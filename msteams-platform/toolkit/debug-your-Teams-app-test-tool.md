@@ -110,7 +110,7 @@ To use a Teams bot app on the Test Tool, you need to provide:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
-Similarly, you can use the other commands in your bot to test the bot experience.
+Similarly, you can use the other commands in your bot to test the bot experience. Download a ready-to-use sample [here](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app).
 
 ## Predefined activities
 
@@ -178,7 +178,7 @@ The configuration file in the project's root folder allows you to customize Team
 
 ### Default configuration
 
-The Test Tool contains a built-in configuration file in the project's root folder.
+<details><summary>The Test Tool contains a built-in configuration file in the project's root folder.</summary>
 
 ```yaml
 # yaml-language-server: $schema=https://aka.ms/teams-app-test-tool-config/0.1.0/config.schema.json
@@ -250,6 +250,8 @@ team:
       name: Announcements
 ```
 
+</details>
+
 ### Update the configuration file
 
 If your bot code uses Bot Framework APIs, you can modify the configuration file to alter the API response. Let us consider an Azure DevOps notification bot installed in a team that fetches inactive bugs from Azure DevOps. It identifies the owners of the inactive bug, fetches their email addresses, and sends notifications to their personal chats on a daily basis.
@@ -284,7 +286,7 @@ It's vital to recognize that updating the configuration file has three major imp
 
 ## Limitations
 
-1. The Test Tool doesn't process the app manifest, which means features that are enabled through the manifest won't be accessible.
+1. Bot features enabled through the Teams app manifest aren't available as The Test Tool doesn't process it.
 
 1. The Test Tool doesn't support all other types of Bot application [Cards](../task-modules-and-cards/what-are-cards.md#cards).
 
@@ -313,375 +315,149 @@ It's vital to recognize that updating the configuration file has three major imp
 
 ## Debug an existing app with the Test Tool
 
-We'll use the Test Tool to debug the Teams Toolkit AI Chat Bot template. You can download a ready-to-use sample here, AI Chat Bot sample from GitHub Release.
+Ensure you have an existing bot app created using Teams Toolkit. To debug your bot app with the Test Tool, follow these steps:
 
-To launch the Test Tool during debugging, update the following files:
+1. Open the existing bot app's project folder in Teams Toolkit.
 
-1. Modify **launch.json**. Add a new debug entry point to debug in the Test Tool.
+1. Go to **EXPLORER** > **.vscode**.
+1. Select **launch.json** and add the following code at the end of the file:
 
-```yaml
-// .vscode/launch.json 
-
-{ 
-
-    ... 
-
-    "compounds": [ 
-
+    ```yaml
+    // .vscode/launch.json 
+    
+    { 
         ... 
-
-        { 
-
-            "name": "Debug in Test Tool", 
-
-            "configurations": [ 
-
-                "Attach to Local Service" 
-
-            ], 
-
-            "preLaunchTask": "Start Teams App (Test Tool)", 
-
-            "presentation": { 
-
-                "group": "1-local", 
-
-                "order": 1 
-
+        "compounds": [ 
+            ... 
+            { 
+                "name": "Debug in Test Tool", 
+                "configurations": [ 
+                    "Attach to Local Service" 
+                ], 
+                "preLaunchTask": "Start Teams App (Test Tool)", 
+                "presentation": { 
+                    "group": "1-local", 
+                    "order": 1 
+                }, 
+                "stopAll": true 
             }, 
-
-            "stopAll": true 
-
-        }, 
-
-    ] 
-
-} 
-```
-
-1. Modify **tasks.json**. Add the following tasks to automatically start the Test Tool and connect with your bot app during debugging:
-
-```yaml
-// .vscode/tasks.json
-
-{
-
-  "tasks": [
-
-    ... 
-
-    { 
-
-      "label": "Start Teams App (Test Tool)", 
-
-      "dependsOn": [ 
-
-        "Validate prerequisites (Test Tool)", 
-
-        "Deploy (Test Tool)", 
-
-        "Start application (Test Tool)", 
-
-        "Start Test Tool", 
-
-      ], 
-
-      "dependsOrder": "sequence" 
-
-    }, 
-
-    { 
-
-      // Check all required prerequisites. 
-
-      // See https://aka.ms/teamsfx-tasks/check-prerequisites to know the details and how to customize the args. 
-
-      "label": "Validate prerequisites (Test Tool)", 
-
-      "type": "teamsfx", 
-
-      "command": "debug-check-prerequisites", 
-
-      "args": { 
-
-        "prerequisites": [ 
-
-          "nodejs", // Validate if Node.js is installed. 
-
-          "portOccupancy" // Validate available ports to ensure those debug ones are not occupied. 
-
-        ], 
-
-        "portOccupancy": [ 
-
-          3978, // app service port 
-
-          9239, // app inspector port for Node.js debugger 
-
-          56150, // test tool port 
-
         ] 
+    } 
+    ```
 
-      } 
+1. Go to **tasks.json** and add the following code at the end of the file:
 
-    }, 
-
-    { 
-
-      // Build project. 
-
-      // See https://aka.ms/teamsfx-tasks/deploy to know the details and how to customize the args. 
-
-      "label": "Deploy (Test Tool)", 
-
-      "type": "teamsfx", 
-
-      "command": "deploy", 
-
-      "args": { 
-
-        "env": "testtool", 
-
-      } 
-
-    }, 
-
-    { 
-
-      "label": "Start application (Test Tool)", 
-
-      "type": "shell", 
-
-      "command": "npm run dev:teamsfx:testtool", 
-
-      "isBackground": true, 
-
-      "options": { 
-
-        "cwd": "${workspaceFolder}", 
-
-      }, 
-
-      "problemMatcher": { 
-
-        "pattern": [ 
-
-          { 
-
-            "regexp": "^.*$", 
-
-            "file": 0, 
-
-            "location": 1, 
-
-            "message": 2 
-
+    ```json
+        { 
+          "label": "Start Test Tool", 
+          "type": "shell", 
+          "command": "npm run dev:teamsfx:launch-testtool", 
+          "isBackground": true, 
+          "options": { 
+            "env": { 
+              "PATH": "${workspaceFolder}/devTools/teamsapptester/node_modules/.bin:${env:PATH}" 
+            } 
+          }, 
+          "windows": { 
+            "options": { 
+              "env": { 
+                "PATH": "${workspaceFolder}/devTools/teamsapptester/node_modules/.bin;${env:PATH}" 
+              } 
+            } 
+          }, 
+          "problemMatcher": { 
+            "pattern": [ 
+              { 
+                "regexp": "^.*$", 
+                "file": 0, 
+                "location": 1, 
+                "message": 2 
+              } 
+            ], 
+            "background": { 
+              "activeOnStart": true, 
+              "beginsPattern": ".*", 
+              "endsPattern": "Listening on" 
+            } 
+          }, 
+          "presentation": { 
+            "panel": "dedicated", 
+            "reveal": "silent" 
           } 
+        }, 
+      ],
+    }
+    ```
 
-        ], 
+1. Create **.localConfigs.testtool** file in the project's root folder and add the following code:
 
-        "background": { 
+    ```json
+    // .localConfigs.testTool
+    # A gitignored place holder file for local runtime configurations when debug in test tool
+    BOT_ID=
+    BOT_PASSWORD=
+    TEAMSFX_NOTIFICATION_STORE_FILENAME=.notification.testtoolstore.json
+    ```
 
-          "activeOnStart": true, 
+1. Create **.env.testtool** file in the **env** folder and add the following code:
 
-          "beginsPattern": "[nodemon] starting", 
-
-          "endsPattern": "restify listening to|Bot/ME service listening at|[nodemon] app crashed" 
-
-        } 
-
-      } 
-
-    }, 
-
-    { 
-
-      "label": "Start Test Tool", 
-
-      "type": "shell", 
-
-      "command": "npm run dev:teamsfx:launch-testtool", 
-
-      "isBackground": true, 
-
-      "options": { 
-
-        "env": { 
-
-          "PATH": "${workspaceFolder}/devTools/teamsapptester/node_modules/.bin:${env:PATH}" 
-
-        } 
-
-      }, 
-
-      "windows": { 
-
-        "options": { 
-
-          "env": { 
-
-            "PATH": "${workspaceFolder}/devTools/teamsapptester/node_modules/.bin;${env:PATH}" 
-
-          } 
-
-        } 
-
-      }, 
-
-      "problemMatcher": { 
-
-        "pattern": [ 
-
-          { 
-
-            "regexp": "^.*$", 
-
-            "file": 0, 
-
-            "location": 1, 
-
-            "message": 2 
-
-          } 
-
-        ], 
-
-        "background": { 
-
-          "activeOnStart": true, 
-
-          "beginsPattern": ".*", 
-
-          "endsPattern": "Listening on" 
-
-        } 
-
-      }, 
-
-      "presentation": { 
-
-        "panel": "dedicated", 
-
-        "reveal": "silent" 
-
-      } 
-
-    }, 
-
-  ],
-
-}
-```
-
-1. Create three files named **.localConfigs.testTool**, **.env.testtool** and **teamsapp.testtool.yml** in the project’s root folder.
-
-1. Create a file named **.localConfigs.testTool** and add the following code to it.
-
-```yaml
-// .localConfigs.testTool
-
-# A gitignored place holder file for local runtime configurations when debug in test tool
-
-BOT_ID=
-
-BOT_PASSWORD=
-
-TEAMSFX_NOTIFICATION_STORE_FILENAME=.notification.testtoolstore.json
-```
-
-1. Create a file named **.env.testtool** in the env folder of the project's root folder.
-
-```yaml
-// .env.testtool
-
-# This file includes environment variables that can be committed to git. It's gitignored by default because it represents your local development environment
-
-# Built-in environment variables
-
-TEAMSFX_ENV=testtool
-
-# Environment variables used by test tool
-
-TEAMSAPPTESTER_PORT=56150
-```
+    ```json
+    // .env.testtool
+    # This file includes environment variables that can be committed to git. It's gitignored by default because it represents your local development environment
+    # Built-in environment variables
+    TEAMSFX_ENV=testtool
+    # Environment variables used by test tool
+    TEAMSAPPTESTER_PORT=56150
+    ```
 
 1. If you have any custom environment variables, set their values in **.env.testtool** or **.env.testtool.user**.
 
 1. Add either an OpenAI key or Azure OpenAI key and endpoint:
 
-```yaml
-# SECRET_OPENAI_API_KEY=***********
-
-SECRET_AZURE_OPENAI_API_KEY=***********
-
-SECRET_AZURE_OPENAI_ENDPOINT=<https://your-openai-service-name.openai.azure.com/>
-```
+    ```json
+    # SECRET_OPENAI_API_KEY=***********
+    SECRET_AZURE_OPENAI_API_KEY=***********
+    SECRET_AZURE_OPENAI_ENDPOINT=<https://your-openai-service-name.openai.azure.com/>
+    ```
 
 1. Add **teamsapp.testtool.yml** to npm install and pass the environment variables using the `file/createOrUpdateEnvironmentFile` action.
 
-```yaml
-# yaml-language-server: $schema=<https://aka.ms/teams-toolkit/v1.3/yaml.schema.json>
-
-# Visit <https://aka.ms/teamsfx-v5.0-guide> for details on this file
-
-# Visit <https://aka.ms/teamsfx-actions> for details on actions
-
-version: v1.3
-
-deploy:
-
-# Install development tool(s)
-
-* uses: devTool/install
-
-    with:
-
-      testTool:
-
-        version: ~0.1.0-alpha 
-
-        symlinkDir: ./devTools/teamsapptester 
-
-# Run npm command
-
-* uses: cli/runNpmCommand
-
-    with:
-
-      args: install --no-audit
-
-# Generate runtime environment variables
-
-* uses: file/createOrUpdateEnvironmentFile
-
-    with:
-
-      target: ./.localConfigs.testTool
-
-      envs:
-
-        # OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}} 
-
-        AZURE_OPENAI_API_KEY: ${{SECRET_AZURE_OPENAI_API_KEY}} 
-
-        AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}} 
-```
+    ```yaml
+    # yaml-language-server: $schema=<https://aka.ms/teams-toolkit/v1.3/yaml.schema.json>
+    # Visit <https://aka.ms/teamsfx-v5.0-guide> for details on this file
+    # Visit <https://aka.ms/teamsfx-actions> for details on actions
+    version: v1.3
+    deploy:
+    # Install development tool(s)
+    * uses: devTool/install
+        with:
+          testTool:
+            version: ~0.1.0-alpha 
+            symlinkDir: ./devTools/teamsapptester 
+    # Run npm command
+    * uses: cli/runNpmCommand
+        with:
+          args: install --no-audit
+    # Generate runtime environment variables
+    * uses: file/createOrUpdateEnvironmentFile
+        with:
+          target: ./.localConfigs.testTool
+          envs:
+            # OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}} 
+            AZURE_OPENAI_API_KEY: ${{SECRET_AZURE_OPENAI_API_KEY}} 
+            AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}} 
+    ```
 
 1. Update the npm script in **package.json** in the project's root folder with the following code:
 
-```yaml
-"scripts": {
-
-    ... 
-
-    "dev:teamsfx:testtool": "env-cmd --silent -f .localConfigs.testTool npm run dev", 
-
-    "dev:teamsfx:launch-testtool": "env-cmd --silent -f env/.env.testtool teamsapptester start", 
-
-    ... 
-
-},
-```
+    ```json
+    "scripts": {
+        ... 
+        "dev:teamsfx:testtool": "env-cmd --silent -f .localConfigs.testTool npm run dev", 
+        "dev:teamsfx:launch-testtool": "env-cmd --silent -f env/.env.testtool teamsapptester start", 
+        ... 
+    },
+    ```
 
 1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
 
@@ -692,23 +468,23 @@ Test Tool successfully debugs your existing bot app.
 ## FAQ
 
 <details>
-<summary>How can I test my bot application if some features aren't supported by the Test Tool?</summary>
+<summary>How can I test my bot app if the Test Tool doesn't support its features?</summary>
 
-You can always use the [Teams client](https://teams.microsoft.com/) to test the features that aren't supported in the Test Tool. Select the option **Debug (Edge)** or **Debug (Chrome)** to test your application in the Teams client.
+You can always use the [Teams client](https://teams.microsoft.com/) to test the features that Test Tool doesn't support. Select the option **Debug (Edge)** or **Debug (Chrome)** to test your application in the Teams client.
 <br>
 &nbsp;
 </details>
 <details>
-<summary>How would I notice if some features aren't supported in the Test Tool?</summary>
+<summary>How would I know if Test Tool doesn't support features in my bot app?</summary>
 
-The Test Tool shows a warning message in conversation and log panel when it detects some features aren't supported.
+The Test Tool shows a warning message in conversation and log panel when it detects unsupported features.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/debug/features-not-supported.png" alt-text="Screenshot shows the warning message that the feature isn't supported.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/debug/features-not-supported.png" alt-text="Screenshot shows the warning message of an unsupported feature.":::
 <br>
 &nbsp;
 </details>
 <details>
-<summary>Is it recommended to use only the Test Tool for testing bot applications?</summary>
+<summary>Does Microsoft recommend using only the Test Tool for testing bot applications?</summary>
 
 No. We always recommend users to test their bot application in the Teams client before moving the application to production environment.
 <br>
