@@ -83,7 +83,7 @@ For users to interact with your message extension from Outlook, you need to enab
 
 > [!NOTE]
 >
-> If you've previously enabled the **Outlook** channel for your bot, you'll need to enable the **Microsoft 365** channel in order for your message extension to function correctly in Microsoft Outlook. The Outlook channel is no longer used for message extensions running in Outlook and can be disabled.
+> If you've previously enabled the **Outlook** channel for your bot, you'll need to enable the **Microsoft 365** channel for your message extension to function correctly in Microsoft Outlook. The Outlook channel is no longer used for message extensions running in Outlook and can be disabled.
 
 1. Go to [Microsoft Azure portal](https://portal.azure.com) or [Bot Framework portal](https://dev.botframework.com) (if you've previously registered there), go to your bot resource.
 
@@ -112,7 +112,7 @@ Microsoft Entra single sign-on (SSO) for message extensions works the same way i
 1. Select **App registrations**.
 1. Select the name of your application to open its app registration.
 1. Select **Manage** > **Expose an API**.
-1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are listed:
+1. In the **Authorized client applications** section, ensure all the following `Client Id` values are listed:
 
    |Microsoft 365 client application | Client ID |
    |--|--|

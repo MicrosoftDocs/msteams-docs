@@ -444,7 +444,9 @@ Respond to the submit action by inserting a message with an Adaptive Card into t
 
 
 > [!NOTE]
-> The `activityPreview` must contain a `message` activity with exactly one adaptive card attachment.
+>
+> * The `activityPreview` must contain a `message` activity with exactly one adaptive card attachment.
+> * Outlook doesn't support to respond with an adaptive card message sent from a bot.
 
 To enable this flow your task module should respond as in the following example, which presents the preview message to the user:
 
