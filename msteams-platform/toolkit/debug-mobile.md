@@ -132,7 +132,7 @@ You can view the project folders and files under **Explorer** in the Visual Stud
 
 ---
 
-You'll be prompted to upload the app into Teams. Select **Add**.
+You'll be prompted to upload a custom app into Teams. Select **Add**.
 
 :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot shows an app being installed.":::
 
