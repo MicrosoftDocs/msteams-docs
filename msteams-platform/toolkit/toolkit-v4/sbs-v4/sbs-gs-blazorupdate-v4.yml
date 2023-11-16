@@ -99,7 +99,7 @@ items:
 
     ### Enable app upload
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as app upload. Sign in to your Microsoft 365 account to view this option.
       
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
@@ -305,7 +305,7 @@ items:
         <details>
         <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-        To run your app in Teams, you need a Microsoft 365 development account that allows app upload. You can learn more about it in the Prerequisites section.
+        To run your app in Teams, you need a Microsoft 365 development account that allows app upload. You can learn more about it in the prerequisites section.
         </details>
 
     1. Stop debugging in Visual Studio.
@@ -566,7 +566,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled app uploading in your Teams account. You can learn more about app uploading in the Prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled app upload in your Teams account. You can learn more about app upload in the prerequisites section.
 
 - title: Preview your first bot app
   durationInMinutes: 1

@@ -88,7 +88,7 @@ items:
     
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
     To verify upload apps in Teams:
-    1. In the Teams client, select **Store** .
+    1. In the Teams client, select **Apps** .
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, app upload is enabled.

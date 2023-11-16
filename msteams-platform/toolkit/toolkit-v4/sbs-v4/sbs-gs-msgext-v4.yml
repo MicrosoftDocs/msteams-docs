@@ -516,7 +516,7 @@ items:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you must have a Microsoft 365 development account that allows app uploading. You can learn more about app upload in the prerequisites section.
+    To run your app in Teams, you must have a Microsoft 365 development account that allows app upload. You can learn more about app upload in the prerequisites section.
     </details>
 
 - title: Deploy your first Teams app
