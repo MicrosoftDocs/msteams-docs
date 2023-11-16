@@ -36,42 +36,19 @@ To extend your Teams message extension to Outlook, ensure the following:
 
 To extend your Teams message extension to Outlook, you can either build a new message extension app with Teams Toolkit or extend an existing Teams message extension app to Outlook.
 
-:::row:::
-:::column:::
-
-[Build a new message extension app with Teams Toolkit.](#build-a-message-extension-app-for-outlook)
-    
-  > [!div class="checklist"]
-  >
-  > * [Build an app with Teams Toolkit in Visual Studio Code](#build-a-message-extension-app-for-outlook)
-  > * [Sideload your app in Teams](#sideload-your-app-in-teams-using-teams-toolkit)
-  > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
-
-:::column-end:::
-:::column:::
-
-[Extend an existing Teams message extension app to Outlook.](#build-a-message-extension-app-for-outlook)
-    
-  > [!div class="checklist"]
-  >
-  > * [Update your app manifest](#update-your-app-manifest)
-  > * [Add the Microsoft 365 channel for your bot](#add-microsoft-365-channel-for-your-app)
-  > * [Update Microsoft Entra app registration for SSO](#update-azure-ad-app-registration-for-sso)
-  > * [Sideload your updated app in Teams](#sideload-your-app-in-teams)
-  > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook-1)
-
-:::column-end:::
-:::row-end:::
-
 # [Build a message extension app for Outlook](#tab/ttk)
 
 You can build a Teams message extension app for Outlook through Teams Toolkit extension for Visual Studio Code. To build a message extension app for Outlook, ensure the following:
 
-  > * [Build an app with Teams Toolkit in Visual Studio Code](#build-a-message-extension-app-for-outlook)
-  > * [Sideload your app in Teams](#sideload-your-app-in-teams)
-  > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
+> [!div class="checklist"]
+> 
+> * [Build an app with Teams Toolkit in Visual Studio Code](#build-a-message-extension-app-for-outlook)
+> * [Sideload your app in Teams](#sideload-your-app-in-teams)
+> * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
 [!INCLUDE [message-extensions-outlook](../includes/messaging-extensions/message-extensions-outlook.md)]
+
+Now, you can sideload your app in Teams and preview your message extension in Outlook. To build your app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
 # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
 
@@ -203,7 +180,7 @@ While your updated message extension continues to run in Teams, you must be awar
 
 - Message extensions in Outlook are supported only in the [`compose`](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions) context. In Teams app manifest, message extension contexts such as `commandBox` and `message` aren't supported in Outlook.
 
--  Action-based message extensions that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this scenario, you can convert your message extension to [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Outlook.
+- Action-based message extensions that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this scenario, you can convert your message extension to [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Outlook.
 
 - You can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email.
 
