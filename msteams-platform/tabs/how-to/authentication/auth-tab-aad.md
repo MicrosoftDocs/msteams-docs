@@ -219,7 +219,7 @@ This code parses the key-value pairs received from Microsoft Entra ID in `window
 * `CancelledByUser` the user closed the pop-up window before completing the authentication flow.
 
   > [!NOTE]
-  > We recommend not to return `Cross-Origin-Opener-Policy` response header on the login pages as it causes the `CancelledByUser` error to occur prematurely.
+  > We recommend not use `same-origin` or `same-origin-allow-popups` values for `Cross-Origin-Opener-Policy` response header on the login pages, as it disrupts the connection to the parent window and causes the authenticate API call to return prematurely with a `CancelledByUser` error.
 
 * `FailedToOpenWindow` the pop-up window couldn't be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a pop-up blocker.
 
