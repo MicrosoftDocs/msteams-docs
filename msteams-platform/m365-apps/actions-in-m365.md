@@ -10,8 +10,10 @@ ms.subservice: m365apps
 # Actions in Microsoft 365
 
 > [!NOTE]
-> The Actions in Microsoft 365 is only available for Microsoft 365 app on web and desktop clients.
-> The Actions in Microsoft 365 is available in public developer preview.
+>
+> * The Actions in Microsoft 365 is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+>
+> * The Actions in Microsoft 365 is supported for Microsoft 365 app on web and desktop clients only.
 
 Actions seamlessly integrate your app into the user's workflow, ensuring effortless discovery and smooth interaction with their content. By guiding users to your app based on their intent and contextual content, Actions facilitate efficient task completion. Which integration increases your app's visibility and engagement with minimal development effort.
 
@@ -23,7 +25,7 @@ Actions enhance user's productivity by streamlining task completion and reducing
 1. Seamlessly integrates your app into users workflow, increasing app's visibility and user engagement.
 1. Users can take immediate action on content files through your app, expanding the range of interactions they can have with their content.  
 
-:::image type="content" source="images/m365-Actions-in-action.gif" alt-text="Graphic shows the user can add a file to the to-do list app with a note attached for a task to complete. ":::
+    :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user can add a file to the to-do list app with a note attached for a task to complete.":::
 
 ## Understand how Actions work
 
@@ -132,19 +134,19 @@ For background: The user is a supervisor at Northwind Traders with limited time 
 In this example, the user sees the latest sales report from a supplier, 'Tokyo Trader,' and wants to add it as an attachment in the supplier management system app built by Northwind Traders.
 They right-click on the Word document and choose the Action 'Add to supplier' built by Northwind Traders.
 
-:::image type="content" source="images/m365-actions-user-scenario-1-1.png" alt-text="The screenshot shows a right click menu displaying the Add To Action running on Microsoft 365 on web.":::
+:::image type="content" source="images/m365-actions-add-to-dropdown.png" alt-text="The screenshot shows a right click menu displaying the options from the add to dropdown.":::
 
 A dialog pops up where they select 'Tokyo Traders' and click 'Add' to add the attachment to their management system, all without opening the document or app. With the openDialog handler, users can complete task efficiently by working in a contextualized dialog interface.
 
-:::image type="content" source="images/m365-actions-user-scenario-1-2.png" alt-text="The screenshot shows a pop-up dialog of the Northwind app for the user to add an attachment  running on Microsoft 365 on web.":::
+:::image type="content" source="images/m365-actions-popup-dialog.png" alt-text="The screenshot shows a pop-up dialog of the northwind app for the user to add an attachment  running on M365 on web.":::
 
 ### Action opens a page
 
 On the same page, the user notices the 'Q2 Top suppliers' Excel sheet and want to see which suppliers they work with on this list.
 They right-click on the Excel file and then click on the Action 'Related suppliers'.
 
-:::image type="content" source="images/m365-actions-user-scenario-2-1.png" alt-text="The screenshot shows the right click menu displaying the Related supplier option running on Microsoft 365 on web.":::
+:::image type="content" source="images/m365-actions-opens-a-page.png" alt-text="The screenshot shows the right click menu displaying the related supplier option running on Microsoft 365 on web.":::
 
 The Northwind app opens, displaying the list of suppliers filtered to show only those that appear in the document. This saves them time opening up the app and the Excel file and checking each item manually.
 
-:::image type="content" source="images/m365-actions-user-scenario-2-2.png" alt-text="The screenshot shows the northwind app open, displaying the list of suppliers filtered to show only those that appear in the document running on Microsoft 365 on web.":::
+:::image type="content" source="images/m365-actions-opens-supplier-list.png" alt-text="The screenshot shows the northwind app, which shows the suppliers that match the document in M365 on the web.":::

@@ -352,6 +352,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 November**
 
+* ***November 30, 2023***: [Actions enhance user's productivity by streamlining task completion and reducing the need for context switching across various Microsoft 365 applications.](m365-apps/actions-in-m365.md).
+
 * ***November 14, 2023***: [Build a bot-based message extension and extend the message extension as plugin for Microsoft Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) and also check the [guidelines to create or upgrade a message extension plugin for Microsoft Copilot for Microsoft 365.](messaging-extensions/high-quality-message-extension.md)
 
 * ***November 02, 2023***: [Introduced Adaptive Card Previewer in public developer preview](concepts/build-and-test/adaptive-card-previewer.md).
