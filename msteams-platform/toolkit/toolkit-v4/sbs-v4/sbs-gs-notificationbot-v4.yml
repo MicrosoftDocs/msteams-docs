@@ -24,7 +24,7 @@ items:
 
     This step-by-step guide helps you to build notification bot with Teams Toolkit. You can see the following output:
 
-      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/trigger-output-v4.png" alt-text="Trigger Output"border="true":::
+      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/trigger-output-v4.png" alt-text="Screenshot shows the output of Teams browser and mobile.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -114,7 +114,7 @@ items:
     1. Go to **Microsoft Teams**.
     1. Select **Apps** > **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a customised app**. If you see the option, sideloading apps is enabled.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/upload-custom-app-v4.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
@@ -213,7 +213,7 @@ items:
 
         You get the following output in Teams:
 
-          :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/trigger-output-v4.png" alt-text="Trigger Output"border="true":::
+          :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/trigger-output-v4.png" alt-text="Screenshot shows the output of Teams browser and mobile.":::
 
     ## Take tour of source code
 
@@ -329,7 +329,7 @@ items:
 
        The following screen appears:
 
-         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/channel-notification-v4.png" alt-text="Channe1 Notification":::
+         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/channel-notification-v4.png" alt-text="Screenshot shows the output of channe1 notification.":::
 
     1. Open **Windows PowerShell**.
 
@@ -339,11 +339,11 @@ items:
 
        You get the notification in the Teams channel:
 
-         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/channel-output-v4.png" alt-text="Channel Output":::
+         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/channel-output-v4.png" alt-text="Screenshot shows the channel output.":::
 
        You get the notification in the personal chat:         
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/member-output-v4.png" alt-text="member-output":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/member-output-v4.png" alt-text="Screenshot shows the output for member.":::
     
 - title: Deploy your first Teams app
   durationInMinutes: 1
@@ -458,7 +458,7 @@ items:
   content: |
     Did you come up with something like this?
 
-     :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/trigger-output-v4.png" alt-text="Trigger Output"border="true":::
+     :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-notification-bot-v4/trigger-output-v4.png" alt-text="Screenshot shows the output of Teams browser and mobile.":::
 
 - content: |
    You've completed the tutorial to build a notification bot. You can extend your notification bot to add the command response and workflow features.
