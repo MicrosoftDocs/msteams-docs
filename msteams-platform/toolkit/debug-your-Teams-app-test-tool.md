@@ -55,7 +55,7 @@ The Test Tool is an npm package that has a CLI command called `teamsapptester`. 
 To use a Teams bot app on the Test Tool, you need to provide:
 
 * The bot message endpoint is the URL that links the Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
-* (Optional) A configuration file to inform the Test Tool about your customized contextual information in Teams. The file is named **teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it will use the default configuration. For more information, see [customize Teams context](#customize-teams-context).
+* (Optional) A configuration file to inform the Test Tool about your customized contextual information in Teams. The file is named **teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
 
 ## Test Tool experience in Teams Toolkit
 
@@ -69,7 +69,7 @@ To use a Teams bot app on the Test Tool, you need to provide:
 
 1. Select **Bot**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the wizard to Create New Project.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the Teams Toolkit app templates.":::
 
 1. Select **AI Chat Bot**. If you need a different functionality for your bot, pick a different option.
 
