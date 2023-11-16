@@ -189,9 +189,9 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 # [Toolkit CLI](#tab/toolkit-cli)
 
-Before you begin, ensure that you set the environment variable **DEVELOP_COPILOT_PLUGIN** to **true**. To the set the environment variables, follow these steps:
+Before you begin, ensure that you set the environment variable **DEVELOP_COPILOT_PLUGIN** to **true**. To set the environment variables, follow these steps:
 
-1. On your Computer, Select the **Windows** + **X** key.
+1. On your Computer, select the **Windows** + **X** key.
 1. Select System.
 1. Under About > Device specifications, select **Advanced system settings**.
 1. Under System Properties, select **Environment Variables..**.
