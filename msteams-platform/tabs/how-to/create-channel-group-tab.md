@@ -888,7 +888,7 @@ To build and run your app:
 
 1. Install the self-signed SSL certificate for local debugging, if requested.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot shows the the option to select yes for a prompted security warning.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/ssl-prompt.png" alt-text="Screenshot shows the option to select yes for a prompted security warning.":::
 
     Teams is loaded in a web browser.
 
@@ -992,7 +992,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
 1. Select **Project** > **Teams Toolkit** > **Preview in Teams**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot the how to select preview in Teams options for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png" alt-text="Screenshot shows how to select preview in Teams options for your project in visual studio."lightbox="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-preview_1.png":::
 
 1. Select **Add** when prompted to install the app to Teams.
 
