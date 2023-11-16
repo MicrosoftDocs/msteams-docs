@@ -33,7 +33,7 @@ You can create a bot-based search message extension using Teams Toolkit for Visu
 
 ## Prerequisites
 
-Before you get started, ensure that you're familiar with the following standards and guidelines for building message extension plugins for Copilot for Microsoft 365:
+Before you begin, ensure that you're familiar with the following standards and guidelines for building message extension plugins for Copilot for Microsoft 365:
 
 * Standards for compliance, performance, security, and user experience outlined in [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365).
 
@@ -46,7 +46,7 @@ Before you get started, ensure that you're familiar with the following standards
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
-Before you get started, ensure that you install the following tools to build and deploy your message extension:
+Before you begin, ensure that you install the following tools to build and deploy your message extension:
 
 * Install the latest [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
 * Ensure that the **Develop Copilot Plugin** feature flag is enabled. To enable the feature flag, follow these steps:
@@ -108,7 +108,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 # [Visual Studio](#tab/visual-studio)
 
-Before you get started, ensure that you install the following tools to build and deploy your message extension:
+Before you begin, ensure that you install the following tools to build and deploy your message extension:
 
 * Install the Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0 and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
 * Ensure that the Copilot feature flag is enabled. To enable the feature flag, follow these steps:
@@ -189,7 +189,7 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 # [Toolkit CLI](#tab/toolkit-cli)
 
-Before you get started, ensure that you set the environment variable **DEVELOP_COPILOT_PLUGIN** to **true**. To the set the environment variables, follow these steps:
+Before you begin, ensure that you set the environment variable **DEVELOP_COPILOT_PLUGIN** to **true**. To the set the environment variables, follow these steps:
 
 1. On your Computer, Select the **Windows** + **X** key.
 1. Select System.
