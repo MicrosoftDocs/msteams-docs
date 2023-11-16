@@ -137,7 +137,7 @@ The following is an app manifest example for `openPage` and `openDialog`:
     ]
     ```
 
-For more information, see public developer preview app manifest schema.
+For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
 
 ### Build the handler that retrieves Action information through context object
 
