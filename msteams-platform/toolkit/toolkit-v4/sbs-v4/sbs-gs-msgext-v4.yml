@@ -125,10 +125,10 @@ items:
 
     1. In the Teams client, select the **Apps**.
     1. Select **Manage your apps**.
-    1. Select **Publish an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Select **Upload an app**.
+    1. Look for the option to **Upload a customised app**. If the option is visible, you've enabled custom app upload.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/spfx-custom-new1-v4.png" alt-text="bot home":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/upload-custom-app-v4" alt-text="Screenshot shows the option to Upload a customised app in Teams.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, talk to your Teams administrator.
@@ -390,7 +390,7 @@ items:
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
     
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/add-mex-app-local-debug-v4.png" alt-text="Screenshot shows message to add the app":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/add-mex-app-local-debug-v4.png" alt-text="Screenshot shows the option to add the customised app in Teams.":::
 
         The toolkit displays a message to indicate that the app is added to Teams.
 
