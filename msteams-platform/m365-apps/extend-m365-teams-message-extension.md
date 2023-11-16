@@ -10,9 +10,9 @@ ms.subservice: m365apps
 ---
 # Extend a Teams message extension across Microsoft 365
 
-> [!NOTE]
+> [!IMPORTANT]
 >
-> If you've connected your message extension bot to an **Outlook** channel, you must migrate to the **Microsoft 365** channel.
+> The **Microsoft 365** channel replaces the Outlook channel for message extensions. Existing message extensions require [Azure Bot registration for the Microsoft 365 channel](#add-microsoft-365-channel-for-your-bot) to work in Microsoft Outlook.
 
 Search-based [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions) allow users to search an external system and share results through the compose message area of the Microsoft Teams client. You can now bring production search-based Teams message extensions to preview audiences in Outlook for Windows desktop and outlook.com by [extending your Teams apps across Microsoft 365](overview.md).
 
@@ -68,8 +68,9 @@ To start with a [sample message extension](https://github.com/OfficeDev/TeamsFx-
 1. Select **Custom Search Results** to download the sample code for a Teams message extension using the latest app manifest. For more information, see [app manifest](../resources/schema/manifest-schema.md).
 
     :::image type="content" source="images/toolkit-palatte-search-sample.png" alt-text="Screenshot shows the Create a new Teams app VS Code command palette to list Teams sample options.":::
-
-    The sample is also available as *NPM Search Connector* in the Teams Toolkit Samples gallery. From the Teams Toolkit pane, select **Development** > **View samples** > **NPM Search Connector**.
+1. Select a preferred programming language.
+1. Select a location on your local machine for the workspace folder and enter your application name.
+ From the left pane, under **DEVELOPMENT**, select **View Samples**.  A **Samples** tab appears, in the search field enter **NPM Search Connector**.
 
     :::image type="content" source="images/toolkit-search-sample.png" alt-text="Screenshot shows the NPM Search Connector sample in Teams Toolkit Samples gallery.":::
 
@@ -115,7 +116,11 @@ If you used Teams Toolkit to create your message extension app, you can use it t
 
 In Microsoft Teams, a message extension consists of a web service that you host and an app manifest, which defines where your web service is hosted. The web service takes advantage of the [Bot Framework SDK](/azure/bot-service/bot-service-overview) messaging schema and secure communication protocol through a Teams channel registered for your bot.
 
-For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot:
+For users to interact with your message extension from Outlook, you need to enable the *Microsoft 365* channel for your Azure bot resource (message extension).
+
+> [!NOTE]
+>
+> If you've previously enabled the Outlook channel for your bot, you'll need to enable the **Microsoft 365** channel in order for your message extension to function correctly in Microsoft Outlook. The Outlook channel is no longer used for message extensions running in Outlook and can be disabled.
 
 1. From [Microsoft Azure portal](https://portal.azure.com) (or [Bot Framework portal](https://dev.botframework.com) if you previously registered there), go to your bot resource.
 
@@ -131,12 +136,14 @@ For users to interact with your message extension from Outlook, you need to add 
 
 1. Confirm that your Microsoft 365 channel is listed along with Teams in your bot's **Channels** pane.
 
-## Update Microsoft Azure Active Directory (Azure AD) app registration for SSO
+<a name='update-microsoft-azure-active-directory-azure-ad-app-registration-for-sso'></a>
+
+## Update Microsoft Entra app registration for SSO
 
 > [!NOTE]
-> You can skip this step if you're using the [sample app](#quickstart) provided in this tutorial, as the scenario doesn't involve Azure Active Directory (AAD) single sign-on authentication.
+> You can skip this step if you're using the [sample app](#quickstart) provided in this tutorial, as the scenario doesn't involve Microsoft Entra single sign-on authentication.
 
-Azure Active Directory (AD) single sign-on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However, you need to add several client application identifiers to the Azure AD app registration of your bot in your tenant's *App registrations* portal.
+Microsoft Entra single sign-on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However, you need to add several client application identifiers to the Microsoft Entra app registration of your bot in your tenant's *App registrations* portal.
 
 1. Sign in to [Azure portal](https://portal.azure.com) with your sandbox tenant account.
 1. Open **App registrations**.

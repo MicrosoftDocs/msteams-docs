@@ -13,9 +13,10 @@ ms.date: 01/31/2023
 You can create a deep link to a Teams chat, such as to start a new chat, browse to a channel conversation, and to a file in a channel.
 
 In this article, you’ll learn to create a deep link:
+
 * [To start a new chat](#deep-link-to-start-a-new-chat)
 * [To navigate to channel conversation](#deep-links-to-navigate-to-channel-conversation)
-* [To navigate to chat messages](#deep-link-to-teams-chat)
+* [To navigate to chat messages](#deep-links-to-navigate-to-chat-messages)
 * [To file in a channel](#generate-deep-links-to-file-in-a-channel)
 
 ## Deep link to start a new chat
@@ -39,12 +40,11 @@ While use of the typed APIs is recommended, you can alternatively use the follow
 
 The query parameters are:
 
-* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID parameter supports the Microsoft Azure Active Directory (Azure AD) `UserPrincipalName`, such as an email address only.
+* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID parameter supports the Microsoft Entra `UserPrincipalName`, such as an email address only.
 * `topicName`: An optional parameter for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current app user's compose box while the chat is in the draft state.
 
 Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
-
 
 #### Configure deep link to start a chat using TeamsJS library
 
@@ -113,7 +113,7 @@ The query parameters are:
 * `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
 * `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`.
 * `serviceName`: Name of the service, app ID. For example, `teams`.
-* `threadId`: The threadID is the team ID of the team where the file is stored. It's optional and can't be set for files stored in a user's OneDrive folder. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
+* `threadId`: The threadID is the team ID of the team where the file is stored. It's optional and can't be set for files stored in a user's OneDrive folder. threadId - 19:<f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype>.
 * `groupId`: Group ID of the file. For example, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]

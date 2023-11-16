@@ -116,9 +116,9 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
 
     You can select a team or a group chat.
 
-* **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
+* **Do you require Microsoft Entra Single-Sign-On support for the tab?**
 
-    Choose **not** to include Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab. The default is yes, enter **n**.
+    Choose **not** to include Microsoft Entra Single-Sign-On support for the tab. The default is yes, enter **n**.
 
 * **Do you want this tab to be available in SharePoint Online? (Y/n)**
 
@@ -182,7 +182,7 @@ gulp ngrok-serve
 
 ## Upload your application to Teams
 
-1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Teams Store":::.
+1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Microsoft Teams Store":::.
 1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
 1. Go to your project directory, browse to the **./package** folder, select the app package zip folder, and choose **Open**.
 
@@ -663,7 +663,7 @@ After you've installed the required tools, set up the development environment.
 
 ### Install Microsoft Teams Toolkit
 
-The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`).
+The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. You can use the toolkit with Visual Studio, or as a Command Line Interface (called `teamsfx`).
 
 # [Latest version of the Visual Studio](#tab/vs)
 
@@ -724,7 +724,7 @@ Do you already have a tenant, and do you've the admin access? Let's check if you
 
 Verify if you can sideload apps in Teams:
 
-1. In the Teams client, select **Store** icon.
+1. In the Teams client, select **Apps**.
 1. Select **Manage your apps**.
 1. Select **Upload a custom app**. If you see Upload a custom app option, sideloading apps is enabled.
 
@@ -878,7 +878,7 @@ To build and run your app:
 
     When you select **F5**, Teams Toolkit:
 
-    1. Registers your application with Azure Active Directory.
+    1. Registers your application with Microsoft Entra ID.
     1. Registers your application for sideloading in Teams.
     1. Starts your application backend running locally.
     1. Starts your application front-end hosted locally.

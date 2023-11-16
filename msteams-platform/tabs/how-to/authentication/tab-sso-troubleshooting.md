@@ -38,7 +38,7 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 <details>
 <summary>1. Error: consent missing.</summary>
 <br>
-When Azure AD receives a request for accessing a Microsoft Graph resource, it checks if the app user or tenant administrator has given consent for this resource. If there's no record of consent from the user or administrator, Azure AD sends an error message to your web service.
+When Microsoft Entra ID receives a request for accessing a Microsoft Graph resource, it checks if the app user or tenant administrator has given consent for this resource. If there's no record of consent from the user or administrator, Microsoft Entra ID sends an error message to your web service.
 
 Your code must tell the client (for example, in the body of a 403 Forbidden response) how to handle the error:
 
@@ -66,7 +66,7 @@ The server-side code should send a 403 Forbidden response to the client to s
 <br>
 You can get this error in one of the two scenarios:
 
-1. The custom domain isn't added to Azure AD. To add custom domain to Azure AD and register it, follow the [add a custom domain name to Azure AD](/azure/active-directory/fundamentals/add-custom-domain) procedure. Then follow the steps to [Configure scope for access token](tab-sso-register-aad.md#configure-scope-for-access-token) again.
+1. The custom domain isn't added to Microsoft Entra ID. To add custom domain to Microsoft Entra ID and register it, follow the [add a custom domain name to Microsoft Entra ID](/azure/active-directory/fundamentals/add-custom-domain) procedure. Then follow the steps to [Configure scope for access token](tab-sso-register-aad.md#configure-scope-for-access-token) again.
 1. You aren't signed in with Administrator credentials in the Microsoft 365 tenancy. Sign-in to Microsoft 365 as an administrator.
 
 </details>
@@ -74,7 +74,7 @@ You can get this error in one of the two scenarios:
 <details>
 <summary>5. Error: User Principal Name (UPN) not received in the returned access token.</summary>
 <br>
-You can add UPN as an optional claim in Azure AD.
+You can add UPN as an optional claim in Microsoft Entra ID.
 
 For more information, see [Provide optional claims to your app](/azure/active-directory/develop/active-directory-optional-claims) and [access tokens](/azure/active-directory/develop/access-tokens).
 </details>
@@ -82,7 +82,7 @@ For more information, see [Provide optional claims to your app](/azure/active-di
 <details>
 <summary>6. Error: Teams SDK Error: resourceDisabled.</summary>
 <br>
-To avoid this error, ensure that application ID URI is configured properly in Azure AD app registration and in your Teams Client.
+To avoid this error, ensure that application ID URI is configured properly in Microsoft Entra app registration and in your Teams Client.
 
 For more information on application ID URI, see [To expose an API](tab-sso-register-aad.md#to-expose-an-api).
 
@@ -92,20 +92,20 @@ For more information on application ID URI, see [To expose an API](tab-sso-regis
 <details>
 <summary>7. Error: Generic error when running the tab app.</summary>
 <br>
-A generic error may show up when one or more of app configurations made in Azure AD are incorrect. To resolve this error, check if the app details configured in your code and the app manifest (previously called Teams app manifest) matches the values in Azure AD.
+A generic error may show up when one or more of app configurations made in Microsoft Entra ID are incorrect. To resolve this error, check if the app details configured in your code and the app manifest (previously called Teams app manifest) matches the values in Microsoft Entra ID.
 
-The following image shows an example of the app details configured in Azure AD.
+The following image shows an example of the app details configured in Microsoft Entra ID.
 
-:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Azure AD":::
+:::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/azure-app-details.png" alt-text="App configuration values in Microsoft Entra ID":::
 
-Check that the following values match between Azure AD, client-side code, and app manifest:
+Check that the following values match between Microsoft Entra ID, client-side code, and app manifest:
 
-- **App ID**: The app ID you generated in Azure AD should be the same in the code and in the app manifest file. Check if the app ID in the app manifest schema matches the **Application (client) ID** in Azure AD.
+- **App ID**: The app ID you generated in Microsoft Entra ID should be the same in the code and in the app manifest file. Check if the app ID in the app manifest schema matches the **Application (client) ID** in Microsoft Entra ID.
 
-- **App secret**: The app secret configured in the backend of your app should match the **Client credentials** in Azure AD.
+- **App secret**: The app secret configured in the backend of your app should match the **Client credentials** in Microsoft Entra ID.
     You should also check if the client secret is expired.
 
-- **Application ID URI**: The app ID URI in the code and in the app manifest file should match the **Application ID URI** in Azure AD.
+- **Application ID URI**: The app ID URI in the code and in the app manifest file should match the **Application ID URI** in Microsoft Entra ID.
 
 - **App permissions**: Check if the permissions you defined in the scope are as per your app requirement. If so, check if they had been granted to the user in the access token.
 
@@ -113,11 +113,11 @@ Check that the following values match between Azure AD, client-side code, and ap
 
 In addition, inspect the access token that was sent to the tab app to verify if the following values are correct:
 
-- **Audience (aud)**: Check if the app ID in the token is correct as given in Azure AD.
+- **Audience (aud)**: Check if the app ID in the token is correct as given in Microsoft Entra ID.
 - **Tenant Id(tid)**: Check if the tenant mentioned in the token is correct.
 - **User identity (preferred_username)**: Check if the user identity matches the username in the request for access token, for the scope that the current user wants to access.
-- **Scopes (scp)**: Check if the scope for which the access token is requested is correct, and as defined in Azure AD.
-- **Azure AD version 1.0 or 2.0 (ver)**: Check if Azure AD version is correct.
+- **Scopes (scp)**: Check if the scope for which the access token is requested is correct, and as defined in Microsoft Entra ID.
+- **Microsoft Entra version 1.0 or 2.0 (ver)**: Check if Microsoft Entra version is correct.
 
 You can use [JWT](https://jwt.ms) for inspecting the token.
 
@@ -185,10 +185,10 @@ To understand the bot behavior when the token exchange fails to trigger a consen
 
    > [!NOTE]
    >
-   > In Teams web client, the password prompt doesn't appear as there is an active Azure AD session in the browser, which is used for authentication and to acquire a token. In Teams desktop client, the password prompt appears because the desktop client doesn't have any Azure AD session to be shared and is asked to login.
+   > In Teams web client, the password prompt doesn't appear as there is an active Microsoft Entra session in the browser, which is used for authentication and to acquire a token. In Teams desktop client, the password prompt appears because the desktop client doesn't have any Microsoft Entra session to be shared and is asked to login.
 
 </details>
 
 ## See also
 
-[Security best practices for application properties in Azure Active Directory](/azure/active-directory/develop/security-best-practices-for-app-registration)
+[Security best practices for application properties in Microsoft Entra ID](/azure/active-directory/develop/security-best-practices-for-app-registration)

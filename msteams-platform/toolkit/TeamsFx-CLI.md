@@ -75,7 +75,7 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 
 ### Parameters for `teamsfx new`
 
-| Parameter | Requirement | Description |
+| Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name` | Yes| Name of your Teams application.|
 |`--interactive`| No | Select the options interactively. The options are `true` and `false` and default value is `true`.|
@@ -147,7 +147,7 @@ teamsfx env add staging --env dev
 
 Run the provision stage in `teamsapp.yml`.
 
-Running `teamsfx provision --env local` triggesr the provision stage in `teamsapp.local.yml` instead.
+Running `teamsfx provision --env local` triggers the provision stage in `teamsapp.local.yml` instead.
 
 ### Parameters for `teamsfx provision`
 
@@ -293,7 +293,7 @@ Check, grant, and list user permission.
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--email` | No | Input email address of collaborator. |
 | `--teams-app-manifest` | No | Manifest of Your Teams app. |
-| `--aad-app-manifest` | No | Manifest of your Azure Active Directory (Azure AD) app. |
+| `--aad-app-manifest` | No | Manifest of your Microsoft Entra app. |
 
 ### Parameters for `teamsfx permission status`
 
@@ -302,7 +302,7 @@ Check, grant, and list user permission.
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--teams-app-manifest` | No | Manifest of Your Teams app. |
-| `--aad-app-manifest` | No | Manifest of your Azure AD app. |
+| `--aad-app-manifest` | No | Manifest of your Microsoft Entra app. |
 | `--list-all-collaborators` | No | To list all collaborators. |
 
 ### Scenarios for `teamsfx permission`
@@ -339,7 +339,7 @@ Update the specific application manifest file.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx update aad-app` | Update the Azure AD App in the current application. |
+| `teamsfx update aad-app` | Update the Microsoft Entra App in the current application. |
 | `teamsfx update teams-app` | Update the Teams App manifest to Teams Developer Portal. |
 
 ### Parameters for `teamsfx update aad-app`
@@ -348,7 +348,7 @@ Update the specific application manifest file.
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
-| `--manifest-file-path` | No | Enter the Azure AD app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
+| `--manifest-file-path` | No | Enter the Microsoft Entra app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
 
 ### Parameters for `teamsfx update teams-app`
 
@@ -421,7 +421,7 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 
 ### Parameters for `teamsfx new`
 
-| Parameter | Requirement | Description |
+| Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name` | Yes| Name of your Teams application.|
 |`--interactive`| No | Select the options interactively. The options are `true` and `false` and default value is `true`.|
@@ -505,13 +505,13 @@ teamsfx env add staging --env dev
 
 Provision the cloud resources in the current application.
 
-| `teamsFx provision` Command | Description |
+| Command | Description |
 |:----------------  |:-------------|
 | `teamsfx provision manifest` | Provision a Teams App in Teams Developer portal with corresponding information specified in the given manifest file. |
 
 ### Parameters for `teamsfx provision`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an environment for the project. |
 |`--subscription`| No | Specify an Azure Subscription ID. |
@@ -525,14 +525,14 @@ This command is used to deploy the current application. By default it deploys en
 
 ### Parameters for `teamsfx deploy`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes| Select an existing environment for the project. |
 |`--open-api-document`| No | Applicable when there's APIM resource in the project. The open API document file path. |
 |`--api-prefix`| No | Applicable when there's APIM resource in the project. The API name prefix. The default unique name of the API is `{api-prefix}-{resource-suffix}-{api-version}`. |
 |`--api-version`| No | Applicable when there's APIM resource in the project. The API version. |
 |`--include-app-manifest`| No | Whether to deploy app manifest to Teams platform. Options are `yes` and `not`. The default value is `no`. |
-|`--include-aad-manifest`| No | Whether to deploy aad manifest. Options are `yes` and `not`. The default value is `no`. |
+|`--include-aad-manifest`| No | Whether to deploy Microsoft Entra manifest. Options are `yes` and `not`. The default value is `no`. |
 
 ## `teamsfx validate`
 
@@ -560,7 +560,7 @@ Preview the current application from local or remote.
 
 ### Parameters for `teamsfx preview`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--local`| No | Preview the application from local. `--local` is exclusive with `--remote`. |
 |`--remote`| No | Preview the application from remote. `--remote` is exclusive with `--local`. |
@@ -569,7 +569,7 @@ Preview the current application from local or remote.
 |`--browser`| No | The browser to open Teams web client. The options are `chrome`, `edge` and `default` such as system default browser and the value is `default`. |
 |`--browser-arg`| No | Argument to pass to the browser, requires --browser, can be used multiple times, for example, --browser-args="--guest" |
 |`--sharepoint-site`| No | SharePoint site URL, such as `{your-tenant-name}.sharepoint.com` for SPFx project remote preview. |
-|`--m365-host`| Preview the application in Teams, Outlook or Microsoft 365 (formally known as Office app). Options are `teams`, `outlook` and `office`. The default value is `teams`. |
+|`--m365-host`| No |Preview the application in Teams, Outlook or Microsoft 365 (formally known as Office app). Options are `teams`, `outlook` and `office`. The default value is `teams`. |
 
 ### Scenarios for `teamsfx preview`
 
@@ -609,7 +609,7 @@ The configuration data is either in user scope or project scope.
 
 ### Parameters for `teamsfx config`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Select an existing environment for the project. |
 |`--folder`| No | Project directory used for get or set project configuration. The default value is `./`. |
@@ -631,7 +631,7 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
   * [Node.js installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
   * [.NET SDK installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
-  * [Azure Functions Core Tools installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure).
+  * [Azure Functions Core Tools installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-functions-core-tools).
 
   To disable .NET SDK validation, use the following command:
 
@@ -677,14 +677,14 @@ TeamsFx CLI provides `teamsFx permission` commands for collaboration scenarios.
 
 ### Parameters for `teamsfx permission grant`
 
-| Parameter  | Requirement | Description |
+| Parameter  | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Provide env name. |
 |`--email`| Yes | Provide collaborator's Microsoft 365 email address. Ensure the collaborator's account is in the same tenant with creator. |
 
 ### Parameters for `teamsfx permission status`
 
-| Parameter | Requirement | Description |
+| Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 |`--env`| Yes | Provide env name. |
 |`--list-all-collaborators` | No | With this flag, Teams Toolkit CLI prints all collaborators for the project. |
@@ -806,7 +806,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 6. Modify `templates/azure/provision/frontendHosting.bicep`.
 
-7. Provision again. Teams Toolkit updates Azure Active Directory (Azure AD), and manifest for you.
+7. Provision again. Teams Toolkit updates Microsoft Entra ID, and manifest for you.
 
 8. Find your `appPackage.dev.zip` in build, or AppPackage folder, and add to Teams.
 

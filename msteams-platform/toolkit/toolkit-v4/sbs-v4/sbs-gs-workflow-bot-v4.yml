@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: ~/toolkit/toolkit-v4/teams-toolkit-tutorial-v4.md
   nextTutorialTitle: Back to Teams app tutorials
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: null
 items:
 - durationInMinutes: 1
   content: |
@@ -45,7 +45,7 @@ items:
     After you've installed the required tools, set up the development environment.
     
     ### Install the Teams Toolkit
-    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Microsoft Teams Store, and more. 
     
     You can use the toolkit with Visual Studio Code or CLI (command-line interface) called `TeamsFx`.
     
@@ -88,7 +88,7 @@ items:
     
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
     To verify sideload apps in Teams:
-    1. In the Teams client, select **Store** .
+    1. In the Teams client, select **Apps** .
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
@@ -196,7 +196,7 @@ items:
   durationInMinutes: 2
   content: |
     You can interact with the bot in Teams by sending a helloWorld command. After running this template, you get a response then select the **workflow bot** and **Enter**.
-     :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-action-response-v4.png" alt-text="select add to add your workflow bot app":::
+     :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-action-response-v4.png" alt-text="Screenshot shows the options to interact with workflow bot app in Teams.":::
     
     You'll receive the following command response in Adaptive Card:
      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-workflow-bot-v4/sbs-workflow-bot-debug-output1-v4.png" alt-text="select add to add your workflow bot app":::

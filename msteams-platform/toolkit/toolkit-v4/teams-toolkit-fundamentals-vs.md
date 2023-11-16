@@ -22,7 +22,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Microsoft Azure using infrastructure-as-code and Bicep.
-* Bring your app to your organization or the Teams App Store using built-in publishing tools.
+* Bring your app to your organization or the Microsoft Teams Store using built-in publishing tools.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png" alt-text="Screenshot shows the User Journey of the Teams Toolkit." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-user-journey.png":::
 
@@ -58,7 +58,7 @@ Perform the following the steps to select templates and app capbaility:
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Azure Active Directory (Azure AD) for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the Azure AD manifest. 
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Microsoft Entra ID for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the Microsoft Entra manifest. 
 
 #### TeamsFx .NET SDK reference
 
@@ -82,7 +82,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
-* Bring your app to your organization or the Teams App Store using built-in publishing tools.
+* Bring your app to your organization or the Teams Store using built-in publishing tools.
 
 :::image type="content" source="images/teams-toolkit-user-journey3VS-v4.png" alt-text="User Journey of the Teams Toolkit"  lightbox="images/teams-toolkit-user-journey3VS-v4.png":::
 
@@ -110,7 +110,7 @@ You can start directly with the capability-focused templates such as tabs, bots,
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Azure Active Directory (Azure AD) automatically. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Azure AD manifest when you need flexibility.
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Microsoft Entra ID automatically. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Microsoft Entra manifest when you need flexibility.
 
 #### TeamsFx .NET SDK Reference docs
 
