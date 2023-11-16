@@ -343,7 +343,7 @@ Example for RSC permissions for a user:
 To install your app on which you've enabled RSC permission in a team, chat, or user, follow these steps:
 
 1. Ensure that you've configured [consent settings](#configure-consent-settings) for team, chat, or user.
-1. [Upload your custom app in Teams](#upload-your-app-in-teams).
+1. [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
 
 ### Configure consent settings
 

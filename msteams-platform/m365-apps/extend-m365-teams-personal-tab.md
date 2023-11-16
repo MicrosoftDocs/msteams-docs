@@ -20,7 +20,7 @@ Updating your Teams personal app to run in other Microsoft 365 applications invo
 > * [Update your Microsoft Teams JavaScript client library (TeamsJS) references](#update-teamsjs-references).
 > * [Amend your Content Security Policy headers](#configure-content-security-policy-headers).
 > * [Update your Microsoft Entra App Registration for Single Sign-On (SSO)](#update-azure-ad-app-registration-for-sso).
-> * [Upload your updated custom app in Teams](#upload-your-app-in-teams).
+> * [Upload your updated custom app in Teams](#upload-your-custom-app-in-teams).
 
 The rest of this guide walks you through these steps and show you how to preview your personal tab in other Microsoft 365 applications.
 
@@ -43,7 +43,7 @@ If you have an existing personal tab app, make a copy or a branch of your produc
 
 If you'd like to use sample code instead of your own production code, you can use the Todo List sample. You can either follow the setup steps in the [Todo List Sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/todo-list-with-Azure-backend) GitHub repository or use the Teams Toolkit extension to create a new Teams app (select **Start from a sample** > **Todo List with backend on Azure**). After you've created a personal tab, return to this article to extend it across Microsoft 365.
 
-Alternately, you can use a basic single sign-on (SSO) **hello world** app that's already Microsoft 365 app enabled, as shown in the following [Quickstart](#quickstart) section, and then skip to [upload your custom app in Teams](#upload-your-app-in-teams).
+Alternately, you can use a basic single sign-on (SSO) **hello world** app that's already Microsoft 365 app enabled, as shown in the following [Quickstart](#quickstart) section, and then skip to [upload your custom app in Teams](#upload-your-custom-app-in-teams).
 
 ### Quickstart
 
