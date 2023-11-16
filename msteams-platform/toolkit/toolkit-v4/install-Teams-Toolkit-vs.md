@@ -54,7 +54,7 @@ The Visual Studio 2022 window appears.
 
 ::: zone pivot="visual-studio-v17-6"
 
-The Microsoft Azure Active Directory (Azure AD) manifest contain definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
+The Microsoft Entra manifest contain definitions of all the attributes of a Microsoft Entra application object in the Microsoft identity platform.
 
 ## Prerequisites
 
