@@ -40,7 +40,7 @@ The Test Tool provides the following advantages:
 
 ## Prerequisites
 
-Ensure you install the following tools for building and deploying your bots in Test Tool.
+Ensure you install the following tools for building and deploying your bots in Test Tool:
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
