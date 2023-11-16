@@ -209,7 +209,7 @@ items:
     1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If app upload is enabled for your Microsoft 365 account, Teams Toolkit displays **Sideloading enabled**.
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Teams Toolkit displays **Sideloading enabled**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
@@ -254,7 +254,7 @@ items:
 
         1. Checks for the following prerequisites:
           * You're logged in with a Microsoft 365 account.
-          * App upload is enabled for your Microsoft 365 account.
+          * Custom app upload is enabled for your Microsoft 365 account.
           * Supported Node.js version is installed.
           * Development certificate for localhost is installed.           
           * Port is available for the tab app.
@@ -292,7 +292,7 @@ items:
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
-    1. Select **Add** when prompted to upload the app onto Teams on your local machine.
+    1. Select **Add** when prompted to upload the custom app onto Teams on your local machine.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Screenshot shows to add the app to Teams.":::
 
@@ -310,7 +310,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled app upload in your Teams account. You can learn more about app upload in the prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
 
       </details>
 

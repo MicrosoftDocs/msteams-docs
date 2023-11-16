@@ -68,23 +68,23 @@ items:
 
     ## Set up your Teams development tenant
 
-    A **tenant** is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
+    A **tenant** is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
-    ### Check for app upload option
+    ### Check for custom app upload option
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as app upload. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > App upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
     
     Do you already have a tenant, and admin access? Let's check if you do!
 
-    Verify if you can upload apps in Teams:
+    Verify if you can upload a custom apps in Teams:
 
     1. Open Microsoft Teams, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the **Upload a custom app** option. If you see the option, app upload is enabled.
+    1. Look for the **Upload a custom app** option. If you see the option, custom app upload is enabled.
 
        :::image type="content" source="~/assets/images/sbs-csharp/custom-upload.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::     
        
@@ -214,7 +214,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled app upload in your Teams account. You can learn more about app upload in the [Prerequisites](sbs-gs-csharp.yml?tutorial-step=1) section.
+      To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the [Prerequisites](sbs-gs-csharp.yml?tutorial-step=1) section.
 
       </details>   
            
