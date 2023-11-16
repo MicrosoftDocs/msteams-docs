@@ -133,7 +133,7 @@ items:
 
     1. Select **Upload an app**.
 
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a customised app**. If you see the option, sideloading apps is enabled.
 
        :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the upload a custom app.":::
       
@@ -148,9 +148,9 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission.png" alt-text="Screenshot shows the add tab device permission":::               
 
-    1. Select **Device Permission Tab** to see the following output:
+    1. Select **Device permission tab** to see the following output:
      
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission-in-teams.png" alt-text="Screenshot shows the device permission tab" lightbox="../msteams-platform/assets/images/tab-device-permission/device-permission-tab.png"::: 
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/tab-device-permission-in-teams.png" alt-text="Screenshot shows the device permission tab." lightbox="../msteams-platform/assets/images/tab-device-permission/device-permission-tab.png"::: 
 
 
     # [Browser](#tab/Browser)
@@ -188,7 +188,7 @@ items:
 
     1. Select **Device Permission Tab** to see the following output:
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-browser-tab.png" alt-text="screenshot show the browser tab device permission." lightbox="../msteams-platform/assets/images/tab-device-permission/mobile-browser-tab-device.png":::
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/mobile-browser-tab.png" alt-text="screenshot shows the browser tab device permission." lightbox="../msteams-platform/assets/images/tab-device-permission/mobile-browser-tab-device.png":::
 
   
     # [Mobile](#tab/mobile)
@@ -209,7 +209,7 @@ items:
 
       Select **App Permission** icon to test the app on desktop.
         
-      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-test-your-app.png" alt-text="screenshot shows the desktop test your app." lightbox="../msteams-platform/assets/images/tab-device-permission/desktop-tab-device-permission.png":::                   
+      :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/desktop-teams-test-your-app.png" alt-text="screenshot shows the desktop screen of device permission tab." lightbox="../msteams-platform/assets/images/tab-device-permission/desktop-tab-device-permission.png":::                   
       
       The **Tab Device Permission** window appears to allow access to the permission requests.
 
