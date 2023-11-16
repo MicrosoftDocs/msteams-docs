@@ -16,7 +16,6 @@ After you create or upload your app, you can manage your apps in Developer Porta
 * [Advanced](#advanced)
 * [Develop](#develop)
 * [Publish](#publish)
-* [Manage rollouts](#manage-rollouts)
 
 ## Overview
 
@@ -59,7 +58,7 @@ In the **Configure** section, you can see the following components to manage and
   > [!NOTE]
   > Connector isn't available for Government Community Cloud (GCC) tenants.
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
-* **Single sign-on**: Bot registered on Microsoft Azure Active Directory (Azure AD) supports single sign-on (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under **Bot management**), then a bot doesn't support SSO, and you have to register your bot on Azure AD to support SSO. For a bot registered on Azure AD, add the **Application ID URI**. To get **Application ID URI** from Azure AD, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
+* **Single sign-on**: Bot registered on Microsoft Entra ID supports single sign-on (SSO). If a bot is registered on Bot Framework portal (or within the Developer Portal under **Bot management**), then a bot doesn't support SSO, and you have to register your bot on Microsoft Entra ID to support SSO. For a bot registered on Microsoft Entra ID, add the **Application ID URI**. To get **Application ID URI** from Microsoft Entra ID, see [how to use SSO authentication for bots](../../bots/how-to/authentication/auth-aad-sso-bots.md).
 * **Languages**: This section allows you to set up or change the language of your app.
 * **Domain**: This section allows you to add the domains to load your apps in the Teams client, such as *.example.com.
 
@@ -139,19 +138,6 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 * **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The Icon tab shows the icon used for your app.
 
-## Manage rollouts
-
-In the **Manage rollouts** section, you can see the following components to manage your app in Developer Portal:
-
-* **Pull request history**: This page allows you to create a new pull request and to control who gets app updates. For example, you can release an update to Microsoft employees to identify and fix bugs before releasing it to the public.
-
-* **Distribute your app**: This page allows you to create a request to distribute your app to specific audience in Teams. We recommend you not to distribute your app to different versions of Teams simultaneously. Instead, roll out gradually to higher order Teams versions. For help, see [aka.ms/teamsAppIngestion](https://domoreexp.visualstudio.com/Teamspace/_wiki/wikis/Teamspace.wiki/26278/Publishing-apps).
-
-* **Withdraw your app**: This page allows you to create a request to withdraw your app from a specific audience.
-
-   > [!NOTE]
-   > DevX team is allowed to withdraw your app from Teams generally available (GA) version.
-
 ## Test your app directly in Teams
 
 The Developer Portal provides options for testing and debugging your app:
@@ -165,7 +151,7 @@ The Developer Portal also includes tools to help you build key features of Teams
 
 * **Scene studio**: Design [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
-* **Identity platform management (Preview)**: Register your apps with Azure AD to help users sign in and provide access to APIs.
+* **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
 * **Teams store app validation**: Check your app package against the test cases that Microsoft uses to review your app.
 * **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
@@ -182,6 +168,9 @@ To add a bot:
     :::image type="content" source="../../assets/images/tdp/Add_new_bot.PNG" alt-text="Add a new bot by using bot management option." lightbox="../../assets/images/tdp/Add_new_bot.PNG":::
 
 From the Developer Portal, you can go to Bot Framework portal and configure your bot to update icon and other properties.
+
+  > [!NOTE]
+  > Bot ID doesn't support environment variables.
 
 ## See also
 

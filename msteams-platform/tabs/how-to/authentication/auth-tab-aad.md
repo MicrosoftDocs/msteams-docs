@@ -1,6 +1,6 @@
 ---
 title: Configure third party OAuth authentication
-description: Learn Teams authentication tabs Microsoft Azure AD, authentication in Teams and how to use it in tabs.
+description: Learn Teams authentication tabs Microsoft Entra ID, authentication in Teams and how to use it in tabs.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.date: 12/13/2022
@@ -10,12 +10,11 @@ ms.date: 12/13/2022
 > [!Note]
 > For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Microsoft Teams JavaScript client library (TeamsJS).
 
-There are many services that you may want to consume inside your Teams app, and most of those services require authentication and authorization to get access to the service. Services includes Facebook, Twitter, and Teams.
-Teams user profile information is stored in Azure AD using Microsoft Graph and this article will focus on authentication using Azure AD to get access to this information.
+Your Microsoft Teams app might need to interact with various services, such as Facebook, Twitter, and Teams. Most of these services necessitate authentication and authorization for access. Teams stores user profile information in Microsoft Entra ID using Microsoft Graph. This article primarily focuses on using Microsoft Entra ID for authentication to access this information.
 
-OAuth 2.0 is an open standard for authentication used by Azure AD and many other service providers. Understanding OAuth 2.0 is a prerequisite for working with authentication in Teams and Azure AD. The examples below use the OAuth 2.0 Implicit Grant flow. It reads the user's profile information from Azure AD and Microsoft Graph.
+OAuth 2.0, an open standard for authentication, is utilized by Microsoft Entra ID and numerous other service providers. Understanding of OAuth 2.0 is essential when dealing with authentication in Teams and Microsoft Entra ID. The examples provided employ the OAuth 2.0 Implicit Grant flow, which retrieves the user's profile information from Microsoft Entra ID and Microsoft Graph.
 
-The code in this article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs). It contains a static tab that requests an access token for Microsoft Graph, and shows the current user's basic profile information from Azure AD.
+The code in the article comes from the Teams sample app [Microsoft Teams Authentication Sample (Node)](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-auth/nodejs). It contains a static tab that requests an access token for Microsoft Graph, and shows the current user's basic profile information from Microsoft Entra ID.
 
 For overview of authentication flow for tabs, see [Authentication flow in tabs](~/tabs/how-to/authentication/auth-flow-tab.md).
 
@@ -23,30 +22,35 @@ Authentication flow in tabs differs from authentication flow in bots.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-## Configure your app to use Azure AD as an identity provider
+<a name='configure-your-app-to-use-azure-ad-as-an-identity-provider'></a>
 
-Identity providers that support OAuth 2.0 don't authenticate requests from unknown applications. You must register the applications ahead of time. To do this with Azure AD, follow these steps:
+## Configure your app to use Microsoft Entra ID as an identity provider
+
+OAuth 2.0 supporting identity providers do not authenticate requests from unregistered applications. Therefore, it's essential to register your applications in advance. For registering an application with Microsoft Entra ID, follow these steps:
 
 1. Open the [Application Registration Portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_RegisteredApps/ApplicationsListBlade).
 
 2. Select your app to view its properties, or select the "New Registration" button. Find the **Redirect URI** section for the app.
 
-3. Select **Web** from the dropdown menu. Update the URL to your authentication endpoint. For the TypeScript/Node.js and C# sample apps on GitHub, the redirect URLs will be similar to the following:
+3. Select **Web** from the dropdown menu and update the URL to your authentication endpoint. In the TypeScript/Node.js and C# sample apps available on GitHub, the redirect URLs follow a similar pattern:
 
     Redirect URLs: `https://<hostname>/bot-auth/simple-start`
 
 Replace `<hostname>` with your actual host. This host can be a dedicated hosting site such as Azure, Glitch, or a ngrok tunnel to localhost on your development machine, such as `abcd1234.ngrok.io`. If you don't have this information, ensure that you've completed or hosted your app (or the sample app). Resume this process when you have this information.
 
 > [!NOTE]
-> You can choose any third party OAuth provider, such as LinkedIn, Google, and others. The process to enable authentication for these providers is similar to using Azure AD as a third party OAuth provider. For more information on using any third party OAuth provider, visit the website of the particular provider.
+> You can choose any third party OAuth provider, such as LinkedIn, Google, and others. The process to enable authentication for these providers is similar to using Microsoft Entra ID as a third party OAuth provider. For more information on using any third party OAuth provider, visit the website of the particular provider.
 
 ## Initiate authentication flow
 
-Authentication flow should be triggered by a user action. You shouldn't open the authentication pop-up automatically because this is likely to trigger the browser's pop-up blocker and confuse the user.
+> [!NOTE]
+> If **Experimental third-party storage partitioning** is enabled, the third-party authentication fails. The app prompts for authentication repeatedly as the values aren’t stored locally.
+
+Trigger the authentication flow by a user action. Avoid opening the authentication pop-up automatically, as this is likely to trigger the browser's pop-up blocker and confuse the user.
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Azure AD, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
+Microsoft Entra ID, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -90,15 +94,15 @@ microsoftTeams.authentication.authenticate({
 
 ### Notes
 
-* The URL you pass to `authenticate()` is the start page of the authentication flow. In this example that is `/tab-auth/simple-start`. This should match what you registered in the [Azure AD Application Registration Portal](https://apps.dev.microsoft.com).
+* The URL you pass to `authenticate()` is the start page of the authentication flow. In this example that is `/tab-auth/simple-start`. This should match what you registered in the [Microsoft Entra Application Registration Portal](https://apps.dev.microsoft.com).
 
-* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do so will result in an empty pop-up.
+* Authentication flow must start on a page that's on your domain. This domain should also be listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) section of the manifest. Failure to do results in an empty pop-up.
 
-* Failing to use `authenticate()` will cause a problem with the pop-up not closing at the end of the sign-in process.
+* If you fail to use `authenticate()`, the pop-up may not close at the end of the sign-in process, causing a problem.
 
 ## Navigate to the authorization page from your pop-up page
 
-When your pop-up page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of the page is to redirect to your identity provider so the user can sign-in. This redirection can be done on the server side using HTTP 302, but in this case it's done on the client side using a call to `window.location.assign()`. This also allows `app.getContext()` to be used to retrieve hinting information, which can be passed to Azure AD.
+When your pop-up page (`/tab-auth/simple-start`) is displayed the following code is run. The main goal of the page is to redirect to your identity provider so the user can sign-in. This redirection can be done on the server side using HTTP 302, but in this case it's done on the client side using a call to `window.location.assign()`. This also allows `app.getContext()` to be used to retrieve hinting information, which can be passed to Microsoft Entra ID.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -161,16 +165,16 @@ After the user completes authorization, the user is redirected to the callback p
 
 ### Notes
 
-* See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Azure AD sign in, which means the user might need to type less. Remember that you shouldn't use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
+* See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Microsoft Entra sign-in, which means the user might need to type less. Remember that you shouldn't use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
 * Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `app.getContext()` function in the Microsoft Teams JavaScript client library (TeamsJS). A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 * The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback doesn't match the parameter you sent during the call, then the return call isn't verified and should be terminated.
 * It isn't necessary to include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
 
 ## The callback page
 
-In the last section, you called the Azure AD authorization service and passed in user and app information so that Azure AD could present the user with its own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when Azure AD calls the  callback page that you provided (`/tab-auth/simple-end`).
+In the last section, you called the Microsoft Entra authorization service and passed in user and app information so that Microsoft Entra ID could present the user with its own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when Microsoft Entra ID calls the  callback page that you provided (`/tab-auth/simple-end`).
 
-In this page, you need to determine success or failure based on the information returned by Azure AD and call `authentication.notifySuccess()` or `authentication.notifyFailure()`. If the login was successful, you'll have access to service resources.
+In this page, you need to determine success or failure based on the information returned by Microsoft Entra ID and call `authentication.notifySuccess()` or `authentication.notifyFailure()`. If the login was successful, you have access to service resources.
 
 ```javascript
 // Split the key-value pairs passed from Azure AD
@@ -206,7 +210,7 @@ if (hashParams["error"]) {
 }
 ```
 
-This code parses the key-value pairs received from Azure AD in `window.location.hash` using the `getHashParameters()` helper function. If it finds an `access_token`, and the `state` value is the same as the one provided at the start of the authentication flow, it returns the access token to the tab by calling `notifySuccess()`; otherwise it reports an error with `notifyFailure()`.
+This code parses the key-value pairs received from Microsoft Entra ID in `window.location.hash` using the `getHashParameters()` helper function. If it finds an `access_token`, and the `state` value is the same as the one provided at the start of the authentication flow, it returns the access token to the tab by calling `notifySuccess()`; otherwise it reports an error with `notifyFailure()`.
 
 ### Notes
 
@@ -222,17 +226,17 @@ Your app can set its own session cookie so that the user need not sign in again 
 > [!NOTE]
 >
 > * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
-> * To get the correct token for Microsoft Teams Free and guest users, it is important that the apps use tenant specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can get tenantId from the bot message or tab context. If the apps use `https://login.microsoftonline.com/common`, the users will get incorrect tokens and will log on to the "home" tenant instead of the tenant that they are currently signed into.
+> * To obtain the appropriate token for Microsoft Teams Free and guest users, ensure your apps utilize the tenant-specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can acquire the tenantId from the bot message or tab context. If your apps use `https://login.microsoftonline.com/common`, users might receive incorrect tokens, causing them to log into the "home" tenant rather than the tenant they are currently signed into.
 
 For more information on single sign-on (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 
 ## Code sample
 
-Sample code showing the tab authentication process using Azure AD:
+Sample code showing the tab authentication process using Microsoft Entra ID:
 
 | Sample name | Description | .NET| Node.js | Manifest |
 |---------------|---------------|------|--------------|--------------|
-| Tab SSO |This sample app shows Azure AD SSO for tabs in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)| NA |
+| Tab SSO |This sample app shows Microsoft Entra SSO for tabs in Teams.| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)| NA |
 | Tab, Bot, and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot, and ME- search, action, link unfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/demo-manifest)|
 
 ## See also

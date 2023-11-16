@@ -13,14 +13,13 @@ Before you create your Teams app project, ensure that the prerequisites are in p
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
-* [Sideload permission](tools-prerequisites.md)
 * [Verify sideloading permission](#verify-sideloading-permission)
 
-## Basic requirements to build your Teams app
+## Requirements to build your Teams app
 
 Ensure the following requirements are met before you start building your Teams app:
 
-| &nbsp; | Basic requirements | For using| For environment type|
+| &nbsp; | Requirements | For using| For environment type|
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; | &nbsp; |
    | &nbsp; | Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SharePoint Framework (SPFx)|
@@ -39,7 +38,7 @@ Ensure the following requirements are met before you start building your Teams a
 
 Ensure the following requirements are met before you start building your Teams app:
 
-| &nbsp; | Basic requirements | For using| For environment type|
+| &nbsp; | Requirements | For using| For environment type|
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; | &nbsp; |
    | &nbsp; | [Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SPFx |
@@ -100,7 +99,7 @@ You can sign up for the developer program using one of the following account typ
 
        This account provides access to all small, medium, and enterprise business-level Microsoft cloud services. The services include Azure, Microsoft Intune, and Microsoft 365. 
 
-       When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Microsoft Azure Active Directory (Azure AD) to represent your organization.
+       When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Microsoft Entra ID to represent your organization.
 
     :::column-end:::
     :::column span="1":::
@@ -170,11 +169,11 @@ You can use this method to verify sideloading permission only after you have cre
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-app_1.png" alt-text="Screenshot showing the options to upload an app highlighted in red.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-an-app.png" alt-text="Screenshot shows the option to upload an app in Teams.":::
 
-1. Check if you can see the option **Upload a custom app** as you can see in the following image:
+1. Check if you can see the option **Upload a customised app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-custom-app1_1.png" alt-text="Screenshot showing the Upload a custom app option highlighted in red.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-customised-app.png" alt-text="Screenshot shows the option to Upload a customised app in Teams.":::
 
 </details>
 

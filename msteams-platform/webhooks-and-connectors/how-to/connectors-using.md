@@ -41,7 +41,7 @@ For more information on connector card actions, see [Actions](/outlook/actionabl
 > [!NOTE]
 >
 > * Specifying `compact` for the `style` property in Microsoft Teams is the same as specifying `normal` for the `style` property in Microsoft Outlook.
-> * For the HttpPOST action, the bearer token is included with the requests. This token includes the Microsoft Azure Active Directory (Azure AD) identity of the Microsoft 365 user who took the action.
+> * For the HttpPOST action, the bearer token is included with the requests. This token includes the Microsoft Entra identity of the Microsoft 365 user who took the action.
 
 ## Send a message through Incoming Webhook or connector for Microsoft 365 Groups
 
