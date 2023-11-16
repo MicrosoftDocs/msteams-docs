@@ -192,7 +192,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and have uploaded 
 
 <details>
 
-<summary> How can I get my existing Teams message extension to work with Microsoft 365 Chat? </summary>
+<summary> How can I get my existing Teams message extension to work with Microsoft Copilot for Microsoft 365? </summary>
 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.
