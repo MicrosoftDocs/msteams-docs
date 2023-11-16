@@ -191,17 +191,18 @@ To trigger the message extension through Microsoft 365 Chat, follow these steps:
 
 Before you begin, ensure that you set the environment variable **DEVELOP_COPILOT_PLUGIN** to **true**. To set the environment variables, follow these steps:
 
-1. On your Computer, select the **Windows** + **X** key.
-1. Select System.
-1. Under About > Device specifications, select **Advanced system settings**.
-1. Under System Properties, select **Environment Variables..**.
-1. Under User variables, select **New..**. A New User Variable dialog opens.
+1. On your computer, select the **Windows** + **X** key.
+1. Select **System**.
+1. Under **About** > **Device specifications**, select **Advanced system settings**.
+1. Under **System Properties**, select **Environment Variables..**.
+1. Under **User variables**, select **New..**. A **New User Variable dialog** opens.
 1. Update the following fields:
     1. **Variable name**: DEVELOP_COPILOT_PLUGIN
     1. **Variable value**: true
 1. Select **OK**.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-plugin-CLI-add-env-variable.png" alt-text="Screenshot shows the Variable name and Variable value fields in the New User Variable dialog.":::
+
 To create a bot-based search message extension plugin using Teams Toolkit CLI, follow these steps:
 
 1. Go to **Command Prompt**.
