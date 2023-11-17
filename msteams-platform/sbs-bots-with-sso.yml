@@ -42,19 +42,23 @@ items:
 
     ## Set up your Teams development tenant
 
-    A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+    A tenant is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also upload and test the custom app.
 
-    ### Enable sideloading option
+    ### Check for custom app upload option
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
      > [!NOTE]
-     > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+     > Custom app upload is necessary for previewing and testing apps in Teams local environment. Enable app upload to preview and test your app in Teams locally.
 
-    1. In the Teams client, select **Apps**.
+    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+    To verify custom upload apps in Teams:
+
+    1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**
-    1. Look for the option **Upload a custom app**.  If the option is visible, you've enabled sideloading apps.
+    1. Look for the option **Upload a custom app**. If you see the option, custom app upload is enabled.
 
         :::image type="content" source="~/assets/images/bots/upload-a-custom-app-sso-bot-authentication.png" alt-text="Screenshot showing the Teams apps, Manage your apps, Upload an app and Upload a custom app highlighted in red.":::
 

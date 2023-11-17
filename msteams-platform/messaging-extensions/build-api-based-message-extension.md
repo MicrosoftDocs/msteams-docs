@@ -243,7 +243,7 @@ To build am API-based message extension using Visual Studio Code, follow these s
 1. Enter the following command:
 
    ```
-   npm install -g @microsoft/teamsfx-cli@2.0.3-beta.2023101103.0
+   npm install -g @microsoft/teamsfx-cli@beta
    ```
 
 1. Type `teamsfx new` in the terminal
