@@ -12,6 +12,7 @@ ms.date: 11/14/2023
 
 > [!IMPORTANT]
 > Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+> Ensure that you apply to the [Microsoft 365 Developer TAP](https://developer.microsoft.com/microsoft-365/tap) for a chance to receive early access to the first allocation of Copilot licenses.
 
 Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
 
@@ -20,7 +21,7 @@ Microsoft 365 plugins provide integration with various  Microsoft 365 products, 
 
 We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. Message extensions should support one or more search commands, as these are recognized by Copilot for Microsoft 365 as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams,Microsoft Copilot for Microsoft 365 and Microsoft 365 Chat.":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams, Microsoft Copilot for Microsoft 365 and M365 Chat.":::
 
 ## Mandatory requirements
 
@@ -34,11 +35,11 @@ The requirements for building message extension plugins for Copilot for Microsof
 
 ## Define descriptions
 
-A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Microsoft 365 Chat.
+A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Microsoft 365 Chat (M365 Chat).
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Microsoft 365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in M365 Chat.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Microsoft 365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in M365 Chat.":::
 
 Ensure that you adhere to the description guidelines listed in the following table:
 
@@ -382,9 +383,9 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 ## Compound utterances
 
 > [!NOTE]
-> Search through task module isn't supported in Microsoft 365 Chat.
+> Search through task module isn't supported in M365 Chat.
 
-For Microsoft 365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, we recommend that you expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in app manifest (previously called Teams app manifest).
+For M365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, we recommend that you expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in app manifest (previously called Teams app manifest).
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
@@ -394,7 +395,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Chat app response contains Preview and Content in the same response. ":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing M365 Chat app response contains Preview and Content in the same response. ":::
 
   <details><summary>Adaptive Card response example</summary>
 
@@ -503,7 +504,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
   * `Action.Submit`: Opens a Task module or Stage view using type invoke in data object.
 
-  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in the Microsoft 365 chat.":::
+  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in the M365 chat.":::
 
 * If a user can change any information on the card through task module, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the metadata, which allows cards to be easily copied from one hub to another. [*Recommended*]
@@ -518,7 +519,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 | Manifest version | App manifest version must be 1.13 or later. [*Mandatory*] |
 |Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-bot).[*Mandatory*]|
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if M365 Chat calls a plugin 1000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to ISV apps and not apps built for your organization. [*Mandatory*] |
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
