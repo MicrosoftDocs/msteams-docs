@@ -72,7 +72,7 @@ You can download the complete set of badge images (in PNG and PDF format) from t
 
 * If you aren't registered as an app developer in Partner Center, Microsoft grants you a worldwide, nonexclusive, nontransferable, royalty-free license to use the badges solely as described in the Teams Store Badge Guidelines. Microsoft may change these guidelines, but if it does, Microsoft will use reasonable means to redirect you to any new URLs where these specifications are posted. Microsoft reserves all rights not expressly granted herein.
 
-* Follow the logo usage specifications described in the [**Teams Store Badge Guidelines (PDF, English)**](https://github.com/MicrosoftDocs/msteams-docs/blob/doc-improvement-store-marketing-guidelines/msteams-platform/assets/downloads/MicrosoftTeams-Store-Marketing-Guidelines.pdf).
+* Follow the logo usage specifications described in the [**Teams Store Badge Guidelines (PDF, English)**](https://github.com/MicrosoftDocs/msteams-docs/blob/main/msteams-platform/assets/downloads/MicrosoftTeams-Store-Marketing-Guidelines.pdf).
 
 Microsoft is the sole owner of the Microsoft Marks and associated goodwill, and the sole beneficiary of the goodwill associated with your use of the Microsoft Marks. Microsoft may revoke this license at any time and at its sole discretion.
 
