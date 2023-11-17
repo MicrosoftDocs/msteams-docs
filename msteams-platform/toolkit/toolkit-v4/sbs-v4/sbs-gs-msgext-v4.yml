@@ -128,8 +128,7 @@ items:
     1. Select **Upload an app**.
     1. Look for the option to **Upload a customised app**. If the option is visible, you've enabled custom app upload.
 
-        :::image type="content" source="toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/upload-custom-app-v4" alt-text="Screenshot shows the option to Upload a customised app in Teams.":::
-        :::image type="content" source="assets/images/sbs-create-a-new-dashboard/dashboard1.png" alt-text="Screenshot shows the final output of dashboard.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/upload-custom-app-v4.png" alt-text="Screenshot shows the option to Upload a customised app in Teams.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, talk to your Teams administrator.
