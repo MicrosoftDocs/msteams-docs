@@ -30,7 +30,7 @@ The Test Tool provides the following advantages:
 
 * **Rapid inner-loop iterations**: Optimizes the process of making changes to the app design and bot logic without having to redeploy the bot to the cloud.
 
-* **Mock data and activities**: The Test Tool makes it easy to accomplish a test for complex scenarios such as **Send a welcome message when a new member joins the channel** by using mock data and built-in and custom activity triggers.
+* **Mock data and activities**: The Test Tool makes it easy to test complex scenarios, such as sending a welcome message when a new member joins the channel, using mock data and activity triggers.
 
 * **Reliable**: The Test Tool is reliable as the bot's Adaptive Card utilizes the same rendering technology as in Teams.
 
@@ -48,14 +48,14 @@ Ensure you install the following tools for building and deploying your bots in T
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
-## Understand how the Test Tool works
+## Understand the Test Tool
 
 The Test Tool is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams Web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
 
 To use a Teams bot on the Test Tool, you need to provide:
 
-* The bot message endpoint is the URL that links the Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
-* (Optional) A configuration file to inform the Test Tool about your customized contextual information in Teams. The file is named **teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
+* Message endpoint: A bot message endpoint is the URL that links the Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
+* Configuration file (Optional): A configuration file informs the Test Tool about your customized contextual information in Teams. The file is named **teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
 
 ## Test Tool experience in Teams Toolkit
 
@@ -90,7 +90,7 @@ To use a Teams bot on the Test Tool, you need to provide:
         :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
     1. Select the location for project workspace.
-    1. Select the **Select Folder**.
+    1. Select **Select Folder**.
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
 
@@ -112,21 +112,23 @@ To use a Teams bot on the Test Tool, you need to provide:
 
 Similarly, you can use the other commands in your bot to test the bot experience.
 
-## Predefined activities
+## Activity triggers
 
-The Test Tool provides predefined activities that you can use to test the functionalities of your bot.
+The Test Tool provides predefined activity triggers to test the functionalities of your bot.
 
 | Category | Activity | Handler |
 | --- | --- | --- |
-| Trigger Installation Update Activity | Install bot <br><br> Uninstall bot | `onInstallationUpdate` <br> `onInstallationUpdateAdded` <br> `onInstallationUpdate` <br> `onInstallationUpdateRemove`|
-| Trigger Conversation Update Activity | Add user <br> Add bot <br> Add channel | `onMembersAdded`<br> `onTeamsMembersAddedEvent` <br> `onTeamsChannelRenamedEvent` |
-| | Remove user <br><br> Remove bot <br><br> Remove channel <br> Remove team | `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br> `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br> `onTeamsChannelDeletedEvent` <br> `onTeamsTeamDeletedEvent` |
-| | Rename channel <br> Rename team | `onTeamsChannelRenamedEvent` <br> `onTeamsTeamRenamedEvent` |
+| Trigger Installation Update Activity | Install bot <br><br><br> Uninstall bot | `onInstallationUpdate` <br> `onInstallationUpdateAdded` <br><br> `onInstallationUpdate` <br> `onInstallationUpdateRemove`|
+| Trigger Conversation Update Activity | Add user <br><br> Add bot <br><br> Add channel | `onMembersAdded`<br><br> `onTeamsMembersAddedEvent` <br><br> `onTeamsChannelRenamedEvent` |
+| | Remove user <br><br><br> Remove bot <br><br><br> Remove channel <br><br> Remove team | `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onTeamsChannelDeletedEvent` <br><br> `onTeamsTeamDeletedEvent` |
+| | Rename channel <br><br> Rename team | `onTeamsChannelRenamedEvent` <br><br> `onTeamsTeamRenamedEvent` |
 
 > [!NOTE]
 > All types of activities aren't available in all scopes. For example, you can't add or remove a channel in a personal chat or a group chat.
 
-The following example explains the **Add user** handler:
+Activity triggers are available in the **Mock an Activity** menu in the Test Tool.
+
+To mock an **Add user** activity, follow these steps:
 
 1. In the Test Tool, go to **Mock an Activity** and select **Add user**.
 
@@ -276,13 +278,13 @@ To comprehensively test this bot in the Test Tool, it's crucial to update the co
 1. Save the file and select **F5** to debug in Test Tool.
 
 > [!NOTE]
-> When you edit the configuration file in Visual Studio Code, Intellisense will automatically update the property names and warn you if you enter invalid values.
+> When you edit the configuration file in Visual Studio Code, Intellisense automatically updates the property names and warn you if you enter invalid values.
 
 It's vital to recognize that updating the configuration file has three major impacts:
 
-* It influences the responses obtained from Bot Framework Connector APIs (example: `TeamsInfo.getPagedMembers()`).
-* It shapes the details in the activity payload (example: `activity.recipient`).
-* It impacts the user interface in the Test Tool (example: group chat names).
+* It influences the responses obtained from Bot Framework Connector APIs, For example, `TeamsInfo.getPagedMembers()`.
+* It shapes the details in the activity payload For example, `activity.recipient`.
+* It impacts the user interface in the Test Tool For example, group chat names.
 
 ## Limitations
 
