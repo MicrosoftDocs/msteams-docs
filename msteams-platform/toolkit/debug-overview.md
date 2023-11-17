@@ -21,7 +21,7 @@ Teams Toolkit in Microsoft Visual Studio Code automates the debug process. You c
 
 During the debug process:
 
-* Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app.
+* Teams Toolkit automatically starts app services, launches debuggers, and uploads the Teams app.
 * Teams Toolkit checks the prerequisites during the debug background process.
 * Your Teams app is available for preview in Teams web client locally after debugging.
 * You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
@@ -330,7 +330,7 @@ Teams Toolkit in Microsoft Visual Studio Code automates the debug process. You c
 
 During the debug process:
 
-* Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app.
+* Teams Toolkit automatically starts app services, launches debuggers, and uploads the Teams app.
 * Teams Toolkit checks the prerequisites during the debug background process.
 * Your Teams app is available for preview in Teams web client locally after debugging.
 * You can also customize debug settings to use your bot endpoints, development certificate, or debug partial component to load your configured app.
