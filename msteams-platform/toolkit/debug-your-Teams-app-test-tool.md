@@ -16,7 +16,7 @@ ms.date: 11/16/2023
 
 The Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use the Test Tool.
 
-The following image shows an AI Chat Bot displaying an [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card) with a list of commands in the Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
+The following image shows an AI Chat Bot displaying an Adaptive Card with a list of commands in the Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
@@ -411,43 +411,15 @@ Ensure you have an existing bot created using Teams Toolkit. To debug your bot w
     TEAMSAPPTESTER_PORT=56150
     ```
 
-    If you have custom environment variables, set their values in **.env.testtool** or **.env.testtool.user**.
+1. If you have custom environment variables, set their values in **.env.testtool** or **.env.testtool.user**.
 
-1. Add either an OpenAI key or Azure OpenAI key endpoint in **.env.testtool.user**.
+1. Add either an OpenAI key or Azure OpenAI key and endpoint in **.env.testtool.user**.
 
     ```json
     # SECRET_OPENAI_API_KEY=***********
     SECRET_AZURE_OPENAI_API_KEY=***********
     SECRET_AZURE_OPENAI_ENDPOINT=<https://your-openai-service-name.openai.azure.com/>
     ```
-
-<!-- 1. Go to **EXPLORER** Add **teamsapp.testtool.yml** to npm install and pass the environment variables using the `file/createOrUpdateEnvironmentFile` action.
-
-    ```yaml
-    # yaml-language-server: $schema=<https://aka.ms/teams-toolkit/v1.3/yaml.schema.json>
-    # Visit <https://aka.ms/teamsfx-v5.0-guide> for details on this file
-    # Visit <https://aka.ms/teamsfx-actions> for details on actions
-    version: v1.3
-    deploy:
-    # Install development tool(s)
-    * uses: devTool/install
-        with:
-          testTool:
-            version: ~0.1.0-alpha 
-            symlinkDir: ./devTools/teamsapptester 
-    # Run npm command
-    * uses: cli/runNpmCommand
-        with:
-          args: install --no-audit
-    # Generate runtime environment variables
-    * uses: file/createOrUpdateEnvironmentFile
-        with:
-          target: ./.localConfigs.testTool
-          envs:
-            # OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}} 
-            AZURE_OPENAI_API_KEY: ${{SECRET_AZURE_OPENAI_API_KEY}} 
-            AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}} 
-    ```-->
 
 1. Go to **package.json** and add the following code under the `scripts` property:
 
