@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 November**
 
+* **November 17, 2023**: Terminology update. Sideload is referred to as upload a custom app.
 * **November 17, 2023**: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps.](toolkit/debug-your-Teams-app-test-tool.md)
 * **November 14, 2023**: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
 * **November 14, 2023**: Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID.
