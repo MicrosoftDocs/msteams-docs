@@ -16,7 +16,7 @@ ms.date: 11/16/2023
 
 The Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use the Test Tool.
 
-The following image shows an AI Chat Bot displaying an Adaptive Card with a list of commands in the Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
+The following image shows a [sample app](#code-sample) displaying an Adaptive Card with a list of commands in the Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
