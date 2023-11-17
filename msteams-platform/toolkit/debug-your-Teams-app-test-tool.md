@@ -89,7 +89,7 @@ To use a Teams bot on the Test Tool, you need to provide:
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
 
-    1. Select the location for project workspace.
+    1. Select the location for the project workspace.
     1. Select **Select Folder**.
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
@@ -170,7 +170,7 @@ You can use **Custom activity** to customize activities, such as `reactionsAdded
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
 
-   Bot sends a `onReactionsAdded` handler in response.
+   Bot sends an `onReactionsAdded` handler in response.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
 
@@ -310,7 +310,7 @@ It's vital to recognize that updating the configuration file has three major imp
    | --- | --- | --- |
    | Basic sending / receiving messages | Available | Available |
    | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
-   | Sending Teams events | Available (mocking activity) |Available |
+   | Sending Teams events | Available (mock activity) |Available |
    | Typing indicator | Not Available | Available |
    | Tab, Messaging Extension, Task Module, Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
 
@@ -460,7 +460,7 @@ The Test Tool shows a warning message in conversation and log panel when it dete
 <details>
 <summary>Does Microsoft recommend using only the Test Tool for testing bot applications?</summary>
 
-No. We always recommend users to test their bot application in the Teams client before moving the application to production environment.
+No. We always recommend users to test their bot application in the Teams client before moving the application to the production environment.
 <br>
 &nbsp;
 </details>
