@@ -870,55 +870,55 @@
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/deploy-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/deploy"
+        "redirect_url": "/microsoftteams/platform/toolkit/deploy"
       },    
       {
         "source_path": "msteams-platform/toolkit/add-capability.md",
-        "redirect_url": "/msteams-platform/toolkit/toolkit-v4/add-capability-v4"
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/add-capability-v4"
       },     
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/provision-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/provision"
+        "redirect_url": "/microsoftteams/platform/toolkit/provision"
       },   
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/install-Teams-Toolkit-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/install-Teams-Toolkit"
+        "redirect_url": "/microsoftteams/platform//toolkit/install-Teams-Toolkit"
       }, 
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/explore-Teams-Toolkit-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/explore-Teams-Toolkit"
+        "redirect_url": "/microsoftteams/platform/toolkit/explore-Teams-Toolkit"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/debug-overview-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/debug-overview"
+        "redirect_url": "/microsoftteams/platform/toolkit/debug-overview"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/debug-local-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/debug-local"
+        "redirect_url": "/microsoftteams/platform/toolkit/debug-local"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/create-new-project-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/create-new-project"
+        "redirect_url": "/microsoftteams/platform/toolkit/create-new-project"
       },   
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/add-single-sign-on-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/add-single-sign-on"
+        "redirect_url": "/microsoftteams/platform/toolkit/add-single-sign-on"
       }, 
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/TeamsFx-preview-and-customize-app-manifest"
+        "redirect_url": "/microsoftteams/platform/toolkit/TeamsFx-preview-and-customize-app-manifest"
       },
       {
         "source_path": "msteams-platform/toolkit/add-How-to guides-v5.md",
-        "redirect_url": "/msteams-platform/toolkit/add-How-to-guides-v5"
+        "redirect_url": "/microsoftteams/platform/toolkit/add-How-to-guides-v5"
       },
       {
         "source_path": "msteams-platform/copilot/how-to-extend-copilot.md",
-        "redirect_url": "/msteams-platform/messaging-extensions/how-to-extend-copilot"
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to-extend-copilot"
       }
     ]
 }
