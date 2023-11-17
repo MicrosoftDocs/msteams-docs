@@ -12,7 +12,6 @@ ms.date: 11/14/2023
 
 > [!NOTE]
 >
-> * Copilot for Microsoft 365 is in private preview. Ensure that you apply to the [Microsoft 365 Developer TAP](https://developer.microsoft.com/microsoft-365/tap) for a chance to receive early access to the first allocation of Copilot licenses.
 > * Bot-based search message extension plugin is available in [**public developer preview**](../resources/dev-preview/developer-preview-intro.md).
 > * Only bot-based search message extension can be extended as a plugin for Copilot for Microsoft 365.
 

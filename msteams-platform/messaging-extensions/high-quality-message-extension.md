@@ -12,7 +12,6 @@ ms.date: 11/14/2023
 
 > [!IMPORTANT]
 > Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
-> Ensure that you apply to the [Microsoft 365 Developer TAP](https://developer.microsoft.com/microsoft-365/tap) for a chance to receive early access to the first allocation of Copilot licenses.
 
 Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
 
