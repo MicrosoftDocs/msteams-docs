@@ -20,7 +20,7 @@ Action-based message extensions allow your users to trigger actions in external 
 To initiate actions from a message extension, set the `type` parameter to `action`. A single message extension can have up to 10 different commands and include multiple search-based and action-based commands.
 
  > [!NOTE]
- >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you sideload an app.
+ >`justInTimeInstall` functions when you upload an app to the app catalog but fails when you upload a custom app.
 
 ### Complete app manifest example
 
@@ -309,7 +309,7 @@ Just like in the adaptive card flow, your service sends a `fetchTask` event and 
 
 ### Request to install your conversational bot
 
-If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module to get more context for your task module. For example, you may need to fetch the roster to populate a people picker control, or the list of channels in a team.
+If your app contains a conversation bot, ensure it's installed in the conversation before loading your task module to get more context for your task module. For example, you might need to fetch the roster to populate a people picker control, or the list of channels in a team.
 
 To facilitate this flow, when your message extension first receives the `composeExtensions/fetchTask` invoke, check to see if your bot is installed in the current context. You can get this, by attempting the get roster call. For example, if your bot isn't installed, you return an Adaptive Card with an action that requests the user to install your bot. The user needs to have permission to install apps in that location. If they can’t install, the message prompts to contact the administrator.
 
@@ -437,11 +437,10 @@ Respond to the submit action by inserting a message with an Adaptive Card into t
 
 1. The user selects the message extension to trigger the task module.
 1. The user uses the task module to configure the poll.
-1. After submitting the configuration task module, the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
+1. After you submit the configuration task module, the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
 1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` adds the bot.
 1. Interacting with the adaptive card changes the message before sending it.
-1. Once the user selects `Send`, the bot will post the message to the channel.
-
+1. Once the user selects `Send`, the bot posts the message to the channel.
 
 > [!NOTE]
 > The `activityPreview` must contain a `message` activity with exactly one adaptive card attachment.
