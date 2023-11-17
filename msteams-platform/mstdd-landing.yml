@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Teams App Test Tool streamlines the debug process of bot apps
+        url: toolkit/debug-your-Teams-app-test-tool.md
       - text: Build bot-based message extension plugin
         url: messaging-extensions/build-bot-based-plugin.md
       - text: Guidelines to extend bot-based message extension as plugin 

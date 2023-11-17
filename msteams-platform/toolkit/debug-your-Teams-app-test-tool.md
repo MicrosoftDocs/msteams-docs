@@ -22,7 +22,7 @@ The following image shows a sample app displaying an Adaptive Card with a list o
 
 The following are the advantages of Test Tool:
 
-* **Sandbox environment**: The sandbox environment of Test Tool emulates the behavior, look and, user experience of Teams.
+* **Sandbox environment**: The sandbox environment of Test Tool emulates the behavior, look, and user experience of Teams.
 
 * **Tunneling**: An external tunnel service isn't necessary as Test Tool runs on a local server that your bot can communicate with.
 
@@ -34,7 +34,7 @@ The following are the advantages of Test Tool:
 
 * **Reliable**: Test Tool is reliable as the bot's Adaptive Card utilizes the same rendering technology as in Teams.
 
-* **Integration with existing Teams bot applications**: Test Tool integrates effortlessly with existing Teams bot applications built with [Bot Framework SDK](https://dev.botframework.com/).
+* **Integration with existing Teams bot applications**: Test Tool integrates effortlessly with existing Teams bot applications built with Bot Framework SDK.
 
 * **Support for different scopes**: Test Tool supports testing in personal, team, and group chat scopes.
 
@@ -50,7 +50,7 @@ Ensure you install the following tools for building and deploying your bots in T
 
 ## Understand Test Tool
 
-Test Tool is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams Web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
+Test Tool is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
 
 To use a Teams bot on Test Tool, you need to provide:
 
@@ -85,7 +85,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
 
-    You can also change the default location by the following steps:
+    To change the default location, follow these steps:
 
     1. Select **Browse**.
 
@@ -484,3 +484,4 @@ No. We always recommend users to test their bot application in the Teams client 
 * [Install Teams Toolkit](install-Teams-Toolkit.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [Bot Framework SDK](https://dev.botframework.com/)
