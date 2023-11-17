@@ -133,7 +133,7 @@ Test Tool provides predefined activity triggers to test the functionalities of y
 > [!NOTE]
 > All types of activities aren't available in all scopes. For example, you can't add or remove a channel in a personal chat or a group chat.
 
-Prefedined activity triggers are available in the **Mock an Activity** menu in Test Tool.
+Predefined activity triggers are available in the **Mock an Activity** menu in Test Tool.
 
 To mock an **Add user** activity, follow these steps:
 
