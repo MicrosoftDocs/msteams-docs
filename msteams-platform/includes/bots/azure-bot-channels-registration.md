@@ -26,7 +26,7 @@ ms.date: 06/02/2022
    
 1. In the displayed **App registration** window, select the **New registration** tab in the upper left.
 1. Enter the name of the bot application you're registering, we used *BotTeamsAuth* (you need to select your own unique name).
-1. For the **Supported account types**, select *Accounts in any organizational directory (Any Azure AD directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*.
+1. For the **Supported account types**, select *Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*.
 1. Select the **Register** button. Once completed, Azure displays the *Overview* page for the application.
 1. Copy and save to a file the **Application (client) ID** value.
 1. In the left panel, select **Certificate and secrets**.
