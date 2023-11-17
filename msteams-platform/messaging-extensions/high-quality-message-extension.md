@@ -1,6 +1,6 @@
 ---
 title: Bot-based message extension plugin guidelines
-description: Learn about the guidelines and criteria to extend your message extension as a plugin for Microsoft 365 Chat.
+description: Learn about the guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
@@ -8,23 +8,23 @@ ms.localizationpriority: high
 ms.date: 11/14/2023
 ---
 
-# Guidelines to create or upgrade a message extension plugin for Microsoft 365 Chat
+# Guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365
 
-> [!NOTE]
-> Microsoft 365 Chat is available only in [**Public developer preview**](../resources/dev-preview/developer-preview-intro.md).
+> [!IMPORTANT]
+> Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
 
-Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft 365 Chat to interact with APIs from other software and services through a bot. With Microsoft 365 Chat, you can:
+Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
 
-We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Microsoft 365 Chat. Message extensions should support one or more search commands, as these are recognized by Microsoft 365 Chat as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. Message extensions should support one or more search commands, as these are recognized by Copilot for Microsoft 365 as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Microsoft 365 chat.":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams,Microsoft Copilot for Microsoft 365 and Microsoft 365 Chat.":::
 
 ## Mandatory requirements
 
-The requirements for building message extension plugins for Microsoft 365 Chat include:
+The requirements for building message extension plugins for Copilot for Microsoft 365 include:
 
 > [!div class="checklist"]
 >
@@ -34,7 +34,7 @@ The requirements for building message extension plugins for Microsoft 365 Chat i
 
 ## Define descriptions
 
-A good description offers a clear and concise summary of the app’s features and allows Microsoft 365 Chat to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Microsoft 365 Chat.
+A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Microsoft 365 Chat.
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Microsoft 365 Chat.":::
 
@@ -50,9 +50,9 @@ Ensure that you adhere to the description guidelines listed in the following tab
 
 ### App description
 
-Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Microsoft 365 Chat, app description must be modified to suit the following plugin requirements:
+Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, app description must be modified to suit the following plugin requirements:
 
-* Long description must clearly explain how users can use a message extension plugin in Microsoft 365 Chat and what functionality they can expect. For example, Use Contoso cloud in Microsoft 365 Chat to search and summarize your tasks.
+* Long description must clearly explain how users can use a message extension plugin in Copilot for Microsoft 365 and what functionality they can expect. For example, Use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following table lists the short description examples for each category:
@@ -379,7 +379,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 ---
 
-## Compound Utterances
+## Compound utterances
 
 > [!NOTE]
 > Search through task module isn't supported in Microsoft 365 Chat.
@@ -525,4 +525,5 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 ## See also
 
-[Extend bot-based message extension as plugin](build-bot-based-plugin.md)
+* [Extend bot-based message extension as plugin](build-bot-based-plugin.md)
+* [Extend Microsoft Copilot for Microsoft 365](/microsoft-365-copilot/extensibility/)
