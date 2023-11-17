@@ -18,7 +18,7 @@ Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You c
 
 The following image shows a sample app displaying an Adaptive Card with a list of commands in Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/sample-app-output.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
 The following are the advantages of Test Tool:
 
