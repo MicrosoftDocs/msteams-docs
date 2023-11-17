@@ -474,4 +474,4 @@ No. We always recommend users to test their bot application in the Teams client 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Install Teams Toolkit](install-Teams-Toolkit.md)
 * [Build bots for Teams](../bots/what-are-bots.md)
-* [Designing Adaptive Cards for your Microsoft Teams app](../task-modules-and-cards/cards/design-effective-cards.md)
+* [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
