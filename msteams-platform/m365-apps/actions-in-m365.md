@@ -11,20 +11,20 @@ ms.subservice: m365apps
 
 > [!NOTE]
 >
-> * Actions for Microsoft 365 is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md)
+> * Actions for Microsoft 365 is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 >
 > * Actions is supported for Microsoft 365 apps on web and desktop clients only and isn't supported on Outlook and Microsoft Teams.
 
-Actions seamlessly integrate your app into the user's workflow, ensuring effortless discovery and smooth interaction with their content. By guiding users to your app based on their intent and contextual content, Actions facilitate efficient task completion. Which integration increases your app's visibility and engagement with minimal development effort.
+Actions seamlessly integrate your app into the user's workflow, ensuring effortless discovery and smooth interaction with their content. By guiding users to your app based on their intent and contextual content, Actions facilitate efficient task completion. With the integration increases your app's visibility and engagement with minimal development effort.
 
 Actions enhance user's productivity by streamlining task completion and reducing the need for context switching across various Microsoft 365 applications.
 
-You can create a Teams app extensible across Microsoft 365 with the Actions feature. However Actions will only work in Microsoft 365 hub.
+You can create a Teams app extensible across Microsoft 365 with the Actions feature. However, Actions only work in Microsoft 365 hub.
 
 With Actions users can:
 
 * Accomplish tasks more efficiently.
-* Seamlessly integrates your app into users workflow, increasing app's visibility and user engagement.
+* Seamlessly integrates your app into user's workflow, increasing app's visibility and user engagement.
 * Take immediate action on content files through your app, expanding the range of interactions they can have with their content.
 
 Let us walk through a user scenario of how users might interact with your app through Actions you develop and how the handler affects the workflow.
@@ -44,7 +44,7 @@ When you're creating an app ensure that you define user intent, and choose the o
 ### Intent
 
 Intent is the objective a user wants to perform or achieve. User intent is typically represented as open or add to. Intent enables the Microsoft 365 platform to display the Actions in locations that mostly align with the user's needs and intentions. Intent includes but not limited to, where Actions show up and how Actions are grouped or ordered.
-You can create an intent for Open, addTo, and custom actions. If you want to build any tailored Actions to fulfill any user task create a custom intent.
+You can create an intent for Open, addTo, and custom actions. If you want to build any tailored Actions to fulfil any user task create a custom intent.
 
 ### Object
 
@@ -57,7 +57,7 @@ A handler is how the Action performs the user’s intent on the selected object.
 You can choose between two types of handlers:
 
 * `openDialog`: This handler directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app.
-* `openPage`: By using the openPage handler, you can drive users to your app's dedicated pages(personal tab).
+* `openPage`: By using the openPage handler, you can drive users to your app's dedicated pages (personal tab).
 
 ## Prerequisites
 
@@ -75,9 +75,9 @@ Ensure you install the following tools to build Actions in Microsoft 365:
 
 To build Actions for your app, follow these steps:
 
-1. Update app manifest
-1. Build the handler that retrieves Actions information through context object
-1. Access content object through Graph API
+1. [Update app manifest](#update-app-manifest).
+1. [Build the handler that retrieves Action information through context object](#build-the-handler-that-retrieves-action-information-through-context-object).
+1. [Access content through Graph API](#access-content-through-graph-api).
 
 ### Update app manifest
 
@@ -165,7 +165,7 @@ this.setState({
 
 #### [`actionInfo`](/javascript/api/@microsoft/teams-js/actioninfo)
 
-The TeamsJS is updated to enable your app to determine when a page or dialog was opened from an Action, and the content that user was triggering this Action.
+The TeamsJS helps to enable your app to determine when a user opens a page or dialog from an Action, and the content that initiated the Action.
 
 ```javascript
 app.getContext().then((context: app.Context) => {
@@ -185,7 +185,7 @@ app.getContext().then((context: app.Context) => {
 
 #### [`M365ContentAction`interface](/javascript/api/@microsoft/teams-js/m365contentaction)
 
-In order to not leak personal data to applications, only ids of the office content is passed to the app. Apps use these iDs together with the fact that this is OfficeContent to query the Microsoft graph for more details.
+In order to not leak personal data to applications, only ids of the office content are passed to the app. Apps use these ids together with the fact that this is OfficeContent to query the Microsoft graph for more details.
 
 ```javascript
 export enum ActionObjectType {
@@ -267,7 +267,7 @@ You can now preview your Actions in Microsoft 365 app, right-click a file that i
 
 | **Sample name** | **Description** |**Node.js** |
 |-----------------|-----------------|----------------|
-| Actions in Microsoft 365 apps | This sample code describes the Actions in Microsoft 365 apps. ||
+| Actions in Microsoft 365 apps | This sample code describes the Actions in Microsoft 365 apps. |TBD|
 
 ## See also
 
