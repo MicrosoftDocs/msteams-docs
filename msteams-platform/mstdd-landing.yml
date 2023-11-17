@@ -64,10 +64,10 @@ landingContent:
         url: concepts/build-and-test/adaptive-card-previewer.md
       - text: Introduced the extensions property in public developer preview app manifest schema
         url: resources/schema/manifest-schema-dev-preview.md#extensions
-      - text: Receive meeting participant events
-        url:  apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events
       - text: Build message extensions using API
         url: messaging-extensions/api-based-overview.md
+      - text: The new Microsoft Teams client
+        url: resources/teams-updates.md
 
     - linkListType: reference
       links:
