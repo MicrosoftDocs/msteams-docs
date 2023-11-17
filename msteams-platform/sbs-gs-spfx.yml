@@ -2,7 +2,7 @@
 title: Build your first app with SPFx
 metadata:
   title: Hello World with SPFx
-  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable sideloading.
+  description: In this tutorial, you learn to build Hello World app with SPFx. The step-by-step guide helps you to install toolkit, setup development tenant, and you can enable custom app upload.
   audience: Developer
   level: Beginner
   ms.date: 05/09/2022
@@ -246,13 +246,13 @@ items:
 
         Teams web client opens in a browser window.
 
-    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
+    1. Select **Add** when prompted to upload the custom app onto Teams on your local machine.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png" alt-text="Add the app to Teams" lightbox="../msteams-platform/assets/images/teams-toolkit-v2/add-app-local-debug.png":::
    
     1. Select the web app version, if you're asked to switch to Teams desktop. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
 
-    1. Select **Load debug scripts**, if you're prompted to load debug scripts before your app is sideloaded in Teams.
+    1. Select **Load debug scripts**, if you're prompted to load debug scripts before your custom app is uploaded in Teams.
     
         Congratulations, your first app is running on Teams!
 
