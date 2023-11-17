@@ -92,7 +92,9 @@ const schema: ContainerSchema = {
   initialObjects: { liveCanvas: LiveCanvas },
 };
 const { container } = await liveShare.joinContainer(schema);
-const liveCanvas = container.initialObjects.liveCanvas as LiveCanvas;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const liveCanvas = container.initialObjects.liveCanvas as unknown as LiveCanvas;
 
 // Get the canvas host element
 const canvasHostElement = document.getElementById("canvas-host");
