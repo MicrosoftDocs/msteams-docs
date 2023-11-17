@@ -260,7 +260,7 @@ items:
 
         1. Checks all the following prerequisites:
           - You're logged in with a Microsoft 365 account.
-          - Sideloading is enabled for your Microsoft 365 account.
+          - Custom app upload is enabled for your Microsoft 365 account.
           - Supported Node.js version is installed.
           - Port required by bot app is available.
           
@@ -270,7 +270,7 @@ items:
         5. Registers the bot app in Bot Framework and configures the bot app.
         6. Registers the app in Teams Developer Portal and configures the app.
         7. Starts the bot app.
-        8. Starts Teams in a web browser and sideloads the bot app.
+        8. Starts Teams in a web browser and uploads the custom bot app.
 
 
         </details>
@@ -284,7 +284,7 @@ items:
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
-    1. Select **Add** when prompted to sideload the bot app onto Teams on your local machine or use the dropdown menu to add your bot app to a team, chat, or meeting.
+    1. Select **Add** when prompted to upload the custom bot app onto Teams on your local machine or use the dropdown menu to add your bot app to a team, chat, or meeting.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/add-bot-app-local-debug.png" alt-text="Screenshot shows the bot is being added on Teams client.":::
 
@@ -302,13 +302,13 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
 
       > [!IMPORTANT]
-      > Currently, sideloading apps are available in Government Community Cloud (GCC), GCC-High, and DOD.
+      > Custom app upload is available in Government Community Cloud (GCC), GCC-High, and DOD.
 
       > [!TIP]
-      > Check for issues before sideloading your app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to sideload the app.
+      > Check for issues before you upload a custom app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to upload the app.
       </details> 
 
 - title: Deploy your first Teams app
