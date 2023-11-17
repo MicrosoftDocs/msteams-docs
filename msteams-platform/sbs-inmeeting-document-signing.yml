@@ -80,35 +80,35 @@ items:
   content: |
     The following steps help you to create and register your app in Azure portal.
 
-    * Create an app registration in Azure AD.
+    * Create an app registration in Microsoft Entra ID.
     * Use ngrok to create a tunnel.
     
-    ## Create an app registration in Azure AD
+    ## Create an app registration in Microsoft Entra ID
 
-    Register a new app in Azure AD and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
+    Register a new app in Microsoft Entra ID and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
 
-    ### To register a new app in Azure AD
+    ### To register a new app in Microsoft Entra ID
 
     1. Go to the [Azure portal](https://ms.portal.azure.com/).
     
     2. Select **App registrations**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Screenshot shows the Azure AD Portal page.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Screenshot shows the app registration page in the Azure portal.":::
 
     3. Select **+ New registration**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registrations.png" alt-text="Screenshot shows the New registration page on Azure AD Portal.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registrations.png" alt-text="Screenshot shows the New registration page in the Azure portal.":::
 
     4. Enter the name of your app, which is displayed to the user. The app name can be changed in later, if required.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/register-app.png" alt-text="Screenshot shows the App registration page on Azure AD Portal.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/register-app.png" alt-text="Screenshot shows the App registration page in the Azure Portal.":::
 
     5. Select **Multitenant** as the type of user account that can access your app.
 
     6. Select **Register**.
         A message pops up on the browser stating that the app was created.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created-msg.png" alt-text="Register app on Azure AD Portal.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created-msg.png" alt-text="Register app in the Azure Portal.":::
 
         The page with app ID and other configurations is displayed.
 
@@ -116,7 +116,7 @@ items:
 
     7. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
-    Your app is registered in Azure AD. You should now have the app ID for your app.
+    Your app is registered in Microsoft Entra ID. You should now have the app ID for your app.
 
     ## To create a ngrok tunnel
 
@@ -130,15 +130,15 @@ items:
 
       :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok1.png" alt-text="ngrok HTTPS URL":::
 
-- title: Update the Azure AD app registration
+- title: Update the Microsoft Entra app registration
   durationInMinutes: 1
   content: |
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
-    1. Select **Azure Active Directory**.
+    1. Select **Microsoft Entra ID**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-azure-directory.png" alt-text="Select Azure active directory":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-azure-directory.png" alt-text="Select Microsoft Entra ID":::
 
     1. In the left pane, select **App Registrations**.
 
@@ -226,7 +226,7 @@ items:
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-api-permissions.png" alt-text="Select API permissions"::: 
         
        > [!NOTE]
-       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
+       > Users need to consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
@@ -275,7 +275,7 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    After you've configured the Azure AD app, you need to configure app details in the app settings and manifest file. 
+    After you've configured the Microsoft Entra app, you need to configure app details in the app settings and manifest file. 
 
     **To configure app settings**
 

@@ -24,7 +24,7 @@ items:
     * Send targeted notifications to a specific user in a meeting.
     
     > [!NOTE]
-    > In-meeting notifications are available only for Azure AD users and not for anonymous users.
+    > In-meeting notifications are available only for Microsoft Entra users and not for anonymous users.
     
     This step-by-step guide helps you to generate in-meeting notifications using a bot in Teams meeting. You'll see the following output:
 
@@ -54,7 +54,7 @@ items:
   content: | 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app 
+- title: Register Microsoft Entra app 
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
@@ -263,4 +263,3 @@ items:
 
 - content: |
     You have successfully completed this tutorial.
-
