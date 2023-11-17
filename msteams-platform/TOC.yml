@@ -419,7 +419,7 @@
       href: bots/how-to/conversations/conversation-messages.md
       displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
       items:
-      - name: Receive all conversation messages with RSC
+      - name: Receive all conversation messages
         href: bots/how-to/conversations/channel-messages-with-rsc.md
         displayName: mention
     - name: Create a commands menu
