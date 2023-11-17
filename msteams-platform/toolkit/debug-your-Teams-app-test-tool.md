@@ -292,7 +292,6 @@ It's vital to recognize that updating the configuration file has three major imp
 
 1. The Test Tool doesn't support the following Adaptive Card features:
 
-   * [People Picker](../task-modules-and-cards/cards/people-picker.md)
    * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
    * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
    * [Stage View](../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
@@ -468,7 +467,7 @@ No. We always recommend users to test their bot application in the Teams client 
 
 |Sample name | Description | Node.js |
 |----------------|-----------------|--------------|
-| Test Tool | A sample bot app to explore Test Tool. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app) |
+| Test Tool Sample App | A sample bot app to explore Test Tool. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app) |
 
 ## See also
 
