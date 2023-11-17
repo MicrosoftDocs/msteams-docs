@@ -35,7 +35,7 @@ You can view here an example of user experience with SSO in a tab app:
 Here's what your app users get with SSO experience:
 
 - Teams gets the access token for the current app user from Microsoft Entra ID. This interaction with Microsoft Entra ID is invisible to the app user. It translates to get the app access without having to leave the Teams environment.
-- An app user needs to consent only in a multi-tenant environment. If the app user and the app reside in the same tenant, the app user doesn't need to give consent for using the app.
+- An app user needs to consent only in a multitenant environment. If the app user and the app reside in the same tenant, the app user doesn't need to give consent for using the app.
 - After consenting to Teams the first time, the app user can use your app with no further need of consent, even on any other device. For this reason, it offers a better user experience.
   - Alternatively, the tenant administrator can grant consent on behalf of the app users. In this scenario, when the tenant administrator consents for the app users in the tenant, the app users don't need to be prompted for consent at all. It means that the app users don't see the consent dialogs and can access the app seamlessly.
 - The access token is pre-fetched by Teams to improve performance and load time of the app in the Teams environment.
@@ -45,7 +45,7 @@ Now, let's see what happens at the backend during runtime to achieve SSO experie
 
 ## SSO in Teams at runtime
 
-Achieve SSO in a tab app by obtaining access token for the Teams app user who's currently logged in. This process involves the tab app client and server, Teams client, and Microsoft Entra ID. During this interaction, the app user must give consent for using Teams identity to obtain the access token in a multi-tenant environment.
+Achieve SSO in a tab app by obtaining access token for the Teams app user who's currently logged in. This process involves the tab app client and server, Teams client, and Microsoft Entra ID. During this interaction, the app user must give consent for using Teams identity to obtain the access token in a multitenant environment.
 
 The following image shows how SSO works when a Teams app user attempts to access the tab app:
 
@@ -67,7 +67,7 @@ For more information, see [Add code to enable SSO in a tab app](tab-sso-code.md)
 > - The `getAuthToken()` is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as `User.Read` or `Mail.Read`. For suggested workarounds, see [Extend your app with Microsoft Graph permissions](tab-sso-graph-api.md).
 > - The `getAuthToken` fails for anonymous users as they aren't Microsoft Entra accounts.
 
-Tabs are Teams-aware web pages. To enable SSO in a webpage hosted inside a tab app, add [Teams Javascript client library](/javascript/api/overview/msteams-client?) and call `microsoftTeams.initialize()`. After initialization, call `microsoftTeams.getAuthToken()` to get the access token for your app.
+Tabs are Teams-aware web pages. To enable SSO in a webpage hosted inside a tab app, add [Teams JavaScript client library](/javascript/api/overview/msteams-client?) and call `microsoftTeams.initialize()`. After initialization, call `microsoftTeams.getAuthToken()` to get the access token for your app.
 
 ### Use cases for enabling SSO
 
@@ -98,7 +98,7 @@ To enable SSO for a Teams tab app:
 
 ## Third-party cookies on iOS
 
-After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all apps by default. Therefore, the apps that leverage third-party cookies for authentication in their Channel or Chat tabs and Personal apps won't be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
+After the iOS 14 update, Apple has blocked the [third-party cookie](https://webkit.org/blog/10218/full-third-party-cookie-blocking-and-more/) access for all apps by default. Therefore, the apps that use third-party cookies for authentication in their Channel or Chat tabs and Personal apps won't be able to complete their authentication workflows on Teams iOS clients. To conform with Privacy and Security requirements, you must move to a token-based system or use first-party cookies for the user authentication workflows.
 
 ### Teams mobile client support
 

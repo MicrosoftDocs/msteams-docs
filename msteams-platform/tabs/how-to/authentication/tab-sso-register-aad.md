@@ -30,7 +30,7 @@ Microsoft Entra configuration enables SSO for your tab app in Teams. It responds
 
 It's helpful if you learn about the configuration for registering your app on Microsoft Entra ID beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
-- **Single- or multi-tenant options**: Will your application be used in only the Microsoft 365 tenant where it's registered, or will many Microsoft 365 tenants use it? Applications written for one enterprise are typically single-tenant. Applications written by an independent software vendor and used by many customers need to be multi-tenant so each customer's tenant can access the application.
+- **Single- or multitenant options**: Will your application be used in only the Microsoft 365 tenant where it's registered, or will many Microsoft 365 tenants use it? Applications written for one enterprise are typically single-tenant. Applications written by an independent software vendor and used by many customers need to be multitenant so each customer's tenant can access the application.
 - **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same. Currently, multiple domains per app aren't supported.
 - **Scope**: It's the permission that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
@@ -81,7 +81,7 @@ Register your app in Microsoft Entra ID and configure the tenancy and app's plat
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Microsoft Entra admin center.":::
 
-5. Select the type of user account that can access your app. You can select from single- or multi-tenant options, or Private Microsoft account.
+5. Select the type of user account that can access your app. You can select from single- or multitenant options, or Private Microsoft account.
 
     <details>
     <summary><b>Options for supported account types</b></summary>
@@ -89,8 +89,8 @@ Register your app in Microsoft Entra ID and configure the tenancy and app's plat
     | Option | Select this to... |
     | --- | --- |
     | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called custom app built for your org (LOB app), this app is a single-tenant application in the Microsoft identity platform. |
-    | Accounts in any organizational directory (Any Microsoft Entra directory - Multi-tenant) | Let users in any Microsoft Entra tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multi-tenant application in the Microsoft identity platform.|
-    | Accounts in any organizational directory (Any Microsoft Entra directory - Multi-tenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multi-tenant application that can support app users who have personal Microsoft accounts also. |
+    | Accounts in any organizational directory (Any Microsoft Entra directory - Multi-tenant) | Let users in any Microsoft Entra tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multitenant application in the Microsoft identity platform.|
+    | Accounts in any organizational directory (Any Microsoft Entra directory - Multi-tenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multitenant application that can support app users who have personal Microsoft accounts also. |
     | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
 
     </details>
@@ -290,7 +290,7 @@ Congratulations! You've completed the app configuration in Microsoft Entra ID re
 
 ## See also
 
-- [Tenancy in Microsoft Entra ID](/azure/active-directory/develop/single-and-multi-tenant-apps)
+- [Tenancy in Microsoft Entra ID](/azure/active-directory/develop/single-and-multitenant-apps)
 - [Extend tab app with Microsoft Graph permissions and scope](tab-sso-graph-api.md)
 - [Quickstart - Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app)
 - [Quickstart: Configure an application to expose a web API](/azure/active-directory/develop/quickstart-configure-app-expose-web-apis)

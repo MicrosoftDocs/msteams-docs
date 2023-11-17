@@ -8,7 +8,7 @@ ms.date: 12/15/2022
 ---
 # Configure default options for Teams app
 
-It’s common for an app to support multiple scenarios in Teams, but you may have designed it with a specific scope and capability in mind. For example, if your app is primarily for team or channel use, you can make sure that the first install option users see in the Microsoft Teams Store is **Add to a team**.
+It’s common for an app to support multiple scenarios in Teams, but you might have designed it with a specific scope and capability in mind. For example, if your app is primarily for team or channel use, you can make sure that the first install option users see in the Microsoft Teams Store is **Add to a team**.
 
 :::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot shows the Add to a team option.":::
 
@@ -63,7 +63,7 @@ The admin gets a request to take action before a user can access the app. Under 
 
 :::image type="content" source="../../assets/images/manage-apps-allow.png" alt-text="Screenshot shows the Allow option for the app blocked by publisher." lightbox="../../assets/images/manage-apps-allow-expanded.png":::
 
-If by default, you don't want the app to be hidden, you can update the `defaultBlockUntilAdminAction` property to `false`. When the new version of the app is approved, by default the app will be allowed as long as the admin hasn't taken any explicit action.
+If by default, you don't want the app to be hidden, you can update the `defaultBlockUntilAdminAction` property to `false`. When the new version of the app is approved, by default the app is allowed as long as the admin hasn't taken any explicit action.
 
 > [!NOTE]
 > For custom apps built for your org (LOB apps), `defaultBlockUntilAdminAction` isn't supported. The app isn't blocked if you upload a custom app built for your org with this property.
