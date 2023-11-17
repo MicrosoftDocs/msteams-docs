@@ -68,8 +68,6 @@ landingContent:
         url:  apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events
       - text: Build message extensions using API
         url: messaging-extensions/api-based-overview.md
-      - text: The new Microsoft Teams client
-        url: resources/teams-updates.md
 
     - linkListType: reference
       links:
