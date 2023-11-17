@@ -919,6 +919,10 @@
       {
         "source_path": "msteams-platform/copilot/how-to-extend-copilot.md",
         "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to-extend-copilot"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/how-to-extend-copilot.md",
+        "redirect_url": "/microsoft-365-copilot/extensibility/"
       }
     ]
 }
