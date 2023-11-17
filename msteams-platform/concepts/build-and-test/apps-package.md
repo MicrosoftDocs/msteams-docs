@@ -13,6 +13,14 @@ To distribute your Microsoft Teams app, create an app package. A valid app packa
 * **App manifest**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **App icons**: Each package requires a color and outline icon for your app.
 
+To create an app package, you need the following files:
+
+* App manifest
+* Color icon
+* Outline icon
+
+The files are present inside the app package folder. Zip the three files and name your app package.
+
 ## Teams doesn't host your app
 
 When a user installs your app in Teams, they install an app package that contains only a configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such as on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
