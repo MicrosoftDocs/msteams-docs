@@ -278,13 +278,13 @@ To comprehensively test this bot in the Test Tool, it's crucial to update the co
 1. Save the file and select **F5** to debug in Test Tool.
 
 > [!NOTE]
-> When you edit the configuration file in Visual Studio Code, Intellisense automatically updates the property names and warn you if you enter invalid values.
+> When you edit the configuration file in Visual Studio Code, Intellisense automatically updates the property names and warns you if you enter invalid values.
 
 It's vital to recognize that updating the configuration file has three major impacts:
 
-* It influences the responses obtained from Bot Framework Connector APIs, For example, `TeamsInfo.getPagedMembers()`.
-* It shapes the details in the activity payload For example, `activity.recipient`.
-* It impacts the user interface in the Test Tool For example, group chat names.
+* It influences the responses obtained from Bot Framework Connector APIs, for example, `TeamsInfo.getPagedMembers()`.
+* It shapes the details in the activity payload, for example, `activity.recipient`.
+* It impacts the user interface in the Test Tool, for example, group chat names.
 
 ## Limitations
 
