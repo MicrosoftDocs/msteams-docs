@@ -36,6 +36,7 @@ Teams Toolkit supports the following debug features:
 * [Toggle breakpoints](#toggle-breakpoints)
 * [Hot reload](#hot-reload)
 * [Stop debugging](#stop-debugging)
+* [Teams App Test Tool](#teams-app-test-tool)
 
 Teams Toolkit performs background functions during debug process, which include verifying the prerequisites required for debug. You can see the progress of the verification process in the output channel of Teams Toolkit. In the setup process you can register and configure your Teams app.
 
@@ -64,6 +65,10 @@ You can update and save the source codes of tab, bot, message extension, and Azu
 When you complete local debug, you can select **Stop (Shift+F5)** or **[Alt] Disconnect (Shift+F5)** from the floating debugging toolbar to stop all debug sessions and terminate tasks. The following image shows the stop debug action:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/stop-debug.png" alt-text="Screenshot shows the stop debugging option.":::
+
+### Teams App Test Tool
+
+The Teams App Test Tool makes debugging your bot-based apps effortless. You can chat with your bot and see its messages and adaptive cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use the Test Tool. For more information, see [Teams App Test Tool](debug-your-Teams-app-test-tool.md).
 
 ## Prepare for debug
 
@@ -110,7 +115,7 @@ SECRET_BOT_PASSWORD={YOUR_OWN_BOT_PASSWORD}
 
 </details>
 
-### Customize Scenarios
+### Customize scenarios
 
 Here's a list of debug scenarios that you can use:
 <br>
