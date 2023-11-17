@@ -26,7 +26,7 @@ items:
  
     This step-by-step guide helps you to create a conversation bot in the Teams application. You can see the following output:
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Screenshot shows the final output."lightbox="assets/images/conversation-bot/final-output.png":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Screenshot shows the response from conversation bot."lightbox="assets/images/conversation-bot/final-output.png":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -229,14 +229,14 @@ items:
 
     You can select an option from the command list by typing **@TeamsConversationBot** or **What can I do?** text in the compose area and send it.
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output-1.png" alt-text="Screenshot shows the Final output.":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output-1.png" alt-text="Screenshot shows the response from conversation bot.":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Screenshot shows the Final output.":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Screenshot shows the response from conversation bot.":::
     
 - content: |
     You've completed the tutorial to get started with conversation bot for Microsoft Teams.
