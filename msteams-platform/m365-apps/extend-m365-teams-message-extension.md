@@ -22,7 +22,7 @@ The process to update your search-based Teams message extension involves the fol
 >
 > * Update your app manifest (previously called Teams app manifest).
 > * Add the Microsoft 365 channel for your bot.
-> * Sideload your updated app in Teams.
+> * Upload your updated custom app in Teams.
 
 The rest of this guide walks you through these steps and shows how to preview your message extension in Outlook for Windows desktop and web.
 
@@ -159,9 +159,9 @@ Microsoft Entra single sign-on (SSO) for message extensions works the same way i
    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
    |Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
 
-## Sideload your updated message extension in Teams
+## Upload your updated message extension in Teams
 
-The final step is to sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed *Apps* from the compose message area.
+The final step is to upload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed *Apps* from the compose message area.
 
 1. Package your Teams application (manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons)) in a zip file. If you used Teams Toolkit to create your app, you can easily do this using the **Zip Teams App Package** option in the **UTILITY** section of Teams Toolkit. Select the `manifest.json` file for your app and the appropriate environment.
 
@@ -177,7 +177,7 @@ The final step is to sideload your updated message extension ([app package](/mic
 
     :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option in Teams.":::
 
-After it's sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
+After it's uploaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 
 ## Preview your message extension in Outlook
 
@@ -215,6 +215,9 @@ Your message extension is listed, it opens an adjacent pane to display search re
 * [Action-based message extension](/microsoftteams/platform/messaging-extensions/how-to/action-commands/define-action-command?tabs=AS) commands aren't supported in Outlook. If your app has both search- and action-based commands, it surfaces in Outlook, but the action menu isn't available.
 * Insertion of more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email isn't supported; Adaptive Cards v1.5 and later aren't supported.
 * [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported for inserted cards. Support is limited to `openURL`: when selected, the user is redirected to the specified URL in a new tab.
+
+> [!NOTE]
+> When you test an app with link unfurling, ensure that you remove the app manually after testing. If multiple apps are monitoring the same domain, the app installed most recently might not be invoked to unfurl the link in Outlook, as it would in Teams.
 
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
