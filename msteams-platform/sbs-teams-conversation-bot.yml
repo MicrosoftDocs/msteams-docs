@@ -50,7 +50,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app
+- title: Register Microsoft Entra app
   durationInMinutes: 5
   content: |
     Register your bot with Azure Bot service when you develop and host it in Azure. Following are the steps:
@@ -99,7 +99,7 @@ items:
       > [!NOTE]
       >
       > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-      > * Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+      > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 

@@ -311,7 +311,7 @@ Your offer listing must include a valid Terms of use link. Offers with invalid, 
 
 ### Microsoft 365 re-branding
 
-Tab doesn't load or show an error page or message on the Microsoft 365 client when you replace the tab url from <www.office.com/> to <www.microsoft365.com/>.
+Tab doesn't load or show an error page or message on the Microsoft 365 client when you replace the tab url from `www.office.com/` to `www.microsoft365.com/`.
 
 ### App functionality
 

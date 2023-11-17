@@ -9,7 +9,7 @@ ms.date: 02/09/2023
 # App manifest schema
 
 The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.15, and the current version is 1.16 are each supported (using "v1.x" in the URL).
-For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
+For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases) and for previous versions, see [app manifest versions](https://github.com/microsoft/json-schemas/tree/main/teams).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
 
@@ -641,11 +641,11 @@ The object is an array with all elements of the type `string`. The maximum item 
 
 **Optional** &ndash; Object
 
-Provide your Azure Active Directory App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Microsoft Azure Active Directory (Azure AD), you must provide the App ID. Administrators can easily review permissions and grant consent in Teams admin center.
+Provide your Microsoft Entra App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Microsoft Entra ID, you must provide the App ID. Administrators can easily review permissions and grant consent in Teams admin center.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String||✔️|Azure AD application ID of the app. This ID must be a GUID.|
+|`id`|String||✔️|Microsoft Entra application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters||Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
 
 ## graphConnector
@@ -676,7 +676,7 @@ Indicates if a personal app is rendered without a tab header bar (signifying ful
 
 > [!NOTE]
 >
-> * `isFullScreen` only works for apps published to your organization. Sideloaded and published third-party apps cannot use this property (it is ignored).
+> * `isFullScreen` only works for apps published to your organization. Uploaded and published third-party apps can't use this property (it's ignored).
 >
 > * `isFullScreen=true` removes the Teams-provided header bar and title from personal apps and task module dialogs.
 
@@ -943,7 +943,7 @@ To create an app manifest file:
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json", 
  "manifestVersion": "1.12", 
  "version": "1.0.0", 
- "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
+ "id": "{new GUID for this Teams app - not the Microsoft Entra App ID}", 
  "developer": { 
  "name": "Microsoft", 
  "websiteUrl": "https://www.microsoft.com", 
@@ -991,8 +991,8 @@ To create an app manifest file:
    "{subdomain or ngrok url}" 
   ], 
   "webApplicationInfo": { 
-    "id": "{Azure AD AppId}", 
-    "resource": "api://subdomain.example.com/{Azure AD AppId}" 
+    "id": "{Microsoft Entra AppId}", 
+    "resource": "api://subdomain.example.com/{Microsoft Entra AppId}" 
   }
 } 
 ```
