@@ -181,8 +181,9 @@
           items:
           - name: Overview
             href: toolkit/debug-overview.md
-          - name: Debug your Teams app in test tool
+          - name: Debug bot using Teams App Test Tool
             href: toolkit/debug-your-teams-app-test-tool.md
+            displayName: Mock activity, custom activity, predefined activity
           - name: Debug your Teams app locally
             href: toolkit/debug-local.md
           - name: Debug background process
