@@ -249,7 +249,7 @@ To build and run your app locally:
 
 1. After you update the app manifest, open your app in Teams Toolkit.
 
-1. To debug your app, enter **F5**.
+1. To debug your app, select **Debug in the Microsoft 365 app (Edge) without backend** and enter **F5**.
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 
