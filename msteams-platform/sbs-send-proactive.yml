@@ -28,7 +28,7 @@ items:
 - title: Prerequisites 
   durationInMinutes: 2
   content: |
-    Here's a list of tools you need for building and deploying your apps.
+    Ensure you install the following tools for building and deploying your apps.
 
     | &nbsp; | Install | For using |
     | --- | --- | --- |
@@ -149,7 +149,7 @@ items:
 
          :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
     
-       You can also change the default location by the following steps:
+       You can change the default location by the following steps:
 
         1. Select **Browse**.
 
@@ -157,51 +157,27 @@ items:
             
         1. Select the location for project workspace.
 
-        1. Select the **Select Folder**.
+        1. Select **Select Folder**.
 
            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
     
     1. After your app is created, the Teams Toolkit displays the following message:
 
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/new-window-notification.png" alt-text="Screenshot shows the new window Notification for scaffolding.":::
+
+        The command bot app is created in a few seconds.
+
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot shows the app created.":::
+
     1. Select **Select and Start Debugging Teams App** icon.
 
     1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list. After debugging is successful, you'll be prompted to upload the bot app to Teams on your local machine. 
 
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Screenshot shows the debugging application.":::
+
     1. Select **Add** or use the dropdown menu to add your proactive bot app to a team, chat, or meeting.
 
-    1.	Download the [sample code](https://github.com/MicrosoftDocs/msteams-docs/tree/master/msteams-platform/assets/downloads/SendProactiveMessages.zip) (.zip file) and extract the files.
-    1.	Go to the extracted files and double-click **ProactiveBot.csproj**. The solution opens in Visual Studio.
-    1.	In Visual Studio, right-click the project (**ProactiveBot**) and select **Build** to build the solution.
-
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-bot-project.png" alt-text="Screenshot shows the Proactive Bot Project in Visual Studio and with the Build highlighted in red.":::
-
-        <br>
-
-        <details>
-
-        <summary><b>Troubleshooting</b></summary>
-
-        If you get the **Unable to find package** error, follow these steps:
-
-        1.  Go to **Tools** > **NuGet Package Manager** > **Package Manager Settings**.
-        1.	In the **Options** window that appears, select **NuGet Package Manager** > **Package Sources**.
-        1.	Select **Add**.
-        1.	Enter nuget.org in the **Name** and https://api.nuget.org/v3/index.json in the **Source** fields.
-        1.	Select **Update** and **OK**.
-        1.	Rebuild your project.
-        <br>
-
-        </details>
-
-    1. Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-        ```bash
-        ngrok http --host-header=localhost 3978
-        ```
-        
-    1. From ngrok, copy the HTTPS URL. 
-
-        :::image type="content" source="~/assets/images/proactive-scenario/ngrok-base-url1.png" alt-text="Screenshot shows the ngrok base URL highlighted in red."lightbox="~/assets/images/proactive-scenario/ngrok-base-url1.png":::   
+        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::    
 
     ## Take tour of source code
 
