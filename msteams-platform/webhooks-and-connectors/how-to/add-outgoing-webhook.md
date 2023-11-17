@@ -104,6 +104,44 @@ Your code must always validate the HMAC signature included in the request as fol
 * Convert the hash to a string using UTF-8 encoding.
 * Compare the string value of the generated hash with the value provided in the HTTP request.
 
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/b0edf727c1e77f62107533b716ece64697cb9291/samples/outgoing-webhook/csharp/Models/AuthProvider.cs#L63)
+
+```csharp
+            string providedHmacValue = authenticationHeaderValue.Parameter;
+            string calculatedHmacValue = null;
+            try
+            {
+                byte[] serializedPayloadBytes = Encoding.UTF8.GetBytes(messageContent);
+
+                byte[] keyBytes = Convert.FromBase64String(signingKey);
+                using (HMACSHA256 hmacSHA256 = new HMACSHA256(keyBytes))
+                {
+                    byte[] hashBytes = hmacSHA256.ComputeHash(serializedPayloadBytes);
+                    calculatedHmacValue = Convert.ToBase64String(hashBytes);
+                }
+
+                if (string.Equals(providedHmacValue, calculatedHmacValue))
+                {
+                    return new AuthResponse(true, null);
+                }
+                else
+                {
+                    string errorMessage = string.Format(
+                        "AuthHeaderValueMismatch. Expected:'{0}' Provided:'{1}'",
+                        calculatedHmacValue,
+                        providedHmacValue);
+
+                    return new AuthResponse(false, errorMessage);
+                }
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError("Exception occcured while verifying HMAC on the incoming request. Exception: {0}", ex);
+                return new AuthResponse(false, "Exception thrown while verifying MAC on incoming request.");
+            }
+        }
+```
+
 # [Method to respond](#tab/methodtorespond)
 
 **Create a method to send a success or failure response**
