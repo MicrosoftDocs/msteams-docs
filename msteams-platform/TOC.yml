@@ -169,18 +169,21 @@
             displayName: endpoint
           - name: Add single sign-on to Teams app
             href: toolkit/add-single-sign-on.md
-          - name: Using existing Azure AD app in TeamsFx project
+          - name: Using existing Microsoft Entra app in TeamsFx project
             href: toolkit/use-existing-aad-app.md  
         - name: Customize Manifest
           items:
           - name: Customize Teams app Manifest
             href: toolkit/TeamsFx-preview-and-customize-app-manifest.md
-          - name: Edit Azure AD manifest
+          - name: Edit Microsoft Entra manifest
             href: toolkit/AAD-manifest-customization.md
         - name: Debug your Teams app
           items:
           - name: Overview
             href: toolkit/debug-overview.md
+          - name: Debug bot using Teams App Test Tool
+            href: toolkit/debug-your-teams-app-test-tool.md
+            displayName: Mock activity, custom activity, predefined activity
           - name: Debug your Teams app locally
             href: toolkit/debug-local.md
           - name: Debug background process
@@ -269,6 +272,14 @@
       - name: Analyze your apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
         displayName: dashboard
+    - name: Adaptive Card Previewer for Visual Studio Code
+      items:
+      - name: Overview
+        href: concepts/build-and-test/adaptive-card-previewer.md
+        displayName: preview, Adaptive Card, ACP 
+      - name: Install Adaptive Card Previewer
+        href: concepts/build-and-test/install-adaptive-card-previewer.md
+        displayName: install, Adaptive Card Previewer, ACP
     - name: Yeoman generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams 
   - name: SDKs
@@ -362,7 +373,7 @@
     displayName: Teams Store apps approved by Microsoft for mobile 
   - name: Get context for your tab
     href: tabs/how-to/access-teams-context.md
-    displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Azure Active Directory, retrieve context, theme changes
+    displayName: getContext, entityId, groupId, User context, authentication flow from Microsoft Entra ID, retrieve context, theme changes
   - name: Navigate within your tab
     href: tabs/how-to/tab-navigation.md
   - name: Build a dashboard tab app
@@ -408,7 +419,7 @@
       href: bots/how-to/conversations/conversation-messages.md
       displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
       items:
-      - name: Receive all conversation messages with RSC
+      - name: Receive all conversation messages
         href: bots/how-to/conversations/channel-messages-with-rsc.md
         displayName: mention
     - name: Create a commands menu
@@ -524,6 +535,16 @@
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
+      - name: Extend bot-based message extension as plugin
+        href: messaging-extensions/build-bot-based-plugin.md
+        displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365
+      - name: Guidelines to extend bot-based message extension as plugin
+        href: messaging-extensions/high-quality-message-extension.md
+        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365
+      - name: Microsoft 365 Chat plugin FAQ
+        href: messaging-extensions/copilot-plugin-faq.md
+        displayName: M365, bot-based message extension, plugin
+
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache
@@ -571,7 +592,7 @@
     - name: Get transcripts
       href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
     - name: Get recordings
-      href: /graph/api/resources/callrecording?view=graph-rest-beta&preserve-view=true
+      href: /graph/api/resources/callrecording?view=graph-rest-1.0&preserve-view=true
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
@@ -684,7 +705,7 @@
       items:
       - name: Overview for tab SSO
         href: tabs/how-to/authentication/tab-sso-overview.md
-      - name: Configure your tab app in Azure AD
+      - name: Configure your tab app in Microsoft Entra ID
         href: tabs/how-to/authentication/tab-sso-register-aad.md
       - name: Add code to enable SSO
         href: tabs/how-to/authentication/tab-sso-code.md
@@ -697,7 +718,7 @@
       items:
       - name: Overview
         href: bots/how-to/authentication/bot-sso-overview.md
-      - name: Configure your app in Azure AD
+      - name: Configure your app in Microsoft Entra ID
         href: bots/how-to/authentication/bot-sso-register-aad.md
       - name: Add code to enable SSO
         href: bots/how-to/authentication/bot-sso-code.md
@@ -793,7 +814,7 @@
     items:
       - name: Enable a Teams message extension for Outlook
         href: m365-apps/extend-m365-teams-message-extension.md
-        displayName: mail, Microsoft 365, Office 365
+        displayName: mail, Microsoft 365, Office 365Microsoft 365 
       - name: Teams message extension vs. Outlook add-in
         href: m365-apps/me-or-outlook-add-in.md
         displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
@@ -807,8 +828,6 @@
         displayName: loop component, weburl, metadata
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
-- name: Extend Microsoft 365 Copilot
-  href: copilot/how-to-extend-copilot.md
 - name: Teams developer documentation FAQs
   href: teams-faq.md
 - name: Test your app
@@ -1083,6 +1102,9 @@
   - name: Introducing the new Microsoft Teams client
     href: resources/teams-updates.md
     displayName: Classic Teams, new Teams client, Teams 2.1
+  - name: Extend Microsoft 365 Copilot
+    href: messaging-extensions/how-to-extend-copilot.md
+    displayName: message extension, plugin, Copilot
 - name: Support and feedback
   href: feedback.md
   displayName: Developer community help, questions, suggestions, contact, issues

@@ -422,7 +422,7 @@ To enable, follow the steps:
 
 1. Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media` as shown in the [update manifest](#update-manifest).
 
-2. Use the following format and add the HMTL download attribute to the webpage:
+2. Use the following format and add the HTML download attribute to the webpage:
 
     ```html
     <a href="path_to_file" download="download">Download</a>

@@ -35,7 +35,7 @@ Cards used by bots and message extensions in Microsoft Teams support the followi
 > [!NOTE]
 >
 > * Your bot doesn't receive any notice on which button was selected.
-> * Machine names with numbers aren't supported in URL.
+> * URLs don't support machine names that include numbers. For example, a hostname such as *userhostname123* isn't supported.
 
 With `openUrl`, you can create an action with the following properties:
 
