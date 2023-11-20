@@ -42,7 +42,7 @@ Object is the file on which the user wants to perform an action. Currently, Ac
 
 A handler is how the Action performs the user’s intent on the selected object. It provides the logic and functionality of the Action, creating a smooth and meaningful user experience.
 
-The following are the avilable types of handlers:
+The following are the available types of handlers:
 
 * `openDialog`: Directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app.
 * `openPage`: Drive users to your app's dedicated pages (personal tab).
