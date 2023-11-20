@@ -45,6 +45,8 @@ You can build a Teams message extension app for Outlook through Teams Toolkit ex
 > * [Sideload your app in Teams](#sideload-your-app-in-teams)
 > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
+You can build either a search-based or an action-based message extension.
+
 [!INCLUDE [message-extensions-outlook](../includes/messaging-extensions/message-extensions-outlook.md)]
 
 Now, you can [sideload your app in Teams](#sideload-your-app-in-teams) and [preview your message extension in Outlook](#preview-your-message-extension-in-outlook). To build your app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
@@ -103,7 +105,7 @@ For users to interact with your message extension from Outlook, you need to enab
 ### Update Microsoft Entra app registration for SSO
 
 > [!NOTE]
-> You can skip this step if you're using the [sample app](#build-a-message-extension-app-for-outlooktabttk) provided in this tutorial, as the scenario doesn't involve Microsoft Entra single sign-on authentication.
+> You can skip this step if you're building an app for Outlook using Teams Toolkit, as the scenario doesn't involve Microsoft Entra single sign-on authentication.
 
 Microsoft Entra single sign-on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However, you need to add several client application identifiers to the Microsoft Entra app registration of your bot in your tenant's **App registrations** portal.
 
@@ -143,29 +145,13 @@ After it's uploaded through Teams, your message extension is available in Outloo
 
 ### Preview your message extension in Outlook
 
-Here's how to test your message extension running in Outlook for Windows and Outlook on the web.
-
-# [Outlook on the web](#tab/outlook-on-the-web)
-
-To preview your app running in Outlook on the web:
+Here's how to test your message extension running in Outlook on the web. To preview your app running in Outlook on the web, follow these steps:
 
 1. Sign in to [outlook.com](https://www.outlook.com) using your test tenant credentials.
 1. Select **New message**.
 1. Select **Apps** on the ribbon.
 
    :::image type="content" source="images/outlook-me.png" alt-text="Screenshot shows the preview your message extension in Outlook on the web.":::
-
-# [Outlook for Windows](#tab/outlook-on-the-desktop)
-
-To preview your app running in Outlook for Windows:
-
-1. Launch Outlook and sign in with your test tenant credentials.
-1. Select **New Email**.
-1. Select **All Apps** on the ribbon.
-
-   `Place holder for Figma image`
-
----
 
 Your message extension is listed. You can invoke it from there and use it just as you would while composing a message in Teams.
 
