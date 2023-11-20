@@ -64,7 +64,7 @@ Ensure you install the following tools to build Actions in Microsoft 365:
 To create Actions for your app, follow these steps:
 
 1. [Update app manifest](#update-app-manifest).
-1. [Build the handler that retrieves Action information through context object](#build-the-handler-that-retrieves-action-information-through-context-object).
+1. [Create a handler](#create-a-handler).
 1. [Access content through Graph API](#access-content-through-graph-api).
 
 #### Update app manifest
