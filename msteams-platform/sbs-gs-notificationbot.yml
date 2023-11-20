@@ -116,7 +116,7 @@ items:
     
         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/my-notification-output.png" alt-text="My Notification Output1"border="true":::
 
-       Your notification bot app is sideloaded into Teams client.
+       Your notification bot app is uploaded into Teams client.
 
        In real time, events are triggered by an external source, such as a third party API that cause the notification bot to send the user a notification. To emulate an event trigger, you can send an event manually using powershell or terminal.
 
