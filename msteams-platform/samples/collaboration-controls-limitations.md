@@ -121,7 +121,7 @@ The controls provide the following methods to debug your application.
 
 <summary><b>What are the Collaboration controls (Preview)?</b></summary>
 
-Collaboration controls (Preview) enable you to add Microsoft 365 capabilities to your Power Apps line of business custom applications to simplify user workflows when collaborating on business processes in Teams or Power Apps.
+Collaboration controls (Preview) enable you to add Microsoft 365 capabilities to your Power Apps custom app built for your org (LOB app) to simplify user workflows when collaborating on business processes in Teams or Power Apps.
 
 <br>
 
