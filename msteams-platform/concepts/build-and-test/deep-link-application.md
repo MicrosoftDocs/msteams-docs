@@ -16,11 +16,11 @@ If your app is approved for Teams mobile platform, you can create a deep link to
 
 Deep links allow users to know more about an app and install it in different scopes. You can also create deep links for your app users to go to specific pages within your app. In this article, learn how to create a deep link:
 
-- [To open application install dialog](#deep-link-to-open-application-install-dialog)
-- [To browse within your app](#deep-link-to-browse-within-your-app)
-- [To go to a chat with the application](#deep-link-to-a-chat-with-the-application)
-- [Share deep link for a tab](#share-deep-link-for-a-tab)
-- [To open a task module](#deep-link-to-open-a-task-module)
+* [To open application install dialog](#deep-link-to-open-application-install-dialog)
+* [To browse within your app](#deep-link-to-browse-within-your-app)
+* [To go to a chat with the application](#deep-link-to-a-chat-with-the-application)
+* [Share deep link for a tab](#share-deep-link-for-a-tab)
+* [To open a task module](#deep-link-to-open-a-task-module)
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -43,7 +43,7 @@ Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bc
 
 Following are the different app IDs that are used for deep links:
 
-* Side loaded apps: Manifest ID
+* Custom app uploaded in Teams: Manifest ID
 * Apps submitted to org catalog: Org catalog ID
 * Apps submitted to Teams Store: Store ID
 

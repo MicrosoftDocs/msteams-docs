@@ -580,11 +580,11 @@ The object is an array with all elements of the type `string`. The maximum item 
 
 **Optional** &ndash; Object
 
-Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Azure AD app.
+Specify your Microsoft Entra App ID and Graph information to help users seamlessly sign into your Microsoft Entra app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️|Microsoft Azure AD application ID of the app. This ID must be a GUID.|
+|`id`|String| |✔️|Microsoft Entra application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters||Resource URL of the app for acquiring auth token for SSO.|
 
 ## graphConnector
@@ -1001,3 +1001,4 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
+* [Different versions of app manifest schema](https://github.com/microsoft/json-schemas/tree/main/teams)
