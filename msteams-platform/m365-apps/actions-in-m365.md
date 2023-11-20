@@ -53,7 +53,7 @@ Ensure you install the following tools to build Actions in Microsoft 365:
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | [Install Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+| &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -71,9 +71,9 @@ To create Actions for your app, follow these steps:
 
 Define the intent, object, and handler for your actions in the app manifest schema (previously called Teams app manifest).
 
-The following is an app manifest example for `openPage` and `openDialog`:
+The following is an app manifest example for with `intent` and `supportedobjects` and `handlers` properties for `openPage` and `openDialog`:
 
-* Action to open a page: Action shows related tasks in the **To-do** app based on the selected file. It uses a custom `intent` to identify the file type, such as .xlsx or doc. It has a handler type of **openPage** that opens the app and navigates to the specified `pageId` and `subpageId`.
+* Action to open a page: Action shows related tasks in the **To-do** app based on the selected file. It uses `"intent": "custom"` to identify the file type, such as .xlsx or doc. The `"type": "openPage"` handler opens the app and navigates to the `pageId` and `subpageId` (need more information in code line no 96).
 
     ```json
     "actions": [
@@ -101,7 +101,7 @@ The following is an app manifest example for `openPage` and `openDialog`:
     ]
     ```
 
-* Action to open a dialog: Action lets you add a selected file and a note to the **To-do** app. It uses an `intent` type of **addTo** to identify the file type, such as .docx or .doc. It has a `handler` type of **openDialog** that opens a web-based dialog from the specified URL.
+* Action to open a dialog: Action lets you add a selected file and a note to the **To-do** app. It uses an `"intent": "addTo"` to identify the file type, such as .docx or .doc. The `"type": "openDialog"` handler opens a web-based dialog from the specified URL.
 
     ```json
     "actions": [
@@ -133,15 +133,11 @@ The following is an app manifest example for `openPage` and `openDialog`:
 
 For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
 
-#### Build the handler that retrieves Action information through context object
+#### Create a handler
 
-Update the handler to receive the Action information to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
+Update the handler to receive the Action information through the context object to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
 
-* Open page handler: Handler is directed to app’s launch page based on the pageId and subPageId defined in the manifest.
-
-* Open dialog handler: HTML-based dialog that enables app to complete tasks seamlessly within the dialog itself.
-
-When the user selects Add option from the context menu the app's page or dialog is launched with the help of the `openDialog` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
+When a user selects Add option from the app's context menu, a page or dialog opens with the help of the `openDialog` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
 
 ```javascript
 const context = await app.getContext();
@@ -151,27 +147,25 @@ this.setState({
 });
 ```
 
-#### [`actionInfo`](/javascript/api/@microsoft/teams-js/actioninfo)
-
-The TeamsJS helps to enable your app to determine when a user opens a page or dialog from an Action, and the content that initiated the Action.
-
-```javascript
-app.getContext().then((context: app.Context) => {
-    const actionInfo = context.actionInfo;
-    if (actionInfo && actionInfo.actionId == 'myActionId1') {
-        // Handle specific action
-    }
-});
-```
-
-**Properties**
+**Parameters**
 
 | &nbsp; | Name | Description |
 | --- | --- | --- |
 | &nbsp; | `actionId` | Maps to the action id supplied inside the manifest. |
 | &nbsp; | `actionObjects` | Array of corresponding action objects. |
 
-#### [`M365ContentAction`interface](/javascript/api/@microsoft/teams-js/m365contentaction)
+* [`actionInfo`](/javascript/api/@microsoft/teams-js/actioninfo): The TeamsJS helps to enable your app to determine when a user opens a page or dialog from an Action, and the content that initiated the Action.
+
+    ```javascript
+    app.getContext().then((context: app.Context) => {
+        const actionInfo = context.actionInfo;
+        if (actionInfo && actionInfo.actionId == 'myActionId1') {
+            // Handle specific action
+        }
+    });
+    ```
+
+#### [`M365ContentAction`interface](/javascript/api/@microsoft/teams-js/m365contentaction) (Need more information from Irene)
 
 In order to not leak personal data to applications, only ids of the office content are passed to the app. Apps use these ids together with the fact that this is OfficeContent to query the Microsoft graph for more details.
 
@@ -233,11 +227,13 @@ async readActionItem() {
 
 ## Build and run your app
 
+After you update the app manifest, you can build and run your app in Teams Toolkit.
+
 To build and run your app locally:
 
-1. After you update the app manifest, open your app in Teams Toolkit.
+1. Open your app in Teams Toolkit.
 
-1. To debug your app, select **Debug in the Microsoft 365 app (Edge) without backend** and enter **F5**.
+1. From the left pane, select **Debug in the Microsoft 365 app (Edge) without backend** and enter **F5**.
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 
@@ -245,9 +241,9 @@ To build and run your app locally:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
 
-## Test your Actions in Microsoft 365 apps
+A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
 
-You can now preview your Actions in Microsoft 365 app, right-click a file that is supported by your Actions. Actions appear in the context menu.
+You can now preview your Actions in Microsoft 365 app, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 

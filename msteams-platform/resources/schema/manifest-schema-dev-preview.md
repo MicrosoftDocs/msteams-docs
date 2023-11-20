@@ -1018,7 +1018,7 @@ Defines the handlers of the action.The handlers is an array of handler objects. 
 
 ### actions.handlers.supportedObjects
 
-Objects defining what objects can trigger this action.
+The supported objects to trigger an action.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -1040,8 +1040,8 @@ Required if the handler type is openDialog. Object containing metadata of the di
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`width`| String | | ✔️ | Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'. |
-|`height`| String | | ✔️ | Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'. |
+|`width`| String | | ✔️ | Dialog width - either a number in pixels or default layout such as large, medium, or small. |
+|`height`| String | | ✔️ | Dialog height - either a number in pixels or default layout such as large, medium, or small. |
 
 ## See also
 
