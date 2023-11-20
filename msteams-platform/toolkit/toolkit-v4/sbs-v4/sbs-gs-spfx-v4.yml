@@ -114,7 +114,7 @@ items:
     1. Select **Manage your apps**.
     1. Look for the option to **Upload a customised app**. If you see the option, custom app upload is enabled.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-customised-app-upload.png.png" alt-text="bot home":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/spfx-customised-app-upload.png.png" alt-text="Screenshot shows the option to upload customised app.":::
 
         > [!NOTE]
         > If Teams doesn't show the option to upload a customised app, talk to your Teams administrator.
@@ -325,7 +325,7 @@ items:
 
     1. Select **Add** when prompted to upload a custom app onto Teams on your local machine.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/add-app-local-debug-v4.png" alt-text="Add the app to Teams":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/add-app-local-debug-v4.png" alt-text="Screenshot shows the option to add an app to Teams.":::
    
     1. Select the web app version, if you're asked to switch to Teams desktop. You can see the HTML, CSS, and JavaScript code in a standard web development environment.
 
