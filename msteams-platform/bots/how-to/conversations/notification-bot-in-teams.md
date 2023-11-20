@@ -162,7 +162,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a personal chat:
 
-  # [TypeScript](#tab/ts2)
+# [TypeScript](#tab/ts2)
 
     ```TypeScript
     // list all installation targets
@@ -175,7 +175,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-  # [C#](#tab/csharp2)
+# [C#](#tab/csharp2)
 
     ```C#
     // list all installation targets
@@ -193,7 +193,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a group chat:
 
-  # [TypeScript](#tab/ts3)
+# [TypeScript](#tab/ts3)
 
     ```TypeScript
     // list all installation targets
@@ -213,7 +213,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-  # [C#](#tab/csharp3)
+# [C#](#tab/csharp3)
 
     ```C#
     // list all installation targets
@@ -236,7 +236,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a channel:
 
-  # [TypeScript](#tab/ts4)
+# [TypeScript](#tab/ts4)
 
     ```TypeScript
     // list all installation targets
@@ -261,7 +261,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-  # [C#](#tab/csharp4)
+# [C#](#tab/csharp4)
 
     ```C#
     // list all installation targets
@@ -449,6 +449,8 @@ If storage isn't provided, you can use a default local file storage, which store
 
 * `.notification.localstore.json` if running locally.
 * `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to 1.
+
+If you're using the default local file storage, Azure web app and Azure Functions clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage.
 
 The `NotificationTargetStorage` is different from Bot Framework SDK's [custom storage](/azure/bot-service/bot-builder-custom-storage). The notification storage requires `read`, `write`, `delete`, and `list` functionalities but Bot Framework SDK's storage has `read`, `write`, and `delete` functionalities and doesn’t have the `list` functionality.
 
