@@ -1,7 +1,7 @@
 ---
 title: Test and debug your bot locally
 author: surbhigupta
-description: Learn about testing and debugging your bot locally with an IDE within Teams environment via custom app upload and more.
+description: Learn about testing and debugging your bot locally with an IDE within Teams environment via uploading a custom app and more.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
