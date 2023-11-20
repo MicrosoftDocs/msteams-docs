@@ -11,7 +11,7 @@ ms.date: 03/03/2022
 
 ## Upload your app to Teams
 
-You can sideload your Teams app to Microsoft Teams without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
+You can upload your Teams app to Microsoft Teams without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
 
 * You want to test and debug an app locally or on your testing cloud environment.
 * You built an app for yourself to automate a workflow.
@@ -19,7 +19,7 @@ You can sideload your Teams app to Microsoft Teams without having to publish to 
 
 > [!IMPORTANT]
 >
-> * Sideloading of apps is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
+> * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
 > * App installation is supported only on Teams desktop client.
 
 ## Prerequisites
@@ -30,7 +30,7 @@ You can sideload your Teams app to Microsoft Teams without having to publish to 
 
 ## Upload your app
 
-You can sideload your app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
+You can upload your custom app to a team, chat, meeting, or for personal use depending on how you configured your app's scope.
 
 1. Log in to the Teams client with your [Microsoft 365 development account](https://developer.microsoft.com/microsoft-365/dev-program).
 
@@ -53,7 +53,7 @@ You can sideload your app to a team, chat, meeting, or for personal use dependin
 
 You can test your Teams app after integrating with Microsoft Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Teams Toolkit for testing your Teams app:
 
-* **Locally hosted in Teams**: Teams Toolkit locally hosts your Teams app by sideloading it into Teams for testing in local environment.
+* **Locally hosted in Teams**: Teams Toolkit locally hosts your Teams app by uploading it into Teams for testing in local environment.
 
 * **Cloud-hosted in Teams**: For testing your Teams app remotely, you need to Cloud-host it using provisioning and deploying on Microsoft Entra ID. It involves uploading your solution to the Microsoft Entra ID and then upload into Teams.
 
@@ -62,7 +62,7 @@ You can test your Teams app after integrating with Microsoft Teams. To test your
 
 ## Locally hosted environment
 
-Teams is a cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. Local hosting is about sideloading into Teams for testing in local environment.
+Teams is a cloud-based product that requires all services it accesses, to be available publicly using HTTPS endpoints. Local hosting is about custom app uploading into Teams for testing in local environment.
 
 ## Cloud-hosted environment
 
