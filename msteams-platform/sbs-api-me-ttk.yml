@@ -97,23 +97,23 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
-   ### Check for sideloading option
+   ### Check for custom app upload option
 
-   After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+   After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-   Verify if you can sideload apps in Teams:
+   Verify if you can upload a custom apps in Teams:
 
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
 

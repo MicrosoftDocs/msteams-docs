@@ -238,7 +238,7 @@ After deploying, you can preview the app in Teams client or the web browser befo
 
 ### Preview your app
 
-To preview your app, you need to create a **Zip App Package** and sideload into the Teams client.
+To preview your app, you need to create a **Zip App Package** and upload into the Teams client.
 
 1. Select **Project** > **Teams Toolkit** > **Zip App Package**.
 1. Select **For Local** or **For Azure** to generate Teams app package.
@@ -251,9 +251,9 @@ To preview your app, you need to create a **Zip App Package** and sideload into 
 
    :::image type="content" source="images/vs-deploy-preview-teams2-v4.png" alt-text="Preview Teams app in teams client":::
 
-   Now your app is sideloaded into Teams.
+   Now your custom app is uploaded into Teams.
 
-   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Sideload Teams app in teams client":::
+   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Upload Teams app in teams client":::
 
 The other way to preview your app:
 
@@ -265,9 +265,9 @@ The other way to preview your app:
    > [!NOTE]
    > The same menu options are available in Project menu.
 
-   Now your app is sideloaded into Teams.
+   Now your custom app is uploaded into Teams.
 
-   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Sideload Teams app in teams client":::
+   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Upload Teams app in teams client":::
 
 ## See also
 
