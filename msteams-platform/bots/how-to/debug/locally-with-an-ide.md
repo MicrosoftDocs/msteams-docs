@@ -71,7 +71,7 @@ Initiate a conversation with your bot by using its ID. When a bot is added throu
       Alternatively, you can paste your bot's app ID in the search box in the top left in Teams. In the search results page, go to the **People** tab to see your bot and to start chatting with it.
 
 > [!NOTE]
-> For Teams to refer to your bot's app ID, enable [custom aop upload](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> For Teams to refer to your bot's app ID, enable [custom app upload](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 Your bot receives the `conversationUpdate` event as you add the bots to a team, without the team information in the `channelData` object.
 
