@@ -162,7 +162,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a personal chat:
 
-# [TypeScript](#tab/ts2)
+  # [TypeScript](#tab/ts2)
 
     ```TypeScript
     // list all installation targets
@@ -175,7 +175,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-# [C#](#tab/csharp2)
+  # [C#](#tab/csharp2)
 
     ```C#
     // list all installation targets
@@ -193,7 +193,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a group chat:
 
-# [TypeScript](#tab/ts3)
+  # [TypeScript](#tab/ts3)
 
     ```TypeScript
     // list all installation targets
@@ -213,7 +213,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-# [C#](#tab/csharp3)
+  # [C#](#tab/csharp3)
 
     ```C#
     // list all installation targets
@@ -236,7 +236,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a channel:
 
-# [TypeScript](#tab/ts4)
+  # [TypeScript](#tab/ts4)
 
     ```TypeScript
     // list all installation targets
@@ -261,7 +261,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-# [C#](#tab/csharp4)
+  # [C#](#tab/csharp4)
 
     ```C#
     // list all installation targets
