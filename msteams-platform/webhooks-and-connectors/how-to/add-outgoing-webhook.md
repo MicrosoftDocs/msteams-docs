@@ -104,7 +104,7 @@ Your code must always validate the HMAC signature included in the request as fol
 * Convert the hash to a string using UTF-8 encoding.
 * Compare the string value of the generated hash with the value provided in the HTTP request.
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/b0edf727c1e77f62107533b716ece64697cb9291/samples/outgoing-webhook/csharp/Models/AuthProvider.cs#L63)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/csharp/Models/AuthProvider.cs#L63C13-L63C13)
 
 ```csharp
             string providedHmacValue = authenticationHeaderValue.Parameter;
