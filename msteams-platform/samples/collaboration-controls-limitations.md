@@ -25,14 +25,14 @@ Following are the limitations for Collaboration controls:
      :::image type="content" source="../assets/images/collaboration-control/subgrid-view.png" alt-text="The screenshot shows the subgrid view of the tasks." border= "true":::
 
 * Activities added to the timeline control don’t appear in the components, tasks, meetings, and notes created in the components aren't included in the timeline control.
-* New records must be saved before accessing the components, otherwise you'll see an empty screen.
+* New records must be saved before accessing the components, otherwise you see an empty screen.
 * The components don't inherit theming from the form or app they're added to.
 * Localization is only available when running the app inside Microsoft Teams.
 * Microsoft Edge strict mode isn't supported and cross-site cookies are required.
 
 **Admin Center does not update when installation or upgrade is complete**
 
-When following the installation steps in [install Collaboration controls](~/samples/install-collaboration-control.md), you're redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation and when it's completed it might not be available in the list. You can view the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/) to confirm that installation is complete.
+When following the installation steps in [install Collaboration controls](~/samples/install-collaboration-control.md), you're redirected to the Power Platform admin center. A banner is displayed when installation starts, but it isn't updated when installation completes. The status is listed during installation and after completion it might not be available in the list. You can view the solutions list at [https://make.powerapps.com/](https://make.preview.powerapps.com/) to confirm that installation is complete.
 
 **View during installation:**
      :::image type="content" source="../assets/images/collaboration-control/view-during-installation.png" alt-text="The screenshot shows the process during installation." border="true":::
@@ -103,7 +103,7 @@ The controls provide the following methods to debug your application.
 
 1. **Trace logging** of plugin events when an API is invoked. This information is stored in your Dataverse environment.
 
-    1. To enable trace logging follow these steps in [logging and tracing](/power-apps/developer/data-platform/logging-tracing?WT.mc_id=email).
+    1. To enable trace logging, follow these steps in [logging and tracing](/power-apps/developer/data-platform/logging-tracing?WT.mc_id=email).
 
 1. **Browser logging** for UI controls. This is standard console logging.
 
@@ -157,7 +157,7 @@ Your users can experience productivity gains and stay in their flow by collabo
 
 <summary><b>How do I get access to the Collaboration controls (Preview)?</b></summary>
 
-Request that your Power Platform administrator install the controls from AppSource to your Power Apps environment.
+Request that your Power Platform administrator installs the controls from AppSource to your Power Apps environment.
 
 <br>
 
