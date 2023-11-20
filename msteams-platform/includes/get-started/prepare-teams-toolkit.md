@@ -1,6 +1,6 @@
 ## Prepare development environment
 
-After you've installed the required tools, set up the development environment.
+After you install the required tools, you set up the development environment.
 
 ### Install Teams Toolkit
 
@@ -16,7 +16,7 @@ You can use Teams Toolkit with Visual Studio Code or CLI (command-line interface
 
    :::image type="content" source="../../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Teams Toolkit extension installation.":::
 
-   The Teams Toolkit :::image type="icon" source="../../assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+   The Teams Toolkit :::image type="icon" source="../../assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code **Activity Bar**.
 
 You can also install Teams Toolkit from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -28,7 +28,7 @@ To install the TeamsFx CLI, use the `npm` package manager and enter the followin
 npm install -g @microsoft/teamsfx-cli
 ```
 
-Depending on your configuration, you may need to use `sudo` to install the CLI:
+Depending on your configuration, you might need to use `sudo` to install the CLI:
 
 ``` bash
 sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
@@ -64,9 +64,9 @@ Verify if you can upload apps in Teams:
 1. In the Teams client, select the **Apps** icon.
 1. Select **Manage your apps**.
 1. Select **Upload an app**.
-1. Look for the option to **Upload a custom app**. If the option is visible, you've enabled custom app upload.
+1. Look for the option to **Upload a customised app**. If the option is visible, you enabled custom app upload.
 
-   :::image type="content" source="../../assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
+   :::image type="content" source="../../assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of Upload a customised app.":::
 
       > [!NOTE]
       > Contact your Teams administrator, if you don't find the option to upload a customised app.
@@ -82,4 +82,4 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
    :::image type="content" source="../../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
-1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
+1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a customised app** option in Teams.
