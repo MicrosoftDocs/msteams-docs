@@ -92,7 +92,7 @@ items:
     
     1.   Select **About** > **Developer preview**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview-1.png" alt-text="Screenshot shows the dropdown list with About and Developer preview highlighted in red.":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview-enable.png" alt-text="Screenshot shows the dropdown list with about and developer preview options.":::
    
     1.   Select **Switch to developer preview**.
    
@@ -185,9 +185,9 @@ items:
          1. In the left pane, select the **Apps** icon.
          1. Select **Manage your apps**.
          1. Select **Upload an app**.
-         1. Look for the option to **Upload a custom app**.
+         1. Look for the option to **Upload a customised app**.
  
-            :::image type="content" source="~/assets/images/sbs-connector/upload-a-custom-app.png" alt-text="Screenshot of Upload an app with Upload a custom app highlighted in red.":::
+            :::image type="content" source="~/assets/images/sbs-connector/upload-a-custom-app.png" alt-text="Screenshot shows the option to upload a customised app.":::
       
     1. Select the .zip file that you created in the **Manifest** folder and select **Open**.
 
