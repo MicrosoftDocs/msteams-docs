@@ -41,8 +41,7 @@ To extend your Teams message extension to Outlook, you can either build a new me
 You can build a Teams message extension app for Outlook through Teams Toolkit extension for Visual Studio Code. To build a message extension app for Outlook, ensure the following:
 
 > [!div class="checklist"]
-> 
-> * [Build an app with Teams Toolkit in Visual Studio Code](#build-a-message-extension-app-for-outlook)
+>
 > * [Sideload your app in Teams](#sideload-your-app-in-teams)
 > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
@@ -58,7 +57,7 @@ To extend your existing Teams message extension app to Outlook, ensure the follo
 >
 > * [Update your app manifest.](#update-your-app-manifest)
 > * [Add the Microsoft 365 channel for your app.](#add-microsoft-365-channel-for-your-app)
-> * [Update Azure AD app registration for SSO.](#update-azure-ad-app-registration-for-sso)
+> * [Update Microsoft Entra app registration for SSO.](#update-microsoft-entra-app-registration-for-sso)
 > * [Sideload your updated app in Teams.](#sideload-your-app-in-teams)
 > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
@@ -104,7 +103,7 @@ For users to interact with your message extension from Outlook, you need to enab
 ### Update Microsoft Entra app registration for SSO
 
 > [!NOTE]
-> You can skip this step if you're using the [sample app](#quickstart) provided in this tutorial, as the scenario doesn't involve Microsoft Entra single sign-on authentication.
+> You can skip this step if you're using the [sample app](#tab/ttk) provided in this tutorial, as the scenario doesn't involve Microsoft Entra single sign-on authentication.
 
 Microsoft Entra single sign-on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However, you need to add several client application identifiers to the Microsoft Entra app registration of your bot in your tenant's **App registrations** portal.
 
@@ -145,7 +144,7 @@ After it's uploaded through Teams, your message extension is available in Outloo
 ### Preview your message extension in Outlook
 
 Here's how to test your message extension running in Outlook for Windows and Outlook on the web.
-    
+
 # [Outlook on the web](#tab/outlook-on-the-web)
 
 To preview your app running in Outlook on the web:
@@ -178,15 +177,15 @@ As you debug your message extension, you can identify the source (originating fr
 
 While your updated message extension continues to run in Teams, you must be aware of the following limitations:
 
-- Message extensions in Outlook are supported only in the [`compose`](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions) context. In Teams app manifest, message extension contexts such as `commandBox` and `message` aren't supported in Outlook.
+* Message extensions in Outlook are supported only in the [`compose`](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions) context. In Teams app manifest, message extension contexts such as `commandBox` and `message` aren't supported in Outlook.
 
-- Action-based message extensions that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this scenario, you can convert your message extension to [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Outlook.
+* Action-based message extensions that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this scenario, you can convert your message extension to [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Outlook.
 
-- You can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email. 
+* You can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email.
 
-- [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported. `openURL` is the only supported card action.
+* [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported. `openURL` is the only supported card action.
 
-- Adaptive Card actions are supported. For `Action.Submit` only [stageview](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/tabs-link-unfurling#invoke-collaborative-stage-view-from-adaptive-card) and [taskmodule](https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/task-modules/task-modules-bots?tabs=nodejs#bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions) launching is supported.
+* Adaptive Card actions are supported. For `Action.Submit` only [stageview](../tabs/tabs-link-unfurling.md#invoke-collaborative-stage-view-from-adaptive-card) and [taskmodule](../task-modules-and-cards/task-modules/task-modules-bots.md#bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions) launching is supported.
 
 > [!NOTE]
 > When you test an app with link unfurling, ensure that you remove the app manually after testing. If multiple apps are monitoring the same domain, the app installed most recently might not be invoked to unfurl the link in Outlook, as it would in Teams.
@@ -201,7 +200,6 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 | Teams Link Unfurling | Simple Teams app to demonstrate link unfurling. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs)
 | Tab in Stage View | Microsoft Teams tab sample app for demonstrating a tab in Stage View. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
 |Teams action-based message extension for Microsoft 365| `TBD` | `TBD` |
-
 
 ## Next step
 
