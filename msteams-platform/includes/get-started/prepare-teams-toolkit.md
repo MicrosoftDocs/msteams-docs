@@ -1,6 +1,6 @@
 ## Prepare development environment
 
-After you've installed the required tools, set up the development environment.
+After you install the required tools, you set up the development environment.
 
 ### Install Teams Toolkit
 
@@ -17,7 +17,7 @@ You can use Teams Toolkit with Visual Studio Code or CLI (command-line interface
 
    :::image type="content" source="../../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Teams Toolkit extension installation.":::
 
-   The Teams Toolkit :::image type="icon" source="../../assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+   The Teams Toolkit :::image type="icon" source="../../assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code **Activity Bar**.
 
 You can also install Teams Toolkit from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -30,7 +30,7 @@ To install the TeamsFx CLI, use the `npm` package manager and enter the followin
 npm install -g @microsoft/teamsfx-cli
 ```
 
-Depending on your configuration, you may need to use `sudo` to install the CLI:
+Depending on your configuration, you might need to use `sudo` to install the CLI:
 
 ``` bash
 sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
@@ -66,7 +66,7 @@ Verify if you can upload apps in Teams:
 1. In the Teams client, select the **Apps** icon.
 1. Select **Manage your apps**.
 1. Select **Upload an app**.
-1. Look for the option to **Upload a customised app**. If the option is visible, you've enabled custom app upload. 
+1. Look for the option to **Upload a customised app**. If the option is visible, you enabled custom app upload. 
    
    :::image type="content" source="../../assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of Upload a customised app.":::
 
