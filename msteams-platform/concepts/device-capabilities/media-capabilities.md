@@ -70,36 +70,36 @@ The following table lists set of APIs to enable your device's media capabilities
 | [**getMedia**](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages)| This API enables the user to view images in full-screen mode as a scrollable list.|
 
-The following illustration depicts the web app experience of `captureImage` API for the image capability on Teams mobile:
+The following image depicts the web app experience of `captureImage` API for the image capability on Teams mobile:
 
 * Launch camera and capture the image to share:
 
-  :::image type="content" source="~/assets/images/tabs/capture-media-mobile.png" alt-text="Illustration shows the captureImage capability for mobile.":::
+  :::image type="content" source="~/assets/images/tabs/capture-media-mobile.png" alt-text="Image shows the captureImage capability for mobile.":::
 
 * Select media from the gallery to share:
 
-  :::image type="content" source="~/assets/images/tabs/capture-media-mobile-gallery.png" alt-text="Illustration shows the mobile gallery of captureImage capability.":::
+  :::image type="content" source="~/assets/images/tabs/capture-media-mobile-gallery.png" alt-text="Image shows the mobile gallery of captureImage capability.":::
 
 You can view the web app experience of the `selectMedia` API for Teams desktop and mobile.
 
 # [Mobile](#tab/mobile)
 
-The following illustration depicts the web app experience of `selectMedia` API for the image capability:
+The following image depicts the web app experience of `selectMedia` API for the image capability:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile.":::
+:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Image shows the image capability for mobile.":::
 
 > [!NOTE]
 > In devices with Android version under 7, the `selectMedia` API launches the native Android camera experience instead of the native Teams camera experience.
 
-The following illustration depicts the web app experience of `selectMedia` API for the microphone capability:
+The following image depicts the web app experience of `selectMedia` API for the microphone capability:
 
-:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for mobile.":::
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Image shows the microphone capability for mobile.":::
 
 # [Desktop](#tab/desktop)
 
-The following illustration depicts the web app experience of `selectMedia` API for the image capability:
+The following image depicts the web app experience of `selectMedia` API for the image capability:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration shows the media capability for desktop.":::
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Image shows the media capability for desktop.":::
 
 ---
 
