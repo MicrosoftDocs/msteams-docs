@@ -103,7 +103,7 @@ For users to interact with your message extension from Outlook, you need to enab
 ### Update Microsoft Entra app registration for SSO
 
 > [!NOTE]
-> You can skip this step if you're using the [sample app](#tab/ttk) provided in this tutorial, as the scenario doesn't involve Microsoft Entra single sign-on authentication.
+> You can skip this step if you're using the [sample app](#build-a-message-extension-app-for-outlooktabttk) provided in this tutorial, as the scenario doesn't involve Microsoft Entra single sign-on authentication.
 
 Microsoft Entra single sign-on (SSO) for message extensions works the same way in Outlook [as it does in Teams](/microsoftteams/platform/bots/how-to/authentication/auth-aad-sso-bots). However, you need to add several client application identifiers to the Microsoft Entra app registration of your bot in your tenant's **App registrations** portal.
 
