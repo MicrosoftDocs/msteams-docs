@@ -15,51 +15,39 @@ ms.subservice: m365apps
 >
 > * Actions is supported for Microsoft 365 apps on web and desktop clients only and isn't supported on Outlook and Microsoft Teams.
 
-Actions seamlessly integrate your app into the user's workflow, ensuring effortless discovery and smooth interaction with their content. By guiding users to your app based on their intent and contextual content, Actions facilitate efficient task completion. With the integration increases your app's visibility and engagement with minimal development effort.
+Actions enable your app to integrate seamlessly into the user's workflow and guide users to your app based on their intent and the content at hand, making task completion more efficient.
+Actions help you enhance your app's visibility and engagement with minimal development effort and improve user productivity by streamlining task completion and reducing the need to switch contexts across various Microsoft 365 apps. For instance, your app can act immediately on content files, expanding the range of interactions users can have with their content.
 
-Actions enhance user's productivity by streamlining task completion and reducing the need for context switching across various Microsoft 365 applications.
+You can extend your Teams app across Microsoft 365 using Actions. However, it's important to note that Actions function only in the Microsoft 365.
 
-You can create a Teams app extensible across Microsoft 365 with the Actions feature. However, Actions only work in Microsoft 365 hub.
-
-With Actions users can:
-
-* Accomplish tasks more efficiently.
-* Seamlessly integrates your app into user's workflow, increasing app's visibility and user engagement.
-* Take immediate action on content files through your app, expanding the range of interactions they can have with their content.
-
-Let us walk through a user scenario of how users might interact with your app through Actions you develop and how the handler affects the workflow.
-
-In the graphic, the user intends to attach a Word document without opening it. Right-click on the Word document and select **Add to** > **Add todo task**.
-
-A dialog window appears with the Word document attached. Users can input additional information in the **Notes** and select **Submit**. `openDialog` handler enables users to efficiently complete tasks within a contextualized dialog interface.
+In the following graphic, the user intends to attach a Word document to the list in the **To do** app. The uses right-clicks on the Word document and select the **Add to** action. A dialog appears with the Word document attached, the user adds a note and select **Submit**. The Word document is added to the list in the **To do** app:
 
   :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user can add a file to the to-do list app with a note attached for a task to complete.":::
 
-## Understand how Actions work
+## Build Actions
 
-Actions are the combination of Intent, Object, and Handler. Actions represent the task that the user wants to perform where Intent is the user’s desired action, Object is the function to be executed, and Handler is the way to perform the action on the object.
+Actions are the combination of intent, object, and handler. Actions represent the task that the user wants to perform where intent is the user’s desired action, object is the function to be executed, and handler is the way to perform the action on the object.
 
-When you're creating an app ensure that you define user intent, and choose the object to perform the action, and construct the corresponding handler that facilitates task completion for the user.
+When you're creating an app ensure that you define user intent, choose the object to perform the action, and construct the corresponding handler that facilitates task completion for the user.
 
 ### Intent
 
-Intent is the objective a user wants to perform or achieve. User intent is typically represented as open or add to. Intent enables the Microsoft 365 platform to display the Actions in locations that mostly align with the user's needs and intentions. Intent includes but not limited to, where Actions show up and how Actions are grouped or ordered.
-You can create an intent for Open, addTo, and custom actions. If you want to build any tailored Actions to fulfil any user task create a custom intent.
+Intent is the objective a user wants to perform or achieve, such as open or add. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement, grouping, and ordering of Actions. You can create an intent for Open, addTo, and custom actions. You can use custom Actions to create tailored Actions.
 
 ### Object
 
-Object is the file on which the user wants to perform an action. Currently, Actions can be triggered on content objects, files that have an extension, like Word, PowerPoint, Excel, PDF, and images. Which reside in OneDrive and SharePoint that are accessible through Microsoft Graph.
+Object is the file on which the user wants to perform an action. Currently, Actions can be triggered on content objects (files) that have an extension, such as Word, PowerPoint, Excel, PDF, and images. The files must be available in OneDrive or SharePoint and are accessible through Microsoft Graph.
 
 ### Handlers
 
 A handler is how the Action performs the user’s intent on the selected object. It provides the logic and functionality of the Action, creating a smooth and meaningful user experience.
 
-You can choose between two types of handlers:
+The following are the avilable types of handlers:
 
-* `openDialog`: This handler directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app.
-* `openPage`: By using the openPage handler, you can drive users to your app's dedicated pages (personal tab).
+* `openDialog`: Directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app.
+* `openPage`: Drive users to your app's dedicated pages (personal tab).
 
-## Prerequisites
+### Prerequisites
 
 Ensure you install the following tools to build Actions in Microsoft 365:
 
@@ -71,15 +59,15 @@ Ensure you install the following tools to build Actions in Microsoft 365:
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
-## Build Actions
+### Create Actions
 
-To build Actions for your app, follow these steps:
+To create Actions for your app, follow these steps:
 
 1. [Update app manifest](#update-app-manifest).
 1. [Build the handler that retrieves Action information through context object](#build-the-handler-that-retrieves-action-information-through-context-object).
 1. [Access content through Graph API](#access-content-through-graph-api).
 
-### Update app manifest
+#### Update app manifest
 
 Define the intent, object, and handler for your actions in the app manifest schema (previously called Teams app manifest).
 
@@ -145,7 +133,7 @@ The following is an app manifest example for `openPage` and `openDialog`:
 
 For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
 
-### Build the handler that retrieves Action information through context object
+#### Build the handler that retrieves Action information through context object
 
 Update the handler to receive the Action information to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
 
@@ -229,7 +217,7 @@ foo: string?
 | &nbsp; | `itemId` | Only office content IDs are passed to the app. Apps should use these ids to query the Microsoft graph for more details. |
 | &nbsp; | `secondaryId` | Represents an optional secondary identifier for an action in a Microsoft 365 content item. |
 
-### Access content through Graph API
+#### Access content through Graph API
 
 After obtaining the itemId of the triggering content, you can use the Graph API to read or modify the content, facilitating task completion for your users.
 
