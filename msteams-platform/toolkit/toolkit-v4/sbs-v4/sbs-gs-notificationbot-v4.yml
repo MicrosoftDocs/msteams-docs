@@ -111,8 +111,8 @@ items:
 
    Verify if you can upload a custom app in Teams:
 
-    1. Go to **Microsoft Teams**.
-    1. Select **Apps** > **Manage your apps**.
+    1. In the Teams client, select the **Apps** icon.
+    1. Select **Manage your apps**.
     1. Select **Upload an app**.
     1. Look for the option to **Upload a customised app**. If you see the option, sideloading apps is enabled.
 
