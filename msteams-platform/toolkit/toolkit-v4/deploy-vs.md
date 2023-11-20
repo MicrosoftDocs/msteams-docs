@@ -232,7 +232,7 @@ After deploying, you can preview the app in Teams client or the web browser befo
 
    :::image type="content" source="images/vs-deploy-confirmation-v4.png" alt-text="Deploy to cloud confirmation dialog":::
 
-   After the deploy process completes, you can see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
+   After the deploy process completes, you can see a pop-up with the confirmation that it's successfully deployed. You can also check the status in the output window.
 
    :::image type="content" source="images/VS-deploy-popup-v4.png" alt-text="deploy to cloud popup":::
 

@@ -23,7 +23,7 @@ Microsoft 365 subscribers can develop apps for Microsoft Teams with one of the f
 
 ## Create your development environment
 
-If you do not have a Microsoft 365 account, you must sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
+If you don't have a Microsoft 365 account, you must sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
 
 ## Enable Teams for your organization
 
@@ -34,7 +34,7 @@ Enable Teams for your organization and for more information, see [enabling Teams
 > [!IMPORTANT]
 > If you've set up a Microsoft 365 Developer Program instant sandbox or a configurable sandbox with the Teams sample data pack, you can skip the steps to enable custom app upload. The **Upload custom apps** setting is enabled by default in the Teams sample data pack.
 
-To turn on the custom app uploadin for your developer tenant:
+To turn on the custom app uploading for your developer tenant:
 
 1. Sign in to [Microsoft Teams admin center](https://admin.teams.microsoft.com/dashboard) with your admin credentials.
 

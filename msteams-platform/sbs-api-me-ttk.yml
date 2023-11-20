@@ -2,7 +2,7 @@
 title:  Build message extension using API
 metadata:
   title: Build API-based message extension 
-  description: In this learn module, you'll learn how to build a message extension using OpenAPI Description (OAD) document with Teams Toolkit.
+  description: In this learn module, learn how to build a message extension using OpenAPI Description (OAD) document with Teams Toolkit.
   audience: Developer
   level: Beginner
   ms.date: 10/21/2021
@@ -108,7 +108,7 @@ items:
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-   Verify if you can upload a custom apps in Teams:
+   Verify if you can upload a custom app in Teams:
 
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.

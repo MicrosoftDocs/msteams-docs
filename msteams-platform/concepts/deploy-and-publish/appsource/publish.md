@@ -103,7 +103,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
         1. Test instructions detailing app functionality and supported scenarios.
 
-        1. Setup instructions if your app requires more configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
+        1. Set up instructions if your app requires more configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
 
         1. We recommend you to link a demo video that demonstrates key user flow for your app.
 
