@@ -140,7 +140,7 @@ Sideload your updated message extension ([app package](/microsoftteams/platform/
 
    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option in Teams.":::
 
-After it's sideloaded through Teams, your message extension is available in Outlook for Windows desktop and web.
+After it's uploaded through Teams, your message extension is available in Outlook for Windows desktop and web.
 
 ### Preview your message extension in Outlook
 
@@ -182,11 +182,14 @@ While your updated message extension continues to run in Teams, you must be awar
 
 - Action-based message extensions that [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box are supported in Outlook. However, using [bots to deliver cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#) isn't supported. In this scenario, you can convert your message extension to [send cards](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#respond-with-a-card-inserted-into-the-compose-message-area) into the compose box in Outlook.
 
-- You can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email.
+- You can't insert more than five [Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards?tabs=design) in an email. 
 
 - [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported. `openURL` is the only supported card action.
 
 - Adaptive Card actions are supported. For `Action.Submit` only [stageview](https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/tabs-link-unfurling#invoke-collaborative-stage-view-from-adaptive-card) and [taskmodule](https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/task-modules/task-modules-bots?tabs=nodejs#bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions) launching is supported.
+
+> [!NOTE]
+> When you test an app with link unfurling, ensure that you remove the app manually after testing. If multiple apps are monitoring the same domain, the app installed most recently might not be invoked to unfurl the link in Outlook, as it would in Teams.
 
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
