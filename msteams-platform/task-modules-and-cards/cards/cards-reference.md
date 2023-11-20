@@ -128,7 +128,7 @@ The following table provides the features that support Adaptive Cards:
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
 > * Media elements are not supported in Adaptive Card on the Teams platform.
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
-> * Adaptive Cards in Teams don't support file or image upload capability.
+> * Adaptive Cards in Teams don't support file or image upload.
 
 ### Example of Adaptive Card
 
