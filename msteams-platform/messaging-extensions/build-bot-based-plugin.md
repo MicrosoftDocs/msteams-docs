@@ -22,6 +22,8 @@ Microsoft Copilot for Microsoft 365, powered by an advanced processing and orche
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and M365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
+> [!VIDEO https://www.youtube.com/embed/vvNFCagkdcE?si=1jS5gsLuJFPANzoi]
+
 ## What is a plugin?
 
 A plugin allows Copilot for Microsoft 365 to interact directly with third-party data, apps, and services, enhance its capabilities, and broaden its range of capabilities. Plugins allow Copilot for Microsoft 365 to:
