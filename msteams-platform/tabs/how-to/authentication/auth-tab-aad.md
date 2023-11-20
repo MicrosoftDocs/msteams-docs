@@ -50,7 +50,7 @@ Trigger the authentication flow by a user action. Avoid opening the authenticati
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Microsoft Entra ID, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
+Microsoft Entra ID, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means you need to add a page to host the identity provider that is displayed inside a pop-up window by Teams client. In the following example, the page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
