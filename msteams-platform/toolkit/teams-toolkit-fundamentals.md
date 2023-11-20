@@ -40,6 +40,20 @@ Teams Toolkit is available for free for Visual Studio Code. For more information
 | Installation | Available in the VS Code Marketplace |
 | Build with | JavaScript, TypeScript, React, SPFx |
 
+## Version Mapping
+
+The following table list out the version support for the Teams Toolkit extension for each release cycle:
+
+| &nbsp; | Teams Toolkit for Visual Studio Code|Teams Toolkit for Visual Studio| Teams Toolkit CLI | TeamsFx SDK |Teams SDK|Manifest|
+|----|----|----|----|----|----|----|
+|Public Preview|v3.8.x|v17.2|v0.14.x|v0.7.x|v1.11.x, v1.12.x|v1.11|
+|GA|v4.0.0|v17.3|v1.0.0|v1.0.0|v1.12.x|v1.11|
+|Latest*|v5.x.x|v17.6|-|v2.x.x|v2.x.x|v1.16|
+|Beta**|Prerelease|v17.7 Preview|v2.x.x-beta|v2.x.x-beta|v2.x.x-beta|Dev preview|
+
+*Latest is aligned on the major version.<br>
+**Beta indicates developer preview.
+
 ## Features
 
 The following list provides the key features of Teams Toolkit:
@@ -57,7 +71,7 @@ You can start directly with the capability-focused templates such as tabs, bots,
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Azure Active Directory (Azure AD) for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the included Azure AD manifest when you need flexibility.
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Microsoft Entra ID for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the included Microsoft Entra manifest when you need flexibility.
 
 ### Multiple environments
 
@@ -84,7 +98,7 @@ Teams Toolkit makes it simple to get started with app development for Microsoft 
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
 * Create unique configurations like dev, test, and prod using the environments feature.
-* Bring your app to your organization or the Teams App Store using built-in publishing tools.
+* Bring your app to your organization or the Microsoft Teams Store using built-in publishing tools.
 
 :::image type="content" source="toolkit-v4/images/teams-toolkit-user-journey3VS-v4.png" alt-text="User Journey of the Teams Toolkit."  lightbox="toolkit-v4/images/teams-toolkit-user-journey3VS-v4.png":::
 
@@ -96,6 +110,20 @@ Teams Toolkit v4 is available for free for Visual Studio Code. For more informat
 | - | ------------------ |
 | Installation | Available in the VS Code Marketplace |
 | Build with | JavaScript, TypeScript, React, SPFx |
+
+## Version Mapping
+
+The Teams Toolkit lifecycle and support policy covers Generally available (GA) and future versions.
+
+| &nbsp; | Teams Toolkit for Visual Studio Code|Teams Toolkit for Visual Studio| Teams Toolkit CLI | TeamsFx SDK |Teams SDK|Manifest|
+|----|----|----|----|----|----|----|
+|Public Preview|v3.8.x|v17.2|v0.14.x|v0.7.x|v1.11.x, v1.12.x|v1.11|
+|GA|v4.0.0|v17.3|v1.0.0|v1.0.0|v1.12.x|v1.11|
+|Latest*|v5.x.x|v17.6|-|v2.x.x|v2.x.x|v1.16|
+|Beta**|Prerelease|v17.7 Preview|v2.x.x-beta|v2.x.x-beta|v2.x.x-beta|Dev preview|
+
+*Latest is aligned on the major version.<br>
+**Beta indicates developer preview.
 
 ## Features
 
@@ -114,7 +142,7 @@ You can start directly with the capability-focused templates such as tabs, bots,
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Azure Active Directory (Azure AD) automatically. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Azure AD manifest when you need flexibility.
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, configure settings, such as Microsoft Entra ID automatically. Sign in with your Microsoft 365 account to control where the app is configured and customized the included Microsoft Entra manifest when you need flexibility.
 
 ### Multiple environments
 

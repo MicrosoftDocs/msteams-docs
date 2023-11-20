@@ -1,12 +1,12 @@
 ---
-title: Create and send task module
+title: Create and send task modules
 author: surbhigupta
 description: Learn how to create and send task modules. Handle the initial invoke action and respond with a task module from an action message extension command.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
 ---
-# Create and send task module
+# Create and send task modules
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
@@ -25,8 +25,8 @@ In the process of the initial invoke request, your service receives an `Activity
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
 |`value.commandId` | Contains the ID of the command that was invoked. |
@@ -75,8 +75,8 @@ The payload activity properties when a task module is invoked from 1:1 chat are 
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
@@ -126,8 +126,8 @@ The payload activity properties when a task module is invoked from a group chat 
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`ChannelData.legacy. replyToId`| Gets or sets the ID of the message to which this message is a reply. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
@@ -225,8 +225,8 @@ The payload activity properties when a task module is invoked from a channel (ne
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
 |`channelData.source.name`| The source name from where task module is invoked. |
@@ -291,8 +291,8 @@ The payload activity properties when a task module is invoked from a channel (re
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
 |`channelData.channel.id`| Channel ID (if the request was made in a channel). |
 |`channelData.team.id`| Team ID (if the request was made in a channel). |
 |`channelData.source.name`| The source name from where task module is invoked. |
@@ -400,8 +400,8 @@ The payload activity properties when a task module is invoked from a command box
 |`name`| Type of command that is issued to your service. It must be `composeExtension/fetchTask`. |
 |`from.id`| ID of the user that sent the request. |
 |`from.name`| Name of the user that sent the request. |
-|`from.aadObjectId`| Azure Active Directory object ID of the user that sent the request. |
-|`channelData.tenant.id`| Azure Active Directory tenant ID. |
+|`from.aadObjectId`| Microsoft Entra object ID of the user that sent the request. |
+|`channelData.tenant.id`| Microsoft Entra tenant ID. |
 |`channelData.source.name`| The source name from where task module is invoked. |
 |`value.commandId` | Contains the ID of the command that was invoked. |
 |`value.commandContext` | The context that triggered the event. It must be `compose`. |
@@ -653,17 +653,17 @@ The schema for the taskInfo object is:
 |`title`| The title of the task module.|
 |`height`| It must be either an integer (in pixels), or `small`, `medium`, `large`.|
 |`width`| It must be either an integer (in pixels), or `small`, `medium`, `large`.|
-|`card`| The adaptive card defining the form (if using one).
+|`card`| The Adaptive Card defining the form (if using one).
 |`url`| The URL to be opened inside of the task module as an embedded web view.|
 |`fallbackUrl`| If a client does not support the task module feature, this URL is opened in a browser tab. |
 
 ### Respond to the fetchTask with an Adaptive Card
 
-When using an adaptive card, you must respond with a `task` object with the `value` object containing an Adaptive Card.
+When using an Adaptive Card, you must respond with a `task` object with the `value` object containing an Adaptive Card.
 
 #### Example
 
-The following code section is an example to `fetchTask` response with an adaptive card:
+The following code section is an example to `fetchTask` response with an Adaptive Card:
 
 # [C#/.NET](#tab/dotnet)
 
@@ -987,7 +987,7 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Respond to action command](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+> [Respond to task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 
 ## See also
 

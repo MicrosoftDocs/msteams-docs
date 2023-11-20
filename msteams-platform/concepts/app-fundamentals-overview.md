@@ -1,7 +1,7 @@
 ---
 title: Plan your app overview
 author: heath-hamilton
-description: Understand use case and Microsoft Teams app features, map use cases, plan responsive tabs for mobile. Learn Teams features and availability for GCC, GCC-High, and DOD.
+description: Understand use cases and Microsoft Teams app features, map use cases, and plan responsive tabs for mobile. Learn about Teams features, availability, and app supports for GCC, GCC-High, and DOD.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 03/20/2023
@@ -76,8 +76,7 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-|Line-of-business apps| ✔️ | ❌ | ❌ |
-|Custom apps| ✔️ | ✔️ | ✔️ |
+|Line-of-business apps| ✔️ | ✔️ | ✔️ |
 |Sideloading apps | ✔️ | ❌ | ❌ |
 | **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ |

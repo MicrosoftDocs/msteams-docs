@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: webhooks-and-connectors/how-to/connectors-creating.md
   nextTutorialTitle: Read more on Webhooks and Connectors
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: null
 items:
 - durationInMinutes: 1
   content: |
@@ -36,13 +36,14 @@ items:
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-    Ensure you install the following tools and set up your development environment: 
+    Ensure that you install the following tools and set up your development environment: 
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call, and all-in-one place.|
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all-in-one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version.|
-     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
+     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version.|
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
    
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -51,9 +52,7 @@ items:
   durationInMinutes: 1
   content: |  
 
-    Clone **Microsoft-Teams-Samples** repository to your local GitHub:  
-
-      [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)] 
+    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)] 
 
 - title: Enable developer preview
   durationInMinutes: 1
@@ -82,10 +81,10 @@ items:
    
     1.   Select **Save**.
        
-          Your test tenant can now permit custom app sideloading.
+          Your test tenant can now permit custom app upload.
 
           > [!TIP]
-          > The sideloading takes some time to become active.
+          > Custom app upload takes some time to become active.
 
     1.   Go to **Microsoft Teams**.
     
@@ -93,7 +92,7 @@ items:
     
     1.   Select **About** > **Developer preview**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview-1.png" alt-text="Screenshot shows the dropdown list with About and Developer preview highlighted in red.":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-devpreview-enable.png" alt-text="Screenshot shows the dropdown list with about and developer preview options.":::
    
     1.   Select **Switch to developer preview**.
    
@@ -102,7 +101,7 @@ items:
   durationInMinutes: 1
   content: | 
 
-   1. Go to **TeamsToDoAppconnector.sln** in the cloned repository.
+   1. Open **TeamsToDoAppconnector.sln** in Visual Studio from the cloned repository.
 
        :::image type="content" source="~/assets/images/sbs-connector/sln-1.png" alt-text="Screenshot of cloned repository with TeamsToDoAppConnector.sln highlighted in red.":::
 
@@ -125,10 +124,10 @@ items:
 
        * **Connector name**.
        * **Logo**
-       * **Short description** of your app (10 words or less).
-       * **Detailed description** of what your Connector does (3-5 sentences).
+       * **Short description of your app (10 words or less)**.
+       * **Detailed description of what your Connector does (3-5 sentences)**.
        * **Company website**.
-       * **Configuration page** for your Connector as `https://[BASE_URI]/connector/setup`.
+       * **Configuration page for your Connector** as `https://[BASE_URI]/connector/setup`.
        * Set **Valid domains** as `https>//[Base URI]`.
        * Select **Yes** to enable the action on Connector cards.
        * Set **Actions URL** as `https://[BASE_URI]/Task/Update`.
@@ -144,17 +143,28 @@ items:
        > [!TIP]
        > Save the Connector ID for future reference.
 
-    1. Select **TeamsToDoAppConnector.csproj** file from the cloned repository.
+    1. Open the **TeamsToDoAppConnector.csproj** file from the cloned repository.
 
        :::image type="content" source="~/assets/images/sbs-connector/web-1.png" alt-text="Screenshot of cloned repository with TeamsToDoAppConnector.csproj highlighted in red."::: 
 
-    1. Open in **Visual Studio** and do the following updates. 
+    1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **connector-todo-notification** > **csharp**.
+    
+    1. Open the **appsettings.json** file in Visual Studio and do the following updates. 
 
          * Replace the `BASE_URL` with `ngork URL` or `dev tunnel URL`.
          * Replace `CONNECTOR_ID` with the connector ID created.
        
        :::image type="content" source="~/assets/images/sbs-connector/manifest-1.png" alt-text="Screenshot of Visual Studio with BaseUrl and connector ID highlighted in red after the replacement of required information."::: 
+    
+    1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **connector-todo-notification** > **csharp** > **TeamsAppPackages**.
+    
+    1. Open the **manifest.json** file in Visual Studio and make the following changes:
 
+         * Replace `CONNECTOR_ID` with the connector ID created.
+         * Replace `VALID-DOMAIN` to your ngrok OR dev tunnel domain excluding https://.
+
+            :::image type="content" source="~/assets/images/sbs-connector/manifest-2.png" alt-text="Screenshot of Visual Studio with connector ID and valid domain highlighted in red after the required updates."::: 
+    
     1. Press **F5** to run the project.
        A web page opens. 
 
@@ -163,14 +173,6 @@ items:
 - title: Test connector in Microsoft Teams
   durationInMinutes: 5
   content: |
-
-    1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **connector-todo-notification** > **csharp** > **TeamsAppPackages**.
-    1. Open the manifest.json file in Visual Studio and make the following changes:
-
-         * Replace `CONNECTOR_ID` with the connector ID created.
-         * Replace `VALID-DOMAIN` to your ngrok OR dev tunnel domain excluding https://.
-
-            :::image type="content" source="~/assets/images/sbs-connector/manifest-2.png" alt-text="Screenshot of Visual Studio with connector ID and valid domain highlighted in red after the required updates."::: 
 
     1. Create a .zip file with the following files that are present in the **Manifest** folder: 
          * manifest.json
@@ -183,9 +185,9 @@ items:
          1. In the left pane, select the **Apps** icon.
          1. Select **Manage your apps**.
          1. Select **Upload an app**.
-         1. Look for the option to **Upload a custom app**.
+         1. Look for the option to **Upload a customised app**.
  
-            :::image type="content" source="~/assets/images/sbs-connector/upload-a-custom-app.png" alt-text="Screenshot of Upload an app with Upload a custom app highlighted in red.":::
+            :::image type="content" source="~/assets/images/sbs-connector/upload-a-custom-app.png" alt-text="Screenshot shows the option to upload a customised app.":::
       
     1. Select the .zip file that you created in the **Manifest** folder and select **Open**.
 

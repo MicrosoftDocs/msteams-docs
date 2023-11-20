@@ -51,7 +51,7 @@ items:
 
    ### Install the Teams Toolkit
 
-   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Microsoft Teams Store, and more. 
     
    You can use the toolkit with Visual Studio Code or CLI (command-line interface) called `TeamsFx`.
 
@@ -100,23 +100,23 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test your app.
+   A **tenant** is like a space, or a container where you chat, share files, and run meetings for your organization in Teams. You can also upload and test your custom app.
 
-   ### Check for sideloading option
+   ### Check for custom app upload option
 
-   After creating the app, you must load your app in Teams without distributing it. This is known as sideloading. Sign-in to your Microsoft 365 account to view this option.
+   After creating the app, you must load your app in Teams without distributing it. This is known as custom app upload. Sign-in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+    > CUstom app upload is necessary for previewing and testing apps in Teams local environment. Enable custom app upload to preview and test your app in Teams locally.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-   To verify sideload apps in Teams:
+   To verify custom upload apps in Teams:
 
-    1. In the Teams client, select **Store** .
+    1. In the Teams client, select **Store**.
     1. Select **Manage your apps**.
     1. Select **Publish an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/upload-custom-app-v4.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 

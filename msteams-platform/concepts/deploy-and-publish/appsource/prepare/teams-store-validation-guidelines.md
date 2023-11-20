@@ -1,22 +1,22 @@
 ---
-title: Microsoft Teams store validation guidelines
-description: Know how to increase the chances of your app to pass the Microsoft Teams store submission process. Understand the mandatory and suggested fixes. Explore the validation guidelines. 
+title: Microsoft Teams Store validation guidelines
+description: Know how to increase the chances of your app to pass the Microsoft Teams Store submission process. Understand the mandatory and suggested fixes. Explore the validation guidelines. 
 author: heath-hamilton
 ms.author: surbhigupta
 ms.topic: reference
 ms.localizationpriority: high
 ms.date: 03/21/2023
 ---
-# Microsoft Teams store validation guidelines
+# Teams Store validation guidelines
 
-Following these guidelines increases the chances of your app to pass the Microsoft Teams store submission process. The Teams-specific guidelines complement the Microsoft [commercial marketplace certification policies](/legal/marketplace/certification-policies#1140-teams) and are updated frequently to reflect new capabilities, user feedback, and business rule changes.
+Following these guidelines increases the chances of your app to pass the Microsoft Teams Store submission process. The Teams-specific guidelines complement the Microsoft [commercial marketplace certification policies](/legal/marketplace/certification-policies#1140-teams) and are updated frequently to reflect new capabilities, user feedback, and business rule changes.
 
 > [!NOTE]
 >
 > * Some guidelines may not be applicable to your app. For example, if your app doesn't include a bot, you can ignore bot-related guidelines.
 > * We've cross-referenced these guidelines to the Microsoft commercial certification policies and added Do’s and Don’ts with examples from pass or fail scenarios encountered in our validation process.
-> * Certain guidelines are marked as *Mandatory Fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission will pass Microsoft Teams store validation only after you have fixed the issues.
-> * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams store, if you choose not to fix the issues.
+> * Certain guidelines are marked as *Mandatory Fix*. If your app submission doesn't meet these mandatory guidelines, you'll receive a failure report from us with steps to mitigate. Your app submission will pass Teams Store validation only after you have fixed the issues.
+> * Other guidelines are marked as *Suggested Fix*. For an ideal user experience, we suggest that you fix the issues, however, your app submission will not be blocked from publishing on the Teams Store, if you choose not to fix the issues.
 
 :::row:::
    :::column:::
@@ -32,7 +32,7 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="icon" source="../../../../assets/icons/function.png" link="#general-functionality-and-performance" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/package.png" link="#app-package-and-store-listing" border="false":::
+      :::image type="icon" source="../../../../assets/icons/package.png" link="#app-package-and-teams-store-listing" border="false":::
    :::column-end:::
 :::row-end:::
 
@@ -93,7 +93,7 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ### App Name
 
@@ -103,14 +103,14 @@ Following these guidelines increases the chances of your app to pass the Microso
 <br></br>
 <details><summary>Expand to know more</summary>
 
-An app's name plays a critical role in how users discover it in the store. Use the following guidelines to name an app:
+An app's name plays a critical role in how users discover it in the Teams Store. Use the following guidelines to name an app:
 
 * The name must include terms relevant to your users. [*Mandatory Fix*]
 * Prefix or suffix common nouns with the developer's name. For example, **Contoso Tasks** instead of **Tasks**. [*Mandatory Fix*]
 * Must not use **Teams** or other Microsoft product names such as Excel, PowerPoint, Word, OneDrive, SharePoint, OneNote, Azure, Surface, and Xbox that could falsely indicate co-branding or co-selling. For more information about referencing Microsoft software products and services, see [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks/usage/general). [*Mandatory Fix*]
-* Must not copy the name of an app listed in the store or other offer in the commercial marketplace. [*Mandatory Fix*]
+* Must not copy the name of an app listed in the Teams Store or other offer in the commercial marketplace. [*Mandatory Fix*]
 * Must not contain profane or derogatory terms. The name also mustn't include racially or culturally insensitive language. [*Mandatory Fix*]
-* Must be unique. If your app (Contoso) is listed in the Microsoft Teams store and Microsoft AppSource and you want to list another app specific to a geography such as Contoso Mexico, your submission must meet the following criteria:
+* Must be unique. If your app (Contoso) is listed in the Teams Store and Microsoft AppSource and you want to list another app specific to a geography such as Contoso Mexico, your submission must meet the following criteria:
   * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion. [*Mandatory Fix*]
   * When uploading the app package in Partner Center, select the right **Markets** where the app is available in the **Availability** section. [*Mandatory Fix*]
 
@@ -129,7 +129,7 @@ An app's name plays a critical role in how users discover it in the store. Use t
 * The app name in the app manifest and AppSource must match. [*Mandatory Fix*]
 
  > [!TIP]
- > Your app’s branding on the Microsoft Teams store and AppSource including your app name, developer name, app icon, AppSource screenshots, video, short description, and website either separately or taken together mustn't impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
+ > Your app’s branding on the Teams Store and AppSource including your app name, developer name, app icon, AppSource screenshots, video, short description, and website either separately or taken together mustn't impersonate an official Microsoft offering unless your app is an official Microsoft 1P offering.
 
 </details>
 
@@ -209,7 +209,7 @@ If your app authenticates users with an external service, follow these guideline
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.3](/legal/marketplace/certification-policies#11403-security).
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ### Financial information
 
@@ -278,6 +278,11 @@ Don't include domains outside of your organization's control (including wildcard
 
 * If your app uses the Azure Bot Service's OAuthCard, you must include *token.botframework.com* as a valid domain or else the Sign in button won't work. You mustn't declare *.botframework.com* as wildcards aren't allowed with this domain name. [*Mandatory Fix*]
 
+* OpenAPI URLs must be under partner control.
+
+  > [!NOTE]
+  > We should also link to the WIP doc on guidelines to create a message plug under the newly created Teams apps extensible as Microsoft 365 Chat plugin section.  Please run grammar check and structure this content better.
+
 * Following External Domains aren't allowed: [*Mandatory Fix*]
   * *.azurewebsites.net
   * *.azureedge.com
@@ -312,7 +317,7 @@ App must warn users before downloading any files or executables (.exe) into the 
 * Calling out account dependency or limitations under app functionality isn't required but is mandatory to add it in both app manifest long description and AppSource app listing.
 * You must call out any dependency on tenant admins for new users. If there's no dependency, it's mandatory to provide a sign up, contact us, get started link, or email.
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ### Launching external functionality
 
@@ -396,7 +401,7 @@ Explore resources designed to help you with responsible Artificial Intelligence 
   * Apps that use facial expressions or facial movements to infer emotional states, such as anger, disgust, happiness, sadness, surprise, fear, or other terms commonly used to describe the emotional state of a person can be restricted based on the review.
   * Use of facial expressions and movements to detect and classify only individual facial elements, such as smiles or raised eyebrows is permitted. The key distinction is between the detection of facial expressions or movements as visual signals versus the inference of an emotional state.
 
-## App package and store listing
+## App package and Teams Store listing
 
 [*Mandatory Fix*]
 
@@ -414,7 +419,7 @@ App packages must be correctly formatted and include all required information an
 >   * **Prepopulate the test accounts with dummy data** to aid testing.
 >   * If you are providing your test accounts, ensure that you enable third-party integration. Also, disable two-factor or multi-factor authentication.
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ### App manifest
 
@@ -424,11 +429,11 @@ The app manifest defines your app's configuration.
 
 * Your app manifest must conform to a publicly released app manifest schema. For more information, see [app manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the app manifest.
 * If your app includes a bot or message extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Azure Active Directory for authentication, include the Microsoft Azure Active Directory (Azure AD) Application (client) ID in the app manifest. For more information, see the [app manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* If your app uses Microsoft Entra ID for authentication, include the Microsoft Entra Application (client) ID in the app manifest. For more information, see the [app manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### Uses of latest app manifest schema
 
-* If your app uses Single sign-on (SSO), you must declare Microsoft Azure Active Directory (Azure AD) ID in the app manifest for user authentication. [*Mandatory Fix*]
+* If your app uses Single sign-on (SSO), you must declare Microsoft Entra ID in the app manifest for user authentication. [*Mandatory Fix*]
 
 * You must use a publicly released app manifest schema. You can update your app package to use a public version of app manifest schema 1.10 or later. [*Mandatory Fix*]
 
@@ -456,7 +461,7 @@ The app manifest defines your app's configuration.
 
 [*Mandatory Fix*]
 
-Icons are one of the main elements people see when browsing the Teams store.
+Icons are one of the main elements people see when browsing the Teams Store.
 <br></br>
 <details><summary>Expand to know more</summary>
 
@@ -476,7 +481,7 @@ Your icons must communicate your app's brand and purpose while adhering to the f
 
 * The outline must be 32x32 pixels and can be white with a transparent background or transparent with a white background. The icon mustn't have any extra padding around the symbol. [*Mandatory Fix*]
 
-* Your app package must include correctly sized and formatted icons. The icons must match the information in store listing metadata. [*Mandatory Fix*]
+* Your app package must include correctly sized and formatted icons. The icons must match the information in Teams Store listing metadata. [*Mandatory Fix*]
 
 For more information, see [icon guidelines](~/concepts/build-and-test/apps-package.md#app-icons).
 
@@ -484,7 +489,7 @@ For more information, see [icon guidelines](~/concepts/build-and-test/apps-packa
 
 ### App descriptions
 
-You must have a short and long description for your app. App description helps improve your app discoverability in the Teams store. The descriptions in your app configuration and Partner Center must be the same.
+You must have a short and long description for your app. App description helps improve your app discoverability in the Teams Store. The descriptions in your app configuration and Partner Center must be the same.
 
 :::image type="content" source="../../../../assets/images/submission/validation-app-description-adequete-information.png" alt-text="Graphic shows an example of adequate app description in the Teams app.":::
 
@@ -764,7 +769,7 @@ Support URLs must include your contact details or a way forward for users to rai
 * The offer must meet all the [technical requirements](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/include-saas-offer) for Teams apps linked to a SaaS offer.
 * The Teams apps linked to SaaS offer must meet all the requirements defined in [1000 Software as a Service (SaaS)](/legal/marketplace/certification-policies#1000-software-as-a-service-saas).
 * `subscriptionOffer` details mentioned in the app manifest file must be correct. In your app manifest, add or update node `subscriptionOffer` with value `publisherId.offerId`. For example, if your publisher ID is `contoso1234` and your offer ID is `offer01`, the value that you specify in your app manifest must be `contoso1234.offer01`.
-* Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for store approval.
+* Linked SaaS offer to the Teams app must be live in AppSource and preview offers aren't accepted for Teams Store approval.
 
 </details>
 
@@ -815,7 +820,7 @@ If setup of your app for testing purposes is complex, provide an end-to-end func
 
 </details>
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Tabs
 
@@ -911,7 +916,7 @@ The following are the navigation guidelines:
 * Horizontal scroll mustn't be present in an in-meeting tab. [*Mandatory Fix*]
 
 * In-meeting dialogs used in your app mustn't allow horizontal scrolling. Use in-meeting dialogs sparingly and for scenarios that are light and task oriented. You can specify the width of the in-meeting dialog’s I-frame within the supported size range to account for different scenarios. [*Mandatory Fix*]
-* Task modules used in your app mustn't allow horizontal scrolling. Task modules allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If required, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
+* Task modules used in your app mustn't allow horizontal scrolling. Task modules allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If necessary, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
 
 * Horizontal scroll present in the tab in a personal chat, channel, and in-meeting details tab in any scope isn't allowed if the entire tab canvas is scrollable, unless your tab uses an infinite canvas with fixed UI elements. [*Mandatory Fix*]
 
@@ -1008,7 +1013,7 @@ The following are the navigation guidelines:
 </details>
 <br/>
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Bots
 
@@ -1077,11 +1082,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots mustn't display a typing indicator after responding to the user command, but can display a typing indicator while responding to the user command. [*Mandatory Fix*]
 
-* Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged in to the app. [*Mandatory Fix*]
+* Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged on to the app. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged in to the app.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged on to the app.":::
 
 * Bots must provide a valid response to **help** command.
 
@@ -1267,7 +1272,7 @@ Apps that provide only notifications with content such as, **You have a new noti
 
 * Bot information in the app manifest (bot name, logo, privacy link, and terms of service link) must be consistent with the Bot Framework metadata. [*Mandatory Fix*]
 
-* Ensure that the bot ID in the app manifest matches with bot ID in the last store published version of your app. Changing bot IDs in an app update leads to permanent loss of all user interaction history with the bot for existing users of your app and starts a new conversation chain with the new Bot ID. [*Mandatory Fix*]
+* Ensure that the bot ID in the app manifest matches with bot ID in the last Teams Store published version of your app. Changing bot IDs in an app update leads to permanent loss of all user interaction history with the bot for existing users of your app and starts a new conversation chain with the new Bot ID. [*Mandatory Fix*]
 
 * Any change to app name, metadata, bot welcome message, or bot responses must be updated with new name. [*Mandatory Fix*]
 
@@ -1286,7 +1291,7 @@ Apps that provide only notifications with content such as, **You have a new noti
 
 </details>
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Message extensions
 
@@ -1320,6 +1325,8 @@ If your app includes a message extension, ensure that it adheres to these guidel
 * Messaging extensions must respond or work as intended in group chat and channel scopes. [*Mandatory Fix*]
 
 * You must include a way for the user to sign in or sign out from the messaging extension. [*Mandatory Fix*]
+
+* Message extensions that use OpenAPI urls must not provide redirection on any API call. Actual API calls must be served from the same domain or subdomain of the root domain.
 
 </details>
 </br>
@@ -1410,7 +1417,7 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 
 </details>
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Task modules
 
@@ -1433,7 +1440,7 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
 </details>
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Meeting extensions
 
@@ -1566,7 +1573,7 @@ Shared meeting stage feature can only be launched through the Teams desktop app.
 
 </details>
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Connector
 
@@ -1638,7 +1645,7 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 </details>
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Microsoft 365 App Compliance Program
 
@@ -1646,19 +1653,19 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 <br></br>
 <details><summary>Expand to know more</summary>
 
-The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams store, you must complete the following tiers of the program:
+The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams Store, you must complete the following tiers of the program:
 
-* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified). [*Mandatory Fix*]
+* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Microsoft Entra consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified). [*Mandatory Fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="Graphic shows an example of a blue verified badge on the Azure Active Directory consent dialog.":::
+    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="Graphic shows an example of a blue verified badge on the Microsoft Entra consent dialog.":::
 
 * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. [*Suggested Fix*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: For an app that isn't previously listed, you can't complete Publisher Attestation until the app is available in Teams Store. If you're updating an already listed app, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation) before submitting the latest version of the app.
 
 </details>
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Advertising
 
@@ -1668,7 +1675,7 @@ Apps mustn't display advertising, including dynamic ads, banner ads, and ads in 
 
 :::image type="content" source="../../../../assets/images/submission/validation-advertising-banners.png" alt-text="Graphic shows an example of a failed scenario of advertising in Teams.":::
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Cryptocurrency based apps
 
@@ -1690,7 +1697,7 @@ You must demonstrate compliance with all laws where your app is distributed, if 
 
 After an internal Microsoft review, if the compliance demonstration is satisfactory, Microsoft may proceed with further certification of your app. If the compliance demonstration is unsatisfactory, Microsoft keeps you informed of the decision to not proceed with certification of your app.
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## App functionality
 
@@ -1699,7 +1706,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 * Apps must always notify the user before downloading any file or executable on the user’s environment. Any call to action (CTA), either text based or otherwise, that makes it clear to the user that a file or executable is downloaded on user action is allowed in the app. [*Mandatory Fix*]
 * Apps with region dependency must notify the users with a graceful failure message in all applicable capabilities if they attempt to use it in an unsupported region. [*Mandatory Fix*]
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Mobile experience
 
@@ -1729,7 +1736,7 @@ After an internal Microsoft review, if the compliance demonstration is satisfact
 
 * Capabilities that aren't supported on mobile mustn't dead-end a user and must provide a graceful failure message where applicable. [*Mandatory Fix*]
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
 
 ## Apps extended across Microsoft 365 clients
 
@@ -1776,11 +1783,57 @@ The app must terminate the user account instance when the user is switched or lo
 
 #### Tab navigation
 
-* The progress indicator must appear when the app is loading and dismiss automatically after the app is completely loaded. [*Mandatory Fix*]
+* The progress indicator must appear when the app is loading and dismiss automatically after the app is loaded. [*Mandatory Fix*]
 
 * An error screen must appear when an app fails to load in the instances such as incoherent or broken network, time-out, or authentication failure, and so on. [*Mandatory Fix*]
 
-[Back to top](#microsoft-teams-store-validation-guidelines)
+[Back to top](#teams-store-validation-guidelines)
+
+## Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365
+
+* App packages are correctly formatted and adhere to the manifest schema version 1.13 or later.
+* App must pass the [responsible AI checks.](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements)
+* App must meet the [plugin compatible criteria](../../../../messaging-extensions/high-quality-message-extension.md).
+
+### Plugin must not manipulate LLM behavior
+
+The short descriptions of an app, parameter, and command must not include the following:
+
+1. Instructional phrases. For example, if the user says X, ignore, delete, reset, new instructions, answer in bold, or don't print anything.
+1. Verbose, flowery, or marketing language.
+1. Superlative claims such as **#1**, **amazing**, or **best**.
+1. URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.
+1. Grammar and punctuation errors.
+
+### User Awareness
+
+The long description of an app must clearly call out the following:
+
+* App's compatibility with Copilot. For example, use Contoso in Copilot to search and summarize your tasks.
+
+* Provide at least one prompt of how users can use a message extension plugin in Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
+
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Copilot.":::
+
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Copilot.":::
+
+### Response Quality
+
+* The mandatory fields in Microsoft 365 Chat Adaptive Card response must include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, and flags. Both the preview and content must be part of a single response.
+
+   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Chat app response contains Preview and Content in the same response. ":::
+
+* Adaptive Cards in Microsoft 365 Chat response must have at least one action button.
+* Action buttons present in Microsoft 365 Chat response Adaptive Cards must be functional.
+
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
+
+* Microsoft 365 Chat must respond accurately and not display an error when a user prompts with a single parameter.
+* Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a multi parameter.
+* Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a follow-up.
+* Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Chat.
+
+[Back to top](#teams-store-validation-guidelines)
 
 ## Next step
 
@@ -1791,6 +1844,6 @@ The app must terminate the user account instance when the user is switched or lo
 
 * [Test and debug your app](~/concepts/build-and-test/debug.md)
 * [Distribute your app](~/concepts/deploy-and-publish/apps-publish-overview.md)
-* [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+* [Prepare your Teams Store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 * [Include a SaaS offer with your Teams app](include-saas-offer.md)
 * [Strategize and execute growth for your app](../post-publish/app-growth/overview-app-growth.md)
