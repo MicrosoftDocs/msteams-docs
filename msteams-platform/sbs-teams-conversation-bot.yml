@@ -26,7 +26,7 @@ items:
  
     This step-by-step guide helps you to create a conversation bot in the Teams application. You can see the following output:
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Screenshot shows the final output."lightbox="assets/images/conversation-bot/final-output.png":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Screenshot shows the response from conversation bot."lightbox="assets/images/conversation-bot/final-output.png":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -50,7 +50,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app
+- title: Register Microsoft Entra app
   durationInMinutes: 5
   content: |
     Register your bot with Azure Bot service when you develop and host it in Azure. Following are the steps:
@@ -99,7 +99,7 @@ items:
       > [!NOTE]
       >
       > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-      > * Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+      > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
@@ -191,12 +191,12 @@ items:
 
     1. Select **Upload an app**.
 
-    1. Look for the option to **Upload a custom app**. If the option is visible, you can sideload apps.
+    1. Look for the option to **Upload a customised app**. If the option is visible, you can sideload apps.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-latest.png" alt-text="Screenshot shows the bot home." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-new2.png":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-latest.png" alt-text="Screenshot shows the option to upload a customised app." lightbox="~\assets\images\teams-toolkit-v2\spfx-custom-latest.png":::
 
         > [!NOTE]
-        > Contact your Teams administrator, if you don't find the option to upload a custom app.
+        > Contact your Teams administrator, if you don't find the option to upload a customised app.
   
     1. Select **Open** to upload the .zip file that you created in the **TeamAppManifest** folder.
     
@@ -229,14 +229,14 @@ items:
 
     You can select an option from the command list by typing **@TeamsConversationBot** or **What can I do?** text in the compose area and send it.
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output-1.png" alt-text="Screenshot shows the Final output.":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output-1.png" alt-text="Screenshot shows the response from conversation bot.":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Screenshot shows the Final output.":::
+    :::image type="content" source="./assets/images/conversation-bot/final-output.png" alt-text="Screenshot shows the response from conversation bot.":::
     
 - content: |
     You've completed the tutorial to get started with conversation bot for Microsoft Teams.
