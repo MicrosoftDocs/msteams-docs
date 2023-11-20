@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Test and debug your bot locally with IDE
 
-When testing your bot, you need to consider both the contexts you want your bot to run in, and any functionality you might have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you choose to test your bot aligns with its functionality.
+When testing your bot, consider the contexts in which you intend your bot to operate, as well as any added functionality that requires Microsoft Teams-specific data. Ensure the testing method you select aligns with your bot's functionality.
 
 ## Test by uploading to Teams
 
