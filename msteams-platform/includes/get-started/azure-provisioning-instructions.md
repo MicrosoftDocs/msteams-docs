@@ -30,7 +30,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows that you might incur charges for using Azure resources.":::
 
-   The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
+   The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice which displays hellomsg successfully provisioned in the cloud.":::
 
@@ -88,7 +88,7 @@ Once the provisioning and deployment steps are complete:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/mex-added-msg.png" alt-text="Screenshot shows a message to try the app now or later.":::
 
-    - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
+    - If you select **Got it**, you can try the app later from the list of uploaded custom apps.
     - If you select **Try it**, Teams loads your app.
 
    Your app is loaded on the Azure site.
@@ -97,4 +97,4 @@ Once the provisioning and deployment steps are complete:
 
    The message extension app is loaded in a chat bot app.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/msgext-app.png" alt-text="Screenshot shows an app sideloaded in Teams.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/msgext-app.png" alt-text="Screenshot shows a custom app uploaded in Teams.":::
