@@ -1255,7 +1255,7 @@ Apps that provide only notifications with content such as, **You have a new noti
 <details><summary>Bot metadata information</summary>
 
 > [!NOTE]
-> We don't recommend uploading multiple apps with different content with the same bot ID, as this might result in undefined bot behavior. Delete or uninstall any previous versions of the apps and only upload the latest version. You also need to give the app permissions in the app package if the apps are created using the same bot ID. However, you have to enable both the apps in the app permission policy and the managed apps and ensure that they're not blocked. Otherwise, you might encounter problems while using these apps.
+> We don't recommend uploading multiple apps with differing content under the same bot ID. This could lead to unpredictable bot behavior. Remove or uninstall any prior versions of the apps, ensuring only the latest version is uploaded. If the apps share the same bot ID, assign the necessary permissions in the app package. Additionally, activate both apps in the app permission policy and the managed apps, ensuring they are not blocked. Failure to do so might result in issues during app usage.
 
 * Bot information in the app manifest (bot name, logo, privacy link, and terms of service link) must be consistent with the Bot Framework metadata. [*Mandatory Fix*]
 

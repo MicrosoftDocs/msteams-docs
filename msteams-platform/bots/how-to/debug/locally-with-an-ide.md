@@ -24,7 +24,7 @@ There are two methods for uploading your app:
 > To alter the manifest and re-upload your app, [delete the bot](#delete-a-bot-from-teams) before uploading the altered app package.
 > To test the bot, enable sideloading in Teams. For more information, see [enable sideloading](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
-We don't recommend uploading multiple apps with different content with the same bot ID, as this might result in undefined bot behavior. Delete or uninstall any previous versions of the apps and only upload the latest version. You also need to give the app permissions in the app package if the apps are created using the same bot ID. However, you have to enable both the apps in the app permission policy and the managed apps and ensure that they're not blocked. Otherwise, you might encounter problems while using these apps.
+We don't recommend uploading multiple apps with differing content under the same bot ID. This could lead to unpredictable bot behavior. Remove or uninstall any prior versions of the apps, ensuring only the latest version is uploaded. If the apps share the same bot ID, assign the necessary permissions in the app package. Additionally, activate both apps in the app permission policy and the managed apps, ensuring they are not blocked. Failure to do so might result in issues during app usage.
 
 ## Debug your bot locally
 
