@@ -315,7 +315,7 @@ items:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
        1. At the upper-left, go to **Select host app** and from the drop-down, select **Microsoft Teams**.
        1. Go to **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
-       1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you've saved earlier.
+       1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you saved earlier.
 
           :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
        
@@ -373,11 +373,11 @@ items:
 
            `responseLayout` specifies the layout of the attachments. Used for responses of type result. Supported types are list and grid. If the response body contains an object with multiple elements like text, title, and image, then the response layout must be set to `list`. If the API response contains only images or thumbnails, then the response layout must be set to `grid`.
 
-       1. `"responseCardTemplate"`: Paste the Adaptive Card template code you've saved earlier.
+       1. `"responseCardTemplate"`: Paste the Adaptive Card template code that you saved earlier.
 
            `responseCardTemplate` is an Adaptive Card template to map the JSON response to an Adaptive Card.
 
-       1. `"previewCardTemplate"`: Paste the preview card template code you've saved earlier.
+       1. `"previewCardTemplate"`: Paste the preview card template code that you saved earlier.
 
            `previewCardTemplate` is a preview card template is used to show a preview of results in the message extension flyout.
 
@@ -564,7 +564,7 @@ items:
     1. Go to **Microsoft Teams** and sign in using your test tenant credentials. 
     1. Go to **Apps** > **Manage your app** > **Upload an app**.
     1. Select **Upload a customized app**.
-    1. Select the zip file you've created and select **Open**.
+    1. Select the zip file created and select **Open**.
     1. Select **Add**. The app is added to Teams.
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot shows a pop-up window with the Add option.":::
@@ -572,7 +572,7 @@ items:
     1. Go to a chat and from the message compose area, select **+** and search for your app.
     1. Select the app and make a search query.
 
-       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat menu and the app is displayed in the flyout menu.":::
 
     1. The app responds with an Adaptive Card in the chat window.
     1. Select **Send**.
