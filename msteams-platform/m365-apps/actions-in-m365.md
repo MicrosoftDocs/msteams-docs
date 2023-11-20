@@ -165,51 +165,51 @@ this.setState({
     });
     ```
 
-#### [`M365ContentAction`interface](/javascript/api/@microsoft/teams-js/m365contentaction) (Need more information from Irene)
+* [`M365ContentAction`interface](/javascript/api/@microsoft/teams-js/m365contentaction)
 
-In order to not leak personal data to applications, only ids of the office content are passed to the app. Apps use these ids together with the fact that this is OfficeContent to query the Microsoft graph for more details.
+    In order to not leak personal data to applications, only ids of the office content are passed to the app. Apps use these ids together with the fact that this is OfficeContent to query the Microsoft graph for more details.
 
-```javascript
-export enum ActionObjectType {
-    Future = 'future',
-    M365Contenet = 'm365content',
-}
+    ```javascript
+    export enum ActionObjectType {
+        Future = 'future',
+        M365Contenet = 'm365content',
+    }
+    
+    export interface BaseActionObject<T extends ActionObjectType> {
+        type: T;
+    }
+    
+    export interface M365ContentAction extends BaseActionObject<ActionObjectType.M365Content>{
+    // In order to not leak person data to applications, only ids of the
+    // office content is passed to the app. Apps use these ids together with the fact
+    // that this is OfficeContent to query the Microsoft graph for more details.
+    //
+    // In the future, we may need to support "ExternalContent" or "MailContent" etc.
+    // and would also use the types as hints on which cloud api to call to get more info 
+        itemId: string;
+        secondaryId?: SecondaryId;
+    }
+    
+    // These correspond with field names in the MSGraph
+    export enum SecondaryM365ContentIdName {
+        DriveId = 'driveId',
+        GroupId = 'groupId',
+        SiteId = 'siteId',
+        UserId = 'userId',
+    }
+    
+    // This is just an example of how future Actions could be added, not for checkin
+    export interface FutureAction extends BaseActionObject<ActionObjectType.Future> {
+    foo: string?
+    }
+    ```
 
-export interface BaseActionObject<T extends ActionObjectType> {
-    type: T;
-}
+    **Properties**
 
-export interface M365ContentAction extends BaseActionObject<ActionObjectType.M365Content>{
-// In order to not leak person data to applications, only ids of the
-// office content is passed to the app. Apps use these ids together with the fact
-// that this is OfficeContent to query the Microsoft graph for more details.
-//
-// In the future, we may need to support "ExternalContent" or "MailContent" etc.
-// and would also use the types as hints on which cloud api to call to get more info 
-    itemId: string;
-    secondaryId?: SecondaryId;
-}
-
-// These correspond with field names in the MSGraph
-export enum SecondaryM365ContentIdName {
-    DriveId = 'driveId',
-    GroupId = 'groupId',
-    SiteId = 'siteId',
-    UserId = 'userId',
-}
-
-// This is just an example of how future Actions could be added, not for checkin
-export interface FutureAction extends BaseActionObject<ActionObjectType.Future> {
-foo: string?
-}
-```
-
-**Properties**
-
-| &nbsp; | Name | Description |
-| --- | --- | --- |
-| &nbsp; | `itemId` | Only office content IDs are passed to the app. Apps should use these ids to query the Microsoft graph for more details. |
-| &nbsp; | `secondaryId` | Represents an optional secondary identifier for an action in a Microsoft 365 content item. |
+    | &nbsp; | Name | Description |
+    | --- | --- | --- |
+    | &nbsp; | `itemId` | Only office content IDs are passed to the app. Apps should use these ids to query the Microsoft graph for more details. |
+    | &nbsp; | `secondaryId` | Represents an optional secondary identifier for an action in a Microsoft 365 content item. |
 
 #### Access content through Graph API
 
