@@ -18,9 +18,9 @@ ms.subservice: m365apps
 Actions enable your app to integrate seamlessly into the user's workflow and guide users to your app based on their intent and the content at hand, making task completion more efficient.
 Actions help you enhance your app's visibility and engagement with minimal development effort and improve user productivity by streamlining task completion and reducing the need to switch contexts across various Microsoft 365 apps. For instance, your app can act immediately on content files, expanding the range of interactions users can have with their content.
 
-You can extend your Teams app across Microsoft 365 using Actions. However, it's important to note that Actions function only in the Microsoft 365.
+You can extend your Teams app across Microsoft 365 using Actions. However, it's important to note that Actions function only in Microsoft 365.
 
-In the following graphic, the user intends to attach a Word document to the list in the **To do** app. The uses right-clicks on the Word document and select the **Add to** action. A dialog appears with the Word document attached, the user adds a note and select **Submit**. The Word document is added to the list in the **To do** app:
+In the following graphic, the user intends to attach a Word document to the list in the **To do** app. The user right-click on the Word document and select the **Add to** action. A dialog appears with the Word document attached. The user adds a note and selects **Submit**. The Word document is added to the list in the **To do** app:
 
   :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user can add a file to the to-do list app with a note attached for a task to complete.":::
 
