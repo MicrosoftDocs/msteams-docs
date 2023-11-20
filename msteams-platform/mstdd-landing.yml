@@ -48,6 +48,14 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Teams App Test Tool streamlines the debug process of bot apps
+        url: toolkit/debug-your-Teams-app-test-tool.md
+      - text: Build bot-based message extension plugin
+        url: messaging-extensions/build-bot-based-plugin.md
+      - text: Guidelines to extend bot-based message extension as plugin 
+        url: messaging-extensions/high-quality-message-extension.md
+      - text: Use callRecording API to fetch meeting recording from all meetings
+        url: graph-api/meeting-transcripts/overview-transcripts.md
       - text: Introduced systemDefault reserved activity type for send activity feed notifications
         url: tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications
       - text: Apps for Teams meetings are available in GCC-High
@@ -56,18 +64,10 @@ landingContent:
         url: concepts/build-and-test/adaptive-card-previewer.md
       - text: Introduced the extensions property in public developer preview app manifest schema
         url: resources/schema/manifest-schema-dev-preview.md#extensions
-      - text: Receive meeting participant events
-        url:  apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events
       - text: Build message extensions using API
         url: messaging-extensions/api-based-overview.md
       - text: The new Microsoft Teams client
         url: resources/teams-updates.md
-      - text: Use callTranscript API to fetch meeting transcript from all meetings
-        url:  graph-api/meeting-transcripts/overview-transcripts.md
-      - text: Ratings and review for Teams apps
-        url: concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps
-      - text: Bot configuration experience
-        url:  bots/how-to/bot-configuration-experience.md      
 
     - linkListType: reference
       links:

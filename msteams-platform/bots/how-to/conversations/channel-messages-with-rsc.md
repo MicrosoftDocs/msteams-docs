@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Receive all conversation messages with RSC
+# Receive all conversation messages
 
 The resource-specific consent (RSC) permissions model, originally developed for Microsoft Teams Graph APIs, is being extended to bot scenarios. With RSC, conversation owners can consent for a bot to receive all user messages in standard channels and chats without being @mentioned. This can be enabled by specifying the `ChannelMessage.Read.Group` or `ChatMessage.Read.Chat` permission strings in your app manifest (previously called Teams app manifest). Conversation owners can grant consent during the app installation or upgrade process after the app updates are published. For more information about enabling RSC for your app and inside of a tenant, see [resource-specific consent](../../../graph-api/rsc/resource-specific-consent.md).
 
@@ -54,7 +54,7 @@ For your bot to receive all conversation messages, the relevant RSC permission s
 
 The following code provides an example of the app manifest:
 
-* **webApplicationInfo.id**: Your Microsoft Azure Active Directory (AAD) app ID. The app ID can be the same as your bot ID.
+* **webApplicationInfo.id**: Your Microsoft Entra app ID. The app ID can be the same as your bot ID.
 * **webApplicationInfo.resource**: Any string. The resource field has no operation in RSC, but must be added with a value to avoid error response.
 * **authorization.permissions.resourceSpecific**: RSC permissions for your app with either or both `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` specified. For more information, see [resource-specific permissions](/microsoftteams/platform/graph-api/rsc/resource-specific-consent#resource-specific-permissions).
 
@@ -148,27 +148,27 @@ The following steps guide you to sideload and validate bot that receives all cha
 1. Select &#x25CF;&#x25CF;&#x25CF; from the left pane. The dropdown menu appears.
 1. Select **Manage team** from the dropdown menu.
 
-   :::image type="content" source="Media/managingteam.png" alt-text="Screenshot shows the managing team option in Teams application.":::
+   :::image type="content" source="Media/managing-team.png" alt-text="Screenshot shows the managing team option in Teams application.":::
 
 1. Select **Apps**. Multiple apps appear.
 
 1. Select **Upload a custom app** from the lower right corner.
 
-      :::image type="content" source="Media/uploadingcustomapp.png" alt-text="Screenshot shows the upload a custom app option.":::
+      :::image type="content" source="Media/uploading-custom-app.png" alt-text="Screenshot shows the upload a custom app option.":::
   
 1. Select **Open**.
 
-      :::image type="content" source="Media/selectapppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="Media/selectapppackage.png":::
+      :::image type="content" source="Media/select-apppackage.png" alt-text="Screenshot shows the open dialog box to select the app package." lightbox="Media/select-apppackage.png":::
 
 1. Select **Add** from the app details pop-up, to add the bot to your selected team.
 
-      :::image type="content" source="Media/addingbot.png" alt-text="Screenshot shows the add button to add a bot to a team." lightbox="Media/addingbot.png":::
+      :::image type="content" source="Media/adding-bot.png" alt-text="Screenshot shows the add button to add a bot to a team." lightbox="Media/adding-bot.png":::
 
 1. Select a channel and enter a message in the channel for your bot.
 
     The bot receives the message without being @mentioned.
 
-      :::image type="content" source="Media/botreceivingmessage.png" alt-text="Screenshot shows a bot receiving message in a channel." lightbox="Media/botreceivingmessage.png":::
+      :::image type="content" source="Media/bot-receiving-message.png" alt-text="Screenshot shows a bot receiving message in a channel." lightbox="Media/bot-receiving-message.png":::
 
 # [Chat messages](#tab/chat)
 
@@ -178,11 +178,11 @@ The following steps guide you to sideload and validate bot that receives all cha
 1. Select the ellipses &#x25CF;&#x25CF;&#x25CF; from the group chat. The dropdown menu appears.
 1. Select **Manage apps** from the dropdown menu.
 
-   :::image type="content" source="../../../assets/images/bots/chats-manage-apps-entry.png" alt-text="Screenshot shows the manage apps option from the dropdown menu of a Teams chat.":::
+   :::image type="content" source="../../../assets/images/bots/chats-manage-apps-entry.png" alt-text="Screenshot shows the manage apps option from the dropdown menu of a Teams chat." lightbox="../../../assets/images/bots/chats-manage-apps-entry.png":::
 
 1. Select **Upload a custom app** from the lower right corner of **Manage apps**.
 
-   :::image type="content" source="../../../assets/images/bots/Chats_Manage_Apps_Page.png" alt-text="Screenshot shows the upload an app option.":::
+   :::image type="content" source="../../../assets/images/bots/Chats_Manage_Apps_Page.png" alt-text="Screenshot shows the upload an app option." lightbox="../../../assets/images/bots/Chats_Manage_Apps_Page.png":::
 
 1. Select the app package from the **Open** dialog box.
 1. Select **Open**.

@@ -26,6 +26,10 @@ Teams platform features that are available to all app developers.
 
 **2023 November**
 
+* **November 17, 2023**: Terminology update. Sideload is referred to as upload a custom app.
+* **November 17, 2023**: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps.](toolkit/debug-your-Teams-app-test-tool.md)
+* **November 14, 2023**: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
+* **November 14, 2023**: Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID.
 * **November 03, 2023**: [Introduced systemDefault reserved activity type for send activity feed notifications.](tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications)
 * **November 03, 2023**: [Apps for Teams meetings are available in GCC-High environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 
@@ -50,7 +54,7 @@ Teams platform features that are available to all app developers.
 | 29/08/2023 | Use Microsoft Teams Store with intelligent search experience to display apps that are closest match to the user's specified characters. | Distribute your app > [Publish to the Teams Store](concepts/deploy-and-publish/appsource/publish.md#teams-store-search-experience) |
 | 28/08/2023 | Teams app manifest is now referred to as app manifest. | App manifest > [Overview](resources/schema/manifest-schema.md)|
 | 16/08/2023 | Use Teams Toolkit Visual Studio v17.7 extension with many new app development features to get started with app development for Teams. | Tools and SDKs > Tools > [Teams Toolkit for Visual Studio](toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md) |
-| 10/08/2023 | Send a proactive message using AAD ID | Build bots > Bot conversations > [Proactive messages](bots/how-to/conversations/send-proactive-messages.md)|
+| 10/08/2023 | Send a proactive message using Microsoft Entra ID | Build bots > Bot conversations > [Proactive messages](bots/how-to/conversations/send-proactive-messages.md)|
 | 25/07/2023 | Use Collaborative Stage View to engage with your app content in a new Teams window | Build tabs > [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view).
 | 25/07/2023 | Use people icon in an Adaptive Card to view the images of users | Build cards and task modules > Build cards > Review Teams Store validation guidelines > [Build cards](task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card) |
 | 20/07/2023 | App caching for iOS personal tray | Build tabs > [App caching for iOS personal tray](tabs/how-to/app-caching.md) |
@@ -350,7 +354,10 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 November**
 
-***November 02, 2023***: [Introduced Adaptive Card Previewer in public developer preview](concepts/build-and-test/adaptive-card-previewer.md).
+* ***November 14, 2023***: [Build a bot-based message extension and extend the message extension as plugin for Microsoft Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) and also check the [guidelines to create or upgrade a message extension plugin for Microsoft Copilot for Microsoft 365.](messaging-extensions/high-quality-message-extension.md)
+
+* ***November 02, 2023***: [Introduced Adaptive Card Previewer in public developer preview](concepts/build-and-test/adaptive-card-previewer.md).
+
 :::column-end:::
 :::row-end:::
 
@@ -374,7 +381,7 @@ Developer preview is a public program that provides early access to unreleased T
 |13/07/2023| Extend static tabs to group chat or meetings with a customizable experience. |Build tabs > [Overview](tabs/what-are-tabs.md)|
 | 25/05/2023 | Use a deep link to open a tab app in meeting side panel in Teams mobile client. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meeting > [Build tabs for meeting](apps-in-teams-meetings/build-tabs-for-meeting.md#deep-link-to-meeting-side-panel) |
 |23/05/2023 | Teams AI library helps you build AI-powered Teams apps. | Build Bots > [Teams AI library](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)|
-|23/05/2023| Extend Microsoft 365 Copilot to integrate with Microsoft Teams apps to turn your app into the most powerful productivity tool. | [Extend Microsoft 365 Copilot](copilot/how-to-extend-copilot.md)|
+|23/05/2023| Extend Microsoft 365 Copilot to integrate with Microsoft Teams apps to turn your app into the most powerful productivity tool. | [Extend Microsoft 365 Copilot](messaging-extensions/how-to-extend-copilot.md)|
 |31/01/2023| Send notifications to specific participants on a meeting stage with targeted in-meeting notification. |Build apps for Teams meetings and calls > Enable and configure apps for meetings > Build in-meeting notification for Teams meeting > Build tabs for meeting > [Targeted in-meeting notification](apps-in-teams-meetings/in-meeting-notification-for-meeting.md#targeted-in-meeting-notification)|
 |30/01/2023| Enable app caching to improve subsequent launch time of the apps to the meeting side panel.|Build tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 
