@@ -107,39 +107,38 @@ Your code must always validate the HMAC signature included in the request as fol
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/csharp/Models/AuthProvider.cs#L63C13-L63C13)
 
 ```csharp
-            string providedHmacValue = authenticationHeaderValue.Parameter;
-            string calculatedHmacValue = null;
-            try
-            {
-                byte[] serializedPayloadBytes = Encoding.UTF8.GetBytes(messageContent);
+string providedHmacValue = authenticationHeaderValue.Parameter;
+string calculatedHmacValue = null;
+try
+{
+    byte[] serializedPayloadBytes = Encoding.UTF8.GetBytes(messageContent);
 
-                byte[] keyBytes = Convert.FromBase64String(signingKey);
-                using (HMACSHA256 hmacSHA256 = new HMACSHA256(keyBytes))
-                {
-                    byte[] hashBytes = hmacSHA256.ComputeHash(serializedPayloadBytes);
-                    calculatedHmacValue = Convert.ToBase64String(hashBytes);
-                }
+    byte[] keyBytes = Convert.FromBase64String(signingKey);
+    using (HMACSHA256 hmacSHA256 = new HMACSHA256(keyBytes))
+    {
+        byte[] hashBytes = hmacSHA256.ComputeHash(serializedPayloadBytes);
+        calculatedHmacValue = Convert.ToBase64String(hashBytes);
+    }
 
-                if (string.Equals(providedHmacValue, calculatedHmacValue))
-                {
-                    return new AuthResponse(true, null);
-                }
-                else
-                {
-                    string errorMessage = string.Format(
-                        "AuthHeaderValueMismatch. Expected:'{0}' Provided:'{1}'",
-                        calculatedHmacValue,
-                        providedHmacValue);
+    if (string.Equals(providedHmacValue, calculatedHmacValue))
+    {
+        return new AuthResponse(true, null);
+    }
+    else
+    {
+        string errorMessage = string.Format(
+            "AuthHeaderValueMismatch. Expected:'{0}' Provided:'{1}'",
+            calculatedHmacValue,
+            providedHmacValue);
 
-                    return new AuthResponse(false, errorMessage);
-                }
-            }
-            catch (Exception ex)
-            {
-                Trace.TraceError("Exception occcured while verifying HMAC on the incoming request. Exception: {0}", ex);
-                return new AuthResponse(false, "Exception thrown while verifying MAC on incoming request.");
-            }
-        }
+        return new AuthResponse(false, errorMessage);
+    }
+}
+catch (Exception ex)
+{
+    Trace.TraceError("Exception occcured while verifying HMAC on the incoming request. Exception: {0}", ex);
+    return new AuthResponse(false, "Exception thrown while verifying MAC on incoming request.");
+}
 ```
 
 # [Method to respond](#tab/methodtorespond)
