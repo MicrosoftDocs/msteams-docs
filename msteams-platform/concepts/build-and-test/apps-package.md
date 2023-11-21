@@ -18,6 +18,18 @@ To create an app package, perform the following steps:
 1. Zip the app manifest, color icon, and outline icon files
 1. Provide a suitable name
 
+Sample app manifest
+
+While creating app from Teams Toolkit, the app manifest generates from a template file and resolves the environment variable using the env files. You can then customize the manifest file based on your requirements.
+
+To customize app manifest using Teams Toolkit, see [Visual Studio code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) and [Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md).
+
+You can add capabilities bot, tab, and message extensions to your app by updating the app manifest with the required app capability. For more information, see [build app with app capabilities](../../get-started/get-started-overview.md).
+
+To get the app manifest for your app package in Teams, you need to create a ZIP file that contains the manifest.json file and the app icons. The manifest.json file describes how your app is configured, including its capabilities, required resources, and other important attributes. The app icons are the color and outline versions of your app logo that display in different Teams scenarios.
+
+If you are using the Teams Toolkit, you can customize and preview the app manifest file in Visual Studio or Visual Studio Code. The Teams Toolkit generates the app manifest file from a template file and resolves the environment variables using the env files. You can also use the Teams Toolkit to zip the app package and validate the app manifest file.
+
 ## Teams doesn't host your app
 
 When a user installs your app in Teams, they install an app package that contains only a configuration file (also known as an app manifest) and your app's icons. The app's logic and data storage are hosted elsewhere, such as on localhost during development and Azure Web Services. Teams accesses these resources via HTTPS.
