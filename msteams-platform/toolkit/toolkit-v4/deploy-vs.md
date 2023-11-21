@@ -253,7 +253,7 @@ To preview your app, you need to create a **Zip App Package** and upload into th
 
    Now your custom app is uploaded into Teams.
 
-   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Upload Teams app in teams client":::
+   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Screenshot shows the custom app upload in teams client.":::
 
 The other way to preview your app:
 
@@ -267,7 +267,7 @@ The other way to preview your app:
 
    Now your custom app is uploaded into Teams.
 
-   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Upload Teams app in teams client":::
+   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Screenshot shows the custom app upload in teams client.":::
 
 ## See also
 
