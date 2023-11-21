@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 November**
 
+* **November 21, 2023**: Terminology update. LOB apps is referred to as custom apps built for your org (LOB apps).
 * **November 20, 2023**: [Use captureImage API to capture an image or select media from the gallery for mobile clients.](concepts/device-capabilities/media-capabilities.md)
 * **November 17, 2023**: Terminology update. Sideload is referred to as upload a custom app.
 * **November 17, 2023**: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps.](toolkit/debug-your-Teams-app-test-tool.md)

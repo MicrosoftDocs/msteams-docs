@@ -89,7 +89,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
         :::image type="content" source="../../../assets/images/submission/teams-validation-developer-portal.png" alt-text="Teams Store app validation in Developer Portal" lightbox="../../../assets/images/submission/teams-validation-developer-portal.png":::
 
-     1. Self-test your app thoroughly prior to app submission to ensure it adheres to Teams Store policies. Sideload the app in Teams and test the end to end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
+     1. Self-test your app thoroughly prior to app submission to ensure it adheres to Teams Store policies. Upload a custom app in Teams and test the end to end user flows for your app. Ensure the functionality works as expected, links aren't broken, user experience isn't blocked, and any limitations are clearly highlighted.
 
      1. Test your app across desktop, web, and mobile clients. Ensure that the app is responsive across different form factors.
   
@@ -103,7 +103,7 @@ If your app is production ready, you can begin the process of getting it listed 
 
         1. Test instructions detailing app functionality and supported scenarios.
 
-        1. Setup instructions if your app requires more configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
+        1. Set up instructions if your app requires more configuration to access app functionality. Alternately, if your app requires complex configuration, you can also provide a [provisioned demo tenant](/office/developer-program/microsoft-365-developer-program-get-started) with admin access so that our validators can skip the configuration steps.
 
         1. We recommend you to link a demo video that demonstrates key user flow for your app.
 
