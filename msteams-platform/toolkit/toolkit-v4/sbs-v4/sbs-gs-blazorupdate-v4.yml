@@ -277,7 +277,7 @@ items:
         
     1. Select **Add** when prompted to install the app to Teams.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/blazor-add-app_1.png" alt-text="Screenshot of BlazorApp local debug with Add option highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/blazor-add-app.png" alt-text="Screenshot of BlazorApp local debug with Add option highlighted in red.":::
 
        Congratulations, your first tab app is running in your local environment!
 
