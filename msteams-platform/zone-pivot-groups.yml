@@ -83,5 +83,7 @@ groups:
   - id: version-one
     title: TeamsFx CLI v1
   - id: version-two
-    title: TeamsFx CLI v2   
+    title: TeamsFx CLI v2  
+  - id: version-three
+    title: Teams Toolkit CLI v3  
 
