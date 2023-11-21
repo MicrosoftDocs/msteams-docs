@@ -146,7 +146,11 @@ items:
 
     1. From the list of samples, select **Proactive Messaging**. A prebuilt sample that's ready for debugging opens.
 
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/select-proactive-msg.png" alt-text="Screenshot shows the Proactive messaging bot sample.":::
+
     1. Select **Create**.
+
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/create-proactive-bot.png" alt-text="Screenshot shows the Create option.":::
 
     1. Select **Default folder** to store your project root folder in default location.
 
@@ -170,7 +174,7 @@ items:
 
         The command bot app is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/command-bot.png" alt-text="Screenshot shows the app created.":::
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/bot-successful.png" alt-text="Screenshot shows the app created.":::
 
     1. Select **Select and Start Debugging Teams App** icon.
 
