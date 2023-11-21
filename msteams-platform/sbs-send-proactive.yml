@@ -14,14 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    A proactive message is any message sent by a bot that isn't in response to a request from a user that includes messages, such as:
+    A proactive message is a message sent by a bot that responds to simple commands sent in the chat from a user and doesn't respond to messages, such as:
+    
      - Welcome messages
      - Notifications
      - Scheduled messages
      
     This step-by-step guide helps you to send a proactive message from a bot. You'll see the following output:
 
-    * Proactive hello message in chat.  
+    * Proactive hello message in chat.
 
       :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Screenshot shows the Proactive Hello message in Teams chat.":::
 
@@ -99,22 +100,22 @@ items:
 
     After creating the app, you must load your app in Teams without distributing it. Sign in to your Microsoft 365 account to view this option.
 
-        > [!NOTE]
-        > Uploading your app is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
+    > [!NOTE]
+    > Uploading your app is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
     To verify uploading apps in Teams:
 
-        1. Go to **Microsoft Teams**.
-        1. Select **Apps** > **Manage your apps**.
-        1. Select **Upload an app**.
-        1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Go to **Microsoft Teams**.
+    1. Select **Apps** > **Manage your apps**.
+    1. Select **Upload an app**.
+    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
 
-            :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
 
-            > [!NOTE]
-            > Contact Teams administrator, if you don't see the option to upload a custom app.
+        > [!NOTE]
+        > Contact Teams administrator, if you don't see the option to upload a custom app.
 
     ### Create a free Teams developer tenant (optional)
 
@@ -133,13 +134,15 @@ items:
   durationInMinutes: 3
   content: |
 
-    **To build notification bot using Visual Studio Code**
+    **To build proactive message bot using Visual Studio Code**
 
     1. Open Visual Studio Code.
     
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
     1. In the left pane, select **View Samples**.
+
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/view-sample-1.png" alt-text="Screenshot shows the View Samples option.":::
 
     1. From the list of samples, select **Proactive Messaging**. A prebuilt sample that's ready for debugging opens.
 
