@@ -81,7 +81,7 @@ items:
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
+   You've all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
 
 - title: Create OpenAPI Description document
@@ -234,7 +234,7 @@ items:
                 "AI Detection"
             ],
             "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
-            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
             "name": "AI Music Generator",
             "opentools_url": "https://goto.opentools.ai/ai-music-generator",
             "platforms": [
@@ -420,7 +420,7 @@ items:
             },
             {
             "type": "TextBlock",
-            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
             "wrap": true
             },
             {
