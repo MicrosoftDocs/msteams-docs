@@ -135,7 +135,7 @@ This action uploads and deploys the project to Azure App Service using [the zip 
 |---|---|---|---|
 | `workingDirectory` | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the `workingDirectory`. | No | Project root |
 | `artifactFolder` |  Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the `workingDirectory`. | Yes | NA |
-| `ignoreFile` | Specifies the file path of the ignore file used during upload. You can utilize this file to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
+| `ignoreFile` | Specifies the file path of the ignored file used during upload. You can utilize this file to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
 | `resourceId` |  Indicates the resource ID of an Azure App Service. It's generated automatically after running the provision command. If you already have an Azure App Service, you can find its resource ID in the Azure portal. For more information, see [how to find resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/). | Yes | NA |
 | `dryRun` | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct. | No | false |
 | `outputZipFile` |  Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. During deployment, it reconstructs this file reflects all folders and files in your `artifactFolder`, and removes any non-existent files or folder. | No | ./.deployment/deployment.zip |
@@ -163,7 +163,7 @@ This action uploads and deploys the project to Azure Functions using. For more i
 |---|---|---|---|
 | `workingDirectory` | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the `workingDirectory`. | No | Project root |
 | `artifactFolder` |  Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the `workingDirectory`. | Yes | NA |
-| `ignoreFile` | Specifies the file path of the ignore file used during upload. You can utilize this file to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
+| `ignoreFile` | Specifies the file path of the ignored file used during upload. You can utilize this file to exclude certain files or folders from the artifactFolder. Its syntax is similar to the Git's ignore. | No | null |
 | `resourceId` | Indicates the resource ID of an Azure Functions. It's generated automatically after running the provision command. If you already have an Azure Functions, you can find its resource ID in the Azure portal. For more information, see [how to find resource ID](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/). | Yes | NA |
 | `dryRun` | You can set the dryRun parameter to true if you only want to test the preparation of the upload and don't intend to deploy it. This helps you verify that the packaging zip file is correct. | No | false |
 | `outputZipFile` | Indicates the path of the zip file for the packaged artifact folder. It's relative to the workingDirectory. During deployment, it reconstructs this file, reflecting all folders and files in your `artifactFolder`, and removes any non-existent files or folder. | No | ./.deployment/deployment.zip |
@@ -189,7 +189,7 @@ This action uploads and deploys the project to Azure Storage.
 |---|---|---|---|
 | `workingDirectory` | Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the workingDirectory. | No | Project root |
 | `artifactFolder` |  Represents the folder where you want to upload the artifact. If your input value is a relative path, it's relative to the `workingDirectory`. | Yes | NA |
-| `ignoreFile` | Specifies the file path of the ignore file used during upload. You can utilize this file to exclude certain files or folders from the `artifactFolder`. Its syntax is similar to the Git's ignore. | No | null |
+| `ignoreFile` | Specifies the file path of the ignored file used during upload. You can utilize this file to exclude certain files or folders from the `artifactFolder`. Its syntax is similar to the Git's ignore. | No | null |
 | `resourceId` |  Indicates the resource ID of an Azure Storage. It's generated automatically after running the provision command. If you already have an Azure Storage, you can find its resource ID in the Azure portal (see [this link](https://azurelessons.com/how-to-find-resource-id-in-azure-portal/) for more information). | Yes | NA |
 
 ### See also
@@ -232,13 +232,13 @@ After deploying, you can preview the app in Teams client or the web browser befo
 
    :::image type="content" source="images/vs-deploy-confirmation-v4.png" alt-text="Deploy to cloud confirmation dialog":::
 
-   After the deploy process completes, you can see a pop-up with the confirmation that it has been successfully deployed. You can also check the status in the output window.
+   After the deploy process completes, you can see a pop-up with the confirmation that it's successfully deployed. You can also check the status in the output window.
 
    :::image type="content" source="images/VS-deploy-popup-v4.png" alt-text="deploy to cloud popup":::
 
 ### Preview your app
 
-To preview your app, you need to create a **Zip App Package** and sideload into the Teams client.
+To preview your app, you need to create a **Zip App Package** and upload into the Teams client.
 
 1. Select **Project** > **Teams Toolkit** > **Zip App Package**.
 1. Select **For Local** or **For Azure** to generate Teams app package.
@@ -251,9 +251,9 @@ To preview your app, you need to create a **Zip App Package** and sideload into 
 
    :::image type="content" source="images/vs-deploy-preview-teams2-v4.png" alt-text="Preview Teams app in teams client":::
 
-   Now your app is sideloaded into Teams.
+   Now your custom app is uploaded into Teams.
 
-   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Sideload Teams app in teams client":::
+   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Screenshot shows the custom app upload in teams client.":::
 
 The other way to preview your app:
 
@@ -265,9 +265,9 @@ The other way to preview your app:
    > [!NOTE]
    > The same menu options are available in Project menu.
 
-   Now your app is sideloaded into Teams.
+   Now your custom app is uploaded into Teams.
 
-   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Sideload Teams app in teams client":::
+   :::image type="content" source="images/sideload-teams_1-v4.PNG" alt-text="Screenshot shows the custom app upload in teams client.":::
 
 ## See also
 
