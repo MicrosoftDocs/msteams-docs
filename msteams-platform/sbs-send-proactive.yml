@@ -184,7 +184,21 @@ items:
 
     1. Select **Add** or use the dropdown menu to add your proactive bot app to a team, chat, or meeting.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::    
+        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the app cloud output.":::
+
+     1. Select **Set up a bot**
+
+    The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
+
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the app cloud output.":::
+
+    1. Copy and paste the `http://localhost:3978/api/notify` URL in browser to get a proactive hello message in the chat. 
+
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the app cloud output.":::
+
+    1. Go to Teams. You receive a proactive hello message from the bot when the installation is successful.
+
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the app cloud output.":::
 
     ## Take tour of source code
 
