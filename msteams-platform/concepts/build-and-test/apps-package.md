@@ -99,7 +99,7 @@ Here's how app icons appear in different Teams capabilities and contexts.
 Choose how you plan to distribute your app:
 
 > [!div class="nextstepaction"]
-> [Sideload your app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
+> [Upload your custom app in Teams](~/concepts/deploy-and-publish/apps-upload.md)
 > [!div class="nextstepaction"]
 > [Publish your app to your org](/microsoftteams/tenant-apps-catalog-teams?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/breadcrumb/toc.json)
 > [!div class="nextstepaction"]
