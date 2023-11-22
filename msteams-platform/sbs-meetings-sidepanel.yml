@@ -127,7 +127,7 @@ items:
           
     1. Go to **manifest.json** file in the cloned repository.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation_1.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation-file.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
     
     1. Open **manifest.json** file in Visual Studio and make the following changes:
 
@@ -182,14 +182,14 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, go to **csharp > SidePanel > Manifest**.
+    1. In your cloned repository, go to **csharp > SidePanel > AppPackage**.
 
     1. Create a .zip file with the following files that are present in the **manifest** folder: 
        * manifest.json
        * outline.png
        * color.png
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/zipfile_1.png" alt-text="Screenshot of cloned repository with the Side Manifest zip file highlighted in red."::: 
+         :::image type="content" source="~/assets/images/meetings-side-panel/manifest-zipfile.png" alt-text="Screenshot of cloned repository with the Side Manifest zip file highlighted in red."::: 
     
     1. Create a meeting with a few presenters and attendees.
    
@@ -203,7 +203,7 @@ items:
 
         :::image type="content" source="~/assets/images/meetings-side-panel/uploadcustomapp_1.png" alt-text="Screenshot of a banner displayed to build your own app where the Upload a custom app option highlighted in red."::: 
 
-    1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
+    1. Select **Open** to upload the .zip file that you created in the **manifest** folder.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/selectzip_1.png" alt-text="Screenshot of the cloned repository with Side Manifest zip file and Open option highlighted in red."::: 
 
