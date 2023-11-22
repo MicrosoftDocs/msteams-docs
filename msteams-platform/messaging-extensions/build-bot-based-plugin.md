@@ -12,12 +12,21 @@ ms.date: 11/14/2023
 
 > [!NOTE]
 >
+> * Copilot for Microsoft 365 is in private preview. Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
+>   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
+>   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 > * Bot-based search message extension plugin is available in [**public developer preview**](../resources/dev-preview/developer-preview-intro.md).
 > * Only bot-based search message extension can be extended as a plugin for Copilot for Microsoft 365.
 
 Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot for Microsoft 365 can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot for Microsoft 365, you can enable users to interact with third-party tools and services, thereby empowering them to achieve more with Copilot for Microsoft 365. You can achieve this extension by developing a plugin or connecting to an external data source.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and M365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
+
+See the video to learn more about extending Copilot for Microsoft 365 using Teams message extensions:
+</br>
+</br>
+
+> [!VIDEO https://www.youtube.com/embed/vvNFCagkdcE?si=1jS5gsLuJFPANzoi]
 
 ## What is a plugin?
 
@@ -88,9 +97,9 @@ To run your message extension in Teams, follow these steps:
 1. Select a product from the list. Teams unfurls the product as an Adaptive Card in the message compose area.
 1. Select **Send**.
 
-**Trigger message extension as plugin in M365 Chat**
+**Trigger message extension in M365 Chat**
 
-To trigger the message extension as plugin in  M365 Chat, follow these steps:
+To trigger the message extension as plugin in M365 Chat, follow these steps:
 
 1. Select **Apps**.
 1. Search for **M365 Chat** and open the **M365 Chat** app.
@@ -167,7 +176,7 @@ To create a bot-based search message extension plugin using Visual Studio, follo
 
 **Trigger message extension in M365 Chat**
 
-To trigger the message extension through M365 Chat, follow these steps:
+To trigger the message extension as plugin in M365 Chat, follow these steps:
 
 1. Go to **Visual Studio**.
 1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launches Teams web client.

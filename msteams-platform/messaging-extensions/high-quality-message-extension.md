@@ -11,7 +11,11 @@ ms.date: 11/14/2023
 # Guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365
 
 > [!IMPORTANT]
-> Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+>
+> * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+> Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
+>   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
+>   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 
 Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
 
