@@ -49,7 +49,7 @@ items:
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
-   | &nbsp; | Microsoft Copilot for Microsoft 365 | Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams. Copilot for Microsoft 365 combines the power of large language models (LLMs) with the intelligence of the Microsoft Graph to help you get things done.|
+   | &nbsp; | Microsoft Copilot for Microsoft 365 | Copilot for Microsoft 365 is in private preview. Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot: <br>- A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)). <br>- An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses. |
    | **Optional** | &nbsp; | &nbsp; |
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
@@ -346,15 +346,15 @@ items:
     To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the prerequisites section.
     </details>
 
-- title: Trigger your bot-based message extension plugin in Microsoft 365 Chat
+- title: Trigger your bot-based message extension plugin in M365 Chat
   durationInMinutes: 1
   content: |
-    To trigger the message extension in Microsoft 365 Chat, follow these steps:
+    To trigger the message extension in M365 Chat, follow these steps:
 
     1. From the left pane, select **Teams Toolkit**.
     1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
     1. Select Debug in **Copilot (Edge)** or **Debug in Copilot (Chrome)**.
-    1. Select **F5** to build and run your app in Microsoft 365 Chat.
+    1. Select **F5** to build and run your app in M365 Chat.
     1. Go to **Microsoft Teams** > **Apps**.
     1. Search for **M365 Chat** and open the app.
     1. Select **Plugins**.
@@ -362,12 +362,12 @@ items:
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-    1. From the compose message area, send a message to Microsoft 365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
+    1. From the compose message area, send a message to M365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
 
-       :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
+       :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
 
     > [!NOTE]
-    > This prompt might not always make Microsoft 365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the Microsoft 365 Chat response and leave a message.
+    > This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the M365 Chat response and leave a message.
 
 
 - title: Deploy your first Teams app
@@ -479,7 +479,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've created a bot-based message extension and extended the message extension as a plugin in Copilot for Microsoft 365.
+    You've created a bot-based message extension and extended the message extension as a plugin in M365 Chat.
 
     
 
