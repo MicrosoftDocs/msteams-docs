@@ -42,14 +42,14 @@ You can build a Teams message extension app for Outlook through Teams Toolkit ex
 
 > [!div class="checklist"]
 >
-> * [Sideload your app in Teams](#sideload-your-app-in-teams)
+> * [Upload your app in Teams](#upload-your-custom-app-in-teams)
 > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
 You can build either a search-based or an action-based message extension.
 
 [!INCLUDE [message-extensions-outlook](../includes/messaging-extensions/message-extensions-outlook.md)]
 
-Now, you can [sideload your app in Teams](#sideload-your-app-in-teams) and [preview your message extension in Outlook](#preview-your-message-extension-in-outlook). To build your app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
+Now, you can [upload your app in Teams](#upload-your-app-in-teams) and [preview your message extension in Outlook](#preview-your-message-extension-in-outlook). To build your app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
 # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
 
@@ -60,12 +60,12 @@ To extend your existing Teams message extension app to Outlook, ensure the follo
 > * [Update your app manifest.](#update-your-app-manifest)
 > * [Add the Microsoft 365 channel for your app.](#add-microsoft-365-channel-for-your-app)
 > * [Update Microsoft Entra app registration for SSO.](#update-microsoft-entra-app-registration-for-sso)
-> * [Sideload your updated app in Teams.](#sideload-your-app-in-teams)
+> * [Upload your updated app in Teams.](#upload-your-custom-app-in-teams)
 > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
-### Update your app manifest
+### Update your app manifestS
 
-Update the [app manifest](../resources/schema/manifest-schema.md) schema version `1.13` or later to enable your Teams message extension to run in Outlook.
+Update the [app manifest](../resources/schema/manifest-schema.md) (previously called Teams app manifest) schema version `1.13` or later to enable your Teams message extension to run in Outlook.
 
 Open your app manifest and update the `$schema` and `manifestVersion` with the following values:
 
@@ -125,9 +125,9 @@ Microsoft Entra single sign-on (SSO) for message extensions works the same way i
 
 ---
 
-### Sideload your app in Teams
+### Upload your custom app in Teams
 
-Sideload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed **Apps** from the compose message area.
+Upload your updated message extension ([app package](/microsoftteams/platform/concepts/build-and-test/apps-package)) into Teams. After you complete, message extension appears in your installed **Apps** from the compose message area.
 
 1. Create a .zip file with app manifest and app [icons](/microsoftteams/platform/resources/schema/manifest-schema#icons).
 
