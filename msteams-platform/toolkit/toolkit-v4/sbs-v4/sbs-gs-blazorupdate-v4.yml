@@ -95,24 +95,24 @@ items:
 
     ## Set up your Teams development tenant
 
-    A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+    A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
 
-    ### Enable sideloading option
+    ### Enable custom app upload
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
       
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-    Verify if you can sideload apps in Teams:
+    Verify if you can upload a custom app in Teams:
 
     1. In the Teams client, select **Apps** icon.
     1. Select **Manage your apps**.
-    1. Select **Upload a custom app**. If you see Upload a customized app option, sideloading apps is enabled.
+    1. Select **Upload a customised app**. If you see Upload a customised app option, custom app upload is enabled.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/upload-custom-app-v4.png" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options are highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/upload-custom-app-v4.png" alt-text="Screenshot shows the option to upload a customised app.":::
 
         > [!NOTE]
-        > If Teams doesn't show the option to upload a custom app, connect to your Teams administrator.
+        > If Teams doesn't show the option to upload a customised app, connect to your Teams administrator.
 
     ### Create a free Teams developer tenant (optional)
 
@@ -262,10 +262,10 @@ items:
         When you select **F5**, Teams Toolkit:
 
         1. Registers your application with Microsoft Entra ID.
-        1. Registers your application for sideloading in Teams.
+        1. Registers your application for uploading in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
-        1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
+        1. Starts Teams in a web browser with a command to instruct Teams to upload the application (the URL is registered inside the application manifest).
     
         </details>
 
@@ -277,15 +277,15 @@ items:
         
     1. Select **Add** when prompted to install the app to Teams.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/blazor-add-app_1.png" alt-text="Screenshot of BlazorApp local debug with Add option highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/blazor-add-app.png" alt-text="Screenshot of BlazorApp local debug with Add option highlighted in red.":::
 
        Congratulations, your first tab app is running in your local environment!
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/app-local.png" alt-text="Screenshot of Microsoft Teams with Your app is running in your local environment highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/app-local.png" alt-text="Screenshot shows that your app is running in your local environment in Teams.":::
 
     1. Move through the page to view the user details.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of Microsoft Teams with Authorize option highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot shows the option to authorize the profile photo of the user.":::
 
     1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
@@ -305,7 +305,7 @@ items:
         <details>
         <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-        To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
+        To run your app in Teams, you need a Microsoft 365 development account that allows custom app upload. You can learn more about it in the prerequisites section.
         </details>
 
     1. Stop debugging in Visual Studio.
@@ -381,15 +381,15 @@ items:
 
     1. Select **Add** when prompted to install the app to Teams.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/blazor-add-app.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/blazor-add-app.png" alt-text="Screenshot shows the add option to add a blazor app.":::
 
         Congratulations, your first tab app is running in your Azure environment!
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/blazor-tab-app-azure.png" alt-text="Screenshot of Microsoft Teams with Your app is running in your Azure environment highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/blazor-tab-app-azure.png" alt-text="Screenshot shows that your app is running in your azure environment.":::
 
     1. Move through the page to view the user details.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of Microsoft Teams with Authorize option under Personal Tab highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot shows the option to authorize the profile photo of user in personal tab.":::
 
     1. Select **Authorize** to let your app retrieve user details using Microsoft Graph.
 
@@ -536,10 +536,10 @@ items:
         When you select **F5**, Teams Toolkit:
 
         1. Registers your application with Microsoft Entra ID.
-        1. Registers your application for sideloading in Teams.
+        1. Registers your application for uploading in Teams.
         1. Starts your application backend running locally.
         1. Starts your application front-end hosted locally.
-        1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
+        1. Starts Teams in a web browser with a command to instruct Teams to upload the application (the URL is registered inside the application manifest).
     
         </details>
         
@@ -548,17 +548,17 @@ items:
 
         Your web browser starts to run the app.
 
-    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
+    1. Select **Add** when prompted to upload a custom app onto Teams on your local machine.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/add-bot.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option is highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/add-bot.png" alt-text="Screenshot shows the add option for adding a blazor app.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/bot-running.png" alt-text="Screenshot of Microsoft Teams with Welcome option highlighted under Suggestions.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/bot-running.png" alt-text="Screenshot shows the Welcome card in the chat tab of blazor app.":::
 
         You can type `welcome` to show an introduction card, and type `learn` to go to adaptive card and bot command documentation.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/bot-welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::       
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/bot-welcome.png" alt-text="Screenshot shows an introduction card of blazor app in a chat tab.":::       
 
          You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
          
@@ -566,7 +566,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
 
 - title: Preview your first bot app
   durationInMinutes: 1
@@ -639,17 +639,17 @@ items:
 
      1. Select **Add** when prompted to install the app to Teams.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/blazor-add-app-v4.png" alt-text="Screenshot of Teams displaying the Add option for adding Blazor app. The Add option is highlighted in red.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/blazor-add-app-v4.png" alt-text="Screenshot shows the Add option for adding a blazor app to Teams.":::
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
  
      1. You can type `welcome` to show an introduction card.
 
-         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::
+         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/welcome.png" alt-text="Screenshot shows an introduction card in the chat tab of a blazor app.":::
 
      1. You can type `learn` to go to adaptive card and bot command documentation.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/learn.png" alt-text="Screenshot of Microsoft Teams displaying the Learn Adaptive Card and Commands.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/teams-toolkit-v4/blazor-vs-preview2/learn.png" alt-text="Screenshot shows the learn adaptive card and commands in the chat tab of blazor app.":::
 
 - title: Congratulations!
   durationInMinutes: 1

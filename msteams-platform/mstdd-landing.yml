@@ -48,6 +48,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Teams App Test Tool streamlines the debug process of bot apps
+        url: toolkit/debug-your-Teams-app-test-tool.md
       - text: Build bot-based message extension plugin
         url: messaging-extensions/build-bot-based-plugin.md
       - text: Guidelines to extend bot-based message extension as plugin 
@@ -62,8 +64,6 @@ landingContent:
         url: concepts/build-and-test/adaptive-card-previewer.md
       - text: Introduced the extensions property in public developer preview app manifest schema
         url: resources/schema/manifest-schema-dev-preview.md#extensions
-      - text: Receive meeting participant events
-        url:  apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events
       - text: Build message extensions using API
         url: messaging-extensions/api-based-overview.md
       - text: The new Microsoft Teams client
