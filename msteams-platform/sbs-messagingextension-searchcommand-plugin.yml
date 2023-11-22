@@ -2,7 +2,7 @@
 title: Build a bot-based message extension plugin for Copilot for Microsoft 365
 metadata:
   title: Build a bot-based message extension plugin for Copilot for Microsoft 365
-  description: In this tutorial, you can learn to build a bot-based message extension and extend it as a plugin in Microsoft Copilot for Microsoft 365.
+  description: In this tutorial, learn to build a bot-based message extension and extend it as a plugin in Microsoft Copilot for Microsoft 365.
   audience: Developer
   level: Beginner
   ms.date: 11/14/2023
@@ -257,7 +257,7 @@ items:
     1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. The Teams Toolkit displays **Sideloading enabled** if sideloading is enabled for your Microsoft 365 account.
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. The Teams Toolkit displays **Sideloading enabled** if custom app upload is enabled for your Microsoft 365 account.
 
         :::image type="content" source="assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
@@ -343,7 +343,7 @@ items:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. You can learn more about sideloading in the Prerequisites section.
+    To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the prerequisites section.
     </details>
 
 - title: Trigger your bot-based message extension plugin in Microsoft 365 Chat

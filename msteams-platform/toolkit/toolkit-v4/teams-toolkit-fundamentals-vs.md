@@ -18,7 +18,7 @@ zone_pivot_groups: teams-toolkit-platform-vs
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
 
-* Start with a project template for common line-of-business app scenarios or from a sample.
+* Start with a project template for common custom app built for your org (LOB app) scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Microsoft Azure using infrastructure-as-code and Bicep.
@@ -44,21 +44,21 @@ The following are the key features of Teams Toolkit:
 
 ### Project templates
 
-You can start with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production. 
+You can start with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production.
 
 Perform the following the steps to select templates and app capbaility:
 
 1. Select **File > New > Project**.
 
 1. Enter **Teams** in the search box and from search results, select **Microsoft Teams App** template.
- 
+
 1. Select **Next**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png" alt-text="Screenshot shows the search and select Microsoft Teams app." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png":::
 
 ### Automatic registration and configuration
 
-You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Microsoft Entra ID for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the Microsoft Entra manifest. 
+You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Microsoft Entra ID for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the Microsoft Entra manifest.
 
 #### TeamsFx .NET SDK reference
 
@@ -78,7 +78,7 @@ You can save time and let the toolkit automatically register the app in Teams De
 
 Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
 
-* Start with a project templates for common line-of-business app scenarios or from a sample.
+* Start with a project templates for common custom app built for your org (LOB app) scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
 * Run and debug to Teams directly from familiar tools.
 * Smart defaults for hosting in Azure using infrastructure-as-code and Bicep.
@@ -104,7 +104,7 @@ The following list provides the key features of Teams Toolkit:
 
 ### Project templates
 
-You can start directly with the capability-focused templates such as tabs, bots, and message extensions or by following existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with templates for common line-of-business app scenarios and smart defaults to accelerate your time to production.
+You can start directly with the capability-focused templates such as tabs, bots, and message extensions or by following existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with templates for common custom app built for your org (LOB app) scenarios and smart defaults to accelerate your time to production.
 
 :::image type="content" source="images/create-new-app-vs_2-v4.png" alt-text="Create new Teams app menu in VS Code":::
 

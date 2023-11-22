@@ -7,7 +7,7 @@ ms.date: 12/13/2022
 ---
 # Configure third party OAuth IdP authentication
 
-> [!Note]
+> [!NOTE]
 > For authentication to work for your tab on mobile clients, ensure that you're using version 1.4.1 or later of the Microsoft Teams JavaScript client library (TeamsJS).
 
 Your Microsoft Teams app might need to interact with various services, such as Facebook, Twitter, and Teams. Most of these services necessitate authentication and authorization for access. Teams stores user profile information in Microsoft Entra ID using Microsoft Graph. This article primarily focuses on using Microsoft Entra ID for authentication to access this information.
@@ -50,14 +50,14 @@ Trigger the authentication flow by a user action. Avoid opening the authenticati
 
 Add a button to your configuration or content page to enable the user to sign in when needed. This can be done in the tab [configuration](~/tabs/how-to/create-tab-pages/configuration-page.md) page or any [content](~/tabs/how-to/create-tab-pages/content-page.md) page.
 
-Microsoft Entra ID, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means that you'll need to add a pop-up page to host the identity provider. In the following example, this page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
+Microsoft Entra ID, like most identity providers, doesn't allow its content to be placed in an `iframe`. This means you need to add a page to host the identity provider that is displayed inside a pop-up window by Teams client. In the following example, the page is `/tab-auth/simple-start`. Use the `authentication.authenticate()` function of the TeamsJS library to launch this page when the button is selected.
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
 ```javascript
 import { authentication } from "@microsoft/teams-js";
 authentication.authenticate({
-    url: window.location.origin + "/tab/simple-start-v2",
+    url: window.location.origin + "/tab-auth/simple-start-v2",
     width: 600,
     height: 535})
 .then((result) => {
@@ -78,7 +78,7 @@ authentication.authenticate({
 
 ```javascript
 microsoftTeams.authentication.authenticate({
-    url: window.location.origin + "/tab-auth/simple-start",
+    url: window.location.origin + "/tab-auth/simple-start-v1",
     width: 600,
     height: 535,
     successCallback: function (result) {
@@ -217,6 +217,10 @@ This code parses the key-value pairs received from Microsoft Entra ID in `window
 `NotifyFailure()` has the following predefined failure reasons:
 
 * `CancelledByUser` the user closed the pop-up window before completing the authentication flow.
+
+  > [!NOTE]
+  > We recommend not to use `same-origin` or `same-origin-allow-popups` values for `Cross-Origin-Opener-Policy` response header on the login pages, as it disrupts the connection to the parent window and causes the authenticate API call to return prematurely with a `CancelledByUser` error.
+
 * `FailedToOpenWindow` the pop-up window couldn't be opened. When running Microsoft Teams in a browser, this typically means that the window was blocked by a pop-up blocker.
 
 If successful, you can refresh or reload the page and show content relevant to the now-authenticated user. If authentication fails, it displays an error message.
