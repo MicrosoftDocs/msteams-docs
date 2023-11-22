@@ -49,7 +49,7 @@ You can build either a search-based or an action-based message extension.
 
 [!INCLUDE [message-extensions-outlook](../includes/messaging-extensions/message-extensions-outlook.md)]
 
-Now, you can [upload your app in Teams](#upload-your-app-in-teams) and [preview your message extension in Outlook](#preview-your-message-extension-in-outlook). To build your app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
+Now, you can [upload your app in Teams](#upload-your-custom-app-in-teams) and [preview your message extension in Outlook](#preview-your-message-extension-in-outlook). To build your app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
 # [Extend an existing Teams message extension app to Outlook](#tab/existing-app)
 
@@ -63,7 +63,7 @@ To extend your existing Teams message extension app to Outlook, ensure the follo
 > * [Upload your updated app in Teams.](#upload-your-custom-app-in-teams)
 > * [Preview your message extension in Outlook](#preview-your-message-extension-in-outlook)
 
-### Update your app manifestS
+### Update your app manifest
 
 Update the [app manifest](../resources/schema/manifest-schema.md) (previously called Teams app manifest) schema version `1.13` or later to enable your Teams message extension to run in Outlook.
 
