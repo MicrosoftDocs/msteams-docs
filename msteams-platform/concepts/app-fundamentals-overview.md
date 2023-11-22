@@ -1,7 +1,7 @@
 ---
 title: Plan your app overview
 author: heath-hamilton
-description: Understand use case and Microsoft Teams app features, map use cases, plan responsive tabs for mobile. Learn Teams features and availability for GCC, GCC-High, and DOD.
+description: Understand use cases and Microsoft Teams app features, map use cases, and plan responsive tabs for mobile. Learn about Teams features, availability, and app supports for GCC, GCC-High, and DOD.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 03/20/2023
@@ -76,9 +76,8 @@ The following table includes Teams features and availability for GCC, GCC-High, 
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
 | Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCC-High. | ✔️ Microsoft apps compliant with DOD. |
 | 3P or third-party apps | ✔️ Third-party apps are available. Disabled by default and tenant admin use their own discretion to enable it. | ❌ | ❌ |
-|Line-of-business apps| ✔️ | ❌ | ❌ |
-|Custom apps| ✔️ | ✔️ | ✔️ |
-|Sideloading apps | ✔️ | ❌ | ❌ |
+| Custom apps built for your org (LOB apps)| ✔️ | ✔️ | ✔️ |
+| Upload custom apps | ✔️ | ❌ | ❌ |
 | **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ |
 | Bots | ✔️ | ✔️ | ✔️ |
@@ -91,7 +90,7 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 
 * For third-party apps, see [web apps](../samples/integrating-web-apps.md) and [meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md).
 * For bots, see [build your first conversational bot for Teams](../get-started/first-app-bot.md), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
-* For sideloading apps, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+* For custom app upload, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 * For custom connectors, see [create connectors for Microsoft 365 Groups for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
 
 </details>

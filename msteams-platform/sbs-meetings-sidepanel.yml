@@ -53,7 +53,7 @@ items:
 - title: Register Azure AD app
   durationInMinutes: 5
   content: |
-    To create and register your bot in Microsoft Azure Active Directory (Azure AD), perform the following steps:
+    To create and register your bot in Microsoft Entra ID, perform the following steps:
 
     * Create and register your Azure app. 
     * Create client secret to enable single sign-on (SSO) authentication of the bot.
@@ -98,7 +98,105 @@ items:
 
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
-- title: Create your bot
+       :::image type="content" source="./assets/images/meetings-side-panel/tenant-review.png" alt-text="Screenshot of Microsoft App ID section under Create an Azure Bot. The Type of App selected and Review plus create options are highlighted in red.":::
+
+    1. If the validation is passed, select **Create**.
+
+        It takes a few moments for your bot service to be provisioned. 
+
+       :::image type="content" source="./assets/images/conversation-bot/validation-passed.png" alt-text="Screenshot of deployment complete with the Go to resource option highlighted in red.":::       
+
+    1. Select **Go to resource**. 
+
+       :::image type="content" source="./assets/images/meetings-side-panel/go-to-resource.png" alt-text="Screenshot of deployment complete with the Go to resource option highlighted in red.":::
+
+        Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure Bot.
+
+        :::image type="content" source="./assets/images/meetings-side-panel/app-overview.png" alt-text="Screenshot of the Azure bot Home page that is created.":::
+
+    **To create client secret**
+
+      Perform the following steps if you've created a new **Microsoft App ID**:
+
+    1. In the left pane, select **Configuration**. 
+
+       > [!TIP]
+       > Save the **Microsoft App ID** or **Client ID** for future reference.
+
+    1. Next to **Microsoft App ID**, select **Manage Password**.
+
+       :::image type="content" source="~/assets/images/manage-password-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted in red.":::
+
+    1. In the **Client secrets** section, select **+ New client secret**. 
+
+       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_2.png" alt-text="Screenshot of client secrets section with New client secret highlighted in red.":::
+    
+    1. In the **Add a client secret** window that appears, enter **Description** of the client secret and select **Add**.
+    
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret_1.png" alt-text="Screenshot of Add a client secret window with the Add option highlighted in red.":::
+
+    1. Select **Copy to clipboard** to copy the **Value** details.
+
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientvalue.png" alt-text="Screenshot of Client secrets section with the Copy to clipboard icon highlighted in red.":::
+       
+       > [!TIP]
+       > Save the **Client secrets** value or app password for future reference.
+
+    **To add the Teams channel**
+
+    1. Go to **Home**.
+
+       :::image type="content" source="~/assets/images/meetings-side-panel/gotohome_1.png" alt-text="Screenshot of Azure bot Home page with the Home option highlighted in red.":::
+
+    1. Select your bot from **Recent resources**.
+
+    1. Select **Channels** in the left pane 
+
+    1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
+
+       :::image type="content" source="./assets/images/meetings-side-panel/channel-teams_1.png" alt-text="Screenshot of Azure bot Home page. The Channels option in the left pane and Microsoft Teams under Channels are highlighted in red.":::
+
+    1. Select the checkbox to accept the **Terms of Service**.
+    
+    1. Select **Agree**.
+
+       :::image type="content" source="~/assets/images/meetings-side-panel/terms_2.png" alt-text="Screenshot of Terms of Service page with the Agree option highlighted in red.":::
+
+    1. Select **Apply**.
+
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot of Microsoft Teams Messaging channel with the Apply option highlighted in red.":::
+    
+    **To create tunnel for local web server**
+
+    Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+
+     ```bash
+     ngrok http --host-header=localhost 3001
+     ```
+
+    > [!TIP]
+    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3001` command.
+
+    **To add messaging endpoint**
+
+    1. From ngrok, copy the HTTPS URL.
+
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/ngrok-url_1.png" alt-text="Screenshot of ngrok with the ngrok HTTPS URL highlighted in red.":::
+
+        > [!NOTE]
+        > The HTTPS URL in your ngrok is your domain name that doesn't include `https://`.
+
+    1. In **Settings**, select **Configuration**.
+
+    1. In **Messaging endpoint**, add the HTTPS URL from ngrok and at the end of the URL add /api/messages.
+
+       :::image type="content" source="~/assets/images/meetings-side-panel/messaging-endpoint_1.png" alt-text="Screenshot of Azure bot Configuration page. The Messaging endpoint with the ngork URL highlighted in red.":::
+
+    1. Select **Apply**.
+
+        You have successfully set up a bot in Azure Bot service.
+
+- title: Update the Microsoft Entra app registration
   durationInMinutes: 1
   content: |
 
@@ -263,5 +361,3 @@ items:
 
 - content: |
     You've completed the tutorial to get started with a **Side Panel** app!
-
-

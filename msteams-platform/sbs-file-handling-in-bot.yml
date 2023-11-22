@@ -35,7 +35,7 @@ items:
      | --- | --- | --- |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
 
@@ -45,7 +45,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app 
+- title: Register Microsoft Entra app 
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
@@ -93,8 +93,9 @@ items:
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
       > [!NOTE]
-      > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-      > Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+      >
+      > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+      > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
@@ -128,9 +129,9 @@ items:
 
          * Set `"MicrosoftAppType"` to **MultiTenant**.
          * Set `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Set `"MicrosoftAppPassword"` to your bot's client secret ID **value**.
+         * Set `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
       
-           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json.png" alt-text="Screenshot shows the details filled app settings file in visual studio.":::
+           :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/appsettings-json.png" alt-text="Screenshot shows the details filled app settings file in Visual Studio.":::
            
     1. Go to the **manifest.json** file in the cloned repository.
 
@@ -189,7 +190,7 @@ items:
 - title: Upload the bot in Teams
   durationInMinutes: 2
   content: | 
-    1. In your cloned repository, Go to **Microsoft-Teams-Samples** > **samples** > **bot-file-upload** > **csharp** > **TeamsAppManifest**.
+    1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **bot-file-upload** > **csharp** > **TeamsAppManifest**.
 
     1. Create a .zip file with the following files that are present in the **TeamsAppManifest** folder:
        * manifest.json
@@ -204,7 +205,7 @@ items:
 
     1. Select **Upload an app**.
 
-    1. Look for the option to **Upload a custom app**. If the option is visible, you have enabled sideloading apps. 
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
        :::image type="content" source="assets/images/teams-file-upload-bot/custom-upload.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
 
@@ -214,16 +215,16 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot show the option to add the app in Teams sideloading."::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot show the option to upload the custom app in Teams."::: 
 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
   content: |
-    1. In the message compose area, enter **hi** and select send. The bot sends an Adaptive card with the permission to upload the file.
+    1. In the message compose area, enter **hi** and select **Send**. The bot sends an Adaptive card with the permission to upload the file.
 
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/respond-bot.png" alt-text="Screenshot show the responsive message with an adaptive card sent by bot.":::
 
-    1. Select **Allow**. The `teams-logo.png` file is uploaded to the file directory and is ready for download.
+    1. Select **Allow**. The **teams-logo.png** file is uploaded to the file directory and is ready for download.
          
        :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/sbs-allow.png" alt-text="Screenshot shows the option to download the teams logo.":::
     
