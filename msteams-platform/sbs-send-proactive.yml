@@ -44,91 +44,6 @@ items:
     > The guide is tested on Teams Toolkit latest version and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
     
     [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
-    
-    ## Prepare development environment
-
-    After you've installed the required tools, set up the development environment.
-
-    ### Install the Teams Toolkit
-
-    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Microsoft Teams Store, and more. 
-        
-    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
-
-    # [Visual Studio Code](#tab/vscode)
-
-    1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-    1. In the search box, enter **Teams Toolkit**.
-    1. Select **Install** next to the Teams Toolkit.
-
-        :::image type="content" source="~/assets/images/sbs-notification-bot/teams-toolkit.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets/images/sbs-notification-bot/teams-toolkit-2.png":::
-
-        The Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
-
-    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
-
-    # [Command line](#tab/cli)
-
-    To install the TeamsFx CLI, use the `npm` package manager:
-
-    ``` bash
-    npm install -g @microsoft/teamsfx-cli
-    ```
-
-    Depending on your configuration, you may need to use `sudo` to install the CLI:
-
-    ``` bash
-    sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
-    ```
-
-    It's more common on Linux and macOS systems.
-
-    Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
-
-    You can use the CLI with the `teamsfx` command. Test the command is working by running `teamsfx -h`.
-
-    > [!NOTE]
-    > Before you run TeamsFx in PowerShell terminals, ensure you enable the **remote signed** execution policy for PowerShell.
-
-    ---
-
-    ## Set up your Teams development tenant
-
-    A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also sideload and test the app.
-
-    ### Check for sideloading option
-
-    After creating the app, you must load your app in Teams without distributing it. Sign in to your Microsoft 365 account to view this option.
-
-    > [!NOTE]
-    > Uploading your app is necessary for previewing and testing apps in Teams local environment. Enable Sideloading to preview and test your app in Teams locally.
-
-    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
-
-    To verify uploading apps in Teams:
-
-    1. Go to **Microsoft Teams**.
-    1. Select **Apps** > **Manage your apps**.
-    1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
-
-        > [!NOTE]
-        > Contact Teams administrator, if you don't see the option to upload a custom app.
-
-    ### Create a free Teams developer tenant (optional)
-
-    If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
-
-    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-    1. Select **Join Now** and follow the onscreen instructions.
-    1. Select **Set up E5 subscription** from the welcome screen.
-    1. Set up administrator account. After you finish, the following screen displays.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft":::
-
-    1. Sign in to Teams using the new administrator account. Now you should have the **Upload a custom app** option.     
 
 - title: Build Proactive Message bot
   durationInMinutes: 3
@@ -154,79 +69,79 @@ items:
 
     1. Select **Default folder** to store your project root folder in default location.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-default-location.png" alt-text="Select default location":::
+         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-default-location.png" alt-text="Screenshot shows the option to select default location":::
     
        You can change the default location by the following steps:
 
         1. Select **Browse**.
 
-            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-browse.png" alt-text="Select browse location":::
+            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-browse.png" alt-text="Screenshot shows the option to browse location.":::
             
         1. Select the location for project workspace.
 
         1. Select **Select Folder**.
 
-           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Select Folder":::
+           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Screenshot shows the option to select Folder.":::
     
     1. After your app is created, the Teams Toolkit displays the following message:
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/new-window-notification.png" alt-text="Screenshot shows the new window Notification for scaffolding.":::
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/bot-successful.png" alt-text="Screenshot shows the bot created.":::
 
-        The command bot app is created in a few seconds.
+        The proactive message bot is created in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/bot-successful.png" alt-text="Screenshot shows the app created.":::
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/file-structure.png" alt-text="Screenshot shows the proactive message bot created.":::
 
-    1. Select **Select and Start Debugging Teams App** icon.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/proactive-scenario/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list. After debugging is successful, you'll be prompted to upload the bot app to Teams on your local machine. 
+    1. Select **Debug (Edge)** or **Debug (Chrome)** from the dropdown list.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="Screenshot shows the debugging application.":::
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/debug-option-edge.png" alt-text="Screenshot shows the debugging application.":::
+
+    You'll be prompted to upload the proactive message bot to Teams on your local machine. 
 
     1. Select **Add** or use the dropdown menu to add your proactive bot app to a team, chat, or meeting.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the app cloud output.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the option to add bot to Teams..":::
 
-     1. Select **Set up a bot**
+    1. Select **Set up a bot**. The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
 
-    The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
-
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the app cloud output.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
 
     1. Copy and paste the `http://localhost:3978/api/notify` URL in browser to get a proactive hello message in the chat. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the app cloud output.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that responds to proactive message.":::
 
-    1. Go to Teams. You receive a proactive hello message from the bot when the installation is successful.
+    1. Go to Teams. You'll receive a **proactive hello** message from the bot as you refresh the browser.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the app cloud output.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
 
     ## Take tour of source code
 
-        Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
+            Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/folder-structure-command-bot.png" alt-text="Screenshot shows the structure tab":::
+            :::image type="content" source="~/assets/images/proactive-scenario/file-structure.png" alt-text="Screenshot shows the structure tab":::
 
-        If you choose to use UI framework, following sample template code provides a scaffolding with React components. It contains following content:
+            If you choose to use UI framework, following sample template code provides a scaffolding with React components. It contains following content:
 
-        | Folder / File | Contents |
-        | - | - |
-        | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-        | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
-        | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
-        | `.vscode/` | VSCode files for debugging. |
-        | `appPackage/` | Templates for the Teams application manifest. |
-        | `infra/` | Templates for provisioning Azure resources. |
-        | `src/` | The source code for the application. |
-        | `src/index.js` | Application entry point and `restify` handlers for command and response. |
-        | `src/teamsBot.js` | An empty teams activity handler for bot customization. |
-        | `src/adaptiveCards/helloworldCommand.json` | A generated Adaptive Card that is sent to Teams. |
-        | `src/helloworldCommandHandler.js` | The business logic to handle a command. |
+            | Folder / File | Contents |
+            | - | - |
+            | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+            | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+            | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+            | `.vscode/` | VSCode files for debugging. |
+            | `appPackage/` | Templates for the Teams application manifest. |
+            | `infra/` | Templates for provisioning Azure resources. |
+            | `src/` | The source code for the application. |
+            | `src/index.js` | Application entry point and `restify` handlers for command and response. |
+            | `src/teamsBot.js` | An empty teams activity handler for bot customization. |
+            | `src/adaptiveCards/helloworldCommand.json` | A generated Adaptive Card that is sent to Teams. |
+            | `src/helloworldCommandHandler.js` | The business logic to handle a command. |
 
-- title: Deploy your first Teams app
+- title: Deploy your Proactive message bot
   durationInMinutes: 1
   content: |
 
-    You've learnt to build, and run Teams app with proactive message bot capability. The final step is to deploy your app on Azure.
+    You've learnt to build and run Teams app with proactive message bot capability. The final step is to deploy your app on Azure.
 
     Let's deploy the first app with proactive message bot capability on Azure using Teams Toolkit.
 
@@ -237,12 +152,13 @@ items:
     1. Open Visual Studio Code.
     1. Open the project folder that you created the proactive message bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign-in to Azure** using your credentials.
+    1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
         > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step.
 
-        Your default web browser opens to let you sign-in to the account.
+        Your default web browser opens to let you sign in to the account.
+
         1. Close the browser when prompted and return to Visual Studio Code.
 
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
@@ -262,8 +178,14 @@ items:
         :::image type="content" source="~/assets/images/sbs-command-bot/provision-cloud.png" alt-text="Screenshot shows the provisioning commands.":::
 
     1. Select an existing resource group or create new resource group. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
-    
-        :::image type="content" source="~/assets/images/sbs-command-bot/subscription-cloud.png" alt-text="Screenshot show resources for provisioning.":::
+
+    1. Select anyone of the existing subscription.
+
+        :::image type="content" source="~/assets/images/proactive-scenario/select-subscription.png" alt-text="Screenshot shows the subscription option for provisioning.":::
+
+    1. Select an existing or create new resource group.
+
+        :::image type="content" source="~/assets/images/sbs-command-bot/select-resource-group.png" alt-text="Screenshot show the resource group option for provisioning.":::
 
         > [!NOTE]
         > A dialog appears mentioning that costs may be incurred when running resources in Azure.
@@ -274,7 +196,7 @@ items:
 
        The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner. After few minutes, you see the following notice:
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-provision-success1.png" alt-text="Screenshot shows the provisioning complete dialog.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/deploy-provision-proactive.png" alt-text="Screenshot shows the provisioning complete dialog.":::
 
          You have the option to view the provisioned resources. For this tutorial, you don't need to view resources.
 
@@ -288,21 +210,29 @@ items:
 
        Deployment takes some time. You can monitor the progress in the dialog in lower-right corner. After a few minutes, you see the following notice.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/command-deploy-confirm.png" alt-text="Screenshots shows the deploy confirm.":::
-    
+        :::image type="content" source="~/assets/images/proactive-scenario/deploy-confirmation-proactive.png" alt-text="Screenshots shows the deploy confirm.":::
     
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-    1. Select **Start Debugging** button. You'll be prompted to sideload the proactive message bot app onto Teams.
+    1. Select **Start Debugging** button. You'll be prompted to upload the proactive message bot app to Teams.
 
-         :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Screenshot shows the remote debug.":::
+         :::image type="content" source="~/assets/images/proactive-scenario/debug-option-remote.png" alt-text="Screenshot shows the remote debug.":::
 
-    1. Select **Add** or use the dropdown menu to add your proactive message bot app to a team, chat, or meeting.
-    
-        :::image type="content" source="~/assets/images/sbs-command-bot/app-cloud-output.png" alt-text="Screenshot shows the app cloud output.":::
+    1. Select **Add** or use the dropdown menu to add your proactive bot app to a team, chat, or meeting.
 
-    1. Select the bot.
-    1. Select **Enter**.
+        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the option to add bot to Teams.":::
+
+    1. Select **Set up a bot**. The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
+
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the bot response in the chat.":::
+
+    1. Copy and paste the `http://localhost:3978/api/notify` URL in browser to get a proactive hello message in the chat. 
+
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that sends proactive message to chat.":::
+
+    1. Go to Teams. You'll receive a **proactive hello** message from the bot as you refresh the browser.
+
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response.":::
         
     # [Command Line](#tab/cli)
 
@@ -339,7 +269,7 @@ items:
   content: |
     Did you come up with something like this? This is how the proactive hello message in Adaptive Card appears:
     
-    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo-in-adaptive-card.png" alt-text="Screenshot shows the Proactive Hello message in adaptive card.":::
+    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Screenshot shows the proactive hello message.":::
 
 - content: |
     You've completed the scenario.
