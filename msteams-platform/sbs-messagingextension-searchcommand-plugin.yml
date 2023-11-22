@@ -17,8 +17,8 @@ items:
     > [!NOTE]
     >
     > * Bot-based search message extension plugin is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
-    > * Only bot-based search message extension can be extended as a plugin in M365 Chat.
-    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+    > * Only bot-based search message extension can be extended as a plugin in Microsoft Copilot for Microsoft 365.
+    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in M365 Chat in Microsoft Teams.
     
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot-based message extension plugin with Teams using Javascript.  

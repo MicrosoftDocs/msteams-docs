@@ -23,7 +23,8 @@ Microsoft Copilot for Microsoft 365, powered by an advanced processing and orche
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and M365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
 See the video to learn more about extending Copilot for Microsoft 365 using Teams message extensions:
-<br>
+</br>
+</br>
 
 > [!VIDEO https://www.youtube.com/embed/vvNFCagkdcE?si=1jS5gsLuJFPANzoi]
 
