@@ -45,20 +45,20 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 
 | Command | Description |
 |----------------|-------------|
-| `teamsfx new`| Create new Teams application.|
-| `teamsfx add`| Adds features to your Teams application.|
-| `teamsfx account`| Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
-| `teamsfx env` | Manage environments. |
-| `teamsfx provision` | Provision cloud resources in the current application.|
-| `teamsfx deploy` | Deploy the current application.  |
-| `teamsfx package` | Build your Teams app into package for publishing.|
-| `teamsfx validate` | Validate the current application.|
-| `teamsfx publish` | Publish the app to Teams.|
-| `teamsfx preview` | Preview the current application. |
-| `teamsfx config`  | Manage the configuration data. |
-| `teamsfx permission`| Collaborate with other developers in same project.|
-| `teamsfx update` | Update the specific application manifest file. |
-| `teamsfx upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
+| `teamsapp new`| Create new Teams application.|
+| `teamsapp add`| Adds features to your Teams application.|
+| `teamsapp account`| Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
+| `teamsapp env` | Manage environments. |
+| `teamsapp provision` | Provision cloud resources in the current application.|
+| `teamsapp deploy` | Deploy the current application.  |
+| `teamsapp package` | Build your Teams app into package for publishing.|
+| `teamsapp validate` | Validate the current application.|
+| `teamsapp publish` | Publish the app to Teams.|
+| `teamsapp preview` | Preview the current application. |
+| `teamsapp config`  | Manage the configuration data. |
+| `teamsapp permission`| Collaborate with other developers in same project.|
+| `teamsapp update` | Update the specific application manifest file. |
+| `teamsapp upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
 
 ## Interactive mode
 
