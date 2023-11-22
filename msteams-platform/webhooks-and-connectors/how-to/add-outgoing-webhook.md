@@ -77,7 +77,7 @@ A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange
 The following scenario provides the details to add an Outgoing Webhook:
 
 * Scenario: Push change status notifications on a Teams channel database server to your app.
-* Example: You have a line of business app that tracks all CRUD (create, read, update, and delete) operations. These operations are made to the employee records by Teams channel HR users across a Microsoft 365 tenancy.
+* Example: You have a custom app built for your org (LOB app) that tracks all CRUD (create, read, update, and delete) operations. These operations are made to the employee records by Teams channel HR users across a Microsoft 365 tenancy.
 
 # [URL JSON payload](#tab/urljsonpayload)
 
