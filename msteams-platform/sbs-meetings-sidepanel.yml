@@ -213,7 +213,7 @@ items:
   content: |
     1. Go to **appsettings.json** file in the cloned repository.
 
-          :::image type="content" source="~/assets/images/meetings-side-panel/appsettingslocation_1.png" alt-text="Screenshot shows the appsettings JSON file with appsettings information.":::
+          :::image type="content" source="~/assets/images/meetings-side-panel/appsettings-location.png" alt-text="Screenshot shows the appsettings JSON file with appsettings information.":::
 
     1. Open **appsettings.json** file in Visual Studio and update the following information:  
 
@@ -280,7 +280,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, go to **csharp > SidePanel > AppPackage**.
+    1. In your cloned repository, go to **csharp > SidePanel > AppManifest**.
 
     1. Create a .zip file with the following files that are present in the **manifest** folder: 
        * manifest.json
@@ -295,15 +295,13 @@ items:
  
     1. In the pop-up window, select **Manage apps**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/manageapps_1.png" alt-text="Screenshot of Teams Slide Panel with the add Apps icon and Manage apps option highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/manage-apps.png" alt-text="Screenshot of Teams Slide Panel with the add Apps icon and Manage apps option highlighted in red."::: 
    
     1. Select **Upload an app**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/uploadcustomapp_1.png" alt-text="Screenshot of a banner displayed to build your own app where the Upload a custom app option highlighted in red."::: 
-
     1. Select **Open** to upload the .zip file that you created in the **manifest** folder.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/selectzip_1.png" alt-text="Screenshot of the cloned repository with Side Manifest zip file and Open option highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/select-zip.png" alt-text="Screenshot of the cloned repository with Side Manifest zip file and Open option highlighted in red."::: 
 
     1. Select **Add**.
 
@@ -311,7 +309,7 @@ items:
 
        The **Manage apps** section displays the list of applications.
    
-        :::image type="content" source="~/assets/images/meetings-side-panel/manageappsection_1.png" alt-text="Screenshot of Manage apps displaying the list of applications."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/manage-app-section.png" alt-text="Screenshot of Manage apps displaying the list of applications."::: 
    
     1. Go to Teams meeting.
     
@@ -321,11 +319,11 @@ items:
 
     1. Select the **Side Panel** app.
   
-        :::image type="content" source="~/assets/images/meetings-side-panel/appicon-2.png" alt-text="Screenshot with the side panel app highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/select-side-panel-app.png" alt-text="Screenshot with the side panel app highlighted in red."::: 
 
     1. Select **Save**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/welcomeapp_1.png" alt-text="Screenshot of Side Panel with Save option highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/welcome-side-panel.png" alt-text="Screenshot of Side Panel with Save option highlighted in red."::: 
    
        The app is visible in the meeting side panel.         
 
@@ -336,17 +334,17 @@ items:
 
     1. Select **Add New Agenda Item** to add a new agenda to the default agenda list.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanelinmeet_1.png" alt-text="Screenshot of Teams meeting displaying the addition of New Agenda highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/sidepanel-add-agenda.png" alt-text="Screenshot of Teams meeting displaying the addition of New Agenda highlighted in red."::: 
 
     1. Enter a new agenda item and select **Add**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/newagenda_1.png" alt-text="Screenshot of Teams meeting with Add option highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-new-agenda.png" alt-text="Screenshot of Teams meeting with Add option highlighted in red."::: 
 
        The new agenda is added to the list.
 
     1. Select **Publish Agenda**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/youragenda_1.png" alt-text="Screenshot of Teams meeting with Publish Agenda highlighted in red."::: 
+         :::image type="content" source="~/assets/images/meetings-side-panel/publish-agenda.png" alt-text="Screenshot of Teams meeting with Publish Agenda highlighted in red."::: 
 
        The new agenda list is displayed in the meeting chat.
 
