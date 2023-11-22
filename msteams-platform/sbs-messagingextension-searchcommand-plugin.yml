@@ -17,8 +17,8 @@ items:
     > [!NOTE]
     >
     > * Bot-based search message extension plugin is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
-    > * Only bot-based search message extension can be extended as a plugin in Microsoft 365 Chat.
-    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+    > * Only bot-based search message extension can be extended as a plugin in Microsoft Copilot for Microsoft 365.
+    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in M365 Chat in Microsoft Teams.
     
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot-based message extension plugin with Teams using Javascript.  
@@ -28,11 +28,11 @@ items:
     - How to set up a new project with Teams Toolkit.
     - How to build a bot-based message extension plugin.
     - How to deploy your app.
-    - Trigger your bot-based message extension plugin in Microsoft 365 Chat.
+    - Trigger your bot-based message extension plugin in M365 Chat.
 
     This step-by-step guide helps you to build  bot-based message extension plugin with Teams Toolkit. You'll see the following output after you've completed this guide:
 
-     :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-invoke.png" alt-text="Screenshot shows the plugin prompt and the response from Microsoft 365 Chat.":::
+     :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-invoke.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -49,7 +49,7 @@ items:
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
    | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
-   | &nbsp; | Microsoft 365 Chat | The Microsoft 365 Chat feature in Copilot combines the power of large language models (LLMs) with the intelligence of the Microsoft Graph to help you get things done. |
+   | &nbsp; | Microsoft Copilot for Microsoft 365 | Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams. Copilot for Microsoft 365 combines the power of large language models (LLMs) with the intelligence of the Microsoft Graph to help you get things done.|
    | **Optional** | &nbsp; | &nbsp; |
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
@@ -479,7 +479,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've created a bot-based message extension and extended the message extension as a plugin in Microsoft 365 Chat.
+    You've created a bot-based message extension and extended the message extension as a plugin in Copilot for Microsoft 365.
 
     
 
