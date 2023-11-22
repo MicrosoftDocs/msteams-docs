@@ -80,10 +80,11 @@ groups:
   title: TeamsFx command line interface
   prompt: Before you begin, select the command line interface version.
   pivots:
+  - id: version-three
+    title: Teams Toolkit CLI v3
+  - id: version-two
+    title: TeamsFx CLI v2    
   - id: version-one
     title: TeamsFx CLI v1
-  - id: version-two
-    title: TeamsFx CLI v2  
-  - id: version-three
-    title: Teams Toolkit CLI v3  
+
 
