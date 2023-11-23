@@ -35,7 +35,7 @@ Apps to interact with your data
 | Collect information to insert into a data store or run advanced searches. | Message extensions with action commands |
 | Create embedded web experiences to view, work with and share data. | Tabs |
 | Push data and send data out of the Teams client. | Connectors and webhooks|
-| Interactive modal forms from wherever you need them to collect or display information. | Dialogs (task modules) |
+| Interactive modal forms from wherever you need them to collect or display information. | Dialogs (referred as task modules in TeamsJS v.1.0) |
 
 </details>
 </br>
@@ -47,7 +47,7 @@ A quick way to start a process or workflow in an external system.
 | **If you want to...** | **Try ...** |
 | --- | --- |
 | Trigger messages, allowing your users to quickly send the contents of a message to your web services. | Message extensions action commands |
-| Open messages from a tab, a bot, or a message extension to collect information before initiating a workflow. | Dialogs (task modules) |
+| Open messages from a tab, a bot, or a message extension to collect information before initiating a workflow. | Dialogs (referred as task modules in TeamsJS v.1.0)  |
 | Interact with your users through text and rich cards. | Conversational bots |
 | A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot. |  Outgoing webhooks |
 

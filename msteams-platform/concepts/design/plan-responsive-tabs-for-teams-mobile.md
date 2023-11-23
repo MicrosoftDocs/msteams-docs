@@ -11,7 +11,7 @@ ms.date: 12/09/2022
 
 Teams platform offers the opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet the user's needs.
 
-Capabilities such as bots, message extensions, and connectors work seamlessly on desktop and mobile clients. However, building tabs and dialogs (task modules) require planning for hosting your web experience on Teams mobile.
+Capabilities such as bots, message extensions, and connectors work seamlessly on desktop and mobile clients. However, building tabs and dialogs (referred as task modules in TeamsJS v.1.0)  require planning for hosting your web experience on Teams mobile.
 
 Consider the following before you implement responsive tabs for your app in Teams mobile:
 
