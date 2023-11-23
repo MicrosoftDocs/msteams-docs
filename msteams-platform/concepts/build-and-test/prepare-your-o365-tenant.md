@@ -23,7 +23,7 @@ Microsoft 365 subscribers can develop apps for Microsoft Teams with one of the f
 
 ## Create your development environment
 
-If you do not have a Microsoft 365 account, you must sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. The subscription is free for 90 days and continues to renew as long as you are using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It is active as long as your Visual Studio subscription is active. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
+If you don't have a Microsoft 365 account, you must sign up for a [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program) subscription. The subscription is free for 90 days and continues to renew as long as you're using it for development activity. If you have a Visual Studio Enterprise or Professional subscription, both programs include a free Microsoft 365 [developer subscription](https://aka.ms/MyVisualStudioBenefits). It's active as long as your Visual Studio subscription is active. For more information, see [set up a Microsoft 365 developer subscription](/office/developer-program/office-365-developer-program-get-started).
 
 ## Enable Teams for your organization
 
@@ -32,9 +32,9 @@ Enable Teams for your organization and for more information, see [enabling Teams
 ## Enable custom Teams apps and turn on custom app uploading
 
 > [!IMPORTANT]
-> If you've set up a Microsoft 365 Developer Program instant sandbox or a configurable sandbox with the Teams sample data pack, you can skip the steps to enable sideloading. The **Upload custom apps** setting is enabled by default in the Teams sample data pack.
+> If you've set up a Microsoft 365 Developer Program instant sandbox or a configurable sandbox with the Teams sample data pack, you can skip the steps to enable custom app upload. The **Upload custom apps** setting is enabled by default in the Teams sample data pack.
 
-To turn on the custom app uploading or sideloading for your developer tenant:
+To turn on the custom app uploading for your developer tenant:
 
 1. Sign in to [Microsoft Teams admin center](https://admin.teams.microsoft.com/dashboard) with your admin credentials.
 
@@ -45,14 +45,14 @@ To turn on the custom app uploading or sideloading for your developer tenant:
 
 2. Go to **Teams apps** > **Setup Policies** > **Global**.
 
-    :::image type="content" source="../../assets/images/prepare-test-tenant/turn-on-sideload.png" alt-text="Screenshot shows the turn on sideload view.":::
+    :::image type="content" source="../../assets/images/prepare-test-tenant/turn-on-sideload.png" alt-text="Screenshot shows the turn on custom app upload view.":::
 
 3. Toggle **Upload custom apps** to the **On** position.
 
-4. Select **Save**. Your test tenant can permit custom app sideloading.
+4. Select **Save**. Your test tenant can permit custom app upload.
 
     > [!Note]
-    > It can take up to 24 hours for the sideloading to be active. In the interim, you can use **upload for \<your tenant>** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/upload-custom-apps#upload).
+    > It can take up to 24 hours for the custom app upload to be active. In the interim, you can use **upload for \<your tenant>** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/upload-custom-apps#upload).
 
     :::image type="content" source="../../assets/images/prepare-test-tenant/upload-for-contoso.png" alt-text="Screenshot shows the upload app view.":::
 

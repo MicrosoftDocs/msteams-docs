@@ -161,9 +161,9 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
 > [!NOTE]
 > During debug, you can use ngrok to test your app in Microsoft Entra ID. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
-## Sideload and Preview in Teams
+## Upload a custom app and Preview in Teams
 
-You've configured the app to enable SSO. You can now sideload your app in Teams and preview it in Teams environment.
+You've configured the app to enable SSO. You can now upload your custom app in Teams and preview it in Teams environment.
 
 To preview your app in Teams:
 
@@ -177,11 +177,11 @@ To preview your app in Teams:
 
     The options to upload an app appear.
 
-1. Select **Upload a custom app** to sideload the app into Teams.
+1. Select **Upload a custom app** to upload your custom app into Teams.
 
 1. Select your app package zip file, and then select **Add**.
 
-    The app is sideloaded. The consent dialog appears to inform you of the permissions that may be required.
+    The custom app is uploaded. The consent dialog appears to inform you of the permissions that may be required.
 
 1. Select **Continue**.
 
