@@ -8,7 +8,7 @@ ms.date: 09/28/2022
 
 # Create Teams app package
 
-An app package is a file format that has the required resources to install and run your app in Teams and it must contains the following files:
+An app package is a file format that has the required resources to install and run your app in Teams and it must contain the following files:
 
 * **[App manifest](#app-manifest)**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **[App icons](#app-icons)**: Each package requires a color and outline icon for your app.
