@@ -47,7 +47,7 @@ The payload contains the following parameters:
 |---|---|
 | `type` | The type must be `URL` |
 | `url` | `URL` to be shared |
-|`message`| Default message to be loaded in the composed box |
+|`message`| Default message to be loaded in the compose box |
 | `preview` | Set to `true` to enable URL preview |
 
 The following image shows the Share to Teams option:
