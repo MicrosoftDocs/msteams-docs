@@ -68,7 +68,7 @@ import path from "path";
 
 Add AI capabilities to your existing app or a new Bot Framework app.
 
-**Planner**: A planner is a function that takes in a user's ask and returns a plan on how to accomplish the request. Planner is the main component that calls the large language model (LLM) OpenAI or Azure OpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
+**Planner**: A planner is a feature that accepts a user's request and generates a strategy to fulfill it. The planner is the primary component that invokes the Large Language Model (LLM) from OpenAI or Azure OpenAI. The OpenAI API is driven by an array of models, each with unique capabilities. For your specific use case, you might make minor customizations to our original base models.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
 
@@ -208,11 +208,11 @@ Actions are atomic functions that are registered to the AI Module and serve as t
 
 ### Register Action Handlers
 
-Action handlers help users achieve the goals, which is shared in the user intents. One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
+Action handlers assist users in accomplishing their intended goals. One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
 
-You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions. You can use the `app.ai.action` method to register an action.
+Ensure you register a handler for every action specified in the prompt. You can use the app.ai.action method to register an action. You can use the `app.ai.action` method to register an action.
 
-In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause`  actions. Every time an action is called, you return `true` or `false`. ​Returning `false` from a handler prevents the planner from running additional `DO` or `SAY` commands. When the bot receives an unknown action, we're telling the bot to terminate the action.
+In the following light bot example, the actions `LightsOn`, `LightsOff`, and `Pause` are present. Each time an action is invoked, it returns either true or false. If a handler returns false, it stops the planner from executing further `DO` or `SAY` commands. If the bot encounters an unknown action, it is instructed to terminate that action.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L107)
 
@@ -249,7 +249,7 @@ app.ai.action(
 
 ### Moderation
 
-`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag.
+`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags.  When a moderator flags an incoming message input, the system redirects the moderator to the `FlaggedInputAction` handler. The `context.sendActivity` then dispatches a message to the user, notifying them about the flag.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L97)
 

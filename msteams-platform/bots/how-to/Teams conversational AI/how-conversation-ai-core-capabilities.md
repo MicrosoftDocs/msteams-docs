@@ -285,7 +285,7 @@ A simple interface for actions and predictions allows bots to react when they ha
 
 Thanks to our AI library, the prompt needs only to outline the actions supported by the bot, and supply a few-shot examples of how to employ those actions. Conversation history helps with a natural dialogue between the user and bot, such as *add cereal to groceries list*, followed by *also add coffee*, which should indicate that coffee is to be added to the groceries list.
 
-The following is a conversation with an AI assistant. The assistant can manage lists and supports the following commands:
+The following is a conversation with an AI assistant. The AI assistant is capable of managing lists and recognizes the subsequent commands:
 
 * DO `<action> <optional entities>`
 * SAY `<response>`
@@ -346,7 +346,7 @@ All entities are required parameters to actions
     {{conversation.listNames}}
     ```
 
-* AI: The bot logic is simplified to provide handlers for actions such as `addItem`, `removeItem`, and `findItem`. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
+* AI: The bot logic is streamlined to include handlers for actions such as `addItem`, `removeItem`, and `findItem`. This distinct separation between actions and the prompts guiding the AI on how to execute the actions and prompts serves as a powerful tool.
 
     Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
 
