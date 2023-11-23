@@ -23,9 +23,9 @@ When a user installs your app in Teams, they install an app package that contain
 
 ## App manifest
 
-An app manifest describes how your app is configured, including its capabilities, required resources, and other important attributes. Your app manifest file must be at the top level of the package with the name `manifest.json`.
+An app manifest describes your app's configuration, including its capabilities, required resources, and other significant attributes. Your app manifest file must be at the top level of the package with the name `manifest.json`.
 
-If you are using the Teams Toolkit to create an app, the app manifest generates from a template file and resolves the environment variable using the env files. You can then customize the manifest file in [Microsoft Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) and [Microsoft Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements. You can also zip the app package and validate the app manifest file in Teams Toolkit.
+If you are using the Teams Toolkit to develop an app, the app manifest generates from a template file and resolves the environment variable using the env files. You can then customize the manifest file in [Microsoft Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) and [Microsoft Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements. You can also zip the app package and validate the app manifest file in Teams Toolkit.
 
 When publishing to the Microsoft Teams Store, make sure your manifest references to the latest [schema](~/resources/schema/manifest-schema.md).
 
