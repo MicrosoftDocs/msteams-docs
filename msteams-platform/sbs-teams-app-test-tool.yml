@@ -1,0 +1,93 @@
+### YamlMime:Tutorial
+title: Teams App Test Tool
+metadata:
+  title: Teams App Test Tool
+  description: With this learning module, you learn how to emulate the Teams experience for your bot in Teams App Test Tool.
+  audience: Developer
+  level: Advanced
+  ms.date: 10/21/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: toolkit/debug-your-teams-app-test-tool.md
+  nextTutorialTitle: Teams App Test Tool
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+    > [!NOTE]
+    >
+    > Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit. Ensure that you install the [latest prerelease version](/toolkit/install-teams-toolkit?tabs=vscode&pivots=visual-studio-code-v5#install-a-pre-release-version) of the Teams Toolkit.
+    
+    Start Microsoft Teams app development with your first Teams app. 
+    You can create a bot app with Teams using Javascript. 
+    This step-by-step guide helps you to build configurable bot with Teams Toolkit. You'll see the following output after you've completed this guide, where the user can configure his bot from the channel or group chat:
+    
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+   Ensure you install the following tools for building and deploying your apps.
+   | &nbsp; | Install | For using... |
+   | --- | --- | --- |
+   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
+   | &nbsp; | [Node.js](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
+
+   ## Prepare development environment
+   After you've installed the required tools, set up the development environment.
+   ### Install the Teams Toolkit
+   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+    
+   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
+   # [Visual Studio Code](#tab/vscode)
+   1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+   1. In the search box, enter **Teams Toolkit**.
+   1. Select **Install** next to the Teams Toolkit.
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
+    The Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+   You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+   # [Command line](#tab/cli)
+   To install the TeamsFx CLI, use the `npm` package manager:
+   ``` bash
+   npm install -g @microsoft/teamsfx-cli
+   ```
+   Depending on your configuration, you may need to use `sudo` to install the CLI:
+   ``` bash
+   sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+   ```
+   This condition is more common on Linux and macOS systems.
+   Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
+   You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
+   > [!CAUTION]
+   > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
+   ---
+
+- title: Create project workspace for your bot app
+  durationInMinutes: 1
+  content: |
+    Let's create your first bot app.
+    
+    
+    As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
+    In this tutorial, you learn:
+    
+    ## Create your bot project workspace
+    If the prerequisites are in place, let's begin!
+    > [!NOTE]
+    > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
+    # [Visual Studio Code](#tab/vscode)
+   
+- title: Build and run your first bot app
+  durationInMinutes: 1
+  content: |
+    
+- title: Deploy your first Teams app
+  durationInMinutes: 1
+  content: |
+
+- title: Congratulations!
+  durationInMinutes: 1
+  content: |
+    You've done it!
+    You've created a bot configuration app.
+    Now that you've learned to create a bot configuration app.
+    You've completed the tutorial.
