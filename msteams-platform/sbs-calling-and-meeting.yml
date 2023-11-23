@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: bots/calls-and-meetings/registering-calling-bot.md
   nextTutorialTitle: Register a calling bot
   ms.custom: mvc
-  ms.localizationpriority: none
+  ms.localizationpriority: null
 items:
 - durationInMinutes: 1
   content: |
@@ -336,7 +336,7 @@ items:
 
     1. Select **Upload an app**.
    
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled. 
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled. 
 
        :::image type="content" source="~/assets/images/custom-app-upload.PNG" alt-text="Screenshot showing the selection of Upload a custom app.":::
 

@@ -29,7 +29,7 @@ You can use various tools and services to build your app. Following is an exampl
 1. Extend functionality by adding more Teams capabilities and Microsoft 365 data with :::image type="icon" source="../assets/icons/graph-small-icon.png"::: Microsoft Graph.
 1. Test the app on a developer tenant with sample user data.
 1. Deploy the app to Azure.
-1. Manage and publish the app to Teams store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
+1. Manage and publish the app to Microsoft Teams Store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
 
 ## Tools and SDKs
 
@@ -74,8 +74,8 @@ The following tools in the Teams platform help you during app development:
 |-----|-----|
 | Design | Teams UI kit and Teams UI library |
 | Build | Teams Toolkit, Tools and SDKs, and Microsoft Graph |
-| Test, deploy, and publish |Azure Active Directory (Azure AD) and Developer Portal |
-| Distribute | Partner Center and Teams store |
+| Test, deploy, and publish |Microsoft Entra ID and Developer Portal |
+| Distribute | Partner Center and Teams Store |
 
 ## See also
 
@@ -156,7 +156,7 @@ You can preview your Teams apps running in other high usage Microsoft 365 experi
         **Monetize your app**
     :::column-end:::
     :::column span="2":::
-        Teams store offers app monetizing options, such as SaaS offers and In-app purchases. Choose the best monetizing option suitable for your Teams app.
+        Teams Store offers app monetizing options, such as SaaS offers and In-app purchases. Choose the best monetizing option suitable for your Teams app.
 
         > [!div class="nextstepaction"]
         > [Monetize your app](~/concepts/deploy-and-publish/appsource/prepare/monetize-overview.md)

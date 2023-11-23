@@ -10,7 +10,7 @@ ms.date: 03/28/2023
 
 Ensure that you adhere to the following prerequisites while building your Teams personal and channel or group tab:
 
-* Allow your tab pages to be discovered in an iFrame, using X-Frame-Options and Content-Security-Policy HTTP response headers.
+* Enable discovery of your tab pages in an iFrame by utilizing X-Frame-Options and [Content-Security-Policy HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) response headers.
   * Set Content Security Policy headers to allow Teams and any other [host applications](../../m365-apps/overview.md) of your app:
 
     [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
@@ -48,7 +48,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 | &nbsp; | [Git](https://git-scm.com/downloads) | Git to use the sample apps repo from GitHub. |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call - all in one place. |
 | &nbsp; | [ngrok](https://ngrok.com/download) | Ngrok is a reverse proxy software tool. Ngrok creates a tunnel to your locally running web server's publicly available HTTPS endpoints. Your server's web endpoints are available during the current session on your computer. When the computer is shut down or goes to sleep, the service is no longer available. |
-| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+| &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
 
 ### Build your Teams tab
 
@@ -63,5 +63,6 @@ Now let's build your tab. But first select your choice of tab to build:
 
 * [Build tabs for Teams](../what-are-tabs.md)
 * [Build your first tab app using JavaScript](../../sbs-gs-javascript.yml)
-* [Register your tab app in Azure AD](authentication/tab-sso-register-aad.md)
+* [Register your tab app in Microsoft Entra ID](authentication/tab-sso-register-aad.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
+* [Content Security Policy](/aspnet/core/blazor/security/content-security-policy)

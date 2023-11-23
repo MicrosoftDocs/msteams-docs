@@ -10,7 +10,7 @@ metadata:
   nextTutorialHref: task-modules-and-cards/task-modules/task-modules-bots.md
   nextTutorialTitle: Read more on task modules from bots
   ms.custom: mvc
-  ms.localizationpriority: High
+  ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
@@ -36,7 +36,7 @@ items:
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
-     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
      
      > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -47,21 +47,18 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Create and register your bot in Azure AD portal
+- title: Register Microsoft Entra app
   durationInMinutes: 5
   content: |
-    To create and register your bot in Microsoft Azure Active Directory (Azure AD), perform the following steps:
+   The following steps help you to create and register your bot in Azure portal:
 
-    * Create Azure Bot resource to register bot with Azure Bot Service.
-    * Create client secret ID and value details to enable single sign-on (SSO) authentication of the bot.
-    * Add Teams channel to deploy the bot to a Teams channel.
-    * Create a tunnel to your web server's endpoints by using dev tunnel (recommended) or ngrok.
+   * Create and register your Azure app.
+   * Create client secret to enable SSO authentication of the bot.
+   * Add Teams channel to deploy the bot.
+   * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+   * Add messaging endpoint to the dev tunnel that you created.
 
-     [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
-
-     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
-
-     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+   [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
     **Create a tunnel**
 
@@ -75,20 +72,27 @@ items:
 
       ---     
 
-    [!INCLUDE [messaging endpoint](includes/get-started/messaging-endpoint.md)]
+    [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+    
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
-- title: Update the Azure AD app registration
-  durationInMinutes: 1
-  content: |
-    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+    [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
+
+    [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
-    [!INCLUDE [API permission](includes/get-started/azure-api-permissions.md)]
+- title: Create your bot
+  durationInMinutes: 5
+  content: |
 
-    [!INCLUDE [Authentication](includes/get-started/azure-web-authentication.md)]
+     [!INCLUDE [Azure bot resource](includes/get-started/azure-bot-resource.md)]
+
+     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
+
+     [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
@@ -121,7 +125,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    To build and run the service using the latest version of Visual Studio or Command line.
+    To build and run the service, use the latest version of Visual Studio or Command line.
 
     # [Latest version of Visual Studio](#tab/latestversionofvisualstudio)
 
@@ -134,7 +138,7 @@ items:
 
           :::image type="content" source="~/assets/images/Teams-task-module/project-file-location.png" alt-text="CS proj file":::
 
-       1. From **View**, open **Solution Explorer**.
+       1. Under **View**, open **Solution Explorer**.
 
           :::image type="content" source="~/assets/images/Teams-task-module/solutionexplorer_1.png" alt-text="Screenshot shows the open solution explorer.":::
 
@@ -174,7 +178,7 @@ items:
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If the option is visible, you have enabled sideloading apps.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
        :::image type="content" source="~/assets/images/Teams-task-module/custom-upload.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
        
@@ -199,7 +203,7 @@ items:
 
        :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card_1.png" alt-text="Adaptive card":::
 
-    1. Enter Hello and select **Submit**.
+    1. Enter **Hello** and select **Submit**.
 
        :::image type="content" source="~/assets/images/Teams-task-module/adaptive-card-text.png" alt-text="Screenshot shows Adaptive card message box.":::
 
@@ -248,4 +252,3 @@ items:
 
 - content: |
     You've completed the tutorial to get started with Teams task module app!
-
