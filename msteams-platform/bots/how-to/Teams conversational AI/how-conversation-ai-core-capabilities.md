@@ -285,7 +285,7 @@ A simple interface for actions and predictions allows bots to react when they ha
 
 Thanks to our AI library, the prompt needs only to outline the actions supported by the bot, and supply a few-shot examples of how to employ those actions. Conversation history helps with a natural dialogue between the user and bot, such as *add cereal to groceries list*, followed by *also add coffee*, which should indicate that coffee is to be added to the groceries list.
 
-The following is a conversation with an AI assistant. The AI assistant is capable of managing lists and recognizes the subsequent commands:
+The following is a conversation with an AI assistant. The AI assistant is capable of managing lists and recognizes the following commands:
 
 * DO `<action> <optional entities>`
 * SAY `<response>`
