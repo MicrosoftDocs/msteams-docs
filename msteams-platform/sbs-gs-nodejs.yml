@@ -113,24 +113,24 @@ items:
     ## Set up your Teams development tenant
 
     A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings.
-    This space is also where you sideload and test your app. 
+    This space is also where you upload and test your custom app. 
     
     Let's verify if you're ready to develop with the tenant.
 
-    ### Enable sideloading option
+    ### Enable custom app upload option
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
       
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
+    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
 
     Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-    Verify if you can sideload apps in Teams:
+    Verify if you can upload a custom apps in Teams:
 
     1. In the Teams client, select **Store** icon.
     1. Select **Manage your apps**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot of illustration shows the option to upload a custom app in Teams.":::
 
@@ -642,10 +642,10 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-in-teams.png" alt-text="Screenshot of image showing Preview button.":::
 
-        The Developer Portal informs you that your app is sideloaded successfully.
+        The Developer Portal informs you that your custom app is uploaded successfully.
 
     1. Select **Manage your apps**.
-       Your app is listed in the sideloaded apps. 
+       Your app is listed in the uploaded apps. 
     1. Find your app using the search box, select the three-dots in its row.
     1. Select the **View** option.
         The **Add** page appears for your app.

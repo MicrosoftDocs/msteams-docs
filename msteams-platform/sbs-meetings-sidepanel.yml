@@ -63,7 +63,7 @@ items:
 - title: Create and register your bot
   durationInMinutes: 5
   content: |
-    To create and register your bot in Microsoft Azure Active Directory (Azure AD), perform the following steps:
+    To create and register your bot in Microsoft Entra ID, perform the following steps:
 
     * Create Azure Bot resource to register bot with Azure Bot service.
     * Create client secret to enable single sign-on (SSO) authentication of the bot.
@@ -196,15 +196,15 @@ items:
 
         You have successfully set up a bot in Azure Bot service.
 
-- title: Update the Azure AD app registration
+- title: Update the Microsoft Entra app registration
   durationInMinutes: 1
   content: |
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
-    1. Select **Azure Active Directory**.
+    1. Select **Microsoft Entra ID**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/AAD.png" alt-text="Screenshot of Azure services with Azure Active Directory highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/AAD.png" alt-text="Screenshot of Azure services with Microsoft Entra ID highlighted in red.":::
 
     1. In the left navigation pane, select **App registrations**.
 
@@ -212,7 +212,7 @@ items:
 
     1. Select your bot.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot of Azure Active Directory page. The App registrations in the left panel and the bot selected are highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot of Microsoft Entra ID page. The App registrations in the left panel and the bot selected are highlighted in red.":::
 
     1. Under **Manage**, select **Expose an API**.
 
@@ -293,7 +293,7 @@ items:
     1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
-       > Users need to consent to these permissions only if the Azure AD app is registered in a different tenant.
+       > Users need to consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
 
     1. Select **Add a permission** > **Microsoft Graph**
 
@@ -484,5 +484,3 @@ items:
 
 - content: |
     You've completed the tutorial to get started with a **Side Panel** app!
-
-

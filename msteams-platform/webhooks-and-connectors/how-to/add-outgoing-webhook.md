@@ -77,7 +77,7 @@ A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange
 The following scenario provides the details to add an Outgoing Webhook:
 
 * Scenario: Push change status notifications on a Teams channel database server to your app.
-* Example: You have a line of business app that tracks all CRUD (create, read, update, and delete) operations. These operations are made to the employee records by Teams channel HR users across a Microsoft 365 tenancy.
+* Example: You have a custom app built for your org (LOB app) that tracks all CRUD (create, read, update, and delete) operations. These operations are made to the employee records by Teams channel HR users across a Microsoft 365 tenancy.
 
 # [URL JSON payload](#tab/urljsonpayload)
 
@@ -103,6 +103,47 @@ Your code must always validate the HMAC signature included in the request as fol
 * Compute the hash from the byte array of the security token provided by Teams when you registered the Outgoing Webhook in the Teams client. See [create an Outgoing Webhook](#create-outgoing-webhooks).
 * Convert the hash to a string using UTF-8 encoding.
 * Compare the string value of the generated hash with the value provided in the HTTP request.
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/csharp/Models/AuthProvider.cs#L63C13-L63C13)
+
+```csharp
+public static AuthResponse Validate(AuthenticationHeaderValue authenticationHeaderValue, string messageContent, string claimedSenderId)
+{
+    //...
+    string providedHmacValue = authenticationHeaderValue.Parameter;
+    string calculatedHmacValue = null;
+    try
+    {
+        byte[] serializedPayloadBytes = Encoding.UTF8.GetBytes(messageContent);
+ 
+        byte[] keyBytes = Convert.FromBase64String(signingKey);
+        using (HMACSHA256 hmacSHA256 = new HMACSHA256(keyBytes))
+        {
+            byte[] hashBytes = hmacSHA256.ComputeHash(serializedPayloadBytes);
+            calculatedHmacValue = Convert.ToBase64String(hashBytes);
+        }
+ 
+        if (string.Equals(providedHmacValue, calculatedHmacValue))
+        {
+            return new AuthResponse(true, null);
+        }
+        else
+        {
+            string errorMessage = string.Format(
+                "AuthHeaderValueMismatch. Expected:'{0}' Provided:'{1}'",
+                calculatedHmacValue,
+                providedHmacValue);
+ 
+            return new AuthResponse(false, errorMessage);
+        }
+    }
+    catch (Exception ex)
+    {
+        Trace.TraceError("Exception occcured while verifying HMAC on the incoming request. Exception: {0}", ex);
+        return new AuthResponse(false, "Exception thrown while verifying MAC on incoming request.");
+    }
+}
+```
 
 # [Method to respond](#tab/methodtorespond)
 
