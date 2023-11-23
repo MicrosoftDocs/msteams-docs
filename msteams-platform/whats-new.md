@@ -26,7 +26,11 @@ Teams platform features that are available to all app developers.
 
 **2023 November**
 
-* **November 15, 2023**: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* **November 23, 2023**: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* **November 21, 2023**: Terminology update. LOB apps is referred to as custom apps built for your org (LOB apps).
+* **November 20, 2023**: [Use captureImage API to capture an image or select media from the gallery for mobile clients.](concepts/device-capabilities/media-capabilities.md)
+* **November 17, 2023**: Terminology update. Sideload is referred to as upload a custom app.
+* **November 17, 2023**: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps.](toolkit/debug-your-Teams-app-test-tool.md)
 * **November 14, 2023**: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
 * **November 14, 2023**: Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID.
 * **November 03, 2023**: [Introduced systemDefault reserved activity type for send activity feed notifications.](tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications)
@@ -353,7 +357,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 November**
 
-* ***November 14, 2023***: [Build a bot-based message extension and extend the message extension as plugin for Microsoft 365 Chat](messaging-extensions/build-bot-based-plugin.md) and also check the [guidelines to create or upgrade a message extension plugin for Microsoft 365 Chat.](messaging-extensions/high-quality-message-extension.md)
+* ***November 14, 2023***: [Build a bot-based message extension and extend the message extension as plugin for Microsoft Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) and also check the [guidelines to create or upgrade a message extension plugin for Microsoft Copilot for Microsoft 365.](messaging-extensions/high-quality-message-extension.md)
 
 * ***November 02, 2023***: [Introduced Adaptive Card Previewer in public developer preview](concepts/build-and-test/adaptive-card-previewer.md).
 
