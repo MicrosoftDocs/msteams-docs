@@ -91,21 +91,22 @@ items:
 
     1. Go to the [Azure portal](https://ms.portal.azure.com/).
     
-    2. Select **App registrations**.
+    1. Select **App registrations**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Screenshot shows the Azure AD portal page.":::
 
-    3. Select **+ New registration**.
+    1. Select **+ New registration**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registrations.png" alt-text="Screenshot shows the New registration page on Azure AD portal.":::
 
-    4. Enter the name of your app, which is displayed to the user. The app name can be changed in later, if required.
+    1. Enter the name of your app, which is displayed to the user. The app name can be changed in later, if required.
+
+    1. Select **Multitenant** as the type of user account that can access your app.
+
+    1. Select **Register**.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/register-app.png" alt-text="Screenshot shows the App registration page on Azure AD portal.":::
 
-    5. Select **Multitenant** as the type of user account that can access your app.
-
-    6. Select **Register**.
         A message pops up on the browser stating that the app was created.
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created-msg.png" alt-text="Screenshot shows how to register app on Azure AD portal.":::
@@ -114,7 +115,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created.png" alt-text="Screenshot shows a successful app registration.":::
 
-    7. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
+    1. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
     Your app is registered in Microsoft Entra ID. You should now have the app ID for your app.
 
