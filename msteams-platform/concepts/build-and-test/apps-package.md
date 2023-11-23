@@ -6,14 +6,14 @@ ms.topic: conceptual
 ms.date: 09/28/2022
 ---
 
-# Create Teams app package
+# Teams app package
 
 An app package is a file format that has the required resources to install and run your app in Teams and it must contain the following files:
 
 * **[App manifest](#app-manifest)**: Describes how your app is configured, including its capabilities, required resources, and other important attributes.
 * **[App icons](#app-icons)**: Each package requires a color and outline icon for your app.
 
-To distribute your Microsoft Teams app, you need to ZIP the files in the app package folder and provide a suitable name.
+To distribute your Microsoft Teams app, you need to zip the files in the app package folder and provide a suitable name.
 
 ## Teams doesn't host your app
 
@@ -23,9 +23,10 @@ When a user installs your app in Teams, they install an app package that contain
 
 ## App manifest
 
-An app manifest describes your app's configuration, including its capabilities, required resources, and other significant attributes. Your app manifest file must be at the top level of the package with the name `manifest.json`.
+An app manifest describes your app's configuration, including its capabilities, required resources, and other significant attributes with the name `manifest.json` in the app package.
 
-If you're using the Teams Toolkit to develop an app, the app manifest generates from a template file and resolves the environment variable using the env files. You can then customize the manifest file in [Microsoft Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) and [Microsoft Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements. You can also zip the app package and validate the app manifest file in Teams Toolkit.
+If you're using the Teams Toolkit to develop an app, the app manifest generates from a template file
+based on the selected capabilities when developing the app. You can then customize the manifest file in [Microsoft Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) or [Microsoft Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements. You can also zip the app package and validate the app manifest file in Teams Toolkit.
 
 When publishing to the Microsoft Teams Store, make sure your manifest references to the latest [schema](~/resources/schema/manifest-schema.md).
 
