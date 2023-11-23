@@ -89,14 +89,16 @@ You can classify members as in-tenant or out-tenant by comparing `tenantID` of t
 
 2. Use `getContext`, compare the `tenantID` of the member to the `hostTenantID` property.
 
-## Azure AD native identity
+<a name='azure-ad-native-identity'></a>
+
+## Microsoft Entra native identity
 
 Apps must function cross-tenants in installation and usage. The following table lists the channel types and their corresponding group IDs:
 
 |Channel type| groupId | hostTeamGroupId |
 |----------|---------|-----------------|
-|Regular | Team Azure AD group ID | Team Azure AD group ID |
-|Shared | Empty | Host Team Azure AD group ID |
+|Regular | Team Microsoft Entra group ID | Team Microsoft Entra group ID |
+|Shared | Empty | Host Team Microsoft Entra group ID |
 
 ## See also
 

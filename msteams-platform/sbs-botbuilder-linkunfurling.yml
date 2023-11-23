@@ -48,7 +48,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)] 
 
-- title: Register Azure AD app 
+- title: Register Microsoft Entra app 
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
@@ -195,7 +195,7 @@ items:
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**
-    1. Look for the option to **Upload a custom app**. If you see the option, you can sideload apps.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
        :::image type="content" source="../msteams-platform/assets/images/Teams-link-unfurling/custom-upload.png" alt-text="Upload custom app":::
       

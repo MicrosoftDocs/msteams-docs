@@ -21,4 +21,4 @@
    > [!NOTE]
    >
    > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-   > * Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+   > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.

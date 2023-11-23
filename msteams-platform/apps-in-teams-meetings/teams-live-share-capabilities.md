@@ -20,13 +20,14 @@ This article focuses on how to integrate the Live Share SDK into your app and ke
 
 ### Install the JavaScript SDK
 
-The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
+The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later. If you want to use the `TestLiveShareHost` class for local browser development, you must install `@fluidframework/test-client-utils` and `start-server-and-test` packages in your `devDependencies`.
 
 #### npm
 
 ```bash
 npm install @microsoft/live-share fluid-framework @fluidframework/azure-client --save
 npm install @microsoft/teams-js --save
+npm install @fluidframework/test-client-utils start-server-and-test --save-dev
 ```
 
 #### yarn
@@ -34,6 +35,7 @@ npm install @microsoft/teams-js --save
 ```bash
 yarn add @microsoft/live-share fluid-framework @fluidframework/azure-client
 yarn add @microsoft/teams-js
+yarn add @fluidframework/test-client-utils -dev
 ```
 
 ### Register RSC permissions
@@ -48,7 +50,8 @@ To enable the Live Share SDK for your meeting extension, you must first add the 
         "configurationUrl": "<<YOUR_CONFIGURATION_URL>>",
         "canUpdateConfiguration": true,
         "scopes": [
-            "groupchat"
+            "groupchat",
+            "team"
         ],
         "context": [
             "meetingSidePanel",
@@ -177,12 +180,13 @@ That's all it took to setup your container and join the meeting's session. Now, 
 
 The Live Share SDK includes a set of new distributed-data structures that extend Fluid's `DataObject` class, providing new types of stateful and stateless objects. Unlike Fluid data structures, Live Share's `LiveDataObject` classes don’t write changes to the Fluid container, enabling faster synchronization. Further, these classes were designed from the ground up for common meeting scenarios in Teams meetings. Common scenarios include synchronizing what content the presenter is viewing, displaying metadata for each user in the meeting, or displaying a countdown timer.
 
-| Live Object                                                        | Description                                                                                                                             |
+| Live Object                                                            | Description                                                                                                                             |
 | ------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| [LivePresence](/javascript/api/@microsoft/live-share/livepresence) | See which users are online, set custom properties for each user, and broadcast changes to their presence.                                                            |
-| [LiveState](/javascript/api/@microsoft/live-share/livestate)       | Synchronize any JSON serializable `state` value. |
-| [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)       | Synchronize a countdown timer for a given interval.                                                            |
-| [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)       | Broadcast individual events with any custom data attributes in the payload.                                                             |
+| [LivePresence](/javascript/api/@microsoft/live-share/livepresence)     | See which users are online, set custom properties for each user, and broadcast changes to their presence.                                                            |
+| [LiveState](/javascript/api/@microsoft/live-share/livestate)           | Synchronize any JSON serializable `state` value. |
+| [LiveTimer](/javascript/api/@microsoft/live-share/livetimer)           | Synchronize a countdown timer for a given interval.                                                            |
+| [LiveEvent](/javascript/api/@microsoft/live-share/liveevent)           | Broadcast individual events with any custom data attributes in the payload.                                                             |
+| [LiveFollowMode](/javascript/api/@microsoft/live-share/livefollowmode) | Follow specific users, present to everyone in the session, and start or end suspensions.                                  |
 
 ### LivePresence example
 
@@ -273,7 +277,9 @@ const schema = {
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-const presence = container.initialObjects.presence as LivePresence<ICustomUserData>;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const presence = container.initialObjects.presence as unknown as LivePresence<ICustomUserData>;
 
 // Register listener for changes to each user's presence.
 // This should be done before calling `.initialize()`.
@@ -395,7 +401,8 @@ const { appState } = container.initialObjects;
 // This should be done before calling `.initialize()`.
 appState.on("stateChanged", (planetName, local, clientId) => {
   // Update app with newly selected planet.
-  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+  // See which user made the change (optional)
+  const clientInfo = await appState.getClientInfo(clientId);
 });
 
 // Set a default value and start listening for changes.
@@ -434,13 +441,16 @@ const schema = {
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-const appState = container.initialObjects.appState as LiveState<PlanetName>;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const appState = container.initialObjects.appState as unknown as LiveState<PlanetName>;
 
 // Register listener for changes to the state.
 // This should be done before calling `.initialize()`.
-appState.on("stateChanged", (planetName: PlanetName, local: boolean, clientId: string) => {
+appState.on("stateChanged", async (planetName: PlanetName, local: boolean, clientId: string) => {
   // Update app with newly selected planet
-  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+  // See which user made the change (optional)
+  const clientInfo = await appState.getClientInfo(clientId);
 });
 
 // Set a default value and start listening for changes.
@@ -518,9 +528,10 @@ const { customReactionEvent } = container.initialObjects;
 
 // Register listener to receive events sent through this object.
 // This should be done before calling `.initialize()`.
-customReactionEvent.on("received", (kudosReaction, local, clientId) => {
+customReactionEvent.on("received", async (kudosReaction, local, clientId) => {
   console.log("Received reaction:", kudosReaction, "from clientId", clientId);
-  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+  // See which user made the change (optional)
+  const clientInfo = await customReactionEvent.getClientInfo(clientId);
   // Display notification in your UI
 });
 
@@ -557,13 +568,16 @@ const schema = {
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-const customReactionEvent = container.initialObjects.customReactionEvent as LiveEvent<ICustomReaction>;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const customReactionEvent = container.initialObjects.customReactionEvent as unknown as LiveEvent<ICustomReaction>;
 
 // Register listener to receive events sent through this object.
 // This should be done before calling `.initialize()`.
 customReactionEvent.on("received", async (event: ICustomReaction, local: boolean, clientId: string) => {
   console.log("Received reaction:", kudosReaction, "from clientId", clientId);
-  // To know which user made this change, you can pass the `clientId` to the `getUserForClient()` API from the `LivePresence` class.
+  // See which user made the change (optional)
+  const clientInfo = await customReactionEvent.getClientInfo(clientId);
   // Display notification in your UI
 });
 
@@ -624,7 +638,7 @@ export const MyCustomEvent = () => {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-timer.png" alt-text="Screenshot shows an example of a count down timer with 9 seconds remaining.":::
 
-`LiveTimer` provides a simple countdown timer that is synchronized for everyone in a meeting. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game.
+`LiveTimer` provides a simple countdown timer that is synchronized for all participants in a meeting. It’s useful for scenarios that have a time limit, such as a group meditation timer or a round timer for a game. You can also use it to schedule tasks for everyone in the session, such as displaying a reminder prompt.
 
 # [JavaScript](#tab/javascript)
 
@@ -704,7 +718,9 @@ const schema = {
   initialObjects: { timer: LiveTimer },
 };
 const { container } = await liveShare.joinContainer(schema);
-const timer = container.initialObjects.timer as LiveTimer;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const timer = container.initialObjects.timer as unknown as LiveTimer;
 
 // Register listeners for timer changes
 // This should be done before calling `.initialize()`.
@@ -797,12 +813,503 @@ export function CountdownTimer() {
 
 ---
 
-## Role verification for live data structures
+### LiveFollowMode example
 
-Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants might span across organizations, have different privileges, or simply have different goals. Hence, it’s important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you could choose that only meeting presenters and organizers can control video playback, but still allow guests and attendees to request videos to watch next.
+:::image type="content" source="../assets/images/teams-live-share/live-share-follow-mode.png" alt-text="Image shows three clients with three separate views: a presenter, a user who follows the presenter, and a user with their own private view with the option to sync back to the presenter.":::
 
 > [!NOTE]
-> The `LivePresence` class doesn't support role verification. The `LivePresenceUser` object has a `getRoles` method, which returns the meeting roles for a given user.
+> `LiveFollowMode` is in Beta and provided as a preview only. Don't use this API in a production environment.
+
+The `LiveFollowMode` class combines `LivePresence` and `LiveState` into a single class, enabling you to easily implement follower and presenter modes into your application. This allows you to implement familiar patterns from popular collaborative apps such as PowerPoint Live, Excel Live, and Whiteboard. Unlike screen sharing, `LiveFollowMode` allows you to render content with high quality, improved accessibility, and enhanced performance. Users can easily switch between their private views and follow other users.
+
+You can use the `startPresenting()` function to **take control** of the application for all other users in the session. Alternatively, you can allow users to individually select specific users they want to follow using the `followUser()` function. In both scenarios, users can temporarily enter a private view with the `beginSuspension()` function or synchronize back to the presenter with the `endSuspension()` function. Meanwhile, the `update()` function allows the local user to inform other clients in the session of their own personal `stateValue`. Similar to `LivePresence`, you can listen to changes to each user's `stateValue` through a `presenceChanged` event listener.
+
+`LiveFollowMode` also exposes a `state` object, which dynamically updates depending on the user the local user is following. For example, if the local user isn't following anyone, the `state.value` property matches the local user's most recent `stateValue` broadcasted through `update()`. However, if the local user is following a presenter, the `state.value` property matches the presenting user's most recent `stateValue`. Similar to `LiveState`, you can listen to changes to the `state` value using a `stateChanged` event listener. For more information on the `state` object, see [IFollowModeState interface reference](/javascript/api/@microsoft/live-share/ifollowmodestate).
+
+The following are a few examples in which you can use `LiveFollowMode` in your application:
+
+- Synchronize camera positions in a 3D scene to cobrowse during a design review.
+- Update the `slideId` to open in a carousel for productive presentations and discussions.
+- Broadcast the `path` to open in your application's router.
+
+Example:
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import {
+  LiveShareClient,
+  LiveFollowMode,
+  FollowModeType,
+} from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    followMode: LiveFollowMode,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+const followMode = container.initialObjects.followMode;
+
+// As an example, we will assume there is a button in the application document
+const button = document.getElementById("action-button");
+// As an example, we will assume there is a div with text showing the follow state
+const infoText = document.getElementById("info-text");
+
+// Register listener for changes to the `state` value to use in your app.
+// This should be done before calling `.initialize()`.
+followMode.on("stateChanged", (state, local, clientId) => {
+  console.log("The state changed:");
+  console.log("- state value:", state.value);
+  console.log("- follow mode type:", state.type);
+  console.log("- following user id:", state.followingUserId);
+  console.log("- count of other users also following user", state.otherUsersCount);
+  console.log("- state.value references local user's stateValue", state.isLocalValue);
+  // Can optionally get the relevant user's presence object
+  const followingUser = followMode.getUserForClient(clientId);
+  switch (state.type) {
+    case FollowModeType.local: {
+        // Update app to reflect that the user is not currently following anyone and there is no presenter.
+        infoText.innerHTML = "";
+        // Show a "Start presenting" button in your app.
+        button.innerHTML = "Start presenting";
+        button.onclick = followMode.startPresenting;
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.activeFollowers: {
+        // Update app to reflect that the local user is being followed by other users.
+        infoText.innerHTML = `${state.otherUsersCount} users are following you`;
+        // Does not mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
+        button.innerHTML = "Present to all";
+        button.onclick = followMode.startPresenting;
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.activePresenter: {
+        // Update app to reflect that the local user is actively presenting to everyone.
+        infoText.innerHTML = `You are actively presenting to everyone`;
+        // Show a "Stop presenting" button in your app.
+        button.innerHTML = "Stop presenting";
+        button.onclick = followMode.stopPresenting;
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.followPresenter: {
+        // The local user is following a remote presenter.
+        infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
+        // Show a "Take control" button in your app.
+        button.innerHTML = "Take control";
+        button.onclick = followMode.startPresenting;
+        // Note: state.isLocalValue will be false.
+        break;
+    }
+    case FollowModeType.suspendFollowPresenter: {
+        // The local user is following a remote presenter but has an active suspension.
+        infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
+        // Show a "Sync to presenter" button in your app.
+        button.innerHTML = "Sync to presenter";
+        button.onclick = followMode.endSuspension;
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.followUser: {
+        // The local user is following a specific remote user.
+        infoText.innerHTML = `You are following ${followingUser?.displayName}`;
+        // Show a "Stop following" button in your app.
+        button.innerHTML = "Stop following";
+        button.onclick = followMode.stopFollowing;
+        // Note: state.isLocalValue will be false.
+        break;
+    }
+    case FollowModeType.suspendFollowUser: {
+        // The local user is following a specific remote user but has an active suspension.
+        infoText.innerHTML = `You were following ${followingUser?.displayName}`;
+        // Show a "Resume following" button in your app.
+        button.innerHTML = "Resume following";
+        button.onclick = followMode.endSuspension;
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    default: {
+        break;
+    }
+  }
+  const newCameraPosition = state.value;
+  // TODO: apply new camera position
+});
+
+// Register listener for changes to each user's personal state updates.
+// This should be done before calling `.initialize()`.
+followMode.on("presenceChanged", (user, local) => {
+  console.log("A user presence changed:");
+  console.log("- display name:", user.displayName);
+  console.log("- state value:", user.data?.stateValue);
+  console.log("- user id user is following:", user.data?.followingUserId);
+  console.log("- change from local client", local);
+  console.log("- change impacts local user", user.isLocalUser);
+  // As an example, we will assume there is a button for each user in the session.
+  document.getElementById(`follow-user-${user.userId}-button`).onclick = () => {
+    followMode.followUser(user.userId);
+  };
+  // Update 3D scene to reflect this user's camera position (e.g., orb + display name)
+  const userCameraPosition = user.data?.stateValue;
+});
+
+// Define the initial stateValue for the local user (optional).
+const startingCameraPosition = {
+  x: 0,
+  y: 0,
+  z: 0,
+};
+// Start receiving incoming presence updates from the session.
+// This will also broadcast the user's `startingCameraPosition` to others in the session.
+await followMode.initialize(startingCameraPosition);
+
+// Example of an event listener for a camera position changed event.
+// For something like a camera change event, you should use a debounce function to prevent sending updates too frequently.
+// Note: it helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+function onCameraPositionChanged(position, isUserAction) {
+    // Broadcast change to other users so that they have their latest camera position
+    followMode.update(position);
+    // If the local user changed the position while following another user, we want to suspend.
+    // Note: helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+    if (!isUserAction) return;
+    switch (state.type) {
+      case FollowModeType.followPresenter:
+      case FollowModeType.followUser: {
+        // This will trigger a "stateChanged" event update for the local user only.
+        followMode.beginSuspension();
+        break;
+      }
+      default: {
+        // No need to suspend for other types
+        break;
+      }
+    }
+}
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import {
+  LiveShareClient,
+  LiveFollowMode,
+  FollowModeType,
+  IFollowModeState,
+  FollowModePresenceUser,
+} from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+
+// Declare interface for custom data to synchronize with LiveFollowMode.
+// In this example, we are synchronizing the camera position in a 3D scene.
+interface ICameraPosition {
+  x: number;
+  y: number;
+  z: number;
+}
+
+// Join the Fluid container
+const host = LiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    followMode: LiveFollowMode<ICameraPosition>,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const followMode = container.initialObjects.followMode as unknown as LiveFollowMode<ICameraPosition>;
+
+// As an example, we will assume there is a button in the application document
+const button = document.getElementById("action-button");
+// As an example, we will assume there is a div with text showing the follow state
+const infoText = document.getElementById("info-text");
+
+// Register listener for changes to the `state` value to use in your app.
+// This should be done before calling `.initialize()`.
+followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: boolean, clientId: string) => {
+  console.log("The state changed:");
+  console.log("- state value:", state.value);
+  console.log("- follow mode type:", state.type);
+  console.log("- following user id:", state.followingUserId);
+  console.log("- count of other users also following user", state.otherUsersCount);
+  console.log("- state.value references local user's stateValue", state.isLocalValue);
+  // Can optionally get the relevant user's presence object
+  const followingUser = followMode.getUserForClient(clientId);
+  switch (state.type) {
+    case FollowModeType.local: {
+        // Update app to reflect that the user is not currently following anyone and there is no presenter.
+        infoText.innerHTML = "";
+        // Show a "Start presenting" button in your app.
+        button.innerHTML = "Start presenting";
+        button.onclick = followMode.startPresenting;
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.activeFollowers: {
+        // Update app to reflect that the local user is being followed by other users.
+        infoText.innerHTML = `${state.otherUsersCount} users are following you`;
+        // Does not mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
+        button.innerHTML = "Present to all";
+        button.onclick = followMode.startPresenting;
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.activePresenter: {
+        // Update app to reflect that the local user is actively presenting to everyone.
+        infoText.innerHTML = `You are actively presenting to everyone`;
+        // Show a "Stop presenting" button in your app.
+        button.innerHTML = "Stop presenting";
+        button.onclick = followMode.stopPresenting;
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.followPresenter: {
+        // The local user is following a remote presenter.
+        infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
+        // Show a "Take control" button in your app.
+        button.innerHTML = "Take control";
+        button.onclick = followMode.startPresenting;
+        // Note: state.isLocalValue will be false.
+        break;
+    }
+    case FollowModeType.suspendFollowPresenter: {
+        // The local user is following a remote presenter but has an active suspension.
+        infoText.innerHTML = `${followingUser?.displayName} is presenting to everyone`;
+        // Show a "Sync to presenter" button in your app.
+        button.innerHTML = "Sync to presenter";
+        button.onclick = followMode.endSuspension;
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    case FollowModeType.followUser: {
+        // The local user is following a specific remote user.
+        infoText.innerHTML = `You are following ${followingUser?.displayName}`;
+        // Show a "Stop following" button in your app.
+        button.innerHTML = "Stop following";
+        button.onclick = followMode.stopFollowing;
+        // Note: state.isLocalValue will be false.
+        break;
+    }
+    case FollowModeType.suspendFollowUser: {
+        // The local user is following a specific remote user but has an active suspension.
+        infoText.innerHTML = `You were following ${followingUser?.displayName}`;
+        // Show a "Resume following" button in your app.
+        button.innerHTML = "Resume following";
+        button.onclick = followMode.endSuspension;
+        // Note: state.isLocalValue will be true.
+        break;
+    }
+    default: {
+        break;
+    }
+  }
+  const newCameraPosition = state.value;
+  // TODO: apply new camera position
+});
+
+// Optionally, you can register a listener for changes to each user's personal state updates.
+// This should be done before calling `.initialize()`.
+followMode.on("presenceChanged", (user: FollowModePresenceUser<ICameraPosition>, local: boolean) => {
+  console.log("A user presence changed:");
+  console.log("- display name:", user.displayName);
+  console.log("- state value:", user.data?.stateValue);
+  console.log("- userId that user is following:", user.data?.followingUserId);
+  console.log("- change from local client", local);
+  console.log("- change impacts local user", user.isLocalUser);
+  // As an example, we will assume there is a button for each user in the session.
+  document.getElementById(`follow-user-${user.userId}-button`)!.onclick = () => {
+    followMode.followUser(user.userId);
+  };
+  // Update 3D scene to reflect this user's camera position (e.g., orb + display name)
+  const userCameraPosition = user.data?.stateValue;
+});
+
+// Define the initial stateValue for the local user (optional).
+const startingCameraPosition: ICameraPosition = {
+  x: 0,
+  y: 0,
+  z: 0,
+};
+// Start receiving incoming presence updates from the session.
+// This will also broadcast the user's `startingCameraPosition` to others in the session.
+await followMode.initialize(startingCameraPosition);
+
+// Example of an event listener for a camera position changed event.
+// For something like a camera change event, you should use a debounce function to prevent sending updates too frequently.
+// Note: it helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+function onCameraPositionChanged(position: ICameraPosition, isUserAction: boolean) {
+    // Broadcast change to other users so that they have their latest camera position
+    followMode.update(position);
+    // If the local user changed the position while following another user, we want to suspend.
+    // Note: helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+    if (!isUserAction) return;
+    switch (state.type) {
+      case FollowModeType.followPresenter:
+      case FollowModeType.followUser: {
+        // This will trigger a "stateChanged" event update for the local user only.
+        followMode.beginSuspension();
+        break;
+      }
+      default: {
+        // No need to suspend for other types
+        break;
+      }
+    }
+}
+```
+
+# [React](#tab/react)
+
+```jsx
+import { FollowModeType } from "@microsoft/live-share";
+import { useLiveFollowMode } from "@microsoft/live-share-react";
+// As an example, we will use a fake component to denote what a 3D viewer might look like in an app
+import { Example3DModelViewer } from "./components";
+
+// Define a unique key that differentiates this usage of `useLiveFollowMode` from others in your app
+const MY_UNIQUE_KEY = "follow-mode-key";
+
+// Define the initial stateValue for the local user (optional).
+const startingCameraPosition = {
+  x: 0,
+  y: 0,
+  z: 0,
+};
+
+// Example component for using useLiveFollowMode
+export const MyLiveFollowMode = () => {
+    const {
+      state,
+      localUser,
+      otherUsers,
+      allUsers,
+      liveFollowMode,
+      update,
+      startPresenting,
+      stopPresenting,
+      beginSuspension,
+      endSuspension,
+      followUser,
+      stopFollowing,
+    } = useLiveFollowMode(MY_UNIQUE_KEY, startingCameraPosition);
+
+    // Example of an event listener for a camera position changed event.
+    // For something like a camera change event, you should use a debounce function to prevent sending updates too frequently.
+    // Note: it helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+    function onCameraPositionChanged(position, isUserAction) {
+        // Broadcast change to other users so that they have their latest camera position
+        update(position);
+        // If the local user changed the position while following another user, we want to suspend.
+        // Note: helps to distinguish changes initiated by the local user (e.g., drag mouse) separately from other change events.
+        if (!isUserAction) return;
+        switch (state.type) {
+          case FollowModeType.followPresenter:
+          case FollowModeType.followUser: {
+            // This will trigger a "stateChanged" event update for the local user only.
+            followMode.beginSuspension();
+            break;
+          }
+          default: {
+            // No need to suspend for other types
+            break;
+          }
+        }
+    }
+
+    // Can optionally get the relevant user's presence object
+    const followingUser = liveFollowMode?.getUser(state.followingUserId);
+
+    // Render UI
+    return (
+        <div>
+            {state.type === FollowModeType.local && (
+                <div>
+                    <p>{""}</p>
+                    <button onClick={startPresenting}>
+                        {"Start presenting"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.activeFollowers && (
+                <div>
+                    <p>{`${state.otherUsersCount} users are following you`}</p>
+                    <button onClick={startPresenting}>
+                        {"Present to all"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.activePresenter && (
+                <div>
+                    <p>{`You are actively presenting to everyone`}</p>
+                    <button onClick={stopPresenting}>
+                        {"Stop presenting"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.followPresenter && (
+                <div>
+                    <p>{`${followingUser?.displayName} is presenting to everyone`}</p>
+                    <button onClick={startPresenting}>
+                        {"Take control"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.suspendFollowPresenter && (
+                <div>
+                    <p>{`${followingUser?.displayName} is presenting to everyone`}</p>
+                    <button onClick={endSuspension}>
+                        {"Sync to presenter"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.followUser && (
+                <div>
+                    <p>{`You are following ${followingUser?.displayName}`}</p>
+                    <button onClick={stopFollowing}>
+                        {"Stop following"}
+                    </button>
+                </div>
+            )}
+            {state.type === FollowModeType.suspendFollowUser && (
+                <div>
+                    <p>{`You were following ${followingUser?.displayName}`}</p>
+                    <button onClick={stopFollowing}>
+                        {"Resume following"}
+                    </button>
+                </div>
+            )}
+            <div>
+                <p>{"Follow a specific user:"}</p>
+                {otherUsers.map((user) => (
+                    <button onClick={() => {
+                        followUser(user.userId);
+                    }} key={user.userId}>
+                        {user.displayName}
+                    </button>
+                ))}
+            </div>
+            <Example3DModelViewer
+                cameraPosition={state.value}
+                onCameraPositionChanged={onCameraPositionChanged}
+            />
+        </div>
+    );
+}
+```
+
+---
+
+## Role verification for live data structures
+
+Meetings in Teams include calls, all-hands meetings, and online classrooms. Meeting participants might span across organizations, have different privileges, or have different goals. Hence, it’s important to respect the privileges of different user roles during meetings. Live objects are designed to support role verification, allowing you to define the roles that are allowed to send messages for each individual live object. For example, you've selected the option that permits only meeting presenters and organizers to control video playback. However, guests and attendees can still request the next videos to watch.
 
 In the following example where only presenters and organizers can take control, `LiveState` is used to synchronize which user is the active presenter:
 
@@ -960,9 +1467,9 @@ export const MyCustomState = () => {
 
 ---
 
-Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer be present in the meeting. As a general rule of thumb, all users are either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
+Listen to your customers to understand their scenarios before implementing role verification into your app, particularly for the **Organizer** role. There's no guarantee that a meeting organizer will be present in the meeting. As a general rule of thumb, all users are either **Organizer** or **Presenter** when collaborating within an organization. If a user is an **Attendee**, it's usually an intentional decision on behalf of a meeting organizer.
 
-In some cases, a user may have multiple roles. For example, an **Organizer** is also an **Presenter**. In addition, meeting participants that are external to the tenant hosting the meeting have the **Guest** role, but may also have **Presenter** privileges. This provides a lot of flexibility in how you use role verification in your application.
+In some cases, a user might have multiple roles. For example, an **Organizer** is also an **Presenter**. In addition, meeting participants that are external to the tenant hosting the meeting have the **Guest** role, but might also have **Presenter** privileges. This provides more flexibility in how you use role verification in your application.
 
 > [!NOTE]
 > The Live Share SDK isn't supported for **Guest** users in channel meetings.
@@ -997,7 +1504,7 @@ const schema = {
   initialObjects: { playlistMap: SharedMap },
 };
 const { container } = await liveShare.joinContainer(schema);
-const playlistMap = container.initialObjects.playlistMap as SharedMap;
+const playlistMap = container.initialObjects.playlistMap;
 
 // Register listener for changes to values in the map
 playlistMap.on("valueChanged", (changed, local) => {
@@ -1022,10 +1529,10 @@ import { ContainerSchema, SharedMap, IValueChanged } from "fluid-framework";
 const host = LiveShareHost.create();
 const liveShare = new LiveShareClient(host);
 const schema: ContainerSchema = {
-  initialObjects: { exampleMap: SharedMap },
+  initialObjects: { playlistMap: SharedMap },
 };
 const { container } = await liveShare.joinContainer(schema);
-const playlistMap = container.initialObjects.playlistMap as SharedMap;
+const playlistMap = container.initialObjects.playlistMap as unknown as SharedMap;
 
 // Declare interface for object being stored in map
 interface IVideo {
@@ -1089,12 +1596,143 @@ export function PlaylistMapExample() {
 > [!NOTE]
 > Core Fluid Framework DDS objects don't support meeting role verification. Everyone in the meeting can change the data stored through these objects.
 
+## Local browser testing
+
+You can locally test the Live Share SDK in your browser using the `TestLiveShareHost` class without installing your app in Teams. This is useful for testing the core collaborative capabilities of your application within a familiar `localhost` environment.
+
+Example:
+
+# [JavaScript](#tab/javascript)
+
+```javascript
+import { LiveShareClient, TestLiveShareHost, LiveState } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+import { SharedMap } from "fluid-framework";
+
+/**
+ * Detect whether you are in Teams or local environment using your preferred method.
+ * Options for this include: environment variables, URL params, Teams FX, etc.
+ */
+const inTeams = process.env.IN_TEAMS;
+// Join the Fluid container
+const host = inTeams
+  ? LiveShareHost.create()
+  : TestLiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema = {
+  initialObjects: {
+    liveState: LiveState,
+    sharedMap: SharedMap,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+
+// ... ready to start app sync logic
+```
+
+# [TypeScript](#tab/typescript)
+
+```TypeScript
+import {
+  LiveShareClient,
+  TestLiveShareHost,
+  LiveState,
+  ILiveShareHost,
+} from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+import { ContainerSchema, SharedMap } from "fluid-framework";
+
+/**
+ * Detect whether you are in Teams or local environment using your preferred method.
+ * Options for this include: environment variables, URL params, Teams FX, etc.
+ */
+const inTeams = process.env.IN_TEAMS;
+// Join the Fluid container
+const host: ILiveShareHost = inTeams
+  ? LiveShareHost.create()
+  : TestLiveShareHost.create();
+const liveShare = new LiveShareClient(host);
+const schema: ContainerSchema = {
+  initialObjects: {
+    exampleMap: SharedMap,
+    liveState: LiveState,
+  },
+};
+const { container } = await liveShare.joinContainer(schema);
+
+// ... ready to start app sync logic
+```
+
+# [React](#tab/react)
+
+```jsx
+import { TestLiveShareHost } from "@microsoft/live-share";
+import { LiveShareHost } from "@microsoft/teams-js";
+import { LiveShareProvider, useLiveShareContext } from "@microsoft/live-share-react";
+import { useState } from "react";
+
+/**
+ * Detect whether you are in Teams or local environment using your preferred method.
+ * Options for this include: environment variables, URL params, Teams FX, etc.
+ */
+const inTeams = process.env.IN_TEAMS;
+
+export const App = () => {
+    // Create the host as React state so that it doesn't get reset on mount
+    const [host] = useState(
+        inTeams ? LiveShareHost.create() : TestLiveShareHost.create()
+    );
+
+    // Live Share for React does not require that you define a custom Fluid schema
+    return (
+        <LiveShareProvider host={host} joinOnLoad>
+            <LiveShareLoading />
+        </LiveShareProvider>
+    );
+}
+
+const LiveShareLoading = () => {
+    // Any live-share-react hook (e.g., useLiveShareContext, useLiveState, etc.) must be a child of <LiveShareProvider>
+    const { joined } = useLiveShareContext();
+    if (joined) {
+        return <p>{"Loading..."}</p>;
+    }
+    return <p>{"Your app here..."}</p>;
+}
+```
+
+---
+
+The `TestLiveShareHost` class utilizes `tinylicious` test server from Fluid Framework, rather than our production Azure Fluid Relay service. To do this, you must add a few scripts to your `package.json` to start the test server. You must also add the `@fluidframework/test-client-utils` and `start-server-and-test` packages to the `devDependencies` in your `package.json`.
+
+```json
+{
+    "scripts": {
+        "start": "start-server-and-test start:server 7070 start:client",
+        "start:client": "{YOUR START CLIENT COMMAND HERE}",
+        "start:server": "npx tinylicious@latest"
+    },
+    "devDependencies": {
+        "@fluidframework/test-client-utils": "^1.3.6",
+        "start-server-and-test": "^2.0.0"
+    }
+}
+```
+
+When you start your application this way, the `LiveShareClient` adds `#{containerId}` to your URL, if it doesn't exist. You can then copy and paste the URL into a new browser window to connect to the same Fluid container.
+
+> [!NOTE]
+> By default, all clients connected through `TestLiveShareHost` will have `presenter` and `organizer` roles.
+
 ## Code samples
 
-| Sample name | Description                                                     | JavaScript                                  |
-| ----------- | --------------------------------------------------------------- | ------------------------------------------- |
-| Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://aka.ms/liveshare-diceroller) |
-| Agile Poker | Enable all connected clients to play Agile Poker.               | [View](https://aka.ms/liveshare-agilepoker) |
+| Sample name |    Description    |  JavaScript  |  TypeScript  |
+| ----------- | --------------------------------------------------------------- | ------------------------------------------- | ---------------------------------------------- |
+| Dice Roller | Enable all connected clients to roll a die and view the result. | [View](https://aka.ms/liveshare-diceroller) | [View](https://aka.ms/liveshare-diceroller-ts) |
+| Agile Poker | Enable all connected clients to play Agile Poker. | [View](https://aka.ms/liveshare-agilepoker) | NA |
+| 3D Model    | Enable all connected clients to view a 3D model together. |    NA | [View](https://aka.ms/liveshare-3dviewer-ts) |
+| Timer | Enable all connected clients to view a countdown timer. |  NA | [View](https://aka.ms/liveshare-timer-ts) |
+| Presence avatars | Display presence avatars for all connected clients. |    NA | [View](https://aka.ms/liveshare-presence-ts) |
 
 ## Next step
 

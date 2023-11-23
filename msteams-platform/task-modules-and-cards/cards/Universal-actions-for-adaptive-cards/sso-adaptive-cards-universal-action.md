@@ -16,7 +16,7 @@ Authentication steps for single sign-on (SSO) are similar to that of a bot in Te
 
 ## Add code to handle an access token
 
-Ensure you've configured your bot in Azure Active Directory (Azure AD) for obtaining access token. You can update the code to handle the access token for Adaptive Cards Universal Actions in bot.
+Ensure you've configured your bot in Microsoft Entra ID for obtaining access token. You can update the code to handle the access token for Adaptive Cards Universal Actions in bot.
 
 If there's a cached token, the bot uses the same token. If there's no token available, the Adaptive Card sends an invoke response to the bot service, which sends an OAuth card with the following values that includes a `tokenExchangeResource` to designate an SSO operation:
 
@@ -44,9 +44,9 @@ If there's a cached token, the bot uses the same token. If there's no token avai
 }
 ```
 
-The bot service delivers the invoke response to the Teams client, which uses the `tokenExchangeResource` value and the Teams client token to obtain an on-behalf-of token or exchangeable token from Azure AD.
+The bot service delivers the invoke response to the Teams client, which uses the `tokenExchangeResource` value and the Teams client token to obtain an on-behalf-of token or exchangeable token from Microsoft Entra ID.
 
-The SSO fails when the Teams client ignores the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or if Azure AD doesn't support the value. Then the Teams client triggers the nominal sign-in or OAuth flow. It's recommended that you provide a sign-in URL in the above response so that the OAuth flow works.
+The SSO fails when the Teams client ignores the `tokenExchangeResource` value for any reason, including invalid values, errors retrieving exchangeable tokens, or if Microsoft Entra ID doesn't support the value. Then the Teams client triggers the nominal sign-in or OAuth flow. It's recommended that you provide a sign-in URL in the above response so that the OAuth flow works.
 
 ## Consent dialog for getting access token
 
@@ -54,7 +54,7 @@ If the app user is using an Adaptive Card for the first time, they must give con
 
    :::image type="content" source="../../../assets/images/authentication/consent-sso-ac.png" alt-text="Screenshot shows you the consent dialog box.":::
 
-When the app user selects **View and accept**, the existing Azure AD permission consent view appears to show all the permissions. The app user can continue with the authentication flow.
+When the app user selects **View and accept**, the existing Microsoft Entra permission consent view appears to show all the permissions. The app user can continue with the authentication flow.
 
 ## Add code to receive the token
 
@@ -99,7 +99,7 @@ When the app user selects **View and accept**, the existing Azure AD permission 
             }
     ```
 
-1. Teams client sends an invoke request to the bot. The bot receives the app users consent and uses their identity to help the token exchange process with the bot framework token service and Azure AD. The bot framework token service delivers the app users access token to the bot.
+1. Teams client sends an invoke request to the bot. The bot receives the app users consent and uses their identity to help the token exchange process with the bot framework token service and Microsoft Entra ID. The bot framework token service delivers the app users access token to the bot.
    * Bot service ignores the access token if the value is incorrect.
    * Bot service that experiences an error while performing token exchange must respond with an error or a second sign-in request that doesn't include SSO information. If the bot service responds with an error, the error must be:
 
