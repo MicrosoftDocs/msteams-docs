@@ -50,8 +50,8 @@ To add Teams tab to SharePoint, perform the following steps to add Teams tab to 
 Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip).
 
 1. Open Microsoft Teams.
-1. Select the **Apps** icon at the lower left of side tab.
-1. Select **Upload a custom app** at the lower left. The following image displays the corresponding screen:  
+1. Select **Apps** > **Manage your apps** > **Upload an app**.
+1. Select **Upload a customized app**. 
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option."  lightbox="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png":::
 
