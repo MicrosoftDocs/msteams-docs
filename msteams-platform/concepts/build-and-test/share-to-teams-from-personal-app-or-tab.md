@@ -73,11 +73,11 @@ The following table provides the response codes:
 | **7000** | Platform throttled the request because of API was invoked too frequently. |
 | **8000** | User aborted the operation. |
 | **9000** | Platform code is old and doesn't implement this API. |
-| **10000** | The return value is too big and has exceeded our size boundaries. |
+| **10000** | The return value is too large and has exceeded our size boundaries. |
 
 ## Limitations
 
-* The Share to Teams is available for the desktop client, but it's not supported on web and mobile clients.
+* The Share to Teams is available for the desktop client, but it isn't supported on web and mobile clients.
 * The Share to Teams button can be hosted or embedded in an app running inside Teams.
 * You can add Share to Teams button to the app created by using **Teams Javascript client library**.
 
