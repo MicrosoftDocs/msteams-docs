@@ -140,7 +140,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-azure-directory.png" alt-text="Select Microsoft Entra ID":::
 
-    1. In the left pane, select **App Registrations**.
+    1. In the left pane, select **App registrations**.
 
     1. Select your app.
 
