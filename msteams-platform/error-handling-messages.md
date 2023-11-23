@@ -115,6 +115,53 @@ ms.topic: reference
 </br>
 </details>
 
+## Apps in Meetings
+
+<details>
+<br>
+<summary><b>No specific error code</b></summary>
+
+* **Message**: Session ID changes every time the page is reloaded in the custom app on MS Teams Desktop App.
+
+* **Scenario**: A custom app in Microsoft Teams Desktop App, which uses Cookies and a session id to keep track of temporary settings for tasks, is experiencing an issue where the session ID changes every time the page is reloaded.
+
+* **Resolution**: Avoid using cookies in Teams apps as they can cause issues when switching between Desktop and Web or different devices. Instead, store state server-side in a database or other store, keyed on the user's AadObject Id (their unique Azure Active Directory user guid), which remains consistent across all platforms.
+
+* **Source**: [View](https://stackoverflow.com/questions/74131632/ms-teams-desktop-app-changing-session-id-between-pages)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b>Not Available</b></summary>
+
+* **Message**: `OnTeamsMeetingStartAsync()` and `OnTeamsMeetingEndAsync()` methods are not being called in a specific tenant, but work in a local demo tenant.
+
+* **Scenario**: The developer is trying to use `OnTeamsMeetingStartAsync()` and `OnTeamsMeetingEndAsync()` methods in a specific tenant, but they are not being called. However, these methods work in a local demo tenant.
+
+* **Resolution**: Confirm that the feature is available in public developer preview.<br>Ensure that `OnlineMeeting.ReadBasic.Chat` permission is added.<br>Check the configuration of group owner consent settings for RSC in a team using the Azure AD portal.<br> Use Graph explorer to check whether the correct RSC permission is associated with the bot.
+
+* **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7226)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b>Upload failed File size too large</b></summary>
+
+* **Message**: The file size limit for Adobe eSign feature is 10MB.
+
+* **Scenario**: The error occurred when trying to attach files over 10MB using the Teams 'Approvals' App for eSignature and Approvals of documents.
+
+* **Resolution**: Ensure that the file size does not exceed the limit set by Adobe eSign feature, which is 10MB. If larger files need to be attached, consider compressing the files or using a different method to send them.
+
+* **Source**: [View](https://stackoverflow.com/questions/73911852/ms-teams-approvals-upload-failed-file-size-too-large)
+
+</br>
+</details>
+
 ## Authentication
 
 <details>
