@@ -16,11 +16,11 @@ If your app is approved for Teams mobile platform, you can create a deep link to
 
 Deep links allow users to know more about an app and install it in different scopes. You can also create deep links for your app users to go to specific pages within your app. In this article, learn how to create a deep link:
 
-- [To open application install dialog](#deep-link-to-open-application-install-dialog)
-- [To browse within your app](#deep-link-to-browse-within-your-app)
-- [To go to a chat with the application](#deep-link-to-a-chat-with-the-application)
-- [Share deep link for a tab](#share-deep-link-for-a-tab)
-- [To open a task module](#deep-link-to-open-a-task-module)
+* [To open application install dialog](#deep-link-to-open-application-install-dialog)
+* [To browse within your app](#deep-link-to-browse-within-your-app)
+* [To go to a chat with the application](#deep-link-to-a-chat-with-the-application)
+* [Share deep link for a tab](#share-deep-link-for-a-tab)
+* [To open a task module](#deep-link-to-open-a-task-module)
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -43,7 +43,7 @@ Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bc
 
 Following are the different app IDs that are used for deep links:
 
-* Side loaded apps: Manifest ID
+* Custom app uploaded in Teams: Manifest ID
 * Apps submitted to org catalog: Org catalog ID
 * Apps submitted to Teams Store: Store ID
 
@@ -269,7 +269,7 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
 | Value | Type | Required | Description |
 | --- | --- | --- | --- |
-| `APP_ID` | string | Yes | For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. For Line of business (LOB) or custom apps, use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a task module is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
+| `APP_ID` | string | Yes | For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. For custom apps or custom apps built for your org (LOB apps), use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a task module is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
 | `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent using a `task/submit invoke` message to the specified bot. `BOT_APP_ID` must be specified as a bot in the app's manifest, which you can't send it to any bot. |
 
 > [!NOTE]
