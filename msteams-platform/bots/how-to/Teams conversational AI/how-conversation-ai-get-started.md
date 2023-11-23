@@ -68,7 +68,7 @@ import path from "path";
 
 Add AI capabilities to your existing app or a new Bot Framework app.
 
-**Planner**: A planner is a function that takes in a user's ask and returns back a plan on how to accomplish the request. Planner is the main component that calls the large language model (LLM) OpenAI or Azure OpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
+**Planner**: A planner is a function that takes in a user's ask and returns a plan on how to accomplish the request. Planner is the main component that calls the large language model (LLM) OpenAI or Azure OpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
 
