@@ -35,6 +35,8 @@ Currently, the following limitations apply to formatting:
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
 
+You can also User mention Tag mention in bot messages.
+
 ## Cross-platform support
 
 Some styles are currently not supported across all platforms. The following table provides a list of styles and which of these styles are supported in text-only messages and rich cards:
