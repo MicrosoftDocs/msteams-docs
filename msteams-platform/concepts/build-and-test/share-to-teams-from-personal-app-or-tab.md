@@ -47,7 +47,7 @@ The payload contains the following parameters:
 |---|---|
 | `type` | The type must be `URL` |
 | `url` | `URL` to be shared |
-|`message`| Default message to be loaded in the compose box |
+|`message`| Default message to be loaded in the composed box |
 | `preview` | Set to `true` to enable URL preview |
 
 The following image shows the Share to Teams option:
@@ -83,7 +83,7 @@ The following table provides the response codes:
 
 ## End user Share to Teams experience
 
-After you enable share to teams button on personal app or tab, you can share the content. To access, follow the steps:
+After you enable Share to Teams button on personal app or tab, you can share the content. To access, follow the steps:
 
 1. Open a personal app or tab and select **Share to Teams**.
 
