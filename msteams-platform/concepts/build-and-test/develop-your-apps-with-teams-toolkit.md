@@ -29,7 +29,7 @@ Following are the steps to open your app in Visual Studio Code:
     A dialog is displayed.
 
     > [!NOTE]
-    > Ensure your TTK is updated to the latest version in Visual Studio Code to enable the app to open.
+    > Ensure that you install the latest version of Teams Toolkit for Visual Studio Code.
 
 1. Select **Open**.
 
@@ -98,7 +98,7 @@ Following are the steps to open your app in Visual Studio:
 After you open your app in Teams Toolkit, you can now [develop](/microsoftteams/platform/toolkit/teamsfx-multi-env) and [debug](../../toolkit/debug-overview.md) your Teams app in Teams Toolkit.
 
   > [!NOTE]
-  > You can work in TTK through Developer Portal in Preview version only. 
+  > You can work in TTK through Developer Portal in Preview version only.
 
 ## See also
 
