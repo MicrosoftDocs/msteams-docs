@@ -164,9 +164,7 @@ For best practices, see the following resources:
 
 A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of videos hosted on YouTube or Vimeo.
 
-For the benefit of the customers and admins who want to install and use your app, we recommend that you add a video that addresses the value your app brings to the users.
-
-Also, as a best practice, we recommend that you add a demo or scenario walkthrough video that describes the end-to-end usage of your app to the users.
+For the benefit of the customers and admins who wants to install and use your app, we recommend that you add a video that addresses the value your app brings to the users. Also, as a best practice, we recommend that you add a demo or scenario walkthrough video that describes the end-to-end usage of your app to the users.
 
 When providing a video that educates the users of the value your app provides, ensure to cover the following information in the video:
 

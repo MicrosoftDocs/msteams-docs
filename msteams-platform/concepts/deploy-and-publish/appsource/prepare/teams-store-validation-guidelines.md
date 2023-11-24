@@ -691,7 +691,7 @@ If you choose to submit a video as part of your app listing in your Partner Cent
 * The video must be short, clear, engaging, and of good quality.
 * The video must demonstrate how to set up and use the app.
 * The video must be in a narrative form.
-* The duration of the video should be within 60-90 seconds for a value video and the recommended duration for a walkthrough video is three to five minutes. [*Suggested Fix*]
+* The duration of the video should be within 60-90 seconds for a value video and the recommended duration for a walkthrough video is 3-5 minutes. [*Suggested Fix*]
 * You must turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
 * The video must highlight your app’s functionality and integration within Teams. [*Mandatory Fix*]
 * The video must be available as a functional link. [*Mandatory Fix*]
