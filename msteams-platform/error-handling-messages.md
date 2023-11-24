@@ -1189,7 +1189,7 @@ ms.topic: reference
 
 * **Scenario**: A developer is trying to write a PowerShell script to display all teams in Microsoft Teams software. However, the 'Get-Team' command in the script is not showing any output.
 
-* **Resolution**: Ensure that the 'Get-Team' cmdlet is used with the correct parameters. The cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization. For more information, see [https://learn.microsoft.com/en-us/powershell/module/teams/get-team?view=teams-ps#examples](/powershell/module/teams/get-team?view=teams-ps).
+* **Resolution**: Ensure that the 'Get-Team' cmdlet is used with the correct parameters. The cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization. For more information, see [https://learn.microsoft.com/en-us/powershell/module/teams/get-team?view=teams-ps#examples](/powershell/module/teams/get-team?view=teams-ps&preserve-view=true).
 
 * **Source**: [View](https://stackoverflow.com/questions/73484825/how-to-get-command-output-in-the-powershell-script)
 
@@ -1298,7 +1298,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to get Tab information for a personal chat using getTabInstances API, but it never resolves. The same behavior is observed on mobile as well.
 
-* **Resolution**: The getTabInstances API is not implemented on mobile and it's performance is poor. It is advised not to use it as it will get deprecated. Instead, use the Graph APIs to know what tabs are pinned in a given chat or channel. The links to these APIs are: li[https://learn.microsoft.com/en-us/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http](/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http) and [https://learn.microsoft.com/en-us/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http](/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http). Keep in mind that using these APIs may require extra permissions on the app registration.
+* **Resolution**: The getTabInstances API is not implemented on mobile and it's performance is poor. It is advised not to use it as it will get deprecated. Instead, use the Graph APIs to know what tabs are pinned in a given chat or channel. The links to these APIs are: [https://learn.microsoft.com/en-us/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http](/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) and [https://learn.microsoft.com/en-us/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http](/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true). Keep in mind that using these APIs may require extra permissions on the app registration.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-library-js/issues/1487)
 
