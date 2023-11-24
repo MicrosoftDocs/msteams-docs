@@ -27,9 +27,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>URL with double quotes in Adaptive Card action is not opening in Microsoft Teams on iOS.</b></summary>
-
-* **Message**: URL with double quotes in Adaptive Card action isn't opening in Microsoft Teams on iOS.
+<summary><b>Message: URL with double quotes in Adaptive Card action is not opening in Microsoft Teams on iOS.</b></summary>
 
 * **Scenario**: A developer is using Logic Apps to generate Actions in an Adaptive Card and pass a URL with double quotes. When the Adaptive Card is sent to Microsoft Teams and the action button is clicked, the URL doesn't open.
 
@@ -42,7 +40,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>Not Provided</b></summary>
+<summary><b>Code: Not Provided</b></summary>
 
 * **Message**: Adaptive Cards aren't fully occupying width in MS Teams Group Channel despite setting the 'width: full' property.
 
@@ -57,7 +55,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>Not Available</b></summary>
+<summary><b>Code: Not Available</b></summary>
 
 * **Message**: ReplyToId is coming null when user performs any action on the Adaptive Card in the emulator.
 
@@ -72,7 +70,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>BadSyntax</b></summary>
+<summary><b>Code: BadSyntax</b></summary>
 
 * **Message**: Failed to read card payload as JSON
 
@@ -87,7 +85,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>209</b></summary>
+<summary><b>Code: 209</b></summary>
 
 * **Message**: Invoke validation failed. User forbidden to perform action.
 
@@ -102,7 +100,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>Not Available</b></summary>
+<summary><b>Code: Not Available</b></summary>
 
 * **Message**: The response from the Teams Adaptive Card isn't being recorded in the Azure Logic App.
 
@@ -119,7 +117,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>No specific error code</b></summary>
+<summary><b>Code: No specific error code</b></summary>
 
 * **Message**: Session ID changes every time the page is reloaded in the custom app on MS Teams Desktop App.
 
@@ -134,7 +132,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>Not Available</b></summary>
+<summary><b>Code: Not Available</b></summary>
 
 * **Message**: `OnTeamsMeetingStartAsync()` and `OnTeamsMeetingEndAsync()` methods aren't being called in a specific tenant, but work in a local demo tenant.
 
@@ -149,7 +147,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>Upload failed File size too large</b></summary>
+<summary><b>Code: Upload failed File size too large</b></summary>
 
 * **Message**: The file size limit for Adobe eSign feature is 10 MB.
 
@@ -166,7 +164,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>403</b></summary>
+<summary><b>Code: 403</b></summary>
 
 * **Message**: Google auth on Microsoft Teams mobile app returns 403: disallowed_useragent
 
@@ -181,7 +179,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>AuthFailed</b></summary>
+<summary><b>Code: AuthFailed</b></summary>
 
 * **Message**: Failure to get the renewal token from microsoftTeams.authentication.getAuthToken({ }) on app load or for renewal when it expires.
 
@@ -196,9 +194,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>getAuthToken() method returns empty SSO token in success callback.</b></summary>
-
-* **Message**: getAuthToken() method returns empty SSO token in success callback.
+<summary><b>Message: getAuthToken() method returns empty SSO token in success callback.</b></summary>
 
 * **Scenario**: The developer is trying to fetch the SSO token using TeamsFx React SDK in an SSO Tab app. The token is fetched successfully when running the app using Teams Toolkit or when previewing/publishing the app from the Developer Portal. However, when the app is deployed in Ring0, the SSO token is returned as an empty string.
 
@@ -211,7 +207,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>Manifest Error</b></summary>
+<summary><b>Code: Manifest Error</b></summary>
 
 * **Message**: Manifest doesn't contain the RSC permission to allow in-app purchases.
 
@@ -226,7 +222,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>`unknownAuthError`</b></summary>
+<summary><b>Code: unknownAuthError</b></summary>
 
 * **Message**: The error occurs when the `authentication.getAuthToken()` function is called, returning.
 
@@ -241,7 +237,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>SSO-Token</b></summary>
+<summary><b>Code: SSO-Token</b></summary>
 
 * **Message**: SSO Token isn't getting generated for some users in Azure AD.
 
@@ -256,9 +252,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>OAuth token for user authentication is not working on iOS 16.</b></summary>
-
-* **Message**: OAuth token for user authentication isn't working on iOS 16.
+<summary><b>Message: OAuth token for user authentication isn't working on iOS 16.</b></summary>
 
 * **Scenario**: The developer is using an OAuth token from an HTTP response to authenticate users. The authentication works on Android, desktop, and web platforms, but fails on iOS 16.
 
@@ -271,7 +265,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>53001</b></summary>
+<summary><b>Code: 53001</b></summary>
 
 * **Message**: The error message is about incompatible browsers and authentication failure of a custom Teams app due to Conditional Access policy.
 
@@ -286,7 +280,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>CORS</b></summary>
+<summary><b>Code: CORS</b></summary>
 
 * **Message**: Access to XMLHttpRequest at [https://login.microsoftonline.com/common/oauth2/v2.0/token](https://login.microsoftonline.com/common/oauth2/v2.0/token) from origin has been blocked by CORS policy.
 
@@ -301,7 +295,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>SDK initialization timed out</b></summary>
+<summary><b>Code: SDK initialization timed out</b></summary>
 
 * **Message**: The developer is trying to implement simple authentication in a Microsoft Teams app using Adobe ID as a third-party OAuth provider. However, an exception is thrown when the `app.initialize()` function is called, stating that the SDK initialization has timed out.
 
@@ -318,7 +312,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Bad Request - Error in query syntax</b></summary>
+<summary><b>Code: Bad Request - Error in query syntax</b></summary>
 
 * **Message**: The error occurred while trying to get detailed user information using `GetUserProfile()` in Microsoft Power Virtual Agents Flow Template.
 
@@ -333,7 +327,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> ServiceError</b></summary>
+<summary><b>Code: ServiceError</b></summary>
 
 * **Message**: Couldn't find Connection Setting with name `teamsAuth`.
 
@@ -348,7 +342,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> BadArgument</b></summary>
+<summary><b>Code: BadArgument</b></summary>
 
 * **Message**: Unknown attachment type.
 
@@ -363,7 +357,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> BadArgument</b></summary>
+<summary><b>Code: BadArgument</b></summary>
 
 * **Message**: Failed to decrypt pairwise id.
 
@@ -378,7 +372,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> BadArgument</b></summary>
+<summary><b>Code: BadArgument</b></summary>
 
 * **Message**: Failed to decrypt pairwise id.
 
@@ -393,9 +387,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> The deep link does not save the subEntityId param when clicked in Microsoft Teams chat.</b></summary>
-
-* **Message**: The deep link doesn't save the subEntityId param when clicked in Microsoft Teams chat.
+<summary><b>Message: The deep link doesn't save the subEntityId param when clicked in Microsoft Teams chat.</b></summary>
 
 * **Scenario**: A developer is trying to use a deep link in Microsoft Teams chat, but the subEntityId param isn't being saved when the link is clicked.
 
@@ -408,7 +400,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 412</b></summary>
+<summary><b>Code: 412</b></summary>
 
 * **Message**: The server crashes when trying to send a 412 response in the `onInvokeActivity` in the `server/bots/botActivityHandler.js`.
 
@@ -423,7 +415,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> invalid_grant</b></summary>
+<summary><b>Code: invalid_grant</b></summary>
 
 * **Message**: Due to a configuration change made by your administrator, or because you moved to a new location, you must use multi-factor authentication to access.
 
@@ -438,9 +430,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Manifest.json validation errors and meeting join events not getting delivered.</b></summary>
-
-* **Message**: Manifest.json validation errors and meeting join events not getting delivered.
+<summary><b>Message: Manifest.json validation errors and meeting join events not getting delivered.</b></summary>
 
 * **Scenario**: The developer is trying to run a Microsoft Teams bot for meeting events but is encountering validation errors with the manifest.json file. Additionally, the bot isn't receiving meeting join events, although chat messages are arriving.
 
@@ -453,9 +443,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> This action can't be performed since the app does not exist or has been uninstalled.</b></summary>
-
-* **Message**: This action can't be performed since the app doesn't exist or has been uninstalled.
+<summary><b>Message: This action can't be performed since the app does not exist or has been uninstalled.</b></summary>
 
 * **Scenario**: The developer is creating a Microsoft Teams messaging bot that requires authentication/sign-in. The bot sends a non-reply message to the user that includes a hero card with a sign-in button. When the user receives the hero card and clicks the sign-in button, an error message is displayed.
 
@@ -468,7 +456,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Error finding key for token.</b></summary>
+<summary><b>Code: Error finding key for token.</b></summary>
 
 * **Message**: The system is unable to find the key for the token while testing the command bot app.
 
@@ -483,7 +471,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 400</b></summary>
+<summary><b>Code: 400</b></summary>
 
 * **Message**: Bot isn't responding when using app service url as messaging endpoint.
 
@@ -498,9 +486,9 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> DEP0005, DEP0018</b></summary>
+<summary><b>Code: DEP0005, DEP0018</b></summary>
 
-* **Message**: The bot stopped responding due to deprecation of Buffer() and unhandled promise rejections.
+* **Message**: The bot stopped responding due to deprecation of `Buffer()` and unhandled promise rejections.
 
 * **Scenario**: A bot built with Microsoft Bot Framework Node.JS SDK, deployed on a windows server, stopped responding after working well for over a year.
 
@@ -513,7 +501,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Invalid URL</b></summary>
+<summary><b>Code: Invalid URL</b></summary>
 
 * **Message**: Invoking a Teams chat via DeepLink to external contacts doesn't work on iOS.
 
@@ -528,9 +516,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Bot is not receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.</b></summary>
-
-* **Message**: Bot isn't receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.
+<summary><b>Message: Bot isn't receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.</b></summary>
 
 * **Scenario**: The developer is trying to make a bot receive all channel messages even when not mentioned, as per the documentation. However, the bot isn't receiving all messages unless explicitly mentioned. The developer is also facing issues with the structure of `webApplicationInfo` in Manifest.json and receiving an error when uploading the manifest.json.
 
@@ -543,7 +529,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> `BotNotInConversationRoster`</b></summary>
+<summary><b>Code: BotNotInConversationRoster</b></summary>
 
 * **Message**: Automatic installation of bot isn't working while invoking from message extension.
 
@@ -558,7 +544,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Permissions Denied</b></summary>
+<summary><b>Code: Permissions Denied</b></summary>
 
 * **Message**: Permission denied. Ask your IT admin to add this app for you.
 
@@ -573,7 +559,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Invalid user identity in provided tenant</b></summary>
+<summary><b>Code: Invalid user identity in provided tenant</b></summary>
 
 * **Message**: The bot encountered an error while sending Adaptive Cards to users outside the host's tenant/organization.
 
@@ -588,7 +574,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Not Provided</b></summary>
+<summary><b>Code: Not Provided</b></summary>
 
 * **Message**: Bot isn't responding to command messages in Teams channel without an assigned owner.
 
@@ -603,7 +589,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> context.adapter.getSignInLink is not a function.</b></summary>
+<summary><b>Code: context.adapter.getSignInLink is not a function.</b></summary>
 
 * **Message**: The function `getSignInLink` isn't recognized as a function of `context.adapter`.
 
@@ -618,7 +604,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 401</b></summary>
+<summary><b>Code: 401</b></summary>
 
 * **Message**: Unauthorized Error Ngrok
 
@@ -633,7 +619,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Invalid client secret provided</b></summary>
+<summary><b>Code: Invalid client secret provided</b></summary>
 
 * **Message**: The client secret provided in the GetAuthenticationToken() method is invalid. The secret being sent in the request should be the client secret value, not the client secret ID.
 
@@ -648,7 +634,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Ext.SetUpBotError</b></summary>
+<summary><b>Code: Ext.SetUpBotError</b></summary>
 
 * **Message**: Failed to create an app in Azure Active Directory.
 
@@ -663,9 +649,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Bot is not receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.</b></summary>
-
-* **Message**: Bot isn't receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.
+<summary><b>Message: Bot isn't receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.</b></summary>
 
 * **Scenario**: The developer is trying to receive all channel messages through a bot, which is expected to receive all messages even when not mentioned, as per the `ChannelMessage.Read.Group` RSC permission. However, the bot isn't receiving all messages unless explicitly mentioned.
 
@@ -678,7 +662,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> BadRequest</b></summary>
+<summary><b>Code: BadRequest</b></summary>
 
 * **Message**: The user 'XXX-XXX-XXX-XXX-XXX' isn't found.
 
@@ -693,7 +677,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 401</b></summary>
+<summary><b>Code: 401</b></summary>
 
 * **Message**: Unauthorized access error. All bot interactions are failing with 401 or failing to reach the local server completely.
 
@@ -708,7 +692,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 0</b></summary>
+<summary><b>Code: 0</b></summary>
 
 * **Message**: Unknown bot.
 
@@ -723,7 +707,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> AADSTS700016</b></summary>
+<summary><b>Code: AADSTS700016</b></summary>
 
 * **Message**: Application with identifier 'Application (client) ID' wasn't found in the directory 'Bot Framework'.
 
@@ -738,7 +722,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 401</b></summary>
+<summary><b>Code: 401</b></summary>
 
 * **Message**: `UserNotAuthorizedToGrantResourceSpecificPermission` error is received when trying to add bot to a meeting.
 
@@ -753,7 +737,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 403</b></summary>
+<summary><b>Code: 403</b></summary>
 
 * **Message**: CSRF token validation failed.
 
@@ -768,9 +752,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Azure Teams Bot stops responding after a few minutes of operation in Teams.</b></summary>
-
-* **Message**: Azure Teams Bot stops responding after a few minutes of operation in Teams.
+<summary><b>Message: Azure Teams Bot stops responding after a few minutes of operation in Teams.</b></summary>
 
 * **Scenario**: A bot developed for Teams using Azure Bot Service and C# works well in local environment using Bot Framework Emulator, but stops responding after some time in Teams. Uninstalling and reinstalling the bot temporarily resolves the issue but it reoccurs.
 
@@ -783,7 +765,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Bad Request - Error in query syntax</b></summary>
+<summary><b>Code: Bad Request - Error in query syntax</b></summary>
 
 * **Message**: Error in the GetUserProfile query syntax in Power Virtual Agents Flow Template.
 
@@ -798,7 +780,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> `ProvisionError`</b></summary>
+<summary><b>Code: ProvisionError</b></summary>
 
 * **Message**: Failed to provision Developer Portal bot registration.
 
@@ -815,9 +797,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> iOS Teams app not showing card if the card contains a hyperlink with an ampersand.</b></summary>
-
-* **Message**: iOS Teams app not showing card if the card contains a hyperlink with an ampersand.
+<summary><b>Message: iOS Teams app not showing card if the card contains a hyperlink with an ampersand.</b></summary>
 
 * **Scenario**: The developer is trying to display a card in the iOS Teams app that contains a hyperlink with an ampersand. Instead of displaying the card, the app only shows the message 'Sent a card'.
 
@@ -832,7 +812,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Manifest Error</b></summary>
+<summary><b>Code: Manifest Error</b></summary>
 
 * **Message**: Manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file.
 
@@ -847,7 +827,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> File not found</b></summary>
+<summary><b>Code: File not found</b></summary>
 
 * **Message**: The file couldn't be found in the app package.
 
@@ -862,7 +842,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Error converting value "{{variable-name}}" to type 'System.Nullable`1[System.Guid]'. Path 'botId', line 1, position 31.</b></summary>
+<summary><b>Code: Error converting value "{{variable-name}}" to type 'System.Nullable`1[System.Guid]'. Path 'botId', line 1, position 31.</b></summary>
 
 * **Message**: Can't use environment variable as Bot ID in Teams App Developer Portal.
 
@@ -877,7 +857,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 400</b></summary>
+<summary><b>Code: 400</b></summary>
 
 * **Message**: App failed to update.
 
@@ -892,7 +872,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Not Available</b></summary>
+<summary><b>Code: Not Available</b></summary>
 
 * **Message**: Option to disable developer preview no longer exists in the stated menu.
 
@@ -907,7 +887,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 514</b></summary>
+<summary><b>Code: 514</b></summary>
 
 * **Message**: SDK Initialization Failed - Please provide instrumentation key.
 
@@ -922,7 +902,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Duplicate file error</b></summary>
+<summary><b>Code: Duplicate file error</b></summary>
 
 * **Message**: Duplicate readme.md files found in different sample paths.
 
@@ -937,7 +917,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> SyntaxError</b></summary>
+<summary><b>Code: SyntaxError</b></summary>
 
 * **Message**: Can't use import statement outside a module.
 
@@ -952,7 +932,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Not Provided</b></summary>
+<summary><b>Code: Not Provided</b></summary>
 
 * **Message**: Provided add-in package wasn't understood. Please, make sure that the file being submitted is a valid Office add-in package.
 
@@ -967,7 +947,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Package Loading Failure</b></summary>
+<summary><b>Code: Package Loading Failure</b></summary>
 
 * **Message**: Provided add-in package wasn't understood. Please, make sure that the file being submitted is a valid Office add-in package.
 
@@ -982,9 +962,9 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Error while reading `manifest.json`: root. Required properties are missing from object: ['description.short','description.full']</b></summary>
+<summary><b>Code: Error while reading manifest.json: root. Required properties are missing from object: ['description.short','description.full']</b></summary>
 
-* **Message**: Manifest parsing has failed due to missing required properties in the manifest.json file.
+* **Message**: Manifest parsing has failed due to missing required properties in the `manifest.json` file.
 
 * **Scenario**: The developer was trying to upload manifest files for a team extension-based commercial application on Microsoft Teams.
 
@@ -997,7 +977,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Uncaught SyntaxError SyntaxError: Invalid or unexpected token</b></summary>
+<summary><b>Code: Uncaught SyntaxError SyntaxError: Invalid or unexpected token</b></summary>
 
 * **Message**: An unexpected syntax error occurred while trying to build the React template.
 
@@ -1012,7 +992,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> TypeError</b></summary>
+<summary><b>Code: TypeError</b></summary>
 
 * **Message**: Can't set property closed of # which has only a getter.
 
@@ -1027,7 +1007,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> `Mgmt.AppCatalog.LOBApp.Upload.BadRequest.ErrorTypeError`</b></summary>
+<summary><b>Code: Mgmt.AppCatalog.LOBApp.Upload.BadRequest.ErrorTypeError</b></summary>
 
 * **Message**: Error occurred while adding app manifest to MS Teams admin center.
 
@@ -1044,9 +1024,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Unable to launch camera in android mobile using the provided React-js code snippet.</b></summary>
-
-* **Message**: Unable to launch camera in android mobile using the provided React-js code snippet.
+<summary><b>Message: Unable to launch camera in android mobile using the provided React-js code snippet.</b></summary>
 
 * **Scenario**: The developer is trying to launch the camera and gallery on both android and iPhone using a React-js code snippet in a Microsoft Teams app. The camera doesn't open on Android, only the gallery opens without multiple selection, while it works fine on iPhone.
 
@@ -1059,7 +1037,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 10000 / SIZE_EXCEEDED</b></summary>
+<summary><b>Code: 10000 / SIZE_EXCEEDED</b></summary>
 
 * **Message**: The error occurs when users select more than a certain number of images using the microsoftTeams.media.selectMedia function, exceeding the total file size limit of ~30 MB.
 
@@ -1074,7 +1052,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> DOMException: Permission denied</b></summary>
+<summary><b>Code: DOMException: Permission denied</b></summary>
 
 * **Message**: Unable to get audio record in meeting side panel.
 
@@ -1091,9 +1069,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Error encountered while running the msgext-search bot sample, with issues in bot registration and GraphQL resolver error with the 'searchMessageExtension' field path.</b></summary>
-
-* **Message**: Error encountered while running the msgext-search bot sample, with issues in bot registration and GraphQL resolver error with the 'searchMessageExtension' field path.
+<summary><b>Message: Error encountered while running the msgext-search bot sample, with issues in bot registration and GraphQL resolver error with the 'searchMessageExtension' field path.</b></summary>
 
 * **Scenario**: The developer was running the msgext-search bot sample in a development environment with Node.js 16 and the latest version of Chrome. Errors were encountered and displayed in the console log, indicating issues with bot registration and a GraphQL resolver error.
 
@@ -1108,7 +1084,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> PreconditionFailed</b></summary>
+<summary><b>Code: PreconditionFailed</b></summary>
 
 * **Message**: PreconditionFailed-ETag mismatch for thread store resource.
 
@@ -1123,7 +1099,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> No authorization information present</b></summary>
+<summary><b>Code: No authorization information present</b></summary>
 
 * **Message**: No authorization information present on the request.
 
@@ -1138,7 +1114,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> PS>TerminatingError(Import-Module)</b></summary>
+<summary><b>Code: PS>TerminatingError(Import-Module)</b></summary>
 
 * **Message**: Couldn't load file or assembly 'System.Management.Automation, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system can't find the file specified.
 
@@ -1153,7 +1129,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Forbidden</b></summary>
+<summary><b>Code: Forbidden</b></summary>
 
 * **Message**: UnknownError
 
@@ -1168,7 +1144,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Not Applicable</b></summary>
+<summary><b>Code: Not Applicable</b></summary>
 
 * **Message**: Batch request against /education/user/{userId} endpoint in Microsoft Graph API isn't returning a 'value' property.
 
@@ -1183,7 +1159,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Not Applicable</b></summary>
+<summary><b>Code: Not Applicable</b></summary>
 
 * **Message**: The 'Get-Team' command in the PowerShell script isn't returning any results.
 
@@ -1198,7 +1174,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 403</b></summary>
+<summary><b>Code: 403</b></summary>
 
 * **Message**: You don't have the required permissions to access this item.
 
@@ -1213,7 +1189,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> PreconditionFailed</b></summary>
+<summary><b>Code: PreconditionFailed</b></summary>
 
 * **Message**: Failed to execute `TeamsGraphService` backend request `RevokeGroupResourceSpecificPermissionsRequest`.
 
@@ -1230,9 +1206,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Error while importing the Teams custom app after unzipping, zipping, and re-importing.</b></summary>
-
-* **Message**: Error while importing the Teams custom app after unzipping, zipping, and re-importing.
+<summary><b>Message: Error while importing the Teams custom app after unzipping, zipping, and re-importing.</b></summary>
 
 * **Scenario**: The developer is trying to import a Teams custom app. The import works fine if the zip is exported and immediately re-imported. However, if the zip is exported, unzipped on a Mac or Windows computer, then re-zipped and re-imported, it fails.
 
@@ -1245,7 +1219,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 403</b></summary>
+<summary><b>Code: 403</b></summary>
 
 * **Message**: Failed to create an app in Azure Active Directory due to insufficient privileges.
 
@@ -1262,7 +1236,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Not Available</b></summary>
+<summary><b>Code: Not Available</b></summary>
 
 * **Message**: Admin Permissions Consent window doesn't close back after granting or cancelling permissions in the Desktop/ Mac Teams app.
 
@@ -1277,7 +1251,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> VM5:2</b></summary>
+<summary><b>Code: VM5:2</b></summary>
 
 * **Message**: Failed to execute 'postMessage' on 'DOMWindow': The target origin provided doesn't match the recipient window's origin.
 
@@ -1292,7 +1266,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Not Available</b></summary>
+<summary><b>Code: Not Available</b></summary>
 
 * **Message**: `getTabInstances` API doesn't resolve in personal chat and on mobile.
 
@@ -1307,7 +1281,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 100</b></summary>
+<summary><b>Code: 100</b></summary>
 
 * **Message**: `registerBeforeUnloadHandler` doesn't work for mobile devices.
 
@@ -1324,9 +1298,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Task Module is empty when opened in Teams desktop or web app, but works fine in Teams mobile app.</b></summary>
-
-* **Message**: Task Module is empty when opened in Teams desktop or web app, but works fine in Teams mobile app.
+<summary><b>Message: Task Module is empty when opened in Teams desktop or web app, but works fine in Teams mobile app.</b></summary>
 
 * **Scenario**: A chat bot was created to send adaptive cards with buttons that start task modules. However, when these task modules are opened in Teams desktop or web app, they appear empty. The issue doesn't occur in Teams mobile app.
 
@@ -1339,7 +1311,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> X-Frame-Options set to 'deny'</b></summary>
+<summary><b>Code: X-Frame-Options set to 'deny'</b></summary>
 
 * **Message**: The application proxy doesn't work in Teams Desktop Task Module due to login.microsoftonline.com authentication.
 
@@ -1354,7 +1326,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Not Available</b></summary>
+<summary><b>Code: Not Available</b></summary>
 
 * **Message**: Unable to load a different TeamsJS app inside of a task module/dialog.
 
@@ -1369,7 +1341,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Not Provided</b></summary>
+<summary><b>Code: Not Provided</b></summary>
 
 * **Message**: Failed to load web view in Task Module on Android.
 
@@ -1386,9 +1358,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> Error encountered when trying to mention @webhook name in teams.</b></summary>
-
-* **Message**: Error encountered when trying to mention @webhook name in teams.
+<summary><b>Message: Error encountered when trying to mention @webhook name in teams.</b></summary>
 
 * **Scenario**: The developer is trying to invoke Azure functions from Outgoing webhooks in Microsoft Teams. They have created Outgoing webhooks in teams and added their Azure function URL in the callback URL. They have also copied their secret key from webhooks to Azure configuration. However, when they try to mention @webhook name in teams, they encounter an error.
 
@@ -1401,7 +1371,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b> 403</b></summary>
+<summary><b>Code: 403</b></summary>
 
 * **Message**: Forbidden error when trying to do an HttpPOST request via a message card, delivered via a Custom Connector.
 
