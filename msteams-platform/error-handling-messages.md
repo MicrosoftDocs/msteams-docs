@@ -313,3 +313,80 @@ ms.topic: reference
 
 </br>
 </details>
+
+## Bots
+
+<details>
+<br>
+<summary><b> Bad Request - Error in query syntax</b></summary>
+
+* **Message**: The error occurred while trying to get detailed user information using `GetUserProfile()` in Microsoft Power Virtual Agents Flow Template.
+
+* **Scenario**: The developer was trying to get detailed user information using Microsoft Power Virtual Agents in Microsoft Teams. The error occurred when the developer tried to use GetUserProfile() function with the input as 'first(outputs('Search_for_users_(V2)')?['body/value'])?['UserPrincipalName']'.
+
+* **Resolution**: Instead of passing in display name, pass in UserID. This way, the call to `SearchForUsers()` is not needed. Correcting the input to `GetUserProfile()` function should resolve the issue.
+
+* **Source**: [View](https://stackoverflow.com/questions/74814903/microsoft-power-virtual-agents-error-in-power-virtual-agents-flow-template)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> ServiceError</b></summary>
+
+* **Message**: Could not find Connection Setting with name `teamsAuth`.
+
+* **Scenario**: The developer was trying to add SSO for a notification bot using Teams Toolkit. Despite following the documentation and adding the OAuth connection in the bot, the developer was encountering an error stating that the connection setting `teamsAuth` could not be found.
+
+* **Resolution**: Ensure that the OAuth connection name is correctly added to the .env file as mentioned in the documentation. If the issue persists, try using the TeamsBotSSOPrompt function by registering an AAD App for bot authentication. If the problem still persists, consider filing an issue in the TeamsFx repo for further assistance.
+
+* **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7407)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> BadArgument</b></summary>
+
+* **Message**: Unknown attachment type.
+
+* **Scenario**: The developer is trying to attach a PDF file to a Microsoft Teams bot and encounters an error.
+
+* **Resolution**: The developer should check the sample code for file sharing on MS Teams provided by Microsoft. Additionally, the 'supportsFiles' option needs to be enabled in the manifest for the bot to support file attachments.
+
+* **Source**: [View](https://stackoverflow.com/questions/74885946/attached-pdf-to-ms-teams-chatbot)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> BadArgument</b></summary>
+
+* **Message**: Failed to decrypt pairwise id.
+
+* **Scenario**: The error occurred when attempting to create a conversation between a bot and a user in Teams using the POST request to the [https://smba.trafficmanager.net/amer/v3/conversations](https://smba.trafficmanager.net/amer/v3/conversations) endpoint.
+
+* **Resolution**: Verify the values of each parameter in the request, especially the ID given for the member parameter. If the error persists, try executing the request at a different time as it may be a temporary issue.
+
+* **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7424)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> BadArgument</b></summary>
+
+* **Message**: Failed to decrypt pairwise id.
+
+* **Scenario**: The error occurred when attempting to create a conversation between a bot and a user in Teams using the POST request to the [https://smba.trafficmanager.net/amer/v3/conversations](https://smba.trafficmanager.net/amer/v3/conversations) endpoint.
+
+* **Resolution**: Verify the values of each parameter in the request, especially the ID given for the member parameter. If the error persists, try executing the request at a different time as it may be a temporary issue.
+
+* **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7424)
+
+</br>
+</details>
