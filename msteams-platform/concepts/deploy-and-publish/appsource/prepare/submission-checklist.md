@@ -121,20 +121,10 @@ Ensure that you provide the following information in your app's long description
 * Define your product, state its primary features, and its target audience.
 * Describe the unique value proposition of your app within Microsoft Teams.
 * Highlight how your app contributes to resolving customer problems and assists them in their everyday work.
-* List key benefits that your app provides to customers. We recommend that you add up to three benefits.
+* List the key benefits that your app provides to customers. We recommend that you add up to three benefits.
 * If there are specific requirements to use your app, mention them clearly in the description for the benefit of users and admins looking to install and use your app.
 
-Your Partner Center account allows you to add a long description of up to 4000 characters. However, for better readability, we recommended you keep your app's long description concise.
-
-:::row:::
-
-:::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="Example screenshot highlights where an app's long description displays in a Teams Store listing.":::
-:::column-end:::
-:::column span="1":::
-:::column-end:::
-
-:::row-end:::
+Your Partner Center account allows you to add a long description of up to 4000 characters. However, for better readability, we recommended to keep your app's long description concise.
 
 Make sure your long description adheres to the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description).
 
