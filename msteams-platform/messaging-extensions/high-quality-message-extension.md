@@ -390,6 +390,10 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 For M365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands).
 
+:::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a multi parameter search such as seafood and in stock.":::
+
+:::image type="content" source="../assets/images/Copilot/high-quaity-me-fail-single-parameters.png" alt-text="Screenshot shows an example of a failed scenario where the Northwind app returns a response for single parameter search such as Out of stock .":::
+
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
 ## Adaptive Card response
