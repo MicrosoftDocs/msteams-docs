@@ -829,3 +829,168 @@ ms.topic: reference
 </details>
 
 ## Developer Portal
+
+<details>
+<br>
+<summary><b> Manifest Error</b></summary>
+
+* **Message**: Manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file.
+
+* **Scenario**: The developer was trying to upload the manifest for a Teams app with localization. The Teams app started throwing an error stating that the manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file.
+
+* **Resolution**: Add 'name.short' and 'name.full' properties to the localization file. Even if the name of the application is not localizable, these fields are required in the localization file.
+
+* **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7551)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> File not found</b></summary>
+
+* **Message**: The file could not be found in the app package.
+
+* **Scenario**: The developer is trying to import the 'Hello World' app package to the Developer Portal in Microsoft Teams. However, the import fails with an error message stating that the file could not be found in the app package. The developer has tried both generating the app package using the 'gulp' command and manually creating the app package, but the error persists.
+
+* **Resolution**: The developer should manually update the color and outline icon file names in the manifest file and check if it works. If the issue persists, the developer should manually create a zip package of color, outline, and manifest file which is in the appPackage folder and check if it works. If the issue still persists, the developer should check the PR #525 for the updated changes.
+
+* **Source**: [View](https://github.com/officedev/microsoft-teams-samples/issues/510)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> Error converting value "{{variable-name}}" to type 'System.Nullable`1[System.Guid]'. Path 'botId', line 1, position 31.</b></summary>
+
+* **Message**: Cannot use environment variable as Bot ID in Teams App Developer Portal.
+
+* **Scenario**: The developer is trying to use an environment variable as a bot ID while creating a Teams App manifest using the Developer Portal.
+
+* **Resolution**: Environment variables are not designed to be used in the GUID field. The developer should directly use the GUID value instead of the environment variable in the bot ID field.
+
+* **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/5011)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> 400</b></summary>
+
+* **Message**: App failed to update.
+
+* **Scenario**: The developer is trying to update a bot in the Developer Portal but forgot to identify the bot by selecting an existing bot in the dropdown. When trying to save the changes, an error occurs.
+
+* **Resolution**: The developer should delete the existing instances and redo the process. This is because the Developer Portal creates a unique app ID and locks the ID for the registered Teams app, preventing duplicate app IDs for multiple apps. In this case, since the existing bot was not selected, the manifest did not update with the commands, causing the error.
+
+* **Source**: [View](https://stackoverflow.com/questions/73298450/how-to-fix-app-failed-to-update-error-in-developer-portal)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> Not Available</b></summary>
+
+* **Message**: Option to disable developer preview no longer exists in the stated menu.
+
+* **Scenario**: A user enabled the developer preview in Microsoft Teams and later found that the option to disable it no longer exists in the menu. The user was unable to disable the developer preview for a year.
+
+* **Resolution**: The user should update the Teams version and check again. If the issue persists, the user should connect with the tenant admin to disable the policy. If the issue still persists, the user should reach out to Microsoft 365 Product Support.
+
+* **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7171)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> 514</b></summary>
+
+* **Message**: SDK Initialization Failed - Please provide instrumentation key.
+
+* **Scenario**: The developer is trying to initialize the Teams SDK in web teams on Chrome browser but it's failing due to missing instrumentation key.
+
+* **Resolution**: Ensure that you have provided a valid instrumentation key while initializing the SDK. The instrumentation key is required for telemetry data. If you don't have one, you can create it in Azure portal.
+
+* **Source**: [View](https://github.com/officedev/microsoft-teams-library-js/issues/1453)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> Duplicate file error</b></summary>
+
+* **Message**: Duplicate readme.md files found in different sample paths.
+
+* **Scenario**: While ingesting sample files, duplicate readme.md files were found under different 'parent' sample paths.
+
+* **Resolution**: Review the files and determine if they are needed. If not, delete the duplicate files. A PR has been raised to delete the second readme file residing in the /Images/ path. After the changes are pushed to the main branch, check and confirm the changes.
+
+* **Source**: [View](https://github.com/officedev/microsoft-teams-samples/issues/568)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> SyntaxError</b></summary>
+
+* **Message**: Cannot use import statement outside a module.
+
+* **Scenario**: The developer is trying to run the Microsoft Teams sample app 'app-hello-world' locally using npm start, but encounters a syntax error related to the import statement.
+
+* **Resolution**: Add "type": "module", in the package.json file. If the issue persists, follow the steps mentioned in the 'app-hello-world' GitHub sample and refer to the 'Common Issues' section.
+
+* **Source**: [View](https://github.com/officedev/microsoft-teams-samples/issues/446)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> Not Provided</b></summary>
+
+* **Message**: Provided add-in package was not understood. Please, make sure that the file being submitted is a valid Office add-in package.
+
+* **Scenario**: The error occurred while importing an AppStudio app in the Developer Portal in Teams.
+
+* **Resolution**: Ensure that the Manifest Version is provided in $schema and manifestVersion.<br>Avoid using reserved ids 'about' and 'conversations' for entity id in the manifest. Also, do not specify the 'Name' property if you use reserved ids.<br>Either provide a value for property `defaultGroupCapability.meetings` or remove it.
+
+* **Source**: [View](https://stackoverflow.com/questions/73895355/error-while-importing-appstudio-app-in-developer-portal-in-teams)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> Package Loading Failure</b></summary>
+
+* **Message**: Provided add-in package was not understood. Please, make sure that the file being submitted is a valid Office add-in package.
+
+* **Scenario**: The error occurred while trying to import an existing app to the developer portal.
+
+* **Resolution**: Ensure that you have created a zip folder that does not contain any subfolders. Select the manifest.json, color.png, outline.png and create a zip folder directly. If the issue persists, share your zip folder with the support team for further investigation.
+
+* **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/6743)
+
+</br>
+</details>
+
+<details>
+<br>
+<summary><b> Error while reading `manifest.json`: root. Required properties are missing from object: ['description.short','description.full']</b></summary>
+
+* **Message**: Manifest parsing has failed due to missing required properties in the manifest.json file.
+
+* **Scenario**: The developer was trying to upload manifest files for a team extension-based commercial application on Microsoft Teams.
+
+* **Resolution**: Check the manifest.json file for missing required properties. In this case, 'description.short' and 'description.full' were missing. Update the file with the required attributes and re-upload the manifest zip from Teams App > Manage Apps.
+
+* **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/6743)
+
+</br>
+</details>
