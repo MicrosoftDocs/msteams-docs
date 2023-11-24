@@ -1,6 +1,6 @@
 ---
 title: Error handling messages
-description: Error handling messgaes
+description: Error handling messages
 author: vishnu
 ms.localizationpriority: medium
 ms.topic: reference
@@ -16,9 +16,9 @@ ms.topic: reference
 
 * **Message**: Unable to render dynamic data inside the Adaptive Card template for user mentions in Teams.
 
-* **Scenario**: The developer is trying to create a dynamic AdaptiveCard to mention users in Teams. They are facing an issue with rendering dynamic data inside the template. They have tried to serialize a JSON with the same $data structure with the name of the user mentioned but it doesn't render anything.
+* **Scenario**: The developer is trying to create a dynamic AdaptiveCard to mention users in Teams. They're facing an issue with rendering dynamic data inside the template. They have tried to serialize a JSON with the same $data structure with the name of the user mentioned but it doesn't render anything.
 
-* **Resolution**: Currently, there is no support for sending a dynamic array to the entity property in Microsoft Teams. For mentioning a user, you need to repeat the entity block, not the text block. For more information, see [https://learn.microsoft.com/en-us/adaptive-cards/templating/language](/adaptive-cards/templating/language)
+* **Resolution**: Currently, there's no support for sending a dynamic array to the entity property in Microsoft Teams. For mentioning a user, you need to repeat the entity block, not the text block. For more information, see [https://learn.microsoft.com/en-us/adaptive-cards/templating/language](/adaptive-cards/templating/language)
 
 * **Source**: [View](https://stackoverflow.com/questions/74364152/send-data-array-to-an-adaptivecard-with-c-sharp)
 
@@ -29,9 +29,9 @@ ms.topic: reference
 <br>
 <summary><b>URL with double quotes in Adaptive Card action is not opening in Microsoft Teams on iOS.</b></summary>
 
-* **Message**: URL with double quotes in Adaptive Card action is not opening in Microsoft Teams on iOS.
+* **Message**: URL with double quotes in Adaptive Card action isn't opening in Microsoft Teams on iOS.
 
-* **Scenario**: A developer is using Logic Apps to generate Actions in an Adaptive Card and pass a URL with double quotes. When the Adaptive Card is sent to Microsoft Teams and the action button is clicked, the URL does not open.
+* **Scenario**: A developer is using Logic Apps to generate Actions in an Adaptive Card and pass a URL with double quotes. When the Adaptive Card is sent to Microsoft Teams and the action button is clicked, the URL doesn't open.
 
 * **Resolution**: Verify the URL and try with a different URL. Ensure that the URL is properly encoded to handle special characters like double quotes. Test the behavior on different platforms (Teams web, desktop, and iOS) to isolate the issue. If the problem persists, report the issue with all the relevant details for further investigation.
 
@@ -44,11 +44,11 @@ ms.topic: reference
 <br>
 <summary><b>Not Provided</b></summary>
 
-* **Message**: Adaptive Cards are not fully occupying width in MS Teams Group Channel despite setting the 'width: full' property.
+* **Message**: Adaptive Cards aren't fully occupying width in MS Teams Group Channel despite setting the 'width: full' property.
 
-* **Scenario**: The developer is trying to render Adaptive Cards in MS Teams Group Channel with full width. Despite setting the 'width: full' property, the Adaptive Cards are not occupying the full width.
+* **Scenario**: The developer is trying to render Adaptive Cards in MS Teams Group Channel with full width. Despite setting the 'width: full' property, the Adaptive Cards aren't occupying the full width.
 
-* **Resolution**: The issue was fixed by the engineering team and the fix was rolled out to the organization's tenant. The developer should ensure they are using the latest version of MS Teams Desktop and Web version in channel scope.
+* **Resolution**: The issue was fixed by the engineering team and the fix was rolled out to the organization's tenant. The developer should ensure they're using the latest version of MS Teams Desktop and Web version in channel scope.
 
 * **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7468)
 
@@ -61,9 +61,9 @@ ms.topic: reference
 
 * **Message**: ReplyToId is coming null when user performs any action on the Adaptive Card in the emulator.
 
-* **Scenario**: Developer is testing an adaptive card with yes/no action items in the emulator. When a user clicks on yes/no, the developer wants to update the card with a thank you message. However, the ReplyToId, which is needed for the update, is coming as null.
+* **Scenario**: Developer is testing an adaptive card with yes/no action items in the emulator. When a user selects on yes/no, the developer wants to update the card with a thank you message. However, the ReplyToId, which is needed for the update, is coming as null.
 
-* **Resolution**: Verify the version of the Bot Framework Emulator being used. It is recommended to use version V4.<br>Test the adaptive card again in the emulator.<br>If the issue persists, share a screen recording of the issue for further investigation.
+* **Resolution**: Verify the version of the Bot Framework Emulator being used. It's recommended to use version V4.<br>Test the adaptive card again in the emulator.<br>If the issue persists, share a screen recording of the issue for further investigation.
 
 * **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7540)
 
@@ -93,7 +93,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to use the 'Refresh' action in an adaptive card in a one-to-one chat in Teams. The action works for the developer but not for the other user in the chat. The error occurs after the Teams cache is cleared and the chat is opened in a browser.
 
-* **Resolution**: The issue was resolved by adding a bot at the launch of the messaging extension. The bot was not automatically added to the 'groupchat'. The developer used the `OnTeamsMessagingExtensionFetchTaskAsync` method to check if the app is installed by fetching member information. If the bot is not in the conversation roster, the `GetAddMissedBotCard` method is called to add the bot.
+* **Resolution**: The issue was resolved by adding a bot at the launch of the messaging extension. The bot wasn't automatically added to the 'groupchat'. The developer used the `OnTeamsMessagingExtensionFetchTaskAsync` method to check if the app is installed by fetching member information. If the bot isn't in the conversation roster, the `GetAddMissedBotCard` method is called to add the bot.
 
 * **Source**: [View](https://stackoverflow.com/questions/74273728/teams-refresh-adaptive-card-returns-209-error-in-group-chat)
 
@@ -104,9 +104,9 @@ ms.topic: reference
 <br>
 <summary><b>Not Available</b></summary>
 
-* **Message**: The response from the Teams Adaptive Card is not being recorded in the Azure Logic App.
+* **Message**: The response from the Teams Adaptive Card isn't being recorded in the Azure Logic App.
 
-* **Scenario**: The developer is trying to capture the input text from a Teams Adaptive Card and use it in their Azure Logic App, but the response is not being recorded.
+* **Scenario**: The developer is trying to capture the input text from a Teams Adaptive Card and use it in their Azure Logic App, but the response isn't being recorded.
 
 * **Resolution**: Ensure to use the 'Post adaptive card and wait for a response' action if you expect a response from the card. The output of this action doesn't give any output options, so you have to format it yourself. Use 'Parse json' and enter input in the expression field: @Outputs('adaptivecardname')?[body]
 
@@ -136,9 +136,9 @@ ms.topic: reference
 <br>
 <summary><b>Not Available</b></summary>
 
-* **Message**: `OnTeamsMeetingStartAsync()` and `OnTeamsMeetingEndAsync()` methods are not being called in a specific tenant, but work in a local demo tenant.
+* **Message**: `OnTeamsMeetingStartAsync()` and `OnTeamsMeetingEndAsync()` methods aren't being called in a specific tenant, but work in a local demo tenant.
 
-* **Scenario**: The developer is trying to use `OnTeamsMeetingStartAsync()` and `OnTeamsMeetingEndAsync()` methods in a specific tenant, but they are not being called. However, these methods work in a local demo tenant.
+* **Scenario**: The developer is trying to use `OnTeamsMeetingStartAsync()` and `OnTeamsMeetingEndAsync()` methods in a specific tenant, but they aren't being called. However, these methods work in a local demo tenant.
 
 * **Resolution**: Confirm that the feature is available in public developer preview.<br>Ensure that `OnlineMeeting.ReadBasic.Chat` permission is added.<br>Check the configuration of group owner consent settings for RSC in a team using the Azure AD portal.<br> Use Graph explorer to check whether the correct RSC permission is associated with the bot.
 
@@ -151,11 +151,11 @@ ms.topic: reference
 <br>
 <summary><b>Upload failed File size too large</b></summary>
 
-* **Message**: The file size limit for Adobe eSign feature is 10MB.
+* **Message**: The file size limit for Adobe eSign feature is 10 MB.
 
-* **Scenario**: The error occurred when trying to attach files over 10MB using the Teams 'Approvals' App for eSignature and Approvals of documents.
+* **Scenario**: The error occurred when trying to attach files over 10 MB using the Teams 'Approvals' App for eSignature and Approvals of documents.
 
-* **Resolution**: Ensure that the file size does not exceed the limit set by Adobe eSign feature, which is 10MB. If larger files need to be attached, consider compressing the files or using a different method to send them.
+* **Resolution**: Ensure that the file size doesn't exceed the limit set by Adobe eSign feature, which is 10 MB. If larger files need to be attached, consider compressing the files or using a different method to send them.
 
 * **Source**: [View](https://stackoverflow.com/questions/73911852/ms-teams-approvals-upload-failed-file-size-too-large)
 
@@ -200,7 +200,7 @@ ms.topic: reference
 
 * **Message**: getAuthToken() method returns empty SSO token in success callback.
 
-* **Scenario**: The developer is trying to fetch the SSO token using TeamsFx React SDK in a SSO Tab app. The token is fetched successfully when running the app using Teams Toolkit or when previewing/publishing the app from the Developer Portal. However, when the app is deployed in Ring0, the SSO token is returned as an empty string.
+* **Scenario**: The developer is trying to fetch the SSO token using TeamsFx React SDK in an SSO Tab app. The token is fetched successfully when running the app using Teams Toolkit or when previewing/publishing the app from the Developer Portal. However, when the app is deployed in Ring0, the SSO token is returned as an empty string.
 
 * **Resolution**: Check the implementation of the getAuthToken() method. Ensure that the correct ClientId is being used across all environments. Verify the app manifest and app definition in Ring0. If the issue persists, escalate to the engineering team for further investigation.
 
@@ -213,11 +213,11 @@ ms.topic: reference
 <br>
 <summary><b>Manifest Error</b></summary>
 
-* **Message**: Manifest does not contain the RSC permission to allow in-app purchases.
+* **Message**: Manifest doesn't contain the RSC permission to allow in-app purchases.
 
-* **Scenario**: The developer is trying to implement in-app purchases in Microsoft Teams app. The app works fine on a test tenant but shows an error on a normal tenant. The error also occurs on a second account where the in-app purchase popup does not appear.
+* **Scenario**: The developer is trying to implement in-app purchases in Microsoft Teams app. The app works fine on a test tenant but shows an error on a normal tenant. The error also occurs on a second account where the in-app purchase popup doesn't appear.
 
-* **Resolution**: Validate the manifest using Teams store app validation in the Developer Portal.<br>Follow the v1 implementation guide strictly, remove the planInfo parameter and put a callback function inside instead.<br>Ensure that the in-app purchase is implemented in personal scope as it is currently not supported in channel scope.
+* **Resolution**: Validate the manifest using Teams Store app validation in the Developer Portal.<br>Follow the v1 implementation guide strictly, remove the planInfo parameter and put a callback function inside instead.<br>Ensure that the in-app purchase is implemented in personal scope as it is currently not supported in channel scope.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-library-js/issues/1788)
 
@@ -232,7 +232,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to get tokens from the current user logged in on Teams Desktop App using the `authentication.getAuthToken()` function in the Teams SDK. The error occurs when testing on Teams Desktop client (both Windows and MacOS).
 
-* **Resolution**: There are several possible resolutions. First, proactively check for token expiration and ask the user to login again if the ID token is not valid. Second, catch the error in a callback passed into the acquiretoken ADAL JS function and ask the user to login again if the error occurs. Third, whitelist the login.microsoftonline.com endpoint in your browser extension or re-enable third party cookies in your browser if they are disabled. Lastly, add two client applications to `Authorized client applications` in Azure Portal for the Teams desktop/mobile clients and the web client: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` and `1fec8e78-bce4-4aaf-ab1b-5451cc387264`.
+* **Resolution**: There are several possible resolutions. First, proactively check for token expiration and ask the user to login again if the ID token isn't valid. Second, catch the error in a callback passed into the acquiretoken ADAL JS function and ask the user to login again if the error occurs. Third, whitelist the login.microsoftonline.com endpoint in your browser extension or re-enable third party cookies in your browser if they're disabled. Lastly, add two client applications to `Authorized client applications` in Azure Portal for the Teams desktop/mobile clients and the web client: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` and `1fec8e78-bce4-4aaf-ab1b-5451cc387264`.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-library-js/issues/1307)
 
@@ -243,7 +243,7 @@ ms.topic: reference
 <br>
 <summary><b>SSO-Token</b></summary>
 
-* **Message**: SSO Token is not getting generated for some users in Azure AD.
+* **Message**: SSO Token isn't getting generated for some users in Azure AD.
 
 * **Scenario**: The issue occurs when users enter the Una Chat Bot in MS Teams. The SSO Token should be automatically generated for all users, but it's not happening for some.
 
@@ -258,7 +258,7 @@ ms.topic: reference
 <br>
 <summary><b>OAuth token for user authentication is not working on iOS 16.</b></summary>
 
-* **Message**: OAuth token for user authentication is not working on iOS 16.
+* **Message**: OAuth token for user authentication isn't working on iOS 16.
 
 * **Scenario**: The developer is using an OAuth token from an HTTP response to authenticate users. The authentication works on Android, desktop, and web platforms, but fails on iOS 16.
 
@@ -292,7 +292,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to enable SSO for a Teams App and is using client-side code to acquire a token using MSAL. The token API is failing due to a CORS issue in both local and development environments.
 
-* **Resolution**: The 'OnBehalfOf' token call should only be made from a backend server, where CORS would not apply. The only call that needs to be made from the front-end code is `microsoftTeams.authentication.getAuthToken()`. It is recommended to review the linked video and blog post for a more detailed understanding.
+* **Resolution**: The 'OnBehalfOf' token call should only be made from a backend server, where CORS wouldn't apply. The only call that needs to be made from the front-end code is `microsoftTeams.authentication.getAuthToken()`. It's recommended to review the linked video and blog post for a more detailed understanding.
 
 * **Source**: [View](https://stackoverflow.com/questions/74426827/cors-issue-while-trying-to-access-https-login-microsoftonline-com-common-oauth)
 
@@ -324,7 +324,7 @@ ms.topic: reference
 
 * **Scenario**: The developer was trying to get detailed user information using Microsoft Power Virtual Agents in Microsoft Teams. The error occurred when the developer tried to use GetUserProfile() function with the input as 'first(outputs('Search_for_users_(V2)')?['body/value'])?['UserPrincipalName']'.
 
-* **Resolution**: Instead of passing in display name, pass in UserID. This way, the call to `SearchForUsers()` is not needed. Correcting the input to `GetUserProfile()` function should resolve the issue.
+* **Resolution**: Instead of passing in display name, pass in UserID. This way, the call to `SearchForUsers()` isn't needed. Correcting the input to `GetUserProfile()` function should resolve the issue.
 
 * **Source**: [View](https://stackoverflow.com/questions/74814903/microsoft-power-virtual-agents-error-in-power-virtual-agents-flow-template)
 
@@ -335,9 +335,9 @@ ms.topic: reference
 <br>
 <summary><b> ServiceError</b></summary>
 
-* **Message**: Could not find Connection Setting with name `teamsAuth`.
+* **Message**: Couldn't find Connection Setting with name `teamsAuth`.
 
-* **Scenario**: The developer was trying to add SSO for a notification bot using Teams Toolkit. Despite following the documentation and adding the OAuth connection in the bot, the developer was encountering an error stating that the connection setting `teamsAuth` could not be found.
+* **Scenario**: The developer was trying to add SSO for a notification bot using Teams Toolkit. Despite following the documentation and adding the OAuth connection in the bot, the developer was encountering an error stating that the connection setting `teamsAuth` couldn't be found.
 
 * **Resolution**: Ensure that the OAuth connection name is correctly added to the .env file as mentioned in the documentation. If the issue persists, try using the TeamsBotSSOPrompt function by registering an AAD App for bot authentication. If the problem still persists, consider filing an issue in the TeamsFx repo for further assistance.
 
@@ -369,7 +369,7 @@ ms.topic: reference
 
 * **Scenario**: The error occurred when attempting to create a conversation between a bot and a user in Teams using the POST request to the `https://smba.trafficmanager.net/amer/v3/conversations` endpoint.
 
-* **Resolution**: Verify the values of each parameter in the request, especially the ID given for the member parameter. If the error persists, try executing the request at a different time as it may be a temporary issue.
+* **Resolution**: Verify the values of each parameter in the request, especially the ID given for the member parameter. If the error persists, try executing the request at a different time as it might be a temporary issue.
 
 * **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7424)
 
@@ -384,7 +384,7 @@ ms.topic: reference
 
 * **Scenario**: The error occurred when attempting to create a conversation between a bot and a user in Teams using the POST request to the `https://smba.trafficmanager.net/amer/v3/conversations` endpoint.
 
-* **Resolution**: Verify the values of each parameter in the request, especially the ID given for the member parameter. If the error persists, try executing the request at a different time as it may be a temporary issue.
+* **Resolution**: Verify the values of each parameter in the request, especially the ID given for the member parameter. If the error persists, try executing the request at a different time as it might be a temporary issue.
 
 * **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7424)
 
@@ -395,11 +395,11 @@ ms.topic: reference
 <br>
 <summary><b> The deep link does not save the subEntityId param when clicked in Microsoft Teams chat.</b></summary>
 
-* **Message**: The deep link does not save the subEntityId param when clicked in Microsoft Teams chat.
+* **Message**: The deep link doesn't save the subEntityId param when clicked in Microsoft Teams chat.
 
-* **Scenario**: A developer is trying to use a deep link in Microsoft Teams chat, but the subEntityId param is not being saved when the link is clicked.
+* **Scenario**: A developer is trying to use a deep link in Microsoft Teams chat, but the subEntityId param isn't being saved when the link is clicked.
 
-* **Resolution**: Ensure that the 'context' is not web encoded. Try using the following format: [https://teams.microsoft.com/l/entity/c38259cb-cd15-4797-b634-098bcea43f9a/index1?webUrl=https://google.com/&label=Google&context={"subEntityId":39138959}](https://teams.microsoft.com/l/entity/c38259cb-cd15-4797-b634-098bcea43f9a/index1?webUrl=https://google.com/&label=Google&context={"subEntityId":39138959}).
+* **Resolution**: Ensure that the 'context' isn't web encoded. Try using the following format: [https://teams.microsoft.com/l/entity/c38259cb-cd15-4797-b634-098bcea43f9a/index1?webUrl=https://google.com/&label=Google&context={"subEntityId":39138959}](https://teams.microsoft.com/l/entity/c38259cb-cd15-4797-b634-098bcea43f9a/index1?webUrl=https://google.com/&label=Google&context={"subEntityId":39138959}).
 
 * **Source**: [View](https://stackoverflow.com/questions/74349950/microsoft-teams-deep-link-from-chat)
 
@@ -412,9 +412,9 @@ ms.topic: reference
 
 * **Message**: The server crashes when trying to send a 412 response in the `onInvokeActivity` in the `server/bots/botActivityHandler.js`.
 
-* **Scenario**: The developer is using Node 16 and npm 8 in the sample app-sso and encounters a server crash when the botAdaptivity attempts to return a 412 response. The bot-builder does not catch and process this exception, causing the app to crash.
+* **Scenario**: The developer is using Node 16 and npm 8 in the sample app-sso and encounters a server crash when the botAdaptivity attempts to return a 412 response. The bot-builder doesn't catch and process this exception, causing the app to crash.
 
-* **Resolution**: Ensure that all required permissions are added and the configuration is correct. Check if admin consent has been granted for your graph API's. Also, consider adding exception handling in the server or elsewhere to catch and process this exception. An issue has been submitted to botbuilder-js and they have added this problem to their backlog.
+* **Resolution**: Ensure that all required permissions are added and the configuration is correct. Check if admin consent has been granted for your graph API's. Also, consider adding exception handling in the server or elsewhere to catch and process this exception. An issue is submitted to botbuilder-js and they have added this problem to their backlog.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-samples/issues/513)
 
@@ -442,7 +442,7 @@ ms.topic: reference
 
 * **Message**: Manifest.json validation errors and meeting join events not getting delivered.
 
-* **Scenario**: The developer is trying to run a Microsoft Teams bot for meeting events but is encountering validation errors with the manifest.json file. Additionally, the bot is not receiving meeting join events, although chat messages are arriving.
+* **Scenario**: The developer is trying to run a Microsoft Teams bot for meeting events but is encountering validation errors with the manifest.json file. Additionally, the bot isn't receiving meeting join events, although chat messages are arriving.
 
 * **Resolution**: Ensure that the manifest.json file is correctly formatted and adheres to the schema.<br>Check the bot's permissions and scopes to ensure it has the necessary access to receive meeting join events.<br>Refer to the sample provided by Microsoft at [https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-events/csharp) for guidance.<br>If the issue persists, reach out to Microsoft support for further assistance.
 
@@ -455,11 +455,11 @@ ms.topic: reference
 <br>
 <summary><b> This action can't be performed since the app does not exist or has been uninstalled.</b></summary>
 
-* **Message**: This action can't be performed since the app does not exist or has been uninstalled.
+* **Message**: This action can't be performed since the app doesn't exist or has been uninstalled.
 
 * **Scenario**: The developer is creating a Microsoft Teams messaging bot that requires authentication/sign-in. The bot sends a non-reply message to the user that includes a hero card with a sign-in button. When the user receives the hero card and clicks the sign-in button, an error message is displayed.
 
-* **Resolution**: Ensure that `token.botframework.com` and `login.microsoftonline.com` are added in the valid domain section of your app manifest.<br>If you are sideloading the app, be aware that installing/uninstalling the app can be buggy. Try closing and reopening your MS Teams client.
+* **Resolution**: Ensure that `token.botframework.com` and `login.microsoftonline.com` are added in the valid domain section of your app manifest.<br>If you're sideloading the app, be aware that installing/uninstalling the app can be buggy. Try closing and reopening your MS Teams client.
 
 * **Source**: [View](https://stackoverflow.com/questions/73364222/ms-teams-bot-sign-in-not-working-says-this-action-cant-be-performed-since-the)
 
@@ -485,7 +485,7 @@ ms.topic: reference
 <br>
 <summary><b> 400</b></summary>
 
-* **Message**: Bot is not responding when using app service url as messaging endpoint.
+* **Message**: Bot isn't responding when using app service url as messaging endpoint.
 
 * **Scenario**: The developer is trying to use a bot with a deployed service url in Microsoft Teams. The bot works fine with ngrok but fails to respond when using the app service url.
 
@@ -515,7 +515,7 @@ ms.topic: reference
 <br>
 <summary><b> Invalid URL</b></summary>
 
-* **Message**: Invoking a Teams chat via DeepLink to external contacts does not work on iOS.
+* **Message**: Invoking a Teams chat via DeepLink to external contacts doesn't work on iOS.
 
 * **Scenario**: The developer is trying to invoke a Teams chat with external contacts using DeepLink on iOS. The same operation works fine on other platforms like desktop but fails on iOS, returning an 'Invalid URL' error.
 
@@ -530,9 +530,9 @@ ms.topic: reference
 <br>
 <summary><b> Bot is not receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.</b></summary>
 
-* **Message**: Bot is not receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.
+* **Message**: Bot isn't receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.
 
-* **Scenario**: The developer is trying to make a bot receive all channel messages even when not mentioned, as per the documentation. However, the bot is not receiving all messages unless explicitly mentioned. The developer is also facing issues with the structure of `webApplicationInfo` in Manifest.json and receiving an error when uploading the manifest.json.
+* **Scenario**: The developer is trying to make a bot receive all channel messages even when not mentioned, as per the documentation. However, the bot isn't receiving all messages unless explicitly mentioned. The developer is also facing issues with the structure of `webApplicationInfo` in Manifest.json and receiving an error when uploading the manifest.json.
 
 * **Resolution**: Ensure that the manifest version is v1.12 or above.<br>Add `token.botframework.com` in valid domains.<br>Remove 'orgWide': [], from the authorization section.<br>The bot-id should be given in the `webapplicationInfo` section.<br>Refer to the sample provided in the link: [https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp) and follow the steps.
 
@@ -545,9 +545,9 @@ ms.topic: reference
 <br>
 <summary><b> `BotNotInConversationRoster`</b></summary>
 
-* **Message**: Automatic installation of bot is not working while invoking from message extension.
+* **Message**: Automatic installation of bot isn't working while invoking from message extension.
 
-* **Scenario**: The developer is trying to automatically install a bot when invoked from a message extension. Despite following the documentation and using an adaptive card with an install button, the bot does not get installed.
+* **Scenario**: The developer is trying to automatically install a bot when invoked from a message extension. Despite following the documentation and using an adaptive card with an install button, the bot doesn't get installed.
 
 * **Resolution**: Ensure that the bot is correctly configured in the manifest.json file.<br>Check the messaging extension invoke handler in TeamsBot.<br>Verify that the adaptive card is correctly formatted and includes the 'justInTimeInstall' property.<br>Try uploading the app via the Teams admin center instead of sideloading.<br>Test the setup with a different sample to see if the issue persists.
 
@@ -564,7 +564,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to add a transcript bot to a chat or a meeting in Microsoft Teams but is encountering a permissions error.
 
-* **Resolution**: Check if there is any custom policy set up in admin center for this app which is not allowing it to be added in chat/meeting. Ensure that the options for adding apps to meetings and chats are enabled in the Teams admin center. If all settings are correct, it may take up to 28 days for apps to be fully provisioned. In this case, a manual sync performed by Microsoft support solved the issue.
+* **Resolution**: Check if there's any custom policy set up in admin center for this app which isn't allowing it to be added in chat/meeting. Ensure that the options for adding apps to meetings and chats are enabled in the Teams admin center. If all settings are correct, it may take up to 28 days for apps to be fully provisioned. In this case, a manual sync performed by Microsoft support solved the issue.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-samples/issues/780)
 
@@ -579,7 +579,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to send an Adaptive Card to each member of a meeting using a notification bot. The bot is able to send the card to the meeting creator but throws an error when trying to send to other members.
 
-* **Resolution**: The bot can only send Adaptive Cards to users within the host's tenant/organization. Add a condition to check if the member's tenantId matches the conversation's tenantId before sending the Adaptive Card. This will prevent the bot from attempting to send cards to users outside the host's tenant, thus avoiding the error.
+* **Resolution**: The bot can only send Adaptive Cards to users within the host's tenant/organization. Add a condition to check if the member's tenantId matches the conversation's tenantId before sending the Adaptive Card. This prevents the bot from attempting to send cards to users outside the host's tenant, thus avoiding the error.
 
 * **Source**: [View](https://stackoverflow.com/questions/73114932/invalid-user-identity-in-provided-tenant-when-sending-adaptive-card-to-other-m)
 
@@ -590,9 +590,9 @@ ms.topic: reference
 <br>
 <summary><b> Not Provided</b></summary>
 
-* **Message**: Bot is not responding to command messages in Teams channel without an assigned owner.
+* **Message**: Bot isn't responding to command messages in Teams channel without an assigned owner.
 
-* **Scenario**: The issue occurs when a command message is posted in a Teams channel that was created using the Graph API and does not have an assigned owner. The bot installed in the channel does not respond to the command message.
+* **Scenario**: The issue occurs when a command message is posted in a Teams channel that was created using the Graph API and doesn't have an assigned owner. The bot installed in the channel doesn't respond to the command message.
 
 * **Resolution**: Ensure that the Teams channel has an assigned owner. This can be done by checking the channel's settings. If the issue persists, it may be due to an intermittent issue with the Graph API. Monitor the situation and report if the issue reoccurs.
 
@@ -605,11 +605,11 @@ ms.topic: reference
 <br>
 <summary><b> context.adapter.getSignInLink is not a function.</b></summary>
 
-* **Message**: The function `getSignInLink` is not recognized as a function of `context.adapter`.
+* **Message**: The function `getSignInLink` isn't recognized as a function of `context.adapter`.
 
-* **Scenario**: The developer is following a tutorial to implement adaptive cards in a Microsoft Teams bot. The error occurs when trying to use the `getSignInLink` function with the `CloudAdapter` class, which is not recognized as a valid function.
+* **Scenario**: The developer is following a tutorial to implement adaptive cards in a Microsoft Teams bot. The error occurs when trying to use the `getSignInLink` function with the `CloudAdapter` class, which isn't recognized as a valid function.
 
-* **Resolution**: The developer should refer to the provided NodeJS sample where the `CloudAdapter` class is used. If the issue persists, the developer should ensure they are using the latest version of the repository and consider seeking further examples or documentation on how to use the `getSignInLink` function with the `CloudAdapter` class.
+* **Resolution**: The developer should refer to the provided NodeJS sample where the `CloudAdapter` class is used. If the issue persists, the developer should ensure they're using the latest version of the repository and consider seeking further examples or documentation on how to use the `getSignInLink` function with the `CloudAdapter` class.
 
 * **Source**: [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/issues/722)
 
@@ -624,7 +624,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to set up a bot for the C# Sequential Flow Adaptive Card but encounters a 401 Unauthorized Error when trying to call the bot and test a sample incident.
 
-* **Resolution**: Check the messaging endpoint URL in bot registration and ensure it is correctly set to https://<your_ngrok_url>/api/messages. If the issue persists, try reregistering the AAD app, recreating the bot, and changing the settings from single tenant to multi-tenant.
+* **Resolution**: Check the messaging endpoint URL in bot registration and ensure it's correctly set to https://<your_ngrok_url>/api/messages. If the issue persists, try reregistering the AAD app, recreating the bot, and changing the settings from single tenant to multi-tenant.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-samples/issues/738)
 
@@ -665,9 +665,9 @@ ms.topic: reference
 <br>
 <summary><b> Bot is not receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.</b></summary>
 
-* **Message**: Bot is not receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.
+* **Message**: Bot isn't receiving all channel messages despite having the ChannelMessage.Read.Group RSC permission.
 
-* **Scenario**: The developer is trying to receive all channel messages through a bot, which is expected to receive all messages even when not mentioned, as per the `ChannelMessage.Read.Group` RSC permission. However, the bot is not receiving all messages unless explicitly mentioned.
+* **Scenario**: The developer is trying to receive all channel messages through a bot, which is expected to receive all messages even when not mentioned, as per the `ChannelMessage.Read.Group` RSC permission. However, the bot isn't receiving all messages unless explicitly mentioned.
 
 * **Resolution**: Ensure that the bot is in Public Developer Preview as this feature is currently available only in this mode. If the issue persists, test the bot using the sample provided at [https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-receive-channel-messages-withRSC/csharp). If the problem still exists, provide a screen recording of the issue for further investigation.
 
@@ -680,7 +680,7 @@ ms.topic: reference
 <br>
 <summary><b> BadRequest</b></summary>
 
-* **Message**: The user 'XXX-XXX-XXX-XXX-XXX' is not found.
+* **Message**: The user 'XXX-XXX-XXX-XXX-XXX' isn't found.
 
 * **Scenario**: The developer is trying to assign a phone number to a bot using PowerShell. The error occurs when the developer tries to assign the number to the bot.
 
@@ -699,7 +699,7 @@ ms.topic: reference
 
 * **Scenario**: The developer has completed the setup instructions for the `app-complete-auth` NodeJS example. However, all bot interactions are failing with a 401 error or failing to reach the local server. The bot registration has been configured as UserAssignedMSI and the developer is using an unpaid ngrok account.
 
-* **Resolution**: Check the ngrok configuration and ensure it is set up correctly. Also, verify the bot registration settings. The bot should be configured as MultiTenant, not UserAssignedMSI. Make sure to use the existing app registration option to create the bot using the app registration ID created in the first chapter of the setup instructions.
+* **Resolution**: Check the ngrok configuration and ensure it's set up correctly. Also, verify the bot registration settings. The bot should be configured as MultiTenant, not UserAssignedMSI. Make sure to use the existing app registration option to create the bot using the app registration ID created in the first chapter of the setup instructions.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-samples/issues/670)
 
@@ -712,7 +712,7 @@ ms.topic: reference
 
 * **Message**: Unknown bot.
 
-* **Scenario**: The developer is trying to use a contentBotId from a different tenant in the MS Teams manifest file. When the contentBotId is from the same tenant as the MS Teams domain, it works and loads the data. However, when the contentBotId is from a different tenant, MS Teams does not load anything.
+* **Scenario**: The developer is trying to use a contentBotId from a different tenant in the MS Teams manifest file. When the contentBotId is from the same tenant as the MS Teams domain, it works and loads the data. However, when the contentBotId is from a different tenant, MS Teams doesn't load anything.
 
 * **Resolution**: Create a multi-tenant bot using ML Studio before creating the MS bot. Register the application and check the manifest file for the required ContentBotId. Test the URL after app registration into multi-Tenant. If the error still occurs, setup the connection settings under configurations. Add Oauth connection settings to get some kind of authentication for different clients for the same authentication URL. If the issue persists, it might be due to the use of existing AAD instead of creating from Azure bot template. The manually created AAD have email address of user who have created this in Owners section, while AAD created from Azure bot template have 'Bot Framework Dev Portal' user.
 
@@ -725,9 +725,9 @@ ms.topic: reference
 <br>
 <summary><b> AADSTS700016</b></summary>
 
-* **Message**: Application with identifier 'Application (client) ID' was not found in the directory 'Bot Framework'.
+* **Message**: Application with identifier 'Application (client) ID' wasn't found in the directory 'Bot Framework'.
 
-* **Scenario**: The developer was trying to run a proactive installation sample app using the client id from Azure bot configuration. The error occurred when the application was not found in the directory 'Bot Framework'.
+* **Scenario**: The developer was trying to run a proactive installation sample app using the client id from Azure bot configuration. The error occurred when the application wasn't found in the directory 'Bot Framework'.
 
 * **Resolution**: Verify if the correct client/app id is being used. Ensure that the bot is set up through the CLI and not through the web interface. Confirm if the required Microsoft graph Application-level permissions `TeamsAppInstallation.ReadWriteForUser.All` have been added. Follow the instructions to add proper ids and secret details in the `appsettings.json` file. Upload the app at the org level to get `AppCatalogTeamAppId` and then try to add the app in either personal or team scope. If the error persists, retry the steps by following the guidelines step by step creating a new app id.
 
@@ -742,7 +742,7 @@ ms.topic: reference
 
 * **Message**: `UserNotAuthorizedToGrantResourceSpecificPermission` error is received when trying to add bot to a meeting.
 
-* **Scenario**: The developer implemented a 'Meeting-Attendance-bot' in Azure and tried to add it to a meeting. Despite granting Graph API permissions for the tenant, the bot could not be added due to a `UserNotAuthorizedToGrantResourceSpecificPermission` error.
+* **Scenario**: The developer implemented a 'Meeting-Attendance-bot' in Azure and tried to add it to a meeting. Despite granting Graph API permissions for the tenant, the bot couldn't be added due to a `UserNotAuthorizedToGrantResourceSpecificPermission` error.
 
 * **Resolution**: Ensure that the required permissions are granted and access is allowed. Refer to the documentation on granting Resource Specific Consent (RSC) permissions. Confirm if the correct sample is being used. Make sure to allow applications to access online meetings on behalf of a user. Check the application access policy setup using PowerShell. Create an application access policy and grant the policy to the user to allow the app ID contained in the policy to access online meetings on behalf of the granted user.
 
@@ -838,7 +838,7 @@ ms.topic: reference
 
 * **Scenario**: The developer was trying to upload the manifest for a Teams app with localization. The Teams app started throwing an error stating that the manifest is invalid due to missing 'name.short' and 'name.full' properties in the localization file.
 
-* **Resolution**: Add 'name.short' and 'name.full' properties to the localization file. Even if the name of the application is not localizable, these fields are required in the localization file.
+* **Resolution**: Add 'name.short' and 'name.full' properties to the localization file. Even if the name of the application isn't localizable, these fields are required in the localization file.
 
 * **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7551)
 
@@ -849,11 +849,11 @@ ms.topic: reference
 <br>
 <summary><b> File not found</b></summary>
 
-* **Message**: The file could not be found in the app package.
+* **Message**: The file couldn't be found in the app package.
 
-* **Scenario**: The developer is trying to import the 'Hello World' app package to the Developer Portal in Microsoft Teams. However, the import fails with an error message stating that the file could not be found in the app package. The developer has tried both generating the app package using the 'gulp' command and manually creating the app package, but the error persists.
+* **Scenario**: The developer is trying to import the 'Hello World' app package to the Developer Portal in Microsoft Teams. However, the import fails with an error message stating that the file couldn't be found in the app package. The developer has tried both generating the app package using the 'gulp' command and manually creating the app package, but the error persists.
 
-* **Resolution**: The developer should manually update the color and outline icon file names in the manifest file and check if it works. If the issue persists, the developer should manually create a zip package of color, outline, and manifest file which is in the appPackage folder and check if it works. If the issue still persists, the developer should check the PR #525 for the updated changes.
+* **Resolution**: The developer should manually update the color and outline icon file names in the manifest file and check if it works. If the issue persists, the developer should manually create a zip package of color, outline, and manifest file, which is in the appPackage folder and check if it works. If the issue still persists, the developer should check the PR #525 for the updated changes.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-samples/issues/510)
 
@@ -864,11 +864,11 @@ ms.topic: reference
 <br>
 <summary><b> Error converting value "{{variable-name}}" to type 'System.Nullable`1[System.Guid]'. Path 'botId', line 1, position 31.</b></summary>
 
-* **Message**: Cannot use environment variable as Bot ID in Teams App Developer Portal.
+* **Message**: Can't use environment variable as Bot ID in Teams App Developer Portal.
 
 * **Scenario**: The developer is trying to use an environment variable as a bot ID while creating a Teams App manifest using the Developer Portal.
 
-* **Resolution**: Environment variables are not designed to be used in the GUID field. The developer should directly use the GUID value instead of the environment variable in the bot ID field.
+* **Resolution**: Environment variables aren't designed to be used in the GUID field. The developer should directly use the GUID value instead of the environment variable in the bot ID field.
 
 * **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/5011)
 
@@ -883,7 +883,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to update a bot in the Developer Portal but forgot to identify the bot by selecting an existing bot in the dropdown. When trying to save the changes, an error occurs.
 
-* **Resolution**: The developer should delete the existing instances and redo the process. This is because the Developer Portal creates a unique app ID and locks the ID for the registered Teams app, preventing duplicate app IDs for multiple apps. In this case, since the existing bot was not selected, the manifest did not update with the commands, causing the error.
+* **Resolution**: The developer should delete the existing instances and redo the process. This is because the Developer Portal creates a unique app ID and locks the ID for the registered Teams app, preventing duplicate app IDs for multiple apps. In this case, since the existing bot wasn't selected, the manifest didn't update with the commands, causing the error.
 
 * **Source**: [View](https://stackoverflow.com/questions/73298450/how-to-fix-app-failed-to-update-error-in-developer-portal)
 
@@ -928,7 +928,7 @@ ms.topic: reference
 
 * **Scenario**: While ingesting sample files, duplicate readme.md files were found under different 'parent' sample paths.
 
-* **Resolution**: Review the files and determine if they are needed. If not, delete the duplicate files. A PR has been raised to delete the second readme file residing in the /Images/ path. After the changes are pushed to the main branch, check and confirm the changes.
+* **Resolution**: Review the files and determine if they're needed. If not, delete the duplicate files. A PR has been raised to delete the second readme file residing in the /Images/ path. After the changes are pushed to the main branch, check and confirm the changes.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-samples/issues/568)
 
@@ -939,7 +939,7 @@ ms.topic: reference
 <br>
 <summary><b> SyntaxError</b></summary>
 
-* **Message**: Cannot use import statement outside a module.
+* **Message**: Can't use import statement outside a module.
 
 * **Scenario**: The developer is trying to run the Microsoft Teams sample app 'app-hello-world' locally using npm start, but encounters a syntax error related to the import statement.
 
@@ -954,11 +954,11 @@ ms.topic: reference
 <br>
 <summary><b> Not Provided</b></summary>
 
-* **Message**: Provided add-in package was not understood. Please, make sure that the file being submitted is a valid Office add-in package.
+* **Message**: Provided add-in package wasn't understood. Please, make sure that the file being submitted is a valid Office add-in package.
 
 * **Scenario**: The error occurred while importing an AppStudio app in the Developer Portal in Teams.
 
-* **Resolution**: Ensure that the Manifest Version is provided in $schema and manifestVersion.<br>Avoid using reserved ids 'about' and 'conversations' for entity id in the manifest. Also, do not specify the 'Name' property if you use reserved ids.<br>Either provide a value for property `defaultGroupCapability.meetings` or remove it.
+* **Resolution**: Ensure that the Manifest Version is provided in $schema and manifestVersion.<br>Avoid using reserved ids 'about' and 'conversations' for entity id in the manifest. Also, don't specify the 'Name' property if you use reserved ids.<br>Either provide a value for property `defaultGroupCapability.meetings` or remove it.
 
 * **Source**: [View](https://stackoverflow.com/questions/73895355/error-while-importing-appstudio-app-in-developer-portal-in-teams)
 
@@ -969,11 +969,11 @@ ms.topic: reference
 <br>
 <summary><b> Package Loading Failure</b></summary>
 
-* **Message**: Provided add-in package was not understood. Please, make sure that the file being submitted is a valid Office add-in package.
+* **Message**: Provided add-in package wasn't understood. Please, make sure that the file being submitted is a valid Office add-in package.
 
 * **Scenario**: The error occurred while trying to import an existing app to the developer portal.
 
-* **Resolution**: Ensure that you have created a zip folder that does not contain any subfolders. Select the manifest.json, color.png, outline.png and create a zip folder directly. If the issue persists, share your zip folder with the support team for further investigation.
+* **Resolution**: Ensure that you have created a zip folder that doesn't contain any subfolders. Select the manifest.json, color.png, outline.png and create a zip folder directly. If the issue persists, share your zip folder with the support team for further investigation.
 
 * **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/6743)
 
@@ -1014,7 +1014,7 @@ ms.topic: reference
 <br>
 <summary><b> TypeError</b></summary>
 
-* **Message**: Cannot set property closed of # which has only a getter.
+* **Message**: Can't set property closed of # which has only a getter.
 
 * **Scenario**: The error occurred when the developer was trying to set up the 'app-hello-world' nodejs sample using a newer version of node.
 
@@ -1033,7 +1033,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to add an app manifest to MS Teams admin center but encounters an error.
 
-* **Resolution**: Update your manifest version to a newer one if you don't need it so old. <br>Ensure your manifest Id and Bot Id are not the same. The Bot Id should be the Azure Application ID for the Bot itself, which you can get from Azure's Bot registration.<br>Review your 'validdomain' entries. They are not typically needed for a bot and are mostly needed for other app types like a Tab app.
+* **Resolution**: Update your manifest version to a newer one if you don't need it so old. <br>Ensure your manifest Id and Bot Id aren't the same. The Bot Id should be the Azure Application ID for the Bot itself, which you can get from Azure's Bot registration.<br>Review your 'validdomain' entries. They aren't typically needed for a bot and are mostly needed for other app types like a Tab app.
 
 * **Source**: [View](https://stackoverflow.com/questions/76821663/error-adding-app-manifest-to-teams-admin-center)
 
@@ -1048,7 +1048,7 @@ ms.topic: reference
 
 * **Message**: Unable to launch camera in android mobile using the provided React-js code snippet.
 
-* **Scenario**: The developer is trying to launch the camera and gallery on both android and iPhone using a React-js code snippet in a Microsoft Teams app. The camera does not open on Android, only the gallery opens without multiple selection, while it works fine on iPhone.
+* **Scenario**: The developer is trying to launch the camera and gallery on both android and iPhone using a React-js code snippet in a Microsoft Teams app. The camera doesn't open on Android, only the gallery opens without multiple selection, while it works fine on iPhone.
 
 * **Resolution**: Ensure that the necessary camera and storage permissions are granted on the Android device. Check the app's permission settings and make sure the camera and storage permissions are enabled. If the issue persists, consider debugging the code to identify any potential issues specific to Android.
 
@@ -1080,7 +1080,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to get audio record in the meeting side panel using TeamsFx-Samples and Recorder.js. The code works in `meetingChatTab` but fails in meetingSidePanel, with no console error but a DOMException: Permission denied in `meetingChatTab` (web version).
 
-* **Resolution**: The developer should ensure that they have manually granted permission at a per app level in the web browser as per the instructions in the Microsoft Teams documentation. However, it should be noted that device permissions in the meetings side panel are not yet supported in the General/Public ring.
+* **Resolution**: The developer should ensure that they have manually granted permission at a per app level in the web browser as per the instructions in the Microsoft Teams documentation. However, it should be noted that device permissions in the meetings side panel aren't yet supported in the General/Public ring.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-samples/issues/442)
 
@@ -1114,7 +1114,7 @@ ms.topic: reference
 
 * **Scenario**: The error occurred while trying to create a group chat using the $batch API from MS Team Graph API.
 
-* **Resolution**: Ensure that you are using the correct POST query while creating the group chat. After creating the group chat, try adding members to the chat using batch operation.
+* **Resolution**: Ensure that you're using the correct POST query while creating the group chat. After creating the group chat, try adding members to the chat using batch operation.
 
 * **Source**: [View](https://stackoverflow.com/questions/75531923/ms-teams-graph-api-preconditionfailed-etag-mismatch-for-thread-store-resource-w)
 
@@ -1140,7 +1140,7 @@ ms.topic: reference
 <br>
 <summary><b> PS>TerminatingError(Import-Module)</b></summary>
 
-* **Message**: Could not load file or assembly 'System.Management.Automation, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system cannot find the file specified.
+* **Message**: Couldn't load file or assembly 'System.Management.Automation, Version=7.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35' or one of its dependencies. The system can't find the file specified.
 
 * **Scenario**: The error occurred when a PowerShell script was executed via Intune on devices other than the developer's own. The script was intended to deploy corporate images to each user's workstation for use as Microsoft Teams backgrounds. The script worked fine when executed locally or on the developer's machine, but failed on other laptops when executed through Intune.
 
@@ -1157,9 +1157,9 @@ ms.topic: reference
 
 * **Message**: UnknownError
 
-* **Scenario**: The developer is trying to retrieve messages from a public Microsoft Teams channel that they are not a part of, using Microsoft Graph APIs.
+* **Scenario**: The developer is trying to retrieve messages from a public Microsoft Teams channel that they aren't a part of, using Microsoft Graph APIs.
 
-* **Resolution**: Ensure that the access token has at least ChannelMessage.Read.All permission. If not, add the required permission and try again. Check the functionality in the Graph Explorer first. Note that only team members, owners, or admins can access GET /teams/team-id/ and even admins cannot pull messages from channels they are not part of. This is by design.
+* **Resolution**: Ensure that the access token has at least ChannelMessage.Read.All permission. If not, add the required permission and try again. Check the functionality in the Graph Explorer first. Note that only team members, owners, or admins can access GET /teams/team-id/ and even admins can't pull messages from channels they aren't part of. This is by design.
 
 * **Source**: [View](https://stackoverflow.com/questions/72811357/get-microsoft-teams-public-channel-message)
 
@@ -1170,11 +1170,11 @@ ms.topic: reference
 <br>
 <summary><b> Not Applicable</b></summary>
 
-* **Message**: Batch request against /education/user/{userId} endpoint in Microsoft Graph API is not returning a 'value' property.
+* **Message**: Batch request against /education/user/{userId} endpoint in Microsoft Graph API isn't returning a 'value' property.
 
-* **Scenario**: The developer is running a batch request against the /education/user/{userId} endpoint in Microsoft Graph API and is not receiving a 'value' property in the response.
+* **Scenario**: The developer is running a batch request against the /education/user/{userId} endpoint in Microsoft Graph API and isn't receiving a 'value' property in the response.
 
-* **Resolution**: This is not a bug but a feature of the Microsoft Graph API. When calling endpoints that return a collection, the batch response contains a 'value' property with a collection of objects. However, when calling endpoints that return a single object, like /education/users/{id}, the batch response directly contains the object. No 'value' property is returned in this case.
+* **Resolution**: This isn't a bug but a feature of the Microsoft Graph API. When calling endpoints that return a collection, the batch response contains a 'value' property with a collection of objects. However, when calling endpoints that return a single object, like /education/users/{id}, the batch response directly contains the object. No 'value' property is returned in this case.
 
 * **Source**: [View](https://stackoverflow.com/questions/73894073/microsoft-graph-education-user-batch-request-not-returning-a-value-property)
 
@@ -1185,9 +1185,9 @@ ms.topic: reference
 <br>
 <summary><b> Not Applicable</b></summary>
 
-* **Message**: The 'Get-Team' command in the PowerShell script is not returning any results.
+* **Message**: The 'Get-Team' command in the PowerShell script isn't returning any results.
 
-* **Scenario**: A developer is trying to write a PowerShell script to display all teams in Microsoft Teams software. However, the 'Get-Team' command in the script is not showing any output.
+* **Scenario**: A developer is trying to write a PowerShell script to display all teams in Microsoft Teams software. However, the 'Get-Team' command in the script isn't showing any output.
 
 * **Resolution**: Ensure that the 'Get-Team' cmdlet is used with the correct parameters. The cmdlet supports retrieving teams with particular properties/information, including all teams that a specific user belongs to, all teams that have been archived, all teams with a specific display name, or all teams in the organization. For more information, see [https://learn.microsoft.com/en-us/powershell/module/teams/get-team?view=teams-ps#examples](/powershell/module/teams/get-team?view=teams-ps&preserve-view=true).
 
@@ -1200,7 +1200,7 @@ ms.topic: reference
 <br>
 <summary><b> 403</b></summary>
 
-* **Message**: You do not have the required permissions to access this item.
+* **Message**: You don't have the required permissions to access this item.
 
 * **Scenario**: The developer is trying to list tasks for a plan using MS Graph API in a Teams app. The error occurs when a non-admin user tries to access the tasks.
 
@@ -1219,7 +1219,7 @@ ms.topic: reference
 
 * **Scenario**: The error occurred when trying to remove a side-loaded application from a Team installation using the Graph API.
 
-* **Resolution**: Ensure that the Teams app does not have Resource-Specific Consent (RSC) permissions. Installation or removal of apps with RSC permissions is not supported in app-only context. If the app needs to read members of a Team and direct message users in a Team, RSC permissions are not required. Use the bot API to get members of a Team and send 1:1 personal chat messages in Teams.
+* **Resolution**: Ensure that the Teams app doesn't have Resource-Specific Consent (RSC) permissions. Installation or removal of apps with RSC permissions isn't supported in app-only context. If the app needs to read members of a Team and direct message users in a Team, RSC permissions aren't required. Use the bot API to get members of a Team and send 1:1 personal chat messages in Teams.
 
 * **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/7550)
 
@@ -1236,7 +1236,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to import a Teams custom app. The import works fine if the zip is exported and immediately re-imported. However, if the zip is exported, unzipped on a Mac or Windows computer, then re-zipped and re-imported, it fails.
 
-* **Resolution**: Ensure that when zipping the files, only the three necessary files (manifest file, color and outline icon file) are selected and zipped. Do not zip the entire folder containing these files as it results in the files being buried in a folder which the dev portal is not expecting.
+* **Resolution**: Ensure that when zipping the files, only the three necessary files (manifest file, color and outline icon file) are selected and zipped. Don't zip the entire folder containing these files as it results in the files being buried in a folder which the dev portal isn't expecting.
 
 * **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/6668)
 
@@ -1264,11 +1264,11 @@ ms.topic: reference
 <br>
 <summary><b> Not Available</b></summary>
 
-* **Message**: Admin Permissions Consent window does not close back after granting or cancelling permissions in the Desktop/ Mac Teams app.
+* **Message**: Admin Permissions Consent window doesn't close back after granting or cancelling permissions in the Desktop/ Mac Teams app.
 
-* **Scenario**: A developer is building a Microsoft Teams Tab application that requires opening the admin permissions consent page within the app. The consent window works fine on the web version of the application, but on the Desktop/ Mac Teams app, the window does not close after granting or cancelling permissions.
+* **Scenario**: A developer is building a Microsoft Teams Tab application that requires opening the admin permissions consent page within the app. The consent window works fine on the web version of the application, but on the Desktop/ Mac Teams app, the window doesn't close after granting or cancelling permissions.
 
-* **Resolution**: Do not mix Teams Tab SSO supports and the idea of having an admin do a pre-consent in the same place. Provide a separate link for admin to pre-consent or rely on the standard SSO experience.<br>Use 'microsoftTeams.authentication.getAuthToken' which handles SSO better than 'authentication.authenticate'.<br>Your redirect page should call the 'notifySuccess(…)' method to close the login screen.<br>Mark your app as 'needs admin pre-approval' and set 'defaultBlockUntilAdminAction' to 'true' and 'publisherDocsUrl' to the page with the instructions for the admin.
+* **Resolution**: Don't mix Teams Tab SSO supports and the idea of having an admin do a pre-consent in the same place. Provide a separate link for admin to pre-consent or rely on the standard SSO experience.<br>Use 'microsoftTeams.authentication.getAuthToken' which handles SSO better than 'authentication.authenticate'.<br>Your redirect page should call the 'notifySuccess(…)' method to close the login screen.<br>Mark your app as 'needs admin pre-approval' and set 'defaultBlockUntilAdminAction' to 'true' and 'publisherDocsUrl' to the page with the instructions for the admin.
 
 * **Source**: [View](https://stackoverflow.com/questions/73235113/ms-teams-tab-app-is-not-closing-back-the-admin-permissions-consent-window-in-the)
 
@@ -1279,7 +1279,7 @@ ms.topic: reference
 <br>
 <summary><b> VM5:2</b></summary>
 
-* **Message**: Failed to execute 'postMessage' on 'DOMWindow': The target origin provided does not match the recipient window's origin.
+* **Message**: Failed to execute 'postMessage' on 'DOMWindow': The target origin provided doesn't match the recipient window's origin.
 
 * **Scenario**: The developer is trying to initialize a Teams application with a Tab that serves each tenant their own self-hosted version of the app. The initialization fails when trying to redirect to the tenant specific app.
 
@@ -1294,11 +1294,11 @@ ms.topic: reference
 <br>
 <summary><b> Not Available</b></summary>
 
-* **Message**: `getTabInstances` API does not resolve in personal chat and on mobile.
+* **Message**: `getTabInstances` API doesn't resolve in personal chat and on mobile.
 
 * **Scenario**: The developer is trying to get Tab information for a personal chat using getTabInstances API, but it never resolves. The same behavior is observed on mobile as well.
 
-* **Resolution**: The getTabInstances API is not implemented on mobile and it's performance is poor. It is advised not to use it as it will get deprecated. Instead, use the Graph APIs to know what tabs are pinned in a given chat or channel. The links to these APIs are: [https://learn.microsoft.com/en-us/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http](/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) and [https://learn.microsoft.com/en-us/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http](/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true). Keep in mind that using these APIs may require extra permissions on the app registration.
+* **Resolution**: The getTabInstances API isn't implemented on mobile and its performance is poor. It's advised not to use it as it will get deprecated. Instead, use the Graph APIs to know what tabs are pinned in a given chat or channel. The links to these APIs are: [https://learn.microsoft.com/en-us/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http](/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) and [https://learn.microsoft.com/en-us/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http](/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true). Keep in mind that using these APIs may require extra permissions on the app registration.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-library-js/issues/1487)
 
@@ -1309,11 +1309,11 @@ ms.topic: reference
 <br>
 <summary><b> 100</b></summary>
 
-* **Message**: `registerBeforeUnloadHandler` does not work for mobile devices.
+* **Message**: `registerBeforeUnloadHandler` doesn't work for mobile devices.
 
 * **Scenario**: The developer is trying to use `registerBeforeUnloadHandler` and `registerOnLoadHandler` in a custom Teams app on mobile devices. The functions work well on Web and Desktop Teams but not on iOS and Android Teams.
 
-* **Resolution**: Currently, there is no alternative to `registerBeforeUnloadHandler` for mobile devices and there are no plans to support it in the future. The developer can suggest this feature in the Microsoft Teams Community.
+* **Resolution**: Currently, there's no alternative to `registerBeforeUnloadHandler` for mobile devices and there are no plans to support it in the future. The developer can suggest this feature in the Microsoft Teams Community.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-library-js/issues/1445)
 
@@ -1328,7 +1328,7 @@ ms.topic: reference
 
 * **Message**: Task Module is empty when opened in Teams desktop or web app, but works fine in Teams mobile app.
 
-* **Scenario**: A chat bot was created to send adaptive cards with buttons that start task modules. However, when these task modules are opened in Teams desktop or web app, they appear empty. The issue does not occur in Teams mobile app.
+* **Scenario**: A chat bot was created to send adaptive cards with buttons that start task modules. However, when these task modules are opened in Teams desktop or web app, they appear empty. The issue doesn't occur in Teams mobile app.
 
 * **Resolution**: Check if 'showLoadingIndicator' is set to true in your manifest. If it is, ensure that you have implemented the corresponding protocol for showing the loading indicator as per Microsoft's documentation. If the issue persists, consider debugging your code to identify any potential issues with the task module's implementation.
 
@@ -1360,7 +1360,7 @@ ms.topic: reference
 
 * **Scenario**: The developer was trying to load another app inside of a different app's tab using a Task Module in Microsoft Teams.
 
-* **Resolution**: The developer cannot load a different TeamsJS app inside of a task module/dialog. The loading information and context will be based on the manifest of the app that triggered the dialog. Instead, the developer can use Deeplinks instead of tasks.startTask method.
+* **Resolution**: The developer can't load a different TeamsJS app inside of a task module/dialog. The loading information and context will be based on the manifest of the app that triggered the dialog. Instead, the developer can use Deeplinks instead of tasks.startTask method.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-library-js/issues/1301)
 
@@ -1405,9 +1405,9 @@ ms.topic: reference
 
 * **Message**: Forbidden error when trying to do an HttpPOST request via a message card, delivered via a Custom Connector.
 
-* **Scenario**: The developer is trying to create a custom connector for their application in Teams. They are able to post message cards using PostMan, but when they try to post a message card with an Action (HttpPOST) and execute it on the click of a button, they receive a 'Failed to send' message. Further inspection reveals that an API called Execute Action is returning a 403 forbidden error.
+* **Scenario**: The developer is trying to create a custom connector for their application in Teams. They're able to post message cards using PostMan, but when they try to post a message card with an Action (HttpPOST) and execute it on the click of a button, they receive a 'Failed to send' message. Further inspection reveals that an API called Execute Action is returning a 403 forbidden error.
 
-* **Resolution**: Check the permissions for the webhook.site URL. Make sure it is added as an Action URL in the connector developer dashboard and as a valid domain in the connector manifest.json. If the issue persists, try using a different webhook.site as suggested by the Microsoft Teams support.
+* **Resolution**: Check the permissions for the webhook.site URL. Make sure it's added as an Action URL in the connector developer dashboard and as a valid domain in the connector manifest.json. If the issue persists, try using a different webhook.site as suggested by the Microsoft Teams support.
 
 * **Source**: [View](https://github.com/microsoftdocs/msteams-docs/issues/6739)
 
