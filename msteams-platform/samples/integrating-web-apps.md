@@ -34,7 +34,7 @@ Your Teams app must include required and expected collaborative features. To wor
 |Chatbots |[Bots](../bots/what-are-bots.md) |
 |Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Connectors for Microsoft 365 Groups](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors-for-microsoft-365-groups) |
 |Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
-|Modals  |[Task modules](../task-modules-and-cards/what-are-task-modules.md)  |
+|Modals  |[Dialogs (referred as task modules in TeamsJS v.1.0)](../task-modules-and-cards/what-are-task-modules.md)  |
 |Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md)  |
 
 ## Determine a subset of functionality
