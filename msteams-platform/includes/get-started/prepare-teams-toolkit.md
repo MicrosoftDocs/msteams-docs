@@ -10,7 +10,7 @@ You can use Teams Toolkit with Visual Studio Code or CLI (command-line interface
 
 # [Visual Studio Code](#tab/vscode)
 
-1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** / **⌘⇧-X** or **View** > **Extensions**).
 1. In the search box, enter **Teams Toolkit**.
 1. Select **Install**.
 
@@ -53,8 +53,8 @@ A **tenant** is a space or a container for your organization in Teams, where you
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
 
-   > [!NOTE]
-   > Ensure that you enable app uploading to preview and test apps in Teams local environment.
+> [!NOTE]
+> Ensure that you enable app uploading to preview and test apps in Teams local environment.
 
 Custom app upload is enabled through a tenant and admin must give an access to upload a custom app.
 Do you already have a tenant and an admin access? Let's check if you really do!
