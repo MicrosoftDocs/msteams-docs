@@ -67,7 +67,7 @@ You must use the web based authentication flow for the following:
 
 * Embedded content pages in tabs.
 * Configuration page, task module, and message extension.
-* Conversational bot with a task module.
+* Conversational bot with a dialog.
 
 According to the updated SameSite restrictions, a browser doesn't add a cookie to an already authenticated web site if the link derives from an external site. You must ensure your authentication cookies are marked for cross site usage `SameSite=None; Secure` or ensure that a fallback is in place.
 
