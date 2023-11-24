@@ -149,6 +149,42 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td>&#x2713;</td>
         </tr>
+                <tr>
+            <th><a href="#call">call</a></th>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#chat">chat</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+        </tr>
         <tr>
             <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
@@ -329,42 +365,6 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th><a href="#call">call</a></th>
-            <td>&#x2713;</td>
-            <td>&#x2713;*</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;*</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;*</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th><a href="#chat">chat</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
-            <td>&#x2713;</td>
-            <td>&#x2713;*</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;*</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -557,7 +557,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
 
 ## Preview capabilities awaiting host support
 
-Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and  [**search**](#search).
+Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), and [**meeting**](#meeting).
 
 Later in this article, you can find more information on each capability of the Teams JavaScript client library.
 
@@ -1754,15 +1754,15 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#pagesadaptiveCardbot">pages.adaptiveCard.bot</a></th>
@@ -1777,10 +1777,10 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td></td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#pagesappbutton">pages.appButton</a></th>
@@ -1874,6 +1874,14 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
         </tr>
     </tbody>
 </table>
+
+### `pages.adaptiveCard`
+
+[Reference] | [Sample]
+
+### `pages.adaptiveCard.bot`
+
+[Reference]| [Sample]
 
 ### `pages.appButton`
 
