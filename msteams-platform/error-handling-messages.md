@@ -12,7 +12,7 @@ ms.topic: reference
 
 <details>
 <br>
-<summary><b>Not Available</b></summary>
+<summary><b>Code: Not Available</b></summary>
 
 * **Message**: Unable to render dynamic data inside the Adaptive Card template for user mentions in Teams.
 
