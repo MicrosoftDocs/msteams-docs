@@ -24,7 +24,7 @@ items:
 
     * Proactive hello message in chat.
 
-      :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Screenshot shows the Proactive Hello message in Teams chat.":::
+      :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-result.png" alt-text="Screenshot shows the Proactive Hello message in Teams chat.":::
 
 - title: Prerequisites 
   durationInMinutes: 2
@@ -91,13 +91,13 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created.":::
 
-    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/proactive-scenario/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
+    1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/proactive-scenario/run-debug-icon.png"::: icon from the top-left corner.
 
     1. Select **Debug (Edge)** or **Debug (Chrome)** from the dropdown list.
 
         :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/debug-option-edge.png" alt-text="Screenshot shows the debugging application.":::
 
-    When debugging is successful, you'll be prompted to upload the proactive message bot to Teams on your local machine. 
+        When debugging is successful, you'll be prompted to upload the proactive message bot to Teams on your local machine. 
 
     1. Select **Add** or use the dropdown menu to add your proactive bot app to a team, chat, or meeting.
 
@@ -117,25 +117,25 @@ items:
 
     ## Take tour of source code
 
-        Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
+    Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/file-structure.png" alt-text="Screenshot shows the structure tab":::
+    :::image type="content" source="~/assets/images/proactive-scenario/file-structure.png" alt-text="Screenshot shows the structure tab":::
 
-        If you choose to use UI framework, following sample template code provides a scaffolding with React components. It contains following content:
+    If you choose to use UI framework, following sample template code provides a scaffolding with React components. It contains following content:
 
-        | Folder / File | Contents |
-        | - | - |
-        | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-        | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
-        | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
-        | `.vscode/` | VSCode files for debugging. |
-        | `appPackage/` | Templates for the Teams application manifest. |
-        | `infra/` | Templates for provisioning Azure resources. |
-        | `src/` | The source code for the application. |
-        | `src/index.js` | Application entry point and `restify` handlers for command and response. |
-        | `src/teamsBot.js` | An empty teams activity handler for bot customization. |
-        | `src/adaptiveCards/helloworldCommand.json` | A generated Adaptive Card that is sent to Teams. |
-        | `src/helloworldCommandHandler.js` | The business logic to handle a command. |
+    | Folder / File | Contents |
+    | - | - |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+    | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+    | `.vscode/` | VSCode files for debugging. |
+    | `appPackage/` | Templates for the Teams application manifest. |
+    | `infra/` | Templates for provisioning Azure resources. |
+    | `src/` | The source code for the application. |
+    | `src/index.js` | Application entry point and `restify` handlers for command and response. |
+    | `src/teamsBot.js` | An empty teams activity handler for bot customization. |
+    | `src/adaptiveCards/helloworldCommand.json` | A generated Adaptive Card that is sent to Teams. |
+    | `src/helloworldCommandHandler.js` | The business logic to handle a command. |
 
 - title: Deploy your Proactive message bot
   durationInMinutes: 1
@@ -177,7 +177,7 @@ items:
 
     # [Visual Studio Code](#tab/vscode)
 
-    Under **DEPLOYMENT** you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
+    Under **DEPLOYMENT**, you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
     
     1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
 
@@ -187,13 +187,13 @@ items:
 
     1. Select an existing resource group or create new resource group. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
-    1. Select anyone of the existing subscription.
+    1. Select one of the existing subscription.
 
         :::image type="content" source="~/assets/images/proactive-scenario/select-subscription.png" alt-text="Screenshot shows the subscription option for provisioning.":::
 
     1. Select an existing or create new resource group.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/select-resource-group.png" alt-text="Screenshot show the resource group option for provisioning.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/select-resource-group.png" alt-text="Screenshot show the resource group option for provisioning.":::
 
         > [!NOTE]
         > A dialog appears mentioning that costs may be incurred when running resources in Azure.
@@ -220,12 +220,12 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/deploy-confirmation-proactive.png" alt-text="Screenshots shows the deploy confirm.":::
     
-    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
+    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View** > **Run**) from Visual Studio Code.
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown list.
 
         :::image type="content" source="~/assets/images/proactive-scenario/debug-option-remote.png" alt-text="Screenshot shows the remote debug.":::
 
-    1. Select **Start Debugging** or **F5**button. You'll be prompted to upload the proactive message bot app to Teams.
+    1. Select **Start Debugging**. When debugging is successful, you'll be prompted to upload the proactive message bot app to Teams.
 
     1. Select **Add** or use the dropdown menu to add your proactive bot app to a team, chat, or meeting.
 
@@ -241,7 +241,7 @@ items:
 
     1. Go to Teams. You'll receive a **proactive hello** message from the bot as you refresh the browser.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Screenshot shows the bot response.":::
         
     # [Command Line](#tab/cli)
 
@@ -278,7 +278,7 @@ items:
   content: |
     Did you come up with something like this? 
     
-    :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Screenshot shows the proactive hello message.":::
+    :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-result.png" alt-text="Screenshot shows the proactive hello message.":::
 
 - content: |
     You've completed the scenario.
