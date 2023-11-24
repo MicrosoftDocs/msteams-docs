@@ -51,7 +51,7 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 
 1. Open Microsoft Teams.
 1. Select **Apps** > **Manage your apps** > **Upload an app**.
-1. Select **Upload a customized app**. 
+1. Select **Upload a customised app**. 
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option."  lightbox="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png":::
 
