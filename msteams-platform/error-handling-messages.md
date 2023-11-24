@@ -232,7 +232,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to get tokens from the current user logged in on Teams Desktop App using the `authentication.getAuthToken()` function in the Teams SDK. The error occurs when testing on Teams Desktop client (both Windows and MacOS).
 
-* **Resolution**: There are several possible resolutions. First, proactively check for token expiration and ask the user to login again if the ID token isn't valid. Second, catch the error in a callback passed into the acquiretoken ADAL JS function and ask the user to login again if the error occurs. Third, whitelist the login.microsoftonline.com endpoint in your browser extension or re-enable third party cookies in your browser if they're disabled. Lastly, add two client applications to `Authorized client applications` in Azure Portal for the Teams desktop/mobile clients and the web client: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` and `1fec8e78-bce4-4aaf-ab1b-5451cc387264`.
+* **Resolution**: There are several possible resolutions. First, proactively check for token expiration and ask the user to login again if the ID token isn't valid. Second, catch the error in a callback passed into the acquiretoken ADAL JS function and ask the user to login again if the error occurs. Third, safelist the login.microsoftonline.com endpoint in your browser extension or re-enable third party cookies in your browser if they're disabled. Lastly, add two client applications to `Authorized client applications` in Azure Portal for the Teams desktop/mobile clients and the web client: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` and `1fec8e78-bce4-4aaf-ab1b-5451cc387264`.
 
 * **Source**: [View](https://github.com/officedev/microsoft-teams-library-js/issues/1307)
 
