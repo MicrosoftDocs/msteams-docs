@@ -12,7 +12,7 @@
 
 1. Enter the name of your app.
 
-1. Select **Accounts in any organizational directory (Any Microsoft Entra tenant - Multitenant)**.
+1. Select **Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)**.
 
 1. Select **Register**.
 

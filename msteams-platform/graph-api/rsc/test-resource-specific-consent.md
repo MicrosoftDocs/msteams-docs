@@ -264,7 +264,7 @@ Example for RSC in a chat
 > In your app manifest, only include the RSC permissions that you want your app to have.
 
 > [!NOTE]
-> If the app is meant to access calling/media APIs, then the `webApplicationInfo.Id` should be the Microsoft Entra app Id of an [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot).
+> If the app is meant to access calling/media APIs, then the `webApplicationInfo.Id` should be the Microsoft Entra app ID of an [Azure Bot Service](/graph/cloud-communications-get-started#register-a-bot).
 
 ## Test added RSC permissions to a team using the Postman app
 
