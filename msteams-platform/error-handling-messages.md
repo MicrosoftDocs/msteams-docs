@@ -1345,7 +1345,7 @@ ms.topic: reference
 
 * **Scenario**: The developer is trying to update an app to allow users to open their on-premises sites in the Teams task window using AAD, Enterprise application, Application Proxy and assigned users. The app works fine on mobile and browser but fails on the Desktop application with an error related to 'X-Frame-Options'.
 
-* **Resolution**: Ensure that the website used is iFramable and is included in the valid domains of the Manifest. Set the Content-Security-Policy header to 'frame-ancestors teams.microsoft.com *.teams.microsoft.com*.skype.com'. For Internet Explorer 11 compatibility, set X-Content-Security-Policy. Alternatively, set the X-Frame-Options header to 'ALLOW-FROM [https://teams.microsoft.com/%27](https://teams.microsoft.com/%27). Refer to the documentation for tab requirements in Microsoft Teams.
+* **Resolution**: Ensure that the website used is iFramable and is included in the valid domains of the Manifest. Set the Content-Security-Policy header to 'frame-ancestors teams.microsoft.com *.teams.microsoft.com*.skype.com'. For Internet Explorer 11 compatibility, set X-Content-Security-Policy. Alternatively, set the X-Frame-Options header to 'ALLOW-FROM `https://teams.microsoft.com/%27`. Refer to the documentation for tab requirements in Microsoft Teams.
 
 * **Source**: [View](https://stackoverflow.com/questions/73867078/application-proxy-doesnt-work-in-teams-desktop-task-module-due-to-login-microso)
 
