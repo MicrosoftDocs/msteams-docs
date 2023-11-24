@@ -20,7 +20,7 @@ Deep links allow users to know more about an app and install it in different sco
 * [To browse within your app](#deep-link-to-browse-within-your-app)
 * [To go to a chat with the application](#deep-link-to-a-chat-with-the-application)
 * [Share deep link for a tab](#share-deep-link-for-a-tab)
-* [To open a dialog (referred as task module in TeamsJS v.1.0)](#deep-link-to-open-a-task-module)
+* [To open a dialog (referred as task module in TeamsJS v.1.0)](#deep-link-to-open-a-dialog)
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
