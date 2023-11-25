@@ -29,7 +29,7 @@ Following are the steps to open your app in Visual Studio Code:
     A dialog is displayed.
 
     > [!NOTE]
-    > Ensure that you install the latest version of Teams Toolkit for Visual Studio Code.Refer [Install Teams Toolkit](../../toolkit/install-Teams-Toolkit.md) for latest version.
+    > Ensure that you install the latest version of Teams Toolkit for Visual Studio Code. Download the latest version from [Install Teams Toolkit](../../toolkit/install-Teams-Toolkit.md).
 
 1. Select **Open**.
 
