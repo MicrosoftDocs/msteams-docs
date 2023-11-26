@@ -55,7 +55,7 @@ The [captureImage](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js
   
 > [!IMPORTANT]
 >
-> * You can invoke the `captureImage`, `selectMedia`, `getMedia`, and `viewImages` APIs from various Teams surfaces, including task modules, tabs, and personal apps. For more information, see [the entry points for Teams apps](../extensibility-points.md).</br>
+> * You can invoke the `captureImage`, `selectMedia`, `getMedia`, and `viewImages` APIs from various Teams surfaces, including dialogs (referred as task modules in TeamsJS v.1.0), tabs, and personal apps. For more information, see [the entry points for Teams apps](../extensibility-points.md).</br>
 > * The `selectMedia` API supports both camera and microphone capabilities through different input configurations.
 > * The `selectMedia` API for accessing microphone capability supports for mobile clients only.
 > * The maximum count of images uploaded is determined by [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) and also by the total size of array returned by the `selectMedia` API. Ensure that the array size doesn't exceed 20 MB, if the array size exceeds 20 MB, the API generates an error code 10000 that is SIZE_EXCEEDED error.
