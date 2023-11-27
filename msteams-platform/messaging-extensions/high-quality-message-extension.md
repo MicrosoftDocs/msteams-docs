@@ -390,8 +390,8 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 
 For M365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands).
 <br>
-
-<details><summary>The following is an example of multi-parameters defined in app manifest:</summary>
+<br>
+<details><summary>Example of multiple parameters defined in app manifest</summary>
 
 ```json
 "commands": [
