@@ -207,7 +207,7 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 
 > [!NOTE]
 >
-> * The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
+> * The prerequisite to get the bot response with an Adaptive Card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
 >
 > * Outlook doesn't support bot response with Adaptive Card.
 
