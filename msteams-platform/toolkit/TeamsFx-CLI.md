@@ -1,7 +1,7 @@
 ---
 title: TeamsFx Command Line Interface
 author: MuyangAmigo
-description: In this module, learn TeamsFx Command Line Interface, TeamsFx library, supported commands and its scenarios
+description: In this module, learn Teamsapp Command Line Interface, TeamsFx library, supported commands and its scenarios
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,6 +10,10 @@ zone_pivot_groups: toolkit-cli
 ---
 
 # Teams Toolkit command line interface
+
+> [!IMPORTANT]
+>
+> We recommend that you use Teamsapp CLI v3 for building your Teams app. TeamsFx CLI v1 and TeamsFx CLI v2 will soon be deprecated.
 
 Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
 
@@ -30,8 +34,6 @@ Following is a list of main Teams Toolkit CLI features:
 
 * **Teams Toolkit CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
-* **Teams Toolkit CLI SDK**: Provides access to database, such as the primary Teams Toolkit CLI code library contains simple authentication for both client and server-side code tailored for Teams developers.
-
 ## Get Started
 
 Install `teamsapp` from `npm` and run `teamsapp -h` to check all available commands:
@@ -47,7 +49,7 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 |----------------|-------------|
 | `teamsapp new`| Create new Teams application.|
 | `teamsapp add`| Adds features to your Teams application.|
-| `teamsapp account`| Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
+| `teamsapp auth`| Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
 | `teamsapp env` | Manage environments. |
 | `teamsapp provision` | Provision cloud resources in the current application.|
 | `teamsapp deploy` | Deploy the current application.  |
@@ -59,6 +61,7 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 | `teamsapp permission`| Collaborate with other developers in same project.|
 | `teamsapp update` | Update the specific application manifest file. |
 | `teamsapp upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
+| `teamsapp doctor` | Prerequisites to create Teams application.|
 
 ## Interactive mode
 
@@ -116,15 +119,15 @@ The following table lists different features to your Teams application along wit
 |:----------------  |:-------------|
 | `teamsapp add SPFxWebPart` | Auto-hosted SPFx web part tightly integrated with Microsoft Teams. |
 
-## `teamsapp account`
+## `teamsapp auth`
 
 The following table lists the cloud service accounts, such as Azure and Microsoft 365.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsapp account login`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
-| `teamsapp account logout`  | Log out of selected cloud service. Service options are Microsoft 365 or Azure. |
-| `teamsapp account show` | Display all connected cloud accounts information. |
+| `teamsapp auth login`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsapp auth logout`  | Log out of selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsapp auth show` | Display all connected cloud accounts information. |
 
 ## `teamsapp env`
 
@@ -339,24 +342,28 @@ Update the specific application manifest file.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsapp update aad-app` | Update the Microsoft Entra App in the current application. |
-| `teamsapp update teams-app` | Update the Teams App manifest to Teams Developer Portal. |
+| `teamsapp entra-app update` | Update the Microsoft Entra App in the current application. |
+| `teamsapp update` | Update the Teams App manifest to Teams Developer Portal. |
 
-### Parameters for `teamsapp update aad-app`
+### Parameters for `teamsapp entra-app update`
 
 | Parameter | Required |Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
-| `--manifest-file-path` | No | Enter the Microsoft Entra app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
+| `--entra-app-manifest-file` | No | Enter the Microsoft Entra app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
 
 ### Parameters for `teamsapp update teams-app`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
-| `--env` | Yes | Select an existing environment for the project. |
+| `--env` | Yes | Specifies the environment name for the project scaffolded by Microsoft Teams Toolkit. |
+| `--env-file` | Yes | Specifies the .env file that defines the env variables to replace in the Teams app manifest template file. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
-| `--manifest-file-path` | No | Enter the Teams app manifest template file path, it's a relative path to project root folder, defaults to `./appPackage/manifest.json`. |
+| `--manifest-file` | No | Specifies the Microsoft Teams app manifest file path. Default value: `./appPackage/manifest.json`. |
+| `--package-file` |  | Specifies the zipped Microsoft Teams app package file path. |
+| `--output-package-file` |  | Specifies the output zipped Microsoft Teams app package file path. Default value: `./appPackage/build/appPackage.${env}.zip`. |
+| `--output-manifest-file` |  | Specifies the final output Microsoft Teams app manifest file path in which the placeholders are resolved. |
 
 ## `teamsapp upgrade`
 
@@ -367,6 +374,14 @@ Upgrade the project to work with the latest version of Teams Toolkit.
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--force` | No | Force upgrade the project to work with the latest version of Teams Toolkit. Defaults to `false`. |
+
+## `teamsapp doctor`
+
+| Command | Description |
+|:----------------  |:-------------|
+| `teamsapp install` |  |
+| `teamsapp uninstall` |  |
+| `teamsapp launchinfo` |  |
 
 ::: zone-end
 
