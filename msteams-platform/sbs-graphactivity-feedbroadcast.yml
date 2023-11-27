@@ -39,8 +39,8 @@ items:
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version to be installed. |
-     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
+     | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -107,177 +107,58 @@ items:
     * Create and register a new application under App registrations
     * Use ngrok to create a tunnel to your web server's endpoints
       
-    **To create and register new application**
+    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
-    1. Go to the [Azure portal](https://portal.azure.com/). The system prompts you to sign in with your Microsoft account credentials.
-    1. Select **Microsoft Entra ID**.
-     
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-azure-active.png" alt-text="Screenshot shows the Microsoft Entra ID under Azure services." border="true":::
+    **Create a tunnel**
 
-    1. In the left navigation pane, select **App registrations**.
+      # [dev tunnel](#tab/dev)
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration-screen.png" alt-text="Screenshot shows app registrations in the overview screen." border="true":::
+      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
-    1. Select **New registration**.
+      # [ngrok](#tab/ngrok)
+      
+      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration.png" alt-text="Screenshot shows a new registration under app registrations." border="true":::
+      ---     
 
-       Register an application page appears.
+    [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="Screenshot shows the new app registration screen." border="true":::
-
-    1. Enter the following details to register an application.
-
-       1.  Set **Name** to your app name
-       1.  Set **Supported account types** to any account type
-       1.  Leave the **Redirect URI** empty
-    
-    1. Select **Register**.
-
-       App **Overview** page appears.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id2.png" alt-text="Screenshot shows the overview page of the new app." border="true":::
-
-       > [!Important]
-       > Save the **Application (client) ID** and **Directory (tenant) ID** for future reference.
-       
-    **To create tunnel for local web server**
-
-      Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-     ```bash
-     ngrok http --host-header=localhost 3978
-     ```
-     
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok2.png" alt-text="Screenshot shows tunnel creation in ngrok." border="true":::
-
-    > [!TIP]
-    > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
-
-- title: Update the Microsoft Entra app registration
-  durationInMinutes: 1
-  content: |
-    1. In the left navigation pane, select **Expose an API**.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-exposeanapi.png" alt-text="Screenshot shows the expose an API screen." border="true":::
-
-    1. Select **Set**.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/expose-an-api1.png" alt-text="Screenshot shows the set option for application ID URI." border="true":::
-
-    1. Set the **Application ID URI** in the form of `api://{AppID}`.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/setlink.png" alt-text="Screenshot shows the application ID URI entered." border="true":::
-
-    1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
-        `api:// your ngrok/{AppID}`</br>
-        
-       The following image shows the domain name:
-        
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png" alt-text="Screenshot shows the application ID URI entered." border="true":::
-
-        > [!NOTE]
+    > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
         > `For example: api://f631****.ngrok.io/c4e88a5d-e3d4-47f4-accb-0ef9de3bce8a`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
-    1. Select **Add a scope**. 
+    [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Screenshot shows the add a scope option." border="true":::
+    [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
-       Add a scope page appears.
+    **Add API Permission**
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-scope.png" alt-text="Screenshot shows the add a scope page." border="true":::
+    1. In the left pane, under **Manage**, select **API permissions**.
 
-    1. Enter the details for configuring scope.
-     
-        1. Enter **access_as_user** as the **Scope name**.
+    1. Select **+ Add a permission**.
 
-          > [!NOTE]
-          > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
-           `api://bff2****.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`.
-
-        1. Set **Who can consent** to **Admins and users**.
-        1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
-    
-            * Enter **Teams can access the user’s profile** as **Admin consent display name**
-
-            * Enter **Allows Teams to call the app’s web APIs** as the current user as **Admin consent description**
-
-            * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**
-
-            * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**
-  
-        1. Ensure that **State** is set to **Enabled**.
-
-        1. Select **Add scope** to save.
-
-       Your application ID URI is created with scope name.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/accessasuser.png" alt-text="Screenshot shows the added scope for the application ID URI." border="true":::
-
-    1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
-    
-    1. Select **Add a client application**. 
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-client.png" alt-text="Screenshot shows the add a client application option." border="true":::
-
-       Add a client application pane appears.
-
-    1. Enter the Client ID for desktop and web application separately that you want to authorize. It's the application ID of client application that you want to authorize.
-       
-       | **Client ID** | **For authorizing** |
-       |--------|-------------|
-       | `1fec8e78-bce4-4aaf-ab1b-5451cc387264` | Teams desktop or mobile application |
-       | `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` | Teams web application |
-
-    1. Select **Authorized scopes** to determine, which type of token return the service.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Screenshot shows the authroized scope of the client application." border="true":::
-
-       The following image displays the Client ID:
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Screenshot shows the client application ID." border="true":::
-
-    1. In the left pane, select **API Permissions**. 
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-api-permission.png" alt-text="Screenshot shows the select API permissions page." border="true":::
-
-       > [!NOTE]
-       > Users need to consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
-
-    1. Select **Add a permission**.
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configured-permission1.png" alt-text="Screenshot shows the add a permission option." border="true":::
-
-       Request API permission page appears.
+     :::image type="content" source="../../assets/images/include-files/add-permission.png" alt-text="Screenshot show the option to select Add permission.":::
 
     1. Select **Microsoft Graph**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectmicrosoftgraph.png" alt-text="Screenshot shows the option to select Microsoft graph." border="true":::
-
     1. Select **Delegated permissions**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions.png" alt-text="Screenshot shows the option to select delegated permissions." border="true":::
-
-    1. Add the following permissions:</br>
-         * **Directory.Read.All**
-         * **Directory.ReadWrite.All**
-         * **TeamsActivity.Send**
-         * **TeamsAppInstallation.ReadForUser**
-         * **TeamsAppInstallation.ReadWriteForUser**
-         * **User.Read**
-          
-       > [!NOTE]
-       > User. Read is enabled by default.
-
+    1. Select the following permissions:
+    * **Directory.Read.All
+    * **Directory.ReadWrite.All
+    * **TeamsActivity.Send
+    * **TeamsAppInstallation.ReadForUser
+    * **TeamsAppInstallation.ReadWriteForUser
+    * **User.Read
+    
+     > [!NOTE]
+      > User. Read is enabled by default.
+      
     1. Select **Add permissions**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Screenshot shows the various API permissions." border="true":::
+     :::image type="content" source="../../assets/images/include-files/select-add-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions3.png" alt-text="Screenshot shows the various API permissions and highlights the add permissions button." border="true":::
-
-   
-    1. Select **Add a permission**.
+    1. Select **+ Add a permission**.
 
     1. Select **Microsoft Graph**.
  
@@ -287,7 +168,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions1.png" alt-text="Screenshot shows the option to select application permissions." border="true":::
 
-    1. Add the following permissions:</br> 
+    1. Select the following permissions:</br> 
 
          * **Directory.Read.All**
          * **TeamsActivity.Send** 
@@ -300,64 +181,43 @@ items:
     1. Ensure to grant the admin consent for the required permissions.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Screenshot shows the admin consent message." border="true":::
+    1. Ensure to grant the admin consent for the required permissions.
 
-    1. From the left pane, select **Authentication** to set a redirect URI. 
-
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-authentication.png" alt-text="Screenshot shows the authentication screen of your app." border="true":::
-
-       > [!NOTE]
-       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-               
-         1. Select **Add a platform**.
-
-         1. For this tutorial, select **Web**.
-
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-platform.png" alt-text="Screenshot shows the add a platform option." border="true":::
-
-         1. Enter the redirect URI for your app by appending `Auth/end` to fully qualified domain name:</br> 
-           `https://ngrok.io/Auth/end`. </br>
-
-         1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
-             * **ID tokens**
-             * **Access tokens**
-   
-         1. Select **Configure**.
-
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configure-web-details.png" alt-text="Screenshot shows the configure web window." border="true":::
-
-         1. Select **Add URI** and enter `https://ngrok.io/Auth/Start`. 
-
-         1. Select **Save**.
-
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-uri.png" alt-text="Screenshot shows how to add the URI." border="true":::
-
-    **To create client secret**
-
-    1. In the left pane, select **Certificates & secrets**. 
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-certificate.png" alt-text="Screenshot shows the select certificates & secrets screen." border="true":::
-
-    1. In the **Client secrets** section, select **New client secret**. 
-
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret.png" alt-text="Screenshot shows client secrets section." border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Screenshot shows the admin consent message." border="true":::
+     
+     > [!NOTE]
+      >
+       > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+       > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
     
-       The **Add a client secret** window appears.  
+    **Add a web authentication**
 
-    1. Enter a value in **Description**.
+    1. In the left pane, under **Manage**, select **Authentication**.
 
-    1. Select **Add**.
+    1. Select **Add a platform** > **Single-page application**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secret-save.png" alt-text="Screenshot shows the add a client screen." border="true":::
+     :::image type="content" source="../../assets/images/include-files/platform-web.png" alt-text="Screenshot shows the selection of web authentication.":::
 
-    1. In the **Value** column, select **Copy to clipboard**.
+    1. Enter the redirect URI for your app by appending `auth-end` to the fully qualified domain name. For example, `https://your-devtunnel-domain/auth-end` or `https://your-ngrok-domain/auth-end`.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret-code.png" alt-text="Screenshot shows how to copy the client secret code." border="true":::
-       
-       > [!Important]
-       > Save the **Client secrets** value or app password for future reference.
+    1. Under **Implicit grant and hybrid flows**, select the **Access tokens** and **ID tokens** checkboxes.
+
+    1. Select **Configure**.
+
+     :::image type="content" source="../../assets/images/include-files/configure-web.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
+
+    1. Under **Web**, select **Add URI**.
+
+    1. Enter `https://token.botframework.com/.auth/web/redirect`.
+
+    1. Select **Save**.
+
+     :::image type="content" source="../../assets/images/include-files/web-add-uri.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
+
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
 
-- title: Set up app settings and manifest files
+- title: Set up app settings
   durationInMinutes: 1
   content: |
     1. Go to **appsettings.json** file in cloned repository.
@@ -373,6 +233,9 @@ items:
       
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details1.png" alt-text="Screenshot shows the changes in the app settings file." border="true":::
 
+- title: Set up manifest file
+  durationInMinutes: 1
+  content: |
     1. Go to **manifest.json** file in cloned repository.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-location-package.png" alt-text="Screenshot shows the location of the app settings file." border="true":::
@@ -384,6 +247,7 @@ items:
          * Set `validDomains` to `[WebAppDomainName]`.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-file.png" alt-text="Screenshot shows the changes in the manifest file." border="true":::
+
 
 - title: Build and run the service
   durationInMinutes: 1
