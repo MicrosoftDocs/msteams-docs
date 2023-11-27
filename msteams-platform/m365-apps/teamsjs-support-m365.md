@@ -1889,9 +1889,14 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
 
 [Reference] | [Sample]
 
+Preview. Subcapability for interacting with Adaptive Card pages.
+
 ### `pages.adaptiveCard.bot`
 
 [Reference]| [Sample]
+
+Preview. Subcapability for interaction with Adaptive Card pages that need to communicate with the Bot Framework.
+
 > [!NOTE]
 > The following methods aren't supported on the Teams mobile client:
 >
