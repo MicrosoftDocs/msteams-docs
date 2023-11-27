@@ -26,7 +26,7 @@ items:
 
     This step-by-step guide helps you to build in-meeting document signing app. You'll see the following output after you've completed this guide:
 
-      :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Final Output":::
+      :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Screenshot shows the final output screen.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -66,7 +66,7 @@ items:
     1. Select **Upload an app**.
     1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-custom-app.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-custom-app.png" alt-text="Diagram shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
         > Contact your Teams administrator, if you don't find the option to upload a custom app.  
@@ -91,30 +91,31 @@ items:
 
     1. Go to the [Azure portal](https://ms.portal.azure.com/).
     
-    2. Select **App registrations**.
+    1. Select **App registrations**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Screenshot shows the app registration page in the Azure portal.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/azure-portal.png" alt-text="Screenshot shows the Azure AD portal page.":::
 
-    3. Select **+ New registration**.
+    1. Select **+ New registration**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registrations.png" alt-text="Screenshot shows the New registration page in the Azure portal.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registrations.png" alt-text="Screenshot shows the New registration page on Azure AD portal.":::
 
-    4. Enter the name of your app, which is displayed to the user. The app name can be changed in later, if required.
+    1. Enter the name of your app, which is displayed to the user. The app name can be changed in later, if required.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/register-app.png" alt-text="Screenshot shows the App registration page in the Azure Portal.":::
+    1. Select **Multitenant** as the type of user account that can access your app.
 
-    5. Select **Multitenant** as the type of user account that can access your app.
+    1. Select **Register**.
 
-    6. Select **Register**.
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/register-app.png" alt-text="Screenshot shows the App registration page on Azure AD portal.":::
+
         A message pops up on the browser stating that the app was created.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created-msg.png" alt-text="Register app in the Azure Portal.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created-msg.png" alt-text="Screenshot shows how to register app on Azure AD portal.":::
 
         The page with app ID and other configurations is displayed.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created.png" alt-text="App registration is successful.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-created.png" alt-text="Screenshot shows a successful app registration.":::
 
-    7. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
+    1. Note and save the app ID from **Application (client) ID**. You'll need it for updating the Teams app manifest later.
 
     Your app is registered in Microsoft Entra ID. You should now have the app ID for your app.
 
@@ -128,7 +129,7 @@ items:
 
       The ngrok tunnel information appears.
 
-      :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok1.png" alt-text="ngrok HTTPS URL":::
+      :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok1.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
 
 - title: Update the Microsoft Entra app registration
   durationInMinutes: 1
@@ -138,31 +139,31 @@ items:
 
     1. Select **Microsoft Entra ID**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-azure-directory.png" alt-text="Select Microsoft Entra ID":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-azure-directory.png" alt-text="Screenshot shows how to select the Azure active directory.":::
 
-    1. In the left pane, select **App Registrations**.
+    1. In the left pane, select **App registrations**.
 
     1. Select your app.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registration.png" alt-text="App registration":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-registration.png" alt-text="Screenshot shows the app registration option.":::
 
     1. Under **Manage**, select **Expose an API**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/exposeanapi.png" alt-text="Expose an API":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/exposeanapi.png" alt-text="Screenshot shows the expose an API option.":::
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-set.png" alt-text="Screenshot that shows the Application ID URI to Add.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-set.png" alt-text="Screenshot shows the application ID URI to add.":::
 
     1. Use the `api://your ngrok/botid-{AppID}` format for the **Application ID URI**.
 
     1. Update the **Application ID URI** and select **Save**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-uri1.png" alt-text="Screenshot that shows the App ID URI with Save option highlighted in red.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-uri1.png" alt-text="Screenshot shows the application ID URI with save option highlighted in red.":::
         
        The following image shows the Application ID URI:
         
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appIDuri1.png" alt-text="Screenshot shows the Expose an API showing application ID URI.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appIDuri1.png" alt-text="Screenshot shows the expose an API screen with the application ID URI.":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -170,7 +171,7 @@ items:
 
     1. Select **Add a scope**. 
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addascope.png" alt-text="Screenshot that shows the Add a scope highlighted in red.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addascope.png" alt-text="Screenshot shows the add a scope option highlighted in red.":::
     
     1. Enter **access_as_user** as the **Scope name**.
 
@@ -192,53 +193,53 @@ items:
 
        The following image shows the fields and the values:
 
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-a-scope-page1.png" alt-text="Add a scope page":::
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-a-scope-page1.png" alt-text="Screenshot shows the add a scope page.":::
 
         > [!NOTE]
         > The **Scope name** must match with the **Application ID URI** with `/access_as_user` appended at the end.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/scopes1.png" alt-text="Scopes":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/scopes1.png" alt-text="Screenshot shows the scopes of the application.":::
     
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
 
     1. Select **Add a client application**. 
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-client-application.png" alt-text="Select client application":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-client-application.png" alt-text="Screenshot shows the select client application option.":::
 
     1. Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-token-generator-addclientapp1.png" alt-text="Add client application 1":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-token-generator-addclientapp1.png" alt-text="Screenshot shows how to add the first client ID.":::
 
        You can enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-token-generator-addclientapp2.png" alt-text="Add client application 2":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-token-generator-addclientapp2.png" alt-text="Screenshot shows how to add the first client ID.":::
 
     1. Select **Authorized scopes**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authorizedscope1.png" alt-text="Add authorozation":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authorizedscope1.png" alt-text="Screenshot shows the authorozation scopes.":::
 
         The following image displays the client ID:
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Client applications"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/clientapps.png" alt-text="Screenshot shows the client application IDs."::: 
   
     1. In the left pane, select **API permissions**. 
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-api-permissions.png" alt-text="Select API permissions"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-api-permissions.png" alt-text="Screenshot shows how to select API permissions."::: 
         
        > [!NOTE]
        > Users need to consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addpermission.png" alt-text="Add permission"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/addpermission.png" alt-text="Screenshot shows how to add permissions."::: 
 
     1. Select **Microsoft Graph**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/microsoft-graph.png" alt-text="Microsoft Graph"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/microsoft-graph.png" alt-text="Screenshot shows Microsoft Graph API option."::: 
 
     1. Select **Delegated permissions**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/delegated-permission.png" alt-text="Delegated-permission"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/delegated-permission.png" alt-text="Screenshot shows the delegated permissions option."::: 
 
     1. Add the following permissions:
          * **email**
@@ -250,7 +251,7 @@ items:
 
     1. Select **Add permissions**.  
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/permissions.png" alt-text="Delegated-permission":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/permissions.png" alt-text="Screenshot shows how to add delegated permissions.":::
 
     1. From the left pane, select **Authentication** to set a redirect URI. 
 
@@ -259,7 +260,7 @@ items:
                
          1. Select **Add a platform** > **Web**.
 
-             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-authentication.png" alt-text="Select Authentication":::
+             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-authentication.png" alt-text="Screenshot shows how to add an authentication platform.":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to fully qualified domain name:</br> 
             `https://your ngrok/auth-end`. </br>
@@ -270,7 +271,7 @@ items:
 
          1. Select **Configure**.
             
-             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authend.png" alt-text="Auth-end":::
+             :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/authend.png" alt-text="Screenshot shows the configure web window.":::
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
@@ -281,27 +282,27 @@ items:
 
     1. Go to the **appsettings.json** file in the cloned repository.
 
-          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettingslocation.png" alt-text="App settings location":::
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettingslocation.png" alt-text="Screenshot shows the app settings file location.":::
 
     1. Open the **appsettings.json** file and update the following information: 
 
          * Replace all occurrences of `<<aad-id>>` with your app's Microsoft App ID.
          * Replace all occurrences of `<<client secret>>` with your app's client secret.
 
-          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings2.png" alt-text="App settings":::
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings2.png" alt-text="Screenshot shows the changes in the app settings file.":::
 
     **To configure app manifest file**
 
     1. Go to the **manifest.json** file in the cloned repository.
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifestlocation.png" alt-text="Manifest file location":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifestlocation.png" alt-text="Screenshot shows the manifest file location.":::
     
     1. Open the **manifest.json** file and update the following information.
 
          * Replace all occurrences of `<<deployment-url>` with your fully qualified ngrok domain name.
          * Replace all occurrences of `<<aad-id>>` with your app's **Microsoft App ID**.
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-update-file.png" alt-text="Screenshot shows the Manifest file." lightbox="~/assets\images\sbs-inmeeting-doc-signing\manifest.png":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-update-file.png" alt-text="Screenshot shows the changes in the manifest file." lightbox="~/assets\images\sbs-inmeeting-doc-signing\manifest.png":::
 
 
 - title: Build and run the service
@@ -313,21 +314,21 @@ items:
 
        1. Go to **File** > **Open** > **Project/Solution...**.
     
-           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/project-solution.png" alt-text="Open file":::
+           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/project-solution.png" alt-text="Screenshot shows how to open a project in Visual Studio.":::
 
        1. Open the **MeetingSigning.sln** file in Visual Studio.
 
-           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/Tokenfileready.png" alt-text="Solution File":::   
+           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/Tokenfileready.png" alt-text="Screenshot shows how to select the project file.":::
 
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-            :::image type="content" source="~/assets/images/meetings-side-panel/certificate.png" alt-text="Trust Certificate":::
+            :::image type="content" source="~/assets/images/meetings-side-panel/certificate.png" alt-text="Screenshot shows an install certificate window.":::
 
           The following webpage opens.
 
-           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-ready.png" alt-text="App ready"::: 
+           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-ready.png" alt-text="Screenshot shows a webpage with a message to install the app in Teams.":::
 
 - title: Add Meeting Signing app to Teams
   durationInMinutes: 1
@@ -341,7 +342,7 @@ items:
        * outlineIcon.png
        * colorIcon.png
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/zipfile.png" alt-text="Zip file"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/zipfile.png" alt-text="Screenshot shows the created zip file."::: 
     
     1. Create a meeting in Teams with a few presenters and attendees.
 
@@ -351,39 +352,39 @@ items:
     
     1. In the pop-up window, select **Manage apps**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-teams.png" alt-text="Add an app to Teams"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-teams.png" alt-text="Screenshot shows how to add an app in a meeting.":::
     
     1. Select **Upload an app** > **Upload a custom app**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-an-app.png" alt-text="Upload an app to Teams"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-an-app.png" alt-text="Screenshot shows the upload a custom app option in Teams."::: 
     
     1. Select the .zip file you've created in the **Manifest** folder and select **Open**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-open.png" alt-text="Select Open"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-open.png" alt-text="Screenshot shows how to open a custom app."::: 
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-add.png" alt-text="Add the app":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-add.png" alt-text="Screenshot shows how to add the app.":::
 
        Now the meeting signing app is added to the meeting.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-to-meeting.png" alt-text="Add app to meeting":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-to-meeting.png" alt-text="Screenshot shows the app added to the meeting.":::
     
     1. Go back to the meeting details page, and select **Apps** > **Meeting Signing** app.
         
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-meeting-signing-app.png" alt-text="Add meeting signing app to meeting":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-meeting-signing-app.png" alt-text="Screenshot shows how to add the app to a live meeting.":::
 
     1. Select **Save**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/install-meeting-signing.png" alt-text="Install meeting signing app"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/install-meeting-signing.png" alt-text="Screenshot shows the completed install of the meeting signing app."::: 
 
        The Meeting Signing app is visible in the meeting window.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-app.png" alt-text="Meeting signing app":::         
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-app.png" alt-text="Screenshot shows the meeting signing app in the meeting window.":::        
 
     1. Go to the meeting chat in Teams, and select **Meeting Signing** tab, and then select **Create Documents**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documentation.png" alt-text="Create Documentation"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documentation.png" alt-text="Screenshot shows the create documentation option.":::
 
     1. Enter the following details in the Meeting Signing window.
 
@@ -392,40 +393,40 @@ items:
         1. Enter signers of the documents.
         1. Select **Done**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documents.png" alt-text="Create Documents":::  
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/create-documents.png" alt-text="Screenshot shows the creation of a documentation in a meeting."::: 
 
     1. Select **Consent** to give permission to the app to access data from your account.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/give-consent.png" alt-text="Give Consent"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/give-consent.png" alt-text="Screenshot shows how to give consent."::: 
 
     1. Sign in into Teams with your credentials and select **Sign in**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/teams-login-after-consent.png" alt-text="Teams Login after Consent"::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/teams-login-after-consent.png" alt-text="Screenshot shows Teams login after giving consent.":::
 
        In Teams, you'll get a notification for successfully creating the document.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-success-upload.png" alt-text="Doc Success Upload":::              
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-success-upload.png" alt-text="Screenshot shows a document created success message.":::          
 
      1. Go back to Teams meeting, and now you can view the documents in the side panel. 
      
      1. Select **Share to meeting** to share the document in meeting.
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/view-doc-in-sidepanel.png" alt-text="View doc in sidepanel":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/view-doc-in-sidepanel.png" alt-text="Screenshot shows the document in the the meeting side panel.":::
 
      1. Select **Click to sign!**.
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-shared-in-meeting.png" alt-text="Document shared in meeting":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-shared-in-meeting.png" alt-text="Screenshot shows document shared in meeting.":::
         
      1. Select **Done**.   
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-signing-confirm.png" alt-text="Meeting Signing confirmation":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-signing-confirm.png" alt-text="Screenshot shows the meeting signing app's confirmation dialog.":::
 
 - title: Complete challenge
   durationInMinutes: 1
   content: |
     Did you come up with something like this?
 
-       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="final output for Meeting Signing app"::: 
+       :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Screenshot shows the final output for the meeting signing app."::: 
 
 - content: |
     Congratulations! You've completed the tutorial to create the **In-meeting Signing** app!
