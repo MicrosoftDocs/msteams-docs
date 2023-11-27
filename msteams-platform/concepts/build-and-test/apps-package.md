@@ -25,11 +25,11 @@ When a user installs your app in Teams, they install an app package that contain
 
 An app manifest describes your app's configuration, including its capabilities, required resources, and other significant attributes with the name `manifest.json` in the app package.
 
-You can create an app through one of the following platforms:
+You can create an app and configure the app manifest through one of the following platforms:
 
-* Teams Toolkit - A set of tools and extensions in Microsoft Visual Studio Code and Visual Studio to create, debug, and deploy an app. When creating an app, the app manifest generates from a template file based on the selected capabilities. You can then customize and validate the manifest file and zip the app package in [Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) or [Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements.
+* **Teams Toolkit**: A set of tools and extensions in Microsoft Visual Studio Code and Visual Studio to create, debug, and deploy an app. When creating an app, the app manifest generates from a template file based on the selected capabilities. You can then customize and validate the manifest file and zip the app package in [Visual Studio Code](../../toolkit/TeamsFx-preview-and-customize-app-manifest.md) or [Visual Studio](../../toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-vs.md) based on your requirements.
 
-* Teams Developer Portal - A web-based platform that helps you create your app, configure your app manifest, and generate an app package. To create an app through Teams Developer Portal, see [steps to create and register an app](teams-developer-portal.md).
+* **Teams Developer Portal**: A web-based platform that helps you create your app, configure your app manifest, and generate an app package. To create an app through Teams Developer Portal, see [steps to create and register an app](teams-developer-portal.md).
 
 You can add bot, tab, message extensions, and other capabilities to your app by updating the app manifest with the required app capability. For more information, see [build app with app capabilities](../../get-started/get-started-overview.md).
 
