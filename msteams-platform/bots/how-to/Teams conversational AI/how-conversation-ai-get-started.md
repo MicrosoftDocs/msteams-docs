@@ -420,6 +420,37 @@ app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: Ap
 });
 ```
 
+If you use either sequence or monologue or tools augmentation, it's impossible for the model to hallucinate a invalid function name or or an invalid action name, or to not returning the correct parameters. You must create a new actions file and define all the actions you want the prompt to use for augmentation.
+
+```javascript
+[
+    {
+        "name": "LightsOn",
+        "description": "Turns on the lights"
+    },
+    {
+        "name": "LightsOff",
+        "description": "Turns off the lights"
+    },
+    {
+        "name": "Pause",
+        "description": "Delays for a period of time",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "time": {
+                    "type": "number",
+                    "description": "The amount of time to delay in milliseconds"
+                }
+            },
+            "required": [
+                "time"
+            ]
+        }
+    }
+]
+```
+
 ### Register Action Handlers
 
 Action handlers help users achieve the goals, which is shared in the user intents.
@@ -435,32 +466,26 @@ In the following example of a light bot, we have the `LightsOn`, `LightsOff`, an
 ```javascript
 // Register action handlers
 app.ai.action('LightsOn', async (context: TurnContext, state: ApplicationTurnState) => {
-    state.conversation.value.lightsOn = true;
+    state.conversation.lightsOn = true;
     await context.sendActivity(`[lights on]`);
-    return true;
+    return `the lights are now on`;
 });
 
 app.ai.action('LightsOff', async (context: TurnContext, state: ApplicationTurnState) => {
-    state.conversation.value.lightsOn = false;
+    state.conversation.lightsOn = false;
     await context.sendActivity(`[lights off]`);
-    return true;
+    return `the lights are now off`;
 });
 
-app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState, data: TData) => {
-    const time = data.time ? parseInt(data.time) : 1000;
-    await context.sendActivity(`[pausing for ${time / 1000} seconds]`);
-    await new Promise((resolve) => setTimeout(resolve, time));
-    return true;
-});
+interface PauseParameters {
+    time: number;
+}
 
-// Register a handler to handle unknown actions that might be predicted
-app.ai.action(
-    AI.UnknownActionName,
-    async (context: TurnContext, state: ApplicationTurnState, data: TData, action: string | undefined) => {
-        await context.sendActivity(responses.unknownAction(action || 'unknown'));
-        return false;
-    }
-);
+app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState, parameters: PauseParameters) => {
+    await context.sendActivity(`[pausing for ${parameters.time / 1000} seconds]`);
+    await new Promise((resolve) => setTimeout(resolve, parameters.time));
+    return `done pausing`;
+});
 ```
 
 ## Next step
