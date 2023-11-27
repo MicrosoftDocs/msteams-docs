@@ -91,7 +91,7 @@ Use when you want to combine text and media, like audio or video.
 
 ### People
 
-Best used when you to efficiently convey who's involved with a task.
+Use when you want to efficiently communicate the individuals involved in a task.
 
 #### Mobile
 
@@ -681,3 +681,4 @@ It's easy to send multiple cards into a conversation, but once cards scroll out 
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Respond to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 * [User Specific Views](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md)
+* [Adaptive Card Previewer](../../concepts/build-and-test/adaptive-card-previewer.md)

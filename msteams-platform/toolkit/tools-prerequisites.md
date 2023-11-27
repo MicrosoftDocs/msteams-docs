@@ -13,14 +13,13 @@ Before you create your Teams app project, ensure that the prerequisites are in p
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
-* [Sideload permission](tools-prerequisites.md)
-* [Verify sideloading permission](#verify-sideloading-permission)
+* [Verify custom app upload permission](#verify-custom-app-upload-permission)
 
-## Basic requirements to build your Teams app
+## Requirements to build your Teams app
 
 Ensure the following requirements are met before you start building your Teams app:
 
-| &nbsp; | Basic requirements | For using| For environment type|
+| &nbsp; | Requirements | For using| For environment type|
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; | &nbsp; |
    | &nbsp; | Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SharePoint Framework (SPFx)|
@@ -39,7 +38,7 @@ Ensure the following requirements are met before you start building your Teams a
 
 Ensure the following requirements are met before you start building your Teams app:
 
-| &nbsp; | Basic requirements | For using| For environment type|
+| &nbsp; | Requirements | For using| For environment type|
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; | &nbsp; |
    | &nbsp; | [Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SPFx |
@@ -100,7 +99,7 @@ You can sign up for the developer program using one of the following account typ
 
        This account provides access to all small, medium, and enterprise business-level Microsoft cloud services. The services include Azure, Microsoft Intune, and Microsoft 365. 
 
-       When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Microsoft Azure Active Directory (Azure AD) to represent your organization.
+       When you sign up to one of these services as an organization, a cloud-based directory is automatically provisioned in Microsoft Entra ID to represent your organization.
 
     :::column-end:::
     :::column span="1":::
@@ -135,17 +134,17 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 
 While creating Teams app using SPFx environment, you must have a SharePoint collection site administrator account. It’s required for deploying and hosting your app on SharePoint site. If you're using a Microsoft 365 developer program tenant, you can use the administrator account you created at the time.
 
-## Verify sideloading permission
+## Verify custom app upload permission
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
-You can verify if the sideloading permission is enabled using either Visual Studio Code or Teams client.
+You can verify if the app upload permission is enabled using either Visual Studio Code or Teams client.
 
 <br>
 <details>
-<summary><b>Verify sideloading permission using Visual Studio Code</b></summary>
+<summary><b>Verify custom app upload permission using Visual Studio Code</b></summary>
 
-You can use this method to verify sideloading permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify sideloading permission using Teams client.
+You can use this method to verify custom app upload permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify custom app upload permission using Teams client.
 
 1. Open **Visual Studio Code**.
 1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
@@ -161,33 +160,33 @@ You can use this method to verify sideloading permission only after you have cre
 
 1. Verify if you can see the option **Sideloading enabled** as shown in the following image:
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the Sideloading enabled option highlighted in red.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/sideloading_1.png" alt-text="Screenshot shows the custom app upload enabled option highlighted in red.":::
 
 </details>
 <br>
 <details>
-<summary><b>Verify sideloading permission using Teams client</b></summary>
+<summary><b>Verify custom app upload permission using Teams client</b></summary>
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-app_1.png" alt-text="Screenshot showing the options to upload an app highlighted in red.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-an-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
-1. Check if you can see the option **Upload a custom app** as you can see in the following image:
+1. Check if you can see the option **Upload a customised app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-custom-app1_1.png" alt-text="Screenshot showing the Upload a custom app option highlighted in red.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-customised-app.png" alt-text="Screenshot shows the option to Upload a customised app in Teams.":::
 
 </details>
 
-### Enable sideloading using admin center
+### Enable custom app upload using admin center
 
-If sideloading option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for sideloading.
+If the custom app upload option isn’t visible in Teams Toolkit extension in Visual Studio Code or if the option to upload a custom app isn’t available in Teams, it indicates that you don't have the required permission for custom app upload.
 
-You must enable sideloading for your app in Teams:
+You must enable custom app upload in Teams:
 
-* If you're a tenant admin, enable the sideloading setting for your tenant or organization in the Teams admin center.
-* If you aren't a tenant admin, contact your tenant admin to enable sideloading.
+* If you're a tenant admin, enable the custom app upload setting for your tenant or organization in the Teams admin center.
+* If you aren't a tenant admin, contact your tenant admin to enable custom app upload.
 
-If you have admin rights, you can enable sideloading:
+If you have admin rights, you can enable custom app upload:
 
   1. Sign in to [Microsoft 365 admin center](https://admin.microsoft.com/Adminportal/Home?source=applauncher#/homepage#/) with your admin credentials.
 
@@ -214,9 +213,9 @@ If you have admin rights, you can enable sideloading:
   5. Select **Save**.
 
      > [!Note]
-     > It can take up to 24 hours for sideloading to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
+     > It can take up to 24 hours for custom app upload to become active. In the meantime, you can use **upload for your tenant** to test your app. To upload the .zip package file of the app, see [upload custom apps](/microsoftteams/teams-app-setup-policies).
 
-     Ensure that you have the sideloading permission using the steps mentioned in [verify sideloading permission using Visual Studio Code or Teams client](#verify-sideloading-permission).
+     Ensure that you have the app upload permission using the steps mentioned in [verify custom app upload permission using Visual Studio Code or Teams client](#verify-custom-app-upload-permission).
 
 </details>
 

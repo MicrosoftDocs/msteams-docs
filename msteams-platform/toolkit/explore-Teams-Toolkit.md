@@ -114,7 +114,7 @@ From the task pane, you can see the following sections:
 
         To provision, deploy, and publish your Teams app, you need the following features:
         
-        * **Provision**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager, and it registers your app with Azure AD automatically.
+        * **Provision**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager, and it registers your app with Microsoft Entra ID automatically.
         
         * **Deploy**: Deploy the source code to Azure.
        
@@ -286,7 +286,7 @@ From the task pane, you can see the following sections:
 
         To provision, deploy, and publish your Teams app, you need the following features:
         
-        * **Provision in the cloud**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager, and it registers your app with Azure AD automatically.
+        * **Provision in the cloud**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager, and it registers your app with Microsoft Entra ID automatically.
 
         * **Zip Teams metadata package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
         

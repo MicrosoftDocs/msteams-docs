@@ -1,0 +1,588 @@
+### YamlMime:Tutorial
+title:  Build API-based message extension
+metadata:
+  title: Build API-based message extension
+  description: In this learn module, learn how to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
+  audience: Developer
+  level: Advanced
+  ms.date: 10/16/2023
+  ms.topic: interactive-tutorial
+  nextTutorialHref: messaging-extensions/build-bot-based-message-extension.md                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+  nextTutorialTitle: Build message extension using Bot Framework
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+
+    > [!NOTE]
+    >
+    > * API-based message extensions only support search commands.
+    > * API-based message extensions are available only in [public developer preview](resources/dev-preview/developer-preview-intro.md).
+
+    Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
+
+    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a messaging extension to fetch and display customer data directly from Teams, which helps save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+
+   Here's a list of tools you need for building and deploying your apps.
+
+   | Install | For using... |
+   | --- | --- |
+   |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, or call - all in one place.|
+   |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
+   |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
+   |[Azure account](https://azure.microsoft.com/free/) | Access to Azure resources.|
+   |OpenAPI Description (OAD) document| A document that describes the capabilities of your API. For more information, see [OpenAPI Description](https://learn.openapis.org/specification/structure.html).|
+
+   ## Set up your Teams development tenant
+
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your custom app. Let's verify if you're ready to develop with the tenant.
+
+   ### Check for custom app upload option
+
+   After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
+
+    > [!NOTE]
+    > custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
+
+   Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+   Verify if you can upload a custom app in Teams:
+
+    1. In the Teams client, select the **Apps** icon.
+    1. Select **Manage your apps**.
+    1. Select **Upload an app**.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
+
+        > [!NOTE]
+        > Contact your Teams administrator, if you don't find the option to upload a custom app.
+
+   ### Create a free Teams developer tenant (optional)
+
+   If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+
+   1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+   1. Select **Join Now** and follow the onscreen instructions.
+   1. In the welcome screen, select **Set up E5 subscription**.
+   1. Set up your administrator account. After you finish, the following screen appears.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+
+   1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+   ## Get a free Azure account
+
+   If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+
+   You've all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
+
+
+- title: Create OpenAPI Description document
+  durationInMinutes: 5
+  content: |
+
+    ## OpenAPI Description
+  
+    OpenAPI Description (OAD) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
+    
+    To interact with the APIs, an OpenAPI Description document is necessary. The OpenAPI Description document must meet the following criteria:
+    
+    * The `auth` property must not be specified.
+    * JSON and YAML are the supported formats.
+    * OpenAPI Versions 2.0 and 3.0.x are supported.
+    * Teams doesn't support the oneOf, anyOf, allOf, and not (swagger.io) constructs.
+    * Constructing arrays for the request isn't supported, however, nested objects within a JSON request body are supported.
+    * The request body, if present, must be application/Json to ensure compatibility with a wide range of APIs.
+    * Define an HTTPS protocol server URL for the `servers.url` property.
+    * Only single parameter search is supported.
+    * Only one required parameter without a default value is allowed.
+    * Only POST and GET HTTP methods are supported.
+    * The OpenAPI Description document must have an `operationId`.
+    * The operation must not have required Header or Cookie parameters without default values.
+    * A command must have exactly one parameter.
+    * Ensure that there are no remote references in the OpenAPI Description document.
+    * A required parameter with a default value is considered optional.
+
+    We've used the following OpenAPI Description as an example for this tutorial:
+
+    <details><summary>OpenAPI Description</summary>
+    
+    ```yml
+    openapi: 3.0.1
+    info:
+      title: OpenTools Plugin
+      description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+      version: 'v1'
+    servers:
+      - url: https://gptplugin.opentools.ai
+    paths:
+      /tools:
+        get:
+          operationId: searchTools
+          summary: Search for AI Tools
+          parameters:
+            - in: query
+              name: search
+              required: true
+              schema:
+                type: string
+              description: Used to search for AI tools by their category based on the keywords. For example, "tool to create music" will give tools that can create music.
+          responses:
+            "200":
+              description: OK
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/searchToolsResponse'
+            "400":
+              description: Search Error
+              content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/searchToolsError'
+    components:
+      schemas:
+        searchToolsResponse:
+          required:
+            - search
+          type: object
+          properties:
+            tools:
+              type: array
+              items:
+                type: object
+                properties:
+                  name:
+                    type: string
+                    description: The name of the tool.
+                  opentools_url:
+                    type: string
+                    description: The URL to access the tool.
+                  main_summary:
+                    type: string
+                    description: A summary of what the tool is.
+                  pricing_summary:
+                    type: string
+                    description: A summary of the pricing of the tool.
+                  categories:
+                    type: array
+                    items:
+                      type: string
+                    description: The categories assigned to the tool.
+                  platforms:
+                    type: array
+                    items:
+                      type: string
+                    description: The platforms that this tool is available on.
+              description: The list of AI tools.
+        searchToolsError:
+          type: object
+          properties:
+            message:
+              type: string
+              description: Message of the error.
+          
+    ```
+    
+    > [!NOTE]
+    > Ensure that the `required: true` property is available for only one parameter. If there are more than one required parameters, you can update the required property to `required: false` for the other parameters. 
+    
+    </details>
+
+    You can validate if the OpenAPI Description document is valid. To verify, follow these steps:
+
+    1. Go to [Swagger/OpenAPI validator](https://apitools.dev/swagger-parser/online/) and validate the OpenAPI Description document.
+    1. Save the OpenAPI Description document.
+    1. Go to [Swagger Editor](https://editor.swagger.io/).
+    1. In the left pane, paste the OpenAPI Description in the editor.
+    1. In the right pane, select **GET**.
+    1. Select **Try it out**.
+    1. Enter the values for the **search** parameter as **Tool to create music**.
+    1. Select **Execute**. The swagger editor displays a response with a list of products.
+    
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
+
+    1. Go to **Server response** > **Response Body**.
+    1. Under `products`, copy the first product from the list and save it for future reference.
+
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
+
+- title: Create response rendering template
+  durationInMinutes: 5
+  content: |
+
+   An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+
+   ### Adaptive Card template 
+    
+    
+    To create an Adaptive Card template, follow these steps:
+    
+    1. Go to [ChatGPT](https://chat.openai.com/) and ask the following query in the message compose area:
+
+       ```text
+        Create an Adaptive Card Template that binds to the following response:
+            "categories": [
+                "Music Generation",
+                "AI Detection"
+            ],
+            "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
+            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "name": "AI Music Generator",
+            "opentools_url": "https://goto.opentools.ai/ai-music-generator",
+            "platforms": [
+                "Web",
+                "App",
+                "API"
+            ]
+       ```
+     1. Select **Send message**. 
+
+     1. ChatGPT generates a response with an Adaptive Card template that binds to the sample data. Save the Adaptive Card template for future reference.
+
+        Following is an example of the Adaptive Card template:
+
+        <details><summary>Adaptive Card template</summary>
+
+        ```json
+        {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator",
+            "weight": "Bolder",
+            "size": "Large"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Categories",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Music Generation, AI Detection",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Description",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Platform",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Web, App, API",
+            "wrap": true
+            }
+        ],
+        "actions": [
+            {
+            "type": "Action.OpenUrl",
+            "title": "Learn More",
+            "url": "https://goto.opentools.ai/ai-music-generator"
+            },
+            {
+            "type": "Action.OpenUrl",
+            "title": "Try It",
+            "url": "https://goto.opentools.ai/c/ai-music-generator"
+            }
+        ]
+        }
+
+        ``` 
+        </details>
+
+    1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
+       1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
+       1. At the upper-left, go to **Select host app** and from the drop-down, select **Microsoft Teams**.
+       1. Go to **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
+       1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you saved earlier.
+
+          :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
+       
+       1. Select **Preview mode**. The Adaptive Card designer displays an Adaptive Card with the data that binds the response to the template.
+          
+          :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-preview.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::   
+    
+    **Create a preview card template**
+    
+    The preview card template can contain a `title`, `subtitle` and `image` properties. If the API response doesn't have an image, you can remove the image property.
+
+    Following is an example of a preview card template:
+
+    <details><summary>Preview card template</summary>
+
+    ```json
+       "previewCardTemplate": {
+            "title": "${if(name, name, 'N/A')}",
+            "subtitle": "$${if(price, price, 'N/A')}",
+        } 
+    ```
+    Create an if condition for the `title` and `subtitle` where, if name exists, the bot uses the name, else, it uses NA. For example, `"title": "Name: ${if(name, name, 'N/A')}"`. Save the preview card template for future reference.
+    </details>
+
+
+   ### Response rendering template
+
+    The response rendering template must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json`](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
+
+    To create a response rendering template, follow these steps:
+
+    1. Create a JSON file and add the following code to the file:
+
+       ```json
+       { 
+         "version": "1.0.0", 
+         "$schema": "<URL_REFERENCE_TO_SCHEMA>", 
+         "jsonPath": "", 
+         "responseLayout": "", 
+         "responseCardTemplate": { 
+        },
+        "previewCardTemplate": {
+            }
+        }
+        ```
+    1. Update the properties in the response rendering template as follows:
+
+       1. `"version"`: `"1.0.0"`
+       1. `"$schema"`: `"http://adaptivecards.io/schemas/adaptive-card.json"`
+       1. `"jsonPath"`: `"tools"`
+
+          `jsonPath` is the path to the result(s) in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is "tools". For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
+
+       1. `"responseLayout"`: `"list"`
+
+           `responseLayout` specifies the layout of the attachments. Used for responses of type result. Supported types are list and grid. If the response body contains an object with multiple elements like text, title, and image, then the response layout must be set to `list`. If the API response contains only images or thumbnails, then the response layout must be set to `grid`.
+
+       1. `"responseCardTemplate"`: Paste the Adaptive Card template code that you saved earlier.
+
+           `responseCardTemplate` is an Adaptive Card template to map the JSON response to an Adaptive Card.
+
+       1. `"previewCardTemplate"`: Paste the preview card template code that you saved earlier.
+
+           `previewCardTemplate` is a preview card template is used to show a preview of results in the message extension flyout.
+
+    1. Save the response rendering template in the same folder you saved the OpenAPI Description document. 
+
+    The following code is an example of a Response rendering template:
+
+    <details><summary>Response rendering template</summary>
+
+    ```json
+    {
+            "version": "devPreview",
+            "jsonPath": "tools",
+            "responseLayout": "list",
+            "responseCardTemplate": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator",
+            "weight": "Bolder",
+            "size": "Large"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Categories",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Music Generation, AI Detection",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Description",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "wrap": true
+            },
+            {
+            "type": "TextBlock",
+            "text": "Platform",
+            "size": "Medium"
+            },
+            {
+            "type": "TextBlock",
+            "text": "Web, App, API",
+            "wrap": true
+            }
+        ],
+        "actions": [
+            {
+            "type": "Action.OpenUrl",
+            "title": "Learn More",
+            "url": "https://goto.opentools.ai/ai-music-generator"
+            },
+            {
+            "type": "Action.OpenUrl",
+            "title": "Try It",
+            "url": "https://goto.opentools.ai/c/ai-music-generator"
+            }
+        ]
+        },
+        "previewCardTemplate": {
+            "title": "${if(name, name, 'N/A')}",
+            "subtitle": "$${if(price, price, 'N/A')}",
+        } 
+        }
+
+    ```
+
+    </details>
+
+- title: Create app manifest
+  durationInMinutes: 3
+  content: |
+
+    Now, you need to create an app manifest (previously called Teams app manifest). The app manifest describes how your app integrates into the Microsoft Teams product.
+
+    ### Create a Teams app manifest
+    
+    To create the manifest, follow these steps: 
+    
+    1. Create a new JSON file. Your app manifest must conform to the schema defined in the [public developer preview app manifest schema](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json).
+
+    1. Add the following code to the JSON file:
+
+       <details><summary>App manifest</summary>
+
+       ```json
+       {
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+        "manifestVersion": "devPreview",
+        "version": "1.0.3",
+        "id": "<<YOUR-MICROSOFT-APP-ID>>",
+        "packageName": "com.microsoft.teams.extension",
+        "developer": {
+            "name": "Teams App, Inc.",
+            "websiteUrl": "https://www.example.com",
+            "privacyUrl": "https://www.example.com/termofuse",
+            "termsOfUseUrl": "https://www.example.com/privacy"
+        },
+        "icons": {
+            "color": "color.png",
+            "outline": "outline.png"
+        },
+        "name": {
+            "short": "Search ME API",
+            "full": "Search ME API full"
+        },
+        "description": {
+            "short": "product app for testing API MEs",
+            "full": "product app for testing API MEs"
+        },
+        "accentColor": "#FFFFFF",
+        "composeExtensions": [
+            {
+                "composeExtensionType": "",
+                "apiSpecificationFile": "",
+                "commands": [
+                    {
+                        "context": [
+                            "compose"
+                        ],
+                        "type": "query",
+                        "title": "API for fetching Klarna.",
+                        "id": "",
+                        "parameters": [
+                            {
+                                "name": "",
+                                "title": "",
+                                "description": ""
+                            }
+                        ],
+                        "description": "",
+                        "apiResponseRenderingTemplateFile": ""
+                    }
+                ]
+            }
+        ],
+        "permissions": [
+            "identity",
+            "messageTeamMembers"
+        ],
+        "validDomains": []
+       }
+       ```
+       </details>
+    
+    1. Update the app manifest properties as follows:
+
+         * Replace `<<YOUR-MICROSOFT-APP-ID>>` with bot's Microsoft App ID.
+         * Update the value for `composeExtensionType` to `apiBased`.
+         * Update the value for `apiSpecificationFile` to the path of your OpenAPI Description file. 
+         * Update the value for `commands.id` to `searchTools`.
+         * Update the value for `commands.title` to `Search for AI Tools`.
+         * Update the value for `commands.description` to `Search for AI Tools`.
+         * Update the value for `parameters.name` to `search`. If there are no parameters, then the values must be query parameters or `properties.name` if referencing a property in the request body schema.
+         * Update the `apiResponseRenderingTemplateFile` to the path of your response rendering template file.
+         * Update the value for `validDomains` to the `service URL` endpoint defined in the OpenAPI Description file. 
+         
+    1. Save the Teams app manifest in the same folder you saved the OpenAPI Description document and the response rendering template.
+        * You need a color image and outline image. These images should be included in the folder and referenced in your Teams app manifest. 
+        * Zip up the contents of the folder. The zip file must include the following files:
+          * OpenAPI Description document
+          * Response rendering template
+          * App manifest
+          * Color icon
+          * Outline icon 
+
+    
+- title: Upload a custom app to Teams
+  durationInMinutes: 1
+  content: |
+
+    Sign into Teams test environment to test your app in Teams. To upload a custom app in Teams, follow these steps: 
+
+    1. Go to **Microsoft Teams** and sign in using your test tenant credentials. 
+    1. Go to **Apps** > **Manage your app** > **Upload an app**.
+    1. Select **Upload a customized app**.
+    1. Select the zip file created and select **Open**.
+    1. Select **Add**. The app is added to Teams.
+
+       :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot shows a pop-up window with the Add option.":::
+
+    1. Go to a chat and from the message compose area, select **+** and search for your app.
+    1. Select the app and make a search query.
+
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat menu and the app is displayed in the flyout menu.":::
+
+    1. The app responds with an Adaptive Card in the chat window.
+    1. Select **Send**.
+
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+
+- title: Congratulations!
+  durationInMinutes: 1
+  content: |
+
+    You've done it! 
+    You've learned to create a API-based message extension using OpenAPI Description document.
+

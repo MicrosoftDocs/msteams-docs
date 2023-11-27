@@ -45,7 +45,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app 
+- title: Register Microsoft Entra app 
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
@@ -95,7 +95,7 @@ items:
       > [!NOTE]
       >
       > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-      > * Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+      > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
@@ -205,7 +205,7 @@ items:
 
     1. Select **Upload an app**.
 
-    1. Look for the option to **Upload a custom app**. If the option is visible, you can sideload apps. 
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
        :::image type="content" source="assets/images/teams-file-upload-bot/custom-upload.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
 
@@ -215,7 +215,7 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot show the option to add the app in Teams sideloading."::: 
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-bot-file.png" alt-text="Screenshot show the option to upload the custom app in Teams."::: 
 
 - title: Interacting with the bot in Teams
   durationInMinutes: 2
