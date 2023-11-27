@@ -19,13 +19,13 @@ You can monitor many data points, such as:
 - Who is interested in your app?
 - Which users and organizations are using your app?
 - How are users engaging with your app?
-- Which users have churned away after using your app for some time?
+- Which users churn away from your app after using it for some time?
 
 This information helps you analyze the data against your business goals, take corrective action by fixing issues. It also helps you to intervene in the user journey or make informed decisions around feature investments, enhancements, and adoption for the app.
 
 **But Teams app usage report must suffice, isn’t it?**
 
-As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the Microsoft Teams Store. Custom app developers can find [usage analytics for their custom apps](../build-and-test/analyze-your-apps-usage-in-developer-portal.md) in the Developer Portal for Teams. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
+As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in the Partner Center. The data is available within a week after publishing your app on the Microsoft Teams Store. Custom app developers can find [usage analytics for their custom apps](../build-and-test/analyze-your-apps-usage-in-developer-portal.md) in the Developer Portal for Teams. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
 
 - Monthly, daily, and weekly active users.
 - Retention and intensity charts.
@@ -81,7 +81,7 @@ This instrumentation is required to be done additionally in your SaaS app becaus
 
 <!--Tracking Teams app specific analytics-->
 
-This section includes guidelines and pointers regarding what to look for, which events to capture, how to use instrumentation markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, and Stage Views or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
+This section includes guidelines and pointers regarding what to look for, which events to capture, how to use instrumentation markers, and where to fetch Teams-relevant information that helps you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, and Stage Views or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
 
 You can classify Teams platform features into broadly two constructs:
 
@@ -96,7 +96,7 @@ These webpages often have the instrumentation done for core SaaS web app needs. 
 
 When you build a tab following [prerequisites defined here](../../tabs/how-to/tab-requirements.md), add the [Teams JavaScript client SDK](/javascript/api/overview/msteams-client) to your tab's content or configuration page. It ensures that your page can access Teams-specific information or [context](../../tabs/how-to/access-teams-context.md). Use this information for useful user-specific insights, such as:
 
-- Microsoft 365 tenant ID (Microsoft Entra tenant) for the current user (`tid`). In Microsoft 365 or Microsoft Entra ID, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this [Graph API](/graph/api/tenantrelationship-findtenantinformationbytenantid). Ensure to invoke this API in your Microsoft 365 Developer tenant since you are able to consent to the required tenant administrator permission it needs.
+- Microsoft 365 tenant ID (Microsoft Entra tenant) for the current user (`tid`). In Microsoft 365 or Microsoft Entra ID, a tenant is representative of an organization, that is, the user’s company. The Microsoft 365 tenant ID is useful to find out and log which Microsoft 365 tenant the user belongs to. Once you know the tenant ID, you can find out the tenant domain for the organization, which often reveals the organization’s name, using this [Graph API](/graph/api/tenantrelationship-findtenantinformationbytenantid). Ensure to invoke this API in your Microsoft 365 Developer tenant since you're able to consent to the required tenant administrator permission it needs.
 - License type assigned to the user and the SKU for the current user’s tenant. Possible values are F1, E1, E3, and E5 enterprise plans for (`licenseType`) and enterprise, free, edu, and unknown for (`tenantSKU`).
 - The context where the tab URL is loaded. Some possible values can be content page, dialog, tab settings dialog, tab remove dialog, and meeting sidePanel (`frameContext`).
 - Host client type where tab is loaded. Possible values are Android, IoS, web, desktop, and surfaceHub (`hostClientType`). You can slice your analytics data.
@@ -146,10 +146,10 @@ Besides the obvious metrics in the SaaS world such as daily, weekly, monthly act
   - How many days on an average do users use your app in the first week after installing the app?
   - What is the week-over-week or month-over-month new user retention cohort analysis for your app or specific capabilities (like personal app or bot) in your app?
   - How many users use your app only on Teams mobile clients?
-  - How many users have used the camera device capability in your app?
+  - How many users used the camera device capability in your app?
   - What does the funnel analysis reveal for your app across phases, from app installation to activation to engagement to retention and finally, monetization? Where are the drop-offs happening?
-  - How many users have installed your app in the past one week?
-  - How many users have churned from your app in the last three months? What is the resulting quarterly churn rate?
+  - How many users installed your app in the past one week?
+  - How many users churned from your app in the last three months? What is the resulting quarterly churn rate?
   - Which organization has seen the maximum number of installations for your app in the past 30 days?
   - Which organizations do the users installing your app in the past 14 days belong to?
   - Which organization has seen the maximum number of trial sign-ups for your app in the last seven days?
