@@ -196,7 +196,7 @@ items:
 
     1. Select **Add a platform** > **Single-page application**.
 
-     :::image type="content" source="~/assetsimages/sbs-graphactivity-feedbroadcast/platform-web-single-page.png" alt-text="Screenshot shows the selection of web authentication.":::
+     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/platform-web-single-page.png" alt-text="Screenshot shows the selection of web authentication.":::
 
     1. Enter the redirect URI for your app by appending `auth-end` to the fully qualified domain name. For example, `https://your-devtunnel-domain/auth-end` or `https://your-ngrok-domain/auth-end`.
 
