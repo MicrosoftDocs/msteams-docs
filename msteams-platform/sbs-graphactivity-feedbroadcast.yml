@@ -163,9 +163,9 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-exposeanapi.png" alt-text="Screenshot shows the expose an API screen." border="true":::
 
-    1. Select **Set**.
+    1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/expose-an-api1.png" alt-text="Screenshot shows the set option for application ID URI." border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/expose-an-api-add-app-id-uri.png" alt-text="Screenshot shows the set option for application ID URI." border="true":::
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
