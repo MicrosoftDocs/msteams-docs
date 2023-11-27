@@ -137,7 +137,7 @@ items:
 
     1. Select **+ Add a permission**.
 
-     :::image type="content" source="../../assets/images/sbs-graphactivity-feedbroadcast/add-permission.png" alt-text="Screenshot show the option to select Add permission.":::
+     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-permission.png" alt-text="Screenshot show the option to select Add permission.":::
 
     1. Select **Microsoft Graph**.
 
@@ -156,7 +156,7 @@ items:
       
     1. Select **Add permissions**.
 
-     :::image type="content" source="../../assets/images/sbs-graphactivity-feedbroadcast/select-add-permissions.png" alt-text="Screenshot show the option to select permissions.":::
+     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-add-permissions.png" alt-text="Screenshot show the option to select permissions.":::
 
     1. Select **+ Add a permission**.
 
@@ -196,7 +196,7 @@ items:
 
     1. Select **Add a platform** > **Single-page application**.
 
-     :::image type="content" source="../../assetsimages/sbs-graphactivity-feedbroadcast/platform-web-single-page.png" alt-text="Screenshot shows the selection of web authentication.":::
+     :::image type="content" source="~/assetsimages/sbs-graphactivity-feedbroadcast/platform-web-single-page.png" alt-text="Screenshot shows the selection of web authentication.":::
 
     1. Enter the redirect URI for your app by appending `auth-end` to the fully qualified domain name. For example, `https://your-devtunnel-domain/auth-end` or `https://your-ngrok-domain/auth-end`.
 
@@ -204,7 +204,7 @@ items:
 
     1. Select **Configure**.
 
-     :::image type="content" source="../..//assets/images/sbs-graphactivity-feedbroadcast/configure-web.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
+     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configure-web.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
 
     1. Under **Web**, select **Add URI**.
 
@@ -212,7 +212,7 @@ items:
 
     1. Select **Save**.
 
-     :::image type="content" source="../../assetsimages/sbs-graphactivity-feedbroadcast/web-add-uri.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
+     :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/web-add-uri.png" alt-text="Screenshot shows the option to add redirect uri and select implicit grant and hybrid flows.":::
 
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
