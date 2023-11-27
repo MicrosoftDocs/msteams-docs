@@ -1756,7 +1756,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td>&#x2713;</td>
         </tr>
         <tr>
-            <th>[`pages.adaptiveCard`](#pagesadaptivecard)</th>
+            <th>[pages.adaptiveCard](#pagesadaptivecard)</th>
             <td></td>
             <td></td>
             <td></td>
@@ -1775,7 +1775,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td>&#x2713;</td>
         </tr>
         <tr>
-            <th>[`pages.adaptiveCard.bot`](#pagesadaptivecardbot)</th>
+            <th>[pages.adaptiveCard.bot](#pagesadaptivecardbot)</th>
             <td></td>
             <td></td>
             <td></td>
