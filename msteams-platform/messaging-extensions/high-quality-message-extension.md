@@ -391,7 +391,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 For M365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands).
 <br>
 <br>
-<details><summary>Example of multiple parameters defined in app manifest</summary>
+<details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
 
 ```json
 "commands": [
@@ -613,7 +613,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 | Manifest version | App manifest version must be 1.13 or later. [*Mandatory*] |
 |Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-bot).[*Mandatory*]|
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if M365 Chat calls a plugin 1000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to ISV apps and not apps built for your organization. [*Mandatory*] |
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
