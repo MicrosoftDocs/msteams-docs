@@ -81,11 +81,11 @@ import { VectraDataSource } from './VectraDataSource';
 
 Add AI capabilities to your existing app or a new Bot Framework app.
 
-**OpenAIModel**: OpenAI model supports both OpenAI and Azure OpenAI LLMs.
+**OpenAIModel**: OpenAIModel is a class that represents a model that can be used to call the OpenAI API or any other source that supports the OpenAI REST schema. OpenAI model supports both OpenAI and Azure OpenAI LLMs.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
 
-**ActionPlanner**: The ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model.
+**ActionPlanner**: The ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. It's responsible for generating and executing plans based on the user's input and the available actions.
 
 # [JavaScript](#tab/javascript)
 
@@ -197,7 +197,7 @@ return new TeamsLightBot(new ()
 
 ## Register data sources
 
-A vector data source makes it easy to add RAG to any prompt. You can register a named data sources with the planner and then specify the name[s] of the data sources to augment the prompt with in the prompts config.json.
+A vector data source makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources to augment the prompt with in the prompts config.json.  Data sources allow AI to inject relevant information from external sources into the prompt, such as vector databases or cognitive search.
 
 ```typescript
 // Register your data source with planner
@@ -206,15 +206,6 @@ planner.prompts.addDataSource(new VectraDataSource({
     apiKey:  process.env.OPENAI_API_KEY!,
     indexFolder: path.join(__dirname, '../index'),
 }));
-```
-
-```config.json
-   "augmentation": {
-        "augmentation_type": "none",
-        "data_sources": {
-            "teams-ai": 1200
-        }
-    }
 ```
 
 ### Embeddings
@@ -362,12 +353,12 @@ export class VectraDataSource implements DataSource {
 
 Prompts are pieces of text that can be used to create conversational experiences. Prompts are used to start conversations, ask questions, and generate responses. The use of prompts helps reduce the complexity of creating conversational experiences and make them more engaging for the user.
 
-A new object based prompt system breaks a prompt into sections and each section can be given a token budget that's either a fixed set of tokens, or proportional to the overall remaining tokens. You can generate prompts for both Text Completion and Chat Completion style API's.
+A new object based prompt system breaks a prompt into sections and each section can be given a token budget that's either a fixed set of tokens, or proportional to the overall remaining tokens. You can generate prompts for both Text Completion and Chat Completion style APIs.
 
 The following are a few guidelines to create prompts:
 
 * Provide instructions, examples, or both.
-* Provide quality data. Ensure that there are enough examples and proofread your examples. The model is usually smart enough to see through basic spelling mistakes and give you a response, but it also might assume that the input is intentional and it might affect the response.
+* Provide quality data. Ensure that there are enough examples and proofread your examples. The model is smart enough to see through basic spelling mistakes and give you a response, but it also might assume that the input is intentional and it might affect the response.
 * Check your prompt settings. The temperature and top_p settings control how deterministic the model is in generating a response.  Higher value such as 0.8 makes the output random, while lower value such as 0.2 makes the output focused and deterministic.
 
 Create a folder called prompts and define your prompts in the folder. When the user interacts with the bot by entering a text prompt, the bot responds with a text completion.
@@ -398,6 +389,9 @@ Create a folder called prompts and define your prompts in the folder. When the u
         },
         "augmentation": {
             "augmentation_type": "sequence"
+            "data_sources": {
+                 "teams-ai": 1200
+         }
         }
       }
     ```
@@ -421,6 +415,12 @@ The following table includes the query parameters:
 |`stop_sequences`     |  Up to four sequences where the API stops generating further tokens. The returned text won't contain the stop sequence. |
 |`augmentation_type`| The type of augmentation. Supported values are `sequence`, `monologue` and `tools`.|
 
+### Prompt management
+
+Prompt management helps adjust the size and content of the prompt that is sent to the language model, based on the available token budget and the data sources or augmentations.
+
+If a bot has a maximum of 4,000 tokens where 2,800 tokens are for input and 1,000 tokens are for output, the model can manage the overall context window and ensure that it never processes more than 3,800 tokens. The model starts with a text of about 100 tokens, adds in the data source of another 1,200 tokens, and then looks at the remaining budget of 1,500 tokens. The conversation history and input are given the remaining 1,500 tokens, and the conversation history is squeezed into the remaining space and the model never exceeds 2,800 tokens.
+
 ### Prompt actions
 
 Plans let the model perform actions or respond to the user. You can create a schema of the plan and add a list of actions that you support to perform an action and pass arguments. The OpenAI endpoint figures out the actions required to be used, extracts all the entities, and passes those as arguments to the action call.
@@ -437,7 +437,7 @@ The lights are currently {{getLightStatus}}.
 
 Prompt template is a simple and powerful way to define and compose AI functions using plain text. You can use prompt template to create natural language prompts, generate responses, extract information, invoke other prompts, or perform any other task that can be expressed with text.
 
-The language supports features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams parses your template and execute the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
+The language supports features that allow you to include variables, call external functions, and pass parameters to functions. You don't need to write any code or import any external libraries, just use the curly braces {{...}} to embed expressions in your prompts. Teams parses your template and executes the logic behind it. This way, you can easily integrate AI into your apps with minimal effort and maximum flexibility.
 
 * ``{{function}}``:  Calls a registered function and inserts its return value string.​
 
@@ -569,7 +569,8 @@ public class LightBotActions
 
 ---
 
-If you use either `sequence`, `monologue` or `tools` augmentation, it's impossible for the model to hallucinate a invalid function name, action name, or the correct parameters. You must create a new actions file and define all the actions you want the prompt to support for augmentation. You must define the actions to tell the model when to perform the action.
+If you use either `sequence`, `monologue` or `tools` augmentation, it's impossible for the model to hallucinate an invalid function name, action name, or the correct parameters. You must create a new actions file and define all the actions you want the prompt to support for augmentation. You must define the actions to tell the model when to perform the action. Sequence augmentation is suitable for tasks that require multiple steps or complex logic.
+Monologue augmentation is suitable for tasks that require natural language understanding and generation, and more flexibility and creativity.
 
 In the following example of a light bot, the `actions.json` file has a list of all the actions the bot can perform:
 
@@ -606,14 +607,28 @@ In the following example of a light bot, the `actions.json` file has a list of a
 * `description`: Description of the action. Optional.
 * `parameters`: Add a JSON schema object of the required parameters.
 
-Looping is needed for augmentations like `functions` and `monologue` where the LLM needs to see the result of the last action that was performed. If you're using a  `sequence` augmentation, you can disable looping to guard against any accidental looping in the following ways:
+ Feedback loop is a model's response to validate, correct, or refine the answer to your question. If you're using a  `sequence` augmentation, you can disable looping to guard against any accidental looping in the following ways:
 
-1. You can set `allow_looping?` to `false` in the `AIOptions` definition.
-1. You can set `max_repair_attempts` to `0` in the `index.ts` file.
+* You can set `allow_looping?` to `false` in the `AIOptions` definition.
+* You can set `max_repair_attempts` to `0` in the `index.ts` file.
 
 #### Manage history
 
 You can use the `MaxHistoryMessages` and `MaxConversationHistoryTokens` arguments to allow the AI library to automatically manage your history.
+
+### Feedback loop
+
+A feedback loop allows you to monitor and improve the bot’s interactions over time, leading to more effective and user-friendly applications. The feedback received can be used to make adjustments and improvements, ensuring that the bot continues to meet user needs and expectations.
+
+A feedback loop consists of the following:
+
+**Repair Loop**: When the model’s response doesn’t meet the expectations, a repair loop is initiated. The conversation history is forked,  allowing the system to attempt different solutions without affecting the main conversation.
+
+**Validation**: The corrected response is validated. If it passes the validation, the conversation is unforked, and the repaired structure is inserted back into the main conversation.
+
+**Learn from Mistakes**: Once the model sees an example of correct behavior, it learns to avoid making similar mistakes in the future.
+
+**Handle Complex Commands**: Once the model has learned from its mistakes, it becomes capable of handling more complex commands and returning the desired plan.
 
 ## Next step
 

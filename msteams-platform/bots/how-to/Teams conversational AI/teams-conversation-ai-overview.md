@@ -48,6 +48,7 @@ The following are some of the main features available through Teams AI library:
 * [Responsible AI](#responsible-ai)
 * [Predictive engine for mapping intents to actions](#predictive-engine-for-mapping-intents-to-actions)
 * [Action Planner](#action-planner)
+* [Prompt management](#prompt-management)
 * [Augmentation](#augmentation)
 * [Vector data sources](#vector-data-sources)
 * [Enhanced reasoning](#enhanced-reasoning)
@@ -109,9 +110,11 @@ The bot framework using Teams AI library requires the following:
 
 ## Action Planner
 
-The new ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case.
+The new ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case. Reliability is dramatically increasing with an internal feedback loop that automatically fixes subpar responses from the LLM.
 
-Reliability is dramatically increasing with an internal feedback loop that automatically fixes subpar responses from the LLM. Additionally, the management of token budgets is improved, reducing the chance of exceeding a model’s context window lowering your costs. The ActionPlanner supports augmentation expanding the capabilities and control over your model.
+## Prompt management
+
+Dynamic prompt management is a feature of the AI system that allows it to adjust the size and content of the prompt that is sent to the language model, based on the available token budget and the data sources or augmentations. It can improve the efficiency and accuracy of the model by ensuring that the prompt doesn't exceed the context window or include irrelevant information. Steve explained how dynamic prompt management works in the meeting and gave some examples of how to use it with different augmentations.
 
 ## Augmentation
 
