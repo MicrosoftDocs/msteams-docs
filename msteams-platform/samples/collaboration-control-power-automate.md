@@ -28,35 +28,37 @@ It also includes a set of Collaboration controls APIs and tasks that can be invo
 
 In the [Azure portal](https://ms.portal.azure.com/#home) for Microsoft Entra management, sign in to your account with adequate permissions to add a user application to your environment with the following steps:
 
-1. In the home page of Azure portal, select **Microsoft Entra ID**. In Microsoft Entra ID, select dropdown list for **Add** and select **App registration**.
+1. In the home page of Azure portal, select **Microsoft Entra ID**.
 
-   :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="Screenshot is an example that shows how to add a new App Registration.":::
+   :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="Screenshot shows how to add a new App Registration.":::
 
-   :::image type="content" source="../assets/images/collaboration-control/new-app-registration.png" alt-text="Screenshot is an example that shows how to add new app registration.":::
+1. Select the dropdown list for **Add** and select **App registration**.
+
+   :::image type="content" source="../assets/images/collaboration-control/new-app-registration.png" alt-text="Screenshot shows how to add new app registration.":::
 
 1. In the app registration, set your application name and add the Web redirect URI to `https://global.consent.azure-apim.net/redirect`.
 
-   :::image type="content" source="../assets/images/collaboration-control/register-an-application.png" alt-text="Screenshot is an example that shows how to register an application.":::
+   :::image type="content" source="../assets/images/collaboration-control/register-an-application.png" alt-text="Screenshot shows how to register an application.":::
 
 1. In the Implicit Grant and hybrid flows section, select both Access Tokens and ID tokens.
 
-   :::image type="content" source="../assets/images/collaboration-control/authorisation-endpoint-tokens.png" alt-text="Screenshot is an example that shows the tokens and ID tokens.":::
+   :::image type="content" source="../assets/images/collaboration-control/authorisation-endpoint-tokens.png" alt-text="Screenshot shows the tokens and ID tokens.":::
 
 1. Select API Permission in the left pane and select **Add a permission**, and then search for **Dynamic CRM** permission.
 
-   :::image type="content" source="../assets/images/collaboration-control/dynamic-crm.png" alt-text="Screenshot is an example that shows how to add a permission.":::
+   :::image type="content" source="../assets/images/collaboration-control/dynamic-crm.png" alt-text="Screenshot shows how to add a permission.":::
 
 1. Ensure to select **user_impersonation** in Permissions after selecting the Dynamics CRM.
 
-   :::image type="content" source="../assets/images/collaboration-control/admin-consent-required.png" alt-text="Screenshot is an example that shows how to enable the checkbox user_impersonation.":::
+   :::image type="content" source="../assets/images/collaboration-control/admin-consent-required.png" alt-text="Screenshot shows how to enable the checkbox user_impersonation.":::
 
 1. In the Certificates & Secrets page, add a **New client secret** and save the value for later use while setting up the connector security.
 
-   :::image type="content" source="../assets/images/collaboration-control/copy-new-secret-value.png" alt-text="Screenshot is an example that shows how to copy new secret value.":::
+   :::image type="content" source="../assets/images/collaboration-control/copy-new-secret-value.png" alt-text="Screenshot shows how to copy new secret value.":::
 
 1. In the application Overview page, copy the **Application (client) ID** and save it for later use while setting up the connector security.
 
-   :::image type="content" source="../assets/images/collaboration-control/application-client-ID.png" alt-text="Screenshot is an example that shows how to save client ID":::
+   :::image type="content" source="../assets/images/collaboration-control/application-client-ID.png" alt-text="Screenshot shows how to save client ID":::
 
 Now your Azure app is all set and you need to add it as a user application in your environment.
 
@@ -64,31 +66,31 @@ Now your Azure app is all set and you need to add it as a user application in yo
 
 1. Open Power Apps portal, in the upper right corner select **settings** and open **Admin center**.
 
-   :::image type="content" source="../assets/images/collaboration-control/power-apps-interface.png" alt-text="Screenshot is an example that shows the Power apps interface.":::
+   :::image type="content" source="../assets/images/collaboration-control/power-apps-interface.png" alt-text="Screenshot shows the Power apps interface.":::
 
 1. In the admin center, select **Environment** from the left pane and select your environment in the list that you want to add the connector app.
 
-   :::image type="content" source="../assets/images/collaboration-control/power-platform-admin-center.png" alt-text="Screenshot is an example that shows how to add connector app.":::
+   :::image type="content" source="../assets/images/collaboration-control/power-platform-admin-center.png" alt-text="Screenshot shows how to add connector app.":::
 
 1. In the environment details page, select **Settings**.
 
-   :::image type="content" source="../assets/images/collaboration-control/settings-environment.png" alt-text="Screenshot is an example that shows how to select settings.":::
+   :::image type="content" source="../assets/images/collaboration-control/settings-environment.png" alt-text="Screenshot shows how to select settings.":::
 
 1. In the settings details page, select **Users + permissions** section and select **Application users**.
 
-   :::image type="content" source="../assets/images/collaboration-control/users-link.png" alt-text="Screenshot is an example that shows the application user link.":::
+   :::image type="content" source="../assets/images/collaboration-control/users-link.png" alt-text="Screenshot shows the application user link.":::
 
 1. In the App users page, select the **+ New app user**. **Create a new app user** window appears.
 
-   :::image type="content" source="../assets/images/collaboration-control/new-app-user.png" alt-text="Screenshot is an example that shows the new app user.":::
+   :::image type="content" source="../assets/images/collaboration-control/new-app-user.png" alt-text="Screenshot shows the new app user.":::
 
 1. Select **+ Add an app**.
 
-   :::image type="content" source="../assets/images/collaboration-control/create-new-app-user.png" alt-text="Screenshot is an example that shows how to create new app user.":::
+   :::image type="content" source="../assets/images/collaboration-control/create-new-app-user.png" alt-text="Screenshot shows how to create new app user.":::
 
 1. Select your app from the search box and select add again.
 
-   :::image type="content" source="../assets/images/collaboration-control/add-app-aad.png" alt-text="Screenshot is an example that shows how to add app from Microsoft Entra ID.":::
+   :::image type="content" source="../assets/images/collaboration-control/add-app-aad.png" alt-text="Screenshot shows how to add app from Microsoft Entra ID.":::
 
 After the app is added, set the **Business unit** and **Security Roles** to your connector application. Select **Create** and your app is in the list. With the app user set in the environment, we can proceed to custom connector configuration.
 
@@ -97,9 +99,10 @@ After the app is added, set the **Business unit** and **Security Roles** to your
 1. Open PowerApps or Power Automate and select the **Custom Connectors** menu. Select **edit** for the Collaboration connector.
 
    :::image type="content" source="../assets/images/collaboration-control/collaboration-connector.png" alt-text="Screenshot shows how to select edit for custom connector menu.":::
+
 1. In the General Information tab, enter the host with the address of Dynamic 365 instance domain (without the https://).
 
-   :::image type="content" source="../assets/images/collaboration-control/general-information.png" alt-text="Screenshot is an example that shows the General information.":::
+   :::image type="content" source="../assets/images/collaboration-control/general-information.png" alt-text="Screenshot shows the General information.":::
 
 1. In the Security tab, enter the following inputs:
 
@@ -108,17 +111,17 @@ After the app is added, set the **Business unit** and **Security Roles** to your
    * Resource URL:  The URL of your Dynamic 365 instance (`https://org.crm.dynamics.com/`).
    * Scope: Same as above with. Default suffix (`https://org.crm.dynamics.com/.default`).
 
-   :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="Screenshot is an example that shows the Dynamic 365 instance.":::
+   :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="Screenshot shows the Dynamic 365 instance.":::
 
 1. Select **Update connector** to save the changes and allow your flow to establish connections.
 
-   :::image type="content" source="../assets/images/collaboration-control/custom-connector.png" alt-text="Screenshot is an example that shows the custom connector.":::
+   :::image type="content" source="../assets/images/collaboration-control/custom-connector.png" alt-text="Screenshot shows the custom connector.":::
 
 ## How to invoke the connector  
 
 Triggers and actions are pre-defined with configurable input and output as a workflow step. Adding the workflow step to the proper workflow position with correct input and output configuration to define when the trigger or action is to be invoked.
 
-  :::image type="content" source="../assets/images/collaboration-control/invoke-the-connector.png" alt-text="Screenshot is an example that shows how to invoke the connector.":::
+  :::image type="content" source="../assets/images/collaboration-control/invoke-the-connector.png" alt-text="Screenshot shows how to invoke the connector.":::
 
 ### Triggers and actions supported with connector
 
@@ -136,7 +139,7 @@ The following triggers and actions are supported within a flow:
 
   1. When a Task is created or modified
 
-      :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="Screenshot is an example that shows the task is created or modified.":::
+      :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="Screenshot shows the task is created or modified.":::
 
       By default, the trigger Planner Task is disabled and won't trigger. To enable it, the tenant admin must follow the steps:
 
@@ -149,7 +152,7 @@ The following triggers and actions are supported within a flow:
 
   1. Begin Collaboration session
 
-      :::image type="content" source="../assets/images/collaboration-control/begin-collab-session.png" alt-text="Screenshot is an example that shows how to begin collaboration session.":::
+      :::image type="content" source="../assets/images/collaboration-control/begin-collab-session.png" alt-text="Screenshot shows how to begin collaboration session.":::
 
      This step action creates a new collaboration session for your dataverse business entity:
 
@@ -167,7 +170,7 @@ The following triggers and actions are supported within a flow:
 
   1. Retrieve Collaboration session
 
-      :::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="Screenshot is an example that shows how to Retrieve collaboration session.":::
+      :::image type="content" source="../assets/images/collaboration-control/retrieve-collab-session.png" alt-text="Screenshot shows how to Retrieve collaboration session.":::
 
      This step action returns the collaboration session that matches the provided inputs:
 
@@ -177,7 +180,7 @@ The following triggers and actions are supported within a flow:
 
   1. Update Collaboration session
 
-      :::image type="content" source="../assets/images/collaboration-control/update-collab-session.png" alt-text="Screenshot is an example that shows how to update collaboration session.":::
+      :::image type="content" source="../assets/images/collaboration-control/update-collab-session.png" alt-text="Screenshot shows how to update collaboration session.":::
 
      This step action updates an existing collaboration session:
 
@@ -206,7 +209,7 @@ The following triggers and actions are supported within a flow:
 
   1. Associate Collaboration Map (external)
 
-      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map.png" alt-text="Screenshot is an example that shows how to associate collaboration map.":::
+      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map.png" alt-text="Screenshot shows how to associate collaboration map.":::
 
      This step action creates a mapping of an external collaboration entity (outside dataverse) with your collaboration session:
 
@@ -223,7 +226,7 @@ The following triggers and actions are supported within a flow:
 
   1. Associate Collaboration Map (internal)
 
-      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map-internal.png" alt-text="Screenshot is an example that shows how to associate collaboration map internal.":::
+      :::image type="content" source="../assets/images/collaboration-control/associate-collab-map-internal.png" alt-text="Screenshot shows how to associate collaboration map internal.":::
 
      This step action creates a mapping of a collaboration entity (dataverse table) with your collaboration session. Internal are intended to create mappings between internal Dataverse entities/tables only.
 
@@ -241,7 +244,7 @@ The following triggers and actions are supported within a flow:
 
   1. Update Collaboration Map
 
-      :::image type="content" source="../assets/images/collaboration-control/update-collab-map.png" alt-text="Screenshot is an example that shows how to update collaboration map.":::
+      :::image type="content" source="../assets/images/collaboration-control/update-collab-map.png" alt-text="Screenshot shows how to update collaboration map.":::
 
      This step action updates an existing collaboration map:
 
@@ -271,7 +274,7 @@ The following triggers and actions are supported within a flow:
 
   1. Get Collaboration Metadata
 
-      :::image type="content" source="../assets/images/collaboration-control/get-collab-metadata.png" alt-text="Screenshot is an example that shows how to get collaboration metadata.":::
+      :::image type="content" source="../assets/images/collaboration-control/get-collab-metadata.png" alt-text="Screenshot shows how to get collaboration metadata.":::
 
      This step action lists all metadata matching the specified filter.
 
@@ -281,7 +284,7 @@ The following triggers and actions are supported within a flow:
 
   1. Create Planner Task
 
-      :::image type="content" source="../assets/images/collaboration-control/create-planner-task.png" alt-text="Screenshot is an example that shows how to create planner task.":::
+      :::image type="content" source="../assets/images/collaboration-control/create-planner-task.png" alt-text="Screenshot shows how to create planner task.":::
 
      This step action creates a Graph Planner Task using Collaboration controls Planner task virtual table:
 
@@ -310,7 +313,7 @@ The following triggers and actions are supported within a flow:
 
   1. Get Planner Task
 
-      :::image type="content" source="../assets/images/collaboration-control/get-planner-task.png" alt-text="Screenshot is an example that shows the get planner task.":::
+      :::image type="content" source="../assets/images/collaboration-control/get-planner-task.png" alt-text="Screenshot shows the get planner task.":::
 
      This step action returns a Planner Task data using Collaboration controls Planner task virtual table:
 
@@ -346,11 +349,11 @@ The following are examples of flows:
 
 1. Getting a response from Microsoft forms, creating a Collaboration session and a task associated.
 
-   :::image type="content" source="../assets/images/collaboration-control/response-submitted.png" alt-text="Screenshot is an example that shows how to submit new response.":::
+   :::image type="content" source="../assets/images/collaboration-control/response-submitted.png" alt-text="Screenshot shows how to submit new response.":::
 
 1. Every time a collaboration session is created, capture the details and send an e-mail notification.
 
-   :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Screenshot is an example that shows the Collaboration session created.":::
+   :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Screenshot shows the Collaboration session created.":::
 
 > [!NOTE]
 > Multiple flows could be triggered in this way to perform different actions, using data from the response of the Collaboration session creation.

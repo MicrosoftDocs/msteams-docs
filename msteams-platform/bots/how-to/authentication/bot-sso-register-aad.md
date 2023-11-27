@@ -148,7 +148,7 @@ You need:
 
     The **Expose an API** page appears.
 
-1. Select **Set** to generate application ID URI.
+1. Select **Add** to generate application ID URI.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-bots/expose-an-api.png" alt-text="Screenshot shows the Set option of Application ID URI." :::
 
