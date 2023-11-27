@@ -19,6 +19,24 @@ Teams AI library is a Teams-centric interface to GPT-based common language model
 
 The AI library provides a simple capabilities-driven approach and helps you to create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
 
+## Why use Teams AI library?
+
+The AI Library is a Teams-centric interface to Large Language Models. Your apps can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills.
+
+You can focus on writing your business logic, and allow Teams to handle the complexities of conversational bots so that you can easily extract and utilize user intent within your apps.
+
+:::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library.":::
+
+* The AI Library is a Teams-centric interface to Large Language Models. Use prebuilt templates to add Teams app capabilities.
+
+* Use techniques like prompt engineering to add ChatGPT like conversational experiences to your bot and built-in safety features, like moderation, help ensure your bot always responds in an appropriate manner.
+
+* The library includes a planning engine that lets the model identify the user's intent and then maps that intent to actions that you implement.
+
+* You can easily add support for any LLM of your choice without changing the bot logic.
+
+The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a  mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
+
 The following are some of the main features available through Teams AI library:
 
 * [Simple Teams-centric component scaffolding](#simple-teams-centric-component-scaffolding)
@@ -29,6 +47,11 @@ The following are some of the main features available through Teams AI library:
 * [LLM modularity](#llm-modularity)
 * [Responsible AI](#responsible-ai)
 * [Predictive engine for mapping intents to actions](#predictive-engine-for-mapping-intents-to-actions)
+* [Action Planner](#action-planner)
+* [Augmentation](#augmentation)
+* [Vector data sources](#vector-data-sources)
+* [Enhanced reasoning](#enhanced-reasoning)
+* [Feedback loop](#feedback-loop)
 
 ## Simple Teams-centric component scaffolding
 
@@ -76,22 +99,6 @@ A simple interface for actions and predictions allows bots to react when the bot
 1. Allows prompts to make summarizations over a period of time focused on the user’s manager.
 1. Provides actions to summarize chat content for users to consume.
 
-## Why use Teams AI library?
-
-The AI Library is a Teams-centric interface to Large Language Models. Your apps can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills.
-
-You can focus on writing your business logic, and allow Teams to handle the complexities of conversational bots so that you can easily extract and utilize user intent within your apps.
-
-:::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library.":::
-
-* The AI Library is a Teams-centric interface to Large Language Models. Use prebuilt templates to add Teams app capabilities.
-
-* Use techniques like prompt engineering to add ChatGPT like conversational experiences to your bot and built-in safety features, like moderation, help ensure your bot always responds in an appropriate manner.
-
-* The library includes a planning engine that lets the model identify the user's intent and then maps that intent to actions that you implement.
-
-* You can easily add support for any LLM of your choice without changing the bot logic.
-
 <!-- ## Bots Architecture overview
 
 The bot framework using Teams AI library requires the following:
@@ -100,33 +107,13 @@ The bot framework using Teams AI library requires the following:
 * Adherence to Activity schema for reading and writing JSON documents
 * Invoking Rest APIs to determine additional context required to handle a user's message, such as Azure Active Directory (Azure AD) ID and UPN of the user the bot is interacting with. -->
 
-## Updates
-
-The Teams AI Library is now available for developers in JavaScript and C# languages allowing developers to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a  mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
-
-The following table lists the changes and updates to the Teams AI library:
-
-|Type |Description  |
-|---------|---------|
-|**State Management**     | Simpler TurnState object and no more need for a TurnStateManager class.        |
-|Prompt Config     | Updated the config.json version number for prompts to 1.1.        |
-|Prompt Management     | All prompt management is now done by the Planner.        |
-|Chaining    | Chaining isn't supported.        |
-|completePrompt method    |  Planners are free to implement a completePrompt() method (the ActionPlanner will) but you can no longer access that through the AI class.       |
-|**Additions**    |    |
-|OpenAIModel    |The OpenAIModel class lets you call both OAI and Azure OAI with one single component. New models can be defined for other model types like LLaMA2.              |
-|Embeddings    | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings.        |
-|Prompts     | A new object based prompt system enables better token management and reduces the likelihood overflowing the models context window.        |
-| Augmentation     | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only  `functions`, `sequences`, and `monologue` style augmentations are supported.        |
-|Data Sources     |  A new DataSource plugin type makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt.      |
-
-### Action Planner
+## Action Planner
 
 The new ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case.
 
 Reliability is dramatically increasing with an internal feedback loop that automatically fixes subpar responses from the LLM. Additionally, the management of token budgets is improved, reducing the chance of exceeding a model’s context window lowering your costs. The ActionPlanner supports augmentation expanding the capabilities and control over your model.
 
-### Augmentation
+## Augmentation
 
 Say goodbye to prompt engineering headaches and say hello to efficiently enhancing and directing your AI model’s responses with Augmentation. When creating a prompt select one of the following Augmentation Modes to tailor your model to your needs, increasing its accuracy and desired outcomes:
 
@@ -138,19 +125,35 @@ Say goodbye to prompt engineering headaches and say hello to efficiently enhanci
 
 * **Functions**: Produce structured responses from your model by employing user-defined Functions. These functions are customizable using JSON schemas to define the parameters and their format. The ActionPlanner assesses model responses against the schema, making repairs as needed increasing response reliability and consistency.
 
-#### Vector data sources
+### Vector data sources
 
 Vector Databases are a novel type of database designed specifically for storing Vectors and facilitating efficient search over them. They return the most relevant results for a user’s query. The vector search feature in a vector database enables retrieval-augmented generation to harness LLMs and custom data or domain-specific information. This process involves extracting pertinent information from a custom data source and integrating it into the model request through prompt engineering. Prior to sending a request to the LLM, the user input/query/request is also transformed into an embedding, and vector search techniques are employed to locate the most similar embeddings within the database. You can register named data sources with the planner and then specify the name[s] of the data sources they wish to augment the prompt with in the prompts config.json.
 
-### Enhanced reasoningEnhanced reasoning
+## Enhanced reasoning
 
 With enhanced reasoning, the Teams AI Library tackles the ongoing issue of bot hallucinations head-on by offering an integrated fact-checking system.
 
 When a user interacts with your AI assistant, this system prompts the bot to engage in a process of self-reflection critically evaluating its potential responses prior to sending them. The introspection allows the bot to identify inaccuracies and correct its answers improving accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment, building trust in your product and drawing users back every day.
 
-### Feedback loop
+## Feedback loop
 
 A feedback loop is a feature of the Teams AI library that helps to improve the quality and user experience of conversational apps. It's an algorithm that detects when the large language model (LLM) produces a subpar or incorrect response, and feeds this information back to the LLM as input. The integration of AlphaWave gives the AI library the ability to repair malformed responses from the model. JSON Schema based Validator plugins are used to validate all structured responses from the model. If the model returns missing or invalid JSON, it's asked to repair its mistake.
+
+The following table lists the changes and updates to the Teams AI library:
+
+|Type |Description  |JavaScript|C#|
+|---------|---------|||
+|**State Management**     | Simpler TurnState object and no more need for a TurnStateManager class.        |||
+|Prompt Config     | Updated the config.json version number for prompts to 1.1.        |||
+|Prompt Management     | All prompt management is now done by the Planner.        |||
+|Chaining    | Chaining isn't supported.        |||
+|completePrompt method    |  Planners are free to implement a completePrompt() method (the ActionPlanner will) but you can no longer access that through the AI class.       |||
+|**Additions**    |    |||
+|OpenAIModel    |The OpenAIModel class lets you call both OAI and Azure OAI with one single component. New models can be defined for other model types like LLaMA2.              | ✔️ ||
+|Embeddings    | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings.        | ✔️ |❌|
+|Prompts     | A new object based prompt system enables better token management and reduces the likelihood overflowing the models context window.        | ✔️ ||
+| Augmentation     | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only  `functions`, `sequences`, and `monologue` style augmentations are supported.        | ✔️ |❌|
+|Data Sources     |  A new DataSource plugin type makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt.      | ✔️ |❌|
 
 ## Next step
 
