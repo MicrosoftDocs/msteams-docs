@@ -388,7 +388,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 > [!NOTE]
 > Search through task module isn't supported in M365 Chat.
 
-For M365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands).
+For M365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle two or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands).  Ensure that you update your web service to support search based on multiple parameters.
 <br>
 <br>
 <details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
