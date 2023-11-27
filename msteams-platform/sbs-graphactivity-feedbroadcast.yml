@@ -27,9 +27,9 @@ items:
 
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Output of feed broad cast" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Screenshot shows the output of feed broad cast" border="true":::
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Final output" border="true"::: 
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Screenshot shows the final output" border="true"::: 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -95,6 +95,9 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="creenshot shows how to clone a GitHub repository." border="true":::
+
+    1. Select **Clone**. 
 
 - title: Register your Teams Auth SSO with Microsoft Entra ID
   durationInMinutes: 1
@@ -106,22 +109,22 @@ items:
       
     **To create and register new application**
 
-    1. Go to the [Azure portal](https://portal.azure.com/). The system prompts you to sign in with your Microsoft account credentials
+    1. Go to the [Azure portal](https://portal.azure.com/). The system prompts you to sign in with your Microsoft account credentials.
     1. Select **Microsoft Entra ID**.
      
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-azure-active.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-azure-active.png" alt-text="Screenshot shows the Microsoft Entra ID under Azure services." border="true":::
 
-    1. In the left navigation pane, select **App Registrations**.
+    1. In the left navigation pane, select **App registrations**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration -screen.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration-screen.png" alt-text="Screenshot shows app registrations in the overview screen." border="true":::
 
     1. Select **New registration**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration2.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/new-app-registration.png" alt-text="Screenshot shows a new registration under app registrations." border="true":::
 
        Register an application page appears.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/register.png" alt-text="Screenshot shows the new app registration screen." border="true":::
 
     1. Enter the following details to register an application.
 
@@ -133,7 +136,7 @@ items:
 
        App **Overview** page appears.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id2.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-id2.png" alt-text="Screenshot shows the overview page of the new app." border="true":::
 
        > [!Important]
        > Save the **Application (client) ID** and **Directory (tenant) ID** for future reference.
@@ -146,7 +149,7 @@ items:
      ngrok http --host-header=localhost 3978
      ```
      
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok2.png" alt-text="New registration" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/ngrok2.png" alt-text="Screenshot shows tunnel creation in ngrok." border="true":::
 
     > [!TIP]
     > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
@@ -156,22 +159,22 @@ items:
   content: |
     1. In the left navigation pane, select **Expose an API**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-exposeanapi.png" alt-text="Expose an API" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-exposeanapi.png" alt-text="Screenshot shows the expose an API screen." border="true":::
 
     1. Select **Set**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/expose-an-api1.png" alt-text="Expose and api" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/expose-an-api1.png" alt-text="Screenshot shows the set option for application ID URI." border="true":::
 
     1. Set the **Application ID URI** in the form of `api://{AppID}`.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/setlink.png" alt-text="Set a link" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/setlink.png" alt-text="Screenshot shows the application ID URI entered." border="true":::
 
     1. Insert the `WebAppDomain` value between `api://` and `/{AppID}`.</br>
         `api:// your ngrok/{AppID}`</br>
         
        The following image shows the domain name:
         
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png" alt-text="Save a link" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/savelink.png" alt-text="Screenshot shows the application ID URI entered." border="true":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -179,11 +182,11 @@ items:
 
     1. Select **Add a scope**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Add scope" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/addascope.png" alt-text="Screenshot shows the add a scope option." border="true":::
 
        Add a scope page appears.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-scope.png" alt-text="Add scope" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-scope.png" alt-text="Screenshot shows the add a scope page." border="true":::
 
     1. Enter the details for configuring scope.
      
@@ -210,13 +213,13 @@ items:
 
        Your application ID URI is created with scope name.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/accessasuser.png" alt-text="Access as user" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/accessasuser.png" alt-text="Screenshot shows the added scope for the application ID URI." border="true":::
 
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-client.png" alt-text="Add client" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-client.png" alt-text="Screenshot shows the add a client application option." border="true":::
 
        Add a client application pane appears.
 
@@ -229,32 +232,32 @@ items:
 
     1. Select **Authorized scopes** to determine, which type of token return the service.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Authroized scope" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Screenshot shows the authroized scope of the client application." border="true":::
 
        The following image displays the Client ID:
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Client application" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clientapplications.png" alt-text="Screenshot shows the client application ID." border="true":::
 
     1. In the left pane, select **API Permissions**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-api-permission.png" alt-text="Client application" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-api-permission.png" alt-text="Screenshot shows the select API permissions page." border="true":::
 
        > [!NOTE]
        > Users need to consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configured-permission1.png" alt-text="Add a permission" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configured-permission1.png" alt-text="Screenshot shows the add a permission option." border="true":::
 
        Request API permission page appears.
 
     1. Select **Microsoft Graph**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectmicrosoftgraph.png" alt-text="Select Microsoft graph" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectmicrosoftgraph.png" alt-text="Screenshot shows the option to select Microsoft graph." border="true":::
 
     1. Select **Delegated permissions**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions.png" alt-text="Select graph permission" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions.png" alt-text="Screenshot shows the option to select delegated permissions." border="true":::
 
     1. Add the following permissions:</br>
          * **Directory.Read.All**
@@ -269,20 +272,20 @@ items:
 
     1. Select **Add permissions**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Request permission" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions.png" alt-text="Screenshot shows the various API permissions." border="true":::
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions3.png" alt-text="Request permission" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/requestpermissions3.png" alt-text="Screenshot shows the various API permissions and highlights the add permissions button." border="true":::
 
    
     1. Select **Add a permission**.
 
     1. Select **Microsoft Graph**.
  
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectmicrosoftgraph.png" alt-text="Select Microsoft graph" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectmicrosoftgraph.png" alt-text="Screenshot shows the option to select Microsoft graph." border="true":::
 
     1. Select **Application permissions**.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions1.png" alt-text="Select Microsoft graph" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-graph-permissions1.png" alt-text="Screenshot shows the option to select application permissions." border="true":::
 
     1. Add the following permissions:</br> 
 
@@ -292,15 +295,15 @@ items:
 
     1. Select **Add permissions**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/request-application-permission.png" alt-text="Request permission" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/request-application-permission.png" alt-text="Screenshot shows the various API permissions." border="true":::
 
     1. Ensure to grant the admin consent for the required permissions.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Add platform" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Screenshot shows the admin consent message." border="true":::
 
     1. From the left pane, select **Authentication** to set a redirect URI. 
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-authentication.png" alt-text="Select Authentication" border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-authentication.png" alt-text="Screenshot shows the authentication screen of your app." border="true":::
 
        > [!NOTE]
        > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
@@ -309,7 +312,7 @@ items:
 
          1. For this tutorial, select **Web**.
 
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-platform.png" alt-text="Add platform" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-a-platform.png" alt-text="Screenshot shows the add a platform option." border="true":::
 
          1. Enter the redirect URI for your app by appending `Auth/end` to fully qualified domain name:</br> 
            `https://ngrok.io/Auth/end`. </br>
@@ -320,23 +323,23 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configure-web-details.png" alt-text="Configure web" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/configure-web-details.png" alt-text="Screenshot shows the configure web window." border="true":::
 
          1. Select **Add URI** and enter `https://ngrok.io/Auth/Start`. 
 
          1. Select **Save**.
 
-             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-uri.png" alt-text="Redirect uri" border="true":::
+             :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-uri.png" alt-text="Screenshot shows how to add the URI." border="true":::
 
     **To create client secret**
 
     1. In the left pane, select **Certificates & secrets**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-certificate.png" alt-text="Select Certificate" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-certificate.png" alt-text="Screenshot shows the select certificates & secrets screen." border="true":::
 
     1. In the **Client secrets** section, select **New client secret**. 
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret.png" alt-text="Client secret" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret.png" alt-text="Screenshot shows client secrets section." border="true":::
     
        The **Add a client secret** window appears.  
 
@@ -344,11 +347,11 @@ items:
 
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secret-save.png" alt-text="Secret id" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/secret-save.png" alt-text="Screenshot shows the add a client screen." border="true":::
 
     1. In the **Value** column, select **Copy to clipboard**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret-code.png" alt-text="Client secret code" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/client-secret-code.png" alt-text="Screenshot shows how to copy the client secret code." border="true":::
        
        > [!Important]
        > Save the **Client secrets** value or app password for future reference.
@@ -359,7 +362,7 @@ items:
   content: |
     1. Go to **appsettings.json** file in cloned repository.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettings-location.png" alt-text="App settings location" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettings-location.png" alt-text="Screenshot shows the location of the app settings file." border="true":::
 
     1. Open **appsettings.json** file in the latest version of Visual Studio and update the following information:  
 
@@ -368,11 +371,11 @@ items:
          * Set `"MicrosoftAppPassword"` to your bot's client secret ID value.
          * Set `"BaseUrl"` to the `[WebAppDomainName]`.
       
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details1.png" alt-text="Appsettings" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-settings-details1.png" alt-text="Screenshot shows the changes in the app settings file." border="true":::
 
     1. Go to **manifest.json** file in cloned repository.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-location-package.png" alt-text="Manifest location" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-location-package.png" alt-text="Screenshot shows the location of the app settings file." border="true":::
 
     1. Open **manifest.json** file in the latest version of Visual Studio and make the following changes:
 
@@ -380,7 +383,7 @@ items:
          * Replace all occurrences of `<<Base_URL>>` with your fully qualified domain name.
          * Set `validDomains` to `[WebAppDomainName]`.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-file.png" alt-text="Manifest file" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manifest-file.png" alt-text="Screenshot shows the changes in the manifest file." border="true":::
 
 - title: Build and run the service
   durationInMinutes: 1
@@ -388,23 +391,23 @@ items:
        1. Open Visual Studio.
        1. Go to **File** > **Open** > **Project/Solution...**.
     
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/vsopenproject.png" alt-text="Open file in Visual Studio" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/VSopenfile.png" alt-text="Screenshot shows how to open a project in Visual Studio." border="true":::
 
        1. Select **ActivityFeedBroadcast.sln** file from **csharp** folder.
 
        1. Select **Open**.
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-project.png" alt-text="Open a project" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-project.png" alt-text="creenshot shows how to select the project file." border="true":::
 
        1. Press **F5** to run the project.
     
        1. Select **Yes** if the following dialog appears:
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/graphactivity-generator-certificate.png" alt-text="Select certificate" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/graphactivity-generator-certificate.png" alt-text="Screenshot shows an install certificate window." border="true":::
 
-          A webpage opens with a message **. Your bot is ready!**
+          A webpage opens with a message. Your bot is ready!
 
-          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-is-ready.png" alt-text="App is ready" border="true":::
+          :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-is-ready.png" alt-text="Screenshot shows a webpage with a message that your bot is ready." border="true":::
 
 - title: Add activity feed broadcast app to Teams
   durationInMinutes: 1
@@ -416,21 +419,25 @@ items:
        * outline.png
        * color.png
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Select zip file" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/selectzip.png" alt-text="Screenshot shows the created zip file." border="true":::
     
     1. In the Teams client, select the **Apps** icon.
 
     1. Select **Manage your apps**.
 
-    1. Select **Upload an app**.
+       :::image type="content" source="~/assets/images/Teams-task-module/manage-apps_3.png" alt-text="Screenshot shows the manage your apps option in Teams.":::
+    
+    1. Select **Submit an app to your org**. 
 
-    1. Look for the option to **Upload a custom app**. If the option is visible, you have enabled sideloading apps. 
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.png" alt-text="Screenshot shows the upload an app screen.":::
+       
+    1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
 
-       :::image type="content" source="assets/images/teams-file-upload-bot/custom-upload.png" alt-text="Screenshot shows the selection of Upload a custom app highlighted in red.":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-a-custom-app.png" alt-text="Screenshot shows the opening of a custom app." border="true":::
 
     1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-an-app.png" alt-text="Add app" border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-an-app.png" alt-text="Screenshot shows the add app screen." border="true":::
    
           The app is visible in the meeting SidePanel.
 

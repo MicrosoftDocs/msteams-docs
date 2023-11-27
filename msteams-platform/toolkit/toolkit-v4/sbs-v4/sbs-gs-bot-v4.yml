@@ -127,12 +127,12 @@ items:
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+    1. Look for the option to **Upload a customised app**. If you see the option, custom app upload is enabled.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/spfx-custom-new.png" alt-text="Screenshot shows upload a custom app under Manage your apps option":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/upload-custom-app-v4.png" alt-text="Screenshot shows upload a customised app under Manage your apps option":::
 
         > [!NOTE]
-        > If you don't have the option to upload a custom app, talk to your Teams administrator.
+        > If you don't have the option to upload a customised app, talk to your Teams administrator.
 
    ### Create a free Teams developer tenant (optional)
 
