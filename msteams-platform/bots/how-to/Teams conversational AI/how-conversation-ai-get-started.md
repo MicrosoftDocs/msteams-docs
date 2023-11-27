@@ -420,7 +420,13 @@ app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: Ap
 });
 ```
 
-If you use either sequence or monologue or tools augmentation, it's impossible for the model to hallucinate a invalid function name or or an invalid action name, or to not returning the correct parameters. You must create a new actions file and define all the actions you want the prompt to use for augmentation.
+If you use either sequence or monologue or tools augmentation, it's impossible for the model to hallucinate a invalid function name or or an invalid action name, or to not returning the correct parameters. You must create a new actions file and define all the actions you want the prompt to support for augmentation. You must define the actions to tell the model when to perform the action.
+
+in the following example of a light bot, you must provide the following parameters:
+
+* `name`: Name of the action. Required.
+* `description`: Description of the action. Optional.
+* `parameters`: Add a JSON schema object of the required parameters.
 
 ```javascript
 [
