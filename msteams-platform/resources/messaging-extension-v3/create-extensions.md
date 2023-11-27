@@ -235,13 +235,13 @@ There are three ways to collect information from a user in Teams.
 
 ### Static parameter list
 
-In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method, ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
+In this method, all you need to do is define a static list of parameters in the manifest as shown in the "Create To Do" command. To use this method, ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
 When a user chooses a command with static parameters, Teams generates a form in a task module with the defined parameters in the manifest. On hitting Submit, a `composeExtensions/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
 
 ### Dynamic input using an Adaptive Card
 
-In this method, your service can define a custom Adaptive Card to collect the user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. If you set `fetchTask` to `true`, any static parameters defined for the command is ignored.
+In this method, your service can define a custom Adaptive Card to collect the user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. If you set `fetchTask` to `true`, any static parameters defined for the command are ignored.
 
 In this method, your service receives a `composeExtensions/fetchTask` event and responds with an Adaptive Card based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Following is a sample response with an Adaptive Card:
 
@@ -365,7 +365,7 @@ Here's an example of the invoke:
 }
 ```
 
-Respond to the invoke with the same task response you would have responded with if the bot was already installed.
+Respond to the invoke with the same task response that you have responded with, if the bot was installed.
 
 ## Responding to submit
 
