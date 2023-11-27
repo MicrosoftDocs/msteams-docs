@@ -286,73 +286,112 @@ A simple interface for actions and predictions allows bots to react when they ha
 
 Thanks to our AI library, the prompt needs only to outline the actions supported by the bot, and supply a few-shot examples of how to employ those actions. Conversation history helps with a natural dialogue between the user and bot, such as *add cereal to groceries list*, followed by *also add coffee*, which should indicate that coffee is to be added to the groceries list.
 
-All entities are required parameters to actions.
+The following is a conversation with an AI assistant. The AI assistant is capable of managing lists and recognizes the following commands:
 
-Current list names:
+* DO `<action> <optional entities>`
+* SAY `<response>`
 
-```javascript
-{{conversation.listNames}}
-```
+The following actions are supported:
 
-Conversation history:
+* `addItem list="<list name>" item="<text>"`
+* `removeItem list="<list name>" item="<text>"`
+* `findItem list="<list name>" item="<text>"`
+* `summarizeLists`
 
-```javascript
-{{conversation.history}}
-```
+All entities are required parameters to actions
 
-Current query:
+* Current list names:
 
-```javascript
-Human: {{activity.text}}
-```
+    ```
+    {{conversation.listNames}} 
+    ```
 
-## AI
+    ```text
 
-The bot logic is simplified to provide handlers for actions such as `addItem`, `removeItem`, and `findItem`. This clear delineation between actions and the prompts that instruct the AI on how to execute them is an incredibly potent tool.
+    Examples:  
 
-Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
+    Human: remind me to buy milk
+    AI: DO addItem list="groceries" item="milk" THEN SAY Ok I added milk to your groceries list
+    Human: we already have milk
+    AI: DO removeItem list="groceries" item="milk" THEN SAY Ok I removed milk from your groceries list
+    Human: buy ingredients to make margaritas
+    AI: DO addItem list="groceries" item="tequila" THEN DO addItem list="groceries" item="orange liqueur" THEN DO addItem list="groceries" item="lime juice" THEN SAY Ok I added tequila, orange liqueur, and lime juice to your groceries list
+    Human: do we have have milk
+    AI: DO findItem list="groceries" item="milk"
+    Human: what's in my grocery list
+    AI: DO summarizeLists  
+    Human: what's the contents of all my lists?
+    AI: DO summarizeLists
+    Human: show me all lists but change the title to Beach Party
+    AI: DO summarizeLists
+    Human: show me all lists as a card and sort the lists alphabetically
+    AI: DO summarizeLists
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L149)
+    ```
 
-```typescript
-app.ai.action('addItem', async (context, state, data: EntityData) => {
-    const items = getItems(state, data.list);
-    items.push(data.item);
-    setItems(state, data.list, items);
-    return true;
-});
+* Conversation history:
 
+    ```
+    {{conversation.history}} 
+    ```
 
-app.ai.action('removeItem', async (context, state, data: EntityData) => {
-    const items = getItems(state, data.list);
-    const index = items.indexOf(data.item);
-    if (index >= 0) {
-        items.splice(index, 1);
+* Current query:
+
+    ```
+    Human: {{activity.text}} 
+    ```
+
+* Current list names:
+
+    ```javascript
+    {{conversation.listNames}}
+    ```
+
+* AI: The bot logic is streamlined to include handlers for actions such as `addItem`, `removeItem`, and `findItem`. This distinct separation between actions and the prompts guiding the AI on how to execute the actions and prompts serves as a powerful tool.
+
+    Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
+
+    [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L149)
+
+    ```typescript
+    app.ai.action('addItem', async (context, state, data: EntityData) => {
+        const items = getItems(state, data.list);
+        items.push(data.item);
         setItems(state, data.list, items);
         return true;
-    } else {
-        await context.sendActivity(responses.itemNotFound(data.list, data.item));
-
-
+    });
+    
+    
+    app.ai.action('removeItem', async (context, state, data: EntityData) => {
+        const items = getItems(state, data.list);
+        const index = items.indexOf(data.item);
+        if (index >= 0) {
+            items.splice(index, 1);
+            setItems(state, data.list, items);
+            return true;
+        } else {
+            await context.sendActivity(responses.itemNotFound(data.list, data.item));
+    
+    
+            // End the current chain
+            return false;
+        }
+    });
+    
+    app.ai.action('findItem', async (context, state, data: EntityData) => {
+        const items = getItems(state, data.list);
+        const index = items.indexOf(data.item);
+        if (index >= 0) {
+            await context.sendActivity(responses.itemFound(data.list, data.item));
+        } else {
+            await context.sendActivity(responses.itemNotFound(data.list, data.item));
+        }
+    
+    
         // End the current chain
         return false;
-    }
-});
-
-app.ai.action('findItem', async (context, state, data: EntityData) => {
-    const items = getItems(state, data.list);
-    const index = items.indexOf(data.item);
-    if (index >= 0) {
-        await context.sendActivity(responses.itemFound(data.list, data.item));
-    } else {
-        await context.sendActivity(responses.itemNotFound(data.list, data.item));
-    }
-
-
-    // End the current chain
-    return false;
-});
-```
+    });
+    ```
 
 ## Next step
 

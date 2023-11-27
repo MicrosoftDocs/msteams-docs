@@ -443,8 +443,6 @@ The language supports features that allow you to include variables, call externa
 
 * ``{{$input}}``:  Inserts the message text. It gets its value from state.temp.input.
 
-* ``{{$history}}``: Inserts the conversation history.​ It gets its value from state.temp.history.
-
 * ``{{$state.[property]}}``: Inserts state properties.
 
 ## Actions
@@ -612,6 +610,10 @@ Looping is needed for augmentations like `functions` and `monologue` where the L
 
 1. You can set `allow_looping?` to `false` in the `AIOptions` definition.
 1. You can set `max_repair_attempts` to `0` in the `index.ts` file.
+
+#### Manage history
+
+You can use the `MaxHistoryMessages` and `MaxConversationHistoryTokens` arguments to allow the AI library to automatically manage your history.
 
 ## Next step
 
