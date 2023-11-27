@@ -81,11 +81,13 @@ import { VectraDataSource } from './VectraDataSource';
 
 Add AI capabilities to your existing app or a new Bot Framework app.
 
-**Planner**: OpenAI planner is the main component that calls the large language model (LLM) OpenAI or Azure OpenAI. The OpenAI API is powered by a diverse set of models with different capabilities. You can also make limited customizations to our original base models for your specific use case.
+**OpenAIModel**: OpenAI model supports both OpenAI and Azure OpenAI LLMs.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
 
-**Moderator**: A moderator adds safety moderation to the input and output. It allows you to identify the user input, flag prompt injection techniques, review the output from the bot, and run it through a business logic for filtering to ensure that the bot complies with OpenAI's usage policies. You can either moderate the input or the output, or both. OpenAI moderator is the default moderator.
+**ActionPlanner**: The ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model.
+
+# [JavaScript](#tab/javascript)
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L70)
 
@@ -115,9 +117,40 @@ const planner = new ActionPlanner({
     prompts,
     defaultPrompt: 'chat',
 });
-The `defaultModel` type `text-davinci-003` can perform any language task with better quality, longer output, and consistent instruction.
 
 ```
+
+# [C#](#tab/C#)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/Program.cs#L51C1-L51C1).
+
+```csharp
+    // Create model
+    OpenAIModel model = new OpenAIModel(
+        sp.GetService<AzureOpenAIPlannerOptions>()!,
+        loggerFactory);
+
+    // Create prompt manager
+    PromptManager prompts = new(new()
+    {
+        promptFolder = "./Prompts",
+    });
+
+    prompts.AddFunction("getlightStatus". (context, memory, functions, tokenizer, args) =>
+    bool lightsOn = (bool)(memory.GetValue("Conversation.lightsOn") ?? false);
+    dynamic res = lightsOn ? "on" : "off";
+    return tasks.FromResult(res);
+    });
+
+    //Create ActionPlanner
+
+    ActionPlanner actionPlanner = new(new(model, prompts, (context, state, planner) =>
+    {
+        return tasks.FromResult(prompts.GetPrompt("sequence"));
+    });
+```
+
+---
 
 ## Define storage and application
 
@@ -126,6 +159,8 @@ The application object automatically manages the conversation and user state of 
 * **Storage**: Create a storage provider to store the conversation and the user state for your bot.
 
 * **Application**: The application class has all the information and bot logic required for an app. You can register actions or activity handlers for the app in this class.
+
+# [JavaScript](#tab/javascript3)
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L82)
 
@@ -142,6 +177,23 @@ const app = new Application<ApplicationTurnState>({
 ```
 
 The `MemoryStorage()` function stores all the state for your bot. The `Application` class replaces the Teams Activity Handler class. You can configure your `ai` by adding the planner, moderator, prompt manager, default prompt and history. The `ai` object is passed into the `Application`, which receives the AI components and the default prompt defined earlier.
+
+# [C#](#tab/C#3)
+
+```csharp
+return new TeamsLightBot(new ()
+    {
+        Storage = sp.GetService<IStorage>(),
+        AI = new(planner),
+        LoggerFactory = loggerFactory,
+        turnStateFactory: () => 
+        {
+            new AppState(turnContext),
+        }
+    });
+```
+
+---
 
 ## Register data sources
 
@@ -324,34 +376,31 @@ Create a folder called prompts and define your prompts in the folder. When the u
   
 * `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/prompts/chat/config.json)
+   [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/prompts/chat/config.json)
 
-   ```json
-  {
-    "schema": 1.1,
-    "description": "Chat with Teams Chef",
-    "type": "completion",
-    "completion": {
-        "model": "gpt-3.5-turbo",
-        "completion_type": "chat",
-        "include_history": true,
-        "include_input": true,
-        "max_input_tokens": 2800,
-        "max_tokens": 1000,
-        "temperature": 0.9,
-        "top_p": 0.0,
-        "presence_penalty": 0.6,
-        "frequency_penalty": 0.0,
-        "stop_sequences": []
-    },
-    "augmentation": {
-        "augmentation_type": "none",
-        "data_sources": {
-            "teams-ai": 1200
+    ```json
+     {
+        "schema": 1.1,
+        "description": "A bot that can turn the lights on and off",
+        "type": "completion",
+        "completion": {
+            "model": "gpt-3.5-turbo",
+            "completion_type": "chat",
+            "include_history": true,
+            "include_input": true,
+            "max_input_tokens": 2800,
+            "max_tokens": 1000,
+            "temperature": 0.2,
+            "top_p": 0.0,
+            "presence_penalty": 0.6,
+            "frequency_penalty": 0.0,
+            "stop_sequences": []
+        },
+        "augmentation": {
+            "augmentation_type": "sequence"
         }
-    }
-  }
-   ```
+      }
+    ```
 
 ### Query parameters
 
@@ -370,20 +419,18 @@ The following table includes the query parameters:
 |`presence_penalty`     |  Number between -2.0 and 2.0. Positive values penalize new tokens based on whether they appear in the text so far, increasing the model's likelihood to talk about new topics.       |
 |`frequency_penalty`     |Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.         |
 |`stop_sequences`     |  Up to four sequences where the API stops generating further tokens. The returned text won't contain the stop sequence. |
+|`augmentation_type`| The type of augmentation. Supported values are `sequence`, `monologue` and `tools`.|
 
 ### Prompt actions
 
 Plans let the model perform actions or respond to the user. You can create a schema of the plan and add a list of actions that you support to perform an action and pass arguments. The OpenAI endpoint figures out the actions required to be used, extracts all the entities, and passes those as arguments to the action call.
 
 ```text
-    The following is a conversation with an AI assistant. 
-    The AI is Santa Clause and the Human is a child meeting Santa for the first time. 
-    The AI should always reply the way Santa would. 
-    The AI should always greet the human the way Santa would, ask them their name, and then what they would like for Christmas.
-    
-    {{$history}}
-    Human: {{$input}}
-    AI:
+The following is a conversation with an AI assistant.
+The assistant can turn a light on or off.
+
+context:
+The lights are currently {{getLightStatus}}.
   ```
 
 ### Prompt template
@@ -404,29 +451,129 @@ The language supports features that allow you to include variables, call externa
 
 Actions handle events triggered by AI components.
 
-`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag.
+`FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag. If you want to stop the action, you must add `AI.StopCommandName`.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L97)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L141)
 
 ```javascript
-app.ai.action(AI.FlaggedInputActionName, async (context: TurnContext, state: TurnState, data: TData) => {
-    await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
-    return false;
-});
+// Register other AI actions
+app.ai.action(
+    AI.FlaggedInputActionName,
+    async (context: TurnContext, state: ApplicationTurnState, data: Record<string, any>) => {
+        await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
+        return AI.StopCommandName;
+    }
+);
 
-app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: ApplicationTurnState, data: TData) => {
+app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: ApplicationTurnState, data: any) => {
     await context.sendActivity(`I'm not allowed to talk about such things.`);
-    return false;
+    return AI.StopCommandName;
 });
 ```
 
-If you use either sequence or monologue or tools augmentation, it's impossible for the model to hallucinate a invalid function name or or an invalid action name, or to not returning the correct parameters. You must create a new actions file and define all the actions you want the prompt to support for augmentation. You must define the actions to tell the model when to perform the action.
+### Register Action Handlers
 
-in the following example of a light bot, you must provide the following parameters:
+Action handlers help users achieve the goals, which is shared in the user intents.
 
-* `name`: Name of the action. Required.
-* `description`: Description of the action. Optional.
-* `parameters`: Add a JSON schema object of the required parameters.
+One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
+
+You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions.
+
+In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause`  action. Every time an action is called, you return a `string`. If you require the bot to return time, you don't need to parse the time and convert it to a number. The `PauseParameters` property ensures that it returns time in number format without pausing the prompt.
+
+# [JavaScript](#tab/javascript2)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L107)
+
+```javascript
+// Register action handlers
+app.ai.action('LightsOn', async (context: TurnContext, state: ApplicationTurnState) => {
+    state.conversation.lightsOn = true;
+    await context.sendActivity(`[lights on]`);
+    return `the lights are now on`;
+});
+
+app.ai.action('LightsOff', async (context: TurnContext, state: ApplicationTurnState) => {
+    state.conversation.lightsOn = false;
+    await context.sendActivity(`[lights off]`);
+    return `the lights are now off`;
+});
+
+interface PauseParameters {
+    time: number;
+}
+
+app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState, parameters: PauseParameters) => {
+    await context.sendActivity(`[pausing for ${parameters.time / 1000} seconds]`);
+    await new Promise((resolve) => setTimeout(resolve, parameters.time));
+    return `done pausing`;
+});
+```
+
+# [C#](#tab/C#2)
+
+```csharp
+public class LightBotActions
+    {
+        [Action("LightsOn")]
+        public async Task<string> LightsOn([ActionTurnContext] ITurnContext turnContext, [ActionTurnState] AppState turnState)
+        {
+            turnState.Conversation!.LightsOn = true;
+            await turnContext.SendActivityAsync(MessageFactory.Text("[lights on]"));
+            return "the lights are now on";
+        }
+
+        [Action("LightsOff")]
+        public async Task<string> LightsOff([ActionTurnContext] ITurnContext turnContext, [ActionTurnState] AppState turnState)
+        {
+            turnState.Conversation!.LightsOn = false;
+            await turnContext.SendActivityAsync(MessageFactory.Text("[lights off]"));
+            return "the lights are now off";
+        }
+
+        [Action("Pause")]
+        public async Task<string> LightsOff([ActionTurnContext] ITurnContext turnContext, [ActionParameters] Dictionary<string, object> args)
+        {
+            // Try to parse entities returned by the model.
+            // Expecting "time" to be a number of milliseconds to pause.
+            if (args.TryGetValue("time", out object? time))
+            {
+                if (time != null && time is string timeString)
+                {
+                    if (int.TryParse(timeString, out int timeInt))
+                    {
+                        await turnContext.SendActivityAsync(MessageFactory.Text($"[pausing for {timeInt / 1000} seconds]"));
+                        await Task.Delay(timeInt);
+                    }
+                }
+            }
+
+            return "done pausing";
+        }
+
+        [Action("LightStatus")]
+        public async Task<string> LightStatus([ActionTurnContext] ITurnContext turnContext, [ActionTurnState] AppState turnState)
+        {
+            await turnContext.SendActivityAsync(ResponseGenerator.LightStatus(turnState.Conversation!.LightsOn));
+            return turnState.Conversation!.LightsOn ? "the lights are on" : "the lights are off";
+        }
+
+        [Action(AIConstants.UnknownActionName)]
+        public async Task<string> UnknownAction([ActionTurnContext] TurnContext turnContext, [ActionName] string action)
+        {
+            await turnContext.SendActivityAsync(ResponseGenerator.UnknownAction(action ?? "Unknown"));
+            return "unknown action";
+        }
+    }
+}
+
+```
+
+---
+
+If you use either `sequence`, `monologue` or `tools` augmentation, it's impossible for the model to hallucinate a invalid function name, action name, or the correct parameters. You must create a new actions file and define all the actions you want the prompt to support for augmentation. You must define the actions to tell the model when to perform the action.
+
+In the following example of a light bot, the `actions.json` file has a list of all the actions the bot can perform:
 
 ```javascript
 [
@@ -457,42 +604,14 @@ in the following example of a light bot, you must provide the following paramete
 ]
 ```
 
-### Register Action Handlers
+* `name`: Name of the action. Required.
+* `description`: Description of the action. Optional.
+* `parameters`: Add a JSON schema object of the required parameters.
 
-Action handlers help users achieve the goals, which is shared in the user intents.
+Looping is needed for augmentations like `functions` and `monologue` where the LLM needs to see the result of the last action that was performed. If you're using a  `sequence` augmentation, you can disable looping to guard against any accidental looping in the following ways:
 
-One of the key aspects in action handlers is that you must first register the actions in the prompts and then help user achieve the goal.
-
-You must register a handler for each action listed in the prompt and also add a handler to deal with unknown actions.
-
-In the following example of a light bot, we have the `LightsOn`, `LightsOff`, and `Pause`  action. Every time an action is called, you return `true` or `false`. ​Returning `false` from a handler prevents the planner from running additional `DO` or `SAY` commands. When the bot receives an unknown action, we're telling the bot to terminate the action.
-
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L107)
-
-```javascript
-// Register action handlers
-app.ai.action('LightsOn', async (context: TurnContext, state: ApplicationTurnState) => {
-    state.conversation.lightsOn = true;
-    await context.sendActivity(`[lights on]`);
-    return `the lights are now on`;
-});
-
-app.ai.action('LightsOff', async (context: TurnContext, state: ApplicationTurnState) => {
-    state.conversation.lightsOn = false;
-    await context.sendActivity(`[lights off]`);
-    return `the lights are now off`;
-});
-
-interface PauseParameters {
-    time: number;
-}
-
-app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState, parameters: PauseParameters) => {
-    await context.sendActivity(`[pausing for ${parameters.time / 1000} seconds]`);
-    await new Promise((resolve) => setTimeout(resolve, parameters.time));
-    return `done pausing`;
-});
-```
+1. You can set `allow_looping?` to `false` in the `AIOptions` definition.
+1. You can set `max_repair_attempts` to `0` in the `index.ts` file.
 
 ## Next step
 
