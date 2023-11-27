@@ -1766,12 +1766,11 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
         </tr>
         <tr>
