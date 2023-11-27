@@ -32,7 +32,7 @@ When publishing to the Microsoft Teams Store, make sure your manifest references
 
 You can add bot, tab, message extensions, and other capabilities to your app by updating the app manifest with the required app capability. For more information, see [build app with app capabilities](../../get-started/get-started-overview.md).
 
-*Sample code reference for app manifest*
+*Sample code reference*
 
 ## App icons
 
