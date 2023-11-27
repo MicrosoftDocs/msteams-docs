@@ -105,9 +105,9 @@ The bot framework using Teams AI library requires the following:
 The Teams AI Library is now available for developers in JavaScript and C# languages allowing developers to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a  mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
 
 The following table lists the changes and updates to the Teams AI library:
+
 |Type |Description  |
 |---------|---------|
-|Changes    |         |
 |**State Management**     | Simpler TurnState object and no more need for a TurnStateManager class.        |
 |Prompt Config     | Updated the config.json version number for prompts to 1.1.        |
 |Prompt Management     | All prompt management is now done by the Planner.        |
@@ -131,9 +131,12 @@ Reliability is dramatically increasing with an internal feedback loop that autom
 Say goodbye to prompt engineering headaches and say hello to efficiently enhancing and directing your AI model’s responses with Augmentation. When creating a prompt select one of the following Augmentation Modes to tailor your model to your needs, increasing its accuracy and desired outcomes:
 
 * **Retrieval Augmented Generation (RAG)**: Automatically incorporate real-time, dynamic, and specified external datasources into your model’s responses enabling up to date and contextually accurate results without fine-tuning or re-training your model. Answer questions about today’s sales numbers or customize to a specific user’s data; with RAG your model is no longer stuck in the past. Discover how easy it's to build by trying the RAG bot sample today!
-**Monologue**: Create AutoGPT-style agents capable of performing multi-step actions independently and reliability with full schema validation and automatic repair included.
-**Sequences**: Enable your AI assistant to return a sequence of actions for execution with schema validation increasing reliability.
-**Functions**: Produce structured responses from your model by employing user-defined Functions. These functions are customizable using JSON schemas to define the parameters and their format. The ActionPlanner assesses model responses against the schema, making repairs as needed increasing response reliability and consistency.
+
+* **Monologue**: Create AutoGPT-style agents capable of performing multi-step actions independently and reliability with full schema validation and automatic repair included.
+
+* **Sequences**: Enable your AI assistant to return a sequence of actions for execution with schema validation increasing reliability.
+
+* **Functions**: Produce structured responses from your model by employing user-defined Functions. These functions are customizable using JSON schemas to define the parameters and their format. The ActionPlanner assesses model responses against the schema, making repairs as needed increasing response reliability and consistency.
 
 #### Vector data sources
 
