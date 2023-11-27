@@ -137,7 +137,7 @@ When a user interacts with your AI assistant, this system prompts the bot to eng
 
 ## Feedback loop
 
-A feedback loop is a feature of the Teams AI library that helps to improve the quality and user experience of conversational apps. It's an algorithm that detects when the large language model (LLM) produces a subpar or incorrect response, and feeds this information back to the LLM as input. The integration of AlphaWave gives the AI library the ability to repair malformed responses from the model. JSON Schema based Validator plugins are used to validate all structured responses from the model. If the model returns missing or invalid JSON, it's asked to repair its mistake.
+The feedback loop is a feature of the AI system that allows it to validate and correct the output of the language model. It works by checking the structure and parameters of the plan or monologue that the model returns, and giving it feedback if there are any errors or missing information. The model then tries to fix its mistakes and return a valid output. The feedback loop can improve the reliability and accuracy of the AI system, and reduce the chances of hallucination or invalid actions.
 
 The following table lists the changes and updates to the Teams AI library:
 
