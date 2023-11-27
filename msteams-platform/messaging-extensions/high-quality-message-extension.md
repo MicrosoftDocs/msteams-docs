@@ -389,6 +389,95 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 > Search through task module isn't supported in M365 Chat.
 
 For M365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands).
+<br>
+
+<details><summary>The following is an example of multi-parameters defined in app manifest:</summary>
+
+```json
+"commands": [
+                {
+                    "id": "inventorySearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search products by name, category, inventory status, supplier location, stock level",
+                    "title": "Product inventory",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "productName",
+                            "title": "Product name",
+                            "description": "Enter a product name here",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "categoryName",
+                            "title": "Category name",
+                            "description": "Enter the category of the product",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "inventoryStatus",
+                            "title": "Inventory status",
+                            "description": "Enter what status of the product inventory. Possible values are 'in stock', 'low stock', 'on order', or 'out of stock'",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "supplierCity",
+                            "title": "Supplier city",
+                            "description": "Enter the supplier city of product",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "stockQuery",
+                            "title": "Stock level",
+                            "description": "Enter a range of integers such as 0-42 or 100- (for >100 items). Only use if you need an exact numeric range.",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "discountSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search for discounted products by category",
+                    "title": "Discounts",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "categoryName",
+                            "title": "Category name",
+                            "description": "Enter the category to find discounted products",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "revenueSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Find products based on their revenue/period",
+                    "title": "Revenue",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "revenueRange",
+                            "title": "Revenue range",
+                            "description": "Enter 'high' or 'low' or enter a range of integers such as 0-10000 or 5000- using this exact format",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+```
+
+</details>
+<br>
 
 :::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a multi parameter search such as seafood and in stock.":::
 
@@ -512,7 +601,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in M365 Chat.":::
 
 * If a user can change any information on the card through task module, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
-* Adaptive Cards must include a URL as part of the metadata, which allows cards to be easily copied from one hub to another. [*Recommended*]
+* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
 ## Technical requirements
