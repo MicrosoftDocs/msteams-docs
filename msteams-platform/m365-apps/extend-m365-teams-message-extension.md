@@ -182,10 +182,10 @@ Use the [Microsoft Teams developer community channels](/microsoftteams/platform/
 
 | **Sample Name** | **Description** | **Node.js** |
 |---------------|--------------|--------|
-| NPM Search Connector | Use Teams Toolkit to build a message extension app. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) |
+| NPM Search Connector | Teams Toolkit sample app to build a message extension app. Works in Teams and Outlook. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v2.1.0/NPM-search-connector-M365) |
 | Teams Link Unfurling | Simple Teams app to demonstrate link unfurling. Works in Teams, Outlook. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-link-unfurling/nodejs)
 | Tab in Stage View | Microsoft Teams tab sample app for demonstrating a tab in Stage View. Works in Teams, Outlook, Microsoft 365 app. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs) |
-|Teams action-based message extension for Microsoft 365| `TBD` | `TBD` |
+|Teams action-based message extension for Microsoft 365| Teams Toolkit sample app to build a message extension app. Works in Teams and Outlook. | [View](https://github.com/OfficeDev/TeamsFx/tree/dev/templates/js/message-extension-action) |
 
 ## Next step
 
