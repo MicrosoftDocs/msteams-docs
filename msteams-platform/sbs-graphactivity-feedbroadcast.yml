@@ -97,7 +97,7 @@ items:
     1. Select **Code**.
     1. From the dropdown menu, select **Open with GitHub Desktop**.
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="creenshot shows how to clone a GitHub repository." border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="Screenshot shows how to clone a GitHub repository." border="true":::
 
     1. Select **Clone**. 
 
@@ -234,7 +234,7 @@ items:
 
     1. Select **Authorized scopes** to determine, which type of token return the service.
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Screenshot shows the authroized scope of the client application." border="true":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-desktop-app.png" alt-text="Screenshot shows the authorized scope of the client application." border="true":::
 
        The following image displays the Client ID:
 
@@ -407,7 +407,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/graphactivity-generator-certificate.png" alt-text="Screenshot shows an install certificate window." border="true":::
 
-          A webpage opens with a message. Your bot is ready!
+          A webpage appears with a message that your bot is ready.
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-is-ready.png" alt-text="Screenshot shows a webpage with a message that your bot is ready." border="true":::
 
