@@ -4,6 +4,7 @@ description: In this article, learn about Teams conversation AI.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
+ms.date: 11/27/2023
 ---
 
 # Teams AI library
