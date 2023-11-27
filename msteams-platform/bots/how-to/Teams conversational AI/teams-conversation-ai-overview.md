@@ -146,16 +146,10 @@ The following table lists the changes and updates to the Teams AI library:
 
 |Type |Description  |JavaScript|C#|
 |---------|---------|||
-|**State Management**     | Simpler TurnState object and no more need for a TurnStateManager class.        |||
-|Prompt Config     | Updated the config.json version number for prompts to 1.1.        |||
-|Prompt Management     | All prompt management is now done by the Planner.        |||
-|Chaining    | Chaining isn't supported.        |||
-|completePrompt method    |  Planners are free to implement a completePrompt() method (the ActionPlanner will) but you can no longer access that through the AI class.       |||
-|**Additions**    |    |||
-|OpenAIModel    |The OpenAIModel class lets you call both OAI and Azure OAI with one single component. New models can be defined for other model types like LLaMA2.              | ✔️ ||
+|OpenAIModel    |The OpenAIModel class lets you call both OAI and Azure OAI with one single component. New models can be defined for other model types like LLaMA2.              | ✔️ |✔️|
 |Embeddings    | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings.        | ✔️ |❌|
-|Prompts     | A new object based prompt system enables better token management and reduces the likelihood overflowing the models context window.        | ✔️ ||
-| Augmentation     | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only  `functions`, `sequences`, and `monologue` style augmentations are supported.        | ✔️ |❌|
+|Prompts     | A new object based prompt system enables better token management and reduces the likelihood overflowing the models context window.        | ✔️ |✔️|
+| Augmentation     | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only  `functions`, `sequences`, and `monologue` style augmentations are supported.        | ✔️ |✔️|
 |Data Sources     |  A new DataSource plugin type makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt.      | ✔️ |❌|
 
 ## Next step
