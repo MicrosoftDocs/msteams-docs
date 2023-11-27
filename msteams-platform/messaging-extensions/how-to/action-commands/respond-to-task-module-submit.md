@@ -206,7 +206,11 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 ## Bot response with Adaptive Card
 
 > [!NOTE]
-> The prerequisite to get the bot response with an Adaptive card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
+>
+> * The prerequisite to get the bot response with an Adaptive Card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
+>
+> * Outlook doesn't support bot response with Adaptive Card.
+
 
 You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. It's useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it.
 
