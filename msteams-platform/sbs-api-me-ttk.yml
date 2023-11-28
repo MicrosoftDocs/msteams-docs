@@ -280,7 +280,7 @@ items:
                     items:
                       type: string
                       description: The categories assigned to the tool.
-                platforms:
+                  platforms:
                     type: array
                     items:
                       type: string
