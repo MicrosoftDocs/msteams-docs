@@ -10,7 +10,7 @@ ms.date: 01/19/2023
 
 # People Picker in Adaptive Cards
 
-People Picker helps users to search and select users in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, task modules, and tabs. People Picker supports the following features:
+People Picker helps users to search and select users in Adaptive Card. You can add People Picker as input control to Adaptive Card, which works across chats, channels, dialogs (referred as task modules in TeamsJS v.1.0), and tabs. People Picker supports the following features:
 
 * Searches single or multiple users.
 * Selects single or multiple users.
