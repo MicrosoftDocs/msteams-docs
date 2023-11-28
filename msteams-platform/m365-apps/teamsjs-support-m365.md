@@ -1008,8 +1008,6 @@ Preview. Namespace providing functionality to start a chat with others.
 
 Preview. This capability enables users to copy and paste to the system clipboard.
 
-
-```md
 <br />
 <table border>
     <thead>
@@ -1064,7 +1062,6 @@ Preview. This capability enables users to copy and paste to the system clipboard
         </tr>
     </tbody>
 </table>
-```
 
 ## `dialog`
 
