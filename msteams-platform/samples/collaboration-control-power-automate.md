@@ -32,7 +32,7 @@ In the [Azure portal](https://ms.portal.azure.com/#home) for Microsoft Entra man
 
    :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="Screenshot shows how to add a new App Registration.":::
 
-1. Select the dropdown list for **Add** and select **App registration**.
+1. Select **+Add** dropdown and then select **App registration**.
 
    :::image type="content" source="../assets/images/collaboration-control/new-app-registration.png" alt-text="Screenshot shows how to add new app registration.":::
 
@@ -107,7 +107,7 @@ After the app is added, set the **Business unit** and **Security Roles** to your
 1. In the Security tab, enter the following inputs:
 
    * **Client secret**: Use your saved app secret value in the input.
-   * **Client ID**: Your Azure app (Client ID).
+   * **Client id**: Your Azure app (Client ID).
    * **Resource URL**:  The URL of your Dynamic 365 instance (`https://org.crm.dynamics.com/`).
    * **Scope**: Same as the resource URL with a `.default` suffix (`https://org.crm.dynamics.com/.default`).
 
@@ -129,7 +129,7 @@ The following triggers and actions are supported within a flow:
 
 * **Triggers**
 
-  1. When a Collaboration Session is created
+  1. When a Collaboration Session is created.
 
       :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Screenshot shows Collaboration session that is created.":::
 
@@ -137,7 +137,7 @@ The following triggers and actions are supported within a flow:
 
       **Run as:** The running user for steps where invoker connections are used.
 
-  1. When a Task is created or modified
+  1. When a Task is created or modified.
 
       :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="Screenshot shows the task is created or modified.":::
 
@@ -228,7 +228,7 @@ The following triggers and actions are supported within a flow:
 
       :::image type="content" source="../assets/images/collaboration-control/associate-collab-map-internal.png" alt-text="Screenshot shows how to associate collaboration map internal.":::
 
-     This step action creates a mapping of a collaboration entity (Dataverse table) with your collaboration session. Internal are intended to create mappings between internal Dataverse entities/tables only.
+     This step action creates a mapping of a collaboration entity (Dataverse table) with your collaboration session. Internal are intended to create mappings between internal Dataverse entities or tables only.
 
      * **Collaboration Root ID:** The collaboration session unique identifier to map to a collaborative entity.
      * **Collaboration Map Entity ID:** The Dataverse collaborative entity ID to map.
