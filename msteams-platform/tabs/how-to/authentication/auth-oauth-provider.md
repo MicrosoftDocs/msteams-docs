@@ -34,11 +34,6 @@ For more information on parameters, see [authenticate (AuthenticatePopUpParamete
 
 ## Add authentication to external browsers
 
-> [!NOTE]
->
-> * You can add authentication to external browsers for tabs in mobile only.
-> * Use the beta version of TeamsJS to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
-
 The following image provides the flow to add authentication to external browsers:
 
  :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth":::
