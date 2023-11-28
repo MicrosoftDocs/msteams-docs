@@ -1145,10 +1145,10 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td></td>
             <td>&#x2713;</td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td>&#x2713;</td>
         </tr>
@@ -1163,10 +1163,10 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td></td>
             <td>&#x2713;</td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td>&#x2713;</td>
         </tr>
