@@ -168,7 +168,7 @@ The following code provides an example of context variable:
     "sharepoint": "The SharePoint context is available only when hosted in SharePoint",
     "tenantSKU": "The license type for the current user tenant. Possible values are enterprise, free, edu, unknown",
     "userLicenseType": "The license type for the current user",
-    "parentMessageId": "The parent message ID from which this dialog is launched",
+    "parentMessageId": "The parent message ID from which this task module is launched",
     "ringId": "The current ring ID",
     "appSessionId": "The unique ID for the current session used for correlating telemetry data",
     "isCallingAllowed": "Indicates if calling is allowed for the current logged in user",
