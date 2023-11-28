@@ -1002,7 +1002,7 @@ Preview. Namespace providing functionality to start a chat with others.
     </tbody>
 </table>
 
-`clipboard`
+## `clipboard`
 
 [Reference ](/javascript/api/@microsoft/teams-js/clipboard?view=msteams-client-js-latest)| Sample
 
