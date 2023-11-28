@@ -160,7 +160,7 @@ To enable SSO in your application, follow these steps:
 
 </details>
 <details>
-<summary><b>Bot project
+<summary><b>Command bot project
 </b></summary>
 
 <a name='set-up-the-azure-ad-redirects'></a>
