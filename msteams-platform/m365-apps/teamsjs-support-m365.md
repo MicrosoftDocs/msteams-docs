@@ -1004,7 +1004,7 @@ Preview. Namespace providing functionality to start a chat with others.
 
 ## `clipboard`
 
-[Reference](/javascript/api/@microsoft/teams-js/clipboard?view=msteams-client-js-latest)|
+[Reference](/javascript/api/@microsoft/teams-js/clipboard)
 
 Preview. This capability enables users to copy and paste to the system clipboard.
 
@@ -1065,7 +1065,7 @@ Preview. This capability enables users to copy and paste to the system clipboard
 
 ## `dialog`
 
-[Reference](/javascript/api/@microsoft/teams-js/dialog) |
+[Reference](/javascript/api/@microsoft/teams-js/dialog)
 
 Preview. This group of capabilities enables apps to show modal task modules (dialogs). There are two primary types of dialogs: URL-based dialogs and Adaptive Card dialogs. Both types of dialogs are shown on top of your app, preventing interaction with your app while they're displayed.
 
