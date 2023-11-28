@@ -219,7 +219,7 @@ items:
     <details><summary>OpenAPI Description document</summary>
 
     ```YAML 
-        openapi: 3.0.1
+    openapi: 3.0.1
     info:
     title: OpenTools Plugin
     description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
