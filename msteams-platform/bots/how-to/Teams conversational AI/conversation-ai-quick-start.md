@@ -32,11 +32,29 @@ To get started, ensure that you have the following tools:
 
 1. Clone the repository to test the sample app.
 
-   ```bash
+   ```
    git clone https://github.com/microsoft/teams-ai.git
    ```
 
-1. Run the following command to go to the app folder:
+1. Go to the JavaScript folder in the cloned repository.
+
+   ```
+   cd samples/js
+   ```
+
+1. Run the following command to install dependencies:
+
+   ```
+   yarn install
+   ```
+
+1. Run the following command to build dependencies:
+
+   ```
+   yarn build 
+   ```
+
+1. Go to the **04.ai.a.teamsChefBot** sample folder.
 
    ```bash
    cd samples/js/samples/04.ai.a.teamsChefBot
@@ -49,8 +67,7 @@ To get started, ensure that you have the following tools:
    ```
 
    > [!NOTE]
-   > If you’re cloning the [ChefBot sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the `.env.local.user` file and update the OpenAI key to get started.
-
+   > If you’re cloning the [ChefBot sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically.
 1. Go to **Visual Studio Code**.
 
 1. Select **Open a folder**, browse to the folder where ChefBot is available and then select **Select folder**.
@@ -65,6 +82,12 @@ To get started, ensure that you have the following tools:
 
    A browser tab opens a Teams web client requesting to add the bot to your tenant.
 
+   1. If you get an error which says **Could not find a declaration file for module 'jsonwebtoken'**, run the following in the **TERMINAL**:
+
+      ```
+      yarn add @types/jsonwebtoken
+      ```
+
 1. Select **Add**.
 
    :::image type="content" source="../../../assets/images/bots/Conversation-AI-sample-app-add.png" alt-text="Screenshot shows the option to add the app in Teams web client.":::
@@ -75,7 +98,7 @@ To get started, ensure that you have the following tools:
 
    :::image type="content" source="../../../assets/images/bots/conversation-AI-quick-start-final.png" alt-text="Screenshot shows an example of conversation with Teams chef bot in Teams.":::
 
-   The bot uses the text-davinci-003 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+   The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 > [!NOTE]
 > If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).

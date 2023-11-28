@@ -130,7 +130,7 @@ Say goodbye to prompt engineering headaches and say hello to efficiently enhanci
 
 ### Vector data sources
 
-Vector Databases are a novel type of database designed specifically for storing Vectors and facilitating efficient search over them. They return the most relevant results for a user’s query. The vector search feature in a vector database enables retrieval-augmented generation to harness LLMs and custom data or domain-specific information. This process involves extracting pertinent information from a custom data source and integrating it into the model request through prompt engineering. Prior to sending a request to the LLM, the user input/query/request is also transformed into an embedding, and vector search techniques are employed to locate the most similar embeddings within the database. You can register named data sources with the planner and then specify the name[s] of the data sources they wish to augment the prompt with in the prompts config.json.
+Vector Databases are a novel type of database designed specifically for storing Vectors and facilitating efficient search over them. They return the most relevant results for a user’s query. The vector search feature in a vector database enables retrieval-augmented generation to harness LLMs and custom data or domain-specific information. This process involves extracting pertinent information from a custom data source and integrating it into the model request through prompt engineering. Prior to sending a request to the LLM, the user input/query/request is also transformed into an embedding, and vector search techniques are employed to locate the most similar embeddings within the database.
 
 ## Enhanced reasoning
 
@@ -142,7 +142,7 @@ When a user interacts with your AI assistant, this system prompts the bot to eng
 
 The feedback loop is a feature of the AI system that allows it to validate and correct the output of the language model. It works by checking the structure and parameters of the plan or monologue that the model returns, and giving it feedback if there are any errors or missing information. The model then tries to fix its mistakes and return a valid output. The feedback loop can improve the reliability and accuracy of the AI system, and reduce the chances of hallucination or invalid actions.
 
-The following table lists the changes and updates to the Teams AI library:
+The following table lists the updates to the Teams AI library:
 
 |Type |Description  |JavaScript|C#|
 |---------|---------|||
