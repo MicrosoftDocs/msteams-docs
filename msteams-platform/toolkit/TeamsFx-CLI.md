@@ -24,9 +24,7 @@ For more information, see:
 
 ::: zone pivot="version-three"
 
-## Teams Tookit CLI Library
-
-Teams Toolkit CLI is a library encapsulating common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Microsoft Teams with zero configuration.
+Teams Toolkit CLI is a encapsulating common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Microsoft Teams with zero configuration.
 
 Following is a list of main Teams Toolkit CLI features:
 
