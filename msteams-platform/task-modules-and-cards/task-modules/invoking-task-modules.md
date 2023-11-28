@@ -26,8 +26,8 @@ The `TaskInfo` object contains the metadata for a dialog. Define the `url` for a
 | Attribute | Type | Description |
 | --- | --- | --- |
 | `title` | string | This attribute appears below the app name and to the right of the app icon. |
-| `height` | number or string | This attribute can be a number representing the dialog's height in pixels, or `small`, `medium`, or `large`. For more information, see [dialog sizing](#task-module-sizing). |
-| `width` | number or string | This attribute can be a number representing the dialog's width in pixels, or `small`, `medium`, or `large`. For more information, see [dialog sizing](#task-module-sizing). |
+| `height` | number or string | This attribute can be a number representing the dialog's height in pixels, or `small`, `medium`, or `large`. For more information, see [dialog sizing](#dialog-sizing). |
+| `width` | number or string | This attribute can be a number representing the dialog's width in pixels, or `small`, `medium`, or `large`. For more information, see [dialog sizing](#dialog-sizing). |
 | `url` | string | This attribute is the URL of the page loaded as an `<iframe>` inside the dialog. The URL's domain must be in the app's [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in your app's manifest. |
 | `card` | Adaptive Card or Adaptive Card bot card attachment | This attribute is the JSON for the Adaptive Card to appear in the dialog. If the user is invoking from a bot, use the Adaptive Card JSON in a Bot Framework `attachment` object. From a tab, the user must use an Adaptive Card. For more information, see [Adaptive Card or Adaptive Card bot card attachment](#adaptive-card-or-adaptive-card-bot-card-attachment) |
 | `fallbackUrl` | string | This attribute opens the URL in a browser tab, if a client doesn't support the dialog feature. |
