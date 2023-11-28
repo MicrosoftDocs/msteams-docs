@@ -22,7 +22,7 @@ In this version, the connector enables makers to set up triggers:
 1. When a Collaboration session is created.
 1. When a planner task is created or modified.
 
-It also includes a set of Collaboration controls APIs and tasks that can be invoked with a flow. The connector actions is found in workflow step selections. The connector itself would be found on Custom connectors with configurable options. To use the connector in your solution, it’s necessary to create an Azure App trusted by your environment to execute the flows.
+It also includes a set of Collaboration controls APIs and tasks that can be invoked with a flow. The connector actions are found in workflow step selections. The connector itself would be found on Custom connectors with configurable options. To use the connector in your solution, it’s necessary to create an Azure App trusted by your environment to execute the flows.
 
 ## Create an Azure App
 
@@ -106,10 +106,10 @@ After the app is added, set the **Business unit** and **Security Roles** to your
 
 1. In the Security tab, enter the following inputs:
 
-   * Client secret: Use your saved app secret value in the input.
-   * Client ID: Your Azure app (Client ID).
-   * Resource URL:  The URL of your Dynamic 365 instance (`https://org.crm.dynamics.com/`).
-   * Scope: Same as above with. Default suffix (`https://org.crm.dynamics.com/.default`).
+   * **Client secret**: Use your saved app secret value in the input.
+   * **Client ID**: Your Azure app (Client ID).
+   * **Resource URL**:  The URL of your Dynamic 365 instance (`https://org.crm.dynamics.com/`).
+   * **Scope**: Same as the resource URL with a `.default` suffix (`https://org.crm.dynamics.com/.default`).
 
    :::image type="content" source="../assets/images/collaboration-control/dynamic-365-instance.png" alt-text="Screenshot shows the Dynamic 365 instance.":::
 
@@ -129,7 +129,7 @@ The following triggers and actions are supported within a flow:
 
 * **Triggers**
 
-  1. When a Collaboration Session is Created.
+  1. When a Collaboration Session is created
 
       :::image type="content" source="../assets/images/collaboration-control/colab-session-created-preview.png" alt-text="Screenshot shows Collaboration session that is created.":::
 
@@ -141,12 +141,12 @@ The following triggers and actions are supported within a flow:
 
       :::image type="content" source="../assets/images/collaboration-control/task-created.png" alt-text="Screenshot shows the task is created or modified.":::
 
-      By default, the trigger Planner Task is disabled and won't trigger. To enable it, the tenant admin must follow the steps:
+      By default, the trigger Planner task is disabled and won't trigger. To enable it, the tenant admin must follow the steps:
 
       1. Create a support ticket under the path Power Apps/Collaboration controls/Settings.
       1. Request that your environment is enabled for the Collaboration connector and provides your Environment URL (preferred) or Organization ID.  
-      1. You can add the following sample text to your support request: "Enable Environment URL: `url` for the Collaboration Connector".
-      1. To open a support ticket, see [Get Help + Support](/power-platform/admin/get-help-support)
+      1. You can add the following sample text to your support request: "Enable Environment URL: `url` for the Collaboration connector".
+      1. To open a support ticket, see [Get Help + Support](/power-platform/admin/get-help-support).
 
 * **Actions**
 
@@ -154,7 +154,7 @@ The following triggers and actions are supported within a flow:
 
       :::image type="content" source="../assets/images/collaboration-control/begin-collab-session.png" alt-text="Screenshot shows how to begin collaboration session.":::
 
-     This step action creates a new collaboration session for your dataverse business entity:
+     This step action creates a new collaboration session for your Dataverse business entity:
 
       * **Application Name:** Name of the associated application, for example, could be “Collaboration Manager for Loans” or “Collaboration Manager for Closed Loan Auditing”.
       * **Collaboration Root Entity Name:** Type of application record (table name) for example, could be “msfi_loanapplication” for a Collaboration Manager for Loans application.
@@ -211,7 +211,7 @@ The following triggers and actions are supported within a flow:
 
       :::image type="content" source="../assets/images/collaboration-control/associate-collab-map.png" alt-text="Screenshot shows how to associate collaboration map.":::
 
-     This step action creates a mapping of an external collaboration entity (outside dataverse) with your collaboration session:
+     This step action creates a mapping of an external collaboration entity (outside Dataverse) with your collaboration session:
 
      * **Collaboration Root ID:** The collaboration session unique identifier to map to a collaborative entity.
      * **Collaboration Map External ID:** The external collaborative resource ID to map.
@@ -228,7 +228,7 @@ The following triggers and actions are supported within a flow:
 
       :::image type="content" source="../assets/images/collaboration-control/associate-collab-map-internal.png" alt-text="Screenshot shows how to associate collaboration map internal.":::
 
-     This step action creates a mapping of a collaboration entity (dataverse table) with your collaboration session. Internal are intended to create mappings between internal Dataverse entities/tables only.
+     This step action creates a mapping of a collaboration entity (Dataverse table) with your collaboration session. Internal are intended to create mappings between internal Dataverse entities/tables only.
 
      * **Collaboration Root ID:** The collaboration session unique identifier to map to a collaborative entity.
      * **Collaboration Map Entity ID:** The Dataverse collaborative entity ID to map.
@@ -309,7 +309,7 @@ The following triggers and actions are supported within a flow:
      * **Percent Complete:** Percentage of task completion (0-100)
      * **Preview Type:** This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference.
      * **Reference Count:** Number of external references that exist on the task.
-     * **Start Date Time:** Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 01, 2014 is 2014-01-01T00:00:00Z.
+     * **Start Date Time:** Date and time at which the task starts. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on January 01, 2014 is 2014-01-01T00:00:00Z.
 
   1. Get Planner Task
 
@@ -323,7 +323,7 @@ The following triggers and actions are supported within a flow:
 
       :::image type="content" source="../assets/images/collaboration-control/update-planner-task-preview.png" alt-text="Screenshot shows Update planner task.":::
 
-     This step action updates a planner task record using Collaboration controls Planner task virtual table.
+     This step action updates a planner task record using Collaboration controls planner task virtual table.
 
      * **Task ID (Required):** Task unique identifier.
      * **Assignments:** A json formatted object that represents all the assignments of a Task. See plannerAssignments resource type - Microsoft Graph v1.0 | Microsoft Docs.  

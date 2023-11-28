@@ -379,7 +379,7 @@ You can configure authentication for multiple platforms as long as the URL is un
         > [!NOTE]
         > The URL mentioned in **Redirect URIs** is an example.
 
-    1. Enter the front-channel log-out URL.
+    1. Enter the front-channel logout URL.
     1. Select the tokens you want Microsoft Entra ID to send for your app.
 
 1. Select **Configure**.
@@ -863,9 +863,9 @@ Congratulations! You've completed the following app configurations in Microsoft 
 - Keep the Microsoft Entra app registration restricted to its original purpose of service to service application.
 - For better control over disabling authentication connections, rolling secrets, or reusing the Microsoft Entra app with other applications, create an additional Microsoft Entra app for any user to service authentication.
 
-If you use the Microsoft Entra registration app for authentication you might encounter the following issues:
+If you use the Microsoft Entra registration app for authentication, you might encounter the following issues:
 
-- If you renew the certificate attached to the Microsoft Entra app registration, it'll affect the users who have authenticated with other Microsoft Entra services using the certificate.
+- If you renew the certificate attached to the Microsoft Entra app registration, it affects the users who have authenticated with other Microsoft Entra services using the certificate.
 - It creates a single point of failure and control for all authentication-related activities with the bot.
 
 ## Next step
