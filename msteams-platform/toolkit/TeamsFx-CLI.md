@@ -401,11 +401,11 @@ Following is a list of main TeamsFx features:
 
 ## Get Started
 
-Install `teamsapp` from `npm` and run `teamsapp -h` to check all available commands:
+Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available commands:
 
 ```bash
-  npm install -g @microsoft/teamsapp-cli
-  teamsapp -h
+  npm install -g @microsoft/teamsfx-cli
+  teamsfx -h
 ```
 
 ## Supported commands
