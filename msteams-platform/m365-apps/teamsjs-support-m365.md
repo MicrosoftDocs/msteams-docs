@@ -286,7 +286,6 @@ The following table lists host application support for TeamsJS capabilities that
     </tbody>
 </table>
 
-
 ## Teams-only capabilities
 
 The following table lists support for TeamsJS capabilities that run only in the Teams environment.
@@ -550,7 +549,6 @@ The following table lists support for TeamsJS capabilities that run only in the 
     </tbody>
 </table>
 
-
 ## Preview capabilities awaiting host support
 
 Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and  [**search**](#search).
@@ -620,7 +618,6 @@ The `app` namespace is supported globally across all application hosts and, ther
     </tbody>
 </table>
 
-
 ## `appInitialization`
 
 [Reference](/javascript/api/@microsoft/teams-js/appInitialization)
@@ -682,7 +679,6 @@ Deprecated. Namespace for initializing an app. For new apps, use [app.initialize
     </tbody>
 </table>
 
-
 ## `appInstallDialog`
 
 [Reference](/javascript/api/@microsoft/teams-js/appinstalldialog) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/AppInstallDialog.tsx)
@@ -743,7 +739,6 @@ Namespace used to open a dialog for installing an application.
         </tr>
     </tbody>
 </table>
-
 
 ## `authentication`
 
@@ -808,7 +803,6 @@ The `authentication` namespace is supported globally across all application host
     </tbody>
 </table>
 
-
 ## `barCode`
 
 [Reference](/javascript/api/@microsoft/teams-js/barcode)
@@ -870,7 +864,6 @@ Preview. Namespace to interact with the barcode scanning-related part of the lib
     </tbody>
 </table>
 
-
 ## `calendar`
 
 [Reference](/javascript/api/@microsoft/teams-js/calendar)
@@ -931,7 +924,6 @@ Namespace providing calendar-related functionality.
         </tr>
     </tbody>
 </table>
-
 
 ## `call`
 
@@ -1212,7 +1204,6 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
     </tbody>
 </table>
 
-
 ### `dialog.adaptiveCard`
 
 [Reference](/javascript/api/@microsoft/teams-js/dialog.adaptivecard) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Dialog.AdaptiveCard.tsx)
@@ -1335,7 +1326,6 @@ When an API doesn't support or generates an error, add logic to fail or provide 
     </tbody>
 </table>
 
-
 ### `geoLocation.map`
 
 [Reference](/javascript/api/@microsoft/teams-js/geolocation.map) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/GeoLocation.map.tsx)
@@ -1403,7 +1393,6 @@ Deprecated. Namespace providing location-related functionality (get and show loc
     </tbody>
 </table>
 
-
 ## `mail`
 
 [Reference](/javascript/api/@microsoft/teams-js/mail)
@@ -1464,7 +1453,6 @@ Namespace providing email-related functionality.
         </tr>
     </tbody>
 </table>
-
 
 ## `media`
 
@@ -1527,7 +1515,6 @@ Namespace providing image file-related functionality.
     </tbody>
 </table>
 
-
 ## `meeting`
 
 [Reference](/javascript/api/@microsoft/teams-js/meeting)
@@ -1588,7 +1575,6 @@ Namespace providing in-meeting app functionality.
         </tr>
     </tbody>
 </table>
-
 
 > [!NOTE]
 > The following methods aren't supported on the Teams mobile client:
@@ -1658,7 +1644,6 @@ Namespace to interact with the menu-related part of the library. This module is 
         </tr>
     </tbody>
 </table>
-
 
 ## `pages`
 
@@ -1820,7 +1805,6 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
     </tbody>
 </table>
 
-
 > [!NOTE]
 > The following methods aren't supported on the Teams mobile client:
 >
@@ -1922,7 +1906,6 @@ Namespace providing functionality for [People Picker API](../concepts/device-cap
     </tbody>
 </table>
 
-
 ## `profile`
 
 [Reference](/javascript/api/@microsoft/teams-js/profile)
@@ -1983,7 +1966,6 @@ Preview. Namespace providing for profile-related functionality.
         </tr>
     </tbody>
 </table>
-
 
 > [!NOTE]
 > The `profile.showProfile` method isn't supported on the Teams mobile client.
@@ -2049,7 +2031,6 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
     </tbody>
 </table>
 
-
 ## `secondaryBrowser`
 
 [Reference](/javascript/api/@microsoft/teams-js/secondaryBrowser)
@@ -2110,7 +2091,6 @@ Preview. Namespace supporting in-app browser experiences of the host app. For ex
         </tr>
     </tbody>
 </table>
-
 
 ## `settings`
 
@@ -2173,7 +2153,6 @@ Deprecated. Provides settings-related functionality. Use equivalent APIs from th
     </tbody>
 </table>
 
-
 ## `sharing`
 
 [Reference](/javascript/api/@microsoft/teams-js/sharing) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Sharing.tsx)
@@ -2234,7 +2213,6 @@ Namespace to open a share dialog for web content. For more information, see [Sha
         </tr>
     </tbody>
 </table>
-
 
 > [!NOTE]
 > The `sharing.shareWebContent` method isn't supported on the Teams mobile client.
@@ -2300,7 +2278,6 @@ Preview. Namespace to interact with the Stage View specific part of the library.
     </tbody>
 </table>
 
-
 ## `tasks`
 
 [Reference](/javascript/api/@microsoft/teams-js/tasks)
@@ -2361,7 +2338,6 @@ The earlier version of the capability for providing modal dialog (task module) s
         </tr>
     </tbody>
 </table>
-
 
 > [!NOTE]
 > The `task.getDefaultSizeIfNotProvided` method isn't supported on the Teams mobile client.
@@ -2427,7 +2403,6 @@ Namespace containing the set of APIs that support Teams-specific functionalities
     </tbody>
 </table>
 
-
 ## `video`
 
 [Reference](/javascript/api/@microsoft/teams-js/videoeffects) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Video.tsx)
@@ -2488,7 +2463,6 @@ Preview. Namespace representing functionality for in-meeting video effects.
         </tr>
     </tbody>
 </table>
-
 
 > [!NOTE]
 > The following methods aren't supported on the Teams mobile client:
@@ -2556,7 +2530,6 @@ Preview. Contains functionality to allow web apps to store data in webview cache
         </tr>
     </tbody>
 </table>
-
 
 > [!NOTE]
 > The `webStorage.isWebStorageClearedOnUserLogOut` method isn't supported on the Teams mobile client.
