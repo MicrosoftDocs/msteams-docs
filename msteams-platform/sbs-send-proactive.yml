@@ -41,7 +41,7 @@ items:
     | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
     > [!NOTE]
-    > The guide is tested on Teams Toolkit latest version and Nodejs version 14 and 16. The steps in this guide may work with other versions, but that hasn't been tested.
+    > The guide has been tested on the latest version of Teams Toolkit and Nodejs version 14 and 16. The steps in this guide may work with other versions, but no testing has been done to confirm their compatibility.
     
     [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
@@ -57,37 +57,33 @@ items:
 
     1. In the left pane, select **View Samples**.
 
-        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/view-sample-1.png" alt-text="Screenshot shows the View Samples option.":::
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/view-sample-1.png" alt-text="Screenshot shows the View Samples option in Visual Studio Activity Bar.":::
 
     1. From the list of samples, select **Proactive Messaging**. A prebuilt sample that's ready for debugging opens.
 
-        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/select-proactive-msg.png" alt-text="Screenshot shows the Proactive messaging bot sample.":::
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/select-proactive-msg.png" alt-text="Screenshot shows the prebuilt Proactive Messaging bot sample in the list of samples.":::
 
     1. Select **Create**.
 
-        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/create-proactive-bot.png" alt-text="Screenshot shows the Create option.":::
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/create-proactive-bot.png" alt-text="Screenshot shows the Create option to create a Proactive messaging bot.":::
 
     1. Select **Default folder** to store your project root folder in default location.
 
-         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-default-location.png" alt-text="Screenshot shows the option to select default location":::
+         :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-default-location.png" alt-text="Screenshot shows the option to select the default location.":::
     
        If you want to change the default location, perform the following steps:
 
         1. Select **Browse**.
 
-            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-browse.png" alt-text="Screenshot shows the option to browse location.":::
+            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-browse.png" alt-text="Screenshot shows the option to browse the location.":::
             
         1. Select the location for project workspace.
 
         1. Select **Select Folder**.
 
-           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Screenshot shows the option to select Folder.":::
+           :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Screenshot shows the option to select the folder.":::
     
-    1. After your app is created, the Teams Toolkit displays the following message:
-
-        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/bot-successful.png" alt-text="Screenshot shows the bot created.":::
-
-        The proactive message bot is created in a few seconds.
+    1. The proactive message bot is created in a few seconds and displays the proactive message bot successful dialog in the lower-right corner with the option to debug:
 
         :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created.":::
 
@@ -95,47 +91,46 @@ items:
 
     1. Select **Debug (Edge)** or **Debug (Chrome)** from the dropdown list.
 
-        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/debug-option-edge.png" alt-text="Screenshot shows the debugging application.":::
+        :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/debug-option-edge.png" alt-text="Screenshot shows the debugging options to choose from.":::
 
         When debugging is successful, you'll be prompted to upload the proactive message bot to Teams on your local machine. 
 
     1. Select **Add** or use the dropdown menu to add your proactive bot app to a team, chat, or meeting.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the option to add bot to Teams..":::
+        :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the option to add bot to Teams.":::
 
-    1. Select **Set up a bot**. The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
+    1. Select **Set up a bot**. 
+    
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-bot-setup.png" alt-text="Screenshot shows the option to set up the bot.":::
+        
+        The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
 
         :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
 
-    1. Copy and paste the URL or navigate to the URL in browser to get a proactive hello message in the chat. 
+    1. Copy and paste the URL or navigate to the URL in browser. A proactive hello message gets triggered and to be shared in the chat. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that responds to proactive message.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that triggers bot to responds with a proactive message in Teams.":::
 
-    1. Go to Teams. You'll receive a **proactive hello** message from the bot as you refresh the browser.
+    1. Go to Teams. You'll receive a **proactive hello** message from the bot.
 
         :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
 
-    ## Take tour of source code
+    ## Take a tour of the source code
 
     Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/proactive-scenario/file-structure.png" alt-text="Screenshot shows the structure tab":::
+    :::image type="content" source="~/assets/images/proactive-scenario/file-structure.png" alt-text="Screenshot shows the structure tab.":::
 
-    If you choose to use UI framework, following sample template code provides a scaffolding with React components. It contains following content:
+    The new project folder contains the following content:
 
     | Folder / File | Contents |
     | - | - |
-    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-    | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
-    | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
     | `.vscode/` | VSCode files for debugging. |
-    | `appPackage/` | Templates for the Teams application manifest. |
-    | `infra/` | Templates for provisioning Azure resources. |
-    | `src/` | The source code for the application. |
-    | `src/index.js` | Application entry point and `restify` handlers for command and response. |
-    | `src/teamsBot.js` | An empty teams activity handler for bot customization. |
-    | `src/adaptiveCards/helloworldCommand.json` | A generated Adaptive Card that is sent to Teams. |
-    | `src/helloworldCommandHandler.js` | The business logic to handle a command. |
+    | `appManifest/` | Templates for the Teams application manifest. |
+    | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
+    | `manifest.json` | App manifest (previously called Teams app manifest) for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |    
 
 - title: Deploy your Proactive message bot
   durationInMinutes: 1
@@ -187,7 +182,7 @@ items:
 
     1. Select an existing resource group or create new resource group. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
-    1. Select one of the existing subscription.
+    1. Select one of the existing subscriptions.
 
         :::image type="content" source="~/assets/images/proactive-scenario/select-subscription.png" alt-text="Screenshot shows the subscription option for provisioning.":::
 
@@ -202,7 +197,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/provision-confirm1.png" alt-text="Screenshot of the provisioning dialog.":::
 
-       The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the dialogs in the lower-right corner. After few minutes, you see the following notice:
+       The provisioning process creates resources in the Azure cloud. You can monitor the progress in the dialogs that appear in lower-right corner. After few minutes, the following dialog appears:
 
         :::image type="content" source="~/assets/images/proactive-scenario/deploy-provision-proactive.png" alt-text="Screenshot shows the provisioning complete dialog.":::
 
@@ -210,20 +205,21 @@ items:
 
     1. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot showing the where to click to deploy to cloud.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot shows the Deploy option under LIFECYCLE.":::
 
     1. Select **Deploy**.
 
-        :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Screenshot shows the confirmation to deploy.":::
+        :::image type="content" source="~/assets/images/sbs-command-bot/Deploy-confirm.png" alt-text="Screenshot shows the confirmation dialog to deploy.":::
 
-       Deployment takes some time. You can monitor the progress in the dialog in lower-right corner. After a few minutes, you see the following notice.
+       Deployment takes some time. You can monitor the progress in the dialogs that appear in lower-right corner. After a few minutes, the following dialog appears.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/deploy-confirmation-proactive.png" alt-text="Screenshots shows the deploy confirm.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/deploy-confirmation-proactive.png" alt-text="Screenshot shows the deploy confirm.":::
     
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View** > **Run**) from Visual Studio Code.
+
     1. Select **Launch Remote (Edge)** from the launch configuration dropdown list.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/debug-option-remote.png" alt-text="Screenshot shows the remote debug.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/debug-option-remote.png" alt-text="Screenshot shows the remote debug option highlighted.":::
 
     1. Select **Start Debugging**. When debugging is successful, you'll be prompted to upload the proactive message bot app to Teams.
 
@@ -231,17 +227,21 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the option to add bot to Teams.":::
 
-    1. Select **Set up a bot**. The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
+    1. Select **Set up a bot**. 
+    
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-bot-setup.png" alt-text="Screenshot shows the option to set up the bot.":::
+        
+        The proactive message bot app is uploaded to Teams client and the following message appears in response to the message sent.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the bot response in the chat.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
 
-    1. Copy and paste the URL or navigate to the URL in browser to get a proactive hello message in the chat.
+    1. Copy and paste the URL or navigate to the URL in browser. A proactive hello message gets triggered and to be shared in the chat. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that sends proactive message to chat.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that triggers bot to responds with a proactive message in Teams.":::
 
-    1. Go to Teams. You'll receive a **proactive hello** message from the bot as you refresh the browser.
+    1. Go to Teams. You'll receive a **proactive hello** message from the bot.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/proactive-helo1.png" alt-text="Screenshot shows the bot response.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-response.png" alt-text="Screenshot shows the bot response on the chat.":::
         
     # [Command Line](#tab/cli)
 
@@ -282,7 +282,7 @@ items:
 
 - content: |
     You've completed the scenario.
-    * You can send notifications on daily basis or request for feedback from user on periodic basis.
+    * You can send notifications on a daily basis or request for feedback from users on a periodic basis.
     * Handle throttling limits to avoid multiple notifications.
     
    
