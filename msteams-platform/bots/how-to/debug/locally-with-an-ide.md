@@ -1,7 +1,7 @@
 ---
 title: Test and debug your bot locally
 author: surbhigupta
-description: Learn about testing and debugging your bot locally with an IDE within Teams environment via sideloading and more.
+description: Learn about testing and debugging your bot locally with an IDE within Teams environment via uploading a custom app and more.
 ms.topic: overview
 ms.localizationpriority: medium
 ms.author: anclear
@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Test and debug your bot locally with IDE
 
-When testing your bot, consider the contexts in which you intend your bot to operate, as well as any added functionality that requires Microsoft Teams-specific data. Ensure the testing method you select aligns with your bot's functionality.
+When testing your bot, you need to consider both the contexts you want your bot to run in, and any functionality you may have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you choose to test your bot aligns with its functionality.
 
 ## Test by uploading to Teams
 
@@ -22,9 +22,7 @@ There are two methods for uploading your app:
 
 > [!NOTE]
 > To alter the manifest and re-upload your app, [delete the bot](#delete-a-bot-from-teams) before uploading the altered app package.
-> To test the bot, enable sideloading in Teams. For more information, see [enable sideloading](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
-
-We don't recommend uploading multiple apps with differing content under the same bot ID. This could lead to unpredictable bot behavior. Remove or uninstall any prior versions of the apps, ensuring only the latest version is uploaded. If the apps share the same bot ID, assign the necessary permissions in the app package. Additionally, activate both apps in the app permission policy and the managed apps, ensuring they aren't blocked. Failure to do so might result in issues during app usage.
+> To test the bot, enable custom app upload in Teams. See [enable custom app upload](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 ## Debug your bot locally
 
@@ -72,14 +70,14 @@ Initiate a conversation with your bot by using its ID. When a bot is added throu
    3. Select your bot and send a message to initiate a conversation.
       Alternatively, you can paste your bot's app ID in the search box in the top left in Teams. In the search results page, go to the **People** tab to see your bot and to start chatting with it.
 
-> [!Note]
-> For Teams to refer to your bot's app ID, enable [sideloading of apps](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
+> [!NOTE]
+> For Teams to refer to your bot's app ID, enable [custom app upload](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 
 Your bot receives the `conversationUpdate` event as you add the bots to a team, without the team information in the `channelData` object.
 
 ## Block a bot in personal chat
 
-Users have the option to block your bot from sending personal chat messages. They can do this by right-clicking your bot in the chat channel and selecting **Block bot conversation**. Consequently, your bots continue to dispatch messages, but the user doesn't receive them.
+Users can choose to block your bot from sending personal chat messages. They may toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means, your bots continue to send messages, however, the user doesn't receive the messages.
 
 ![Blocking a bot](~/assets/images/bots/botdisable.png)
 

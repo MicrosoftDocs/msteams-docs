@@ -33,14 +33,14 @@ Microsoft Graph [teamsAppInstallation resource type](/graph/api/resources/teamsa
 
 To use these permissions, you must add a [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplicationinfo) key to your app manifest (previously called Teams app manifest) with the following values:
 
-* **id**: Your Azure Active Directory app ID.
+* **id**: Your Microsoft Entra app ID.
 * **resource**: The resource URL for the app.
 
 > [!NOTE]
 >
 > * Your bot requires application and not user delegated permissions because the installation is for others.
 >
-> * An Azure AD tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Azure AD tenant get the granted permissions.
+> * A Microsoft Entra tenant administrator must [explicitly grant permissions to an application](/graph/security-authorization#grant-permissions-to-an-application). After the application is granted permissions, all members of the Microsoft Entra tenant get the granted permissions.
 
 ## Enable proactive app installation and messaging
 
@@ -87,7 +87,7 @@ You can retrieve the `teamsAppId` in the following ways:
     > [!NOTE]
     > When the app is in the Teams Store, the `teamsAppId` is same as `IdFromManifest` and the `externalId` must not be used in this case.
 
-* If your app has already been uploaded or sideloaded for a user in personal scope:
+* If your app has already been uploaded for a user in personal scope:
 
     **Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -97,7 +97,7 @@ You can retrieve the `teamsAppId` in the following ways:
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
     ```
 
-* If your app has already been uploaded or sideloaded for a channel in team scope:
+* If your app has already been uploaded for a channel in team scope:
 
     **Microsoft Graph page reference:** [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 

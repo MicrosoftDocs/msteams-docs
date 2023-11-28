@@ -1,0 +1,488 @@
+### YamlMime:Tutorial
+title:  Build message extension using API
+metadata:
+  title: Build API-based message extension 
+  description: In this learn module, learn how to build a message extension using OpenAPI Description (OAD) document with Teams Toolkit.
+  audience: Developer
+  level: Beginner
+  ms.date: 10/21/2021
+  ms.topic: interactive-tutorial
+  nextTutorialHref: messaging-extensions/build-bot-based-message-extension.md
+  nextTutorialTitle: Build message extension using Bot Framework.
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+
+    > [!NOTE]
+    >
+    > * API-based message extensions only support search commands.
+    > * API-based message extensions are available only in [public developer preview](resources/dev-preview/developer-preview-intro.md).
+
+    Message extensions built using an API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. It helps streamline workflows by reducing the need to switch between different applications.
+
+    You can use API message extension to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a Messaging Extension to fetch and display customer data directly from Teams. This can help save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+
+   Here's a list of tools you need for building and deploying your apps.
+
+   | Install | For using... |
+   | --- | --- |
+   |[Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   |[Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, or call - all in one place.|
+   |[Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   |[Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
+   |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
+   | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app to your organization or the Microsoft Teams Store. |
+   |OpenAPI Description (OAD) document| A document that describes the capabilities of your API. For more information, see [OpenAPI Description](https://learn.openapis.org/specification/structure.html).|
+
+   ## Prepare development environment
+
+   After you've installed the required tools, set up the development environment. 
+
+
+   ### Install the Teams Toolkit
+
+   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
+    
+   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
+
+
+   # [Visual Studio Code](#tab/vscode)
+
+   1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+   1. In the search box, enter **Teams Toolkit**.
+   1. Select **Install** next to the Teams Toolkit.
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
+
+    The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/hw-teams-toolkit-sidebar-icon.png" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+
+   You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+   > [!NOTE]
+   > The latest version of Teams Toolkit is v5.
+
+   # [Command line](#tab/cli)
+
+   To install the TeamsFx CLI, use the `npm` package manager:
+
+   ``` bash
+   npm install -g @microsoft/teamsfx-cli@beta
+   ```
+
+   Depending on your configuration, you might need to use `sudo` to install the CLI:
+
+   ``` bash
+   sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+   ```
+
+   This condition is more common on Linux and macOS systems.
+
+   Ensure you add the npm global cache to your path. This step is normally done as part of the Node.js installer.
+
+   You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
+
+   > [!CAUTION]
+   > Before you can run TeamsFx in PowerShell terminals, you must enable the 'remote signed' execution policy for PowerShell.
+
+   ---
+
+   ## Set up your Teams development tenant
+
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your custom app. Let's verify if you're ready to develop with the tenant.
+
+   ### Check for custom app upload option
+
+   After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
+
+    > [!NOTE]
+    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams local environment.
+
+   Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+   Verify if you can upload a custom app in Teams:
+
+    1. In the Teams client, select the **Apps** icon.
+    1. Select **Manage your apps**.
+    1. Select **Upload an app**.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
+
+        > [!NOTE]
+        > Contact your Teams administrator, if you don't find the option to upload a custom app.
+
+   ### Create a free Teams developer tenant (optional)
+
+   If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
+
+   1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+   1. Select **Join Now** and follow the onscreen instructions.
+   1. In the welcome screen, select **Set up E5 subscription**.
+   1. Set up your administrator account. After you finish, the following screen appears.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+
+   1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+
+   ## Get a free Azure account
+
+   If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+
+   Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
+
+
+- title: Build an API based message extension
+  durationInMinutes: 1
+  content: |
+
+    After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
+
+    ## Sign in to your Microsoft 365 account
+
+    Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+    # [Visual Studio Code](#tab/viscode)
+
+    1. Open Visual Studio Code.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+    1. Select **Sign in to M365**.
+
+        Your default web browser opens to let you sign in to the account.
+
+    1. Sign in to your Microsoft 365 account using your credentials.
+    1. Close the browser when prompted and return to Visual Studio Code.
+    1. Return to Teams Toolkit within Visual Studio Code.
+
+        Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+
+        Now you're ready to build the app and run it locally!
+
+    # [Command line](#tab/cline)
+
+    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+
+        ``` bash
+        teamsfx account login m365
+        ```
+
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+    2. Sign in to Azure with the TeamsFx CLI:
+
+        ``` bash
+        teamsfx account login azure
+        ```
+
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+
+        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+
+    ---
+
+    ## Create OpenAPI Description document 
+  
+    OpenAPI Description (OAD) is the industry-standard specification that outlines how OpenAPI files are structured and outlined. It's a language-agnostic, human-readable format for describing APIs. It's easy for both humans and machines to read and write. The schema is machine-readable and represented in either YAML or JSON.
+    
+    You must have an OpenAPI Description (OAD) document before you create an API-based message extension. The API spec must meet the following criteria: 
+    
+    * The `auth` property must not be specified.
+    * JSON and YAML are the supported formats.
+    * OpenAPI Versions 2.0 and 3.0.x are supported.
+    * Teams doesn't support the oneOf, anyOf, allOf, and not (swagger.io) constructs.
+    * Constructing arrays for the request isn't supported, however, nested objects within a JSON request body are supported.
+    * The request body, if present, must be application/Json to ensure compatibility with a wide range of APIs.
+    * Define an HTTPS protocol server URL for the `servers.url` property.
+    * Only single parameter search is supported.
+    * Only one required parameter without a default value is allowed.
+    * Only POST and GET HTTP methods are supported.
+    * The OpenAPI Description document must have an `operationId`.
+    * The operation must not have required Header or Cookie parameters without default values.
+    * A command must have exactly one parameter.
+    * Ensure that there are no remote references in the OpenAPI Description document.
+    * A required parameter with a default value is considered optional.
+    
+    We've used the following OpenAPI Description as an example for this tutorial: <br/>
+    <br/>
+    <details><summary>OpenAPI Description document</summary>
+
+    ```YAML 
+        openapi: 3.0.1
+    info:
+    title: OpenTools Plugin
+    description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+    version: 'v1'
+    servers:
+    - url: https://gptplugin.opentools.ai
+    paths:
+    /tools:
+        get:
+        operationId: searchTools
+        summary: Search for AI Tools
+        parameters:
+            - in: query
+            name: search
+            required: true
+            schema:
+                type: string
+            description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+        responses:
+            "200":
+            description: OK
+            content:
+                application/json:
+                schema:
+                    $ref: '#/components/schemas/searchToolsResponse'
+            "400":
+            description: Search Error
+            content:
+                application/json:
+                schema:
+                    $ref: '#/components/schemas/searchToolsError'
+    components:
+    schemas:
+        searchToolsResponse:
+        required:
+            - search
+        type: object
+        properties:
+            tools:
+            type: array
+            items:
+                type: object
+                properties:
+                name:
+                    type: string
+                    description: The name of the tool.
+                opentools_url:
+                    type: string
+                    description: The URL to access the tool.
+                main_summary:
+                    type: string
+                    description: A summary of what the tool is.
+                pricing_summary:
+                    type: string
+                    description: A summary of the pricing of the tool.
+                categories:
+                    type: array
+                    items:
+                    type: string
+                    description: The categories assigned to the tool.
+                platforms:
+                    type: array
+                    items:
+                    type: string
+                    description: The platforms that this tool is available on.
+            description: The list of AI tools.
+        searchToolsError:
+        type: object
+        properties:
+            message:
+            type: string
+            description: Message of the error.
+
+    ```
+    </details>
+    
+    Now that you've got your OpenAPI Description document, it also requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata. If your building an app using Teams Toolkit or Developer portal for Teams, the response rendering template is extracted from the OpenAPI Description document automatically.
+
+     The following code is an example of the response rendering template: <br/>
+     <br/>
+     <details><summary>Response rendering template</summary>
+
+     ```json
+        {
+        "version": "1.0.0",
+        "jsonPath": "tools",
+        "responseLayout": "list",
+        "responseCardTemplate": {
+            "type": "AdaptiveCard",
+            "version": "1.4",
+            "body": [
+            {
+                "type": "TextBlock",
+                "text": "${if(name, name, 'N/A')}",
+                "size": "Large",
+                "weight": "Bolder",
+                "wrap": true
+            },
+            {
+                "type": "TextBlock",
+                "text": "Categories: ${join(categories, ', ')}",
+                "size": "Small",
+                "isSubtle": true,
+                "wrap": true
+            },
+            {
+                "type": "TextBlock",
+                "text": "${if(main_summary, main_summary, 'N/A')}",
+                "size": "Medium",
+                "wrap": true
+            },
+            {
+                "type": "TextBlock",
+                "text": "Supported Platforms: ${join(platforms, ', ')}",
+                "size": "Small",
+                "isSubtle": true,
+                "wrap": true
+            },
+            {
+                "type": "TextBlock",
+                "text": "Pricing Summary:",
+                "size": "Medium",
+                "weight": "Bolder",
+                "wrap": true
+            },
+            {
+                "type": "TextBlock",
+                "text": "${if(pricing_summary, pricing_summary, 'N/A')}",
+                "size": "Small",
+                "wrap": true
+            }
+            ],
+            "actions": [
+            {
+                "type": "Action.OpenUrl",
+                "title": "Learn More",
+                "url": "${opentools_url}",
+                "$when": "${opentools_url != null}"
+            },
+            {
+                "type": "Action.OpenUrl",
+                "title": "Chat with Chatbot",
+                "url": "${chatbot_short_url}",
+                "$when": "${chatbot_short_url != null}"
+            }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+        },
+        "previewCardTemplate": {
+            "title": "${if(name, name, 'N/A')}"
+        }
+        }
+     ```
+     </details>
+    
+    You can now create a message extension that uses the OpenAPI Description document. To create am message extension using the OpenAPI Description document, follow these steps:
+
+    1. Open Visual Studio Code.
+
+    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the Visual Studio Code **Activity Bar**.
+
+    1. Select **Create a New App**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/create-project.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+
+    1. Select **Message Extension**.
+
+    1. Select **Custom Search Results**
+          
+    1. Select **Start with an OpenAPI Description Document**.
+
+       
+    1. Select **Browse** and select the OpenAPI Description document you saved earlier. A list of APIs available in the document appears.
+
+    1. Select the APIs from the list and select **OK**.
+    
+    1. Select **Default folder** to store your project root folder in default location.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+
+       You can also change the default location by the following steps:
+
+       1. Select **Browse**.
+
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+
+       1. Select the location for project workspace.
+       1. Select the **Select Folder**.
+
+           :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows the folder to select.":::
+
+    1. Enter a suitable name for your app and then select **Enter**.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/hello-bot.png" alt-text="Screenshot shows where to enter the app name.":::
+
+        A dialog appears. Select **Yes, I trust the authors** or **No, I don’t trust the authors** based on your requirement.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png":::
+    
+        Your Teams app with a API-based message extension capability is created in few seconds.
+
+        :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-readme.png" alt-text="Screenshot shows the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-bot/app-created-bot.png":::
+
+        After your app is created, the Teams Toolkit displays the following message:
+
+        :::image type="content" source="assets/images/Copilot/api-based-me-ttk-api-me-debug.png" alt-text="Screenshot shows the message from Teams Toolkit that the feature is successfully created along with the option to select Debug.":::
+        
+        Select **Local debug** to preview your project.
+        
+
+    After scaffolding is done, view the project directories and files under **Explorer** in Visual Studio Code.
+
+    :::image type="content" source="../msteams-platform/assets/images/Copilot/api-based-me-ttk-explorer.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
+
+    | Folder name | Contents |
+    | --- | --- |
+    | `env/.env.dev.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
+    | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
+    | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
+    |`appPackage/apiSpecificationFiles/openapi.yml`|A description file that contains the structure and syntax of an API in the OpenAPI Description.|
+    | `appPackage/responseTemplates` | The response rendering template, which consists of the Adaptive Card template, preview card template, and metadata. |
+    | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
+
+    > [!Tip]
+    > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
+
+    ## Provision you app
+
+    To provision your app on Azure:
+
+    1. Go to Teams Toolkit and from the left pane, select **Run and Debug** (**Ctrl+Shift+D**).
+    1. Select **Launch Remote (Edge)** from the launch configuration dropdown.        
+
+        The Teams Toolkit provisions your app on Azure and deploys it to Teams.
+
+        > [!NOTE]
+        > The first time you provision your app, it takes a few minutes to complete. Subsequent provisions are faster.
+
+    1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
+    1. Select the app from the list and [trigger your search commands from compose message area](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet#search-commands).
+
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
+
+       Teams sends the search result as an Adaptive Card in the chat message.
+
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+
+    
+
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+
+    Did you come up with something like this?
+    
+     :::image type="content" source="assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
+      
+      
+- title: Congratulations!
+  durationInMinutes: 1
+  content: |
+
+    You've done it!
+
+    You've created an API based message extension.
+
