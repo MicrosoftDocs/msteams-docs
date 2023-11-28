@@ -75,6 +75,9 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
     1. Select **Create a resource**.
+
+       :::image type="content" source="./assets/images/meetings-side-panel/create-resource-azure-portal.png" alt-text="Screenshot shows the create a resource option in the Azure portal.":::
+    
     1. Search for **Azure Bot** in the search box.
     1. Select **Azure Bot**.
     1. Select **Create**.
