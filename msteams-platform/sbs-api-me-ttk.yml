@@ -285,7 +285,7 @@ items:
                     items:
                     type: string
                     description: The platforms that this tool is available on.
-            description: The list of AI tools.
+                description: The list of AI tools.
         searchToolsError:
         type: object
         properties:
