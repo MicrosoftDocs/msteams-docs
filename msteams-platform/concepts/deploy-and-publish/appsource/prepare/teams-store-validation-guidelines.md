@@ -1260,9 +1260,6 @@ Apps that provide only notifications with content such as, **You have a new noti
 
 <details><summary>Bot metadata information</summary>
 
-> [!NOTE]
-> We don't recommend uploading multiple apps with differing content under the same bot ID. This could lead to unpredictable bot behavior. Remove or uninstall any prior versions of the apps, ensuring only the latest version is uploaded. If the apps share the same bot ID, assign the necessary permissions in the app package. Additionally, activate both apps in the app permission policy and the managed apps, ensuring they are not blocked. Failure to do so might result in issues during app usage.
-
 * Bot information in the app manifest (bot name, logo, privacy link, and terms of service link) must be consistent with the Bot Framework metadata. [*Mandatory Fix*]
 
 * Ensure that the bot ID in the app manifest matches with bot ID in the last Teams Store published version of your app. Changing bot IDs in an app update leads to permanent loss of all user interaction history with the bot for existing users of your app and starts a new conversation chain with the new Bot ID. [*Mandatory Fix*]
