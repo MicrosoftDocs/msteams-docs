@@ -32,7 +32,7 @@ Following is a list of main Teams Toolkit CLI features:
 
 * **Teams Toolkit CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
-## Get Started
+## Get started
 
 Install `teamsapp` from `npm` and run `teamsapp -h` to check all available commands:
 
