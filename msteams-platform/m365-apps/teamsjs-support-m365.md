@@ -931,7 +931,60 @@ Namespace providing calendar-related functionality.
 
 Namespace providing functionality to start a call with others.
 
-<br /> <table border>     <thead>         <tr>             <th></th>             <th colspan=3>Web</th>             <th colspan=5>Desktop</th>             <th colspan=6>Mobile</th>         </tr>         <tr>             <th></th>             <th colspan=3></th>             <th colspan=5>Windows</th>             <th colspan=3>Android</th>             <th colspan=3>iOS</th>         </tr>         <tr>             <td></td>             <td><img alt="Teams" src="./images/teams-icon.png"/></td>             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>             <td><img alt="Teams" src="./images/teams-icon.png"/></td>             <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>             <td><img alt="Outlook (Preview)" src="./images/outlook-preview-icon.png"/></td>             <td><img alt="Teams" src="./images/teams-icon.png"/></td>             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>             <td><img alt="Teams" src="./images/teams-icon.png"/></td>             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>         </tr>     </thead>     <tbody>         <tr>             <th>call</th>             <td>&#x2713;</td>             <td></td>             <td></td>             <td>&#x2713;</td>             <td></td>             <td></td>             <td></td>             <td></td>             <td>&#x2713;</td>             <td></td>             <td></td>             <td>&#x2713;</td>             <td></td>             <td></td>         </tr>     </tbody> </table>   
+<br />
+<table border>
+    <thead>
+        <tr>
+            <th></th>
+            <th colspan=3>Web</th>
+            <th colspan=5>Desktop</th>
+            <th colspan=6>Mobile</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th colspan=3></th>
+            <th colspan=5>Windows</th>
+            <th colspan=3>Android</th>
+            <th colspan=3>iOS</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Outlook (Preview)" src="./images/outlook-preview-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+            <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
+            <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>call</th>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
 ## `chat`
 
