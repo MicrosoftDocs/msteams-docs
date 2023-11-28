@@ -1143,14 +1143,14 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td></td>
             <td>&#x2713;*</td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#dialogadaptivecardbot">dialog.adaptiveCard.bot</a> <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
@@ -1161,14 +1161,14 @@ Preview. This group of capabilities enables apps to show modal task modules (dia
             <td></td>
             <td>&#x2713;*</td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#dialogupdate">dialog.update</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
@@ -1756,42 +1756,6 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td>&#x2713;</td>
         </tr>
         <tr>
-            <th><a href="#pagesadaptivecard">pages.adaptiveCard</a></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-        </tr>
-        <tr>
-            <th><a href="#pagesadaptivecardbot">pages.adaptiveCard.bot</a></th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td>&#x2713;</td>
-        </tr>
-        <tr>
             <th><a href="#pagesappbutton">pages.appButton</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
@@ -1883,18 +1847,6 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
         </tr>
     </tbody>
 </table>
-
-### `pages.adaptiveCard`
-
-[Reference] | [Sample]
-
-Preview. Subcapability for interacting with Adaptive Card pages.
-
-### `pages.adaptiveCard.bot`
-
-[Reference]| [Sample]
-
-Preview. Subcapability for interaction with Adaptive Card pages that need to communicate with the Bot Framework.
 
 > [!NOTE]
 > The following methods aren't supported on the Teams mobile client:
