@@ -147,9 +147,6 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td>&#x2713;*</td>
         </tr>
-
-
-```
         <tr>
             <th><a href="#clipboard">clipboard</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
@@ -167,9 +164,6 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td>&#x2713;*</td>
         </tr>
-```
-
-
         <tr>
             <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
