@@ -22,8 +22,6 @@ items:
      
     This step-by-step guide helps you to send a proactive message from a bot. You'll see the following output:
 
-    Proactive hello message in chat.
-
     :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-result.png" alt-text="Screenshot shows the Proactive Hello message in Teams chat.":::
 
 - title: Prerequisites 
