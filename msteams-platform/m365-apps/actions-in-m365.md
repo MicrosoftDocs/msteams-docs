@@ -164,9 +164,11 @@ this.setState({
     });
     ```
 
+* `itemId`: The app receives the id as the content and uses it to query the Microsoft graph.
+
 #### Access content through Graph API
 
-After obtaining the itemId of the triggering content, you can use the Graph API to read or modify the content, facilitating task completion for your users.
+After obtaining the `itemId` of the triggering content, you can use the Graph API to read or modify the content, facilitating task completion for your users.
 
 ```javascript
 async readActionItem() {
