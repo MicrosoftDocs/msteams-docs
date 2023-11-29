@@ -24,6 +24,7 @@ To get started, ensure that you have the following tools:
 * [Teams Toolkit](../../../toolkit/install-Teams-Toolkit.md)
 * [NodeJS](https://nodejs.org/en/)
 * [OpenAI](https://openai.com/api/) key
+* [Azure Open AI Service](https://oai.azure.com/portal)
 * Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)
 
 ## Build and run the sample app
@@ -36,40 +37,31 @@ To get started, ensure that you have the following tools:
    git clone https://github.com/microsoft/teams-ai.git
    ```
 
-1. Go to the JavaScript folder in the cloned repository.
-
-   ```
-   cd samples/js
-   ```
-
-1. Run the following command to install dependencies:
-
-   ```
-   yarn install
-   ```
-
-1. Run the following command to build dependencies:
-
-   ```
-   yarn build 
-   ```
-
 1. Go to the **04.ai.a.teamsChefBot** sample folder.
 
    ```bash
    cd samples/js/samples/04.ai.a.teamsChefBot
    ```
 
-1. Update the **SECRET_OPENAI_API_KEY** in the `.env.local.user` configuration file.
+1. Update the following in the `.env.local.user` configuration file:
 
    ```text
     SECRET_OPENAI_API_KEY=<your OpenAI key>
+    SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
+    SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI endpoint>
    ```
 
    > [!NOTE]
    > If you’re cloning the [ChefBot sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically.
-1. Go to **Visual Studio Code**.
 
+1. Update the following code in the `teamsapp.local.yml` file:
+
+   ```yml
+   AZURE_OPENAI_KEY: ${{SECRET_AZURE_OPENAI_KEY}}
+   AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}}
+   ```
+
+1. Go to **Visual Studio Code**.
 1. Select **Open a folder**, browse to the folder where ChefBot is available and then select **Select folder**.
 
 1. From the left pane, select **Teams Toolkit**.
