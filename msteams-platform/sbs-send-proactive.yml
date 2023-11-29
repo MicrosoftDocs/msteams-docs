@@ -31,16 +31,12 @@ items:
 
     | &nbsp; | Install | For using |
     | --- | --- | --- |
-    | **Required** | &nbsp; | &nbsp; |
     | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
     | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
     | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
-    
-    > [!NOTE]
-    > The guide has been tested on the latest version of Teams Toolkit and Nodejs version 14 and 16. The steps in this guide might work with other versions, but no testing has been done to confirm their compatibility.
     
     [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
@@ -94,11 +90,11 @@ items:
 
         When debugging is successful, you'll be prompted to upload the proactive message bot to Teams on your local machine. 
 
-    1. Select **Add** or use the dropdown menu to add your proactive bot app to a team, chat, or meeting.
+    1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat** or **Add to a meeting**.
 
         :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the option to add bot to Teams.":::
 
-    1. Select **Set up a bot**. 
+    1. Enter the name of a chat or team in the search field and select **Set up a bot**. 
     
         :::image type="content" source="~/assets/images/proactive-scenario/proactive-bot-setup.png" alt-text="Screenshot shows the option to set up the bot.":::
         
@@ -135,9 +131,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've learnt to build and run Teams app with proactive message bot capability. The final step is to deploy your app on Azure.
-
-    Let's deploy the first app with proactive message bot capability on Azure using Teams Toolkit.
+    You've learnt to build and run Teams app with proactive message bot capability. Let's deploy the first app with proactive message bot capability on Azure using Teams Toolkit.
 
     ## Sign in to your Azure account
 
@@ -145,7 +139,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder where you created the proactive message bot app.
-    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -170,10 +164,8 @@ items:
      <br>
 
     # [Visual Studio Code](#tab/vscode)
-
-    Under **DEPLOYMENT**, you can provision for necessary cloud resources and your app's code is copied into the created cloud resources.
-    
-    1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+   
+    1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
 
     1. Select **Provision** under **LIFECYCLE**.
 
@@ -200,9 +192,7 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/deploy-provision-proactive.png" alt-text="Screenshot shows the provisioning complete dialog.":::
 
-         You have the option to view the provisioned resources. For this tutorial, you don't need to view resources.
-
-    1. Select **Deploy** under **LIFECYCLE** after provisioning is complete.
+    1. Select **Deploy** under **LIFECYCLE**.
 
         :::image type="content" source="~/assets/images/sbs-command-bot/deploy-cloud.png" alt-text="Screenshot shows the Deploy option under LIFECYCLE.":::
 
@@ -220,13 +210,13 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/debug-option-remote.png" alt-text="Screenshot shows the remote debug option highlighted.":::
 
-    1. Select **Start Debugging**. When debugging is successful, you'll be prompted to upload the proactive message bot app to Teams.
+       When debugging is successful, you'll be prompted to upload the proactive message bot app to Teams.
 
-    1. Select **Add** or use the dropdown menu to add your proactive bot app to a team, chat, or meeting.
+    1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat** or **Add to a meeting**.
 
         :::image type="content" source="~/assets/images/proactive-scenario/add-to-teams.png" alt-text="Screenshot shows the option to add bot to Teams.":::
 
-    1. Select **Set up a bot**. 
+    1. Enter the name of a chat or team in the search field and select **Set up a bot**.
     
         :::image type="content" source="~/assets/images/proactive-scenario/proactive-bot-setup.png" alt-text="Screenshot shows the option to set up the bot.":::
         
