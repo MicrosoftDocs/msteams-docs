@@ -206,7 +206,131 @@ items:
 
     [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
-    [!INCLUDE [Service connection](includes/get-started/oauth-connection-settings.md)]
+    1. In the left navigation pane, select **App registrations**.
+
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/select-app-registration-screen.png" alt-text="Screenshot shows app registrations under the Microsoft Entra ID overview." border="true":::    
+
+    1. Select your bot.
+
+       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot of Microsoft Entra ID page. The App registrations in the left panel and the bot selected are highlighted in red.":::
+
+    1. Under **Manage**, select **Expose an API**.
+
+    1. Select **Set**.
+
+       :::image type="content" source="~/assets/images/meetings-side-panel/expose-an-api.png" alt-text="Screenshot of Expose an API with the Set option highlighted in red.":::
+
+    1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
+
+       :::image type="content" source="~/assets/images/meetings-side-panel/set-link.png" alt-text="Screenshot of Expose an API with the Application ID highlighted in red.":::
+        
+       The following image shows the domain name:
+        
+       :::image type="content" source="~/assets/images/meetings-side-panel/appI-Duri.png" alt-text="Screenshot of Expose an API with the domain name highlighted in red.":::
+
+        > [!NOTE]
+        > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
+        > For example: `api://f631****.ngrok.io/92c11075-c629-4a1e-ab58-02b4fd4204c2`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+
+    1. Select **Add a scope**. 
+
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/select-scope.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
+    
+    1.  In the panel that appears, enter **access_as_user** as the **Scope name**.
+  
+    1. Set **Who can consent?** to **Admins and users**.
+  
+    1. To configure the admin and user consent prompts with appropriate values for **access_as_user** scope, provide the following information in the fields:</br>
+    
+         * Enter **Teams can access the user’s profile** as **Admin consent display name**.
+
+         * Enter **Allows Teams to call the app’s web APIs as the current user** as **Admin consent description**.
+
+         * Enter **Teams can access the user profile and make requests on the user’s behalf** as **User consent display name**.
+
+         * Enter **Enable Teams to call this app’s APIs with the same rights as the user** as **User consent description**.
+  
+      The following image shows the fields and the values:
+
+       :::image type="content" source="~/assets/images/meetings-side-panel/add-a-scope.png" alt-text="Screenshot of Add a scope window with Add scope highlighted in red.":::
+
+    1. Ensure that "State" is set to "Enabled".
+
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/sbs-enabled.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
+
+    1. Select "Add scope" to save.
+
+        > [!NOTE]
+        > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
+           `api://*******.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
+
+        :::image type="content" source="~/assets/images/meetings-side-panel/scopes_1.png" alt-text="Screenshot of Scopes defined by this API section with the Scope highlighted in red.":::
+  
+    1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
+    
+    1. Select **Add a client application**. 
+
+       :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Screenshot of Authorized client applications section with Add a Client application highlighted in red.":::
+
+    1. Enter each of the following client IDs:
+
+       * Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
+
+         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Screenshot of Add a client application page with the Client ID 1 highlighted in red."::: 
+
+       * Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
+
+         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Screenshot of Add a client application with the Client ID 2 highlighted in red.":::
+
+    1. Select **Authorized scopes**.
+
+         :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope_1.png" alt-text="Screenshot of Authorized scopes section under Expose an API page with the scope highlighted in red":::
+
+       The following image displays the client Id:
+
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red."::: 
+  
+    1. In the left pane, select **API permissions**. 
+
+       > [!NOTE]
+       > Users need to consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
+
+    1. Select **Add a permission** > **Microsoft Graph**
+
+        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission_1.png" alt-text="Screenshot of Configured permissions with Add a permission highlighted in red."::: 
+
+    1. Select **Delegated permissions**.
+
+    1. Add the following **API permissions**:</br>
+         * **email**
+         * **offline_access**
+         * **openid**
+         * **profile**
+         * **User.Read**
+
+    1. Select **Add permissions**.
+
+        :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Screenshot of Request API permissions with the Add permissions highlighted in red after selecting the required permissions.":::
+
+    1. From the left pane, select **Authentication**.
+
+       > [!NOTE]
+       > If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+               
+         1. Select **Add a platform** > **Web**.
+
+            :::image type="content" source="~/assets/images/meetings-side-panel/webauth_1.png" alt-text="Screenshot of Authentication page with Add a platform option followed by Web option highlighted in red.":::
+
+         1. Enter the redirect URI for your app by appending `auth-end` to domain name:</br> 
+           `https://your ngrok/auth-end`. </br>
+
+         1. Enable **Implicit grant and hybrid flows** by selecting the following checkboxes:
+             * **ID tokens (used for implicit flows)**
+             * **Access tokens (used for implicit and hybrid flows)**
+   
+         1. Select **Configure**.
+
+             :::image type="content" source="~/assets/images/meetings-side-panel/authend_1.png" alt-text="Screenshot of Configure Web page with the options Redirect URLs, token selections, and Configure are highlighted in red.":::
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
