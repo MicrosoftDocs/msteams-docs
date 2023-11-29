@@ -683,9 +683,9 @@ You can add the following configuration snippet to `.fx\configs\config.{env}.jso
 },
 // Add code below. Note you need to replace the placeholders with real values.
 "auth": {
-    "clientId": "<your Azure AD app client id>",
+    "clientId": "<your Microsoft Entra app client id>",
     "clientSecret": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}",
-    "objectId": "<your Azure AD app object id>",
+    "objectId": "<your Microsoft Entra app object id>",
     "accessAsUserScopeId": "<id of the access_as_user scope>"
 }
 ```
@@ -703,7 +703,7 @@ You can add the following configuration snippet to `.fx\configs\config.{env}.jso
 
 ```json
 "bot": {
-    "appId": "<your Azure AD app client id>",
+    "appId": "<your Microsoft Entra app client id>",
     "appPassword": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}"
 }
 ```
