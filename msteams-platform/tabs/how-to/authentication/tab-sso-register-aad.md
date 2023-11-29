@@ -14,15 +14,15 @@ Microsoft Entra ID provides access to your tab app based on the app user's Teams
 
 ## Enable SSO in Microsoft Entra ID
 
-Register your tab app in Microsoft Entra ID and enable it for SSO requires making app configurations, such as generating app ID, defining API scope, and preauthorize client IDs for trusted applications.
+Registering your tab app in Microsoft Entra ID and enabling it for SSO requires making app configurations, such as generating app ID, defining API scope, and preauthorize client IDs for trusted applications.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-azure-ad.png" alt-text="Configure Microsoft Entra ID to send access token to Teams Client app":::
 
 Create a new app registration in Microsoft Entra ID, and expose its (web) API using scopes (permissions). Configure a trust relationship between the exposed API on Microsoft Entra ID and your app. It allows Teams Client to obtain an access token on behalf of your application and the logged-in user. You can add client IDs for the trusted mobile, desktop, and web applications that you want to preauthorize.
 
-You might also need to configure additional details, such as authenticating app users on the platform or device where you want to target your tab app.
+You might also need to configure other details, such as authenticating app users on the platform or device where you want to target your tab app.
 
-User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to additional Graph scopes, such as `User.Read` or `Mail.Read`, see [get an access token with Graph permissions](tab-sso-graph-api.md#acquire-access-token-for-ms-graph).
+User-level Graph API permissions are supported, that is, email, profile, offline_access, and OpenId. If you require access to other Graph scopes, such as `User.Read` or `Mail.Read`, see [get an access token with Graph permissions](tab-sso-graph-api.md#acquire-access-token-for-ms-graph).
 
 Microsoft Entra configuration enables SSO for your tab app in Teams. It responds with an access token for validating the app user.
 
@@ -30,7 +30,7 @@ Microsoft Entra configuration enables SSO for your tab app in Teams. It responds
 
 It's helpful if you learn about the configuration for registering your app on Microsoft Entra ID beforehand. Ensure that you've prepared to configure the following details prior to registering your app:
 
-- **Single- or multitenant options**: Will your application be used in only the Microsoft 365 tenant where it's registered, or will many Microsoft 365 tenants use it? Applications written for one enterprise are typically single-tenant. Applications written by an independent software vendor and used by many customers need to be multitenant so each customer's tenant can access the application.
+- **Single or multitenant options**: Will your application be used in only the Microsoft 365 tenant where it's registered, or will many Microsoft 365 tenants use it? Applications written for one enterprise are typically single-tenant. Applications written by an independent software vendor and used by many customers need to be multitenant so each customer's tenant can access the application.
 - **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same. Currently, multiple domains per app aren't supported.
 - **Scope**: It's the permission that an authorized app user or your app can be granted for accessing a resource exposed by the API.
 
@@ -76,11 +76,11 @@ Register your app in Microsoft Entra ID and configure the tenancy and app's plat
 
     The **Register an application** page appears.
 
-4. Enter the name of your app that you want to be displayed to the app user. You can change this name at a later stage, if you want to.
+4. Enter the name of your app that you want to be displayed to the app user. You can change the name at a later stage, if you want to.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Microsoft Entra admin center.":::
 
-5. Select the type of user account that can access your app. You can select from single- or multitenant options, or Private Microsoft account.
+5. Select the type of user account that can access your app. You can select from single or multitenant options in organizational directories, or restrict the access to personal Microsoft accounts only.
 
     <details>
     <summary><b>Options for supported account types</b></summary>
@@ -88,8 +88,8 @@ Register your app in Microsoft Entra ID and configure the tenancy and app's plat
     | Option | Select this to... |
     | --- | --- |
     | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called custom app built for your org (LOB app), this app is a single-tenant application in the Microsoft identity platform. |
-    | Accounts in any organizational directory (Any Microsoft Entra directory - Multi-tenant) | Let users in any Microsoft Entra tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multitenant application in the Microsoft identity platform.|
-    | Accounts in any organizational directory (Any Microsoft Entra directory - Multi-tenant) and personal Microsoft accounts | Target the widest set of customers. <br> By selecting this option, you're registering a multitenant application that can support app users who have personal Microsoft accounts also. |
+    | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | Let users in any Microsoft Entra tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multitenant application in the Microsoft identity platform.|
+    | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) | Target the widest set of customers. <br> By selecting this option, you're registering a multitenant application that can support app users who have personal Microsoft accounts also. |
     | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
 
     </details>
@@ -191,10 +191,10 @@ To configure scope and authorize trusted client applications, you need:
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
 
-    1. Enter the scope name. This is a mandatory field.
+    1. Enter the scope name. This field is mandatory.
     2. Select the user who can give consent for this scope. The default option is **Admins only**.
-    3. Enter the **Admin consent display name**. This is a mandatory field.
-    4. Enter the description for admin consent. This is a mandatory field.
+    3. Enter the **Admin consent display name**. This field is mandatory.
+    4. Enter the description for admin consent. This field is mandatory.
     5. Enter the **User consent display name**.
     6. Enter the description for user consent description.
     7. Select the **Enabled** option for state.
