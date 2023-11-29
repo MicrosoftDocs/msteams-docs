@@ -22,9 +22,9 @@ items:
      
     This step-by-step guide helps you to send a proactive message from a bot. You'll see the following output:
 
-    * Proactive hello message in chat.
+    Proactive hello message in chat.
 
-      :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-result.png" alt-text="Screenshot shows the Proactive Hello message in Teams chat.":::
+    :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-result.png" alt-text="Screenshot shows the Proactive Hello message in Teams chat.":::
 
 - title: Prerequisites 
   durationInMinutes: 2
@@ -41,7 +41,7 @@ items:
     | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
     > [!NOTE]
-    > The guide has been tested on the latest version of Teams Toolkit and Nodejs version 14 and 16. The steps in this guide may work with other versions, but no testing has been done to confirm their compatibility.
+    > The guide has been tested on the latest version of Teams Toolkit and Nodejs version 14 and 16. The steps in this guide might work with other versions, but no testing has been done to confirm their compatibility.
     
     [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
@@ -49,11 +49,11 @@ items:
   durationInMinutes: 3
   content: |
 
-    **To build proactive message bot using Visual Studio Code**
+    To build proactive message bot using Visual Studio Code, follow these steps:
 
     1. Open Visual Studio Code.
     
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
 
     1. In the left pane, select **View Samples**.
 
