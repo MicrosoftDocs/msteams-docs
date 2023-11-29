@@ -38,8 +38,9 @@ items:
     | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
     | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call and all in one place.|
-    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
     | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+    
     > [!NOTE]
     > The guide has been tested on the latest version of Teams Toolkit and Nodejs version 14 and 16. The steps in this guide might work with other versions, but no testing has been done to confirm their compatibility.
     
@@ -107,9 +108,9 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
 
-    1. Copy and paste the URL or navigate to the URL in browser. A proactive hello message gets triggered and to be shared in the chat. 
+    1. Copy and paste the URL or navigate to the URL in browser. A proactive hello message is triggered and shared in the chat. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that triggers bot to responds with a proactive message in Teams.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that triggers bot to respond with a proactive message in Teams.":::
 
     1. Go to Teams. You'll receive a **proactive hello** message from the bot.
 
@@ -117,7 +118,7 @@ items:
 
     ## Take a tour of the source code
 
-    Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **Explorer** area of Visual Studio Code.
+    Teams Toolkit provides components for building an app. After creating the project, you can view the project folders and files in the **EXPLORER** area of Visual Studio Code.
 
     :::image type="content" source="~/assets/images/proactive-scenario/file-structure.png" alt-text="Screenshot shows the structure tab.":::
 
@@ -125,11 +126,11 @@ items:
 
     | Folder / File | Contents |
     | - | - |
-    | `.vscode/` | VSCode files for debugging. |
-    | `appManifest/` | Templates for the Teams application manifest. |
+    | `.vscode/` | Visual Studio Code files for debugging. |
+    | `appManifest/` | Templates for the app manifest (previously called Teams app manifest). |
     | `env/`| Name / value pairs are stored in environment files and used by `teamsapp.yml` to customize the provisioning and deployment rules. |
-    | `manifest.json` | App manifest (previously called Teams app manifest) for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
-    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `manifest.json` | App manifest for publishing through the Developer Portal for Teams is stored in `Properties/manifest.json`. |
+    | `teamsapp.yml` | Main project file describes your app configuration and defines the set of actions to run in each lifecycle stage. |
     | `teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging. |    
 
 - title: Deploy your Proactive message bot
@@ -142,7 +143,7 @@ items:
 
     ## Sign in to your Azure account
 
-    Use your account to access the Microsoft Azure portal and to provide provision new cloud resources to support your app.
+    Use your account to access the Microsoft Azure portal and provision new cloud resources to support your app.
 
     1. Open Visual Studio Code.
     1. Open the project folder where you created the proactive message bot app.
@@ -154,19 +155,19 @@ items:
 
         Your default web browser opens to let you sign in to the account.
 
-        1. Close the browser when prompted and return to Visual Studio Code.
+    1. Close the browser when prompted and return to Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
+    The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure that you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
     ## Deploy your app to Azure
 
-     Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the tab app.
+     Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the bot app.
      <br>
      <br>
      <details>
      <summary>What's the difference between Provision and Deploy?</summary>
      <br>
-     The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it's separate from the deployment step.
+     <b>Provision</b> creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, and JavaScript) is copied to the resources. <b>Deploy</b> copies the code for your app to the resources you created during provisioning. It's common to deploy multiple times without provisioning new resources. Since provisioning can take some time to complete, it's separate from deployment.
      </details>
      <br>
 
@@ -180,7 +181,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-command-bot/provision-cloud.png" alt-text="Screenshot shows the provisioning commands.":::
 
-    1. Select an existing resource group or create new resource group. For more information, see [Create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
+    1. Select an existing resource group or create new resource group. For more information, see [create resource group](/azure/azure-resource-manager/management/manage-resource-groups-portal#create-resource-groups).
 
     1. Select one of the existing subscriptions.
 
@@ -191,7 +192,7 @@ items:
         :::image type="content" source="~/assets/images/proactive-scenario/select-resource-group.png" alt-text="Screenshot show the resource group option for provisioning.":::
 
         > [!NOTE]
-        > A dialog appears mentioning that costs may be incurred when running resources in Azure.
+        > A dialog appears mentioning that costs might be incurred when running resources in Azure.
 
     1. Select **Provision**.
 
@@ -213,7 +214,7 @@ items:
 
        Deployment takes some time. You can monitor the progress in the dialogs that appear in lower-right corner. After a few minutes, the following dialog appears.
 
-        :::image type="content" source="~/assets/images/proactive-scenario/deploy-confirmation-proactive.png" alt-text="Screenshot shows the deploy confirm.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/deploy-confirmation-proactive.png" alt-text="Screenshot shows the deployment confirmation dialog.":::
     
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View** > **Run**) from Visual Studio Code.
 
@@ -235,9 +236,9 @@ items:
 
         :::image type="content" source="~/assets/images/proactive-scenario/proactive-msg-sent.png" alt-text="Screenshot shows the proactive message bot response in the chat.":::
 
-    1. Copy and paste the URL or navigate to the URL in browser. A proactive hello message gets triggered and to be shared in the chat. 
+    1. Copy and paste the URL or navigate to the URL in browser. A proactive hello message is triggered and shared in the chat. 
 
-        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that triggers bot to responds with a proactive message in Teams.":::
+        :::image type="content" source="~/assets/images/proactive-scenario/pro-msg-browser.png" alt-text="Screenshot shows the browser that triggers bot to respond with a proactive message in Teams.":::
 
     1. Go to Teams. You'll receive a **proactive hello** message from the bot.
 
