@@ -83,9 +83,9 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/select-folder.png" alt-text="Screenshot shows the option to select the folder.":::
     
-           The proactive message bot is created in a few seconds and displays the proactive message bot successful dialog in the lower-right corner with the option to debug:
+       The proactive message bot is created in a few seconds and displays the proactive message bot successful dialog in the lower-right corner with the option to debug:
 
-           :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created.":::
+       :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created.":::
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/proactive-scenario/run-debug-icon.png"::: icon from the top-left corner.
 
