@@ -125,7 +125,7 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage Password**.
 
-       :::image type="content" source="~/assets/images/manage-password-bot-label.png" alt-text="Screenshot of Microsoft App ID option under Configuration page with the Manage option highlighted in red.":::
+       :::image type="content" source="~/assets/images/manage-password-bot-label.png" alt-text="Screenshot shows microsoft app id option in configuration page.":::
 
     1. In the **Client secrets** section, select **+ New client secret**. 
 
@@ -133,7 +133,7 @@ items:
     
     1. In the **Add a client secret** window that appears, enter **Description** of the client secret and select **Add**.
     
-         :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret_1.png" alt-text="Screenshot of Add a client secret window with the Add option highlighted in red.":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret_1.png" alt-text="Screenshot shows the option to add a client secret window.":::
 
     1. Select **Copy to clipboard** to copy the **Value** details.
 
@@ -160,11 +160,11 @@ items:
     
     1. Select **Agree**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/terms_2.png" alt-text="Screenshot of Terms of Service page with the Agree option highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/terms_2.png" alt-text="Screenshot shows the option to agree the terms of service.":::
 
     1. Select **Apply**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot of Microsoft Teams Messaging channel with the Apply option highlighted in red.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot shows the option to apply in microsoft Teams messaging channel.":::
     
     **To create tunnel for local web server**
 
@@ -310,7 +310,7 @@ items:
 
     1. Select **Add permissions**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Screenshot of Request API permissions with the Add permissions highlighted in red after selecting the required permissions.":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Screenshot shows the option to add permissions in request api permissions section.":::
 
     1. From the left pane, select **Authentication**.
 
@@ -419,7 +419,7 @@ items:
  
     1. In the pop-up window, select **Manage apps**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/manage-apps.png" alt-text="Screenshot of Teams Slide Panel with the add Apps icon and Manage apps option highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/manage-apps.png" alt-text="Screenshot shows the option to add an app in manage app section."::: 
    
     1. Select **Upload an app**.
 
@@ -429,7 +429,7 @@ items:
 
     1. Select **Add**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/add-the-app.png" alt-text="Screenshot of Side Panel in Teams with the Add option highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/add-the-app.png" alt-text="Screenshot shows the option to add the side panel app."::: 
 
        The **Manage apps** section displays the list of applications.
    
