@@ -16,11 +16,11 @@ items:
   content: |
     > [!NOTE]
     >
-    > Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit. Ensure that you install the [latest prerelease version](/toolkit/install-teams-toolkit?tabs=vscode&pivots=visual-studio-code-v5#install-a-pre-release-version) of the Teams Toolkit.
+    > Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit. 
     
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot app with Teams using Javascript. 
-    This step-by-step guide helps you to build configurable bot with Teams Toolkit. You'll see the following output after you've completed this guide, where the user can configure his bot from the channel or group chat:
+    This step-by-step guide helps you to build AI chat bot with Teams Toolkit. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
     
 - title: Prerequisites
   durationInMinutes: 1
@@ -76,7 +76,7 @@ items:
     > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Teams Toolkit version, and environment.
     # [Visual Studio Code](#tab/vscode)
    
-- title: Build and run your first bot app
+- title: Build and run your AI chat bot app
   durationInMinutes: 1
   content: |
 
