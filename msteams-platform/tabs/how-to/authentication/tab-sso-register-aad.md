@@ -63,7 +63,6 @@ Register your app in Microsoft Entra ID and configure the tenancy and app's plat
 ### To register a new app in Microsoft Entra ID
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
-   The Microsoft Entra admin center page opens.
 
 2. Select the **App registrations** icon.
 
@@ -131,7 +130,7 @@ To configure scope and authorize trusted client applications, you need:
 
     The **Expose an API** page appears.
 
-1. Select **Set** to generate application ID URI in the form of `api://{AppID}`.
+1. Select **Add** to generate application ID URI in the form of `api://{AppID}`.
 
     :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI":::
 
