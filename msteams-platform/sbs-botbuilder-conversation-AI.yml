@@ -491,7 +491,7 @@ items:
             });
             ```
             
-            When the `OpenAIModerator` reviews and identifies a flag in an input or output, it triggers the action `AI.FlaggedInputActionName` or `AI.FlaggedOutputActionName` and the `context.sendActivity` sends a message to the user. If the user receives a message for a flagged  input or output, the user can control what he wants to do.
+            When the `OpenAIModerator` reviews and identifies a flag in an input or output, it triggers the action `AI.FlaggedInputActionName` or `AI.FlaggedOutputActionName` and the `context.sendActivity` sends a message to the user. If the user receives a message for a flagged input or output, the user can control what he wants to do.
 
         1. After adding the code to define actions, add the following code in a new line to define history:
  
