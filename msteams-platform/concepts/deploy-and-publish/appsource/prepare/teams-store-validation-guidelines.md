@@ -280,9 +280,6 @@ Don't include domains outside of your organization's control (including wildcard
 
 * OpenAPI URLs must be under partner control.
 
-  > [!NOTE]
-  > We should also link to the WIP doc on guidelines to create a message plug under the newly created Teams apps extensible as Microsoft 365 Chat plugin section.  Please run grammar check and structure this content better.
-
 * Following External Domains aren't allowed: [*Mandatory Fix*]
   * *.azurewebsites.net
   * *.azureedge.com
