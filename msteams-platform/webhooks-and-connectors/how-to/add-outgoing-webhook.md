@@ -52,11 +52,11 @@ Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Web
 
 1. Select **Apps** on the channel page.
 
-    :::image type="content" source="../../assets/images/outgoingwebhook2_1.png" alt-text="Screenshot shows the apps tab on a Teams channel.":::
+    :::image type="content" source="../../assets/images/outgoing-webhook.png" alt-text="Screenshot shows the apps tab on a Teams channel.":::
 
 1. Select **Create an Outgoing Webhook**.
 
-    :::image type="content" source="../../assets/images/outgoingwebhook3_1.png" alt-text="Screenshot shows the select create outgoing webhook option."lightbox="../../assets/images/outgoingwebhook3_1.png":::
+    :::image type="content" source="../../assets/images/create-an-outgoing-webhook.png" alt-text="Screenshot shows the select create outgoing webhook option."lightbox="../../assets/images/create-an-outgoing-webhook.png":::
 
 1. Type the following details in the **Create an outgoing webhook** page:
 
@@ -67,7 +67,7 @@ Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Web
 
 1. Select **Create**. The Outgoing Webhook is added to the current team's channel.
 
-    :::image type="content" source="../../assets/images/outgoingwebhook_1.png" alt-text="Screenshot shows the create button in the create an outgoing webhook window.":::
+    :::image type="content" source="../../assets/images/create-outgoingwebhook.png" alt-text="Screenshot shows the create button in the create an outgoing webhook window.":::
 
 A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue appears. It's a security token used to authenticate calls between Teams and the designated outside service. The HMAC security token doesn't expire and is unique for each configuration.
 
