@@ -29,7 +29,7 @@ items:
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Screenshot shows the output of feed broad cast" border="true":::
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient1.png" alt-text="Screenshot shows the final output" border="true"::: 
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient.png" alt-text="Screenshot shows the final output" border="true"::: 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -53,7 +53,7 @@ items:
  
     ## Set up your Teams development tenant
 
-    A **tenant** is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also upload and test the custom app.
+    A tenant is like a space or a container where you chat, share files, and run meetings for your organization in Teams. You can also upload and test the custom app.
 
     ### Check for custom app upload option
 
@@ -69,12 +69,12 @@ items:
          1. In the Teams client, select the **Apps** icon.
          1. Select **Manage your apps**.
          1. Select **Upload an app**.
-         1. Look for the option to **Upload a custom app**.
+         1. Look for the option to **Upload a customised app**.
 
             :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/upload-app.png" alt-text="Screenshot shows the custom upload app in Teams.":::
 
         > [!NOTE]
-        > Contact Teams administrator, if you can't upload a custom app.
+        > Contact Teams administrator, if you can't upload a customised app.
 
     ### Create a free Teams developer tenant (optional)
 
@@ -87,7 +87,7 @@ items:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Microsoft" border="true":::
 
-    1. Sign in to Teams using the new administrator account. Now you can select **Upload a custom app**.
+    1. Sign in to Teams using the new administrator account. Now you can select **Upload a customised app**.
 
 - title: Set up local environment
   durationInMinutes: 1 
@@ -289,7 +289,7 @@ items:
 
     1. Select **Manage your apps**.
 
-       :::image type="content" source="~/assets/images/Teams-task-module/manage-apps_3.png" alt-text="Screenshot shows the manage your apps option in Teams.":::
+       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/manage-apps.png" alt-text="Screenshot shows the manage your apps option in Teams.":::
     
     1. Select **Submit an app to your org**. 
 
