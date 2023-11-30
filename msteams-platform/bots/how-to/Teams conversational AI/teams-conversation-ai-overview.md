@@ -120,7 +120,7 @@ Dynamic prompt management is a feature of the AI system that allows it to adjust
 
 Say goodbye to prompt engineering headaches and say hello to efficiently enhancing and directing your AI model’s responses with Augmentation. When creating a prompt select one of the following Augmentation Modes to tailor your model to your needs, increasing its accuracy and desired outcomes:
 
-* **Retrieval Augmented Generation (RAG)**: Automatically incorporate real-time, dynamic, and specified external datasources into your model’s responses enabling up to date and contextually accurate results without fine-tuning or re-training your model. Answer questions about today’s sales numbers or customize to a specific user’s data; with RAG your model is no longer stuck in the past. Discover how easy it's to build by trying the RAG bot sample today!
+* **Retrieval Augmented Generation (RAG)**: Automatically incorporates real-time, dynamic, and specified external datasources into your model’s responses enabling up to date and contextually accurate results without fine-tuning or re-training your model. Answer questions about today’s sales numbers or customize to a specific user’s data; with RAG your model is no longer stuck in the past. Discover how easy it's to build by trying the RAG bot sample today!
 
 * **Monologue**: Create AutoGPT-style agents capable of performing multi-step actions independently and reliability with full schema validation and automatic repair included.
 

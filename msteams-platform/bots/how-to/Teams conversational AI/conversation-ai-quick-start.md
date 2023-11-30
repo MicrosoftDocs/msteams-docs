@@ -21,7 +21,7 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
 To get started, ensure that you have the following tools:
 
 * Microsoft Teams
-* [Teams Toolkit](../../../toolkit/install-Teams-Toolkit.md)
+* [Teams Toolkit for Visual Studio Code](../../../toolkit/install-Teams-Toolkit.md)
 * [NodeJS](https://nodejs.org/en/)
 * [OpenAI](https://openai.com/api/) key
 * [Azure Open AI Service](https://oai.azure.com/portal)
@@ -35,6 +35,24 @@ To get started, ensure that you have the following tools:
 
    ```
    git clone https://github.com/microsoft/teams-ai.git
+   ```
+
+1. Go to the **JS** folder.
+
+   ```
+   cd samples/js
+   ```
+
+1. Enter the following code to install dependencies:
+
+   ```
+   yarn install
+   ```
+
+1. Enter the following code to build dependencies:
+
+   ```
+   yarn build
    ```
 
 1. Go to the **04.ai.a.teamsChefBot** sample folder.
@@ -52,7 +70,7 @@ To get started, ensure that you have the following tools:
    ```
 
    > [!NOTE]
-   > If you’re cloning the [ChefBot sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically.
+   > If you’re cloning the [ChefBot sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key to get started.
 
 1. Update the following code in the `teamsapp.local.yml` file:
 
@@ -74,7 +92,7 @@ To get started, ensure that you have the following tools:
 
    A browser tab opens a Teams web client requesting to add the bot to your tenant.
 
-   1. If you get an error which says **Could not find a declaration file for module 'jsonwebtoken'**, run the following in the **TERMINAL**:
+   1. If you get an error, which says **Could not find a declaration file for module 'jsonwebtoken'**, run the following in the **TERMINAL**:
 
       ```
       yarn add @types/jsonwebtoken
