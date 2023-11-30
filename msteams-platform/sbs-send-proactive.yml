@@ -80,7 +80,7 @@ items:
     
        The proactive message bot is created in a few seconds and displays the proactive message bot successful dialog in the lower-right corner with the option to debug:
 
-       :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created."lightbox="../msteams-platform/assets/images/proactive-scenario/proactive-bot-created-1.png"::::::
+       :::image type="content" source="../msteams-platform/assets/images/proactive-scenario/proactive-bot-created.png" alt-text="Screenshot shows the proactive message bot created."lightbox="../msteams-platform/assets/images/proactive-scenario/proact-bot-created-1.png"::::::
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/proactive-scenario/run-debug-icon.png"::: icon from the top-left corner.
 
