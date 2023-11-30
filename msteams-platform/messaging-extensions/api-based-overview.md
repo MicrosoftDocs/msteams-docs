@@ -26,6 +26,12 @@ You can create an API-based message extension using an [OpenAPI Description (OAD
 >[!IMPORTANT]
 > You can build an API-based message extension now and starting early next year, the extensions will function as plugins within Copilot and enhance Copilot experience for your extensions.
 
+See the video to learn more about building an API-based message extension using Teams Toolkit:
+</br>
+</br>
+
+> [!VIDEO https://www.youtube.com/embed/jSYNHz6hz4Y?si=htmfWtlY9bYH_RT2]
+
 ## Prerequisites
 
 Before you get started, ensure that you adhere to the following requirements:
