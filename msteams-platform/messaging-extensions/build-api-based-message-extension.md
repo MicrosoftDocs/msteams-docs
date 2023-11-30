@@ -21,7 +21,7 @@ Before you get started, ensure that you meet the following requirements:
 </br>
 <details><summary>1. OpenAPI Description (OAD)</summary>
 
-Developers must not require users to enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
+You must not require users to enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
 
 * The `auth` property must not be specified.
 * JSON and YAML are the supported formats.
@@ -313,13 +313,13 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
 1. Under **Select Operations Copilot Can Interact with**, select dropdown and select APIs from the list.
-1. Select **Create**. The project is scaffolded and you can find API spec, manifest and response template files in the **appPackage** folder.
+1. Select **Create**. The project is scaffolded and you can find API specification, manifest, and response template files in the **appPackage** folder.
 
 1. In the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel**.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
 
-   1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported.
+   1. Select the Account to use to create the tunnel. The supported account types are Azure, Microsoft Account (MSA), and GitHub.
    1. Name: Enter a name for the tunnel.
    1. Tunnel Type: Select Persistent or Temporary.
    1. Access: Select Public.
