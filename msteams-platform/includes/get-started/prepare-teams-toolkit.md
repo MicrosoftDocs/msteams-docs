@@ -16,7 +16,7 @@ You can use Teams Toolkit with Visual Studio Code or CLI (command-line interface
 
    :::image type="content" source="../../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Teams Toolkit extension installation.":::
 
-   The Teams Toolkit :::image type="icon" source="../../assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code **Activity Bar**.
+   The Teams Toolkit :::image type="icon" source="../../assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code Activity Bar.
 
 You can also install Teams Toolkit from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -47,7 +47,7 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 
 ## Set up your Teams development tenant
 
-A **tenant** is a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
+A tenant is a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
 
 ### Check for upload an app option
 
