@@ -26,11 +26,12 @@ items:
   durationInMinutes: 1
   content: |
    Ensure you install the following tools for building and deploying your apps.
-   | &nbsp; | Install | For using... |
-   | --- | --- | --- |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
-   | &nbsp; | [Node.js](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
+
+   | Install | For using... |
+   | --- | --- |
+   | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
+   | [Node.js](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
    ## Prepare development environment
    After you've installed the required tools, set up the development environment.
@@ -115,17 +116,15 @@ items:
 
             :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
-        1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
+    1. 
+
+    1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
     1. Test Tool opens the bot in a webpage.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
-    
-- title: Deploy your AI chat bot app
-  durationInMinutes: 1
-  content: |
 
 - title: Congratulations!
   durationInMinutes: 1
