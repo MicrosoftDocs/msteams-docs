@@ -23,7 +23,7 @@ items:
     * Keeps users up to date.
     * Broadcasts message for all the members.
     * Displays activity feed notification.
-    * Broadcasts details available for members.
+    * Broadcast details available for members.
 
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
 
@@ -38,9 +38,9 @@ items:
 
      | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022 and install the ASP.NET and web development workloads. Use the latest version. |
      | &nbsp; | [.NET Core SDK version 3.1](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the .NET 3.1 (or later) SDK globally, the portable version can be installed. |
-     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> Or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -62,7 +62,7 @@ items:
     > [!NOTE]
     > Custom app upload is necessary for previewing and testing apps in Teams local environment. Enable custom app upload to preview and test your app in Teams locally.
 
-    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+    Do you already have a tenant, and do you have admin access? Let's check if you really do!
 
     To verify custom upload apps in Teams:
 
