@@ -35,7 +35,7 @@ You can use deep links to allow app user to open an app install dialog to know m
 
 Following is the deep link format to open an app install dialog from your Teams client:
 
-`https://teams.microsoft.com/l/app/<your-app-id>&tenantId=<tenantId>`
+`https://teams.microsoft.com/l/app/<your-app-id>?tenantId=<tenantId>`
 
 Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bcb4). To know more about different app IDs see, [app ID used for different apps](#app-id-used-for-different-apps).
 
