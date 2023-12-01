@@ -33,11 +33,13 @@ Microsoft Entra ID also enables you to customize who has access to your account 
 | Account type | Function |
 | --- | --- |
 | Accounts in this organizational directory only  (Microsoft only - Single tenant) | All user and guest accounts in your directory can use your application or API. Use this option if your target audience is internal to your organization. |
-| Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | All users with a work or school account from Microsoft can use your application or API. This includes schools and businesses that use Office 365. Use this option if you want to enable multitenancy and your target audience are businesses or educational customers. |
-| Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) | All users with a work or school, or personal Microsoft account can use your application or API. It includes schools and businesses that use Office 365 as well as personal accounts that are used to sign in to services like Xbox and Skype. Use this option to to enable multitenancy and target the widest set of Microsoft identities. |
+| Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | All users with a work or school account from Microsoft can use your application or API. It includes schools and businesses that use Office 365. Use this option if you want to enable multitenancy and your target audience are businesses or educational customers. |
+| Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) | All users with a work or school, or personal Microsoft account can use your application or API. It includes schools and businesses that use Office 365 as well as personal accounts that are used to sign in to services like Xbox and Skype. Use this option to enable multitenancy and target the widest set of Microsoft identities. |
 | Personal Microsoft accounts only | Personal accounts that are used to sign in to services like Xbox and Skype. Use this option to target the widest set of Microsoft identities. |
 
 ## Tenants in Microsoft Entra ID
+
+A 'tenant' is a secure identity system where users, their data, and the applications they use are managed. The tenant provides identity and access management capabilities to the applications registered under it.
 
 ### Single tenant
 
@@ -55,7 +57,7 @@ The following steps help you to create and register your app in Azure portal:
 
 ### Create an app registration in Microsoft Entra ID
 
-Register a new app in Microsoft Entra ID and configure the tenancy and app's platform. You'll generate a new app ID that you'll use later in your Teams app manifest file.
+Register a new app in Microsoft Entra ID and configure the tenancy and app's platform. You generate a new app ID that you can use later in your Teams app manifest file.
 
 To register a new app in Microsoft Entra ID
 
@@ -100,4 +102,10 @@ To register a new app in Microsoft Entra ID
 
 [!INCLUDE [ngrok-tunnel](../includes/get-started/ngrok-tunnel.md)]
 
-      ---
+---
+
+## See also
+
+* [Configure your app in Microsoft Entra ID](../bots/how-to/authentication/bot-sso-register-aad.md)
+* [Configure your tab app in Microsoft Entra ID](../tabs/how-to/authentication/tab-sso-register-aad.md)
+* [Edit Microsoft Entra manifest](AAD-manifest-customization.md)
