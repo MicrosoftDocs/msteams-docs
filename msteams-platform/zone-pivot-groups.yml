@@ -88,7 +88,7 @@ groups:
   title: Quick start guide
   prompt: Before you begin, select the language in which you want to build.
   pivots:
-  - id: qs-Javascript
+  - id: qs-javascript
     title: JavaScript
-  - id: qs-Csharp
+  - id: qs-csharp
     title: Csharp

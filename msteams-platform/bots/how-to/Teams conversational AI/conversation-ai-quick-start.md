@@ -17,7 +17,7 @@ ms.date: 04/07/2022
 
 Get started with Teams AI library using the **ChefBot** sample. It's designed to quickly run a Teams AI library based sample on your computer's localhost.
 
-::: zone pivot="qs-Javascript"
+::: zone pivot="qs-javascript"
 
 ## Set up your development environment
 
@@ -118,7 +118,7 @@ To get started, ensure that you have the following tools:
 
 ::: zone-end
 
-::: zone pivot="qs-Csharp"
+::: zone pivot="qs-csharp"
 
 ## Prerequisites
 
