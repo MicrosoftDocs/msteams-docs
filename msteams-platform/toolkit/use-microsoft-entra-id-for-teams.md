@@ -11,41 +11,41 @@ ms.localizationpriority: medium
 Microsoft Entra ID is a cloud platform that simplifies the process of building modern applications. You can host your Teams apps entirely in Azure or extend your app with Azure services. Hosting your Teams app on Azure helps you create applications that are reliable, scalable, and easily maintainable. Azure supports popular programming languages, including Python, JavaScript, Java, .NET, and Go.
 
 You must have an Azure account to use Azure resources or to host your Teams app on Microsoft Entra ID.
-For more information, see [Microsoft Entra ID subscription](/azure/developer/intro/azure-developer-billing).
+For more information, see [Microsoft Entra ID subscription](/azure/developer/intro/azure-developer-billing#what-is-an-azure-subscription).
 
 With Microsoft Entra ID, you can use the following services for your Teams app:
 
 1. Host any Teams app on Microsoft Entra ID with any capability
 
 1. Teams apps for meetings:
-    1. Generate meeting token for Teams
-    1. Generate Teams meeting side panel
+    1. [Generate meeting token for Teams](../sbs-meeting-token-generator.yml)
+    1. [Generate Teams meeting side panel](../sbs-meetings-sidepanel.yml)
 
 1. Teams bot apps:
     1. Create client secret for the bot app
     1. Authentication for Teams apps
-    1. Configure Single sign-on for your app
-    1. Configure third-party authentication for your app
-    1. Send activity feed notification from Microsoft Teams activity feed
+    1. [Configure Single sign-on for your app](add-single-sign-on.md)
+    1. [Configure third-party authentication for your app](../tabs/how-to/authentication/auth-tab-aad.md)
+    1. [Send activity feed notification from Microsoft Teams activity feed](../sbs-graphactivity-feedbroadcast.yml)
 
 Microsoft Entra ID also enables you to customize who has access to your account when you're registering your app on the platform.
 
 | Account type | Function |
 | --- | --- |
 | Accounts in this organizational directory only  (Microsoft only - Single tenant) | All user and guest accounts in your directory can use your application or API. Use this option if your target audience is internal to your organization. |
-| Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | All users with a work or school account from Microsoft can use your application or API. It includes schools and businesses that use Office 365. Use this option if you want to enable multitenancy and your target audience are businesses or educational customers. |
-| Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) | All users with a work or school, or personal Microsoft account can use your application or API. It includes schools and businesses that use Office 365 as well as personal accounts that are used to sign in to services like Xbox and Skype. Use this option to enable multitenancy and target the widest set of Microsoft identities. |
+| Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | All users with a work or school account from Microsoft can use your application or API. It includes schools and businesses that use Microsoft 365. Use this option if you want to enable multitenancy and your target audience are businesses or educational customers. |
+| Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) | All users with a work or school, or personal Microsoft account can use your application or API. It includes schools and businesses that use Microsoft 365 as well as personal accounts that are used to sign in to services like Xbox and Skype. Use this option to enable multitenancy and target the widest set of Microsoft identities. |
 | Personal Microsoft accounts only | Personal accounts that are used to sign in to services like Xbox and Skype. Use this option to target the widest set of Microsoft identities. |
 
 ## Tenants in Microsoft Entra ID
 
-A 'tenant' is a secure identity system where users, their data, and the applications they use are managed. The tenant provides identity and access management capabilities to the applications registered under it.
+A 'tenant' is a secure identity and access management system for the users, groups, and the applications stored in the organization’s Azure environment. The tenant provides a centralized platform for admins to manage identities, permissions, and access to Azure resources and services.
 
-### Single tenant
+When you create a single tenant application in Microsoft Entra ID, it is restricted to the users in the organizational directory it was created in. This type of tenanat is perfect for applications that are simple and prioritize security, privacy, and collaboration within an organization. On the other hand, mutitenant applications can be accessed by users outside the tenant it was created in. This promotes better scalability and reach.
 
-### Multitenant
+For more information about single and multitenancy, see [Tenancy in Microsoft Entra ID](/entra/identity-platform/single-and-multi-tenant-apps) or see the following video:
 
-#### Advantages of mutitenancy
+> [!VIDEO https://www.youtube.com/embed/watch?v=RjGVOFm39j0]
 
 ## Register your Teams app on Microsoft Entra ID
 
@@ -83,11 +83,11 @@ To register a new app in Microsoft Entra ID
 
 1. Select **Register**. A message appears on the browser stating that the app was created.
 
-    :::image type="content" source="../assets/images/authentication/teams-sso-bots/app-created-msg.png" alt-text="Screenshot shows a message stating that the app was created.":::
+    :::image type="content" source="../assets/images/authentication/teams-app-created-message.png" alt-text="Screenshot shows a message stating that the app was created.":::
 
     Your app is registered in Microsoft Entra ID. The app overview page appears.
 
-    :::image type="content" source="../assets/images/include-files/app-registration-overview.png" alt-text="Screenshot shows the app registration overview page.":::
+    :::image type="content" source="../assets/images/authentication/teams-app-overview-page.png" alt-text="Screenshot shows the app registration overview page.":::
 
     > [!NOTE]
     > Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
