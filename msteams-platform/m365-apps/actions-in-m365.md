@@ -44,6 +44,12 @@ A handler is how the Action performs the user’s intent on the selected object.
 
 `openPage`: Drive users to your app's dedicated pages (personal tab).
 
+| &nbsp; | Actions | Supported |
+| --- | --- | --- |
+| &nbsp; | Intent | `Open`, `addTo`, and `custom` |
+| &nbsp; | Object  | The files must be available in OneDrive or SharePoint and are accessible through Microsoft Graph. |
+| &nbsp; | Handlers | `openPage` |
+
 ### Prerequisites
 
 Ensure you install the following tools to build Actions in Microsoft 365:
@@ -176,6 +182,13 @@ A browser window opens with Microsoft 365 home page and your app is available un
 You can now preview your Actions in Microsoft 365 app, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
+
+## Enable Actions in Microsoft Admin Center
+
+1. Upload the app package containing the Actions via the Microsoft Admin Center
+1. Enable the app for targeted release to users in the tenant
+1. In the Microsoft Admin Center, select **Settings** > **Integrated Apps** > **Upload custom apps**.
+1. Ensure that you've your users enrolled in the targeted release to use Actions.
 
 ## Code sample
 
