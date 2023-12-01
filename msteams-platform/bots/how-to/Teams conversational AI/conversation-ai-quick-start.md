@@ -122,10 +122,14 @@ To get started, ensure that you have the following tools:
 
 ## Prerequisites
 
+To get started, ensure that you have the following tools:
+
 * [**.*NET 6.0 SDK**](https://dotnet.microsoft.com/download/dotnet/6.0)
 * [**Azure OpenAI resource**](https://oai.azure.com/portal) or [OpenAI](https://platform.openai.com/docs/overview).
 * Visual Studio 2022 17.7.0 or later.
 * [Teams Toolkit extension](../../../toolkit/toolkit-v4/install-Teams-Toolkit-vs.md)
+
+## Build and run the sample app
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
