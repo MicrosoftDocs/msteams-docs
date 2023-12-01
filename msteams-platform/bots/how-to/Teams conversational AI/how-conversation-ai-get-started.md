@@ -126,25 +126,27 @@ const planner = new ActionPlanner({
 
 ```csharp
     // Create model
-    OpenAIModel model = new OpenAIModel(
-        sp.GetService<AzureOpenAIPlannerOptions>()!,
-        loggerFactory);
+    OpenAIModel model = new(new OpenAIModelOptions(
+        config.openAI.ApiKey,
+        "gpt-35-turbo"
+    ), loggerFactory);
 
     // Create prompt manager
     PromptManager prompts = new(new()
     {
-        promptFolder = "./Prompts",
+        PromptFolder = "./Prompts",
     });
 
-    prompts.AddFunction("getlightStatus". (context, memory, functions, tokenizer, args) =>
-    bool lightsOn = (bool)(memory.GetValue("Conversation.lightsOn") ?? false);
-    dynamic res = lightsOn ? "on" : "off";
-    return tasks.FromResult(res);
+    prompts.AddFunction("getLightStatus", (context, memory, functions, tokenizer, args) =>
+    {
+        bool lightsOn = (bool)(memory.GetValue("conversation.lightsOn") ?? false);
+        dynamic res = lightsOn ? "on" : "off";
+        return tasks.FromResult(res);
     });
 
     //Create ActionPlanner
 
-    ActionPlanner actionPlanner = new(new(model, prompts, (context, state, planner) =>
+    ActionPlanner<AppState> planner = new(new(model, prompts, (context, state, planner) =>
     {
         return tasks.FromResult(prompts.GetPrompt("sequence"));
     });
@@ -186,12 +188,14 @@ return new TeamsLightBot(new ()
         Storage = sp.GetService<IStorage>(),
         AI = new(planner),
         LoggerFactory = loggerFactory,
-        turnStateFactory: () => 
+        TurnStateFactory: () => 
         {
-            new AppState(turnContext),
+            return new AppState();
         }
     });
 ```
+
+`TurnStateFactory` allows you to create a custom state class for your application. You can use it to store additional information or logic that you need for your bot. You can also override some of the default properties of the turn state, such as the user input, the bot output, or the conversation history. To use `TurnStateFactory`, you need to create a class that extends the default turn state and pass a function that creates an instance of your class to the application constructor. 
 
 ---
 
