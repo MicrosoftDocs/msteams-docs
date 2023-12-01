@@ -137,7 +137,7 @@
       items:
       - name: Teams Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
-        displayName: TTK, version
+        displayName: Teams Toolkit, version
       - name: Install Teams Toolkit
         href: toolkit/install-Teams-Toolkit.md
         displayName: download
@@ -219,7 +219,7 @@
       items:
       - name: Overview
         href: toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md
-        displayName: TTK, version, 17.7
+        displayName: Teams Toolkit, version, 17.7
       - name: Install Teams Toolkit
         href: toolkit/toolkit-v4/install-Teams-Toolkit-vs.md
         displayName: download
