@@ -98,7 +98,7 @@ Following are the steps to open your app in Visual Studio:
 After you open your app in Teams Toolkit, you can now [develop](/microsoftteams/platform/toolkit/teamsfx-multi-env) and [debug](../../toolkit/debug-overview.md) your Teams app in Teams Toolkit.
 
   > [!NOTE]
-  > You can work in Teams Toolkit through Developer Portal in Preview version only.
+  > You can work in Teams Toolkit through Developer Portal in preview version only.
 
 ## See also
 
