@@ -32,7 +32,7 @@ When you're creating an app ensure that you define user intent, choose the objec
 
 ### Intent
 
-Intent is the objective a user wants to perform or achieve, such as open or add. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement, grouping, and ordering of Actions. You can create an intent for Open, addTo, and custom actions. You can use custom Actions to create tailored Actions.
+Intent is the objective a user wants to perform or achieve, such as open or add. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement, grouping, and ordering of Actions. You can create an intent for `Open`, `addTo`, and `custom` actions. You can use `custom` Actions to create tailored Actions.
 
 ### Object
 
@@ -42,10 +42,7 @@ Object is the file on which the user wants to perform an action. Currently, Ac
 
 A handler is how the Action performs the user’s intent on the selected object. It provides the logic and functionality of the Action, creating a smooth and meaningful user experience.
 
-The following are the available types of handlers:
-
-* `openDialog`: Directs users to a dialog, offering a dedicated and contextualized interface for interacting with your app's features without opening the full app.
-* `openPage`: Drive users to your app's dedicated pages (personal tab).
+`openPage`: Drive users to your app's dedicated pages (personal tab).
 
 ### Prerequisites
 
@@ -71,9 +68,9 @@ To create Actions for your app, follow these steps:
 
 Define the intent, object, and handler for your actions in the app manifest schema (previously called Teams app manifest).
 
-The following is an app manifest example for with `intent` and `supportedobjects` and `handlers` properties for `openPage` and `openDialog`:
+The following is an app manifest example for with `intent` and `supportedobjects` and `handlers` properties for `openPage`:
 
-* Action to open a page: Action shows related tasks in the **To-do** app based on the selected file. It uses `"intent": "custom"` to identify the file type, such as .xlsx or doc. The `"type": "openPage"` handler opens the app and navigates to the `pageId` and `subpageId` (need more information in code line no 96).
+* Action to open a page: Action shows related tasks in the **To-do** app based on the selected file. It uses `"intent": "custom"` to identify the file type, such as .xlsx or doc. The `"type": "openPage"` handler opens the app and navigates to the `pageId`.
 
     ```json
     "actions": [
@@ -100,35 +97,13 @@ The following is an app manifest example for with `intent` and `supportedobjects
     ]
     ```
 
-* Action to open a dialog: Action lets you add a selected file and a note to the **To-do** app. It uses an `"intent": "addTo"` to identify the file type, such as .docx or .doc. The `"type": "openDialog"` handler opens a web-based dialog from the specified URL.
+The https:// URL referencing the JSON Schema for the manifest. Use public developer preview manifest schema.
 
-    ```json
-    "actions": [
-        {
-            // Defining Action to open a dialog
-            "id": "addTodoTask",
-            "displayName": "Add todo task",
-            "intent": "addTo",
-            "description": "Add this file with a short note to my to do list",
-            "handlers": [
-                {
-                    "type": "openDialog",
-                    "supportedObjects": {
-                        "file": {
-                            "extensions": ["xlsx", "doc", "dot", "docx", "pdf", "pptx", "ppt"]
-                        }
-                    },
-                    "dialogInfo": {
-                        "dialogType": "url",
-                        "url": "http://localhost:53000/index.html#/dialogPage",
-                        "width": "small",
-                        "height": "large"
-                    }
-                }
-            ]
-        }
-    ]
-    ```
+```json
+"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+
+"manifestVersion": "devPreview",
+```
 
 For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
 
