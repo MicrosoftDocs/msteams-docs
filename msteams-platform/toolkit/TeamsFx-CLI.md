@@ -13,7 +13,7 @@ zone_pivot_groups: toolkit-cli
 
 > [!IMPORTANT]
 >
-> We recommend that you use Teamsapp CLI v3 for building your Teams app. TeamsFx CLI v1 and TeamsFx CLI v2 will soon be deprecated.
+> We recommend that you use Teams Toolkit CLI v3 for building your Teams app. TeamsFx CLI v1 and TeamsFx CLI v2 will soon be deprecated.
 
 Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
 
