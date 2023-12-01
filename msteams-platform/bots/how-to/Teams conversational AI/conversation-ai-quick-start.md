@@ -159,7 +159,7 @@ To get started, ensure that you have the following tools:
    ```
 
 1. In the debug dropdown menu, select **Dev Tunnels** > **Create A Tunnel**.
-1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported.
+1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported. Update the following:
    1. Name: Enter a name for the tunnel.
    1. Tunnel Type: Select Persistent or Temporary.
    1. Access: Select Public.
