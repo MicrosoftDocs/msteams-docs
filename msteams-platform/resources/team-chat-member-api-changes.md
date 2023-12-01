@@ -65,7 +65,7 @@ Following are the upcoming API changes:
 > * Bot Framework SDK v3: Upgrade to version 3.30.2 or later.
 > * Bot Framework SDK v4: Upgrade to version 4.8 or later.
 
-* A new API is created [`TeamsInfo.GetMemberAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) for retrieving the profile information for a single user. It takes the ID of the team or chat and a [UPN](/windows/win32/ad/naming-properties#userprincipalname) that is `userPrincipalName`, Microsoft Azure Active Directory (Azure AD) Object ID `objectId`, or the Teams user ID `id` as parameters and returns the profile information for that user.
+* A new API is created [`TeamsInfo.GetMemberAsync`](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=dotnet#get-single-member-details) for retrieving the profile information for a single user. It takes the ID of the team or chat and a [UPN](/windows/win32/ad/naming-properties#userprincipalname) that is `userPrincipalName`, Microsoft Entra Object ID `objectId`, or the Teams user ID `id` as parameters and returns the profile information for that user.
 
     > [!NOTE]
     > `objectId` is changed to `aadObjectId` to match what is called in the `Activity` object of a Bot Framework message. The new API is available with version 4.8 or later of the Bot Framework SDK. It is also available in the Teams SDK extension Bot Framework 3.x. Meanwhile, you can use the [REST](/microsoftteams/platform/bots/how-to/get-teams-context?tabs=json#get-single-member-details) endpoint.

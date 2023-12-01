@@ -14,7 +14,7 @@ In this article, you'll learn how to install the Moodle LMS.
 > [!NOTE]
 > To help IT admins to easily set up Moodle and Teams integration, open-source Microsoft 365 Moodle Plugins is updated for the following:
 >
-> * Auto-registration of your Moodle server with [Microsoft Azure Active Directory (Azure AD)](https://azure.microsoft.com/services/active-directory/).
+> * Auto-registration of your Moodle server with [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/).
 >
 > * One-click deployment of your Moodle Assistant bot to Azure.
 >
@@ -30,7 +30,7 @@ Following are the prerequisites to install Moodle:
 
 * Moodle administrator credentials.
 
-* Azure AD administrator credentials.
+* Microsoft Entra administrator credentials.
 
 * An Azure subscription where you can create new resources.
 
@@ -69,18 +69,20 @@ Ensure to install and download the following before proceeding with the Microsof
     >
     > * If you do not have an existing Moodle site, go to the [Moodle on Azure](https://github.com/azure/moodle) repo, and quickly deploy a Moodle instance and customize it to your needs.
 
-## Configure the connection between the Microsoft 365 plugins and Azure AD
+<a name='configure-the-connection-between-the-microsoft-365-plugins-and-azure-ad'></a>
 
-You must configure the connection between the Microsoft 365 plugins and Azure AD.
+## Configure the connection between the Microsoft 365 plugins and Microsoft Entra ID
+
+You must configure the connection between the Microsoft 365 plugins and Microsoft Entra ID.
 
 ### Requisites
 
-Register Moodle as an application in your Azure AD, using the PowerShell script. The script provisions the following:
+Register Moodle as an application in your Microsoft Entra ID, using the PowerShell script. The script provisions the following:
 
-* A new Azure AD application for your Microsoft 365 tenant, which is used by the Microsoft 365 Moodle Plugins.
+* A new Microsoft Entra application for your Microsoft 365 tenant, which is used by the Microsoft 365 Moodle Plugins.
 * The app for your Microsoft 365 tenant, set up the required reply URLs and permissions for the provisioned app, and returns the `AppID` and `Key`.
 
-Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup page to configure your Moodle server site with Azure AD.
+Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup page to configure your Moodle server site with Microsoft Entra ID.
 
 > [!IMPORTANT]
 >
@@ -128,7 +130,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
     1. Sign in to your Microsoft 365 administrator account in the pop-up window.
 
-    1. Enter the name of the Azure AD Application, for example, Moodle or Moodle plugins.
+    1. Enter the name of the Microsoft Entra Application, for example, Moodle or Moodle plugins.
 
     1. Enter the URL for your Moodle server.
 
@@ -143,7 +145,7 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 1. After the page refreshes you can see another new section **Admin consent & additional information**.
     1. Select **Provide Admin Consent** link, enter your Microsoft 365 Global Administrator credentials, then **Accept** to grant the permissions.
 
-    1. Next to the **Azure AD Tenant** field, select the **Detect** button.
+    1. Next to the **Microsoft Entra tenant** field, select the **Detect** button.
 
     1. Next to the **OneDrive for Business URL**, select the **Detect** button.
 
@@ -151,24 +153,24 @@ Use the generated `AppID` and `Key` in your Microsoft 365 Moodle Plugins setup p
 
 1. Select the **Update** button to verify the installation, and then select **Save changes**.
 
-1. Synchronize users between your Moodle server and Azure AD. To get started:
+1. Synchronize users between your Moodle server and Microsoft Entra ID. To get started:
 
     > [!NOTE]
     > Depending on your environment, you can select different options during this stage.
 
     1. Switch to the **Sync Settings tab**.
 
-    1. In the **Sync users with Azure AD** section, select the checkboxes that apply to your environment. You must select the following:  
+    1. In the **Sync users with Microsoft Entra ID** section, select the checkboxes that apply to your environment. You must select the following:  
 
-        ✔ Create accounts in Moodle for users in Azure AD.
+        ✔ Create accounts in Moodle for users in Microsoft Entra ID.
 
-        ✔ Update all accounts in Moodle for users in Azure AD.
+        ✔ Update all accounts in Moodle for users in Microsoft Entra ID.
 
-    1. In the **User Creation Restriction** section, you can set up a filter to limit the Azure AD users that is synced to Moodle.
+    1. In the **User Creation Restriction** section, you can set up a filter to limit the Microsoft Entra users that is synced to Moodle.
 
-1. To validate [cron](https://docs.moodle.org/400/en/Cron) jobs and run them manually for the first run, select the **Scheduled tasks management page** link in the **Sync users with Azure AD** section. This takes you to the **Scheduled Tasks** page.
+1. To validate [cron](https://docs.moodle.org/400/en/Cron) jobs and run them manually for the first run, select the **Scheduled tasks management page** link in the **Sync users with Microsoft Entra ID** section. This takes you to the **Scheduled Tasks** page.
 
-    1. Scroll down and find the **Sync users with Azure AD** job and select **Run now**.
+    1. Scroll down and find the **Sync users with Microsoft Entra ID** job and select **Run now**.
 
     1. If you select to create Groups based on existing courses, you can also run the **Create user groups in Microsoft 365** job.
 
@@ -193,7 +195,7 @@ The free Moodle assistant bot for Microsoft Teams helps teachers and students an
 
 :::image type="content" source="../assets/images/MoodleBotInformationFlow.png" alt-text="Screenshot shows the Moodle bot for Microsoft Teams information flow.":::
 
-To install the bot, you must register it on the [Microsoft Identity Platform](https://identity.microsoft.com/Landing). This allows your bot to authenticate against your Microsoft endpoints.
+To install the bot, you must register it on the [Microsoft identity platform](https://identity.microsoft.com/Landing). This allows your bot to authenticate against your Microsoft endpoints.
 
 To register your bot:
 

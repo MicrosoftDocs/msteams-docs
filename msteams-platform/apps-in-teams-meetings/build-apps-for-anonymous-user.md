@@ -25,11 +25,9 @@ For anonymous users to interact with the apps in Teams meetings, ensure to:
 To allow anonymous users to interact with the tab app, update the `supportsAnonymousGuestUsers` property to `true` in your app manifest schema v1.16 or later. Following is an example of the manifest:
 
 ```json
-
- "meetingExtensionDefinition": {
-  "supportsAnonymousGuestUsers": true
- }
-
+"meetingExtensionDefinition": {
+    "supportsAnonymousGuestUsers": true
+}
 ```
 
 For more information, see [app manifest schema.](~/resources/schema/manifest-schema.md#meetingextensiondefinition)
@@ -48,26 +46,21 @@ To test your apps experience for anonymous users, select the URL in the meeting 
 
 Apps receive the following information for an anonymous user when they call the `getContext` API from the [shared app stage](~/apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md). You can recognize anonymous users by checking for a `userLicenseType` value of `Anonymous`.
 
-> [!NOTE]
-> The Live Share SDK isn't supported for anonymous users.
-
 # [JavaScript](#tab/javascript)
 
 ```javascript
+import * as microsoftTeams from "@microsoft/teams-js";
 
 microsoftTeams.app.getContext().then((context) => {
-    if (context.user.licenseType === "Anonymous")
-        {
-            // Add your custom logic here
-        }
+    if (context.user.licenseType === "Anonymous") {
+        // Add your custom logic here
+    }
 });
-
 ```
 
 # [JSON](#tab/json)
 
 ```json
-
 {
    "app": {
     "locale": "en-us",
@@ -101,7 +94,6 @@ microsoftTeams.app.getContext().then((context) => {
       "id": "MCMxOTptZWV0aW5nX1ptTXlOV1pqTXpFdE1XVTBNaTAwTkRObUxXSmhNbVl0TmpNNE9UWTBZbU0wTldNMkB0aHJlYWQudjIjMA=="
     }
 }
-
 ```
 
 ---

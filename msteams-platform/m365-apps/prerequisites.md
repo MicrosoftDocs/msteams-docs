@@ -16,7 +16,7 @@ To set up your development environment:
 
 > [!div class="checklist"]
 >
-> * [Get Microsoft 365 Developer (Sandbox) Tenant and enable sideloading](#prepare-a-developer-tenant-for-testing)
+> * [Get Microsoft 365 Developer (Sandbox) Tenant and enable custom app upload](#prepare-a-developer-tenant-for-testing)
 > * [Install Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
 > * [*Optional*] [Enroll your Microsoft 365 tenant in Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 > * [*Optional*] [Install Beta Channel builds of Microsoft 365 Apps in your test environment](#install-microsoft-365-apps-in-your-test-environment)
@@ -29,7 +29,7 @@ You need a Microsoft 365 developer subscription sandbox tenant to set up your de
 > [!NOTE]
 > As you set up for testing, ensure that you sign out of all other accounts and sign in with the account you intend to use for testing.
 
-You also need to enable sideloading for your tenant:
+You also need to enable custom app upload for your tenant:
 
  1. Sign in to [Teams admin center](https://admin.teams.microsoft.com/dashboard) with your test tenant credentials.
 
@@ -39,7 +39,7 @@ You also need to enable sideloading for your tenant:
 
  1. Under Custom apps, turn on the **Interaction with custom apps** toggle and **Save**.
 
-    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="The screenshot is an example that enables sideloading for custom apps from the Teams Admin Center":::
+    :::image type="content" source="images/teams-admin-enable-sideloading.png" alt-text="The screenshot is an example that enables custom app upload from the Teams Admin Center":::
 
  1. Apart from Org-wide app settings, custom app policy settings also allow users to upload custom apps to Teams. For more information, see [manage custom app policies and settings](/microsoftteams/teams-custom-app-policies-and-settings#custom-app-policy-and-settings).
 
@@ -50,7 +50,7 @@ You also need to enable sideloading for your tenant:
 ## Enroll your developer tenant for Microsoft 365 Targeted Releases (Optional)
 
 > [!NOTE]
-> It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional) for sideloaded Teams apps to appear in Outlook and Microsoft 365 app.
+> It can take up to five days after creating a [Microsoft 365 developer sandbox tenant](/office/developer-program/microsoft-365-developer-program-get-started) and enrolling in [Microsoft 365 Targeted Releases](#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional) for uploaded Teams apps to appear in Outlook and Microsoft 365 app.
 
 This section is optional and only required for any features in **preview**, as listed in [Teams apps across Microsoft 365](overview.md) app element support table. To enroll your test tenant for Microsoft 365 Targeted Releases:
 

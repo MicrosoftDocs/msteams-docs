@@ -16,7 +16,7 @@ The Live Share SDK enables robust **media synchronization** for any HTML `<video
 
 ## Install
 
-Live Share media is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or yarn. You must also install its peer dependencies, which include `@microsoft/live-share`, `fluid-framework` and `@fluidframework/azure-client`. If you are using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
+Live Share media is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share-media), and you can download through npm or yarn. You must also install its peer dependencies, which include `@microsoft/live-share`, `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.11.0` or later.
 
 ```bash
 npm install @microsoft/live-share @microsoft/live-share-media fluid-framework @fluidframework/azure-client --save
@@ -54,7 +54,11 @@ Example:
 # [JavaScript](#tab/javascript)
 
 ```javascript
-import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  UserMeetingRole,
+  MediaPlayerSynchronizerEvents,
+} from "@microsoft/live-share";
 import { LiveMediaSession } from "@microsoft/live-share-media";
 import { LiveShareHost } from "@microsoft/teams-js";
 
@@ -71,6 +75,12 @@ const { mediaSession } = container.initialObjects;
 const player = document.getElementById("player");
 const synchronizer = mediaSession.synchronize(player);
 
+// Listen for groupaction events (optional)
+synchronizer.addEventListener(MediaPlayerSynchronizerEvents.groupaction, async (evt) => {
+  // See which user made the change (e.g., to display a notification)
+  const clientInfo = await synchronizer.mediaSession.getClientInfo(evt.details.clientId);
+});
+
 // Define roles you want to allow playback control and start sync
 const allowedRoles = [UserMeetingRole.organizer, UserMeetingRole.presenter];
 await mediaSession.initialize(allowedRoles);
@@ -79,7 +89,11 @@ await mediaSession.initialize(allowedRoles);
 # [TypeScript](#tab/typescript)
 
 ```TypeScript
-import { LiveShareClient, UserMeetingRole } from "@microsoft/live-share";
+import {
+  LiveShareClient,
+  UserMeetingRole,
+  MediaPlayerSynchronizerEvents,
+} from "@microsoft/live-share";
 import { LiveMediaSession, IMediaPlayer, MediaPlayerSynchronizer } from "@microsoft/live-share-media";
 import { LiveShareHost } from "@microsoft/teams-js";
 import { ContainerSchema } from "fluid-framework";
@@ -91,11 +105,19 @@ const schema: ContainerSchema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
 const { container } = await liveShare.joinContainer(schema);
-const mediaSession = container.initialObjects.mediaSession as LiveMediaSession;
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
+const mediaSession = container.initialObjects.mediaSession as unknown as LiveMediaSession;
 
 // Get the player from your document and create synchronizer
 const player: IMediaPlayer = document.getElementById("player") as HTMLVideoElement;
 const synchronizer: MediaPlayerSynchronizer = mediaSession.synchronize(player);
+
+// Listen for groupaction events (optional)
+synchronizer.addEventListener(MediaPlayerSynchronizerEvents.groupaction, async (evt) => {
+  // See which user made the change (e.g., to display a notification)
+  const clientInfo = await synchronizer.mediaSession.getClientInfo(evt.details.clientId);
+});
 
 // Define roles you want to allow playback control and start sync
 const allowedRoles: UserMeetingRole[] = [UserMeetingRole.organizer, UserMeetingRole.presenter];
@@ -107,7 +129,8 @@ await mediaSession.initialize(allowedRoles);
 ```jsx
 import { useMediaSynchronizer } from "@microsoft/live-share-react";
 import { UserMeetingRole } from "@microsoft/live-share";
-import { useRef } from "react";
+import { MediaPlayerSynchronizerEvents } from "@microsoft/live-share-media";
+import { useRef, useEffect } from "react";
 
 const ALLOWED_ROLES = [UserMeetingRole.organizer, UserMeetingRole.presenter];
 
@@ -118,12 +141,31 @@ const UNIQUE_KEY = "MEDIA-SESSION-ID";
 
 export function VideoPlayer() {
   const videoRef = useRef(null);
-  const { play, pause, seekTo } = useMediaSynchronizer(
+  const { play, pause, seekTo, mediaSynchronizer } = useMediaSynchronizer(
     UNIQUE_KEY,
     videoRef,
     INITIAL_TRACK,
     ALLOWED_ROLES
   );
+
+  // Listen for groupaction events (optional)
+  useEffect(() => {
+    // Listen for player group actions for errors (e.g., play error)
+    const onGroupAction = (evt: IMediaPlayerSynchronizerEvent) => {
+      // See which user made the change (e.g., to display a notification)
+      const clientInfo = await synchronizer.mediaSession.getClientInfo(evt.details.clientId);
+    };
+    mediaSynchronizer?.addEventListener(
+      MediaPlayerSynchronizerEvents.groupaction,
+      onGroupAction
+    );
+    return () => {
+      mediaSynchronizer?.removeEventListener(
+        MediaPlayerSynchronizerEvents.groupaction,
+        onGroupAction
+      );
+    };
+  }, [mediaSynchronizer]);
 
   return (
     <div>
@@ -267,7 +309,7 @@ export function VideoPlayer() {
 
 ---
 
-When beginning a suspension, you can also include an optional [CoordinationWaitPoint](/javascript/api/@microsoft/live-share-media/coordinationwaitpoint) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization won't resume until all users have ended the suspension for that wait point.
+When beginning a suspension, you can also include an optional [CoordinationWaitPoint](/javascript/api/@microsoft/live-share-media/coordinationwaitpoint) parameter, which allows users to define the timestamps in which a suspension should occur for all users. Synchronization doesn't resume until all users end the suspension for that wait point.
 
 Here are a few scenarios where wait points are especially useful:
 
@@ -494,10 +536,10 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 
 ## Code samples
 
-| Sample name          | Description                                                                                                                               | JavaScript                                     |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| React video          | Basic example showing how the LiveMediaSession object works with HTML5 video.                                                        | [View](https://aka.ms/liveshare-reactvideo)    |
-| React media template | Enable all connected clients to watch videos together, build a shared playlist, transfer whom is in control, and annotate over the video. | [View](https://aka.ms/liveshare-mediatemplate) |
+| Sample name |   Description   |  JavaScript  |  TypeScript  |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------- | ---------------------------------------------- |
+| React video | Basic example showing how the LiveMediaSession object works with HTML5 video. | [View](https://aka.ms/liveshare-reactvideo) |    NA |
+| React media template | Enable all connected clients to watch videos together, build a shared playlist, transfer whom is in control, and annotate over the video. | [View](https://aka.ms/liveshare-mediatemplate) | [View](https://aka.ms/liveshare-mediatemplate-ts) |
 
 ## Next step
 

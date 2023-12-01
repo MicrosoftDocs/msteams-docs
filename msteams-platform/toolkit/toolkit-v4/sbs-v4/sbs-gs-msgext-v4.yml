@@ -19,7 +19,7 @@ items:
 
     Your app will have a capability, which comes with its own UI and UX:
     
-    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/your-helloworld-app-v4.png" alt-text="Diagram showing this app has three features.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/your-helloworld-app-v4.png" alt-text="Screenshot shows the different types of app features.":::
     
     
     In this tutorial, you can learn:
@@ -72,11 +72,11 @@ items:
    1. In the search box, enter **Teams toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
-    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/install-toolkit-vscodeversion-v4.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/install-toolkit-vscodeversion-v4.png" alt-text="Screenshot shows the Teams Toolkit extension installation.":::
 
     The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
-    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/teams-toolkit-sidebar-icon-v4.PNG" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/teams-toolkit-sidebar-icon-v4.PNG" alt-text="Screenshot shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -110,25 +110,25 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
-   ### Check for sideloading option
+   ### Check for custom app upload option
 
-   After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+   After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you won't be able to preview and test your app in Teams locally.
+    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-   Verify if you can sideload apps in Teams:
+   Verify if you can upload a custom app in Teams:
 
     1. In the Teams client, select the **Apps**.
     1. Select **Manage your apps**.
-    1. Select **Publish an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Select **Upload an app**.
+    1. Look for the option to **Upload a customised app**. If the option is visible, you've enabled custom app upload.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/spfx-custom-new1-v4.png" alt-text="bot home":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/upload-custom-app-v4.png" alt-text="Screenshot shows the option to upload a customised app in Teams.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, talk to your Teams administrator.
@@ -142,7 +142,7 @@ items:
    1. In the welcome screen, select **Set up E5 subscription**.
    1. Set up your administrator account. After you finish, the following screen appears.
 
-       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/microsoft-365-v4.png" alt-text="Microsoft":::
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/microsoft-365-v4.png" alt-text="Screenshot shows the Microsoft 365 developer subscriptions.":::
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -161,7 +161,7 @@ items:
 
     Message Extension capability lets you interact with a web service. Use the compose area, command box, or a messaging in Teams client to search and initiate actions in an external system.
 
-      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/your-helloworld-app-msgext-v4.png" alt-text="Diagram showing this app has three features. message extension is highlighted.":::
+      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/your-helloworld-app-msgext-v4.png" alt-text="Screenshot shows the different types of app featues and message extension is highlighted.":::
 
     There are two types of Teams **message extensions**:
 
@@ -195,23 +195,23 @@ items:
 
     1. Select **Create a new app**.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/create-project-v4.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/create-project-v4.png" alt-text="Screenshot shows the option to select create a new app from the Teams Toolkit sidebar.":::
 
     1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/create-new-app1-v4.png" alt-text="Wizard start for Create New Project":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/create-new-app1-v4.png" alt-text="Screenshot shows the option to select create a new Teams app.":::
 
     1. Ensure that **Message extension** is selected as the capability that you want to build in your app..
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-capabilities-mex1-v4.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-capabilities-mex1-v4.png" alt-text="Screenshot shows the option to select the capabilities to your new app.":::
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-language-tab-v4.png" alt-text="Screenshot showing how to select the programming language.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-language-tab-v4.png" alt-text="Screenshot shows the option to select the programming language.":::
 
     1. Select **Default folder** to store your project root folder in default location.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-default-location-v4.png" alt-text="Select default location":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-default-location-v4.png" alt-text="Screenshot shows the selection of default location.":::
 
         You can also change the default location by the following steps:
 
@@ -316,7 +316,7 @@ items:
     1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. The Teams Toolkit displays **Sideloading enabled** if sideloading is enabled for your Microsoft 365 account.
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Teams Toolkit displays **Sideloading enabled**.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/m365-sideloading-enabled-msg-v4.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
@@ -365,7 +365,7 @@ items:
 
         1. Checks all the following prerequisites:
           - You're logged in with a Microsoft 365 account.
-          - Sideloading is enabled for your Microsoft 365 account.
+          - Custom app upload is enabled for your Microsoft 365 account.
           - Supported Node.js version is installed.
           - Ngrok is installed.
           - Port required by bot app is available.
@@ -376,7 +376,7 @@ items:
         5. Registers the bot app in Bot Framework and configures the app.
         6. Registers the app in Teams Developer Portal and configures the app.
         7. Starts the message extension app hosted locally.
-        8. Starts Teams in a web browser and sideloads the Teams app.
+        8. Starts Teams in a web browser and uploads the Teams app.
         
         </details>
 
@@ -390,20 +390,20 @@ items:
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
     
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/add-mex-app-local-debug-v4.png" alt-text="Screenshot shows message to add the app":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/add-mex-app-local-debug-v4.png" alt-text="Screenshot shows the option to add the customised app in Teams.":::
 
         The toolkit displays a message to indicate that the app is added to Teams.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/mex-added-local-debug-v4.png" alt-text="Screenshot shows message to try the app now or later":::
  
-        - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
+        - If you select **Got it**, you can try the app later from the list of uploaded apps.
         - If you select **Try it**, Teams loads your app.
 
     1. Select **Try it**.
 
         The Message Extension app is loaded in a chat bot app.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/app-added-mex-local-debug-v4.png" alt-text="Screenshot that shows app sideloaded in Teams":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/app-added-mex-local-debug-v4.png" alt-text="Screenshot that shows custom app uploaded in Teams":::
 
         As message extension apps rely on bots for enabling communication between the user and the web service,, your app loads in to a chat feature of a bot.
 
@@ -495,14 +495,14 @@ items:
     </details>
     <br>
     <details>
-    <summary>Run the app from sideloaded apps</summary>
+    <summary>Run the app from uploaded custom apps</summary>
 
-    You can open a sideloaded Teams app from the list of sideloaded apps. 
+    You can open a uploaded Teams app from the list of uploaded apps. 
 
     1. Select the **Apps** from the Teams sidebar.
     1. Select the **Manage apps**.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/sideloaded-apps-v4.png" alt-text="Screenshot that shows sideloaded apps":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/sideloaded-apps-v4.png" alt-text="Screenshot that shows uploaded custom apps":::
 
     1. Select the three dots icon for your app, and then select **View details**. You can also copy link to the app and use it to open the app.
     1. Select **Open** to load the app, and then select **Try it**. 
@@ -516,7 +516,7 @@ items:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. You can learn more about sideloading in the Prerequisites section.
+    To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the prerequisites section.
     </details>
 
 - title: Deploy your first Teams app

@@ -87,7 +87,7 @@ You can retrieve the `teamsAppId` in the following ways:
     > [!NOTE]
     > When the app is in the Teams Store, the `teamsAppId` is same as `IdFromManifest` and the `externalId` must not be used in this case.
 
-* If your app has already been uploaded or sideloaded for a user in personal scope:
+* If your app has already been uploaded for a user in personal scope:
 
     **Microsoft Graph page reference:** [List apps installed for user](/graph/api/userteamwork-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 
@@ -97,7 +97,7 @@ You can retrieve the `teamsAppId` in the following ways:
     GET https://graph.microsoft.com/v1.0/users/{user-id}/teamwork/installedApps?$expand=teamsApp&$filter=teamsApp/externalId eq '{IdFromManifest}'
     ```
 
-* If your app has already been uploaded or sideloaded for a channel in team scope:
+* If your app has already been uploaded for a channel in team scope:
 
     **Microsoft Graph page reference:** [List apps in team](/graph/api/team-list-installedapps?view=graph-rest-v1.0&tabs=http&preserve-view=true)
 

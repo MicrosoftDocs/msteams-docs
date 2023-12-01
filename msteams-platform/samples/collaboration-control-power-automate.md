@@ -26,9 +26,9 @@ It also includes a set of Collaboration controls APIs and tasks that can be invo
 
 ## Create an Azure App
 
-In the [Azure portal](https://ms.portal.azure.com/#home) for Azure Active Directory management, sign in to your account with adequate permissions to add a user application to your environment with the following steps:
+In the [Azure portal](https://ms.portal.azure.com/#home) for Microsoft Entra management, sign in to your account with adequate permissions to add a user application to your environment with the following steps:
 
-1. In the home page of Azure portal, select **Azure Active Directory**. In Azure Active Directory, select dropdown list for **Add** and select **App registration**.
+1. In the home page of Azure portal, select **Microsoft Entra ID**. In Microsoft Entra ID, select dropdown list for **Add** and select **App registration**.
 
    :::image type="content" source="../assets/images/collaboration-control/azure-active-directory-home-portal.png" alt-text="Screenshot is an example that shows how to add a new App Registration.":::
 
@@ -88,7 +88,7 @@ Now your Azure app is all set and you need to add it as a user application in yo
 
 1. Select your app from the search box and select add again.
 
-   :::image type="content" source="../assets/images/collaboration-control/add-app-aad.png" alt-text="Screenshot is an example that shows how to add app from Azure Active Directory.":::
+   :::image type="content" source="../assets/images/collaboration-control/add-app-aad.png" alt-text="Screenshot is an example that shows how to add app from Microsoft Entra ID.":::
 
 After the app is added, set the **Business unit** and **Security Roles** to your connector application. Select **Create** and your app is in the list. With the app user set in the environment, we can proceed to custom connector configuration.
 
