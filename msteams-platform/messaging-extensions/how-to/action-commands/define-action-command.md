@@ -69,7 +69,6 @@ If the message extension is invoked from the compose box or directly from a mess
 
 You can create an action command using **Teams Toolkit** and **Developer Portal for Teams**.
 
-
 # [Teams Toolkit](#tab/Teams-toolkit)
 
 To create an action based message extension using Teams Toolkit, follow these steps:
@@ -107,7 +106,7 @@ To create an action based message extension using Developer Portal for Teams, fo
 
    A command details page appears.
 
-1. In the Command details page, select the **Action** and then select parameter type.
+1. In the Command details page, select **Action** and then select parameter type.
 
 1. 1. Select **Action**  as the type of command and update the following:
    * Command ID

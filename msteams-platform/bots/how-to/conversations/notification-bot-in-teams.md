@@ -450,6 +450,8 @@ If storage isn't provided, you can use a default local file storage, which store
 * `.notification.localstore.json` if running locally.
 * `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to 1.
 
+If you're using the default local file storage, Azure web app and Azure Functions clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage.
+
 The `NotificationTargetStorage` is different from Bot Framework SDK's [custom storage](/azure/bot-service/bot-builder-custom-storage). The notification storage requires `read`, `write`, `delete`, and `list` functionalities but Bot Framework SDK's storage has `read`, `write`, and `delete` functionalities and doesn’t have the `list` functionality.
 
 For more information about Azure blob storage, see the [notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/v3/adaptive-card-notification/src/store/blobStore.ts).
@@ -467,7 +469,7 @@ If you select HTTP trigger, the scaffolded notification API doesn't have authent
 
 * Use an API key. You can use [function access keys](/azure/azure-functions/security-concepts?tabs=v4#function-access-keys), if you select Azure Functions to host your notification bot.
 
-* Use an access token issued by Azure Active Directory (Azure AD). For more information, see [Configure SSO for your bot in Azure AD](../authentication/bot-sso-register-aad.md).
+* Use an access token issued by Microsoft Entra ID. For more information, see [Configure SSO for your bot in Microsoft Entra ID](../authentication/bot-sso-register-aad.md).
 
 There can be more authentication or authorization solutions for an API, you can select as required.
 

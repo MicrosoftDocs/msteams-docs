@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2023-10-18T04:15:01+05:30</updated>
+	<updated>2023-10-26T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Build message extensions using API]]></title>
+		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/api-based-overview</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/messaging-extensions/api-based-overview?referrer=whats.new.rssfeed"/>
+		<updated>2023-10-25T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Teams Toolkit. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. This is currently in developer preview. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20f1e3d44d-9e64-8332-dff8-26595726898c%0A*%20Version%20Independent%20ID%3A%20f1e3d44d-9e64-8332-dff8-26595726898c%0A*%20Content%3A%20%5BBuild%20message%20extensions%20using%20API%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fmessaging-extensions%2Fapi-based-overview)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fmessaging-extensions%2Fapi-based-overview.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fmessaging-extensions%2Fapi-based-overview.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40v-ypalikila%0A*%20Microsoft%20Alias%3A%20**anclear**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Platform update: Use callTranscript API to fetch meeting transcript from all meetings]]></title>
 		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/graph-api/meeting-transcripts/overview-transcripts</id>
@@ -109,14 +117,6 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/apps-upload#update-your-app?referrer=whats.new.rssfeed"/>
 		<updated>2023-04-14T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[With this Contextless Upgrade, an app is automatically updated in real-time everywhere it is installed for the user. This means that there are no changes to the experience for auto upgrades, and for updates where a property changes or RSC permissions change, the user is only required to consent once. The document guides you on how they can provide an enhanced and seamless app upgrade experience for their app users. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%2054780e5a-ca3a-5277-dc84-37f85d9ea1cb%0A*%20Version%20Independent%20ID%3A%205f89865b-a9fd-ada5-72d2-6375357bba8c%0A*%20Content%3A%20%5BUpload%20your%20custom%20app%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload%23update-your-app)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fapps-upload.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Set up Microsoft license management]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license?referrer=whats.new.rssfeed"/>
-		<updated>2023-04-06T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Independent software vendors (ISVs) can configure Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing. This allows Teams admins or users to easily assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%20273416d6-635b-e334-76ed-037473249a6d%0A*%20Version%20Independent%20ID%3A%20273416d6-635b-e334-76ed-037473249a6d%0A*%20Content%3A%20%5BSet%20up%20Microsoft%20license%20management%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fmanage-third-party-apps-license)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fmanage-third-party-apps-license.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fmanage-third-party-apps-license.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>

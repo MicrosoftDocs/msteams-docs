@@ -24,7 +24,7 @@ Get familiarized with search based message extension app in one of the following
 Before you create your codespace, ensure that you have the following prerequisites:
 
 * A GitHub account to create your codespace instance
-* A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with sideloading permission
+* A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with custom app upload permission
 * A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
@@ -62,7 +62,7 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
       GitHub Codespaces builds your message extension app, loads it to Teams client, and opens in a separate browser tab.
 
-   Your message extension app is sideloaded to Teams.
+   Your message extension app is uploaded to Teams.
 
 1. Once the app dialog appears in Teams, select **Add** to install your message extension in Teams.
 

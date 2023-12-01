@@ -566,6 +566,9 @@ Specifies the native features on a user's device that your app may request acces
 
 A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. The valid domain matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to go to any other domain besides the one use for tab configuration, that domain must be specified here.
 
+> [!NOTE]
+> Office Add-ins, configured with an `extensions` property in the manifest, disregard domains containing a wildcard. If your app incorporates an Office Add-in, specify the full domain name for the domains that the add-in will access.
+
 It's **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you must not include accounts.google.com in `validDomains[]`.
 
 > [!IMPORTANT]
@@ -577,11 +580,11 @@ The object is an array with all elements of the type `string`. The maximum item 
 
 **Optional** &ndash; Object
 
-Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Azure AD app.
+Specify your Microsoft Entra App ID and Graph information to help users seamlessly sign into your Microsoft Entra app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️|Microsoft Azure AD application ID of the app. This ID must be a GUID.|
+|`id`|String| |✔️|Microsoft Entra application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters||Resource URL of the app for acquiring auth token for SSO.|
 
 ## graphConnector
@@ -998,3 +1001,4 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
+* [Different versions of app manifest schema](https://github.com/microsoft/json-schemas/tree/main/teams)

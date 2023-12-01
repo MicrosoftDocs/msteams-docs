@@ -1,14 +1,14 @@
 ---
-title: Sideload and test app in Teams environment v4
+title: Upload and test app in Teams environment v4
 author: zyxiaoyuer
-description: In this module, learn how to sideload and test app in different environment using Teams toolkit v4.
+description: In this module, learn how to upload and test the custom apps in different environment using Teams toolkit v4.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
 ---
 
-# Sideload and test app in Teams environment v4
+# Upload and test the custom apps in Teams environment v4
 
 > [!IMPORTANT]
 >
@@ -63,9 +63,9 @@ To provision and deploy resources targeting Azure inside CI/CD, you must create 
 
 Perform the following steps to create Azure service principals:
 
-1. Register an Microsoft Azure Active Directory (Azure AD) application in single tenant.
-2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
-3. Create a new Azure AD application secret.
+1. Register a Microsoft Entra application in single tenant.
+2. Assign a role to your Microsoft Entra application to access your Azure subscription. The `Contributor` role is recommended.
+3. Create a new Microsoft Entra application secret.
 
 > [!TIP]
 > Save your tenant id, application id (AZURE_SERVICE_PRINCIPAL_NAME), and the secret (AZURE_SERVICE_PRINCIPAL_PASSWORD) for future use.

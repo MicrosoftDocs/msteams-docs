@@ -198,7 +198,7 @@ items:
 
     1. Go to the [Azure portal](https://portal.azure.com/).
 
-    1. Select **Azure Active Directory**.
+    1. Select **Microsoft Entra ID**.
 
     1. In the left pane, select **App registrations**.
 
@@ -282,7 +282,7 @@ items:
     1. In the left pane, select **API permissions**. 
 
        > [!NOTE]
-       > Users need to consent to the API permissions only if the Azure Active Directory app is registered in a different tenant.
+       > Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
     1. Select **Add a permission**.
 
@@ -317,13 +317,13 @@ items:
 
       1. In **New Connection Setting**, enter the following details:
 
-          * **Name** enter **name for your new connection setting. You can use the name in the settings of your bot service code**.
-          * **Service Provider** select **Azure Active Directory V2**.
-          * **Client ID** update your **Microsoft App ID**.
-          * **Client secret**  update the value of the `client secret ID**.
-          * **Token Exchange URL** use the **Application ID URI**.
-          * **Tenant ID** enter **common**.
-          * **Scopes** enter **User.Read**.
+          * **Name**: Enter the name for your new connection setting. You can use the name in the settings of your bot service code.
+          * **Service Provider**: Select **Azure Active Directory v2**.
+          * **Client ID**: Update your **Microsoft App ID**.
+          * **Client secret**: Update the value of the **client secret ID**.
+          * **Token Exchange URL**: Use the **Application ID URI**.
+          * **Tenant ID**: Enter **common**.
+          * **Scopes**: Enter **User.Read**.
      
       1. Select **Save**.
 
@@ -392,7 +392,7 @@ items:
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
        :::image type="content" source="assets/images/teams-file-upload-bot/custom-upload.png" alt-text="Screenshot showing the selection of Upload a custom app highlighted in red.":::
     
