@@ -49,15 +49,11 @@ items:
   content: | 
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
-
-      :::image type="content" source="./assets/images/meetings-side-panel/clonerepository_1.png" alt-text= "Screenshot shows a GitHub web page. The option titled open with GitHub desktop under code dropdown menu is highlighted in red.":::
-
-   1. Select **Clone**. 
            
       > [!NOTE]
       > If you encounter the error "Filename too long," apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
 
-- title: Create and register your bot
+- title: Create and register your app
   durationInMinutes: 5
   content: |
     To create and register your bot in Microsoft Entra ID, perform the following steps:
