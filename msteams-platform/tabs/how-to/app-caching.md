@@ -58,7 +58,7 @@ There are multiple reasons for an app to not get cached or for an app to get rem
 * Side panel is the only supported frameContext for app caching in meetings.
 * App caching isn't supported for meetings where the invited user count is more than 20.
 * If an app fails to load, the app isn't cached.
-* On iOS, app is removed from the cache when the app is terminated.
+* On iOS, when the app is terminated, the app is removed from the cache.
 
 ## Code example
 
