@@ -18,9 +18,9 @@ App caching is supported for the following:
 | --- | --- | --- | --- |
 | &nbsp; | *Supported* <br> *Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)* | *Supported* | *Supported* |
 | Personal | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
-| Chat | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
-| Channel | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
-| Meeting tab | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
+| Chat | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
+| Channel | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
+| Meeting tab | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
 | Meeting side panel or In-meeting apps | ✔️ Cache lifetime: 20 minutes| ❌ | ❌ |
 
 ## Enable app caching
@@ -58,6 +58,7 @@ There are multiple reasons for an app to not get cached or for an app to get rem
 * Side panel is the only supported frameContext for app caching in meetings.
 * App caching isn't supported for meetings where the invited user count is more than 20.
 * If an app fails to load, the app isn't cached.
+* On iOS, app is removed from the cache when it's terminated.
 
 ## Code example
 
