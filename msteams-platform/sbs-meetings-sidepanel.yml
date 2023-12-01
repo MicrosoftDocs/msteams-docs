@@ -50,7 +50,14 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app
+      :::image type="content" source="./assets/images/meetings-side-panel/clonerepository_1.png" alt-text= "Screenshot shows a GitHub web page. The option titled open with GitHub desktop under code dropdown menu is highlighted in red.":::
+
+   1. Select **Clone**. 
+           
+      > [!NOTE]
+      > If you encounter the error "Filename too long," apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
+
+- title: Create and register your bot
   durationInMinutes: 5
   content: |
     To create and register your bot in Microsoft Entra ID, perform the following steps:
@@ -63,34 +70,25 @@ items:
 
     [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
-    **Create a tunnel**
+    1. Go to the [Azure portal](https://portal.azure.com/).
+    1. Select **Create a resource**.
 
-      # [dev tunnel](#tab/dev)
+       :::image type="content" source="./assets/images/meetings-side-panel/create-resource-azure-portal.png" alt-text="Screenshot shows the create a resource option in the Azure portal.":::
+    
+    1. Search for **Azure Bot** in the search box.
+    1. Select **Azure Bot**.
+    1. Select **Create**.
 
-      Use ngrok or Command Prompt to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
+       :::image type="content" source="./assets/images/meetings-side-panel/create-azure-bot.png" alt-text="Screenshot shows the Azure bot create page with the create option highlighted in red.":::
 
-      ```bash
-          ngrok http --host-header=localhost 3978
-      ```
-
-      > [!TIP]
-      > If you encounter **ERR_NGROK_4018**, follow the steps provided in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3978` command.
-
-      The window shows the HTTPS URL.
-
-      :::image type="content" source="~/assets/images/meetings-side-panel/ngrok-url_1.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
-
-      # [ngrok](#tab/ngrok)
-      
-      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
-
-      ---     
-
-    [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+    1. In the **Create an Azure Bot** window that appears, enter the required bot handle name in **Bot handle**.
+    1. Select your **Subscription** and **Resource group** from the dropdown list.
+       
+       :::image type="content" source="./assets/images/conversation-bot/create-azure-bot.png" alt-text="Screenshot shows the create an Azure bot with the resource group option highlighted in red.":::
     
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
-    [!INCLUDE [Client secret](includes/get-started/azure-api-permissions.md)]
+       :::image type="content" source="~/assets/images/meetings-side-panel/newresource.png" alt-text="Screenshot shows the new resource group location.":::
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
@@ -98,21 +96,21 @@ items:
 
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
-       :::image type="content" source="./assets/images/meetings-side-panel/tenant-review.png" alt-text="Screenshot of Microsoft App ID section under Create an Azure Bot. The Type of App selected and Review plus create options are highlighted in red.":::
+       :::image type="content" source="./assets/images/meetings-side-panel/tenant-review.png" alt-text="Screenshot shows the Microsoft app ID section under create an Azure bot. The type of app selected and review plus create options are highlighted in red.":::
 
     1. If the validation is passed, select **Create**.
 
         It takes a few moments for your bot service to be provisioned. 
 
-       :::image type="content" source="./assets/images/conversation-bot/validation-passed.png" alt-text="Screenshot of deployment complete with the Go to resource option highlighted in red.":::       
+       :::image type="content" source="./assets/images/conversation-bot/validation-passed.png" alt-text="Screenshot shows the deployment complete with the go to resource option highlighted in red.":::       
 
     1. Select **Go to resource**. 
 
-       :::image type="content" source="./assets/images/meetings-side-panel/go-to-resource.png" alt-text="Screenshot of deployment complete with the Go to resource option highlighted in red.":::
+       :::image type="content" source="./assets/images/meetings-side-panel/go-to-resource.png" alt-text="Screenshot shows the deployment complete with the go to resource option highlighted in red.":::
 
         Your Azure bot is created and you can see the **Resource group** and **Subscription ID** in the Azure Bot.
 
-        :::image type="content" source="./assets/images/meetings-side-panel/app-overview.png" alt-text="Screenshot of the Azure bot Home page that is created.":::
+        :::image type="content" source="./assets/images/meetings-side-panel/app-overview.png" alt-text="Screenshot shows the Azure bot home page that is created.":::
 
     **To create client secret**
 
@@ -125,19 +123,19 @@ items:
 
     1. Next to **Microsoft App ID**, select **Manage Password**.
 
-       :::image type="content" source="~/assets/images/manage-password-bot-label.png" alt-text="Screenshot shows microsoft app id option in configuration page.":::
+       :::image type="content" source="~/assets/images/manage-password-bot-label.png" alt-text="Screenshot shows the Microsoft app ID option under configuration page with the manage option highlighted in red.":::
 
     1. In the **Client secrets** section, select **+ New client secret**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_2.png" alt-text="Screenshot of client secrets section with New client secret highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/newclientsecret_2.png" alt-text="Screenshot shows the client secrets section with new client secret highlighted in red.":::
     
     1. In the **Add a client secret** window that appears, enter **Description** of the client secret and select **Add**.
     
-         :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret_1.png" alt-text="Screenshot shows the option to add a client secret window.":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientsecret_1.png" alt-text="Screenshot shows the add a client secret window with the add option highlighted in red.":::
 
     1. Select **Copy to clipboard** to copy the **Value** details.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/clientvalue.png" alt-text="Screenshot of Client secrets section with the Copy to clipboard icon highlighted in red.":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientvalue.png" alt-text="Screenshot shows the client secrets section with the copy to clipboard icon highlighted in red.":::
        
        > [!TIP]
        > Save the **Client secrets** value or app password for future reference.
@@ -146,7 +144,7 @@ items:
 
     1. Go to **Home**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/gotohome_1.png" alt-text="Screenshot of Azure bot Home page with the Home option highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/gotohome_1.png" alt-text="Screenshot shows the Azure bot home page with the home option highlighted in red.":::
 
     1. Select your bot from **Recent resources**.
 
@@ -154,17 +152,17 @@ items:
 
     1. Select **Microsoft Teams** <img src="~/assets/images/bots/teamsicon.png" alt="Teams icon" width="20"/>.
 
-       :::image type="content" source="./assets/images/meetings-side-panel/channel-teams_1.png" alt-text="Screenshot of Azure bot Home page. The Channels option in the left pane and Microsoft Teams under Channels are highlighted in red.":::
+       :::image type="content" source="./assets/images/meetings-side-panel/channel-teams_1.png" alt-text="Screenshot shows the Azure bot home page. The channels option in the left pane and Microsoft Teams under channels are highlighted in red.":::
 
     1. Select the checkbox to accept the **Terms of Service**.
     
     1. Select **Agree**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/terms_2.png" alt-text="Screenshot shows the option to agree the terms of service.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/terms_2.png" alt-text="Screenshot shows the terms of service page with the agree option highlighted in red.":::
 
     1. Select **Apply**.
 
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot shows the option to apply in microsoft Teams messaging channel.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/apply-teams_1.png" alt-text="Screenshot shows the Microsoft Teams messaging channel with the apply option highlighted in red.":::
     
     **To create tunnel for local web server**
 
@@ -181,7 +179,7 @@ items:
 
     1. From ngrok, copy the HTTPS URL.
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/ngrok-url_1.png" alt-text="Screenshot of ngrok with the ngrok HTTPS URL highlighted in red.":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/ngrok-url_1.png" alt-text="Screenshot shows ngrok with the ngrok HTTPS URL highlighted in red.":::
 
         > [!NOTE]
         > The HTTPS URL in your ngrok is your domain name that doesn't include `https://`.
@@ -190,7 +188,7 @@ items:
 
     1. In **Messaging endpoint**, add the HTTPS URL from ngrok and at the end of the URL add /api/messages.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/messaging-endpoint_1.png" alt-text="Screenshot of Azure bot Configuration page. The Messaging endpoint with the ngork URL highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/messaging-endpoint_1.png" alt-text="Screenshot shows the Azure bot configuration page. The messaging endpoint with the ngork URL is highlighted in red.":::
 
     1. Select **Apply**.
 
@@ -204,7 +202,7 @@ items:
 
     [!INCLUDE [Teams channel](includes/get-started/add-teams-channel.md)]
 
-    [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
+       :::image type="content" source="~/assets/images/meetings-side-panel/AAD.png" alt-text="Screenshot shows the Azure services with Microsoft Entra ID highlighted in red.":::
 
     1. In the left navigation pane, select **App registrations**.
 
@@ -212,21 +210,21 @@ items:
 
     1. Select your bot.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot of Microsoft Entra ID page. The App registrations in the left panel and the bot selected are highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/appregister_2.png" alt-text="Screenshot shows the Microsoft Entra ID page. The app registrations in the left panel and the bot selected are highlighted in red.":::
 
     1. Under **Manage**, select **Expose an API**.
 
-    1. Select **Set**.
+    1. Select **Add**.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/expose-an-api.png" alt-text="Screenshot of Expose an API with the Set option highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/expose-an-api.png" alt-text="Screenshot shows the expose an API with the set option highlighted in red.":::
 
     1. Set the **Application ID URI** in the form of `api://your ngrok/botid-{AppID}`.
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/set-link.png" alt-text="Screenshot of Expose an API with the Application ID highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/set-link.png" alt-text="Screenshot shows the expose an API with the application ID highlighted in red.":::
         
        The following image shows the domain name:
         
-       :::image type="content" source="~/assets/images/meetings-side-panel/appI-Duri.png" alt-text="Screenshot of Expose an API with the domain name highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/appI-Duri.png" alt-text="Screenshot shows the expose an API with the domain name highlighted in red.":::
 
         > [!NOTE]
         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain changes.
@@ -234,7 +232,7 @@ items:
 
     1. Select **Add a scope**. 
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/select-scope.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/select-scope.png" alt-text="Screenshot shows the scopes defined by the API section with the add a scope option highlighted in red.":::
     
     1.  In the panel that appears, enter **access_as_user** as the **Scope name**.
   
@@ -252,11 +250,11 @@ items:
   
       The following image shows the fields and the values:
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/add-a-scope.png" alt-text="Screenshot of Add a scope window with Add scope highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/add-a-scope.png" alt-text="Screenshot shows the add a scope window with add scope highlighted in red.":::
 
     1. Ensure that "State" is set to "Enabled".
 
-       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/sbs-enabled.png" alt-text="Screenshot of Scopes defined by this API section with the Add a scope option highlighted in red.":::
+       :::image type="content" source="../msteams-platform/assets/images/meetings-side-panel/sbs-enabled.png" alt-text="Screenshot shows the scopes defined by the API section with the add a scope option highlighted in red.":::
 
     1. Select "Add scope" to save.
 
@@ -264,31 +262,31 @@ items:
         > The **Scope name** should match with the **Application ID** URI with `/access_as_user` appended at the end.</br>
            `api://*******.ngrok.io/00000000-0000-0000-0000-000000000000/access_as_user`
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/scopes_1.png" alt-text="Screenshot of Scopes defined by this API section with the Scope highlighted in red.":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/scopes_1.png" alt-text="Screenshot shows the scopes defined by the API section with the scope highlighted in red.":::
   
     1. In the **Authorized client applications** section, identify the applications that you want to authorize for your app’s web application. 
     
     1. Select **Add a client application**. 
 
-       :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Screenshot of Authorized client applications section with Add a Client application highlighted in red.":::
+       :::image type="content" source="~/assets/images/meetings-side-panel/selectclientapp.png" alt-text="Screenshot shows the authorized client applications section with add a client application highlighted in red.":::
 
     1. Enter each of the following client IDs:
 
        * Enter **Client ID**: `1fec8e78-bce4-4aaf-ab1b-5451cc387264` for Teams mobile or desktop application. 
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Screenshot of Add a client application page with the Client ID 1 highlighted in red."::: 
+         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication1.png" alt-text="Screenshot shows the add a client application page with the client ID one highlighted in red."::: 
 
        * Enter **Client ID**: `5e3ce6c0-2b1f-4285-8d4b-75ee78787346` for Teams web application.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Screenshot of Add a client application with the Client ID 2 highlighted in red.":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/addclientapplication2.png" alt-text="Screenshot shows the add a client application with the client ID two highlighted in red.":::
 
     1. Select **Authorized scopes**.
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope_1.png" alt-text="Screenshot of Authorized scopes section under Expose an API page with the scope highlighted in red":::
+         :::image type="content" source="~/assets/images/meetings-side-panel/authorizedscope_1.png" alt-text="Screenshot shows the authorized scopes section under expose an API page with the scope highlighted in red":::
 
-       The following image displays the client Id:
+       The following image displays the client ID:
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot of Authorized client applications under Expose an API with the client IDs highlighted in red."::: 
+         :::image type="content" source="~/assets/images/meetings-side-panel/clientapps.png" alt-text="Screenshot shows the authorized client applications under expose an API with the client IDs highlighted in red."::: 
   
     1. In the left pane, select **API permissions**. 
 
@@ -297,7 +295,7 @@ items:
 
     1. Select **Add a permission** > **Microsoft Graph**
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission_1.png" alt-text="Screenshot of Configured permissions with Add a permission highlighted in red."::: 
+        :::image type="content" source="~/assets/images/meetings-side-panel/addpermission-graph-api.png" alt-text="Screenshot shows the configured permissions with add a permission highlighted in red."::: 
 
     1. Select **Delegated permissions**.
 
@@ -310,7 +308,7 @@ items:
 
     1. Select **Add permissions**.
 
-        :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Screenshot shows the option to add permissions in request api permissions section.":::
+        :::image type="content" source="~/assets/images/meetings-side-panel/other-permissions_1.png" alt-text="Screenshot shows the request API permissions with the add permissions highlighted in red after selecting the required permissions.":::
 
     1. From the left pane, select **Authentication**.
 
@@ -319,7 +317,7 @@ items:
                
          1. Select **Add a platform** > **Web**.
 
-            :::image type="content" source="~/assets/images/meetings-side-panel/webauth_1.png" alt-text="Screenshot of Authentication page with Add a platform option followed by Web option highlighted in red.":::
+            :::image type="content" source="~/assets/images/meetings-side-panel/webauth_platform.png" alt-text="Screenshot shows the authentication page with add a platform option followed by web option highlighted in red.":::
 
          1. Enter the redirect URI for your app by appending `auth-end` to domain name:</br> 
            `https://your ngrok/auth-end`. </br>
@@ -330,7 +328,7 @@ items:
    
          1. Select **Configure**.
 
-             :::image type="content" source="~/assets/images/meetings-side-panel/authend_1.png" alt-text="Screenshot of Configure Web page with the options Redirect URLs, token selections, and Configure are highlighted in red.":::
+             :::image type="content" source="~/assets/images/meetings-side-panel/authend_1.png" alt-text="Screenshot shows the configure web page with redirect URLs, token selections, and configure options highlighted in red.":::
 
 - title: Set up app settings and manifest files
   durationInMinutes: 1
@@ -345,7 +343,7 @@ items:
          * Replace `"<<Microsoft-App-Secret>>"` to **Value** of your bot's **Client secret**.
          * Replace `<<Your_Domain_URL>>` to the ngrok or dev tunnel domain name.
 
-          :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot of appsettings JSON file with appsettings highlighted.":::
+          :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot shows the appsettings JSON file with appsettings highlighted in red.":::
           
     1. Go to **manifest.json** file in the cloned repository.
 
@@ -369,11 +367,11 @@ items:
        1. Open **Visual Studio**.
        1. Go to **File** > **Open** > **Project/Solution..**.
     
-           :::image type="content" source="~/assets/images/meetings-side-panel/open-project1.png" alt-text="Screenshot of Visual Studio with the File, Open, and Project/Solution highlighted in red.":::
+           :::image type="content" source="~/assets/images/meetings-side-panel/open-project1.png" alt-text="Screenshot shows Visual Studio with the file, open, and project/solution highlighted in red.":::
 
        1. Select **SidePanel.csproj** file from **csharp** folder.
 
-           :::image type="content" source="~/assets/images/meetings-side-panel/Tokenfileready_1.png" alt-text="Screenshot of cloned repository with the SidePanel.csproj highlighted in red.":::
+           :::image type="content" source="~/assets/images/meetings-side-panel/Tokenfileready_1.png" alt-text="Screenshot shows the cloned repository with the side panel project file highlighted in red.":::
 
        1. Press **F5** to run the project. You can run the project using Visual Studio or .NET in the appropriate folder.
 
@@ -385,11 +383,11 @@ items:
     
        1. Select **Yes** if the following dialog appears:
 
-            :::image type="content" source="~/assets/images/meetings-side-panel/certificate.png" alt-text="Screenshot of Security Warning with the Yes option highlighted in red.":::
+            :::image type="content" source="~/assets/images/meetings-side-panel/certificate.png" alt-text="Screenshot shows the security warning with the yes option highlighted in red.":::
 
-          A webpage appears with a message **Your bot is ready!**
+          A webpage appears with a message, **Your bot is ready!**
 
-           :::image type="content" source="~/assets/images/meetings-side-panel/appisready_1.png" alt-text="Screenshot of the webpage that displays Your bot is ready!."::: 
+           :::image type="content" source="~/assets/images/meetings-side-panel/appisready_1.png" alt-text="Screenshot shows the webpage that displays that your bot is ready."::: 
  
     # [Command line](#tab/cli)
 
@@ -398,7 +396,7 @@ items:
     ```bash
     dotnet run
     ```
-    :::image type="content" source="~/assets/images/meetings-side-panel/dotnetruncmd.png" alt-text="Screenshot of Command Prompt - dotnet run with the dotnet run command."::: 
+    :::image type="content" source="~/assets/images/meetings-side-panel/dotnetruncmd.png" alt-text="Screenshot shows Command Prompt dotnet run with the dotnet run command."::: 
       
 - title: Add meeting side panel to Teams
   durationInMinutes: 1
