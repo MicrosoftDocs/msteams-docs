@@ -115,11 +115,11 @@ The following steps help you to approve from admin center:
 
    In the **Pending approval** widget at the top of the page, lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publishes the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="Screenshot shows the approval.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app.png" alt-text="Screenshot shows the teams apps pending for approval.":::
 
 1. Select the app name to go to the app details page. On the **About** tab, you can view details about the app, including description, status, and app ID.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/about-submitted-app-1.png" alt-text="Screenshot shows the submitted app.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/about-submitted-app.png" alt-text="Screenshot shows the submitted app.":::
 
 1. Select the status dropdown and change from **Submitted** to **Publish**.
 

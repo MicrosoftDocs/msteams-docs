@@ -175,7 +175,7 @@ A video in your listing can be the most effective way to communicate why people 
 * How does your app work?
 * What other benefits do you get from using your app?
 
-You can add a URL for your YouTube or Vimeo video.
+You can add a URL for your YouTube or Vimeo video in the format `https://www.example.com/123456789`.
 
 #### Best practices for videos
 
