@@ -14,33 +14,33 @@ ms.date: 12/09/2022
 
 As a developer, you build an app for millions of Microsoft Teams users to achieve specific business or customer goals. For this purpose, you distribute it using one or more of the many distribution options available to you. After the app is published, you'll want to measure how your app is performing in the real-world.
 
-You can monitor many data points, such as:
+You'll also be interested in monitoring many data points, such as:
 
 - Who is interested in your app?
 - Which users and organizations are using your app?
 - How are users engaging with your app?
-- Which users churn away from your app after using it for some time?
+- Which users have churned away after using your app for some time?
 
 This information helps you analyze the data against your business goals, take corrective action by fixing issues. It also helps you to intervene in the user journey or make informed decisions around feature investments, enhancements, and adoption for the app.
 
 **But Teams app usage report must suffice, isn’t it?**
 
-As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in the Partner Center. The data is available within a week after publishing your app on the Microsoft Teams Store. Custom app developers can find [usage analytics for their custom apps](../build-and-test/analyze-your-apps-usage-in-developer-portal.md) in the Developer Portal for Teams. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
+As the app’s developer, you can track your app’s usage in the [Teams app usage report](../deploy-and-publish/appsource/post-publish/overview.md#analyze-app-usage) in Partner Center within a week after publishing your app on the Microsoft Teams Store. Custom app developers can find [usage analytics for their custom apps](../build-and-test/analyze-your-apps-usage-in-developer-portal.md) in the Developer Portal for Teams. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. These reports are available at an aggregate level, such as:
 
 - Monthly, daily, and weekly active users.
 - Retention and intensity charts.
 - Users who used your app more than five days in the last month.
-- Platform, operating system, and geographic split of users for your app.
+- Platform, operating system, and geographic split of users for your app, and so on.
 
 The out-of-box usage reports available in Partner Center or the Developer Portal for Teams can't provide you with in-depth analytics of what goes on inside your app and specific user-level analytics. Such analytics include a user’s journey within your app or a user’s engagement with specific features and measuring scenario completions.
 
-Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's integrated and surfaced inside Microsoft Teams shell where users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, and dialogs (referred as task modules in TeamsJS v.1.0). All these capabilities are a means to surface web-based experiences inside Teams.
+Your app on Teams is essentially a web-based service hosted elsewhere, for example, Azure cloud. It's embedded and surfaced inside Microsoft Teams shell where users can use your app. This applies to your app irrespective of the [platform capabilities](../../overview-explore.md) used, such as tabs, bots, message extensions, meeting extensions, cards, dialogs (referred as task modules in TeamsJS v.1.0), and so on.. All these capabilities are a means to surface web-based experiences inside Teams.
 
 Plan analytics for the Teams app the same way as you do for a SaaS product that runs on the web browser.
 
 ## Plan early for analytics
 
-Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app accrues to hosted canvas constructs such as tabs, dialogs, and meeting apps. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, you need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
+Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, dialogs, meeting apps and so on. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, you need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
 
 At the time, your production Teams app is live on the Teams Store and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that you don’t miss tracking:
 
