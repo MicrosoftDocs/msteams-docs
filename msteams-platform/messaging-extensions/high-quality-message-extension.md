@@ -40,7 +40,7 @@ The requirements for building message extension plugins for Copilot for Microsof
 
 A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365 (M365 Chat).
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in M365 Chat.":::
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in M365 Chat.":::
 
@@ -56,7 +56,7 @@ Ensure that you adhere to the description guidelines listed in the following tab
 
 Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, app description must be modified to suit the following plugin requirements:
 
-* Long description must clearly explain how users can use a message extension plugin in Copilot for Microsoft 365 and what functionality they can expect. For example, Use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
+* Long description must clearly explain the functionality and usage of the message extension plugin in Copilot for Microsoft 365. For example, Use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following table lists the short description examples for each category:
@@ -228,7 +228,7 @@ The following table lists the command description examples for each category:
 
 # [General](#tab/general)
 
-**Description**: Find number of stocks or listed equities using keyworks, key ratios, index, and so on.
+**Description**: Find number of stocks or listed equities using keywords, key ratios, index, and so on.
 
 **Command description example:**
 
@@ -391,7 +391,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 For M365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle two or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
 
 * Update your web service to support search based on multiple parameters.
-* The search parameters must not have an **empty** or **null** value.
+* Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
 <br>
 <br>
@@ -483,7 +483,7 @@ For M365 Chat, a search-based message extension must support compound utterances
 </details>
 <br>
 
-:::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a multi parameter search such as seafood and in stock.":::
+:::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
