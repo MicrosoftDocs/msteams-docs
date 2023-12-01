@@ -25,6 +25,8 @@ landingContent:
 #  linkLists:
 #    - linkListType: whats-new
 #      links:
+#      - text: Introduced Teams Toolkit command line interface v3
+#        url: ~/toolkit/TeamsFx-CLI.md
 #      - text: Introduced app manifest v1.14
 #        url: ~/resources/schema/manifest-schema.md
 #      - text: Common reasons for app validation failure
@@ -41,8 +43,7 @@ landingContent:
 #        url: ~/concepts/device-capabilities/browser-device-permissions.md
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
-#      - text: Adaptive Cards overflow menu
-#        url: ~/task-modules-and-cards/cards/cards-format.md
+
 
 - title: Whats new
   linkLists:

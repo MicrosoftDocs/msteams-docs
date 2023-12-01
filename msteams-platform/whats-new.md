@@ -24,6 +24,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
+**2023 Decemeber**
+
+* **December 15, 2023**:[Introduced Teams Toolkit command line interface v3.](toolkit/TeamsFx-CLI.md)
+
 **2023 November**
 
 * **November 20, 2023**: [Use captureImage API to capture an image or select media from the gallery for mobile clients.](concepts/device-capabilities/media-capabilities.md)

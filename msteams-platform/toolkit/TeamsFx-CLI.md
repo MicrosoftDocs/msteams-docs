@@ -375,11 +375,13 @@ Upgrade the project to work with the latest version of Teams Toolkit.
 
 ## `teamsapp doctor`
 
+Prerequisites to create Teams application.
+
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsapp install` |  |
-| `teamsapp uninstall` |  |
-| `teamsapp launchinfo` |  |
+| `teamsapp install` | Upload a custom app for a given application package across Microsoft 365. |
+| `teamsapp uninstall` | Remove an acquired Microsoft 365 App. |
+| `teamsapp launchinfo` | Get launch information of an acquired Microsoft 365 App. |
 
 ::: zone-end
 
