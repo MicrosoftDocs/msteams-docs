@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 Microsoft Entra ID is a cloud platform that simplifies the process of building modern applications. You can host your Teams apps entirely in Azure or extend your app with Azure services. Hosting your Teams app on Azure helps you create applications that are reliable, scalable, and easily maintainable. Azure supports popular programming languages, including Python, JavaScript, Java, .NET, and Go.
 
 You must have an Azure account to use Azure resources or to host your Teams app on Microsoft Entra ID.
-For more information, see [Microsoft Entra ID subscription](https://learn.microsoft.com/azure/developer/intro/azure-developer-billing#what-is-an-azure-subscription).
+For more information, see [Microsoft Entra ID subscription](/azure/developer/intro/azure-developer-billing).
 
 With Microsoft Entra ID, you can use the following services for your Teams app:
 
@@ -30,12 +30,12 @@ With Microsoft Entra ID, you can use the following services for your Teams app:
 
 Microsoft Entra ID also enables you to customize who has access to your account when you're registering your app on the platform.
 
-    | Account type | Function |
-    | --- | --- |
-    | Accounts in this organizational directory only  (Microsoft only - Single tenant) | All user and guest accounts in your directory can use your application or API. Use this option if your target audience is internal to your organization. |
-    | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | All users with a work or school account from Microsoft can use your application or API. This includes schools and businesses that use Office 365. Use this option if you want to enable multitenancy and your target audience are businesses or educational customers. |
-    | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) | All users with a work or school, or personal Microsoft account can use your application or API. It includes schools and businesses that use Office 365 as well as personal accounts that are used to sign in to services like Xbox and Skype. Use this option to to enable multitenancy and target the widest set of Microsoft identities. |
-    | Personal Microsoft accounts only | Personal accounts that are used to sign in to services like Xbox and Skype. Use this option to target the widest set of Microsoft identities. |
+| Account type | Function |
+| --- | --- |
+| Accounts in this organizational directory only  (Microsoft only - Single tenant) | All user and guest accounts in your directory can use your application or API. Use this option if your target audience is internal to your organization. |
+| Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | All users with a work or school account from Microsoft can use your application or API. This includes schools and businesses that use Office 365. Use this option if you want to enable multitenancy and your target audience are businesses or educational customers. |
+| Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox) | All users with a work or school, or personal Microsoft account can use your application or API. It includes schools and businesses that use Office 365 as well as personal accounts that are used to sign in to services like Xbox and Skype. Use this option to to enable multitenancy and target the widest set of Microsoft identities. |
+| Personal Microsoft accounts only | Personal accounts that are used to sign in to services like Xbox and Skype. Use this option to target the widest set of Microsoft identities. |
 
 ## Tenants in Microsoft Entra ID
 
@@ -94,10 +94,10 @@ To register a new app in Microsoft Entra ID
 
 # [dev tunnel](#tab/dev)
 
-      [!INCLUDE [dev-tunnel](../includes/get-started/dev-tunnel.md)]
+[!INCLUDE [dev-tunnel](../includes/get-started/dev-tunnel.md)]
 
 # [ngrok](#tab/ngrok)
 
-      [!INCLUDE [ngrok-tunnel](../includes/get-started/ngrok-tunnel.md)]
+[!INCLUDE [ngrok-tunnel](../includes/get-started/ngrok-tunnel.md)]
 
       ---
