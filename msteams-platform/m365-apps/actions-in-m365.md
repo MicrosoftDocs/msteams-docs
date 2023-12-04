@@ -16,9 +16,7 @@ ms.subservice: m365apps
 > * Actions is supported for Microsoft 365 apps on web and desktop clients only and isn't supported on Outlook and Microsoft Teams.
 
 Actions enable your app to integrate seamlessly into the user's workflow and guide users to your app based on their intent and the content at hand, making task completion more efficient.
-Actions help you enhance your app's visibility and engagement with minimal development effort and improve user productivity by streamlining task completion and reducing the need to switch contexts across various Microsoft 365 apps. For instance, your app can act immediately on content files, expanding the range of interactions users can have with their content.
-
-You can extend your Teams app across Microsoft 365 using Actions. However, it's important to note that Actions function only in Microsoft 365.
+Actions help you enhance your app's visibility and engagement with minimal development effort and reduce the need to switch contexts across various Microsoft 365 apps. For instance, your app can act immediately on content files, expanding the range of interactions users can have with their content.
 
 In the following graphic, the user intends to attach a Word document to the list in the **To do** app. The user right-click on the Word document and select the **Add to** action. A dialog appears with the Word document attached. The user adds a note and selects **Submit**. The Word document is added to the list in the **To do** app:
 
@@ -183,12 +181,101 @@ You can now preview your Actions in Microsoft 365 app, right-click a file that i
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 
-## Enable Actions in Microsoft Admin Center
+### Enable Actions in Microsoft Admin Center
 
-1. Upload the app package containing the Actions via the Microsoft Admin Center
-1. Enable the app for targeted release to users in the tenant
+1. Upload the app package containing the Actions in the Microsoft Admin Center.
+1. Enable the app for targeted release to users in the tenant.
 1. In the Microsoft Admin Center, select **Settings** > **Integrated Apps** > **Upload custom apps**.
 1. Ensure that you've your users enrolled in the targeted release to use Actions.
+
+### Run the app locally with Azure Subscription
+
+To debug the project, you will need to configure an Azure SQL Database to be used locally:
+
+1. [Create an Azure SQL database.](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal)
+1. [Add IP address of your computer into allowlist of firewall of Azure SQL Server.](/azure/azure-sql/database/firewall-configure?view=azuresql)
+1. Use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql) with below query to create a table:
+
+    ```sql
+    (
+    id INT IDENTITY PRIMARY KEY,
+    description NVARCHAR(128) NOT NULL,
+    objectId NVARCHAR(36),
+    itemId NVARCHAR(128),
+    channelOrChatId NVARCHAR(128),
+    isCompleted TinyInt NOT NULL default 0,
+    )
+    ```
+
+1. Open `env/.env.local.user` file, uncomment and set the values of below config with the Azure SQL Database you just created:
+
+    ```sql
+    SECRET_SQL_ENDPOINT=
+    SECRET_SQL_DATABASE_NAME=
+    SECRET_SQL_USER_NAME=
+    SECRET_SQL_PASSWORD=
+    ```
+
+1. Edit the `LOCAL_STORAGE` value to false in `env/.env.local` file.
+1. Open Debug View (Ctrl+Shift+D) and select **Debug in the Microsoft 365 app (Edge)** from the  dropdown and enter **F5**.
+
+A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
+
+### Deploy the app to Azure
+
+1. Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available commands:
+
+    ```bash
+    npm install -g @microsoft/teamsfx-cli
+    ```
+
+1. Create todo-list project.
+
+    ```bash
+    teamsfx new template todo-list-with-Azure-backend
+    ```
+
+1. Provision the project to azure. Input admin name and password of SQL.
+
+    ```bash
+    teamsfx provision
+    ```
+
+1. Deploy the app.
+
+    ```bash
+    teamsfx deploy
+    ```
+
+1. Open `env/.env.dev` file, you could get the database name in `PROVISIONOUTPUT__AZURESQLOUTPUT__DATABASENAME` output. In Azure portal, find the database and use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql) with below query to create a table:
+
+    ```sql
+    CREATE TABLE Todo
+    (
+        id INT IDENTITY PRIMARY KEY,
+        description NVARCHAR(128) NOT NULL,
+        objectId NVARCHAR(36),
+        channelOrChatId NVARCHAR(128),
+        isCompleted TinyInt NOT NULL default 0,
+    )
+    ```
+
+1. Open the project in Visual Studio Code.
+1. Create an `env/.env.dev.user` file, and set value for `SECRET_SQL_USER_NAME` and `SECRET_SQL_PASSWORD`.
+1. Open the command palette and select Teams: Provision in the cloud. You will be asked to input admin name and password of SQL. The toolkit will help you to provision Azure SQL.
+1. Once provision is completed, open the command palette and select Teams: Deploy to the cloud.
+1. Open Debug View (Ctrl+Shift+D) and select **Launch Remote (Edge)** or **Launch Remote (Chrome)** from the  dropdown and enter **F5**.
+
+A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
+
+## Design guidelines
+
+Actions with custom intent will show as a flat list in the bottom of the context menu, actions with Open/Add to intent will be grouped into Open and Add to.
+
+> [!NOTE]
+> The placement of actions is determined by the Microsoft 365 platform. Using intent does not guarantee grouping, and using custom intent does not imply no grouping. We are planning to introduce additional features and experiences to assist users in quickly locating the most relevant and useful actions.
+
+:::image type="content" source="images/actions-design-guidelines.png" alt-text="The screenshot shows the design of context menu.":::
 
 ## Code sample
 
