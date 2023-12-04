@@ -43,7 +43,7 @@ A 'tenant' is a secure identity and access management system for the users, grou
 
 When you create a single tenant application in Microsoft Entra ID, it's restricted to the users in the organizational directory it was created in. This type of tenant is perfect for applications that are simple and prioritize security, privacy, and collaboration within an organization. On the other hand, multitenant applications are accessed to users both inside and outside the tenant it was created in. This type of tenancy promotes better scalability, reach, and collaboration.
 
-For more information about single and multitenancy, see [Tenancy in Microsoft Entra ID](/entra/identity-platform/single-and-multi-tenant-apps) or see the following video:<br>
+For more information about single and multitenancy, see [Tenancy in Microsoft Entra ID](/entra/identity-platform/single-and-multi-tenant-apps) or see the following video:
 <br>
 > [!VIDEO https://www.youtube.com/embed/RjGVOFm39j0]
 
