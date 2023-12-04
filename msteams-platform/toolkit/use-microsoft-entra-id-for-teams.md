@@ -48,7 +48,6 @@ For more information about single and multitenancy, see [Tenancy in Microsoft En
 <br>
 
 > [!VIDEO https://www.youtube.com/embed/RjGVOFm39j0]
-<br>
 
 ## Register your Teams app on Microsoft Entra ID
 
