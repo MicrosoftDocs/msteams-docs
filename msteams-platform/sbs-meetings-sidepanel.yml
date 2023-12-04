@@ -58,7 +58,7 @@ items:
   content: |
     To create and register your bot in Microsoft Entra ID, perform the following steps:
 
-    * Create and register your Azure app. 
+    * Create Azure Bot resource to register bot with Azure Bot service.
     * Create client secret to enable single sign-on (SSO) authentication of the bot.
     * Add Teams channel to deploy the bot.
     * Create a ngrok or dev tunnel to your web server's endpoints.
