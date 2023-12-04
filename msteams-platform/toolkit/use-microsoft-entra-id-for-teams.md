@@ -45,6 +45,7 @@ When you create a single tenant application in Microsoft Entra ID, it's restrict
 
 For more information about single and multitenancy, see [Tenancy in Microsoft Entra ID](/entra/identity-platform/single-and-multi-tenant-apps) or see the following video:
 <br>
+<br>
 
 > [!VIDEO https://www.youtube.com/embed/RjGVOFm39j0]
 <br>
