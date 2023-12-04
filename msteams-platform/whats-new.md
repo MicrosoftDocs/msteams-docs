@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 November**
 
+* **December 08, 2023**: [Tag mentions](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention) are now supported in Teams mobile client.
 * **November 27, 2023**: [Extend an action-based Teams message extension across Microsoft 365.](~/m365-apps/extend-m365-teams-message-extension.md)
 * **November 21, 2023**: Terminology update. LOB apps is referred to as custom apps built for your org (LOB apps).
 * **November 20, 2023**: [Use captureImage API to capture an image or select media from the gallery for mobile clients.](concepts/device-capabilities/media-capabilities.md)
