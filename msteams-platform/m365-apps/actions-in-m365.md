@@ -219,13 +219,7 @@ A browser window opens with Microsoft 365 home page. Your app is available under
 
 To deploy the app to Azure, follow these steps:
 
-1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-
-1. Select **Code**.
-
-1. From the dropdown menu, select **Open with GitHub Desktop**.
-
-   :::image type="content" source="../../assets/images/include-files/clone-repository.png" alt-text="Screenshot show the option to clone repository in local.":::
+[!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
 1. Go to Visual Studio Code.
 
