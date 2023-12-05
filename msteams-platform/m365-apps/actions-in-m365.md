@@ -28,25 +28,11 @@ Actions are the combination of intent, object, and handler. Actions represent th
 
 When you're creating an app ensure that you define user intent, choose the object to perform the action, and construct the corresponding handler that facilitates task completion for the user.
 
-### Intent
-
-Intent is the objective a user wants to perform or achieve, such as open or add. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement, grouping, and ordering of Actions. You can create an intent for `Open`, `addTo`, and `custom` actions. You can use `custom` Actions to create tailored Actions.
-
-### Object
-
-Object is the file on which the user wants to perform an action. Currently, Actions can be triggered on content objects (files) that have an extension, such as Word, PowerPoint, Excel, PDF, and images. The files must be available in OneDrive or SharePoint and are accessible through Microsoft Graph.
-
-### Handlers
-
-A handler is how the Action performs the user’s intent on the selected object. It provides the logic and functionality of the Action, creating a smooth and meaningful user experience.
-
-`openPage`: Drive users to your app's dedicated pages (personal tab).
-
-| &nbsp; | Actions | Supported |
-| --- | --- | --- |
-| &nbsp; | Intent | `Open`, `addTo`, and `custom` |
-| &nbsp; | Object  | The files must be available in OneDrive or SharePoint and are accessible through Microsoft Graph. |
-| &nbsp; | Handlers | `openPage` |
+| &nbsp; | Actions | Description | What is supported in this preview  
+| --- | --- | --- | ---|
+| &nbsp; | Intent | Intent is the objective a user wants to perform or achieve, such as `Open` and  `addTo`. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement, grouping, and ordering of Actions. | You can create an intent for `Open`, `addTo`, and `custom` actions. You can use `custom` Actions to create tailored Actions. |
+| &nbsp; | Object  | Object is the file on which the user wants to perform an action. | Currently, Actions can be triggered on content objects (files) that have an extension, such as Word, PowerPoint, Excel, PDF, and images. The files must be available in OneDrive or SharePoint and are accessible through Microsoft Graph. |
+| &nbsp; | Handlers | A handler is how the Action performs the user’s intent on the selected object. It provides the logic and functionality of the Action, creating a smooth and meaningful user experience. | `openPage`: Handler allows you to directly guide users to your app's personal tab. By utilizing the `openPage` handler, you can effectively drive users to your app's dedicated pages, providing them with a rich and expansive interface to accomplish their goals. |
 
 ### Prerequisites
 
@@ -115,7 +101,7 @@ For more information, see [public developer preview app manifest schema](../reso
 
 Update the handler to receive the Action information through the context object to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
 
-When a user selects Add option from the app's context menu, a page or dialog opens with the help of the `openDialog` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
+When a user selects Add option from the app's context menu, a page opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
 
 ```javascript
 const context = await app.getContext();
@@ -131,19 +117,18 @@ this.setState({
 | --- | --- | --- |
 | &nbsp; | `actionId` | Maps to the action id supplied inside the manifest. |
 | &nbsp; | `actionObjects` | Array of corresponding action objects. |
+| &nbsp; | `itemId` | The app receives the id as the content and uses it to query the Microsoft graph. |
 
-* [`actionInfo`](/javascript/api/@microsoft/teams-js/actioninfo): The TeamsJS helps to enable your app to determine when a user opens a page or dialog from an Action, and the content that initiated the Action.
+[`actionInfo`](/javascript/api/@microsoft/teams-js/actioninfo): The TeamsJS helps to enable your app to determine when a user opens a page or dialog from an Action, and the content that initiated the Action.
 
-    ```javascript
-    app.getContext().then((context: app.Context) => {
-        const actionInfo = context.actionInfo;
-        if (actionInfo && actionInfo.actionId == 'myActionId1') {
-            // Handle specific action
-        }
-    });
-    ```
-
-* `itemId`: The app receives the id as the content and uses it to query the Microsoft graph.
+```javascript
+app.getContext().then((context: app.Context) => {
+    const actionInfo = context.actionInfo;
+    if (actionInfo && actionInfo.actionId == 'myActionId1') {
+        // Handle specific action
+    }
+});
+```
 
 #### Access content through Graph API
 
