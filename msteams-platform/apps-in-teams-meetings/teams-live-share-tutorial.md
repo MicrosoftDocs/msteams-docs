@@ -268,7 +268,7 @@ After you've started running your app locally with `npm run start`, you can then
 
    A new ngrok terminal opens with a new url, for example `https:...ngrok.io`. The new URL is the tunnel that points to your app, which needs to be updated in your app `manifest.json`.
 
-### Create the app package to sideload into Teams
+### Create the app package to upload into Teams
 
 1. Go to the Dice Roller sample folder `live-share-sdk\samples\javascript\01.dice-roller` on your computer. You can also check the [manifest.json](https://github.com/microsoft/live-share-sdk/blob/main/samples/javascript/01.dice-roller/manifest/manifest.json) from the Dice Roller sample on GitHub.
 
@@ -294,7 +294,7 @@ After you've started running your app locally with `npm run start`, you can then
 
    For more information on manifest, visit the [Teams manifest documentation](../resources/schema/manifest-schema.md)
 
-### Sideload your app into a meeting
+### Upload your custom app into a meeting
 
 1. Open Teams.
 

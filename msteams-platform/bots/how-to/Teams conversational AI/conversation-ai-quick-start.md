@@ -67,7 +67,7 @@ To get started, ensure that you have the following tools:
 
 1. Select **Add**.
 
-   :::image type="content" source="../../../assets/images/bots/Conversation-AI-sample-app-add.png" alt-text="Screenshot shows the add option in Teams web client.":::
+   :::image type="content" source="../../../assets/images/bots/Conversation-AI-sample-app-add.png" alt-text="Screenshot shows the option to add the app in Teams web client.":::
 
    A chat window opens.
 

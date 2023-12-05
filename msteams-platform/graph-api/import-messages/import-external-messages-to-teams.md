@@ -36,7 +36,7 @@ At a high level, the import process consists of the following:
 ### Set up your Microsoft 365 tenant
 
 * Ensure that a Microsoft 365 tenant exists for the import data. For more information on setting up a Microsoft 365 tenancy for Teams, see [prepare your Microsoft 365 tenant](../../concepts/build-and-test/prepare-your-o365-tenant.md).
-* Make sure that team members are in Azure Active Directory. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Azure AD.
+* Make sure that team members are in Microsoft Entra ID. For more information, see [add a new user](/azure/active-directory/fundamentals/add-users-azure-active-directory) to Microsoft Entra ID.
 
 ## Step 1: Create a team
 

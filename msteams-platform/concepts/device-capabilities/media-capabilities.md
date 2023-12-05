@@ -43,7 +43,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 
 ## Media capability APIs
 
-The [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia), [getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia), and [viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) APIs enable you to use native media capabilities as follows:
+The [captureImage](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-captureimage), [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia), [getMedia](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia), and [viewImages](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages) APIs enable you to use native media capabilities as follows:
 
 * Use the native **microphone** to allow users to **record audio** (record 10 minutes of conversation) from the device.
 * Use native **camera control** to allow users to **capture and attach images** and **capture videos** (record up to five minutes of video) on the go.
@@ -55,7 +55,7 @@ The [selectMedia](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-
   
 > [!IMPORTANT]
 >
-> * The `selectMedia`, `getMedia`, and `viewImages` APIs can be invoked from multiple Teams surfaces, such as task modules, tabs, and personal apps. For more information, see [Entry points for Teams apps](../extensibility-points.md).</br>
+> * You can invoke the `captureImage`, `selectMedia`, `getMedia`, and `viewImages` APIs from various Teams surfaces, including task modules, tabs, and personal apps. For more information, see [the entry points for Teams apps](../extensibility-points.md).</br>
 > * The `selectMedia` API supports both camera and microphone capabilities through different input configurations.
 > * The `selectMedia` API for accessing microphone capability supports for mobile clients only.
 > * The maximum count of images uploaded is determined by [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) and also by the total size of array returned by the `selectMedia` API. Ensure that the array size doesn't exceed 20 MB, if the array size exceeds 20 MB, the API generates an error code 10000 that is SIZE_EXCEEDED error.
@@ -64,29 +64,42 @@ The following table lists set of APIs to enable your device's media capabilities
 
 | API      | Description   |
 | --- | --- |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Camera)**| This API allows users to **capture or select media from the device camera** and return it to the web-app. The users can edit, crop, rotate, annotate, or draw over images before submission. In response to `selectMedia`, the web-app receives the media IDs of selected images and a thumbnail of the selected media. This API can be further configured through the [ImageProps](/javascript/api/@microsoft/teams-js/media.imageprops) configuration. |
-| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Microphone**)| Set the [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) to `4` (Audio) in `selectMedia` API for accessing microphone capability. This API also allows users to record audio from the device microphone and return recorded clips to the web app. The users can pause, re-record, and play recording preview before submission. In response to **selectMedia**, the web-app receives media IDs of the selected audio recordings. <br/> Use `maxDuration`, if you need to configure a duration in minutes for recording the conversation. The current duration for recording is 10 minutes, after which the recording terminates.  |
+| [**captureImage**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-captureimage) (**Camera**)| The API enables users to activate the camera and capture an image or select media from the gallery. When the `captureImage` callback is triggered, the image is shared as a file. The API restricts users to either select or capture a single image for sharing and is compatible only with mobile clients. |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Camera**)| The `selectMedia` API enables users to capture or select media from their device's camera or gallery, and then return it to the web app. Users have the ability to edit, crop, rotate, annotate, or draw over images prior to submission. In response to `selectMedia`, the web app obtains the media IDs of the selected images and a thumbnail of the chosen media. You can further configure this API using the [ImageProps](/javascript/api/@microsoft/teams-js/media.imageprops) configuration. |
+| [**selectMedia**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-selectmedia) (**Microphone**)| To access the microphone capability, set the [mediaType](/javascript/api/@microsoft/teams-js/media.mediatype) to `4` (Audio) in the `selectMedia` API. This API enables users to record audio using the device's microphone and returns the recorded clips to the web app. Users have the option to pause, re-record, or preview the recording before submitting. In response to `selectMedia`, the web app receives the media IDs of the selected audio recordings. </br> If you need to set a specific duration for the recording, use `maxDuration`. The current recording duration is set to 10 minutes, after which the recording automatically ends. |
 | [**getMedia**](/javascript/api/@microsoft/teams-js/media.media#@microsoft-teams-js-media-media-getmedia)| This API retrieves the media captured by `selectMedia` API in chunks, irrespective of the media size. These chunks are assembled and sent back to the web app as a file or blob. Breaking media into smaller chunks facilitates large file transfer. |
 | [**viewImages**](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js-media-viewimages)| This API enables the user to view images in full-screen mode as a scrollable list.|
+
+The following image depicts the web app experience of `captureImage` API for the image capability on Teams mobile:
+
+* Launch camera and capture the image to share:
+
+  :::image type="content" source="~/assets/images/tabs/capture-media-mobile.png" alt-text="Image shows the captureImage capability for mobile.":::
+
+* Select media from the gallery to share:
+
+  :::image type="content" source="~/assets/images/tabs/capture-media-mobile-gallery.png" alt-text="Image shows the mobile gallery of captureImage capability.":::
+
+You can view the web app experience of the `selectMedia` API for Teams desktop and mobile.
 
 # [Mobile](#tab/mobile)
 
 The following image depicts the web app experience of `selectMedia` API for the image capability:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Illustration shows the image capability for mobile.":::
+:::image type="content" source="~/assets/images/tabs/media-capability-mobile2.png" alt-text="Image shows the image capability for mobile.":::
 
 > [!NOTE]
 > In devices with Android version under 7, the `selectMedia` API launches the native Android camera experience instead of the native Teams camera experience.
 
 The following image depicts the web app experience of `selectMedia` API for the microphone capability:
 
-:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Illustration shows the microphone capability for mobile.":::
+:::image type="content" source="~/assets/images/tabs/microphone-capability.png" alt-text="Image shows the microphone capability for mobile.":::
 
 # [Desktop](#tab/desktop)
 
 The following image depicts the web app experience of `selectMedia` API for the image capability:
 
-:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Illustration shows the media capability for desktop.":::
+:::image type="content" source="~/assets/images/tabs/media-capability-desktop1.png" alt-text="Image shows the media capability for desktop.":::
 
 ---
 
@@ -108,7 +121,25 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
 ## Code snippets
 
-* Call `selectMedia` API for capturing images using camera:
+* Call `captureImage` API for launching and capturing image using camera:
+
+    ```javascript
+    microsoftTeams.media.captureImage((error: microsoftTeams.SdkError, attachments: microsoftTeams.media.Media[]) => {
+    // If there's any error, an alert shows the error message/code
+    if (error) {
+      if (error.message) {
+        alert(" ErrorCode: " + error.errorCode + error.message);
+      } else {
+        alert(" ErrorCode: " + error.errorCode);
+      }
+    } else if (attachments) {
+      let y = attachments[0];
+      img.src = ("data:" + y.mimeType + ";base64," + y.preview);
+    }
+  });
+    ```
+
+* Call `selectMedia` API for capturing and selecting media from device camera or gallery:
 
     ```javascript
     let imageProp: microsoftTeams.media.ImageProps = {
@@ -200,7 +231,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
 * Call `selectMedia` API for capturing images and video using camera:
 
-  This allows users to select between capturing an image or a video.
+  This API allows users to select between capturing an image or a video.
 
     ```javascript
     
@@ -384,14 +415,14 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 
 You can configure an app to enable users to download files from the webview to their mobile device.
 
->[!NOTE]
+> [!NOTE]
 > Downloading files is only supported on Android Teams mobile client and only unauthenticated files can be downloaded.
 
 To enable, follow the steps:
 
 1. Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#devicepermissions) file by adding the `devicePermissions` property and specifying `media` as shown in the [update manifest](#update-manifest).
 
-2. Use the following format and add the HMTL download attribute to the webpage:
+2. Use the following format and add the HTML download attribute to the webpage:
 
     ```html
     <a href="path_to_file" download="download">Download</a>
