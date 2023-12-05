@@ -22,6 +22,9 @@ Grab UI templates for your app design from the Microsoft Teams UI Kit, which als
 > [!div class="nextstepaction"]
 > [Get the UI kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
+> [!NOTE]
+> For [apps extended across Microsoft 365](../../m365-apps/overview.md#app-planning-and-design), app playbooks and UI templates are also available to help you get started.
+
 ### Microsoft Teams UI Library
 
 View and test individual Teams UI templates and related components in your browser.

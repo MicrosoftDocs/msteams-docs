@@ -71,6 +71,12 @@ You can now define and deploy Office Add-ins in the [developer preview version](
 
 For more information, see [app manifest for Office Add-ins (preview)](/office/dev/add-ins/develop/json-manifest-overview).
 
+## App planning and design
+
+When thinking about creating an app that will live within and build upon the Microsoft 365 ecosystem of apps, it's important to consider how it will aid your users in doing their work and completing their daily tasks. By being thoughtful in your app planning and design, you can create an experience that's more cohesive and introduces less friction to users as they go about their work.
+
+For apps that will span Microsoft 365 experiences, you can review our [App Playbooks](/microsoft-365-copilot/extensibility/plugins-are-apps#planning-your-app) and the preview of the [Microsoft 365 UI Kit (Figma)](https://aka.ms/UI-kit-m365) to help you get started.
+
 ## Microsoft commercial marketplace submission
 
 Join the growing number of production Teams apps in the [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Microsoft AppSource) store with expanded support for Outlook and Microsoft 365 audiences. The app [submission process for Teams apps enabled for Outlook and Microsoft 365](../concepts/deploy-and-publish/appsource/publish.md) is the same as for traditional Teams apps. The only difference is to use app manifest [version 1.13](../tabs/how-to/using-teams-client-sdk.md) in your app package, which introduces support for Teams apps that run across Microsoft 365.
