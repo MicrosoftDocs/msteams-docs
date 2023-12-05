@@ -270,7 +270,13 @@ A browser window opens with Microsoft 365 home page and your app is available un
 
 ## Design guidelines
 
+One single Action in the context menu contains App icon and display name.
+
 Actions with custom intent will show as a flat list in the bottom of the context menu, actions with Open/Add to intent will be grouped into Open and Add to.
+
+:::image type="content" source="images/app-icon-context-menu.png" alt-text="The screenshot shows the app icon in context menu.":::
+
+:::image type="content" source="images/icon-slot.png" alt-text="The screenshot shows the icon slot in context menu.":::
 
 > [!NOTE]
 > The placement of actions is determined by the Microsoft 365 platform. Using intent does not guarantee grouping, and using custom intent does not imply no grouping. We are planning to introduce additional features and experiences to assist users in quickly locating the most relevant and useful actions.
