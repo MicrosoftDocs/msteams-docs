@@ -219,9 +219,21 @@ A browser window opens with Microsoft 365 home page. Your app is available under
 
 To deploy the app to Azure, follow these steps:
 
-1. Clone the repo to your local workspace or directly download the source code.
+1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
 
-1. Open the project in Visual Studio Code.
+1. Select **Code**.
+
+1. From the dropdown menu, select **Open with GitHub Desktop**.
+
+   :::image type="content" source="../../assets/images/include-files/clone-repository.png" alt-text="Screenshot show the option to clone repository in local.":::
+
+1. Go to Visual Studio Code.
+
+1. Select **File** > **Open Folder...**.
+
+1. Select the folder where your app is created.
+
+1. Select **Select Folder**.
 
 1. Create an `env/.env.dev.user` file, and set value for `SECRET_SQL_USER_NAME` and `SECRET_SQL_PASSWORD`.
 
