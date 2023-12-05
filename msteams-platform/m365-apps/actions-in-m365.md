@@ -60,7 +60,7 @@ Define the intent, object, and handler for your actions in the app manifest sche
 
 The following is an app manifest example for with `intent` and `supportedobjects` and `handlers` properties for `openPage`:
 
-* Action to open a page: Action shows related tasks in the **To-do** app based on the selected file. It uses `"intent": "custom"` to identify the file type, such as .xlsx or doc. The `"type": "openPage"` handler opens the app and navigates to the `pageId`.
+Action to open a page: Action shows related tasks in the **To-do** app based on the selected file. It uses `"intent": "custom"` to identify the file type, such as .xlsx or doc. The `"type": "openPage"` handler opens the app and navigates to the `pageId`.
 
     ```json
     "actions": [
