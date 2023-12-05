@@ -1,7 +1,7 @@
 ---
 title: Extend a Teams meeting app to Outlook
 description: Here's how to ensure your Teams meeting app experience works seamlessly when extended to Outlook
-ms.date: 08/31/2023
+ms.date: 12/05/2023
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: tutorial

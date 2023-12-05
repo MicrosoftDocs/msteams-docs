@@ -5,12 +5,14 @@ description: Learn how to build a tab for a meeting chat, meeting side panel, an
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
-ms.date: 04/07/2022
+ms.date: 12/05/2023
 ---
 
 # Build tabs for meeting
 
 Every team has a different way of communicating and collaborating tasks. To achieve these different tasks, customize Teams with apps for meetings. Enable your apps for Teams meetings and configure the apps to be available in the meeting scope within their app manifest.
+
+Starting with app manifest version 1.13, meeting apps are supported on Microsoft Outlook. You can build meeting apps that can be configured and added to Teams meetings scheduled from the Outlook desktop client. See [Extend a Teams meeting app to Outlook](../m365-apps/extend-m365-meeting-app.md) for more on how to test meeting app support in Outlook.
 
 ## Tabs in Teams meetings
 
