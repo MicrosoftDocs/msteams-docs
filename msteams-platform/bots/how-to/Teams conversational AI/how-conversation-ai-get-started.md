@@ -24,9 +24,11 @@ Teams AI library is built on top of the Bot Framework SDK and uses its fundament
 > [!NOTE]
 > The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter&preserve-view=true).
 
+# [JavaScript](#tab/javascript4)
+
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L9)
 
-```typescript
+```javascript
 // Import required bot services.
 // See https://aka.ms/bot-services to learn more about the different parts of a bot.
 import {
@@ -54,7 +56,41 @@ const botFrameworkAuthentication = new ConfigurationBotFrameworkAuthentication(
 // See https://aka.ms/about-bot-adapter to learn more about how bots work.
 const adapter = new CloudAdapter(botFrameworkAuthentication);
 
-  ```
+```
+
+# [C#](#tab/dotnet)
+
+```csharp
+using AI_library;
+using Microsoft.Bot.Builder;
+using Microsoft.Bot.Builder.Integration.AspNet.Core;
+using Microsoft.Bot.Connector.Authentication;
+using Microsoft.TeamsFx.Conversation;
+
+var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddControllers();
+builder.Services.AddHttpClient("WebClient", client => client.Timeout = TimeSpan.FromSeconds(600));
+builder.Services.AddHttpContextAccessor();
+
+// Prepare Configuration for ConfigurationBotFrameworkAuthentication
+var config = builder.Configuration.Get<ConfigOptions>();
+builder.Configuration["MicrosoftAppType"] = "MultiTenant";
+builder.Configuration["MicrosoftAppId"] = config.BOT_ID;
+builder.Configuration["MicrosoftAppPassword"] = config.BOT_PASSWORD;
+
+// Create the Bot Framework Authentication to be used with the Bot Adapter.
+builder.Services.AddSingleton<BotFrameworkAuthentication, ConfigurationBotFrameworkAuthentication>();
+
+// Create the Cloud Adapter with error handling enabled.
+// Note: some classes expect a BotAdapter and some expect a BotFrameworkHttpAdapter, so
+// register the same adapter instance for all types.
+builder.Services.AddSingleton<CloudAdapter, AdapterWithErrorHandler>();
+builder.Services.AddSingleton<IBotFrameworkHttpAdapter>(sp => sp.GetService<CloudAdapter>());
+builder.Services.AddSingleton<BotAdapter>(sp => sp.GetService<CloudAdapter>());
+```
+
+---
 
 ### Import Teams AI library
 
@@ -62,7 +98,7 @@ Import all the classes from `@microsoft/teams-ai` to build your bot and use the 
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L64)
 
-```typescript
+```javascript
 // import Teams AI library
 import {
     AI,
@@ -126,10 +162,26 @@ const planner = new ActionPlanner({
 
 ```csharp
     // Create model
-    OpenAIModel model = new(new OpenAIModelOptions(
-        config.openAI.ApiKey,
-        "gpt-35-turbo"
-    ), loggerFactory);
+    
+    OpenAIModel? model = null;
+    
+    if (!string.IsNullOrEmpty(config.OpenAI?.ApiKey))
+    {
+        model = new(new OpenAIModelOptions(config.OpenAI.ApiKey, "gpt-3.5-turbo"));
+    }
+    else if (!string.IsNullOrEmpty(config.Azure?.OpenAIApiKey) && !string.IsNullOrEmpty(config.Azure.OpenAIEndpoint))
+    {
+        model = new(new AzureOpenAIModelOptions(
+            config.Azure.OpenAIApiKey,
+            "gpt-35-turbo",
+            config.Azure.OpenAIEndpoint
+        ));
+    }
+    
+    if (model == null)
+    {
+        throw new Exception("please configure settings for either OpenAI or Azure");
+    }
 
     // Create prompt manager
     PromptManager prompts = new(new()
@@ -137,19 +189,29 @@ const planner = new ActionPlanner({
         PromptFolder = "./Prompts",
     });
 
-    prompts.AddFunction("getLightStatus", (context, memory, functions, tokenizer, args) =>
+    // Add function to be referenced in the prompt template
+
+    prompts.AddFunction("getLightStatus", async (context, memory, functions, tokenizer, args) =>
     {
         bool lightsOn = (bool)(memory.GetValue("conversation.lightsOn") ?? false);
-        dynamic res = lightsOn ? "on" : "off";
-        return tasks.FromResult(res);
+        return await Task.FromResult(lightsOn ? "on" : "off");
     });
 
-    //Create ActionPlanner
+    // Create ActionPlanner
+    ActionPlanner<AppState> planner = new(
+        options: new(
+            model: model,
+            prompts: prompts,
+            defaultPrompt: async (context, state, planner) =>
+            {
+                PromptTemplate template = prompts.GetPrompt("sequence");
+                return await Task.FromResult(template);
+            }
+        )
+        { LogRepairs = true },
+        loggerFactory: loggerFactory
+    );
 
-    ActionPlanner<AppState> planner = new(new(model, prompts, (context, state, planner) =>
-    {
-        return tasks.FromResult(prompts.GetPrompt("sequence"));
-    });
 ```
 
 ---
@@ -183,19 +245,19 @@ The `MemoryStorage()` function stores all the state for your bot. The `Applicati
 # [C#](#tab/dotnet3)
 
 ```csharp
-return new TeamsLightBot(new ()
+ return new TeamsLightBot(new()
     {
         Storage = sp.GetService<IStorage>(),
         AI = new(planner),
         LoggerFactory = loggerFactory,
-        TurnStateFactory: () => 
+        TurnStateFactory = () =>
         {
             return new AppState();
         }
     });
 ```
 
-`TurnStateFactory` allows you to create a custom state class for your application. You can use it to store additional information or logic that you need for your bot. You can also override some of the default properties of the turn state, such as the user input, the bot output, or the conversation history. To use `TurnStateFactory`, you need to create a class that extends the default turn state and pass a function that creates an instance of your class to the application constructor. 
+`TurnStateFactory` allows you to create a custom state class for your application. You can use it to store additional information or logic that you need for your bot. You can also override some of the default properties of the turn state, such as the user input, the bot output, or the conversation history. To use `TurnStateFactory`, you need to create a class that extends the default turn state and pass a function that creates an instance of your class to the application constructor.
 
 ---
 
@@ -578,7 +640,7 @@ Monologue augmentation is suitable for tasks that require natural language under
 
 In the following example of a light bot, the `actions.json` file has a list of all the actions the bot can perform:
 
-```javascript
+```json
 [
     {
         "name": "LightsOn",
