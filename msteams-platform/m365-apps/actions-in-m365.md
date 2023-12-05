@@ -237,7 +237,7 @@ To deploy the app to Azure, follow these steps:
 
 1. Create an `env/.env.dev.user` file, and set value for `SECRET_SQL_USER_NAME` and `SECRET_SQL_PASSWORD`.
 
-1. Open the command palette and select **Teams: Provision in the cloud**. You'll be asked to input admin name and password of SQL. The toolkit helps you to provision Azure SQL.
+1. Open the command palette and select **Teams: Provision in the cloud**. You are asked to input admin name and password of SQL. The toolkit helps you to provision Azure SQL.
 
 1. Once provision is completed, open the command palette and select **Teams: Deploy to the cloud**.
 
@@ -249,7 +249,7 @@ A browser window opens with Microsoft 365 home page and your app is available un
 
 One single Action in the context menu contains App icon and display name.
 
-Actions with custom intent shows as a flat list in the bottom of the context menu, actions with Open/Add to intent will be grouped into Open and Add to.
+Actions with custom intent show as a flat list in the bottom of the context menu, actions with Open/Add to intent will be grouped into Open and Add to.
 
 :::image type="content" source="images/app-icon-context-menu.png" alt-text="The screenshot shows the app icon in context menu.":::
 
