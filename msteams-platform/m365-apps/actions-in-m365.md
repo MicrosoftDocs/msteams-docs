@@ -62,30 +62,30 @@ The following is an app manifest example for with `intent` and `supportedobjects
 
 Action to open a page: Action shows related tasks in the **To-do** app based on the selected file. It uses `"intent": "custom"` to identify the file type, such as .xlsx or doc. The `"type": "openPage"` handler opens the app and navigates to the `pageId`.
 
-    ```json
-    "actions": [
-        {
-            // Defining Action to open a page
-            "id": "relatedTasks",
-            "displayName": "Related tasks",
-            "intent": "custom",
-            "description": "Shows tasks in the To do app that are related to this file.",
-            "handlers": [
-                {
-                    "type": "openPage",
-                    "supportedObjects": {
-                        "file": {
-                            "extensions": ["xlsx", "doc", "docx", "pdf", "pptx", "ppt"]
-                        }
-                    },
-                    "pageInfo": {
-                        "pageId": "index",
+```json
+"actions": [
+    {
+        // Defining Action to open a page
+        "id": "relatedTasks",
+        "displayName": "Related tasks",
+        "intent": "custom",
+        "description": "Shows tasks in the To do app that are related to this file.",
+        "handlers": [
+            {
+                "type": "openPage",
+                "supportedObjects": {
+                    "file": {
+                        "extensions": ["xlsx", "doc", "docx", "pdf", "pptx", "ppt"]
                     }
+                },
+                "pageInfo": {
+                    "pageId": "index",
                 }
-            ]
-        }
-    ]
-    ```
+            }
+        ]
+    }
+]
+```
 
 The https:// URL referencing the JSON Schema for the manifest. Use public developer preview manifest schema.
 
@@ -177,9 +177,9 @@ You can now preview your Actions in Microsoft 365 app, right-click a file that i
 
 To debug the project, you will need to configure an Azure SQL Database to be used locally:
 
-1. [Create an Azure SQL database.](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal)
-1. [Add IP address of your computer into allowlist of firewall of Azure SQL Server.](/azure/azure-sql/database/firewall-configure?view=azuresql)
-1. Use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql) with below query to create a table:
+1. [Create an Azure SQL database.](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal&preserve-view=true)
+1. [Add IP address of your computer into allowlist of firewall of Azure SQL Server.](/azure/azure-sql/database/firewall-configure?view=azuresql&preserve-view=true)
+1. Use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql&preserve-view=true) with below query to create a table:
 
     ```sql
     (
@@ -232,7 +232,7 @@ A browser window opens with Microsoft 365 home page and your app is available un
     teamsfx deploy
     ```
 
-1. Open `env/.env.dev` file, you could get the database name in `PROVISIONOUTPUT__AZURESQLOUTPUT__DATABASENAME` output. In Azure portal, find the database and use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql) with below query to create a table:
+1. Open `env/.env.dev` file, you could get the database name in `PROVISIONOUTPUT__AZURESQLOUTPUT__DATABASENAME` output. In Azure portal, find the database and use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql&preserve-view=true) with below query to create a table:
 
     ```sql
     CREATE TABLE Todo
