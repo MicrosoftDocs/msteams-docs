@@ -1,12 +1,12 @@
 ---
-title: Use Microsoft Entra ID for Teams apps
+title: Microsoft Entra ID for Teams apps
 author: surbhigupta
-description: Hosting your Teams app on Azure helps you create reliable, scalable, and easy-to-maintain apps.
+description: Hosting your Teams app on Microsoft Entra ID helps you create reliable, scalable, and easy-to-maintain apps.
 ms.topic: overview
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ---
-# Use Microsoft Entra ID for Teams apps
+# Microsoft Entra ID for Teams apps
 
 Microsoft Entra ID is a cloud platform that simplifies the process of building Teams apps. You can host your Teams apps entirely in Microsoft Entra ID or extend your app with Azure services. Hosting your Teams app on Microsoft Entra ID helps you create apps that are reliable, scalable, and easily maintainable. Microsoft Entra ID supports popular programming languages, including Python, JavaScript, Java, .NET, and Go.
 
@@ -47,62 +47,10 @@ For more information about tenancy, see [Tenancy in Microsoft Entra ID](/entra/i
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWZb0O]
 
-## Register your Teams app on Microsoft Entra ID
+## Next step
 
-The following steps help you to create and register your app in Azure portal:
-
-* Create an app registration in Microsoft Entra ID.
-
-* Use Visual Studio or ngrok to create a tunnel.
-
-### Create an app registration in Microsoft Entra ID
-
-Register a new app in Microsoft Entra ID and configure the tenancy and app's platform. You generate a new app ID that you can use later in your Teams app manifest file.
-
-To register a new app in Microsoft Entra ID
-
-1. Open the [Azure portal](https://portal.azure.com/) on your web browser.
-
-1. Select the **App registrations** icon.
-
-    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Screenshot shows the Azure portal home page with app registrations icon highlighted in red.":::
-
-    The **App registrations** page appears.
-
-1. Select **+ New registration** icon.
-
-    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="Screenshot shows the app registrations page with new registration option highlighted in red.":::
-
-    The **Register an application** page appears.
-
-1. Enter the name of your app that you want the app user to see. You can change this name at a later stage if you want to.
-
-    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Screenshot shows the register an app page.":::
-
-1. Select the type of user account that can access your app.
-
-1. Select **Register**. A message appears on the browser stating that the app was created.
-
-    :::image type="content" source="../assets/images/authentication/teams-app-created-message.png" alt-text="Screenshot shows a message stating that the app was created.":::
-
-    Your app is registered in Microsoft Entra ID. The app overview page appears.
-
-    :::image type="content" source="../assets/images/authentication/teams-app-overview-page.png" alt-text="Screenshot shows the app registration overview page.":::
-
-    > [!NOTE]
-    > Save the app ID from **Application (client) ID** and **Directory (tenant) ID** for further use.
-
-### Create a tunnel
-
-# [dev tunnel](#tab/dev)
-
-[!INCLUDE [dev-tunnel](../includes/get-started/dev-tunnel.md)]
-
-# [ngrok](#tab/ngrok)
-
-[!INCLUDE [ngrok-tunnel](../includes/get-started/ngrok-tunnel.md)]
-
----
+> [!div class="nextstepaction"]
+>
 
 ## See also
 
