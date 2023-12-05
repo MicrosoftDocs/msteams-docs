@@ -47,9 +47,7 @@ Before you get started, ensure that you install the following tools:
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 | &nbsp; | [Azure SQL](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal&preserve-view=true) | Azure SQL Database, a fully managed platform as a service (PaaS) database engine that handles most of the database management functions such as upgrading, patching, backups, and monitoring without user involvement. |
 
-### Create Actions
-
-To create Actions for your app, follow these steps:
+To build Actions for your app, follow these steps:
 
 1. [Update app manifest](#update-app-manifest).
 1. [Retrieve Action information through context object](#retrieve-action-information-through-context-object).
@@ -59,11 +57,15 @@ To create Actions for your app, follow these steps:
 
 Define the intent, object, and handler for your actions in the app manifest schema (previously called Teams app manifest).
 
-The following is an app manifest example for with `intent` and `supportedobjects` and `handlers` properties for `openPage`:
-
-Action to open a page: Action shows related tasks in the **To-do** app based on the selected file. It uses `"intent": "custom"` to identify the file type, such as .xlsx or doc. The `"type": "openPage"` handler opens the app and navigates to the `pageId`.
+The following is an example of the `intent` and `supportedobjects` and `handlers` properties for `openPage` in app manifest:
 
 ```json
+{
+  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+.
+.
+.
 "actions": [
     {
         // Defining Action to open a page
@@ -86,17 +88,12 @@ Action to open a page: Action shows related tasks in the **To-do** app based on 
         ]
     }
 ]
-```
-
-The https:// URL referencing the JSON Schema for the manifest. Use public developer preview manifest schema.
-
-```json
-"$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
-
-"manifestVersion": "devPreview",
+}
 ```
 
 For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
+
+When a user selects an action to open a page and view related tasks in the To-do app based on the selected file. The app uses the `"intent": "custom"` property to identify the file type, such as .xlsx or doc and the `"type": "openPage"` handler opens the app and navigates to the `pageId`.
 
 #### Retrieve Action information through context object
 
@@ -112,15 +109,13 @@ this.setState({
 });
 ```
 
-**Parameters**
-
 | &nbsp; | Name | Description |
 | --- | --- | --- |
 | &nbsp; | `actionId` | Maps to the action id supplied inside the manifest. |
 | &nbsp; | `actionObjects` | Array of corresponding action objects. |
 | &nbsp; | `itemId` | The app receives the id as the content and uses it to query the Microsoft graph. |
 
-[`actionInfo`](/javascript/api/@microsoft/teams-js/actioninfo): The TeamsJS helps to enable your app to determine when a user opens a page or dialog from an Action, and the content that initiated the Action.
+The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a page from an Action, and the content that initiated the Action.
 
 ```javascript
 app.getContext().then((context: app.Context) => {
@@ -145,19 +140,27 @@ async readActionItem() {
 }
 ```
 
-## Build and run your app
+## Run your app
 
-After you update the app manifest, you can build and run your app in Teams Toolkit.
+After you update the app manifest, you can run your app in Teams Toolkit.
 
-To build and run your app locally:
+To run your app in Teams Toolkit follow these steps:
 
-1. Open your app in Teams Toolkit.
+1. Go to Visual Studio Code.
 
-1. From the left pane, select **Debug in the Microsoft 365 app (Edge) without backend** and enter **F5**.
+1. Select **File** > **Open Folder...**.
+
+1. Select the folder where your app is created.
+
+1. Select **Select Folder**.
+
+1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
+
+1. From the debug dropdown menu, select **Debug in the Microsoft 365 app (Edge) without backend** and select the **F5** key.
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 
-1. Select **Yes** if the following dialog appears:
+1. Select **Yes** if you receive the following security warning:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
 
@@ -169,17 +172,11 @@ You can now preview your Actions in Microsoft 365 app, right-click a file that i
 
 ### Enable Actions in Microsoft Admin Center
 
-1. Upload the app package containing the Actions in the [Microsoft Admin Center](https://admin.microsoft.com/#/homepage).
+In the [Microsoft Admin Center](https://admin.microsoft.com/AdminPortal#/homepage), select **Settings** > **Integrated Apps** > **Upload custom apps** and follow instructions to preinstall your app for entire organization or user groups within your tenant. Ensure that you've enabled the app for [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users in the tenant.
 
-1. Enable the app for [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to users in the tenant.
+### Run the app with Azure
 
-1. In the Microsoft Admin Center, select **Settings** > **Integrated Apps** > **Upload custom apps**.
-
-1. To use Actions, you need to enroll your users in the targeted release.
-
-### Run the app locally with Azure Subscription
-
-To debug the project, you'll need to configure an Azure SQL Database to be used locally:
+To run the app with Azure subscription, you'll need to configure an Azure SQL Database:
 
 1. [Create an Azure SQL database.](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal&preserve-view=true)
 
@@ -200,63 +197,31 @@ To debug the project, you'll need to configure an Azure SQL Database to be used 
 
 1. Open your app in Teams Toolkit.
 
-1. The file `env/.env.local.user` contains the config values for the Azure SQL Database you created. Open the file and update the values as follows:
+1. Open `env/.env.local.user` and update the following values:
 
     ```sql
+    LOCAL_STORAGE=
     SECRET_SQL_ENDPOINT=
     SECRET_SQL_DATABASE_NAME=
     SECRET_SQL_USER_NAME=
     SECRET_SQL_PASSWORD=
     ```
 
+    The `env/.env.local.user` file contains the config values for the Azure SQL Database you created. Open the file and update the values as follows:
+
 1. Update the `LOCAL_STORAGE` value to false in `env/.env.local` file.
 
-1. From the left pane, open debug view (Ctrl+Shift+D) and select **Debug in Teams (Edge)** from the  dropdown and enter **F5**.
+1. From the left pane, open debug view (Ctrl+Shift+D) and select **Debug in Teams (Edge)** from the  dropdown and select the **F5** key.
 
-A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
+A browser window opens with Microsoft 365 home page. Your app is available under the **Apps** section.
 
 ### Deploy the app to Azure
 
-1. Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available commands:
+To deploy the app to Azure, follow these steps:
 
-    ```bash
-    npm install -g @microsoft/teamsfx-cli
-    ```
+1. Clone the repo to your local workspace or directly download the source code.
 
-1. Create **todo-list** project.
-
-    ```bash
-    teamsfx new template todo-list-with-Azure-backend
-    ```
-
-1. Provision the project to Azure. Update admin name and password of SQL.
-
-    ```bash
-    teamsfx provision
-    ```
-
-1. Deploy the app.
-
-    ```bash
-    teamsfx deploy
-    ```
-
-1. Open `env/.env.dev` file from the database name in `PROVISIONOUTPUT__AZURESQLOUTPUT__DATABASENAME` output.
-
-1. In Azure portal, find the database and use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql&preserve-view=true) with below query to create a table:
-
-    ```sql
-    CREATE TABLE Todo
-    (
-        id INT IDENTITY PRIMARY KEY,
-        description NVARCHAR(128) NOT NULL,
-        objectId NVARCHAR(36),
-        channelOrChatId NVARCHAR(128),
-        isCompleted TinyInt NOT NULL default 0,
-    )
-    ```
-
-1. Open your app in Teams Toolkit.
+1. Open the project in Visual Studio Code.
 
 1. Create an `env/.env.dev.user` file, and set value for `SECRET_SQL_USER_NAME` and `SECRET_SQL_PASSWORD`.
 
@@ -281,13 +246,15 @@ Actions with custom intent shows as a flat list in the bottom of the context men
 > [!NOTE]
 > The placement of actions is determined by the Microsoft 365 platform. Using intent does not guarantee grouping, and using custom intent does not imply no grouping. We are planning to introduce additional features and experiences to assist users in quickly locating the most relevant and useful actions.
 
+### In context menu
+
 :::image type="content" source="images/actions-design-guidelines.png" alt-text="The screenshot shows the design of context menu.":::
 
 ## Code sample
 
 | **Sample name** | **Description** |**Node.js** |
 |-----------------|-----------------|----------------|
-| Actions in Microsoft 365 apps | This sample code describes the Actions in Microsoft 365 apps. |TBD|
+| Actions in Microsoft 365 apps | This sample code describes the Actions in Microsoft 365 apps. | [Code sample](https://github.com/OfficeDev/m365-msteams-actions-preview/tree/main) [Need to update the public link.]|
 
 ## See also
 
