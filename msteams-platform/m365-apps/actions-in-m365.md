@@ -168,14 +168,14 @@ You can now preview your Actions in Microsoft 365 app, right-click a file that i
 
 ### Enable Actions in Microsoft Admin Center
 
-1. Upload the app package containing the Actions in the Microsoft Admin Center.
+1. Upload the app package containing the Actions in the [Microsoft Admin Center](https://admin.microsoft.com/#/homepage).
 1. Enable the app for targeted release to users in the tenant.
 1. In the Microsoft Admin Center, select **Settings** > **Integrated Apps** > **Upload custom apps**.
 1. Ensure that you've your users enrolled in the targeted release to use Actions.
 
 ### Run the app locally with Azure Subscription
 
-To debug the project, you will need to configure an Azure SQL Database to be used locally:
+To debug the project, you'll need to configure an Azure SQL Database to be used locally:
 
 1. [Create an Azure SQL database.](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal&preserve-view=true)
 1. [Add IP address of your computer into allowlist of firewall of Azure SQL Server.](/azure/azure-sql/database/firewall-configure?view=azuresql&preserve-view=true)
@@ -192,7 +192,7 @@ To debug the project, you will need to configure an Azure SQL Database to be use
     )
     ```
 
-1. Open `env/.env.local.user` file, uncomment and set the values of below config with the Azure SQL Database you just created:
+1. Open `env/.env.local.user` file, uncomment and set the values of below config with the Azure SQL Database you created:
 
     ```sql
     SECRET_SQL_ENDPOINT=
@@ -220,7 +220,7 @@ A browser window opens with Microsoft 365 home page and your app is available un
     teamsfx new template todo-list-with-Azure-backend
     ```
 
-1. Provision the project to azure. Input admin name and password of SQL.
+1. Provision the project to Azure. Input admin name and password of SQL.
 
     ```bash
     teamsfx provision
@@ -247,7 +247,7 @@ A browser window opens with Microsoft 365 home page and your app is available un
 
 1. Open the project in Visual Studio Code.
 1. Create an `env/.env.dev.user` file, and set value for `SECRET_SQL_USER_NAME` and `SECRET_SQL_PASSWORD`.
-1. Open the command palette and select Teams: Provision in the cloud. You will be asked to input admin name and password of SQL. The toolkit will help you to provision Azure SQL.
+1. Open the command palette and select Teams: Provision in the cloud. You'll be asked to input admin name and password of SQL. The toolkit helps you to provision Azure SQL.
 1. Once provision is completed, open the command palette and select Teams: Deploy to the cloud.
 1. Open Debug View (Ctrl+Shift+D) and select **Launch Remote (Edge)** or **Launch Remote (Chrome)** from the  dropdown and enter **F5**.
 
@@ -257,7 +257,7 @@ A browser window opens with Microsoft 365 home page and your app is available un
 
 One single Action in the context menu contains App icon and display name.
 
-Actions with custom intent will show as a flat list in the bottom of the context menu, actions with Open/Add to intent will be grouped into Open and Add to.
+Actions with custom intent shows as a flat list in the bottom of the context menu, actions with Open/Add to intent will be grouped into Open and Add to.
 
 :::image type="content" source="images/app-icon-context-menu.png" alt-text="The screenshot shows the app icon in context menu.":::
 
