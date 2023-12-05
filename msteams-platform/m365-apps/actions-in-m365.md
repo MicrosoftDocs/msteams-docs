@@ -20,7 +20,7 @@ Actions help you enhance your app's visibility and engagement with minimal devel
 
 The following graphic is an example of open page Action where the user intends to view the list of suppliers. In Microsoft 365, the user right-clicks on the excel file and select the **Related suppliers**. The Northwind page opens with the list of suppliers. This saves time for the user to open the app and the Excel file and check each item manually.
 
-  :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user can add a file to the to-do list app with a note attached for a task to complete.":::
+  :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user right-clicks on the excel file and select the related suppliers.":::
 
 ## Build Actions
 
@@ -52,7 +52,7 @@ Before you get started, ensure that you install the following tools:
 To create Actions for your app, follow these steps:
 
 1. [Update app manifest](#update-app-manifest).
-1. [Create a handler](#create-a-handler).
+1. [Retrieve Action information through context object](#retrieve-action-information-through-context-object).
 1. [Access content through Graph API](#access-content-through-graph-api).
 
 #### Update app manifest
@@ -98,7 +98,7 @@ The https:// URL referencing the JSON Schema for the manifest. Use public de
 
 For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
 
-#### Create a handler
+#### Retrieve Action information through context object
 
 Update the handler to receive the Action information through the context object to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
 
@@ -170,16 +170,21 @@ You can now preview your Actions in Microsoft 365 app, right-click a file that i
 ### Enable Actions in Microsoft Admin Center
 
 1. Upload the app package containing the Actions in the [Microsoft Admin Center](https://admin.microsoft.com/#/homepage).
-1. Enable the app for targeted release to users in the tenant.
+
+1. Enable the app for [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to users in the tenant.
+
 1. In the Microsoft Admin Center, select **Settings** > **Integrated Apps** > **Upload custom apps**.
-1. Ensure that you've your users enrolled in the targeted release to use Actions.
+
+1. To use Actions, you need to enroll your users in the targeted release.
 
 ### Run the app locally with Azure Subscription
 
 To debug the project, you'll need to configure an Azure SQL Database to be used locally:
 
 1. [Create an Azure SQL database.](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal&preserve-view=true)
+
 1. [Add IP address of your computer into allowlist of firewall of Azure SQL Server.](/azure/azure-sql/database/firewall-configure?view=azuresql&preserve-view=true)
+
 1. Use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql&preserve-view=true) with below query to create a table:
 
     ```sql
@@ -193,7 +198,9 @@ To debug the project, you'll need to configure an Azure SQL Database to be used 
     )
     ```
 
-1. Open `env/.env.local.user` file, uncomment and set the values of below config with the Azure SQL Database you created:
+1. Open your app in Teams Toolkit.
+
+1. The file `env/.env.local.user` contains the config values for the Azure SQL Database you created. Open the file and update the values as follows:
 
     ```sql
     SECRET_SQL_ENDPOINT=
@@ -202,8 +209,9 @@ To debug the project, you'll need to configure an Azure SQL Database to be used 
     SECRET_SQL_PASSWORD=
     ```
 
-1. Edit the `LOCAL_STORAGE` value to false in `env/.env.local` file.
-1. Open Debug View (Ctrl+Shift+D) and select **Debug in the Microsoft 365 app (Edge)** from the  dropdown and enter **F5**.
+1. Update the `LOCAL_STORAGE` value to false in `env/.env.local` file.
+
+1. From the left pane, open debug view (Ctrl+Shift+D) and select **Debug in Teams (Edge)** from the  dropdown and enter **F5**.
 
 A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
 
@@ -215,13 +223,13 @@ A browser window opens with Microsoft 365 home page and your app is available un
     npm install -g @microsoft/teamsfx-cli
     ```
 
-1. Create todo-list project.
+1. Create **todo-list** project.
 
     ```bash
     teamsfx new template todo-list-with-Azure-backend
     ```
 
-1. Provision the project to Azure. Input admin name and password of SQL.
+1. Provision the project to Azure. Update admin name and password of SQL.
 
     ```bash
     teamsfx provision
@@ -233,7 +241,9 @@ A browser window opens with Microsoft 365 home page and your app is available un
     teamsfx deploy
     ```
 
-1. Open `env/.env.dev` file, you could get the database name in `PROVISIONOUTPUT__AZURESQLOUTPUT__DATABASENAME` output. In Azure portal, find the database and use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql&preserve-view=true) with below query to create a table:
+1. Open `env/.env.dev` file from the database name in `PROVISIONOUTPUT__AZURESQLOUTPUT__DATABASENAME` output.
+
+1. In Azure portal, find the database and use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql&preserve-view=true) with below query to create a table:
 
     ```sql
     CREATE TABLE Todo
@@ -246,10 +256,14 @@ A browser window opens with Microsoft 365 home page and your app is available un
     )
     ```
 
-1. Open the project in Visual Studio Code.
+1. Open your app in Teams Toolkit.
+
 1. Create an `env/.env.dev.user` file, and set value for `SECRET_SQL_USER_NAME` and `SECRET_SQL_PASSWORD`.
-1. Open the command palette and select Teams: Provision in the cloud. You'll be asked to input admin name and password of SQL. The toolkit helps you to provision Azure SQL.
-1. Once provision is completed, open the command palette and select Teams: Deploy to the cloud.
+
+1. Open the command palette and select **Teams: Provision in the cloud**. You'll be asked to input admin name and password of SQL. The toolkit helps you to provision Azure SQL.
+
+1. Once provision is completed, open the command palette and select **Teams: Deploy to the cloud**.
+
 1. Open Debug View (Ctrl+Shift+D) and select **Launch Remote (Edge)** or **Launch Remote (Chrome)** from the  dropdown and enter **F5**.
 
 A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
