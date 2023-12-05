@@ -16,9 +16,9 @@ ms.subservice: m365apps
 > * Actions is supported for Microsoft 365 apps on web and desktop clients only and isn't supported on Outlook and Microsoft Teams.
 
 Actions enable your app to integrate seamlessly into the user's workflow and guide users to your app based on their intent and the content at hand, making task completion more efficient.
-Actions help you enhance your app's visibility and engagement with minimal development effort and reduce the need to switch contexts across various Microsoft 365 apps. For instance, your app can act immediately on content files, expanding the range of interactions users can have with their content.
+Actions help you enhance your app's visibility and engagement with minimal development effort and reduce the need to switch contexts across various Microsoft 365 apps.
 
-In the following graphic, the user intends to attach a Word document to the list in the **To do** app. The user right-click on the Word document and select the **Add to** action. A dialog appears with the Word document attached. The user adds a note and selects **Submit**. The Word document is added to the list in the **To do** app:
+The following graphic is an example of open page Action where the user intends to view the list of suppliers. In Microsoft 365, the user right-clicks on the excel file and select the **Related suppliers**. The Northwind page opens with the list of suppliers. This saves time for the user to open the app and the Excel file and check each item manually.
 
   :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user can add a file to the to-do list app with a note attached for a task to complete.":::
 
@@ -26,17 +26,17 @@ In the following graphic, the user intends to attach a Word document to the list
 
 Actions are the combination of intent, object, and handler. Actions represent the task that the user wants to perform where intent is the user’s desired action, object is the function to be executed, and handler is the way to perform the action on the object.
 
-When you're creating an app ensure that you define user intent, choose the object to perform the action, and construct the corresponding handler that facilitates task completion for the user.
-
-| &nbsp; | Actions | Description | What is supported in this preview  
+| &nbsp; | Name | Description | What is supported in this preview  
 | --- | --- | --- | ---|
 | &nbsp; | Intent | Intent is the objective a user wants to perform or achieve, such as `Open` and  `addTo`. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement, grouping, and ordering of Actions. | You can create an intent for `Open`, `addTo`, and `custom` actions. You can use `custom` Actions to create tailored Actions. |
 | &nbsp; | Object  | Object is the file on which the user wants to perform an action. | Currently, Actions can be triggered on content objects (files) that have an extension, such as Word, PowerPoint, Excel, PDF, and images. The files must be available in OneDrive or SharePoint and are accessible through Microsoft Graph. |
 | &nbsp; | Handlers | A handler is how the Action performs the user’s intent on the selected object. It provides the logic and functionality of the Action, creating a smooth and meaningful user experience. | `openPage`: Handler allows you to directly guide users to your app's personal tab. By utilizing the `openPage` handler, you can effectively drive users to your app's dedicated pages, providing them with a rich and expansive interface to accomplish their goals. |
 
+When you create an app ensure that you define user intent, choose the object to perform the action, and construct the corresponding handler that facilitates task completion for the user.
+
 ### Prerequisites
 
-Ensure you install the following tools to build Actions in Microsoft 365:
+Before you get started, ensure that you install the following tools:
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
