@@ -34,7 +34,7 @@ To get started, ensure that you have the following tools:
 If you have run the samples before or encounter a runtime error, follow these steps to start fresh:
 
 * Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
-* If you don’t want Teams Toolkit to generate the **MicrosoftAppId** and **MicrosoftAppPassword**, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the`.env` file with your own values.
+* If you don’t want Teams Toolkit to generate the appId and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
 * Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
 
 Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit does not auto-generate the following:
@@ -54,7 +54,7 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 
 1. Go to the **JS** folder.
 
-1.Select a sample from the cloned repo that you want to test and go to the sample folder.
+1. Select a sample from the cloned repo that you want to test and go to the sample folder.
 
 1. Select the following AI service you want to use:
 

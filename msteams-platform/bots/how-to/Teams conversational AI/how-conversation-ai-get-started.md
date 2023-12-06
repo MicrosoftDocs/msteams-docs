@@ -58,10 +58,10 @@ const adapter = new CloudAdapter(botFrameworkAuthentication);
 
 ```
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet1)
 
 ```csharp
-using AI_library;
+using Microsoft.Teams.AI;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Integration.AspNet.Core;
 using Microsoft.Bot.Connector.Authentication;
@@ -123,7 +123,7 @@ Add AI capabilities to your existing app or a new Bot Framework app.
 
 **ActionPlanner**: The ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. It's responsible for generating and executing plans based on the user's input and the available actions.
 
-# [JavaScript](#tab/javascript)
+# [JavaScript](#tab/javascript1)
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L70)
 
@@ -156,7 +156,7 @@ const planner = new ActionPlanner({
 
 ```
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet2)
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/Program.cs#L51C1-L51C1).
 
@@ -574,7 +574,7 @@ app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState,
 });
 ```
 
-# [C#](#tab/dotnet2)
+# [C#](#tab/dotnet4)
 
 ```csharp
 public class LightBotActions
