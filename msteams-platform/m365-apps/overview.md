@@ -75,7 +75,7 @@ For more information, see [app manifest for Office Add-ins (preview)](/office/de
 
 When thinking about creating an app that will live within and build upon the Microsoft 365 ecosystem of apps, it's important to consider how it will aid your users in doing their work and completing their daily tasks. By being thoughtful in your app planning and design, you can create an experience that's more cohesive and introduces less friction to users as they go about their work.
 
-For apps that will span Microsoft 365 experiences, you can review our [App Playbooks](/microsoft-365-copilot/extensibility/plugins-are-apps#planning-your-app) and the preview of the [Microsoft 365 UI Kit (Figma)](https://aka.ms/UI-kit-m365) to help you get started.
+For apps that will span Microsoft 365 experiences, you can review our [App Playbooks](/microsoft-365-copilot/extensibility/plugins-are-apps#planning-your-app) and the preview of the [Microsoft 365 UI Kit (Figma)](https://aka.ms/M365UIKit) to help you get started.
 
 ## Microsoft commercial marketplace submission
 
