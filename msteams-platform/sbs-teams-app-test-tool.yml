@@ -120,15 +120,47 @@ items:
 
             :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
-    1. 
+    ## Create an app registration in Microsoft Entra ID
 
-    1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
+    Register a new app in Microsoft Entra ID and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
+
+    ### To register a new AI in Microsoft Entra ID
+
+    1. Go to the [Azure portal](https://ms.portal.azure.com/).
+
+    1. Select **create a resource and search for Azure Open AI.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
-    1. Test Tool opens the bot in a webpage.
+    1. Select Azure Open AI > select **Create**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
+    1. Fill the required details and select **Next**.
+    1. Select **All network  ** and then select **Next**.
+    1. FIll the rewuired details and select **Next**.
+    1. Select **Create**.
+
+    Deployment is in progress.
+
+    1. Select **Go to resources**.
+    1. Select **Keys and endpoints** from the left pane.
+    1. Copy the **Key and endpoints.
+    1. Select **Model deployments > Manage deployments.
+
+    Its opens Azure Open AI Studio.
+
+    1. Select **Create new deployments**.
+    1. Select the **gpt-35-turbo model** for Select a Model and **0301** for **Model version** from the dropdown list.
+    1. Enter **Deployment name** and select created.
+    1. Copy Deployment name.
+
+
+    1. Open VSC and 
+
+
+
+
 
 
 - title: Activity triggers
