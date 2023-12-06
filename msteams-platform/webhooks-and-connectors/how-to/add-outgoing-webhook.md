@@ -52,11 +52,11 @@ Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Web
 
 1. Select **Apps** on the channel page.
 
-    :::image type="content" source="../../assets/images/outgoingwebhook2_1.png" alt-text="Screenshot shows the apps tab on a Teams channel.":::
+    :::image type="content" source="../../assets/images/outgoing-webhook.png" alt-text="Screenshot shows the apps tab on a Teams channel.":::
 
 1. Select **Create an Outgoing Webhook**.
 
-    :::image type="content" source="../../assets/images/outgoingwebhook3_1.png" alt-text="Screenshot shows the select create outgoing webhook option."lightbox="../../assets/images/outgoingwebhook3_1.png":::
+    :::image type="content" source="../../assets/images/create-an-outgoing-webhook.png" alt-text="Screenshot shows the select create outgoing webhook option."lightbox="../../assets/images/create-an-outgoing-webhook.png":::
 
 1. Type the following details in the **Create an outgoing webhook** page:
 
@@ -67,7 +67,7 @@ Create Outgoing Webhooks and add custom bots to Teams. To create an Outgoing Web
 
 1. Select **Create**. The Outgoing Webhook is added to the current team's channel.
 
-    :::image type="content" source="../../assets/images/outgoingwebhook_1.png" alt-text="Screenshot shows the create button in the create an outgoing webhook window.":::
+    :::image type="content" source="../../assets/images/create-outgoingwebhook.png" alt-text="Screenshot shows the create button in the create an outgoing webhook window.":::
 
 A [Hash-based Message Authentication Code (HMAC)](https://security.stackexchange.com/questions/20129/how-and-when-do-i-use-hmac/20301) dialogue appears. It's a security token used to authenticate calls between Teams and the designated outside service. The HMAC security token doesn't expire and is unique for each configuration.
 
@@ -107,39 +107,42 @@ Your code must always validate the HMAC signature included in the request as fol
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/outgoing-webhook/csharp/Models/AuthProvider.cs#L63C13-L63C13)
 
 ```csharp
-            string providedHmacValue = authenticationHeaderValue.Parameter;
-            string calculatedHmacValue = null;
-            try
-            {
-                byte[] serializedPayloadBytes = Encoding.UTF8.GetBytes(messageContent);
-
-                byte[] keyBytes = Convert.FromBase64String(signingKey);
-                using (HMACSHA256 hmacSHA256 = new HMACSHA256(keyBytes))
-                {
-                    byte[] hashBytes = hmacSHA256.ComputeHash(serializedPayloadBytes);
-                    calculatedHmacValue = Convert.ToBase64String(hashBytes);
-                }
-
-                if (string.Equals(providedHmacValue, calculatedHmacValue))
-                {
-                    return new AuthResponse(true, null);
-                }
-                else
-                {
-                    string errorMessage = string.Format(
-                        "AuthHeaderValueMismatch. Expected:'{0}' Provided:'{1}'",
-                        calculatedHmacValue,
-                        providedHmacValue);
-
-                    return new AuthResponse(false, errorMessage);
-                }
-            }
-            catch (Exception ex)
-            {
-                Trace.TraceError("Exception occcured while verifying HMAC on the incoming request. Exception: {0}", ex);
-                return new AuthResponse(false, "Exception thrown while verifying MAC on incoming request.");
-            }
+public static AuthResponse Validate(AuthenticationHeaderValue authenticationHeaderValue, string messageContent, string claimedSenderId)
+{
+    //...
+    string providedHmacValue = authenticationHeaderValue.Parameter;
+    string calculatedHmacValue = null;
+    try
+    {
+        byte[] serializedPayloadBytes = Encoding.UTF8.GetBytes(messageContent);
+ 
+        byte[] keyBytes = Convert.FromBase64String(signingKey);
+        using (HMACSHA256 hmacSHA256 = new HMACSHA256(keyBytes))
+        {
+            byte[] hashBytes = hmacSHA256.ComputeHash(serializedPayloadBytes);
+            calculatedHmacValue = Convert.ToBase64String(hashBytes);
         }
+ 
+        if (string.Equals(providedHmacValue, calculatedHmacValue))
+        {
+            return new AuthResponse(true, null);
+        }
+        else
+        {
+            string errorMessage = string.Format(
+                "AuthHeaderValueMismatch. Expected:'{0}' Provided:'{1}'",
+                calculatedHmacValue,
+                providedHmacValue);
+ 
+            return new AuthResponse(false, errorMessage);
+        }
+    }
+    catch (Exception ex)
+    {
+        Trace.TraceError("Exception occcured while verifying HMAC on the incoming request. Exception: {0}", ex);
+        return new AuthResponse(false, "Exception thrown while verifying MAC on incoming request.");
+    }
+}
 ```
 
 # [Method to respond](#tab/methodtorespond)
