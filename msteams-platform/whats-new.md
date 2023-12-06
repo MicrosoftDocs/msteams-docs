@@ -56,7 +56,7 @@ Teams platform features that are available to all app developers.
 |20/11/2023|Introduced API to capture image or media from the gallery|Integrate device capabilities > Integrate media capabilities > [Media capability APIs](concepts/device-capabilities/media-capabilities.md)|
 |17/11/2023|Terminology update. Sideload is referred to as upload a custom app||
 |17/11/2023|Launched a Teams app testing tool to simplify debugging of bot-based apps|Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug bot using Teams App Test Tool](toolkit/debug-your-Teams-app-test-tool.md)|
-|14/11/2023|Introduced API to fetch meeting recordings from all meetings.|Build apps for Teams meetings and calls > Get meeting transcripts and recordings using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md#reserved-activity-type-for-send-activity-feed-notifications)|
+|14/11/2023|Introduced API to fetch meeting recordings from all meetings.|Build apps for Teams meetings and calls > Get meeting transcripts and recordings using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md)|
 |14/11/2023|Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID| |
 |03/11/2023|Introduced systemDefault reserved activity type for send activity feed notifications.|Build tabs > [Send activity feed notifications](tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications)|
 |03/11/2023|Introduced apps for Teams meetings in GCC-High environment|Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md)|
