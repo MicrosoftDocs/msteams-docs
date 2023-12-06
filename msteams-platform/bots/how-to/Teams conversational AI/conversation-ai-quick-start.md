@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: ai-library-quick-start
 ms.author: v-ypalikila
-ms.date: 04/07/2022
+ms.date: 12/06/2022
 ---
 
 # Teams AI library quick start guide
@@ -14,10 +14,6 @@ ms.date: 04/07/2022
 > [!NOTE]
 >
 > Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
-Get started with Teams AI library using the **ChefBot** sample. It's designed to quickly run a Teams AI library based sample on your computer's localhost.
-
-
 
 ## Prerequisites
 
@@ -30,7 +26,7 @@ To get started, ensure that you have the following tools:
 | [Teams Toolkit](#install-teams-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
-| [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have create an Azure OpenAI service.|
+| [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
 
@@ -41,7 +37,7 @@ If you have run the samples before or encounter a runtime error, follow these st
 * If you don’t want Teams Toolkit to generate the appId and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
 * Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
 
-Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit does not auto-generate the following:
+Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following:
 
 * An Azure OpenAI or OpenAI key
 * A database or similar storage options
@@ -49,6 +45,8 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 ::: zone pivot="qs-javascript"
 
 ## Build and run the sample app
+
+Get started with Teams AI library using the **ChefBot** sample. It's designed to quickly run a Teams AI library based sample on your computer's localhost.
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
@@ -58,9 +56,14 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
    git clone https://github.com/microsoft/teams-ai.git
    ```
 
+1. Go to the **teams-ai** folder and run the following command to import Teams AI library:
+
+   ```
+   npm install @microsoft/teams-ai
+   ```
 1. Go to the **JS** folder.
 
-1. Select a sample from the cloned repo that you want to test and go to the sample folder.
+1. Go to the folder where you've cloned the repository and select **04.ai.a.teamsChefBot**.
 
 1. Select the following AI service you want to use:
 
@@ -83,22 +86,22 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
         AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}}
        ```
 
-   1. Go to the `index.ts` file and comment the following lines under **// OpenAI Support**:
-
-      ```typescript
-      apiKey: process.env.OPENAI_KEY!,
-      defaultModel: 'text-ada-001',
-      ```
-
-   1. Update Update the value for `azureDefaultDeployment` with the model you've deployed.
+   1. In the `index.ts` file, update the value for `azureDefaultDeployment` with your model deployment name.
 
       ```typescript
       azureDefaultDeployment: 'gpt-35-turbo',
       ```
 
+   1. In the `config.json` file, update the value for `model` with your model deployment name.
+
+      ```json
+      "model": "gpt-3.5-turbo"
+      ```
+
+
    # [Open AI](#tab/open-ai)
 
-   1. In the sample folder, update the following in the `.env.local.user` configuration file:
+   1. In the sample folder, update the following code in the `.env.local.user` configuration file:
 
        ```text
         SECRET_OPENAI_API_KEY=<your OpenAI key>
@@ -113,26 +116,25 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
         OPENAI_API_KEY: ${{SECRET_OPENAI_API_KEY}}
        ```
 
-   1. Go to the `index.ts` file and comment the following lines under **// Azure OpenAI Support**:
-
-      ```typescript
-      azureApiKey: process.env.AZURE_OPENAI_KEY!,
-      azureDefaultDeployment: 'text-ada-001',
-      azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT!,
-      azureApiVersion: '2023-03-15-preview',
-      ```
-
-   1. Update the value for `defaultModel` with the model you've deployed.
+   1. In the `index.js` file, update the value for `defaultModel` with your model deployment name.
 
       ```typescript
       defaultModel: 'gpt-35-turbo',
       ```
 
+   1. In the `config.json` file, update the value for `model` with your model deployment name.
+
+      ```json
+      "model": "gpt-3.5-turbo"
+      ```
+
+   1. In the sample root folder, duplicate the `sample.env` file  and update the duplicate file to `.env`.
+
       ---
 
 1. Go to **Visual Studio Code**.
 
-1. Select **Open a folder**, browse to the folder where sample is available and then select **Select folder**.
+1. Select **Open a folder**, browse to the folder where ChefBot is available and then select **Select folder**.
 
 1. From the left pane, select **Teams Toolkit**.
 
@@ -144,7 +146,7 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 
    A browser tab opens a Teams web client requesting to add the bot to your tenant.
 
-   1. If you get an error, which says **Could not find a declaration file for module 'jsonwebtoken'**, run the following in the **TERMINAL**:
+   1. If you get an error, which says **Could not find a declaration file for module 'jsonwebtoken'**, run the following command in the **TERMINAL**:
 
       ```
       yarn add @types/jsonwebtoken
@@ -156,7 +158,7 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 
    A chat window opens.
 
-1. In the message compose area, @mention your bot to invoke the bot.
+1. In the message compose area, send a message to invoke the bot.
 
    :::image type="content" source="../../../assets/images/bots/conversation-AI-quick-start-final.png" alt-text="Screenshot shows an example of conversation with Teams chef bot in Teams.":::
 
@@ -182,22 +184,38 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 1. Go to the **dotnet** folder.
 
    ```
-   cd teams-ai/dotnet/samples
+   cd teams-ai/dotnet
    ```
 
 1. Go to the folder where you've cloned the repository and select **04.ai.a.teamsChefBot**.
 1. Select **TeamsChefBot.sln**. The solution opens in Visual Studio.
-1. In Visual Studio, update the following code in the `appsettings.Development.json` file:
 
-   ```json
-   "Azure": {
-    "OpenAIApiKey": "<your-azure-openai-api-key>",
-    "OpenAIEndpoint": "<your-azure-openai-endpoint>",
-    "ContentSafetyApiKey": "<your-azure-content-safety-api-key>",
-    "ContentSafetyEndpoint": "<your-azure-content-safety-endpoint>"
-   }
-   ```
+1. Select the following AI service you want to use:
 
+   # [Azure OpenAI](#tab/azure-open-ai2)
+
+   1. In Visual Studio, update your Azure OpenAI related settings in the `appsettings.Development.json` file.
+
+      ```json
+      "Azure": {
+      "OpenAIApiKey": "<your-azure-openai-api-key>",
+      "OpenAIEndpoint": "<your-azure-openai-endpoint>",
+      "ContentSafetyApiKey": "<your-azure-content-safety-api-key>",
+      "ContentSafetyEndpoint": "<your-azure-content-safety-endpoint>"
+      }
+      ```
+
+   # [Open AI](#tab/open-ai2)
+
+   1. In Visual Studio, update your OpenAI related settings in the `appsettings.Development.json` file.
+
+      ```json
+      "OpenAI": {
+      "ApiKey": "<your-openai-api-key>"
+      },
+      ```
+   ---
+     
 1. In the debug dropdown menu, select **Dev Tunnels** > **Create A Tunnel**.
 1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported. Update the following:
    1. Name: Enter a name for the tunnel.
@@ -210,7 +228,9 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 1. Go to **Solution Explorer** and select your project.
 1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-   If prompted, sign in with a Microsoft 365 account.
+   If prompted, sign in to your Microsoft 365 account. You'll receive a message that Teams app is successfully prepared.
+
+1. Select **OK**.
 
 1. Select **F5** or select **Debug** > **Start**.
 1. Select **Add**. The message extension is added to Teams.
@@ -223,13 +243,13 @@ You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow 
 
 ::: zone-end
 
-You can also use the following tools to run and setup a sample:
+You can also use the following tools to run and set up a sample:
 
-1. Teams Toolkit CLI: You can use the Teams Toolkit CLI to create and manage Microsoft Teams apps from the command line. To get started, you’ll need to install the Teams Toolkit CLI by running npm install -g @microsoft/teamsfx-cli. For more information, see [Teams Toolkit CLI set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/TEAMS-TOOLKIT-CLI.md)
+1. **Teams Toolkit CLI**: You can use the Teams Toolkit CLI to create and manage Microsoft Teams apps from the command line. For more information, see [Teams Toolkit CLI set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/TEAMS-TOOLKIT-CLI.md).
 
-1. Bot Framework Emulator: The Bot Framework Emulator is a desktop application that allows you to test and debug your bot locally. To use the emulator, you’ll need to download and install it from [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator). Once installed, you can connect to your bot by entering the bot’s endpoint URL and Microsoft App ID and password. You can then send messages to your bot and see its responses in real-time. For more information, see [Bot Framework Emulator set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/BOTFRAMEWORK-EMULATOR.md)
+1. **Bot Framework Emulator**: The [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator) is a desktop application that allows you to test and debug your bot locally. Y you can connect to your bot by entering the bot’s endpoint URL and Microsoft App ID and password. You can then send messages to your bot and see its responses in real-time. For more information, see [Bot Framework Emulator set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/BOTFRAMEWORK-EMULATOR.md).
 
-1. Manual resource setup: If you prefer to set up your resources manually, you can do so by following the instructions provided by the respective services. For more information, see [Manual set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/MANUAL-RESOURCE-SETUP.md)
+1. **Manual setup**: If you prefer to set up your resources manually, you can do so by following the instructions provided by the respective services. For more information, see [Manual set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/MANUAL-RESOURCE-SETUP.md).
 
 
 ## Next step
