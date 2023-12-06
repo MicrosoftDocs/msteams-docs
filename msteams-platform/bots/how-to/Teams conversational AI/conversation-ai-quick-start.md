@@ -33,9 +33,8 @@ To get started, ensure that you have the following tools:
 | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have create an Azure OpenAI service.|
 | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
+
 <br/>
-
-
 If you have run the samples before or encounter a runtime error, follow these steps to start fresh:
 
 * Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
@@ -223,6 +222,15 @@ You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow 
 1. Right-click the menu and select **Teams Toolkit** > **Deploy to the Cloud**.
 
 ::: zone-end
+
+You can also use the following tools to run and setup a sample:
+
+1. Teams Toolkit CLI: You can use the Teams Toolkit CLI to create and manage Microsoft Teams apps from the command line. To get started, you’ll need to install the Teams Toolkit CLI by running npm install -g @microsoft/teamsfx-cli. For more information, see [Teams Toolkit CLI set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/TEAMS-TOOLKIT-CLI.md)
+
+1. Bot Framework Emulator: The Bot Framework Emulator is a desktop application that allows you to test and debug your bot locally. To use the emulator, you’ll need to download and install it from [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator). Once installed, you can connect to your bot by entering the bot’s endpoint URL and Microsoft App ID and password. You can then send messages to your bot and see its responses in real-time. For more information, see [Bot Framework Emulator set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/BOTFRAMEWORK-EMULATOR.md)
+
+1. Manual resource setup: If you prefer to set up your resources manually, you can do so by following the instructions provided by the respective services. For more information, see [Manual set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/MANUAL-RESOURCE-SETUP.md)
+
 
 ## Next step
 
