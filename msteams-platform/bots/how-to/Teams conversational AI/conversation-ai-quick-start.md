@@ -17,19 +17,24 @@ ms.date: 04/07/2022
 
 Get started with Teams AI library using the **ChefBot** sample. It's designed to quickly run a Teams AI library based sample on your computer's localhost.
 
-::: zone pivot="qs-javascript"
 
-## Set up your development environment
+
+## Prerequisites
 
 To get started, ensure that you have the following tools:
 
-* Microsoft Teams
-* [Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
-* [Teams Toolkit extension](../../../toolkit/install-Teams-Toolkit.md)
-* [NodeJS](https://nodejs.org/en/)
-* [OpenAI](https://openai.com/api/) key
-* [Azure Open AI Service](https://oai.azure.com/portal)
-* Global Administrator access to a [Microsoft 365 tenant](https://developer.microsoft.com/microsoft-365/dev-program?ocid=MSlearn&WT.mc_id=m365-16105-cxa) and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading)
+| Install | For using... |
+| --- | --- |
+| &nbsp; | &nbsp; |
+| [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or CSharp build environments. Use the latest version. |
+| [Teams Toolkit](#install-teams-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+| [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+| [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must have create an Azure OpenAI service.|
+| [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
+<br/>
+
 
 If you have run the samples before or encounter a runtime error, follow these steps to start fresh:
 
@@ -41,6 +46,8 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 
 * An Azure OpenAI or OpenAI key
 * A database or similar storage options
+
+::: zone pivot="qs-javascript"
 
 ## Build and run the sample app
 
@@ -162,15 +169,6 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 ::: zone-end
 
 ::: zone pivot="qs-csharp"
-
-## Prerequisites
-
-To get started, ensure that you have the following tools:
-
-* [**.NET 6.0 SDK**](https://dotnet.microsoft.com/download/dotnet/6.0)
-* [**Azure OpenAI resource**](https://oai.azure.com/portal) or [OpenAI](https://platform.openai.com/docs/overview).
-* Visual Studio 2022 17.7.0 or later.
-* [Teams Toolkit extension](../../../toolkit/toolkit-v4/install-Teams-Toolkit-vs.md)
 
 ## Build and run the sample app
 
