@@ -49,7 +49,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Introduced RSC permissions for users to access different resources
-        url:  graph-api/rsc/resource-specific-consent.md
+        url:  graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access
       - text: Extend an action-based Teams message extension across Microsoft 365
         url:  m365-apps/extend-m365-teams-message-extension.md
       - text: Use captureImage API to capture an image or select media from the gallery for mobile clients
