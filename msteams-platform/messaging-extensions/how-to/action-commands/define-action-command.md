@@ -171,7 +171,7 @@ The following code provides an example of action based for message extensions:
                             },
                         },
                     };
-                // return TaskModuleHTMLPage(turnContext, action);
+                return TaskModuleHTMLPage(turnContext, action);
                 default:
                     string memberName = "";
                     var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);
