@@ -14,8 +14,8 @@ Registering your Teams app in Microsoft Entra ID allows the app to access Azure 
 
 It's helpful if you learn about the configuration for registering your app in Microsoft Entra ID beforehand. Ensure that you're prepared to configure the following details prior to registering your app:
 
-* **Single or multitenant options**: Will your application be used in only the Microsoft 365 tenant where it's registered, or will many Microsoft 365 tenants use it? For example, apps created for a single organization are typically single tenant. On the other hand, apps created by an independent software vendor that is used by many customers need to be multitenant so each customer's tenant can access the app.
-* **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also referred to as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your app's domain name and the domain name you register for your Microsoft Entra application should be the same. Currently, a single app doesn't support multiple domains.
+* **Single or multitenant options**: Choose single tenant if your application is only used in its home tenant, or choose multitenant if many Microsoft 365 tenants use it regularly. For example, apps created for a single organization are typically single tenant. On the other hand, apps created by an independent software publisher that is used by many customers need to be multitenant so each customer's tenant can access the app.
+* **Application ID URI**: It's a globally unique URI that identifies the web API you expose for your app's access through scopes. It's also known as an identifier URI. The application ID URI includes the app ID and the subdomain where your app is hosted. Your app's domain name and the domain name you register for your Microsoft Entra application should be the same. Currently, a single app doesn't support multiple domains.
 
 ## App registration experience in Microsoft Entra ID
 

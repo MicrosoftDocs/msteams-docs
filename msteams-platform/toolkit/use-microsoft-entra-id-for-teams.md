@@ -37,9 +37,9 @@ Microsoft Entra ID also enables you to customize who has access to your account 
 
 ## Tenants in Microsoft Entra ID
 
-A 'tenant' is a secure identity and access management system for the Teams apps that you host in Microsoft Entra ID. It also contains the users, groups, and other apps stored in the organization’s Azure environment. The tenant provides a centralized platform for admins to manage identities, permissions, and access to Azure resources and services.
+A 'tenant' is a secure identity and access management system for the Teams apps that you host in Microsoft Entra ID. It also contains the users, groups, and other apps stored in the organization’s Azure environment. The tenant provides a centralized platform for admins to manage identities, permissions, and access to Azure resources and services. The tenant in which you register your app is referred to as its home tenant.
 
-A single tenant app in Microsoft Entra ID is restricted to the users in the organizational directory it's created in. This type of tenant is suited for apps that are simple and prioritize security, privacy, and collaboration within an organization. On the other hand, multitenant apps are accessible to users both inside and outside the tenant it's created in. This type of tenancy promotes better scalability, reach, and collaboration within and across organizations.
+A single tenant app in Microsoft Entra ID is restricted to the users in the organizational directory of its home tenant. This type of tenant is suited for apps that are simple and prioritize security, privacy, and collaboration within an organization. On the other hand, multitenant apps are accessible to users both inside and outside the home tenant. This type of tenancy promotes better scalability, reach, and collaboration within and across organizations.
 
 For more information about tenancy, see [Tenancy in Microsoft Entra ID](/entra/identity-platform/single-and-multi-tenant-apps) or see the following video:
 <br>
@@ -50,7 +50,7 @@ For more information about tenancy, see [Tenancy in Microsoft Entra ID](/entra/i
 ## Next step
 
 > [!div class="nextstepaction"]
->
+> [Register Teams app in Microsoft Entra ID](register-teams-app-microsoft-entra-id.md)
 
 ## See also
 

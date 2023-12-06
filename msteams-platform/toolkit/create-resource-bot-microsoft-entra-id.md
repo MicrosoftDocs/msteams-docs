@@ -8,11 +8,11 @@ ms.localizationpriority: medium
 ---
 # Create a bot resource in Microsoft Entra ID
 
-Your Teams bot app can access resources available in Microsoft Entra ID. You'll need to create a bot resource with Microsoft Entra ID. This process will register your bot app with Azure AI Bot Service and enable the bot app to connect to Teams channels.
+Your Teams bot app can access resources available in Microsoft Entra ID. You need to create a bot resource with Microsoft Entra ID. This process registers your bot app with Azure AI Bot Service and enable the bot app to connect to Teams channels.
 
 In this section, you will:
 
-- [Create bot resource](#create-a-bot-resource-in-azure-ad)
+- [Create and deploy bot resource](#create-a-bot-resource-in-microsoft-entra-id)
 - [Configure the client secret](#create-client-secret)
 - [Enable the bot resource for Teams](#enable-bot-for-teams)
 
@@ -32,19 +32,19 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
 1. Type **Azure bot** in the search box, and select the Azure bot from the options that appear.
 
-    :::image type="content" source="../assets/images/authentication/select-azure-bot-marketplace.png" alt-text="Screenshot shows the azure bot in the azure marketplace.":::
+    :::image type="content" source="../assets/images/authentication/select-azure-bot-marketplace.png" alt-text="Screenshot shows the Azure bot in the Azure Marketplace.":::
 
-    The **Azure Bot** page appears, and the plan is pre-selected as Azure Bot.
+    The **Azure Bot** page appears, and the plan is preselected as Azure Bot.
 
 1. Select **Create**.
 
-    :::image type="content" source="../assets/images/authentication/azure-bot-create.png" alt-text="Screenshot shows the azure bot plan selected in the azure bot creation screen.":::
+    :::image type="content" source="../assets/images/authentication/azure-bot-create.png" alt-text="Screenshot shows the Azure bot plan selected in the Azure bot creation screen.":::
 
     The **Create an Azure Bot** page appears.
 
 1. Enter relevant details for the bot app.
 
-    1. Under **Project details**, enter the following:
+    1. Under **Project details**, enter the following details:
 
         1. Enter a unique identifier as the bot handle. It isn't the display name, and you can choose a different display name later.
 
@@ -52,80 +52,73 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
         1. Select the resource group that you want to provision for your bot app.
 
-        1. Select the data residency option. Depending on your choice, this limits or doesn't limit the regions where data is stored and processed and the channels available for your bot.
+        1. Select the data residency option. Your choice limits the regions where data is stored and processed and the channels available for your bot.
 
-        :::image type="content" source="../assets/images/authentication/create-azure-bot-screen.png" alt-text="Screenshot shows the main create azure bot screen.":::
+            :::image type="content" source="../assets/images/authentication/create-azure-bot-screen.png" alt-text="Screenshot shows the project details tab of the create Azure bot screen.":::
 
             You can also create a new resource group.
 
             1. Select **Create new**.
 
-                :::image type="content" source="../../assets/images/aad-configuration/bot-resource-aad/create-new-resource.png" alt-text="Create new resource for provisioning." border="false":::
+                :::image type="content" source="../assets/images/authentication/create-resource-group.png" alt-text="Screenshot shows the option to create a new resource group in Azure portal.":::
 
             1. Enter a name for the resource and select **OK**.
 
-    1. Select the **Pricing** details.
+    1. Under **Pricing**, the standard price tier is selected by default. You can change your pricing tier by clicking on **Change plan**.
 
-        The standard price tier is selected by default. You can change your pricing tier, if needed.
+    1. Under **Microsoft App ID**, you need to configure the type of app and the creation type.
 
-    1. Select the **Microsoft App ID** details.
+        1. Depending on how you want to use the bot resource, choose from **User-assigned Managed Identity**, **Multi Tenant**, and **Single Tenant** as the type of app.
 
-        1. Select the type of app in the **Microsoft App ID** section. Choose from User-assigned managed identity, Multi Tenant, and Single Tenant.
+        1. For the app creation type, you can either create a new Microsoft App ID or use an existing app registration. If you select **Create new Microsoft App ID**, Azure creates a new and unique app ID for your bot resource.
 
-        1. Select **Use existing app registration** as the creation type.
+        1. If you already have a registered app that you want to link the bot resource to, select **Use existing app registration** as the creation type.
+
+            :::image type="content" source="../assets/images/authentication/select-existing-app-registration.png" alt-text="Screenshot shows the option to enter an existing app ID in the create Azure bot screen. ":::
 
             The fields for entering the app ID details appear.
 
-        1. Enter the app ID for the Azure AD app you registered.
+        1. Enter the app ID of the Microsoft Entra app you have already registered.
 
-        1. Enter the app tenant ID for the Azure AD app you registered.
+1. (Optional) Select **Next** and the **Tags** tab opens.
 
-1. Select **Next : Tags >**.
+    1. Enter the name and value tags for categorizing resources you provisioned.
 
-    The **Tags** tab opens.
+    :::image type="content" source="../assets/images/authentication/name-value-tag-azure-bot.png" alt-text="Screenshot shows the tags tab in the create an Azure bot screen.":::
 
-1. Enter the name and value tags for categorizing resources you provisioned.
+1. Select **Review + create**.
 
-    These steps aren't mandatory and you can skip them, if needed.
+    Microsoft Entra ID validates the entered details. After successful validation, it creates the bot resource and provisions the selected resources.
 
-    :::image type="content" source="../../assets/images/aad-configuration/bot-resource-aad/create-bot-tags.png" alt-text="Create name and value tag pairs for categorizing resources for billing purpose." border="false":::
+1. Select **Create** to create the bot.
 
-1. Select **Next : Review + create >**.
-
-    Azure AD validates the project details. After successful validation, it creates the project and provisions the selected resources.
-
-1. Select **Create** to create the bot after successful validation.
-
-    :::image type="content" source="../../assets/images/aad-configuration/bot-resource-aad/review-create.png" alt-text="Create bot" border="false":::
+    :::image type="content" source="../assets/images/authentication/resource-bot-creation-final-preview.png" alt-text="Screenshot shows the final preview screen before creating a bot in Azure portal.":::
 
      A message pops up on the browser stating that the deployment is being initialized.
 
-    :::image type="content" source="../../assets/images/aad-configuration/bot-resource-aad/initialize-deploment.png" alt-text="Message stating deployment is initialized" border="true":::
+    :::image type="content" source="../assets/images/authentication/initialize-deployment-message.png" alt-text="Screenshot shows a message stating the deployment of the resource is initializing.":::
 
-    The **Overview** page appears that states the deployment is in progress. The deployment details are displayed on the page.
+    The **Overview** page opens as the deployment is in progress. Once the deployment is complete, you get a **Deployment succeeded** message.
 
-    :::image type="content" source="../../assets/images/aad-configuration/bot-resource-aad/deploy-progress.png" alt-text="Deployment in progress" border="false":::
+1. Under **Next steps** dropdown, select **Go to resource**.
 
-1. Select **Go to resource** to view the bot details.
+    :::image type="content" source="../assets/images/authentication/go-to-bot-resource.png" alt-text="Screenshot shows the Azure bot resource deployment page.":::
 
-    :::image type="content" source="../../assets/images/aad-configuration/bot-resource-aad/bot-deployed.png" alt-text="Bot resource is deployed" border="false":::
+     You can see the details of the bot resource you deployed.
 
-     You can view the subscription details for the bot resource.
+    :::image type="content" source="../assets/images/authentication/bot-resource-overview-page.png" alt-text="Screenshot shows the overview page of the resource bot":::
 
-    :::image type="content" source="../../assets/images/aad-configuration/bot-resource-aad/bot-app-created.png" alt-text="Bot app is created" border="false":::
-
-After you create your bot resource, you need to add a client secret and enable bot for working in Teams.
+After you create your bot resource, you need to add a client secret and enable the bot to work in Teams.
 
 ### Create client secret
 
-A client secret is a string that the bot app uses to prove its identity when requesting a token from Azure AD.
+A client secret is a string that the bot app uses to prove its identity when requesting a token from Microsoft Entra ID.
 
 #### To create client secret for the bot
 
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
-   The Microsoft Azure Bot page opens.
 
-1. Enter the name of your Azure AD app in **Search** box, and open your app.
+1. Enter the name of your Microsoft Entra app in **Search** box, and open your app.
 
 1. Select **Settings** > **Configurations**.
 
@@ -160,7 +153,7 @@ A client secret is a string that the bot app uses to prove its identity when req
 
    > [!NOTE]
    > Ensure that you copy the value of client secret right after you create it. The value is visible only at the time when the client secret is created, and can't be viewed after that.
-   >
+
 ### Enable bot for Teams
 
 You must enable the Teams channel to let the bot interact with Microsoft Teams.
@@ -170,7 +163,7 @@ You must enable the Teams channel to let the bot interact with Microsoft Teams.
 1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
    The Microsoft Azure Bot page opens.
 
-1. Enter the name of your Azure AD app in **Search** box, and open your app.
+1. Enter the name of your Microsoft Entra app in **Search** box, and open your app.
 
 1. Select **Settings** > **Channels**.
 
