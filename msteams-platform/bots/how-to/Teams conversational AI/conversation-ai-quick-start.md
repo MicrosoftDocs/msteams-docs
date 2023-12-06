@@ -90,7 +90,7 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
       azureDefaultDeployment: 'gpt-35-turbo',
       ```
 
-   # [Open AI](tab/open-ai)
+   # [Open AI](#tab/open-ai)
 
    1. In the sample folder, update the following in the `.env.local.user` configuration file:
 
