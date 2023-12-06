@@ -28,18 +28,6 @@ Teams platform features that are available to all app developers.
 
 ***December 05, 2023***: [Introduced RSC permissions for users to access different resources.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access)
 
-**2023 November**
-
-* **November 27, 2023**: [Extend an action-based Teams message extension across Microsoft 365.](~/m365-apps/extend-m365-teams-message-extension.md)
-* **November 21, 2023**: Terminology update. LOB apps is referred to as custom apps built for your org (LOB apps).
-* **November 20, 2023**: [Use captureImage API to capture an image or select media from the gallery for mobile clients.](concepts/device-capabilities/media-capabilities.md)
-* **November 17, 2023**: Terminology update. Sideload is referred to as upload a custom app.
-* **November 17, 2023**: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps.](toolkit/debug-your-Teams-app-test-tool.md)
-* **November 14, 2023**: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
-* **November 14, 2023**: Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID.
-* **November 03, 2023**: [Introduced systemDefault reserved activity type for send activity feed notifications.](tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications)
-* **November 03, 2023**: [Apps for Teams meetings are available in GCC-High environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
-
 :::column-end:::
 :::row-end:::
 
@@ -52,7 +40,7 @@ Teams platform features that are available to all app developers.
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 |27/11/2023|Introduced action-based message extensions.|Extend your app across Microsoft 365 > Teams message extensions in Outlook > Enable a Teams message extension for Outlook > Extend a Teams message extension across Microsoft 365 > [Extend an action based Teams message extension across Microsoft 365](~/m365-apps/extend-m365-teams-message-extension.md)|
-|21/11/2023|Terminology update. LOB apps is now referred to as cusotmer apps built for your org (LOB apps).
+|21/11/2023|Terminology update. LOB apps is now referred to as custom apps built for your org (LOB apps).
 |20/11/2023|Introduced API to capture image or media from the gallery.|Integrate device capabilities > Integrate media capabilities > [Media capability APIs](concepts/device-capabilities/media-capabilities.md)|
 |17/11/2023|Terminology update. Sideload is referred to as upload a custom app.||
 |17/11/2023|Launched a Teams app testing tool to simplify debugging of bot-based apps.|Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug bot using Teams App Test Tool](toolkit/debug-your-Teams-app-test-tool.md)|
@@ -388,7 +376,6 @@ Developer preview is a public program that provides early access to unreleased T
 |28/09/2023| Configure your bot during installation or after installation from the team or group chat where the bot is installed. | Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
 |31/08/2023| The new Teams client supports light theme for apps in Teams meetings. | Build tabs > [Get context for your tab](tabs/how-to/access-teams-context.md#handle-theme-change)|
 |28/08/2023| Teams app manifest is now referred to as app manifest. | App manifest > [App manifest schema](resources/schema/manifest-schema.md)|
-|22/08/2023| Enable RSC permissions for a user using the Graph APIs | Utilize Teams data with Microsoft Graph > Resource-specific consent > [Grant RSC permission to your app](graph-api/rsc/grant-resource-specific-consent.md#configure-consent-settings) |
 |21/08/2023| Introduced the new Microsoft Teams client to provide better experience for your apps and users | Resources > [Introducing the new Microsoft Teams client](resources/teams-updates.md)|
 |21/08/2023| Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365. | Extend your app across Microsoft 365 > [Adaptive Card-based Loop components](m365-apps/design-loop-components.md)|
 |08/08/2023| Use callRecording API to fetch meeting recording from all meetings. | Build apps for Teams meetings and calls > [Get meeting transcripts and recordings using Graph APIs](graph-api/meeting-transcripts/overview-transcripts.md)|
