@@ -122,7 +122,7 @@ The following table includes the query parameters:
 |`frequency_penalty`     |Number between -2.0 and 2.0. Positive values penalize new tokens based on their existing frequency in the text so far, decreasing the model's likelihood to repeat the same line verbatim.         |
 |`stop_sequences`     |  Up to four sequences where the API stops generating further tokens. The returned text won't contain the stop sequence. |
 
-# Breaking Changes
+## Breaking Changes
 
 * State Management: Simpler TurnState object and no more need for a TurnStateManager class.
 * Prompt Config Updates: Updated the config.json version number for prompts to 1.1.
