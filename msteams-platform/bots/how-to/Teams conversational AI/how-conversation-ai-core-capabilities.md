@@ -31,27 +31,29 @@ In the following section, we've used  the samples from the [AI library](https://
 
 ## Send or receive message
 
-Replace `TeamsActivityHandler` with this `Application` and `TurnState`. `TurnState` is constructed to include `ConversationState`.
+You can send and receive messages using the Bot Framework. The app listens for the user to send a message , and when it receives this message, it deletes the conversation state and sends a message back to the user. The app also keeps track of the number of messages received in a conversation and echoes back the user’s message with a count of messages received so far.
 
 # [JavaScript](#tab/javascript6)
 
 Example: [EchoBot](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.messaging.a.echoBot/src/index.ts#L70)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.messaging.a.echoBot/src/index.ts#L83)
 
 ```typescript
-// Assumption is that the bot/app is named “app” or “bot”
-import { Application, TurnState } from '@microsoft/teams-ai';
+// Listen for user to say '/reset' and then delete conversation state
+app.message('/reset', async (context: TurnContext, state: ApplicationTurnState) => {
+    state.deleteConversationState();
+    await context.sendActivity(`Ok I've deleted the current conversation state.`);
+});
 
-interface ConversationState {
-    count: number;
-}
-type ApplicationTurnState = TurnState<ConversationState>;
+// Listen for ANY message to be received. MUST BE AFTER ANY OTHER MESSAGE HANDLERS
+app.activity(ActivityTypes.Message, async (context: TurnContext, state: ApplicationTurnState) => {
+    // Increment count state
+    let count = state.conversation.count ?? 0;
+    state.conversation.count = ++count;
 
-// Define storage and application
-const storage = new MemoryStorage();
-const app = new Application<ApplicationTurnState>({
-    storage
+    // Echo back users request
+    await context.sendActivity(`[${count}] you said: ${context.activity.text}`);
 });
 ```
 
@@ -59,31 +61,23 @@ const app = new Application<ApplicationTurnState>({
 
 [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/01.messaging.echoBot/Program.cs#L34)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/01.messaging.echoBot/Program.cs#L49)
 
 ```csharp
-// Create the storage to persist turn state
-builder.Services.AddSingleton<IStorage, MemoryStorage>();
+ // Listen for user to say "/reset" and then delete conversation state
+    app.OnMessage("/reset", ActivityHandlers.ResetMessageHandler);
 
-// Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
-builder.Services.AddTransient<IBot>(sp =>
-{
-    IStorage storage = sp.GetService<IStorage>();
-    ApplicationOptions<AppState> applicationOptions = new()
-    {
-        Storage = storage,
-        TurnStateFactory = () =>
-        {
-            return new AppState();
-        }
-    };
+    // Listen for ANY message to be received. MUST BE AFTER ANY OTHER MESSAGE HANDLERS
+    app.OnActivity(ActivityTypes.Message, ActivityHandlers.MessageHandler);
+
+    return app;
 ```
 
 ---
 
 ## Message extensions
 
-In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the Message extensions query handler by extending handler methods.
+In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the Message extensions query handler by extending handler methods. The app listens for search actions and item taps, and formats the search results as a list of HeroCards displaying package information. The result is used to display the search results in the messaging extension.
 
 # [JavaScript](#tab/javascript5)
 
@@ -195,7 +189,7 @@ app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, 
 
 ## Adaptive Cards capabilities
 
-You can register Adaptive Card action handlers using the `app.adaptiveCards` property.
+You can register Adaptive Card action handlers using the `app.adaptiveCards` property. The app listens for messages containing the keywords `static` or `dynamic` and returns an Adaptive Card using the `StaticMessageHandler` or `DynamicMessageHandler` methods. The app also listens for queries from a dynamic search card, submit buttons on the Adaptive Cards.
 
 # [JavaScript](#tab/javascript4)
 
