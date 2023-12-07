@@ -635,3 +635,4 @@ Follow the [step-by-step](../../../sbs-gs-notificationbot.yml) guide to build Te
 * [TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
 * [Bot Framework SDK](/azure/bot-service/bot-builder-basics)
 * [Send proactive installation messages](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)
+* [Build your app using C#](../../../sbs-gs-csharp.yml)
