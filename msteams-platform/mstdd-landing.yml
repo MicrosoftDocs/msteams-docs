@@ -44,11 +44,11 @@ landingContent:
 #      - text: Adaptive Cards overflow menu
 #        url: ~/task-modules-and-cards/cards/cards-format.md
 
-- title: Whats new
+- title: What's new
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Tag mentions are now supported in Teams mobile client
+      - text: Bots can now mention tags in Teams channels
         url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
       - text: Extend an action-based Teams message extension across Microsoft 365
         url:  m365-apps/extend-m365-teams-message-extension.md
