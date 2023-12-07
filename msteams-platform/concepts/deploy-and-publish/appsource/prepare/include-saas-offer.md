@@ -41,6 +41,12 @@ The initial step to create any SaaS offer is to decide the listing or publishing
 
 There are four listing options through which you can publish your SaaS offer:
 
+* Decide on your subscription model. A transactable SaaS offer can include multiple subscription plans. Public subscription plans available to anyone are most common, but you may also want to target specific customers with deals only for them. For more information, see [private plans in the Microsoft commercial marketplace](/azure/marketplace/private-plans).
+* Read about the [*Sell through Microsoft* listing option](/azure/marketplace/plan-saas-offer#listing-options) for your SaaS offer, which is required if you want users to purchase subscription plans for your app directly through the Teams Store.
+* Learn how [Microsoft Entra single sign-on (SSO)](/azure/marketplace/azure-ad-saas) helps your customers purchase and manage subscriptions. (Microsoft Entra SSO is required for Teams apps with SaaS offers.)
+* Understand that you're responsible for managing and paying for the infrastructure required to support your customers' use of your SaaS offer.
+* Plan for mobile. To avoid violating third-party Teams Store policies, your app can't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the related [commercial marketplace certification policies](/legal/marketplace/certification-policies#114048-mobile-experience).
+
 * Sell through Microsoft
 * Free trials
 * Get it now (Free)
@@ -92,6 +98,18 @@ You can allow the user to subscribe and use your application at no cost. The opt
     :::column span="2":::
 
 **Contact me**
+
+* Users must be able to sign in to your landing page with the same Microsoft Entra credentials they used to buy the subscription. For more information, see [Microsoft Entra ID and transactable SaaS offers in the commercial marketplace](/azure/marketplace/azure-ad-saas).
+* Allow users to take the following actions on your landing page. Don’t forget to consider what’s appropriate for a user’s role and permissions. For example, you may want to allow only subscription admins to search for users):
+  * Search for users in their org using email or another form of identity.
+  * See users they can assign licenses to in a list.
+  * Assign licenses to one or multiple users at the same time.
+  * Assign and manage different types of licenses (if available).
+  * Validate if a license is already assigned to another user.
+  * Cancel their subscription.
+* Provide an introduction on how to use your app.
+* Add ways to get support, such as an FAQ, knowledge base, or contact email.
+* Provide a link that makes it easy for the subscriber to get back to the landing page. For example, include this link in your app’s **About** tab.
 
 Customers can share their details and ask that you contact them about the offer through the leads from Microsoft.
 

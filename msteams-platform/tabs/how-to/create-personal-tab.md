@@ -127,9 +127,9 @@ Following are the steps to create a personal tab:
 
       Use the arrow keys to select **Personal (static)**.
 
-    * **Do you require Microsoft Azure Active Directory (Azure AD) Single-Sign-On support for the tab?**
+    * **Do you require Microsoft Entra Single-Sign-On support for the tab?**
 
-      Choose **not** to include Azure AD Single-Sign-On support for the tab. The default is yes, enter **n**.
+      Choose **not** to include Microsoft Entra Single-Sign-On support for the tab. The default is yes, enter **n**.
     > [!NOTE]
     > In a tab, the tab home page appears only when the user selects the back button (or moves out of the tab) and comes back to the home page. The tab doesn't maintain or retain the previous state by design.
     </details>
@@ -250,7 +250,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 ### Upload your application to Teams
 
 1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Microsoft Teams Store":::.
-1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
+1. Select **Manage your apps** > **Upload an app** > **Upload a customised app**.
 1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
 
     :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab":::
@@ -410,7 +410,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab in Teams. Your tab is now available in Teams.
 
@@ -581,7 +581,7 @@ ngrok http 3978 --host-header=localhost
 
 ### Preview your app in Teams
 
-1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your app is sideloaded successfully. The **Add** page appears for your app in Teams.
+1. Select **Preview in Teams** from the Developer Portal toolbar, Developer Portal informs you that your custom app is uploaded successfully. The **Add** page appears for your app in Teams.
 
 1. Select **Add** to load the tab on Teams. Your tab is now available in Teams.
 
@@ -668,24 +668,24 @@ You can use the CLI with the `teamsfx` command. Verify that the command is worki
 
 ## Set up your Teams development tenant
 
-A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
-### Enable sideloading option
+### Enable custom app upload option
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
 Do you already have a tenant and the admin access? Let's check if you really do!
 
-Verify if you can sideload apps in Teams:
+Verify if you can upload a custom app in Teams:
 
 1. In the Teams client, select **Apps**.
 1. Select **Manage your apps**.
-1. Select **Upload a custom app**. If you see Upload a custom app option, sideloading apps is enabled.
+1. Select **Upload a customised app**. If you see **Upload a customised app** option, custom app upload is enabled.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a custom app option highlighted in red."lightbox="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG" alt-text="Screenshot shows the option to upload a customised app in manage your app section."lightbox="../../assets/images/teams-toolkit-v2/blazor/upload-custom-app.PNG":::
 
     > [!NOTE]
-    > Contact your Teams administrator, if you don't find the option to upload a custom app.
+    > Contact your Teams administrator, if you don't find the option to upload a customised app.
 
 ### Create a free Teams developer tenant (optional)
 
@@ -698,7 +698,7 @@ If you don't have a Teams developer account, you can get it for free. Join the M
 
     :::image type="content" source="../../assets/images/build-your-first-app/dev-program-subscription.PNG" alt-text="Screenshot of Microsoft 365 Developer Program displaying your Microsoft 365 developer subscriptions for the blazor app.":::
 
-1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
+1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a customised app** option in Teams.
 
 ## Get a free Azure account
 
@@ -830,11 +830,11 @@ To build and run your app:
 
     When you select **F5**, Teams Toolkit:
 
-    1. Registers your application with Azure Active Directory.
-    1. Registers your application for sideloading in Teams.
+    1. Registers your application with Microsoft Entra ID.
+    1. Registers your application for uploading in Teams.
     1. Starts your application backend running locally.
     1. Starts your application front-end hosted locally.
-    1. Starts Teams in a web browser with a command to instruct Teams to side load the application (the URL is registered inside the application manifest).
+    1. Starts Teams in a web browser with a command to instruct Teams to upload a custom app (the URL is registered inside the application manifest).
 
     </details>
 
@@ -850,7 +850,7 @@ To build and run your app:
 
     Congratulations, your first tab app is running in your local environment!
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot of Microsoft Teams with Your app is running in your local environment highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/app-local.png" alt-text="Screenshot shows your first tab app is running in your local environment.":::
 
 1. Move through the page to view the user details.
 
@@ -858,7 +858,7 @@ To build and run your app:
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of Microsoft Teams with Authorize option highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot shows the authorize option in the personal tab of your app.":::
 
 1. Select **Accept** to let your app access user details.
 
@@ -866,7 +866,7 @@ To build and run your app:
 
     Your photograph and details appear in your **Personal Tab**.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot of your Personal Tab in the app displaying basic information.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/tab-user-info.png" alt-text="Screenshot shows the basic information displayed on the personal tab of your app in Teams.":::
 
     You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
 
@@ -874,7 +874,7 @@ To build and run your app:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you need a Microsoft 365 development account that allows app sideloading. You can learn more about it in the Prerequisites section.
+    To run your app in Teams, you need a Microsoft 365 development account that allows custom app upload. You can learn more about it in the Prerequisites section.
 
     </details>
 
@@ -952,7 +952,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     Congratulations, your first tab app is running in your Azure environment!
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.PNG" alt-text="Screenshot of Microsoft Teams with Your app is running in your Azure environment highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/blazor-tab-app-azure.PNG" alt-text="Screenshot shows the personal tab of your app in Teams.":::
 
     Move through the page to view the user details.
 
@@ -960,7 +960,7 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 
     The app requests permission to grant access for displaying user details.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot of Microsoft Teams with Authorize option under Personal Tab highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/authorize-user-info.png" alt-text="Screenshot shows the authorize option in the personal tab of your app in Teams.":::
 
 1. Select **Accept** to let your app access user details.
 

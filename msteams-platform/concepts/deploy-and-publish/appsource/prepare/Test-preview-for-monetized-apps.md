@@ -1,7 +1,7 @@
 ---
 title: Test and publish a SaaS offer to the marketplace
 author: v-ypalikila
-description: Create and test SaaS Preview offers for Teams app before pushing the offer live. Create a preview offer ID, configure your app with the preview offer ID, and sideload.
+description: Create and test SaaS Preview offers for Teams app before pushing the offer live. Create a preview offer ID, configure your app with the preview offer ID, and upload.
 ms.topic: conceptual
 ms.author: v-ypalikila
 ms.localizationpriority: high
@@ -54,7 +54,7 @@ You can generate the preview offer ID from the **AppSource preview** link in the
     > [!NOTE]
     > Unlike a public offer ID, you can recognize the preview offer ID with the *-preview* suffix, for example, **publisherId.offerId-preview**.
 
-    If the offer you want to preview is limited to the non-US regions, Developer Portal for Teams might not be able to find your offer. You can either add United States to the list of [markets, pricing, and availability](/azure/marketplace/create-new-saas-offer-plans) or ignore the error and select **Preview in Teams** to sideload the app to Microsoft Teams.  
+    If the offer you want to preview is limited to the non-US regions, Developer Portal for Teams might not be able to find your offer. You can either add United States to the list of [markets, pricing, and availability](/azure/marketplace/create-new-saas-offer-plans) or ignore the error and select **Preview in Teams** to upload a custom app to Microsoft Teams.  
 
     :::image type="content" source="../../../../assets/images/apps-in-meetings/us-region.png" alt-text="Screenshot shows the user can select United States region.":::
 
@@ -86,7 +86,7 @@ You must add the `subscriptionOffer` property to your [app manifest](../../../..
 > * Check for the label *Preview offer* next to **Apps subscription** to confirm if the offer is a preview offer.
 > * The manifest schema version 1.10 or later supports the `subscriptionOffer` property.
 
-## Sideload the app to Teams
+## Upload your custom app into Teams
 
 After you configure your app with the Preview Offer ID, create an updated app package and upload it to Teams to test the end-to-end purchase experience. For more information, see [Upload your app in Teams](../../apps-upload.md). You can also select **Preview in Teams** in the Developer Portal for Teams to launch your app quickly in the Teams client.
 
@@ -102,7 +102,7 @@ If the Preview offer is specified in the app manifest and the preview audience i
 
   :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="Screenshot shows the No plans found with preview warning." :::
 
-* If the offer ID specified in the app manifest isn't a Preview offer, the app shows the following warning message to the user and sideloading is disabled:
+* If the offer ID specified in the app manifest isn't a Preview offer, the app shows the following warning message to the user and custom app upload is disabled:
   
   This is not a preview offer. Be sure to append the **-preview** to the offer ID.
 

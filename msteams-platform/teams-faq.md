@@ -36,7 +36,7 @@ No, Adaptive Card Previewer is available in Visual Studio Code only.
 ## App validation
 
 <details>
-<summary>How can I connect Azure AD to an MPN account?</summary>
+<summary>How can I connect Microsoft Entra ID to an MPN account?</summary>
 
 <!--Question: Publisher Attestation issue - the app needed to be published first (I attached the screenshot when I tried to submit the attestation). Before doing the Publisher Attestation. I think this is most likely to connect the Azure AD to an MPN account.-->
 
@@ -45,7 +45,7 @@ Follow the steps in the pages given here:
 1. [Publisher verification overview - Microsoft Entra](/azure/active-directory/develop/publisher-verification-overview).
 1. [Microsoft LearnMark an app as publisher verified - Microsoft Entra](/azure/active-directory/develop/mark-app-as-publisher-verified).
 1. [Microsoft Learn
-Resolution - Connect Azure AD to MPN settings](/partner-center/mpn-benefits-azure-cloud).
+Resolution - Connect Microsoft Entra ID to MPN settings](/partner-center/mpn-benefits-azure-cloud).
 
 <!--Links found:
 1. [Update preferred email](/partner-center/partner-center-account-setup.md#update-preferred-email)
@@ -89,6 +89,143 @@ You can test or validate the Adaptive Card schema using the **Adaptive cards edi
 <summary>Why am I unable to create a bot in Developer Portal?</summary>
 
 App registration is disabled for the user or the user doesn't have enough permissions to create an app. For more information, see [limitations and known issues.](~/bots/bot-features.md#limitations-and-known-issues)
+</details>
+
+## Microsoft 365 Chat
+
+<details>
+
+<summary>Why isn't Microsoft 365 Chat including my plugin in a response?</summary>
+
+Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, make sure you've uploaded the app package to Outlook and interacted with the app, including authentication.
+
+If the problem continues, use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
+<br>
+&nbsp;
+
+</details>
+<details>
+
+<summary> What descriptions should I include in app manifest? </summary>
+
+Here's an example description that work for NPM Finder.
+
+```json
+ "name": { 
+
+        "short": "NPM Finder", 
+
+        "full": "Nuget Package Manager Finder" 
+
+    }, 
+
+    "description": { 
+
+        "short": "Returns information about available NPM packages", 
+
+        "full": "The Nuget Package Manager (NPM) Finder application provides information (such as title and description) about Nuget packages available in the global NPM catalog." 
+
+    }, 
+
+… 
+
+            "commands": [ 
+
+                { 
+
+                    "id": "searchQuery", 
+
+                    "context": [ 
+
+                        "compose", 
+
+                        "commandBox" 
+
+                    ], 
+
+                    "description": "Searches the global NPM catalog for available packages", 
+
+                    "title": "Search", 
+
+                    "type": "query", 
+
+                    "parameters": [ 
+
+                        { 
+
+                            "name": "searchQuery", 
+
+                            "title": "Search Query", 
+
+                            "description": "A package name or description of capability to search", 
+
+                            "inputType": "text" 
+
+                        } 
+
+                    ] 
+
+```
+
+<br>
+&nbsp;
+
+</details>
+
+<details>
+
+<summary> Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
+
+Use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
+<br>
+&nbsp;
+</details>
+
+<details>
+
+<summary> Can I build my own Teams message extension? </summary>
+
+Yes, you can. Ensure that you have a descriptive app manifest and have uploaded the app to Outlook and interacted with it, including authentication.
+<br>
+&nbsp;
+</details>
+
+<details>
+
+<summary> How can I get my existing Teams message extension to work with Microsoft Copilot for Microsoft 365? </summary>
+
+1. Register the bot channel in Azure Bot Service.
+1. Upload the app to Outlook.
+<br>
+
+&nbsp;
+</details>
+
+<details>
+
+<summary> What is the certification process?</summary>
+
+After publishing their plugin, developers opt into the App Compliance flow in Partner Center. If they haven't completed Publisher Verification, they'll be prompted to do so before starting the Microsoft 365 Certification process.  The next step is to complete Publisher Attestation, which collects self-attested information about their plugin, company, and operations. This information is published on a [Microsoft 365 App Compliance Program site](/microsoft-365-app-certification/teams/teams-apps).  The developer then starts the Microsoft 365 Certification process by uploading initial documents to help scope the assessment to their plugin and operating environment. Based on the scope, the developer will then be required to provide evidence for specific controls related to application security, operational security, and data handling/privacy. Developers that build on Azure can also use the App Compliance Automation Tool (ACAT). This tool automatically scans their environment and produces evidence for several controls, reducing the developer's manual work. For more information, see this video.
+<br>
+&nbsp;
+</details>
+
+<details>
+
+<summary> How are plugins certified?</summary>
+
+After passing the proactive validation, developers of both existing and new message extensions that haven't been certified will be encouraged to certify their plugin. This will be communicated through an email confirming their message extension has been validated.
+<br>
+&nbsp;
+</details>
+
+<details>
+
+<summary> How are new plugins certified?</summary>
+
+Developers will be encouraged to certify their new plugin after successfully completing validation.
+<br>
+&nbsp;
 </details>
 
 ## Live share
@@ -191,7 +328,7 @@ Live Share isn't supported for GCC, GCC-High, and DOD tenants.
 </details>
 
 <details>
-<summary><b>Does Live Share support external and guest users?</b></summary>
+<summary>Does Live Share support external and guest users?</summary>
 
 Yes, Live Share supports guest and external users for most meeting types. However, guest users aren't supported in channel meetings.
 
@@ -200,7 +337,7 @@ Yes, Live Share supports guest and external users for most meeting types. Howeve
 </details>
 
 <details>
-<summary><b>Does Live Share support Teams Rooms devices?</b></summary>
+<summary>Does Live Share support Teams Rooms devices?</summary>
 
 No, Live Share doesn't support Teams Rooms devices.
 
@@ -209,7 +346,7 @@ No, Live Share doesn't support Teams Rooms devices.
 </details>
 
 <details>
-<summary><b>Do Live Share apps support meeting recordings?</b></summary>
+<summary>Do Live Share apps support meeting recordings?</summary>
 
 No, Live Share doesn't support meeting recordings.
 
@@ -262,7 +399,7 @@ For more information, see [Graph explorer](https://developer.microsoft.com/graph
 <details>
 <summary>What should I do if one or more of the course teams weren't created after synchronization?</summary>
 
-Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 AAD UPN account. The team can't be created if the synchronization doesn't find a match.
+Each Moodle course must have at least one faculty and one student matched to a Microsoft 365 account username. The team can't be created if the synchronization doesn't find a match.
 
 Each team course instance must have an owner, and the synchronization sets the faculty as the owner, with assumption that the faculty has Teams license.
 <br>
@@ -281,7 +418,7 @@ The app users have multiple sign-in options from the Moodle login page.
 
 </details>
 <details>
-<summary>How can I specify which users to sync? I don’t want all Azure AD users synchronized with the Moodle website. </summary>
+<summary>How can I specify which users to sync? I don’t want all Microsoft Entra users synchronized with the Moodle website. </summary>
 
 Use the **User Creation Restriction** option to specify the app users by synchronizing the configuration options of the **local_o365** plugin. The dropdown menu to the left of the **filter** offers options, such as Country or region, Company Name, and Language.
 
@@ -292,7 +429,7 @@ The following image shows user creation restrictions options:
 
 :::image type="content" source="assets/images/MoodleInstructions/faq-2.png" alt-text="sync":::
 
-:::image type="content" source="assets/images/MoodleInstructions/faq-3.png" alt-text="Azure ad":::
+:::image type="content" source="assets/images/MoodleInstructions/faq-3.png" alt-text="Microsoft Entra ID":::
 <br>
 &nbsp;
 </details>
@@ -312,7 +449,7 @@ The following image shows synchronization of courses:
 &nbsp;
 </details>
 <details>
-<summary>We have followed the documentation, but the user accounts fail to sync AAD and Moodle. What should we do?</summary>
+<summary>We have followed the documentation, but the user accounts fail to sync Microsoft Entra ID and Moodle. What should we do?</summary>
 
 The issue can be resolved before users perform the **Delta token clean up** as a final troubleshooting step.
 
@@ -322,7 +459,7 @@ The following table provides the actions and dependencies to be performed and ch
 |-------|------------|----------|
 | Stable version| Verify that the version of Moodle is listed as a **stable**.| For more information, see [Version support](https://docs.moodle.org/dev/Releases#Version_support).|
 |Permissions| Verify that the Azure application has the necessary permissions to run the synchronization.| For more information, see [Microsoft permissions](https://docs.moodle.org/311/en/Microsoft_365#Permissions).|
-| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Azure AD**.| For more information, see [Enable full sync](https://docs.moodle.org/311/en/local_o365)</br>For more information, see [Check task logs](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
+| Full sync| Verify that **Perform a full sync each run** is enabled, and review the **Task Logs** for **Sync users with Microsoft Entra ID**.| For more information, see [Enable full sync](https://docs.moodle.org/311/en/local_o365)</br>For more information, see [Check task logs](https://docs.moodle.org/311/en/local_o365#Sync_users_with_Azure_AD). |
 |Token refresh|Clean the **User sync delta token** in the local_o365 plugin.| For more information, see, [Token refresh](https://docs.moodle.org/38/en/Office365).|
 
 <br>
@@ -334,7 +471,7 @@ The following table provides the actions and dependencies to be performed and ch
 The reason for inconsistencies with users being able unable to sign using their Microsoft 365 credentials can be related to the user mapping operation during synchronization. To resolve the issue, perform the following steps:
 
 * Check if the Moodle user authentication type is **OpenID**.
-* Check if the Moodle **User Name** matches the AAD username.
+* Check if the Moodle **User Name** matches the Microsoft Entra username.
 * Clean up the **Token Issue** and retry.
 * Check if the users have **Permissions** to access the Azure application.
 <br>
@@ -555,7 +692,7 @@ See [manage account settings and profile info](/windows/uwp/publish/manage-accou
 &nbsp;
 </details>
 <details>
-<summary>Why do I see a, "This account isn't publish eligible," message when I try to submit my app?</summary>
+<summary>Why do I see a, "This account isn't published eligible," message when I try to submit my app?</summary>
 
 You received this error message because your [account verification status](/partner-center/verification-responses) is pending. Check your status in the Partner Center [dashboard](https://partner.microsoft.com/dashboard). Select the **Settings** gear icon and choose **Developer settings > Account > Account settings**.
 
@@ -667,7 +804,7 @@ You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Sampl
 <details>
 <summary>How can I change application ID URI of SSO scope to use bot ID also so that the consent window won't be required for a bot app?</summary>
 
-For more information, see [Configure your app in Azure AD](bots/how-to/authentication/bot-sso-register-aad.md).
+For more information, see [Configure your app in Microsoft Entra ID](bots/how-to/authentication/bot-sso-register-aad.md).
 <br>
 &nbsp;
 </details>
@@ -690,7 +827,7 @@ Open the sign in simple start page instead of opening login page directly to res
 <details>
 <summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
 
-Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Azure AD.
+Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Microsoft Entra ID.
 <br>
 &nbsp;
 </details>
@@ -764,13 +901,13 @@ Before provision, the toolkit asks you if you want to create a new resource grou
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Currently, building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Azure AD portal. The content in the document doesn't apply to SPFx-based apps.
+> Currently, building a Teams app using SharePoint Framework with Teams Toolkit doesn't have direct integration with Microsoft Entra admin center. The content in the document doesn't apply to SPFx-based apps.
 
 <br>
 &nbsp;
 </details>
 <details>
-<summary>How can I deploy the code in Azure AD using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
+<summary>How can I deploy the code in Microsoft Entra ID using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
 
 Shared references to deploy the code using toolkit:
 
