@@ -254,7 +254,10 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
 
    ---
 
-1. In the debug dropdown menu, select **Dev Tunnels** > **Create A Tunnel**.
+1. In the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel..**.
+
+   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-dev-tunnel.png" alt-text="Screenshot shows an example of the Dev Tunnel and Create a Tunnel options in Visual Studio.":::
+
 1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported. Update the following:
    1. **Name**: Enter a name for the tunnel.
    1. **Tunnel Type**: Select **Persistent** or **Temporary**.
@@ -266,13 +269,20 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
 1. Go to **Solution Explorer** and select your project.
 1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
+   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams-app.png" alt-text="Screenshot shows an example of the prepare teams app dependencies option under Teams Toolkit section in Visual Studio.":::
+
    If prompted, sign in to your Microsoft 365 account. You'll receive a message that Teams app is successfully prepared.
 
 1. Select **OK**.
 
 1. Select **F5** or select **Debug** > **Start**.
 1. Select **Add**. The app is added to Teams and a chat window opens.
+
+   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-add-app.png" alt-text="Screenshot shows the add option to add the app to Micrososft Teams.":::
+
 1. In the message compose area, send a message to invoke the bot.
+
+   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-invoke-chef-bot.png" alt-text="Screenshot shows an example of a chat window and a message from the chef bot as a reply to users message.":::
 
 You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow these steps:
 
