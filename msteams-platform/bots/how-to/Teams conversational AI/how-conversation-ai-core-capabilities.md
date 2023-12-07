@@ -55,7 +55,7 @@ const app = new Application<ApplicationTurnState>({
 });
 ```
 
-# [C#](#tab/dotnet4)
+# [C#](#tab/dotnet6)
 
 [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)
 
@@ -142,7 +142,7 @@ app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, 
 });
 ```
 
-# [C#](#tab/dotnet4)
+# [C#](#tab/dotnet5)
 
 [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
 
