@@ -8,22 +8,22 @@ ms.localizationpriority: medium
 ---
 # Microsoft Entra ID for Teams apps
 
-Microsoft Entra ID is a cloud platform that simplifies the process of building Teams apps. You can host your Teams apps entirely in Microsoft Entra ID or extend your app with Azure services. Hosting your Teams app on Microsoft Entra ID helps you create apps that are reliable, scalable, and easily maintainable. Microsoft Entra ID supports popular programming languages, including Python, JavaScript, Java, .NET, and Go.
+Microsoft Entra ID is a cloud platform that simplifies the process of building Teams apps. You can host your Teams apps entirely on Microsoft Entra ID or extend your app with Azure services. Hosting your Teams app on Microsoft Entra ID helps you create apps that are reliable, scalable, and easily maintainable. Microsoft Entra ID supports popular programming languages, including C#, Java, JavaScript, TypeScript, PowerShell, Python, and .NET.
 
 You must have an Azure account to use Azure resources or to host your Teams app on Microsoft Entra ID.
 For more information, see [Microsoft Entra ID subscription](/azure/developer/intro/azure-developer-billing#what-is-an-azure-subscription).
 
-You can host any Teams app on Microsoft Entra ID with any capability or use the following services for your Teams app:
+You can host any Teams app on Microsoft Entra ID with any capability. You can also use the following Azure services for your Teams app:
 
 1. Teams apps for meetings:
     1. [Generate meeting token for Teams](../sbs-meeting-token-generator.yml)
     1. [Generate Teams meeting side panel](../sbs-meetings-sidepanel.yml)
 
 1. Teams bot apps:
-    1. Create client secret for the bot app
-    1. Authentication for Teams apps
+    1. [Create client secret for the bot app](create-resource-bot-microsoft-entra-id.md#create-client-secret)
+    1. [Authentication for Teams apps](../concepts/authentication/authentication.md)
     1. [Configure Single sign-on for your app](add-single-sign-on.md)
-    1. [Configure third-party authentication for your app](../tabs/how-to/authentication/auth-tab-aad.md)
+    1. [Configure third-party authentication for your app](../bots/how-to/authentication/add-authentication.md)
     1. [Send activity feed notification from Microsoft Teams activity feed](../sbs-graphactivity-feedbroadcast.yml)
 
 Microsoft Entra ID also enables you to customize who has access to your account when you're registering your Teams app on the platform.
@@ -37,9 +37,13 @@ Microsoft Entra ID also enables you to customize who has access to your account 
 
 ## Tenants in Microsoft Entra ID
 
-A 'tenant' is a secure identity and access management system for the Teams apps that you host in Microsoft Entra ID. It also contains the users, groups, and other apps stored in the organization’s Azure environment. The tenant provides a centralized platform for admins to manage identities, permissions, and access to Azure resources and services. The tenant in which you register your app is referred to as its home tenant.
+A 'tenant' is a secure identity and access management system for the Teams apps that you host on Microsoft Entra ID. It also contains the users, groups, and other apps stored in the organization’s Azure environment. The tenant provides a centralized platform for admins to manage identities, permissions, and access to Azure resources and services. The tenant in which you register your app is referred to as its home tenant.
 
-A single tenant app in Microsoft Entra ID is restricted to the users in the organizational directory of its home tenant. This type of tenant is suited for apps that are simple and prioritize security, privacy, and collaboration within an organization. On the other hand, multitenant apps are accessible to users both inside and outside the home tenant. This type of tenancy promotes better scalability, reach, and collaboration within and across organizations.
+You can register your Microsoft Entra app with two types of tenants:
+
+* **Single tenant**: A Microsoft Entra app registered under the single tenant is restricted to the users in the organizational directory of its home tenant. This type of tenant is suited for apps that are simple and prioritize security, privacy, and collaboration within an organization.
+
+* **Multitenant**: A Microsoft Entra app registered under the multitenant is accessible to users both inside and outside the home tenant. This type of tenancy promotes better scalability and reach for the app, and promotes collaboration within and across organizations.
 
 For more information about tenancy, see [Tenancy in Microsoft Entra ID](/entra/identity-platform/single-and-multi-tenant-apps) or see the following video:
 <br>
