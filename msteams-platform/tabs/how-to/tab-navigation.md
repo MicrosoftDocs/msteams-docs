@@ -51,7 +51,7 @@ else {/*Handle situation where capability isn't supported*/}
 ```
 
 > [!NOTE]
-> The tab app navigation is supported only in new Teams 2.1.
+> The tab app navigation is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
 
 You can use the [pages.navigateToApp()](/javascript/api/%40microsoft/teams-js/pages#@microsoft-teams-js-pages-navigatetoapp) function. You can also use deep links for tab navigation as shown in [create deep links](~/concepts/build-and-test/deep-link-application.md#configure-deep-link-to-a-tab-using-teamsjs-library).
 
