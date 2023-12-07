@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 December**
 
-* **December 08, 2023**: [Bots can now mention tags in text messages and Adaptive Cards posted in Teams channels.](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
+* **December 08, 2023**: [Bots can now mention tags in text messages and Adaptive Cards posted in Teams channels.](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)
 
 :::column-end:::
 :::row-end:::
