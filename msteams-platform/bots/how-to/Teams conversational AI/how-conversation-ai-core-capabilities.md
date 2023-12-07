@@ -31,25 +31,23 @@ In the following section, we've used  the samples from the [AI library](https://
 
 ## Send or receive message
 
-Replace `TeamsActivityHandler` with this `Application` and `DefaultTurnState`. `DefaultTurnState` is constructed to include `ConversationState`.
+Replace `TeamsActivityHandler` with this `Application` and `TurnState`. `TurnState` is constructed to include `ConversationState`.
+
+# [JavaScript](#tab/javascript6)
 
 Example: [EchoBot](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
 
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.messaging.a.echoBot/src/index.ts#L70)
+
 ```typescript
 // Assumption is that the bot/app is named “app” or “bot”
-import { Application, DefaultTurnState } from '@microsoft/teams-ai';
+import { Application, TurnState } from '@microsoft/teams-ai';
 
 interface ConversationState {
-  count: number;
+    count: number;
 }
+type ApplicationTurnState = TurnState<ConversationState>;
 
-// DefaultTurnState: Conversation State, UserState, TempState
-type ApplicationTurnState = DefaultTurnState<ConversationState>;
-
-// Previous:
-// const bot = TeamsActivityHandler();
-
-// New:
 // Define storage and application
 const storage = new MemoryStorage();
 const app = new Application<ApplicationTurnState>({
@@ -57,43 +55,81 @@ const app = new Application<ApplicationTurnState>({
 });
 ```
 
+# [C#](#tab/dotnet4)
+
+[Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/01.messaging.echoBot/Program.cs#L34)
+
+```csharp
+// Create the storage to persist turn state
+builder.Services.AddSingleton<IStorage, MemoryStorage>();
+
+// Create the bot as a transient. In this case the ASP Controller is expecting an IBot.
+builder.Services.AddTransient<IBot>(sp =>
+{
+    IStorage storage = sp.GetService<IStorage>();
+    ApplicationOptions<AppState> applicationOptions = new()
+    {
+        Storage = storage,
+        TurnStateFactory = () =>
+        {
+            return new AppState();
+        }
+    };
+```
+
+---
+
 ## Message extensions
 
 In the Bot Framework SDK's `TeamsActivityHandler`, you needed to set up the Message extensions query handler by extending handler methods.
 
+# [JavaScript](#tab/javascript5)
+
 Now, the app class has `messageExtensions` features to simplify creating the handlers:
 
 * `context`: `TurnContext`
-* `state`: `DefaultTurnState`
+* `state`: `TurnState`
 * `query`: The data passed from message extension interaction
 
 [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L81)
+
 ```javascript
 import { MessagingExtensionAttachment } from "botbuilder";
+import axios from 'axios';
 import { Application } from `@microsoft/teams-ai`;
 
-// ME query listener
-app.messageExtensions.query("searchCmd", async (context, state, query) => {
-  const searchQuery = query.parameters.queryText;
+// Listen for search actions
+app.messageExtensions.query('searchCmd', async (context: TurnContext, state: TurnState, query) => {
+    const searchQuery = query.parameters.queryText ?? '';
+    const count = query.count ?? 10;
+    const response = await axios.get(
+        `http://registry.npmjs.com/-/v1/search?${new URLSearchParams({
+            size: count.toString(),
+            text: searchQuery
+        }).toString()}`
+    );
 
-  // Work with the search query
-  // For example, create search/action cards
-  
-  // Return results
-  return {
-    attachmentLayout: "", 
-    attachments: results, 
-    type: "result" 
-  };
+    // Format search results
+    const results: MessagingExtensionAttachment[] = [];
+    response?.data?.objects?.forEach((obj: any) => results.push(createNpmSearchResultCard(obj.package)));
 
+    // Return results as a list
+    return {
+        attachmentLayout: 'list',
+        attachments: results,
+        type: 'result'
+    };
 });
 ```
 
 Similarly, `selectItem` listener would be set up as:
 
 ```typescript
-app.messageExtensions.selectItem(async (context, state, item) => {
+app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, item) => {
     // Generate detailed result
     const card = createNpmPackageCard(item);
 
@@ -106,9 +142,62 @@ app.messageExtensions.selectItem(async (context, state, item) => {
 });
 ```
 
+# [C#](#tab/dotnet4)
+
+[Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/Program.cs#L47)
+
+* [Search results reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/ActivityHandlers.cs#L39)
+
+```csharp
+// Listen for search actions
+    app.MessageExtensions.OnQuery("searchCmd", activityHandlers.QueryHandler);
+    // Listen for item tap
+    app.MessageExtensions.OnSelectItem(activityHandlers.SelectItemHandler);
+
+    return app;
+
+ // Format search results in ActivityHandlers.cs
+
+            List<MessagingExtensionAttachment> attachments = packages.Select(package => new MessagingExtensionAttachment
+            {
+                ContentType = HeroCard.ContentType,
+                Content = new HeroCard
+                {
+                    Title = package.Id,
+                    Text = package.Description
+                },
+                Preview = new HeroCard
+                {
+                    Title = package.Id,
+                    Text = package.Description,
+                    Tap = new CardAction
+                    {
+                        Type = "invoke",
+                        Value = package
+                    }
+                }.ToAttachment()
+            }).ToList();
+
+            // Return results as a list
+
+            return new MessagingExtensionResult
+            {
+                Type = "result",
+                AttachmentLayout = "list",
+                Attachments = attachments
+            };
+
+```
+
+---
+
 ## Adaptive Cards capabilities
 
 You can register Adaptive Card action handlers using the `app.adaptiveCards` property.
+
+# [JavaScript](#tab/javascript4)
 
 [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.adaptiveCards.a.typeAheadBot)
 
@@ -142,6 +231,31 @@ app.adaptiveCards.actionSubmit('StaticSubmit', async (context, _state, data: Sub
 });
 ```
 
+# [C#](#tab/dotnet4)
+
+[Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot/Program.cs#L52)
+
+```csharp
+// Listen for messages that trigger returning an adaptive card
+    app.OnMessage(new Regex(@"static", RegexOptions.IgnoreCase), activityHandlers.StaticMessageHandler);
+    app.OnMessage(new Regex(@"dynamic", RegexOptions.IgnoreCase), activityHandlers.DynamicMessageHandler);
+
+    // Listen for query from dynamic search card
+    app.AdaptiveCards.OnSearch("nugetpackages", activityHandlers.SearchHandler);
+    // Listen for submit buttons
+    app.AdaptiveCards.OnActionSubmit("StaticSubmit", activityHandlers.StaticSubmitHandler);
+    app.AdaptiveCards.OnActionSubmit("DynamicSubmit", activityHandlers.DynamicSubmitHandler);
+
+    // Listen for ANY message to be received. MUST BE AFTER ANY OTHER HANDLERS
+    app.OnActivity(ActivityTypes.Message, activityHandlers.MessageHandler);
+
+    return app;
+```
+
+---
+
 ## Core capabilities
 
 ## Bot logic for handling an action
@@ -150,6 +264,8 @@ The Bot responds to the user's input with the action `LightsOn` to turn the ligh
 
 The following example illustrates how Teams AI library makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with OpenAI:
 
+# [JavaScript](#tab/javascript3)
+
 Example: [Light bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.c.actionMapping.lightBot)
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L80)
@@ -157,79 +273,204 @@ Example: [Light bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/
 ```typescript
 
 // Create AI components
-const planner = new OpenAIPlanner<ApplicationTurnState>({
-    apiKey: process.env.OpenAIKey,
+const model = new OpenAIModel({
+    // OpenAI Support
+    apiKey: process.env.OPENAI_KEY!,
     defaultModel: 'gpt-3.5-turbo',
+
+    // Azure OpenAI Support
+    azureApiKey: process.env.AZURE_OPENAI_KEY!,
+    azureDefaultDeployment: 'gpt-3.5-turbo',
+    azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT!,
+    azureApiVersion: '2023-03-15-preview',
+
+    // Request logging
     logRequests: true
 });
 
-const promptManager = new DefaultPromptManager<ApplicationTurnState>(path.join(__dirname, '../src/prompts'));
+const prompts = new PromptManager({
+    promptsFolder: path.join(__dirname, '../src/prompts')
+});
+
+const planner = new ActionPlanner({
+    model,
+    prompts,
+    defaultPrompt: 'sequence',
+});
 
 // Define storage and application
 const storage = new MemoryStorage();
 const app = new Application<ApplicationTurnState>({
     storage,
-    planner
+    ai: {
+        planner
+    }
+});
+
+// Define a prompt function for getting the current status of the lights
+planner.prompts.addFunction('getLightStatus', async (context: TurnContext, memory: Memory) => {
+    return memory.getValue('conversation.lightsOn') ? 'on' : 'off';
 });
 
 // Register action handlers
-app.ai.action('LightsOn', async (context, state) => {
-    state.conversation.value.lightsOn = true;
+app.ai.action('LightsOn', async (context: TurnContext, state: ApplicationTurnState) => {
+    state.conversation.lightsOn = true;
     await context.sendActivity(`[lights on]`);
-    return true;
+    return `the lights are now on`;
 });
 
-app.ai.action('LightsOff', async (context, state) => {
-    state.conversation.value.lightsOn = false;
+app.ai.action('LightsOff', async (context: TurnContext, state: ApplicationTurnState) => {
+    state.conversation.lightsOn = false;
     await context.sendActivity(`[lights off]`);
-    return true;
+    return `the lights are now off`;
 });
 
-app.ai.action('Pause', async (context, state, data) => {
-    const time = data.time ? parseInt(data.time) : 1000;
-    await context.sendActivity(`[pausing for ${time / 1000} seconds]`);
-    await new Promise((resolve) => setTimeout(resolve, time));
-    return true;
-});
+interface PauseParameters {
+    time: number;
+}
 
-app.ai.action('LightStatus', async (context, state) => {
-    // Send the user a static response with the status of the lights.
-    const response = responses.lightStatus(state.conversation.value.lightsOn);
-    await context.sendActivity(response);
-
-
-    // Since we might be prompting the user with a followup question, we need to do
-    // some surgery on the {{conversation.history}} to append a THEN SAY command. This
-    // lets the model know we just asked the user a question and it can predict the
-    // next action based on their response.
-    ConversationHistory.appendToLastLine(state, ` THEN SAY ${response}`);
-
-
-    // End the current chain since we've manually just prompted the user for input.
-    return false;
-});
-
-
-// Register a handler to handle unknown actions that might be predicted
-app.ai.action(AI.UnknownActionName, async (context, state, data, action) => {
-    await context.sendActivity(responses.unknownAction(action));
-    return false;
-});
-
-
-// Register a handler to deal with a user asking something off topic
-app.ai.action(AI.OffTopicActionName, async (context, state) => {
-    await context.sendActivity(responses.offTopic());
-    return false;
+app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState, parameters: PauseParameters) => {
+    await context.sendActivity(`[pausing for ${parameters.time / 1000} seconds]`);
+    await new Promise((resolve) => setTimeout(resolve, parameters.time));
+    return `done pausing`;
 });
 
 ```
+
+# [C#](#tab/dotnet3)
+
+Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/Program.cs#L33)
+
+* [Actions sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/LightBotActions.cs#L10)
+
+```csharp
+/ Create AI Model
+if (!string.IsNullOrEmpty(config.OpenAI?.ApiKey))
+{
+    builder.Services.AddSingleton<OpenAIModel>(sp => new(
+        new OpenAIModelOptions(config.OpenAI.ApiKey, "gpt-3.5-turbo")
+        {
+            LogRequests = true
+        },
+        sp.GetService<ILoggerFactory>()
+    ));
+}
+else if (!string.IsNullOrEmpty(config.Azure?.OpenAIApiKey) && !string.IsNullOrEmpty(config.Azure.OpenAIEndpoint))
+{
+    builder.Services.AddSingleton<OpenAIModel>(sp => new(
+        new AzureOpenAIModelOptions(
+            config.Azure.OpenAIApiKey,
+            "gpt-35-turbo",
+            config.Azure.OpenAIEndpoint
+        )
+        {
+            LogRequests = true
+        },
+        sp.GetService<ILoggerFactory>()
+    ));
+}
+else
+{
+    throw new Exception("please configure settings for either OpenAI or Azure");
+}
+
+// Create the bot as transient. In this case the ASP Controller is expecting an IBot.
+builder.Services.AddTransient<IBot>(sp =>
+{
+    // Create loggers
+    ILoggerFactory loggerFactory = sp.GetService<ILoggerFactory>()!;
+
+    // Create Prompt Manager
+    PromptManager prompts = new(new()
+    {
+        PromptFolder = "./Prompts"
+    });
+
+    // Adds function to be referenced in the prompt template
+    prompts.AddFunction("getLightStatus", async (context, memory, functions, tokenizer, args) =>
+    {
+        bool lightsOn = (bool)(memory.GetValue("conversation.lightsOn") ?? false);
+        return await Task.FromResult(lightsOn ? "on" : "off");
+    });
+
+    // Create ActionPlanner
+    ActionPlanner<AppState> planner = new(
+        options: new(
+            model: sp.GetService<OpenAIModel>()!,
+            prompts: prompts,
+            defaultPrompt: async (context, state, planner) =>
+            {
+                PromptTemplate template = prompts.GetPrompt("sequence");
+                return await Task.FromResult(template);
+            }
+        )
+        { LogRepairs = true },
+        loggerFactory: loggerFactory
+    );
+
+    return new TeamsLightBot(new()
+    {
+        Storage = sp.GetService<IStorage>(),
+        AI = new(planner),
+        LoggerFactory = loggerFactory,
+        TurnStateFactory = () =>
+        {
+            return new AppState();
+        }
+    });
+});
+
+// LightBotActions defined in LightBotActions.cs
+    
+[Action("LightsOn")]
+        public async Task<string> LightsOn([ActionTurnContext] ITurnContext turnContext, [ActionTurnState] AppState turnState)
+        {
+            turnState.Conversation.LightsOn = true;
+            await turnContext.SendActivityAsync(MessageFactory.Text("[lights on]"));
+            return "the lights are now on";
+        }
+
+        [Action("LightsOff")]
+        public async Task<string> LightsOff([ActionTurnContext] ITurnContext turnContext, [ActionTurnState] AppState turnState)
+        {
+            turnState.Conversation.LightsOn = false;
+            await turnContext.SendActivityAsync(MessageFactory.Text("[lights off]"));
+            return "the lights are now off";
+        }
+
+        [Action("Pause")]
+        public async Task<string> LightsOff([ActionTurnContext] ITurnContext turnContext, [ActionParameters] Dictionary<string, object> args)
+        {
+            // Try to parse entities returned by the model.
+            // Expecting "time" to be a number of milliseconds to pause.
+            if (args.TryGetValue("time", out object? time))
+            {
+                if (time != null && time is string timeString)
+                {
+                    if (int.TryParse(timeString, out int timeInt))
+                    {
+                        await turnContext.SendActivityAsync(MessageFactory.Text($"[pausing for {timeInt / 1000} seconds]"));
+                        await Task.Delay(timeInt);
+                    }
+                }
+            }
+
+            return "done pausing";
+        }
+
+```
+
+---
 
 ### Message extension query
 
 The Teams AI library offers you a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
 
 The following is an example of how you can structure their code to handle a message-extension query for the `searchCmd` command.
+
+# [JavaScript](#tab/javascript2)
 
 Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
@@ -280,6 +521,53 @@ app.messageExtensions.selectItem(async (context, state, item) => {
 
 ```
 
+# [C#](#tab/dotnet2)
+
+Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/Program.cs#L47)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/ActivityHandlers.cs#L39)
+
+```csharp
+// Listen for search actions
+    app.MessageExtensions.OnQuery("searchCmd", activityHandlers.QueryHandler);
+    // Listen for item tap
+    app.MessageExtensions.OnSelectItem(activityHandlers.SelectItemHandler);
+
+    return app;
+
+ // Format search results
+            List<MessagingExtensionAttachment> attachments = packages.Select(package => new MessagingExtensionAttachment
+            {
+                ContentType = HeroCard.ContentType,
+                Content = new HeroCard
+                {
+                    Title = package.Id,
+                    Text = package.Description
+                },
+                Preview = new HeroCard
+                {
+                    Title = package.Id,
+                    Text = package.Description,
+                    Tap = new CardAction
+                    {
+                        Type = "invoke",
+                        Value = package
+                    }
+                }.ToAttachment()
+            }).ToList();
+
+            return new MessagingExtensionResult
+            {
+                Type = "result",
+                AttachmentLayout = "list",
+                Attachments = attachments
+            };
+```
+
+---
+
 ## Intents to actions
 
 A simple interface for actions and predictions allows bots to react when they have high confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses.
@@ -295,7 +583,6 @@ The following actions are supported:
 
 * `addItem list="<list name>" item="<text>"`
 * `removeItem list="<list name>" item="<text>"`
-* `findItem list="<list name>" item="<text>"`
 * `summarizeLists`
 
 All entities are required parameters to actions
@@ -332,7 +619,7 @@ All entities are required parameters to actions
 * Conversation history:
 
     ```
-    {{conversation.history}} 
+    {{conversation.(history}} 
     ```
 
 * Current query:
@@ -347,51 +634,83 @@ All entities are required parameters to actions
     {{conversation.listNames}}
     ```
 
-* AI: The bot logic is streamlined to include handlers for actions such as `addItem`, `removeItem`, and `findItem`. This distinct separation between actions and the prompts guiding the AI on how to execute the actions and prompts serves as a powerful tool.
+* AI: The bot logic is streamlined to include handlers for actions such as `addItem` and `removeItem`. This distinct separation between actions and the prompts guiding the AI on how to execute the actions and prompts serves as a powerful tool.
 
-    Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
+# [JavaScript](#tab/javascript1)
 
-    [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L149)
+Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
 
-    ```typescript
-    app.ai.action('addItem', async (context, state, data: EntityData) => {
-        const items = getItems(state, data.list);
-        items.push(data.item);
-        setItems(state, data.list, items);
-        return true;
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L149)
+
+```typescript
+    app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+    const items = getItems(state, parameters.list);
+    items.push(...(parameters.items ?? []));
+    setItems(state, parameters.list, items);
+    return `items added. think about your next action`;
     });
-    
-    
-    app.ai.action('removeItem', async (context, state, data: EntityData) => {
-        const items = getItems(state, data.list);
-        const index = items.indexOf(data.item);
-        if (index >= 0) {
-            items.splice(index, 1);
-            setItems(state, data.list, items);
-            return true;
-        } else {
-            await context.sendActivity(responses.itemNotFound(data.list, data.item));
-    
-    
-            // End the current chain
-            return false;
+
+    app.ai.action('removeItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+        const items = getItems(state, parameters.list);
+        (parameters.items ?? []).forEach((item: string) => {
+            const index = items.indexOf(item);
+            if (index >= 0) {
+                items.splice(index, 1);
+            }
+        });
+        setItems(state, parameters.list, items);
+        return `items removed. think about your next action`;
+    });
+```
+
+# [C#](#tab/dotnet1)
+
+Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.d.chainedActions.listBot/ListBotActions.cs#L40)
+
+```csharp
+        [Action("AddItem")]
+        public string AddItem([ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
+        {
+            ArgumentNullException.ThrowIfNull(turnState);
+            ArgumentNullException.ThrowIfNull(parameters);
+
+            string listName = GetParameterString(parameters, "list");
+            string item = GetParameterString(parameters, "item");
+
+            IList<string> items = GetItems(turnState, listName);
+            items.Add(item);
+            SetItems(turnState, listName, items);
+
+            return "item added. think about your next action";
         }
-    });
-    
-    app.ai.action('findItem', async (context, state, data: EntityData) => {
-        const items = getItems(state, data.list);
-        const index = items.indexOf(data.item);
-        if (index >= 0) {
-            await context.sendActivity(responses.itemFound(data.list, data.item));
-        } else {
-            await context.sendActivity(responses.itemNotFound(data.list, data.item));
+
+        [Action("RemoveItem")]
+        public async Task<string> RemoveItem([ActionTurnContext] ITurnContext turnContext, [ActionTurnState] ListState turnState, [ActionParameters] Dictionary<string, object> parameters)
+        {
+            ArgumentNullException.ThrowIfNull(turnContext);
+            ArgumentNullException.ThrowIfNull(turnState);
+            ArgumentNullException.ThrowIfNull(parameters);
+
+            string listName = GetParameterString(parameters, "list");
+            string item = GetParameterString(parameters, "item");
+
+            IList<string> items = GetItems(turnState, listName);
+
+            if (!items.Contains(item))
+            {
+                await turnContext.SendActivityAsync(ResponseBuilder.ItemNotFound(listName, item)).ConfigureAwait(false);
+                return "item not found. think about your next action";
+            }
+
+            items.Remove(item);
+            SetItems(turnState, listName, items);
+            return "item removed. think about your next action";
         }
-    
-    
-        // End the current chain
-        return false;
-    });
-    ```
+```
+
+---
 
 ## Next step
 
