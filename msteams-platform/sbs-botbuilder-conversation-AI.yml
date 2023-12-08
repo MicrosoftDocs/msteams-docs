@@ -557,48 +557,48 @@ items:
         1.  After adding the code to listen for new members to join the conversation and delete the conversation state, add the following code in a new line to action handlers:
 
             ```typescript
-            // Register action handlers
-            interface ListOnly {
-                list: string;
-            }
-
-            interface ListAndItems extends ListOnly {
-                items?: string[];
-            }
-
-            app.ai.action('createList', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
-                ensureListExists(state, parameters.list);
-                if (Array.isArray(parameters.items) && parameters.items.length > 0) {
-                    await app.ai.doAction(context, state, 'addItems', parameters);
-                    return `list created and items added. think about your next action`;
-                } else {
-                    return `list created. think about your next action`;
+                // Register action handlers
+                interface ListOnly {
+                    list: string;
                 }
-            });
 
-            app.ai.action('deleteList', async (context: TurnContext, state: ApplicationTurnState, parameters: ListOnly) => {
-                deleteList(state, parameters.list);
-                return `list deleted. think about your next action`;
-            });
+                interface ListAndItems extends ListOnly {
+                    items?: string[];
+                }
 
-            app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
-                const items = getItems(state, parameters.list);
-                items.push(...(parameters.items ?? []));
-                setItems(state, parameters.list, items);
-                return `items added. think about your next action`;
-            });
-
-            app.ai.action('removeItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
-                const items = getItems(state, parameters.list);
-                (parameters.items ?? []).forEach((item: string) => {
-                    const index = items.indexOf(item);
-                    if (index >= 0) {
-                        items.splice(index, 1);
+                app.ai.action('createList', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+                    ensureListExists(state, parameters.list);
+                    if (Array.isArray(parameters.items) && parameters.items.length > 0) {
+                        await app.ai.doAction(context, state, 'addItems', parameters);
+                        return `list created and items added. think about your next action`;
+                    } else {
+                        return `list created. think about your next action`;
                     }
                 });
-                setItems(state, parameters.list, items);
-                return `items removed. think about your next action`;
-            });
+
+                app.ai.action('deleteList', async (context: TurnContext, state: ApplicationTurnState, parameters: ListOnly) => {
+                    deleteList(state, parameters.list);
+                    return `list deleted. think about your next action`;
+                });
+
+                app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+                    const items = getItems(state, parameters.list);
+                    items.push(...(parameters.items ?? []));
+                    setItems(state, parameters.list, items);
+                    return `items added. think about your next action`;
+                });
+
+                app.ai.action('removeItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+                    const items = getItems(state, parameters.list);
+                    (parameters.items ?? []).forEach((item: string) => {
+                        const index = items.indexOf(item);
+                        if (index >= 0) {
+                            items.splice(index, 1);
+                        }
+                    });
+                    setItems(state, parameters.list, items);
+                    return `items removed. think about your next action`;
+                });
 
             ```
 
@@ -607,53 +607,53 @@ items:
         1. after app.run(context), add the following functions in a new line to retrieves the items for a given list from the conversation state:
 
             ```typescript
-            /**
-            * Retrieves the items for a given list from the conversation state.
-            * @param {ApplicationTurnState} state - The current turn state.
-            * @param {string} list - The name of the list to retrieve items for.
-            * @returns {string[]} - The items in the specified list.
-            */
-            function getItems(state: ApplicationTurnState, list: string): string[] {
-                ensureListExists(state, list);
-                return state.conversation.lists[list];
-            }
-
-            /**
-            * Sets the items for a given list in the conversation state.
-            * @param {ApplicationTurnState} state - The current turn state.
-            * @param {string} list - The name of the list to set items for.
-            * @param {string[]} items - The items to set for the specified list.
-            */
-            function setItems(state: ApplicationTurnState, list: string, items: string[]): void {
-                ensureListExists(state, list);
-                state.conversation.lists[list] = items ?? [];
-            }
-
-            /**
-            * Ensures that a list with the given name exists in the conversation state.
-            * @param {ApplicationTurnState} state - The current turn state.
-            * @param {string} listName - The name of the list to ensure exists.
-            */
-            function ensureListExists(state: ApplicationTurnState, listName: string): void {
-                if (typeof state.conversation.lists != 'object') {
-                    state.conversation.lists = {};
+                /**
+                * Retrieves the items for a given list from the conversation state.
+                * @param {ApplicationTurnState} state - The current turn state.
+                * @param {string} list - The name of the list to retrieve items for.
+                * @returns {string[]} - The items in the specified list.
+                */
+                function getItems(state: ApplicationTurnState, list: string): string[] {
+                    ensureListExists(state, list);
+                    return state.conversation.lists[list];
                 }
 
-                if (!Object.prototype.hasOwnProperty.call(state.conversation.lists, listName)) {
-                    state.conversation.lists[listName] = [];
+                /**
+                * Sets the items for a given list in the conversation state.
+                * @param {ApplicationTurnState} state - The current turn state.
+                * @param {string} list - The name of the list to set items for.
+                * @param {string[]} items - The items to set for the specified list.
+                */
+                function setItems(state: ApplicationTurnState, list: string, items: string[]): void {
+                    ensureListExists(state, list);
+                    state.conversation.lists[list] = items ?? [];
                 }
-            }
 
-            /**
-            * Deletes a list from the conversation state.
-            * @param {ApplicationTurnState} state - The current turn state.
-            * @param {string} listName - The name of the list to delete.
-            */
-            function deleteList(state: ApplicationTurnState, listName: string): void {
-                if (typeof state.conversation.lists == 'object' && Object.prototype.hasOwnProperty.call(state.conversation.lists, listName)) {
-                    delete state.conversation.lists[listName];
+                /**
+                * Ensures that a list with the given name exists in the conversation state.
+                * @param {ApplicationTurnState} state - The current turn state.
+                * @param {string} listName - The name of the list to ensure exists.
+                */
+                function ensureListExists(state: ApplicationTurnState, listName: string): void {
+                    if (typeof state.conversation.lists != 'object') {
+                        state.conversation.lists = {};
+                    }
+
+                    if (!Object.prototype.hasOwnProperty.call(state.conversation.lists, listName)) {
+                        state.conversation.lists[listName] = [];
+                    }
                 }
-            }
+
+                /**
+                * Deletes a list from the conversation state.
+                * @param {ApplicationTurnState} state - The current turn state.
+                * @param {string} listName - The name of the list to delete.
+                */
+                function deleteList(state: ApplicationTurnState, listName: string): void {
+                    if (typeof state.conversation.lists == 'object' && Object.prototype.hasOwnProperty.call(state.conversation.lists, listName)) {
+                        delete state.conversation.lists[listName];
+                    }
+                }
 
             ```
 
@@ -806,67 +806,67 @@ items:
        
        ``` 
       
-    1. In the root folder, create a new file **responses.ts** and add the following code to the file:
+    1. In the root folder, create a new file **responses.ts** and add the following code to define responses:
 
          ```typescript
-         // Copyright (c) Microsoft Corporation. All rights reserved.
-         // Licensed under the MIT License.
+            // Copyright (c) Microsoft Corporation. All rights reserved.
+            // Licensed under the MIT License.
 
-         /*
-         All of these responses where generated by GPT using a prompt similar to:
+            /*
+            All of these responses where generated by GPT using a prompt similar to:
 
-        
-         Here's a JavaScript string literal template:
+            
+            Here's a JavaScript string literal template:
 
-         `I couldn't find a ${item} on your ${list} list.`
+            `I couldn't find a ${item} on your ${list} list.`
 
-         Create a JavaScript array with 7 variations of the template.
-         The variations should be helpful, creative, clever, and very friendly.
-         The variations should always use the back tick `` syntax.
-         The variations should always include ${item} and ${list} variables.
-        
+            Create a JavaScript array with 7 variations of the template.
+            The variations should be helpful, creative, clever, and friendly.
+            The variations should always use the back tick `` syntax.
+            The variations should always include ${item} and ${list} variables.
+            
 
-         7 variations were asked for so that we can remove the 2 we like the least.
-         */
+            7 variations were asked for so that we can remove the 2 we like the least.
+            */
 
-         /**
-         * Generates a greeting message for the user.
-         * @returns {string} The greeting message.
-         */
-         export function greeting(): string {
-            return getRandomResponse([
-                'Welcome to List Bot! Type /reset to delete all existing lists.',
-                "Hello! I'm List Bot. Use /reset to delete all your lists.",
-                "Hi there! I'm here to help you manage your lists. Use /reset to delete all lists.",
-                "Greetings! I'm List Bot. Type /reset to delete all your list.",
-                'Hey there! List Bot here. You can use /reset to delete all lists.'
-            ]);
-         }
+            /**
+            * Generates a greeting message for the user.
+            * @returns {string} The greeting message.
+            */
+            export function greeting(): string {
+                return getRandomResponse([
+                    'Welcome to List Bot! Type /reset to delete all existing lists.',
+                    "Hello! I'm List Bot. Use /reset to delete all your lists.",
+                    "Hi there! I'm here to help you manage your lists. Use /reset to delete all lists.",
+                    "Greetings! I'm List Bot. Type /reset to delete all your list.",
+                    'Hey there! List Bot here. You can use /reset to delete all lists.'
+                ]);
+            }
 
-         /**
-         * Resets all lists and returns a message indicating that the reset was successful.
-         * @returns {string} The response message.
-         */
-         export function reset(): string {
-            return getRandomResponse([
-                'Resetting all lists. All lists have been deleted.',
-                'Starting fresh. All lists have been reset.',
-                'All lists have been cleared. Ready for new lists!',
-                'Cleaning slate. All lists have been reset.',
-                'All lists have been wiped. Ready for new lists!'
-            ]);
-         }
+            /**
+            * Resets all lists and returns a message indicating that the reset was successful.
+            * @returns {string} The response message.
+            */
+            export function reset(): string {
+                return getRandomResponse([
+                    'Resetting all lists. All lists have been deleted.',
+                    'Starting fresh. All lists have been reset.',
+                    'All lists have been cleared. Ready for new lists!',
+                    'Cleaning slate. All lists have been reset.',
+                    'All lists have been wiped. Ready for new lists!'
+                ]);
+            }
 
-         /**
-         * Returns a random response message from an array of possible responses.
-         * @param {string[]} responses An array of possible response messages.
-         * @returns {string} A randomly selected response message.
-         */
-         function getRandomResponse(responses: string[]): string {
-            const i = Math.floor(Math.random() * (responses.length - 1));
-            // eslint-disable-next-line security/detect-object-injection
-            return responses[i];
-         }
+            /**
+            * Returns a random response message from an array of possible responses.
+            * @param {string[]} responses An array of possible response messages.
+            * @returns {string} A randomly selected response message.
+            */
+            function getRandomResponse(responses: string[]): string {
+                const i = Math.floor(Math.random() * (responses.length - 1));
+                // eslint-disable-next-line security/detect-object-injection
+                return responses[i];
+            }
 
          ```
 
@@ -957,7 +957,7 @@ items:
     1. Select **Sign in to Azure**.
 
         > [!TIP]
-        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+        > If you have the Azure Account extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
     1. Sign in to your Azure account using your credentials.
