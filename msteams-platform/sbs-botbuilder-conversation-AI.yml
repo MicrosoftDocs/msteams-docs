@@ -362,40 +362,40 @@ items:
            AZURE_OPENAI_ENDPOINT=https://********.openai.azure.com/
           ```
 
-       > [!NOTE]
-       > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key or Azure Open AI endpoint.
+         > [!NOTE]
+         > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key or Azure Open AI endpoint.
 
     
      1. Go to the `teamsapp.local.yml` file, under **Generate runtime environment variables**, add the following code after `BOT_ID` and `BOT_PASSWORD`:
 
-       1. For OpenAI:
+        1. For OpenAI:
 
-       ```teamsapp.local.yml
-       OPENAI_KEY: ${{OPENAI_KEY}}
-       ```
+           ```teamsapp.local.yml
+           OPENAI_KEY: ${{OPENAI_KEY}}
+           ```
 
-       1. For Azure OpenAI:
+        1. For Azure OpenAI:
 
-       ```teamsapp.local.yml
-        AZURE_OPENAI_KEY: ${{AZURE_OPENAI_KEY}}
-        AZURE_OPENAI_ENDPOINT: ${{AZURE_OPENAI_ENDPOINT}}
-        ```
-       When you run the app locally, the values defined here are used in the local settings.
+           ```teamsapp.local.yml
+            AZURE_OPENAI_KEY: ${{AZURE_OPENAI_KEY}}
+            AZURE_OPENAI_ENDPOINT: ${{AZURE_OPENAI_ENDPOINT}}
+           ```
+           When you run the app locally, the values defined here are used in the local settings.
     
     1. Go to the `config.ts` file and add the following code after `botId` and `botPassword`:
 
        1. For OpenAI:
     
-       ```config.ts
-       OPENAI_KEY: process.env.OPENAI_KEY
-       ```
+          ```config.ts
+          OPENAI_KEY: process.env.OPENAI_KEY
+          ```
 
        1. For Azure OpenAI:
 
-       ```config.ts
-        AZURE_OPENAI_KEY: process.env.AZURE_OPENAI_KEY,
-        AZURE_OPENAI_ENDPOINT: process.env.AZURE_OPENAI_ENDPOINT
-       ```
+          ```config.ts
+           AZURE_OPENAI_KEY: process.env.AZURE_OPENAI_KEY,
+           AZURE_OPENAI_ENDPOINT: process.env.AZURE_OPENAI_ENDPOINT
+          ```
 
        When you debug the app, the `OPENAI_KEY` or `AZURE_OPENAI_KEY` and `AZURE_OPENAI_ENDPOINT` processes the `OPENAI_KEY` or `AZURE_OPENAI_KEY` and `AZURE_OPENAI_ENDPOINT` from the `.env.local.user` or `.env.local` file during local debug.
 
