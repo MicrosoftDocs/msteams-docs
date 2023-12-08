@@ -431,7 +431,7 @@ You can configure which users are allowed to consent to apps accessing their Tea
 [PS]
 
 </details>
-
+<br>
 <details>
 
 <summary><b>Configure Chat RSC via PowerShell cmndlets</b></summary>
