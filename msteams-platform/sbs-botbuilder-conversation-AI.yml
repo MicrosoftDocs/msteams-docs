@@ -343,45 +343,30 @@ items:
 
        ```bash
        npm install @microsoft/teams-ai
-       npm install vectra
+       yarn install
 
        ```
 
-    1. Go to **Explorer** > **env**. 
+    1. Go to **Explorer**. Update the following code in the `.env.local` file:
     
-       1. For OpenAI: Go to **.env.local**, at the end of the file, enter the OpenAI key that you've generated.
+       1. For OpenAI: Add the OpenAI key that you've generated.
 
-       ```env/.env.local
-        SECRET_OPENAI_API_KEY=sk***********************
-       ```
+          ```env/.env.local
+          OPENAI_KEY=sk***********************
+          ```
 
-       1. For Azure OpenAI: Go to **.env.local**, at the end of the file, add the Azure OpenAI key and endpoint that you've generated.
+       1. For Azure OpenAI: Add the Azure OpenAI key and endpoint that you've generated.
 
-       ```env/.env.local
-        AZURE_OPENAI_KEY=***********************
-        AZURE_OPENAI_ENDPOINT=https://********.openai.azure.com/
-       ```
+          ```env/.env.local
+           AZURE_OPENAI_KEY=***********************
+           AZURE_OPENAI_ENDPOINT=https://********.openai.azure.com/
+          ```
 
        > [!NOTE]
        > If you’re creating the sample through Teams Toolkit, you’ll find the `.env.local.user` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key or Azure Open AI endpoint.
 
-    1. Go to the `config.ts` file and add the following code after `botId` and `botPassword`:
-
-       1. For OpenAI:
     
-       ```config.ts
-       openAIKey: process.env.OPENAI_KEY
-       ```
-
-       1. For Azure OpenAI:
-
-       ```config.ts
-       openAIEndpoint: process.env.AZURE_OPENAI_ENDPOINT
-       ```
-
-       When you debug the app, the `OpenAIKey` or `openAIEndpoint` processes the `SECRET_OPENAI_API_KEY` or `AZURE_OPENAI_ENDPOINT` from the `.env.local.user` or `.env.local` file during local debug.
-
-    1. Go to the `teamsapp.local.yml` file, under **Generate runtime environment variables**, add the following code after `BOT_ID` and `BOT_PASSWORD`:
+     1. Go to the `teamsapp.local.yml` file, under **Generate runtime environment variables**, add the following code after `BOT_ID` and `BOT_PASSWORD`:
 
        1. For OpenAI:
 
@@ -396,24 +381,87 @@ items:
         AZURE_OPENAI_ENDPOINT: ${{AZURE_OPENAI_ENDPOINT}}
         ```
        When you run the app locally, the values defined here are used in the local settings.
+    
+    1. Go to the `config.ts` file and add the following code after `botId` and `botPassword`:
+
+       1. For OpenAI:
+    
+       ```config.ts
+       OPENAI_KEY: process.env.OPENAI_KEY
+       ```
+
+       1. For Azure OpenAI:
+
+       ```config.ts
+        AZURE_OPENAI_KEY: process.env.AZURE_OPENAI_KEY,
+        AZURE_OPENAI_ENDPOINT: process.env.AZURE_OPENAI_ENDPOINT
+       ```
+
+       When you debug the app, the `OPENAI_KEY` or `AZURE_OPENAI_KEY` and `AZURE_OPENAI_ENDPOINT` processes the `OPENAI_KEY` or `AZURE_OPENAI_KEY` and `AZURE_OPENAI_ENDPOINT` from the `.env.local.user` or `.env.local` file during local debug.
+
+    1. Go to the `teamsapp.local.yml` file, under **deploy**, update the following for `target`:
+
+       ```teamsapp.local.yml
+       OPENAI_KEY: ${{OPENAI_KEY}}
+       ```
 
     1. Go to the `index.ts` file:
+
+        1. Under **Import required packages**, after `restify` add the following code in a new line:
+        
+           ```typescript
+           import * as path from 'path';
+           ```
+
+        1. Under **Import required bot service**, after `TurnContext` add `MemoryStorage` in a new line:
+
+           ```typescript
+            import {
+            CloudAdapter,
+            ConfigurationServiceClientCredentialFactory,
+            ConfigurationBotFrameworkAuthentication,
+            TurnContext,
+            MemoryStorage,
+            } from "botbuilder";
+           ```
+
+        1. After the `botbuilder` import, comment the following code:
+
+           ```typescript
+           //import * as path from 'path';
+
+           ```
+
+        1. After `onTurnErrorHandler`, comment the following code:
+
+           ```typescript
+           //const bot = new TeamsBot();
+           `   
 
         1. Under **Create HTTP server** after `console.log` method, add the following code in a new line to import Teams AI library:
 
             ```typescript
-            import { AI, Application, ActionPlanner, OpenAIModel, PromptManager, TurnState } from '@microsoft/teams-ai';
-            import { addResponseFormatter } from './responseFormatter';
-            import { VectraDataSource } from './VectraDataSource';
+            import {
+              Application,
+              ActionPlanner,
+              OpenAIModel,
+              PromptManager,
+              TurnState,
+              DefaultConversationState
+            } from '@microsoft/teams-ai';
+            import * as responses from './responses';
             ```
 
             You need to import the required classes to use the functions and variables available in the class to build your app. You can use pre-built templates and add your business logic to this scaffold.
 
-        1. After `import path from "path"`, add the following code in a new line to define a state:
+        1. After `import * as responses from './responses'`, add the following code in a new line to define a state:
 
             ```typescript
-            // eslint-disable-next-line @typescript-eslint/no-empty-interface
-            interface ConversationState {}
+            // Strongly type the applications turn state
+            interface ConversationState extends DefaultConversationState {
+                greeted: boolean;
+                lists: Record<string, string[]>;
+            }
             type ApplicationTurnState = TurnState<ConversationState>;
 
             ```
@@ -428,6 +476,8 @@ items:
            }
            ```
 
+           The environment variables are required for the application to run correctly. If it is not set, an error is shown.
+
         1. After `throw new Error`.
         
            1. For OpenAI: Add the following code in a new line to create `OpenAIModel`, `promptManager`, and `ActionPlanner`:
@@ -435,44 +485,38 @@ items:
             ```typescript
             // Create AI components
             const model = new OpenAIModel({
-            // OpenAI Support
-              apiKey: process.env.OPENAI_KEY!,
-              defaultModel: 'gpt-3.5-turbo',
+                // OpenAI Support
+                apiKey: process.env.OPENAI_KEY!,
+                defaultModel: 'gpt-3.5-turbo',
 
-            // Request logging
-            logRequests: true
+                // Azure OpenAI Support
+                azureApiKey: process.env.AZURE_OPENAI_KEY!,
+                azureDefaultDeployment: 'gpt-3.5-turbo',
+                azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT!,
+                azureApiVersion: '2023-03-15-preview',
+
+                // Request logging
+                logRequests: true
             });
 
             const prompts = new PromptManager({
-                promptsFolder: path.join(__dirname, '../src/prompts')
+                promptsFolder: path.join(__dirname, '/src/prompts')
             });
 
             const planner = new ActionPlanner({
                 model,
                 prompts,
-                defaultPrompt: 'chat',
+                defaultPrompt: 'monologue',
             });
-            ````
 
-            * Planner: The `OpenAIPlanner` is a class that implements an interface called `Planner`. Planner calls the OpenAI's large language model (LLM)s `text-davinci-003` model for text completion. You can use the `OpenAIPlanner` or AzureOpenAIPlanner. If your using the AzureOpenAIPlanner, ensure that you define the endpoint property.
+            ```
 
-            * PromptManager: `promptManager` Allows you to register your prompts and load a prompt template into the AI component. All the functions related to the prompt manager are available in the `DefaultPromptManager`.  The prompt manager parses the prompts defined in the `prompt` folder. You can replace or override your own functionality in the prompt manager. 
+            * OpenAIModel: OpenAIModel is a class that represents a model that can be used to call the OpenAI API or any other source that supports the OpenAI REST schema. OpenAI model supports both OpenAI and Azure OpenAI LLMs.
 
-            * Moderator: The `OpenAIModerator` reviews both user's input and the model output to detect harmful speech, such as hate speech, self-harm, and violence.
+            * Prompt manager: The prompt manager manages prompt creation. It calls functions and injects from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
 
-           1. For Azure OpenAI: Replace the code for '//OpenAI Support' with the following code:
-        
-                ```typescript
-                 
-                        // Azure OpenAI Support
-                        azureApiKey: process.env.AZURE_OPENAI_KEY!,
-                        azureDefaultDeployment: 'gpt-3.5-turbo',
-                        azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT!,
-                        azureApiVersion: '2023-03-15-preview',
-                ```
-
-                Teams AI library for Azure OpenAI is built with Azure AI Content Safety which detects harmful user-generated and AI-generated content in applications and services. Content Safety includes text and image APIs that allow you to detect material that is harmful. For more information, see [Azure AI Content Safety](/azure/ai-services/content-safety/overview). You can also use [Moderation APIs](/azure/ai-services/content-moderator/overview#moderation-apis) to personalize your bot to a specific language or a style.
-
+            * ActionPlanner: The ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. It's responsible for generating and executing plans based on the user's input and the available actions.
+            
         1. After `const promptManager`, add the following code in a new line to define storage and application:
 
             ```typescript
@@ -481,7 +525,7 @@ items:
             const app = new Application<ApplicationTurnState>({
                 storage,
                 ai: {
-                    planner,
+                    planner
                 }
             });
             ```
@@ -490,60 +534,144 @@ items:
             * The `MemoryStorage` class is a memory based storage provider that stores and retrieves plan old JSON objects. It's imported from the Bot Builder SDK.
 
        
-        1.  After adding the code to define storage and application, add the following code in a new line to define data sources:
-
-           ```typescript
-           // Register your data source with planner
-            planner.prompts.addDataSource(new VectraDataSource({
-                name: 'teams-ai',
-                apiKey:  process.env.OPENAI_KEY!,
-                indexFolder: path.join(__dirname, '../index'),
-            }));
-
-            // Add a custom response formatter to convert markdown code blocks to <pre> tags
-            addResponseFormatter(app);
-
-           ```
-       
-       
-        1.  After adding the code to define data sources, add the following code in a new line to define actions:
+        1.  After adding the code to define storage and application, add the following code in a new line to listen for new members to join the conversation and delete the conversation state:
 
             ```typescript
-            // Register other AI actions
-            app.ai.action(
-                AI.FlaggedInputActionName,
-                async (context: TurnContext, state: ApplicationTurnState, data: Record<string, any>) => {
-                    await context.sendActivity(`I'm sorry your message was flagged: ${JSON.stringify(data)}`);
-                    return AI.StopCommandName;
+            // Listen for new members to join the conversation
+            // Listen for new members to join the conversation
+            app.conversationUpdate('membersAdded', async (context: TurnContext, state: ApplicationTurnState) => {
+                if (!state.conversation.greeted) {
+                    state.conversation.greeted = true;
+                    await context.sendActivity(responses.greeting());
                 }
-            );
+            });
 
-            app.ai.action(AI.FlaggedOutputActionName, async (context: TurnContext, state: ApplicationTurnState, data: any) => {
-                await context.sendActivity(`I'm not allowed to talk about such things.`);
-                return AI.StopCommandName;
+            // ListEN for /reset command and then delete the conversation state
+            app.message('/reset', async (context: TurnContext, state: ApplicationTurnState) => {
+                state.deleteConversationState();
+                await context.sendActivity(responses.reset());
             });
             ```
-            
-            When the `ActionPlanner` reviews and identifies a flag in an input or output, it triggers the action `AI.FlaggedInputActionName` or `AI.FlaggedOutputActionName` and the `context.sendActivity` sends a message to the user. If the user receives a message for an flagged  input or output, the user can control what he wants to do.
 
-        1. Under **Import required packages**, after `restify` add `import * as path from 'path';` in a new line.
+            The `MembersAdded` method is called when a new member joins the conversation. The `state.deleteConversationState` method deletes the conversation state.
+       
+       
+        1.  After adding the code to listen for new members to join the conversation and delete the conversation state, add the following code in a new line to action handlers:
 
-        1. Under **Import required bot service**, after `TurnContext` add `MemoryStorage`.
+            ```typescript
+            // Register action handlers
+            interface ListOnly {
+                list: string;
+            }
+
+            interface ListAndItems extends ListOnly {
+                items?: string[];
+            }
+
+            app.ai.action('createList', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+                ensureListExists(state, parameters.list);
+                if (Array.isArray(parameters.items) && parameters.items.length > 0) {
+                    await app.ai.doAction(context, state, 'addItems', parameters);
+                    return `list created and items added. think about your next action`;
+                } else {
+                    return `list created. think about your next action`;
+                }
+            });
+
+            app.ai.action('deleteList', async (context: TurnContext, state: ApplicationTurnState, parameters: ListOnly) => {
+                deleteList(state, parameters.list);
+                return `list deleted. think about your next action`;
+            });
+
+            app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+                const items = getItems(state, parameters.list);
+                items.push(...(parameters.items ?? []));
+                setItems(state, parameters.list, items);
+                return `items added. think about your next action`;
+            });
+
+            app.ai.action('removeItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
+                const items = getItems(state, parameters.list);
+                (parameters.items ?? []).forEach((item: string) => {
+                    const index = items.indexOf(item);
+                    if (index >= 0) {
+                        items.splice(index, 1);
+                    }
+                });
+                setItems(state, parameters.list, items);
+                return `items removed. think about your next action`;
+            });
+
+            ```
 
         1. By default, bot builder uses `bot` as a variable, as we're constructing an app for the `new Application`. We must replace `await bot.run(context)` with `await app.run(context)`.
    
-    1. In the root folder, create new folders **prompts** > **chat**.
+        1. after app.run(context), add the following functions in a new line to retrieves the items for a given list from the conversation state:
+
+            ```typescript
+            /**
+            * Retrieves the items for a given list from the conversation state.
+            * @param {ApplicationTurnState} state - The current turn state.
+            * @param {string} list - The name of the list to retrieve items for.
+            * @returns {string[]} - The items in the specified list.
+            */
+            function getItems(state: ApplicationTurnState, list: string): string[] {
+                ensureListExists(state, list);
+                return state.conversation.lists[list];
+            }
+
+            /**
+            * Sets the items for a given list in the conversation state.
+            * @param {ApplicationTurnState} state - The current turn state.
+            * @param {string} list - The name of the list to set items for.
+            * @param {string[]} items - The items to set for the specified list.
+            */
+            function setItems(state: ApplicationTurnState, list: string, items: string[]): void {
+                ensureListExists(state, list);
+                state.conversation.lists[list] = items ?? [];
+            }
+
+            /**
+            * Ensures that a list with the given name exists in the conversation state.
+            * @param {ApplicationTurnState} state - The current turn state.
+            * @param {string} listName - The name of the list to ensure exists.
+            */
+            function ensureListExists(state: ApplicationTurnState, listName: string): void {
+                if (typeof state.conversation.lists != 'object') {
+                    state.conversation.lists = {};
+                }
+
+                if (!Object.prototype.hasOwnProperty.call(state.conversation.lists, listName)) {
+                    state.conversation.lists[listName] = [];
+                }
+            }
+
+            /**
+            * Deletes a list from the conversation state.
+            * @param {ApplicationTurnState} state - The current turn state.
+            * @param {string} listName - The name of the list to delete.
+            */
+            function deleteList(state: ApplicationTurnState, listName: string): void {
+                if (typeof state.conversation.lists == 'object' && Object.prototype.hasOwnProperty.call(state.conversation.lists, listName)) {
+                    delete state.conversation.lists[listName];
+                }
+            }
+
+            ```
+
+    1. In the root folder, create new folders **prompts** > **monologue**.
 
     1. Under **chat**, create the following files:
        * config.json
        * skprompt.txt
+       * actions.json
 
     1. Go to the `config.json` file and add the following code to create the prompt model settings:
     
         ```config.json
         {
             "schema": 1.1,
-            "description": "Chat with Teams Chef",
+            "description": "A bot that can manage lists of items",
             "type": "completion",
             "completion": {
                 "model": "gpt-3.5-turbo",
@@ -552,17 +680,14 @@ items:
                 "include_input": true,
                 "max_input_tokens": 2800,
                 "max_tokens": 1000,
-                "temperature": 0.9,
+                "temperature": 0.2,
                 "top_p": 0.0,
                 "presence_penalty": 0.6,
                 "frequency_penalty": 0.0,
                 "stop_sequences": []
             },
             "augmentation": {
-                "augmentation_type": "none",
-                "data_sources": {
-                    "teams-ai": 1200
-                }
+                "augmentation_type": "monologue"
             }
         }
         ```
@@ -572,194 +697,182 @@ items:
     1. Go to the `skprompt.txt` file. Add the following instructions for OpenAI endpoint to conduct and facilitate conversation:
 
         ```text
-        The following is a conversation with an AI assistant, its name is Teams Chef.
-        Teams Chef is an expert in Microsoft Teams apps development and the Human is junior developer learning Microsoft Teams development for the first time.
-        Teams Chef should always reply by explaining new concepts in simple terms using cooking as parallel concepts.
-        Teams Chef should always greet the human, ask them their name, and then guide the junior developer in his journey to build new apps for Microsoft Teams.
-        Base your answer off the text below:
+        The following is a conversation with an AI assistant.
+        The assistant can manage lists of items.
+
+        rules:
+        - only create lists the user has explicitly asked to create.
+        - only add items to a list that the user has asked to have added.
+        - if multiple lists are being manipulated, call a separate action for each list.
+        - if items are being added and removed from a list, call a separate action for each operation.
+
+        Current lists:
+        {{$conversation.lists}}
+
         ```
 
         The `skprompt.txt` file contains text prompts with which the users interact with OpenAI endpoint. OpenAI endpoint attempts to use these prompts to produce the next series of words that are most likely to follow from the previous text.
 
-      1. In the root folder, create a new file **responseFormatter.ts** and add the following code to the file:
+    1. In the `actions.json` file, add the following code to define actions:
 
-         ```typescript
-         import { Application, AI, PredictedSayCommand } from '@microsoft/teams-ai';
-
-         /**
-         *
-         * @param app
-         */
-         export function addResponseFormatter(app: Application): void {
-            app.ai.action<PredictedSayCommand>(AI.SayCommandActionName, async (context, state, data) => {
-                // Replace markdown code blocks with <pre> tags
-                let addTag = false;
-                let inCodeBlock = false;
-                const output: string[] = [];
-                const response = data.response.split('\n');
-                for (const line of response) {
-                    if (line.startsWith('```')) {
-                        if (!inCodeBlock) {
-                            // Add tag to start of next line
-                            addTag = true;
-                            inCodeBlock = true;
-                        } else {
-                            // Add tag to end of previous line
-                            output[output.length - 1] += '</pre>';
-                            addTag = false;
-                            inCodeBlock = false;
+       ```typescript
+        [
+            {
+                "name": "createList",
+                "description": "Creates a new list with an optional set of initial items",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "list": {
+                            "type": "string",
+                            "description": "The name of the list to create"
+                        },
+                        "items": {
+                            "type": "array",
+                            "description": "The items to add to the list",
+                            "items": {
+                                "type": "string"
+                            }
                         }
-                    } else if (addTag) {
-                        output.push(`<pre>${line}`);
-                        addTag = false;
-                    } else {
-                        output.push(line);
-                    }
+                    },
+                    "required": [
+                        "list"
+                    ]
                 }
-
-                // Send response
-                const formattedResponse = output.join('\n');
-                await context.sendActivity(formattedResponse);
-
-                return '';
-            });
-          }
-         ```
-
-      1. In the root folder, create a new file **responseFormatter.ts** and add the following code to the file:
+            },
+            {
+                "name": "deleteList",
+                "description": "Deletes a list",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "list": {
+                            "type": "string",
+                            "description": "The name of the list to delete"
+                        }
+                    },
+                    "required": [
+                        "list"
+                    ]
+                }
+            },
+            {
+                "name": "addItems",
+                "description": "Adds one or more items to a list",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "list": {
+                            "type": "string",
+                            "description": "The name of the list to add the item to"
+                        },
+                        "items": {
+                            "type": "array",
+                            "description": "The items to add to the list",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": [
+                        "list",
+                        "items"
+                    ]
+                }
+            },
+            {
+                "name": "removeItems",
+                "description": "Removes one or more items from a list",
+                "parameters": {
+                    "type": "object",
+                    "properties": {
+                        "list": {
+                            "type": "string",
+                            "description": "The name of the list to remove the item from"
+                        },
+                        "items": {
+                            "type": "array",
+                            "description": "The items to remove from the list",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "required": [
+                        "list",
+                        "items"
+                    ]
+                }
+            }
+        ]
+       
+       ``` 
+      
+    1. In the root folder, create a new file **responses.ts** and add the following code to the file:
 
          ```typescript
-         import { DataSource, Memory, RenderedPromptSection, Tokenizer } from '@microsoft/teams-ai';
-         import { OpenAIEmbeddings, LocalDocumentIndex } from 'vectra';
-         import * as path from 'path';
-         import { TurnContext } from 'botbuilder';
+         // Copyright (c) Microsoft Corporation. All rights reserved.
+         // Licensed under the MIT License.
+
+         /*
+         All of these responses where generated by GPT using a prompt similar to:
+
+         ```
+         Here's a JavaScript string literal template:
+
+         `I couldn't find a ${item} on your ${list} list.`
+
+         Create a JavaScript array with 7 variations of the template.
+         The variations should be helpful, creative, clever, and very friendly.
+         The variations should always use the back tick `` syntax.
+         The variations should always include ${item} and ${list} variables.
+         ```
+
+         7 variations were asked for so that we can remove the 2 we like the least.
+         */
 
          /**
-         * Options for creating a `VectraDataSource`.
+         * Generates a greeting message for the user.
+         * @returns {string} The greeting message.
          */
-         export interface VectraDataSourceOptions {
-            /**
-            * Name of the data source and local index.
-            */
-            name: string;
-
-            /**
-            * OpenAI API key to use for generating embeddings.
-            */
-            apiKey: string;
-
-            /**
-            * Path to the folder containing the local index.
-            * @remarks
-            * This should be the root folder for all local indexes and the index itself
-            * needs to be in a subfolder under this folder.
-            */
-            indexFolder: string;
-
-            /**
-            * Optional. Maximum number of documents to return.
-            * @remarks
-            * Defaults to `5`.
-            */
-            maxDocuments?: number;
-
-            /**
-            * Optional. Maximum number of chunks to return per document.
-            * @remarks
-            * Defaults to `50`.
-            */
-            maxChunks?: number;
-
-            /**
-            * Optional. Maximum number of tokens to return per document.
-            * @remarks
-            * Defaults to `600`.
-            */
-            maxTokensPerDocument?: number;
+         export function greeting(): string {
+            return getRandomResponse([
+                'Welcome to List Bot! Type /reset to delete all existing lists.',
+                "Hello! I'm List Bot. Use /reset to delete all your lists.",
+                "Hi there! I'm here to help you manage your lists. Use /reset to delete all lists.",
+                "Greetings! I'm List Bot. Type /reset to delete all your list.",
+                'Hey there! List Bot here. You can use /reset to delete all lists.'
+            ]);
          }
 
          /**
-         * A data source that uses a local Vectra index to inject text snippets into a prompt.
+         * Resets all lists and returns a message indicating that the reset was successful.
+         * @returns {string} The response message.
          */
-         export class VectraDataSource implements DataSource {
-            private readonly _options: VectraDataSourceOptions;
-            private readonly _index: LocalDocumentIndex;
+         export function reset(): string {
+            return getRandomResponse([
+                'Resetting all lists. All lists have been deleted.',
+                'Starting fresh. All lists have been reset.',
+                'All lists have been cleared. Ready for new lists!',
+                'Cleaning slate. All lists have been reset.',
+                'All lists have been wiped. Ready for new lists!'
+            ]);
+         }
 
-            /**
-            * Name of the data source.
-            * @remarks
-            * This is also the name of the local Vectra index.
-            */
-            public readonly name: string;
-
-            /**
-            * Creates a new `VectraDataSource` instance.
-            * @param options Options for creating the data source.
-            */
-            public constructor(options: VectraDataSourceOptions) {
-                this._options = options;
-                this.name = options.name;
-
-                // Create embeddings model
-                const embeddings = new OpenAIEmbeddings({
-                    model: 'text-embedding-ada-002',
-                    apiKey: options.apiKey,
-                });
-
-                // Create local index
-                this._index = new LocalDocumentIndex({
-                    embeddings,
-                    folderPath: path.join(options.indexFolder, options.name),
-                });
-            }
-
-            /**
-            * Renders the data source as a string of text.
-            * @param context Turn context for the current turn of conversation with the user.
-            * @param memory An interface for accessing state values.
-            * @param tokenizer Tokenizer to use when rendering the data source.
-            * @param maxTokens Maximum number of tokens allowed to be rendered.
-            */
-            public async renderData(context: TurnContext, memory: Memory, tokenizer: Tokenizer, maxTokens: number): Promise<RenderedPromptSection<string>> {
-                // Query index
-                const query = memory.getValue('temp.input') as string;
-                const results = await this._index.queryDocuments(query, {
-                    maxDocuments: this._options.maxDocuments ?? 5,
-                    maxChunks: this._options.maxChunks ?? 50,
-                });
-
-                // Add documents until you run out of tokens
-                let length = 0;
-                let output = '';
-                let connector = '';
-                for (const result of results) {
-                    // Start a new doc
-                    let doc = `${connector}url: ${result.uri}\n`;
-                    let docLength = tokenizer.encode(doc).length;
-                    const remainingTokens = maxTokens - (length + docLength);
-                    if (remainingTokens <= 0) {
-                        break;
-                    }
-
-                    // Render document section
-                    const sections = await result.renderSections(Math.min(remainingTokens, this._options.maxTokensPerDocument ?? 600), 1);
-                    docLength += sections[0].tokenCount;
-                    doc += sections[0].text;
-
-                    // Append do to output
-                    output += doc;
-                    length += docLength;
-                    connector = '\n\n';
-                }
-
-                return { output, length, tooLong: length > maxTokens };
-            }
-
+         /**
+         * Returns a random response message from an array of possible responses.
+         * @param {string[]} responses An array of possible response messages.
+         * @returns {string} A randomly selected response message.
+         */
+         function getRandomResponse(responses: string[]): string {
+            const i = Math.floor(Math.random() * (responses.length - 1));
+            // eslint-disable-next-line security/detect-object-injection
+            return responses[i];
          }
 
          ```
 
-    This sample leverages OpenAI endpoint for all its natural language modelling, the user can talk to an AI bot in any language of their choosing. The bot understands and responds appropriately without extra code.
+    1. In the root folder, delete the **bot.ts** file.     
 
     ## Build and run your first bot app locally
 
