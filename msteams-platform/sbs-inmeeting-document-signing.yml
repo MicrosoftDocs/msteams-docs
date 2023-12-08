@@ -64,16 +64,12 @@ items:
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+    1. Look for the option to **Upload a customised app**. If you see the option, custom app upload is enabled.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-custom-app.png" alt-text="Diagram shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-custom-app.png" alt-text=" Screenshot shows the option to upload a customised app in Teams.":::
 
         > [!NOTE]
-        > Contact your Teams administrator, if you don't find the option to upload a custom app.  
-
-    ## Download the code sample
-
-      You must use the [In-Meeting Document Signing](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-share-to-stage-signing/csharp) code sample for this step-by-step guide. To use the code sample, clone the repository from GitHub.
+        > Contact your Teams administrator, if you don't find the option to upload a customised app.  
 
 - title: Set up local environment
   durationInMinutes: 1
@@ -101,19 +97,9 @@ items:
       [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
       # [ngrok](#tab/ngrok)
+
+      [!INCLUDE [Tunnel](includes\get-started\ngrok-tunnel.md)]
       
-      Use ngrok to create a tunnel to your locally running web server's publicly available HTTPS endpoints. Run the following command in ngrok:
-
-     ```bash
-     ngrok http --host-header=localhost 44326
-     ```
-
-      The ngrok tunnel information appears.
-
-      :::image type="content" source="../msteams-platform/assets/images/sbs-inmeeting-doc-signing/ngrok1.png" alt-text="Screenshot shows the ngrok HTTPS URL.":::
-
-      ---  
-
     [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
     
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
@@ -129,7 +115,7 @@ items:
 
     1. Select **+ Add a permission**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/add-api-permission.png" alt-text="Screenshot shows the option to select Add permission.":::
 
     1. Select **Microsoft Graph**.
 
@@ -141,14 +127,13 @@ items:
 
     1. Select **Add permissions**.
 
-      :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
+       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/select-api-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
-
 
 - title: Create your bot
   durationInMinutes: 1
