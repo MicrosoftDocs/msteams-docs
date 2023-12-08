@@ -79,72 +79,21 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
    yarn build
    ```
 
-
-
 1. After the dependencies are installed. Select **File** > **Open Folder**.
 
 1. Go to **teams-ai > js > samples> 04.ai.a.teamsChefBot** and select **Select Folder**. All the files for the chef bot sample are listed under the **EXPLORER** section in Visual Studio Code.
 
 1. Under **EXPLORER**, duplicate the `sample.env` file  and update the duplicate file to `.env`.
 
+1. In the sample folder, update the following code in the `.env.local` configuration file:
 
-1. Select the following AI service you want to use:
+   ```text
+   OPENAI_KEY=<your OpenAI key>
 
-   # [Azure OpenAI](#tab/azure-open-ai)
+   ```
 
-   1. Update the following in the `.env` configuration file:
-
-       ```text
-        AZURE_OPENAI_KEY=<your Azure OpenAI key>
-        AZURE_OPENAI_ENDPOINT=<your Azure OpenAI endpoint>
-       ```
-
-      > [!NOTE]
-      > If you’re cloning a [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key to get started.
-
-   1. Update the following code in the `teamsapp.local.yml` file under the **deploy** section:
-
-      ```yml
-      SECRET_OPENAI_KEY: ${{SECRET_OPENAI_KEY}}
-      ```
-
-   1. In the `index.ts` file, go to line number 78 and remove `&& !process.env.AZURE_OPENAI_KEY`.
-
-   1. In the `index.ts` file, comment from line number 88 to 92.
-
-      ```typescript
-      // Azure OpenAI Support
-      // azureApiKey: process.env.AZURE_OPENAI_KEY!,
-      //  azureDefaultDeployment: 'gpt-3.5-turbo',
-      // azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT!,
-      // azureApiVersion: '2023-03-15-preview',
-      ```
-
-   1. In the `index.ts` file, update the value for `azureDefaultDeployment` with your model deployment name.
-
-      ```typescript
-      azureDefaultDeployment: 'gpt-35-turbo',
-      ```
-
-   1. In the `config.json` file, update the value for `model` with your model deployment name.
-
-      ```json
-      "model": "gpt-3.5-turbo"
-      ```
-
-   # [Open AI](#tab/open-ai)
-
-   1. In the sample folder, update the following code in the `.env.local` configuration file:
-
-       ```text
-        OPENAI_KEY=<your OpenAI key>
-       ```
-
-      > [!NOTE]
-      > If you’re cloning a [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key to get started.
-
-   
-      ---
+   > [!NOTE]
+   > If you’re cloning a [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key to get started.
 
 1. From the left pane, select **Teams Toolkit**.
 
