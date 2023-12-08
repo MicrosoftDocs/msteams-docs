@@ -346,15 +346,21 @@ To install your app on which you've enabled RSC permission in a team, chat, or u
 1. [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
 
 ### Configure consent settings
+>[!WARNING]
+>The way you manage settings for application RSC permissions is changing in 2024. Instructions below have been updated to include dates for when new settings will be available for admins to modify
 
 The tenant-level controls of application RSC permissions vary based on the resource type.
 
 For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
-<br>
+<b> Before March 14th, 2024 </b>
+
 <details>
 
-<summary><b>Configure group owner consent settings for RSC in a team using the Microsoft Entra admin center</b></summary>
+<summary><b>Configure group owner consent settings for RSC in a team using the Microsoft Entra admin center [Will be deprecated in March 2024]</b></summary>
+
+>[!IMPORTANT]
+>After March 14th, 2024 this setting will be deprecated and longer available for adjustments. At that time, please utilize the PowerShell cmndlets listed below to adjust your Team RSC setttings.
 
 You can enable or disable group owner consent directly within the Microsoft Entra admin center:
 
@@ -371,7 +377,10 @@ In addition, you can enable or disable group owner consent using PowerShell. Fol
 <br>
 <details>
 
-<summary><b>Configure chat owner consent settings for RSC in a chat using the Graph APIs</b></summary>
+<summary><b>Configure chat owner consent settings for RSC in a chat using the Graph APIs [Will be deprecated in May 2024]</b></summary>
+
+>[!IMPORTANT]
+>After March 14th, 2024 Microsoft suggests disabling this setting and utlizing the PowerShell cmndlets listed below to manage your Chat RSC settings.
 
 You can enable or disable RSC for chats using Graph API. The property `isChatResourceSpecificConsentEnabled` in [teamsAppSettings](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
 
@@ -404,6 +413,32 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 
 > [!NOTE]
 > Admin control is added to allow or block RSC consent settings based on the sensitivity of the data accessed. It isn't based on the single master switch that enables or disables consent settings for app RSC permissions for all apps in the tenant.
+
+</details>
+
+<br>
+
+<b> After March 14th, 2024 </b>
+
+<details>
+
+<summary><b>Configure Team RSC via PowerShell cmndlets</b></summary>
+
+Team owners can authorize applications, such as applications published by third-party vendors, to access your organization's data associated with a group. For example, a Team owner in Microsoft Teams can allow an app to read all Teams messages in the team, or list the basic profile of a Team's members.
+ 
+You can configure which users are allowed to consent to apps accessing their Teams' data, or you can disable the setting for all users.
+
+[PS]
+
+</details>
+
+<details>
+
+<summary><b>Configure Chat RSC via PowerShell cmndlets</b></summary>
+
+You can enable or disable Chat RSC via PowerShell cmndlets:
+
+[PS]
 
 </details>
 
