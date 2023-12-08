@@ -56,7 +56,21 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
    git clone https://github.com/microsoft/teams-ai.git
    ```
 
-1. Go to the **JS** folder.
+1. Go to **Visual Studio Code**.
+
+1. Select **File** > **Open Folder**.
+
+1. Go to the location where you've cloned teams-ai repo and select the **teams-ai** folder.
+
+1. Select **Select Folder**.
+
+1. Select **View** > **Terminal**. A terminal window opens.
+
+1. In the terminal window, run the following command to go to the **JS** folder:
+
+   ```
+   cd .\js\
+   ```
 
 1. Run the following command to install and build dependencies:
 
@@ -65,17 +79,20 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
    yarn build
    ```
 
-1. Run the following command to go to the **04.ai.a.teamsChefBot** sample:
 
-   ```cmd
-   cd .\samples\04.ai.a.teamsChefBot\ 
-   ```
+
+1. After the dependencies are installed. Select **File** > **Open Folder**.
+
+1. Go to **teams-ai > js > samples> 04.ai.a.teamsChefBot** and select **Select Folder**. All the files for the chef bot sample are listed under the **EXPLORER** section in Visual Studio Code.
+
+1. Under **EXPLORER**, duplicate the `sample.env` file  and update the duplicate file to `.env`.
+
 
 1. Select the following AI service you want to use:
 
    # [Azure OpenAI](#tab/azure-open-ai)
 
-   1. In the sample folder, update the following in the `.env.local` configuration file:
+   1. Update the following in the `.env` configuration file:
 
        ```text
         AZURE_OPENAI_KEY=<your Azure OpenAI key>
@@ -120,86 +137,37 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
    1. In the sample folder, update the following code in the `.env.local` configuration file:
 
        ```text
-        SECRET_OPENAI_API_KEY=<your OpenAI key>
+        OPENAI_KEY=<your OpenAI key>
        ```
 
       > [!NOTE]
       > If you’re cloning a [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key to get started.
 
-   1. Update the following code in the `teamsapp.local.yml` file under the **deploy** section:
-
-      ```yml
-      AZURE_OPENAI_KEY: ${{AZURE_OPENAI_KEY}}
-      AZURE_OPENAI_ENDPOINT: ${{AZURE_OPENAI_ENDPOINT}}
-      ```
-
-   1. In the `index.ts` file, go to line number 78 and remove `!process.env.OPENAI_KEY &&`.
-
-   1. In the `index.ts` file, comment from line number 85 to 86.
-
-      ```typescript
-      // OpenAI Support
-      //apiKey: process.env.OPENAI_KEY!,
-      //defaultModel: 'gpt-3.5-turbo',
-      ```
-
-   1. update the value for `defaultModel` with your model deployment name.
-
-      ```typescript
-      defaultModel: 'gpt-35-turbo',
-      ```
-
-   1. In the `config.json` file, update the value for `model` with your model deployment name.
-
-      ```json
-      "model": "gpt-3.5-turbo"
-      ```
-
-   1. In the sample root folder, duplicate the `sample.env` file  and update the duplicate file to `.env`.
-
-   1. Update the following code in the `.env` file:
-
-      ```text
-      AZURE_OPENAI_KEY=
-      AZURE_OPENAI_ENDPOINT=
-      BOT_ID=
-      BOT_PASSWORD=
-      ```
-
+   
       ---
 
-   1. Go to **Visual Studio Code**.
+1. From the left pane, select **Teams Toolkit**.
 
-   1. Select **Open a folder**, browse to the folder where ChefBot is available and then select **Select folder**.
+1. Under **ACCOUNTS**, sign in to the following:
 
-   1. From the left pane, select **Teams Toolkit**.
+   * **Microsoft 365 account**
+   * **Azure account**
 
-   1. Under **ACCOUNTS**, sign in to the following:
-
-* **Microsoft 365 account**
-* **Azure account**
-
-   1. To debug your app, enter **F5**.
+1. To debug your app, select the **F5** key.
 
    A browser tab opens a Teams web client requesting to add the bot to your tenant.
 
-   1. If you get an error, which says **Could not find a declaration file for module 'jsonwebtoken'**, run the following command in the **TERMINAL**:
-
-      ```
-      yarn add @types/jsonwebtoken
-      ```
-
-   1. Select **Add**.
+1. Select **Add**.
 
    :::image type="content" source="../../../assets/images/bots/Conversation-AI-sample-app-add.png" alt-text="Screenshot shows the option to add the app in Teams web client.":::
 
    A chat window opens.
 
-   1. In the message compose area, send a message to invoke the bot.
+1. In the message compose area, send a message to invoke the bot.
 
    :::image type="content" source="../../../assets/images/bots/conversation-AI-quick-start-final.png" alt-text="Screenshot shows an example of conversation with Teams chef bot in Teams.":::
 
-   The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 > [!NOTE]
 > If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
