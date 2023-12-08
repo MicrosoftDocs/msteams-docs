@@ -1,5 +1,5 @@
 ---
-title: Actions in Microsoft 365
+title: Actions in Microsoft 365 quick start guide
 description: In this article, learn how to create Actions in Microsoft 365, function of Actions and its use cases.
 ms.date: 11/16/2023
 ms.author: mosdevdocs
@@ -7,7 +7,7 @@ author: Vishnu
 ms.topic: Conceptual
 ms.subservice: m365apps
 ---
-# Actions in Microsoft 365 Quick Start Guide
+# Actions in Microsoft 365 quick start guide
 
 This quick start guide helps you create Action in Microsoft 365.
 
