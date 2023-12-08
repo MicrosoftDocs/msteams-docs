@@ -450,6 +450,8 @@ If storage isn't provided, you can use a default local file storage, which store
 * `.notification.localstore.json` if running locally.
 * `${process.env.TEMP}/.notification.localstore.json`, if `process.env.RUNNING_ON_AZURE` is set to 1.
 
+If you're using the default local file storage, Azure web app and Azure Functions clean up the local file during a restart or redeploy. You can also uninstall the bot from Teams, then install it to again add connections to the storage.
+
 The `NotificationTargetStorage` is different from Bot Framework SDK's [custom storage](/azure/bot-service/bot-builder-custom-storage). The notification storage requires `read`, `write`, `delete`, and `list` functionalities but Bot Framework SDK's storage has `read`, `write`, and `delete` functionalities and doesn’t have the `list` functionality.
 
 For more information about Azure blob storage, see the [notification storage implementation sample](https://github.com/OfficeDev/TeamsFx-Samples/blob/v3/adaptive-card-notification/src/store/blobStore.ts).

@@ -19,7 +19,7 @@ items:
 
     Your app will have a capability, which comes with its own UI and UX:
     
-    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/your-helloworld-app-v4.png" alt-text="Diagram showing this app has three features.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/your-helloworld-app-v4.png" alt-text="Screenshot shows the different types of app features.":::
     
     
     In this tutorial, you can learn:
@@ -72,11 +72,11 @@ items:
    1. In the search box, enter **Teams toolkit**.
    1. Select **Install** next to the Teams Toolkit.
 
-    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/install-toolkit-vscodeversion-v4.png" alt-text="Illustration shows the Teams Toolkit extension installation.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/install-toolkit-vscodeversion-v4.png" alt-text="Screenshot shows the Teams Toolkit extension installation.":::
 
     The Teams Toolkit icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
-    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/teams-toolkit-sidebar-icon-v4.PNG" alt-text="Illustration shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
+    :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/teams-toolkit-sidebar-icon-v4.PNG" alt-text="Screenshot shows the Teams Toolkit icon in Visual Studio Code sidebar.":::
 
    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
@@ -125,10 +125,10 @@ items:
 
     1. In the Teams client, select the **Apps**.
     1. Select **Manage your apps**.
-    1. Select **Publish an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+    1. Select **Upload an app**.
+    1. Look for the option to **Upload a customised app**. If the option is visible, you've enabled custom app upload.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/spfx-custom-new1-v4.png" alt-text="bot home":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/upload-custom-app-v4.png" alt-text="Screenshot shows the option to upload a customised app in Teams.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, talk to your Teams administrator.
@@ -142,7 +142,7 @@ items:
    1. In the welcome screen, select **Set up E5 subscription**.
    1. Set up your administrator account. After you finish, the following screen appears.
 
-       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/microsoft-365-v4.png" alt-text="Microsoft":::
+       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/microsoft-365-v4.png" alt-text="Screenshot shows the Microsoft 365 developer subscriptions.":::
 
    1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
@@ -161,7 +161,7 @@ items:
 
     Message Extension capability lets you interact with a web service. Use the compose area, command box, or a messaging in Teams client to search and initiate actions in an external system.
 
-      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/your-helloworld-app-msgext-v4.png" alt-text="Diagram showing this app has three features. message extension is highlighted.":::
+      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/your-helloworld-app-msgext-v4.png" alt-text="Screenshot shows the different types of app featues and message extension is highlighted.":::
 
     There are two types of Teams **message extensions**:
 
@@ -195,23 +195,23 @@ items:
 
     1. Select **Create a new app**.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/create-project-v4.png" alt-text="Location of the Create New Project link in the Teams Toolkit sidebar.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/create-project-v4.png" alt-text="Screenshot shows the option to select create a new app from the Teams Toolkit sidebar.":::
 
     1. Select **Create a new Teams app** to create an app using the Teams Toolkit.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/create-new-app1-v4.png" alt-text="Wizard start for Create New Project":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/create-new-app1-v4.png" alt-text="Screenshot shows the option to select create a new Teams app.":::
 
     1. Ensure that **Message extension** is selected as the capability that you want to build in your app..
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-capabilities-mex1-v4.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-capabilities-mex1-v4.png" alt-text="Screenshot shows the option to select the capabilities to your new app.":::
 
     1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-language-tab-v4.png" alt-text="Screenshot showing how to select the programming language.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-language-tab-v4.png" alt-text="Screenshot shows the option to select the programming language.":::
 
     1. Select **Default folder** to store your project root folder in default location.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-default-location-v4.png" alt-text="Select default location":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-default-location-v4.png" alt-text="Screenshot shows the selection of default location.":::
 
         You can also change the default location by the following steps:
 
@@ -390,7 +390,7 @@ items:
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
     
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/add-mex-app-local-debug-v4.png" alt-text="Screenshot shows message to add the app":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/add-mex-app-local-debug-v4.png" alt-text="Screenshot shows the option to add the customised app in Teams.":::
 
         The toolkit displays a message to indicate that the app is added to Teams.
 

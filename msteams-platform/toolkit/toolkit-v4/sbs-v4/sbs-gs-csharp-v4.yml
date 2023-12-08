@@ -92,9 +92,10 @@ items:
 
     1. In the Teams client, select **Apps**.
     1. Select **Manage your apps**.
-    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
+    1. Select **Upload an app**.
+    1. Look for the option to **Upload a customised app**. If the option is visible, you've enabled custom app upload.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/upload-custom-app-v4.png" alt-text="Illustration shows the option to upload a custom app in Teams.":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/upload-custom-app-v4.png" alt-text="Screenshot shows the option to upload a customised app in Teams.":::
 
         > [!NOTE]
         > If Teams doesn't show the option to upload a custom app, talk to your Teams administrator.
@@ -225,7 +226,7 @@ items:
 
        Congratulations, your first tab app is running on Teams!
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/final-output-vs-v4.png" alt-text="Final Output for VS":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-csharp/final-output-vs-v4.png" alt-text="Screenshot shows the final output of the csharp app.":::
 
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>

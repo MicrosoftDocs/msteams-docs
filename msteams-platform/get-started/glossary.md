@@ -78,6 +78,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Conversational bot](../bots/how-to/conversations/conversation-messages.md) |  It lets a user interact with your web service using text, interactive cards, and task modules. <br>**See also** [Chat bot](#c) |
 | [Copilot](../messaging-extensions/build-bot-based-plugin.md)|Microsoft 365 Copilot is powered by an advanced processing and orchestration engine that seamlessly integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to turn your words into the most powerful productivity tool. |
 | Customer-owned apps | An app created by you or your organization that is meant for use by other Teams app users outside the organization. It can be made available on Microsoft Teams Store. <br> **See also**: [Teams Store validation guidelines](#s); [Microsoft Store](#s); [LOB apps](#l); [Personal tab](#p); [Shared apps](#s) |
+| Custom app built for your org (LOB app) | An app created only for Teams by you or your organization.  |
 | [Custom app upload](../toolkit/publish.md#publish-to-individual-scope-or-custom-app-upload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
 | [Custom Together Mode](../apps-in-teams-meetings/teams-together-mode.md)| Custom Together Mode scenes in Teams provide an immersive and engaging meeting environment. <br>**See also**: [Developer Portal for Teams](#d) |
 
@@ -167,7 +168,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Meeting surfaces](../resources/schema/manifest-schema.md#configurabletabs) | The set of `meetingSurfaceItem` scopes where a tab is supported. <br>**See also**: [Configurable tab](#c)|
 | [Microsoft 365 account](../toolkit/accounts.md#microsoft-365-developer-account-types) | Microsoft 365 account includes 25 user licenses, including the administrator, for development purposes only. |
 | Microsoft 365 client ID | See [Client ID](#c) |
-| [Add Microsoft 365 channel for your bot](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-bot) | A feature of Teams message extension app that lets the users interact with it from Microsoft 365. |
+| [Add Microsoft 365 channel for your bot](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app) | A feature of Teams message extension app that lets the users interact with it from Microsoft 365. |
 | [Microsoft 365 developer program](../toolkit/tools-prerequisites.md)| The Microsoft 365 Developer Program helps you build apps that extend Microsoft 365. |
 | Microsoft App Password | A secret string that the application uses to prove its identity when requesting a token. Also, it can be referred to as application password. <br> **See also**: [Client secret](#c) |
 | [Microsoft Graph Explorer](../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md) | The gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access data in Microsoft 365, Windows 10, and Enterprise Mobility + Security. |

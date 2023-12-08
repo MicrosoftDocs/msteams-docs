@@ -153,7 +153,7 @@ You can use this method to verify custom app upload permission only after you ha
 
 1. Verify if you can see the option **Sideloading enabled** as shown in the following image:
 
-    :::image type="content" source="images/sideloading_1-v4.png" alt-text="Enable sideloading":::
+    :::image type="content" source="images/sideloading_1-v4.png" alt-text="Screenshot shows you the custom app upload in Teams.":::
 
 </details>
 <br>

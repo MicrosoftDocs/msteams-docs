@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2023 November**
 
+* **November 21, 2023**: Terminology update. LOB apps is referred to as custom apps built for your org (LOB apps).
+* **November 20, 2023**: [Use captureImage API to capture an image or select media from the gallery for mobile clients.](concepts/device-capabilities/media-capabilities.md)
 * **November 17, 2023**: Terminology update. Sideload is referred to as upload a custom app.
 * **November 17, 2023**: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps.](toolkit/debug-your-Teams-app-test-tool.md)
 * **November 14, 2023**: [Use callRecording API to fetch meeting recording from all meetings.](graph-api/meeting-transcripts/overview-transcripts.md)
@@ -355,6 +357,8 @@ Developer preview is a public program that provides early access to unreleased T
 **2023 November**
 
 * ***November 30, 2023***: [Actions enhance user's productivity by streamlining task completion and reducing the need for context switching across various Microsoft 365 applications.](m365-apps/actions-in-m365.md).
+
+* ***November 27, 2023***: [Extend an action-based Teams message extension across Microsoft 365.](~/m365-apps/extend-m365-teams-message-extension.md)
 
 * ***November 14, 2023***: [Build a bot-based message extension and extend the message extension as plugin for Microsoft Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) and also check the [guidelines to create or upgrade a message extension plugin for Microsoft Copilot for Microsoft 365.](messaging-extensions/high-quality-message-extension.md)
 

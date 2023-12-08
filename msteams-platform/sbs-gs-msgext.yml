@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams app. 
-    You can create a message extension Teams app with Teams using Javascript.  
+    You can create a message extension Teams app with Teams using JavaScript.  
     
     In this tutorial, you'll learn:
 
@@ -284,7 +284,7 @@ items:
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take three to five minutes to complete.
 
-        Teams run your app in a web browser.
+        Teams runs your app in a web browser.
         
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
@@ -306,7 +306,7 @@ items:
 
         As message extension apps rely on bots for enabling communication between the user and the web service,, your app loads in to a chat feature of a bot.
 
-        - If you've created a bot app before you created the message extension app, you can see that it is loaded in the same bot app you created. Previous chat messages are visible.
+        - If you've created a bot app before you created the message extension app, you can see that it's loaded in the same bot app you created. Previous chat messages are visible.
         - If you created a message extension first, your app is loaded in any chat that is open on Teams.
 
         > [!NOTE]
@@ -320,15 +320,15 @@ items:
 
     1. Let's enter a search string in the search box, such as "cli". You'll get a list of the matching items:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot that shows how to use the app for search.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot shows how to use the app for search.":::
 
     1. Select one from the search results. It will be displayed in the compose area so you can send the result to the channel.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-result.png" alt-text="Screenshot that shows the search result.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-result.png" alt-text="Screenshot shows the search result.":::
 
     1. Select the **Send** instructions.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot that shows the search result sent on chat.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot shows the search result sent on chat.":::
     
         Now, you've learned how to build and run a basic message extension app!         
 
@@ -342,21 +342,21 @@ items:
 
     1. Select **Create Card**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows how to create a card." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows how to create a card." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png":::
 
     1. Enter the card details as shown, and select **Submit**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="Screenshot that shows how to add a card details.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="Screenshot shows how to add the card details.":::
 
         Your card details appear in the compose area.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot that shows how to add a card details." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot shows how to add the card details." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png":::
 
     1. Select the **Send** icon from the compose area.
 
         The app sends the card on the bot chat.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot that shows the card sent." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot shows that the card is sent." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png":::
     </details>
     <br>
     <details>
@@ -370,28 +370,28 @@ items:
         
         The app opens the search box and you can use it to run a query.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot that shows how to @mention the message extension app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to @mention the message extension app.":::
 
     1. Enter a search string, and select one from the search result.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot that shows how to run a search using the message extension app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot shows how to run a search using the message extension app.":::
 
         It displays in the command area as a card.
 
     1. Copy the card to paste it in the compose area.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot that shows search result in a card.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot shows the search result in a card.":::
         
     1. Send the card using the compose area.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot that shows search result in a chat.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the search result in a chat.":::
 
     * **Using three-dot icon:**
     
     1. Launch the message extension from three dots at the bottom of the composing area.
     1. Select your message extension app.       
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot that shows how to open the sample message extension app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension app.":::
 
         The message extension app loads with the options to run a search and create adaptive cards.
     </details>
@@ -399,12 +399,12 @@ items:
     <details>
     <summary>Run the app from uploaded custom apps</summary>
 
-    You can open a uploaded Teams app from the list of uploaded custom apps. 
+    You can open an uploaded Teams app from the list of uploaded custom apps. 
 
     1. Select the **Store** icon from the Teams sidebar.
     1. Select the **Manage apps**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot that shows custom uploaded apps.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot shows the custom uploaded apps.":::
 
     1. Select the three dots icon for your app, and then select **View details**. You can also copy link to the app and use it to open the app.
     1. Select **Open** to load the app, and then select **Try it**. 
@@ -441,7 +441,7 @@ items:
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
-        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
     1. Close the browser when prompted and return to Visual Studio Code.

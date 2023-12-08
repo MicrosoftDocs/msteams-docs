@@ -90,7 +90,7 @@ Once the provisioning and deployment steps are complete:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows how to launch the app remotely.":::
 
-1. Select **Add** when prompted to sideload the app onto Teams.
+1. Select **Add** when prompted to upload the app onto Teams.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot shows an app being installed.":::
 
