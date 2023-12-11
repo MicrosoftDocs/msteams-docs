@@ -80,29 +80,31 @@ items:
 - title: Register Azure AD app 
   durationInMinutes: 5
   content: |
-   The following steps help you to create and register your bot in Azure portal:
+    The following steps help you to create and register your bot in Azure portal:
     
-   * Create and register your Azure app. 
-   * Create client secret to enable SSO authentication of the bot.
-   * Add Teams channel to deploy the bot.
-   * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
-   * Add messaging endpoint to the dev tunnel that you created.
+    * Create and register your Azure app. 
+    * Create client secret to enable SSO authentication of the bot.
+    * Add Teams channel to deploy the bot.
+    * Create a tunnel to your web server's endpoints using dev tunnel (recommended) or ngrok.
+    * Add messaging endpoint to the dev tunnel that you created.
 
-   [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
+    [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
-   **Create a tunnel**
+    **Create a tunnel**
 
-      # [dev tunnel](#tab/dev)
+    # [dev tunnel](#tab/dev)
 
-      [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
+    [!INCLUDE [Tunnel](includes/get-started/dev-tunnel.md)]
 
-      # [ngrok](#tab/ngrok)
+    # [ngrok](#tab/ngrok)
 
-      [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+    [!INCLUDE [Tunnel](includes/get-started/ngrok-tunnel.md)]
+
+    ---
       
-   [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
+    [!INCLUDE [Azure web authentication](includes/get-started/azure-web-authentication.md)]
     
-   [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
+    [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
     **Add API permissions**
 
