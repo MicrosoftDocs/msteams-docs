@@ -6,6 +6,7 @@ ms.author: mosdevdocs
 author: v-preethah
 ms.topic: Conceptual
 ms.subservice: m365apps
+---
 
 # Build Actions in Microsoft 365
 
