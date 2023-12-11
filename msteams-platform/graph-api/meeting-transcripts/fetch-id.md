@@ -576,7 +576,7 @@ You can try the following code sample for a bot app:
 
 | **Sample name** | **Description** | **.NET** | **Node.js** |
 |----------------|-----------------|--------------|--------------|--------------|
-| Meeting transcription | This is a sample application which demonstrates how to get Transcript using Graph API and show it in the task module. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) |
+| Meeting transcription | This is a sample application which demonstrates how to get meeting transcript using Graph API and show it in the task module. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-transcription/nodejs) |
 | Meeting transcript and recording | This is a sample application which demonstrates how to get meeting transcript and recording using Graph API. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-meeting-transcript-recording/nodejs) |
 
 ## Next step
