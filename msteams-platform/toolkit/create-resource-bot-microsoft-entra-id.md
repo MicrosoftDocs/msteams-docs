@@ -188,4 +188,6 @@ You must enable the Teams channel to let the bot interact with Microsoft Teams.
 
 ## See also
 
--
+- [Build bots for Teams](../bots/what-are-bots.md)
+- [Configure your app in Microsoft Entra ID](../bots/how-to/authentication/bot-sso-register-aad.md)
+- [Add authentication to your Teams bot](../bots/how-to/authentication/add-authentication.md)
