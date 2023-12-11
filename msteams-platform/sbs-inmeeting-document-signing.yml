@@ -90,7 +90,7 @@ items:
 
     [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
-     **Create a tunnel**
+    **Create a tunnel**
 
       # [dev tunnel](#tab/dev)
 
