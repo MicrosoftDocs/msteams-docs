@@ -24,7 +24,7 @@ For more information, see:
 
 ::: zone pivot="version-three"
 
-Teams Toolkit CLI is a encapsulating common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Microsoft Teams with zero configuration.
+Teams Toolkit CLI encapsulates common functionality and integration patterns, such as simplified access to Microsoft Identity. You can build apps for Microsoft Teams with zero configuration.
 
 Following is a list of main Teams Toolkit CLI features:
 
@@ -47,7 +47,7 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 |----------------|-------------|
 | `teamsapp new`| Create new Teams application.|
 | `teamsapp add`| Adds features to your Teams application.|
-| `teamsapp auth`| Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
+| `teamsapp auth`| Manage cloud service accounts. The supported cloud services are Azure and Microsoft 365. |
 | `teamsapp env` | Manage environments. |
 | `teamsapp provision` | Provision cloud resources in the current application.|
 | `teamsapp deploy` | Deploy the current application.  |
@@ -57,7 +57,7 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 | `teamsapp preview` | Preview the current application. |
 | `teamsapp config`  | Manage the configuration data. |
 | `teamsapp permission`| Collaborate with other developers in same project.|
-| `teamsapp update` | Update the specific application manifest file. |
+| `teamsapp update` | Update the specific app manifest file. |
 | `teamsapp upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
 | `teamsapp doctor` | Prerequisites to create Teams application.|
 
@@ -79,12 +79,12 @@ By default, `teamsapp new` is in interactive mode and guides to create new Teams
 | Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name` | Yes| Name of your Teams application.|
-|`--interactive`| No | Select the options interactively. The options are `true` and `false` and default value is `true`.|
-|`--capabilities`| No| Choose Teams application capabilities, the options are `tab`, `tab-non-sso`, `tab-spfx`, `bot`, `message-extension`, `notification`, `command-bot`, `sso-launch-page`, `search-app`. The default value is `tab`.|
-|`--programming-language`| No| Programming language for the project. The options are `javascript` or `typescript` and default value is `javascript`.|
+|`--interactive`| No | Select the options interactively. The available options are `true` and `false` and the default value is `true`.|
+|`--capabilities`| No| Choose Teams application capabilities, the available options are `tab`, `tab-non-sso`, `tab-spfx`, `bot`, `message-extension`, `notification`, `command-bot`, `sso-launch-page`, and `search-app`. The default value is `tab`.|
+|`--programming-language`| No| Programming language for the project. The available options are `javascript` or `typescript` and the default value is `javascript`.|
 |`--folder`| No | Project directory. A sub folder with your app name is created under this directory. The default value is `./`.|
-|`--spfx-framework-type`| No| Applicable if `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and default value is `none`.|
-|`--spfx-web part-name`| No | Applicable if `SPFx tab` capability is selected. The default value is "helloworld".|
+|`--spfx-framework-type`| No| Applicable if `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and the default value is `none`.|
+|`--spfx-web part-name`| No | Applicable if `SPFx tab` capability is selected. The default value is helloworld.|
 |`--bot-host-type-trigger`| No | Applicable if `Notification bot` capability is selected. The options are `http-restify`, `http-functions`, and `timer-functions`. The default value is `http-restify`.|
 
 ### Scenarios for `teamsapp new`
@@ -222,7 +222,7 @@ Preview the current application.
 | `--env` | No | Select an existing env for the project. Defaults to `local`. |
 | `--manifest-file-path` | No | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`. |
 | `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsapp` uses the auto detected one from project type (`npm run dev:teamsapp` or `dotnet run` or `func start`). If empty, `teamsapp` skips starting local service. |
-| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsapp` uses the default common pattern ("started/successfully/finished/crashed/failed"). If empty, `teamsapp` treats process start as ready signal. |
+| `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsapp` uses the default common pattern (started/successfully/finished/crashed/failed). If empty, `teamsapp` treats process start as ready signal. |
 | `--open-only` | No | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
 | `--m365-host` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app [string] [choices: `teams`, `outlook`, `office`]. Defaults to `teams`. |
 | `--browser` | No | Select browser to open Teams web client [string] [choices: `chrome`, `edge`, `default`]. Defaults to `default`. |
@@ -304,11 +304,11 @@ Check, grant, and list user permission.
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--teams-app-manifest` | No | Manifest of Your Teams app. |
 | `--aad-app-manifest` | No | Manifest of your Microsoft Entra app. |
-| `--list-all-collaborators` | No | To list all collaborators. |
+| `--list-all-collaborators` | No | List all collaborators. |
 
 ### Scenarios for `teamsapp permission`
 
-* Grant Permission
+* Grant permission
 
   Project creator and collaborators can use `teamsapp` permission grant command to add a new collaborator to the project:
 
@@ -318,7 +318,7 @@ Check, grant, and list user permission.
 
   After you receive the required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have all the permissions for Microsoft 365 account.
 
-* Show Permission Status
+* Show permission status
 
   Project creator and collaborators can use `teamsapp collaborator status` command to view Microsoft 365 account permission for specific env:
 
@@ -326,7 +326,7 @@ Check, grant, and list user permission.
   teamsapp permission status --env dev
   ```
 
-* List All Collaborators
+* List all collaborators
 
   Project creator and collaborators can use `teamsapp collaborator status` command to view all collaborators for specific env:
 
@@ -340,8 +340,8 @@ Update the specific application manifest file.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsapp entra-app update` | Update the Microsoft Entra App in the current application. |
-| `teamsapp update` | Update the Teams App manifest to Teams Developer Portal. |
+| `teamsapp entra-app update` | Update the Microsoft Entra ID app in the current application. |
+| `teamsapp update` | Update the Teams app manifest to Teams Developer Portal. |
 
 ### Parameters for `teamsapp entra-app update`
 
@@ -349,7 +349,7 @@ Update the specific application manifest file.
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
-| `--entra-app-manifest-file` | No | Enter the Microsoft Entra app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
+| `--entra-app-manifest-file` | No | Enter the Microsoft Entra ID app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
 
 ### Parameters for `teamsapp update teams-app`
 
