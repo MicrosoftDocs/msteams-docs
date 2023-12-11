@@ -110,17 +110,17 @@ The bot framework using Teams AI library requires the following:
 
 ## Action Planner
 
-The new ActionPlanner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case. Reliability is dramatically increasing with an internal feedback loop that automatically fixes subpar responses from the LLM.
+Action Planner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
 
 ## Prompt management
 
-Dynamic prompt management is a feature of the AI system that allows it to adjust the size and content of the prompt that is sent to the language model, based on the available token budget and the data sources or augmentations. It can improve the efficiency and accuracy of the model by ensuring that the prompt doesn't exceed the context window or include irrelevant information. Steve explained how dynamic prompt management works in the meeting and gave some examples of how to use it with different augmentations.
+Dynamic prompt management is a feature of the AI system that allows it to adjust the size and content of the prompt that is sent to the language model, based on the available token budget and the data sources or augmentations. It can improve the efficiency and accuracy of the model by ensuring that the prompt doesn't exceed the context window or include irrelevant information. 
 
 ## Augmentation
 
-Say goodbye to prompt engineering headaches and say hello to efficiently enhancing and directing your AI model’s responses with Augmentation. When creating a prompt select one of the following Augmentation Modes to tailor your model to your needs, increasing its accuracy and desired outcomes:
+Efficiently enhance and direct your AI model’s responses with Augmentation. Using different augmentation modes, you can tailor your model to your needs, increasing its accuracy and desired outcomes.
 
-* **Retrieval Augmented Generation (RAG)**: Automatically incorporates real-time, dynamic, and specified external datasources into your model’s responses enabling up to date and contextually accurate results without fine-tuning or re-training your model. Answer questions about today’s sales numbers or customize to a specific user’s data; with RAG your model is no longer stuck in the past. Discover how easy it's to build by trying the RAG bot sample today!
+* **Retrieval Augmented Generation (RAG)**: Automatically incorporates real-time, dynamic, and specified external data sources into your model’s responses enabling up to date and contextually accurate results without fine-tuning or re-training your model. Answer questions about today’s sales numbers or customize to a specific user’s data; with RAG your model is no longer stuck in the past.
 
 * **Monologue**: Create AutoGPT-style agents capable of performing multi-step actions independently and reliability with full schema validation and automatic repair included.
 
@@ -130,17 +130,16 @@ Say goodbye to prompt engineering headaches and say hello to efficiently enhanci
 
 ### Vector data sources
 
-Vector Databases are a novel type of database designed specifically for storing Vectors and facilitating efficient search over them. They return the most relevant results for a user’s query. The vector search feature in a vector database enables retrieval-augmented generation to harness LLMs and custom data or domain-specific information. This process involves extracting pertinent information from a custom data source and integrating it into the model request through prompt engineering. Prior to sending a request to the LLM, the user input/query/request is also transformed into an embedding, and vector search techniques are employed to locate the most similar embeddings within the database.
+Vector databases are a new type of database designed to store vectors and enable efficient search over them. They return the most relevant results for a user's query. The vector search feature in a vector database allows retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input, query, or request is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database. 
+
 
 ## Enhanced reasoning
 
-With enhanced reasoning, the Teams AI Library tackles the ongoing issue of bot hallucinations head-on by offering an integrated fact-checking system.
-
-When a user interacts with your AI assistant, this system prompts the bot to engage in a process of self-reflection critically evaluating its potential responses prior to sending them. The introspection allows the bot to identify inaccuracies and correct its answers improving accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment, building trust in your product and drawing users back every day.
+Teams AI Library offers an  integrated fact-checking system to tackle bot hallucinations. When a user interacts with your AI assistant, the system prompts the bot to engage in a process of self-reflection critically evaluating its potential responses before sending. TThe introspection allows the bot to identify inaccuracies and correct its answers, which improves accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment, building trust in your product and drawing users back every day.
 
 ## Feedback loop
 
-The feedback loop is a feature of the AI system that allows it to validate and correct the output of the language model. It works by checking the structure and parameters of the plan or monologue that the model returns, and giving it feedback if there are any errors or missing information. The model then tries to fix its mistakes and return a valid output. The feedback loop can improve the reliability and accuracy of the AI system, and reduce the chances of hallucination or invalid actions.
+Feedback loop allows the bot to validate and correct the output of the language model. It checks the structure and parameters of the plan or monologue that the model returns, and provides feedback on errors or missing information. The model then tries to fix its mistakes and returns a valid output. The feedback loop can improve the reliability and accuracy of the AI system, and reduce the chances of hallucination or invalid actions.
 
 The following table lists the updates to the Teams AI library:
 

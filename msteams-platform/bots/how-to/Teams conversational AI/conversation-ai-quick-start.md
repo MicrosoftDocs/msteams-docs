@@ -24,6 +24,7 @@ To get started, ensure that you have the following tools:
 | &nbsp; | &nbsp; |
 | [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or CSharp build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+|[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
 | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
@@ -72,10 +73,15 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
    cd .\js\
    ```
 
-1. Run the following command to install and build dependencies:
+1. Run the following command to install dependencies:
 
-   ```cmd
+   ```terminal
    yarn install
+   ```
+
+1. Run the following command to build dependencies:
+
+   ```terminal
    yarn build
    ```
 
