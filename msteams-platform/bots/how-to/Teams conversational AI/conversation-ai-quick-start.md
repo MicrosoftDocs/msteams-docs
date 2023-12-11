@@ -65,6 +65,8 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
 
 1. Select **Select Folder**.
 
+   :::image type="content" source="../../../assets/images/bots/ai-library-dot-net-select-folder.png" alt-text="Screenshot shows the teams-ai folder and the Select Folder option.":::
+
 1. Select **View** > **Terminal**. A terminal window opens.
 
 1. In the terminal window, run the following command to go to the **JS** folder:
