@@ -451,7 +451,7 @@ Test Tool successfully debugs your existing bot.
 <details>
 <summary>How can I test my bot if Test Tool doesn't support its features?</summary>
 
-You can always use the Teams client to test the features that Test Tool doesn't support. Select the option **Debug (Edge)** or **Debug (Chrome)** to test your application in the Teams client.
+You can always use the Teams client to test the features that Test Tool doesn't support. Select the option **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** to test your application in the Teams client.
 <br>
 &nbsp;
 </details>

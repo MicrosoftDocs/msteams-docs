@@ -28,7 +28,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 # [Windows](#tab/Windows)
 
-1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** drop down.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser option.":::
 
@@ -58,7 +58,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 # [macOS](#tab/macOS)
 
-1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** drop down.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser lists.":::
 
