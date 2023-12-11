@@ -91,15 +91,12 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
 
 1. Under **EXPLORER**, duplicate the `sample.env` file  and update the duplicate file to `.env`.
 
-1. In the sample folder, update the following code in the `.env.local` configuration file:
+1. In the sample folder, update the following code in the `.env` configuration file:
 
    ```text
    OPENAI_KEY=<your OpenAI key>
 
    ```
-
-   > [!NOTE]
-   > If you’re cloning a [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples) through Teams Toolkit, you’ll find the `.env.local` file in the setup that is created automatically. If the file isn't available, create the .env.local.user file and update the OpenAI key to get started.
 
 1. From the left pane, select **Teams Toolkit**.
 
