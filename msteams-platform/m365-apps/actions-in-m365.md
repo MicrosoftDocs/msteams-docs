@@ -3,7 +3,7 @@ title: Actions in Microsoft 365
 description: In this article, learn more about the function of Actions and its use cases. 
 ms.date: 11/16/2023
 ms.author: mosdevdocs
-author: bvishnu
+author: v-bvishnu
 ms.topic: Conceptual
 ms.subservice: m365apps
 ---
@@ -11,7 +11,7 @@ ms.subservice: m365apps
 
 > [!NOTE]
 >
-> * Actions for Microsoft 365 is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md)..
+> * Actions for Microsoft 365 is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 >
 > * Actions is supported for Microsoft 365 apps on web and desktop clients only and isn't supported on Outlook and Microsoft Teams.
 
