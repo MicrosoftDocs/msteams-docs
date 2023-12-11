@@ -13,13 +13,25 @@ This quick start guide helps you create Action in Microsoft 365.
 
 ## Prerequisites
 
-1. [Create an Azure SQL database.](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal&preserve-view=true)
+Before you get started, ensure that you install the following tools:
 
-1. [Add IP address of your computer into allowlist of firewall of Azure SQL Server.](/azure/azure-sql/database/firewall-configure?view=azuresql&preserve-view=true)
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| &nbsp; | [Azure SQL database](/azure/azure-sql/database/single-database-create-quickstart?view=azuresql&tabs=azure-portal&preserve-view=true) | Azure SQL Database, a fully managed platform as a service (PaaS) database engine that handles most of the database management functions such as upgrading, patching, backups, and monitoring without user involvement. |
+| &nbsp; | [IP address](/azure/azure-sql/database/firewall-configure?view=azuresql&preserve-view=true) | IP address of your computer into allowlist of firewall of Azure SQL Server. |
+| &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+| &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
 ### Run the app with Azure
 
-To run the app with Azure subscription, you'll need to configure an Azure SQL Database:
+To run the app with Azure subscription, you must configure an Azure SQL Database:
+
+1. Create an Azure SQL database.
+
+1. Add IP address of your computer into allowlist of firewall of Azure SQL Server.
 
 1. Use [query editor](/azure/azure-sql/database/connect-query-portal?view=azuresql&preserve-view=true) with below query to create a table:
 
@@ -86,6 +98,13 @@ To deploy the app to Azure, follow these steps:
 
 A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
 
+## Code sample
+
+| **Sample name** | **Description** |**Node.js** |
+|-----------------|-----------------|----------------|
+| Actions in Microsoft 365 apps | This sample code describes the Actions in Microsoft 365 apps. | [Code sample](https://github.com/OfficeDev/m365-msteams-actions-preview/tree/main) [Need to update the public link.]|
+
 ## See also
 
-[Extend Teams apps across Microsoft 365](overview.md)
+[Actions in Microsoft 365](actions-in-m365.md)
+[Build Actions in Microsoft 365](build-actions-in-m365.md)

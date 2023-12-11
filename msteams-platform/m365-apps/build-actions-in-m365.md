@@ -120,7 +120,7 @@ async readActionItem() {
 
 ## Run your app
 
-After you update the app manifest, you can run your app in Teams Toolkit.
+After you update the app package with the required information, you can run your app in Teams Toolkit.
 
 To run your app in Teams Toolkit follow these steps:
 
@@ -157,3 +157,8 @@ In the [Microsoft Admin Center](https://admin.microsoft.com/AdminPortal#/homepag
 | **Sample name** | **Description** |**Node.js** |
 |-----------------|-----------------|----------------|
 | Actions in Microsoft 365 apps | This sample code describes the Actions in Microsoft 365 apps. | [Code sample](https://github.com/OfficeDev/m365-msteams-actions-preview/tree/main) [Need to update the public link.]|
+
+## See also
+
+[Actions in Microsoft 365](actions-in-m365.md)
+[Actions in Microsoft 365 quick start guide](actions-in-m365-quick-start-guide.md)
