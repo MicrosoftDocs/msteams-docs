@@ -6,14 +6,11 @@ ms.topic: overview
 ms.localizationpriority: medium
 ---
 
-# Communication flow for Microsoft Teams bot applications
+# Communication flow for Teams bot applications
 
-The key aspect of developing and managing effective bots is to learn about the communication flow for Teams bot applications and understand how the traffic is routed between a user in Microsoft Teams and a bot application running in Azure. Quickly learn how to inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
+The key aspect to develop and manage effective bots is to learn about the communication flow for Microsoft Teams bot applications and understand how the traffic is routed between a user in Teams and a bot application that runs in Azure. You can learn how to inspect the traffic and understand the user data flow in transit and at rest for bots in Teams.
 
-The use cases explained here are messaging and calling bots in Teams. Let's dive in and explore the world of Teams bot applications.
-
-> [!NOTE]
-> Communication flow for Teams bot application is applicable to [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+The communication flow explained here is applicable to the users who use Microsoft 365 worldwide and Government Community Cloud (GCC), and it does not apply to other cloud endpoints.
 
 ## Architecture and data flow
 
@@ -38,7 +35,9 @@ You can develop bots using various languages such as C#, JavaScript, and Python,
 
 All traffic that goes to a bot, and responses from the bot, must route through a corporate firewall.
 
-## Use cases
+## Examples
+
+The examples explained here are messaging and calling bots in Teams.
 
 1. **Teams messaging bots (conversational bots)**: Messaging bots implement chat-based interaction between a user in Teams and your bot. This is a two-way communication channel where user sends a chat message to the bot and gets an answer. You can configure this channel for notification only. where bot sends message but user can't query or answer. For details about how to create a conversation bot, see [create Teams conversation bot](../sbs-teams-conversation-bot.yml).
 1. **Teams calling bots**: Calling bots implement voice-based interaction between a user in Teams and your bot. The bot can answer an incoming call, join a call, and manage its lifecycle. Calling bots are also used for compliance recording in regulated industries. For instance, a bot could be used to record customer service calls for quality assurance purposes. For more information about how to create a calling bot, see [calls and online meetings bots](calls-and-meetings/calls-meetings-bots-overview.md) and [compliance recording for calls and meetings](/MicrosoftTeams/teams-recording-policy).
