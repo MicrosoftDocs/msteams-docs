@@ -50,7 +50,7 @@ Ensure that you adhere to the description guidelines listed in the following tab
 | --- | --- |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Avoid using the name of any other plugin in both short and long descriptions. |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Avoid using inappropriate or offensive keywords. |
-| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the text doesn't lead to prompt injections. Additionally, the description mustn't contain symbols or text that indicate that it can be used as code for prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the descriptions does not guide Copilot to take actions that bypass the normal functioning of the application. Additionally, the description mustn't contain symbols or text that indicate that it can be used as code for prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
 
 ### App description
 
