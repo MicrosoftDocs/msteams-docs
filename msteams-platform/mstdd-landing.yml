@@ -25,8 +25,6 @@ landingContent:
 #  linkLists:
 #    - linkListType: whats-new
 #      links:
-#      - text: Actions in Microsoft 365
-#        url: ~/m365-apps/actions-in-m365.md
 #      - text: Introduced app manifest v1.14
 #        url: ~/resources/schema/manifest-schema.md
 #      - text: Common reasons for app validation failure
@@ -49,8 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Adaptive Cards overflow menu
-        url: ~/task-modules-and-cards/cards/cards-format.md      
+      - text: Actions in Microsoft 365
+        url: ~/m365-apps/actions-in-m365.md    
       - text: Extend an action-based Teams message extension across Microsoft 365
         url:  m365-apps/extend-m365-teams-message-extension.md
       - text: Use captureImage API to capture an image or select media from the gallery for mobile clients

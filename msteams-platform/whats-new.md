@@ -356,7 +356,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 December**
 
-* ***December 15, 2023***: [Actions enable your app to integrate seamlessly into the user's workflow and guide users to your app based on their intent and the content at hand, making task completion more efficient.](m365-apps/actions-in-m365.md).
+* ***December 15, 2023***: [Actions enable your app to integrate seamlessly into the user's workflow and guide users to your app based on their intent and the content at hand, making task completion more efficient](m365-apps/actions-in-m365.md).
 
 :::column-end:::
 :::row-end:::
