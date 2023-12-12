@@ -1,11 +1,13 @@
 ---
-title: Facilitate adoption of your app and create awareness
+title: Facilitate adoption of your app and help customers promote your app
 author: ashishguptaiitb
+ms.author: guptaashish
+manager: prkosh
 description: Learn about the best practices and guidance for app adoption and promotion.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.author: guptaashish
-ms.date: 03/02/2023
+ms.date: 12/12/2023
 ---
 
 # Five steps to drive adoption of your app
@@ -300,20 +302,21 @@ In your app’s help documentation, consider providing some or all the following
 
 * Contact method with support information, for example, email, phone, or web portal.
 * Links to help documentation about rollout for admins, features for users, and troubleshooting to supporting functions.
+* Understanding of how IT admins can control which users have access to apps by using [app centric management](/microsoftteams/app-centric-management) and [permission policies](/microsoftteams/app-policies#app-permission-policies), depending on their tenant configuration.
 * Language support provided by the app in case the app is available in any non-English language.
 * Latest release date and version that imparts app freshness and hence inspires confidence.
 * Call out any app-specific configuration or permissions that might be required. Also, call out any app-specific uptime information link if your app relies on a backend infrastructure to work.
 * If you [block an app by default](concepts/design/enable-app-customization.md), provide documentation for the requirements before admins can allow the app. For example, the required configuration or subscription purchase that admins must do.
 
-Your customers can find [support information for your app](/microsoftteams/manage-apps#support-information-for-apps) and self-serve themselves. The following table provides the support information that you already submitted to Microsoft with your app and the interface in Teams where this information is displayed:
+To know more how your customers access the support information for your app, see [support information for Teams apps](/microsoftteams/manage-apps#support-information-for-apps). The following table explains what support information you can submit with your app and where does Teams display it for app users and administrators.
 
-|Input source when creating app|Parameter|Description and meaning|Visibility of the information in Teams|
-|-----|-----|-----|-----|
-|[Manifest file](resources/schema/manifest-schema.md)|`websiteUrl`|The web page at this URL provides support information for an app.|App details page in Teams admin center displays the website URL.|
-|[Manifest file](resources/schema/manifest-schema.md)|`privacyUrl`|The URL to the page that provides privacy information for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Appsource listing.|
-|[Manifest file](resources/schema/manifest-schema.md)|`termsOfUseUrl`|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Appsource listing.|
-|[Manifest file](resources/schema/manifest-schema.md)|`publisherDocsUrl`|The URL destination provides app documentation for the admins to use to understand, allow, configure, and rollout the app. | URL is available in Teams admin center for those apps where app developer provide it in their manifest file.|
-|[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL.|Displayed in [Microsoft AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.|
+| Input source when creating app                                          | Parameter          | Description and meaning                                                                                                    | Visibility of the information in Teams                                                                       |
+|-------------------------------------------------------------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| [Manifest file](resources/schema/manifest-schema.md)                    | `websiteUrl`       | The web page at this URL provides support information for an app.                                                          | App details page in Teams admin center displays the website URL.                                             |
+| [Manifest file](resources/schema/manifest-schema.md)                    | `privacyUrl`       | The URL to the page that provides privacy information for the app.                                                         | • Displayed in app details page in Teams admin center. <br> • Displayed in Appsource listing.                |
+| [Manifest file](resources/schema/manifest-schema.md)                    | `termsOfUseUrl`    | The URL to the page that provides the terms of use for the app.                                                            | • Displayed in app details page in Teams admin center. <br> • Displayed in Appsource listing.                |
+| [Manifest file](resources/schema/manifest-schema.md)                    | `publisherDocsUrl` | The URL destination provides app documentation for the admins to use to understand, allow, configure, and rollout the app. | URL is available in Teams admin center for those apps where app developer provide it in their manifest file. |
+| [Partner Center submission](/azure/marketplace/add-in-submission-guide) | NA                 | Support or help documentation URL.                                                                                         | Displayed in [Microsoft AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.      |
 
 > [!div class="nextstepaction"]
 > [Back to top](#understand-how-you-can-drive-app-adoption)
