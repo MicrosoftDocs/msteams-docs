@@ -54,19 +54,23 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 You can add single sign-on authentication to your conversation bot using the following steps:
 
 * [Create Teams conversation bot](../sbs-teams-conversation-bot.yml)
-* [Configure your bot app in Azure AD](~/bots/how-to/authentication/bot-sso-register-aad.md)
+* [Configure your bot app in Microsoft Entra ID](~/bots/how-to/authentication/bot-sso-register-aad.md)
 
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
 --->
+
+## Bot configuration experience
+
+Bot configuration experience helps the users to interact with the bot in Teams. Users can interact with the bot either by sending a message or selecting a command from the command list. After the bot is installed in a channel or team, all the members from the channel or team can provide inputs to the bot at the same time, the bot only considers the last input provided by the user. For more information, see [bot configuration experience](how-to/bot-configuration-experience.md).
 
 ## Code samples
 
 |Sample name | Description |.NET | Node.js | Manifest
 |----------------|-----------------|--------------|--------------|--------------|
 | Bot daily task reminder| This sample shows how to schedule a recurring task and get a reminder at a scheduled time using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-daily-task-reminder/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-daily-task-reminder/csharp/demo-manifest/Bot-Daily-Task-Reminder.zip) |
-| Hello World Bot | This is a simple hello world application with both Bot and Message extension capabilities. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
-| Adaptive Card Notification | This is a sample, which shows how to send notifications with different adaptive cards using Bots. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
-| Incoming Webhook Notification | This is a sample, which shows how to send notifications via Incoming Webhook in Microsoft Teams channels. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
+| Hello world bot | This is a simple hello world application with both bot and message extension capabilities. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/hello-world-bot) |
+| Adaptive Card notification | This is a sample, which shows how to send notifications with different Adaptive Cards using bots. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/adaptive-card-notification) |
+| Incoming Webhook notification | This is a sample, which shows how to send notifications using Incoming Webhook in Microsoft Teams channels. | NA | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v1.0.0/incoming-webhook-notification) |
 
 ## Next step
 

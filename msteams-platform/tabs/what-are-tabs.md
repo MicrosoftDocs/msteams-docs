@@ -9,7 +9,7 @@ ms.date: 05/04/2023
 
 # Build tabs for Teams
 
-Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client).
+Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client).
 
 > [!IMPORTANT]
 > Custom tabs are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
@@ -98,7 +98,7 @@ You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) 
 The tab features are as follows:
 
 * If a tab is added to an app that also has a bot, the bot is also added to the team.
-* Awareness of Microsoft Azure Active Directory (Azure AD) ID of the current user.
+* Awareness of Microsoft Entra ID of the current user.
 * Locale awareness for the user to indicate language that is `en-us`.
 * Single sign-on (SSO) capability, if supported.
 * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example an individual work item.

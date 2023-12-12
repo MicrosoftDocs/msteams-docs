@@ -23,7 +23,7 @@ You can find comprehensive message extension design guidelines, including elemen
 
 You can add a message extension in the following Teams contexts:
 
-* From the Teams store.
+* From the Microsoft Teams Store.
 * In a channel, chat, or meeting (before, during, and after) near the compose box. It's worth noting if you add a message extension in one of these places, only you can use it in that context.
 
 The following examples show how to add a message extension in a channel.

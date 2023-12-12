@@ -37,7 +37,7 @@ Moodle LMS helps users access the following apps:
 
 The following scenarios describe the accelerated learning potential combining Microsoft's cloud services with Moodle's courses:
 
-* **Facilitate hybrid remote meetings**: Teams meetings and extensibility services allow faculty to present in-person and remotely with students. For students it's mandatory to have access to shared views, apps, and polls for remote meetings. The follow-up tasks provide for multi-language transcription and audio or video course recordings. Teams and Moodle work together to share roosters, activities, and tasks.
+* **Facilitate hybrid remote meetings**: Teams meetings and extensibility services allow faculty to present in-person and remotely with students. For students it's mandatory to have access to shared views, apps, and polls for remote meetings. The follow-up tasks provide for multi-language transcription and audio or video course recordings. Teams and Moodle work together to share rosters, activities, and tasks.
 
 * **Personalize meeting panels**: Create unique collaborative learning experiences using Teams Graph API endpoints. For other additional plans or projects, users can interview all new recruits and categorize the results using custom polls. There's facility to share quizzes directly in Teams while pushing updates to the Moodle site asynchronously.
 

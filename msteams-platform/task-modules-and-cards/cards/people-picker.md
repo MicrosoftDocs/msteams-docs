@@ -151,7 +151,7 @@ To enable search within a list of conversation members, use the appropriate data
 
 ### Data Submission
 
-You can use `Action.Submit` or `Action.Execute` to submit selected data to your bot. The `invoke` payload received on your bot is a list of Microsoft Azure Active Directory (Azure AD) IDs or the IDs provided in static list.
+You can use `Action.Submit` or `Action.Execute` to submit selected data to your bot. The `invoke` payload received on your bot is a list of Microsoft Entra IDs or the IDs provided in static list.
 In People Picker, when a user is selected in the control, the `Azure AD ID` of the user is the value sent back. The `Azure AD ID` is a string and uniquely identifies a user in the directory.
 
 The format of the value submitted to the bot depends on the value of the `isMultiSelect` property:
@@ -297,7 +297,6 @@ The following image illustrates People Picker in Adaptive Cards with static choi
 
 You can implement People Picker for efficient task management in different scenarios.
 
-
 ## Code sample
 
 | Sample Name           | Description | .NET    | Node.js   | Manifest
@@ -310,4 +309,5 @@ You can implement People Picker for efficient task management in different scena
 * [Bots and SDKs](../../bots/bot-features.md)
 * [Build message extensions for Teams](../../messaging-extensions/what-are-messaging-extensions.md)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
+* [Media elements in Adaptive Card](media-elements-in-adaptive-cards.md)
 * [Tag mention](../../bots/how-to/conversations/channel-and-group-conversations.md#tag-mention)

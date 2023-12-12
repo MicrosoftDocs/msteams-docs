@@ -32,7 +32,7 @@ Your Teams app must include required and expected collaborative features. To wor
 |Share shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)<br/>[Message extensions for Outlook](../m365-apps/overview.md)  |
 |Action shortcuts and extensions  |[Message extensions](../messaging-extensions/what-are-messaging-extensions.md)  |
 |Chatbots |[Bots](../bots/what-are-bots.md) |
-|Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[connectors for Microsoft 365 Groups](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
+|Channel notifications  |[Bots](../bots/what-are-bots.md)<br/>[Incoming Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)<br/>[Connectors for Microsoft 365 Groups](../webhooks-and-connectors/what-are-webhooks-and-connectors.md#connectors-for-microsoft-365-groups) |
 |Message external services  |[Bots](../bots/what-are-bots.md)<br/>[Outgoing Webhooks](../webhooks-and-connectors/what-are-webhooks-and-connectors.md)  |
 |Modals  |[Task modules](../task-modules-and-cards/what-are-task-modules.md)  |
 |Content-rich cards  |[Adaptive Cards](../task-modules-and-cards/what-are-cards.md)  |
@@ -77,14 +77,14 @@ See how to get context for your Teams [tab](../tabs/how-to/access-teams-context.
 
 ***Integration scenarios**: Standalone apps, collaboration apps, SharePoint*
 
-Azure Active Directory is the identity provider for Teams. If your app uses a different identity provider, you must either do an identity mapping exercise or combine with Microsoft Azure Active Directory (Azure AD).
+Microsoft Entra ID is the identity provider for Teams. If your app uses a different identity provider, you must either do an identity mapping exercise or combine with Microsoft Entra ID.
 
-Teams has single sign-on (SSO) mechanisms with Azure AD for third-party apps. It also provides the guidance for authentication flows to other identity providers using standards such as OAuth and Open ID Connect, known as OIDC.
+Teams has single sign-on (SSO) mechanisms with Microsoft Entra ID for third-party apps. It also provides the guidance for authentication flows to other identity providers using standards such as OAuth and OpenID Connect, known as OIDC.
 
 > [!IMPORTANT]
 > Currently, third-party apps are available in Government Community Cloud (GCC) but are not available for GCC-High and Department of Defense (DOD). Third-party apps are turned off by default for GCC. To turn on third-party apps for GCC, see [manage app permission policies](/microsoftteams/teams-app-permission-policies) and [manage apps](/microsoftteams/manage-apps).
 
-For SharePoint pages, you can only use SSO and can't add another Azure AD ID if you want SSO to work for another app as the ID is the SharePoint app.
+For SharePoint pages, you can only use SSO and can't add another Microsoft Entra ID if you want SSO to work for another app as the ID is the SharePoint app.
 
 Learn more about [authentication in Teams](../concepts/authentication/authentication.md).
 

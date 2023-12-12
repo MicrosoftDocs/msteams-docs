@@ -36,7 +36,7 @@ Users can access bots that were added on desktop with an @mention.
 
 Users can add a bot one of the following ways:
 
-* From the Teams store.
+* From the Microsoft Teams Store.
 * Using the app flyout by selecting the **More** icon on the left side of Teams.
 * With an @mention in the new chat or compose box (the following example shows how you can do this in a group chat).
 

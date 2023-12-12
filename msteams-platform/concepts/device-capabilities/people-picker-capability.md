@@ -36,7 +36,7 @@ The `selectPeople` API comes with the following input configurations:
 |Configuration parameter|Type|Description| Default value|
 |-----|------|--------------|------|
 |`title`|String| It's an optional parameter and sets the title for the People Picker control.|`selectPeople`|
-|`setSelected`|String| It's an optional parameter. You must pass Microsoft Azure Active Directory (Azure AD) IDs of the people to be preselected. This parameter preselects people while launching the People Picker input control. In a single selection, only the first valid user is pre-populated ignoring the rest.|**Null**|
+|`setSelected`|String| It's an optional parameter. You must pass Microsoft Entra IDs of the people to be preselected. This parameter preselects people while launching the People Picker input control. In a single selection, only the first valid user is pre-populated ignoring the rest.|**Null**|
 |`openOrgWideSearchInChatOrChannel`|Boolean| It's an optional parameter and when set to true, it launches the People Picker in organization wide scope even if the app is added to a chat or channel.|**False**|
 |`singleSelect`|Boolean|It's an optional parameter and when set to true, it launches the People Picker and restricts the selection to only one user.|**False**|
 

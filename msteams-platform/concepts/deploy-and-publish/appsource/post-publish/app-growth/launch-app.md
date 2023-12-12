@@ -16,15 +16,15 @@ The core focus at this stage is to announce the availability of the app for exis
 <br>
 
 <details>
-<summary>Invest strategically into your app store listing, landing page and documentation</summary>
+<summary>Invest strategically into your Microsoft Teams Store listing, landing page and documentation</summary>
 
 Ensure that you’ve included links to your Teams app on your landing page, documentation, marketing materials, and so on. For more information, see [Promote your app on another site](../overview.md#promote-your-app-on-another-site) to fetch the link to your app inside the Teams in-product marketplace.
 
 To get the public AppSource link, visiy [Microsoft AppSource](https://appsource.microsoft.com/marketplace/apps?exp=ubp8&page=1&product=teams) and search for your app in the search box. Pick the URL from your browser’s address bar.
 
-Focus on the following with respect to your app store listing, landing page and documentation at this stage:
+Focus on the following with respect to your Teams Store listing, landing page and documentation at this stage:
 
-- **App store listing**: It's the description and metadata that appears on the public Teams marketplace. It's the most important piece of text that conveys what your app can do, and the value users can derive out of it. The app store listing appears within the App Store in Teams clients and the Manage Apps section in the Teams Admin Center. It also appears on the AppSource public marketplace on the web.
+- **Teams Store listing**: It's the description and metadata that appears on the public Teams marketplace. It's the most important piece of text that conveys what your app can do, and the value users can derive out of it. The Teams Store listing appears within the Teams Store in Teams clients and the Manage Apps section in the Teams Admin Center. It also appears on the AppSource public marketplace on the web.
 
     Here’s some key guidance:
 
@@ -36,9 +36,9 @@ Focus on the following with respect to your app store listing, landing page and 
 
     **Resources and examples for inspiration**
 
-    Your app store listing must meet the validation guidelines and Teams marketplace policies to be published.
+    Your Teams Store listing must meet the validation guidelines and Teams marketplace policies to be published.
 
-    For more information on optimizing your app store listing, see [Chapter 2 in Marketplace Best Practices Guide](https://aka.ms/marketplacebestpracticesguide).
+    For more information on optimizing your Teams Store listing, see [Chapter 2 in Marketplace Best Practices Guide](https://aka.ms/marketplacebestpracticesguide).
 
 - **Landing page**: It's the landing page for your app hosted on your website. You can use this page to talk about your Teams app in full detail. It must include the value delivered inside Teams, personas targeted, key scenarios, details of subscription or pricing, customer testimonials, and so on.  You can use this page to receive traffic from your core SaaS product or periodic digital or social campaigns.
 
@@ -46,7 +46,7 @@ Focus on the following with respect to your app store listing, landing page and 
 
   - As you’ve built a collaborative app inside Teams, avoid labeling it as a “Teams integration” page and linking it under the “Integrations” section in your website header, navigation menu or footer.
   - Your Teams collaborative app deserves a top-level link in your website header, navigation menu or footer. Make it easy to discover – more traffic is the first step to increased acquisition.
-  - Use the recommended app store CTA arts on multiple places on this page prominently to direct users to acquire your app.
+  - Use the recommended Teams Store CTA arts on multiple places on this page prominently to direct users to acquire your app.
   - Include beautiful video, animated GIFs, and artful screenshots of your real Teams app on this page for impactful storytelling. Your goal should be to get everyone who lands on this page to install and try out your Teams app immediately.
   - Ensure to include credible customer testimonials (with their permissions of course) and links to public references and success stories to build trust that your Teams app has already benefited customers.
   - It’s a good practice to include a FAQ section where users can quickly find answers to their most common queries related to your Teams app. It can include scenarios, features, any other cost or pricing, which SaaS subscription plans of yours support the Teams app, and so on.
@@ -147,7 +147,7 @@ The banner or notification CTA can direct users to your app‘s landing page or 
 <details>
 <summary>Freemium experience, free trial and extended trials for new Teams users</summary>
 
-Since your goal at this stage is to achieve product-market fit for your app, it’s critical to learn how users are perceiving your new app and if they’re getting the intended value by using the app. If you have a freemium SaaS offering, offer a limited feature set in your Teams app for free. If not already done for your core SaaS product, offer free trials to users who sign up for your app (and SaaS service) through the Teams marketplace (that is AppSource or Teams in-product store). If you already offer trials for your SaaS product and your standard free trial period is 15 days, consider extending the trial period for Teams users to 30-60 days.
+Since your goal at this stage is to achieve product-market fit for your app, it’s critical to learn how users are perceiving your new app and if they’re getting the intended value by using the app. If you have a freemium SaaS offering, offer a limited feature set in your Teams app for free. If not already done for your core SaaS product, offer free trials to users who sign up for your app (and SaaS service) through the Teams marketplace (that is AppSource or Teams Store). If you already offer trials for your SaaS product and your standard free trial period is 15 days, consider extending the trial period for Teams users to 30-60 days.
 
 Given you’ve built your Teams app for collaborative use cases, you'll naturally want trial users to invite their colleagues as well to use your app in shared context inside Teams. An extended trial facilitates collaborative evaluation of your app and increases the likelihood of these users converting to paid and sticky customers.
 
@@ -221,14 +221,14 @@ Connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@m
 </details>
 <br>
 <details>
-<summary>Teams app store listing optimization</summary>
+<summary>Teams Store listing optimization</summary>
 
 Improve your solution listing in Teams marketplace by following the best practices [here](/azure/marketplace/gtm-offer-listing-best-practices).
 
 </details>
 <br>
 <details>
-<summary>App store marketing toolkit</summary>
+<summary>Teams Store marketing toolkit</summary>
 
 Get free, customizable marketing and sales resources, such as data sheets, presentations, and more collateral to customize marketing for your Teams app [here](https://partner.microsoft.com/asset#/?type=marketing-campaigns&area=mrkt).
 
@@ -237,7 +237,7 @@ Get free, customizable marketing and sales resources, such as data sheets, prese
 <details>
 <summary>Partner press release and blog content review</summary>
 
-Publicly announce your Teams app by leveraging this service to review of a press release you draft and get a quote from a Microsoft representative. Watch this [short video](https://partner.microsoft.com/asset/detail/spm-20-how-to-write-a-press-release-mp4) to learn how to create an effective press release by using eight key pointers and connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) for using the offer.
+Publicly announce your Teams app by leveraging this service to review a press release you draft and get a quote from a Microsoft representative. Create an effective press release by using eight key pointers and connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to use the offer.
 
 </details>
 <br>
@@ -256,14 +256,14 @@ Contact the field, account, or engineering representatives from Microsoft to dis
 </details>
 <br>
 <details>
-<summary>Featured placements in AppSource and the Teams in-product app store</summary>
+<summary>Featured placements in AppSource and the Teams Store</summary>
 
-Contact your Microsoft field, account or engineering representatives or connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to feature your app in AppSource and the Teams in-client app store merchandising sections. Ensure your app experience is free of bugs to boost your chances of getting promoted on the store.
+Contact your Microsoft field, account or engineering representatives or connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to feature your app in AppSource and the Teams Store merchandising sections. Ensure your app experience is free of bugs to boost your chances of getting promoted on the Teams Store.
 
 > [!NOTE]
-> The Microsoft Teams store editorial team determines the prominence and location of an app within the editorial sections such as promo banner on the Teams store based on ranking parameters.
+> The Teams Store editorial team determines the prominence and location of an app within the editorial sections such as promo banner on the Teams Store based on ranking parameters.
 >
-> For more information, see [Microsoft Teams store ranking parameters](../teams-store-ranking-parameters.md).
+> For more information, see [Microsoft Teams Store ranking parameters](../teams-store-ranking-parameters.md).
 
 </details>
 <br>

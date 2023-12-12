@@ -2,7 +2,7 @@
 title: App design process
 author: heath-hamilton
 description: Learn how and when you might use Microsoft tools and resources to design an effective Microsoft Teams app.
-ms.localizationpriority: mediums
+ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
 ms.date: 06/28/2022
@@ -109,7 +109,7 @@ Not unlike the design phase, you can use these Fluent UI components in your app 
 
 Whether you’re just starting on your app or close to a production-ready app, we recommend that you periodically review the following resources:
 
-* **Microsoft Teams store validation guidelines**: Provides standards that all Teams apps should strive for, and not just apps listed in the store. For more information, see the [guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+* **Microsoft Teams Store validation guidelines**: Provides standards that all Teams apps should strive for, and not just apps listed in the Teams Store. For more information, see the [guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 * **Design best practices**: These docs and the UI kit provide best practices for designing high-quality apps. For example, see the [best practices for designing bots](~/bots/design/bots.md#best-practices).
 
 ## See also

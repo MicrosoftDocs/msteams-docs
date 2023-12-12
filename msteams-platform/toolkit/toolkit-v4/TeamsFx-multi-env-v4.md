@@ -74,8 +74,8 @@ The following table lists the common scenarios for customized resource provision
 | Scenarios | Location| Description |
 | --- | --- | --- |
 | Customize Azure Resource |`bicep` files under `templates\azure` `.fx\azure.parameters.<envName>.json` | [Customize ARM parameters and templates](../provision.md#customize-arm-template-files) |
-| Reuse existing Microsoft Azure Active Directory (Azure AD) app for Teams app | `auth` section in`.fx\config.<envName>.json`|  [Use an existing Azure AD app for your Teams app](../provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
-| Reuse existing Azure AD app for bot |`bot` section in`.fx\config.<envName>.json`| [Use an existing Azure AD app for your bot](../provision.md#use-an-existing-azure-ad-app-for-your-bot) |
+| Reuse existing Microsoft Entra app for Teams app | `auth` section in`.fx\config.<envName>.json`|  [Use an existing Microsoft Entra app for your Teams app](../provision.md#use-an-existing-azure-ad-app-for-your-teams-app) |
+| Reuse existing Microsoft Entra app for bot |`bot` section in`.fx\config.<envName>.json`| [Use an existing Microsoft Entra app for your bot](../provision.md#use-an-existing-azure-ad-app-for-your-bot) |
 | Skip adding user while provisioning SQL |`skipAddingSqlUser` property in`.fx\config.<envName>.json`| [Skip adding user for SQL database](../provision.md#skip-adding-user-for-sql-database) |
 | Customize app manifest |`manifest.template.json` file is available under `templates\appPackage`| [Preview app manifest in Toolkit](../TeamsFx-preview-and-customize-app-manifest.md)|
 

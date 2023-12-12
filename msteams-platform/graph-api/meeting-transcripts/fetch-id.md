@@ -19,7 +19,7 @@ To obtain meeting ID and organizer ID for fetching the transcript and recording,
 
 ## Subscribe to change notifications
 
-You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts and recordings, if it's authorized via required Azure AD permissions.
+You can subscribe your app to receive change notifications for scheduled meeting events. When your app is notified about the subscribed meeting events, it can obtain transcripts and recordings, if it's authorized via required Microsoft Entra permissions.
 
 Your app receives notification for the type of meeting events for which it's subscribed:
 

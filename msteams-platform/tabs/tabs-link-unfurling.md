@@ -167,7 +167,7 @@ Following is the process to invoke Collaborative Stage View:
 > * `invoke` workflow is similar to the `appLinking` workflow.
 > * To maintain consistency, it is recommended to name `Action.Submit` as `Open`.
 > * `websiteUrl` is a required property to be passed in the `TabInfo` object.
-> * If you don't have an optimized mobile experience for Teams mobile client, the Stage View for apps distributed through the [Teams store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> * If you don't have an optimized mobile experience for Teams mobile client, the Stage View for apps distributed through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 #### Query parameters
 

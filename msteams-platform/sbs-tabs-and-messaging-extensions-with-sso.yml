@@ -2,7 +2,7 @@
 title: SSO for tabs and message extension
 metadata:
   title: SSO for tabs and message extension
-  description: In this module, learn how to set up Azure Active Directory Single sign-on (Azure AD SSO) for tabs.
+  description: In this module, learn how to set up Microsoft Entra Single sign-on (Microsoft Entra SSO) for tabs.
   audience: Developer
   level: Beginner
   ms.date: 12/07/2021
@@ -14,15 +14,15 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-   The  Azure Active Directory single sign-on (Azure AD SSO) helps to authenticate users in Teams. 
+   The  Microsoft Entra single sign-on (Microsoft Entra SSO) helps to authenticate users in Teams. 
 
-   **Key aspects of Azure AD SSO**:
+   **Key aspects of Microsoft Entra SSO**:
 
     * Allows the user to sign in automatically after the first sign in.
     * Allows the user to sign in to other devices without entering credentials again.
     * Obtains token for the signed in user.
 
-   This step-by-step guide helps you to create tabs and message extensions enabling Azure AD SSO authentication. You'll see the following output:
+   This step-by-step guide helps you to create tabs and message extensions enabling Microsoft Entra SSO authentication. You'll see the following output:
 
      :::image type="content" source="./assets/images/Tab-ME-SSO/hello-megan-profile245-1.png" alt-text="Screenshot of the tab and message extension with SSO authentication output after you have successfully completed the step-by-step guide.":::
    
@@ -34,11 +34,11 @@ items:
 
     | &nbsp; | Install | For using... |
      | --- | --- | --- |
-     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, call, and all-in-one place.|
+     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all-in-one place.|
      | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
      | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. If you haven't installed the latest version, install the portable version. |
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies). |
+     | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`). |
 
       > [!NOTE]
       > After downloading ngrok, sign up and install [authtoken](https://ngrok.com/download).
@@ -49,7 +49,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app 
+- title: Register Microsoft Entra app 
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
@@ -99,7 +99,7 @@ items:
       > [!NOTE]
       >
       > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-      > * Users need to consent to the API permissions only if the Azure AD app is registered in a different tenant.
+      > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
@@ -134,12 +134,12 @@ items:
     1. Update the following information:  
 
          * Replace `"MicrosoftAppId"` to your bot's **Microsoft App ID**.
-         * Replace `"MicrosoftAppPassword"` to your bot's client secret ID **Value**.
+         * Replace `"MicrosoftAppPassword"` to your bot's client secrets **Value**.
          * Replace `"SiteUrl"` to your ngrok URL.
          * Replace `"ConnectionName"` to the name of OAuth connection setting.
          * Replace `"TenantId"` to the tenant ID of the tenant where the app is used.
          * Replace `"ClientId"` to your bot's **Microsoft App ID**.
-         * Replace `"AppSecret"` to your bot's client secret ID **Value**.
+         * Replace `"AppSecret"` to your bot's client secrets **Value**.
          * Replace `"ApplicationIdURI"` in the form of `api://*******.ngrok.io/botid-{AppID}`.
 
         :::image type="content" source="./assets/images/Tab-ME-SSO/app-setting.png" alt-text="Screenshot of the appsettings.json file with the values entered highlighted in red.":::
@@ -151,7 +151,7 @@ items:
 
         :::image type="content" source="./assets/images/Tab-ME-SSO/folder-manifest-1.png" alt-text="Screenshot of Manifest folder with the manifest file highlighted in red.":::
     
-    1. Open the **manifest.json** file in **Visual Studio** and make the following changes:
+    1. Open the **manifest.json** file in Visual Studio and make the following changes:
 
          * Replace `DOMAIN-NAME` with your ngrok URL.
          * Replace `YOUR-MICROSOFT-APP-ID` with your bot's **Microsoft App ID**.
@@ -165,7 +165,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    To build and run the service use Visual Studio or Command line.
+    To build and run the service, use Visual Studio or Command line.
 
     # [Visual Studio](#tab/vs2019)
 
@@ -217,7 +217,7 @@ items:
 
     1. Select **Upload an app**.
 
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
        :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the upload a custom app.":::
 
@@ -256,7 +256,7 @@ items:
 
               :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-sso1-1.png" alt-text= "Screenshot of your app with sign in highlighted in red.":::
 
-          1. Enter your credentials in **Sign in** window, and select **Next**.
+          1. Enter your credentials in **Sign in** window and select **Next**.
 
               :::image type="content" source="./assets/images/Tab-ME-SSO/sign-in-box.png" alt-text= "Screenshot of Microsoft Sign in page with Next highlighted in red.":::
         

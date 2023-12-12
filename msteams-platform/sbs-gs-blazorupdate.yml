@@ -35,18 +35,18 @@ items:
     | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=enterprise&ch=pre&rel=17)| You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
     | &nbsp; | [Microsoft Teams](https://www.microsoft.com/en-us/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place. |
     | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-    | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm devDependencies).
+    | &nbsp; | Dev tunnel | Teams app features (conversational bots, message extensions, and incoming webhooks) need inbound connections. A tunnel connects your development system to Teams. Dev tunnel is a powerful tool to securely open your localhost to the internet and control who has access. Dev tunnel is available in Visual Studio 2022 version 17.7.0 or later. <br> or </br> You can also use [ngrok](https://ngrok.com/download) as a tunnel to connect your development system to Teams. It isn't required for apps that only include tabs. This package is installed within the project directory (using npm `devDependencies`).
 
     After you've installed the required tools, set up the development environment.
 
     ### Install Microsoft Teams Toolkit
 
-    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more.<br>
+    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Microsoft Teams Store, and more.<br>
     You can use the toolkit with Visual Studio, or CLI (command-line interface) called `teamsfx`. 
     
     # [Visual Studio](#tab/vs)
 
-    1. Download the latest version of the Visual Studio.
+    1. Download the latest version of Visual Studio.
     1. Open `vs_enterprise__3bed52501a604464b1eff2ce580fd4eb.exe` from your download folder.
     1. Select **Continue** in the **Visual Studio Installer** page to configure your installation.
 
@@ -89,16 +89,16 @@ items:
 
     ## Set up your Teams development tenant
 
-    A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you sideload and test your app. Let's verify if you're ready to develop with the tenant.
+    A tenant is like a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
-    ### Enable sideloading option
+    ### Enable custom app upload
 
-    After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+    After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
       
     1. In the Teams client, select **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If the option is visible, you have enabled sideloading apps.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot of Manage your apps in Teams with the Upload an app dialog open. Apps icon, Manage your apps, Upload an app, and Upload a customised app options are highlighted in red.":::
 
@@ -249,7 +249,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/select-subscription.png" alt-text="Screenshot of Provision with New and Provision highlighted in red.":::
 
-        Provision warning displays. 
+        A **Teams Toolkit** warning dialog appears. 
 
     1. Select **Provision**.
     
@@ -275,7 +275,7 @@ items:
 
     #### **To deploy your tab app to cloud**
 
-    1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud**.
+    1. Select **Project** > **Teams Toolkit** > **Deploy to the Cloud...**.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/vs-build-deploytocloud_1.png" alt-text="Screenshot of Visual Studio with Project, Teams Toolkit, and Deploy to the Cloud options highlighted in red." lightbox="../msteams-platform\assets\images\teams-toolkit-v2\blazor-vs-preview2\vs-build-deploytocloud_2.png":::
 
@@ -412,11 +412,11 @@ items:
 
         Now the bot is successfully running on Teams! After the app is loaded, a chat session with the bot opens.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-running.png" alt-text="Screenshot of Microsoft Teams with Welcome option highlighted under Suggestions.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-welcome.png" alt-text="Screenshot of Microsoft Teams with Welcome option highlighted under Suggestions.":::
 
         You can type `helloworld` to show an introduction card for an Adaptive Card.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-welcome.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::       
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/bot-running.png" alt-text="Screenshot of Microsoft Teams displaying an introduction card.":::       
 
          You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading.  If you change any file within the project, the page will be reloaded.
          
@@ -424,7 +424,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
 
 - title: Preview your first bot app
   durationInMinutes: 1
@@ -445,7 +445,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/blazor-vs-preview2/provision-azure_1.png" alt-text="Screenshot of Provision with provision option highlighted in red. ":::
 
-           Provision warning displays. 
+           A **Teams Toolkit** warning dialog appears. 
 
     1. Select **Provision**.
 

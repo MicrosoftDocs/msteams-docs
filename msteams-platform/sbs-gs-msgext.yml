@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
     Start Microsoft Teams app development with your first Teams app. 
-    You can create a message extension Teams app with Teams using Javascript.  
+    You can create a message extension Teams app with Teams using JavaScript.  
     
     In this tutorial, you'll learn:
 
@@ -25,7 +25,7 @@ items:
 
     This step-by-step guide helps you to build message extension Teams app with Teams Toolkit. You'll see the following output after you've completed this guide:
 
-     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows that app sideloaded in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png":::
+     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows that custom app uploaded in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -37,7 +37,7 @@ items:
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
-   | &nbsp; | [Teams Toolkit](#install-the-teams-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+   | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
    | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
@@ -46,107 +46,19 @@ items:
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
    | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
-   | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+   | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
 
 
    > [!TIP]
    > If you work with Microsoft Graph data, you should learn about and bookmark the Microsoft Graph Explorer. This browser-based tool allows you to query Microsoft Graph outside of an app.
 
-
-   ## Prepare development environment
-
-   After you've installed the required tools, set up the development environment.
-
-
-   ### Install the Teams Toolkit
-
-   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
-    
-   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
-
-
-   # [Visual Studio Code](#tab/vscode)
-
-   1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
-   1. In the search box, enter **Teams Toolkit**.
-   1. Select **Install** next to the Teams Toolkit.
-
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion-1.png":::
-
-    The Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
-
-   You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
-
-   
-   # [Command line](#tab/cli)
-
-   To install the TeamsFx CLI, use the `npm` package manager:
-
-   ``` bash
-   npm install -g @microsoft/teamsfx-cli
-   ```
-
-   Depending on your configuration, you may need to use `sudo` to install the CLI:
-
-   ``` bash
-   sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
-   ```
-
-   This condition is more common on Linux and macOS systems.
-
-   Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
-
-   You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
-
-   > [!CAUTION]
-   > Before you can run TeamsFx in PowerShell terminals, you must enable the "remote signed" execution policy for PowerShell.
-
-   ---
-
-   ## Set up your Teams development tenant
-
-   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
-
-   ### Check for sideloading option
-
-   After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
-
-    > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams local environment.
-
-   Do you already have a tenant, and do you have the admin access? Let's check if you really do!
-
-   Verify if you can sideload apps in Teams:
-
-    1. In the Teams client, select the **Store** icon.
-    1. Select **Manage your apps**.
-    1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
-
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
-
-        > [!NOTE]
-        > If you don't have the option to upload a custom app, talk to your Teams administrator.
-
-   ### Create a free Teams developer tenant (optional)
-
-   If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
-
-   1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-   1. Select **Join Now** and follow the onscreen instructions.
-   1. In the welcome screen, select **Set up E5 subscription**.
-   1. Set up your administrator account. After you finish, the following screen appears.
-
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
-
-   1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+   [!INCLUDE [Set up prerequisites](includes/get-started/prepare-teams-toolkit.md)]
 
    ## Get a free Azure account
 
-   If you wish to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+   If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
-
+   Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
 
 - title: Create project workspace for your message extension app
   durationInMinutes: 1
@@ -304,7 +216,7 @@ items:
     1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. The Teams Toolkit displays **Sideloading enabled** if sideloading is enabled for your Microsoft 365 account.
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Teams Toolkit displays **Sideloading enabled**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
@@ -353,17 +265,17 @@ items:
 
         1. Checks all the following prerequisites:
           - You're logged in with a Microsoft 365 account.
-          - Sideloading is enabled for your Microsoft 365 account.
+          - Custom app upload is enabled for your Microsoft 365 account.
           - Supported Node.js version is installed.
           - Port required by bot app is available.
 
         2. Install npm packages
         3. Starts Dev Tunnel to create a HTTP tunnel.
-        4. Registers the app in Azure AD and configures the app.
+        4. Registers the app in Microsoft Entra ID and configures the app.
         5. Registers the bot app in Bot Framework and configures the app.
         6. Registers the app in Teams Developer Portal and configures the app.
         7. Starts the message extension app hosted locally.
-        8. Starts Teams in a web browser and sideloads the Teams app.
+        8. Starts Teams in a web browser and uploads the Teams app.
         
         </details>
 
@@ -372,7 +284,7 @@ items:
         > [!NOTE]
         > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take three to five minutes to complete.
 
-        Teams run your app in a web browser.
+        Teams runs your app in a web browser.
         
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
@@ -383,18 +295,18 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows message to try the app now or later.":::
  
-        - If you select **Got it**, you can try the app later from the list of Sideloaded apps.
+        - If you select **Got it**, you can try the app later from the list of uploaded custom apps.
         - If you select **Try it**, Teams loads your app.
 
     1. Select **Try it**.
 
         The Message Extension app is loaded in a chat bot app.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows that app sideloaded in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows that custom app uploaded in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png":::
 
         As message extension apps rely on bots for enabling communication between the user and the web service,, your app loads in to a chat feature of a bot.
 
-        - If you've created a bot app before you created the message extension app, you can see that it is loaded in the same bot app you created. Previous chat messages are visible.
+        - If you've created a bot app before you created the message extension app, you can see that it's loaded in the same bot app you created. Previous chat messages are visible.
         - If you created a message extension first, your app is loaded in any chat that is open on Teams.
 
         > [!NOTE]
@@ -408,15 +320,15 @@ items:
 
     1. Let's enter a search string in the search box, such as "cli". You'll get a list of the matching items:
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot that shows how to use the app for search.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot shows how to use the app for search.":::
 
     1. Select one from the search results. It will be displayed in the compose area so you can send the result to the channel.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-result.png" alt-text="Screenshot that shows the search result.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-result.png" alt-text="Screenshot shows the search result.":::
 
     1. Select the **Send** instructions.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot that shows the search result sent on chat.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot shows the search result sent on chat.":::
     
         Now, you've learned how to build and run a basic message extension app!         
 
@@ -430,21 +342,21 @@ items:
 
     1. Select **Create Card**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot that shows how to create a card." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows how to create a card." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png":::
 
     1. Enter the card details as shown, and select **Submit**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="Screenshot that shows how to add a card details.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="Screenshot shows how to add the card details.":::
 
         Your card details appear in the compose area.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot that shows how to add a card details." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot shows how to add the card details." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png":::
 
     1. Select the **Send** icon from the compose area.
 
         The app sends the card on the bot chat.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot that shows the card sent." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot shows that the card is sent." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png":::
     </details>
     <br>
     <details>
@@ -458,41 +370,41 @@ items:
         
         The app opens the search box and you can use it to run a query.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot that shows how to @mention the message extension app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to @mention the message extension app.":::
 
     1. Enter a search string, and select one from the search result.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot that shows how to run a search using the message extension app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot shows how to run a search using the message extension app.":::
 
         It displays in the command area as a card.
 
     1. Copy the card to paste it in the compose area.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot that shows search result in a card.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot shows the search result in a card.":::
         
     1. Send the card using the compose area.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot that shows search result in a chat.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the search result in a chat.":::
 
     * **Using three-dot icon:**
     
     1. Launch the message extension from three dots at the bottom of the composing area.
     1. Select your message extension app.       
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot that shows how to open the sample message extension app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension app.":::
 
         The message extension app loads with the options to run a search and create adaptive cards.
     </details>
     <br>
     <details>
-    <summary>Run the app from sideloaded apps</summary>
+    <summary>Run the app from uploaded custom apps</summary>
 
-    You can open a sideloaded Teams app from the list of sideloaded apps. 
+    You can open an uploaded Teams app from the list of uploaded custom apps. 
 
     1. Select the **Store** icon from the Teams sidebar.
     1. Select the **Manage apps**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot that shows sideloaded apps.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot shows the custom uploaded apps.":::
 
     1. Select the three dots icon for your app, and then select **View details**. You can also copy link to the app and use it to open the app.
     1. Select **Open** to load the app, and then select **Try it**. 
@@ -506,7 +418,7 @@ items:
     <details>
     <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you must have a Microsoft 365 development account that allows app sideloading. You can learn more about sideloading in the Prerequisites section.
+    To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the Prerequisites section.
     </details>
 
 - title: Deploy your first Teams app
@@ -529,7 +441,7 @@ items:
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
-        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
     1. Close the browser when prompted and return to Visual Studio Code.

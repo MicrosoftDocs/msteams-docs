@@ -19,7 +19,7 @@ A proactive message is any message sent by a bot that isn't in response to a req
 >
 > * To send proactive message, it's recommended to start with [building notification bot with JavaScript](../../../sbs-gs-notificationbot.yml) or [incoming webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) explore. For more information, see [Teams Toolkit documents](../../../toolkit/teams-toolkit-fundamentals.md).
 >
-> * Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. For proactive messages the bots should use the following end points for government cloud environments: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch` <br> - DOD: `https://smba.infra.dod.teams.microsoft.us/dod`
+> * Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. For proactive messages the bots must use the following end points for government cloud environments: <br> - GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`<br> - GCCH: `https://smba.infra.gov.teams.microsoft.us/teams` <br> - DOD: `https://smba.infra.dod.teams.microsoft.us/teams`
 
 To send a proactive message to a user, a group chat, or a team, your bot must have the requisite access to send the message. For a group chat or team, the app that contains your bot must be first installed in that location.
 
@@ -29,14 +29,16 @@ Sending a proactive message is different from sending a regular message. There's
 
 To send a proactive message, follow these steps:
 
-1. [Get the user AAD ID, user ID, team ID, or channel ID](#get-the-user-aad-id-user-id-team-id-or-channel-id), if necessary.
+1. [Get the Microsoft Entra user ID, user ID, team ID, or channel ID](#get-the-user-aad-id-user-id-team-id-or-channel-id), if necessary.
 1. [Create the conversation](#create-the-conversation), if necessary.
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
 The code snippets in the [samples](#samples) section are to create a one-on-one conversation. For links to samples for both one-on-one conversations and group or channels messages, see [code sample](#code-sample). To use proactive messages effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging).
 
-## Get the user AAD ID, user ID, team ID, or channel ID
+<a name='get-the-user-aad-id-user-id-team-id-or-channel-id'></a>
+
+## Get the Microsoft Entra user ID, user ID, team ID, or channel ID
 
 You can create a new conversation with a user or a conversation thread in a channel and you must have the correct ID. You can receive or retrieve this ID using any of the following ways:
 
@@ -46,11 +48,11 @@ You can create a new conversation with a user or a conversation thread in a chan
 * You can retrieve the [list of channels](~/bots/how-to/get-teams-context.md) in a team where your app is installed.
 * You can retrieve the [list of members](~/bots/how-to/get-teams-context.md) of a team where your app is installed.
 
-Regardless of how you get the information, store the `tenantId` and then store either the `userId`, or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team. Ensure that the bot is installed in the team before you can send a proactive message to a channel. 
+Regardless of how you get the information, store the `tenantId` and then store either the `userId`, or `channelId` to create a new conversation. You can also use the `teamId` to create a new conversation thread in the general or default channel of a team. Ensure that the bot is installed in the team before you can send a proactive message to a channel.
 
 * The `aadObjectId` is unique to the user and can be retrieved using the [graph API](/graph/api/user-list) to create a new conversation in personal chat. Ensure that the bot is installed in the personal scope before you can send a proactive message. If the bot isn't installed in a personal scope when sending a proactive message using the `aadObjectId`, the bot returns a `403` error with `ForbiddenOperationException` message.
 
-* The `userId` is unique to your bot ID and a particular user. You can't reuse the `userId` between bots. 
+* The `userId` is unique to your bot ID and a particular user. You can't reuse the `userId` between bots.
 
 * The `channelId` is global.
 
@@ -68,9 +70,9 @@ To [create the conversation](/azure/bot-service/rest-api/bot-framework-rest-conn
 For `serviceUrl`, use the value from an incoming activity triggering the flow or one of the global service URLs. If the `serviceUrl` isn't available from an incoming activity triggering the proactive scenario, use the following global URL endpoints:
 
 * Public: `https://smba.trafficmanager.net/teams/`
-* GCC: `https://smba.infra.gcc.teams.microsoft.com/gcc`
-* GCCH: `https://smba.infra.gov.teams.microsoft.us/gcch`
-* DOD: `https://smba.infra.dod.teams.microsoft.us/dod`
+* GCC: `https://smba.infra.gcc.teams.microsoft.com/teams`
+* GCCH: `https://smba.infra.gov.teams.microsoft.us/teams`
+* DOD: `https://smba.infra.dod.teams.microsoft.us/teams`
 
 For a code sample, see the call `CreateConversationAsync` in the [**sample**](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs).
 
@@ -179,7 +181,7 @@ When using proactive messaging to send scheduled messages to users, verify that 
 
 Proactively message users that have previously not installed or interacted with your app. For example, you want to use the [company communicator](~/samples/app-templates.md#company-communicator) to send messages to your entire organization. In this case, you can use the Graph API to proactively install your app for your users. Cache the necessary values from the `conversationUpdate` event your app receives upon installation.
 
-You can only install apps that are in your organizational app catalog or the Teams App Store.
+You can only install apps that are in your organizational app catalog or the Microsoft Teams Store.
 
 See [install apps for users](/graph/api/userteamwork-post-installedapps) in the Graph documentation and [proactive bot installation and messaging in Teams with Graph](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md). There's also a [Microsoft .NET framework sample](https://github.com/microsoftgraph/contoso-airlines-teams-sample/blob/283523d45f5ce416111dfc34b8e49728b5012739/project/Models/GraphService.cs#L176) on the GitHub platform.
 
@@ -367,8 +369,6 @@ async def _message_all_members(self, turn_context: TurnContext):
 ```
 
 # [JSON](#tab/json)
-
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/send-proactive-messages?tabs=json)
 
 ```json
 POST /v3/conversations

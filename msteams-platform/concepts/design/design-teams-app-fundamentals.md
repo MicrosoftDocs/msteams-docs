@@ -52,7 +52,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
    :::column span="3":::
 
-      Your app's primary icon can go a long way in conveying your brand to Teams users. Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to the Teams store.
+      Your app's primary icon can go a long way in conveying your brand to Teams users. Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to the Microsoft Teams Store.
 
       You also can use Fluent UI icons throughout your app:
 
