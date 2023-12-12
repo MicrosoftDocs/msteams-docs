@@ -160,8 +160,9 @@ items:
 
     1. Open the **appsettings.json** file and update the following information: 
 
-         * Replace all occurrences of `<<aad-id>>` with your app's Microsoft App ID.
-         * Replace all occurrences of `<<client secret>>` with your app's client secret.
+         * Set `"ClientId"` to your app's **Microsoft App ID**.
+         * Set `"ClientSecret"` to your app's client secret **Value**.
+         * Set `"Audience"` to your app's **Application ID URI**.
 
           :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings2.png" alt-text="App settings"::: 
 
@@ -173,8 +174,9 @@ items:
     
     1. Open the **manifest.json** file and update the following information.
 
-         * Replace all occurrences of `<<deployment-url>` with your fully qualified ngrok domain name.
-         * Replace all occurrences of `<<aad-id>>` with your app's **Microsoft App ID**.
+         * Set `"ID"` to **Microsoft App ID**.
+         * Replace all occurrences of `"deployment-url"` with your fully qualified ngrok or devtunnel domain name.
+         * Replace all occurrences of `"aad-id"` with your app's **Microsoft App ID**.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-update-file.png" alt-text="Screenshot shows the changes in the manifest file." lightbox="~/assets\images\sbs-inmeeting-doc-signing\manifest.png":::
 
@@ -228,13 +230,11 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/add-app-teams.png" alt-text="Screenshot shows how to add an app in a meeting.":::
     
-    1. Select **Upload an app** > **Upload a custom app**.
+    1. Select **Upload an app**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/upload-an-app.png" alt-text="Screenshot shows the upload a custom app option in Teams."::: 
-    
-    1. Select the .zip file you've created in the **Manifest** folder and select **Open**.
+    1. Select the .zip file you've created in the **AppManifest** folder and select **Open**.
 
-        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-open.png" alt-text="Screenshot shows how to open a custom app."::: 
+        :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/select-zip-file.png" alt-text="Screenshot shows how to open a custom app."::: 
 
     1. Select **Add**.
 
@@ -287,13 +287,9 @@ items:
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/view-doc-in-sidepanel.png" alt-text="Screenshot shows the document in the the meeting side panel.":::
 
-     1. Select **Click to sign!**.
+     The following image shows the document shared in the meeting.
 
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/doc-shared-in-meeting.png" alt-text="Screenshot shows document shared in meeting.":::
-        
-     1. Select **Done**.   
-
-         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/meeting-signing-confirm.png" alt-text="Screenshot shows the meeting signing app's confirmation dialog.":::
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Screenshot shows the final output for the meeting signing app."::: 
 
 - title: Complete challenge
   durationInMinutes: 1
