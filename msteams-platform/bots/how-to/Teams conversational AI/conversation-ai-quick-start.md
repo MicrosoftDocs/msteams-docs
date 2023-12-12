@@ -32,13 +32,13 @@ To get started, ensure that you have the following tools:
 | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
 
 <br/>
-If you have run the samples before or encounter a runtime error, follow these steps to start fresh:
+If you ran the samples before or encounter a runtime error, follow these steps to start fresh:
 
 * Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
 * If you don’t want Teams Toolkit to generate the appId and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
 * Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
 
-Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following:
+Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
 
 * An Azure OpenAI or OpenAI key
 * A database or similar storage options
@@ -47,7 +47,7 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 
 ## Build and run the sample app
 
-Get started with Teams AI library using the **ChefBot** sample. It's designed to quickly run a Teams AI library based sample on your computer's localhost.
+Get started with Teams AI library using the **ChefBot** sample. It enables your computer’s localhost to quickly execute a Teams AI library-based sample.
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
@@ -61,7 +61,7 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
 
 1. Select **File** > **Open Folder**.
 
-1. Go to the location where you've cloned teams-ai repo and select the **teams-ai** folder.
+1. Go to the location where you cloned teams-ai repo and select the **teams-ai** folder.
 
 1. Select **Select Folder**.
 
@@ -87,7 +87,7 @@ Get started with Teams AI library using the **ChefBot** sample. It's designed to
    yarn build
    ```
 
-1. After the dependencies are installed. Select **File** > **Open Folder**.
+1. After the dependencies are installed, select **File** > **Open Folder**.
 
 1. Go to **teams-ai > js > samples> 04.ai.a.teamsChefBot** and select **Select Folder**. All the files for the chef bot sample are listed under the **EXPLORER** section in Visual Studio Code.
 
@@ -146,7 +146,7 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
    cd teams-ai/dotnet
    ```
 
-1. Go to the folder where you've cloned the repository and select **04.ai.a.teamsChefBot**.
+1. Go to the folder where you cloned the repository and select **04.ai.a.teamsChefBot**.
 1. Select **TeamsChefBot.sln**. The solution opens in Visual Studio.
 
 1. Select the following AI service you want to use:
@@ -178,20 +178,20 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
 
 1. In the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel..**.
 
-   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-dev-tunnel.png" alt-text="Screenshot shows an example of the Dev Tunnel and Create a Tunnel options in Visual Studio.":::
+   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-dev-tunnel.png" alt-text="Screenshot shows an example of the Dev Tunnel and Create a Tunnel option in Visual Studio.":::
 
-1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported. Update the following:
+1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported. Update the following options:
    1. **Name**: Enter a name for the tunnel.
    1. **Tunnel Type**: Select **Persistent** or **Temporary**.
    1. **Access**: Select **Public**.
    1. Select **OK**. Visual Studio displays a confirmation message that a tunnel is created.
 
-    The tunnel you've created is listed under **Dev Tunnels > (name of the tunnel)**.
+    The tunnel you created is listed under **Dev Tunnels > (name of the tunnel)**.
 
 1. Go to **Solution Explorer** and select your project.
 1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams-app.png" alt-text="Screenshot shows an example of the prepare teams app dependencies option under Teams Toolkit section in Visual Studio.":::
+   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams-app.png" alt-text="Screenshot shows an example of the Prepare Teams app Dependencies option under Teams Toolkit section in Visual Studio.":::
 
    If prompted, sign in to your Microsoft 365 account. You'll receive a message that Teams app is successfully prepared.
 
@@ -200,7 +200,7 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
 1. Select **F5** or select **Debug** > **Start**.
 1. Select **Add**. The app is added to Teams and a chat window opens.
 
-   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-add-app.png" alt-text="Screenshot shows the add option to add the app to Micrososft Teams.":::
+   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-add-app.png" alt-text="Screenshot shows the add option to add the app to Microsoft Teams.":::
 
 1. In the message compose area, send a message to invoke the bot.
 
