@@ -6,7 +6,6 @@ manager: prkosh
 description: Learn about the best practices and guidance for app adoption and promotion.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.author: guptaashish
 ms.date: 12/12/2023
 ---
 
