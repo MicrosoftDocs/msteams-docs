@@ -26,19 +26,21 @@ Before you get started, ensure that you install the following tools:
 
 To build Actions for your app, follow these steps:
 
-1. [Update app manifest](#update-app-manifest).
-1. [Retrieve Action information through context object](#retrieve-action-information-through-context-object).
-1. [Access content through Graph API](#access-content-through-graph-api).
+> [!div class="checklist"]
+>
+>* [Update app manifest](#update-app-manifest).
+>* [Retrieve Action information through context object](#retrieve-action-information-through-context-object).
+>* [Access content through Graph API](#access-content-through-graph-api).
 
 ## Update app manifest
 
-Define the intent, object, and handler for your actions in the app manifest schema (previously called Teams app manifest).
+Define the intent, object, and handler for your actions in the app manifest (previously called Teams app manifest).
 
-The following is an example of the `intent` and `supportedobjects` and `handlers` properties for `openPage` in app manifest:
+The following is an example of the `intent`, `supportedobjects`, and `handlers` properties for `openPage` in app manifest:
 
 ```json
 {
-  "$schema": "https://raw.githubusercontent.com/OfficeDev/microsoft-teams-app-schema/preview/DevPreview/MicrosoftTeams.schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview",
 .
 .
@@ -70,7 +72,7 @@ The following is an example of the `intent` and `supportedobjects` and `handlers
 
 For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
 
-When a user selects an action to open a page and view related tasks in the To-do app based on the selected file. The app uses the `"intent": "custom"` property to identify the file type, such as .xlsx or doc and the `"type": "openPage"` handler opens the app and navigates to the `pageId`.
+When a user selects an action to open a page and view related tasks in an app based on the selected file. The app uses the `"intent": "custom"` property to identify the file type, such as .xlsx or doc and the `"type": "openPage"` handler opens the app and navigates to the `pageId`.
 
 ## Retrieve Action information through context object
 
@@ -88,11 +90,11 @@ this.setState({
 
 | &nbsp; | Name | Description |
 | --- | --- | --- |
-| &nbsp; | `actionId` | Maps to the action id supplied inside the manifest. |
+| &nbsp; | `actionId` | Maps to the Action ID supplied inside the manifest. |
 | &nbsp; | `actionObjects` | Array of corresponding action objects. |
-| &nbsp; | `itemId` | The app receives the id as the content and uses it to query the Microsoft graph. |
+| &nbsp; | `itemId` | The app receives the ID as the content and uses it to query the Microsoft graph. |
 
-The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a page from an Action, and the content that initiated the Action.
+The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a page from an Action and the content that initiated the Action.
 
 ```javascript
 app.getContext().then((context: app.Context) => {

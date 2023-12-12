@@ -1004,46 +1004,36 @@ The object is an array of action objects. This block is required only for soluti
 |`id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
 |`displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
 |`description`| String | | ✔️ | Specifies the description of the actions. |
-|`intent`| String enum |  | ✔️ | Specifies the type of actions. The supported enum value open, addTo, and custom. |
-|`actions.handlers`| Array of objects | | ✔️ | An array of handlers object, defining how actions can be handled. If an app has more than one handler, only one experience will show up at one entry point. The hub will decide which action to show up based on which experience is supported.  |
+|`intent`| String enum |  | ✔️ | Specifies the type of actions. The supported enum values are `open`, `addTo`, and `custom`. |
+|`actions.handlers`| Array of objects | | ✔️ | An array of handlers object, defining how Actions can be handled. If an app has more than one handler, only one experience shows up at one entry point. The hub decides which Action to show up based on which experience is supported. |
 
 ### actions.handlers
 
-Defines the handlers of the action.The handlers is an array of handler objects. Each action must have at least one handler.
+Defines the handlers of the Action. The handlers is an array of handler objects. Each Action must have at least one handler.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`supportedObjects`| Object | |  | Objects defining what objects can trigger this action. |
-|`type`| String enum | | ✔️ | Specifies the handler type of actions. The supported enum value openPage, openDialog. |
-|`dialogInfo`| Object | |  | Required if the handler type is `openDialog`. Object containing metadata of the dialog handler. |
+|`supportedObjects`| Object | |  | Objects defining what objects can trigger this Action. |
+|`type`| String enum | | ✔️ | Specifies the handler type of Actions. The supported enum value is  `openPage`. |
 |`pageInfo`| Object | |  | Required if the handler type is `openPage`. Object containing metadata of the page to open. |
 
 ### actions.handlers.supportedObjects
 
-The supported objects to trigger an action.
+The supported objects to trigger an Action.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`file`| Object | |  | Supported file types. |
-|`file.extensions`| Array of strings | |  | Array of strings. File extensions of the file types the action can trigger. |
+|`file.extensions`| Array of strings | |  | Array of strings. File extensions of the file types the Action can trigger. |
 
 ### actions.handlers.pageInfo
 
-Required if the handler type is openPage. Object containing metadata of the page to open.
+Required if the handler type is `openPage`. Object containing metadata of the page to open.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`pageId`| String | |  | Id of the page (in the app) that the action will direct the user to. |
-|`subpageId`| String | |  | Id of the subpage (in the app) that the action will direct the user to. |
-
-###  actions.handlers.dialogInfo
-
-Required if the handler type is openDialog. Object containing metadata of the dialog to open.
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`width`| String | | ✔️ | Dialog width - either a number in pixels or default layout such as large, medium, or small. |
-|`height`| String | | ✔️ | Dialog height - either a number in pixels or default layout such as large, medium, or small. |
+|`pageId`| String | |  | ID of the page (in the app) that the Action directs the user to. |
+|`subpageId`| String | |  | ID of the subpage (in the app) that the Action directs the user to. |
 
 ## See also
 
