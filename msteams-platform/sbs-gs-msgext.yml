@@ -285,9 +285,9 @@ items:
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
     
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows message to add the app." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the message to add the app to Teams."
 
-        The toolkit displays a message to indicate that the app is added to Teams.
+        Teams displays a message to indicate that the app is added to Teams.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows message to try the app now or later.":::
  
@@ -298,7 +298,7 @@ items:
 
         The message extension app is loaded in a chat bot app.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows that custom app uploaded in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-loaded-chat-app.png" alt-text="Screenshot shows the message extension running in a bot app."
 
         As message extension apps rely on bots for enabling communication between the user and the web service, your app loads in to a chat feature of a bot.
 
@@ -334,34 +334,15 @@ items:
     <br>
     <br>
     <details>
-    <summary>To create a card</summary>
-
-    1. Select **Create Card**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows how to create a card." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png":::
-
-    1. Enter the card details as shown, and select **Submit**.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-details.png" alt-text="Screenshot shows how to add the card details.":::
-
-        Your card details appear in the compose area.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png" alt-text="Screenshot shows how to add the card details." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-added.png":::
-
-    1. Select the **Send** icon from the compose area.
-
-        The app sends the card on the bot chat.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png" alt-text="Screenshot shows that the card is sent." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-card-sent.png":::
-    </details>
-    <br>
-    <details>
     <summary>To open your app from compose area</summary>
 
     Choose one of the following ways to open your app.
     
-    * **Using `@mention`:**
-    
+    * **Using `@mention`**:
+
+    > [!NOTE]
+    > Using `@mention` to open your app only works on v1 of the Teams client.
+
     1. Enter `@your-app-name` in the command area of your app.
         
         The app opens the search box and you can use it to run a query.
@@ -397,14 +378,15 @@ items:
 
     You can open an uploaded Teams app from the list of uploaded custom apps. 
 
-    1. Select the **Store** icon from the Teams sidebar.
-    1. Select **Manage apps**.
-    1. Select the three dots icon for your app, and then select **View details**. You can also copy link to the app and use it to open the app.
+    1. Select **Apps** > **Manage your apps**.
+    1. Select the dropdown for your app, and then select **Personal app**.
         
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/sideloaded-apps.png" alt-text="Screenshot shows the custom uploaded apps.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-scopes-mex-app.png" alt-text="Screenshot shows the app scope of your message extension app.":::
 
-    1. Select **Open** to load the app, and then select **Try it**. 
+    1. Teams displays a message urging you to try out your app. Select **Try it**.
         
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows message to try the app now or later.":::
+
         The app loads in Teams.
 
     </details>
@@ -443,8 +425,7 @@ items:
 
         The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
-        Congratulations, you're signed in to your Azure account! 
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
+        Congratulations, you're signed in to your Azure account! Let's learn how to deploy the app to Azure using the Teams Toolkit.
 
     # [Command line](#tab/cline)
 
@@ -466,8 +447,7 @@ items:
 
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have created a Teams app! 
-        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
+        Congratulations, you created a Teams app! Let's learn how to deploy the app to Azure using the Teams Toolkit.
 
     ---
 
@@ -493,11 +473,10 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've done it!
+    You did it!
 
-    You've created a message extension app.
+    You created a message extension app.
 
-    Now that you've learned to create a basic app, you can move on to creating more complex apps. Follow the procedures to build and deploy the app, and your app has multiple capabilities. 
+    Now that you learned to create a basic app, you can move on to creating more complex apps. Follow the procedures to build and deploy the app to enable the multiple capabilities of your app. 
 
-    You've completed the tutorial to build message extension app with JavaScript.
-    
+    You completed the tutorial to build message extension app with JavaScript.
