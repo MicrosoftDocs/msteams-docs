@@ -44,7 +44,7 @@ Actions enable your app to integrate seamlessly into the user's workflow and gui
 
 > [!NOTE]
 > The placement of Actions is determined by the Microsoft 365 platform.
-There is no guarantee that intents are grouped and custom intents are not grouped into Actions. We are planning to introduce additional features and experiences to assist users in quickly locating the most relevant and useful actions.
+There is no guarantee that intents are grouped, and custom intents are not grouped into Actions. We are planning to introduce additional features and experiences to assist users in quickly locating the most relevant and useful actions.
 
 ### Context menu
 

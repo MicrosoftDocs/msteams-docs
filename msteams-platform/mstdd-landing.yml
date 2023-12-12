@@ -25,6 +25,8 @@ landingContent:
 #  linkLists:
 #    - linkListType: whats-new
 #      links:
+#      - text: Actions in Microsoft 365
+#        url: ~/m365-apps/actions-in-m365.md
 #      - text: Introduced app manifest v1.14
 #        url: ~/resources/schema/manifest-schema.md
 #      - text: Common reasons for app validation failure
@@ -41,13 +43,14 @@ landingContent:
 #        url: ~/concepts/device-capabilities/browser-device-permissions.md
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
-#      - text: Adaptive Cards overflow menu
-#        url: ~/task-modules-and-cards/cards/cards-format.md
+
 
 - title: Whats new
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Adaptive Cards overflow menu
+        url: ~/task-modules-and-cards/cards/cards-format.md      
       - text: Extend an action-based Teams message extension across Microsoft 365
         url:  m365-apps/extend-m365-teams-message-extension.md
       - text: Use captureImage API to capture an image or select media from the gallery for mobile clients
@@ -66,8 +69,7 @@ landingContent:
         url: apps-in-teams-meetings/teams-apps-in-meetings.md
       - text: Introduced Adaptive Card Previewer in public developer preview
         url: concepts/build-and-test/adaptive-card-previewer.md
-      - text: Introduced the extensions property in public developer preview app manifest schema
-        url: resources/schema/manifest-schema-dev-preview.md#extensions
+
 
     - linkListType: reference
       links:
