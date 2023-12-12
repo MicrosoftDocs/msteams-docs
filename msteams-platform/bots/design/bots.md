@@ -105,7 +105,7 @@ In a personal app, a carousel can provide an effective overview of your bot and 
 
 ### Channels and group chats
 
-In channels and group chats, a tour should open in a modal (also known as a [dialogs ](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)(referred as task modules in TeamsJS v.1.0)) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
+In channels and group chats, a tour should open in a modal (also known as a [dialogs ](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)(referred as task modules in TeamsJS v1.x)) so it doesn’t interrupt ongoing conversations. This also gives you the option to implement role-based views for your tour.
 
 #### Mobile
 
@@ -355,11 +355,11 @@ People will quickly abandon your bot if they can’t troubleshoot issues.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Example showing you can use dialogs or tabs with your bot for complex interactions.":::
+:::image type="content" source="../../assets/images/bots/bot-interactions-do.png" alt-text="Example showing you can use modal dialogs or tabs with your bot for complex interactions.":::
 
 #### Do: Use dialogs or tabs
 
-If your bot provides an answer that requires a few more steps, you can link to a dialog or tab to complete the task or flow.
+If your bot provides an answer that requires a few more steps, you can link to a modal dialog or tab to complete the task or flow.
 
    :::column-end:::
    :::column span="":::
@@ -380,7 +380,7 @@ An extensive conversation to complete a single task is slow and overly complex. 
 
 #### Do: Only show sensitive info in a personal context
 
-If your bot is in a group chat or channel, we recommend directing users to a private location (such as a dialog, tab, or browser) to view sensitive information.
+If your bot is in a group chat or channel, we recommend directing users to a private location (such as a modal dialog, tab, or browser) to view sensitive information.
 
    :::column-end:::
    :::column span="":::
@@ -399,4 +399,4 @@ These other guidelines may help with your bot design:
 
 * [Designing your personal app](../../concepts/design/personal-apps.md)
 * [Designing Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
-* [Designing dialog](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+* [Designing dialogs](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)

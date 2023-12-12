@@ -8,7 +8,7 @@ ms.date: 05/25/2023
 ---
 # Designing dialogs for your Microsoft Teams app
 
-You can create modal pop-up experiences in your Teams app with dialogs (referred as task modules in TeamsJS v.1.0). Use this capability to display rich media and information or complete a complex task.
+You can create modal pop-up experiences in your Teams app with dialogs (referred as task modules in TeamsJS v1.x). Use this capability to display rich media and information or complete a complex task.
 
 :::image type="content" source="../../assets/images/task-module/task-module-overview.png" alt-text="Example shows a dialog." lightbox="../../assets/images/task-module/task-module-overview.png":::
 
@@ -164,7 +164,7 @@ Use these recommendations to create a quality app experience.
    :::column span="":::
 :::image type="content" source="../../assets/images/task-module/usability-do.png" alt-text="Example showing a dialog best practice (one dialog at a time).":::
 
-#### Do: Use one dialog at a time
+#### Do: Show one dialog at a time
 
 The goal is to focus the user on completing a task after all!
 
