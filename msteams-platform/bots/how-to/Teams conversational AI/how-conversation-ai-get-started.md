@@ -117,7 +117,7 @@ import { VectraDataSource } from './VectraDataSource';
 
 Add AI capabilities to your existing app or a new Bot Framework app.
 
-**OpenAIModel**: The OpenAIModel class provides a way to access the OpenAI API or any other service which adheres to the OpenAI REST format. It is compatible with both OpenAI and Azure OpenAI language models.
+**OpenAIModel**: The OpenAIModel class provides a way to access the OpenAI API or any other service, which adheres to the OpenAI REST format. It's compatible with both OpenAI and Azure OpenAI language models.
 
 **Prompt manager**: The prompt manager manages prompt creation. It calls functions and injects  from your code into the prompt. It copies the conversation state and the user state into the prompt for you automatically.
 
@@ -263,7 +263,7 @@ The `MemoryStorage()` function stores all the state for your bot. The `Applicati
 
 ## Register data sources
 
-A vector data source makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources to augment the prompt within the prompt's `config.json` file.  Data sources allow AI to inject relevant information from external sources into the prompt, such as vector databases or cognitive search.  You can register named data sources with the planner and then specify the name[s] of the data sources they wish to augment the prompt within the prompt's `config.json` file..
+A vector data source makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources to augment the prompt within the prompt's `config.json` file.  Data sources allow AI to inject relevant information from external sources into the prompt, such as vector databases or cognitive search.  You can register named data sources with the planner and then specify the name[s] of the data sources they wish to augment the prompt within the prompt's `config.json` file.
 
 ```typescript
 // Register your data source with planner
@@ -483,7 +483,7 @@ The following table includes the query parameters:
 
 ### Prompt management
 
-Prompt management helps adjust the size and content of the prompt sent to the language model, considering the the available token budget and the data sources or augmentations.
+Prompt management helps adjust the size and content of the prompt sent to the language model, considering the available token budget and the data sources or augmentations.
 
 If a bot has a maximum of 4,000 tokens where 2,800 tokens are for input and 1,000 tokens are for output, the model can manage the overall context window and ensure that it never processes more than 3,800 tokens. The model starts with a text of about 100 tokens, adds in the data source of another 1,200 tokens, and then looks at the remaining budget of 1,500 tokens. The system allocates the remaining 1,500 tokens to the conversation history and input. The conversation history is then condensed to fit the remaining space, ensuring the model never surpasses 2,800 tokens.
 
