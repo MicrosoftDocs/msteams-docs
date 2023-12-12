@@ -2587,12 +2587,6 @@ Preview. Contains functionality to allow web apps to store data in webview cache
 > [!NOTE]
 > The `webStorage.isWebStorageClearedOnUserLogOut` method isn't supported on the Teams mobile client.
 
-## Code sample
-
-| Sample name           | Description | Source|
-:---------------------|:--------------|:---------|
-| TeamsJS Capability Checker| Sample application to demonstrate the capabilities of TeamsJS library v2 in Teams apps extended across Outlook and Microsoft 365. | [TypeScript](https://github.com/vikramtha/microsoft-teams-library-js/tree/vikramtha/teamsjs-cc-app/apps/teams-cc-app)
-
 ## See also
 
 - [Extend Teams apps across Microsoft 365](./overview.md)
