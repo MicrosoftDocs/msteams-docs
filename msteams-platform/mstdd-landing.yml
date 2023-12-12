@@ -49,7 +49,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Teams AI library
-        url:  bots/how-to/conversations/teams-conversation-ai-overview.md
+        url:  bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
       - text: Extend an action-based Teams message extension across Microsoft 365
         url:  m365-apps/extend-m365-teams-message-extension.md
       - text: Use captureImage API to capture an image or select media from the gallery for mobile clients
