@@ -831,7 +831,7 @@
       - name: Overview
         href: m365-apps/actions-in-m365.md
         displayName: actions design
-      - name: Build Actions in M365
+      - name: Build Actions in Microsoft 365
         href: m365-apps/build-actions-in-m365.md
         displayName: build actions, retrieve action  
       - name: Quick start guide
