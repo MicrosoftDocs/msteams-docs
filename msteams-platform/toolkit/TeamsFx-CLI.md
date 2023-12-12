@@ -71,14 +71,14 @@ By default, `teamsapp new` is in interactive mode and guides to create new Teams
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsapp new template` | Create an app from an existing template. |
-| `teamsapp new template list` | List all the available templates. |
+| `teamsapp new sample` | Create an app from an existing sample. |
+| `teamsapp list samples` | List all the available samples. |
 
-### Parameters for `teamsapp new`
+### Parameters for `teamsapp new -h`
 
 | Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
-|`--app-name` | Yes| Name of your Teams application.|
+|`--app-name -n` | Yes| Name of your Teams application.|
 |`--interactive`| No | Select the options interactively. The available options are `true` and `false` and the default value is `true`.|
 |`--capabilities`| No| Choose Teams application capabilities, the available options are `tab`, `tab-non-sso`, `tab-spfx`, `bot`, `message-extension`, `notification`, `command-bot`, `sso-launch-page`, and `search-app`. The default value is `tab`.|
 |`--programming-language`| No| Programming language for the project. The available options are `javascript` or `typescript` and the default value is `javascript`.|
