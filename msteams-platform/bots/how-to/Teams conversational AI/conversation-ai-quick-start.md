@@ -225,4 +225,4 @@ You can also use the following tools to run and set up a sample:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build your first bot using Teams AI library](../../../sbs-botbuilder-conversation-AI.yml)
+> [Teams AI library FAQ](coversational-ai-faq.md)
