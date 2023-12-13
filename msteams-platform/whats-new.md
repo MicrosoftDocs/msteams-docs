@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 December**
 
-* **December 15, 2023**:[Introduced Teams Toolkit command line interface v3.](toolkit/TeamsFx-CLI.md)
+* **December 15, 2023**: [Introduced Teams Toolkit command line interface v3.](toolkit/TeamsFx-CLI.md)
 
 * **December 12, 2023**: [Use Teams AI library to build apps that can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md).
 
