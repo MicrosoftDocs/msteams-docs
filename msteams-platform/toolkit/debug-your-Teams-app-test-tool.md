@@ -104,7 +104,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
-1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
+1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool (Preview)** in dropdown list.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
