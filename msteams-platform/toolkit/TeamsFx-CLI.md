@@ -393,13 +393,13 @@ Sideload a given application package across Microsoft 365.
 
 ### Scenarios for `teamsapp install`
 
-Sideload the application package with JSON-based manifest to Teams, Outlook, and the Microsoft 365 app.
+Sideload the application package with json based manifest to Teams, Outlook, and the Microsoft 365 app.
 
 ```bash
 teamsapp install --file-path appPackage.zip
 ```
 
-Sideload the Outlook add-in application package with XML-based manifest to Outlook.
+Sideload the Outlook add-in application package with xml based manifest to Outlook.
 
 ```bash
 teamsapp install --xml-path manifest.xml
