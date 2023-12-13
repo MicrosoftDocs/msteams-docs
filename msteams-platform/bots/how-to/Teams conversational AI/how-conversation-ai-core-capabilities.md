@@ -35,9 +35,9 @@ You can send and receive messages using the Bot Framework. The app listens for t
 
 # [JavaScript](#tab/javascript6)
 
-Example: [EchoBot](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.messaging.a.echoBot/src/index.ts#L83)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.messaging.a.echoBot/src/index.ts#L83)
 
 ```typescript
 // Listen for user to say '/reset' and then delete conversation state
@@ -59,9 +59,9 @@ app.activity(ActivityTypes.Message, async (context: TurnContext, state: Applicat
 
 # [C#](#tab/dotnet6)
 
-[Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/01.messaging.echoBot/Program.cs#L49)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/01.messaging.echoBot/Program.cs#L49)
 
 ```csharp
  // Listen for user to say "/reset" and then delete conversation state
@@ -87,9 +87,9 @@ Now, the app class has `messageExtensions` features to simplify creating the
 * `state`: `TurnState`
 * `query`: The data passed from message extension interaction
 
-[Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L81)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L81)
 
 ```javascript
 import { MessagingExtensionAttachment } from "botbuilder";
@@ -138,7 +138,7 @@ app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, 
 
 # [C#](#tab/dotnet5)
 
-[Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
 
 * [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/Program.cs#L47)
 
@@ -193,9 +193,9 @@ You can register Adaptive Card action handlers using the `app.adaptiveCards` p
 
 # [JavaScript](#tab/javascript4)
 
-[Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.adaptiveCards.a.typeAheadBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.adaptiveCards.a.typeAheadBot)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.adaptiveCards.a.typeAheadBot/src/index.ts#L92)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.adaptiveCards.a.typeAheadBot/src/index.ts#L92)
 
 ```javascript
 // Listen for messages that trigger returning an adaptive card
@@ -227,9 +227,9 @@ app.adaptiveCards.actionSubmit('StaticSubmit', async (context, _state, data: Sub
 
 # [C#](#tab/dotnet4)
 
-[Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot/Program.cs#L52)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot/Program.cs#L52)
 
 ```csharp
 // Listen for messages that trigger returning an adaptive card
@@ -260,9 +260,9 @@ The following example illustrates how Teams AI library makes it possible to mana
 
 # [JavaScript](#tab/javascript3)
 
-Example: [Light bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.c.actionMapping.lightBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.c.actionMapping.lightBot)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L80)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L80)
 
 ```typescript
 
@@ -333,7 +333,7 @@ app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState,
 
 # [C#](#tab/dotnet3)
 
-Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot)
 
 * [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/Program.cs#L33)
 
@@ -466,9 +466,9 @@ The following is an example of how you can structure their code to handle a mess
 
 # [JavaScript](#tab/javascript2)
 
-Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L76)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L76)
 
 ```typescript
 
@@ -517,7 +517,7 @@ app.messageExtensions.selectItem(async (context, state, item) => {
 
 # [C#](#tab/dotnet2)
 
-Example: [Message extension search command](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand)
 
 * [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/02.messageExtensions.a.searchCommand/Program.cs#L47)
 
@@ -632,9 +632,9 @@ All entities are required parameters to actions
 
 # [JavaScript](#tab/javascript1)
 
-Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L149)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L149)
 
 ```typescript
     app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
@@ -659,9 +659,9 @@ Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/js/samples/0
 
 # [C#](#tab/dotnet1)
 
-Example: [List bot](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.d.chainedActions.listBot/ListBotActions.cs#L40)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.d.chainedActions.listBot/ListBotActions.cs#L40)
 
 ```csharp
         [Action("AddItem")]
