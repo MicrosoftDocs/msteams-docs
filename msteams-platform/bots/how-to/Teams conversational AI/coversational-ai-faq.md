@@ -21,6 +21,7 @@ ms.date: 04/07/2022
 Teams AI library provides abstractions for you to build robust applications that utilize OpenAI large language model (LLM)s.
 <br>
 </details>
+</br>
 
 <details>
 <summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
@@ -28,6 +29,7 @@ Teams AI library provides abstractions for you to build robust applications that
 No, you need to have your large language model (LLM)s, hosted in Azure OpenAI or elsewhere.
 <br>
 </details>
+</br>
 
 <details>
 <summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
@@ -35,6 +37,7 @@ No, you need to have your large language model (LLM)s, hosted in Azure OpenAI or
 Yes, it's possible to use Teams AI library with other large language model (LLM)s.
 <br>
 </details>
+</br>
 
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
@@ -42,6 +45,7 @@ Yes, it's possible to use Teams AI library with other large language model (LLM)
 Yes, Teams AI library provides abstractions to simplify utilization of large language model (LLM)s in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
 <br>
 </details>
+</br>
 
 <details>
 <summary>How does Teams AI library integrate with ODSL?</summary>
@@ -49,13 +53,16 @@ Yes, Teams AI library provides abstractions to simplify utilization of large lan
 The two are independent and can't be integrated.
 <br>
 </details>
+</br>
 
 <details>
 <summary>How does Teams AI library co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
+</br>
 
 Teams AI library story is targeted towards Pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
 <br>
 </details>
+</br>
 
 <details>
 <summary>What is the release status of Teams AI library at Build 2023?</summary>
@@ -63,6 +70,7 @@ Teams AI library story is targeted towards Pro-developers and separate from the 
 Teams AI library is available in public preview at Build 2023.
 <br>
 </details>
+</br>
 
 <details>
 <summary>How should information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
