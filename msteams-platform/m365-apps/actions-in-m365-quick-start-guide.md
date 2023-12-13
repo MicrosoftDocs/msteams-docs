@@ -9,7 +9,7 @@ ms.subservice: m365apps
 ---
 # Actions in Microsoft 365 quick start guide
 
-Get started with Actions in Microsoft 365 using the Actions across Microsoft 365 sample.
+Get started with Actions in Microsoft 365 using the [Microsoft 365 sample](https://github.com/OfficeDev/m365-msteams-actions-preview/tree/main) [Need to update the public link.].
 
 ## Prerequisites
 
@@ -109,13 +109,13 @@ To deploy the app to Azure, follow these steps:
     PROVISIONOUTPUT__AZURESQLOUTPUT__DATABASENAME=
     ```
 
-### Preview the app in Teams
+### Preview the app in Azure
 
-After deployment, you can preview the app running in Azure. To preview the app in Teams follow these steps:
+After deployment, you can preview the app running in Azure. To preview the app in Azure follow these steps:
 
 1. Go to Visual Studio Code.
 
-1. From the left pane, select **Run and Debug (Ctrl+Shift+D)** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)** from the dropdown list.
+1. From the left pane, select **Run and Debug (Ctrl+Shift+D)** and select **Launch Remote in the Microsoft 365 app (Edge)** or **Launch Remote in the Microsoft 365 app (Chrome)** from the dropdown list.
 
 A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
 

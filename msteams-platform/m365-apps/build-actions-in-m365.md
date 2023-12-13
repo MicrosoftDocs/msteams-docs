@@ -16,11 +16,10 @@ When you create an app ensure that you define user intent, choose the object to 
 
 Before you get started, ensure that you install the following tools:
 
-| &nbsp; | Install | For using... |
+| &nbsp; | Install | Description |
 | --- | --- | --- |
-| &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chats, meetings, and calls in one place.|
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+| &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that run and debug your app. Use the latest version. |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | A JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
@@ -34,7 +33,7 @@ To build Actions for your app, follow these steps:
 
 ## Update app manifest
 
-Define the intent, object, and handler for your actions in the app manifest (previously called Teams app manifest).
+Add the `actions` property and define the intent, object, and handler for your actions in the app manifest (previously called Teams app manifest).
 
 The following is an example of the `intent`, `supportedobjects`, and `handlers` properties for `openPage` in app manifest:
 
@@ -57,7 +56,7 @@ The following is an example of the `intent`, `supportedobjects`, and `handlers` 
                 "type": "openPage",
                 "supportedObjects": {
                     "file": {
-                        "extensions": ["xlsx", "doc", "docx", "pdf", "pptx", "ppt"]
+                        "extensions": [".xlsx", ".doc", ".docx", ".pdf", ".pptx", ".ppt"]
                     }
                 },
                 "pageInfo": {
@@ -76,16 +75,12 @@ When a user selects an action to open a page and view related tasks in an app ba
 
 ## Retrieve Action information through context object
 
-Update the handler to receive the Action information through the context object to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
+Build the handler to receive the Action information through the [context object](/javascript/api/%40microsoft/teams-js/app.context?view=msteams-client-js-latest) to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
 
 When a user selects Add option from the app's context menu, a page opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
 
 ```javascript
 const context = await app.getContext();
-const itemId = context.actionInfo && context.actionInfo.actionObjects[0].itemId;
-this.setState({
-    itemId: itemId
-});
 ```
 
 | &nbsp; | Name | Description |
@@ -97,6 +92,7 @@ this.setState({
 The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a page from an Action and the content that initiated the Action.
 
 ```javascript
+const itemId = context.actionInfo && context.actionInfo.actionObjects[0].itemId;
 app.getContext().then((context: app.Context) => {
     const actionInfo = context.actionInfo;
     if (actionInfo && actionInfo.actionId == 'myActionId1') {
@@ -121,9 +117,9 @@ async readActionItem() {
 
 ## Run your app
 
-After you update the app package with the required information, you can run your app in Teams Toolkit.
+After you update the app package with the required information, you can run your app in Teams Toolkit to test your Actions.
 
-To run your app in Teams Toolkit follow these steps:
+To run your app in Teams Toolkit, follow these steps:
 
 1. Go to Visual Studio Code.
 
@@ -151,7 +147,16 @@ You can now preview your Actions in Microsoft 365 app, right-click a file that i
 
 ### Enable Actions in Microsoft Admin Center
 
-In the [Microsoft Admin Center](https://admin.microsoft.com/AdminPortal#/homepage), select **Settings** > **Integrated Apps** > **Upload custom apps** and follow instructions to preinstall your app for entire organization or user groups within your tenant. Ensure that you've enabled the app for [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users in the tenant.
+Actions are available in public developer preview. To use an app with Actions in your tenant, an admin must upload the app package to the Microsoft Admin Center as follows:
+
+1. Go to [Microsoft Admin Center](https://admin.microsoft.com/AdminPortal#/homepage).
+
+1. Select **Settings** > **Integrated Apps** > **Upload custom apps**.
+
+Follow instructions to preinstall your app for entire organization or user groups within your tenant.
+
+> [!NOTE]
+> Ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users in the tenant.
 
 ## Code sample
 
