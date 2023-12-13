@@ -394,7 +394,6 @@ For M365 Chat, a search-based message extension must support compound utterances
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
 <br>
-<br>
 <details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
 
 ```json
