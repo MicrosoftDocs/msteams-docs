@@ -97,4 +97,4 @@ Once the provisioning and deployment steps are complete:
 
    The message extension app is loaded in a chat bot app.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows that custom app uploaded in Teams."::: lightbox="../../assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug.png"
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/first-msgext/mex-loaded-chat-app.png" alt-text="Screenshot shows the message extension running in a bot app.":::

@@ -201,7 +201,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign in to M365** using your credentials. Your default web browser opens to let you sign in to the account.
+    1. Select **Sign in to Microsoft 365** using your credentials. Your default web browser opens to let you sign in to the account.
     1. Close the browser after sign in and return to Visual Studio Code.
     1. Return to Teams Toolkit in Visual Studio Code.
 
@@ -274,7 +274,7 @@ items:
     1. Sign in with your Microsoft 365 account, if prompted.
     1. Select **Add** to add the app to your account.
     
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the dialong to add the app to Teams."
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the dialog to add the app to Teams."
 
         Teams displays a message after the app is added to Teams.
 
