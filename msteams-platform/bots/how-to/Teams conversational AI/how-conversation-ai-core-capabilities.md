@@ -191,7 +191,7 @@ You can register Adaptive Card action handlers using the `app.adaptiveCards` p
 
 * [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.adaptiveCards.a.typeAheadBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.adaptiveCards.a.typeAheadBot/src/index.ts#L92)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.adaptiveCards.a.typeAheadBot/src/index.ts#L95)
 
 ```javascript
 // Listen for messages that trigger returning an adaptive card
@@ -258,7 +258,7 @@ The following example illustrates how Teams AI library makes it possible to mana
 
 * [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.c.actionMapping.lightBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L80)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L93)
 
 ```typescript
 
@@ -464,7 +464,7 @@ The following is an example of how you can structure their code to handle a mess
 
 * [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L76)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L81)
 
 ```typescript
 
@@ -630,7 +630,7 @@ All entities are required parameters to actions
 
 * [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L149)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.d.chainedActions.listBot/src/index.ts#L154)
 
 ```typescript
     app.ai.action('addItems', async (context: TurnContext, state: ApplicationTurnState, parameters: ListAndItems) => {
