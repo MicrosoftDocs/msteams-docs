@@ -11,9 +11,7 @@ ms.date: 12/06/2022
 
 # Teams AI library quick start guide
 
-> [!NOTE]
->
-> Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+Get started with Teams AI library using the Chef bot sample, which is designed to  to help you cook apps using the Teams AI Library. The bot uses the gpt-3.5-turbo model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 ## Prerequisites
 
