@@ -1,0 +1,487 @@
+### YamlMime:Tutorial
+title: Build a bot-based message extension plugin for Copilot for Microsoft 365
+metadata:
+  title: Build a bot-based message extension plugin for Copilot for Microsoft 365
+  description: In this tutorial, learn to build a bot-based message extension and extend it as a plugin in Microsoft Copilot for Microsoft 365.
+  audience: Developer
+  level: Beginner
+  ms.date: 11/14/2023
+  ms.topic: interactive-tutorial
+  nextTutorialHref: messaging-extensions/high-quality-message-extension.md
+  nextTutorialTitle: Bot-based message extension plugin guidelines
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+    > [!NOTE]
+    >
+    > * Bot-based search message extension plugin is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
+    > * Only bot-based search message extension can be extended as a plugin in Microsoft Copilot for Microsoft 365.
+    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in M365 Chat in Microsoft Teams.
+    
+    Start Microsoft Teams app development with your first Teams app. 
+    You can create a bot-based message extension plugin with Teams using Javascript.  
+    
+    In this tutorial, you'll learn:
+
+    - How to set up a new project with Teams Toolkit.
+    - How to build a bot-based message extension plugin.
+    - How to deploy your app.
+    - Trigger your bot-based message extension plugin in M365 Chat.
+
+    This step-by-step guide helps you to build  bot-based message extension plugin with Teams Toolkit. You'll see the following output after you've completed this guide:
+
+     :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-invoke.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+
+   Ensure you install the following tools for building and deploying your apps.
+
+   | &nbsp; | Install | For using... |
+   | --- | --- | --- |
+   | **Required** | &nbsp; | &nbsp; |
+   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
+   | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the pre-release version.|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+   | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+   | &nbsp; | Microsoft Copilot for Microsoft 365 | Copilot for Microsoft 365 is in private preview. Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot: <br>- A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)). <br>- An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses. |
+   | **Optional** | &nbsp; | &nbsp; |
+   | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
+   | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
+   
+
+  
+   ## Prepare development environment
+
+   After you've installed the required tools, set up the development environment.
+
+   ### Install Teams Toolkit
+
+   > [!NOTE]
+   > Teams Toolkit support for bot-based message extension is available only in Teams Toolkit pre-release version. Before you get started, ensure that you've installed a [Teams Toolkit pre-release version](toolkit/install-Teams-Toolkit.md#install-a-pre-release-version).
+
+   Microsoft Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app and publish to the Teams Store. 
+    
+   You can use Teams Toolkit with Visual Studio Code. To install Teams Toolkit, follow these steps:
+
+   1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+   1. In the search box, enter **Teams Toolkit**.
+   1. On the Teams Toolkit page, select the dropdown arrow next to Install.
+   1. Select **Install Pre-Release Version**.
+
+      The Teams Toolkit :::image type="icon" source="assets/images/include-files/teams-toolkit-sidebar-icon.PNG"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+
+
+   ## Set up your Teams development tenant
+
+   A **tenant** is a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
+
+   ### Check for upload an app option
+
+   After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
+
+    > [!NOTE]
+    > Ensure that you enable app uploading to preview and test apps in Teams local environment.
+
+   Custom app upload is enabled through a tenant and admin must give an access to upload a custom app. 
+   Do you already have a tenant and an admin access? Let's check if you really do!
+
+   Verify if you can upload apps in Teams:
+
+   1. In the Teams client, select the **Apps** icon.
+   1. Select **Manage your apps**.
+   1. Select **Upload an app**.
+   1. Look for the option to **Upload a customised app**. If the option is visible, you've enabled custom app upload. 
+    
+      :::image type="content" source="assets/images/Copilot/teams-upload-customised-app.png" alt-text="Screenshot shows the selection of Upload a customised app option in Teams.":::
+
+        > [!NOTE]
+        > Contact your Teams administrator, if you don't find the option to upload a custom app.
+
+   ### Create a free Teams developer tenant (optional)
+
+   If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
+
+   1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
+   1. Select **Join Now** and follow the onscreen instructions.
+   1. In the welcome screen, select **Set up E5 subscription**.
+   1. Set up your administrator account. After you finish, the following screen appears.
+
+      :::image type="content" source="assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+
+   1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a customised app** option in Teams.
+
+   ## Get a free Azure account
+
+   If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
+
+   Now you've got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to create first.
+
+- title: Create project workspace for your message extension app
+  durationInMinutes: 1
+  content: |
+
+    You've built your bot app. Now, let's create your first message extension app.
+
+    Message extension capability lets you interact with a web service. Use the compose area, command box, or a messaging in Teams client to search and initiate actions in an external system.
+
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. message extension is highlighted.":::
+
+    There are two types of Teams **message extensions**:
+
+    - [Search commands](../msteams-platform/messaging-extensions/how-to/search-commands/define-search-command.md): You can search external systems. Then, you can insert its results into a message in the form of a card.
+    - [Action commands](../msteams-platform/messaging-extensions/how-to/action-commands/define-action-command.md): You can present your users with a modal pop-up to collect or display information. Then, you can process their interaction and send information back to Teams.
+
+    Let's create a message extension with a *search command*. Use it to search for external data and insert the results into a message within Teams client.
+
+    As you've already prepared for creating these apps, you can set up a new Teams project for creating the message extension app.
+
+    > [!NOTE]
+    >
+    > * Message extensions rely on bots to provide a dialog between the user and your code.
+    > * Only bot-based search message extension can be extended as a plugin for Copilot for Microsoft 365.
+
+
+    In this tutorial, you'll learn:
+
+    1. [How to set up a new message extension project with Teams Toolkit.](#create-your-message-extension-project-workspace)
+    1. [About the directory structure of your app project.](#take-a-tour-of-the-message-extension-app-source-code)
+
+    ## Create your message extension project workspace
+
+    If the prerequisites are in place, let's begin!
+
+     To create a bot-based message extension plugin, follow these steps:
+
+    1. Open **Visual Studio Code**.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+
+    1. Select **Create a New App**.
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Screen shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+
+    1. Select **Message Extension** to create an app using the Teams Toolkit.
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the Wizard start for Create New Project.":::
+
+    1. Select **Custom Search Results**.
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex1.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+
+    1. Select **Start with a Bot**.
+
+       :::image type="content" source="assets/images/Copilot/bot-based-VSC-start-with-bot.png" alt-text="Screenshot shows the Start with a Bot option to create a bot-based message extension in Visual Studio Code..":::
+    
+    1. Select **JavaScript** as the programming language.
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
+
+    1. Select **Default folder** to store your project root folder in default location.
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+
+        You can also change the default location by the following steps:
+
+        1. Select **Browse**.
+
+            :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+            
+        1. Select the location for project workspace.
+
+        1. Select the **Select Folder**.
+
+            :::image type="content" source="assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder.":::
+
+    1. Enter a suitable name for your app. Select **Enter**.
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/enter-project-name.png" alt-text="Screenshot showing how to enter the app name.":::
+
+        Teams Toolkit creates the app in a few seconds.
+
+        :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-ttk-creates-app.png" alt-text="Screenshot showing the app created." lightbox="assets/images/Copilot/bot-based-plugin-sbs-ttk-creates-app.png":::
+
+        After your app is created, the Teams Toolkit displays the following message: 
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows the localdebug.":::
+
+        You can select **Local debug** to preview your project. 
+
+      <details>
+      <summary>A quick recap of creating a Teams app.</summary>
+      Watch this short recap for creating a Teams app.
+
+      ![Create a Teams app](~/assets/videos/create-bot-based-message-extension.gif)
+      </details>
+
+    ## Take a tour of the message extension app source code
+
+    A message extension uses the Bot Framework. You use it to interact with your service via a conversation. After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+
+    :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-source-code.png" alt-text="Screenshot shows all the files available in the message extension project created in Teams Toolkit.":::
+
+    | Folder / File | Contents |
+    | --- | --- |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+    | `.vscode/` | VSCode files for local debug. |
+    | `src/`        | The source code for the search application.   |
+    | `appPackage/` | Templates for the Teams application manifest. |
+    | `infra/` | Templates for provisioning Azure resources. |
+    | `src/searchApp.js` | Handles the business logic for this app template to query npm registry and return result list. For more information, see [Teams Toolkit Visual Studio Code v5 Guide](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works. |
+    | `src/index.js`     | `index.js` is used to setup and configure the Message Extension. For more information, see [Teams Toolkit Visual Studio Code v5 Guide](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.  |
+
+    > [!Tip]
+    > Familiarize yourself with bots and message extension outside of Teams before you integrate your app within Teams.
+
+- title: Build and run your first bot-based message extension plugin
+  durationInMinutes: 1
+  content: |
+
+    After you set up your project workspace with Teams Toolkit, build your project. You need to sign in to your Microsoft 365 account.
+
+    ## Sign in to your Microsoft 365 account
+
+    Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
+    1. Open **Visual Studio Code**.
+    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select **Sign in to M365** using your credentials..
+
+        Your default web browser opens to let you sign in to the account.
+
+    1. Close the browser when prompted and return to Visual Studio Code.
+    1. Return to Teams Toolkit within Visual Studio Code.
+
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. The Teams Toolkit displays **Sideloading enabled** if custom app upload is enabled for your Microsoft 365 account.
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+
+        Now you're ready to build the app and run it locally!
+
+    
+
+    ## Build and run your app in the local environment
+
+    A message extension lets you interact with a web service. It takes advantage of the messaging feature and secure communication of a bot. The message extension app is added to a web service registered as a bot. 
+    
+    ### Build and run your app locally
+
+    1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
+    1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)**. Teams Toolkit launches your app in Teams using a web browser.
+    1. Select **F5** to build and run your app locally.
+
+        > [!NOTE]
+        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
+
+        <!-- markdownlint-disable MD033 -->
+        <details>
+        <summary>Learn what happens when you run your app locally in the debugger.</summary>
+
+        When you select **F5**, the Teams Toolkit:
+
+        1. Checks all the following prerequisites:
+          - You're logged in with a Microsoft 365 account.
+          - Custom app upload is enabled for your Microsoft 365 account.
+          - Supported Node.js version is installed.
+          - Port required by bot app is available.
+
+        2. Install npm packages
+        3. Starts Dev Tunnel to create a HTTP tunnel.
+        4. Registers the app in Microsoft Entra ID and configures the app.
+        5. Registers the bot app in Bot Framework and configures the app.
+        6. Registers the app in Teams Developer Portal and configures the app.
+        7. Starts the message extension app hosted locally.
+        8. Starts Teams in a web browser and uploads the Teams app.
+        
+        </details>
+
+        :::image type="content" source="assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot showing when F5 key is pressed to debug." lightbox="assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png":::
+
+        > [!NOTE]
+        > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take three to five minutes to complete.
+
+  
+        
+    1. Select **Add**. The app is installed on Teams.
+    
+        :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-add-app-local.png" alt-text="Screenshot shows message to add the app." lightbox="assets/images/Copilot/bot-based-plugin-sbs-add-app-local.png":::
+        
+        As message extensions rely on bots for enabling communication between the user and the web service,, your app loads in to a chat feature of a bot.
+
+        - If you've created a bot app before you created the message extension app, you can see that it is loaded in the same bot app you created. Previous chat messages are visible.
+        - If you created a message extension first, your app is loaded in any chat that is open on Teams.
+
+        > [!NOTE]
+        > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
+
+    ### Test your app
+
+    The first time your app loads, the message extension app is open for you to test. This sample app lets you search open-source npm packages from the software registry.
+    
+    #### To run a search query
+
+    1. Go to a Teams chat and select **Actions and apps**.
+    1. From the message extension fly-out menu, enter the name of your message extension from the search box.
+    1. Select your message extension and enter your search query.   
+
+       :::image type="content" source="assets/images/Copilot/bot-based-VSC-me-invoke.png" alt-text="Screenshot shows an example of a message extension invoked from a chat in Teams and the message extension displays a list of products based on the search query..":::
+
+    1. Select a product from the list. Teams unfurls the product into an Adaptive Card in the message Compose area.
+
+    1. Select Send. The Adaptive Card is sent.
+
+       :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-send-adaptive-card.png" alt-text="Screenshot shows an example of a product sent in the chat as an Adaptive Card.":::
+    
+
+    <br>
+    <!-- markdownlint-disable MD033 -->
+    <details>
+    <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+
+    To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the prerequisites section.
+    </details>
+
+- title: Trigger your bot-based message extension plugin in M365 Chat
+  durationInMinutes: 1
+  content: |
+    To trigger the message extension in M365 Chat, follow these steps:
+
+    1. From the left pane, select **Teams Toolkit**.
+    1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
+    1. Select Debug in **Copilot (Edge)** or **Debug in Copilot (Chrome)**.
+    1. Select **F5** to build and run your app in M365 Chat.
+    1. Go to **Microsoft Teams** > **Apps**.
+    1. Search for **M365 Chat** and open the app.
+    1. Select **Plugins**.
+    1. From the list of plugins, turn on the toggle for your app.
+
+       :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
+
+    1. From the compose message area, send a message to M365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
+
+       :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
+
+    > [!NOTE]
+    > This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the M365 Chat response and leave a message.
+
+
+- title: Deploy your first Teams app
+  durationInMinutes: 1
+  content: |
+
+    You've learned to create, build, and run Teams app with message extension capabilities. The final step is to deploy your app on Azure.
+
+    Let's deploy the first message extension app on Azure using Teams Toolkit.
+
+    ## Sign in to your Azure account
+
+    Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app.
+
+    1. Open Visual Studio Code.
+    1. Open the project folder in which you created the message extension app.
+    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select **Sign in to Azure** using your credentials.
+
+        > [!TIP]
+        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+
+        Your default web browser opens to let you sign in to the account.
+    1. Close the browser when prompted and return to Visual Studio Code.
+
+        The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
+
+        Congratulations, you have signed in your Azure account! 
+        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
+
+    
+    ## Deploy your app to Azure
+
+    Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the message extension app.
+    <br>
+    <br>
+    <details>
+    <summary>What's the difference between Provision and Deploy?</summary>
+    <br>
+    The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it's separate from the deployment step.
+    </details>
+    <br>
+
+      Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code sidebar.
+
+    1. Select **Provision**.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot showing the selection of provision in the cloud under Teams toolkit.":::
+
+    1. Select a subscription to use for the Azure resources.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot showing the subscription to use for the Azure resources.":::
+
+        Your app is hosted using Azure resources. A dialog warns you that costs may be incurred when running resources in Azure.
+
+    1. Select **Provision**.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot showing a dialog box that costs may be incurred when running resources in Azure.":::
+
+       The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice which displays 'hellomsg' successfully provisioned in the cloud.":::
+
+       If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
+
+       The provisioned resource appears in the **ENVIRONMENT** section.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot showing the resource being provisioned in the environment section.":::
+
+    1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot showing deploy to cloud.":::
+
+      As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
+
+    Now, you can use the same process to deploy your Bot and Message Extension apps to Azure.
+
+    ## Run the deployed app
+
+    Once the provisioning and deployment steps are complete:
+
+    1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
+    1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
+    1. Select the **Start debugging (F5)** to launch your app from Azure.
+
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot showing the launch app remotely.":::
+
+    1. Select **Add**.
+
+       :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-add-app.png" alt-text="Screenshot shows an example of the Add option to add an app to Teams.":::
+
+      <!-- markdownlint-disable MD033 -->
+      <details>
+      <summary>Learn what happens when you deployed your app to Azure</summary>
+
+      Before deployment, the application has been running locally:
+
+      * The backend runs using **Azure Functions Core Tools**.
+      * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
+
+      Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
+
+      * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
+      * The frontend application is deployed to an Azure Storage account configured for static web hosting.
+
+      </details>
+
+- title: Congratulations!
+  durationInMinutes: 1
+  content: |
+
+    You've created a bot-based message extension and extended the message extension as a plugin in M365 Chat.
+
+    
+
+    
+    

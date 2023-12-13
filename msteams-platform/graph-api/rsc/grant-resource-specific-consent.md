@@ -22,19 +22,21 @@ In this section, you'll learn to:
 
 To add RSC permissions to your app, follow these steps:
 
-1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Register your app with Microsoft identity platform using the Microsoft Entra admin center](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
 1. [Update your app manifest (previously called Teams app manifest)](#update-your-app-manifest).
 
-### Register your app with Microsoft identity platform using the Azure AD portal
+<a name='register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal'></a>
 
-The Azure Active Directory (Azure AD) portal provides a central platform for you to register and configure your apps. You must register your app in the Azure AD portal to integrate with the identity platform and call Graph APIs. For more information, see [register an app with the identity platform](/graph/auth-register-app-v2).
+### Register your app with Microsoft identity platform using the Microsoft Entra admin center
+
+The Microsoft Entra admin center provides a central platform for you to register and configure your apps. You must register your app in the Microsoft Entra admin center to integrate with the identity platform and call Graph APIs. For more information, see [register an app with the identity platform](/graph/auth-register-app-v2).
 
 > [!WARNING]
-> You mustn't share your Azure AD app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Installing multiple Teams apps associated with the same Azure AD app ID will cause installation or runtime failures.
+> You mustn't share your Microsoft Entra app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and a Microsoft Entra app. Installing multiple Teams apps associated with the same Microsoft Entra app ID will cause installation or runtime failures.
 
 ### Update your app manifest
 
-You must declare RSC permissions in your app **manifest.json** file. You don't need to add the non-RSC permissions to the app manifest as Azure AD portal stores them.
+You must declare RSC permissions in your app **manifest.json** file. You don't need to add the non-RSC permissions to the app manifest as Microsoft Entra admin center stores them.
 
 #### Request RSC permissions for Teams app
 
@@ -57,7 +59,7 @@ To add RSC permission in app manifest:
 
     |Name| Type | Description|
     |---|---|---|
-    |`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+    |`id` |String |Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
     |`resource`|String| This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
 
 1. Add permissions needed by your app.
@@ -265,7 +267,7 @@ Add the [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplic
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |String |Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
 
@@ -341,7 +343,7 @@ Example for RSC permissions for a user:
 To install your app on which you've enabled RSC permission in a team, chat, or user, follow these steps:
 
 1. Ensure that you've configured [consent settings](#configure-consent-settings) for team, chat, or user.
-1. [Sideload your app in Teams](#sideload-your-app-in-teams).
+1. [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
 
 ### Configure consent settings
 
@@ -352,12 +354,12 @@ For delegated permissions, any authorized user can consent to the permissions re
 <br>
 <details>
 
-<summary><b>Configure group owner consent settings for RSC in a team using the Azure AD portal</b></summary>
+<summary><b>Configure group owner consent settings for RSC in a team using the Microsoft Entra admin center</b></summary>
 
-You can enable or disable group owner consent directly within the Azure AD portal:
+You can enable or disable group owner consent directly within the Microsoft Entra admin center:
 
-1. Sign in to the [Azure AD portal](https://portal.azure.com) as a global administrator.
-1. Select **Azure Active Directory** > **Enterprise apps** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
+1. Sign in to the [Microsoft Entra admin center](https://portal.azure.com) as a global administrator.
+1. Select **Microsoft Entra ID** > **Enterprise apps** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
 1. Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data**. By default, **Allow group owner consent for all group owners** is selected. For a team owner to install an app using RSC, enable group owner consent for that user.
 
     :::image type="content" source="../../assets/images/azure-rsc-team-configuration.png" alt-text="Screenshot shows the Azure RSC team configuration.":::
@@ -407,9 +409,9 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 
 <br>
 
-### Sideload your app in Teams
+### Upload your custom app in Teams
 
-If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team, chat, or user.
+If your Teams admin allows custom app uploads, you can [upload your custom app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team, chat, or user.
 
 ## Verify app RSC permission granted to your app
 
@@ -420,13 +422,13 @@ To verify the app RSC permissions, follow these steps:
 
 ### Obtain an access token from the Microsoft identity platform
 
-To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, you must register your app in the Azure AD portal. The access token contains information about your app and its permissions for the resources and APIs available through Microsoft Graph.
+To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, you must register your app in the Microsoft Entra admin center. The access token contains information about your app and its permissions for the resources and APIs available through Microsoft Graph.
 
-You must have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
+You must have the following values from the Microsoft Entra registration process to retrieve an access token from the identity platform:
 
-* **Application ID**: The app ID assigned by the Azure AD portal to your app. If your app supports single sign-on (SSO), you must use the same app ID for your app and SSO.
+* **Application ID**: The app ID assigned by the Microsoft Entra admin center to your app. If your app supports single sign-on (SSO), you must use the same app ID for your app and SSO.
 * **Client secret** or **Certificate**: The password for your app, or the public or private key pair that is the certificate. The client secret or certificate isn't required for native apps.
-* **Redirect URI**: The URL for your app to receive responses from Azure AD.
+* **Redirect URI**: The URL for your app to receive responses from Microsoft Entra ID.
 
 For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
 

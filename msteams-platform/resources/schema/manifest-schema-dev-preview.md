@@ -568,6 +568,9 @@ Specifies the native features on a user's device that your app may request acces
 
 A list of valid domains from which the app expects to load any content. Domain listings can include wildcards, for example `*.example.com`. The valid domain matches exactly one segment of the domain; if you need to match `a.b.example.com` then use `*.*.example.com`. If your tab configuration or content UI needs to go to any other domain besides the one use for tab configuration, that domain must be specified here.
 
+> [!NOTE]
+> Office Add-ins, configured with an `extensions` property in the manifest, disregard domains containing a wildcard. If your app incorporates an Office Add-in, specify the full domain name for the domains that the add-in will access.
+
 It's **not** necessary to include the domains of identity providers you want to support in your app, however. For example, to authenticate using a Google ID, it's necessary to redirect to accounts.google.com, but you must not include accounts.google.com in `validDomains[]`.
 
 > [!IMPORTANT]
@@ -579,11 +582,11 @@ The object is an array with all elements of the type `string`. The maximum item 
 
 **Optional** &ndash; Object
 
-Specify your Microsoft Azure Active Directory (Azure AD) App ID and Graph information to help users seamlessly sign into your Azure AD app.
+Specify your Microsoft Entra App ID and Graph information to help users seamlessly sign into your Microsoft Entra app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String| |✔️|Microsoft Azure AD application ID of the app. This ID must be a GUID.|
+|`id`|String| |✔️|Microsoft Entra application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters||Resource URL of the app for acquiring auth token for SSO.|
 
 ## graphConnector
@@ -906,10 +909,10 @@ The `extensions.runtimes` property configures the sets of runtimes and actions t
 |`code`| Object | | ✔️ | Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain. |
 |`code.page`| URL | | ✔️ | Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
 |`code.script`| URL | | ✔️ | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
-|`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do.|
+|`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes).|
 |`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
-|`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` runs a JavaScript function without waiting for it to finish and `openPage` opens a page in a given view. <br>Supported value: `executeFunction` |
+|`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` type runs a JavaScript function without waiting for it to finish and the `openPage` type opens a page in a given view. |
 |`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
 |`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br>Default value: `false`|
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
@@ -1000,3 +1003,4 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
+* [Different versions of app manifest schema](https://github.com/microsoft/json-schemas/tree/main/teams)

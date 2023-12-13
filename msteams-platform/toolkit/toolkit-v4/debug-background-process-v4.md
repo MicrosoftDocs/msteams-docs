@@ -93,7 +93,7 @@ Teams Toolkit checks the following prerequisites during the debug process:
 For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).
 
 * Teams Toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in with your valid credentials.
-* Custom app uploading or sideloading for your developer tenant is turned on, to prevent local debug termination.
+* Custom app upload for your developer tenant is turned on, to prevent local debug termination.
 * Teams Toolkit installs Ngrok npm package `ngrok@4.2.2` in `~/.fx/bin/ngrok`, if Ngrok isn't installed or the version doesn't match the requirement. Ngrok binary version 2.3 is applicable for bot and message extension. The Ngrok binary is managed by Ngrok npm package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 * Teams Toolkit installs Azure Functions Core Tools npm package. `azure-functions-core-tools@3` for **Windows** and **MacOs** in  `~/.fx/bin/func`, if Azure Functions Core Tools version 4 isn't installed or the version doesn't match the requirement. The Azure Functions Core Tools npm package in `~/.fx/bin/func/node_modules/azure-functions-core-tools/bin` manages Azure Functions Core Tools binary. For Linux, the local debug terminates.
 * Teams Toolkit installs .NET Core SDK for **Windows** and **MacOS** in `~/.fx/bin/dotnet`.NET Core SDK version applicable for Azure Functions, if .NET Core SDK isn't installed or the version doesn't match the requirement. For Linux, the local debug terminates.
@@ -158,15 +158,17 @@ When you select **Start Debugging (F5)**, Teams Toolkit output channel displays 
 
 In the set-up process, Teams Toolkit prepares the following registrations and configurations for your Teams app:
 
-1. [Registers and configures Microsoft Azure Active Directory(Azure AD) app](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
+1. [Registers and configures Microsoft Entra app](#registers-and-configures-microsoft-azure-active-directoryazure-ad-app)
 
 1. [Registers and configures bot](#registers-and-configures-bot)
 
 1. [Registers and configures Teams app](#registers-and-configures-teams-app)
 
-### Registers and configures Microsoft Azure Active Directory(Azure AD) app
+<a name='registers-and-configures-microsoft-azure-active-directoryazure-ad-app'></a>
 
-1. Registers an Azure AD app.
+### Registers and configures Microsoft Entra app
+
+1. Registers a Microsoft Entra app.
 
 2. Creates a Client Secret.
 
@@ -202,11 +204,11 @@ In the set-up process, Teams Toolkit prepares the following registrations and co
 
 For tab app or message extension:
 
-1. Registers an Azure AD application.
+1. Registers a Microsoft Entra application.
 
-1. Creates a Client Secret for the Azure AD application.
+1. Creates a Client Secret for the Microsoft Entra application.
 
-1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Azure AD application.
+1. Registers a bot in [Microsoft Bot Framework](https://dev.botframework.com/) using the Microsoft Entra application.
 
 1. Adds Teams channel.
 

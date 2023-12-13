@@ -98,7 +98,7 @@ You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) 
 The tab features are as follows:
 
 * If a tab is added to an app that also has a bot, the bot is also added to the team.
-* Awareness of Microsoft Azure Active Directory (Azure AD) ID of the current user.
+* Awareness of Microsoft Entra ID of the current user.
 * Locale awareness for the user to indicate language that is `en-us`.
 * Single sign-on (SSO) capability, if supported.
 * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example an individual work item.

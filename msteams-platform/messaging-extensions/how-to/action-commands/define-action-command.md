@@ -69,7 +69,6 @@ If the message extension is invoked from the compose box or directly from a mess
 
 You can create an action command using **Teams Toolkit** and **Developer Portal for Teams**.
 
-
 # [Teams Toolkit](#tab/Teams-toolkit)
 
 To create an action based message extension using Teams Toolkit, follow these steps:
@@ -107,7 +106,7 @@ To create an action based message extension using Developer Portal for Teams, fo
 
    A command details page appears.
 
-1. In the Command details page, select the **Action** and then select parameter type.
+1. In the Command details page, select **Action** and then select parameter type.
 
 1. 1. Select **Action**  as the type of command and update the following:
    * Command ID
@@ -153,7 +152,7 @@ The following code provides an example of action based for message extensions:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action-preview/csharp/Bots/TeamsMessagingExtensionsActionPreviewBot.cs#L35-L56)
 
 ```csharp
-     protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
         {
             // Handle different actions using switch.
             switch (action.CommandId)
@@ -172,7 +171,6 @@ The following code provides an example of action based for message extensions:
                             },
                         },
                     };
-                // return TaskModuleHTMLPage(turnContext, action);
                 default:
                     string memberName = "";
                     var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);
@@ -191,6 +189,7 @@ The following code provides an example of action based for message extensions:
                         },
                     };
             }
+        }
 ```
 
 # [Node.js](#tab/nodejs)

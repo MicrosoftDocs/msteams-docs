@@ -63,6 +63,6 @@ Now let's build your tab. But first select your choice of tab to build:
 
 * [Build tabs for Teams](../what-are-tabs.md)
 * [Build your first tab app using JavaScript](../../sbs-gs-javascript.yml)
-* [Register your tab app in Azure AD](authentication/tab-sso-register-aad.md)
+* [Register your tab app in Microsoft Entra ID](authentication/tab-sso-register-aad.md)
 * [Tabs on mobile](~/tabs/design/tabs-mobile.md)
 * [Content Security Policy](/aspnet/core/blazor/security/content-security-policy)

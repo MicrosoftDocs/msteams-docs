@@ -79,7 +79,7 @@ To add link unfurling to your app manifest, add a new `messageHandlers` array to
 ### Add link unfurling manually
 
 > [!NOTE]
-> If authentication is added through Azure AD, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
+> If authentication is added through Microsoft Entra ID, [unfurl links in Teams using bot](/microsoftteams/platform/sbs-botbuilder-linkunfurling?tabs=vs&tutorial-step=4).
 
 First, you must add the `messageHandlers` array to your app manifest and enable your message extension to interact with links. The following example explains how to add link unfurling manually:
 
@@ -423,7 +423,7 @@ To test zero install link unfurling, follow these steps:
 
 1. From the left pane, select **Teams apps** > **Manage apps**.
 
-    :::image type="content" source="../../assets/images/teams-link-unfurling/manage-apps-admin.png" alt-text="Screenshot of Teams admin center and section for sideloading Teams apps":::
+    :::image type="content" source="../../assets/images/teams-link-unfurling/manage-apps-admin.png" alt-text="Screenshot of Teams admin center and section for custom app upload in Teams.":::
 
 1. Select **+ Upload new app**.
 
@@ -435,7 +435,7 @@ To test zero install link unfurling, follow these steps:
 
 1. After you've successfully uploaded the app, Go to **Teams** > **Apps** > **Built for your org**.
 
-    :::image type="content" source="../../assets/images/teams-link-unfurling/build-for-your-org.png" alt-text="Screenshot of Teams client with org sideloaded Teams app":::
+    :::image type="content" source="../../assets/images/teams-link-unfurling/build-for-your-org.png" alt-text="Screenshot of Teams client with org uploaded Teams app":::
 
 1. You can test the `composeExtensions/anonymousQueryLink` invoke request by setting up a breakpoint in the method that implements the anonymousQueryLink request in your application.
 

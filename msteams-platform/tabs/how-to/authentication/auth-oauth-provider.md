@@ -34,11 +34,6 @@ For more information on parameters, see [authenticate (AuthenticatePopUpParamete
 
 ## Add authentication to external browsers
 
-> [!NOTE]
->
-> * You can add authentication to external browsers for tabs in mobile only.
-> * Use the beta version of TeamsJS to leverage the functionality. Beta versions are available through [NPM](https://www.npmjs.com/package/@microsoft/teams-js/v/1.12.0-beta.2).
-
 The following image provides the flow to add authentication to external browsers:
 
  :::image type="content" source="../../../assets/images/tabs/tabs-authenticate-OAuth.PNG" alt-text="authenticate-OAuth":::
@@ -50,16 +45,15 @@ The following image provides the flow to add authentication to external browsers
    The passed `url` contains placeholders for `{authId}`, and `{oauthRedirectMethod}`.  
 
     ```JavaScript
-    import { authentication } from "@microsoft/teams-js";
-    authentication.authenticate({
-       url: 'https://3p.app.server/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}',
-       isExternal: true,
-       successCallback: function (result) {
-       //sucess 
-       } failureCallback: function (reason) {
-       //failure 
-        }
-    });
+       authentication.authenticate({
+          url: `${window.location.origin}/auth-start?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}&hostRedirectUrl=${url}&googleId=${googleId}`,
+          isExternal: true
+        }).then((result) => {
+          this.getGoogleServerSideToken(result);
+        }).catch((reason) => {
+          console.log("failed" + reason);
+          reject(reason);
+        })
     ```
 
 1. The Teams clients open the URL in an external browser after automatically replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values.

@@ -94,7 +94,7 @@ Following are required to enable users to run the deployed Collaboration Manager
      1. **Description:** Enter a description of the team.
      1. **Business unit:** Select a business unit from the dropdown list.
      1. **Administrator:** Search for the user within your organization that you want to assign as the administrator by entering characters.
-     1. **Team type:** Select the team type. The following steps assume that you've selected Owner from the dropdown list. The other team types (Microsoft 365 team and Microsoft Azure Active Directory team) auto populates team members from Azure Active Directory.
+     1. **Team type:** Select the team type. The following steps assume that you've selected Owner from the dropdown list. The other team types (Microsoft 365 team and Microsoft Entra team) auto populates team members from Microsoft Entra ID.
 
          :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="Screenshot to select new team type.":::
 
@@ -105,7 +105,7 @@ Following are required to enable users to run the deployed Collaboration Manager
 ### Add members to the team
 
 > [!NOTE]
-> Adding members to the team isn't necessary if your team type is Azure Active Directory or Microsoft 365.
+> Adding members to the team isn't necessary if your team type is Microsoft Entra ID or Microsoft 365.
 
 1. Select a team, and then select **Manage team members**.
 

@@ -19,7 +19,7 @@ Your tab requires contextual information to display relevant content:
 Context about the user, team, or company can be especially useful when:
 
 * You create or associate resources in your app with the specified user or team.
-* You initiate an authentication flow from Microsoft Azure Active Directory (Azure AD) or other identity provider, and you don't require the user to enter their username again.
+* You initiate an authentication flow from Microsoft Entra ID or other identity provider, and you don't require the user to enter their username again.
 
 For more information, see [authenticate a user in your Microsoft Teams](~/concepts/authentication/authentication.md).
 
@@ -39,12 +39,12 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 
 * [{page.id}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-id): The developer-defined unique ID for the page defined when first [configuring the page](~/tabs/how-to/create-tab-pages/configuration-page.md). (Known as `{entityId}` prior to TeamsJS v.2.0.0).
 * [{page.subPageId}](/javascript/api/@microsoft/teams-js/app.pageinfo#@microsoft-teams-js-app-pageinfo-subpageid): The developer-defined unique ID for the subpage this content points defined when generating a [deep link](~/concepts/build-and-test/deep-links.md) for a specific item within the page. (Known as `{subEntityId}` prior to TeamsJS v.2.0.0).
-* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): A value suitable as a sign in hint for Azure AD. This is usually the login name of the current user in their home tenant. (Known as `{loginHint}` prior to TeamsJS v.2.0.0).
+* [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): A value suitable as a sign in hint for Microsoft Entra ID. This is usually the login name of the current user in their home tenant. (Known as `{loginHint}` prior to TeamsJS v.2.0.0).
 * [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): The User Principal Name of the current user in the current tenant. (Known as `{userPrincipalName}` prior to TeamsJS v.2.0.0).
-* [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): The Azure AD object ID of the current user in the current tenant. (Known as `{userObjectId}` prior to TeamsJS v.2.0.0).
+* [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): The Microsoft Entra object ID of the current user in the current tenant. (Known as `{userObjectId}` prior to TeamsJS v.2.0.0).
 * [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, or `contrast`. (Known as `{theme}` prior to TeamsJS v.2.0.0).
 * [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): The ID of the Microsoft 365 group in which the tab resides. (Known as `{groupId}` prior to TeamsJS v.2.0.0)
-* [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): The Azure AD tenant ID of the current user. (Known as `{tid}` prior to TeamsJS v.2.0.0).
+* [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): The Microsoft Entra tenant ID of the current user. (Known as `{tid}` prior to TeamsJS v.2.0.0).
 * [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): The current locale of the user formatted as *languageId-countryId*, for example `en-us`. (Known as `{locale}` prior to TeamsJS v.2.0.0).
 
 > [!NOTE]
@@ -148,10 +148,10 @@ The following code provides an example of context variable:
     "locale": "The current locale of the user formatted as languageId-countryId (for example, en-us)",
     "entityId": "The developer-defined unique ID for the entity this content points to",
     "subEntityId": "The developer-defined unique ID for the sub-entity this content points to",
-    "loginHint": "A value suitable as a login hint for Azure AD. This is usually the login name of the current user, in their home tenant",
+    "loginHint": "A value suitable as a login hint for Microsoft Entra ID. This is usually the login name of the current user, in their home tenant",
     "userPrincipalName": "The principal name of the current user, in the current tenant",
-    "userObjectId": "The Azure AD object id of the current user, in the current tenant",
-    "tid": "The Azure AD tenant ID of the current user",
+    "userObjectId": "The Microsoft Entra object id of the current user, in the current tenant",
+    "tid": "The Microsoft Entra tenant ID of the current user",
     "groupId": "Guid identifying the current Office 365 Group ID",
     "theme": "The current UI theme: default | dark | contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",
@@ -328,7 +328,7 @@ Use the following `getContext` properties in shared channels:
 |`channelType`| The property is set to `sharedChannel` for shared channels.|
 |`groupId`|The property is `null` for shared channels.|
 |`hostTenantId`| The property is newly added and describes the host's tenant ID, useful for comparing against the current user's `tid` tenant ID property. |
-|`hostTeamGroupId`| The property is newly added and describes the host team’s Azure AD group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. |
+|`hostTeamGroupId`| The property is newly added and describes the host team’s Microsoft Entra group ID, useful for making Microsoft Graph API calls to retrieve shared channel membership. |
 |`teamId`|The property is newly added and set to the thread ID of the current shared team. |
 |`teamName`|The property is set to current shared team's `teamName`. |
 |`teamType`|The property is set to current shared team's `teamType`.|
