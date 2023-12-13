@@ -61,14 +61,6 @@ Teams AI library story is targeted towards Pro-developers and separate from the 
 </br>
 
 <details>
-<summary>What is the release status of Teams AI library at Build 2023?</summary>
-
-Teams AI library is available in public preview at Build 2023.
-<br>
-</details>
-</br>
-
-<details>
 <summary>How should information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
 
 Teams AI library works alongside the existing Bot Framework SDK and isn't a replacement.
