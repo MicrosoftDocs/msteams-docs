@@ -55,11 +55,14 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 | `teamsapp validate` | Validate the current application.|
 | `teamsapp publish` | Publish the app to Teams.|
 | `teamsapp preview` | Preview the current application. |
-| `teamsapp config`  | Manage the configuration data. |
-| `teamsapp permission`| Collaborate with other developers in same project.|
-| `teamsapp update aad-app` | Update the specific app manifest file. |
+| `teamsapp collaborator`| Collaborate with other developers in same project.|
+| `teamsapp entra-app update` | Update the specific app manifest file. |
 | `teamsapp upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
 | `teamsapp doctor` | Prerequisites to create Teams application.|
+| `teamsapp install` | Upload a custom app for a given application package across Microsoft 365. |
+| `teamsapp uninstall` | Remove an acquired Microsoft 365 App. |
+| `teamsapp launchinfo` | Get launch information of an acquired Microsoft 365 App. |
+| `teamsapp entra-app` | Manage the Microsoft Entra app in the current application. |
 
 ## Interactive mode
 
@@ -150,7 +153,7 @@ Run the provision stage in `teamsapp.yml`.
 
 Running `teamsapp provision --env local` triggers the provision stage in `teamsapp.local.yml` instead.
 
-### Parameters for `teamsapp provision`
+### Parameters for `teamsapp provision -h`
 
 | Parameters | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -163,7 +166,7 @@ Run the deploy stage in `teamsapp.yml`.
 
 Running `teamsapp deploy --env local` triggers the deploy stage in `teamsapp.local.yml` instead.
 
-### Parameters for `teamsapp deploy`
+### Parameters for `teamsapp deploy -h`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -174,7 +177,7 @@ Running `teamsapp deploy --env local` triggers the deploy stage in `teamsapp.loc
 
 Build your Teams app into a package for publishing.
 
-### Parameters for `teamsapp package`
+### Parameters for `teamsapp package -h`
 
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -189,7 +192,7 @@ Build your Teams app into a package for publishing.
 
 Validate the Teams app using manifest schema or validation rules.
 
-### Parameters for `teamsapp validate`
+### Parameters for `teamsapp validate -h`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -205,7 +208,7 @@ Validate the Teams app using manifest schema or validation rules.
 
 Preview the current application.
 
-### Parameters for `teamsapp preview`
+### Parameters for `teamsapp preview -h`
 
 | Parameter | Required | Description |
 |:---------------- | :------------- | :------------- |
@@ -253,7 +256,7 @@ The following list provides the common scenarios for `teamsapp preview`:
 
 Run the publish stage in `teamsapp.yml`.
 
-### Parameters for `teamsapp publish`
+### Parameters for `teamsapp publish -h`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -265,26 +268,7 @@ Run the publish stage in `teamsapp.yml`.
 |`--output-manifest-file` | No | Select the output Teams app manifest file path, defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
 | `--folder -f` | No |Select root folder of the project. Defaults to `./`. |
 
-## `teamsapp config`
-
-Configure user settings.
-
-### Parameters for `teamsapp config`
-
-| Command | Description |
-|:----------------  |:-------------|
-| `teamsapp config get [option]` | Get user global settings. |
-| `teamsapp config set` | Set user settings. |
-
-### Scenarios for `teamsapp config`
-
-* Stop sending telemetry data
-
-  ```typescript
-  teamsapp config set telemetry off
-  ```
-
-## `teamsapp permission`
+## `teamsapp collaborator`
 
 Check, grant, and list user permission to access and manage Teams application and Microsoft Entra application.
 
@@ -293,7 +277,7 @@ Check, grant, and list user permission to access and manage Teams application an
 | `teamsapp collaborator grant` | Check user's permission. |
 | `teamsapp collaborator status` | Show permission status for the project. |
 
-### Parameters for `teamsapp collaborator grant`
+### Parameters for `teamsapp collaborator grant -h`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -303,7 +287,7 @@ Check, grant, and list user permission to access and manage Teams application an
 | `--teams-manifest-file -t` | No | Select the manifest template file path, defaults to `${folder}/appPackage/manifest.json`. |
 | `--entra-app-manifest-file -a` | No | Select the Entra app manifest file path, defaults to `${folder}/aad.manifest.json`. |
 
-### Parameters for `teamsapp collaborator status`
+### Parameters for `teamsapp collaborator status -h`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -341,7 +325,7 @@ Check, grant, and list user permission to access and manage Teams application an
   teamsapp collaborator status --env dev --list-all-collaborators
   ```
 
-## `teamsapp update aad-app`
+## `teamsapp entra-app update`
 
 Update the specific application manifest file.
 
@@ -350,7 +334,7 @@ Update the specific application manifest file.
 | `teamsapp entra-app update` | Update the Microsoft Entra ID app in the current application. |
 | `teamsapp update` | Update the Teams app manifest to Teams Developer Portal. |
 
-### Parameters for `teamsapp entra-app update`
+### Parameters for `teamsapp entra-app update -h`
 
 | Parameter | Required |Description |
 |:----------------  |:-------------|:-------------|
@@ -358,7 +342,7 @@ Update the specific application manifest file.
 | `--folder -f` | No | Select root folder of the project. Defaults to `./` |
 | `--manifest-file` | No | Enter the Microsoft Entra app manifest file path. The default value is `./aad.manifest.json`. |
 
-### Parameters for `teamsapp update`
+### Parameters for `teamsapp update -h`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -374,7 +358,7 @@ Update the specific application manifest file.
 
 Upgrade the project to work with the latest version of Teams Toolkit.
 
-### Parameters for `teamsapp upgrade`
+### Parameters for `teamsapp upgrade -h`
 
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -384,11 +368,84 @@ Upgrade the project to work with the latest version of Teams Toolkit.
 
 Prerequiste checker for building Microsoft Teams apps.
 
+## `teamsapp install`
+
+Sideload a given application package across Microsoft 365.
+
+### Parameters for `teamsapp install -h`
+
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsapp install` | Upload a custom app for a given application package across Microsoft 365. |
-| `teamsapp uninstall` | Remove an acquired Microsoft 365 App. |
-| `teamsapp launchinfo` | Get launch information of an acquired Microsoft 365 App. |
+| `--file-path` | Specifies the Teams app manifest zip package. |
+| `--xml-path` | Specifies the Teams xml manifest xml file. |
+
+### Scenarios for `teamsapp install`
+
+Sideload the application package with JSON-based manifest to Teams, Outlook, and the Microsoft 365 app.
+
+```bash
+teamsapp install --file-path appPackage.zip
+```
+
+Sideload the Outlook add-in application package with XML-based manifest to Outlook.
+
+```bash
+teamsapp install --xml-path manifest.xml
+```
+
+## `teamsapp uninstall`
+
+Remove an acquired M365 App.
+
+### Parameters for `teamsapp uninstall -h`
+
+| Command | Description |
+|:----------------  |:-------------|
+| `--title-id` | Title ID of the acquired M365 App. |
+| `--manifest-id` | Manifest ID of the acquired M365 App. |
+
+### Scenarios for `teamsapp uninstall`
+
+Remove the acquired M365 App by Title ID.
+
+```bash
+teamsapp uninstall --title-id U_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+
+Remove the acquired M365 App by Manifest ID.
+
+```bash
+teamsapp uninstall --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+
+## `teamsapp launchinfo`
+
+Get launch information of an acquired M365 App.
+
+### Parameters for `teamsapp launchinfo -h`
+
+| Command | Description |
+|:----------------  |:-------------|
+| `--title-id` | Title ID of the acquired M365 App. |
+| `--manifest-id` | Manifest ID of the acquired M365 App. |
+
+### Scenarios for `teamsapp launchinfo`
+
+Get launch information of the acquired M365 App by Title ID.
+
+```bash
+teamsapp launchinfo --title-id U_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+
+Get launch information of the acquired M365 App by Manifest ID.
+
+```bash
+teamsapp launchinfo --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
+```
+
+## `teamsapp entra-app`
+
+Manage the Microsoft Entra app in the current application.
 
 ::: zone-end
 
