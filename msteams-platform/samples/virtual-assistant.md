@@ -30,7 +30,7 @@ The following image displays the business functions of Virtual Assistant:
 
 ## Create a Teams-focused Virtual Assistant
 
-Microsoft has published a [Microsoft template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template/) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, dialogs (referred as task modules in TeamsJS v.1.0), teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
+Microsoft has published a [Microsoft template](https://microsoft.github.io/botframework-solutions/overview/virtual-assistant-template/) for building Virtual Assistants and skills. With the template, you can create a Virtual Assistant, powered by a text based experience with support for limited rich cards with actions. We've enhanced template to include Microsoft Teams platform capabilities and power great Teams app experiences. A few of the capabilities include support for rich Adaptive Cards, dialogs (referred as task modules in TeamsJS v1.x), teams or group chats, and message extensions. For more information on extending Virtual Assistant to Microsoft Teams, see [Tutorial: Extend Your Virtual Assistant to Microsoft Teams](https://microsoft.github.io/botframework-solutions/clients-and-channels/tutorials/enable-teams/1-intro/).
 The following image displays the high level diagram of a Virtual Assistant solution:
 
 :::image type="content" source="../assets/images/bots/virtual-assistant/high-level-diagram.png" alt-text="Diagram that shows Virtual Assistant solution.":::
@@ -165,13 +165,13 @@ Request forwarding is done through the [SkillHttpClient](/dotnet/api/microsoft.b
         }
 ```
 
-A similar approach is followed for card action dispatching and dialog responses. Task module fetch and submit action data is updated to include `skillId`.
+A similar approach is followed for card action dispatching and dialog responses. Dialog fetch and submit action data is updated to include `skillId`.
 Activity Extension method `GetSkillId` extracts `skillId` from the payload, which provides details about the skill that needs to be invoked.
 
 The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitAsync` methods are given in the following section:
 
 ```csharp
-    // Invoked when a "task/fetch" event is received to invoke task module.
+    // Invoked when a "task/fetch" event is received to invoke dialog.
     protected override async Task<TaskModuleResponse> OnTeamsTaskModuleFetchAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
     {
         try
@@ -193,7 +193,7 @@ The code snippet for `OnTeamsTaskModuleFetchAsync` and `OnTeamsTaskModuleSubmitA
         }
     }
 
-    // Invoked when a 'task/submit' invoke activity is received for task module submit actions.
+    // Invoked when a 'task/submit' invoke activity is received for dialog submit actions.
     protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
     {
         try
