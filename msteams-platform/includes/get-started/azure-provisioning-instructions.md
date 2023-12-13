@@ -1,6 +1,6 @@
 ## Deploy your app to Azure
 
-Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the message extension app.
+Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. You deploy the message extension app in this tutorial.
 <br>
 <br>
 <details>
