@@ -91,4 +91,4 @@ groups:
   - id: qs-javascript
     title: JavaScript
   - id: qs-csharp
-    title: Csharp
+    title: C#
