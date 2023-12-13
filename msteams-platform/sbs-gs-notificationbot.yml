@@ -110,7 +110,7 @@ items:
 
     1. Select **Start Debugging** button.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging"border="true"::: 
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="App Debugging"border="true"::: 
 
     1. Select **Add**.
     
@@ -230,7 +230,7 @@ items:
 
     1. Select **Start Debugging** button.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="App Debugging":::
 
         You get the following output in Teams.
 
