@@ -9,10 +9,6 @@ ms.date: 11/27/2023
 
 # Get started with Teams AI library
 
-> [!NOTE]
->
-> Teams AI library is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
 Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components.  It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
 
 You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key or Azure OpenAI to provide an AI-driven conversational experience.
