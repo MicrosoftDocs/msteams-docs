@@ -45,28 +45,34 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 
 | Command | Description |
 |----------------|-------------|
+| `teamsapp doctor` | Prerequisites to create Teams application.|
 | `teamsapp new`| Create new Teams application.|
 | `teamsapp add`| Adds features to your Teams application.|
 | `teamsapp auth`| Manage cloud service accounts. The supported cloud services are Azure and Microsoft 365. |
+| `teamsapp entra-app` | Manage the Microsoft Entra app in the current application. |
 | `teamsapp env` | Manage environments. |
+| `teamsapp help` |  Show Microsoft Teams Toolkit CLI help. |
+| `teamsapp install` | Upload a custom app for a given application package across Microsoft 365. |
+| `teamsapp launchinfo` | Get launch information of an acquired Microsoft 365 App. |
+| `teamsapp list` | List available Microsoft Teams application templates and samples. |
 | `teamsapp provision` | Provision cloud resources in the current application.|
-| `teamsapp deploy` | Deploy the current application.  |
+| `teamsapp deploy` | Deploy the current application. |
 | `teamsapp package` | Build your Teams app into package for publishing.|
 | `teamsapp validate` | Validate the current application.|
 | `teamsapp publish` | Publish the app to Teams.|
 | `teamsapp preview` | Preview the current application. |
-| `teamsapp collaborator`| Collaborate with other developers in same project.|
-| `teamsapp entra-app update` | Update the specific app manifest file. |
+| `teamsapp update` |  Update the Teams app manifest to Teams Developer Portal. |
 | `teamsapp upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
-| `teamsapp doctor` | Prerequisites to create Teams application.|
-| `teamsapp install` | Upload a custom app for a given application package across Microsoft 365. |
+| `teamsapp collaborator`| Collaborate with other developers in same project.|
 | `teamsapp uninstall` | Remove an acquired Microsoft 365 App. |
-| `teamsapp launchinfo` | Get launch information of an acquired Microsoft 365 App. |
-| `teamsapp entra-app` | Manage the Microsoft Entra app in the current application. |
 
 ## Interactive mode
 
 `teamsapp` command runs in interactive mode by default. You can work in non-interactive mode by setting `--interactive` flag to `false`.
+
+## `teamsapp doctor`
+
+Prerequiste checker for building Microsoft Teams apps.
 
 ## `teamsapp new`
 
@@ -130,6 +136,14 @@ The following table lists the cloud service accounts, such as Azure and Microsof
 | `teamsapp auth login`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
 | `teamsapp auth logout`  | Log out of selected cloud service. Service options are Microsoft 365 or Azure. |
 
+## `teamsapp entra-app`
+
+Manage the Microsoft Entra app in the current application.
+
+| Command | Description |
+|:----------------  |:-------------|
+| `update` | Update the Entra app in the current application. |
+
 ## `teamsapp env`
 
 Manage environments.
@@ -146,6 +160,21 @@ Create a new environment by copying from the existing dev environment:
 ```bash
 teamsapp env add staging --env dev
 ```
+
+## `teamsapp list`
+
+List available Microsoft Teams app templates and samples.
+
+### Parameters for `teamsapp list -h`
+
+| Command | Description |
+|:----------------  |:-------------|
+| `--samples` |  List of available Teams app samples. |
+| `--templates` | List of available Teams app templates. |
+
+## `teamsapp help`
+
+Show Microsoft Teams Toolkit CLI help.
 
 ## `teamsapp provision`
 
@@ -297,7 +326,7 @@ Check, grant, and list user permission to access and manage Teams application an
 | `--entra-app-manifest-file -a` | No | Select the Entra manifest template file path, defaults to `${folder}/aad.manifest.json`. |
 | `--all -a` | No | List all collaborators. |
 
-### Scenarios for `teamsapp permission`
+### Scenarios for `teamsapp collaborator`
 
 * Grant permission
 
@@ -325,22 +354,9 @@ Check, grant, and list user permission to access and manage Teams application an
   teamsapp collaborator status --env dev --list-all-collaborators
   ```
 
-## `teamsapp entra-app update`
+## `teamsapp update`
 
-Update the specific application manifest file.
-
-| Command | Description |
-|:----------------  |:-------------|
-| `teamsapp entra-app update` | Update the Microsoft Entra ID app in the current application. |
-| `teamsapp update` | Update the Teams app manifest to Teams Developer Portal. |
-
-### Parameters for `teamsapp entra-app update -h`
-
-| Parameter | Required |Description |
-|:----------------  |:-------------|:-------------|
-| `--env` | Yes | Select an existing environment for the project. |
-| `--folder -f` | No | Select root folder of the project. Defaults to `./` |
-| `--manifest-file` | No | Enter the Microsoft Entra app manifest file path. The default value is `./aad.manifest.json`. |
+Update the Teams app manifest to Teams Developer Portal.
 
 ### Parameters for `teamsapp update -h`
 
@@ -363,10 +379,6 @@ Upgrade the project to work with the latest version of Teams Toolkit.
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--force -f` | No | Force upgrade the project to work with the latest version of Teams Toolkit. Defaults value: `false`. |
-
-## `teamsapp doctor`
-
-Prerequiste checker for building Microsoft Teams apps.
 
 ## `teamsapp install`
 
@@ -392,17 +404,6 @@ Sideload the Outlook add-in application package with XML-based manifest to Outlo
 ```bash
 teamsapp install --xml-path manifest.xml
 ```
-
-## `teamsapp uninstall`
-
-Remove an acquired M365 App.
-
-### Parameters for `teamsapp uninstall -h`
-
-| Command | Description |
-|:----------------  |:-------------|
-| `--title-id` | Title ID of the acquired M365 App. |
-| `--manifest-id` | Manifest ID of the acquired M365 App. |
 
 ### Scenarios for `teamsapp uninstall`
 
@@ -443,9 +444,16 @@ Get launch information of the acquired M365 App by Manifest ID.
 teamsapp launchinfo --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-## `teamsapp entra-app`
+## `teamsapp uninstall`
 
-Manage the Microsoft Entra app in the current application.
+Remove an acquired M365 App.
+
+### Parameters for `teamsapp uninstall -h`
+
+| Command | Description |
+|:----------------  |:-------------|
+| `--title-id` | Title ID of the acquired M365 App. |
+| `--manifest-id` | Manifest ID of the acquired M365 App. |
 
 ::: zone-end
 
