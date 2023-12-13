@@ -56,6 +56,8 @@ const adapter = new CloudAdapter(botFrameworkAuthentication);
 
 # [C#](#tab/dotnet1)
 
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.a.teamsChefBot/Program.cs)
+
 ```csharp
 using Microsoft.Teams.AI;
 using Microsoft.Bot.Builder;
@@ -154,7 +156,7 @@ const planner = new ActionPlanner({
 
 # [C#](#tab/dotnet2)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/Program.cs#L51C1-L51C1).
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/Program.cs#L33).
 
 ```csharp
     // Create model
@@ -239,6 +241,8 @@ const app = new Application<ApplicationTurnState>({
 The `MemoryStorage()` function stores all the state for your bot. The `Application` class replaces the Teams Activity Handler class. You can configure your `ai` by adding the planner, moderator, prompt manager, default prompt and history. The `ai` object is passed into the `Application`, which receives the AI components and the default prompt defined earlier.
 
 # [C#](#tab/dotnet3)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/Program.cs#L99)
 
 ```csharp
  return new TeamsLightBot(new()
@@ -571,6 +575,8 @@ app.ai.action('Pause', async (context: TurnContext, state: ApplicationTurnState,
 ```
 
 # [C#](#tab/dotnet4)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/dotnet/samples/04.ai.c.actionMapping.lightBot/LightBotActions.cs)
 
 ```csharp
 public class LightBotActions
