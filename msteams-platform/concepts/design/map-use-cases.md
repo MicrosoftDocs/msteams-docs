@@ -83,33 +83,7 @@ The Microsoft Teams platform offers a large variety of features. Each feature is
 
 Let's look at how Teams capabilities enable different features for your Teams app.
 
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-tab.png" alt-text="Microsoft Teams app capabilities for tab." link="~/tabs/what-are-tabs.md" border="false":::
-:::row-end:::
 
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-bot.png" alt-text="Microsoft Teams app capabilities for bot." link="~/bots/what-are-bots.md" border="false":::
-:::row-end:::
-
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-message-extension.png" alt-text="Microsoft Teams app capabilities for message extension." link="~/messaging-extensions/what-are-messaging-extensions.md" border="false":::
-:::row-end:::
-
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-adaptive-card.png" alt-text="Microsoft Teams app capabilities for adaptive cards." link="~/task-modules-and-cards/cards/cards-reference.md#adaptive-card" border="false":::
-:::row-end:::
-
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-apps-for-meetings.png" alt-text="Microsoft Teams app capabilities for meetings." link="~/apps-in-teams-meetings/teams-apps-in-meetings.md" border="false":::
-:::row-end:::
-
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-webhook-and-connectors.png" alt-text="Microsoft Teams app capabilities for webhooks and connectors." link="~/webhooks-and-connectors/what-are-webhooks-and-connectors.md" border="false":::
-:::row-end:::
-
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-graph-conversational-interface.png" alt-text="Microsoft Teams app capabilities for graph conversational interface." link="/graph/overview" border="false":::
-:::row-end:::
 
 For example:
 
