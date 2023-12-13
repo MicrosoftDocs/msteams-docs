@@ -86,5 +86,13 @@ groups:
     title: TeamsFx CLI v2    
   - id: version-one
     title: TeamsFx CLI v1
-
-
+  - id: version-two
+    title: TeamsFx CLI v2
+- id: ai-library-quick-start
+  title: Quick start guide
+  prompt: Before you begin, select the language in which you want to build.
+  pivots:
+  - id: qs-javascript
+    title: JavaScript
+  - id: qs-csharp
+    title: C#

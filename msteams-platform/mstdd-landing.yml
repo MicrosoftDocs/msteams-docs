@@ -49,6 +49,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Teams AI library
+        url:  bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
       - text: Extend an action-based Teams message extension across Microsoft 365
         url:  m365-apps/extend-m365-teams-message-extension.md
       - text: Use captureImage API to capture an image or select media from the gallery for mobile clients
@@ -67,8 +69,6 @@ landingContent:
         url: apps-in-teams-meetings/teams-apps-in-meetings.md
       - text: Introduced Adaptive Card Previewer in public developer preview
         url: concepts/build-and-test/adaptive-card-previewer.md
-      - text: Introduced the extensions property in public developer preview app manifest schema
-        url: resources/schema/manifest-schema-dev-preview.md#extensions
 
     - linkListType: reference
       links:
