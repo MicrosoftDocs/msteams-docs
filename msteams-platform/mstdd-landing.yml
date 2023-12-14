@@ -44,7 +44,7 @@ landingContent:
 #      - text: Adaptive Cards overflow menu
 #        url: ~/task-modules-and-cards/cards/cards-format.md
 
-- title: Whats new
+- title: What's new
   linkLists:
     - linkListType: whats-new
       links:
