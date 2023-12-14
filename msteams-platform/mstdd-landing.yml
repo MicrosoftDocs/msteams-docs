@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: App caching in chat, channel, and meeting tab scopes is available for iOS mobile client
+      - text: App caching in chat, channel, and meeting tab scopes is available for iOS
         url:  tabs/how-to/app-caching.md
       - text: Teams AI library
         url:  bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
