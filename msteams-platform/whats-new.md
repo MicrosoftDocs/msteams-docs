@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 December**
 
-* ***December 12, 2023***: [App caching in chat, channel, and meeting tab scopes is available for iOS](tabs/how-to/app-caching.md).
+* ***December 14, 2023***: [App caching in chat, channel, and meeting tab scopes is available for iOS](tabs/how-to/app-caching.md).
 * ***December 12, 2023***: [Use Teams AI library to build apps that can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md).
 
 :::column-end:::
