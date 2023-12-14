@@ -238,7 +238,7 @@ The following table lists the command description examples for each category:
           "id": "Search",
           "type": "query",
           "title": "General",
-          "description": "Find number of stocks or listed equities using keyworks, key ratios, index, and so on.",
+          "description": "Find number of stocks or listed equities using keywords, key ratios, and index.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -252,7 +252,7 @@ The following table lists the command description examples for each category:
 
 ### Parameter description
 
-Each parameter supports five attributes, and one attribute must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+Each message extension command supports up to five parameters and first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
 A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for each category:
 
@@ -587,7 +587,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
-* Adaptive Card must be presentable in Win32, web, and mobile (iOS and Android). [*Mandatory*]
+* Adaptive Card must be presentable in desktop, web, and mobile (iOS and Android). [*Mandatory*]
 
 * An Adaptive Card must contain at least one action button, but not more than four action buttons. [*Mandatory*]
 
