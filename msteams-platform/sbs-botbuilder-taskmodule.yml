@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    You can invoke dialogs (referred as task modules in TeamsJS v.1.0) from Teams bots by using Adaptive Cards or Bot Framework cards.
+    You can invoke dialogs (referred as task modules in TeamsJS v1.x) from Teams bots by using Adaptive Cards or Bot Framework cards.
 
     **Key features of dialogs:**
 
