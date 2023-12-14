@@ -26,8 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2023 December**
 
-**December 12, 2023**: [Use Teams AI library to build apps that can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md).
+**December 14, 2023**: [Bots can now mention tags in text messages and Adaptive Cards posted in channels in Teams web and desktop clients](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
 
+**December 12, 2023**: [Use Teams AI library to build apps that can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md).
 
 :::column-end:::
 :::row-end:::
