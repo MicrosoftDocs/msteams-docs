@@ -487,7 +487,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`composeExtensionType`|String|||Type of the compose extension. Enum values are `botBased` and `apiBased`.|
 |`apiSpecificationFile`|String|2048 characters||A relative file path to the api specification file in the manifest package.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. <br>Default value: `true`|
-|`commands`|Array of object|10||Array of commands the message extension supports|
+|`commands`|Array of object|10||Array of commands the message extension supports.|
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
