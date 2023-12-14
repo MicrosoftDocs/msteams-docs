@@ -110,7 +110,7 @@ async readActionItem() {
     try {
         return await this.graphClient.api(`/users/${this.objectId}/drive/items/${this.itemId}`).get();
     } catch (error) {
-        console.log("readActionItem", error);
+        console.log("Error reading the content", error);
     }
 }
 ```
