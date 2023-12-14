@@ -21,7 +21,7 @@ Before you get started, ensure that you install the following tools:
 | &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that run and debug your app. Use the latest version. |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | A JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
+| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor. Which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
 
 To build Actions for your app, follow these steps:
 
@@ -56,7 +56,7 @@ The following is an example of the `intent`, `supportedobjects`, and `handlers` 
                 "type": "openPage",
                 "supportedObjects": {
                     "file": {
-                        "extensions": [".xlsx", ".doc", ".docx", ".pdf", ".pptx", ".ppt"]
+                        "extensions": ["xlsx", "doc", "docx", "pdf", "pptx", "ppt"]
                     }
                 },
                 "pageInfo": {
