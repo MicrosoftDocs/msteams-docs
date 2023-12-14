@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Bots can now mention tags in channels in Teams web and desktop clients
+      - text: Bots can mention tags in channels in Teams web and desktop clients
         url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
       - text: Teams AI library
         url:  bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
