@@ -999,7 +999,7 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 
 > [!NOTE]
 >
-> * Actions for Microsoft 365 is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Actions for Microsoft 365 is available in [public developer preview](../dev-preview/developer-preview-intro.md).
 >
 > * Actions is supported for Microsoft 365 (Office) app for web and desktop.
 

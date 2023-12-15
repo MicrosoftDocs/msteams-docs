@@ -75,7 +75,7 @@ When a user selects an action to open a page and view related tasks in an app ba
 
 ## Retrieve Action information through context object
 
-Build the handler to receive the Action information through the [context object](/javascript/api/%40microsoft/teams-js/app.context?view=msteams-client-js-latest) to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
+Build the handler to receive the Action information through the [context object](/javascript/api/%40microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
 
 When a user selects Add option from the app's context menu, a page opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
 
