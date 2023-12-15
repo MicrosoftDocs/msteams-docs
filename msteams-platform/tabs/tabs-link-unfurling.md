@@ -33,7 +33,7 @@ The following image is an example of the Collaborative Stage View:
 
 ### Stage View vs. Dialog
 
-| Stage View | Dialog (referred as task module in TeamsJS v.1.0)|
+| Stage View | Dialog (referred as task module in TeamsJS v1.x)|
 |:-----------|:-----------|
 | Stage View is useful to display rich content to the users, such as a page, a dashboard, or a file. It provides rich features that help to render your content in the new pop-up window and the full-screen canvas. <br><br> After your app content opens in Stage View, users can choose to pin the content as a tab. <br><br> For more collaborative capabilities, opening your content in Collaborative Stage View (through an Adaptive Card) allows users to engage with content and conversation side-by-side, while enabling multi-window scenarios.| [Dialog](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that need users' attention, or collect information required to move to the next step.|
 
