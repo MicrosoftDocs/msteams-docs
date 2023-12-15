@@ -275,14 +275,14 @@ items:
 
    1. Select **Add** to add the app to your account.
     
-     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the dialog to add the app to Teams."
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.png" alt-text="Screenshot shows the dialog to add the app to Teams."
 
-     Teams displays a message after the app is added to Teams.
+        Teams displays a message after the app is added to Teams.
 
-     :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows the message to try the message extension app now or later.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows the message to try the message extension app now or later.":::
  
-     - If you select **Got it**, you can try the app later from the list of uploaded custom apps.
-     - If you select **Try it**, Teams loads your message extension app.
+        - If you select **Got it**, you can try the app later from the list of uploaded custom apps.
+        - If you select **Try it**, Teams loads your message extension app.
 
    1. Select **Try it**.
 
