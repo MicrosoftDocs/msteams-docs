@@ -139,6 +139,8 @@ items:
 
             :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
+    ---
+
     # [Command line](#tab/cli)
     Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
     ``` bash
@@ -152,6 +154,7 @@ items:
     1. Select **Enter** to select the default workspace folder.
     1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
     After you've answered all questions, your project is created.
+
     ---
 
     ## Take a tour of the bot app source code
@@ -167,12 +170,44 @@ items:
     | `teamsBot.ts` | Teams activity handler. |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
-    | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter. |
+    | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter.|
     | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
     | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
     | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
     > [!Tip]
     > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
+
+- title: Build and run your first bot app
+  durationInMinutes: 1
+  content: |
+    After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
+    ## Sign in to your Microsoft 365 account
+    Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+    # [Visual Studio Code](#tab/viscode)
+    1. Open Visual Studio Code.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+    1. Select **Sign in to M365**.
+        Your default web browser opens to let you sign in to the account.
+    1. Sign in to your Microsoft 365 account using your credentials.
+    1. Close the browser when prompted and return to Visual Studio Code.
+    1. Return to Teams Toolkit within Visual Studio Code.
+        Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+        Now you're ready to build the app and run it locally!
+    # [Command line](#tab/cline)
+    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+        ``` bash
+        teamsfx account login m365
+        ```
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+    2. Sign in to Azure with the TeamsFx CLI:
+        ``` bash
+        teamsfx account login azure
+        ```
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+    ---
 
     ## Create an app registration in Microsoft Entra ID
 
