@@ -102,7 +102,7 @@ The tab features are as follows:
 * Locale awareness for the user to indicate language that is `en-us`.
 * Single sign-on (SSO) capability, if supported.
 * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example an individual work item.
-* The ability to open a dialog from links within a tab.
+* The ability to open a modal dialog from links within a tab.
 * Reuse of SharePoint web parts within the tab.
 
 ## Tabs user scenarios
