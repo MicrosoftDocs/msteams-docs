@@ -56,7 +56,7 @@ There are two types of message extension commands, action command and search com
 
 Action commands are used to present the users with a modal pop-up to collect or display information. When the user submits the form, your web service responds by inserting a message into the conversation directly or into the compose message area. Subsequently, the user can submit the message.  For more complex workflows, you can link multiple forms together.
 
-Action commands are triggered from the compose message area, the command box, or a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message from which it was invoked. The following image displays the message extension action command dialog (referred as task module in TeamsJS v.1.0):
+Action commands are triggered from the compose message area, the command box, or a message. When the command is invoked from a message, the initial JSON payload sent to your bot includes the entire message from which it was invoked. The following image displays the message extension action command dialog (referred as task module in TeamsJS v1.x):
 
 :::image type="content" source="../assets/images/task-module.png" alt-text="Message extension action command dialog":::
 

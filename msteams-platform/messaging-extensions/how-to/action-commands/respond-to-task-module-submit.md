@@ -11,7 +11,7 @@ ms.author: anclear
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-This document guides you on how your app responds to the action commands, such as user's dialog (referred as task module in TeamsJS v.1.0) submit action.
+This document guides you on how your app responds to the action commands, such as user's dialog (referred as task module in TeamsJS v1.x) submit action.
 After a user submits the dialog, your web service receives a `composeExtensions/submitAction` invoke message with the command ID and parameter values. Your app has five seconds to respond to the invoke.
 
 You have the following options to respond:

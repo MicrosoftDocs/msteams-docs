@@ -12,7 +12,7 @@ ms.author: anclear
 Before creating the action command, you must decide the following factors:
 
 1. [Where can the action command be triggered from?](#select-action-command-invoke-locations)
-1. [How will the dialog (referred as task module in TeamsJS v.1.0) be created?](#select-how-to-create-your-dialog)
+1. [How will the dialog (referred as task module in TeamsJS v1.x) be created?](#select-how-to-create-your-dialog)
 1. [Will the final message or card be sent to the channel from a bot, or will the message or card be inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
 
 See the following video to learn how to define message extension action commands:
@@ -212,7 +212,7 @@ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtens
                 value: {
                     width: 450,
                     height: 125,
-                    title: 'Task module Static HTML',
+                    title: 'Dialog Static HTML',
                     url: `${baseurl}/StaticPage.html`
                 }
             }
