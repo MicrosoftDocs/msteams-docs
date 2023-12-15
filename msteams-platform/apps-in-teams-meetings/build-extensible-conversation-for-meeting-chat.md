@@ -10,7 +10,7 @@ ms.date: 01/11/2023
 
 # Build extensible conversation for meeting chat
 
-You can make conversations extensible in Microsoft Teams meetings. Bots, message extensions, cards, and dialogs (referred as task modules in TeamsJS v.1.0) can be combined to deliver an intuitive experience.
+You can make conversations extensible in Microsoft Teams meetings. Bots, message extensions, cards, and dialogs (referred as task modules in TeamsJS v1.x) can be combined to deliver an intuitive experience.
 
 ## Bots
 
