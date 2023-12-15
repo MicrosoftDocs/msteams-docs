@@ -152,7 +152,7 @@ The following code provides an example of action based for message extensions:
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msgext-action-preview/csharp/Bots/TeamsMessagingExtensionsActionPreviewBot.cs#L35-L56)
 
 ```csharp
-     protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
+protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtensionFetchTaskAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionAction action, CancellationToken cancellationToken)
         {
             // Handle different actions using switch.
             switch (action.CommandId)
@@ -171,7 +171,6 @@ The following code provides an example of action based for message extensions:
                             },
                         },
                     };
-                // return TaskModuleHTMLPage(turnContext, action);
                 default:
                     string memberName = "";
                     var member = await TeamsInfo.GetMemberAsync(turnContext, turnContext.Activity.From.Id, cancellationToken);
@@ -190,6 +189,7 @@ The following code provides an example of action based for message extensions:
                         },
                     };
             }
+        }
 ```
 
 # [Node.js](#tab/nodejs)
