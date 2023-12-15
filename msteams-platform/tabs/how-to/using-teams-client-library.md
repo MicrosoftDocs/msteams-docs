@@ -301,13 +301,13 @@ The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are
 
 | Original namespace `tasks` | New namespace `dialog`  |
 | - | - |
-| `tasks.startTask` | `dialog.open` (renamed) |
-| `tasks.submitTasks` | `dialog.submit` (renamed) |
-| `tasks.updateTasks` | `dialog.update.resize` (renamed) |
+| `tasks.startTask` | `dialog.url.open`, `dialog.url.bot.open`, `dialog.adaptiveCard.open`, `dialog.adaptiveCard.bot.open` (renamed and differentiated by HTML / Adaptive Card and page / bot variants) |
+| `tasks.submitTask` | `dialog.url.submit` (renamed) |
+| `tasks.updateTask` | `dialog.update` (renamed) |
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability is split into a main capability (`dialog`) for supporting HTML-based dialogs, and a subcapability for bot-based dialogs, `dialog.bot`.
+Additionally, this capability has been split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 
