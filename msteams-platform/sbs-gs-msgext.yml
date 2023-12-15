@@ -150,7 +150,7 @@ items:
 
    # [Command line](#tab/cli)
 
-     Use `teamsfx` CLI to create your first project.
+      Use `teamsfx` CLI to create your first project.
     
       1. Navigate to the folder where you want to create the project folder and open Command Prompt.
     
@@ -201,7 +201,7 @@ items:
 
    If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering the tenant is your Microsoft 365 account.
 
-   # [Visual Studio Code](#tab/vscode)
+   # [Visual Studio Code](#tab/vsc2)
 
      1. Open Visual Studio Code.
 
@@ -219,7 +219,7 @@ items:
 
          Now you're ready to build the app and run it locally!
 
-   # [Command line](#tab/cli)
+   # [Command line](#tab/cli2)
 
       Sign in to Microsoft 365 with TeamsFx CLI:
 
@@ -227,7 +227,7 @@ items:
          teamsfx account login m365
          ```
 
-        Your default web browser opens to let you sign in to the account. Sign in to your Microsoft 365 account using your credentials. Close the browser when you're prompted.
+      Your default web browser opens to let you sign in to the account. Sign in to your Microsoft 365 account using your credentials. Close the browser when you're prompted.
 
    ---
 
@@ -397,7 +397,7 @@ items:
 
    Sign in to your Azure account to access the Microsoft Azure portal and to provision new cloud resources to support your app.
 
-   # [Visual Studio Code](#tab/vscode)
+   # [Visual Studio Code](#tab/vsc3)
 
    1. Open Visual Studio Code.
    
@@ -416,7 +416,7 @@ items:
 
    Congratulations, you're signed in to your Azure account! Let's learn how to deploy the app to Azure using the Teams Toolkit.
 
-   # [Command line](#tab/cli)
+   # [Command line](#tab/cli3)
 
      Sign in to Azure with the TeamsFx CLI:
 
@@ -424,9 +424,9 @@ items:
          teamsfx account login azure
          ```
 
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+      Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-        Now, let's learn how to deploy the app to Azure using the Teams Toolkit.
+      Now, let's learn how to deploy the app to Azure using the Teams Toolkit.
 
     ---
 

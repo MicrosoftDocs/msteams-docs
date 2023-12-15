@@ -10,7 +10,7 @@ The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your 
 </details>
 <br>
 
-# [Visual Studio Code](#tab/vscode)
+# [Visual Studio Code](#tab/vsc4)
 
 Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code activity bar.
 
@@ -48,7 +48,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 Now, you can use the same process to deploy your bot and message extension apps to Azure.
 
-# [Command Line](#tab/cli)
+# [Command Line](#tab/cli4)
 
 In your terminal window:
 
