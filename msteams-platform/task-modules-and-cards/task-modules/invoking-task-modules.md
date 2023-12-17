@@ -1,6 +1,6 @@
 ---
 title: Invoke and dismiss dialogs
-description: Learn about invoking and dismissing dialogs (task modules), task info object, dialog (task module) sizing, dialog (task module) deep link syntax using Code samples
+description: Learn about invoking and dismissing dialogs (task modules), the dialog info object, dialog sizing, and dialog deep link syntax using code samples.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium
@@ -9,7 +9,7 @@ ms.date: 01/29/2023
 
 # Invoke and dismiss dialogs
 
-Dialogs (referred as task modules in TeamsJS v.1.0) can be invoked from tabs, bots, or deep links. The response can be either in HTML, JavaScript, or as an Adaptive Card. There's a numerous flexibilities in terms of how dialogs are invoked and how to deal with the response of the user's interaction. The following table summarizes how this works:
+Dialogs (referred as task modules in TeamsJS v1.x) can be invoked from tabs, bots, or deep links. The response can be either in HTML, JavaScript, or as an Adaptive Card. There's a numerous flexibilities in terms of how dialogs are invoked and how to deal with the response of the user's interaction. The following table summarizes how this works:
 
 | Invoked using | Dialog with HTML or JavaScript | Dialog with Adaptive Card |
 | --- | --- | --- |
