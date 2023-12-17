@@ -10,7 +10,7 @@ ms.date: 12/16/2022
 
 # Dialogs
 
-Dialogs (referred as task modules in TeamsJS v.1.0) permit you to create modal pop-up experiences in your Teams application. In the pop-up, you can:
+Dialogs (referred as task modules in TeamsJS v1.x) permit you to create modal pop-up experiences in your Teams application. In the pop-up, you can:
 
 * Run your own custom HTML or JavaScript code.
 * Show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video.

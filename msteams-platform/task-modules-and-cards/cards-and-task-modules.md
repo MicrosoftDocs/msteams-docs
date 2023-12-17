@@ -11,7 +11,7 @@ ms.date: 01/09/2023
 
 Cards provide users with various visual, audio, and selectable messages and help in conversation flow.
 
-With dialogs (referred as task modules in TeamsJS v.1.0), you can create modal pop-up experiences in Microsoft Teams. They're useful for starting and completing the tasks, or displaying rich information like videos or Power business intelligence (BI) dashboards.
+With dialogs (referred as task modules in TeamsJS v1.x), you can create modal pop-up experiences in Microsoft Teams. They're useful for starting and completing the tasks, or displaying rich information like videos or Power business intelligence (BI) dashboards.
 
 The following types of cards are supported in bots for Teams:
 

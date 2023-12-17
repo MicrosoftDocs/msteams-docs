@@ -257,7 +257,7 @@ CardFactory.actions([
 
 ## Action type invoke
 
-The `invoke` action is used for invoking [dialogs (referred as task modules in TeamsJS v.1.0)](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+The `invoke` action is used for invoking [dialogs (referred as task modules in TeamsJS v1.x)](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 
 The `invoke` action contains three properties, `type`, `title`, and `value`.
 

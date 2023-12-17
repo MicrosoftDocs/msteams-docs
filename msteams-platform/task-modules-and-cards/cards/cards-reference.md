@@ -56,7 +56,7 @@ You can identify and use different types of cards based on your application requ
 
 ## Features that support different card types
 
-| Card type | Bots | Message extension previews | Message extension results | Dialogs (referred as task modules in TeamsJS v.1.0) | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups|
+| Card type | Bots | Message extension previews | Message extension results | Dialogs (referred as task modules in TeamsJS v1.x) | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups|
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Adaptive Card | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
 | Connector card for Microsoft 365 Groups | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
