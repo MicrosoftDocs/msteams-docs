@@ -46,7 +46,7 @@ If `TaskInfo.width` and `TaskInfo.height` are `"small"`, `"medium"`, or `"large"
 
 :::image type="content" source="../../assets/images/task-module/task-module-example.png" alt-text="dialog example":::
 
-dialogs invoked from a tab can be dynamically resized. After calling `tasks.startTask()` you can call `tasks.updateTask(newSize)` where height and width properties on the newSize object conform to the TaskInfo specification, for example `{ height: 'medium', width: 'medium' }`.
+Dialogs invoked from a tab can be dynamically resized. After calling `tasks.startTask()` you can call `tasks.updateTask(newSize)` where height and width properties on the newSize object conform to the TaskInfo specification, for example `{ height: 'medium', width: 'medium' }`.
 
 The next section provides examples of embedding dialogs in a YouTube video and a PowerApp.
 
