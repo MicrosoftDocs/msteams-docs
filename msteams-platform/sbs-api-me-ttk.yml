@@ -451,7 +451,7 @@ items:
     To provision your app on Azure:
 
     1. Go to Teams Toolkit and from the left pane, select **Run and Debug** (**Ctrl+Shift+D**).
-    1. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.        
+    1. Select **Launch Remote (Edge)** from the launch configuration dropdown.        
 
         The Teams Toolkit provisions your app on Azure and deploys it to Teams.
 

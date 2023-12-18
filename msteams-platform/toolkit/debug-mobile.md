@@ -107,7 +107,7 @@ You can view the project folders and files under **Explorer** in the Visual Stud
 ## Run the deployed app
 
 1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-1. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.
+1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
 1. Select the Start debugging (F5) button.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows how to launch the app remotely.":::

@@ -104,7 +104,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
-1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool (Preview)** in dropdown list.
+1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
@@ -451,7 +451,7 @@ Test Tool successfully debugs your existing bot.
 <details>
 <summary>How can I test my bot if Test Tool doesn't support its features?</summary>
 
-You can always use the Teams client to test the features that Test Tool doesn't support. Select the option **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** to test your application in the Teams client.
+You can always use the Teams client to test the features that Test Tool doesn't support. Select the option **Debug (Edge)** or **Debug (Chrome)** to test your application in the Teams client.
 <br>
 &nbsp;
 </details>
