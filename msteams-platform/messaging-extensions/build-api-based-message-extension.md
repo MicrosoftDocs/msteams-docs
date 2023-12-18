@@ -326,11 +326,11 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
       |File  |Contents |
       |---------|---------|
-      |`repair.cs`     | The main file of a function in Azure Functions.        |
-      |`RepairData.cs`|The data source for the repair API. |
-      |`Models/RepairModel.cs`||
-      |`appPackage/apiSpecificationFiles/repair.yml`     |  A file that describes the structure and behavior of the repair API.       |
-      |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
+      |`repair.cs` | The main file of a function in Azure Functions. Defines an Azure Function that retrieves and filters repair records based on a query parameter from an HTTP GET request, and returns the results as a JSON response.|
+      |`RepairData.cs`|The data source for the repair API. Contains a method that returns a hardcoded list of car repair tasks. |
+      |`Models/RepairModel.cs`|Defines a data model that represents a repair task with properties such as Id, Title, Description, AssignedTo, Date, and Image.|
+      |`appPackage/apiSpecificationFiles/repair.yml` |  A file that describes the structure and behavior of the repair API.|
+      |`appPackage/responseTemplates/repair.json` |  A generated Adaptive Card that used to render API response.|
 
    1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel**.
 
