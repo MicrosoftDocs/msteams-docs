@@ -322,7 +322,17 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
    # [New API](#tab/new-api2)
 
-   1. In the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel**.
+   1. To get started, you must update the source code in the following files:
+
+      |File  |Contents |
+      |---------|---------|
+      |`repair.cs`     | The main file of a function in Azure Functions.        |
+      |`RepairData.cs`|The data source for the repair API. |
+      |`Models/RepairModel.cs`||
+      |`appPackage/apiSpecificationFiles/repair.yml`     |  A file that describes the structure and behavior of the repair API.       |
+      |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
+
+   1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel**.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
 
