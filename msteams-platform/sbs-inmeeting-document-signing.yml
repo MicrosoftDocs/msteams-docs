@@ -147,7 +147,7 @@ items:
 
     [!INCLUDE [Messaging endpoint](includes/get-started/messaging-endpoint.md)]
 
-- title: Set up app settings and manifest files
+- title: Set up app settings, manifest and env files
   durationInMinutes: 1
   content: |
     After you've configured the Microsoft Entra app, you need to configure app details in the app settings and manifest file. 
@@ -164,7 +164,7 @@ items:
          * Set `"ClientSecret"` to your app's client secret **Value**.
          * Set `"Audience"` to your app's **Application ID URI**.
 
-          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/appsettings2.png" alt-text="App settings"::: 
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/app-settings.png" alt-text="App settings"::: 
 
     **To configure app manifest file**
 
@@ -179,6 +179,20 @@ items:
          * Replace all occurrences of `"aad-id"` with your app's **Microsoft App ID**.
 
          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/manifest-update-file.png" alt-text="Screenshot shows the changes in the manifest file." lightbox="~/assets\images\sbs-inmeeting-doc-signing\manifest.png":::
+
+    **To configure env file**
+
+    1. Go to the **.env** file in the cloned repository.
+    
+         :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/env-location.png" alt-text="Screenshot shows the env file location.":::
+
+    1. Open the **.env** file and update the following information.
+
+          * Set `"REACT_APP_AAD_CLIENT_ID"` to your app's **Microsoft App ID**.
+          * Set `"REACT_APP_MSA_ONLY_CLIENT"` to your app's **Microsoft App ID**.
+          * Set `"REACT_APP_MSA_ONLY_SCOPE"` to your app's client secret **Value**..
+  
+          :::image type="content" source="~/assets/images/sbs-inmeeting-doc-signing/env-file.png" alt-text="Screenshot shows the env file.":::
 
 
 - title: Build and run the service
