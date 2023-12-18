@@ -4,9 +4,9 @@ Deployment consists of two steps. First, necessary cloud resources are created (
 <br>
 <br>
 <details>
-<summary>What's the difference between provision and deploy?</summary>
+<summary>What's the difference between **Provision** and **Deploy**?</summary>
 <br>
-The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it's separate from the deployment step.
+The **Provision** step creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. The **Deploy** step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step can take some time to complete, it's separate from the deployment step.
 </details>
 <br>
 
@@ -20,37 +20,39 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
 1. Select a subscription to use for the Azure resources.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot shows the subscription to use for the Azure resources.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/select-azure-subscription-group.png" alt-text="Screenshot shows the Azure subscription group options to choose from.":::
 
-   Your app is hosted using Azure resources.
+1. Select the resource group for the app.
 
-    A dialog warns you that costs might be incurred when running resources in Azure.
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot shows the subscription to use for the Azure resources.":::
 
-1. Select **Provision**.
+1. A dialog warns you that costs might be incurred when running resources in Azure. Select **Provision**.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows that you might incur charges for using Azure resources.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows a dialog that warns the user that a cost might be incurred while provisioning Azure resources.":::
 
    The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice that displays the message extension app successfully provisioned in the cloud.":::
 
-    If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
+   If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
-    The provisioned resource appears in the **ENVIRONMENT** section.
+   The provisioned resource appears in **ENVIRONMENT**.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot shows the resource being provisioned in the environment section.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provisioned-resources-env.png" alt-text="Screenshot shows the resource being provisioned in the environment section.":::
 
-1. Select **Deploy** from the **LIFECYCLE** panel after provisioning is complete.
+1. Select **Deploy** from **LIFECYCLE**.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-cloud.png" alt-text="Screenshot shows the app deploys to the cloud.":::
 
-   As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
+1. A dialog appears that asks you if you want to deploy resouces in the dev environment. Select **Deploy**.
 
-Now, you can use the same process to deploy your bot and message extension apps to Azure.
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/deploy-azure/deploy-azure-confirm.png" alt-text="Screenshot shows the confirmation dialog to deploy app in Azure.":::
+
+   As with provisioning, deployment takes some time. You can monitor the process by watching the dialogs in the bottom-right corner. After a few minutes, you see a completion notice.
 
 # [Command Line](#tab/cli4)
 
-In your terminal window:
+1. Navigate to the folder when you created your message extension app and open Command Prompt.
 
 1. Run `teamsfx provision`.
 
@@ -58,15 +60,15 @@ In your terminal window:
    teamsfx provision
    ```
 
-   When prompted, select an Azure subscription to use Azure resources.
-
-   Your app is hosted using Azure resources.
+   When prompted, select an Azure subscription and resource group to use Azure resources. Your app is hosted using Azure resources.
 
 1. Run `teamsfx deploy`.
 
    ``` bash
    teamsfx deploy
    ```
+
+   Your message extension app is deployed.
 
 ---
 
@@ -75,23 +77,21 @@ In your terminal window:
 Once the provisioning and deployment steps are complete:
 
 1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-1. Select **Launch Remote (Edge)** from the launch configuration drop-down.
-1. Select the **Start debugging (F5)** to launch your app from Azure.
+1. Select **Launch Remote in Teams (Edge)** from the launch configuration drop-down.
+1. Select **F5** to launch your app.
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the launch app remotely.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the launch app remotely in Teams option.":::
 
 1. Select **Add**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/first-msgext/add-mex-app-local-debug-latest.PNG" alt-text="Screenshot shows message to add the app.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/deploy-azure/mex-added-dev.png" alt-text="Screenshot shows message to add the deployed app.":::
 
    The toolkit displays a message to indicate that the app is added to Teams.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows message to try the app now or later.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/deploy-azure/mex-added-dev-try-it.png" alt-text="Screenshot shows message to try the deployed app now or later.":::
 
-    - If you select **Got it**, you can try the app later from the list of uploaded custom apps.
-    - If you select **Try it**, Teams loads your app.
-
-   Your app loads on the Azure site.
+    * If you select **Got it**, you can try the app later from the list of uploaded custom apps.
+    * If you select **Try it**, Teams loads your app.
 
 1. Select **Try it**.
 
