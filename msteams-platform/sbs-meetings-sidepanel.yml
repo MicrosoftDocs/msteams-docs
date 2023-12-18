@@ -14,12 +14,12 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    The meeting side panel enhances your in-meeting experience and helps organizers and presenters to have different sets of views and actions.
+    Microsoft Teams meeting side panel enhances your in-meeting experience and helps organizers and presenters to have different sets of views and actions.
 
     Key features of the meeting side panel are:
 
     * Provisions to add a new agenda point.
-    * Adds the agenda as text input to the side panel list.
+    * Adds the agenda as text input to the meeting side panel list.
     * Publishes the agenda list to the meeting chat.
     
     This step-by-step guide helps you to generate a meeting side panel to add and publish an agenda. You'll see the following output:
@@ -35,7 +35,7 @@ items:
      | --- | --- | --- |
      | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
      | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com) | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version |
+     | &nbsp; | [.NET Core SDK](https://dotnet.microsoft.com/en-us/download) | Customized bindings for local debugging and Azure Functions app deployments. Use the latest version or install the portable version. |
      | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
      | &nbsp; | [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client) | You can install the package using npm or yarn. Use the latest version. |
      | &nbsp; | [Live Share SDK](https://github.com/microsoft/live-share-sdk) | Live Share enables collaborative app experiences. |
@@ -51,7 +51,7 @@ items:
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
            
       > [!NOTE]
-      > If you encounter the error "Filename too long," apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
+      > If you encounter the error **Filename too long**, apply the git command `git config --system core.longpaths true` in your administrator terminal of choice.
 
 - title: Register Microsoft Entra app
   durationInMinutes: 5
@@ -105,23 +105,23 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    1. Go to **appsettings.json** file in the cloned repository.
+    1. Go to the **appsettings.json** file in the cloned repository.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings-location.png" alt-text="Screenshot shows the appsettings JSON file with appsettings information.":::
 
-    1. Open **appsettings.json** file in Visual Studio and update the following information:  
+    1. Open the **appsettings.json** file in Visual Studio and update the following information:  
 
-         * Replace `<<Microsoft-App-ID>>"` to your bot's **Microsoft App ID**.
-         * Replace `"<<Microsoft-App-Secret>>"` to **Value** of your bot's **Client secret**.
+         * Replace `<<Microsoft-App-ID>>` to your bot's **Microsoft App ID**.
+         * Replace `<<Microsoft-App-Secret>>` to **Value** of your bot's **Client secret**.
          * Replace `<<Your_Domain_URL>>` to the ngrok or dev tunnel domain name.
 
           :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot shows the appsettings JSON file with appsettings highlighted in red.":::
           
-    1. Go to **manifest.json** file in the cloned repository.
+    1. Go to the **manifest.json** file in the cloned repository.
 
          :::image type="content" source="~/assets/images/meetings-side-panel/manifestlocation-file.png" alt-text="Screenshot of Teams App Manifest folder with the file path and manifest file highlighted in red.":::
     
-    1. Open **manifest.json** file in Visual Studio and make the following changes:
+    1. Open the **manifest.json** file in Visual Studio and make the following changes:
 
          * Replace `<<Manifest-id>>` to a unique manifest ID. You can also enter your **Microsoft App ID**.
          * Replace all occurrences of `{{domain-name}}` and `{{Base_URL}}` with your ngrok or dev tunnel domain name.
@@ -132,7 +132,7 @@ items:
 - title: Build and run the service
   durationInMinutes: 1
   content: |
-    To build and run the service use Visual Studio or Command line:
+    To build and run the service, use Visual Studio or Command line:
 
     # [Visual Studio](#tab/vs)
 
@@ -141,13 +141,13 @@ items:
     
            :::image type="content" source="~/assets/images/meetings-side-panel/open-project1.png" alt-text="Screenshot shows Visual Studio with the file, open, and project/solution highlighted in red.":::
 
-       1. Select **SidePanel.csproj** file from **csharp** folder.
+       1. Select the **SidePanel.csproj** file from **csharp** > **SidePanel** folder.
 
            :::image type="content" source="~/assets/images/meetings-side-panel/Tokenfileready_1.png" alt-text="Screenshot shows the cloned repository with the side panel project file highlighted in red.":::
 
        1. Press **F5** to run the project. You can run the project using Visual Studio or .NET in the appropriate folder.
 
-       1. Navigate to `samples\meetings-sidepanel\csharp\ClientApp` **folder** and execute the command.
+       1. Go to **samples** > **meetings-sidepanel** > **csharp** > **ClientApp** folder and run the following command:
 
            ```bash
            npx @fluidframework/azure-local-service@latest
@@ -157,35 +157,40 @@ items:
 
             :::image type="content" source="~/assets/images/meetings-side-panel/certificate.png" alt-text="Screenshot shows the security warning with the yes option highlighted in red.":::
 
-          A webpage appears with a message, **Your bot is ready!**
-
-           :::image type="content" source="~/assets/images/meetings-side-panel/appisready_1.png" alt-text="Screenshot shows the webpage that displays that your bot is ready."::: 
  
     # [Command line](#tab/cli)
 
-    Go to **samples > meetings-sidepanel > csharp > Side Panel** in a Command Prompt window and enter the following command:
+    Go to **samples** > **meetings-sidepanel** > **csharp** > **Side Panel** in a Command Prompt window and enter the following command:
 
     ```bash
     dotnet run
     ```
     :::image type="content" source="~/assets/images/meetings-side-panel/dotnetruncmd.png" alt-text="Screenshot shows Command Prompt dotnet run with the dotnet run command."::: 
-      
+
+    ---
+    
+    A webpage appears with a message, **Your bot is ready!**
+
+           :::image type="content" source="~/assets/images/meetings-side-panel/appisready_1.png" alt-text="Screenshot shows the webpage that displays that your bot is ready."::: 
+
 - title: Add meeting side panel to Teams
   durationInMinutes: 1
   content: |
 
     1. In your cloned repository, go to **csharp > SidePanel > AppManifest**.
 
-    1. Create a .zip file with the following files that are present in the **manifest** folder: 
+    1. Create a .zip file with the following files that are present in the **AppManifest** folder: 
        * manifest.json
        * outline.png
        * color.png
 
-         :::image type="content" source="~/assets/images/meetings-side-panel/manifest-zipfile.png" alt-text="Screenshot of cloned repository with the Side Manifest zip file highlighted in red."::: 
+         :::image type="content" source="~/assets/images/meetings-side-panel/manifest-zipfile.png" alt-text="Screenshot shows the app manifest folder with manifest zip file."::: 
     
     1. Create a meeting with a few presenters and attendees.
    
-    1. After the meeting is created, go to the meeting details page, and select the **Apps** icon to add an app.
+    1. After the meeting is created, join the meeting.
+    
+    1. Go to the meeting details page, and select the **Apps** icon to add an app.
  
     1. In the pop-up window, select **Manage apps**.
 
@@ -193,7 +198,9 @@ items:
    
     1. Select **Upload an app**.
 
-    1. Select **Open** to upload the .zip file that you created in the **manifest** folder.
+    1. Go to **csharp > SidePanel > AppManifest**.
+    
+    1. Select **Open** to upload the .zip file that you created in the **AppManifest** folder.
 
         :::image type="content" source="~/assets/images/meetings-side-panel/select-zip.png" alt-text="Screenshot of the cloned repository with Side Manifest zip file and Open option highlighted in red."::: 
 
