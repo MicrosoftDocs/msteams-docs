@@ -157,7 +157,7 @@ items:
       1. Enter the following command to create a new Teams app:
 
          ``` bash
-               teamsfx new
+          teamsfx new
          ```
 
       1. CLI provides you with a series of options to choose from. Use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
@@ -195,7 +195,7 @@ items:
   durationInMinutes: 1
   content: |
 
-   After you set up your project workspace with Teams Toolkit, it is time to build your project. You need to sign in to your Microsoft 365 account.
+   After you set up your project workspace with Teams Toolkit, it's time to build your project. You need to sign in to your Microsoft 365 account.
 
    ## Sign in to your Microsoft 365 account
 
@@ -221,13 +221,13 @@ items:
 
    # [Command line](#tab/cli2)
 
-      Sign in to Microsoft 365 with the following TeamsFx CLI command:
+      1. Sign in to Microsoft 365 with the following TeamsFx CLI command:
 
          ``` bash
-               teamsfx account login m365
+          teamsfx account login m365
          ```
 
-      Your default web browser opens to let you sign in to the account. Sign in to your Microsoft 365 account using your credentials. Close the browser when you're prompted.
+      2. Your default web browser opens to let you sign in to the account. Sign in to your Microsoft 365 account using your credentials. Close the browser when you're prompted.
 
    ---
 
@@ -281,17 +281,17 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows the message to try the message extension app now or later.":::
  
-        * If you select **Got it**, you can try the app later from the list of uploaded custom apps.
-        * If you select **Try it**, Teams loads your message extension app.
+        - If you select **Got it**, you can try the app later from the list of uploaded custom apps.
+        - If you select **Try it**, Teams loads your message extension app.
 
    1. Select **Try it**. The message extension app is loaded in a chat bot app.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-loaded-chat-app.png" alt-text="Screenshot shows the message extension running in a bot app."
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/mex-local-chat-app.png" alt-text="Screenshot shows the message extension running in a bot app."
 
         As message extension apps rely on bots for enabling communication between the user and the web service, your app loads in to a chat feature of a bot.
 
-        * If you created a bot app before you created the message extension app, it loads in the bot app you created. Previous chat messages of the bot app are visible.
-        * If you created a message extension first, your app is loaded in the most recent chat that is open on Teams.
+        - If you created a bot app before you created the message extension app, it loads in the bot app you created. Previous chat messages of the bot app are visible.
+        - If you created a message extension first, your app is loaded in the most recent chat that is open on Teams.
 
      > [!NOTE]
      > You can extend your app to Outlook and Microsoft 365 if you choose to debug your app with Outlook from **RUN AND DEBUG** dropdown in Visual Studio Code.
@@ -417,13 +417,13 @@ items:
 
    # [Command line](#tab/cli3)
 
-     Sign in to Azure with the following TeamsFx CLI command:
+      1. Sign in to Azure with the following TeamsFx CLI command:
 
          ``` bash
-               teamsfx account login azure
+          teamsfx account login azure
          ```
 
-      Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+      2. Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
       Now, let's learn how to deploy the app to Azure using the Teams Toolkit.
 
