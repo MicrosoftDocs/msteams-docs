@@ -435,13 +435,13 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. <br>Default value: `false`.|
+|`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. <br>Default value: `false`|
 |`team.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`team.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.url`|String|2048 characters||Initial webview URL.|
-|`groupChat.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. <br>Default value: `false`.|
-|`groupChat.taskInfo`|Object|||Task module to be launched when fetch task set to false.<br>Default value: `false`.|
+|`groupChat.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. <br>Default value: `false`|
+|`groupChat.taskInfo`|Object|||Task module to be launched when fetch task set to false.<br>Default value: `false`|
 |`groupChat.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`groupChat.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`groupChat.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
@@ -491,7 +491,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false`. To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false` <br> To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
 |`type`     |  Type of the compose extension.  Supported values are `apiBased` or `botBased`. |
 
 ### composeExtensions.commands
