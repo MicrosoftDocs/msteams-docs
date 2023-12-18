@@ -700,7 +700,7 @@ If you choose to submit a video as part of your app listing in your Partner Cent
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
 
 * The video can be surfaced in the first position of the screenshots or videos carousel in the app details (Teams Store and Admin Center) and AppSource pages. [*Suggested Fix*]
-* The video on demo or scenario walkthrough is intended to educate users and not to market the app.
+* The video on demo or scenario walkthrough must intend to educate users and not to promote your app.
 
 For more information on the criteria for creating an app value video or walkthrough video, see the [checklist to create a video](submission-checklist.md#create-a-video).
 
