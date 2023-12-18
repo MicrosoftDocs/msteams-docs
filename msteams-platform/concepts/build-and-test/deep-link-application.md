@@ -44,7 +44,7 @@ Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bc
 Following are the different app IDs that are used for deep links:
 
 * Custom app uploaded in Teams: Manifest ID
-* Apps submitted to org catalog: Org catalog ID. See, [How to find ID based on the Teams app manifest ID](https://learn.microsoft.com/en-us/graph/api/appcatalogs-list-teamsapps#example-3-find-application-based-on-the-teams-app-manifest-id)
+* Apps submitted to org catalog: Org catalog ID. See, [how to find ID based on the Teams app manifest ID](/graph/api/appcatalogs-list-teamsapps##example-3-find-application-based-on-the-teams-app-manifest-id)
 * Apps submitted to Teams Store: Store ID
 
 #### Configure deep link using TeamsJS library
