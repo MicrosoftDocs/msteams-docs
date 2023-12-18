@@ -101,7 +101,7 @@ items:
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
+    1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
 
     1. Select **Start Debugging** button. You'll be prompted to upload the command bot app onto Teams on your local machine. 
 
@@ -213,7 +213,7 @@ items:
     
     
     1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-    1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
+    1. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.
     1. Select **Start Debugging** button. You'll be prompted to upload the command bot app onto Teams.
 
          :::image type="content" source="~/assets/images/sbs-command-bot/remote-debug.png" alt-text="Screenshot shows the remote debug.":::
