@@ -166,5 +166,5 @@ Follow instructions to preinstall your app for entire organization or user group
 
 ## See also
 
-[Actions in Microsoft 365](actions-in-m365.md)
-[Actions in Microsoft 365 quick start guide](actions-in-m365-quick-start-guide.md)
+* [Actions in Microsoft 365](actions-in-m365.md)
+* [Actions in Microsoft 365 quick start guide](actions-in-m365-quick-start-guide.md)

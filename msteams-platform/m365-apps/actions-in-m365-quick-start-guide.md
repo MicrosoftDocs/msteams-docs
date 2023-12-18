@@ -24,7 +24,7 @@ Before you get started, ensure that you install the following tools:
 
 ### Build and run the sample app
 
-1. Go to the [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+1. Go to the [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples). [Need to update the public link.]
 
 1. Select **Code**.
 
@@ -60,5 +60,5 @@ You can now preview your Actions in Microsoft 365 app, right-click a file that i
 
 ## See also
 
-[Actions in Microsoft 365](actions-in-m365.md)
-[Build Actions in Microsoft 365](build-actions-in-m365.md)
+* [Actions in Microsoft 365](actions-in-m365.md)
+* [Build Actions in Microsoft 365](build-actions-in-m365.md)
