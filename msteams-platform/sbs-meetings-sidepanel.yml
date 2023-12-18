@@ -115,7 +115,7 @@ items:
          * Replace `<<Microsoft-App-Secret>>` to **Value** of your bot's **Client secret**.
          * Replace `<<Your_Domain_URL>>` to the ngrok or dev tunnel domain name.
 
-          :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_1.png" alt-text="Screenshot shows the appsettings JSON file with appsettings highlighted in red.":::
+          :::image type="content" source="~/assets/images/meetings-side-panel/appsettings_file.png" alt-text="Screenshot shows the appsettings JSON file with appsettings highlighted in red.":::
           
     1. Go to the **manifest.json** file in the cloned repository.
 
