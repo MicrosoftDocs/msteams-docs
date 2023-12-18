@@ -24,9 +24,9 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
-The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during Teams Store validation.
+The Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during Teams Store validation.
 
-1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
+1. Go to the [Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
 
    You can also validate your app using [Developer Portal for Teams.](~/concepts/build-and-test/teams-developer-portal.md)
 
@@ -114,12 +114,13 @@ Make sure your short description adheres to the [Teams Store validation guidelin
 
 #### Long description
 
-The long description must provide information that highlights your app's key features, user benefits, and any specific user guidance.
+The long description must provide information that highlights your app's key features, user benefits, and unique value proposition in Teams.
 
 Ensure that you provide the following information in your app's long description:
 
 * Define your product, state its primary features, and its target audience.
-* Describe the unique value proposition of your app within Microsoft Teams.
+* Describe the unique value proposition of your app within Teams.
+* Describe your app's capabilities and scenarios in Teams.
 * Highlight how your app contributes to resolving customer problems and assists them in their everyday work.
 * List the key benefits that your app provides to customers. We recommend that you add up to three benefits.
 * If there are specific requirements to use your app, mention them clearly in the description for the benefit of users and admins looking to install and use your app.
@@ -168,7 +169,6 @@ For the benefit of the customers and admins who wants to install and use your ap
 
 When providing a video that educates the users of the value your app provides, ensure to cover the following information in the video:
 
-* Why should the users choose your app over other similar apps in the Teams store?
 * Who's the intended target audience and customer for your app?
 * What unique value does your app provide to the users?
 * Is there any measurable impact that your app guarantees to deliver for users?
@@ -176,15 +176,15 @@ When providing a video that educates the users of the value your app provides, e
 * Are there other key benefits of using your app?
 * What are the primary features of your app?
 
-A demo or scenario walkthrough video is more like an educational video that provides the users or IT admins with a comprehensive walkthrough of your app experience. If you choose to add a demo or walkthrough video, provide the following details:
+A demo or scenario walkthrough video is more like an educational video that provides the users or IT admins with a walkthrough on your app configuration and usage experiences. If you choose to add a demo or walkthrough video, provide the following details:
 
 * How can the users start with your app as first-time users and how do they set up your app?
 * How do they use the different capabilities or features in your app?
 * What are the major features of your app and how do they get to use them?
 * Provide an end-to-end demonstration of your app with all the key workflows and key scenarios that your app supports.
-* If there are any specific training materials on how users can learn and use app workflows, ensure that you provide the related information.
+* If there are any specific training on how users can learn to use the app, ensure that you provide the related information.
 * Use voice-over instructions wherever applicable to make it easier for the users to understand.
-* Ensure that you don't add any marketing content in the scenario walkthrough video.
+* Ensure that the video is focused to educate users and not for marketing your app.
 
 For other best practices on creating videos, see [store validation guidelines](teams-store-validation-guidelines.md#videos).
 

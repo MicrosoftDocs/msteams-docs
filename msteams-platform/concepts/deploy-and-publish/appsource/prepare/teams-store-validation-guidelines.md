@@ -564,6 +564,8 @@ The long description must provide an engaging narrative that highlights your app
 
 * List the key benefits to highlight the advantages of using your app. Add up to three benefits.
 
+* Add the key value proposition of your app in Teams.
+
 * List features with bullet points so it's easier to scan the description.
 
 * Clearly describe limitations, features, conditions or exceptions to the functionality, and deliverables in the listing and related materials before the user installs your app. The Teams capabilities must relate to the core functions described in the listing.
@@ -691,14 +693,14 @@ If you choose to submit a video as part of your app listing in your Partner Cent
 * The video must be in a narrative form.
 * The duration of the video should be within 60-90 seconds for a value video and the recommended duration for a walkthrough video is 3-5 minutes. [*Suggested Fix*]
 * You must turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
-* The video must highlight your app’s functionality and integration within Teams. [*Mandatory Fix*]
+* The video must highlight your app’s functionalities and integration within Teams. [*Mandatory Fix*]
 * The video must be available as a functional link. [*Mandatory Fix*]
 * The video must be in the format `https://www.example.com/123456789`.
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
 
 * The video can be surfaced in the first position of the screenshots or videos carousel in the app details (Teams Store and Admin Center) and AppSource pages. [*Suggested Fix*]
-* The video on demo or scenario walkthrough mustn't have marketing information.
+* The video on demo or scenario walkthrough is intended to educate users and not to market the app.
 
 For more information on the criteria for creating an app value video or walkthrough video, see the [checklist to create a video](submission-checklist.md#create-a-video).
 
