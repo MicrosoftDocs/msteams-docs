@@ -337,8 +337,6 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
    1. Go to **Solution Explorer** and select your project.
    1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-      :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Teams Toolkit in Visual Studio.":::
-
       If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
 
    1. Select the **F5** key or select **Debug** > **Start Debugging**. Visual Studio launches a Teams web client.
@@ -358,7 +356,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
    1. Right-click your project and select **Teams Toolkit** > **Preview in** > **Teams**.
    1. Select the **manifest.json** file and select **Open**. Visual Studio launches a Teams web client.
 
-   ---
+    ---
 
 1. Go to a chat and select **Actions and apps**.
 
