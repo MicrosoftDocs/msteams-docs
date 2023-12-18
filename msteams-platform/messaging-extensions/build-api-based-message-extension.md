@@ -334,7 +334,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
    1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
+      :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
 
    1. Select the Account to use to create the tunnel. The supported account types are Azure, Microsoft Account (MSA), and GitHub.
       1. **Name**: Enter a name for the tunnel.
