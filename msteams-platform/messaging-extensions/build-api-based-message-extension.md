@@ -347,7 +347,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
    # [OpenAPI Description](#tab/openapi-specification2)
 
    1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
-   1. Under **Select Operations Teams Can Interact with**, select dropdown and select APIs from the list.
+   1. Select the dropdown and select the APIs from the list.
    1. Select **Create**. The project is scaffolded and you can find API specification, manifest, and response template files in the **appPackage** folder.
    1. Go to **Solution Explorer** and select your project.
    1. Right-click the menu and select **Teams Toolkit** > **Provision in the Cloud**.
