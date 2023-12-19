@@ -450,7 +450,7 @@ The following image is an example of masking information in Adaptive Cards:
 
 ### Full width Adaptive Card
 
-You can use the `msteams` property to expand the width of an Adaptive Card and make use of additional canvas space. The next section provides information on how to use the property.
+You can use the `msteams` property to expand the width of an Adaptive Card and make use of available canvas space. The next section provides information on how to use the property.
 
 > [!NOTE]
 > Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
@@ -549,8 +549,69 @@ In the Stage View, users can zoom in and zoom out of the image. You can select t
 > [!NOTE]
 >
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
-> * For Teams mobile apps, Stage View functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stage View by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
+> * For Teams mobile apps, Stage View functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stage View by simply tapping on the image, irrespective of whether the `allowExpand` property is present or not.
 > * Stage View for images in Adaptive Cards doesn't support Base64 encoded images.
+
+### Sharing code snippets in Adaptive Cards
+
+Bots can unfurl permalinks of code snippets from external sources into Adaptive Cards with syntax highlighting and contextual information. This is enabled through the `CodeBlock` element that supports the following properties:
+
+| Property | Type | Description |
+|----|----|----|
+| `codeSnippet` | String | The code snippet to be displayed in the Adaptive Card |
+| `language` | Enum | The language of the code snippet to be displayed in the Adaptive Card |
+| `startLineNumber` | Number | (Optional) The line number where the code snippet begins in the source. If left blank, defaults to 1. |
+
+Adaptive Cards with `CodeBlock` are rich and easy to read as they match the indentation and syntax highlighting of the language the code is in. The user can view the the code in its source or open it in IDEs (Visual Studio Code, Visual Studio, etc).
+
+:::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" lightbox="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
+
+`CodeBlock` supports Bash, C, C++, C#, CSS, DOS, Go, GraphQL, HTML, Java, JavaScript, JSON, Objective-C, Perl, PHP, PowerShell, Python, SQL, TypeScript, Visual Basic, Verilog, VHDL, XML, and plain text.
+
+However, `CodeBlock` doesn't support languages like Apache, Fortran, Dart, etc. The code snippet generated in the Adaptive Card is read-only and not editable. The Adaptive Card only previews the first ten lines of the code snippet. If there are more than ten lines of code, the user has to select **Expand (xx lines)** to see the rest of the code snippet. This type of Adaptive Card is supported in meetings only when a bot is added to it.
+
+The following code shows an example of an Adaptive Card with a code snippet.
+
+``` json
+{
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "editor.js",
+            "style": "heading"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Lines 61 - 76"
+        },
+        {
+            "type": "CodeBlock",
+            "codeSnippet": "/**\n* @author John Smith <john.smith@example.com>\n*/\npackage l2f.gameserver.model;\n\npublic abstract strictfp class L2Char extends L2Object {\n  public static final Short ERROR = 0x0001;\n\n  public void moveTo(int x, int y, int z) {\n    _ai = null;\n    log(\"Should not be called\");\n    if (1 > 5) { // what!?\n      return;\n    }\n  }\n}",
+            "language": "java",
+            "startLineNumber": 61
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "View in Azure Repos",
+            "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/teams-modular-packages/pullrequest/176883?_a=files"
+        },
+        {
+            "type": "Action.OpenUrl",
+            "title": "Edit in vscode.dev",
+            "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/teams-modular-packages/pullrequest/176883?_a=files"
+        }
+    ]
+}
+```
+
+> [!NOTE]
+>
+> To avoid rendering errors in the Adaptive Card, use escape sequences such as `\n` in the `codeSnippet` property.
 
 # [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 
