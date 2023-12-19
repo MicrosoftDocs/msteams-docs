@@ -215,7 +215,7 @@ items:
 
     1. Go to the [Azure portal](https://ms.portal.azure.com/).
 
-    1. Select **create a resource and search for Azure Open AI.
+    1. Select **create a resource** and search for Azure Open AI.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
@@ -224,9 +224,20 @@ items:
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
     1. Fill the required details and select **Next**.
-    1. Select **All network  ** and then select **Next**.
-    1. FIll the required details and select **Next**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
+    1. Select **All network including the internet, can access this resource.** and then select **Next**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+    
+    1. Fill the required details and select **Next**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
     1. Select **Create**.
+
+      
 
     Deployment is in progress.
 
