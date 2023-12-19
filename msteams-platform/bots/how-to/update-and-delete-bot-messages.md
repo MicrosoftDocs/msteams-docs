@@ -27,6 +27,10 @@ It is not necessary for the new message to match the original in type. For examp
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `UpdateActivityAsync` method of the `TurnContext` class.
 
 ```csharp
+// Send initial message
+var response = await turnContext.SendActivityAsync(MessageFactory.Attachment(card.ToAttachment()), cancellationToken);
+var activityId = response.Id; // Fetch activity id.
+
 // MessageFactory.Text(): Specifies the type of text data in a message attachment.
 var newActivity = MessageFactory.Text("The new text for the activity");
 newActivity.Id = activityId;
