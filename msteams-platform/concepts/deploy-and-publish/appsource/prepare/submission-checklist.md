@@ -176,15 +176,15 @@ When providing a video that educates the users of the value your app provides, e
 * Are there other key benefits of using your app?
 * What are the primary features of your app?
 
-A demo or scenario walkthrough video is more like an educational video that provides the users or IT admins with a walkthrough of app configuration and usage experiences. If you choose to add a demo or walkthrough video, provide the following details:
+A demo or scenario walkthrough video is more like an educational video that provides the users or IT admins with a walkthrough of app configuration and usage experience. If you decide to add a demo or walkthrough video, provide the following details:
 
 * How can the users start with your app as first-time users and how do they set up your app?
 * How do they use the different capabilities or features in your app?
 * What are the major features of your app and how do they get to use them?
 * Provide an end-to-end demonstration of your app with all the key workflows and key scenarios that your app supports.
-* If there are any specific trainings on how users can learn to use the app, ensure that you provide the required information.
+* If there are any specific training videos on how users can learn to use the app, ensure that you provide the related information.
 * Use voice-over instructions wherever applicable to make it easier for the users to understand.
-* Ensure that the video aims to educate users and not to promote your app.
+* Ensure that the video intends to educate users and not to promote your app.
 
 For other best practices on creating videos, see [store validation guidelines](teams-store-validation-guidelines.md#videos).
 

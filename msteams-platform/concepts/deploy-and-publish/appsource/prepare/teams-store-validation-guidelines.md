@@ -686,7 +686,7 @@ Remember the following:
 
 A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add your YouTube or Vimeo video URL that provides the value of your app. Also, as a best practice, we recommended that you add a video that provides the demo or scenario walkthrough of your app. [*Suggested fix*]
 
-If you choose to submit a video as part of your app listing in your Partner Center account, ensure that you meet the following criteria:
+If you want to submit a video as part of your app listing in your Partner Center account, ensure that you meet the following criteria:
 
 * The video must be short, clear, engaging, and of good quality.
 * The video must demonstrate how to set up and use the app.
