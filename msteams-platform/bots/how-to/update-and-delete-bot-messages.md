@@ -47,6 +47,10 @@ await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `updateActivity` method of the `TurnContext` object.
 
 ```typescript
+// Send initial message
+var message = await context.sendActivity("<Your Message>");
+var activityId = message.id; // Fetch activity id.
+
 // MessageFactory.Text(): Specifies the type of text data in a message attachment.
 const newActivity = MessageFactory.text('The new text for the activity');
 newActivity.id = activityId;
@@ -63,6 +67,10 @@ await turnContext.updateActivity(newActivity);
 To update an existing message, pass a new `Activity` object with the existing activity ID to the `update_activity` method of the `TurnContext` class.
 
 ```python
+# Send initial message
+message = await turn_context.send_activity("<Your Message>")
+activityId = message.id # Fetch activity id.
+
 # MessageFactory.Text(): Specifies the type of text data in a message attachment.
 new_activity = MessageFactory.text("The new text for the activity")
 new_activity.id = activity_id
