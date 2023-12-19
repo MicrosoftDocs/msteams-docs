@@ -217,42 +217,53 @@ items:
 
     1. Select **create a resource** and search for Azure Open AI.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
-
     1. Select Azure Open AI > select **Create**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+        :::image type="content" source="~/assets/images/test-tool/azure-open-ai.png" alt-text="Screenshot shows the Azure open AI in Azure portal.":::
 
     1. Fill the required details and select **Next**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+        :::image type="content" source="~/assets/images/test-tool/azure-open-ai-resource.png" lightbox="~/assets/images/test-tool/azure-open-ai-resource.png" alt-text="Screenshot shows you the Azure open AI subscription and resource group.":::
 
     1. Select **All network including the internet, can access this resource.** and then select **Next**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+        :::image type="content" source="~/assets/images/test-tool/azure-open-ai-network.png" lightbox="~/assets/images/test-tool/azure-open-ai-network.png" alt-text="Screenshot shows the Azure open AI network details.":::
     
     1. Fill the required details and select **Next**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+        :::image type="content" source="~/assets/images/test-tool/azure-open-ai-tags.png" alt-text="Screenshot shows the Azure open AI tags details.":::
 
     1. Select **Create**.
 
-      
+        :::image type="content" source="~/assets/images/test-tool/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
 
     Deployment is in progress.
 
-    1. Select **Go to resources**.
-    1. Select **Keys and endpoints** from the left pane.
-    1. Copy the **Key and endpoints.
-    1. Select **Model deployments > Manage deployments.
+        :::image type="content" source="~/assets/images/test-tool/deployment.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
 
+    1. Select **Go to resources**.
+    1. Select **Keys and Endpoint** from the left pane and copy the **Key** and **Endpoint**.
+
+        :::image type="content" source="~/assets/images/test-tool/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
+
+    1. Select **Model deployments** from the left pane and select **Manage deployments.
+
+        :::image type="content" source="~/assets/images/test-tool/model-deployments.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
+    
     Its opens Azure Open AI Studio.
 
-    1. Select **Create new deployments**.
-    1. Select the **gpt-35-turbo model** for Select a Model and **0301** for **Model version** from the dropdown list.
-    1. Enter **Deployment name** and select created.
+    1. Select **+ Create new deployments**.
+
+        :::image type="content" source="~/assets/images/test-tool/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
+
+    1. Select the **gpt-35-turbo** from **Select a Model** dropdown list and **0301** for **Model version** from the dropdown list.
+
+        :::image type="content" source="~/assets/images/test-tool/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
+
+    1. Enter **Deployment name** and select **Create**.
     1. Copy Deployment name.
 
+        :::image type="content" source="~/assets/images/test-tool/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
 
     1. Open VSC and 
 
