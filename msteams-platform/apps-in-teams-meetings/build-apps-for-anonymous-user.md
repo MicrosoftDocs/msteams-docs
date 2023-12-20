@@ -14,7 +14,7 @@ Anonymous users don't have a Microsoft Entra identity and aren't federated with 
 
 > [!NOTE]
 > * Apps for anonymous users are supported in Teams desktop and mobile clients and isn't supported in channel meetings.
-> * For anonymous users, we currently only support apps in the Browser in Meeting (BiM) feature for Microsoft Edge and Chrome. We don't support this feature for other browsers at this time.
+> * Meeting apps for anonymous users are only supported in Microsoft Edge and Chrome.
 
 For anonymous users to interact with the apps in Teams meetings, ensure to:
 
