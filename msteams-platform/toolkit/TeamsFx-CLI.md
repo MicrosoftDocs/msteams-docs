@@ -45,19 +45,21 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 
 | Command | Description |
 |----------------|-------------|
-| `teamsfx new`| Create new Teams application.|
-| `teamsfx add`| Adds features to your Teams application.|
-| `teamsfx account`| Manage cloud service accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
+| `teamsfx new`| Create a new Microsoft Teams application.|
+| `teamsfx add`| Add feature to your Microsoft Teams application.|
+| `teamsfx account`| Manage Microsoft 365 and Azure accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
 | `teamsfx env` | Manage environments. |
-| `teamsfx provision` | Provision cloud resources in the current application.|
-| `teamsfx deploy` | Deploy the current application.  |
-| `teamsfx package` | Build your Teams app into package for publishing.|
-| `teamsfx validate` | Validate the current application.|
-| `teamsfx publish` | Publish the app to Teams.|
+| `teamsfx help` | Show Microsoft Teams Toolkit CLI help. |
+| `teamsfx list` | List available Microsoft Teams application templates and samples. |
+| `teamsfx provision` | Run the provision stage in teamsapp.yml or teamsapp.local.yml.|
+| `teamsfx deploy` | Run the deploy stage in teamsapp.yml or teamsapp.local.yml. |
+| `teamsfx package` | Build your Microsoft Teams app into a package for publishing.|
+| `teamsfx validate` | Validate the Microsoft Teams app using manifest schema or validation rules. |
+| `teamsfx publish` | Run the publish stage in teamsapp.yml.|
 | `teamsfx preview` | Preview the current application. |
-| `teamsfx config`  | Manage the configuration data. |
-| `teamsfx permission`| Collaborate with other developers in same project.|
-| `teamsfx update` | Update the specific application manifest file. |
+| `teamsfx m365`  | M365 App Management. |
+| `teamsfx permission`| Check, grant and list permissions for who can access and manage Microsoft Teams application and Microsoft Entra application. |
+| `teamsfx update` | Upgrade the project to work with the latest version of Teams Toolkit. |
 | `teamsfx upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
 
 ## Interactive mode
@@ -257,24 +259,17 @@ The following list provides the common scenarios for `teamsfx preview`:
   > [!NOTE]
   > The logs of the background services, such as React is saved in ~/.fx/cli-log/local-preview/.
 
-## `teamsfx config`
+## `teamsfx m365`
 
-Configure user settings.
+M365 App Management.
 
-### Parameters for `teamsfx config`
+### Parameters for `teamsfx m365`
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx config get [option]` | Get user global settings. |
-| `teamsfx config set` | Set user settings. |
-
-### Scenarios for `teamsfx config`
-
-* Stop sending telemetry data
-
-  ```typescript
-  teamsfx config set telemetry off
-  ```
+| `sideloading [options]` | Sideloading an M365 App with corresponding information specified in the given manifest package. |
+| `unacquire [options]` | Remove an acquired M365 App. |
+| `launchinfo [options]` | Get launch information of an acquired M365 App. |
 
 ## `teamsfx permission`
 
@@ -521,7 +516,7 @@ Provision the cloud resources in the current application.
 
 ## `teamsfx deploy`
 
-This command is used to deploy the current application. By default it deploys entire project but its also possible to deploy partially. The options are `frontend-hosting`, `function`, `apim`, `bot`, `spfx`, `aad-manifest`, and `manifest`.
+This command is used to deploy the current application. By default it deploys entire project but it's also possible to deploy partially. The options are `frontend-hosting`, `function`, `apim`, `bot`, `spfx`, `aad-manifest`, and `manifest`.
 
 ### Parameters for `teamsfx deploy`
 
@@ -789,9 +784,9 @@ The following list provides required permissions for `TeamsFx` projects:
     * Update Tab code, and deploy the project to remote.
     * Launch remote and the project.
 
-## Deploy to azure web app manually
+## Deploy to Azure web app manually
 
-1. Create a SSO enable tab.
+1. Create an SSO enable tab.
 2. Provision your project:
 
       ```bash
