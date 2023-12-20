@@ -39,11 +39,14 @@ items:
    | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
    | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
    | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-   | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
+   | [Microsoft 365 developer account](../../../concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
 
    ## Prepare development environment
+
    After you've installed the required tools, set up the development environment.
+
    ### Install the Teams Toolkit
+
    The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
     
    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
@@ -51,12 +54,16 @@ items:
    # [Visual Studio Code](#tab/vscode)
 
    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+
    1. In the search box, enter **Teams Toolkit**.
+
    1. Select **Install** next to the Teams Toolkit.
+
       :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
 
     The Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
-   You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+
+    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
    # [Command line](#tab/cli)
 
@@ -170,19 +177,16 @@ items:
 
     After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
     
-    :::image type="content" source="../msteams-platform/assets/images/bots/Teams-AI-library-ttk-files.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
+    :::image type="content" source="../msteams-platform/assets/images/test-tool/source-code.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
     
     | Folder name | Contents |
     | --- | --- |
-    | `env/.env.local.user` |Configuration file for local environment used by `teamsapp.yml` to customize the provisioning and deployment rules.  |
-    | `index.ts` |  Main entry point for the bot app. |
-    | `teamsBot.ts` | Teams activity handler. |
+    | `env/.env.testtool.user` |Configuration file for local environment used by `teamsapp.testtool.yml` to customize the provisioning and deployment rules.  |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
-    | `config.ts` | `config.ts` wraps access to environment variables that is used to set up the bots adapter.|
     | `teamsapp.yml` |	This is the main Teams Toolkit project that defines properties and configuration stage definitions. |
     | `teamsapp.local.yml` |This overrides teamsapp.yml with actions that enable local execution and debugging. |
-    | `infra/azure.parameters.json` | Parameters file for Azure BICEP provision for every environment. |
+    | `teamsapp.testtool.yml` |This overrides teamsapp.local.yml with actions that enable local execution and debugging. |
     > [!Tip]
     > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
 
@@ -197,20 +201,20 @@ items:
 
     1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
 
-    1. Select **Sign in to M365**.<br>
-        Your default web browser opens to let you sign in to the account.
+    1. Select **Sign in to M365**. Your default web browser opens to let you sign in to the account.
 
     1. Sign in to your Microsoft 365 account using your credentials.
 
     1. Close the browser when prompted and return to Visual Studio Code.
 
-    1. Return to Teams Toolkit within Visual Studio Code. <br>
-        Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+    1. Return to Teams Toolkit within Visual Studio Code. Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
-        Now you're ready to build the app and run it locally!
+
+    Now you're ready to build the app and run it locally!
 
     # [Command line](#tab/cline)
+
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
         ``` bash
@@ -262,9 +266,11 @@ items:
 
         :::image type="content" source="~/assets/images/test-tool/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
 
-    Deployment is in progress.
+        Deployment is in progress.
 
         :::image type="content" source="~/assets/images/test-tool/deployment.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
+
+     ## Azure Open AI keys and endpoint
 
     1. Select **Go to resources**.
     1. Select **Keys and Endpoint** from the left pane and copy the **Key** and **Endpoint**.
@@ -275,7 +281,7 @@ items:
 
         :::image type="content" source="~/assets/images/test-tool/model-deployments.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
     
-    Its opens Azure Open AI Studio.
+        Its opens Azure Open AI Studio.
 
     1. Select **+ Create new deployments**.
 
@@ -327,11 +333,11 @@ items:
 
     1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool (Preview)** in dropdown list.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
  
     1. Test Tool opens your AI chat bot in a webpage.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
 - title: Activity triggers
   durationInMinutes: 1
