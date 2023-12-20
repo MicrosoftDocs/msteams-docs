@@ -26,10 +26,11 @@ Teams platform features that are available to all app developers.
 
 **2023 December**
 
-***December 05, 2023***: [Introduced RSC permissions for users to access different resources.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access)
+* ***December 20, 2023***: [Introduced RSC permissions for users to access different resources.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access)
+* ***December 18, 2023***: [App caching in chat, channel, and meeting tab scopes is available for iOS](tabs/how-to/app-caching.md).
+* ***December 15, 2023***: [Bots can mention tags in text messages and Adaptive Cards posted in Teams channels](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
+* ***December 12, 2023***: [Use Teams AI library to build apps that can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md).
 
-:::column-end:::
-:::row-end:::
 
 <br/>
 
@@ -39,16 +40,15 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|27/11/2023|Introduced action-based message extensions.|Extend your app across Microsoft 365 > Teams message extensions in Outlook > Enable a Teams message extension for Outlook > Extend a Teams message extension across Microsoft 365 > [Extend an action based Teams message extension across Microsoft 365](~/m365-apps/extend-m365-teams-message-extension.md)|
-|21/11/2023|Terminology update. LOB apps is now referred to as custom apps built for your org (LOB apps).
-|20/11/2023|Introduced API to capture image or media from the gallery.|Integrate device capabilities > Integrate media capabilities > [Media capability APIs](concepts/device-capabilities/media-capabilities.md)|
+|21/11/2023|Terminology update. LOB apps is referred to as custom apps built for your org (LOB apps).||
+|20/11/2023|Use captureImage API to capture an image or select media from the gallery for mobile clients.|Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md)|
 |17/11/2023|Terminology update. Sideload is referred to as upload a custom app.||
-|17/11/2023|Launched a Teams app testing tool to simplify debugging of bot-based apps.|Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug bot using Teams App Test Tool](toolkit/debug-your-Teams-app-test-tool.md)|
-|14/11/2023|Introduced API to fetch meeting recordings from all meetings.|Build apps for Teams meetings and calls > Get meeting transcripts and recordings using Graph APIs > [Overview](graph-api/meeting-transcripts/overview-transcripts.md)|
-|14/11/2023|Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID.| |
-|03/11/2023|Introduced systemDefault reserved activity type for send activity feed notifications.|Build tabs > [Send activity feed notifications](tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications)|
-|03/11/2023|Introduced apps for Teams meetings in GCC-High environment.|Build apps for Teams meetings and calls > [Overview](apps-in-teams-meetings/teams-apps-in-meetings.md)|
-|25/10/2023|Configure your bot to receive meeting participant events.|Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Meeting apps APIs](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)|
+|17/11/2023|Introduced Teams App Test Tool that streamlines the debug process of bot-based apps.|Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Teams app Test Tool](toolkit/debug-your-Teams-app-test-tool.md) |
+|14/11/2023|Use callRecording API to fetch meeting recording from all meetings.|Build apps for Teams meetings and calls > [Get meeting transcripts and recordings using Graph APIs](graph-api/meeting-transcripts/overview-transcripts.md)|
+|14/11/2023|Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID.||
+|03/11/2023|Introduced systemDefault reserved activity type for send activity feed notifications.| Build tabs > [Send activity feed notifications](tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications)|
+|03/11/2023|Apps for Teams meetings are available in GCC-High environment.|[Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
+|25/10/2023|Configure your bot to receive meeting participant events. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Meeting apps APIs](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)|
 |11/10/2023|Introduced the new Microsoft Teams client to provide better experience for your apps and users. | Resources > [Introducing the new Microsoft Teams client](resources/teams-updates.md)|
 |05/10/2023|Use callTranscript API to fetch meeting transcript from all meetings.|Build apps for Teams meetings and calls > [Get meeting transcripts and recordings using Graph APIs](graph-api/meeting-transcripts/overview-transcripts.md)|
 |05/10/2023|You can rate apps on Microsoft Teams Store and offer feedback on your usage experience.|Distribute your app > Publish to the Teams Store > [Maintain your published app](concepts/deploy-and-publish/appsource/post-publish/overview.md#ratings-and-review-for-teams-apps)|
@@ -358,6 +358,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2023 November**
 
+* ***November 27, 2023***: [Extend an action-based Teams message extension across Microsoft 365.](~/m365-apps/extend-m365-teams-message-extension.md)
 * ***November 14, 2023***: [Build a bot-based message extension and extend the message extension as plugin for Microsoft Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) and also check the [guidelines to create or upgrade a message extension plugin for Microsoft Copilot for Microsoft 365.](messaging-extensions/high-quality-message-extension.md)
 
 * ***November 02, 2023***: [Introduced Adaptive Card Previewer in public developer preview](concepts/build-and-test/adaptive-card-previewer.md).
