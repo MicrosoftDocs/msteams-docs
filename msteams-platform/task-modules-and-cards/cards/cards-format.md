@@ -180,7 +180,7 @@ The following code shows an example of Adaptive Card with a mention:
 
 ### Microsoft Entra Object ID and UPN in user mention
 
-Teams platform allows to mention users with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
+Users can be mentioned with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
 
 The following table describes the newly supported user mention IDs:
 
@@ -310,7 +310,7 @@ There are two types of people icons that are supported in an Adaptive Card:
 
 * Persona: If you want to show a single user in an Adaptive Card, the Adaptive Card displays the people icon and the name of the user.
 
-    The following is a JSON example of a Persona card:
+    The following JSON code is an example of a Persona card:
 
     ```json
     {
@@ -339,7 +339,7 @@ There are two types of people icons that are supported in an Adaptive Card:
 
 * Persona Set: If you want to show multiple users in an Adaptive Card, the Adaptive Card displays only the people icon of the users.
 
-    The following is a JSON example of a Persona Set:
+    The following JSON code is an example of a Persona Set:
 
     ```json
     {
@@ -386,17 +386,17 @@ The following image is an example of the people icon in an Adaptive Card:
 
 The following table lists the query parameters:
 
-|Property name  |description  |
+| Property Name | Description |
 |---------|---------|
-|`type`     |    `component`     |
-|`name`     |   `graph.microsoft.com/users`. Search all members across the organization.      |
-|`view`     |   `compact`      |
-|`properties`|Passed to the component template|
-|`id`     | User's MRI  |
-|`displayName`     |   Name of the user     |
-|`userPrincipalName`|The user's principal name of the account in Microsoft Entra ID|
+| `type` | `component` |
+| `name` | `graph.microsoft.com/users`. Search all members across the organization. |
+| `view` |   `compact` |
+| `properties` | Passed to the component template |
+| `id` | User's MRI |
+| `displayName` | Name of the user |
+| `userPrincipalName` | The user's principal name of the account in Microsoft Entra ID |
 
-Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute.  The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
+Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` property.  The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
@@ -552,7 +552,7 @@ In the Stage View, users can zoom in and zoom out of the image. You can select t
 > * For Teams mobile apps, Stage View functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stage View by simply tapping on the image, irrespective of whether the `allowExpand` property is present or not.
 > * Stage View for images in Adaptive Cards doesn't support Base64 encoded images.
 
-### Sharing code snippets in Adaptive Cards
+### CodeBlock in Adaptive Cards
 
 Bots can unfurl permalinks of code snippets from external sources into Adaptive Cards with syntax highlighting and contextual information. This is enabled through the `CodeBlock` element that supports the following properties:
 
@@ -562,13 +562,13 @@ Bots can unfurl permalinks of code snippets from external sources into Adaptive 
 | `language` | Enum | The language of the code snippet to be displayed in the Adaptive Card |
 | `startLineNumber` | Number | (Optional) The line number where the code snippet begins in the source. If left blank, defaults to 1. |
 
-Adaptive Cards with `CodeBlock` are rich and easy to read as they match the indentation and syntax highlighting of the language the code is in. The user can view the the code in its source or open it in IDEs (Visual Studio Code, Visual Studio, etc).
+Adaptive Cards with `CodeBlock` are rich and easy to read as they match the indentation and syntax highlighting of the language the code is in. The user can view the code in its source or open it in IDEs such as, Visual Studio Code, Visual Studio, etc.
 
 :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" lightbox="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
 
 `CodeBlock` supports Bash, C, C++, C#, CSS, DOS, Go, GraphQL, HTML, Java, JavaScript, JSON, Objective-C, Perl, PHP, PowerShell, Python, SQL, TypeScript, Visual Basic, Verilog, VHDL, XML, and plain text.
 
-However, `CodeBlock` doesn't support languages like Apache, Fortran, Dart, etc. The code snippet generated in the Adaptive Card is read-only and not editable. The Adaptive Card only previews the first ten lines of the code snippet. If there are more than ten lines of code, the user has to select **Expand (xx lines)** to see the rest of the code snippet. This type of Adaptive Card is supported in meetings only when a bot is added to it.
+However, `CodeBlock` doesn't support languages like Apache, Fortran, Dart, etc. The code snippet generated in the Adaptive Card is read-only and not editable. The Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user has to select **Expand (xx lines)** to see the rest of the code snippet. This type of Adaptive Card is supported in meetings only when a bot is added to it.
 
 The following code shows an example of an Adaptive Card with a code snippet.
 
@@ -721,9 +721,9 @@ To enable overflow menu, configure the `mode` property with the value as `primar
 
 |Property|Type|Required|Description|
 |---|---|---|---|
-|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action. Secondary actions will be collapsed into an overflow menu.|
+|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action<br>Secondary actions are collapsed into an overflow menu|
 
-The following is an example of the `mode` property in the `actions` type and the `ActionSet` element:
+The following example shows the `mode` property in the `actions` type and the `ActionSet` element:
 
 **Actions**
 
