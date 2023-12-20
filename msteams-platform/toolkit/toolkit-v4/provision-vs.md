@@ -163,7 +163,7 @@ The `aadApp/create` action creates a new Microsoft Entra application to authenti
 ```yml
 - uses: aadApp/create
     with:
-      # Required. The Microsoft Entra app's display name. When you run aadApp/update, the Microsoft Entra app name will be updated based on the definition in manifest. If you don't want to change the name, make sure the name in Microsoft Entra manifest is the same with the name defined here.
+      # Required. The Microsoft Entra app's display name. When you run aadApp/update, the Microsoft Entra app name will be updated based on the definition in manifest. If you don't want to change the name, make sure the name in Microsoft Entra app manifest is the same with the name defined here.
       name: <your-application-name>
       # Required. If the value is false, the action will not generate client secret for you
       generateClientSecret: true
@@ -194,7 +194,7 @@ The `aadApp/create` action creates a new Microsoft Entra application to authenti
     with:
       # Required. Relative path to the yaml file. Path to the Microsoft Entra app manifest. Environment variables in manifest will be replaced before apply to Microsoft Entra app.
       manifestPath: <path-to-manifest-file>
-      # Required. Relative path to the yaml folder. This action will output the final Microsoft Entra manifest used to update Microsoft Entra app to this path.
+      # Required. Relative path to the yaml folder. This action will output the final Microsoft Entra app manifest used to update Microsoft Entra app to this path.
       outputFilePath : <path-to-output-file>
 ```
 
@@ -344,9 +344,9 @@ To use a Microsoft Entra app created for your Teams app and to add environment v
        ```env
         AAD_APP_CLIENT_ID=<value of Microsoft Entra application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
         AAD_APP_OBJECT_ID=<value of Microsoft Entra application's object id> # example: 00000000-0000-0000-0000-000000000000
-        AAD_APP_TENANT_ID=<value of Microsoft Entra application's (tenant) id>> # example: 00000000-0000-0000-0000-000000000000
-        AAD_APP_OAUTH_AUTHORITY=<value of Microsoft Entra application's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
-        AAD_APP_OAUTH_AUTHORITY_HOST=<host of Microsoft Entra application's authority> # example: https://login.microsoftonline.com
+        AAD_APP_TENANT_ID=<value of Microsoft Entra's (tenant) id>> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_OAUTH_AUTHORITY=<value of Microsoft Entra's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
+        AAD_APP_OAUTH_AUTHORITY_HOST=<host of Microsoft Entra's authority> # example: https://login.microsoftonline.com
         AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
        ```  
 

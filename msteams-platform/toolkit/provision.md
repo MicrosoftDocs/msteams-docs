@@ -167,7 +167,7 @@ Microsoft Entra ID in your Microsoft 365 tenant.
 ```yml
 - uses: aadApp/create
     with:
-      # Required. The Microsoft Entra app's display name. When you run aadApp/update, the Microsoft Entra app name will be updated based on the definition in manifest. If you don't want to change the name, make sure the name in Microsoft Entra manifest is the same with the name defined here.
+      # Required. The Microsoft Entra app's display name. When you run aadApp/update, the Microsoft Entra app name will be updated based on the definition in manifest. If you don't want to change the name, make sure the name in Microsoft Entra app manifest is the same with the name defined here.
       name: <your-application-name>
       # Required. If the value is false, the action will not generate client secret for you
       generateClientSecret: true
@@ -381,9 +381,9 @@ You can follow the steps to add environment variables to the .env files to use a
        ```env
         AAD_APP_CLIENT_ID=<value of Microsoft Entra application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
         AAD_APP_OBJECT_ID=<value of Microsoft Entra application's object id> # example: 00000000-0000-0000-0000-000000000000
-        AAD_APP_TENANT_ID=<value of Microsoft Entra application's tenant id>> # example: 00000000-0000-0000-0000-000000000000
-        AAD_APP_OAUTH_AUTHORITY=<value of Microsoft Entra application's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
-        AAD_APP_OAUTH_AUTHORITY_HOST=<host of Microsoft Entra application's authority> # example: https://login.microsoftonline.com
+        AAD_APP_TENANT_ID=<value of Microsoft Entra's tenant id>> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_OAUTH_AUTHORITY=<value of Microsoft Entra's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
+        AAD_APP_OAUTH_AUTHORITY_HOST=<host of Microsoft Entra's authority> # example: https://login.microsoftonline.com
         AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
        ```  
 
