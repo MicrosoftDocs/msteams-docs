@@ -51,39 +51,39 @@ items:
     
    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
 
-   # [Visual Studio Code](#tab/vscode)
+    # [Visual Studio Code](#tab/vscode)
 
-   1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
 
-   1. In the search box, enter **Teams Toolkit**.
+    1. In the search box, enter **Teams Toolkit**.
 
-   1. Select **Install** next to the Teams Toolkit.
+    1. Select **Install** next to the Teams Toolkit.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
 
-    The Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
+        The Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
 
-    You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
+        You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-   # [Command line](#tab/cli)
+    # [Command line](#tab/cli)
 
-   To install the TeamsFx CLI, use the `npm` package manager:
-   ``` bash
-   npm install -g @microsoft/teamsfx-cli
-   ```
-   Depending on your configuration, you may need to use `sudo` to install the CLI:
-   ``` bash
-   sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
-   ```
-   This condition is more common on Linux and macOS systems.
-   Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
-   You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
+    To install the TeamsFx CLI, use the `npm` package manager:
+    ``` bash
+    npm install -g @microsoft/teamsfx-cli
+    ```
+    Depending on your configuration, you may need to use `sudo` to install the CLI:
+    ``` bash
+    sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
+    ```
+    This condition is more common on Linux and macOS systems.
+    Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
+    You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
 
-   > [!CAUTION]
-   >
-   > Before you can run TeamsFx in PowerShell terminals, you must enable the remote signed execution policy for PowerShell.
+    > [!CAUTION]
+    >
+    > Before you can run TeamsFx in PowerShell terminals, you must enable the remote signed execution policy for PowerShell.
 
-   ---
+    ---
    
 - title: Create project workspace for your AI chat bot app
   durationInMinutes: 1
