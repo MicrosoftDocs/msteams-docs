@@ -33,7 +33,7 @@ items:
    | Install | For using... |
    | --- | --- |
    | [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or CSharp build environments. Use the latest version. |
-   | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+   | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use pre-release version of Teams Toolkit.|
    | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
    | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
@@ -43,45 +43,19 @@ items:
 
    After you've installed the required tools, set up the development environment.
 
-   ### Install the Teams Toolkit
+   ### Install the pre-release version of Teams Toolkit
 
-   The Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
-    
-   You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
+       The Teams Toolkit for Visual Studio Code extension is available in a pre-release version. To install a Teams Toolkit pre-release version, follow these steps:
 
-    # [Visual Studio Code](#tab/vscode)
+        1. Open **Visual Studio Code**.
 
-    1. Open Visual Studio Code and select the **Extensions** view (**Ctrl+Shift+X** / **⌘⇧-X** or **View > Extensions**).
+        1. Select **Extensions** :::image type="icon" source="toolkit-v4/images/extension icon-v4.png" border="false"::: from the Visual Studio Code activity bar.
 
-    1. In the search box, enter **Teams Toolkit**.
+        1. Enter **Teams Toolkit** in the search box.
 
-    1. Select **Install** next to the Teams Toolkit.
+        1. On the Teams Toolkit page, select the dropdown arrow next to **Install**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/install-toolkit-vscodeversion.png" alt-text="Illustration shows the Teams Toolkit extension installation." lightbox="~/assets\images\teams-toolkit-v2\prerequisites\install-toolkit-vscodeversion-1.png":::
-
-        The Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon appears in the Visual Studio Code **Activity Bar** after it's installed.
-
-        You can also find the Teams Toolkit on the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
-
-    # [Command line](#tab/cli)
-
-    To install the TeamsFx CLI, use the `npm` package manager:
-    ``` bash
-    npm install -g @microsoft/teamsfx-cli
-    ```
-    Depending on your configuration, you may need to use `sudo` to install the CLI:
-    ``` bash
-    sudo npm install -g --unsafe-perm @microsoft/teamsfx-cli
-    ```
-    This condition is more common on Linux and macOS systems.
-    Ensure you add the npm global cache to your PATH. This step is normally done as part of the Node.js installer.  
-    You can use the CLI with the `teamsfx` command. Verify that the command is working by running `teamsfx -h`.
-
-    > [!CAUTION]
-    >
-    > Before you can run TeamsFx in PowerShell terminals, you must enable the remote signed execution policy for PowerShell.
-
-    ---
+        1. Select **Install Pre-Release Version**.
    
 - title: Create project workspace for your AI chat bot app
   durationInMinutes: 1
@@ -161,11 +135,9 @@ items:
 
     For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
-    1. Select **Create a new Teams app**.
+    1. Select **AI Chat Bot** and select **Enter**.
 
-    1. Select **Bot** and deselect **Tab**.
-
-    1. Select **JavaScript** as the programming language.
+    1. Select **JavaScript** as the programming language and select **Enter**.
 
     1. Select **Enter** to select the default workspace folder.
 
@@ -203,43 +175,43 @@ items:
 
     # [Visual Studio Code](#tab/vsc)
 
-        1. Open Visual Studio Code.
+    1. Open Visual Studio Code.
 
-        1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
 
-        1. Select **Sign in to M365**. Your default web browser opens to let you sign in to the account.
+    1. Select **Sign in to M365**. Your default web browser opens to let you sign in to the account.
 
-        1. Sign in to your Microsoft 365 account using your credentials.
+    1. Sign in to your Microsoft 365 account using your credentials.
 
-        1. Close the browser when prompted and return to Visual Studio Code.
+    1. Close the browser when prompted and return to Visual Studio Code.
 
-        1. Return to Teams Toolkit within Visual Studio Code. Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+    1. Return to Teams Toolkit within Visual Studio Code. Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
-        Now you're ready to build the app and run it locally!
+    Now you're ready to build the app and run it locally!
 
     # [Command line](#tab/cli)
 
-        1. Sign in to Microsoft 365 with the TeamsFx CLI:
+    1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
-            ``` bash
-            teamsfx account login m365
-            ```
-            Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+        ``` bash
+        teamsfx account login m365
+        ```
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-        2. Sign in to Azure with the TeamsFx CLI:
+    2. Sign in to Azure with the TeamsFx CLI:
 
-            ``` bash
-            teamsfx account login azure
-            ```
+        ``` bash
+        teamsfx account login azure
+        ```
 
-            Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-            The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-            Congratulations, you have signed in your Azure account!
-            Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+        Congratulations, you have signed in your Azure account!
+        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
     ---
 
     ## Create an app registration in Microsoft Entra ID
@@ -372,7 +344,7 @@ items:
 
     To mock an **Add user** activity, follow these steps:
 
-    1. In Test Tool, go to **Mock an Activity** and select **Add user**.
+    1. In Test Tool, go to **Mock an Activity** > **Add user**.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
