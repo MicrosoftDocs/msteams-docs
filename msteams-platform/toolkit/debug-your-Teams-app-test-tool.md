@@ -478,6 +478,10 @@ No. We always recommend users to test their bot application in the Teams client 
 |----------------|-----------------|--------------|
 | Test Tool Sample App | A sample bot app to explore Test Tool. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app) |
 
+## Step-by-step guide
+
+Follow the [step-by-step guide](../../sbs-teams-app-test-tool.yml) to create an AI chat bot using Teams App Test Tool.
+
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
