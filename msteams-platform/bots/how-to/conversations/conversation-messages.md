@@ -139,9 +139,9 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ## Receive a read receipt
 
-The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in 1:1 and group chats. When the recipients reads the message the Seen :::image type="icon" source="../../../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You can also configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
+The **Read receipts** setting in Teams allows the sender of a chat message to be notified when their message is read by the recipient in 1:1 and group chats. When the recipient reads the message the Seen :::image type="icon" source="../../../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You can also configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
 
-* You can configure your bot to send a follow up message if your app user hasn't read the message in the personal chat.
+* You can configure your bot to send a follow-up message if your app user hasn't read the message in the personal chat.
 
 * You can create a feedback loop using read receipts to tune your bot’s experience.
 
@@ -153,10 +153,10 @@ The **Read receipts** setting in Teams allow the sender of a chat message to be 
 
 To receive read receipts events for your bot, ensure the following:
 
-* Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows: 
+* Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows:
 
-    # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
-    
+# [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
+
     ```json
     
     "webApplicationInfo": {
@@ -177,9 +177,9 @@ To receive read receipts events for your bot, ensure the following:
     }
     
     ```
-    
-    # [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
-    
+
+# [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
+
     ```json
     
      “webApplicationInfo”: {
@@ -192,9 +192,9 @@ To receive read receipts events for your bot, ensure the following:
      },
     
     ```
-    
+
     ---
-    
+
     You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
 
 * Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.
@@ -214,7 +214,7 @@ To receive read receipts events for your bot, ensure the following:
     ```
 
     Following is an example of read receipts event request that a bot receives:
-    
+
     ```json
     {
         "name": "application/vnd.microsoft.readReceipt",
@@ -250,8 +250,7 @@ To receive read receipts events for your bot, ensure the following:
 
 * Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the bot to receive the read receipt events. The tenant admin or the user can enable or disable the read receipt setting.
 
-After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message. 
-
+After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
 
 ## Send a message
 
@@ -591,7 +590,7 @@ When you soft delete a message, the bot gets a notification of the soft delete m
 
 To get a soft delete message activity notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
 
-Following is an example of a soft delete message activity notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
+The following is an example of a soft delete message activity notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
 
 # [C#](#tab/dotnet5)
 
@@ -779,7 +778,7 @@ A conversational bot can include Adaptive Cards that simplify business workflows
 
 ### Adaptive Cards
 
-Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, etc. For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
 The following code shows an example of sending a simple Adaptive Card:
 
@@ -806,6 +805,9 @@ The following code shows an example of sending a simple Adaptive Card:
     ]
 }
 ```
+
+> [!NOTE]
+> Bots can unfurl permalinks of code snippets from external sources and generate Adaptive Cards through the `CodeBlock` property. For more information, see [CodeBlock in Adaptive Cards](../../../task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards).
 
 ## Add notifications to your message
 
@@ -919,7 +921,7 @@ Ensure to handle these errors appropriately in your Teams app. The following tab
 | 403 | **Code**: `BotDisabledByAdmin` <br/> **Message**: The tenant admin disabled this bot | Tenant admin has blocked interactions between user and the bot app. Tenant admin needs to allow the app for the user inside of app policies. For more information, see [app policies](/microsoftteams/app-policies). | No | Stop posting to conversation until interaction with bot is explicitly initiated by a user in the conversation indicating that the bot is no longer blocked. |
 | 403 | **Code**: `BotNotInConversationRoster` <br/> **Message**: The bot isn't part of the conversation roster. | The bot isn't part of the conversation. App needs to be reinstalled in conversation. | No | Before attempting to send another conversation request, wait for an [`installationUpdate`](~/bots/how-to/conversations/subscribe-to-conversation-events.md#install-update-event) event, which indicates that the bot has been added again.|
 | 403 | **Code**: `ConversationBlockedByUser` <br/> **Message**: User blocked the conversation with the bot. | User has blocked the bot in personal chat or a channel through moderation settings. | No | Delete the conversation from cache. Stop attempting to post to conversations until interaction with bot is explicitly initiated by a user in the conversation, indicating that the bot is no longer blocked. |
-| 403 |**Code**: `ForbiddenOperationException` <br/> **Message**: Bot is not installed in user's personal scope | Proactive message is sent by a bot, which isn't installed in a personal scope. | No | Before attempting to send another conversation request, install the app in personal scope. |
+| 403 |**Code**: `ForbiddenOperationException` <br/> **Message**: Bot isn't installed in user's personal scope | Proactive message is sent by a bot, which isn't installed in a personal scope. | No | Before attempting to send another conversation request, install the app in personal scope. |
 | 403 |**Code**: `InvalidBotApiHost` <br/> **Message**: Invalid bot api host. For GCC tenants, please call `https://smba.infra.gcc.teams.microsoft.com`.|The bot called the public API endpoint for a conversation that belongs to a GCC tenant.| No | Update the service URL for the conversation to `https://smba.infra.gcc.teams.microsoft.com` and retry the request.|
 | 403 | **Code**: `NotEnoughPermissions` <br/> **Message**: *scenario specific | Bot doesn't have required permissions to perform the requested action. | No | Determine the required action from the error message. |
 | 404 | **Code**: `ActivityNotFoundInConversation` <br/> **Message**: Conversation not found. | The message ID provided couldn't be found in the conversation. Message doesn't exist or it has been deleted. | No | Check if message ID sent is an expected value. Remove the ID if it was cached. |

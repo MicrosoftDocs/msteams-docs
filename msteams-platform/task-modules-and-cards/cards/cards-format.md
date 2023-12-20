@@ -554,21 +554,43 @@ In the Stage View, users can zoom in and zoom out of the image. You can select t
 
 ### CodeBlock in Adaptive Cards
 
-Bots can unfurl permalinks of code snippets from external sources into Adaptive Cards with syntax highlighting and contextual information. This is enabled through the `CodeBlock` element that supports the following properties:
+The `CodeBlock` element enables bots to unfurl permalinks of code snippets from external sources and generate Adaptive Cards with syntax highlighting and contextual information. This type of Adaptive Cards are easy to read as they match the indentation and syntax highlighting of the language of the code snippet. The Adaptive Card also provides actions for the user to view the code in its source or open it in IDEs such as Visual Studio Code, Visual Studio, etc. However, Adaptive Cards with `CodeBlock` are only sent in chats and channels through bots.
 
-| Property | Type | Description |
-|----|----|----|
-| `codeSnippet` | String | The code snippet to be displayed in the Adaptive Card |
-| `language` | Enum | The language of the code snippet to be displayed in the Adaptive Card |
-| `startLineNumber` | Number | (Optional) The line number where the code snippet begins in the source. If left blank, defaults to 1. |
+:::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
 
-Adaptive Cards with `CodeBlock` are rich and easy to read as they match the indentation and syntax highlighting of the language the code is in. The user can view the code in its source or open it in IDEs such as, Visual Studio Code, Visual Studio, etc.
+`CodeBlock` supports the following languages:
 
-:::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" lightbox="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
+| Language | Supported |
+|---|---|
+| Bash | ✔️ |
+| C | ✔️ |
+| C++ | ✔️ |
+| C# | ✔️ |
+| CSS | ✔️ |
+| DOS | ✔️ |
+| Go | ✔️ |
+| GraphQL | ✔️ |
+| HTML | ✔️ |
+| Java | ✔️ |
+| JavaScript | ✔️ |
+| JSON | ✔️ |
+| Perl | ✔️ |
+| PHP | ✔️ |
+| PowerShell | ✔️ |
+| Python | ✔️ |
+| SQL | ✔️ |
+| TypeScript | ✔️ |
+| Visual Basic | ✔️ |
+| Verilog | ✔️ |
+| VHDL | ✔️ |
+| XML | ✔️ |
+| Apache | ❌ |
+| Fortran | ❌ |
+| Dart | ❌ |
 
-`CodeBlock` supports Bash, C, C++, C#, CSS, DOS, Go, GraphQL, HTML, Java, JavaScript, JSON, Objective-C, Perl, PHP, PowerShell, Python, SQL, TypeScript, Visual Basic, Verilog, VHDL, XML, and plain text.
-
-However, `CodeBlock` doesn't support languages like Apache, Fortran, Dart, etc. The code snippet generated in the Adaptive Card is read-only and not editable. The Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user has to select **Expand (xx lines)** to see the rest of the code snippet. This type of Adaptive Card is supported in meetings only when a bot is added to it.
+> [!NOTE]
+>
+> `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property.
 
 The following code shows an example of an Adaptive Card with a code snippet.
 
@@ -612,6 +634,20 @@ The following code shows an example of an Adaptive Card with a code snippet.
 > [!NOTE]
 >
 > To avoid rendering errors in the Adaptive Card, use escape sequences such as `\n` in the `codeSnippet` property.
+
+The `CodeBlock` element supports the following properties:
+
+| Property | Type | Required | Description |
+|---|---|---|---|
+| `codeSnippet` | String | Yes | The code snippet to be displayed in the Adaptive Card |
+| `language` | Enum | Yes | The language of the code snippet to be displayed in the Adaptive Card |
+| `startLineNumber` | Number | No | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
+
+> [!NOTE]
+>
+> * The code snippet generated in the Adaptive Card is read-only and not editable.
+> * The Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user has to select **Expand** to see the rest of the code snippet.
+> * This type of Adaptive Card is supported in meetings only when a bot is added to it.
 
 # [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 

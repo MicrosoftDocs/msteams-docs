@@ -18,7 +18,7 @@ The document guides you on how to add link unfurling to your app manifest using 
 >
 > * The link unfurling result is cached for 30 minutes.
 > * Link unfurling supports Adaptive Cards version 1.3 and earlier.
-> * Messaging extension commands aren't required for Link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions).
+> * Messaging extension commands aren't required for link unfurling. However, there must be at least one command in manifest as it is a mandatory property in messaging extensions. For more information, see [compose extensions](/microsoftteams/platform/resources/schema/manifest-schema#composeextensions).
 > * For mobile client, link unfurling is supported only for links that don't require authentication.
 
 The following image is an example of link unfurling in Teams desktop and mobile clients:
@@ -27,7 +27,7 @@ The following image is an example of link unfurling in Teams desktop and mobile 
 
 When a link is pasted into the Teams compose message area, the link unfurls into a card with the work item details.
 
-:::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link unfurling example for Azure Dev Ops links pasted in teams compose message area.":::
+:::image type="content" source="../../assets/images/messaging-extension/messagingextensions_linkunfurl.png" alt-text="Screenshot of link unfurling example for Azure DevOps links pasted in teams compose message area.":::
 
 # [Mobile](#tab/mobile)
 
@@ -410,6 +410,9 @@ The following are the limitations:
 
 ---
 
+> [!NOTE]
+> Bots can unfurl permalinks of code snippets from external sources and generate Adaptive Cards through the `CodeBlock` property. For more information, see [CodeBlock in Adaptive Cards](../../../task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards).
+
 ## How to test zero install link unfurling
 
 When you test the zero install link unfurling, don’t install the app as a personal app. Instead, upload the app to Teams.
@@ -419,7 +422,7 @@ When you test the zero install link unfurling, don’t install the app as a pers
 
 To test zero install link unfurling, follow these steps:
 
-1. Login to [Teams admin center](https://admin.teams.microsoft.com/).
+1. Sign in to [Teams admin center](https://admin.teams.microsoft.com/).
 
 1. From the left pane, select **Teams apps** > **Manage apps**.
 
