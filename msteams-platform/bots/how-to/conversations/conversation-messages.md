@@ -359,7 +359,7 @@ HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activi
         "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
         "name": "Megan Bowen"
     },
- "text": "My bot's reply"
+    "text": "My bot's reply"
 }
 ```
 
