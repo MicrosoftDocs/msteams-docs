@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2023 December**
 
+* ***December 20, 2023***: [Incoming Webhooks are available in GCC-High environment.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 * ***December 20, 2023***: [Introduced RSC permissions for users to access different resources.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access)
 * ***December 18, 2023***: [App caching in chat, channel, and meeting tab scopes is available for iOS](tabs/how-to/app-caching.md).
 * ***December 15, 2023***: [Bots can mention tags in text messages and Adaptive Cards posted in Teams channels](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
