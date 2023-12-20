@@ -94,7 +94,7 @@ builder.Services.AddSingleton<BotAdapter>(sp => sp.GetService<CloudAdapter>());
 
 Import all the classes from `@microsoft/teams-ai` to build your bot and use the Teams AI library capabilities.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L64)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L70)
 
 ```javascript
 // import Teams AI library
@@ -123,7 +123,7 @@ Add AI capabilities to your existing app or a new Bot Framework app.
 
 # [JavaScript](#tab/javascript1)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L70)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L82)
 
 ```javascript
 /// Create AI components
@@ -224,7 +224,7 @@ The application object automatically manages the conversation and user state of 
 
 # [JavaScript](#tab/javascript3)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L82)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L108)
 
 ```javascript
 // Define storage and application
@@ -264,6 +264,8 @@ The `MemoryStorage()` function stores all the state for your bot. The `Applicati
 ## Register data sources
 
 A vector data source makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources to augment the prompt within the prompt's `config.json` file.  Data sources allow AI to inject relevant information from external sources into the prompt, such as vector databases or cognitive search.  You can register named data sources with the planner and then specify the name[s] of the data sources they wish to augment the prompt within the prompt's `config.json` file.
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L117)
 
 ```typescript
 // Register your data source with planner
@@ -517,7 +519,7 @@ Actions handle events triggered by AI components.
 
 `FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag. If you want to stop the action, you must add `AI.StopCommandName`.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L141)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L127)
 
 ```javascript
 // Register other AI actions
@@ -547,7 +549,7 @@ In the following example of a light bot, we have the `LightsOn`, `LightsOff`, an
 
 # [JavaScript](#tab/javascript2)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L107)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L133)
 
 ```javascript
 // Register action handlers
