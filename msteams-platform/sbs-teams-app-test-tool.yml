@@ -34,12 +34,10 @@ items:
    | --- | --- |
    | [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or CSharp build environments. Use the latest version. |
    | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
-   |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
    | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
    | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
    | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
    | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-   | [Microsoft 365 developer account](../../../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
 
    ## Prepare development environment
 
@@ -164,9 +162,13 @@ items:
     For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
     1. Select **Create a new Teams app**.
+
     1. Select **Bot** and deselect **Tab**.
+
     1. Select **JavaScript** as the programming language.
+
     1. Select **Enter** to select the default workspace folder.
+
     1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
 
     After you've answered all questions, your project is created.
@@ -244,7 +246,7 @@ items:
 
     Register a new app in Microsoft Entra ID and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
 
-    ### To register a new AI in Microsoft Entra ID
+    ### Register your new chat bot AI in Microsoft Entra ID
 
     1. Go to the [Azure portal](https://ms.portal.azure.com/).
 
@@ -274,7 +276,7 @@ items:
 
         :::image type="content" source="~/assets/images/test-tool/deployment.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
 
-     ## Azure Open AI keys and endpoint
+     ### Get Azure Open AI keys and endpoint
 
     1. Select **Go to resources**.
     1. Select **Keys and Endpoint** from the left pane and copy the **Key** and **Endpoint**.
@@ -300,7 +302,7 @@ items:
 
         :::image type="content" source="~/assets/images/test-tool/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
 
-    ## Update Azure Open AI key and endpoints for your AI chat bot
+    ## Update Azure Open AI key and endpoints
 
     1. Open Visual Studio Code.
 
@@ -309,6 +311,7 @@ items:
     1. Enter your **SECRET_AZURE_OPENAI_API_KEY** and **SECRET_AZURE_OPENAI_ENDPOINT**.
 
         ```text
+        ...
         SECRET_AZURE_OPENAI_API_KEY=<azure-openai-api-key>
         SECRET_AZURE_OPENAI_ENDPOINT=<azure-openai-endpoint>
         ```
