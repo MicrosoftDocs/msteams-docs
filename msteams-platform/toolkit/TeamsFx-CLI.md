@@ -59,7 +59,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 | `teamsfx preview` | Preview the current application. |
 | `teamsfx m365`  | M365 App Management. |
 | `teamsfx permission`| Check, grant and list permissions for who can access and manage Microsoft Teams application and Microsoft Entra application. |
-| `teamsfx update` | Upgrade the project to work with the latest version of Teams Toolkit. |
+| `teamsfx update` | Update the specific application manifest file. |
 | `teamsfx upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
 
 ## Interactive mode
