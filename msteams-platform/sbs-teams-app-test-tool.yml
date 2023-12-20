@@ -387,6 +387,13 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
 
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+    Did you come up with output like this?
+
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
 - title: Congratulations!
   durationInMinutes: 1
   content: |
