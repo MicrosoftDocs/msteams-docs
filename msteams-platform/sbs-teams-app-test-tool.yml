@@ -32,9 +32,14 @@ items:
 
    | Install | For using... |
    | --- | --- |
-   | [Teams Toolkit](#install-the-teams-toolkit) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
-   | [Node.js](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-   | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
+   | [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or CSharp build environments. Use the latest version. |
+   | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+   |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
+   | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+   | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
+   | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [Enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
 
    ## Prepare development environment
    After you've installed the required tools, set up the development environment.
@@ -156,7 +161,7 @@ items:
     1. Select **JavaScript** as the programming language.
     1. Select **Enter** to select the default workspace folder.
     1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
-    
+
     After you've answered all questions, your project is created.
 
     ---
@@ -285,12 +290,48 @@ items:
 
         :::image type="content" source="~/assets/images/test-tool/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
 
-    1. Open VSC and 
+    ## Update Azure Open AI key and endpoints for your AI chat bot
+
+    1. Open Visual Studio Code.
+
+    1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
+
+    1. Enter your **SECRET_AZURE_OPENAI_API_KEY** and **SECRET_AZURE_OPENAI_ENDPOINT**.
+
+        ```text
+        SECRET_AZURE_OPENAI_API_KEY=<azure-openai-api-key>
+        SECRET_AZURE_OPENAI_ENDPOINT=<azure-openai-endpoint>
+        ```
+
+    1. Go to **src** > **app.js** file.
+
+    1. Comment the OpenAI code lines and uncomment the Azure OpenAI code lines.
+
+        ```JavaScript
+        ...
+        // Use OpenAI
+        // apiKey: config.openAIKey,
+        // defaultModel: "gpt-3.5-turbo",
+
+        azureApiKey: config.azureOpenAIKey,
+        azureDefaultDeployment: "gpt-35-turbo",
+        azureEndpoint: config.azureOpenAIEndpoint,
+        ...
+        ```
 
 
+    1. Enter your Azure Open AI deployment name in `azureDefaultDeployment`.
 
 
+    ## Debug and run your AI chat bot app
 
+    1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool (Preview)** in dropdown list.
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
+ 
+    1. Test Tool opens your AI chat bot in a webpage.
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
 - title: Activity triggers
   durationInMinutes: 1
