@@ -141,7 +141,7 @@ Each search command must have a corresponding response rendering template, and e
 
 **Expanded Adaptive Card**
 
-:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adaptive-card.png" alt-text="Example of how the Adaptive Card looks like expanded once a user selects a preview card. The Adaptive Card shows the 'Title', the full 'Description', 'AssignedTo', 'RepairId' and 'Date' values.":::
+:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adaptive-card.png" alt-text="Example of how the Adaptive Card looks like expanded once a user selects a preview card. The Adaptive Card shows the Title, the full Description, AssignedTo, RepairId, and Date values.":::
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
