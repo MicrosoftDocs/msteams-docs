@@ -39,7 +39,7 @@ items:
    | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
    | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
    | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-   | [Microsoft 365 developer account](../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
+   | [Microsoft 365 developer account](../../../concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
 
    ## Prepare development environment
 
@@ -201,43 +201,43 @@ items:
 
     # [Visual Studio Code](#tab/vsc)
 
-    1. Open Visual Studio Code.
+        1. Open Visual Studio Code.
 
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+        1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
 
-    1. Select **Sign in to M365**. Your default web browser opens to let you sign in to the account.
+        1. Select **Sign in to M365**. Your default web browser opens to let you sign in to the account.
 
-    1. Sign in to your Microsoft 365 account using your credentials.
+        1. Sign in to your Microsoft 365 account using your credentials.
 
-    1. Close the browser when prompted and return to Visual Studio Code.
+        1. Close the browser when prompted and return to Visual Studio Code.
 
-    1. Return to Teams Toolkit within Visual Studio Code. Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+        1. Return to Teams Toolkit within Visual Studio Code. Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
-    Now you're ready to build the app and run it locally!
+        Now you're ready to build the app and run it locally!
 
     # [Command line](#tab/cli)
 
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
+        1. Sign in to Microsoft 365 with the TeamsFx CLI:
 
-        ``` bash
-        teamsfx account login m365
-        ```
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+            ``` bash
+            teamsfx account login m365
+            ```
+            Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-    2. Sign in to Azure with the TeamsFx CLI:
+        2. Sign in to Azure with the TeamsFx CLI:
 
-        ``` bash
-        teamsfx account login azure
-        ```
+            ``` bash
+            teamsfx account login azure
+            ```
 
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+            Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+            The account logins are shared between Visual Studio Code and the TeamsFx CLI.
 
-        Congratulations, you have signed in your Azure account!
-        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
+            Congratulations, you have signed in your Azure account!
+            Now that the development environment is configured, you can create, build, and deploy your first Teams app.
     ---
 
     ## Create an app registration in Microsoft Entra ID
