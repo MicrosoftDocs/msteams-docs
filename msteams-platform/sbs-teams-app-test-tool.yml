@@ -140,17 +140,23 @@ items:
             :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
     # [Command line](#tab/cli)
+
     Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
+
     ``` bash
     teamsfx new
     ```
+
     You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+
     For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+
     1. Select **Create a new Teams app**.
     1. Select **Bot** and deselect **Tab**.
     1. Select **JavaScript** as the programming language.
     1. Select **Enter** to select the default workspace folder.
     1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
+    
     After you've answered all questions, your project is created.
 
     ---
@@ -181,29 +187,43 @@ items:
     After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
     ## Sign in to your Microsoft 365 account
     Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
-    # [Visual Studio Code](#tab/viscode)
+    # [Visual Studio Code](#tab/vscode)
     1. Open Visual Studio Code.
+
     1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
-    1. Select **Sign in to M365**.
+
+    1. Select **Sign in to M365**.<br>
         Your default web browser opens to let you sign in to the account.
+
     1. Sign in to your Microsoft 365 account using your credentials.
+
     1. Close the browser when prompted and return to Visual Studio Code.
-    1. Return to Teams Toolkit within Visual Studio Code.
+
+    1. Return to Teams Toolkit within Visual Studio Code. <br>
         Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
         Now you're ready to build the app and run it locally!
+
     # [Command line](#tab/cline)
     1. Sign in to Microsoft 365 with the TeamsFx CLI:
+
         ``` bash
         teamsfx account login m365
         ```
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
     2. Sign in to Azure with the TeamsFx CLI:
+
         ``` bash
         teamsfx account login azure
         ```
+
         Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
         The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+
+        Congratulations, you have signed in your Azure account!
         Now that the development environment is configured, you can create, build, and deploy your first Teams app.
     ---
 
