@@ -81,7 +81,7 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 </details>
 
-You can create an API-based message extension using Visual Studio Code, Teams Toolkit CLI, and Visual Studio.
+You can create an API-based message extension using Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
 
 <!--# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
@@ -325,17 +325,17 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
       |`appPackage/apiSpecificationFiles/repair.yml` |  A file that describes the structure and behavior of the repair API.|
       |`appPackage/responseTemplates/repair.json` |  A generated Adaptive Card that used to render API response.|
 
-   1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel**.
+   1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
 
       :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
 
-   1. Select the Account to use to create the tunnel. The supported account types are Azure, Microsoft Account (MSA), and GitHub.
+   1. Select the account to create the tunnel. The supported account types are Azure, Microsoft Account (MSA), and GitHub.
       1. **Name**: Enter a name for the tunnel.
       1. **Tunnel Type**: Select **Persistent** or **Temporary**.
       1. **Access**: Select **Public**.
       1. Select **OK**. Visual Studio displays a confirmation message that a tunnel is created.
 
-       The tunnel you've created is listed under **Dev Tunnels > (name of the tunnel)**.
+       The tunnel you've created is listed under **Dev Tunnels**.
 
    1. Go to **Solution Explorer** and select your project.
    1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
