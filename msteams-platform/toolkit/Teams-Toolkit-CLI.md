@@ -1,5 +1,5 @@
 ---
-title: TeamsFx Command Line Interface
+title: Teams Toolkit Command Line Interface
 author: MuyangAmigo
 description: In this module, learn Teamsapp Command Line Interface, TeamsFx library, supported commands and its scenarios
 ms.author: zhany
