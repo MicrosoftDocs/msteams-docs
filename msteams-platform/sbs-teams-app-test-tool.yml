@@ -148,7 +148,7 @@ items:
 
     ## Take a tour of the bot app source code
 
-    After scaffolding is done, view the project directories and files in the Explorer area of Visual Studio Code.
+    After you finish scaffolding, explore the project directories and files in the Explorer section of the Visual Studio Code.
     
     :::image type="content" source="../msteams-platform/assets/images/test-tool/source-code.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
     
@@ -309,7 +309,7 @@ items:
 
     ## Debug and run your AI chat bot app
 
-    1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool (Preview)** in dropdown list.
+    1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool (Preview)** from the dropdown list.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
  
