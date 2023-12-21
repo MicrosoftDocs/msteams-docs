@@ -32,6 +32,13 @@ Following is a list of main Teams Toolkit CLI features:
 
 * **Teams Toolkit CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
+* Create new Teams application from templates and samples.
+* Preview your Teams application by uploading the custom app to Teams, Outlook and the Microsoft 365 app.
+* Provision cloud resources and deploy the application to Azure.
+* Validate, package and publish application.
+* Manage multiple environments, Microsoft entra-apps and Teams app registrations.
+* Collaborate with other developers.
+
 ## Get started
 
 Install `teamsapp` from `npm` and run `teamsapp -h` to check all available commands:
@@ -66,6 +73,17 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 | `teamsapp collaborator`| Collaborate with other developers in same project.|
 | `teamsapp uninstall` | Remove an acquired Microsoft 365 App. |
 
+## Global Options
+
+| Command | Description |
+|----------------|-------------|
+| `--version -v` | Display Microsoft Teams Toolkit CLI version.|
+| `--help -h` | Show Microsoft Teams Toolkit CLI help.|
+| `--interactive -i` | Run the command in interactive mode. The default value is true.|
+| `--debug` | Print debug information. The default value is false.|
+| `--verbose` | Print diagnostic information. The default value is false.|
+| `--telemetry` | Whether to enable telemetry. The default value is true.|
+
 ## Interactive mode
 
 `teamsapp` command runs in interactive mode by default. You can work in non-interactive mode by setting `--interactive` flag to `false`.
@@ -78,12 +96,12 @@ Prerequiste checker for building Microsoft Teams apps.
 
 By default, `teamsapp new` is in interactive mode and guides to create new Teams application. You can work in non-interactive mode by setting `--interactive` flag to `false`.
 
-| Command | Description |
+| Sub command | Description |
 |:----------------  |:-------------|
 | `teamsapp new sample` | Create an app from an existing sample. |
 | `teamsapp list samples` | List all the available samples. |
 
-### Parameters for `teamsapp new -h`
+### Parameters for `teamsapp new`
 
 | Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
@@ -165,7 +183,7 @@ teamsapp env add staging --env dev
 
 List available Microsoft Teams app templates and samples.
 
-### Parameters for `teamsapp list -h`
+### Parameters for `teamsapp list`
 
 | Command | Description |
 |:----------------  |:-------------|
@@ -182,7 +200,7 @@ Run the provision stage in `teamsapp.yml`.
 
 Running `teamsapp provision --env local` triggers the provision stage in `teamsapp.local.yml` instead.
 
-### Parameters for `teamsapp provision -h`
+### Parameters for `teamsapp provision`
 
 | Parameters | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -195,7 +213,7 @@ Run the deploy stage in `teamsapp.yml`.
 
 Running `teamsapp deploy --env local` triggers the deploy stage in `teamsapp.local.yml` instead.
 
-### Parameters for `teamsapp deploy -h`
+### Parameters for `teamsapp deploy`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -206,7 +224,7 @@ Running `teamsapp deploy --env local` triggers the deploy stage in `teamsapp.loc
 
 Build your Teams app into a package for publishing.
 
-### Parameters for `teamsapp package -h`
+### Parameters for `teamsapp package`
 
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -221,7 +239,7 @@ Build your Teams app into a package for publishing.
 
 Validate the Teams app using manifest schema or validation rules.
 
-### Parameters for `teamsapp validate -h`
+### Parameters for `teamsapp validate`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -237,7 +255,7 @@ Validate the Teams app using manifest schema or validation rules.
 
 Preview the current application.
 
-### Parameters for `teamsapp preview -h`
+### Parameters for `teamsapp preview`
 
 | Parameter | Required | Description |
 |:---------------- | :------------- | :------------- |
@@ -285,7 +303,7 @@ The following list provides the common scenarios for `teamsapp preview`:
 
 Run the publish stage in `teamsapp.yml`.
 
-### Parameters for `teamsapp publish -h`
+### Parameters for `teamsapp publish`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -306,7 +324,7 @@ Check, grant, and list user permission to access and manage Teams application an
 | `teamsapp collaborator grant` | Check user's permission. |
 | `teamsapp collaborator status` | Show permission status for the project. |
 
-### Parameters for `teamsapp collaborator grant -h`
+### Parameters for `teamsapp collaborator grant`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -316,7 +334,7 @@ Check, grant, and list user permission to access and manage Teams application an
 | `--teams-manifest-file -t` | No | Select the manifest template file path, defaults to `${folder}/appPackage/manifest.json`. |
 | `--entra-app-manifest-file -a` | No | Select the Entra app manifest file path, defaults to `${folder}/aad.manifest.json`. |
 
-### Parameters for `teamsapp collaborator status -h`
+### Parameters for `teamsapp collaborator status`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -358,7 +376,7 @@ Check, grant, and list user permission to access and manage Teams application an
 
 Update the Teams app manifest to Teams Developer Portal.
 
-### Parameters for `teamsapp update -h`
+### Parameters for `teamsapp update`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -374,7 +392,7 @@ Update the Teams app manifest to Teams Developer Portal.
 
 Upgrade the project to work with the latest version of Teams Toolkit.
 
-### Parameters for `teamsapp upgrade -h`
+### Parameters for `teamsapp upgrade`
 
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -384,7 +402,7 @@ Upgrade the project to work with the latest version of Teams Toolkit.
 
 Sideload a given application package across Microsoft 365.
 
-### Parameters for `teamsapp install -h`
+### Parameters for `teamsapp install`
 
 | Command | Description |
 |:----------------  |:-------------|
@@ -448,7 +466,7 @@ teamsapp launchinfo --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 Remove an acquired M365 App.
 
-### Parameters for `teamsapp uninstall -h`
+### Parameters for `teamsapp uninstall`
 
 | Command | Description |
 |:----------------  |:-------------|
