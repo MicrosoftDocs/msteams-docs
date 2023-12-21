@@ -140,7 +140,7 @@ You can use interactive mode to create a Teams app. The following list provides 
 
 The following table lists different features to your Teams application along with their description.
 
-| Command | Description |
+| Sub command | Description |
 |:----------------  |:-------------|
 | `teamsapp add SPFxWebPart` | Auto-hosted SPFx web part tightly integrated with Microsoft Teams. |
 
