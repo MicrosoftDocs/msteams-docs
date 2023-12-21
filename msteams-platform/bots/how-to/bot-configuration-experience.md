@@ -132,6 +132,259 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
           }
     ```
 
+## Code snippets
+
+The following code provides an example of a bot configuration experience:
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "config/fetch")
+    {
+        var response = new ConfigResponse<BotConfigAuth>
+        {
+            Config = new BotConfigAuth
+            {
+                SuggestedActions = new SuggestedActions
+                {
+                    Actions = new List<CardAction>
+                    {
+                        new CardAction
+                        {
+                            Type = "bot config type",
+                            Title = "bot config title",
+                            Image = "https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40",
+                             Value = "bot config value"
+                        }
+                    }
+                },
+                Type = "auth"
+            }
+
+        };
+        
+        return new InvokeResponse { Status = 200, Body = response };
+
+    }
+    else if (turnContext.Activity.Name == "config/submit")
+    {
+        AdaptiveCard card = new AdaptiveCard("1.2")
+        {
+            Body = new List<AdaptiveElement>()
+        };
+        
+        card.Body.Add(new AdaptiveContainer
+        {
+            Items = new List<AdaptiveElement>
+            {
+                new AdaptiveTextBlock
+                {
+                    Size = AdaptiveTextSize.Large,
+                    Text = "bot config test",
+                    Type = "TextBlock"
+                }
+            }
+        });
+
+        var response = new ConfigResponse<TaskModuleResponseBase>
+        {
+            Config = new TaskModuleContinueResponse
+            {
+                Value = new TaskModuleTaskInfo
+                {
+                    Height = 123,
+                    Width = 456,
+                    Title = "test title",
+                    Card = new Attachment
+                    {
+                        ContentType = AdaptiveCard.ContentType,
+                        Content = card
+                    }
+                },
+                Type = "continue"
+            }
+        };
+
+        return new InvokeResponse { Status = 200, Body = response };
+    }
+
+    return null;
+}
+```
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "config/submit")
+    {
+        var response = new ConfigResponse<TaskModuleResponseBase>
+        {
+            Config = new TaskModuleMessageResponse
+            {
+                Value = "this is a message"
+            }
+        };
+        return new InvokeResponse { Status = 200, Body = response };
+
+    }
+    else if (turnContext.Activity.Name == "config/fetch")
+    {
+        AdaptiveCard card = new AdaptiveCard("1.2")
+        {
+            Body = new List<AdaptiveElement>()
+        };
+        
+        card.Body.Add(
+            new AdaptiveContainer
+            {
+                Items = new List<AdaptiveElement>
+                {
+                    new AdaptiveTextBlock
+                    {
+                        Size = AdaptiveTextSize.Large,
+                        Text = "bot config test",
+                        Type = "TextBlock"
+                    }
+                }
+            });
+        
+        // Construct a task module response with the task module URL and any data to be passed to the task module
+
+        var response = new ConfigResponse<TaskModuleResponseBase>
+        {
+            Config = new TaskModuleContinueResponse
+            {
+                Value = new TaskModuleTaskInfo
+                {
+                    Height = 123,
+                    Width = 456,
+                    Title = "test title",
+                    Card = new Attachment
+                    {
+                        ContentType = AdaptiveCard.ContentType,
+                        Content = card
+                    }
+                },
+                Type = "continue"
+            }
+        };
+
+        return new InvokeResponse { Status = 200, Body = response };
+    }
+
+    return null;
+}
+```
+
+```javascript
+// extending both handlers
+
+    async handleTeamsConfigFetch(_context, configData) {
+        let response = {};
+        switch (configData.command) {
+            case 'card':
+                {
+                    response.config = {
+                        suggestedActions: {
+                            actions: [
+                                {
+                                    type: 'bot config auth',
+                                    title: 'bot config title',
+                                    image:
+                                        'https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40',
+                                    value: 'bot config auth value',
+                                },
+                            ],
+                        },
+                        type: 'auth',
+                    };
+                }
+                break;
+            case 'message':
+                {
+                    const cardJson = {
+                        type: 'AdaptiveCard',
+                        version: '1.4',
+
+                        body: [
+                            {
+                                type: 'TextBlock',
+                                text: 'Bot Config Fetch',
+                            },
+                        ],
+                    };
+                    const card = CardFactory.adaptiveCard(cardJson);
+
+                    response = {
+                        config: {
+                            value: {
+                                height: 200,
+                                width: 200,
+                                title: 'test card fetch',
+                                card,
+                            },
+                            type: 'continue',
+                        },
+                    };
+                }
+                break;
+            default:
+                console.log('no default');
+        }
+
+        return response;
+    }
+
+    async handleTeamsConfigSubmit(_context, configData) {
+        let response = {};
+        switch (configData.command) {
+            case 'card':
+                {
+                    const cardJson = {
+                        type: 'AdaptiveCard',
+                        version: '1.4',
+
+                        body: [
+                            {
+                                type: 'TextBlock',
+                                text: 'Bot Config Submit',
+                            },
+                        ],
+                    };
+                    const card = CardFactory.adaptiveCard(cardJson);
+
+                    response = {
+                        config: {
+                            value: {
+                                height: 200,
+                                width: 200,
+                                title: 'test card submit',
+                                card,
+                            },
+                            type: 'continue',
+                        },
+                    };
+                }
+                break;
+            case 'message':
+                {
+                    response = {
+                        config: {
+                            value: 'config submit text',
+                            type: 'message',
+                        },
+                    };
+                }
+                break;
+            default:
+                console.log('no default');
+                break;
+        }
+
+        return response;
+    }
+```
+
 ## Bot configuration experience in Teams
 
 After you've created a bot to enable the bot configuration settings from a team or group chat scope, the user can configure and reconfigure the bot in Teams.
