@@ -147,32 +147,13 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
 1. Go to the folder where you cloned the repository and select **04.ai.a.teamsChefBot**.
 1. Select **TeamsChefBot.sln**. The solution opens in Visual Studio.
 
-1. Select the following AI service you want to use:
-
-   # [Azure OpenAI](#tab/azure-open-ai2)
-
-   1. In Visual Studio, update your Azure OpenAI related settings in the `appsettings.Development.json` file.
-
-      ```json
-      "Azure": {
-      "OpenAIApiKey": "<your-azure-openai-api-key>",
-      "OpenAIEndpoint": "<your-azure-openai-endpoint>",
-      "ContentSafetyApiKey": "<your-azure-content-safety-api-key>",
-      "ContentSafetyEndpoint": "<your-azure-content-safety-endpoint>"
-      }
-      ```
-
-   # [Open AI](#tab/open-ai2)
-
-   1. In Visual Studio, update your OpenAI related settings in the `appsettings.Development.json` file.
+1. In Visual Studio, update your OpenAI related settings in the `appsettings.Development.json` file.
 
       ```json
       "OpenAI": {
       "ApiKey": "<your-openai-api-key>"
       },
       ```
-
-   ---
 
 1. In the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel..**.
 
