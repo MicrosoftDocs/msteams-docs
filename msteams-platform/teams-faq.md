@@ -371,7 +371,8 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 <details>
 <summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</summary>
 
-For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [TeamsFx Library](toolkit/TeamsFx-CLI.md).
+For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md).
+
 <br>
 &nbsp;
 </details>
@@ -964,7 +965,7 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 Shared references to deploy the code using toolkit:
 
 * [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md)
-* [TeamsFx Command Line Interface](toolkit/TeamsFx-CLI.md)
+* [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
 
