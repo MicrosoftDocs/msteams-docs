@@ -166,6 +166,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Teams App Test Tool
+          url: ~/sbs-teams-app-test-tool.yml
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
@@ -182,13 +184,11 @@ landingContent:
           url: ~/sbs-bots-with-sso.yml
         - text: Generate meeting token
           url: ~/sbs-meeting-token-generator.yml
-        - text: Generate meeting side panel
-          url: ~/sbs-meetings-sidepanel.yml
-
-
 
     - linkListType: tutorial
       links:
+        - text: Generate meeting side panel
+          url: ~/sbs-meetings-sidepanel.yml
         - text: Build an in-meeting document signing app
           url:  ~/sbs-inmeeting-document-signing.yml
         - text: Build command bot with JavaScript
@@ -207,12 +207,12 @@ landingContent:
           url: ~/sbs-meetingextension-action.yml
         - text: Build Outgoing Webhooks
           url: ~/sbs-outgoing-webhooks.yml
-        - text: Unfurl links in Teams using bot
-          url: ~/sbs-botbuilder-linkunfurling.yml
 
 
     - linkListType: tutorial
       links:
+        - text: Unfurl links in Teams using bot
+          url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
         - text: Send activity feed notification 
