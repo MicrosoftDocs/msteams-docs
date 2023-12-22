@@ -42,7 +42,7 @@ Use placeholders in your configuration or content URLs. Microsoft Teams replaces
 * [{user.loginHint}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-loginhint): A value suitable as a sign in hint for Microsoft Entra ID. This is usually the login name of the current user in their home tenant. (Known as `{loginHint}` prior to TeamsJS v.2.0.0).
 * [{user.userPrincipalName}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-userprincipalname): The User Principal Name of the current user in the current tenant. (Known as `{userPrincipalName}` prior to TeamsJS v.2.0.0).
 * [{user.id}](/javascript/api/@microsoft/teams-js/app.userinfo#@microsoft-teams-js-app-userinfo-id): The Microsoft Entra object ID of the current user in the current tenant. (Known as `{userObjectId}` prior to TeamsJS v.2.0.0).
-* [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, or `contrast`. (Known as `{theme}` prior to TeamsJS v.2.0.0).
+* [{app.theme}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-theme): The current user interface (UI) theme such as `default`, `dark`, `glass` or `contrast`. (Known as `{theme}` prior to TeamsJS v.2.0.0).
 * [{team.groupId}](/javascript/api/@microsoft/teams-js/app.teaminfo#@microsoft-teams-js-app-teaminfo-groupid): The ID of the Microsoft 365 group in which the tab resides. (Known as `{groupId}` prior to TeamsJS v.2.0.0)
 * [{user.tenant.id}](/javascript/api/@microsoft/teams-js/app.tenantinfo#@microsoft-teams-js-app-tenantinfo-id): The Microsoft Entra tenant ID of the current user. (Known as `{tid}` prior to TeamsJS v.2.0.0).
 * [{app.locale}](/javascript/api/@microsoft/teams-js/app.appinfo#@microsoft-teams-js-app-appinfo-locale): The current locale of the user formatted as *languageId-countryId*, for example `en-us`. (Known as `{locale}` prior to TeamsJS v.2.0.0).
@@ -84,7 +84,7 @@ You can also retrieve the context information using the [Microsoft Teams JavaScr
     "osLocaleInfo": "",
     "parentMessageId": "The parent message ID from which this task module is launched",
     "sessionId": "The unique ID for the current session used for correlating telemetry data",
-    "theme": "The current UI theme: default | dark | contrast",
+    "theme": "The current UI theme: default | dark| glass | contrast",
     "userClickTime": "",
     "userFileOpenPreference": ""  },
   "channel": {
@@ -153,7 +153,7 @@ The following code provides an example of context variable:
     "userObjectId": "The Microsoft Entra object id of the current user, in the current tenant",
     "tid": "The Microsoft Entra tenant ID of the current user",
     "groupId": "Guid identifying the current Office 365 Group ID",
-    "theme": "The current UI theme: default | dark | contrast",
+    "theme": "The current UI theme: default | dark | glass |contrast",
     "isFullScreen": "Indicates if the tab is in full-screen",
     "teamType": "The type of team",
     "teamSiteUrl": "The root SharePoint site associated with the team",
@@ -351,7 +351,7 @@ For more information on shared channels, see [shared channels](~/concepts/build-
 
 You can register your app to be informed if the theme changes by calling `microsoftTeams.app.registerOnThemeChangeHandler(function(theme) { /* ... */ })`.
 
-The `theme` argument in the function is a string with a value of `default`, `dark`, or `contrast`.
+The `theme` argument in the function is a string with a value of `default`, `dark`, `glass` or `contrast`.  The getContext API supports the `glass` value for Teams running on Apple Vision Pro devices.
 
 # [Default](#tab/default)
 
