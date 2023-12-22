@@ -66,7 +66,7 @@ items:
 
    Now, let's create your first message extension app.
 
-   The message extension capability lets you interact with a web service through buttons and forms. Use the compose area, command box, or a message directly in Teams client to search and initiate actions in an external system.
+   The message extension capability lets you interact with a web service through buttons and forms. Use the message compose area, search box, or a message directly in Teams client to search and initiate actions in an external system.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram shows a message extension app highlighted among three Teams apps.":::
 
@@ -101,7 +101,7 @@ items:
 
      1. Select **Create a New App**.
 
-         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Screenshot shows the create a new app option in Teams Toolkit sidebar.":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Screenshot shows the option to create a new app in Teams Toolkit sidebar.":::
 
      1. Select **Message Extension**.
 
@@ -225,7 +225,7 @@ items:
 
    # [Command line](#tab/cli2)
 
-      1. Go to the the project folder of your message extension app and open Command Prompt.
+      1. Go to the project folder of your message extension app and open Command Prompt.
       
       1. Sign in to Microsoft 365 with the following TeamsFx CLI command:
 
@@ -305,15 +305,13 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot shows how to enter a search string in the message extension.":::
 
-   1. Select one of the search results. The app creates a card with the result in the compose area so you can send it in the channel.
+   1. Select one of the search results. The app creates a card with the result in the message compose area so you can send it in the channel.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-result.png" alt-text="Screenshot shows the search result in the message extension.":::
 
-   1. Select **Enter**.
+   1. Select **Enter**. The message extension app sends the card with the search result in the channel.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot shows the search result sent in chat.":::
-    
-        The message extension app sends the card with the search result in the channel.
 
    ## Other ways to open your message extension app
 
@@ -321,7 +319,7 @@ items:
    <br>
    <br>
    <details>
-   <summary>To open your app from message compose area</summary>
+   <summary>Open your app from message compose area</summary>
 
    There are two ways to open your app from the message compose area.
     
@@ -346,7 +344,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot shows the search result in a card.":::
         
-   1. Select **Enter**.
+   1. Select **Enter**. The message extension app sends the card with the search result in the most recent chat.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the card sent in a chat.":::
 
@@ -356,7 +354,7 @@ items:
    
    1. Select your message extension app.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension from the compose area.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension from the message compose area.":::
 
      The message extension app loads with the options to run a search.
    </details>
@@ -416,7 +414,7 @@ items:
 
    # [Command line](#tab/cli3)
 
-      1. Go to the the project folder of your message extension app and open Command Prompt.
+      1. Go to the project folder of your message extension app and open Command Prompt.
       
       1. Sign in to Azure with the following TeamsFx CLI command:
 

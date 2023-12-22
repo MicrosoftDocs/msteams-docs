@@ -6,7 +6,7 @@ Deployment consists of two steps. First, necessary cloud resources are created (
 <details>
 <summary>What's the difference between <b>Provision</b> and <b>Deploy</b>?</summary>
 <br>
-The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (such as HTML, CSS, or JavaScript) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step take some time to complete, it's separate from the deployment step.
+The <b>Provision</b> step creates resources in Azure and Microsoft 365 for your app, but no code (such as HTML, CSS, or JavaScript) is copied to the resources. The <b>Deploy</b> step copies the code for your app to the resources you created during the provision step. It's common to deploy multiple times without provisioning new resources. Since the provision step takes some time to complete, it's separate from the deployment step.
 </details>
 <br>
 
@@ -28,7 +28,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    You can create a new resource group with the following steps:
 
-   1. Select **+ New resource group**
+   1. Select **+ New resource group**.
 
       :::image type="content" source="../../assets/images/teams-toolkit-v2/first-msgext/select-resource-new-resource.png" alt-text="Screenshot shows the option to create a new Azure resource group.":::
 
