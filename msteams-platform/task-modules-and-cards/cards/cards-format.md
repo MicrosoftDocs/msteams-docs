@@ -400,7 +400,7 @@ Adaptive Components are high-level components powered by [templating](/adaptive-
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
-The following is an example of the people icon in an Adaptive Card on Teams desktop and mobile clients:
+The following images show the people icon in an Adaptive Card on Teams desktop and mobile clients:
 
 **Desktop client**:
 
@@ -517,7 +517,7 @@ The following code shows an example of Adaptive Card with typeahead support:
 
 ### Stage View for images in Adaptive Cards
 
-In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stage View selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following is an example of the `msteams` property:
+In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stage View selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following code is an example of the `msteams` property:
 
 ``` json
 {
@@ -825,7 +825,7 @@ In the following example, all the actions are marked as secondary, therefore, a 
 }
 ```
 
-The following is an example of the overflow menu experience in Teams desktop and mobile:
+The following example shows the overflow menu experience in Teams desktop and mobile clients:
 
 # [Desktop](#tab/desktop)
 
