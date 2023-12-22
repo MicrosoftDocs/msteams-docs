@@ -136,6 +136,12 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
 
 The following code provides an example of a bot configuration experience:
 
+### [C#](#tab/dotnet1)
+
+If the Name is "config/fetch", it creates a ConfigResponse object with a `BotConfigAuth` object. This object contains a list of suggested actions for the bot, each represented as a `CardAction`. The `ConfigResponse` is then returned as the body of an `InvokeResponse` with a status code of 200.
+
+If the Name is "config/submit", it creates an AdaptiveCard with a single `AdaptiveTextBlock` element. This card is then used to create a `TaskModuleContinueResponse`, which is returned as the body of an `InvokeResponse` with a status code of 200.
+
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -212,6 +218,12 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 }
 ```
 
+### [C#](#tab/dotnet2)
+
+If the Name is "config/submit", it creates a `ConfigResponse` object with a `TaskModuleMessageResponse` object. This object contains a message string. The `ConfigResponse` is then returned as the body of an `InvokeResponse` with a status code of 200.
+
+If the Name is "config/fetch", it creates an AdaptiveCard with a single `AdaptiveTextBlock` element. This card is then used to create a `TaskModuleContinueResponse`, which is returned as the body of an `InvokeResponse` with a status code of 200.
+
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
 {
@@ -275,6 +287,11 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
     return null;
 }
 ```
+
+### [JS](#tab/js1)
+
+If the command is "card", it creates a configuration object with suggested actions for the bot.
+If the command is "message", it creates an Adaptive Card with a single TextBlock element. This card is then used to create a configuration object.
 
 ```javascript
 // extending both handlers
