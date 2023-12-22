@@ -37,7 +37,6 @@ Following is a list of main Teams Toolkit CLI features:
 * Provision cloud resources and deploy the application to Azure.
 * Validate, package and publish application.
 * Manage multiple environments, Microsoft entra-apps and Teams app registrations.
-* Collaborate with other developers.
 
 ## Get started
 
@@ -124,13 +123,27 @@ By default, `teamsapp new` is in interactive mode and guides to create new Teams
 
 You can use interactive mode to create a Teams app. The following list provides scenarios on controlling all the parameters with `teamsapp new`:
 
-* HTTP triggered notification bot with timer triggered.
+* HTTP triggered notification bot with timer triggered interactive mode.
+
+  ```bash
+  teamsapp new -c notification -t timer-functions -l typescript -n myapp -i true
+  ```
+
+* Import an existing SharePoint Framework solution in interactive mode.
+
+  ```bash
+  teamsapp new -c tab-spfx -s import --spfx-folder <folder-path> -n myapp -i true
+  ```
+
+You can use non-interactive mode to create a Teams app. The following list provides scenarios on controlling all the parameters with `teamsapp new`:
+
+* HTTP triggered notification bot with timer triggered in non-interactive mode.
 
   ```bash
   teamsapp new -c notification -t timer-functions -l typescript -n myapp -i false
   ```
 
-* Import an existing SharePoint Framework solution.
+* Import an existing SharePoint Framework solution in non-interactive mode.
 
   ```bash
   teamsapp new -c tab-spfx -s import --spfx-folder <folder-path> -n myapp -i false
