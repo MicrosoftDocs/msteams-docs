@@ -13,6 +13,8 @@ zone_pivot_groups: toolkit-cli
 
 > [!IMPORTANT]
 >
+> Teams Toolkit CLI v3 is available in developer beta version.
+>
 > We recommend that you use Teams Toolkit CLI v3 for building your Teams app. TeamsFx CLI v1 and TeamsFx CLI v2 will soon be deprecated.
 
 Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
@@ -47,6 +49,8 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
   teamsapp -h
 ```
 
+:::image type="content" source="../assets/images/teams-toolkit-cli/npm-package-install.png" alt-text="Screenshot shows the installation of npm package.":::
+
 ## Supported commands
 
 | Command | Description |
@@ -72,6 +76,8 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 | `teamsapp collaborator`| Collaborate with other developers in same project.|
 | `teamsapp uninstall` | Remove an acquired Microsoft 365 App. |
 
+:::image type="content" source="../assets/images/teams-toolkit-cli/list-of-commands.png" alt-text="Screenshot shows the list of available commands.":::
+
 ## Global Options
 
 | Command | Description |
@@ -82,6 +88,8 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 | `--debug` | Print debug information. The default value is false.|
 | `--verbose` | Print diagnostic information. The default value is false.|
 | `--telemetry` | Whether to enable telemetry. The default value is true.|
+
+:::image type="content" source="../assets/images/teams-toolkit-cli/global-options.png" alt-text="Screenshot shows the list of global options.":::
 
 ## Interactive mode
 
@@ -105,10 +113,9 @@ By default, `teamsapp new` is in interactive mode and guides to create new Teams
 | Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name -n` | Yes| Name of your Teams application.|
-|`--interactive`| No | Select the options interactively. The available options are `true` and `false` and the default value is `true`.|
 |`--capability -c`| Yes| Choose Teams application capabilities, the available options are `bot`, `ai-bot`, and `ai-assistant-bot`. Use `teamsapp list templates` to see all the available options.|
 |`--programming-language -l`| No| Programming language for the project. The available options are `javascript`, `typescript`, and `csharp`. The default value is `javascript`.|
-|`--folder`| No | Project directory. A sub folder with your app name is created under this directory. The default value is `./`.|
+|`--folder -f`| No | Project directory. A sub folder with your app name is created under this directory. The default value is `./`.|
 |`--spfx-framework-type -k`| No| Applicable if `framework` capability is selected. The available options are `minimal`, `react` and `none`, and the default value is `react`.|
 |`--spfx-web part-name -w`| No | Name for SharePoint Framework Web Part. The default value is helloworld.|
 |`--spfx-folder`| No | Directory or Path that contains the existing SharePoint Framework solution.|
@@ -118,6 +125,8 @@ By default, `teamsapp new` is in interactive mode and guides to create new Teams
 |`--bot-host-type-trigger -t`| No | Applicable if `Chat Notification Message` capability is selected. The options are `http-restify`, `http-webapi`, and `http-and-timer-functions`. The default value is `http-restify`.|
 |`--spfx-solution -s`| No| Create a new or import an existing SharePoint Framework solution. The available options are `new` and `import`, and the default value is `new`.|
 |`--spfx-install-latest-package`| No| Install the latest version of SharePoint Framework. The default value is `true`.|
+
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-new-parameters.png" alt-text="Screenshot shows the teamsapp new parameters.":::
 
 ### Scenarios for `teamsapp new`
 
