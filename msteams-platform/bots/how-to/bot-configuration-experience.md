@@ -402,6 +402,8 @@ If the command is "message", it creates an Adaptive Card with a single TextBlock
     }
 ```
 
+---
+
 ## Bot configuration experience in Teams
 
 After you've created a bot to enable the bot configuration settings from a team or group chat scope, the user can configure and reconfigure the bot in Teams.
