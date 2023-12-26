@@ -43,7 +43,7 @@ They can also be built with the [Adaptive Cards](../../task-modules-and-cards/ca
 |----------|-----------|
 |1|**Header**: Make headers clear and concise. Describe the task you want users to complete.
 |2|**App name**: Full name of your app.|
-|3|**Close button**: Closes the task module. Does not apply unsaved changes in the app content.|
+|3|**Close button**: Closes the task module. Doesn't apply unsaved changes in the app content.|
 |4|**webview**: Responsive space that hosts your app content.|
 |5|**Actions (optional)**: Buttons related to your app content.|
 
@@ -56,7 +56,7 @@ They can also be built with the [Adaptive Cards](../../task-modules-and-cards/ca
 |1|**App icon**|
 |2|**App name**: Full name of your app.|
 |3|**Header**: Make headers clear and concise. Describe the task you want users to complete.
-|4|**Close button**: Closes the task module. Does not apply unsaved changes in the app content.|
+|4|**Close button**: Closes the task module. Doesn't apply unsaved changes in the app content.|
 |5|**iframe**: Responsive space that hosts your app content.|
 |6|**Actions (optional)**: Buttons related to your app content.|
 

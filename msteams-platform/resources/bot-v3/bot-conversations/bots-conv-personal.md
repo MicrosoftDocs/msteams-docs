@@ -27,4 +27,4 @@ Depending on the experience you want to create, the bot might need to work in mu
 
 ## Best practice: Welcome messages in personal conversations
 
-Your bot should [proactively send](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) a welcome message to a personal chat the first time (and only the first time) a user initiates a personal chat with your bot. This recommendation does not apply to first-time contacts in a channel.
+Your bot should [proactively send](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) a welcome message to a personal chat the first time (and only the first time) a user initiates a personal chat with your bot. This recommendation doesn't apply to first-time contacts in a channel.

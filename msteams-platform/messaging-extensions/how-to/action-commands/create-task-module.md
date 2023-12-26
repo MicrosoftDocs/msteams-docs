@@ -13,7 +13,7 @@ ms.author: anclear
 You can create the task module using an Adaptive Card or an embedded web view. To create a task module, you must perform the process called the initial invoke request. This document covers
 the initial invoke request, payload activity properties when a task module is invoked from 1:1 chat, group chat, channel (new post), channel (reply to thread), and command box.
 > [!NOTE]
-> If you are not populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.
+> If you aren't populating the task module with parameters defined in the app manifest, you must create the task module for users with either an Adaptive Card or an embedded web view.
 
 ## The initial invoke request
 
@@ -538,7 +538,7 @@ class TeamsMessagingExtensionsActionPreviewBot extends TeamsActivityHandler {
 
 ## Initial invoke request from a message
 
-When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your message extension is invoked from. The `reactions` and `mentions` arrays are optional, and they are not present if there are no reactions or mentions in the original message.
+When your bot is invoked from a message,  the `value` object in the initial invoke request must contain the details of the message that your message extension is invoked from. The `reactions` and `mentions` arrays are optional, and they aren't present if there are no reactions or mentions in the original message.
 The following section is an example of the `value` object:
 
 # [C#/.NET](#tab/dotnet)
@@ -655,7 +655,7 @@ The schema for the taskInfo object is:
 |`width`| It must be either an integer (in pixels), or `small`, `medium`, `large`.|
 |`card`| The Adaptive Card defining the form (if using one).
 |`url`| The URL to be opened inside of the task module as an embedded web view.|
-|`fallbackUrl`| If a client does not support the task module feature, this URL is opened in a browser tab. |
+|`fallbackUrl`| If a client doesn't support the task module feature, this URL is opened in a browser tab. |
 
 ### Respond to the fetchTask with an Adaptive Card
 
@@ -895,7 +895,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 If the app contains a conversational bot, install the bot in the conversation and then load the task module. The bot is useful to get additional context for the task module. An example for this scenario is to fetch the roster to populate a people picker control or the list of channels in a team.
 
-When the message extension receives the `composeExtensions/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot is not installed, return an Adaptive Card with an action that requests the user to install the bot. The user must have the permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
+When the message extension receives the `composeExtensions/fetchTask` invoke, check if the bot is installed in the current context to facilitate the flow. For example, check the flow with a get roster call. If the bot isn't installed, return an Adaptive Card with an action that requests the user to install the bot. The user must have the permission to install the apps in that location for checking. If the app installation is unsuccessful, the user receives a message to contact the administrator.
 
 #### Example
 

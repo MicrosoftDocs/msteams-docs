@@ -133,7 +133,7 @@ Upon completion, your *package.json* file references `@microsoft/teams-js@2.0.0`
 > * `TODO` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-library.md#callbacks-converted-to-promises)
 
 > [!IMPORTANT]
-> Code inside *.html* files is not supported by the upgrade tooling and require manual changes.
+> Code inside *.html* files isn't supported by the upgrade tooling and require manual changes.
 
 ## Configure Content Security Policy headers
 

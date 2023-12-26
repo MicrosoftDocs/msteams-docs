@@ -152,7 +152,7 @@ After the team and channel have been created, you can begin sending back-in-time
 
 > [!NOTE]
 >
-> * Messages imported with `createdDateTime` earlier than the message thread `createdDateTime` is not supported.
+> * Messages imported with `createdDateTime` earlier than the message thread `createdDateTime` isn't supported.
 > * `createdDateTime` must be unique across messages in the same thread.
 > * `createdDateTime` supports timestamps with milliseconds precision. For example, if the incoming request message has the value of `createdDateTime` set as *2020-09-16T05:50:31.0025302Z*, then it would be converted to *2020-09-16T05:50:31.002Z* when the message is ingested.
 
@@ -357,13 +357,13 @@ HTTP/1.1 204 No Content
 * If you need to make a correction to the migration results, you must delete the team, repeat the steps to create the team and channel and re-migrate the messages.
 
 > [!NOTE]
-> Currently, inline images are the only type of media supported by the import message API schema.
+> Inline images are the only type of media supported by the import message API schema.
 
 ##### Import content scope
 
 The following table provides the content scope:
 
-|In-scope | Currently out-of-scope|
+|In-scope | Out-of-scope|
 |----------|--------------------------|
 |Team and channel messages|1:1 and group chat messages|
 |Created time of the original message|Private channels|

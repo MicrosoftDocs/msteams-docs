@@ -105,7 +105,7 @@ const schema: ContainerSchema = {
   initialObjects: { mediaSession: LiveMediaSession },
 };
 const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
+// Force casting is necessary because Fluid doesn't maintain type recognition for `container.initialObjects`.
 // Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
 const mediaSession = container.initialObjects.mediaSession as unknown as LiveMediaSession;
 
@@ -532,7 +532,7 @@ Additionally, add the following [RSC](/microsoftteams/platform/graph-api/rsc/res
 ```
 
 > [!NOTE]
-> The `registerSpeakingStateChangeHandler` API used for audio ducking currently only works on Microsoft Teams desktop and in scheduled and meet now meeting types.
+> The `registerSpeakingStateChangeHandler` API used for audio ducking only works on Microsoft Teams desktop and in scheduled and meet now meeting types.
 
 ## Code samples
 

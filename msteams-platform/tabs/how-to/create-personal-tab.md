@@ -69,7 +69,7 @@ Following are the steps to create a personal tab:
 
     * **Where do you want to place the files?**
 
-      You're currently in your project directory. Select **Enter**.
+      You're in your project directory. Select **Enter**.
 
     * **Title of your Microsoft Teams app project?**
 

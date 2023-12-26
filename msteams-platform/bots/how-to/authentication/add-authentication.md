@@ -47,7 +47,7 @@ You use a resource group to create individual resources for the Bot Framework. F
 1. In the upper left of the displayed window, select **Add** tab to create a new resource group. You'll be prompted to provide the following details:
     1. **Subscription**. Use your existing subscription.
     1. **Resource group**. Enter the name for the resource group. An example could be  *TeamsResourceGroup*. Remember that the name must be unique.
-    1. From the **Region** drop-down menu, select *West US*, or a region close to your applications.
+    1. From the **Region** dropdown menu, select *West US*, or a region close to your applications.
     1. Select the **Review and create** button. You should see a banner that reads *Validation passed*.
     1. Select the **Create** button. It may take a few minutes to create the resource group.
 
@@ -83,7 +83,7 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Select your **Resource group** from the dropdown list.
 1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/multi-tenant.png" alt-text="Screenshot shows how to select multi tenant for Microsoft AppID.":::
+   :::image type="content" source="../../../assets/images/adaptive-cards/multi-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
 
 1. Select **Review + create**.
 
@@ -205,7 +205,7 @@ In this procedure, you'll use a Microsoft Entra provider. Other Microsoft Entra 
     1. **Login URL**. Enter `https://login.microsoftonline.com`.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign, follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Entra ID - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Entra app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory (Microsoft Entra ID - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Entra app. This will be the tenant associated with the users who can be authenticated.
 
         - If you selected *Accounts in any organizational directory (Any Microsoft Entra ID - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Entra app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
@@ -234,7 +234,7 @@ In this procedure, you'll use a Microsoft Entra provider. Other Microsoft Entra 
     1. **Token Exchange URL**. Leave this blank.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign, follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Entra ID - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Entra app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory (Microsoft Entra ID - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Entra app. This will be the tenant associated with the users who can be authenticated.
 
         - If you selected *Accounts in any organizational directory (Any Microsoft Entra ID - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Entra app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
@@ -318,7 +318,7 @@ To deploy the bot, follow the steps in the How to [Deploy your bot to Azure](/az
 Alternatively, while in Visual Studio, you can follow these steps:
 
 1. In Visual Studio *Solution Explorer*, select and hold (or right-click) the project name.
-1. In the drop-down menu, select **Publish**.
+1. In the dropdown menu, select **Publish**.
 1. In the displayed window, select the **New** link.
 1. In the dialog window, select **App Service** on the left and **Create New** on the right.
 1. Select the **Publish** button.
@@ -344,7 +344,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
-In order for the bot sample login to work you must configure the Emulator.
+In order for the bot sample sign-in to work you must configure the Emulator.
 
 ### Configure the Emulator for authentication
 

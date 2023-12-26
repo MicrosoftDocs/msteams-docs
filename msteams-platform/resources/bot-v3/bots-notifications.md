@@ -129,7 +129,7 @@ The `conversationUpdate` event with the `membersAdded` object in the payload is 
 
 > [!NOTE]
 >
->* When an anonymous user is added to a meeting, membersAdded payload object does not have `aadObjectId` field.
+>* When an anonymous user is added to a meeting, membersAdded payload object doesn't have `aadObjectId` field.
 >* When an anonymous user is added to a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was added by another presenter.
 
 #### Schema example: User added to meeting
@@ -267,7 +267,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 
 > [!NOTE]
 >
->* When an anonymous user is removed from a meeting, membersRemoved payload object does not have `aadObjectId` field.
+>* When an anonymous user is removed from a meeting, membersRemoved payload object doesn't have `aadObjectId` field.
 >* When an anonymous user is removed from a meeting, `from` object in the payload always have the id of the meeting organizer, even if the anonymous user was removed by another presenter.
 
 #### Schema example: User removed from meeting
@@ -312,7 +312,7 @@ The `conversationUpdate` event with the `membersRemoved` object in the payload i
 ## Team name updates
 
 > [!NOTE]
-> There is no functionality to query all team names, and team name is not returned in payloads from other events.
+> There is no functionality to query all team names, and team name isn't returned in payloads from other events.
 
 Your bot is notified when the team it is in has been renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. There are no notifications for team creation or deletion, because bots exist only as part of teams and have no visibility outside the scope in which they've been added.
 

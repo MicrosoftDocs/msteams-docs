@@ -13,7 +13,7 @@ ms.date: 09/30/2022
 Collaboration controls virtual entities and their attributes have a one-to-one mapping with a specific Microsoft Graph resource type. For example, the Graph Planner Task entities maps to the [Microsoft Graph Planner Task resource type](/graph/api/resources/plannertask). The virtual entity shares the same attributes as the resource type.
 
 > [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Collaboration controls virtual entities
 
@@ -57,7 +57,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 | `m365_id` | String | Read-only. ID of the task. It's 28 characters long and case-sensitive. [Format validation](/graph/api/resources/planner-identifiers-disclaimer) is done on the service.|
 | `m365_orderhint` | String | Hint used to order items of this type in a list view. The format is defined as outlined in [using order hints in Planner](/graph/api/resources/planner-order-hint-format). |
 | `m365_percentcomplete` | Int32 | Percentage of task completion. When set to 100, the task is considered completed. |
-| `m365_priority` | Int32 | Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority). Currently, Planner interprets values 0 and 1 as "urgent", 2, 3 and 4 as "important", 5, 6, and 7 as "medium", and 8, 9, and 10 as "low". Additionally, Planner sets the value 1 for "urgent", 3 for "important", 5 for "medium", and 9 for "low". |
+| `m365_priority` | Int32 | Priority of the task. The valid range of values is between 0 and 10, with the increasing value being lower priority (0 has the highest priority and 10 has the lowest priority). Planner interprets values 0 and 1 as "urgent", 2, 3 and 4 as "important", 5, 6, and 7 as "medium", and 8, 9, and 10 as "low". Additionally, Planner sets the value 1 for "urgent", 3 for "important", 5 for "medium", and 9 for "low". |
 | `m365_planid` | String | Plan ID to which the task belongs. |
 | `m365_previewtype` | String | This sets the type of preview that shows up on the task. The possible values are: automatic, noPreview, checklist, description, reference. |
 | `m365_referencecount` | Int32 | Number of external references that exist on the task.|
@@ -228,7 +228,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 |`m365_drivetype` |String |Describes the type of drive represented by this resource. OneDrive personal drives will return personal. OneDrive for Business will return business. SharePoint document libraries will return documentLibrary. Read-only. |
 |`m365_graphdriveid` |Guid |Unique Identifier of the graph drive. |
 |`m365_id` |String |The unique Identifier of the drive. Read-only. |
-|`m365_lastmodifiedby` | String |Identity of the user, device, and application, which last modified the item. Read-only. This attribute is a JSON encoded string for example { "user": { "email": “user@contoso.com”,  "ID": "61de164e-21ff-4b1c-8cbd-77ac440894f8", "displayName": "User Name" } } |
+|`m365_lastmodifiedby` | String |Identity of the user, device, and application, which last modified the item. Read-only. This attribute is a JSON encoded string for example { "user": { "email": “<user@contoso.com>”,  "ID": "61de164e-21ff-4b1c-8cbd-77ac440894f8", "displayName": "User Name" } } |
 |`m365_lastmodifieddatetime` |DateTime |Date and time the item was last modified. Read-only.|
 |`m365_name` |String |The name of the item. Read-only. |
 |`m365_owner` |String |Optional. The user account that owns the drive. Read-only. This attribute is a JSON encoded string. For example { "group": { "ID": "76c7286f-8645-4ba8-bc0f-c65a16424aaa", "displayName": "Group Name" }} |
@@ -256,7 +256,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 |`M365_bundle` |String |Bundle metadata, if the item is a bundle. Read-only. This attribute is a JSON encoded string. For example, { "childCount": 3, "album": { "@odata.type": "microsoft.graph.album" }, } |
 |`m365_collaborationrootid` |String |Collaboration root ID of the collaboration session the record is associated with. If the record is associated with multiple collaboration sessions this will be returned as a comma delimited string. Note that this attribute won't be returned when retrieving multiple records. |
 |`m365_copy` |String |If present in the request then a copy operation is performed. |
-|`m365_createdby` |String |Identity of the user, device, and application, which created the item. Read-only. This attribute is a JSON encoded string. For example, {"user":{"displayName":"User Name","email":"alias@contoso.com","ID":"a298b975-3493-4d9e-b2d4-3cad78f00000"},"group": null,"application","device" } |
+|`m365_createdby` |String |Identity of the user, device, and application, which created the item. Read-only. This attribute is a JSON encoded string. For example, {"user":{"displayName":"User Name","email":"<alias@contoso.com>","ID":"a298b975-3493-4d9e-b2d4-3cad78f00000"},"group": null,"application","device" } |
 |`m365_createddatetime` |DateTime |Date and time of item creation. Read-only. |
 |`m365_ctag` |String |An eTag for the content of the item. This eTag isn't changed if only the metadata is changed. Note. This property isn't returned if the item is a folder. Read-only. |
 |`m365_deleted` |String |Information about the deleted state of the item. Read-only. This attribute is a JSON encoded string. For example, { "state": "string" } |
@@ -269,13 +269,13 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 |`m365_graphdriveitemid` |Guid |Unique Identifier of the graph drive item. |
 |`m365_id` |String |The unique Identifier of the item within the Drive. Read-only. |
 |`m365_image` |String |Image metadata, if the item is an image. Read-only. This attribute is a JSON encoded string. For example, {"height","width" } |
-|`m365_lastmodifiedby` |String |Identity of the user, device, and application, which last modified the item. Read-only. This attribute is a JSON encoded string. For example, {"user":{"displayName":"User Name","email":"alias@contoso.com","ID":"a298b975-3493-4d9e-b2d4-3cad78f9a00e"},"group","application","device" } |
+|`m365_lastmodifiedby` |String |Identity of the user, device, and application, which last modified the item. Read-only. This attribute is a JSON encoded string. For example, {"user":{"displayName":"User Name","email":"<alias@contoso.com>","ID":"a298b975-3493-4d9e-b2d4-3cad78f9a00e"},"group","application","device" } |
 |`m365_lastmodifieddatetime` |DateTime |Date and time the item was last modified. Read-only. |
 |`m365_location` |String |Location metadata, if the item has location data. Read-only. This attribute is a JSON encoded string. For example, "location": { "altitude": 1.0, "latitude": 1.0, "longitude": 1.0 } |
 |`m365_malware` |String |Malware metadata, if the item was detected to contain malware. Read-only. This attribute is a JSON encoded string. For example, { "description": "string" } |
 |`m365_name` |String |The name of the item (filename and extension). Read-write. |
 |`m365_package` |String |If present, indicates that this item is a package instead of a folder or file. Packages are treated like files in some contexts and folders in others. Read-only. This attribute is a JSON encoded string. For example, { "type": "oneNote" } |
-|`m365_parentreference` |String |Parent information, if the item has a parent. This attribute is a JSON encoded string. For example, {"driveID":"b!qgK-8nOzX0qISvfGCiC2Smbv0m0RlNhDvNQDZsCMpbSnchFAhWAaQoiTLZcSo1gq","driveType":"documentLibrary","ID":"01EYDCV4YHV77FE3EDDFHIVD6WJ2ETT3PP","name","path":"/drives/b!qgK-8nOzX0qISvfGCiC2Smbv0m0RlNhDvNQDZsCMpbSnchFAhWAaQoiTLZcSo1no/root: /folder name","shareID","sharepointIDs":{"listID":"401172a8-6085-421a-8893-2d9712a35c3c","listItemID","listItemUniqueID":"52feaf12-836c-4e19-8a8f-d64e8939ee52","siteID":"f34e02aa-b373-4a5f-884a-f7c60a20b64a","siteUrl":"https://contoso.sharepoint.com/sites/Contoso","tenantID","webID":"6dd2ef66-9411-43d8-bcd4-0366c08ccabd"},"siteID" } |
+|`m365_parentreference` |String |Parent information, if the item has a parent. This attribute is a JSON encoded string. For example, {"driveID":"b!qgK-8nOzX0qISvfGCiC2Smbv0m0RlNhDvNQDZsCMpbSnchFAhWAaQoiTLZcSo1gq","driveType":"documentLibrary","ID":"01EYDCV4YHV77FE3EDDFHIVD6WJ2ETT3PP","name","path":"/drives/b!qgK-8nOzX0qISvfGCiC2Smbv0m0RlNhDvNQDZsCMpbSnchFAhWAaQoiTLZcSo1no/root: /folder name","shareID","sharepointIDs":{"listID":"401172a8-6085-421a-8893-2d9712a35c3c","listItemID","listItemUniqueID":"52feaf12-836c-4e19-8a8f-d64e8939ee52","siteID":"f34e02aa-b373-4a5f-884a-f7c60a20b64a","siteUrl":"<https://contoso.sharepoint.com/sites/Contoso","tenantID","webID":"6dd2ef66-9411-43d8-bcd4-0366c08ccabd"},"siteID>" } |
 |`m365_parentreferenceid` |String |The Identifier for the drive item that is the parent of the drive item. |
 |`m365_pendingoperations` |String |If present, indicates that one or more operations that might affect the state of the driveItem are pending completion. Read-only. This attribute is a JSON encoded string. For example, { "pendingContentUpdate": {"@odata.type": "microsoft.graph.pendingContentUpdate"} } |
 |`m365_photo` |String |Photo metadata, if the item is a photo. Read-only. This attribute is a JSON encoded string. For example, { "cameraMake": "Camera Make", "cameraModel": "Camera Model", "exposureDenominator": 1000000, "exposureNumerator": 41671, "focalLength": 4.38, "fNumber": 1.73, "iso": 70, "orientation": 6, "takenDateTime": "2020-04-29T14:17:39Z" } |
@@ -284,7 +284,7 @@ Collaboration controls virtual entities and their attributes have a one-to-one m
 |`m365_root` |String |If this property is non-null, it indicates that the driveItem is the top-most driveItem in the drive. |
 |`m365_searchresult` |String |Search metadata, if the item is from a search result. Read-only. This attribute is a JSON encoded string. For example, { "onClickTelemetryUrl": "url" } |
 |`m365_shared` |String |Indicates that the item has been shared with others and provides information about the shared state of the item. Read-only. This attribute is a JSON encoded string. For example, { "scope": "users", "owner": { "user": { "displayName": "User Name", "ID": "bbbb6fa48aaaaaaa" } } } |
-|`m365_sharepointids` |String |Returns Identifiers useful for SharePoint REST compatibility. Read-only. This attribute is a JSON encoded string. e.g{"listID":"401172a7-6085-421a-8893-2d9712a35aba","listItemID":"338","listItemUniqueID":"0edc89e5-24ea-4c6b-a019-dc51f45eeccc","siteID":"f2be02aa-b373-4a5f-884a-f7c60a20bddd","siteUrl":"https://contoso.sharepoint.com/sites/Contoso","tenantID":"1c137272-0581-487f-b195-aeeb93cc4ccc","webID":"6dd2ef66-9411-43d8-bcd4-0366c08caaaa"} |
+|`m365_sharepointids` |String |Returns Identifiers useful for SharePoint REST compatibility. Read-only. This attribute is a JSON encoded string. e.g{"listID":"401172a7-6085-421a-8893-2d9712a35aba","listItemID":"338","listItemUniqueID":"0edc89e5-24ea-4c6b-a019-dc51f45eeccc","siteID":"f2be02aa-b373-4a5f-884a-f7c60a20bddd","siteUrl":"<https://contoso.sharepoint.com/sites/Contoso","tenantID":"1c137272-0581-487f-b195-aeeb93cc4ccc","webID":"6dd2ef66-9411-43d8-bcd4-0366c08caaaa"}> |
 |`m365_siteid` |String |The Identifier for the site that contains the document library. |
 |`m365_size` |IntType |Size of the item in bytes. Read-only. |
 |`m365_specialfolder` |String |If the current item is also available as a special folder, this facet is returned. Read-only. This attribute is a JSON encoded string. For example, { "name": "documents" } |

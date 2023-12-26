@@ -4,21 +4,21 @@ You must have an understanding of the following prerequisites:
 
 - You must have a Microsoft 365 tenant and a team configured with **Allow uploading custom apps** enabled. For more information, see [prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md).
 
-  - If you don't currently have a Microsoft 365 account, you can sign up for a free subscription through the Microsoft 365 Developer Program. The subscription remains active as long as you're using it for ongoing development. See [welcome to the Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
+  - If you don't have a Microsoft 365 account, sign up for a free subscription through the Microsoft 365 Developer Program. The subscription remains active as long as you're using it for ongoing development. See [welcome to the Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 
 In addition, this project requires that you have the following tools installed in your development environment:
 
 - Any text editor or IDE. You can install and use [Visual Studio Code](https://code.visualstudio.com/download) for free.
 
-- [Node.js/npm](https://nodejs.org/en/). Use the latest LTS version. The Node Package Manager (npm) installs in your system with the installation of Node.js.
+- The latest version of [Node.js/npm](https://nodejs.org/en/). The Node Package Manager (npm) installs in your system with the installation of Node.js.
 
-- After you have successfully installed Node.js, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by typing the following command in your command prompt:
+- The [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages. Install them using the following command in Command Prompt:
 
     ```bash
     npm install yo gulp-cli --global
     ```
 
-- Install the Microsoft Teams Apps generator by typing the following command in your command prompt:
+- Microsoft Teams Apps generator. Install the generator with the following command in Command Prompt:
 
     ```bash
     npm install generator-teams --global
@@ -26,9 +26,7 @@ In addition, this project requires that you have the following tools installed i
 
 ## Generate your project
 
-**To generate your project**
-
-1. Open a command prompt and create a new directory for your tab project.
+1. Open Command Prompt and create a new directory for your tab project.
 
 1. To start the generator, go to your new directory and type the following command:
 
@@ -36,17 +34,17 @@ In addition, this project requires that you have the following tools installed i
     yo teams
     ```
 
-1. Next, provide a series of values that are used in your application's `manifest.json` file:
+1. Next, provide a series of values that are used in your app's `manifest.json` file:
 
     ![generator opening screenshot](/microsoftteams/platform/assets/images/tab-images/teamsTabScreenshot.PNG)
 
     **What is your solution name?**
 
-    This is your project name. You can accept the suggested name by pressing enter.
+    This is your project name. You can accept the suggested name and select **Enter**.
 
     **Where do you want to place the files?**
 
-    You're currently in your project directory. Press enter.
+    You're in your project directory. Select **Enter**.
 
     **Title of your Microsoft Teams app project?**
 
@@ -62,7 +60,7 @@ In addition, this project requires that you have the following tools installed i
 
     **Quick scaffolding? (Y/n)**
 
-    The default is yes; enter **n** to enter your Microsoft Partner Id.
+    The default is yes; enter **n** to enter your Microsoft Partner ID.
 
     **Enter your Microsoft Partner Id, if you have one? (Leave blank to skip)**
 
@@ -74,24 +72,26 @@ In addition, this project requires that you have the following tools installed i
 
     **The URL where you will host this solution?**
 
-    By default the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL isn't necessary to complete this quickstart.
+    By default, the generator suggests an Azure Web Sites URL. You'll only be testing your app locally, therefore, a valid URL isn't necessary to complete this quickstart guide.
 
     **Would you like show a loading indicator when your app/tab loads?**
 
-    Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
+    Choose not to include a loading indicator when your app or tab loads. The default is no, enter **n**.
 
    **Would you like personal apps to be rendered without a tab header-bar?**
 
-    Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+    Choose not to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
 
     **Would you like to include Test framework and initial tests? (y/N)**
 
-    Choose **not** to include a test framework for this project. The default is yes; enter **n**.
+    Choose not to include a test framework for this project. The default is yes; enter **n**.
 
     **Would you like to use Azure Applications Insights for telemetry? (y/N)**
 
-    Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
+    Choose not to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
 
     **Default Tab Name (max 16 characters)?**
 
     Name your tab. This tab name will be used throughout your project as a file or URL path component.
+
+Your tab app is now created successfully.

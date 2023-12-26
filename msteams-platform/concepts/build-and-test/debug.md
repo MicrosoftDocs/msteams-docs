@@ -24,7 +24,7 @@ Use multiple manifests and packages to maintain separation between production an
 ## Purely local
 
 > [!NOTE]
-> Running the bot locally does not give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities are permitted by the Bot Framework in the Bot Emulator that might not function when running in Teams.
+> Running the bot locally doesn't give you access to Teams app functionality or Teams-specific bot functions like roster calls and other channel-specific functionality. In addition, some capabilities are permitted by the Bot Framework in the Bot Emulator that might not function when running in Teams.
 
 Your bot can run within the Bot Emulator. This enables you to test some of the core logic of the bot, see a rough layout of messages, and perform simple tests. Following are the steps:
 
@@ -61,7 +61,7 @@ For bots registered in the Microsoft Bot Framework, update the bot's messaging e
 You can use any externally addressable service to host your development and production code and their HTTPS endpoints. There's no expectation that your capabilities reside on the same service. We require all domains to be accessed from your Teams apps listed in the [`validDomains`](~/resources/schema/manifest-schema.md#validdomains) object in the `manifest.json` file.
 
 > [!NOTE]
-> To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.
+> To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` isn't recommended, however `contoso.azurewebsites.net` is recommended.
 
 ## Load and run your experience
 

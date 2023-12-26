@@ -40,7 +40,7 @@ For more information, see [Bot Framework Documentation](/azure/bot-service/?view
 > * While it's possible to [create a new Bot Framework bot](https://dev.botframework.com/bots/new) without using Azure, you must use [create a new Bot Framework bot](https://dev.botframework.com/bots/new), which is no longer exposed in the Bot Framework portal.
 > * When you edit the properties of an existing bot in the [list of your bots in Bot Framework](https://dev.botframework.com/bots) such as its "messaging endpoint," which is common when first developing a bot, especially if you use [ngrok](https://ngrok.com), you will see "Migration status" column and a blue "Migrate" button that will take you into the Microsoft Azure portal. Don't click on the "Migrate" button unless that's what you want to do; instead, click on the name of the bot and you can edit its properties:</br>
    ![Edit Bot Properties](~/assets/images/bots/bf-migrate-bot-to-azure.png)
-> * If you register your bot using Microsoft Azure, your bot code does not need to be *hosted* on Microsoft Azure.
+> * If you register your bot using Microsoft Azure, your bot code doesn't need to be *hosted* on Microsoft Azure.
 > * If you do register a bot using Azure portal, you must have a Microsoft Azure account. You can [create one for free](https://azure.microsoft.com/free/). To verify your identity when you create one, you must provide a credit card, but it won't be charged; it's always free to create and use bots with Teams.
 > * You can now use Developer Portal for Teams to register/update app and bot information directly within Teams. You'll only have to use the Azure portal for adding or configuring other Bot Framework channels such as Direct Line, Web Chat, Skype, and Facebook Messenger.
 

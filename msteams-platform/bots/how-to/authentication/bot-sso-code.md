@@ -56,7 +56,7 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-   # [C#](#tab/cs1)
+# [C#](#tab/cs1)
 
     Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
@@ -64,7 +64,7 @@ To update your app's code:
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
     ```
 
-   # [JavaScript](#tab/js1)
+# [JavaScript](#tab/js1)
 
     Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
@@ -81,7 +81,7 @@ To update your app's code:
 
 1. Use the following code snippet for requesting a token.
 
-   # [C#](#tab/cs2)
+# [C#](#tab/cs2)
 
     After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
@@ -136,7 +136,7 @@ To update your app's code:
         }
     ```
 
-   # [JavaScript](#tab/js2)
+# [JavaScript](#tab/js2)
 
     After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code must appear:
 
@@ -253,7 +253,7 @@ The consent dialog that appears is for open-id scopes defined in Microsoft Entra
 > After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Microsoft Entra scope are modified, then the app user may need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
 
 > [!IMPORTANT]
-> Scenarios where consent dialogs are not needed:
+> Scenarios where consent dialogs aren't needed:
 >
 > - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
 > - If your Microsoft Entra app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
@@ -279,7 +279,7 @@ public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
                     ConnectionName = ConnectionName,
                     Text = "Please Sign In",
                     Title = "Sign In",
-                    Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
+                    Timeout = 300000, // User has 5 minutes to sign in (1000 * 60 * 5)
                     EndOnInvalidMessage = true
                 }));
 
@@ -309,7 +309,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
             {
                 var token = tokenResponse.Token;
 
-                // On successful login, the token contains sign in token.
+                // On successful sing-in, the token contains sign in token.
             }
             else 
             {
@@ -359,7 +359,7 @@ async loginStep(stepContext) {
             await stepContext.context.sendActivity('Login was not successful please try again.');
         } else {
             const token = tokenResponse.token;
-            // On successful login, the token contains sign in token.
+            // On successful sign-in, the token contains sign in token.
         }
         return await stepContext.endDialog();
     }

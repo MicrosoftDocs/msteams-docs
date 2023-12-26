@@ -32,8 +32,8 @@ The Microsoft Teams JavaScript client library (TeamsJS) can be used for navigati
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 
-* An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
-* List items in the table are not formatted well in output.
+* An important alert at the end of this table doesn't make sense. Also, it has a code snippet inside it.
+* List items in the table aren't formatted well in output.
 * Some headings use -ing verbs.
 * Example values and some URLs should be in backticks and not emphasized.
 * Codeblock are missing language.

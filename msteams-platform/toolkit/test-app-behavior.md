@@ -69,7 +69,7 @@ Teams is a cloud-based product that requires all services it accesses, to be ava
 To host your development and production code and their HTTPS endpoints, you need to remotely test your teams app using provisioning and deploying on Microsoft Entra ID. You need to ensure that all domains are accessible from your Teams app listed in the `validDomains` object in the `manifest.json` file.
 
 > [!NOTE]
-> To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.
+> To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` isn't recommended, however `contoso.azurewebsites.net` is recommended.
 
 ## See also
 

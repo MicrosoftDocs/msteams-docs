@@ -82,7 +82,7 @@ The following table lists the set of APIs to enable your device's location capab
 > For `getLocation` API:
 >
 > * If `allowChooseLocation` is set to true, then `showMap` is ignored.
-> * `showMap`= false is not supported on Teams web or desktop.
+> * `showMap`= false isn't supported on Teams web or desktop.
 
 For more information on `getLocation` and `showLocation`, see [LocationProps](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 

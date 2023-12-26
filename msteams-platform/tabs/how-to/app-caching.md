@@ -118,7 +118,7 @@ The following are the limitations for app caching:
 
 ## Troubleshooting
 
-**Apps are not being cached? Why is load handler not invoked on subsequent navigation?**
+**Apps aren't being cached? Why is load handler not invoked on subsequent navigation?**
 
 * Verify if the system and available memory constraints are met.
 

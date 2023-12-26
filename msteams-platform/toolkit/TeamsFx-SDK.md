@@ -279,7 +279,7 @@ try {
 ```
 
 > [!NOTE]
-> TeamsFx class has been deprecated, and `ErrorWithCode` is not recommended. You can use `TeamsUserCredential` instead.
+> TeamsFx class has been deprecated, and `ErrorWithCode` isn't recommended. You can use `TeamsUserCredential` instead.
 
 ```typescript
 try {

@@ -99,7 +99,7 @@ You can rely on an administrator to grant the permissions your app needs at the 
 > To construct the tenant Admin consent URL, a configured redirect URI or a reply URL in the [app registration portal](https://apps.dev.microsoft.com/) is required. To add reply URLs for your bot, access your bot registration, choose **Advanced Options** > **Edit Application Manifest**. Add your redirect URL to the `replyUrls` collection.
 
 > [!IMPORTANT]
-> Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal are not reflected until the consent has been reapplied by the tenant's administrator.
+> Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal aren't reflected until the consent has been reapplied by the tenant's administrator.
 
 ## Code sample
 

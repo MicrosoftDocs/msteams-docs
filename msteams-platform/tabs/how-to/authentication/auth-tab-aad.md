@@ -165,7 +165,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 ### Notes
 
-* See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's login name as the `login_hint` value for Microsoft Entra sign-in, which means the user might need to type less. Remember that you shouldn't use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
+* See [get user context information](~/tabs/how-to/access-teams-context.md) for help building authentication requests and URLs. For example, you can use the user's sign-in name as the `login_hint` value for Microsoft Entra sign-in, which means the user might need to type less. Remember that you shouldn't use this context directly as proof of identity since an attacker could load your page in a malicious browser and provide it with any information they want.
 * Although the tab context provides useful information regarding the user, don't use this information to authenticate the user whether you get it as URL parameters to your tab content URL or by calling the `app.getContext()` function in the Microsoft Teams JavaScript client library (TeamsJS). A malicious actor could invoke your tab content URL with its own parameters, and a web page impersonating Microsoft Teams could load your tab content URL in an iframe and return its own data to the `getContext()` function. You should treat the identity-related information in the tab context simply as hints and validate them before use.
 * The `state` parameter is used to confirm that the service calling the callback URI is the service you called. If the `state` parameter in the callback doesn't match the parameter you sent during the call, then the return call isn't verified and should be terminated.
 * It isn't necessary to include the identity provider's domain in the `validDomains` list in the app's manifest.json file.
@@ -174,7 +174,7 @@ After the user completes authorization, the user is redirected to the callback p
 
 In the last section, you called the Microsoft Entra authorization service and passed in user and app information so that Microsoft Entra ID could present the user with its own monolithic authorization experience. Your app has no control over what happens in this experience. All it knows is what is returned when Microsoft Entra ID calls the  callback page that you provided (`/tab-auth/simple-end`).
 
-In this page, you need to determine success or failure based on the information returned by Microsoft Entra ID and call `authentication.notifySuccess()` or `authentication.notifyFailure()`. If the login was successful, you have access to service resources.
+In this page, you need to determine success or failure based on the information returned by Microsoft Entra ID and call `authentication.notifySuccess()` or `authentication.notifyFailure()`. If the sign-in was successful, you have access to service resources.
 
 ```javascript
 // Split the key-value pairs passed from Azure AD
@@ -188,7 +188,7 @@ if (hashParams["error"]) {
     // Get the stored state parameter and compare with incoming state
     let expectedState = localStorage.getItem("simple.state");
     if (expectedState !== hashParams["state"]) {
-        // State does not match, report error
+        // State doesn't match, report error
         localStorage.setItem("simple.error", JSON.stringify(hashParams));
         authentication.notifyFailure("StateDoesNotMatch");
     } else {
@@ -204,7 +204,7 @@ if (hashParams["error"]) {
         authentication.notifySuccess(key);
     }
 } else {
-    // Unexpected condition: hash does not contain error or access_token parameter
+    // Unexpected condition: hash doesn't contain error or access_token parameter
     localStorage.setItem("simple.error", JSON.stringify(hashParams));
     authentication.notifyFailure("UnexpectedFailure");
 }
@@ -230,7 +230,7 @@ Your app can set its own session cookie so that the user need not sign in again 
 > [!NOTE]
 >
 > * Chrome 80, scheduled for release in early 2020, introduces new cookie values and imposes cookie policies by default. It's recommended that you set the intended use for your cookies rather than rely on default browser behavior. *See* [SameSite cookie attribute (2020 update)](../../../resources/samesite-cookie-update.md).
-> * To obtain the appropriate token for Microsoft Teams Free and guest users, ensure your apps utilize the tenant-specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can acquire the tenantId from the bot message or tab context. If your apps use `https://login.microsoftonline.com/common`, users might receive incorrect tokens, causing them to log into the "home" tenant rather than the tenant they are currently signed into.
+> * To obtain the appropriate token for Microsoft Teams Free and guest users, ensure your apps utilize the tenant-specific endpoint `https://login.microsoftonline.com/**{tenantId}**`. You can acquire the tenantId from the bot message or tab context. If your apps use `https://login.microsoftonline.com/common`, users might receive incorrect tokens, causing them to log into the "home" tenant rather than the tenant they are signed into.
 
 For more information on single sign-on (SSO), see the article [Silent authentication](~/tabs/how-to/authentication/auth-silent-AAD.md).
 

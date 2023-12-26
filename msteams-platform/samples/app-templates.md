@@ -33,7 +33,7 @@ The Champion Management Platform (CMP) app template helps you manage, scale, and
 The Company Communicator app enables corporate teams to create and send messages intended for multiple teams or large number of employees over chat allows organization to reach employees right where they collaborate. Utilize this template for multiple scenarios such as new initiative announcements, employee onboarding, modern learning, and development or organization-wide broadcasts.
 
 > [!NOTE]
-> Company Communicator app is not supported in mobile clients.
+> Company Communicator app isn't supported in mobile clients.
 
 The app provides an easy interface for designated users to create, preview, collaborate, and send messages.
 
@@ -59,7 +59,7 @@ App template code samples are a collection of sample apps for Microsoft Teams pl
 
 > [!NOTE]
 >
-> * Microsoft is not actively managing the source code. The complete source code is open-source and you can explore, fork, and modify the source code to meet your specific requirements.
+> * Microsoft isn't actively managing the source code. The complete source code is open-source and you can explore, fork, and modify the source code to meet your specific requirements.
 > * You must not use Microsoft Power Platform to create apps that are to be published to the Microsoft Teams Store. Microsoft Power Platform apps can be published to an organization’s app store only.
 
 The following table describes App template code samples:  

@@ -67,7 +67,7 @@ With an aim toward simplifying and streamlining the Microsoft 365 developer ecos
 
 ### Office Add-ins (preview)
 
-You can now define and deploy Office Add-ins in the [developer preview version](../resources/schema/manifest-schema-dev-preview.md) of the Microsoft Teams app manifest. Currently, this preview is limited to Outlook Add-ins running on subscription Microsoft 365 for Windows app.
+You can now define and deploy Office Add-ins in the [developer preview version](../resources/schema/manifest-schema-dev-preview.md) of the Microsoft Teams app manifest. This preview is limited to Outlook Add-ins running on subscription Microsoft 365 for Windows app.
 
 For more information, see [app manifest for Office Add-ins (preview)](/office/dev/add-ins/develop/json-manifest-overview).
 

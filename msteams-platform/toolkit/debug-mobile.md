@@ -72,7 +72,7 @@ You can view the project folders and files under **Explorer** in the Visual Stud
     > [!NOTE]
     >
     > * To preview the tab app only in mobile client, set the value for `access` property to `private`.
-    > * When the dev tunnel access value is set to `private`, the tab app cannot be displayed within an iframe on the web client. The login page is hosted on **login.microsoftonline.com**, which has the `X-FRAME-Options` header set to DENY.
+    > * When the dev tunnel access value is set to `private`, the tab app cannot be displayed within an iframe on the web client. The sign-in page is hosted on **login.microsoftonline.com**, which has the `X-FRAME-Options` header set to DENY.
     > * To preview the tab app on the mobile client and debug it on web clients, set the access value to `public`. Any user with the app's URL can visit the tab.
 
     :::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="Screenshot shows the login page.":::
@@ -164,7 +164,7 @@ You'll be prompted to upload a custom app into Teams. Select **Add**.
     :::image type="content" source="../assets/images/debug-mobile/m365-sign-in.PNG" alt-text="Screenshot shows the Microsoft 365 sign in page.":::
 
     > [!NOTE]
-    > You need to login only once per device, and every time you install the app you need to confirm the anti-phishing page.
+    > You need to sign in only once per device, and every time you install the app you need to confirm the anti-phishing page.
 
 1. Your first mobile tab app is created.
 

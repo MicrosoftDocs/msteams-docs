@@ -153,10 +153,10 @@ The **Read receipts** setting in Teams allow the sender of a chat message to be 
 
 To receive read receipts events for your bot, ensure the following:
 
-* Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows: 
+* Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows:
 
-    # [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
-    
+# [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
+
     ```json
     
     "webApplicationInfo": {
@@ -177,9 +177,9 @@ To receive read receipts events for your bot, ensure the following:
     }
     
     ```
-    
-    # [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
-    
+
+# [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
+
     ```json
     
      “webApplicationInfo”: {
@@ -192,9 +192,9 @@ To receive read receipts events for your bot, ensure the following:
      },
     
     ```
-    
+
     ---
-    
+
     You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
 
 * Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.
@@ -214,7 +214,7 @@ To receive read receipts events for your bot, ensure the following:
     ```
 
     Following is an example of read receipts event request that a bot receives:
-    
+
     ```json
     {
         "name": "application/vnd.microsoft.readReceipt",
@@ -250,8 +250,7 @@ To receive read receipts events for your bot, ensure the following:
 
 * Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the bot to receive the read receipt events. The tenant admin or the user can enable or disable the read receipt setting.
 
-After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message. 
-
+After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
 
 ## Send a message
 
@@ -762,7 +761,7 @@ Messages received from or sent to your bot can include different types of messag
 | Rich text | ✔️                | ✔️                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
 | Pictures  | ✔️                | ✔️                | Maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Doesn't support the animated GIF. |
 | Cards     | ❌                | ✔️                | See [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
+| Emojis    | ✔️                | ✔️                | Teams supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
 ### Picture messages
 

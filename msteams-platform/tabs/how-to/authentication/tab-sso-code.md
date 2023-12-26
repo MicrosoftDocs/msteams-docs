@@ -32,7 +32,7 @@ To obtain app access for the current app user, your client-side code must make a
 <summary>Learn more about getAuthToken()</summary>
 <br>
 
-`getAuthToken()` is a method in Microsoft Teams JavaScript library. It requests a Microsoft Entra access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Microsoft Entra ID to obtain a new access token.
+`getAuthToken()` is a method in Microsoft Teams JavaScript library. It requests a Microsoft Entra access token to be issued on behalf of app. The token is acquired from the cache, if it isn't expired. If it's expired, a request is sent to Microsoft Entra ID to obtain a new access token.
 
  For more information, see [getAuthToken](/javascript/api/%40microsoft/teams-js/microsoftteams.authentication#@microsoft-teams-js-microsoftteams-authentication-getauthtoken).
 </details>
@@ -84,14 +84,14 @@ When Teams receives the access token, it's cached and reused as needed. This tok
 
 ### Consent dialog for getting access token
 
-When you call `getAuthToken()` and app user's consent is required for user-level permissions, a Microsoft Entra dialog is shown to the app user who is currently signed in.
+When you call `getAuthToken()` and app user's consent is required for user-level permissions, a Microsoft Entra dialog is shown to the app user who is signed in.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
 The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. After consenting, the app user can access and use your tab app for the granted permissions and scopes.
 
 > [!IMPORTANT]
-> Scenarios where consent dialogs are not needed:
+> Scenarios where consent dialogs aren't needed:
 >
 > - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs, and can access the app seamlessly.
 > - If your Microsoft Entra app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Microsoft Entra app is registered in a different tenant.

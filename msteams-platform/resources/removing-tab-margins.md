@@ -16,7 +16,7 @@ You can build apps that look more native to Teams by removing the margins around
 :::image type="content" source="../assets/images/tabs/remove-margins-tabs.png" alt-text="Tab wit and without margins":::
 
 > [!NOTE]
-> This feature is not applicable to mobile clients, as the tabs viewed in the mobile clients don't have margins.
+> This feature isn't applicable to mobile clients, as the tabs viewed in the mobile clients don't have margins.
 
 ## Guidelines
 

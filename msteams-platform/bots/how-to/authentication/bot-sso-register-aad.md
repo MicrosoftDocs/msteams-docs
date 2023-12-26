@@ -339,7 +339,7 @@ Configuration for authentication depends on the platform or device where you wan
 > [!NOTE]
 >
 > - If your bot app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
-> - Implicit grant is not required if SSO is enabled on a bot app.
+> - Implicit grant isn't required if SSO is enabled on a bot app.
 
 You can configure authentication for multiple platforms as long as the URL is unique.
 
@@ -701,7 +701,7 @@ Configuration for authentication depends on the platform or device where you wan
 > [!NOTE]
 >
 > - If your bot app hasn't been granted IT admin consent, app users have to provide consent the first time they use your app on a different platform.
-> - Implicit grant is not required if SSO is enabled on a bot app.
+> - Implicit grant isn't required if SSO is enabled on a bot app.
 
 You can configure authentication for multiple platforms as long as the URL is unique.
 
