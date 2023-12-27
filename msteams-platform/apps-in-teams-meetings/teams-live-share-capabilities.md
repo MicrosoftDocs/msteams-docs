@@ -151,7 +151,7 @@ export const App = () => {
     // Create the host as React state so that it doesn't get reset on mount
     const [host] = useState(LiveShareHost.create());
 
-    // Live Share for React doesn't require that you define a custom Fluid schema
+    // Live Share for React does not require that you define a custom Fluid schema
     return (
         <LiveShareProvider host={host} joinOnLoad>
             <LiveShareLoading />
@@ -277,7 +277,7 @@ const schema = {
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid doesn't maintain type recognition for `container.initialObjects`.
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
 // Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
 const presence = container.initialObjects.presence as unknown as LivePresence<ICustomUserData>;
 
@@ -441,7 +441,7 @@ const schema = {
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid doesn't maintain type recognition for `container.initialObjects`.
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
 // Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
 const appState = container.initialObjects.appState as unknown as LiveState<PlanetName>;
 
@@ -568,7 +568,7 @@ const schema = {
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid doesn't maintain type recognition for `container.initialObjects`.
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
 // Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
 const customReactionEvent = container.initialObjects.customReactionEvent as unknown as LiveEvent<ICustomReaction>;
 
@@ -718,7 +718,7 @@ const schema = {
   initialObjects: { timer: LiveTimer },
 };
 const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid doesn't maintain type recognition for `container.initialObjects`.
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
 // Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
 const timer = container.initialObjects.timer as unknown as LiveTimer;
 
@@ -873,7 +873,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
   const followingUser = followMode.getUserForClient(clientId);
   switch (state.type) {
     case FollowModeType.local: {
-        // Update app to reflect that the user isn't following anyone and there is no presenter.
+        // Update app to reflect that the user is not currently following anyone and there is no presenter.
         infoText.innerHTML = "";
         // Show a "Start presenting" button in your app.
         button.innerHTML = "Start presenting";
@@ -884,7 +884,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
     case FollowModeType.activeFollowers: {
         // Update app to reflect that the local user is being followed by other users.
         infoText.innerHTML = `${state.otherUsersCount} users are following you`;
-        // Doesn't mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
+        // Does not mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
         button.innerHTML = "Present to all";
         button.onclick = followMode.startPresenting;
         // Note: state.isLocalValue will be true.
@@ -1023,7 +1023,7 @@ const schema = {
   },
 };
 const { container } = await liveShare.joinContainer(schema);
-// Force casting is necessary because Fluid doesn't maintain type recognition for `container.initialObjects`.
+// Force casting is necessary because Fluid does not maintain type recognition for `container.initialObjects`.
 // Casting here is always safe, as the `initialObjects` is constructed based on the schema you provide to `.joinContainer`.
 const followMode = container.initialObjects.followMode as unknown as LiveFollowMode<ICameraPosition>;
 
@@ -1045,7 +1045,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
   const followingUser = followMode.getUserForClient(clientId);
   switch (state.type) {
     case FollowModeType.local: {
-        // Update app to reflect that the user isn't following anyone and there is no presenter.
+        // Update app to reflect that the user is not currently following anyone and there is no presenter.
         infoText.innerHTML = "";
         // Show a "Start presenting" button in your app.
         button.innerHTML = "Start presenting";
@@ -1056,7 +1056,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
     case FollowModeType.activeFollowers: {
         // Update app to reflect that the local user is being followed by other users.
         infoText.innerHTML = `${state.otherUsersCount} users are following you`;
-        // Doesn't mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
+        // Does not mean that the local user is presenting to everyone, so you can still show the "Start presenting" button.
         button.innerHTML = "Present to all";
         button.onclick = followMode.startPresenting;
         // Note: state.isLocalValue will be true.
@@ -1683,7 +1683,7 @@ export const App = () => {
         inTeams ? LiveShareHost.create() : TestLiveShareHost.create()
     );
 
-    // Live Share for React doesn't require that you define a custom Fluid schema
+    // Live Share for React does not require that you define a custom Fluid schema
     return (
         <LiveShareProvider host={host} joinOnLoad>
             <LiveShareLoading />

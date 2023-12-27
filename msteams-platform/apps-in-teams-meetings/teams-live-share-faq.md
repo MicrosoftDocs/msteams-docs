@@ -58,7 +58,7 @@ Scheduled meetings, one-on-one calls, group calls, meet now, and channel meeting
 
 <summary><b>Will Live Share's media package work with DRM content?</b></summary>
 
-No. Teams doesn't support encrypted media for tab applications on desktop. Google Chrome, Microsoft Edge, and mobile clients are supported. For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
+No. Teams currently doesn't support encrypted media for tab applications on desktop. Google Chrome, Microsoft Edge, and mobile clients are supported. For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
 
 <br>
 
@@ -67,7 +67,7 @@ No. Teams doesn't support encrypted media for tab applications on desktop. Googl
 <details>
 <summary><b>How many people can attend a Live Share session?</b></summary>
 
-Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Currently, Live Share supports a maximum of 100 attendees per session. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
@@ -76,7 +76,7 @@ Live Share supports a maximum of 100 attendees per session. If this is something
 <details>
 <summary><b>Can I use Live Share's data structures outside of Teams?</b></summary>
 
-Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
 
 <br>
 
@@ -85,7 +85,7 @@ Live Share packages require the Teams Client SDK to function properly. Features 
 <details>
 <summary><b>Can I use multiple Fluid containers?</b></summary>
 
-Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
+Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
 
 <br>
 
@@ -94,7 +94,7 @@ Live Share only supports having one container using our provided Azure Fluid Rel
 <details>
 <summary><b>Can I change my Fluid container schema after creating the container?</b></summary>
 
-Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
+Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
 
 > [!NOTE]
 > If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
@@ -108,7 +108,7 @@ If you plan to update your app with new `SharedObject`, `DataObject`, or `LiveDa
 * Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
 
 > [!NOTE]
-> Live Share doesn't support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
+> Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
 
 <br>
 
