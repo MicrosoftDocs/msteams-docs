@@ -19,7 +19,7 @@ Your `manifest.json` defines your tab's features and capabilities. The tab insta
 |---|---|---|---|---|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default is `true`. |
 
-When your tab is uploaded to a channel or group chat, Teams adds a right-click dropdown menu for your tab. The available options are determined by the `canUpdateConfiguration` setting. The following table provides the setting details:
+When your tab is uploaded to a channel or group chat, Teams adds a right-click drop-down menu for your tab. The available options are determined by the `canUpdateConfiguration` setting. The following table provides the setting details:
 
 | `canUpdateConfiguration`| true   | false | description |
 | ----------------------- | :----: | ----- | ----------- |
@@ -103,7 +103,7 @@ The following is a sample tab removal code block:
 
 ***
 
-When a user selects **Remove** from the tab's dropdown menu, Teams loads the optional `removeUrl` page assigned in your **configuration page**, into an iFrame. The user is shown a button loaded with the `onClick()` function that calls `pages.config.setValidityState(true)` and enables the **Remove** button shown at the bottom of the removal page iFrame.
+When a user selects **Remove** from the tab's drop-down menu, Teams loads the optional `removeUrl` page assigned in your **configuration page**, into an iFrame. The user is shown a button loaded with the `onClick()` function that calls `pages.config.setValidityState(true)` and enables the **Remove** button shown at the bottom of the removal page iFrame.
 
 After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEvent.notifyFailure()` notifies Teams of the content removal outcome.
 

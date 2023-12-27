@@ -73,13 +73,13 @@ Your app can only have one Team tab:
 
 <img  width="450px" alt="Adding a Teams tab" src="~/assets/images/get-started/TeamTab.png"/>
 
-In this sample, the Team tab is where your configuration page is displayed. Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the dropdown menu. Change the URL to `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` must be replaced with the URL that you used when hosting your app.
+In this sample, the Team tab is where your configuration page is displayed. Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. Change the URL to `https://yourteamsapp.ngrok.io/configure` where `yourteamsapp.ngrok.io` must be replaced with the URL that you used when hosting your app.
 
 ##### Personal tabs
 
 Your app can have up to 16 tabs, including the Team tab.
 
-Personal tabs are different from the Team tab. **Hello Tab** is already listed in the personal tabs list with a placeholder value `com.contoso.helloworld.hellotab`. Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the dropdown menu. The following dialog box appears:
+Personal tabs are different from the Team tab. **Hello Tab** is already listed in the personal tabs list with a placeholder value `com.contoso.helloworld.hellotab`. Select the **...** symbol of the **Tab configuration url** and choose **Edit** from the drop-down menu. The following dialog box appears:
 
 <img  width="450px" alt="Adding a personal tab dialog" src="~/assets/images/get-started/PersonalTab.png"/>
 
@@ -129,7 +129,7 @@ Complete the following steps to setup your message extension:
 
 1. Select **Delete** to remove the message extension, select **Set up**, and follow the same steps used for [bots](#bots). The **Message Extension** dialog box is displayed.
 1. Select the **Use existing bot** tab and **Select from one of my existing bots**.
-1. Select the bot you created from the dropdown menu. Add a **Bot name** and select **Save** to close the dialog box.
+1. Select the bot you created from the drop-down menu. Add a **Bot name** and select **Save** to close the dialog box.
 1. Under the **Command** section, select **Add**. To add a search-based command, select the **Allow users to query your service for information and insert that into a message** option.
 1. In the **New command** dialog box, enter the following values:
 

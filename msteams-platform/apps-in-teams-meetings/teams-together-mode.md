@@ -119,11 +119,11 @@ To build a scene using the Scene studio, follow these steps:
 
     The scene can then be viewed in the custom Together Mode scenes gallery.
 
-Optionally, you can select **Share** from the **Save** dropdown menu. You can create a shareable link to distribute your scenes for others to use. The user can open the link to install the scene and start using it.
+Optionally, you can select **Share** from the **Save** drop-down menu. You can create a shareable link to distribute your scenes for others to use. The user can open the link to install the scene and start using it.
 
 After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. The app package is different from the scene package, for the scene that was designed. The app package created automatically is found in the **Apps** section in the Teams Developer Center.
 
-Optionally, the scene package is retrieved by selecting **Export** from the **Save** dropdown menu. A .zip file that is the scene package is downloaded. Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes:
+Optionally, the scene package is retrieved by selecting **Export** from the **Save** drop-down menu. A .zip file that is the scene package is downloaded. Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes:
 
 :::image type="content" source="../assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
@@ -220,7 +220,7 @@ To select scenes and use custom Together Mode scenes, follow these steps:
     > [!NOTE]
     > On selecting **Preview** in the Scene studio, the scene is installed as an app in Teams. This is the model for a developer to test and try out scenes from the Scene studio. After a scene is exported and uploaded as a custom app, users can view the scenes in the scene gallery.
 
-1. From the **Gallery** dropdown in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
+1. From the **Gallery** drop-down in the upper-left corner, select **Together Mode**. The **Picker** dialog box appears and the scene that is added is available.
 
 1. Select **Change scene** to change the default scene.
 
