@@ -53,6 +53,7 @@ An Action in the context menu contains App icon and display name. Actions with c
 
 :::image type="content" source="images/actions-design-guidelines.png" alt-text="The screenshot shows the design of context menu.":::
 
-## See also
+## Next step
 
-[Extend Teams apps across Microsoft 365](overview.md)
+> [!div class="nextstepaction"]
+> [Build Actions in Microsoft 365](build-actions-in-m365.md)
