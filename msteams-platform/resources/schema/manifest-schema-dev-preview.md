@@ -1038,8 +1038,8 @@ Required if the handler type is `openPage`. Object containing metadata of the pa
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`pageId`| String | |  | ID of the page (in the app) that the Action directs the user to. |
-|`subpageId`| String | |  | ID of the subpage (in the app) that the Action directs the user to. |
+|`EntityId`| String | |  | Maps to the `EntityId` of the static tab. |
+|`SubEntityId`| String | |  | Maps to the `SubEntityId` of the static tab. |
 
 ## See also
 

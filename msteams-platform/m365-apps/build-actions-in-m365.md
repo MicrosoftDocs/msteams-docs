@@ -27,11 +27,11 @@ To build Actions for your app, follow these steps:
 
 > [!div class="checklist"]
 >
->* [Update app manifest](#update-app-manifest).
+>* [Configure app manifest file](#configure-app-manifest-file).
 >* [Retrieve Action information through context object](#retrieve-action-information-through-context-object).
 >* [Access content through Graph API](#access-content-through-graph-api).
 
-## Update app manifest
+## Configure app manifest file
 
 Add the `actions` property and define the intent, object, and handler for your actions in the app manifest (previously called Teams app manifest).
 
@@ -46,7 +46,7 @@ The following is an example of the `intent`, `supportedobjects`, and `handlers` 
 .
 "actions": [
     {
-        // Defining Action to open a page
+        // Defining Action to open a personal tab
         "id": "relatedTasks",
         "displayName": "Related tasks",
         "intent": "custom",
@@ -77,7 +77,7 @@ When a user selects an action to open a page and view related tasks in an app ba
 
 Build the handler to receive the Action information through the [context object](/javascript/api/%40microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
 
-When a user selects Add option from the app's context menu, a page opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
+When a user selects Add option from the app's context menu, a personal tab opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
 
 ```javascript
 const context = await app.getContext();
