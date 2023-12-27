@@ -60,24 +60,24 @@ To update your app's code:
 
    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
-    ```csharp
+   ```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-    ```
+   ```
 
 # [JavaScript](#tab/js1)
 
    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
-    ```JavaScript
+   ```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
     adapter.use(tokenExchangeMiddleware);
-    ```
+   ```
 
-    ---
+---
 
-    > [!NOTE]
-    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
+> [!NOTE]
+> You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 1. Use the following code snippet for requesting a token.
 
@@ -85,7 +85,7 @@ To update your app's code:
 
    After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
-    ```csharp
+   ```csharp
         public class AdapterWithErrorHandler : CloudAdapter
         {
             public AdapterWithErrorHandler(
@@ -134,13 +134,13 @@ To update your app's code:
                 };
             }
         }
-    ```
+   ```
 
 # [JavaScript](#tab/js2)
 
    After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code must appear:
 
-    ```JavaScript
+   ```JavaScript
         // index.js is used to setup and configure your bot.
     
         // Import required packages
@@ -231,7 +231,7 @@ To update your app's code:
             // Route received a request to adapter for processing.
             await adapter.process(req, res, (context) => bot.run(context));
         });
-    ```
+   ```
 
 ---
 
