@@ -26,6 +26,12 @@ You can create an API-based message extension using an [OpenAPI Description (OAD
 >[!IMPORTANT]
 > You can build an API-based message extension now and starting early next year, the extensions will function as plugins within Copilot and enhance Copilot experience for your extensions.
 
+See the video to learn more about building an API-based message extension using Teams Toolkit:
+</br>
+</br>
+
+> [!VIDEO https://www.youtube.com/embed/jSYNHz6hz4Y?si=htmfWtlY9bYH_RT2]
+
 ## Prerequisites
 
 Before you get started, ensure that you adhere to the following requirements:
@@ -37,7 +43,7 @@ Before you get started, ensure that you adhere to the following requirements:
 
 ### OpenAPI Description
 
-The OpenAPI Description (OAD) is the industry-standard specification that details the structure and outline of OpenAPI files. It's a language-agnostic, human-readable format for describing APIs. It's designed to be easily read and written by both humans and machines. The schema is machine-readable and can be represented in either YAML or JSON. An OpenAPI Description document is required before creating an API-driven message extension.
+The OpenAPI Description (OAD) is the industry-standard specification that details the structure and outline of OpenAPI files. It's a language-agnostic, human-readable format for describing APIs. Both humans and machines can easily read and write the openAPI Description. The schema is machine-readable and can be represented in either YAML or JSON. An OpenAPI Description document is required before creating an API-driven message extension.
 
 The following code is an example of an OpenAPI Description document: <br/>
 <br/>
@@ -131,11 +137,11 @@ Each search command must have a corresponding response rendering template, and e
 
 **Preview Card**
 
-:::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of how the compose extension looks like, displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the  'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
+:::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of compose extension displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the  'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
 
 **Expanded Adaptive Card**
 
-:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adaptive-card.png" alt-text="Example of how the Adaptive Card looks like expanded once a user selects a preview card. The Adaptive Card shows the 'Title', the full 'Description', 'AssignedTo', 'RepairId' and 'Date' values.":::
+:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adaptive-card.png" alt-text="Example of how the Adaptive Card looks like expanded once a user selects a preview card. The Adaptive Card shows the Title, the full Description, AssignedTo, RepairId, and Date values.":::
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
@@ -349,7 +355,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 </details>
 
-* `image`: If a property is an image URL, then it's converted to an Image element in the Adaptive Card.
+* `image`: If a property is an image URL, then it converts to an Image element in the Adaptive Card.
 
   <details><summary>Example</summary>
 

@@ -47,8 +47,10 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Actions in Microsoft 365
-        url: ~/m365-apps/actions-in-m365.md    
+      - text: Incoming Webhooks are available in GCC-High
+        url: webhooks-and-connectors/what-are-webhooks-and-connectors.md
+      - text: Introduced RSC permissions for users to access different resources
+        url:  graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access
       - text: App caching in chat, channel, and meeting tab scopes is available for iOS
         url:  tabs/how-to/app-caching.md
       - text: Bots can mention tags in Teams channels
@@ -65,9 +67,6 @@ landingContent:
         url: messaging-extensions/build-bot-based-plugin.md
       - text: Guidelines to extend bot-based message extension as plugin 
         url: messaging-extensions/high-quality-message-extension.md
-      - text: Use callRecording API to fetch meeting recording from all meetings
-        url: graph-api/meeting-transcripts/overview-transcripts.md
-
 
     - linkListType: reference
       links:
