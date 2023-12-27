@@ -166,6 +166,8 @@ The following table lists different features to your Teams application along wit
 |:----------------  |:-------------|
 | `teamsapp add SPFxWebPart` | Auto-hosted SPFx web part tightly integrated with Microsoft Teams. |
 
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-add.png" alt-text="Screenshot shows the teamsapp add command.":::
+
 ## `teamsapp auth`
 
 The following table lists the cloud service accounts, such as Azure and Microsoft 365.
@@ -176,6 +178,8 @@ The following table lists the cloud service accounts, such as Azure and Microsof
 | `teamsapp auth login`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
 | `teamsapp auth logout`  | Log out of selected cloud service. Service options are Microsoft 365 or Azure. |
 
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-auth.png" alt-text="Screenshot shows the teamsapp auth commands.":::
+
 ## `teamsapp entra-app`
 
 Manage the Microsoft Entra app in the current application.
@@ -183,6 +187,8 @@ Manage the Microsoft Entra app in the current application.
 | Command | Description |
 |:----------------  |:-------------|
 | `update` | Update the Entra app in the current application. |
+
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-entra-app.png" alt-text="Screenshot shows the teamsapp entra-app command.":::
 
 ## `teamsapp env`
 
@@ -192,6 +198,8 @@ Manage environments.
 |:----------------  |:-------------|
 | `teamsapp env add`  | Add a new environment by copying from the specified environment. |
 | `teamsapp env list` | List all environments. |
+
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-env.png" alt-text="Screenshot shows the teamsapp env commands.":::
 
 ### Scenarios for `teamsapp env`
 
@@ -212,9 +220,13 @@ List available Microsoft Teams app templates and samples.
 | `--samples` |  List of available Teams app samples. |
 | `--templates` | List of available Teams app templates. |
 
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-list.png" alt-text="Screenshot shows the teamsapp list commands.":::
+
 ## `teamsapp help`
 
 Show Microsoft Teams Toolkit CLI help.
+
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-help.png" alt-text="Screenshot shows the teamsapp help commands.":::
 
 ## `teamsapp provision`
 
@@ -343,18 +355,10 @@ Check, grant, and list user permission to access and manage Teams application an
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsapp collaborator grant` | Check user's permission. |
 | `teamsapp collaborator status` | Show permission status for the project. |
+| `teamsapp collaborator grant` | Check user's permission. |
 
-### Parameters for `teamsapp collaborator grant`
-
-| Parameter | Required | Description |
-|:----------------  |:-------------|:-------------|
-| `--env` | Yes | Select an existing environment for the project. |
-| `--folder -f` | No | Select root folder of the project. Defaults to `./`. |
-| `--email` | No | Input email address of the collaborator. |
-| `--teams-manifest-file -t` | No | Select the manifest template file path, defaults to `${folder}/appPackage/manifest.json`. |
-| `--entra-app-manifest-file -a` | No | Select the Entra app manifest file path, defaults to `${folder}/aad.manifest.json`. |
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-collaborator.png" alt-text="Screenshot shows the teamsapp collaborator commands.":::
 
 ### Parameters for `teamsapp collaborator status`
 
@@ -365,6 +369,16 @@ Check, grant, and list user permission to access and manage Teams application an
 | `--teams-manifest-file -t` | No | Select the manifest template file path, defaults to `${folder}/appPackage/manifest.json`. |
 | `--entra-app-manifest-file -a` | No | Select the Entra manifest template file path, defaults to `${folder}/aad.manifest.json`. |
 | `--all -a` | No | List all collaborators. |
+
+### Parameters for `teamsapp collaborator grant`
+
+| Parameter | Required | Description |
+|:----------------  |:-------------|:-------------|
+| `--env` | Yes | Select an existing environment for the project. |
+| `--folder -f` | No | Select root folder of the project. Defaults to `./`. |
+| `--email` | No | Input email address of the collaborator. |
+| `--teams-manifest-file -t` | No | Select the manifest template file path, defaults to `${folder}/appPackage/manifest.json`. |
+| `--entra-app-manifest-file -a` | No | Select the Entra app manifest file path, defaults to `${folder}/aad.manifest.json`. |
 
 ### Scenarios for `teamsapp collaborator`
 
