@@ -122,8 +122,8 @@ The following table lists the cloud service accounts, such as Azure and Microsof
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx account login`  | Sign in to the selected cloud service. Service options are Microsoft 365 or Azure. |
-| `teamsfx account logout`  | Sign out of selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsfx account login`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsfx account logout`  | Log out of selected cloud service. Service options are Microsoft 365 or Azure. |
 | `teamsfx account show` | Display all connected cloud accounts information. |
 
 ## `teamsfx env`

@@ -408,7 +408,7 @@ Each team course instance must have an owner, and the synchronization sets the f
 <details>
 <summary>What should we do to remove Moodle login page when working from Teams? Can we force single sign-on (SSO)?</summary>
 
-The app users have multiple sign-in options from the Moodle sign-in page.
+The app users have multiple sign-in options from the Moodle login page.
 
 * To sign in exclusively using Microsoft 365 credentials, enable the **Force redirect** configuration settings for the **auth_oidc plugin**. If the service is enabled, the app user can see the Microsoft sign in page.
 * To sign in manually to the Moodle portal, see [Moodle](https://moodle.org/login/index.php).

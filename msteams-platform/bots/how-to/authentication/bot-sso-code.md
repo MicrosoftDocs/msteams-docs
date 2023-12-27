@@ -7,7 +7,7 @@ zone_pivot_groups: enable-sso
 ---
 # Add code to enable SSO in your bot app
 
-Before you add code to enable single sign-on (SSO), ensure that you've configured your app and bot resource in Microsoft Entra admin center.
+Before you add code to enable single sign-on (SSO), ensure that you configure your app and bot resource in Microsoft Entra admin center.
 
 > [!div class="nextstepaction"]
 > [Configure bot app in Microsoft Entra ID](bot-sso-register-aad.md)
@@ -28,7 +28,7 @@ This section covers:
 
 ## Update development environment variables
 
-You've configured client secret and OAuth connection setting for the app in Microsoft Entra ID. You must configure the code with these values.
+You configured the client secret and OAuth connection setting for the app in Microsoft Entra ID. You must configure the code with these values.
 
 To update the development environment variables:
 
@@ -43,7 +43,7 @@ To update the development environment variables:
 
 1. Save the file.
 
-You've now configured the required environment variables for your bot app and SSO. Next, add the code for handling bot tokens.
+You configured the required environment variables for your bot app and SSO. Next, add the code for handling bot tokens.
 
 ## Add code to handle an access token
 
@@ -58,7 +58,7 @@ To update your app's code:
 
 # [C#](#tab/cs1)
 
-    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+   Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
     ```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
@@ -66,7 +66,7 @@ To update your app's code:
 
 # [JavaScript](#tab/js1)
 
-    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
+   Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
     ```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
@@ -83,7 +83,7 @@ To update your app's code:
 
 # [C#](#tab/cs2)
 
-    After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
+   After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
     ```csharp
         public class AdapterWithErrorHandler : CloudAdapter
@@ -138,7 +138,7 @@ To update your app's code:
 
 # [JavaScript](#tab/js2)
 
-    After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code must appear:
+   After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code must appear:
 
     ```JavaScript
         // index.js is used to setup and configure your bot.
@@ -309,7 +309,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
             {
                 var token = tokenResponse.Token;
 
-                // On successful login, the token contains login token.
+                // On successful login, the token contains sign in token.
             }
             else 
             {
@@ -379,7 +379,7 @@ Web APIs on your server must decode the access token and verify if it's sent fro
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
-There are a number of libraries available that can handle JWT validation. Basic validation includes:
+There are many libraries available that can handle JWT validation. Basic validation includes:
 
 - Checking that the token is well-formed.
 - Checking that the token was issued by the intended authority.
@@ -387,7 +387,7 @@ There are a number of libraries available that can handle JWT validation. Basic 
 
 Keep in mind the following guidelines when validating the token:
 
-- Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
+- Microsoft Entra ID issues valid SSO tokens. The `iss` claim in the token must start with this value.
 - The token's `aud1` parameter is set to the app ID generated during Microsoft Entra app registration.
 - The token's `scp` parameter is set to `access_as_user`.
 

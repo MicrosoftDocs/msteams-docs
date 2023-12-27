@@ -645,7 +645,7 @@ The sign in card in Teams is similar to the sign in card in the Bot Framework ex
 
 The sign in action can be used from any card in Teams, not just the sign in card. For more information, see [Teams authentication flow for bots](~/bots/how-to/authentication/auth-flow-bot.md).
 
-### Support for sign in cards
+### Support for login cards
 
 The following table provides the features that support sign in cards:
 

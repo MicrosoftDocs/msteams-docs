@@ -419,7 +419,7 @@ When you test the zero install link unfurling, don’t install the app as a pers
 
 To test zero install link unfurling, follow these steps:
 
-1. Sign in to [Teams admin center](https://admin.teams.microsoft.com/).
+1. Login to [Teams admin center](https://admin.teams.microsoft.com/).
 
 1. From the left pane, select **Teams apps** > **Manage apps**.
 

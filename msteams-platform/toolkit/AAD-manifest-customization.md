@@ -190,7 +190,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
 1. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and sign in to Microsoft 365 account.
   
    > [!NOTE]
-   > Ensure that sign-in credentials of Teams application and Microsoft 365 account are the same.
+   > Ensure that login credentials of Teams application and Microsoft 365 account are the same.
 
 1. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and search the Microsoft Entra application using client ID that you copied before.
   
