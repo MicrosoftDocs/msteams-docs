@@ -345,7 +345,7 @@ Your app must not have the following issues in Outlook and Microsoft 365 clients
 
 1. The content in the app is specific to Teams only.
 
-1. The user is unable to sign in to the app in Outlook.
+1. The user is unable to login to the app in Outlook.
 
 ### App responsiveness
 

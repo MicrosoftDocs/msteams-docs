@@ -252,7 +252,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 
 1. From the list, select a subscription.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the sign-in to Azure and select a subscription option in the CLI window.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the login to Azure and select a subscription option in the CLI window.":::
 
 1. From the list, select a resource group.
 1. If you receive a message, which reads **Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed above?**, enter **Y**.

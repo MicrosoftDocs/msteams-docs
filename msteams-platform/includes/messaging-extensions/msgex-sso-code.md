@@ -256,7 +256,7 @@ public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
                     ConnectionName = ConnectionName,
                     Text = "Please Sign In",
                     Title = "Sign In",
-                    Timeout = 300000, // User has 5 minutes to sign in (1000 * 60 * 5)
+                    Timeout = 300000, // User has 5 minutes to login (1000 * 60 * 5)
                     EndOnInvalidMessage = true
                 }));
 
@@ -286,7 +286,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
             {
                 var token = tokenResponse.Token;
 
-                // On successful sign in, the token contains sign in token.
+                // On successful login, the token contains sign in token.
             }
             else 
             {
@@ -336,7 +336,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
                 await stepContext.context.sendActivity('Login was not successful please try again.');
             } else {
                 const token = tokenResponse.token;
-                // On successful sign-in, the token contains sign in token.
+                // On successful login, the token contains sign in token.
             }
             return await stepContext.endDialog();
         }

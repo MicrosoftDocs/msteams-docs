@@ -23,7 +23,7 @@ To enable license management for a third-party app in Teams, follow the steps:
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/) and select **Partner Center**.
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="The screenshots shows how to sign in to the Partner Center account.":::
+   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="The screenshots shows how to login to the Partner Center account.":::
 
 1. In the **Home** page, select **Marketplace offers** tab to define commercial marketplace offers.
 
@@ -101,7 +101,7 @@ Update your Teams app to map to the paid functionality and [Map your Teams app](
 
 Integrate with Graph usageRights API to manage user permissions at the time of app launch by a customer who has a purchase license. You're required to determine the user’s permissions for the app with a Graph call to the usageRights API.
 
-You can call Graph APIs to determine if the signed in user with a valid subscription of the plan has access to your app. To call Graph usageRights API to check user permissions, follow the steps:
+You can call Graph APIs to determine if the currently logged in user with a valid subscription of the plan has access to your app. To call Graph usageRights API to check user permissions, follow the steps:
 
 1. Get user OBO token: [Get access on behalf of a user](/graph/auth-v2-user).
 

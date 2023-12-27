@@ -344,7 +344,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 If you haven't done it already, install the [Microsoft Bot Framework Emulator](https://aka.ms/bot-framework-emulator-readme). See also [Debug with the Emulator](/azure/bot-service/bot-service-debug-emulator?view=azure-bot-service-4.0&tabs=csharp&preserve-view=true).
 
-In order for the bot sample sign-in to work you must configure the Emulator.
+In order for the bot sample login to work you must configure the Emulator.
 
 ### Configure the Emulator for authentication
 

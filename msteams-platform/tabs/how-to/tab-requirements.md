@@ -17,7 +17,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
   * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy`. Alternately, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but still accepted by most browsers.
 
-* Sign-in pages don't render in iFrames, as a safeguard against clickjacking. Your authentication logic needs to use a method other than redirect. For example, use token-based or cookie-based authentication.
+* Login pages don't render in iFrames, as a safeguard against clickjacking. Your authentication logic needs to use a method other than redirect. For example, use token-based or cookie-based authentication.
 
     > [!NOTE]
     > It is recommended that you set the intended use for your cookies rather than rely on default browser behavior. For more information, see [SameSite cookie attribute](../../resources/samesite-cookie-update.md).

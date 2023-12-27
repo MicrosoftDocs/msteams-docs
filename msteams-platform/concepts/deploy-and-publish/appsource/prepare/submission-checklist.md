@@ -46,7 +46,7 @@ Depending on your app functionality, you're required to provide Teams tenant con
     * Non-admin accounts (required)
 
         * Ensure that test accounts are safe-listed or configured with license keys, if applicable.
-        * If your app requires users to log in or connect to external services, provide the required credentials to complete the sign-in or connection with the external service.
+        * If your app requires users to log in or connect to external services, provide the required credentials to complete the login or connection with the external service.
         * Ensure that phone-based two-way authentication is disabled for test accounts.
         * If the app provides a collaborative experience, provide a non-admin account for each user persona. For example, if your app is used by teachers and students, provide credentials for both user personas.
         * Ensure that at least one account has access to premium or upgraded features, if applicable.

@@ -185,7 +185,7 @@ To understand the bot behavior when the token exchange fails to trigger a consen
 
    > [!NOTE]
    >
-   > In Teams web client, the password prompt doesn't appear as there is an active Microsoft Entra session in the browser, which is used for authentication and to acquire a token. In Teams desktop client, the password prompt appears because the desktop client doesn't have any Microsoft Entra session to be shared and is asked to sign-in.
+   > In Teams web client, the password prompt doesn't appear as there is an active Microsoft Entra session in the browser, which is used for authentication and to acquire a token. In Teams desktop client, the password prompt appears because the desktop client doesn't have any Microsoft Entra session to be shared and is asked to login.
 
 </details>
 
