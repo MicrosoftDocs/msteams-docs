@@ -10,7 +10,7 @@ ms.date: 05/04/2023
 
 # Deep link to an application
 
-You can configure deep links to a tab, to open an app install dialog, to browse within the app, and more. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it. Deep links to custom apps are supported, however, if there's an app in the Microsoft Teams Store with the same app ID as the custom app ID specified in its custom app manifest, then deep link opens the app from the Teams Store instead of the custom app.
+You can configure deep links to a tab, to open an app install dialog, to browse within the app, and more. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it. Deep links to custom apps are supported, however, if there's an app in the Microsoft Teams Store with the same app ID as the custom app ID specified in its app manifest (previously called Teams app manifest), then deep link opens the app from the Teams Store instead of the custom app.
 
 If your app is approved for Teams mobile platform, you can create a deep link to the app on mobile. If you want the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID for the deep link to work. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
@@ -35,7 +35,7 @@ You can use deep links to allow app user to open an app install dialog to know m
 
 Following is the deep link format to open an app install dialog from your Teams client:
 
-`https://teams.microsoft.com/l/app/<your-app-id>&tenantId=<tenantId>`
+`https://teams.microsoft.com/l/app/<your-app-id>?tenantId=<tenantId>`
 
 Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bcb4). To know more about different app IDs see, [app ID used for different apps](#app-id-used-for-different-apps).
 
@@ -44,7 +44,7 @@ Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bc
 Following are the different app IDs that are used for deep links:
 
 * Custom app uploaded in Teams: Manifest ID
-* Apps submitted to org catalog: Org catalog ID
+* Apps submitted to org catalog: Org catalog ID. For more information, see [how to find ID based on the app manifest ID](/graph/api/appcatalogs-list-teamsapps#example-3-find-application-based-on-the-teams-app-manifest-id).
 * Apps submitted to Teams Store: Store ID
 
 #### Configure deep link using TeamsJS library
