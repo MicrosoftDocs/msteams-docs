@@ -120,7 +120,7 @@
     - name: Adaptive Cards
       href: task-modules-and-cards/cards/design-effective-cards.md
       displayName: column, ColumnSet 
-    - name: Task modules
+    - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
       displayname: Forms
     - name: Activity feed notifications
@@ -493,8 +493,6 @@
         href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
       - name: Quick start guide
         href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
-      - name: Build your first Teams AI app
-        href: sbs-botbuilder-conversation-AI.yml
       - name: Teams AI library FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
 - name: Build message extensions
