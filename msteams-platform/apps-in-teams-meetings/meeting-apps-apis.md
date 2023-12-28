@@ -885,7 +885,7 @@ You must configure your [app manifest](../resources/schema/manifest-schema.md) w
 
 > [!NOTE]
 >
-> * The API payload only permits a task module with a URL.
+> * The API payload only permits a dialog with a URL.
 > * The user ID formats **aadObjectid** and **UPN** aren't supported.
 
 Get supported user ID format for targeted in-meeting notification and app icon badging:
