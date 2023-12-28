@@ -117,6 +117,9 @@ async readActionItem() {
 
 ## Run your app
 
+> [!NOTE]
+> Actions are available in public developer preview, ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users to experience Actions in Microsoft 365 app.
+
 After you update the app package with the required information, you can run your app in Teams Toolkit to test your Actions.
 
 To run your app in Teams Toolkit, follow these steps:
@@ -154,9 +157,6 @@ Actions are available in public developer preview. To use an app with Actions in
 1. Select **Settings** > **Integrated Apps** > **Upload custom apps**.
 
 Follow instructions to preinstall your app for entire organization or user groups within your tenant.
-
-> [!NOTE]
-> Ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users in the tenant.
 
 ## Code sample
 
