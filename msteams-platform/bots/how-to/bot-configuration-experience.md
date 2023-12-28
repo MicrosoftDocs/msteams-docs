@@ -58,244 +58,87 @@ For more information, see [public developer preview app manifest schema](../../r
 
 ### Configure your bot
 
-When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `config/fetch` defined in the `teamsBot.js` file. The bot responds with an Adaptive Card and the user provides relevant information in the Adaptive Card and selects **Submit**. After the user selects **Submit**, a `config/submit` is returned to the bot and the bot configuration is complete.
+You can enable the configuration settings for your bot using `onInvokeActivity` or `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` or `handleTeamsConfigFetch` and `handleTeamsConfigSubmit` methods.
 
-You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` file to enable the bot configuration experience in a team or group chat.
+The following table summarizes the methods that are used to enable the bot configuration experience in Teams:
 
-* Invoke `config/fetch`: You must invoke `config/fetch` task to start the bot configuration flow and define the bot response as required.
+| Method | SDK |
+| --- | --- |
+| `onInvokeActivity`| Bot Framework SDK for .NET and TypeScript.|
+| `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync`| Teams Bot SDK for .NET. |
+| `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`. | Teams Bot SDK for Node.js and TypeScript. |
 
-  In the following example, when the bot receives `config/fetch` invoke activity, the bot responds with an Adaptive Card:
+When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `config/fetch`, `handleTeamsConfigFetch` or `OnTeamsConfigFetchAsync` methods defined in the teamsBot.js file. The bot responds with an Adaptive Card and the user provides relevant information in the Adaptive Card and selects Submit. After the user selects Submit, a `config/submit`, `handleTeamsConfigSubmit`, or `OnTeamsConfigSubmitAsync` is returned to the bot and the bot configuration is complete.
 
-    ```javascript
-    if (context._activity.name == "config/fetch") {
-      const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
+[Bot Framework JS](#tab/javascript-1)
+
+```javascript
+if (context._activity.name == "config/submit") {
+ 
+  const choice = context._activity.value.data.choiceselect.split(" ")[0];
+  chosenFlow = choice;
+  if (choice === "static_option_2") {
+      const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
+ 
+      return {
+          status: 200,
+          body: {
+              config: {
+                  type: 'continue',
+                  value: {
+                      card: adaptiveCard,
+                      height: 400,
+                      title: 'Task module submit response',
+                      width: 300                  }              }          }      }  }
+  else {
+ 
       try {
           return {
               status: 200,
               body: {
                   config: {
-                      type: 'continue',
-                      value: {
-                          card: adaptiveCard,
-                          height: 400,
-                          title: 'Task module fetch response',
-                          width: 300
-                      }
-                  }
-              }
-          }
-      } catch (e) {
-          console.log(e);
-      }
-    }
-    ```
-
-* Invoke `config/submit`: You must invoke the `config/submit` task for the bot to respond to the user's input.
-  In the following example, when the bot receives the `config/submit` invoke activity, the bot responds with an Adaptive Card or a message:
-
-    ```javascript
-    if (context._activity.name == "config/submit") {
-    
-      const choice = context._activity.value.data.choiceselect.split(" ")[0];
-      chosenFlow = choice;
-    
-      if (choice === "static_option_2") {
-          const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
-    
-          return {
-              status: 200,
-              body: {
-                  config: {
-                      type: 'continue',
-                      value: {
-                          card: adaptiveCard,
-                          height: 400,
-                          title: 'Task module submit response',
-                          width: 300
-                      }
+                      type: 'message',
+                      value: "end"
                   }
               }
           }
       }
-      else {
-    
-          try {
-              return {
-                  status: 200,
-                  body: {
-                      config: {
-                          type: 'message',
-                          value: "end"
-                      }
+ 
+ 
+if (context._activity.name == "config/fetch") {
+  const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
+  try {
+      return {
+          status: 200,
+          body: {
+              config: {
+                  type: 'continue',
+                  value: {
+                      card: adaptiveCard,
+                      height: 400,
+                      title: 'Task module fetch response',
+                      width: 300
                   }
               }
           }
-    ```
-
-### Code snippets
-
-The following code provides an example of a bot configuration experience:
-
-### [C#](#tab/dotnet1)
-
-If the Name is "config/fetch", it creates a ConfigResponse object with a `BotConfigAuth` object. This object contains a list of suggested actions for the bot, each represented as a `CardAction`. The `ConfigResponse` is then returned as the body of an `InvokeResponse` with a status code of 200.
-
-If the Name is "config/submit", it creates an AdaptiveCard with a single `AdaptiveTextBlock` element. This card is then used to create a `TaskModuleContinueResponse`, which is returned as the body of an `InvokeResponse` with a status code of 200.
-
-```csharp
-protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-{
-    if (turnContext.Activity.Name == "config/fetch")
-    {
-        var response = new ConfigResponse<BotConfigAuth>
-        {
-            Config = new BotConfigAuth
-            {
-                SuggestedActions = new SuggestedActions
-                {
-                    Actions = new List<CardAction>
-                    {
-                        new CardAction
-                        {
-                            Type = "bot config type",
-                            Title = "bot config title",
-                            Image = "https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40",
-                             Value = "bot config value"
-                        }
-                    }
-                },
-                Type = "auth"
-            }
-
-        };
-        
-        return new InvokeResponse { Status = 200, Body = response };
-
-    }
-    else if (turnContext.Activity.Name == "config/submit")
-    {
-        AdaptiveCard card = new AdaptiveCard("1.2")
-        {
-            Body = new List<AdaptiveElement>()
-        };
-        
-        card.Body.Add(new AdaptiveContainer
-        {
-            Items = new List<AdaptiveElement>
-            {
-                new AdaptiveTextBlock
-                {
-                    Size = AdaptiveTextSize.Large,
-                    Text = "bot config test",
-                    Type = "TextBlock"
-                }
-            }
-        });
-
-        var response = new ConfigResponse<TaskModuleResponseBase>
-        {
-            Config = new TaskModuleContinueResponse
-            {
-                Value = new TaskModuleTaskInfo
-                {
-                    Height = 123,
-                    Width = 456,
-                    Title = "test title",
-                    Card = new Attachment
-                    {
-                        ContentType = AdaptiveCard.ContentType,
-                        Content = card
-                    }
-                },
-                Type = "continue"
-            }
-        };
-
-        return new InvokeResponse { Status = 200, Body = response };
-    }
-
-    return null;
+      }
+  } catch (e) {
+      console.log(e);
+  }
 }
 ```
 
-### [C#](#tab/dotnet2)
+[Teams bot SDK JS](#tab/javascript-2)
 
-If the Name is "config/submit", it creates a `ConfigResponse` object with a `TaskModuleMessageResponse` object. This object contains a message string. The `ConfigResponse` is then returned as the body of an `InvokeResponse` with a status code of 200.
+The handleTeamsConfigFetch and handleTeamsConfigSubmit handle the fetching and submission of Teams configuration data.
 
-If the Name is "config/fetch", it creates an AdaptiveCard with a single `AdaptiveTextBlock` element. This card is then used to create a `TaskModuleContinueResponse`, which is returned as the body of an `InvokeResponse` with a status code of 200.
+* `handleTeamsConfigFetch`: If the command is 'card', the function sets the response.config object to contain suggested actions and a type of 'auth'. If the command is 'message', the function creates an AdaptiveCard with the text 'Bot Config Fetch' and sets the response.config object to contain the card and a type of 'continue'. The function returns the response object.
 
-```csharp
-protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-{
-    if (turnContext.Activity.Name == "config/submit")
-    {
-        var response = new ConfigResponse<TaskModuleResponseBase>
-        {
-            Config = new TaskModuleMessageResponse
-            {
-                Value = "this is a message"
-            }
-        };
-        return new InvokeResponse { Status = 200, Body = response };
-
-    }
-    else if (turnContext.Activity.Name == "config/fetch")
-    {
-        AdaptiveCard card = new AdaptiveCard("1.2")
-        {
-            Body = new List<AdaptiveElement>()
-        };
-        
-        card.Body.Add(
-            new AdaptiveContainer
-            {
-                Items = new List<AdaptiveElement>
-                {
-                    new AdaptiveTextBlock
-                    {
-                        Size = AdaptiveTextSize.Large,
-                        Text = "bot config test",
-                        Type = "TextBlock"
-                    }
-                }
-            });
-        
-        // Construct a task module response with the task module URL and any data to be passed to the task module
-
-        var response = new ConfigResponse<TaskModuleResponseBase>
-        {
-            Config = new TaskModuleContinueResponse
-            {
-                Value = new TaskModuleTaskInfo
-                {
-                    Height = 123,
-                    Width = 456,
-                    Title = "test title",
-                    Card = new Attachment
-                    {
-                        ContentType = AdaptiveCard.ContentType,
-                        Content = card
-                    }
-                },
-                Type = "continue"
-            }
-        };
-
-        return new InvokeResponse { Status = 200, Body = response };
-    }
-
-    return null;
-}
-```
-
-### [JS](#tab/js1)
-
-If the command is "card", it creates a configuration object with suggested actions for the bot.
-If the command is "message", it creates an Adaptive Card with a single TextBlock element. This card is then used to create a configuration object.
+* `handleTeamsConfigSubmit`: if the command is 'card', the function creates an AdaptiveCard with the text 'Bot Config Submit' and sets the response.config object to contain the card and a type of 'continue'. If the command is 'message', the function sets the response.config object to contain a value of 'config submit text' and a type of 'message'. The function returns the response object.
 
 ```javascript
 // extending both handlers
-
+ 
     async handleTeamsConfigFetch(_context, configData) {
         let response = {};
         switch (configData.command) {
@@ -322,7 +165,7 @@ If the command is "message", it creates an Adaptive Card with a single TextBlock
                     const cardJson = {
                         type: 'AdaptiveCard',
                         version: '1.4',
-
+ 
                         body: [
                             {
                                 type: 'TextBlock',
@@ -331,7 +174,7 @@ If the command is "message", it creates an Adaptive Card with a single TextBlock
                         ],
                     };
                     const card = CardFactory.adaptiveCard(cardJson);
-
+ 
                     response = {
                         config: {
                             value: {
@@ -348,10 +191,10 @@ If the command is "message", it creates an Adaptive Card with a single TextBlock
             default:
                 console.log('no default');
         }
-
+ 
         return response;
     }
-
+ 
     async handleTeamsConfigSubmit(_context, configData) {
         let response = {};
         switch (configData.command) {
@@ -360,7 +203,7 @@ If the command is "message", it creates an Adaptive Card with a single TextBlock
                     const cardJson = {
                         type: 'AdaptiveCard',
                         version: '1.4',
-
+ 
                         body: [
                             {
                                 type: 'TextBlock',
@@ -369,7 +212,7 @@ If the command is "message", it creates an Adaptive Card with a single TextBlock
                         ],
                     };
                     const card = CardFactory.adaptiveCard(cardJson);
-
+ 
                     response = {
                         config: {
                             value: {
@@ -397,29 +240,20 @@ If the command is "message", it creates an Adaptive Card with a single TextBlock
                 console.log('no default');
                 break;
         }
-
+ 
         return response;
     }
 ```
 
----
+[Teams bot SDK C#](#tab/dotnet-1)
 
-## Code snippets
-
-The following code provides an example of a bot configuration experience:
-
-### [C#](#tab/dotnet3)
-
-`OnTeamsConfigFetchAsync`: This method is invoked when the Teams app requests configuration information. It returns a `ConfigResponseBase` object containing a configuration response for the app. It constructs a response of type `BotConfigAuth`, indicating authentication-related configuration. The response includes suggested actions, and the `Type = "auth"`.
-
-`OnTeamsConfigSubmitAsync`: This method is invoked when the user submits configuration information.
-It returns a `ConfigResponseBase` object containing a configuration response for the submitted data.
-It constructs a response of type `TaskModuleMessageResponse` with a simple test message.
+When a user installs the bot in a team or group chat scope, the `OnTeamsConfigFetchAsync` method is called. The `OnTeamsConfigSubmitAsync` method is called when the user submits the bot configuration. The methods  return `ConfigResponseBase` object that contain the bot configuration, and can be used to create suggested actions, display messages, and configure the bot’s dialog.
 
 ```csharp
+ 
 protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
 {
-
+ 
     ConfigResponseBase response = new ConfigResponse<BotConfigAuth>
     {
         Config = new BotConfigAuth
@@ -440,10 +274,10 @@ protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext
             Type = "auth"
         }
     };
-
+ 
     return Task.FromResult(response);
 }
-
+ 
 protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
 {
     ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
@@ -453,30 +287,30 @@ protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContex
             Value = "test message"
         }
     };
-
+ 
     return Task.FromResult(response);
 }
-
-
+ 
+ 
 protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
 {
     ConfigResponseBase response = createConfigContinueResponse();
     return Task.FromResult(response);
 }
-
+ 
 protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
 {
     ConfigResponseBase response = createConfigContinueResponse();
     return Task.FromResult(response);
 }
-
+ 
 private ConfigResponseBase createConfigContinueResponse()
 {
     AdaptiveCard card = new AdaptiveCard("1.2")
     {
         Body = new List<AdaptiveElement>()
     };
-
+ 
     card.Body.Add(
         new AdaptiveContainer
         {
@@ -490,7 +324,7 @@ private ConfigResponseBase createConfigContinueResponse()
                 }
             }
         });
-
+ 
     ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
     {
         Config = new TaskModuleContinueResponse
@@ -509,125 +343,10 @@ private ConfigResponseBase createConfigContinueResponse()
             Type = "continue"
         }
     };
-
+ 
     return response;
 }
-```
-
-### [JS](#tab/js2)
-
-`handleTeamsConfigFetch`: If the command is 'card', it creates a configuration object with suggested actions for the bot. If the command is 'message', it creates an Adaptive Card with a single `TextBlock` element. This card is then used to create a configuration object.
-
-`handleTeamsConfigSubmit`: If the command is 'card', it creates an Adaptive Card with a single `TextBlock` element. This card is then used to create a configuration object.
-If the command is 'message', it creates a configuration object with a message string.
-
-```javascript
-// extending both handlers
-
-    async handleTeamsConfigFetch(_context, configData) {
-        let response = {};
-        switch (configData.command) {
-            case 'card':
-                {
-                    response.config = {
-                        suggestedActions: {
-                            actions: [
-                                {
-                                    type: 'bot config auth',
-                                    title: 'bot config title',
-                                    image:
-                                        'https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40',
-                                    value: 'bot config auth value',
-                                },
-                            ],
-                        },
-                        type: 'auth',
-                    };
-                }
-                break;
-            case 'message':
-                {
-                    const cardJson = {
-                        type: 'AdaptiveCard',
-                        version: '1.4',
-
-                        body: [
-                            {
-                                type: 'TextBlock',
-                                text: 'Bot Config Fetch',
-                            },
-                        ],
-                    };
-                    const card = CardFactory.adaptiveCard(cardJson);
-
-                    response = {
-                        config: {
-                            value: {
-                                height: 200,
-                                width: 200,
-                                title: 'test card fetch',
-                                card,
-                            },
-                            type: 'continue',
-                        },
-                    };
-                }
-                break;
-            default:
-                console.log('no default');
-        }
-
-        return response;
-    }
-
-    async handleTeamsConfigSubmit(_context, configData) {
-        let response = {};
-        switch (configData.command) {
-            case 'card':
-                {
-                    const cardJson = {
-                        type: 'AdaptiveCard',
-                        version: '1.4',
-
-                        body: [
-                            {
-                                type: 'TextBlock',
-                                text: 'Bot Config Submit',
-                            },
-                        ],
-                    };
-                    const card = CardFactory.adaptiveCard(cardJson);
-
-                    response = {
-                        config: {
-                            value: {
-                                height: 200,
-                                width: 200,
-                                title: 'test card submit',
-                                card,
-                            },
-                            type: 'continue',
-                        },
-                    };
-                }
-                break;
-            case 'message':
-                {
-                    response = {
-                        config: {
-                            value: 'config submit text',
-                            type: 'message',
-                        },
-                    };
-                }
-                break;
-            default:
-                console.log('no default');
-                break;
-        }
-
-        return response;
-    }
+ 
 ```
 
 ---
