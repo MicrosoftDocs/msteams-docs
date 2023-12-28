@@ -60,9 +60,9 @@ Perform the following steps to upload app package:
 
    **Upload an app** window appears.
 
-2. Select **Upload a custom app**.
+2. Select **Upload a customised app**.
 
-   :::image type="content" source="images/upload_1-v4.png" alt-text="upload an app":::
+   :::image type="content" source="images/upload_1-v4.png" alt-text="Screenshot shows the option to upload a customised app.":::
 
    Now the custom app is uploaded into the Teams client and you can add and view.
 
@@ -124,11 +124,11 @@ The following steps help you to approve from Admin Center:
 
    In the **Pending approval** widget at the top of the page lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publishes the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
 
-   :::image type="content" source="images/admin-approval-for-teams-app-1-v4.png" alt-text="approval":::
+   :::image type="content" source="images/admin-approval-for-teams-app.png" alt-text="Screenshot shows the option of custom app submitted for approval.":::
 
 1. Select the app name to go to the app details page. On the **About** tab, you can view details about the app, including description, status, and app ID.
 
-   :::image type="content" source="images/about-submitted-app-1-v4.png" alt-text="submitted app":::
+   :::image type="content" source="images/about-submitted-app.png" alt-text="Screenshot shows the option of custom app submitted.":::
 
 1. Select the status dropdown and change from **Submitted** to **Publish**.
 
