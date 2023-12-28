@@ -70,7 +70,7 @@ The following table summarizes the methods that are used to enable the bot confi
 
 When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `config/fetch`, `handleTeamsConfigFetch` or `OnTeamsConfigFetchAsync` methods defined in the teamsBot.js file. The bot responds with an Adaptive Card and the user provides relevant information in the Adaptive Card and selects Submit. After the user selects Submit, a `config/submit`, `handleTeamsConfigSubmit`, or `OnTeamsConfigSubmitAsync` is returned to the bot and the bot configuration is complete.
 
-[Bot Framework JS](#tab/javascript-1)
+[Bot Framework JS](#tab/bot-framework-js)
 
 ```javascript
 if (context._activity.name == "config/submit") {
@@ -133,7 +133,7 @@ if (context._activity.name == "config/fetch") {
 }
 ```
 
-[Teams bot SDK JS](#tab/javascript-2)
+[Teams bot SDK JS](#tab/teams-bot-sdk-js)
 
 The handleTeamsConfigFetch and handleTeamsConfigSubmit handle the fetching and submission of Teams configuration data.
 
@@ -250,7 +250,7 @@ The handleTeamsConfigFetch and handleTeamsConfigSubmit handle the fetching and s
     }
 ```
 
-[Teams bot SDK C#](#tab/dotnet-1)
+[Teams bot SDK C#](#tab/teams-bot-sdk-c#)
 
 When a user installs the bot in a team or group chat scope, the `OnTeamsConfigFetchAsync` method is called. The `OnTeamsConfigSubmitAsync` method is called when the user submits the bot configuration. The methods  return `ConfigResponseBase` object that contain the bot configuration, and can be used to create suggested actions, display messages, and configure the bot’s dialog.
 
