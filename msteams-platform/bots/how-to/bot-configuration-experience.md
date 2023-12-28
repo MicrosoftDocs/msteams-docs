@@ -404,6 +404,234 @@ If the command is "message", it creates an Adaptive Card with a single TextBlock
 
 ---
 
+## Code snippets
+
+The following code provides an example of a bot configuration experience:
+
+### [C#](#tab/dotnet3)
+
+`OnTeamsConfigFetchAsync`: This method is invoked when the Teams app requests configuration information. It returns a `ConfigResponseBase` object containing a configuration response for the app. It constructs a response of type `BotConfigAuth`, indicating authentication-related configuration. The response includes suggested actions, and the `Type = "auth"`.
+
+`OnTeamsConfigSubmitAsync`: This method is invoked when the user submits configuration information.
+It returns a `ConfigResponseBase` object containing a configuration response for the submitted data.
+It constructs a response of type `TaskModuleMessageResponse` with a simple test message.
+
+```csharp
+protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+{
+
+    ConfigResponseBase response = new ConfigResponse<BotConfigAuth>
+    {
+        Config = new BotConfigAuth
+        {
+            SuggestedActions = new SuggestedActions
+            {
+                Actions = new List<CardAction>
+                {
+                    new CardAction
+                    {
+                        Type = "bot config type",
+                        Title = "bot config title",
+                        Image = "https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40",
+                        Value = "bot config value"
+                    }
+                }
+            },
+            Type = "auth"
+        }
+    };
+
+    return Task.FromResult(response);
+}
+
+protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+{
+    ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
+    {
+        Config = new TaskModuleMessageResponse
+        {
+            Value = "test message"
+        }
+    };
+
+    return Task.FromResult(response);
+}
+
+
+protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+{
+    ConfigResponseBase response = createConfigContinueResponse();
+    return Task.FromResult(response);
+}
+
+protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+{
+    ConfigResponseBase response = createConfigContinueResponse();
+    return Task.FromResult(response);
+}
+
+private ConfigResponseBase createConfigContinueResponse()
+{
+    AdaptiveCard card = new AdaptiveCard("1.2")
+    {
+        Body = new List<AdaptiveElement>()
+    };
+
+    card.Body.Add(
+        new AdaptiveContainer
+        {
+            Items = new List<AdaptiveElement>
+            {
+                new AdaptiveTextBlock
+                {
+                    Size = AdaptiveTextSize.Large,
+                    Text = "bot config test",
+                    Type = "TextBlock"
+                }
+            }
+        });
+
+    ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
+    {
+        Config = new TaskModuleContinueResponse
+        {
+            Value = new TaskModuleTaskInfo
+            {
+                Height = 123,
+                Width = 456,
+                Title = "test title",
+                Card = new Attachment
+                {
+                    ContentType = AdaptiveCard.ContentType,
+                    Content = card
+                }
+            },
+            Type = "continue"
+        }
+    };
+
+    return response;
+}
+```
+
+### [JS](#tab/js2)
+
+`handleTeamsConfigFetch`: If the command is 'card', it creates a configuration object with suggested actions for the bot. If the command is 'message', it creates an Adaptive Card with a single `TextBlock` element. This card is then used to create a configuration object.
+
+`handleTeamsConfigSubmit`: If the command is 'card', it creates an Adaptive Card with a single `TextBlock` element. This card is then used to create a configuration object.
+If the command is 'message', it creates a configuration object with a message string.
+
+```javascript
+// extending both handlers
+
+    async handleTeamsConfigFetch(_context, configData) {
+        let response = {};
+        switch (configData.command) {
+            case 'card':
+                {
+                    response.config = {
+                        suggestedActions: {
+                            actions: [
+                                {
+                                    type: 'bot config auth',
+                                    title: 'bot config title',
+                                    image:
+                                        'https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40',
+                                    value: 'bot config auth value',
+                                },
+                            ],
+                        },
+                        type: 'auth',
+                    };
+                }
+                break;
+            case 'message':
+                {
+                    const cardJson = {
+                        type: 'AdaptiveCard',
+                        version: '1.4',
+
+                        body: [
+                            {
+                                type: 'TextBlock',
+                                text: 'Bot Config Fetch',
+                            },
+                        ],
+                    };
+                    const card = CardFactory.adaptiveCard(cardJson);
+
+                    response = {
+                        config: {
+                            value: {
+                                height: 200,
+                                width: 200,
+                                title: 'test card fetch',
+                                card,
+                            },
+                            type: 'continue',
+                        },
+                    };
+                }
+                break;
+            default:
+                console.log('no default');
+        }
+
+        return response;
+    }
+
+    async handleTeamsConfigSubmit(_context, configData) {
+        let response = {};
+        switch (configData.command) {
+            case 'card':
+                {
+                    const cardJson = {
+                        type: 'AdaptiveCard',
+                        version: '1.4',
+
+                        body: [
+                            {
+                                type: 'TextBlock',
+                                text: 'Bot Config Submit',
+                            },
+                        ],
+                    };
+                    const card = CardFactory.adaptiveCard(cardJson);
+
+                    response = {
+                        config: {
+                            value: {
+                                height: 200,
+                                width: 200,
+                                title: 'test card submit',
+                                card,
+                            },
+                            type: 'continue',
+                        },
+                    };
+                }
+                break;
+            case 'message':
+                {
+                    response = {
+                        config: {
+                            value: 'config submit text',
+                            type: 'message',
+                        },
+                    };
+                }
+                break;
+            default:
+                console.log('no default');
+                break;
+        }
+
+        return response;
+    }
+```
+
+---
+
 ## Bot configuration experience in Teams
 
 After you've created a bot to enable the bot configuration settings from a team or group chat scope, the user can configure and reconfigure the bot in Teams.
