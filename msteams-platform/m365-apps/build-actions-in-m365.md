@@ -25,13 +25,11 @@ Before you get started, ensure that you install the following tools:
 
 To build Actions for your app, follow these steps:
 
-> [!div class="checklist"]
->
->* [Configure app manifest file](#configure-app-manifest-file).
->* [Retrieve Action information through context object](#retrieve-action-information-through-context-object).
->* [Access content through Graph API](#access-content-through-graph-api).
+1. [Configure app manifest](#configure-app-manifest).
+1. [Retrieve Action information through context object](#retrieve-action-information-through-context-object).
+1. [Access content through Graph API](#access-content-through-graph-api).
 
-## Configure app manifest file
+## Configure app manifest
 
 Add the `actions` property and define the intent, object, and handler for your actions in the app manifest (previously called Teams app manifest).
 
@@ -79,10 +77,6 @@ Build the handler to receive the Action information through the [context object]
 
 When a user selects Add option from the app's context menu, a personal tab opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
 
-```javascript
-const context = await app.getContext();
-```
-
 | &nbsp; | Name | Description |
 | --- | --- | --- |
 | &nbsp; | `actionId` | Maps to the Action ID supplied inside the manifest. |
@@ -92,13 +86,13 @@ const context = await app.getContext();
 The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a page from an Action and the content that initiated the Action.
 
 ```javascript
-const itemId = context.actionInfo && context.actionInfo.actionObjects[0].itemId;
-app.getContext().then((context: app.Context) => {
-    const actionInfo = context.actionInfo;
-    if (actionInfo && actionInfo.actionId == 'myActionId1') {
-        // Handle specific action
-    }
-});
+async setItemId() {
+    const context = await app.getContext();
+    const itemId = context.actionInfo && context.actionInfo.actionObjects[0].itemId;
+    this.setState({
+        itemId: itemId
+    });
+}
 ```
 
 ## Access content through Graph API
