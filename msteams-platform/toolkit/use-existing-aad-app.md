@@ -117,18 +117,18 @@ This section provides information for using existing Microsoft Entra app or manu
    1. Add below environment variables and their values to `env\.env.{env}` file.
 
       ```yml
-      AAD_APP_CLIENT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
-      AAD_APP_OBJECT_ID=<value of Azure AD application's object id> # example: 00000000-0000-0000-0000-000000000000
-      AAD_APP_TENANT_ID=<value of Azure AD's Directory (tenant) id> # example: 00000000-0000-0000-0000-000000000000
-      AAD_APP_OAUTH_AUTHORITY=<value of Azure AD's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
-      AAD_APP_OAUTH_AUTHORITY_HOST=<host of Azure AD's authority> # example: https://login.microsoftonline.com
+      AAD_APP_CLIENT_ID=<value of Microsoft Entra application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
+      AAD_APP_OBJECT_ID=<value of Microsoft Entra application's object id> # example: 00000000-0000-0000-0000-000000000000
+      AAD_APP_TENANT_ID=<value of Microsoft Entra's (tenant) id> # example: 00000000-0000-0000-0000-000000000000
+      AAD_APP_OAUTH_AUTHORITY=<value of Microsoft Entra's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
+      AAD_APP_OAUTH_AUTHORITY_HOST=<host of Microsoft Entra's authority> # example: https://login.microsoftonline.com
       AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
       ```
 
    1. If your application requires a Microsoft Entra app client secret, add below environment variable and its value to `env\.env.{env}.user` file.
 
       ```yml
-      SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
+      SECRET_AAD_APP_CLIENT_SECRET=<value of Microsoft Entra application's client secret>
       ```
 
       > [!NOTE]
