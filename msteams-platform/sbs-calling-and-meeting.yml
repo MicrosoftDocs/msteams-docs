@@ -162,7 +162,7 @@ items:
        
      1. Execute the PowerShell script. 
      
-     1. Run `Connect-MicrosoftTeams` and sign-in with the credentials to whom the policy has to be granted.
+     1. Run `Connect-MicrosoftTeams` and sign in with the credentials to whom the policy has to be granted.
 
          :::image type="content" source="~/assets/images/calls-and-meetings/sign-in-powershell-prompts.png" alt-text="screenshot of Windows PowerShell PSI displaying the sign in prompt.":::
 
