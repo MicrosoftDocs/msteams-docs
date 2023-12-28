@@ -97,8 +97,13 @@ if (context._activity.name == "config/submit") {
               status: 200,
               body: {
                   config: {
-                      type: 'message',
-                      value: "end"
+                      type: 'continue',
+                      value: {
+                          card: adaptiveCard,
+                          height: 400,
+                          title: 'Dialog fetch response',
+                          width: 300
+                      }
                   }
               }
           }
