@@ -106,11 +106,11 @@ items:
   
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code **Activity Bar**.
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
+    1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
 
     1. Select **Start Debugging** button.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging"border="true"::: 
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Teams Toolkit." border="true":::
 
     1. Select **Add**.
     
@@ -226,11 +226,11 @@ items:
 
     1. Select **Run and Debug** :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/run-debug-icon.png"::: icon from the Visual Studio Code sidebar.
 
-    1. Select **Debug(Edge)** or **Debug(Chrome)** from the dropdown list.
+    1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the dropdown list.
 
     1. Select **Start Debugging** button.
 
-        :::image type="content" source="../msteams-platform/assets/images/sbs-notification-bot/debug-app.png" alt-text="App Debugging":::
+        :::image type="content" source="../msteams-platform/assets/images/sbs-command-bot/debug-app.png" alt-text="The screenshot shows how to debug your app in Teams Toolkit.":::
 
         You get the following output in Teams.
 
@@ -278,7 +278,7 @@ items:
     1. Open Visual Studio Code.
     1. Open the project folder where you created the notification bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign-in to Azure** using your credentials.
+    1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
         > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step.
