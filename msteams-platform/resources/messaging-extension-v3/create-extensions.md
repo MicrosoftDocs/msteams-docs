@@ -235,15 +235,15 @@ There are three ways to collect information from a user in Teams.
 
 ### Static parameter list
 
-In this method, all you need to do is define a static list of parameters in the manifest as shown above in the "Create To Do" command. To use this method, ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
+In this method, all you need to do is define a static list of parameters in the manifest as shown in the "Create To Do" command. To use this method, ensure `fetchTask` is set to `false` and that you define your parameters in the manifest.
 
 When a user chooses a command with static parameters, Teams generates a form in a task module with the defined parameters in the manifest. On hitting Submit, a `composeExtensions/submitAction` is sent to the bot. For more information on the expected set of responses, see [Responding to submit](#responding-to-submit).
 
-### Dynamic input using an adaptive card
+### Dynamic input using an Adaptive Card
 
-In this method, your service can define a custom adaptive card to collect the user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. If you set `fetchTask` to `true`, any static parameters defined for the command will be ignored.
+In this method, your service can define a custom Adaptive Card to collect the user input. For this approach, set the `fetchTask` parameter to `true` in the manifest. If you set `fetchTask` to `true`, any static parameters defined for the command are ignored.
 
-In this method, your service receives a `composeExtensions/fetchTask` event and responds with an adaptive card based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Following is a sample response with an adaptive card:
+In this method, your service receives a `composeExtensions/fetchTask` event and responds with an Adaptive Card based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Following is a sample response with an Adaptive Card:
 
 ```json
 {
@@ -294,7 +294,7 @@ The bot can also respond with an auth/config response if the user needs to authe
 
 In this method, your service can show an `<iframe>` based widget to show any custom UI and collect user input. For this approach, set the `fetchTask` parameter to `true` in the manifest.
 
-Just like in the adaptive card flow, your service sends a `fetchTask` event and responds with a URL based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Following is a sample response with an Adaptive card:
+Just like in the Adaptive Card flow, your service sends a `fetchTask` event and responds with a URL based [task module response](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). Following is a sample response with an Adaptive card:
 
 ```json
 {
@@ -365,7 +365,7 @@ Here's an example of the invoke:
 }
 ```
 
-Respond to the invoke with the same task response you would have responded with if the bot was already installed.
+Respond to the invoke with the same task response that you have responded with, if the bot was installed.
 
 ## Responding to submit
 
@@ -431,19 +431,21 @@ Compose extensions result response is used to insert a card into the compose box
 }
 ```
 
-### Respond with an adaptive card message sent from a bot
+### Respond with an Adaptive Card message sent from a bot
 
-Respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user can preview the message before submitting it, and potentially edit/interact with it as well. This can be useful in scenarios where you need to gather information from your users before creating an adaptive card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
+Respond to the submit action by inserting a message with an Adaptive Card into the channel with a bot. Your user can preview the message before submitting it, and potentially edit/interact with it as well. This can be useful in scenarios where you need to gather information from your users before creating an Adaptive Card response. The following scenario shows how you can use this flow to configure a poll without including the configuration steps in the channel message.
 
 1. The user selects the message extension to trigger the task module.
 1. The user uses the task module to configure the poll.
-1. After you submit the configuration task module, the app uses the information provided in the task module to craft an adaptive card and sends it as a `botMessagePreview` response to the client.
-1. The user can then preview the adaptive card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` adds the bot.
-1. Interacting with the adaptive card changes the message before sending it.
+1. After you submit the configuration task module, the app uses the information provided in the task module to craft an Adaptive Card and sends it as a `botMessagePreview` response to the client.
+1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the bot isn't already a member of the channel, clicking `Send` adds the bot.
+1. Interacting with the Adaptive Card changes the message before sending it.
 1. Once the user selects `Send`, the bot posts the message to the channel.
 
 > [!NOTE]
-> The `activityPreview` must contain a `message` activity with exactly one adaptive card attachment.
+>
+> * The `activityPreview` must contain a `message` activity with exactly one Adaptive Card attachment.
+> * Outlook doesn't support to respond with an Adaptive Card message sent from a bot.
 
 To enable this flow your task module should respond as in the following example, which presents the preview message to the user:
 
@@ -464,7 +466,7 @@ To enable this flow your task module should respond as in the following example,
 }
 ```
 
-Your message extension will now need to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. The following code is an example of the `value` object you need to process:
+Your message extension needs to respond to two new types of interactions, `value.botMessagePreviewAction = "send"` and `value.botMessagePreviewAction = "edit"`. The following code is an example of the `value` object you need to process:
 
 ```json
 {
@@ -495,7 +497,7 @@ Your message extension will now need to respond to two new types of interactions
 }
 ```
 
-When responding to the `edit` request, you should respond with a `task` response with the values populated with the information the user has already submitted. When responding to the `send` request, you should send a message to the channel containing the finalized adaptive card.
+When responding to the `edit` request, you must respond with a `task` response with the values populated with the information that the user submitted. When responding to the `send` request, you should send a message to the channel containing the finalized Adaptive Card.
 
 # [TypeScript/Node.js](#tab/typescript)
 
@@ -548,7 +550,7 @@ teamChatConnector.onComposeExtensionSubmitAction((
 
         else {
             let attachment = {
-                  // Create adaptive card.
+                  // Create Adaptive Card.
                 };
             let activity = new builder.Message().addAttachment(attachment).toMessage();
             let response = teamBuilder.ComposeExtensionResponse.messagePreview()

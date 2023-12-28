@@ -265,7 +265,7 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 
    ```json
    {
-       "name": "Debug (Edge)",
+       "name": "Debug in Teams (Edge)",
         "configurations": [
            "Attach to Frontend (Edge)",
            // "Attach to Bot",
