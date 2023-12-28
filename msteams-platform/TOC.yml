@@ -493,8 +493,6 @@
         href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
       - name: Quick start guide
         href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
-      - name: Build your first Teams AI app
-        href: sbs-botbuilder-conversation-AI.yml
       - name: Teams AI library FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
 - name: Build message extensions
@@ -817,7 +815,7 @@
         displayName: mail, Microsoft 365, Office 365Microsoft 365 
       - name: Teams message extension vs. Outlook add-in
         href: m365-apps/me-or-outlook-add-in.md
-        displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
+        displayName: mail, Microsoft 365, Office 365, Outlook add-in
   - name: Adaptive Card-based Loop components
     items:
       - name: Design your Loop component
