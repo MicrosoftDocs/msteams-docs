@@ -51,13 +51,13 @@ For more information, see [webApplicationInfo](../../../resources/schema/manifes
     ```json
     "webApplicationInfo":
     {
-    "id": "{Azure AD AppId}",
-    "resource": "api://subdomain.example.com/{Azure AD AppId}"
+    "id": "{Microsoft Entra AppId}",
+    "resource": "api://subdomain.example.com/{Microsoft Entra AppId}"
     }
     ```
 
     where,
-    - `{Azure AD AppId}` is the app ID you created when you registered your app in Microsoft Entra ID. It's the GUID.
+    - `{Microsoft Entra AppId}` is the app ID you created when you registered your app in Microsoft Entra ID. It's the GUID.
     - `subdomain.example.com` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
 
 4. Update the app ID from Microsoft Entra ID in the **id** property.

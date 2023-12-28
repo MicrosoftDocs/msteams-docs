@@ -120,7 +120,7 @@
     - name: Adaptive Cards
       href: task-modules-and-cards/cards/design-effective-cards.md
       displayName: column, ColumnSet 
-    - name: Task modules
+    - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
       displayname: Forms
     - name: Activity feed notifications
