@@ -71,7 +71,7 @@ The following is an example of the `intent`, `supportedobjects`, and `handlers` 
 
 For more information, see [public developer preview app manifest schema](../resources/schema/manifest-schema-dev-preview.md#actions).
 
-When a user selects an action to open a page and view related tasks in an app based on the selected file. The app uses the `"intent": "custom"` property to identify the file type, such as .xlsx or doc and the `"type": "openPage"` handler opens the app and navigates to the `pageId`.
+When a user selects an action to open a personal tab and view related tasks in an app based on the selected file. The app uses the `"intent": "custom"` property to identify the file type, such as .xlsx or doc and the `"type": "openPage"` handler opens the app and navigates to the `pageId`.
 
 ## Retrieve Action information through context object
 
