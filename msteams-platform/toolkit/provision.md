@@ -121,7 +121,7 @@ N/A
 ```yml
 - uses: teamsApp/zipAppPackage
     with:
-      # Required. Relative path to the yaml file. This is the path for app manifest file. Environment variables in manifest will be replaced before apply to AAD app.
+      # Required. Relative path to the yaml file. This is the path for app manifest file. Environment variables in manifest will be replaced before apply to Microsoft Entra app.
       manifestPath: <path-to-manifest-file>
       # Required. Relative path to the yaml file. This is the path for built zip file.
       outputZipPath: <path-to-generated-zip-file>
@@ -167,7 +167,7 @@ Microsoft Entra ID in your Microsoft 365 tenant.
 ```yml
 - uses: aadApp/create
     with:
-      # Required. The AAD app's display name. When you run aadApp/update, the Azure Active Directory AD app name will be updated based on the definition in manifest. If you don't want to change the name, make sure the name in AAD manifest is the same with the name defined here.
+      # Required. The Microsoft Entra app's display name. When you run aadApp/update, the Microsoft Entra app name will be updated based on the definition in manifest. If you don't want to change the name, make sure the name in Microsoft Entra app manifest is the same with the name defined here.
       name: <your-application-name>
       # Required. If the value is false, the action will not generate client secret for you
       generateClientSecret: true
@@ -175,17 +175,17 @@ Microsoft Entra ID in your Microsoft 365 tenant.
       signInAudience: "AzureADMyOrg"
     # Write the information of created resources into environment file for the specified environment variable(s).
     writeToEnvironmentFile:
-      # Required. The client (application) ID of Azure Active Directory AD application. The action will refer the environment variable defined here to determine whether to create a new AAD app.
+      # Required. The client (application) ID of Microsoft Entra application. The action will refer the environment variable defined here to determine whether to create a new Microsoft Entra app.
       clientId: <your-preferred-env-var-name>
       # Required when `generateClientSecret` is `true`. The action will refer the environment variable defined here to determine whether to create a new client secret. It's recommended to add `SECRET_` prefix to the environment variable name so it will be stored to the .env.{envName}.user environment file.
       clientSecret: <your-preferred-env-var-name>
-      # Required. The object ID of AAD application
+      # Required. The object ID of Microsoft Entra application
       objectId: <your-preferred-env-var-name>
-      # Optional. The tenant ID of AAD tenant
+      # Optional. The tenant ID of Microsoft Entra tenant
       tenantId: <your-preferred-env-var-name>
-      # Optional. The AAD authority
+      # Optional. The Microsoft Entra authority
       authority: <your-preferred-env-var-name>
-      # Optional. The host name of AAD authority
+      # Optional. The host name of Microsoft Entra authority
       authorityHost: <your-preferred-env-var-name>
 ```
   
@@ -204,9 +204,9 @@ Microsoft Entra ID in your Microsoft 365 tenant.
 ```yaml
 - uses: aadApp/update
     with:
-      # Required. Relative path to the yaml file. Path to the AAD app manifest. Environment variables in manifest will be replaced before apply to AAD app.
+      # Required. Relative path to the yaml file. Path to the Microsoft Entra app manifest. Environment variables in manifest will be replaced before apply to Microsoft Entra app.
       manifestPath: <path-to-manifest-file>
-      # Required. Relative path to the yaml folder. This action will output the final AAD app manifest used to update AAD app to this path.
+      # Required. Relative path to the yaml folder. This action will output the final Microsoft Entra app manifest used to update Microsoft Entra app to this path.
       outputFilePath : <path-to-output-file>
 ```
 
@@ -225,12 +225,12 @@ Microsoft Entra ID in your Microsoft 365 tenant.
 ```yml
 - uses: botAadApp/create
     with:
-      # Required. The AAD app's display name
+      # Required. The Microsoft Entra app's display name
       name: <your-app-name>
     writeToEnvironmentFile:
-      # The The AAD app's client id created for bot.
+      # The Microsoft Entra app's client id created for bot.
       botId: <your-preferred-env-var-name>
-      # The The AAD app's client secret created for bot. 
+      # The Microsoft Entra app's client secret created for bot. 
       botPassword: <your-preferred-env-var-name>
 ```
   
@@ -379,18 +379,18 @@ You can follow the steps to add environment variables to the .env files to use a
     1. Add the following environment variables and their values to `env\.env.{env}` file.
 
        ```env
-        AAD_APP_CLIENT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
-        AAD_APP_OBJECT_ID=<value of Azure AD application's object id> # example: 00000000-0000-0000-0000-000000000000
-        AAD_APP_TENANT_ID=<value of Azure AD's Directory (tenant) id>> # example: 00000000-0000-0000-0000-000000000000
-        AAD_APP_OAUTH_AUTHORITY=<value of Azure AD's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
-        AAD_APP_OAUTH_AUTHORITY_HOST=<host of Azure AD's authority> # example: https://login.microsoftonline.com
+        AAD_APP_CLIENT_ID=<value of Microsoft Entra application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_OBJECT_ID=<value of Microsoft Entra application's object id> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_TENANT_ID=<value of Microsoft Entra's tenant id>> # example: 00000000-0000-0000-0000-000000000000
+        AAD_APP_OAUTH_AUTHORITY=<value of Microsoft Entra's authority> # example: https://login.microsoftonline.com/<Directory (tenant) ID>
+        AAD_APP_OAUTH_AUTHORITY_HOST=<host of Microsoft Entra's authority> # example: https://login.microsoftonline.com
         AAD_APP_ACCESS_AS_USER_PERMISSION_ID=<id of access_as_user permission> # example: 00000000-0000-0000-0000-000000000000
        ```  
 
     1. If your application requires a Microsoft Entra app client secret, add the following environment variable and its value to `env\.env.{env}.user` file.
 
        ```env
-       SECRET_AAD_APP_CLIENT_SECRET=<value of Azure AD application's client secret>
+       SECRET_AAD_APP_CLIENT_SECRET=<value of Microsoft Entra application's client secret>
        ```
 
 >[!NOTE]
@@ -420,13 +420,13 @@ You can follow the steps to add environment variables to the .env files to use a
     1. Add the following environment variable and its value to `env\.env.{env}` file.
 
        ```env
-       BOT_ID=<value of Azure AD application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000    
+       BOT_ID=<value of Microsoft Entra application's client id (application id)> # example: 00000000-0000-0000-0000-000000000000    
        ```
 
     1. Add the following environment variable and its value to `env\.env.{env}.user` file.
 
        ```env
-       SECRET_BOT_PASSWORD=<value of Azure AD application's client secret>
+       SECRET_BOT_PASSWORD=<value of Microsoft Entra application's client secret>
        ```
 
 > [!NOTE]
@@ -648,9 +648,9 @@ You can add the following configuration snippet to `.fx\configs\config.{env}.jso
 },
 // Add code below. Note you need to replace the placeholders with real values.
 "auth": {
-    "clientId": "<your Azure AD app client id>",
+    "clientId": "<your Microsoft Entra app client id>",
     "clientSecret": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}",
-    "objectId": "<your Azure AD app object id>",
+    "objectId": "<your Microsoft Entra app object id>",
     "accessAsUserScopeId": "<id of the access_as_user scope>"
 }
 ```
@@ -674,7 +674,7 @@ You can add following configuration snippet to `.fx\configs\config.{env}.json` f
 },
 // Add code below. Note you need to replace the placeholders with real values.
 "bot": {
-    "appId": "<your Azure AD app client id>",
+    "appId": "<your Microsoft Entra app client id>",
     "appPassword": "{{$env.ENV_NAME_THAT_STORES_YOUR_SECRET}}"
 }
 ```
