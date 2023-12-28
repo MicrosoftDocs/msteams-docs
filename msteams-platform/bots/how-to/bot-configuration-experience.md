@@ -250,7 +250,7 @@ The handleTeamsConfigFetch and handleTeamsConfigSubmit handle the fetching and s
     }
 ```
 
-# [Teams bot SDK C#](#tab/teams-bot-sdk-c#)
+# [Teams bot SDK C#](#tab/teams-bot-sdk)
 
 When a user installs the bot in a team or group chat scope, the `OnTeamsConfigFetchAsync` method is called. The `OnTeamsConfigSubmitAsync` method is called when the user submits the bot configuration. The methods  return `ConfigResponseBase` object that contain the bot configuration, and can be used to create suggested actions, display messages, and configure the bot’s dialog.
 
