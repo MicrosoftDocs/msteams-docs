@@ -132,7 +132,7 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
           }
     ```
 
-## Code snippets
+### Code snippets
 
 The following code provides an example of a bot configuration experience:
 
