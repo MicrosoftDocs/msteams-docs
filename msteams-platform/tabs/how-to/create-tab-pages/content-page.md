@@ -49,7 +49,7 @@ The following code provides an example of how your page and the Teams client com
 <body>
 ...
     <script>
-    microsoftTeams.app.initialize();
+    await microsoftTeams.app.initialize();
     </script>
 ...
 </body>
