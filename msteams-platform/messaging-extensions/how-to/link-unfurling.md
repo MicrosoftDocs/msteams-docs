@@ -410,9 +410,6 @@ The following are the limitations:
 
 ---
 
-> [!NOTE]
-> Bots can unfurl permalinks of code snippets from external sources and generate Adaptive Cards through the `CodeBlock` element. For more information, see [CodeBlock in Adaptive Cards](../../task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards).
-
 ## How to test zero install link unfurling
 
 When you test the zero install link unfurling, don’t install the app as a personal app. Instead, upload the app to Teams.
