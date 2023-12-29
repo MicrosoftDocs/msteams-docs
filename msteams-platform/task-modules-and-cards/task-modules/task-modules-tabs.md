@@ -239,7 +239,7 @@ The following table provides the possible values of `err` that can be received b
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Using task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+> [Using dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 
 ## See also
 
