@@ -386,7 +386,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 ## Compound utterances
 
 > [!NOTE]
-> Search through task module isn't supported in M365 Chat.
+> Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in M365 Chat.
 
 For M365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle two or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
 
@@ -599,11 +599,11 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   * `Action.OpenUrl`: Opens a specified URL from the Card.
   * `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
   * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
-  * `Action.Submit`: Opens a Task module or Stage view using type invoke in data object.
+  * `Action.Submit`: Opens a dialog or Stage view using type invoke in data object.
 
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in M365 Chat.":::
 
-* If a user can change any information on the card through task module, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
+* If a user can change any information on the card through dialog, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
