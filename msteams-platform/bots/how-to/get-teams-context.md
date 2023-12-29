@@ -441,7 +441,7 @@ Response body
 ## See also
 
 * [Build bots for Teams](../what-are-bots.md)
-* [Task modules](../../task-modules-and-cards/what-are-task-modules.md)
+* [Dialogs](../../task-modules-and-cards/what-are-task-modules.md)
 * [Authenticate users in Microsoft Teams](../../concepts/authentication/authentication.md)
 * [Bot activity handlers](../bot-basics.md)
 * [Localize your app](../../concepts/build-and-test/apps-localization.md)
