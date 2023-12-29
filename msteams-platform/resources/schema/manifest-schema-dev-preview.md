@@ -794,7 +794,7 @@ This object indicates meeting supported video filters.
 |Name| Type|Maximum size|Required |Description|
 |---|---|---|---|---|
 |`id`|String||✔️| The unique identifier for the video filter. This ID must be a GUID. |
-|`name`| String | 128 characters |✔️| A/V filter's name. |
+|`name`| String | 128 characters |✔️| The name of the video filter. |
 |`thumbnail`|String|2048 characters|✔️| The relative file path to the video filter's thumbnail. |
 
 ## authorization
