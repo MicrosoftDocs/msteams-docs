@@ -15,8 +15,7 @@ ms.subservice: m365apps
 >
 > * Actions is supported for Microsoft 365 (Office) app for web and desktop.
 
-Actions enable your app to integrate seamlessly into the user's workflow and guide users to your app based on their intent and the content at hand, making task completion more efficient.
-Actions help you enhance your app's visibility and engagement with minimal development effort and reduce the need for users to switch contexts across various Microsoft 365 apps.
+Actions aim to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with their content. By directing users to your app with their intent and contextual content, Actions enable efficient task completion. This integration enhances the visibility and engagement of your app with minimal development effort.
 
 The following graphic is an example of an Action that directs user to view list of suppliers related to the file. In Microsoft 365, the user right-clicks on the excel file and selects **Related suppliers** to view the list of suppliers for the Northwind company. The Northwind page opens with the list of suppliers. The user saves time by checking the result with a single click and the Excel file each time manually.
 
@@ -24,15 +23,15 @@ The following graphic is an example of an Action that directs user to view list 
 
 ## Understand how Actions work
 
-Actions are built using a combination of Intent, Object, and Handler. When a users wants to perform a task, the task can be represented as a combination of intent and object, where the internt is the verb describing the user's desired action and the object is the noun on which the action is to be performed. You must listen to the user's  task (intent and object) and create a handler that help users to complete the task.
+Actions are built using a combination of Intent, Object, and Handler. When a users wants to perform a task, the task can be represented as a combination of intent and object, where the intent is the verb describing the user's desired action and the object is the noun on which the action is to be performed. You must listen to the user's  task (intent and object) and create a handler that help users to complete the task.
 
-To build an action, you must define the intent, object, and handler in the app manifest and use Teams JavaScript library (Teams JS) to get the Action details to make it easy for the users to do specific tasks.
+Build an action, you must define the intent, object, and handler in the app manifest and use Teams JavaScript library (Teams JS) to get the Action details to make it easy for the users to do specific tasks.
 
 The following table lists the required elements and support information for Actions:
 
 | &nbsp; | Name | Description | What is supported in this preview  
 | --- | --- | --- | ---|
-| &nbsp; | Intent | Intent is the objective a user wants to perform or achieve, such as `Open` and  `addTo`. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement of Actions. | You can create an intent for `Open`, `addTo`, and `custom` Actions. You can use `custom` Action to create tailored action. |
+| &nbsp; | Intent | Intent is the objective a user wants to perform or achieve, such as `Open` and  `addTo`. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement of Actions. | You can create an intent for `Open`, `addTo`, and `custom` Actions. You can use `custom` Action to create tailored action. |
 | &nbsp; | Object  | Object is the file on which the user wants to perform an action. | Currently, Actions can be triggered on content objects (files) that have an extension, such as Word, PowerPoint, Excel, PDF, and images. The files must be available in OneDrive or SharePoint and are accessible through Microsoft Graph. |
 | &nbsp; | Handlers | A handler receives the information of the Action the user performs and helps you create a seamless user experience for performing users specific tasks.  | Actions support `openPage` handler. The `openPage` handler allows you to directly guide users to your app's personal tab. By utilizing the `openPage` handler, you can effectively drive users to your app's dedicated pages, providing them with a rich and expansive interface to accomplish their goals. |
 
