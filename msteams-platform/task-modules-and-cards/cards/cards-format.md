@@ -133,7 +133,7 @@ Bots and message extensions can include mentions within the card content in [Tex
 
 > [!NOTE]
 >
-> * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
+> * [Media elements](https://adaptivecards.io/explorer/Media.html) aren't supported in Adaptive Cards on Teams platform.
 > * Channel and team mentions aren't supported in bot messages.
 > * You can @mention multiple users in a single Adaptive Card message, however, ensure that the message size limit doesn't exceed 28 KB for [Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) and 40 KB for a [bot message](~/bots/how-to/format-your-bot-messages.md).
 
@@ -453,7 +453,7 @@ The following image is an example of masking information in Adaptive Cards:
 You can use the `msteams` property to expand the width of an Adaptive Card and make use of available canvas space. The next section provides information on how to use the property.
 
 > [!NOTE]
-> Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
+> Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content isn't truncated.
 
 #### Construct full width cards
 
@@ -554,7 +554,7 @@ In the Stage View, users can zoom in and zoom out of the image. You can select t
 
 ### CodeBlock in Adaptive Cards
 
-The `CodeBlock` element enables bots to unfurl permalinks of code snippets from external sources and generate Adaptive Cards with syntax highlighting and contextual information. This type of Adaptive Card is easy to read as it matches the indentation and syntax highlighting of the language of the code snippet. The Adaptive Card also provides action buttons for the user to either view the code in its source or open it in IDEs such as Visual Studio Code, Visual Studio, etc. However, Adaptive Cards with `CodeBlock` can only be sent in Teams chats and channels through bots.
+The `CodeBlock` element enables bots to unfurl permalinks of code snippets from external sources and generate Adaptive Cards with syntax highlighting and contextual information. This type of Adaptive Card is easy to read as it matches the indentation and syntax highlighting of the code snippet's language. The Adaptive Card also provides action buttons for the user to either view the code in its source or open it in IDEs such as Visual Studio Code or Visual Studio. However, Adaptive Cards with `CodeBlock` can only be sent in Teams chats and channels through bots.
 
 :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
 
@@ -590,7 +590,7 @@ The `CodeBlock` element enables bots to unfurl permalinks of code snippets from 
 
 > [!NOTE]
 >
-> `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property.
+> `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
 
 The following code shows an example of an Adaptive Card with a code snippet.
 
@@ -633,7 +633,7 @@ The following code shows an example of an Adaptive Card with a code snippet.
 
 > [!NOTE]
 >
-> To avoid rendering errors in the Adaptive Card, use escape sequences such as `\n` in the `codeSnippet` property.
+> To avoid rendering errors in the Adaptive Card, use `\n` to start a new line in the `codeSnippet` property.
 
 The `CodeBlock` element supports the following properties:
 
@@ -789,7 +789,7 @@ In the following example, there are two primary actions and one secondary action
 
 > [!NOTE]
 >
-> * The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior is not applicable to the `ActionSet` in an Adaptive Card.
+> * The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior isn't applicable to the `ActionSet` in an Adaptive Card.
 
 The following image is an example of overflow menu in a bot sent card and a message extension card:
 
