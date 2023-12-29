@@ -1216,36 +1216,36 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
         <tr>
             <th><a href="#dialogadaptivecard">dialog.adaptiveCard</a> <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
-            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
-            <td></td>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#dialogadaptivecardbot">dialog.adaptiveCard.bot</a> <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
-            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
-            <td></td>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
         </tr>
