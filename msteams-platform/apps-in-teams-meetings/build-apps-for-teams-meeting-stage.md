@@ -224,6 +224,61 @@ The following participant roles may be involved during the meeting:
 * **Signer**: This role can sign reviewed documents.
 * **Reader**: This role can view the documents added to the meeting.
 
+## Screen share content to meetings
+
+> [!NOTE]
+>
+> * Only In-Tenant/Guest and External users with presenter or organizer role type can initiate a sharing session.
+> * Share to stage using screen share isn't supported on Mac, T1/classic Teams, or mobile.
+
+Users can screen share content to the Meeting Stage in Teams meetings using the screen sharing architecture. When a user shares an app to the meeting stage, the app is rendered only on the presenter’s device and then screen is shared or mirrored to all other attendees in a new window. After the app content is shared in a meeting, the content can be viewed by all participants, but only the presenter has the ability to interact with the content which provides a multi-player viewing experience.
+
+### User scenarios
+
+|Scenario|Example|
+|-------------|--------------|
+|Seismic App| Rocky, a sales rep for Contoso, pins the Seismic app to his upcoming meeting with Rani, the VP of HR at NorthWest. During the meeting, Rocky opens the Seismic side panel a nd sees a list of pre-curated content that he can share in the meeting to aid his sales pitch. Rani can consume the content on her Teams meeting window and ask questions based on the content shown.|
+|Contoso Cloud Board| Robert, a technical program manager at Contoso, helps run the daily scrum meetings of various teams in the organization. For each scrum, he pins the pod-relevant board as a tab to the standup meeting. During the meeting, he opens the side panel of the Contoso app and clicks on the Share button provided within the side panel. This allows the board to take over the meeting stage for all participants such that everyone views the same board. As each member shares their updates, Rocky makes appropriate changes in the sprint board which is then reflected for all other attendees.|
+
+### How it works
+
+* **Share entire app**: When you share a tab to the Meeting Stage in a Teams meeting, the `contentUrl` associated with the tab is first embedded onto the presenter’s Meeting Stage and is screen shared with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it is being presented on a large surface, allowing the app to update its content appropriately.
+
+  > [!NOTE]
+  > Apps that specify `MeetingStage` in the `page.frameContext` property of the `getContext` object in the manifest and declare `MeetingStage.Write.Chat` permissions support collaborative Share to Stage infrastructure. The share button initiates the existing collaborative protocol instead of the screen sharing protocol.
+
+* **Share specific parts of your app to the meeting stage**: Specify the appropriate sharing protocol along with the`appContentURL`
+
+    | Value | Type | Required | Description |
+    | --- | --- | --- | --- |
+    | `sharingProtocol` | String | No | “collaborative” (default) or “screenShare” |
+
+    > [!NOTE]
+    > If the value for the sharingProtocol property is set as `screenShare`, you don't need to declare any Resource-Specific Consent (RSC) permissions in the app manifest and don't need to set `MeetingStage` in the `getContext` object of the manifest.
+
+* **Deep link to the meeting**: The deep link format is updated with the `sharingProtocol` property. The supported values are `Collaborative` and `ScreenShare`. Default is `Collaborative`.
+
+  Deep link format: `{ "appSharingUrl" : "<URL>", "appId": "<APPID>" , "useMeetNow": <true/false>, “sharingProtocol”: <“collaborative/screenShare”}`
+
+  Example: `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false, “sharingProtocol”: “screenShare” }`
+
+* **Share in Meeting**: The share in meeting method is updated with the `protocol` property to support screen share.
+
+    | Property | HTML Attribute | Type | Required | Default | Description |
+    | --- | --- | --- | --- | --- | --- |
+    | `Protocol` | `data-protocol` | String | No | `collaborative` | Specifies the sharing protocol used. Supported values are `collaborative` and `screenShare` .|
+
+### Advantages
+
+* Developers can show coordinated content to multiple participants over a larger stage, getting more attention and integrating more closely with the meeting lifecycle.
+* Basic sharing for the entire app is available without additional investment.
+* Share to Stage APIs are enhanced to enable sharing of specific content through the Screen sharing protocol.
+* Additional support is available for sharing content through a deeplink or the Share to Meeting button using the Screen Sharing protocol.
+* End users can use their favorite tools within the context of their ongoing communication, improving meeting outcomes.
+* Content is displayed inline within the meeting window.
+* A sharing button is available on all Meeting Side panels for users with organizer or presenter roles.
+* Users can initiate sharing through a deeplink or the Share in Meeting button, both exposed by the developer.
+
 ## Feature compatibility by user types
 
 The following table provides the user types and lists the features that each user can access in meetings:
