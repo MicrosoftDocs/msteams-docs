@@ -109,14 +109,14 @@ async readActionItem() {
 }
 ```
 
-## Run your app
+## Test and Deploy your Actions
 
 > [!NOTE]
 > Actions are available in public developer preview, ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users to experience Actions in Microsoft 365 app.
 
 After you update the app package with the required information, you can run your app in Teams Toolkit to test your Actions.
 
-To run your app in Teams Toolkit, follow these steps:
+To deploy your app in Teams Toolkit, follow these steps:
 
 1. Go to Visual Studio Code.
 

@@ -37,7 +37,7 @@ The following table lists the required elements and support information for Acti
 
 ## Design guidelines
 
-Actions enable your app to integrate seamlessly into the user's workflow and guide users to your app based on their intent and the content at hand, making task completion more efficient.
+This section covers the main principles of creating a captivating user experience by seamlessly integrating app icons and display names in a context menu. A single action can express the core of your application, and by skillfully designing the visual interaction between the app icon and its display name, you can improve both the appearance and the functionality. visually appealing context menu that reflects your application’s identity.
 
 :::image type="content" source="images/app-icon-context-menu.png" alt-text="The screenshot shows the app icon in context menu.":::
 
