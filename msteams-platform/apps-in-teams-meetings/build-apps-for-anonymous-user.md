@@ -13,7 +13,6 @@ ms.date: 02/07/2023
 Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, and cards and dialogs (referred as task modules in TeamsJS v1.x) in your app to engage with anonymous meeting participants.
 
 > [!NOTE]
->
 > * Apps for anonymous users are supported in Teams desktop and mobile clients and isn't supported in channel meetings.
 > * Meeting apps for anonymous users are only supported in Microsoft Edge and Chrome.
 

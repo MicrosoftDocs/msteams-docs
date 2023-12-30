@@ -47,10 +47,9 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * Meeting type
 
-# [Channel meeting](#tab/channel-meeting)
+ # [Channel meeting](#tab/channel-meeting)
 
   The following is a JSON payload response for a channel meeting for in-tenant users:
-
   ```json
   {
       "app": {
@@ -134,7 +133,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
   ```
 
-# [Scheduled meeting](#tab/scheduled-meeting)
+ # [Scheduled meeting](#tab/scheduled-meeting)
 
   The following is a JSON payload response for a scheduled meeting for in-tenant users:
 
@@ -254,12 +253,11 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           }
         }
   ```
-
 ---
 
 * User type
 
-# [Guest user](#tab/guest-user)
+ # [Guest user](#tab/guest-user)
 
   The following is a JSON payload response in a scheduled private meeting for a guest user:
 
@@ -371,7 +369,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         
    ```
 
-# [External user](#tab/external-user)
+ # [External user](#tab/external-user)
 
   The following is a JSON payload response in a scheduled private meeting for an external user:
 
@@ -435,12 +433,11 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
 
   ```
-
 ---
 
 * Call type
 
-# [One-on-One call](#tab/one-on-one-call)
+ # [One-on-One call](#tab/one-on-one-call)
 
   The following is a JSON payload response for a one-on-one call for an in-tenant user:
 
@@ -511,11 +508,11 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
     
   ```
-
-# [Group call](#tab/group-call)
-
+   
+ # [Group call](#tab/group-call)
+   
   The following is a JSON payload response for a group chat call for an in-tenant user:
-
+   
   ```json
         {
          "app": {
@@ -1555,7 +1552,7 @@ To subscribe to participant events, follow these steps:
 
 The following examples show how to capture the participant join and leave events:
 
-# [Participant join event](#tab/participant-join-event)
+# [Participant join event](#tab/participant-join-event) 
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
@@ -1568,7 +1565,7 @@ protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingPartici
 }
 ```
 
-# [Participant leave event](#tab/participant-leave-event)
+# [Participant leave event](#tab/participant-leave-event) 
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
@@ -1585,7 +1582,7 @@ protected override async Task OnTeamsMeetingParticipantsLeaveAsync(MeetingPartic
 
 Following are the examples of the participant join and leave event payloads:
 
-# [Participant join event](#tab/participant-join-event1)
+# [Participant join event](#tab/participant-join-event1) 
 
 The following is an example of the participant join event payload:
 
@@ -1635,7 +1632,7 @@ The following is an example of the participant join event payload:
 } 
 ```
 
-# [Participant leave event](#tab/participant-leave-event1)
+# [Participant leave event](#tab/participant-leave-event1) 
 
 The following is an example of the participant leave event payload:
 
