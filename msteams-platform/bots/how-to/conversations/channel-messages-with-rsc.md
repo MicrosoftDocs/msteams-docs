@@ -23,11 +23,11 @@ The `ChannelMessage.Read.Group` and `ChatMessage.Read.Chat` RSC permissions are 
 ### Filtering at mention messages
 
 ```csharp
-// When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot isn't @mentioned.
+// When ChannelMessage.Read.Group or ChatMessage.Read.Chat RSC is in the app manifest, this method is called even when bot is not @mentioned.
 // This code snippet allows the bot to ignore all messages that do not @mention the bot.
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-        // Ignore the message if bot wasn't mentioned. 
+        // Ignore the message if bot was not mentioned. 
         // Remove this if block to process all messages received by the bot.
         if (!turnContext.Activity.GetMentions().Any(mention => mention.Mentioned.Id.Equals(turnContext.Activity.Recipient.Id, StringComparison.OrdinalIgnoreCase)))
         {

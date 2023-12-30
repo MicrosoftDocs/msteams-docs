@@ -27,7 +27,7 @@ Microsoft Teams supports the following formatting options:
 
 Teams supports a subset of markdown and XML or HTML formatting tags.
 
-The following limitations apply to formatting:
+Currently, the following limitations apply to formatting:
 
 * Text-only messages don't support table formatting.
 * Rich cards support formatting in the text property only, not in the title or subtitle properties.
@@ -37,7 +37,7 @@ After you format text content, ensure that your formatting works across all plat
 
 ## Cross-platform support
 
-Some styles are not supported across all platforms. The following table provides a list of styles and which of these styles are supported in text-only messages and rich cards:
+Some styles are currently not supported across all platforms. The following table provides a list of styles and which of these styles are supported in text-only messages and rich cards:
 
 | Style                     | Text-only messages | Rich cards - XML only |
 | ---                       | :---: | :---: |

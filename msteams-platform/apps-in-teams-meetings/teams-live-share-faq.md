@@ -58,7 +58,7 @@ Scheduled meetings, one-on-one calls, group calls, meet now, and channel meeting
 
 <summary><b>Will Live Share's media package work with DRM content?</b></summary>
 
-No. Teams currently doesn't support encrypted media for tab applications on desktop. Google Chrome, Microsoft Edge, and mobile clients are supported. For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
+No. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported. For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
 
 <br>
 
