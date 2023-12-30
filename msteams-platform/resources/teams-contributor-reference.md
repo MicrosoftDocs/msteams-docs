@@ -53,7 +53,7 @@ For more information on hyperlinks and file paths, see [use links in documentati
 > &emsp;&#x2714; Use a relative path without a leading forward slash.<br>
 > &emsp;&#x2714; Include the Markdown file extension.<br>
 >Ex:  **parent directory/directory/path-to-article.md** —> [Building an app for Microsoft Teams](../concepts/building-an-app.md) <br><br>
-> To reference a Microsoft Learn article that **isn't part of** the Teams platform docset:<br>
+> To reference a Microsoft Learn article that **is not part of** the Teams platform docset:<br>
 > &emsp;&#x2714; Use a relative path that begins with a forward slash.<br>
 > &emsp;&#x2714; Do not include the file extension. <br>
 > Ex:  **/docset/address-to-file-location** —> [Use the Microsoft Graph API to work with Microsoft Teams](/graph/api/resources/teams-api-overview)<br><br>

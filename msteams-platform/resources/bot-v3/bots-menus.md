@@ -18,7 +18,7 @@ When a user selects a menu item, the command string is inserted into the text bo
 ## Bot menu support on Teams mobile app
 
 > [!NOTE]
-> Bot menus aren't displayed on mobile devices.
+> Bot menus are not displayed on mobile devices.
 
 ## App manifest
 

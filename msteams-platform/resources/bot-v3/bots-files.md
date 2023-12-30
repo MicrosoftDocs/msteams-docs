@@ -26,7 +26,7 @@ You can post messages with card attachments referencing existing SharePoint file
 ## Using the Teams Bot APIs
 
 > [!NOTE]
-> This method works only in the `personal` context. It doesn't work in the `channel` or `groupchat` context.
+> This method works only in the `personal` context. It does not work in the `channel` or `groupchat` context.
 
 Your bot can directly send and receive files with users in the `personal` context, also known as personal chats, using Teams APIs. This lets you implement expense reporting, image recognition, file archival, e-signatures, and other scenarios involving direct manipulation of file content. Files shared in Teams typically appear as cards, and allow rich in-app viewing.
 
