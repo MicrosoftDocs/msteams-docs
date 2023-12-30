@@ -112,7 +112,7 @@ You can call Graph APIs to determine if the currently logged in user with a vali
    > [!NOTE]
    >
    > * You need to have minimum `User.Read` permissions to call usageRights.
-   > The usageRights API is in beta version. After the version is updated to v1, users must update from beta to v1 version.
+   > The usageRights API is currently in beta version. After the version is updated to V1, users must upgrade from beta to V1 version.
    > * If the Microsoft Entra app is used for both SaaS Fulfillment APIs and usageRights API, ensure that the tenant under which the Microsoft Entra app is created is either the publishing tenant or the associated tenant in the Partner Center.
 
 To determine if the tenant for the Microsoft Entra app is part of the Partner Center setup, follow these steps:

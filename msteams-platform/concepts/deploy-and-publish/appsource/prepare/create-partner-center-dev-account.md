@@ -137,7 +137,7 @@ Try the following:
 * Check your junk or spam folder.
 * Clear the browser cache, go to your Partner Center account dashboard, and select **Resend verification email**.
 * Try accessing the **Resend verification email** link from a different browser.
-* Work with your IT department to ensure that the verification emails aren't blocked by your email server.
+* Work with your IT department to ensure that the verification emails are not blocked by your email server.
 * Adjust your server's spam filter to allow or safe-list all emails from **<maccount@microsoft.com>**.
 
 <br>

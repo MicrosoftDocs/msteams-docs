@@ -17,7 +17,7 @@ The following image displays the pop-up window for Share to Teams preview experi
 > [!NOTE]
 >
 > * Only the desktop versions of Microsoft&nbsp;Edge and Google Chrome are supported.
-> * Use of Freemium or guest accounts isn't supported.
+> * Use of Freemium or guest accounts is not supported.
 
 You can also add link unfurling for the links shared through Share to Teams button hosted in web app, personal app or tab. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
 
@@ -128,7 +128,7 @@ For teachers using the Share to Teams button, there's an additional option to `C
 
 `options` (optional): `{ elements?: HTMLElement[] }`
 
-All share buttons are rendered on the page. If an optional `options` object is supplied with a list of elements, those elements are rendered into share buttons.
+Currently, all share buttons are rendered on the page. If an optional `options` object is supplied with a list of elements, those elements are rendered into share buttons.
 
 ### Set default form values
 

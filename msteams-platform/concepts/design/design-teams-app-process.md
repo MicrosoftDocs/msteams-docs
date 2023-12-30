@@ -37,7 +37,7 @@ The Microsoft Teams UI Kit can help you develop an effective Teams app in the sh
 The UI kit also has prebuilt templates and components that you can copy and modify as needed, so you can spend more time designing the best user experience instead worrying about what a button should look like.
 
 > [!TIP]
-> **Is the UI kit for me?** If you have any part in creating a Teams app, yes. Understanding how to craft a Teams app isn't only helpful to designers but product managers, developers using IDEs, and makers building with low-code tools (such as the Microsoft Power Platform).
+> **Is the UI kit for me?** If you have any part in creating a Teams app, yes. Understanding how to craft a Teams app is not only helpful to designers but product managers, developers using IDEs, and makers building with low-code tools (such as the Microsoft Power Platform).
 
 1. Go to the [Microsoft Teams UI Kit Figma page](https://www.figma.com/community/file/916836509871353159).
 1. Select **Duplicate** to open the UI kit. (You may have to first create a Figma account.)
@@ -90,7 +90,7 @@ The design is done and you’re ready to start building. The following tools can
 
 If you used UI templates in your design, you can implement these templates with the Microsoft Teams UI Library (a React component library based on Fluent UI).
 
-Not all templates listed in the UI kit are available in the library.
+Currently, not all templates listed in the UI kit are available in the library.
 
 > [!div class="nextstepaction"]
 > [Get the library (GitHub)](https://github.com/OfficeDev/microsoft-teams-ui-component-library)

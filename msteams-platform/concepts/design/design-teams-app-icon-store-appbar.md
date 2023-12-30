@@ -90,7 +90,7 @@ It's recommended that if you have a logo, keep it within the 120 x 120 safe area
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/safe-area-dont.png" alt-text="Example shows a logo that isn't within the safe area.":::
+:::image type="content" source="../../assets/images/design-guidelines/safe-area-dont.png" alt-text="Example shows a logo that is not within the safe area.":::
 
 #### Don’t: Make the icon bigger than the safe area
 

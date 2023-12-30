@@ -12,7 +12,7 @@ ms.date: 12/15/2022
 In the Developer Portal for Teams, on the **Overview** page, you can see the total number of active users for your app.
 
 > [!NOTE]
-> Usage analytics are available for new custom apps published to your org through **Developer Portal** for Teams or imported into **Developer Portal** for Teams after April 2022. Usage analytics for all the apps published to the Microsoft Teams Store is available in **Partner Center**. For more information, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
+> Usage analytics are currently available for new custom apps published to your org through **Developer Portal** for Teams or imported into **Developer Portal** for Teams after April 2022. Usage analytics for all the apps published to the Microsoft Teams Store is available in **Partner Center**. For more information, see [Teams apps usage report](/office/dev/store/teams-apps-usage).
 
 | Metric | Definition |
 | :-----------------------| :------------------------------------------------------------------------------------------------------|
@@ -76,7 +76,7 @@ The **Usage by retention state** chart lets you track four key retention or chur
 | New users or tenants | Active users or tenants who are new and have not used your app. |
 | Returning users or tenants | Active users or tenants who used your app during a given R30 (Rolling 30 days) time period and the immediately preceding R30 time period. |
 | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
-| Lapsed users or tenants | Active users or tenants who weren't seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
+| Lapsed users or tenants | Active users or tenants who were not seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
 
 ## Usage intensity
 
