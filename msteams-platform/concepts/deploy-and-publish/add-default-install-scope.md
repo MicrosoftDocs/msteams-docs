@@ -53,7 +53,7 @@ To configure details in app manifest:
 
 ## Block apps by default for users until an admin approves
 
-To enhance Teams app experience, you can block an app from users by default until admin allows the app. For example, consider a help desk app created by Contoso Electronics for Teams. To enable appropriate functioning of the app, Contoso Electronics’ wants the customers to first configure specific properties of the app. The app is blocked by default and is available to users only after an admin allows it.
+To enhance Teams app experience, you can block an app for users by default until admin allows the app. For example, consider a help desk app created by Contoso Electronics for Teams. To ensure the app functions properly, Contoso Electronics wants customers to configure specific properties of the app first. The app is blocked by default and is available to users only after an admin allows it.
 
 To block the app by default, set the `defaultBlockUntilAdminAction` property to `true` in the app manifest file. When the property is set to `true`, the status of the app in Teams admin center is **Blocked by publisher** in the [Manage apps](https://admin.teams.microsoft.com/policies/manage-apps) page.
 
