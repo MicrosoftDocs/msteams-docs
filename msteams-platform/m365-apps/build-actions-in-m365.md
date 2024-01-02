@@ -156,7 +156,7 @@ Follow instructions to preinstall your app for entire organization or user group
 
 | **Sample name** | **Description** |**Node.js** |
 |-----------------|-----------------|----------------|
-| Actions in Microsoft 365 apps | This sample code describes the Actions in Microsoft 365 apps. | [Code sample](https://github.com/OfficeDev/m365-msteams-actions-preview/tree/main) [Need to update the public link.]|
+| Actions in Microsoft 365 apps | This sample code describes the Actions in Microsoft 365 apps. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs)|
 
 ## See also
 

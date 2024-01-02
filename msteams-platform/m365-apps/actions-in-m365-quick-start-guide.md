@@ -9,7 +9,7 @@ ms.subservice: m365apps
 ---
 # Actions in Microsoft 365 quick start guide
 
-Get started with Actions in Microsoft 365 using the [Microsoft 365 sample](https://github.com/OfficeDev/m365-msteams-actions-preview/tree/main) [Need to update the public link.].
+Get started with Actions in Microsoft 365 using the [sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs).
 
 ## Prerequisites
 
@@ -24,7 +24,7 @@ Before you get started, ensure that you install the following tools:
 
 ### Build and run the sample app
 
-1. Go to the [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples). [Need to update the public link.]
+1. Go to the [sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs).
 
 1. Select **Code**.
 
