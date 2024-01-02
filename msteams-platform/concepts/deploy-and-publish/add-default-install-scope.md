@@ -59,7 +59,7 @@ To block the app by default, set the `defaultBlockUntilAdminAction` property to 
 
 :::image type="content" source="../../assets/images/manage-apps-status.png" alt-text="Screenshot shows an app blocked by publisher." lightbox="../../assets/images/manage-apps-status-expanded.png":::
 
-The admin gets a request to take action before a user can access the app. In **[Manage apps](https://admin.teams.microsoft.com/policies/manage-apps)** page in admin center, an admin can select **Allow** to allow the app with **Blocked by publisher** status.
+The admin gets a request to take action before a user can access the app. In the **[Manage apps](https://admin.teams.microsoft.com/policies/manage-apps)** page in Teams admin center, an admin can select **Allow** to allow the app with **Blocked by publisher** status.
 
 :::image type="content" source="../../assets/images/manage-apps-allow.png" alt-text="Screenshot shows the Allow option for the app blocked by publisher." lightbox="../../assets/images/manage-apps-allow-expanded.png":::
 
