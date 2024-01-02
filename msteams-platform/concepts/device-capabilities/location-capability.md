@@ -101,10 +101,17 @@ import {location} from "@microsoft/teams-js"
 
 let locationProps = {"allowChooseLocation":true,"showMap":true};
 if(location.isSupported()) {
-    const locationPromise = location.getLocation(locationProps);
-    locationPromise.
-        then((result) => {output(JSON.stringify(result));}.
-        catch((error) => {output(error);});
+  microsoftTeams.location.getLocation(locationProps, (error, location) => {
+  // If there's any error, an alert shows the error message/code
+  if (error) {
+     if (error.message) {
+        alert(" ErrorCode: " + error.errorCode + error.message);
+        } else {
+     alert(" ErrorCode: " + error.errorCode);
+     }
+  }
+  console.log(JSON.stringify(location));
+  })
 }
 else {/*Handle case where capability isn't supported */}
 ```
@@ -116,10 +123,15 @@ import {location} from "@microsoft/teams-js"
 
 let location = {"latitude":17,"longitude":17};
 if(location.isSupported()) {
-    const locationPromise = location.showLocation(location);
-    locationPromise.
-         then((result) => {/*Successful map display*/}).
-         catch((error) => {/*Failed map display*/});
+  microsoftTeams.location.showLocation(location, (error, result) => {
+   if (error) {
+     if (error.message) {
+        alert(" ErrorCode: " + error.errorCode + error.message);
+        } else {
+     alert(" ErrorCode: " + error.errorCode);
+     }
+   }
+  });
 }
 else {/*Handle case where capability isn't supported */}
 ```
