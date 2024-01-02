@@ -12,6 +12,12 @@ ms.subservice: m365apps
 
 When you create an app ensure that you define user intent, choose the object to perform the action, and construct the corresponding handler that facilitates task completion for the user.
 
+To build Actions for your app, follow these steps:
+
+1. [Configure app manifest](#configure-app-manifest).
+1. [Retrieve Action information through context object](#retrieve-action-information-through-context-object).
+1. [Access content through Graph API](#access-content-through-graph-api).
+
 ## Prerequisites
 
 Before you get started, ensure that you install the following tools:
@@ -22,12 +28,6 @@ Before you get started, ensure that you install the following tools:
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | A JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor. Which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
-
-To build Actions for your app, follow these steps:
-
-1. [Configure app manifest](#configure-app-manifest).
-1. [Retrieve Action information through context object](#retrieve-action-information-through-context-object).
-1. [Access content through Graph API](#access-content-through-graph-api).
 
 ## Configure app manifest
 
