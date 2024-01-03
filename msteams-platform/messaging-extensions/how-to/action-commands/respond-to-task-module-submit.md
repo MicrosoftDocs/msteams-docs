@@ -17,7 +17,7 @@ After a user submits the dialog, your web service receives a `composeExtensions/
 You have the following options to respond:
 
 * No response: Use the submit action to trigger a process in an external system and not provide any feedback to the user. It's useful for long-running processes and to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
-* [Another dialog](#respond-with-another-dialog): You can respond with an another dialog as part of a multi-step interaction.
+* [Another dialog](#respond-with-another-dialog): You can respond with another dialog as part of a multi-step interaction.
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
@@ -195,7 +195,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## Respond with another dialog
 
-You can select to respond to the `submitAction` event with an another dialog. It's useful in the following scenarios:
+You can select to respond to the `submitAction` event with another dialog. It's useful in the following scenarios:
 
 * Collect large amounts of information.
 * Dynamically change the information collection based on user input.
@@ -549,7 +549,7 @@ You receive a new `composeExtensions/submitAction` message similar to the follow
 
 ### User attribution for bots messages
 
-In scenarios where a bot sends messages on behalf of a user, attributing the message to that user helps with engagement and display a more natural interaction flow. This feature lets you to show a message from your bot that was sent on behalf of a user by displaying the name of the user in the header of the Adaptive Card response.
+In scenarios where a bot sends messages on behalf of a user, attributing the message to that user helps with engagement and display a more natural interaction flow. This feature lets the bot show messages on behalf of a user with the user's name displayed in the Adaptive Card response header.
 
 The following images display an Adaptive Card message sent by a bot. The left-side image is without user attribution and the right-side image is with user attribution. The image with user attribution displays the name of the user in the format: username via bot **(Megan Bowen via Poll)** in the Adaptive Card header.
 
