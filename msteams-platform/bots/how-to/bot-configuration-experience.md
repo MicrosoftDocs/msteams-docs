@@ -68,9 +68,9 @@ You can enable the configuration settings for your bot using the following metho
 
 * For C#:
 
-  * `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync`
-
   * `OnInvokeActivityAsync`
+  
+  * `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync`
 
 #### Javascript code snippets
 
