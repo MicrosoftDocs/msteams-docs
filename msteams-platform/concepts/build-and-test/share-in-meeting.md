@@ -56,6 +56,7 @@ You can scan your web page to locate any HTML elements with the class name of ty
    * `data-button-size`: Specifies the size of the button in pixel.
    * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
    * `data-locale`: Specifies the desired user language.
+   * `data-protocol`: Specifies the sharing protocol used.
 
 # [Method 2](#tab/method-2)
 
@@ -127,6 +128,7 @@ The following are the launcher.js definitions:
 | target | `data-target` | String | No | self | Specifies whether the link opens in the same window, new tab, or new window. |
 | buttonType | `data-button-type` | String | No | primaryShareInMeeting | Specifies the button background color: `primaryShareInMeeting` or `secondaryShareInMeeting`. |
 | buttonSize | `data-button-size` | String | No | NA | Button size in pixels. |
+| Protocol | `data-protocol` | String | No | `collaborative` | Specifies the sharing protocol used. Supported values are `collaborative` and `screenShare` .|
 
 ## End user experience on third-party apps
 
@@ -180,7 +182,7 @@ Once the user initiates an instant meeting (Meet now), they can add participants
 
 To add a deep link to share content on stage, you need to have an app context. The app context allows the Teams client to fetch the app manifest and check if the sharing on stage is possible. The following is an example of an app context:
 
-`{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false }`
+`{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false, “sharingProtocol”: “screenShare” }`
 
 The query parameters for the app context are:
 
@@ -190,6 +192,8 @@ The query parameters for the app context are:
   * **True**: When the `useMeetNow` value is true and if there's no ongoing meeting, a new Meet now meeting will be initiated. When there's an ongoing meeting, this value will be ignored.
 
   * **False**: The default value of `useMeetNow` is false, which means that when a deep link is shared to stage and there's no ongoing meeting, a calendar pop-up will appear. However, you can share directly during a meeting.
+
+* `sharingProtocol`: The screen sharing protocol. The supported values are `Collaborative` and `ScreenShare`. Default is `Collaborative`.
 
 Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Following is an example:
 

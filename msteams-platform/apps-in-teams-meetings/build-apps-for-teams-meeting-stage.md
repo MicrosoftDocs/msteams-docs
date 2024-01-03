@@ -90,8 +90,9 @@ The following table includes the query parameters:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The *result* can contain either a true value if there's a successful share or null when the share fails. |
-|**appContentURL**| String | Yes | The URL that will be shared on to the stage. |
+|`callback`| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The *result* can contain either a true value if there's a successful share or null when the share fails. |
+|`appContentURL`| String | Yes | The URL that will be shared on to the stage. |
+| `sharingProtocol` | String | No | “collaborative” (default) or “screenShare” |
 
 ### Example
 
@@ -232,8 +233,6 @@ The following participant roles may be involved during the meeting:
 > * Share to stage using screen share isn't supported on Mac, classic Teams, or mobile.
 
 Users can screen share content to the meeting Stage in Teams using the screen sharing architecture. When a user shares an app to the meeting stage, the app is rendered only on the presenter’s device and then the screen is shared or mirrored to all other attendees in a new window. After the app content is shared in a meeting, the content can be viewed by all participants, but only the presenter has the ability to interact with the content, which provides a multi-player viewing experience.
-
-> [!VIDEO https://github.com/MicrosoftDocs/msteams-docs/blob/doc-feature-screen-share-content-meeting/msteams-platform/assets/videos/screen-share-meeting.mp4]
 
 :::image type="content" source="../assets/images/meeting-stage/screen-share-meeting-stage.png" alt-text="Screenshot shows an example of the meeting stage view for the presenter in the left and for the audience in the right.":::
 
