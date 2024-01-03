@@ -17,11 +17,11 @@ After a user submits the dialog, your web service receives a `composeExtensions/
 You have the following options to respond:
 
 * No response: Use the submit action to trigger a process in an external system and not provide any feedback to the user. It's useful for long-running processes and to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
-* [Additional dialog](#respond-with-additional-dialog): You can respond with additional dialog as part of a multi-step interaction.
+* [Another dialog](#respond-with-another-dialog): You can respond with additional dialog as part of a multi-step interaction.
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
-* [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
-* [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
+* [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/how-to/add-authentication).
+* [Request the user to provide additional configuration](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
 
 If the app doesn't respond within five seconds, the Teams client retries the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
 
@@ -193,7 +193,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## Respond with additional dialog
+## Respond with another dialog
 
 You can select to respond to the `submitAction` event with additional dialog. It's useful in the following scenarios:
 
