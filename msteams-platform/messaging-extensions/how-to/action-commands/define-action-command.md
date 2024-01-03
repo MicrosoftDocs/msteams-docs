@@ -33,7 +33,8 @@ First, you must decide the location from where your action command must be invok
     Commands context = commandBox
 
    > [!NOTE]
-   > If message extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
+   > * If message extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
+   > * Action command in the new Teams client is invoked using /.
 
 * Message: Directly from an existing message through the `...` overflow menu on a message.
 
