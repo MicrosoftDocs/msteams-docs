@@ -107,7 +107,7 @@ if(location.isSupported()) {
      if (error.message) {
         alert(" ErrorCode: " + error.errorCode + error.message);
         } else {
-     alert(" ErrorCode: " + error.errorCode);
+        alert(" ErrorCode: " + error.errorCode);
      }
   }
   console.log(JSON.stringify(location));
@@ -128,7 +128,7 @@ if(location.isSupported()) {
      if (error.message) {
         alert(" ErrorCode: " + error.errorCode + error.message);
         } else {
-     alert(" ErrorCode: " + error.errorCode);
+        alert(" ErrorCode: " + error.errorCode);
      }
    }
   });
