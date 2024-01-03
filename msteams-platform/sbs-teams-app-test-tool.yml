@@ -66,7 +66,7 @@ items:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted.":::
     
-    As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
+    As you've already prepared for creating these apps, you can set up a new Teams project for creating the AI chat bot app.
     In this tutorial, you'll learn:
     1. [Create your bot project workspace.](#create-your-bot-project-workspace)
     1. [Take a tour of the bot app source code.](#take-a-tour-of-the-bot-app-source-code)
@@ -160,10 +160,10 @@ items:
     |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
     |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
-- title: Build and run your first bot app
+- title: Build and run your AI chat bot app
   durationInMinutes: 1
   content: |
-    After you set up your project workspace with Teams Toolkit, build your bot project. Ensure that you've signed in to your Microsoft 365 account.
+    After you set up your project workspace with Teams Toolkit, build your AI chat bot project. Ensure that you've signed in to your Microsoft 365 account.
 
     ## Sign in to your Microsoft 365 account
 
