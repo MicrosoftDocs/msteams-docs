@@ -20,7 +20,7 @@ You have the following options to respond:
 * [Another dialog](#respond-with-another-dialog): You can respond with an additional dialog as part of a multi-step interaction.
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
-* [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
+* [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
 * [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
 
 If the app doesn't respond within five seconds, the Teams client retries the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
@@ -210,7 +210,6 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 > * The prerequisite to get the bot response with an Adaptive Card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
 >
 > * Outlook doesn't support bot response with Adaptive Card.
-
 
 You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. It's useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it.
 
