@@ -132,7 +132,7 @@ By default, `teamsapp new` is in interactive mode and guides to create new Teams
 
 You can use interactive mode to create a Teams app. The following list provides scenarios on controlling all the parameters with `teamsapp new`:
 
-* HTTP triggered notification bot with timer triggered interactive mode.
+* HTTP triggered notification bot with timer triggered non-interactive mode.
 
   ```bash
   teamsapp new -c notification -t timer-functions -l typescript -n myapp -i true
