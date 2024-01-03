@@ -58,17 +58,23 @@ For more information, see [public developer preview app manifest schema](../../r
 
 ### Configure your bot
 
-You can enable the configuration settings for your bot using `onInvokeActivity` or `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` or `handleTeamsConfigFetch` and `handleTeamsConfigSubmit` methods.
+You can enable the configuration settings for your bot using the following methods:
 
-The following table summarizes the methods that are used to enable the bot configuration experience in Teams:
+* For JS:
 
-| Method | SDK |
-| --- | --- |
-| `onInvokeActivity`| Bot Framework SDK for .NET and TypeScript.|
-| `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync`| Teams Bot SDK for .NET. |
-| `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`. | Teams Bot SDK for Node.js and TypeScript. |
+  * `onInvokeActivity`
+
+  * `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`
+
+* For C#:
+
+  * `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync`
+
+  * `OnInvokeActivityAsync`
 
 #### Javascript code snippets
+
+The following code snippets shows an example of `onInvokeActivity` and `handleTeamsConfigFetch`, `handleTeamsConfigSubmit`:
 
 # [JS1](#tab/bot-framework-js)
 
@@ -265,6 +271,8 @@ The handleTeamsConfigFetch and handleTeamsConfigSubmit handle the fetching and s
 ---
 
 #### C# code snippets
+
+The following code snippets shows an example of `OnTeamsConfigFetchAsync`, `OnTeamsConfigSubmitAsync` and `OnInvokeActivityAsync`:
 
 # [C# 1](#tab/teams-bot-sdk)
 
