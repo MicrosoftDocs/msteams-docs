@@ -70,70 +70,82 @@ The following table summarizes the methods that are used to enable the bot confi
 
 When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `config/fetch`, `handleTeamsConfigFetch` or `OnTeamsConfigFetchAsync` methods defined in the teamsBot.js file. The bot responds with an Adaptive Card and the user provides relevant information in the Adaptive Card and selects Submit. After the user selects Submit, a `config/submit`, `handleTeamsConfigSubmit`, or `OnTeamsConfigSubmitAsync` is returned to the bot and the bot configuration is complete.
 
-# [Bot Framework JS](#tab/bot-framework-js)
+#### Javascript code snippets
+
+# [JS1](#tab/bot-framework-js)
 
 ```javascript
-if (context._activity.name == "config/submit") {
- 
-  const choice = context._activity.value.data.choiceselect.split(" ")[0];
-  chosenFlow = choice;
-  if (choice === "static_option_2") {
-      const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
- 
-      return {
-          status: 200,
-          body: {
-              config: {
-                  type: 'continue',
-                  value: {
-                      card: adaptiveCard,
-                      height: 400,
-                      title: 'Task module submit response',
-                      width: 300                  }              }          }      }  }
-  else {
- 
-      try {
-          return {
-              status: 200,
-              body: {
-                  config: {
-                      type: 'continue',
-                      value: {
-                          card: adaptiveCard,
-                          height: 400,
-                          title: 'Dialog fetch response',
-                          width: 300
-                      }
-                  }
-              }
-          }
-      }
- 
- 
+//Invoked when an invoke activity is received from bot.
+    async onInvokeActivity(context) {
 if (context._activity.name == "config/fetch") {
-  const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
-  try {
-      return {
-          status: 200,
-          body: {
-              config: {
-                  type: 'continue',
-                  value: {
-                      card: adaptiveCard,
-                      height: 400,
-                      title: 'Task module fetch response',
-                      width: 300
-                  }
-              }
-          }
-      }
-  } catch (e) {
-      console.log(e);
-  }
+    const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
+    try {
+        return {
+            status: 200,
+            body: {
+                config: {
+                    type: 'continue',
+                    value: {
+                        card: adaptiveCard,
+                        height: 400,
+                        title: 'Task module fetch response',
+                        width: 400
+                    }
+                }
+            }
+        }
+    } catch (e) {
+        console.log(e);
+    }
+}
+
+if (context._activity.name == "config/submit") {
+
+    const choice = context._activity.value.data.choiceselect.split(" ")[0];
+    chosenFlow = choice;
+
+    if (choice === "static_option_2") {
+        const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
+
+        return {
+            status: 200,
+            body: {
+                config: {
+                    type: 'continue',
+                    value: {
+                        card: adaptiveCard,
+                        height: 400,
+                        title: 'Task module submit response',
+                        width: 400
+                    }
+                }
+            }
+        }
+    }
+    else {
+
+        try {
+            return {
+                status: 200,
+                body: {
+                    config: {
+                        type: 'message',
+                        value: "Submitted successfully!"
+                    }
+                }
+            }
+        }
+        catch (e) {
+            console.log(e);
+
+        }
+    }
+    return await super.onInvokeActivity(context);
+}
 }
 ```
 
-# [Teams bot SDK JS](#tab/teams-bot-sdk-js)
+# [JS2](#tab/teams-bot-sdk-js)
 
 The handleTeamsConfigFetch and handleTeamsConfigSubmit handle the fetching and submission of Teams configuration data.
 
@@ -250,7 +262,11 @@ The handleTeamsConfigFetch and handleTeamsConfigSubmit handle the fetching and s
     }
 ```
 
-# [Teams bot SDK C#](#tab/teams-bot-sdk)
+---
+
+#### C# code snippets
+
+# [C# 1](#tab/teams-bot-sdk)
 
 When a user installs the bot in a team or group chat scope, the `OnTeamsConfigFetchAsync` method is called. The `OnTeamsConfigSubmitAsync` method is called when the user submits the bot configuration. The methods  return `ConfigResponseBase` object that contain the bot configuration, and can be used to create suggested actions, display messages, and configure the bot’s dialog.
 
@@ -352,6 +368,146 @@ private ConfigResponseBase createConfigContinueResponse()
     return response;
 }
  
+```
+
+# [C# 2](#tab/teams-bot-sdk2)
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "config/fetch")
+    {
+        var response = new ConfigResponse<BotConfigAuth>
+        {
+            Config = new BotConfigAuth
+            {
+                SuggestedActions = new SuggestedActions
+                {
+                    Actions = new List<CardAction>
+                    {
+                        new CardAction
+                        {
+                            Type = "bot config type",
+                            Title = "bot config title",
+                            Image = "https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40",
+                             Value = "bot config value"
+                        }
+                    }
+                },
+                Type = "auth"
+            }
+
+        };
+        
+        return new InvokeResponse { Status = 200, Body = response };
+
+    }
+    else if (turnContext.Activity.Name == "config/submit")
+    {
+        AdaptiveCard card = new AdaptiveCard("1.2")
+        {
+            Body = new List<AdaptiveElement>()
+        };
+        
+        card.Body.Add(new AdaptiveContainer
+        {
+            Items = new List<AdaptiveElement>
+            {
+                new AdaptiveTextBlock
+                {
+                    Size = AdaptiveTextSize.Large,
+                    Text = "bot config test",
+                    Type = "TextBlock"
+                }
+            }
+        });
+
+        var response = new ConfigResponse<TaskModuleResponseBase>
+        {
+            Config = new TaskModuleContinueResponse
+            {
+                Value = new TaskModuleTaskInfo
+                {
+                    Height = 123,
+                    Width = 456,
+                    Title = "test title",
+                    Card = new Attachment
+                    {
+                        ContentType = AdaptiveCard.ContentType,
+                        Content = card
+                    }
+                },
+                Type = "continue"
+            }
+        };
+
+        return new InvokeResponse { Status = 200, Body = response };
+    }
+
+    return null;
+}
+
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "config/submit")
+    {
+        var response = new ConfigResponse<TaskModuleResponseBase>
+        {
+            Config = new TaskModuleMessageResponse
+            {
+                Value = "this is a message"
+            }
+        };
+        return new InvokeResponse { Status = 200, Body = response };
+
+    }
+    else if (turnContext.Activity.Name == "config/fetch")
+    {
+        AdaptiveCard card = new AdaptiveCard("1.2")
+        {
+            Body = new List<AdaptiveElement>()
+        };
+        
+        card.Body.Add(
+            new AdaptiveContainer
+            {
+                Items = new List<AdaptiveElement>
+                {
+                    new AdaptiveTextBlock
+                    {
+                        Size = AdaptiveTextSize.Large,
+                        Text = "bot config test",
+                        Type = "TextBlock"
+                    }
+                }
+            });
+        
+        // Construct a task module response with the task module URL and any data to be passed to the task module
+
+        var response = new ConfigResponse<TaskModuleResponseBase>
+        {
+            Config = new TaskModuleContinueResponse
+            {
+                Value = new TaskModuleTaskInfo
+                {
+                    Height = 123,
+                    Width = 456,
+                    Title = "test title",
+                    Card = new Attachment
+                    {
+                        ContentType = AdaptiveCard.ContentType,
+                        Content = card
+                    }
+                },
+                Type = "continue"
+            }
+        };
+
+        return new InvokeResponse { Status = 200, Body = response };
+    }
+
+    return null;
+}
 ```
 
 ---
