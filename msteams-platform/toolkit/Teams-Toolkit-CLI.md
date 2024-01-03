@@ -97,7 +97,7 @@ Commands have different default interactive modes. Some commands are interactive
 
 ## `teamsapp doctor`
 
-Prerequiste checker for building Microsoft Teams apps.
+Prerequisites checker for building Microsoft Teams apps.
 
 ## `teamsapp new`
 
@@ -447,13 +447,13 @@ teamsapp install --xml-path manifest.xml
 
 ### Scenarios for `teamsapp uninstall`
 
-Remove the acquired M365 App by Title ID.
+Remove the acquired Microsoft 365 App by Title ID.
 
 ```bash
 teamsapp uninstall --title-id U_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-Remove the acquired M365 App by Manifest ID.
+Remove the acquired Microsoft 365 App by Manifest ID.
 
 ```bash
 teamsapp uninstall --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -461,7 +461,7 @@ teamsapp uninstall --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## `teamsapp launchinfo`
 
-Get launch information of an acquired M365 App.
+Get launch information of an acquired Microsoft 365 App.
 
 ### Parameters for `teamsapp launchinfo -h`
 
