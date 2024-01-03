@@ -233,7 +233,7 @@ The following participant roles may be involved during the meeting:
 
 Users can screen share content to the meeting Stage in Teams using the screen sharing architecture. When a user shares an app to the meeting stage, the app is rendered only on the presenter’s device and then the screen is shared or mirrored to all other attendees in a new window. After the app content is shared in a meeting, the content can be viewed by all participants, but only the presenter has the ability to interact with the content, which provides a multi-player viewing experience.
 
-:::image type="content" source="../assets/videos/screen-share-meeting.mp4" alt-text="Video shows a demo of screen share content to meeting stage.":::
+> [!VIDEO https://github.com/MicrosoftDocs/msteams-docs/blob/doc-feature-screen-share-content-meeting/msteams-platform/assets/videos/screen-share-meeting.mp4]
 
 :::image type="content" source="../assets/images/meeting-stage/screen-share-meeting-stage.png" alt-text="Screenshot shows an example of the meeting stage view for the presenter in the left and for the audience in the right.":::
 
