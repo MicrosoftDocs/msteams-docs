@@ -28,6 +28,9 @@ Teams platform features that are available to all app developers.
 
 ***January 03, 2024***: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 
+:::column-end:::
+:::row-end:::
+
 <br/>
 
 <details>
