@@ -423,6 +423,7 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
 }
 ```
 
+
 ---
 
 If you used Teams Toolkit to create your personal app, you can also use it to validate the changes to your app manifest file and identify any errors. Open the command palette `Ctrl+Shift+P` and find **Teams: Validate manifest file** or select the option from the Deployment menu of the Teams Toolkit (look for the Teams icon on the left side of Visual Studio Code).
