@@ -17,7 +17,7 @@ After a user submits the dialog, your web service receives a `composeExtensions/
 You have the following options to respond:
 
 * No response: Use the submit action to trigger a process in an external system and not provide any feedback to the user. It's useful for long-running processes and to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
-* [Another dialog](#respond-with-another-dialog): You can respond with another dialog as part of a multi-step interaction.
+* [Additional dialog](#respond-with-additional-dialog): You can respond with additional dialog as part of a multi-step interaction.
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions).
@@ -193,9 +193,9 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 * * *
 
-## Respond with another dialog
+## Respond with additional dialog
 
-You can select to respond to the `submitAction` event with another dialog. It's useful in the following scenarios:
+You can select to respond to the `submitAction` event with additional dialog. It's useful in the following scenarios:
 
 * Collect large amounts of information.
 * Dynamically change the information collection based on user input.
