@@ -39,32 +39,32 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-# [C#](#tab/cs1)
+   # [C#](#tab/cs1)
 
-   Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
-   ```csharp
+    ```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-   ```
+    ```
 
-# [JavaScript](#tab/js1)
+   # [JavaScript](#tab/js1)
 
-   Add the following code snippet to `index.js` (or the equivalent class in your app's code):
+    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
-   ```JavaScript
+    ```JavaScript
        const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
        const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
        adapter.use(tokenExchangeMiddleware);
-   ```
+    ```
 
----
+    ---
 
->[!NOTE]
-> You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
+    >[!NOTE]
+    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 1. Use the following code snippet for requesting a token.
 
-# [C#](#tab/cs2)
+   # [C#](#tab/cs2)
 
    After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
@@ -119,9 +119,9 @@ To update your app's code:
        }
    ```
 
-# [JavaScript](#tab/js2)
+   # [JavaScript](#tab/js2)
 
-   After you add the code to `index.js`, the following code must appear:
+    After you add the code to `index.js`, the following code must appear:
 
    ```JavaScript
        // index.js is used to setup and configure your bot.
@@ -215,7 +215,7 @@ To update your app's code:
 
    ```
 
----
+   ---
 
 ### Consent dialog for getting access token
 
@@ -230,7 +230,7 @@ When the app user selects the user name, the permission is granted and they can 
 The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. After consenting, the app user can access and use your message extension app for the granted permissions and scopes.
 
 > [!IMPORTANT]
-> Scenarios where consent dialogs aren't needed:
+> Scenarios where consent dialogs are not needed:
 >
 > - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
 
@@ -243,7 +243,7 @@ sign in/tokenExchange, and the **value** field. The **value** field contains the
 
 Use the following code snippet example to invoke response:
 
-# [C#](#tab/cs3)
+   # [C#](#tab/cs3)
 
 ```csharp
 public MainDialog(IConfiguration configuration, ILogger<MainDialog> logger)
@@ -297,7 +297,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
         }
 ```
 
-# [JavaScript](#tab/js3)
+   # [JavaScript](#tab/js3)
 
    ```JavaScript
     class MainDialog {
@@ -412,7 +412,7 @@ If you're using the OAuth connection, you must update or add the token in the Bo
 > [!NOTE]
 > You can find the sample `TeamsMessagingExtensionsSearchAuthConfigBot.cs` in [Tab, Bot, and Message Extension (ME) SSO](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp/App%20SSO%20Sample/Bots).
 
-# [C#](#tab/cs4)
+   # [C#](#tab/cs4)
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -473,7 +473,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
      }
 ```
 
-# [JavaScript](#tab/js4)
+   # [JavaScript](#tab/js4)
 
 ```JavaScript
 
@@ -524,7 +524,7 @@ async tokenIsExchangeable(context) {
 
 Use the following code snippet to handle the access token in case the app user logs out:
 
-# [C#](#tab/cs5)
+   # [C#](#tab/cs5)
 
 ```csharp
     private async Task<DialogTurnResult> InterruptAsync(DialogContext innerDc, 
@@ -555,7 +555,7 @@ Use the following code snippet to handle the access token in case the app user l
         }
 ```
 
-# [JavaScript](#tab/js5)
+   # [JavaScript](#tab/js5)
 
 ```JavaScript
     async interrupt(innerDc) {

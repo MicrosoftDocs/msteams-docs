@@ -12,12 +12,12 @@ The Outgoing Webhook acts as a bot and searches for messages in channels using *
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts may be overused in this article. Check once.
-* An important alert at the end of this table doesn't make sense. Also, it has a code snippet inside it.
+* An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
 * Some screenshots like teamschannel.png may be redundant. Check once.
 * Some headings use title case. We use sentence case for titles.
 * Check for markdownlint errors. 
 * Try using &nbsp; to add spaces in codeblocks for indentation and remove the hard tabs.
-* Table with just a row isn't really needed. Provide the content without tabulating it.
+* Table with just a row is not really needed. Provide the content without tabulating it.
 --->
 
 See the following video to learn how to create Outgoing Webhooks:
@@ -33,7 +33,7 @@ The following table provides the features and description of Outgoing Webhooks:
 | Features | Description |
 | ------- | ----------- |
 | Scoped configuration| Webhooks are scoped at the team level. Mandatory setup process for each adds an Outgoing Webhook. |
-| Reactive messaging| Users must use **@mention** for the webhook to receive messages. Users can only message an Outgoing Webhook in public channels and not within the personal or private scope. |
+| Reactive messaging| Users must use **@mention** for the webhook to receive messages. Currently, users can only message an Outgoing Webhook in public channels and not within the personal or private scope. |
 |Standard HTTP message exchange|Responses appear in the same chain as the original request message and can include any Bot Framework message content. For example, rich text, images, cards, and emojis. Although Outgoing Webhooks can use cards, they can't use any card actions except for `openURL`.|
 | Teams API method support|Outgoing Webhooks sends an HTTP POST to a web service and gets a response. They can't access any other APIs, such as retrieve the roster or list of channels in a team.|
 

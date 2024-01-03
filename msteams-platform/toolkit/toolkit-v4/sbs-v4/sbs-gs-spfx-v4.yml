@@ -24,7 +24,7 @@ items:
     :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-spfx-v4/your-helloworld-app-tab1-v4.png" alt-text="Diagram shows that the app has three features.":::
 
     > [!NOTE]
-    > Teams Toolkit offers only the Tab capability in a Teams app with Visual Studio Code and SharePoint Framework. The Bot and Message Extension capabilities aren't available.
+    > Currently, Teams Toolkit offers only the Tab capability in a Teams app with Visual Studio Code and SharePoint Framework. The Bot and Message Extension capabilities are not available.
 
 - title: Prerequisites
   durationInMinutes: 1

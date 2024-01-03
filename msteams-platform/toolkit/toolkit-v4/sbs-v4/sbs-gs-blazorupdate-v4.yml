@@ -22,7 +22,7 @@ items:
     :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-blazorupdate-v4/your-blazor-helloworld-app-v4.png" alt-text="Screenshot of the blazor app displaying the tab, Bot, and Message Extension output after you've successfully completed the step-by-step guide.":::
 
     > [!NOTE]
-    > Teams Toolkit doesn't support the message extension capability.
+    > Currently, Teams Toolkit doesn't support the message extension capability.
 
 - title: Prerequisites
   durationInMinutes: 1

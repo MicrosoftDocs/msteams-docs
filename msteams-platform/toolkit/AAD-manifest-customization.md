@@ -190,7 +190,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
 1. Go to [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and sign in to Microsoft 365 account.
   
    > [!NOTE]
-   > Ensure that login credentials of Teams application and Microsoft 365 account are the same.
+   > Ensure that login credentials of Teams application and M365 account are the same.
 
 1. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and search the Microsoft Entra application using client ID that you copied before.
   
@@ -272,7 +272,7 @@ You need to interact with Microsoft Entra application during various stages of y
       |`orgRestrictions`|Doesn't exist in Graph API|
       |`certification`|Doesn't exist in Graph API|
 
-2. `requiredResourceAccess` property is used for user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. You need to use UUID for other APIs. Perform the following steps to retrieve IDs from Azure portal:
+2. Currently, `requiredResourceAccess` property is used for user readable resource application name or permission name strings only for `Microsoft Graph` and `Office 365 SharePoint Online` APIs. You need to use UUID for other APIs. Perform the following steps to retrieve IDs from Azure portal:
 
     1. Register a new Microsoft Entra application on [Azure portal](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps).
     1. Select `API permissions` from the Microsoft Entra application page.
