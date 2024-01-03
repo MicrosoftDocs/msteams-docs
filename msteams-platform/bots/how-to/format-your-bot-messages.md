@@ -25,7 +25,7 @@ Microsoft Teams supports the following formatting options:
 | markdown | The text must be treated as markdown formatting and rendered on the channel as appropriate. |
 | xml | The text is simple XML markup. |
 
-Teams supports a subset of markdown and XML or HTML formatting tags. Your bot can also mention other users and tags in text messages. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
+Teams supports a subset of markdown and XML or HTML formatting tags. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
 
 Currently, the following limitations apply to formatting:
 
