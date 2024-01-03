@@ -135,13 +135,13 @@ You can use interactive mode to create a Teams app. The following list provides 
 * HTTP triggered notification bot with timer triggered non-interactive mode.
 
   ```bash
-  teamsapp new -c notification -t timer-functions -l typescript -n myapp -i true
+  teamsapp new -c notification -t timer-functions -l typescript -n myapp -i false
   ```
 
-* Import an existing SharePoint Framework solution in interactive mode.
+* Import an existing SharePoint Framework solution in non-interactive mode.
 
   ```bash
-  teamsapp new -c tab-spfx -s import --spfx-folder <folder-path> -n myapp -i true
+  teamsapp new -c tab-spfx -s import --spfx-folder -n myapp -i false
   ```
 
 ## `teamsapp add`
