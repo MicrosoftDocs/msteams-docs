@@ -44,7 +44,7 @@ For authentication or configuration, after the user completes the process, the o
 > * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtensions**, where the value is equal to the usual payload.
 > * When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
-If the app contains a conversational bot, install the bot in the conversation, and then load the dialog. The bot is useful to get additional context for the dialog. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
+If the app contains a conversational bot, install the bot in the conversation, and then load the dialog. The bot is useful to get more context for the dialog. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
 
 ## The submitAction invoke event
 
