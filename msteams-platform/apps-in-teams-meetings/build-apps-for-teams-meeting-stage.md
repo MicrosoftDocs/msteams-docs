@@ -234,16 +234,9 @@ The following participant roles may be involved during the meeting:
 
 Users can screen share content to the meeting Stage in Teams using the screen sharing architecture. When a user shares an app to the meeting stage, the app is rendered only on the presenter’s device and then the screen is shared or mirrored to all other attendees in a new window. After the app content is shared in a meeting, the content can be viewed by all participants, but only the presenter has the ability to interact with the content, which provides a multi-player viewing experience.
 
-:::image type="content" source="../assets/images/meeting-stage/screen-share-meeting-stage.png" alt-text="Screenshot shows an example of the meeting stage view for the presenter in the left and for the audience in the right.":::
+:::image type="content" source="../assets/images/meeting-stage/screen-share-meeting-stage.png" alt-text="Screenshot shows an example of the meeting stage view for the presenter in the left and for the audience in the right." lightbox="../assets/images/meeting-stage/screen-share-meeting-stage.png":::
 
-### User scenarios
-
-|Scenario|Example|
-|-------------|--------------|
-|Seismic App| Rocky, a sales rep for Contoso, pins the Seismic app to his upcoming meeting with Rani, the VP of HR at NorthWest. During the meeting, Rocky opens the Seismic side panel and sees a list of pre-curated content that he can share in the meeting to aid his sales pitch. Rani can consume the content on her Teams meeting window and ask questions based on the content shown.|
-|Contoso Cloud Board| Robert, a technical program manager at Contoso, helps run the daily scrum meetings of various teams in the organization. For each scrum, he pins the pod-relevant board as a tab to the standup meeting. During the meeting, he opens the side panel of the Contoso app and selects the Share button provided within the side panel. This allows the board to take over the meeting stage for all participants such that everyone views the same board. As each member shares their updates, Rocky makes appropriate changes in the sprint board, which is then reflected for all other attendees.|
-
-### How it works
+Users can screen share content to the meeting stage in the following scenarios:
 
 * **Share entire app**: When you share a tab to the Meeting Stage in a Teams meeting, the `contentUrl` associated with the tab is first embedded onto the presenter’s Meeting Stage and is screen shared with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it's being presented on a large surface, allowing the app to update its content appropriately.
 
@@ -271,16 +264,21 @@ Users can screen share content to the meeting Stage in Teams using the screen sh
     | --- | --- | --- | --- | --- | --- |
     | `Protocol` | `data-protocol` | String | No | `collaborative` | Specifies the sharing protocol used. Supported values are `collaborative` and `screenShare` .|
 
+### User scenarios
+
+|Scenario|Example|
+|-------------|--------------|
+|Seismic App| Rocky, a sales rep for Contoso, pins the Seismic app to his upcoming meeting with Rani, the VP of HR at NorthWest. During the meeting, Rocky opens the Seismic side panel and sees a list of pre-curated content that he can share in the meeting to aid his sales pitch. Rani can consume the content on her Teams meeting window and ask questions based on the content shown.|
+|Contoso Cloud Board| Robert, a technical program manager at Contoso, helps run the daily scrum meetings of various teams in the organization. For each scrum, he pins the pod-relevant board as a tab to the standup meeting. During the meeting, he opens the side panel of the Contoso app and selects the Share button provided within the side panel. This allows the board to take over the meeting stage for all participants such that everyone views the same board. As each member shares their updates, Rocky makes appropriate changes in the sprint board, which is then reflected for all other attendees.|
+
 ### Advantages
 
-* Developers can show coordinated content to multiple participants over a larger stage, getting more attention and integrating more closely with the meeting lifecycle.
+* You can show coordinated content to multiple participants over a larger stage, getting more attention, and integrating more closely with the meeting lifecycle.
 * Basic sharing for the entire app is available without additional investment.
-* Share to Stage APIs are enhanced to enable sharing of specific content through the Screen sharing protocol.
-* Additional support is available for sharing content through a deep link or the Share to Meeting button using the Screen Sharing protocol.
-* End users can use their favorite tools within the context of their ongoing communication, improving meeting outcomes.
+* Users can use their favorite tools within the context of their ongoing communication, improving meeting outcomes.
 * Content is displayed inline within the meeting window.
-* A sharing button is available on all Meeting Side panels for users with organizer or presenter roles.
-* Users can initiate sharing through a deep link or the Share in Meeting button, both exposed by the developer.
+* A sharing button is available on all meeting side panels for users with organizer or presenter roles.
+* Users can initiate sharing through a deep link or the Share in Meeting button.
 
 ## Feature compatibility by user types
 
