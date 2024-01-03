@@ -133,7 +133,7 @@ Bots and message extensions can include mentions within the card content in [Tex
 
 > [!NOTE]
 >
-> * [Media elements](https://adaptivecards.io/explorer/Media.html) are not supported in Adaptive Cards on Teams platform.
+> * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
 > * Channel and team mentions aren't supported in bot messages.
 > * You can @mention multiple users in a single Adaptive Card message, however, ensure that the message size limit doesn't exceed 28 KB for [Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) and 40 KB for a [bot message](~/bots/how-to/format-your-bot-messages.md).
 
@@ -453,7 +453,7 @@ The following image is an example of masking information in Adaptive Cards:
 You can use the `msteams` property to expand the width of an Adaptive Card and make use of additional canvas space. The next section provides information on how to use the property.
 
 > [!NOTE]
-> Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content isn't truncated.
+> Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
 
 #### Construct full width cards
 
@@ -692,7 +692,7 @@ In the following example, there are two primary actions and one secondary action
 
 > [!NOTE]
 >
-> * The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior isn't applicable to the `ActionSet` in an Adaptive Card.
+> * The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior is not applicable to the `ActionSet` in an Adaptive Card.
 
 The following image is an example of overflow menu in a bot sent card and a message extension card:
 
