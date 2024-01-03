@@ -18,12 +18,12 @@ ms.date: 06/02/2022
 1. Select **Microsoft App ID and password** and then **Create New**.
 
     ![Create Microsoft App ID](../../assets/images/authentication/CreateMicrosoftAppID.png)
-    ![Create New Microsoft App ID](../../assets/images/authentication/CreateNewMicrosoftAppID.png)
+    ![Create New Microsoft App ID](../../assets/images/authentication/CreateNewMicrosoftAppID.png)    
 
 1. Select **Create App ID in the App Registration Portal** link.
 
    ![App Registrations](../../assets/images/authentication/AppRegistration.png)
-
+   
 1. In the displayed **App registration** window, select the **New registration** tab in the upper left.
 1. Enter the name of the bot application you're registering, we used *BotTeamsAuth* (you need to select your own unique name).
 1. For the **Supported account types**, select *Accounts in any organizational directory (Any Microsoft Entra directory - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)*.

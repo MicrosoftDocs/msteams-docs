@@ -7,7 +7,7 @@ zone_pivot_groups: enable-sso
 ---
 # Add code to enable SSO in your bot app
 
-Before you add code to enable single sign-on (SSO), ensure that you configure your app and bot resource in Microsoft Entra admin center.
+Before you add code to enable single sign-on (SSO), ensure that you've configured your app and bot resource in Microsoft Entra admin center.
 
 > [!div class="nextstepaction"]
 > [Configure bot app in Microsoft Entra ID](bot-sso-register-aad.md)
@@ -28,7 +28,7 @@ This section covers:
 
 ## Update development environment variables
 
-You configured the client secret and OAuth connection setting for the app in Microsoft Entra ID. You must configure the code with these values.
+You've configured client secret and OAuth connection setting for the app in Microsoft Entra ID. You must configure the code with these values.
 
 To update the development environment variables:
 
@@ -43,7 +43,7 @@ To update the development environment variables:
 
 1. Save the file.
 
-You configured the required environment variables for your bot app and SSO. Next, add the code for handling bot tokens.
+You've now configured the required environment variables for your bot app and SSO. Next, add the code for handling bot tokens.
 
 ## Add code to handle an access token
 
@@ -56,36 +56,36 @@ To update your app's code:
 
 1. Add code snippet for `TeamsSSOTokenExchangeMiddleware`.
 
-# [C#](#tab/cs1)
+   # [C#](#tab/cs1)
 
-   Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
+    Add the following code snippet to `AdapterWithErrorHandler.cs` (or the equivalent class in your app's code):
 
-   ```csharp
+    ```csharp
     base.Use(new TeamsSSOTokenExchangeMiddleware(storage, configuration["ConnectionName"]));
-   ```
+    ```
 
-# [JavaScript](#tab/js1)
+   # [JavaScript](#tab/js1)
 
-   Add the following code snippet to `index.js` (or the equivalent class in your app's code):
+    Add the following code snippet to `index.js` (or the equivalent class in your app's code):
 
-   ```JavaScript
+    ```JavaScript
     const {TeamsSSOTokenExchangeMiddleware} = require('botbuilder');
     const tokenExchangeMiddleware = new TeamsSSOTokenExchangeMiddleware(memoryStorage, env.connectionName);
     adapter.use(tokenExchangeMiddleware);
-   ```
+    ```
 
----
+    ---
 
-> [!NOTE]
-> You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
+    > [!NOTE]
+    > You might receive multiple responses for a given request if the user has multiple active endpoints. You must eliminate all duplicate or redundant responses with the token. For more information about signin/tokenExchange, see [TeamsSSOTokenExchangeMiddleware Class](/python/api/botbuilder-core/botbuilder.core.teams.teams_sso_token_exchange_middleware.teamsssotokenexchangemiddleware?view=botbuilder-py-latest#remarks&preserve-view=true).
 
 1. Use the following code snippet for requesting a token.
 
-# [C#](#tab/cs2)
+   # [C#](#tab/cs2)
 
-   After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
+    After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
-   ```csharp
+    ```csharp
         public class AdapterWithErrorHandler : CloudAdapter
         {
             public AdapterWithErrorHandler(
@@ -134,13 +134,13 @@ To update your app's code:
                 };
             }
         }
-   ```
+    ```
 
-# [JavaScript](#tab/js2)
+   # [JavaScript](#tab/js2)
 
-   After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code must appear:
+    After you add the code snippet for `TeamsSSOTokenExchangeMiddleware`, the following code must appear:
 
-   ```JavaScript
+    ```JavaScript
         // index.js is used to setup and configure your bot.
     
         // Import required packages
@@ -231,7 +231,7 @@ To update your app's code:
             // Route received a request to adapter for processing.
             await adapter.process(req, res, (context) => bot.run(context));
         });
-   ```
+    ```
 
 ---
 
@@ -253,7 +253,7 @@ The consent dialog that appears is for open-id scopes defined in Microsoft Entra
 > After the app user consents, they're not required to consent again for any other permissions. If the permissions defined in Microsoft Entra scope are modified, then the app user may need to consent again. If, however, the consent prompt fails to let the app user access, the bot app falls back to sign-in card.
 
 > [!IMPORTANT]
-> Scenarios where consent dialogs aren't needed:
+> Scenarios where consent dialogs are not needed:
 >
 > - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs and can access the app seamlessly.
 > - If your Microsoft Entra app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
@@ -379,7 +379,7 @@ Web APIs on your server must decode the access token and verify if it's sent fro
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
-There are many libraries available that can handle JWT validation. Basic validation includes:
+There are a number of libraries available that can handle JWT validation. Basic validation includes:
 
 - Checking that the token is well-formed.
 - Checking that the token was issued by the intended authority.
@@ -387,7 +387,7 @@ There are many libraries available that can handle JWT validation. Basic validat
 
 Keep in mind the following guidelines when validating the token:
 
-- Microsoft Entra ID issues valid SSO tokens. The `iss` claim in the token must start with this value.
+- Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
 - The token's `aud1` parameter is set to the app ID generated during Microsoft Entra app registration.
 - The token's `scp` parameter is set to `access_as_user`.
 

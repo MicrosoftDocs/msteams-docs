@@ -89,7 +89,7 @@ You must add the following search parameter details that define the text visible
 | `parameter.description` | Describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
-| `parameters.value` | Initial value for the parameter. Currently, the value isn't supported. | No | 1.5 |
+| `parameters.value` | Initial value for the parameter. Currently the value isn't supported | No | 1.5 |
 
 For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 
