@@ -93,7 +93,7 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 
 ## Interactive mode
 
-`teamsapp` command runs in interactive mode by default. You can work in non-interactive mode by setting `--interactive` flag to `false`.
+Commands have different default interactive modes. Some commands are interactive and some are non-interactive by default. The default value is specified in -h for each command.
 
 ## `teamsapp doctor`
 
@@ -142,20 +142,6 @@ You can use interactive mode to create a Teams app. The following list provides 
 
   ```bash
   teamsapp new -c tab-spfx -s import --spfx-folder <folder-path> -n myapp -i true
-  ```
-
-You can use non-interactive mode to create a Teams app. The following list provides scenarios on controlling all the parameters with `teamsapp new`:
-
-* HTTP triggered notification bot with timer triggered in non-interactive mode.
-
-  ```bash
-  teamsapp new -c notification -t timer-functions -l typescript -n myapp -i false
-  ```
-
-* Import an existing SharePoint Framework solution in non-interactive mode.
-
-  ```bash
-  teamsapp new -c tab-spfx -s import --spfx-folder <folder-path> -n myapp -i false
   ```
 
 ## `teamsapp add`
