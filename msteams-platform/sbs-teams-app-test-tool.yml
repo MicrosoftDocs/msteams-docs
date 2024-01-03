@@ -60,18 +60,16 @@ items:
   durationInMinutes: 1
   content: |
 
-    Let's create your first bot app.
+    Let's create your AI chat bot app.
     
     The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, for example, providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
+
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted.":::
     
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the bot app.
     In this tutorial, you'll learn:
-    1. [How to set up a new bot project with Teams Toolkit.](#create-your-bot-project-workspace)
-    1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
-
-    > [!IMPORTANT]
-    > Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+    1. [Create your bot project workspace.](#create-your-bot-project-workspace)
+    1. [Take a tour of the bot app source code.](#take-a-tour-of-the-bot-app-source-code)
 
     ## Create your bot project workspace
 
@@ -161,8 +159,6 @@ items:
     |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
     |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
     |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
-    > [!Tip]
-    > Familiarize yourself with bots outside Teams before you integrate your first bot within Teams.
 
 - title: Build and run your first bot app
   durationInMinutes: 1
@@ -177,7 +173,7 @@ items:
 
     1. Open Visual Studio Code.
 
-    1. Select the Teams Toolkit :::image type="icon" source="assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
 
     1. Select **Sign in to M365**. Your default web browser opens to let you sign in to the account.
 
@@ -364,7 +360,7 @@ items:
 
     1. Select **Mock an Activity** > **Custom activity**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
     1. Add `messageReaction` to customize the activity under the property `type` and invoke the custom activity.
 
@@ -386,7 +382,7 @@ items:
 
         Bot sends an `onReactionsAdded` handler in response.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
 
 - title: Complete challenge
   durationInMinutes: 1
