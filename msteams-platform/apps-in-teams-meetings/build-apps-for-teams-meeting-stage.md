@@ -228,21 +228,25 @@ The following participant roles may be involved during the meeting:
 
 > [!NOTE]
 >
-> * Only In-Tenant/Guest and External users with presenter or organizer role type can initiate a sharing session.
-> * Share to stage using screen share isn't supported on Mac, T1/classic Teams, or mobile.
+> * Only In-tenant or guest and external users with presenter or organizer role can initiate a sharing session.
+> * Share to stage using screen share isn't supported on Mac, classic Teams, or mobile.
 
-Users can screen share content to the Meeting Stage in Teams meetings using the screen sharing architecture. When a user shares an app to the meeting stage, the app is rendered only on the presenter’s device and then screen is shared or mirrored to all other attendees in a new window. After the app content is shared in a meeting, the content can be viewed by all participants, but only the presenter has the ability to interact with the content which provides a multi-player viewing experience.
+Users can screen share content to the meeting Stage in Teams using the screen sharing architecture. When a user shares an app to the meeting stage, the app is rendered only on the presenter’s device and then the screen is shared or mirrored to all other attendees in a new window. After the app content is shared in a meeting, the content can be viewed by all participants, but only the presenter has the ability to interact with the content, which provides a multi-player viewing experience.
+
+:::image type="content" source="../assets/videos/screen-share-meeting.mp4" alt-text="Video shows a demo of screen share content to meeting stage.":::
+
+:::image type="content" source="../assets/images/meeting-stage/screen-share-meeting-stage.png" alt-text="Screenshot shows an example of the meeting stage view for the presenter in the left and for the audience in the right.":::
 
 ### User scenarios
 
 |Scenario|Example|
 |-------------|--------------|
-|Seismic App| Rocky, a sales rep for Contoso, pins the Seismic app to his upcoming meeting with Rani, the VP of HR at NorthWest. During the meeting, Rocky opens the Seismic side panel a nd sees a list of pre-curated content that he can share in the meeting to aid his sales pitch. Rani can consume the content on her Teams meeting window and ask questions based on the content shown.|
-|Contoso Cloud Board| Robert, a technical program manager at Contoso, helps run the daily scrum meetings of various teams in the organization. For each scrum, he pins the pod-relevant board as a tab to the standup meeting. During the meeting, he opens the side panel of the Contoso app and clicks on the Share button provided within the side panel. This allows the board to take over the meeting stage for all participants such that everyone views the same board. As each member shares their updates, Rocky makes appropriate changes in the sprint board which is then reflected for all other attendees.|
+|Seismic App| Rocky, a sales rep for Contoso, pins the Seismic app to his upcoming meeting with Rani, the VP of HR at NorthWest. During the meeting, Rocky opens the Seismic side panel and sees a list of pre-curated content that he can share in the meeting to aid his sales pitch. Rani can consume the content on her Teams meeting window and ask questions based on the content shown.|
+|Contoso Cloud Board| Robert, a technical program manager at Contoso, helps run the daily scrum meetings of various teams in the organization. For each scrum, he pins the pod-relevant board as a tab to the standup meeting. During the meeting, he opens the side panel of the Contoso app and selects the Share button provided within the side panel. This allows the board to take over the meeting stage for all participants such that everyone views the same board. As each member shares their updates, Rocky makes appropriate changes in the sprint board, which is then reflected for all other attendees.|
 
 ### How it works
 
-* **Share entire app**: When you share a tab to the Meeting Stage in a Teams meeting, the `contentUrl` associated with the tab is first embedded onto the presenter’s Meeting Stage and is screen shared with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it is being presented on a large surface, allowing the app to update its content appropriately.
+* **Share entire app**: When you share a tab to the Meeting Stage in a Teams meeting, the `contentUrl` associated with the tab is first embedded onto the presenter’s Meeting Stage and is screen shared with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it's being presented on a large surface, allowing the app to update its content appropriately.
 
   > [!NOTE]
   > Apps that specify `MeetingStage` in the `page.frameContext` property of the `getContext` object in the manifest and declare `MeetingStage.Write.Chat` permissions support collaborative Share to Stage infrastructure. The share button initiates the existing collaborative protocol instead of the screen sharing protocol.
@@ -273,11 +277,11 @@ Users can screen share content to the Meeting Stage in Teams meetings using the 
 * Developers can show coordinated content to multiple participants over a larger stage, getting more attention and integrating more closely with the meeting lifecycle.
 * Basic sharing for the entire app is available without additional investment.
 * Share to Stage APIs are enhanced to enable sharing of specific content through the Screen sharing protocol.
-* Additional support is available for sharing content through a deeplink or the Share to Meeting button using the Screen Sharing protocol.
+* Additional support is available for sharing content through a deep link or the Share to Meeting button using the Screen Sharing protocol.
 * End users can use their favorite tools within the context of their ongoing communication, improving meeting outcomes.
 * Content is displayed inline within the meeting window.
 * A sharing button is available on all Meeting Side panels for users with organizer or presenter roles.
-* Users can initiate sharing through a deeplink or the Share in Meeting button, both exposed by the developer.
+* Users can initiate sharing through a deep link or the Share in Meeting button, both exposed by the developer.
 
 ## Feature compatibility by user types
 
@@ -294,7 +298,7 @@ The following table provides the user types and lists the features that each use
 
 |Sample name | Description | .NET| Node.js | Manifest |
 |----------------|-----------------|--------------|----------------|----------------|
-|Meeting stage sample | This sample app shows a tab in meeting stage for collaboration. This sample also uses live share sdk for collaborative Stage View. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest) |
+|Meeting stage sample | This sample app shows a tab in meeting stage for collaboration. This sample also uses live share SDK for collaborative Stage View. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest) |
 | In-meeting notification | Demonstrates how to implement in-meeting notifications using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest) |
 | In-meeting document signing | This sample app shows how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO, and user specific Stage View. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
 
