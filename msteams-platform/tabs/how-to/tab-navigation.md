@@ -50,7 +50,10 @@ if (pages.currentApp.isSupported()) {
 else {/*Handle situation where capability isn't supported*/}
 ```
 
-You can use the `pages.navigateToApp()` function. You can also use deep links for tab navigation as shown in [create deep links](~/concepts/build-and-test/deep-link-application.md#configure-deep-link-to-a-tab-using-teamsjs-library).
+> [!NOTE]
+> The tab app navigation is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
+
+Use the [pages.navigateToApp()](/javascript/api/%40microsoft/teams-js/pages#@microsoft-teams-js-pages-navigatetoapp) function or [deep links](~/concepts/build-and-test/deep-link-application.md#configure-deep-link-to-a-tab-using-teamsjs-library) for tab app navigation.
 
 ## Configure back button navigation
 
