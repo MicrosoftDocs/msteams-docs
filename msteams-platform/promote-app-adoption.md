@@ -6,7 +6,7 @@ manager: prkosh
 description: Learn about the best practices and guidance for app adoption and promotion.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.date: 12/12/2023
+ms.date: 01/04/2024
 ---
 
 # Five steps to drive adoption of your app
@@ -181,7 +181,7 @@ Your app might require purchasing a service subscription to experience the app's
 
 ### Allow custom apps in an organization
 
-If an organization uses custom apps or custom apps built for your org (LOB apps), then understand how admins control who can upload and use these custom apps. There are three settings that determine whether a user can upload a custom app to a team. These settings don't affect the ability to allow or block third-party apps.
+If an organization uses custom apps or custom apps built for your org, then understand how admins control who can upload and use these custom apps. There are three settings that determine whether a user can upload a custom app to a team. These settings don't affect the ability to allow or block third-party apps.
 
 1. User app setup policy setting: As part of [app setup policies](/microsoftteams/teams-app-setup-policies), admins can control whether a user can upload custom apps to Teams.
 
