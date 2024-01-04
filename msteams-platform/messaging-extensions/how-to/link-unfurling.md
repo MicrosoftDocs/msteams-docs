@@ -419,7 +419,7 @@ When you test the zero install link unfurling, don’t install the app as a pers
 
 To test zero install link unfurling, follow these steps:
 
-1. Login to [Teams admin center](https://admin.teams.microsoft.com/).
+1. Sign in to [Teams admin center](https://admin.teams.microsoft.com/).
 
 1. From the left pane, select **Teams apps** > **Manage apps**.
 
@@ -433,7 +433,7 @@ To test zero install link unfurling, follow these steps:
 
 1. Select **Open** to upload the zip file for your test application.
 
-1. After you've successfully uploaded the app, Go to **Teams** > **Apps** > **Built for your org**.
+1. After app upload is successful, go to **Teams** > **Apps** > **Built for your org**.
 
     :::image type="content" source="../../assets/images/teams-link-unfurling/build-for-your-org.png" alt-text="Screenshot of Teams client with org uploaded Teams app":::
 
@@ -441,7 +441,7 @@ To test zero install link unfurling, follow these steps:
 
 ## Remove link unfurling cache
 
-When a user shares a link in a meeting, the Teams app unfurls the link to an Adaptive Card. The link unfurling result is cached in Teams for 30 minutes. You can update your app to set a cache policy and remove cache for the app, which helps you to show different content in an Adaptive Card when the app's link is shared in a different context in Teams.
+When a user shares a link in a meeting, the Teams app unfurls the link to an Adaptive Card. The link unfurling result is cached in Teams for 30 minutes. You can update your app to set a cache policy and remove cache for the app. This action helps you to show different content in an Adaptive Card when the app's link is shared in a different context in Teams.
 
 To remove link unfurling cache, update your bot with the `type` as `setcachepolicy` under the `suggestedActions` property. Teams doesn't cache the results for the app links with the `"type": "setCachePolicy"`.
 
