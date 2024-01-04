@@ -515,9 +515,9 @@ Each command item is an object with the following structure:
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.url`|String|2048 characters||Initial webview URL.|
-|`parameters`|Array of object|5|✔️|The list of parameters the command takes. Minimum: 1; maximum: 5|
-|`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request. </br> For Api-based message extension, The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters. |
-|`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
+|`parameters`|Array of object|5||The list of parameters the command takes. Minimum: 1; maximum: 5|
+|`parameter.name`|String|64 characters||The name of the parameter as it appears in the client. This is included in the user request. </br> For Api-based message extension, The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters. |
+|`parameter.title`|String|32 characters||User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameter.inputType`|String|||Defines the type of control displayed on a task module for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
 |`parameter.value`|String|512 characters||Initial value for the parameter.|
