@@ -17,7 +17,7 @@ ms.subservice: m365apps
 
 Actions aim to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with their content. By directing users to your app with their intent and contextual content, Actions enable efficient task completion. This integration enhances the visibility and engagement of your app with minimal development effort.
 
-The following graphic is an example of an Action that directs user to view list of suppliers related to the file. In Microsoft 365, the user right-clicks on the excel file and selects **Related suppliers** to view the list of suppliers for the Northwind company. The Northwind page opens with the list of suppliers. The user saves time by checking the result with a single click and the Excel file each time manually.
+The following graphic is an example of an Action that directs user to view list of suppliers related to the file. In Microsoft 365, the user right-clicks on the Excel file and selects **Related suppliers** to view the list of suppliers for the Northwind company. The Northwind page opens with the list of suppliers. The user saves time by checking the result with a single click on the Excel file each time manually.
 
   :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user right-clicks on the excel file and select the related suppliers.":::
 
