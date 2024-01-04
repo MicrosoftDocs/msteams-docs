@@ -83,7 +83,7 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 You can create an API-based message extension using Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
 
-<!--# [Developer Portal for Teams](#tab/developer-portal-for-teams)
+# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
 To create an API-based message extension using Developer Portal for Teams, follow these steps:
 
@@ -132,7 +132,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. In the **Add command** page, go to **Adaptive card template** and select **Upload now**.
 
-    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command."::: 
+    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
 
    > [!NOTE]
    > If you have more than one API, ensure that you upload the **Adaptive card template** for all the APIs.
@@ -158,7 +158,7 @@ You can add commands and parameters to your message extension, to add commands:
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
 
-An API message extension is created. -->
+An API message extension is created.
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
@@ -184,7 +184,7 @@ To build am API-based message extension using Visual Studio Code, follow these s
 
 1. Based on the options selected in **step 6**, select the following:
 
-   # [New API](#tab/new-api)
+# [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -203,7 +203,7 @@ To build am API-based message extension using Visual Studio Code, follow these s
         |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
         |`repairsData.json`    |  The data source for the repair API.       |
 
-   # [OpenAPI Description](#tab/openapi-specification)
+# [OpenAPI Description](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI Description document location.
 
@@ -313,7 +313,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 1. Based on the options selected in **step 7**, select the following:
 
-   # [New API](#tab/new-api2)
+# [New API](#tab/new-api2)
 
    1. To get started, you must update the source code in the following files:
 
@@ -344,7 +344,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
    1. Select the **F5** key or select **Debug** > **Start Debugging**. Visual Studio launches a Teams web client.
 
-   # [OpenAPI Description](#tab/openapi-specification2)
+# [OpenAPI Description](#tab/openapi-specification2)
 
    1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
    1. Select the dropdown and select the APIs from the list.
