@@ -313,7 +313,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 1. Based on the options selected in **step 7**, select the following:
 
-# [New API](#tab/new-api2)
+   # [New API](#tab/new-api2)
 
    1. To get started, you must update the source code in the following files:
 
@@ -344,7 +344,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
    1. Select the **F5** key or select **Debug** > **Start Debugging**. Visual Studio launches a Teams web client.
 
-# [OpenAPI Description](#tab/openapi-specification2)
+   # [OpenAPI Description](#tab/openapi-specification2)
 
    1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
    1. Select the dropdown and select the APIs from the list.
