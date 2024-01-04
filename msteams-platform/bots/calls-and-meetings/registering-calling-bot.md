@@ -101,28 +101,18 @@ You can rely on an administrator to grant the permissions your app needs at the 
 > [!IMPORTANT]
 > Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal are not reflected until the consent has been reapplied by the tenant's administrator.
 
-## Disable anonymous bot joins meeting
+## Disable anonymous bot joining Teams meeting
 
-Avoid external bots joining meeting and
+To prevent the anonymous app from joining any meeting, follow these steps:
 
-1. If resource specific consent (RSC) permissions are disabled for all apps, then no apps can be added for new meetings without users consent. If users already installed apps for these meetings, the existing meetings might be still accessible by apps.
-1. If tenant admin didn’t grant `Calls.JoinGroupCall.All` application permission, the app can’t join any meeting.
-1. Teams admin can disable anonymous bot joins meetings, then no anonymous join can be done by users or apps.
+* Disable RSC permissions for all apps, then no apps can be added for new meetings without users consent. Apps that users already installed for existing meetings might still access those meetings.
 
-1. If admin disable anonymous join for meetings, then no anonymous join can be done by users or apps.
-1. If RSC is disabled for all apps, then no apps can be added for new meetings by users unintentionally, though the existing meetings might be still accessible by apps, if users already installed apps for these meetings.
-1. If tenant admin didn’t grant app permission JoinGroupCall, and the previous two things are also disabled, then the app can’t join any meeting.
+* Tenant admin should disable the `Calls.JoinGroupCall.All` application permission.
 
-RSC permissions are granted on a meeting by meeting basis only when an authorized user is able to install the app in the meeting. This requires all of the following:
+To remove RSC permission for existing apps in the meeting:
 
-1. The organizer of the meeting must have authorized the user to be able to have a presenter role in the meeting.
-1. The app must not have been blocked by the tenant.
-1. The tenant admin should not have blocked consent to RSC permissions.
-
-If an app got installed after meeting all of the above requirements, then you have the following options:
-
-1. To remove RSC access from that specific meetings, uninstall the app from that specific meeting.
-1. To remove RSC access from all meeting instances, delete the service principal for the app. That will delete all RSC grants for the app.
+* Uninstall the app from the specific meeting.
+* Delete the service principal for the app. It removes RSC permission for all meetings instances where the app is installed.
 
 ## Code sample
 
