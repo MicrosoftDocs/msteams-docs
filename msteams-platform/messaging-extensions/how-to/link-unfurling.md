@@ -404,7 +404,7 @@ The following are the limitations:
 
 * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtensions/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
 
-* The bot can't send back an acv2 card in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
+* The bot can't return a [Universal Actions for Adaptive Cards](../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md) when it receives a `composeExtensions/anonymousQueryLink` invoke request. This applies to both the result card and the pre-auth card in auth.
 
 * If the bot selects to send back the `"type": "auth"` property with a pre-auth card, Teams strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 
