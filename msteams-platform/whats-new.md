@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 January**
 
-***January 03, 2024***: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
+***January 04, 2024***: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 :::column-end:::
 :::row-end:::
@@ -41,7 +41,7 @@ Teams platform features that are available to all app developers.
 | -------- | --------- | ----------------|
 |20/12/2023|Incoming Webhooks are available in GCC-High environment.|[Build webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)|
 |20/12/2023|Introduced RSC permissions for users to access different resources.| Utilize Teams data with Microsoft Graph > [Resource-specific consent for your Teams app](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access) |
-|18/12/2023|App caching in chat, channel, and meeting tab scopes is available for iOS| Buils tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
+|18/12/2023|App caching in chat, channel, and meeting tab scopes is available for iOS.| Buils tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
 |15/12/2023|Bots can mention tags in text messages and Adaptive Cards posted in Teams channels.| Build bots > Bot conversation > [Channel and group chat conversations with a bot](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention) |
 |12/12/2023|Use Teams AI library to build apps that can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills.|Build bots > [Teams AI library](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)|
 |21/11/2023|Terminology update. LOB apps is referred to as custom apps built for your org (LOB apps).||
