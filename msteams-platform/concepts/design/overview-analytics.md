@@ -40,7 +40,7 @@ Plan analytics for the Teams app the same way as you do for a SaaS product that 
 
 ## Plan early for analytics
 
-Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, dialogs, meeting apps and so on. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, and so on, you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
+Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, dialogs, meeting apps, and so on. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, and so on, you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
 
 At the time, your production Teams app is live on the Teams Store and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that you don’t miss tracking:
 
@@ -120,7 +120,7 @@ After you extract the Teams-specific information from the tab context, some poss
 
 #### Conversational constructs
 
-Conversation or chat-oriented capabilities include bots, message extensions, cards and dialogs (displaying an Adaptive Card) that are created for Teams users. Conceptually, these experiences are created for and available only to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
+Conversation or chat-oriented capabilities include bots, message extensions, cards, and dialogs (displaying an Adaptive Card) that are created for Teams users. Conceptually, these experiences are created for and available only to users specifically inside Teams. You'll need to capture Teams-specific events and handle them for Teams-specific instrumentation in your code for these constructs from scratch. A bot can access additional context data about a team, chat, meeting, 1:1 call, or group call where it's installed.
 
 Use this information for enriching the bot's functionality and the user experience:
 
@@ -167,7 +167,7 @@ Besides the obvious metrics in the SaaS world such as daily, weekly, monthly act
   - Which users have churned from your app in the past three months?
   - Has a specific user used your app in a Teams meeting?
 
-Next, see how you should methodically craft your data instrumentation strategy and decide what to measure based on which specific insights you want to derive from your Teams app usage. 
+Next, see how you should methodically craft your data instrumentation strategy and decide what to measure based on which specific insights you want to derive from your Teams app usage.
 
 ## Next step
 
