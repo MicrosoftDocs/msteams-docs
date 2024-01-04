@@ -47,6 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Apps for Teams meetings are available in Department of Defense (DOD)
+        url: messaging-extensions/build-bot-based-plugin.md
       - text: Incoming Webhooks are available in GCC-High
         url: webhooks-and-connectors/what-are-webhooks-and-connectors.md
       - text: Introduced RSC permissions for users to access different resources
@@ -65,8 +67,6 @@ landingContent:
         url: toolkit/debug-your-Teams-app-test-tool.md
       - text: Build bot-based message extension plugin
         url: messaging-extensions/build-bot-based-plugin.md
-      - text: Guidelines to extend bot-based message extension as plugin 
-        url: messaging-extensions/high-quality-message-extension.md
 
     - linkListType: reference
       links:
