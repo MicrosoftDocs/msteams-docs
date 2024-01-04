@@ -41,16 +41,29 @@ This section covers the main principles of creating a captivating user experienc
 
 :::image type="content" source="images/app-icon-context-menu.png" alt-text="The screenshot shows the app icon in context menu.":::
 
-:::image type="content" source="images/icon-slot.png" alt-text="The screenshot shows the icon slot in context menu.":::
+* Ensure that the name of the app not to exceed more than 18 characters including spaces.
 
-> [!NOTE]
-> The placement of Actions is determined by the Microsoft 365 platform.
+* Use one line for Actions title. Use verbs that show the result of selecting menu items that trigger actions.
+
+:::image type="content" source="images/icon-slot.png" alt-text="The screenshot shows the icon slot in context menu.":::
 
 ### Context menu
 
-An Action in the context menu contains App icon and display name. Actions with custom intent show as a flat list at the end of the context menu, actions with Open or Add to intent are grouped into **Open** and **Add To**.
+An Action in the context menu contains App icon and display name.
 
-:::image type="content" source="images/actions-design-guidelines.png" alt-text="The screenshot shows the design of context menu.":::
+1. Actions with custom intent show as a flat list at the end of the context menu.
+
+    :::image type="content" source="images/context-menu-flat-list.png" alt-text="Screenshot shows the custom intent as a flat list at the end of the context menu.":::
+
+1. Actions with Open or Add to intent are grouped.
+
+    :::image type="content" source="images/grouped-by-intent.png" alt-text="Screenshot shows the Actions grouped by intent in the context menu.":::
+
+> [!NOTE]
+>
+> The placement of Actions is determined by the Microsoft 365 platform.
+>
+> Grouping doesn't depend on intent. Custom intent doesn't mean no grouping.
 
 ## Next step
 
