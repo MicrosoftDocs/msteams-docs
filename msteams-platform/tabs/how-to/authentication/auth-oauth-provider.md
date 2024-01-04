@@ -45,17 +45,15 @@ The following image provides the flow to add authentication to external browsers
    The passed `url` contains placeholders for `{authId}`, and `{oauthRedirectMethod}`.  
 
     ```JavaScript
-    import { authentication } from "@microsoft/teams-js";
-    authentication.authenticate({
-       url: 'https://3p.app.server/auth?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}',
-       isExternal: true,
-       successCallback: function (result) {
-       //sucess 
-       },
-       failureCallback: function (reason) {
-       //failure 
-       }
-    });
+       authentication.authenticate({
+          url: `${window.location.origin}/auth-start?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}&hostRedirectUrl=${url}&googleId=${googleId}`,
+          isExternal: true
+        }).then((result) => {
+          this.getGoogleServerSideToken(result);
+        }).catch((reason) => {
+          console.log("failed" + reason);
+          reject(reason);
+        })
     ```
 
 1. The Teams clients open the URL in an external browser after automatically replacing the placeholders for `oauthRedirectMethod` and `authId` with suitable values.
