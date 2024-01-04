@@ -272,113 +272,9 @@ The handleTeamsConfigFetch and handleTeamsConfigSubmit handle the fetching and s
 
 #### C# code snippets
 
-The following code snippets shows an example of `OnTeamsConfigFetchAsync`, `OnTeamsConfigSubmitAsync` and `OnInvokeActivityAsync`:
+The following code snippets shows an example of `OnTeamsConfigSubmitAsync` and `OnInvokeActivityAsync`, `OnTeamsConfigFetchAsync`:
 
-# [C# 1](#tab/teams-bot-sdk)
-
-When a user installs the bot in a team or group chat scope, the `OnTeamsConfigFetchAsync` method is called. The `OnTeamsConfigSubmitAsync` method is called when the user submits the bot configuration. The methods  return `ConfigResponseBase` object that contain the bot configuration, and can be used to create suggested actions, display messages, and configure the bot’s dialog.
-
-```csharp
- 
-protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
-{
- 
-    ConfigResponseBase response = new ConfigResponse<BotConfigAuth>
-    {
-        Config = new BotConfigAuth
-        {
-            SuggestedActions = new SuggestedActions
-            {
-                Actions = new List<CardAction>
-                {
-                    new CardAction
-                    {
-                        Type = "bot config type",
-                        Title = "bot config title",
-                        Image = "https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40",
-                        Value = "bot config value"
-                    }
-                }
-            },
-            Type = "auth"
-        }
-    };
- 
-    return Task.FromResult(response);
-}
- 
-protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
-{
-    ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
-    {
-        Config = new TaskModuleMessageResponse
-        {
-            Value = "test message"
-        }
-    };
- 
-    return Task.FromResult(response);
-}
- 
- 
-protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
-{
-    ConfigResponseBase response = createConfigContinueResponse();
-    return Task.FromResult(response);
-}
- 
-protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
-{
-    ConfigResponseBase response = createConfigContinueResponse();
-    return Task.FromResult(response);
-}
- 
-private ConfigResponseBase createConfigContinueResponse()
-{
-    AdaptiveCard card = new AdaptiveCard("1.2")
-    {
-        Body = new List<AdaptiveElement>()
-    };
- 
-    card.Body.Add(
-        new AdaptiveContainer
-        {
-            Items = new List<AdaptiveElement>
-            {
-                new AdaptiveTextBlock
-                {
-                    Size = AdaptiveTextSize.Large,
-                    Text = "bot config test",
-                    Type = "TextBlock"
-                }
-            }
-        });
- 
-    ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
-    {
-        Config = new TaskModuleContinueResponse
-        {
-            Value = new TaskModuleTaskInfo
-            {
-                Height = 123,
-                Width = 456,
-                Title = "test title",
-                Card = new Attachment
-                {
-                    ContentType = AdaptiveCard.ContentType,
-                    Content = card
-                }
-            },
-            Type = "continue"
-        }
-    };
- 
-    return response;
-}
- 
-```
-
-# [C# 2](#tab/teams-bot-sdk2)
+# [C# 1](#tab/teams-bot-sdk2)
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -516,6 +412,110 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
     return null;
 }
+```
+
+# [C# 2](#tab/teams-bot-sdk)
+
+When a user installs the bot in a team or group chat scope, the `OnTeamsConfigFetchAsync` method is called. The `OnTeamsConfigSubmitAsync` method is called when the user submits the bot configuration. The methods  return `ConfigResponseBase` object that contain the bot configuration, and can be used to create suggested actions, display messages, and configure the bot’s dialog.
+
+```csharp
+ 
+protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+{
+ 
+    ConfigResponseBase response = new ConfigResponse<BotConfigAuth>
+    {
+        Config = new BotConfigAuth
+        {
+            SuggestedActions = new SuggestedActions
+            {
+                Actions = new List<CardAction>
+                {
+                    new CardAction
+                    {
+                        Type = "bot config type",
+                        Title = "bot config title",
+                        Image = "https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40",
+                        Value = "bot config value"
+                    }
+                }
+            },
+            Type = "auth"
+        }
+    };
+ 
+    return Task.FromResult(response);
+}
+ 
+protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+{
+    ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
+    {
+        Config = new TaskModuleMessageResponse
+        {
+            Value = "test message"
+        }
+    };
+ 
+    return Task.FromResult(response);
+}
+ 
+ 
+protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+{
+    ConfigResponseBase response = createConfigContinueResponse();
+    return Task.FromResult(response);
+}
+ 
+protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+{
+    ConfigResponseBase response = createConfigContinueResponse();
+    return Task.FromResult(response);
+}
+ 
+private ConfigResponseBase createConfigContinueResponse()
+{
+    AdaptiveCard card = new AdaptiveCard("1.2")
+    {
+        Body = new List<AdaptiveElement>()
+    };
+ 
+    card.Body.Add(
+        new AdaptiveContainer
+        {
+            Items = new List<AdaptiveElement>
+            {
+                new AdaptiveTextBlock
+                {
+                    Size = AdaptiveTextSize.Large,
+                    Text = "bot config test",
+                    Type = "TextBlock"
+                }
+            }
+        });
+ 
+    ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
+    {
+        Config = new TaskModuleContinueResponse
+        {
+            Value = new TaskModuleTaskInfo
+            {
+                Height = 123,
+                Width = 456,
+                Title = "test title",
+                Card = new Attachment
+                {
+                    ContentType = AdaptiveCard.ContentType,
+                    Content = card
+                }
+            },
+            Type = "continue"
+        }
+    };
+ 
+    return response;
+}
+ 
 ```
 
 ---
