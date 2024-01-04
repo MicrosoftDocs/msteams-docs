@@ -597,7 +597,7 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 |Field|Type|Description|
 |:---|:---|:---|
 |`itemId`|Integer|Describes identification of the item. Its value must be `0`.|
-|`mentionType`|String|Describes the mention of a "person." |
+|`mentionType`|String|Describes the mention of a "person". |
 |`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>." |
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   
