@@ -402,7 +402,6 @@ Update the Teams app manifest to Teams Developer Portal.
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
-| `--env` | Yes | Select an existing environment for the project. |
 | `--env-file` |  | Select an .env file that defines the variables to replace in the manifest template file. |
 | `--folder -f` |  | Select root folder of the project. Defaults to `./` |
 | `--manifest-file` |  | Specifies the Teams app manifest file path. Default value: `./appPackage/manifest.json`. |
