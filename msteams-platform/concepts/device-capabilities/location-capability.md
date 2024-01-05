@@ -1,7 +1,7 @@
 ---
 title: Integrate location capabilities
 author: surbhigupta
-description: Learn how to use Teams JavaScript client library to apply location capabilities using Code snippets and samples.
+description: Learn how to use Teams JavaScript client library to utilize location capabilities using Code snippets and samples.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -20,9 +20,9 @@ You can use [Microsoft Teams JavaScript client library](/javascript/api/overview
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-The advantage of integrating location capabilities in your Teams apps is to apply location functionality in Teams web client, desktop, and mobile using [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client). The following scenarios showcase the advantages of location capabilities:
+The advantage of integrating location capabilities in your Teams apps is to utilize location functionality in Teams web client, desktop, and mobile using [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client). The following scenarios showcase the advantages of location capabilities:
 
-The main advantage of integrating location capabilities in your Teams apps is that it allows web app developers on Teams platform to apply location functionality with Microsoft Teams JavaScript client library.
+The main advantage of integrating location capabilities in your Teams apps is that it allows web app developers on Teams platform to utilize location functionality with Microsoft Teams JavaScript client library.
 
 * Share authentic health data of cellular towers with the management. The management can compare any mismatch between captured location information and the data submitted by maintenance staff.
 
