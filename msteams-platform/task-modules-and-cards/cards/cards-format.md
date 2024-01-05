@@ -488,7 +488,7 @@ The following image shows a full width Adaptive Card:
 
 :::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Full width Adaptive Card view":::
 
-The following image shows the default view of the Adaptive Card when you have not set the `width` property to **Full**:
+The following image shows the default view of the Adaptive Card when you haven't set the `width` property to **Full**:
 
 :::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Small width Adaptive Card view":::
 
@@ -551,87 +551,6 @@ In the Stage View, users can zoom in and zoom out of the image. You can select t
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, Stage View functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stage View by simply tapping on the image, irrespective of whether the `allowExpand` property is present or not.
 > * Stage View for images in Adaptive Cards doesn't support Base64 encoded images.
-
-### CodeBlock in Adaptive Cards
-
-The `CodeBlock` element enables bots to unfurl permalinks of code snippets from external sources (websites, repositories, or integrated development environments (IDEs)) and generate Adaptive Cards with syntax highlighting and contextual information in Teams. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation and syntax highlighting matches the code's language. You can add action buttons to view the code in its source or in IDEs such as Visual Studio or Visual Studio Code.
-
-:::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
-
-The `CodeBlock` element supports the following languages:
-
-| Language | Supported | Language | Supported |
-|---|---|---|---|
-| Bash | ✔️ | JSON | ✔️ |
-| C | ✔️ | Perl | ✔️ |
-| C++ | ✔️ | PHP | ✔️ |
-| C# | ✔️ | PowerShell | ✔️ |
-| CSS | ✔️ | Python | ✔️ |
-| DOS | ✔️ | SQL | ✔️ |
-| Go | ✔️ | TypeScript | ✔️ |
-| GraphQL | ✔️ | Visual Basic | ✔️ |
-| HTML | ✔️ | Verilog | ✔️ |
-| Java | ✔️ | VHDL | ✔️ |
-| JavaScript | ✔️ | XML | ✔️ |
-
-> [!NOTE]
->
-> * `CodeBlock` doesn't recognize languages like Dart, Fortran, or Apache.
-> * `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
-> * To avoid rendering errors in the Adaptive Card, ensure that the code snippet is provided as an escaped string in the `codeSnippet` property.
-
-The following code shows an example of an Adaptive Card with a code snippet.
-
-``` json
-{
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "type": "AdaptiveCard",
-    "version": "1.5",
-    "body": [
-        {
-            "type": "TextBlock",
-            "text": "editor.js",
-            "style": "heading"
-        },
-        {
-            "type": "TextBlock",
-            "text": "Lines 61 - 76"
-        },
-        {
-            "type": "CodeBlock",
-            "codeSnippet": "/**\n* @author John Smith <john.smith@example.com>\n*/\npackage l2f.gameserver.model;\n\npublic abstract strictfp class L2Char extends L2Object {\n  public static final Short ERROR = 0x0001;\n\n  public void moveTo(int x, int y, int z) {\n    _ai = null;\n    log(\"Should not be called\");\n    if (1 > 5) { // what!?\n      return;\n    }\n  }\n}",
-            "language": "java",
-            "startLineNumber": 61
-        }
-    ],
-    "actions": [
-        {
-            "type": "Action.OpenUrl",
-            "title": "View in Azure Repos",
-            "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/teams-modular-packages/pullrequest/176883?_a=files"
-        },
-        {
-            "type": "Action.OpenUrl",
-            "title": "Edit in vscode.dev",
-            "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/teams-modular-packages/pullrequest/176883?_a=files"
-        }
-    ]
-}
-```
-
-The `CodeBlock` element supports the following properties:
-
-| Property | Type | Required | Description |
-|---|---|---|---|
-| `codeSnippet` | String | Yes | The code snippet to be displayed in the Adaptive Card. |
-| `language` | Enum | Yes | The language of the code snippet to be displayed in the Adaptive Card. |
-| `startLineNumber` | Number | No | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
-
-### Limitations
-
-* The code snippet generated in the Adaptive Card is read-only and not editable.
-* The Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user has to select **Expand** to see the rest of the code snippet.
-* Adaptive Card with `CodeBlock` is supported in chats, channels, and meetings only when a bot is added to it.
 
 # [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 
@@ -721,6 +640,91 @@ The following code shows an example of formatting for Markdown connector cards:
 ```
 
 ---
+
+### CodeBlock in Adaptive Cards
+
+You can share code snippets as richly formatted Adaptive Cards in Teams chats and channels through bots with the `CodeBlock` element. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. You can add action buttons to view the code in its source or in integrated development environments (IDEs) such as Visual Studio or Visual Studio Code.
+
+<!--Teams automatically unfurls permalinks of code snippets from external sources like websites, repositories, or IDEs and displays an Adaptive Card with the code snippet.-->
+
+:::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
+
+The `CodeBlock` element supports the following languages:
+
+| Language | Supported | Language | Supported |
+|:---|:---:|:---|:---:|
+| Bash | ✔️ | JSON | ✔️ |
+| C | ✔️ | Perl | ✔️ |
+| C++ | ✔️ | PHP | ✔️ |
+| C# | ✔️ | PowerShell | ✔️ |
+| CSS | ✔️ | Python | ✔️ |
+| DOS | ✔️ | SQL | ✔️ |
+| Go | ✔️ | TypeScript | ✔️ |
+| GraphQL | ✔️ | Visual Basic | ✔️ |
+| HTML | ✔️ | Verilog | ✔️ |
+| Java | ✔️ | VHDL | ✔️ |
+| JavaScript | ✔️ | XML | ✔️ |
+
+> [!NOTE]
+>
+> * `CodeBlock` doesn't recognize languages like Dart, Fortran, or Apache.
+> * `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
+
+The following code shows an example of an Adaptive Card displaying a code snippet.
+
+``` json
+{
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "editor.js",
+            "style": "heading"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Lines 61 - 76"
+        },
+        {
+            "type": "CodeBlock",
+            "codeSnippet": "/**\n* @author John Smith <john.smith@example.com>\n*/\npackage l2f.gameserver.model;\n\npublic abstract strictfp class L2Char extends L2Object {\n  public static final Short ERROR = 0x0001;\n\n  public void moveTo(int x, int y, int z) {\n    _ai = null;\n    log(\"Shouldn't be called\");\n    if (1 > 5) { // what!?\n      return;\n    }\n  }\n}",
+            "language": "java",
+            "startLineNumber": 61
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "View in Azure Repos",
+            "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/teams-modular-packages/pullrequest/176883?_a=files"
+        },
+        {
+            "type": "Action.OpenUrl",
+            "title": "Edit in vscode.dev",
+            "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/teams-modular-packages/pullrequest/176883?_a=files"
+        }
+    ]
+}
+```
+
+The `CodeBlock` element supports the following properties:
+
+| Property | Type | Required | Description |
+|---|---|---|---|
+| `codeSnippet` | String | Yes | The code snippet to be displayed in the Adaptive Card. |
+| `language` | Enum | Yes | The language of the code snippet to be displayed in the Adaptive Card. |
+| `startLineNumber` | Number | No | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
+
+To avoid rendering errors in the Adaptive Card, ensure that the code is an escaped string in the `codeSnippet` property. For example, the newline character, `\n` needs to be escaped as `\\n` in the code snippet.
+
+### Limitations
+
+* Adaptive Card with `CodeBlock` is only avaible in web and desktop Teams clients.
+* The code snippet generated in the Adaptive Card is read-only and not editable.
+* The Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user has to select **Expand** to see the rest of the code snippet.
+* Adaptive Card with `CodeBlock` is supported in chats, channels, and meetings only when a bot is added to it.
 
 ## Adaptive Cards overflow menu
 
