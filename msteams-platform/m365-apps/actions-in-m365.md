@@ -45,6 +45,8 @@ This section covers the main principles of creating a captivating user experienc
 
 * Use one line for Actions title. Use verbs that show the result of selecting menu items that trigger actions.
 
+In the following image **Add to** is an example for Actions:
+
 :::image type="content" source="images/icon-slot.png" alt-text="The screenshot shows the icon slot in context menu.":::
 
 ### Context menu
