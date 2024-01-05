@@ -243,5 +243,5 @@ The following table provides the possible values of `err` that can be received b
 
 ## See also
 
-* [Cards and dialogs](../cards-and-task-modules.md)
-* [Invoke and dismiss dialogs](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
+* [Cards and task modules](../cards-and-task-modules.md)
+* [Invoke and dismiss task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md)
