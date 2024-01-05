@@ -70,7 +70,10 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 <br>
 You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
 
-Third-party and custom apps (LOB) built for meetings and calls are available only in Government Community Cloud (GCC) and GCC-High environments but aren't available for Department of Defense (DOD) environment.
+
+Custom apps built for your org (LOB apps) built for meetings and calls are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD) environments.
+
+Third-party apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
 
 You must be familiar with the concepts in this article to create custom meeting experiences with apps in Microsoft Teams.
 
