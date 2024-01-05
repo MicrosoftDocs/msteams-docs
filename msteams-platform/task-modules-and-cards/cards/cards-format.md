@@ -184,7 +184,7 @@ Users can be mentioned with their Microsoft Entra Object ID and User Principle N
 
 The following table describes the newly supported user mention IDs:
 
-|IDs  | Supporting capabilities | Description | Example |
+|IDs | Supporting capabilities | Description | Example |
 |----------|--------|---------------|---------|
 | Microsoft Entra Object ID | Bot, Connector |  Microsoft Entra user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, Connector | Microsoft Entra user’s UPN | `john.smith@microsoft.com` |
@@ -390,13 +390,13 @@ The following table lists the query parameters:
 |---------|---------|
 | `type` | `component` |
 | `name` | `graph.microsoft.com/users`. Search all members across the organization. |
-| `view` |   `compact` |
+| `view` | `compact` |
 | `properties` | Passed to the component template |
 | `id` | User's MRI |
 | `displayName` | Name of the user |
 | `userPrincipalName` | The user's principal name of the account in Microsoft Entra ID |
 
-Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` property.  The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
+Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` property. The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other properties under `properties` is ignored by `component` type in the Adaptive Card schema.
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
