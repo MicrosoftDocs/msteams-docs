@@ -40,7 +40,7 @@ Plan analytics for the Teams app the same way as you do for a SaaS product that 
 
 ## Plan early for analytics
 
-Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, dialogs, meeting apps, and so on. in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, and so on, you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
+Plan analytics for your Teams app at the development design and solution architecture stage. Examine which of the existing data instrumentation and practices for your core SaaS web app will accrue to hosted canvas constructs such as tabs, dialogs, meeting apps, and so on in Teams that you’re optimizing or building from scratch to surface inside Teams. For Teams-specific capabilities, such as [conversational constructs](#conversational-constructs) like bots, message extensions, and so on, you'll need to plan and implement analytics instrumentation, capture relevant events, and context from the SDK methods from scratch.
 
 At the time, your production Teams app is live on the Teams Store and customers start using it, your analytics and data infrastructure should be fully operational. It ensures that you don’t miss tracking:
 
@@ -81,7 +81,7 @@ This instrumentation is required to be done additionally in your SaaS app becaus
 
 <!--Tracking Teams app specific analytics-->
 
-This section includes guidelines and pointers regarding what to look for, which events to capture, how to use instrumentation markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, Stage Views, and so on. or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
+This section includes guidelines and pointers regarding what to look for, which events to capture, how to use instrumentation markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, Stage Views, and so on or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
 
 You can classify Teams platform features into broadly two constructs:
 
