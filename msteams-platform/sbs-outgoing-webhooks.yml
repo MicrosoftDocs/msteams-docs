@@ -28,7 +28,7 @@ items:
     
     This step-by-step guide helps you to create Outgoing Webhooks in Teams. You'll see the following output:
 
-    :::image type="content" source="./assets/images/sbs-outgoing-webhooks/output-result.png" alt-text="Screenshot shows Outgoing Webhooks in Teams channel.":::
+    :::image type="content" source="./assets/images/sbs-outgoing-webhooks/complete-challenge.png" alt-text="Screenshot shows Outgoing Webhooks in Teams channel.":::
 
 - title: Prerequisites
   durationInMinutes: 1
