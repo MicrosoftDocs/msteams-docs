@@ -119,10 +119,33 @@ var response = await client.PostAsync(webhookUrl, content);
 
 # [JavaScript](#tab/javascript)
 
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/nodejs/api/server/index.js#L16)
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/incoming-webhook/nodejs/api/server/index.js#L28)
 
 ```javascript
- axios.post({{WebhookUrl}}, {{formatted_Card_Payload}})
+var formatted_Card_Payload = {
+        "type": "message",
+        "attachments": [
+            {
+                "contentType": "application/vnd.microsoft.card.adaptive",
+                "contentUrl": null,
+                "content": {
+                    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+                    "type": "AdaptiveCard",
+                    "version": "1.2",
+                    "body": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Submitted response:"+ response
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+
+var webhookUrl = "https://xxxxx.webhook.office.com/xxxxxxxxx";
+
+axios.post(webhookUrl , formatted_Card_Payload )
     .then(res => {
         console.log(`statusCode: ${res.status}`)
         console.log(res)
