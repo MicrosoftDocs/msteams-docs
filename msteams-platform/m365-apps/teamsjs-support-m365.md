@@ -7,7 +7,7 @@ description: Understand the level of support for different TeamsJS library capab
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.custom: m365apps
-ms.date: 05/18/2023
+ms.date: 11/05/2023
 keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 ---
 
@@ -49,13 +49,13 @@ The following table lists host application support for TeamsJS capabilities that
     <thead>
         <tr>
             <th>TeamsJS Capability</th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -63,6 +63,7 @@ The following table lists host application support for TeamsJS capabilities that
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -82,23 +83,25 @@ The following table lists host application support for TeamsJS capabilities that
         <tr>
             <th><a href="#app">app</a></th>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#appinstalldialog">appInstallDialog</a></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
@@ -116,36 +119,74 @@ The following table lists host application support for TeamsJS capabilities that
         <tr>
             <th><a href="#authentication">authentication</a></th>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#calendar">calendar</a></th>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+        </tr>
+                <tr>
+            <th><a href="#call">call</a></th>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th><a href="#chat">chat</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <th><a href="#clipboard">clipboard</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
@@ -167,12 +208,13 @@ The following table lists host application support for TeamsJS capabilities that
         <tr>
             <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -184,12 +226,13 @@ The following table lists host application support for TeamsJS capabilities that
         <tr>
             <th><a href="#geolocation">geoLocation</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -202,35 +245,37 @@ The following table lists host application support for TeamsJS capabilities that
             <th><a href="#mail">mail</a></th>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
-            <td></td>
-            <td></td>
             <td></td>
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#pages">pages</a></th>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#profile">profile</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
@@ -240,8 +285,9 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -251,14 +297,15 @@ The following table lists host application support for TeamsJS capabilities that
         </tr>
         <tr>
             <th><a href="#search">search</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td></td>
+            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
-            <td>&#x2713;*</td>
-            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -278,7 +325,8 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -295,13 +343,13 @@ The following table lists support for TeamsJS capabilities that run only in the 
     <thead>
         <tr>
             <th>TeamsJS Capability</th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -309,6 +357,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -330,42 +379,9 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td></td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th><a href="#call">call</a></th>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <th><a href="#chat">chat</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -379,6 +395,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
         <tr>
             <th><a href="#location">location</a><img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -403,6 +420,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -413,6 +431,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
         <tr>
             <th><a href="#people">people</a></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -432,6 +451,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td></td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -447,6 +467,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
         <tr>
             <th><a href="#sharing">sharing</a></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -464,6 +485,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
         <tr>
             <th><a href="#stageview">stageView</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -483,6 +505,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td>&#x2713;</td>
             <td></td>
             <td></td>
+            <td></td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -498,6 +521,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
         <tr>
             <th><a href="#teamscore">teamsCore</a></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -514,10 +538,11 @@ The following table lists support for TeamsJS capabilities that run only in the 
         </tr>
         <tr>
             <th><a href="#video">video</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -531,6 +556,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
         </tr>
         <tr>
             <th><a href="#webstorage">webStorage</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -551,7 +577,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
 
 ## Preview capabilities awaiting host support
 
-Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), [**meeting**](#meeting), and  [**search**](#search).
+Some capabilities in the source are in early preview and still awaiting initial support in one or more host applications that include [**barCode**](#barcode), [**media**](#media), and [**meeting**](#meeting).
 
 Later in this article, you can find more information on each capability of the Teams JavaScript client library.
 
@@ -568,13 +594,13 @@ The `app` namespace is supported globally across all application hosts and, ther
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -582,6 +608,7 @@ The `app` namespace is supported globally across all application hosts and, ther
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -601,19 +628,20 @@ The `app` namespace is supported globally across all application hosts and, ther
         <tr>
             <th>app</th>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
     </tbody>
 </table>
@@ -629,13 +657,13 @@ Deprecated. Namespace for initializing an app. For new apps, use [app.initialize
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -643,6 +671,7 @@ Deprecated. Namespace for initializing an app. For new apps, use [app.initialize
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -662,6 +691,7 @@ Deprecated. Namespace for initializing an app. For new apps, use [app.initialize
         <tr>
             <th>appInitialization <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -690,13 +720,13 @@ Namespace used to open a dialog for installing an application.
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -704,6 +734,7 @@ Namespace used to open a dialog for installing an application.
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -723,6 +754,7 @@ Namespace used to open a dialog for installing an application.
         <tr>
             <th>appInstallDialog</th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
@@ -753,13 +785,13 @@ The `authentication` namespace is supported globally across all application host
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -767,6 +799,7 @@ The `authentication` namespace is supported globally across all application host
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -786,19 +819,20 @@ The `authentication` namespace is supported globally across all application host
         <tr>
             <th>authentication</th>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
     </tbody>
 </table>
@@ -814,13 +848,13 @@ Preview. Namespace to interact with the barcode scanning-related part of the lib
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -828,6 +862,7 @@ Preview. Namespace to interact with the barcode scanning-related part of the lib
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -860,6 +895,7 @@ Preview. Namespace to interact with the barcode scanning-related part of the lib
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
         </tr>
     </tbody>
 </table>
@@ -875,13 +911,13 @@ Namespace providing calendar-related functionality.
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -889,6 +925,7 @@ Namespace providing calendar-related functionality.
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -910,17 +947,18 @@ Namespace providing calendar-related functionality.
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
-            <td>&#x2713;*</td>
             <td></td>
-            <td></td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
         </tr>
     </tbody>
 </table>
@@ -936,13 +974,13 @@ Namespace providing functionality to start a call with others.
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -950,6 +988,7 @@ Namespace providing functionality to start a call with others.
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -969,13 +1008,14 @@ Namespace providing functionality to start a call with others.
         <tr>
             <th>call</th>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -997,13 +1037,13 @@ Preview. Namespace providing functionality to start a chat with others.
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1011,6 +1051,7 @@ Preview. Namespace providing functionality to start a chat with others.
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1030,13 +1071,14 @@ Preview. Namespace providing functionality to start a chat with others.
         <tr>
             <th>chat <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -1122,13 +1164,13 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1136,6 +1178,7 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1155,12 +1198,13 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
         <tr>
             <th>dialog <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
@@ -1175,16 +1219,17 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#dialogadaptivecardbot">dialog.adaptiveCard.bot</a> <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
@@ -1192,27 +1237,29 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#dialogupdate">dialog.update</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1223,13 +1270,14 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
         <tr>
             <th><a href="#dialogurl">dialog.url</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -1240,13 +1288,14 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
         <tr>
             <th><a href="#dialogurlbot">dialog.url.bot</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -1312,13 +1361,13 @@ When an API doesn't support or generates an error, add logic to fail or provide 
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1326,6 +1375,7 @@ When an API doesn't support or generates an error, add logic to fail or provide 
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1345,12 +1395,13 @@ When an API doesn't support or generates an error, add logic to fail or provide 
         <tr>
             <th>geoLocation <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1361,6 +1412,7 @@ When an API doesn't support or generates an error, add logic to fail or provide 
         </tr>
         <tr>
             <th><a href="#geolocationmap">geoLocation.map</a> <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1396,13 +1448,13 @@ Deprecated. Namespace providing location-related functionality (get and show loc
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1410,6 +1462,7 @@ Deprecated. Namespace providing location-related functionality (get and show loc
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1429,6 +1482,7 @@ Deprecated. Namespace providing location-related functionality (get and show loc
         <tr>
             <th>location <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -1457,13 +1511,13 @@ Namespace providing email-related functionality.
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1471,6 +1525,7 @@ Namespace providing email-related functionality.
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1491,18 +1546,19 @@ Namespace providing email-related functionality.
             <th>mail</th>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
-            <td></td>
-            <td></td>
             <td></td>
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
         </tr>
     </tbody>
 </table>
@@ -1518,13 +1574,13 @@ Namespace providing image file-related functionality.
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1532,6 +1588,7 @@ Namespace providing image file-related functionality.
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1564,6 +1621,7 @@ Namespace providing image file-related functionality.
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
         </tr>
     </tbody>
 </table>
@@ -1579,13 +1637,13 @@ Namespace providing in-meeting app functionality.
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1593,6 +1651,7 @@ Namespace providing in-meeting app functionality.
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1611,6 +1670,7 @@ Namespace providing in-meeting app functionality.
     <tbody>
         <tr>
             <th>meeting</th>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1648,13 +1708,13 @@ Namespace to interact with the menu-related part of the library. This module is 
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1662,6 +1722,7 @@ Namespace to interact with the menu-related part of the library. This module is 
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1680,6 +1741,7 @@ Namespace to interact with the menu-related part of the library. This module is 
     <tbody>
         <tr>
             <th>menus</th>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -1723,13 +1785,13 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1737,6 +1799,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1756,23 +1819,25 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
         <tr>
             <th><a href="#pages">pages</a></th>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#pagesappbutton">pages.appButton</a></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
@@ -1790,6 +1855,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
         <tr>
             <th><a href="#pagesbackstack">pages.backStack</a></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -1807,23 +1873,25 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
         <tr>
             <th><a href="#pagescurrentapp">pages.currentApp</a></th>
             <td></td>
+            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;</td>
-            <td></td>
-            <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#pagesconfig">pages.config</a></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -1841,6 +1909,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
         <tr>
             <th><a href="#pagestabs">pages.tabs</a></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -1909,13 +1978,13 @@ Namespace providing functionality for [People Picker API](../concepts/device-cap
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1923,6 +1992,7 @@ Namespace providing functionality for [People Picker API](../concepts/device-cap
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1942,6 +2012,7 @@ Namespace providing functionality for [People Picker API](../concepts/device-cap
         <tr>
             <th>people</th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -1970,13 +2041,13 @@ Preview. Namespace providing for profile-related functionality.
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1984,6 +2055,7 @@ Preview. Namespace providing for profile-related functionality.
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -2008,8 +2080,9 @@ Preview. Namespace providing for profile-related functionality.
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2034,13 +2107,13 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -2048,6 +2121,7 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -2066,14 +2140,15 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
     <tbody>
         <tr>
             <th>search <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td></td>
+            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
-            <td>&#x2713;*</td>
-            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2095,13 +2170,13 @@ Preview. Namespace supporting in-app browser experiences of the host app. For ex
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -2109,6 +2184,7 @@ Preview. Namespace supporting in-app browser experiences of the host app. For ex
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -2137,7 +2213,8 @@ Preview. Namespace supporting in-app browser experiences of the host app. For ex
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
+            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2156,13 +2233,13 @@ Deprecated. Provides settings-related functionality. Use equivalent APIs from th
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -2170,6 +2247,7 @@ Deprecated. Provides settings-related functionality. Use equivalent APIs from th
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -2189,6 +2267,7 @@ Deprecated. Provides settings-related functionality. Use equivalent APIs from th
         <tr>
             <th>settings <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -2217,13 +2296,13 @@ Namespace to open a share dialog for web content. For more information, see [Sha
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -2231,6 +2310,7 @@ Namespace to open a share dialog for web content. For more information, see [Sha
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -2250,6 +2330,7 @@ Namespace to open a share dialog for web content. For more information, see [Sha
         <tr>
             <th>sharing</th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -2281,13 +2362,13 @@ Preview. Namespace to interact with the Stage View specific part of the library.
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -2295,6 +2376,7 @@ Preview. Namespace to interact with the Stage View specific part of the library.
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -2314,6 +2396,7 @@ Preview. Namespace to interact with the Stage View specific part of the library.
         <tr>
             <th>stageView <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -2342,13 +2425,13 @@ The earlier version of the capability for providing modal dialogs (referred as t
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -2356,6 +2439,7 @@ The earlier version of the capability for providing modal dialogs (referred as t
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -2375,6 +2459,7 @@ The earlier version of the capability for providing modal dialogs (referred as t
         <tr>
             <th>tasks <img src="./images/deprecated-badge.png" alt="Badge indicating this capability is deprecated" /></th>
             <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -2406,13 +2491,13 @@ Namespace containing the set of APIs that support Teams-specific functionalities
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -2420,6 +2505,7 @@ Namespace containing the set of APIs that support Teams-specific functionalities
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -2439,6 +2525,7 @@ Namespace containing the set of APIs that support Teams-specific functionalities
         <tr>
             <th>teamsCore</th>
             <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -2467,13 +2554,13 @@ Preview. Namespace representing functionality for in-meeting video effects.
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -2481,6 +2568,7 @@ Preview. Namespace representing functionality for in-meeting video effects.
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -2499,10 +2587,11 @@ Preview. Namespace representing functionality for in-meeting video effects.
     <tbody>
         <tr>
             <th>video <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
-            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
+            <td></td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2534,13 +2623,13 @@ Preview. Contains functionality to allow web apps to store data in webview cache
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -2548,6 +2637,7 @@ Preview. Contains functionality to allow web apps to store data in webview cache
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -2566,6 +2656,7 @@ Preview. Contains functionality to allow web apps to store data in webview cache
     <tbody>
         <tr>
             <th>webStorage <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
