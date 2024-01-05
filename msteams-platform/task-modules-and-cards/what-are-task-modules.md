@@ -42,7 +42,7 @@ A task module includes the following as shown in the previous image:
     > [!NOTE]
     > It is currently not possible to detect the `err` event when a task module is invoked from a bot.
 
-5. The blue rectangle is where your web page appears if you're loading your own web page using the `url` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object). For more information, see [task module sizing](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-sizing).
+5. The blue rectangle is where your web page appears if you're loading your own web page using the `url` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object). For more information, see [Invoke and dismiss dialogs](~/task-modules-and-cards/task-modules/invoking-task-modules.md).
 6. If you're displaying an Adaptive Card using the `card` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) the padding is added for you. For more information, see [task module CSS for HTML or JavaScript task modules](~/task-modules-and-cards/task-modules/invoking-task-modules.md#css-for-html-or-javascript-dialogs).
 7. Adaptive Card buttons render after you select **Sign up**. When using your own page, create your own buttons. By design, the primary button style (solid) is applied to the last root action in an Adaptive Card.  For all other actions, the default button style is applied.
 
