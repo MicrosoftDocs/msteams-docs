@@ -160,7 +160,11 @@ Follow instructions to preinstall your app for entire organization or user group
 |-----------------|-----------------|----------------|
 | Actions in Microsoft 365 apps | This sample code describes the Actions in Microsoft 365 apps. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs)|
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Actions in Microsoft 365 quick start guide](actions-in-m365-quick-start-guide.md)
+
 ## See also
 
-* [Actions in Microsoft 365](actions-in-m365.md)
-* [Actions in Microsoft 365 quick start guide](actions-in-m365-quick-start-guide.md)
+[Actions in Microsoft 365](actions-in-m365.md)
