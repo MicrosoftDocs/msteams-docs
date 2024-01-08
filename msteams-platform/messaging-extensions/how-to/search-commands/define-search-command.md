@@ -11,7 +11,11 @@ ms.localizationpriority: medium
 The search command is invoked from any one or both of the following locations:
 
 * Compose message area: The buttons at the bottom of the compose message area.
-* Command box: By @mentioning in the command box. In the new Teams client is invoked using /.
+* Command box: By @mentioning in the command box.
+
+> [!NOTE]
+> 
+> Search command is invoked using / from the command box in new Teams client.
 
 When a search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
