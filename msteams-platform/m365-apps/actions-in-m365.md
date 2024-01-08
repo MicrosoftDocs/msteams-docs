@@ -29,7 +29,11 @@ The following graphic is an example of an Action that directs user to view list 
 
 ## Understand how Actions work
 
-Actions are built using a combination of Intent, Object, and Handler. When a users wants to perform a task, the task can be represented as a combination of intent and object, where the intent is the verb describing the user's desired action and the object is the noun on which the action is to be performed. You must listen to the user's  task (intent and object) and create a handler that help users to complete the task.
+Actions are built using a combination of Intent, Object, and Handler.
+
+* Intent and object: When a users wants to perform a task, the task can be represented as a combination of intent and object, where the intent is the verb describing the user's desired action and the object is the noun on which the action is to be performed. For example, opening a file is a verb and the file is an object.
+
+* Handler: You must listen to the user's task (intent and object) and create a handler that help users to complete the task.
 
 Build an action, you must define the intent, object, and handler in the app manifest and use Teams JavaScript library (Teams JS) to get the Action details to make it easy for the users to do specific tasks.
 
@@ -43,7 +47,7 @@ The following table lists the required elements and support information for Acti
 
 ## Design guidelines
 
-This section covers the main principles of creating a captivating user experience by seamlessly integrating app icons and display names in a context menu. A single action can express the core of your application, and by skillfully designing the visual interaction between the app icon and its display name, you can improve both the appearance and the functionality. visually appealing context menu that reflects your application’s identity.
+This section explains how to create app icons and display names in a context menu. A single action shows the essence of your app, and by designing the visual connection between the app icon and its display name, you can enhance both the look and the function. visually attractive context menu that shows your app’s identity.
 
 :::image type="content" source="images/app-icon-context-menu.png" alt-text="The screenshot shows the app icon in context menu.":::
 

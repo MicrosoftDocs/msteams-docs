@@ -73,7 +73,7 @@ For more information, see [app manifest for Office Add-ins (preview)](/office/de
 
 ## Actions in Microsoft 365
 
-Actions enable your app to integrate seamlessly into the user's workflow and guide users to your app based on their intent and the content at hand, making task completion more efficient. Actions help you enhance your app's visibility and engagement with minimal development effort and reduce the need to switch contexts across various Microsoft 365 apps.
+Actions aim to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with their content. By directing users to your app with their intent and contextual content, Actions enable efficient task completion. This integration enhances the visibility and engagement of your app with minimal development effort.
 
 For more information, see [Actions in Microsoft 365](actions-in-m365.md)
 
