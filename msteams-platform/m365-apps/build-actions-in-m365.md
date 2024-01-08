@@ -33,7 +33,7 @@ Before you get started, ensure that you install the following tools:
 
 Add the `actions` property and define the intent, object, and handler for your actions in the app manifest (previously called Teams app manifest).
 
-The following ia an app manifest example for Actions that can be triggered on files like Excel, Word, PDF, or PowerPoint:
+The following is an app manifest example for Actions that can be triggered on files like Excel, Word, PDF, or PowerPoint:
 
 ```json
 {
@@ -75,7 +75,7 @@ When a user selects an action to open a personal tab and view related tasks in a
 
 Build the handler to receive the Action information through the [context object](/javascript/api/%40microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
 
-When a user selects Add option from the app's context menu, a personal tab opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the `app.getContext()` context object .
+When a user selects Add option from the app's context menu, a personal tab opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the `app.getContext()` context object.
 
 The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a page from an Action and the content that initiated the Action.
 
