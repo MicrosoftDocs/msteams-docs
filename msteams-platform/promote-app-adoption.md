@@ -297,10 +297,11 @@ When your app is being rolled out or being used, your customers might have queri
 
 Enable and train your customer-facing teams such as enablement, consulting, support, and GTM functions to answer the expected support queries. Proactively establish a support process for your app. It might involve internal enablement, socializing documentation and training videos, internally or even externally published escalation matrix, and providing support information in your communications.
 
-In your app’s help documentation, consider providing some or all the following information to provide reliable support to your customers and admins:
+In your app’s help documentation, consider providing some or all the following information for your customers and admins:
 
-* Contact method with support information, for example, email, phone, or web portal.
-* Links to help documentation about rollout for admins, features for users, and troubleshooting to supporting functions.
+* Contact method for support information, for example, email, phone, community forum, or web portal.
+* Explain features for users, app rollout and configuration methods for admins, and troubleshooting to supporting functions.
+* Explain different personas required to configure an app, for example, an app that works with a CRM or a bug tracking system may require the server-admin to configure app connection or provision an account for the app.
 * Understanding of how IT admins can control which users have access to apps by using [app centric management](/microsoftteams/app-centric-management) and [permission policies](/microsoftteams/app-policies#app-permission-policies), depending on their tenant configuration.
 * Language support provided by the app in case the app is available in any non-English language.
 * Latest release date and version that imparts app freshness and hence inspires confidence.
