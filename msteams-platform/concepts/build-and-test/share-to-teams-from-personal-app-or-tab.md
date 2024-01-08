@@ -77,7 +77,7 @@ The following table provides the response codes:
 
 ## Limitations
 
-* The Share to Teams is available for the desktop client, but it isn't supported on web and mobile clients.
+* The Share to Teams is available for the desktop and mobile clients, but it isn't supported on web client.
 * The Share to Teams button can be hosted or embedded in an app running inside Teams.
 * You can add Share to Teams button to the app created by using **Teams Javascript client library**.
 
