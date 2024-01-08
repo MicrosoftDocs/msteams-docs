@@ -21,7 +21,7 @@
 
     :::image type="content" source="../../assets/images/include-files/asp-net-output.png" alt-text="Screenshot shows the overview window.":::
 
-1. In the debug dropdown list, select **Dev Tunnels (no active tunnel)** > **Create A Tunnel...**.
+1. In the debug dropdown list, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
 
     :::image type="content" source="../../assets/images/include-files/create-tunnel.png" alt-text="Screenshot shows the dropdown to select the dev tunnels.":::
 

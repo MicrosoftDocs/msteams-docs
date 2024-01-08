@@ -839,6 +839,9 @@ Specify meeting extension definition. For more information, see [custom Together
 |`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is **false**.|
 |`supportsAnonymousGuestUsers`|Boolean|||A value that indicates whether an app supports access for anonymous users. The default value is **false**.|
 
+> [!NOTE]
+> The `supportsAnonymousGuestUsers` property in the app manifest schema v1.16 is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
+
 ### meetingExtensionDefinition.scenes
 
 |Name| Type|Maximum size|Required |Description|
