@@ -123,7 +123,7 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 
 1. In the **Test and Distribute** section, select **Install**.
 
-1. In the pop-up dialog box, select **Add to a team** or from the drop-down, select **Add to a chat**.
+1. In the pop-up dialog box, select **Add to a team** or from the dropdown, select **Add to a chat**.
 
 1. Choose the team or chat where you want the tab to be displayed and select **Set up a tab**.
 
@@ -132,4 +132,3 @@ In the **Domains and permissions** section, **Domains from your tabs** must cont
 1. To view your tab, go to the team where you installed the tab, and select it from the tab bar. The page that you chose during configuration is displayed.
 
     ![Channel tab ASPNETMVC uploaded](../../assets/images/tab-images/channeltabaspnetmvcuploaded.png)
-
