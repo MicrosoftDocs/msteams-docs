@@ -10,7 +10,7 @@ ms.date: 06/02/2022
 1. In the [Microsoft Azure portal](https://ms.portal.azure.com/#home), under Azure services, select **Create a resource**.
 1. In the search box, enter "bot". And in the dropdown list, select **Bot Channels Registration**.
 1. Select the **Create** button.
-1. In the **Bot Channel Registration** blade, provide the requested information about your bot.
+1. In **Bot Channel Registration**, provide the requested information about your bot.
 1. Leave the **Messaging endpoint** box empty for now, you'll enter the required URL after deploying the bot. The following picture shows an example of the registration settings:
 
     ![bot app channels registration](../../assets/images/authentication/auth-bot-channels-registration.png)
@@ -39,11 +39,11 @@ ms.date: 06/02/2022
 1. Select **OK**.
 1. Finally, select **Create**.
 
-After Azure has created the registration resource, it will be included in the resource group list.  
+After Azure creates the registration resource, it's included in the resource group list.  
 
 ![bot app channels registration group](~/assets/images/authentication/auth-bot-channels-registration-group.PNG)
 
-Once your bot channels registration is created, you'll need to enable the Teams channel.
+Once your bot channels registration is created, you need to enable the Teams channel.
 
 1. In the [Azure portal](https://ms.portal.azure.com/#home), under Azure services, select the **Bot Channel Registration** you created.
 1. In the left panel, select **Channels**.

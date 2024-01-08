@@ -1,6 +1,6 @@
 ## Deploy your app to Azure
 
-Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the bot app.
+Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you deploy the bot app.
 <br>
 <br>
 <details>
@@ -32,7 +32,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice which displays hellomsg successfully provisioned in the cloud.":::
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice, which displays hellomsg successfully provisioned in the cloud.":::
 
     If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
@@ -76,7 +76,7 @@ Once the provisioning and deployment steps are complete:
 
 1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
 1. Select **Launch Remote (Edge)** from the launch configuration dropdown.
-1. Select the **Start debugging (F5)**. You'll be prompted to sideload the bot app onto Teams.
+1. Select the **Start debugging (F5)**. You're prompted to sideload the bot app onto Teams.
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows the debug and launch app remotely.":::
 
@@ -84,6 +84,6 @@ Once the provisioning and deployment steps are complete:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/add-mex-app.png" alt-text="Screenshot shows the app being installed in different scopes.":::
 
-   You've successfully added your bot app to the Teams client.
+   You successfully added your bot app to the Teams client.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/bot-app-learn-local-debug.png" alt-text="Screenshot shows the learn card in the bot on Teams client.":::  
