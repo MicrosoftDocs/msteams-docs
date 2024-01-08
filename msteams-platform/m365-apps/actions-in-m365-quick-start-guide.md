@@ -15,7 +15,7 @@ ms.subservice: m365apps
 >
 > * Actions is supported for Microsoft 365 (Office) app for web and desktop.
 
-Actions aim to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with their content. This quick start guide helps you to get started with Actions using the sample.
+Get started with Actions in Micrososft 365, which helps integrate an app into the user's workflow by enabling easy discoverability and seamless interaction with their content.
 
 ## Prerequisites
 

@@ -47,7 +47,7 @@ The following table lists the required elements and support information for Acti
 
 ## Design guidelines
 
-This section explains how to create app icons and display names in a context menu. A single action shows the essence of your app, and by designing the visual connection between the app icon and its display name, you can enhance both the look and the function. visually attractive context menu that shows your app’s identity.
+Create app icons and display names in a context menu for Actions in Microsoft 365. A single action shows the essence of your app, and by designing the visual connection between the app icon and its display name, you can enhance both the look and the function.
 
 :::image type="content" source="images/app-icon-context-menu.png" alt-text="The screenshot shows the app icon in context menu.":::
 
