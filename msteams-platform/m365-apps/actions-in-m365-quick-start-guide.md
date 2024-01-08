@@ -9,7 +9,13 @@ ms.subservice: m365apps
 ---
 # Actions in Microsoft 365 quick start guide
 
-Get started with Actions in Microsoft 365 using the [sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs).
+> [!NOTE]
+>
+> * Actions for Microsoft 365 is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+>
+> * Actions is supported for Microsoft 365 (Office) app for web and desktop.
+
+This quick start guide helps you to build Actions in Microsoft 365.
 
 ## Prerequisites
 
