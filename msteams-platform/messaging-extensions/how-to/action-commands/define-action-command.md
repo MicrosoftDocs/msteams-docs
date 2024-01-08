@@ -34,9 +34,8 @@ First, you must decide the location from where your action command must be invok
 
    > [!NOTE]
    > 
-   > * If message extension is invoked from the command box, you can't respond with a bot message inserted directly into the conversation.
-   > 
-   > * Action command in the new Teams client is invoked using /.
+   > * If a message extension is invoked from the command box, you can't respond with a bot message inserted directly into the conversation.
+   > * You can invoke an action command in the new Teams client using /.
 
 * Message: Directly from an existing message through the `...` overflow menu on a message.
 
@@ -45,7 +44,6 @@ First, you must decide the location from where your action command must be invok
    > [!NOTE]
    >
    > * The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting a dialog.
-   >
    > * When the user selects ellipses **…**, an overflow menu is displayed. However, by default, message actions for apps created by you for your organization or third-party apps aren't displayed. After the user selects **More actions**, they can see the message actions and select the required option. The respective message action is displayed in the overflow menu. The overflow menu displays the three most recent message actions. You can't pin the message action to be displayed.
 
 The following image displays the locations from where action command is invoked:
@@ -74,7 +72,7 @@ You can create an action command using **Teams Toolkit** and **Developer Portal 
 
 # [Teams Toolkit](#tab/Teams-toolkit)
 
-To create an action based message extension using Teams Toolkit, follow these steps:
+To create an action-based message extension using Teams Toolkit, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
@@ -89,7 +87,7 @@ Teams Toolkit scaffolds your project and creates an action message extension.
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-To create an action based message extension using Developer Portal for Teams, follow these steps:
+To create an action-based message extension using Developer Portal for Teams, follow these steps:
 
 1. Go to [**Developer Portal for Teams**](https://dev.teams.microsoft.com/home).
 1. Go to **Apps**.
@@ -147,7 +145,7 @@ A search message extension using bot framework created.
 
 ## Code snippets
 
-The following code provides an example of action based for message extensions:
+The following code provides an example of action-based for message extensions:
 
 # [C#](#tab/dotnet)
 
@@ -234,7 +232,7 @@ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtens
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action based message extension.
+Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action-based message extension.
 
 ## Next step
 

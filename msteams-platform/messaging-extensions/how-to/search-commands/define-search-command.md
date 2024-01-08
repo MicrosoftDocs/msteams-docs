@@ -13,9 +13,8 @@ The search command is invoked from any one or both of the following locations:
 * Compose message area: The buttons at the bottom of the compose message area.
 * Command box: By @mentioning in the command box.
 
-> [!NOTE]
-> 
-> Search command is invoked using / from the command box in new Teams client.
+  > [!NOTE]
+  > You can invoke a search command in the new Teams client using /.
 
 When a search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
@@ -115,7 +114,7 @@ Microsoft 365 plugins provide integration with various Microsoft 365 products, s
 
 ## Code snippets
 
-The following code provides an example of search based for message extensions:
+The following code provides an example of search-based for message extensions:
 
 # [C#](#tab/dotnet)
 
@@ -199,11 +198,11 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------------|
-|Teams message extension search   |  This sample shows how to build a Search-based message extension. It searches nudget packages and displays the results in search based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension search   |  This sample shows how to build a search-based message extension. It searches nudget packages and displays the results in search-based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.yml) to build a search based message extension.
+Follow the [step-by-step guide](../../../sbs-messagingextension-searchcommand.yml) to build a search-based message extension.
 
 ## Next step
 
