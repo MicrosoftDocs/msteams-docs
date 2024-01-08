@@ -645,7 +645,7 @@ The following code shows an example of formatting for Markdown connector cards:
 
 You can share code snippets as richly formatted Adaptive Cards in Teams chats and channels through bots with the `CodeBlock` element. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. You can add action buttons to view the code in its source or in integrated development environments (IDEs) such as Visual Studio or Visual Studio Code.
 
-<!--Teams automatically unfurls permalinks of code snippets from external sources like websites, repositories, or IDEs and displays an Adaptive Card with the code snippet.-->
+Teams automatically unfurls permalinks of code snippets from external sources like websites, repositories, or IDEs and renders an Adaptive Card with the code snippet.
 
 :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
 
@@ -717,7 +717,7 @@ The `CodeBlock` element supports the following properties:
 | `language` | Enum | Yes | The language of the code snippet to be displayed in the Adaptive Card. |
 | `startLineNumber` | Number | No | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
 
-To avoid rendering errors in the Adaptive Card, ensure that the code is an escaped string in the `codeSnippet` property. For example, the newline character, `\n` needs to be escaped as `\\n` in the code snippet.
+To render the newline character, `\n` as part of the code snippet in the Adaptive Card, ensure that it is escaped as `\\n` in the `codeSnippet` property. Otherwise, Teams renders the code after the `\n` in the next line of the card.
 
 ### Limitations
 
