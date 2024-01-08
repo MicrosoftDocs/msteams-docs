@@ -467,7 +467,7 @@ items:
       1. Enter **@your-app-name** in the command box of Teams.
        
          > [!NOTE]
-         > In the new Teams client, invoke message extension using /. For example, **/your-app-name**.
+         > In the [new Teams client](~/resources/teams-updates.md), invoke message extension using /. For example, **/your-app-name**.
         
          The app opens the search box and you can use it to run a query.
 
@@ -489,7 +489,7 @@ items:
 
     * **Using three-dot icon:**
     
-      1. Launch the message extension from three dots at the bottom of the composing area.
+      1. Open the message extension from three dots at the bottom of the composing area.
       1. Select your message extension app.       
 
          :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/three-dot-mex-v4.png" alt-text="Screenshot that shows how to open the sample message extension app":::
