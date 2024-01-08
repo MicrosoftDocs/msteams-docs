@@ -368,9 +368,6 @@ items:
 
       1. Enter **/your-app-name** in the command box of Teams. If you're using the classic Teams the search command is invoked by @mentioning in the command box. For example, **@your-app-name**.
        
-         > [!NOTE]
-         > In the [new Teams client](~/resources/teams-updates.md), invoke message extension using /. For example, **/your-app-name**.
-        
          The app opens the search box and you can use it to run a query.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to invoke the message extension app.":::
