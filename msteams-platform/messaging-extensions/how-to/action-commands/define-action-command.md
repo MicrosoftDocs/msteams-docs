@@ -28,15 +28,12 @@ First, you must decide the location from where your action command must be invok
 
     Commands context = `compose`
 
-* Command box: By @mentioning your app in the command box.
+* Command box: By using / in the command box. For example, **/your-app-name**. If you are using classic Teams the action command is invoked by @mentioning in the command box. For example, **@your-app-name**.
 
     Commands context = `commandBox`
 
    > [!NOTE]
-   > 
-   > * If a message extension is invoked from the command box, you can't respond with a bot message inserted directly into the conversation.
-   >
-   > * You can invoke an action command in the [new Microsoft Teams client](~/resources/teams-updates.md) using /.
+   > If a message extension is invoked from the command box, you can't respond with a bot message inserted directly into the conversation.
 
 * Message: Directly from an existing message through the `...` overflow menu on a message.
 
