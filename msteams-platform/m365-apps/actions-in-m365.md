@@ -31,7 +31,7 @@ The following graphic is an example of an Action that directs user to view list 
 
 Actions are built using a combination of Intent, Object, and Handler.
 
-* Intent and object: When a users wants to perform a task, the task can be represented as a combination of intent and object, where the intent is the verb describing the user's desired action and the object is the noun on which the action is to be performed. For example, opening a file is a verb and the file is an object.
+* Intent and object: When a user wants to perform a task, the task can be represented as a combination of intent and object, where the intent is the verb describing the user's desired action and the object is the noun on which the action is to be performed. For example, opening a file is a verb and the file is an object.
 
 * Handler: You must listen to the user's task (intent and object) and create a handler that help users to complete the task.
 

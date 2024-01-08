@@ -109,7 +109,7 @@ async readActionItem() {
 }
 ```
 
-## Test and Deploy your Actions
+## Test and deploy your Actions
 
 > [!NOTE]
 > Actions are available in public developer preview, ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users to experience Actions in Microsoft 365 app.
