@@ -101,7 +101,7 @@ To create an action based message extension using Developer Portal for Teams, fo
 
 1. If you don't have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
 
-   1. If don't have a Bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+   1. If you don't have a bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
 1. Select the required scopes.
 

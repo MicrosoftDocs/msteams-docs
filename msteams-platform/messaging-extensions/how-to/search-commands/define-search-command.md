@@ -37,12 +37,12 @@ Before you get started, ensure that you meet the following requirements:
 
 * [Node.js](https://nodejs.org/en). The supported versions are 16, 18.
 * [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program)
-* [Set up your dev environment for extending Teams apps across Microsoft 365](../../../m365-apps/prerequisites.md) Please note that after you enrolled your developer tenant in Office 365 Target Release, it may take couple days for the enrollment to take effect.
+* [Set up your dev environment for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) Note that after you enrolled your developer tenant in Office 365 Target Release, it may take a couple days for the enrollment to take effect.
 * [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI.
 
 # [Teams Toolkit](#tab/Teams-toolkit)
 
-To create a search based message extension using Teams Toolkit, follow these steps:
+To create a search-based message extension using Teams Toolkit, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
@@ -63,7 +63,7 @@ To run the message extension in Teams, follow these steps:
    :::image type="content" source="../../../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
 
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
-1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window.
+1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select your message extension from the list and enter a search command in the search box.
 1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
@@ -81,7 +81,7 @@ To run the message extension in Teams, follow these steps:
 
 1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
 
-   1. If you don't have a Bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+   1. If you don't have a bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
 1. Select **Save**.
 
