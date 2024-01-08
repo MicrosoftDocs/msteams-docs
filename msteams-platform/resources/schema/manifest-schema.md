@@ -678,7 +678,7 @@ Indicates if a personal app is rendered without a tab header bar (signifying ful
 >
 > * `isFullScreen` only works for apps published to your organization. Uploaded and published third-party apps can't use this property (it's ignored).
 >
-> * `isFullScreen=true` removes the Teams-provided header bar and title from personal apps and task module dialogs.
+> * `isFullScreen=true` removes the Teams-provided header bar and title from personal apps and task module dialogs. Is not recommended to use this parameter on chat bot apps.
 
 ## activities
 
