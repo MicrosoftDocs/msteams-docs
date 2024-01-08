@@ -18,11 +18,11 @@ Actions aim to integrate your app into your user's workflow by enabling easy dis
 
 The following graphic is an example of an Action that directs user to view list of suppliers related to the file:
 
-1. In Microsoft 365, the user right-clicks on the Excel file. A context menu appears.
-
-1. The user selects **Related suppliers** to view the list of suppliers for the Northwind company.
-
-    The Northwind page opens with the list of suppliers. The user saves time by checking the result with a single click on the Excel file without manually opening the file each time.
+| Steps | Description |
+| --- | --- |
+| 1 | In Microsoft 365, the user right-clicks on the Excel file. A context menu appears.|
+| 2 | The user selects **Related suppliers** to view the list of suppliers for the Northwind company.|
+| 3 | The Northwind page opens with the list of suppliers. The user saves time by checking the result with a single click on the Excel file without manually opening the file each time.|
 
   :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user right-clicks on the excel file and select the related suppliers.":::
 

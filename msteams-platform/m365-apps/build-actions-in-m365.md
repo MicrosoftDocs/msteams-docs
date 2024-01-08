@@ -20,20 +20,20 @@ To build Actions for your app, follow these steps:
 
 ## Prerequisites
 
-Before you get started, ensure that you install the following tools:
+Before you get started, ensure that you install the following:
 
 | &nbsp; | Install | Description |
 | --- | --- | --- |
-| &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that run and debug your app. Use the latest version. |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | A JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor, which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
+| &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
 
 ## Configure app manifest
 
 Add the `actions` property and define the intent, object, and handler for your actions in the app manifest (previously called Teams app manifest).
 
-The following is an app manifest example for Actions that can be triggered on files like Excel, Word, PDF, or PowerPoint:
+The following is an app manifest example for Actions that can be triggered on files such as Excel, Word, PDF, or PowerPoint:
 
 ```json
 {
@@ -92,7 +92,7 @@ async setItemId() {
 | &nbsp; | Name | Description |
 | --- | --- | --- |
 | &nbsp; | `actionObjects` | Array of corresponding action objects. |
-| &nbsp; | `itemId` | The app receives the ID as the content and uses it to query the Microsoft graph. |
+| &nbsp; | `itemId` | The app receives the ID as the content and uses it to query the Microsoft Graph. |
 
 ## Access content through Graph API
 
