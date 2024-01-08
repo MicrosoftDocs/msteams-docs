@@ -462,9 +462,9 @@ items:
 
     Choose one of the following ways to open your app.
     
-    * **Using @mention:**
+    * Using @mention:
     
-    1. Enter @your-app-name in the command area of your app.
+    1. Enter **@your-app-name** in the command area of your app.
        
        > [!NOTE]
        > In the new Teams client, invoke message extension using /. For example, **/your-app-name**.
