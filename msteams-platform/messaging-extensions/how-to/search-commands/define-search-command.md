@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 The search command is invoked from any one or both of the following locations:
 
 * Compose message area: The buttons at the bottom of the compose message area.
-* Command box: By using / in the command box. For example, **/your-app-name**. If you are using the classic Teams the search command is invoked by @mentioning in the command box. For example, **@your-app-name**. 
+* Command box: By using / in the command box. For example, **/your-app-name**. If you're using the classic Teams the search command is invoked by @mentioning in the command box. For example, **@your-app-name**. 
 
 When a search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
@@ -33,7 +33,7 @@ Before you get started, ensure that you meet the following requirements:
 
 * [Node.js](https://nodejs.org/en). The supported versions are 16, 18.
 * [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program)
-* [Set up your dev environment for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) Note that after you've enrolled your developer tenant in Office 365 Targeted Release, it may take a couple of days for the enrollment to take effect.
+* [Set up your dev environment for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) After you've enrolled your developer tenant in Office 365 Targeted Release, it may take a couple of days for the enrollment to take effect.
 * [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI.
 
 # [Teams Toolkit](#tab/Teams-toolkit)
