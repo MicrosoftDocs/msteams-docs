@@ -83,7 +83,7 @@ The Azure Bot resource registration registers your web service as a bot with the
 1. Select your **Resource group** from the dropdown list.
 1. Select **Type of App** as **Multi Tenant** for **Microsoft App ID**.
 
-   :::image type="content" source="../../../assets/images/adaptive-cards/multi-tenant.png" alt-text="Screenshot shows how to select multi tenant for Microsoft AppID.":::
+   :::image type="content" source="../../../assets/images/adaptive-cards/multi-tenant.png" alt-text="Screenshot shows how to select multitenant for Microsoft AppID.":::
 
 1. Select **Review + create**.
 
@@ -205,9 +205,9 @@ In this procedure, you'll use a Microsoft Entra provider. Other Microsoft Entra 
     1. **Login URL**. Enter `https://login.microsoftonline.com`.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign, follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Entra ID - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Entra app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Entra app. This will be the tenant associated with the users who can be authenticated.
 
-        - If you selected *Accounts in any organizational directory (Any Microsoft Entra ID - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Entra app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected *Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Entra app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     h. For **Resource URL**, enter `https://graph.microsoft.com/`. This isn't used in the current code sample.  
     i. Leave **Scopes** blank. The following image is an example:
@@ -234,9 +234,9 @@ In this procedure, you'll use a Microsoft Entra provider. Other Microsoft Entra 
     1. **Token Exchange URL**. Leave this blank.
     1. **Tenant ID**, enter the **Directory (tenant) ID** that you recorded earlier for your Azure identity app or **common** depending on the supported account type selected when you created the identity provider app. To decide which value to assign, follow these criteria:
 
-        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory(Microsoft Entra ID - Multi tenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Entra app. This will be the tenant associated with the users who can be authenticated.
+        - If you selected either *Accounts in this organizational directory only (Microsoft only - Single tenant)* or *Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant)*, enter the **tenant ID** you recorded earlier for the Microsoft Entra app. This will be the tenant associated with the users who can be authenticated.
 
-        - If you selected *Accounts in any organizational directory (Any Microsoft Entra ID - Multi tenant and personal Microsoft accounts, for example, Skype, Xbox, Outlook)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Entra app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
+        - If you selected *Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)* enter the word **common** instead of a tenant ID. Otherwise, the Microsoft Entra app verifies through the tenant whose ID was selected and exclude personal Microsoft accounts.
 
     1. For **Scopes**, enter a space-delimited list of graph permissions this application requires for example: User.Read User.ReadBasic.All Mail.Read
 
