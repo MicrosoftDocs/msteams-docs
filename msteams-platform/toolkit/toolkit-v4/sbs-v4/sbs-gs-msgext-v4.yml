@@ -462,12 +462,9 @@ items:
 
     Choose one of the following ways to open your app.
     
-    * **Using @mention:**
+    * **Command box:**
     
-      1. Enter **@your-app-name** in the command box of Teams.
-       
-         > [!NOTE]
-         > In the [new Teams client](~/resources/teams-updates.md), invoke message extension using /. For example, **/your-app-name**.
+      1. Enter **/your-app-name** in the command box of Teams. If you are using the classic Teams the search command is invoked by @mentioning in the command box. For example, **@your-app-name**.
         
          The app opens the search box and you can use it to run a query.
 
@@ -487,7 +484,7 @@ items:
 
          :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-search-card-sent-v4.png" alt-text="Screenshot that shows search result in a chat":::
 
-    * **Using three-dot icon:**
+    * **Compose message area:**
     
       1. Open the message extension from three dots at the bottom of the composing area.
       1. Select your message extension app.       
