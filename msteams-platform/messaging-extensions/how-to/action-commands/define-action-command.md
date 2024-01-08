@@ -36,7 +36,7 @@ First, you must decide the location from where your action command must be invok
    > 
    > * If a message extension is invoked from the command box, you can't respond with a bot message inserted directly into the conversation.
    >
-   > * You can invoke an action command in the new Teams client using /.
+   > * You can invoke an action command in the [new Microsoft Teams client](~/resources/teams-updates.md) using /.
 
 * Message: Directly from an existing message through the `...` overflow menu on a message.
 
@@ -101,7 +101,7 @@ To create an action-based message extension using Developer Portal for Teams, fo
 
 1. If you don't have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
    
-   1. If you don't have a bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+   1. If you don't have a bot ID, select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
 1. Select the required scopes.
 
@@ -111,7 +111,7 @@ To create an action-based message extension using Developer Portal for Teams, fo
 
 1. In the Command details page, select **Action** and then select parameter type.
     
-1. Select **Action**  as the type of command and update the following:
+1. Select **Action** as the type of command and update the following:
    * Command ID
    * Command title
    * Command description

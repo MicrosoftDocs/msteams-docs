@@ -14,7 +14,7 @@ The search command is invoked from any one or both of the following locations:
 * Command box: By @mentioning in the command box.
 
   > [!NOTE]
-  > You can invoke a search command in the new Microsoft Teams client using /.
+  > You can invoke a search command in the [new Microsoft Teams client](~/resources/teams-updates.md) using /.
 
 When a search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
@@ -80,7 +80,7 @@ To run the message extension in Teams, follow these steps:
 
 1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
     
-   1. If you don't have a bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+   1. If you don't have a bot ID, select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
 1. Select **Save**.
 

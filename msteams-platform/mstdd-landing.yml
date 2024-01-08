@@ -48,7 +48,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: / to invoke message extensions from command box in the new Teams client
+      - text: Use / to invoke message extensions from command box in the new Teams client
         url: messaging-extensions/build-bot-based-message-extension.md
       - text: Apps for Teams meetings are available in Department of Defense (DOD)
         url: messaging-extensions/build-bot-based-plugin.md
