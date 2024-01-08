@@ -793,9 +793,9 @@ The following resources can also assist:
 <details>
 <summary>How can I validate a user when they invoke an Adaptive Card? </summary>
 
-You can open the authentication page in the task module when the user selects the button.
+You can open the authentication page in the dialog (referred as task module in TeamsJS v1.x) when the user selects the button.
 
-You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/python) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
+You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/python) for opening the dialog on button click. You can replace the taskInfo.url with your auth page.
 
 <br>
 &nbsp;
@@ -809,9 +809,9 @@ For more information, see [Configure your app in Microsoft Entra ID](bots/how-to
 &nbsp;
 </details>
 <details>
-<summary>I want to open an iframe that contains a React app (that displays confidential information) from a bot task module securely. Can you suggest what is the best, easiest, and standard approach to perform this operation?</summary>
+<summary>I want to open an iframe that contains a React app (that displays confidential information) from a bot dialog (referred as task module in TeamsJS v1.x) securely. Can you suggest what is the best, easiest, and standard approach to perform this operation?</summary>
 
-Implement react page with tab SSO and render the content as required. You can open the same tab URL as task module from bot.
+Implement react page with tab SSO and render the content as required. You can open the same tab URL as dialog from bot.
 
 For more information, see [Enable SSO for tab app](tabs/how-to/authentication/tab-sso-overview.md).
 <br>
@@ -863,6 +863,58 @@ If you have both configurable tab and static tab defined in your app manifest fo
 Pre-existing pinned configurable tab instances of your app continue to work the same. You don't have the option to pin new instances of these configurable tabs. When you select to pin your tab, then Teams pins the static tab of your app.
 <br>
 </details>
+</details>
+
+## Teams AI library
+
+<br>
+<details>
+<summary>What does the Teams AI library do?</summary>
+
+Teams AI library provides abstractions for you to build robust applications that utilize OpenAI large language model (LLM)s.
+<br>
+</details>
+
+<details>
+<summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
+
+No, you need to have your large language model (LLM)s, hosted in Azure OpenAI or elsewhere.
+<br>
+</details>
+
+<details>
+<summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
+
+Yes, it's possible to use Teams AI library with other large language model (LLM)s.
+<br>
+</details>
+
+<details>
+<summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
+
+Yes, Teams AI library provides abstractions to simplify utilization of large language model (LLM)s in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
+<br>
+</details>
+
+<details>
+<summary>How does Teams AI library integrate with ODSL?</summary>
+
+The two are independent and can't be integrated.
+<br>
+</details>
+
+<details>
+<summary>How does Teams AI library co-exist against the hero-story of developers building for the skills ecosystem in Microsoft 365?</summary>
+
+Teams AI library story is targeted towards Pro-developers and separate from the hero-story around skills ecosystem in Microsoft 365.
+<br>
+</details>
+
+<details>
+<summary>How should information about the existing Bot Framework SDK be communicated after announcing a new version?</summary>
+
+Teams AI library works alongside the existing Bot Framework SDK and isn't a replacement.
+<br>
 </details>
 
 ## Teams toolkit
