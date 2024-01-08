@@ -17,11 +17,10 @@ After a user submits the dialog, your web service receives a `composeExtensions/
 You have the following options to respond:
 
 * No response: Use the submit action to trigger a process in an external system and not provide any feedback to the user. It's useful for long-running processes and to provide feedback alternately. For example, you can give feedback with a [proactive message](~/bots/how-to/conversations/send-proactive-messages.md).
-* [Another dialog](#respond-with-another-dialog): You can respond with an additional dialog as part of a multi-step interaction.
+* [Another dialog](#respond-with-another-dialog): You can respond with additional dialog as part of a multi-step interaction.
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
-* [Request the user to authenticate](~/messaging-extensions/how-to/add-authentication.md).
-* [Request the user to provide additional configuration](~/get-started/first-message-extension.md).
+* [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/how-to/add-authentication).
 
 If the app doesn't respond within five seconds, the Teams client retries the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
 
@@ -44,7 +43,7 @@ For authentication or configuration, after the user completes the process, the o
 > * When you select **Action.Submit** through ME cards, it sends invoke activity with the name **composeExtensions**, where the value is equal to the usual payload.
 > * When you select **Action.Submit** through conversation, you receive message activity with the name **onCardButtonClicked**, where the value is equal to the usual payload.
 
-If the app contains a conversational bot, install the bot in the conversation, and then load the dialog. The bot is useful to get additional context for the dialog. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
+If the app contains a conversational bot, install the bot in the conversation, and then load the dialog. The bot is useful to get more context for the dialog. To install conversational bot, see [Request to install your conversational bot](create-task-module.md#request-to-install-your-conversational-bot).
 
 ## The submitAction invoke event
 
@@ -195,7 +194,7 @@ class TeamsMessagingExtensionsActionPreview extends TeamsActivityHandler {
 
 ## Respond with another dialog
 
-You can select to respond to the `submitAction` event with an additional dialog. It's useful in the following scenarios:
+You can select to respond to the `submitAction` event with additional dialog. It's useful in the following scenarios:
 
 * Collect large amounts of information.
 * Dynamically change the information collection based on user input.
@@ -210,7 +209,6 @@ The method for response is the same as [responding to the initial `fetchTask` ev
 > * The prerequisite to get the bot response with an Adaptive Card is that you must add the `bot` object to your app manifest, and define the required scope for the bot. Use the same ID as your message extension for your bot.
 >
 > * Outlook doesn't support bot response with Adaptive Card.
-
 
 You can also respond to the `submitAction` by inserting a message with an Adaptive Card into the channel with a bot. The user can preview the message before submitting it. It's useful in scenarios where you gather information from the users before creating an Adaptive Card response, or when you update the card after someone interacts with it.
 
@@ -550,7 +548,7 @@ You receive a new `composeExtensions/submitAction` message similar to the follow
 
 ### User attribution for bots messages
 
-In scenarios where a bot sends messages on behalf of a user, attributing the message to that user helps with engagement and display a more natural interaction flow. This feature lets you to show a message from your bot that was sent on behalf of a user by displaying the name of the user in the header of the Adaptive Card response.
+In scenarios where a bot sends messages on behalf of a user, attributing the message to that user helps with engagement and display a more natural interaction flow. This feature lets the bot show messages on behalf of a user with the user's name displayed in the Adaptive Card response header.
 
 The following images display an Adaptive Card message sent by a bot. The left-side image is without user attribution and the right-side image is with user attribution. The image with user attribution displays the name of the user in the format: username via bot **(Megan Bowen via Poll)** in the Adaptive Card header.
 
@@ -600,7 +598,7 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 |:---|:---|:---|
 |`itemId`|Integer|Describes identification of the item. Its value must be `0`.|
 |`mentionType`|String|Describes the mention of a "person". |
-|`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>". |
+|`mri`|String|Message resource identifier​ (MRI) of the person on whose behalf the message is sent. Message sender name would appear as "\<user\> through \<bot name\>." |
 |`displayName`|String|Name of the person. Used as fallback in case name resolution is unavailable.|
   
 ## Code sample
@@ -609,7 +607,7 @@ The following section is a description of the entities in the `OnBehalfOf` Array
 |:---------------------|:--------------|:---------|:--------|:--------|
 |Teams message extension action| This sample shows how to define action commands, create dialog, and respond to dialog submit action. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action/csharp/demo-manifest/msgext-action.zip)
 |Message extension action preview| This sample shows how to use action preview in Messaging Extensions using Bot Framework v4. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-action-preview/csharp/demo-manifest/msgext-action-preview.zip) |
-|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based messaging extension.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches NuGet packages and displays the results in search based messaging extension.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Next Step
 
