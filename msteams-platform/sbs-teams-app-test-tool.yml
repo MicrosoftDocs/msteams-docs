@@ -18,9 +18,9 @@ items:
     >
     > Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit. 
     
-    Start Microsoft Teams app development with your first Teams AI chat bot app using Teams App Test Tool. Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. 
+    Start Microsoft Teams app development with your Teams AI chat bot app and debug using Teams App Test Tool. Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. 
 
-    This step-by-step guide helps you to build AI chat bot using Teams App Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
+    This step-by-step guide helps you to build AI chat bot using Teams Toolkit and debug AI chat bot using Teams App Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
     
@@ -390,6 +390,8 @@ items:
     Did you come up with output like this?
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
+    * ** @mention**
 
 - title: Congratulations!
   durationInMinutes: 1
