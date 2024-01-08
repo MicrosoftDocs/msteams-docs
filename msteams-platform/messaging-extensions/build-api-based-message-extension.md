@@ -98,7 +98,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 
 1. Under **Message extension type**, select **API-based**.
 
-1. If you get a disclaimer which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**, select **Yes, change**.
+1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**, select **Yes, change**.
 
 1. Under **Open API spec**, select **Upload now**.
 
@@ -109,7 +109,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 1. Select **Save**. A pop-up appears with the message **API spec saved successfully**.
 1. Select **Got it**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-api-saved.png" alt-text="Screenshot shows an example of the the API spec saved successfully message and Got it button.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-api-saved.png" alt-text="Screenshot shows an example of the API spec saved successfully message and Got it button.":::
 
 **Add commands**
 
@@ -122,15 +122,15 @@ You can add commands and parameters to your message extension, to add commands:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Teams Developer Portal.":::
 
-   A **Add a command** pop-up appears with a list of all the available APIs from the Open API Description document.
+   A **Add command** pop-up appears with a list of all the available APIs from the Open API Description document.
 
-1. Select an API from the list and select **Next**.
+1. Select one or more APIs from the list and select **Next**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png" alt-text="Screenshot shows the list of APIs from the OpenAPI Description Document in the Add a command pop-up window.":::
 
-   A **Add a command** page appears.
+   A **Command details** appears.
 
-1. In the **Add command** page, go to **Adaptive card template** and select **Upload now**.
+1. Under Command details, go to **Adaptive card template** and select **Upload now**.
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
 
@@ -158,7 +158,7 @@ You can add commands and parameters to your message extension, to add commands:
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
 
-An API message extension is created.
+An API-based message extension is created.
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
@@ -321,7 +321,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
       |---------|---------|
       |`repair.cs` | The main file of a function in Azure Functions. Defines an Azure Function that retrieves and filters repair records based on a query parameter from an HTTP GET request, and returns the results as a JSON response.|
       |`RepairData.cs`|The data source for the repair API. Contains a method that returns a hardcoded list of car repair tasks. |
-      |`Models/RepairModel.cs`|Defines a data model that represents a repair task with properties such as Id, Title, Description, AssignedTo, Date, and Image.|
+      |`Models/RepairModel.cs`|Defines a data model that represents a repair task with properties such as ID, Title, Description, AssignedTo, Date, and Image.|
       |`appPackage/apiSpecificationFiles/repair.yml` |  A file that describes the structure and behavior of the repair API.|
       |`appPackage/responseTemplates/repair.json` |  A generated Adaptive Card that used to render API response.|
 
