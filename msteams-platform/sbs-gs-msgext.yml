@@ -360,13 +360,13 @@ items:
     </details>
     <br>
     <details>
-    <summary>To open your app from compose area</summary>
+    <summary>To open your app from command box and compose message area</summary>
 
     Choose one of the following ways to open your app.
     
-    * **Using @mention**:
+    * **Using @mention:**
     
-      1. Enter **@your-app-name** in the command area of your app.
+      1. Enter **@your-app-name** in the command box of Teams.
        
          > [!NOTE]
          > In the new Teams client, invoke message extension using /. For example, **/your-app-name**.
@@ -391,12 +391,12 @@ items:
 
     * **Using three-dot icon:**
     
-    1. Launch the message extension from three dots at the bottom of the composing area.
-    1. Select your message extension app.       
+      1. Launch the message extension from three dots at the bottom of the composing area.
+      1. Select your message extension app.       
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension app.":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension app.":::
 
-        The message extension app loads with the options to run a search and create adaptive cards.
+         The message extension app loads with the options to run a search and create adaptive cards.
     </details>
     <br>
     <details>
@@ -415,7 +415,6 @@ items:
         The app loads in Teams.
 
     </details>
-    <br>
     <br>
     <!-- markdownlint-disable MD033 -->
     <details>

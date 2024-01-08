@@ -458,43 +458,43 @@ items:
     </details>
     <br>
     <details>
-    <summary>To open your app from compose area</summary>
+    <summary>To open your app from command box and compose message area</summary>
 
     Choose one of the following ways to open your app.
     
-    * Using @mention:
+    * **Using @mention:**
     
-    1. Enter **@your-app-name** in the command area of your app.
+      1. Enter **@your-app-name** in the command box of Teams.
        
-       > [!NOTE]
-       > In the new Teams client, invoke message extension using /. For example, **/your-app-name**.
+         > [!NOTE]
+         > In the new Teams client, invoke message extension using /. For example, **/your-app-name**.
         
-        The app opens the search box and you can use it to run a query.
+         The app opens the search box and you can use it to run a query.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/mention-mex-app-v4.png" alt-text="Screenshot that shows how to invoke the message extension app":::
+         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/mention-mex-app-v4.png" alt-text="Screenshot that shows how to invoke the message extension app":::
 
-    1. Enter a search string and select one from the search result.
+      1. Enter a search string and select one from the search result.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-box-search-v4.png" alt-text="Screenshot that shows how to run a search using the message extension app":::
+         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-box-search-v4.png" alt-text="Screenshot that shows how to run a search using the message extension app":::
 
-        It displays in the command area as a card.
+         It displays in the command area as a card.
 
-    1. Copy the card to paste it in the compose area.
+      1. Copy the card to paste it in the compose area.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-search-card-sent-v4.png" alt-text="Screenshot that shows search result in a card":::
+         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-search-card-sent-v4.png" alt-text="Screenshot that shows search result in a card":::
         
-    1. Send the card using the compose area.
+      1. Send the card using the compose area.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-search-card-sent-v4.png" alt-text="Screenshot that shows search result in a chat":::
+         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-search-card-sent-v4.png" alt-text="Screenshot that shows search result in a chat":::
 
     * **Using three-dot icon:**
     
-    1. Launch the message extension from three dots at the bottom of the composing area.
-    1. Select your message extension app.       
+      1. Launch the message extension from three dots at the bottom of the composing area.
+      1. Select your message extension app.       
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/three-dot-mex-v4.png" alt-text="Screenshot that shows how to open the sample message extension app":::
+         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/three-dot-mex-v4.png" alt-text="Screenshot that shows how to open the sample message extension app":::
 
-        The message extension app loads with the options to run a search and create adaptive cards.
+         The message extension app loads with the options to run a search and create adaptive cards.
     </details>
     <br>
     <details>
@@ -513,7 +513,6 @@ items:
         The app loads in Teams.
 
     </details>
-    <br>
     <br>
     <!-- markdownlint-disable MD033 -->
     <details>
