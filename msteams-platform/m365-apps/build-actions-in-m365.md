@@ -10,7 +10,7 @@ ms.subservice: m365apps
 
 # Build Actions in Microsoft 365
 
-When you create an app ensure that you define user intent, choose the object to perform the action, and construct the corresponding handler that facilitates task completion for the user.
+When you create an app ensure that you define user intent, determine the object to perform the action, and construct the corresponding handler that facilitates task completion for the user.
 
 To build Actions for your app, follow these steps:
 
@@ -27,13 +27,13 @@ Before you get started, ensure that you install the following tools:
 | &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that run and debug your app. Use the latest version. |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | A JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor. Which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
+| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor, which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
 
 ## Configure app manifest
 
 Add the `actions` property and define the intent, object, and handler for your actions in the app manifest (previously called Teams app manifest).
 
-The following is an example of the `intent`, `supportedobjects`, and `handlers` properties for `openPage` in app manifest:
+The following ia an app manifest example for Actions that can be triggered on files like Excel, Word, PDF, or PowerPoint:
 
 ```json
 {
@@ -75,13 +75,7 @@ When a user selects an action to open a personal tab and view related tasks in a
 
 Build the handler to receive the Action information through the [context object](/javascript/api/%40microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true) to create a seamless user experience for performing users specific tasks using the [Teams JavaScript library (TeamsJS)](/javascript/api/@microsoft/teams-js).
 
-When a user selects Add option from the app's context menu, a personal tab opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the context object `app.getContext()`.
-
-| &nbsp; | Name | Description |
-| --- | --- | --- |
-| &nbsp; | `actionId` | Maps to the Action ID supplied inside the manifest. |
-| &nbsp; | `actionObjects` | Array of corresponding action objects. |
-| &nbsp; | `itemId` | The app receives the ID as the content and uses it to query the Microsoft graph. |
+When a user selects Add option from the app's context menu, a personal tab opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the `app.getContext()` context object .
 
 The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a page from an Action and the content that initiated the Action.
 
@@ -94,6 +88,11 @@ async setItemId() {
     });
 }
 ```
+
+| &nbsp; | Name | Description |
+| --- | --- | --- |
+| &nbsp; | `actionObjects` | Array of corresponding action objects. |
+| &nbsp; | `itemId` | The app receives the ID as the content and uses it to query the Microsoft graph. |
 
 ## Access content through Graph API
 
@@ -132,19 +131,22 @@ To deploy your app in Teams Toolkit, follow these steps:
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 
-1. Select **Yes** if you receive the following security warning:
+1. If you receive the following security warning, select **Yes**:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
 
 A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
 
-You can now preview your Actions in Microsoft 365 app, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
+You can now preview your Actions in the Microsoft 365 home page, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 
 ### Enable Actions in Microsoft Admin Center
 
-Actions are available in public developer preview. To use an app with Actions in your tenant, an admin must upload the app package to the Microsoft Admin Center as follows:
+> [!NOTE]
+> Actions are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+
+To use an app with Actions in your tenant, an admin must upload the app package to the Microsoft Admin Center as follows:
 
 1. Go to [Microsoft Admin Center](https://admin.microsoft.com/AdminPortal#/homepage).
 

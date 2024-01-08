@@ -11,9 +11,8 @@ ms.subservice: m365apps
 
 > [!NOTE]
 >
-> * Actions for Microsoft 365 is available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
->
-> * Actions is supported for Microsoft 365 (Office) app for web and desktop.
+> * Actions are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Actions are supported for Microsoft 365 (Office) app for web and desktop.
 
 Get started with Actions in Microsoft 365, which helps integrate an app into the user's workflow by enabling easy discoverability and seamless interaction with their content.
 
@@ -25,7 +24,7 @@ Before you get started, ensure that you install the following tools:
 | --- | --- | --- |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | A JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor. Which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
+| &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | Visual Studio Code is a lightweight but powerful source code editor, which comes with built-in support for JavaScript, TypeScript, Node.js, and SharePoint Framework (SPFx) build environments. Use the latest version. |
 | &nbsp; | [Teams Toolkit](../toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
 
 ### Build and run the sample app
@@ -54,13 +53,13 @@ Before you get started, ensure that you install the following tools:
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 
-1. Select **Yes** if you receive the following security warning:
+1. If you receive the following security warning, select **Yes**:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
 
 A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
 
-You can now preview your Actions in Microsoft 365 app, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
+You can now preview your Actions in the Microsoft 365 home page, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 

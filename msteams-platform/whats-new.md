@@ -360,9 +360,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 December**
+**2024 January**
 
-* ***December 15, 2023***: [Actions enable your app to integrate seamlessly into the user's workflow and guide users to your app based on their intent and the content at hand, making task completion more efficient](m365-apps/actions-in-m365.md).
+* ***January 08, 2024***: [Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content](m365-apps/actions-in-m365.md).
 
 :::column-end:::
 :::row-end:::
