@@ -209,8 +209,6 @@ items:
 
         :::image type="content" source="~/assets/images/bots/filepath_1.png" alt-text="Screenshot of Project file with the file path and BotSSOCSharp.csproj file highlighted in red.":::
 
-
-
     1. Select **F5**  to run the project.
 
     1. If a **Security Warning** dialog appears, select **Yes**.
@@ -242,7 +240,7 @@ items:
 - title: Upload the bot in Teams
   durationInMinutes: 2
   content: |
-     1. In your cloned repository, go to **Microsoft-Teams-Samples > samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **BotConversationSsoQuickstart**. 
+     1. In your cloned repository, go to **Microsoft-Teams-Samples** > **samples** > **bot-conversation-sso-quickstart** > **csharp_dotnetcore** > **BotConversationSsoQuickstart**. 
      1. Create a .zip file with the following files that are present in the **appPackage** folder: 
 
         * manifest.json
