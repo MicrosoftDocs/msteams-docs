@@ -14,7 +14,7 @@ The search command is invoked from any one or both of the following locations:
 * Command box: By @mentioning in the command box.
 
   > [!NOTE]
-  > You can invoke a search command in the new Teams client using /.
+  > You can invoke a search command in the new Microsoft Teams client using /.
 
 When a search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
@@ -24,7 +24,7 @@ The following image displays the invoke locations of the search command:
 
 ## Add the search command to your app manifest
 
-To add the search command to your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal, or manually.
+To add the search command to your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions) (previously called Teams app manifest), you must add a new `composeExtensions` object to the top level of your app manifest JSON. You can add the search command either with the help of Developer Portal or manually.
 
 ### Create search message extension using Bot Framework
 
@@ -36,7 +36,7 @@ Before you get started, ensure that you meet the following requirements:
 
 * [Node.js](https://nodejs.org/en). The supported versions are 16, 18.
 * [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program)
-* [Set up your dev environment for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) Note that after you enrolled your developer tenant in Office 365 Target Release, it may take a couple days for the enrollment to take effect.
+* [Set up your dev environment for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) Note that after you've enrolled your developer tenant in Office 365 Targeted Release, it may take a couple of days for the enrollment to take effect.
 * [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI.
 
 # [Teams Toolkit](#tab/Teams-toolkit)
@@ -79,7 +79,7 @@ To run the message extension in Teams, follow these steps:
    :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
 1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
-
+    
    1. If you don't have a bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
 1. Select **Save**.
@@ -108,9 +108,9 @@ To run the message extension in Teams, follow these steps:
 ### Extend bot-based message extension as plugin
 
 > [!IMPORTANT]
-> Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+> Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Teams.
 
-Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. For more information, see [Extend bot-based message extension as plugin for Copilot for Microsoft 365](../../build-bot-based-plugin.md).
+Microsoft 365 plugins provide integration with various Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. For more information, see [extend bot-based message extension as plugin for Copilot for Microsoft 365](../../build-bot-based-plugin.md).
 
 ## Code snippets
 

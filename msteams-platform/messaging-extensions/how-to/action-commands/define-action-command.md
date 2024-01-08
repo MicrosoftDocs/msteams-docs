@@ -22,28 +22,30 @@ See the following video to learn how to define message extension action commands
 
 ## Select action command invoke locations
 
-First, you must decide the location from where your action command must be invoked. By specifying the `context` in your app manifest, your command can be invoked from one or more of the following locations:
+First, you must decide the location from where your action command must be invoked. By specifying the `context` in your app manifest (previously called Teams app manifest), your command can be invoked from one or more of the following locations:
 
 * Compose message area: The buttons at the bottom of the compose message area.
 
-    Command context = compose
+    Commands context = `compose`
 
 * Command box: By @mentioning your app in the command box.
 
-    Commands context = commandBox
+    Commands context = `commandBox`
 
    > [!NOTE]
    > 
    > * If a message extension is invoked from the command box, you can't respond with a bot message inserted directly into the conversation.
+   >
    > * You can invoke an action command in the new Teams client using /.
 
 * Message: Directly from an existing message through the `...` overflow menu on a message.
 
-    Commands context = message
+    Commands context = `message`
 
    > [!NOTE]
    >
    > * The initial invoke to your bot includes a JSON object containing the message from which it was invoked. You can process the message before presenting a dialog.
+   >
    > * When the user selects ellipses **…**, an overflow menu is displayed. However, by default, message actions for apps created by you for your organization or third-party apps aren't displayed. After the user selects **More actions**, they can see the message actions and select the required option. The respective message action is displayed in the overflow menu. The overflow menu displays the three most recent message actions. You can't pin the message action to be displayed.
 
 The following image displays the locations from where action command is invoked:
@@ -98,7 +100,7 @@ To create an action-based message extension using Developer Portal for Teams, fo
    :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
 1. If you don't have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
-
+   
    1. If you don't have a bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
 1. Select the required scopes.
@@ -108,8 +110,8 @@ To create an action-based message extension using Developer Portal for Teams, fo
    A command details page appears.
 
 1. In the Command details page, select **Action** and then select parameter type.
-
-1. 1. Select **Action**  as the type of command and update the following:
+    
+1. Select **Action**  as the type of command and update the following:
    * Command ID
    * Command title
    * Command description
@@ -139,7 +141,7 @@ To create an action-based message extension using Developer Portal for Teams, fo
 
    :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
-A search message extension using bot framework created.
+A search message extension using bot framework is created.
 
 ---
 
