@@ -122,7 +122,7 @@ The Teams Toolkit for Visual Studio Code extension is available in a pre-release
 
 ::: zone pivot="visual-studio-code-v4"
 
-The Microsoft Azure Active Directory (Azure AD) manifest contain definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
+The Microsoft Entra manifest contain definitions of all the attributes of a Microsoft Entra application object in the Microsoft identity platform.
 
 ## Prerequisites
 

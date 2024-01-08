@@ -47,7 +47,7 @@ You can configure your app to post messages to a chat and add deep links to them
 
 ### Hyperlink text message
 
-When you add a deep link to a hyperlinked markdown text message, it's triggered and opened within Teams. Following is an example:
+When you add a deep link to a hyperlinked Markdown text message, it's triggered and opened within Teams. Following is an example:
 
 Example: `[App](https://teams.microsoft.com/l/app/{appId})`, where `appId` is your application ID. To know more about different app IDs used see, [app ID used for different apps](~/concepts/build-and-test/deep-link-application.md#app-id-used-for-different-apps).
 
