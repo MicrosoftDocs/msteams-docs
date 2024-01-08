@@ -101,19 +101,6 @@ You can rely on an administrator to grant the permissions your app needs at the 
 > [!IMPORTANT]
 > Anytime you make a change to your application's permissions, you must also repeat the Admin consent process. Changes made in the app registration portal are not reflected until the consent has been reapplied by the tenant's administrator.
 
-## Disable anonymous bot joining Teams meeting
-
-To prevent the anonymous app from joining any meeting, follow these steps:
-
-* Disable RSC permissions for all apps, then no apps can be added for new meetings without users consent. Apps that users already installed for existing meetings might still access those meetings.
-
-* Tenant admin should disable the `Calls.JoinGroupCall.All` application permission.
-
-To remove RSC permission for existing apps in the meeting:
-
-* Uninstall the app from the specific meeting.
-* Delete the service principal for the app. It removes RSC permission for all meetings instances where the app is installed.
-
 ## Code sample
 
 | **Sample name** | **Description** | **.NET** |
