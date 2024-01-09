@@ -13,9 +13,8 @@ zone_pivot_groups: toolkit-cli
 
 > [!IMPORTANT]
 >
-> Teams Toolkit CLI v3 is available in developer beta version.
->
-> We recommend that you use Teams Toolkit CLI v3 for building your Teams app. TeamsFx CLI v1 and TeamsFx CLI v2 will soon be deprecated.
+> * Teams Toolkit CLI v3 is available in beta version.
+> * We recommend that you use Teams Toolkit CLI v3 to build your Teams app. TeamsFx CLI v1 and TeamsFx CLI v2 will soon be deprecated.
 
 Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
 
@@ -35,14 +34,14 @@ Following is a list of main Teams Toolkit CLI features:
 * **Teams Toolkit CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
 * Create new Teams application from templates and samples.
-* Preview your Teams application by uploading the custom app to Teams, Outlook and the Microsoft 365 app.
+* Preview your Teams application by uploading the custom app to Teams, Outlook, and the Microsoft 365 app.
 * Provision cloud resources and deploy the application to Azure.
-* Validate, package and publish application.
-* Manage multiple environments, Microsoft entra-apps and Teams app registrations.
+* Validate, package, and publish Teams application.
+* Manage multiple environments, Microsoft Entra-apps, and Teams app registrations.
 
 ## Get started
 
-Install `teamsapp` from `npm` and run `teamsapp -h` to check all available commands:
+Install `teamsapp-cli` from `npm` and run `teamsapp -h` to check all available commands:
 
 ```bash
   npm install -g @microsoft/teamsapp-cli
@@ -52,6 +51,8 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 :::image type="content" source="../assets/images/teams-toolkit-cli/npm-package-install.png" alt-text="Screenshot shows the installation of npm package.":::
 
 ## Supported commands
+
+The following table lists the supported commands for Teams Toolkit CLI v3:
 
 | Command | Description |
 |----------------|-------------|
@@ -80,6 +81,8 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 
 ## Global Options
 
+The following are the options available for each command:
+
 | Command | Description |
 |----------------|-------------|
 | `--version -v` | Display Microsoft Teams Toolkit CLI version.|
@@ -93,7 +96,7 @@ Install `teamsapp` from `npm` and run `teamsapp -h` to check all available comma
 
 ## Interactive mode
 
-Commands have different default interactive modes. Some commands are interactive and some are non-interactive by default. The default value is specified in -h for each command.
+Commands have different default interactive modes. Some commands are interactive and some are non-interactive by default. If you want to know the default interactive mode for each command, use -h for each command.
 
 ## `teamsapp doctor`
 
@@ -101,7 +104,12 @@ Prerequisites checker for building Microsoft Teams apps.
 
 ## `teamsapp new`
 
-By default, `teamsapp new` is in interactive mode and guides to create new Teams application. You can work in non-interactive mode by setting `--interactive` flag to `false`.
+By default, `teamsapp new` is in interactive mode and guides to create a new Teams application. You can work in non-interactive mode by setting `--interactive` flag to `false`.
+
+```bash
+teamsapp new   
+teamsapp new -i false
+```
 
 | Sub command | Description |
 |:----------------  |:-------------|
@@ -110,29 +118,31 @@ By default, `teamsapp new` is in interactive mode and guides to create new Teams
 
 ### Parameters for `teamsapp new`
 
+The following table lists the parameters available for `teamsapp new`:
+
 | Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name -n` | Yes| Name of your Teams application.|
-|`--capability -c`| Yes| Choose Teams application capabilities, the available options are `bot`, `ai-bot`, and `ai-assistant-bot`. Use `teamsapp list templates` to see all the available options.|
+|`--capability -c`| Yes| Select Teams application capabilities, the available options are `bot`, `ai-bot`, and `ai-assistant-bot`. Use `teamsapp list templates` to see all the available options.|
 |`--programming-language -l`| No| Programming language for the project. The available options are `javascript`, `typescript`, and `csharp`. The default value is `javascript`.|
 |`--folder -f`| No | Project directory. A sub folder with your app name is created under this directory. The default value is `./`.|
-|`--spfx-framework-type -k`| No| Applicable if `framework` capability is selected. The available options are `minimal`, `react` and `none`, and the default value is `react`.|
-|`--spfx-web part-name -w`| No | Name for SharePoint Framework Web Part. The default value is helloworld.|
-|`--spfx-folder`| No | Directory or Path that contains the existing SharePoint Framework solution.|
-|`--me-architecture -m`| No | Architecture of search based message extension. The available options are `new-api`, `api-spec`, and `bot`. The default value is `new-api`. |
+|`--spfx-framework-type -k`| No| Applicable if `framework` capability is selected. The available options are `minimal`, `react`, and `none`. The default value is `react`.|
+|`--spfx-web part-name -w`| No | Name for SharePoint Framework Web Part. The default value is `helloworld`.|
+|`--spfx-folder`| No | Directory or path that contains the existing SharePoint Framework solution.|
+|`--me-architecture -m`| No | Architecture of search-based message extension. The available options are `new-api`, `api-spec`, and `bot`. The default value is `new-api`. |
 |`--openapi-spec-location -a`| No | OpenAPI description document location. |
-|`--api-operation -o`| No | Select Operation(s) to interact with Teams. |
+|`--api-operation -o`| No | Select Operation(s) that Teams can interact with. |
 |`--bot-host-type-trigger -t`| No | Applicable if `Chat Notification Message` capability is selected. The options are `http-restify`, `http-webapi`, and `http-and-timer-functions`. The default value is `http-restify`.|
-|`--spfx-solution -s`| No| Create a new or import an existing SharePoint Framework solution. The available options are `new` and `import`, and the default value is `new`.|
+|`--spfx-solution -s`| No| Create or import an existing SharePoint Framework solution. The available options are `new` and `import`. The default value is `new`.|
 |`--spfx-install-latest-package`| No| Install the latest version of SharePoint Framework. The default value is `true`.|
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-new-parameters.png" alt-text="Screenshot shows the teamsapp new parameters.":::
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-new-parameters.png" alt-text="Screenshot shows the teamsapp new parameters. lightbox="../assets/images/teams-toolkit-cli/teamsapp-new-parameters.png":::
 
-### Scenarios for `teamsapp new`
+### `teamsapp new` scenarios
 
-You can use interactive mode to create a Teams app. The following list provides scenarios on controlling all the parameters with `teamsapp new`:
+The following is a list of scenarios to control all the parameters with `teamsapp new`:
 
-* HTTP triggered notification bot with timer triggered non-interactive mode.
+* HTTP triggered notification bot with timer triggered in non-interactive mode.
 
   ```bash
   teamsapp new -c notification -t timer-functions -l typescript -n myapp -i false
@@ -146,7 +156,7 @@ You can use interactive mode to create a Teams app. The following list provides 
 
 ## `teamsapp add`
 
-The following table lists different features to your Teams application along with their description.
+The supported feature for Teams application.
 
 | Sub command | Description |
 |:----------------  |:-------------|
@@ -156,13 +166,13 @@ The following table lists different features to your Teams application along wit
 
 ## `teamsapp auth`
 
-The following table lists the cloud service accounts, such as Azure and Microsoft 365.
+The following table lists the cloud service accounts for Teams application:
 
 | Command | Description |
 |:----------------  |:-------------|
 | `teamsapp auth list` | Display all connected Microsoft 365 and Azure accounts. |
-| `teamsapp auth login`  | Log in to the selected cloud service. Service options are Microsoft 365 or Azure. |
-| `teamsapp auth logout`  | Log out of selected cloud service. Service options are Microsoft 365 or Azure. |
+| `teamsapp auth login`  | Log in to the selected cloud service. The available options are Microsoft 365 or Azure. |
+| `teamsapp auth logout`  | Log out of selected cloud service. The available options are Microsoft 365 or Azure. |
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-auth.png" alt-text="Screenshot shows the teamsapp auth commands.":::
 
@@ -178,7 +188,7 @@ Manage the Microsoft Entra app in the current application.
 
 ## `teamsapp env`
 
-Manage environments.
+Manage Teams application environments.
 
 |  Command  | Description |
 |:----------------  |:-------------|
@@ -187,7 +197,7 @@ Manage environments.
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-env.png" alt-text="Screenshot shows the teamsapp env commands.":::
 
-### Scenarios for `teamsapp env`
+### `teamsapp env` scenario
 
 Create a new environment by copying from the existing dev environment:
 
@@ -201,6 +211,8 @@ List available Microsoft Teams app templates and samples.
 
 ### Parameters for `teamsapp list`
 
+The following table lists the parameters available for `teamsapp list`:
+
 | Command | Description |
 |:----------------  |:-------------|
 | `--samples` |  List of available Teams app samples. |
@@ -210,7 +222,7 @@ List available Microsoft Teams app templates and samples.
 
 ## `teamsapp help`
 
-Show Microsoft Teams Toolkit CLI help.
+The `teamsapp help` command displays all the commands available for Teams Toolkit CLI.
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-help.png" alt-text="Screenshot shows the teamsapp help commands.":::
 
@@ -218,9 +230,11 @@ Show Microsoft Teams Toolkit CLI help.
 
 Run the provision stage in `teamsapp.yml`.
 
-Running `teamsapp provision --env local` triggers the provision stage in `teamsapp.local.yml` instead.
+To trigger the provision stage in `teamsapp.local.yml`, run `teamsapp provision --env local`.
 
 ### Parameters for `teamsapp provision`
+
+The following table lists the parameters available for `teamsapp provision`:
 
 | Parameters | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -231,9 +245,11 @@ Running `teamsapp provision --env local` triggers the provision stage in `teamsa
 
 Run the deploy stage in `teamsapp.yml`.
 
-Running `teamsapp deploy --env local` triggers the deploy stage in `teamsapp.local.yml` instead.
+To trigger the deploy stage in `teamsapp.local.yml`, run `teamsapp deploy --env local`.
 
 ### Parameters for `teamsapp deploy`
+
+The following table lists the parameters available for `teamsapp deploy`:
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -245,6 +261,8 @@ Running `teamsapp deploy --env local` triggers the deploy stage in `teamsapp.loc
 Build your Teams app into a package for publishing.
 
 ### Parameters for `teamsapp package`
+
+The following table lists the parameters available for `teamsapp package`:
 
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
@@ -260,6 +278,8 @@ Build your Teams app into a package for publishing.
 Validate the Teams app using manifest schema or validation rules.
 
 ### Parameters for `teamsapp validate`
+
+The following table lists the parameters available for `teamsapp validate`:
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
