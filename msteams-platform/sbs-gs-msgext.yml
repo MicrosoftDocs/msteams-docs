@@ -356,7 +356,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension from the message compose area.":::
 
-     The message extension app loads with the options to run a search.
+       The message extension app loads with the options to run a search.
    
    </details>
    <br>
@@ -376,7 +376,7 @@ items:
    1. A list of your message extension apps appears in your most recent Teams chat. Select your message extension app from the list.
 
    </details>
-   <br>
+   
    ### Learn how to troubleshoot if your app doesn't run locally
 
    To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the Prerequisites section.
