@@ -346,11 +346,13 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the card sent in a chat.":::
 
    </details>
+
    <br>
    <details>
    <summary>Open your app from message compose area</summary>
-   <br>
+
    1. Select the three dots at the bottom of the message compose area.
+
    1. Select your message extension app.
 
          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension from the message compose area.":::
