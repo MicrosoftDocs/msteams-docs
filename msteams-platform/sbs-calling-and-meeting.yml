@@ -83,8 +83,6 @@ items:
     
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
-    [!INCLUDE [API Permission](includes/get-started/azure-api-permissions.md)]
-
     **Add API permissions for downstream calls**
 
     > [!NOTE]
@@ -174,16 +172,9 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    Configure the bot sample to understand how to authenticate conversational bot in Microsoft Teams, create the Teams app package, and upload it to the organization.
-    
-    1. Update the appsettings.json file in Visual Studio.
-    1. Update teh manifest.json file in Visual Studio and compress it to the zip file in File Explorer.
 
-    1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** folder.
-    1. Open the **appsettings.json** file in Visual Studio and update configuration for the bot.
-
-        * Get the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously.
-        * Get the `tenantId` or `UserId` from Teams. To get the `tenantId`, follow these steps:
+    1. Get the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously.
+    1. Get the `tenantId` or `UserId` from Teams. To get the `tenantId`, follow these steps:
           
            1. Select **Teams**.
 
@@ -212,29 +203,37 @@ items:
             > [!NOTE]
             > `TenantId` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denote to whom you want to redirect or transfer the call.
 
-    1. Replace `MicrosoftAppId`, `ClientId`, and `AppId` with Microsoft App ID and `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with **Value**.
-    1. Replace `BotBaseUrl` with `ngrok` URL.
-    1. Replace `TenantId` with `UserId`.
-    1. Replace `DisplayName` with `Id`.
+    **Update app settings**
+    1. Go to the **appsettings.json** file in the cloned repository..
+    1. Open the **appsettings.json** file in Visual Studio and update the following information:  
+
+         * Replace `MicrosoftAppId`, `ClientId`, and `AppId` with **Microsoft App ID**.
+         * Replace `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with **Value** of your bot's **Client secret**.
+         * Replace `BotBaseUrl` with `ngrok` URL.
+         * Replace `TenantId` with `UserId`.
+         * Replace `DisplayName` with `Id`.
 
         :::image type="content" source="./assets/images/calls-and-meetings/appsettings_1.png" alt-text="Screenshot of Appsettings.json displaying the details of appsettings.":::
 
     1. Select **Save**.
 
-    **To update manifest**
+    **Update app manifest**
 
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** > **Manifest** folder.
-    1. Open the `manifest.json` file in Visual Studio.
-    1. In the `manifest.json` file, replace {id} and {BotId} with your Microsoft App ID.
-    1. Add ngrok url in **validDomains** excluding https://.
+    1. Open the `manifest.json` file in Visual Studio and make the following changes:
+         * Replace `{id}`` and `{BotId}` with your **Microsoft App ID**.
+         * Replace all occurrences of `{{domain-name}}` with your ngrok or dev tunnel domain name.
 
         :::image type="content" source="./assets/images/calls-and-meetings/manifest_1.png" alt-text="Screenshot of manifest displaying the details of manifest." lightbox= "./assets/images/calls-and-meetings/app_manifest.png" :::
 
-    1. Zip the contents of the **Manifest** folder to create `manifest.zip`.
-    
-        > [!NOTE]
-        > The `manifest.zip` must not contain any extra folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
-        
+- title: Build and run the service
+  durationInMinutes: 1
+  content: |
+    To build and run the service, use Visual Studio:
+
+       1. Open **Visual Studio**.
+       1. Go to **File** > **Open** > **Project/Solution..**.
+
     1. Run the calling and meeting bot solution in Visual Studio.
 
     1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-calling-meeting** > **csharp** > **Source** > **CallingBotSample.sln**.
@@ -246,7 +245,16 @@ items:
        A webpage opens with a message **Your bot is ready!**.
 
        :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready." lightbox="~/assets/images/calls-and-meetings/your-bot-is-ready.png":::
-    
+
+- title: Add meeting side panel to Teams
+  durationInMinutes: 1
+  content: |
+
+    1. In your cloned repository, go to **csharp > SidePanel > AppManifest**.    
+    1. Zip the contents of the **Manifest** folder to create `manifest.zip`.
+        > [!NOTE]
+        > The `manifest.zip` must not contain any extra folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
+        
     1. In the Teams client, select the **Apps** icon.
     
     1. Select **Manage your apps**.
