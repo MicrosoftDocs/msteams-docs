@@ -323,13 +323,13 @@ items:
 
    1. Enter `/` followed by your message extension app's name in the command box.
         
-        The app opens in the command box and you can use it to run a query.
-
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to mention the message extension app in the search bar of Teams.":::
 
-   > [!NOTE]
-   > * Using `/` to open your message extension app from the command box only works in the new version of the Teams client.
-   > * Use '@' to open your message extension app from the command box in the classic version of the Teams client.
+        The app opens in the command box and you can use it to run a query.
+
+       > [!NOTE]
+       > * Using `/` to open your message extension app from the command box only works in the new version of the Teams client.
+       > * Use `@` to open your message extension app from the command box in the classic version of the Teams client.
 
    1. Enter a search string and select one from the search result.
 
@@ -345,8 +345,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the card sent in a chat.":::
 
-   <details>
-   <br>
+   </details>
    <br>
    <details>
    <summary>Open your app from message compose area</summary>
@@ -378,12 +377,9 @@ items:
 
    </details>
    <br>
-   <!-- markdownlint-disable MD033 -->
-   <details>
-   <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+   ### Learn how to troubleshoot if your app doesn't run locally
 
    To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the Prerequisites section.
-   </details>
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
