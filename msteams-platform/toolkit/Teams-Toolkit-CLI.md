@@ -486,12 +486,12 @@ Get launch information of an acquired Microsoft 365 App.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `--title-id` | Title ID of the acquired M365 App. |
-| `--manifest-id` | Manifest ID of the acquired M365 App. |
+| `--title-id` | Title ID of the acquired Microsoft 365 App. |
+| `--manifest-id` | Manifest ID of the acquired Microsoft 365 App. |
 
 ### Scenarios for `teamsapp launchinfo`
 
-Get launch information of the acquired M365 App by Title ID.
+Get launch information of the acquired Microsoft 365 App by Title ID.
 
 ```bash
 teamsapp launchinfo --title-id U_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -1287,9 +1287,9 @@ The following list provides required permissions for `TeamsFx` projects:
     * Update Tab code, and deploy the project to remote.
     * Launch remote and the project.
 
-## Deploy to azure web app manually
+## Deploy to Azure web app manually
 
-1. Create a SSO enable tab.
+1. Create an SSO enable tab.
 2. Provision your project:
 
       ```bash
