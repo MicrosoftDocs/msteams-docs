@@ -16,7 +16,7 @@ items:
   content: |
     Microsoft Teams calling and meeting bot provides basic functionalities such as create a call, join a call, transfer or redirect a call, join a scheduled meeting, and invite the participants by integrating the cloud communications Graph API.
     
-    Bots can interact with Teams calls and meetings using real time voice, video, and screen sharing. With Microsoft Graph APIs for calls and online meetings, Teams apps can interact with users using voice and video to enhance their experience. These APIs allow you to add the following new features:
+    Bots can interact with Teams calls and meetings using real time voice, video, and screen sharing. Teams apps can interact with users using voice and video to enhance their experience with Microsoft Graph APIs for calls and online meetings. These APIs allow you to add the following new features:
 
     * Use Interactive Voice Response (IVR).
     * Use call control.
@@ -24,7 +24,7 @@ items:
 
     Create a bot and specify additional information and permissions to use these Graph APIs in a Teams app.
  
-    This step-by-step guide helps you to set up Teams calling and meeting bot. You can see the following output after you've completed this guide:
+    This step-by-step guide helps you to set up Teams calling and meeting bot. You'll see the following output:
 
     :::image type="content" source="./assets/images/calls-and-meetings/final-output.png" alt-text="Screenshot of calling and meeting bot output after you've successfully completed the step-by-step guide.":::
 
@@ -53,16 +53,16 @@ items:
 - title: Register Microsoft Entra app
   durationInMinutes: 5
   content: |
-    Register an application using app registration in the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph API. Following are the steps:
+    To register an application using the Microsoft Azure portal for your app to integrate with the Microsoft identity platform and call Microsoft Graph API, perform the following steps:
 
-    1. Create a ngrok tunnel to the endpoints of your web server.
-    1. Create Azure bot resource to register bot with Azure bot service.
-    1. Create client secret that enables single sign-on (SSO) authentication of the bot.
-    1. Create a policy for a demo tenant user for creating online meetings using PowerShell.
-    1. Add API permissions for downstream calls.
-    1. Create bot channel registration in Azure account.
-    1. Add Microsoft Teams channel to deploy the bot to a Teams channel.
-    1. Add messaging endpoint to the ngrok tunnel you created.
+    * Create a ngrok tunnel to the endpoints of your web server.
+    * Create Azure bot resource to register bot with Azure bot service.
+    * Create client secret that enables single sign-on (SSO) authentication of the bot.
+    * Create a policy for a demo tenant user for creating online meetings using PowerShell.
+    * Add API permissions for downstream calls.
+    * Create bot channel registration in Azure account.
+    * Add Microsoft Teams channel to deploy the bot to a Teams channel.
+    * Add messaging endpoint to the ngrok tunnel you created.
 
 
     [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
@@ -85,14 +85,11 @@ items:
 
     **Add API permissions for downstream calls**
 
-    > [!NOTE]
-    > Ensure that your account can grant admin consent for Microsoft. After adding permissions, select `Grant admin consent for Microsoft` to know the status of the consent.
-
-    1. In **Manage** pane of your bot, select **API permissions**.
-    1. Select **Add a permission**. **Request API permissions** window appears.
-    1. Select **Microsoft APIs** > **Microsoft Graph**.
+    1. In the left pane, under **Manage**, select **API permissions**.
+    1. Select **+ Add a permission**.
+    1. Select **Microsoft Graph**.
     1. Select **Application permissions**.
-    1. In **Select permissions**, add the following Graph API applications permissions to your Azure App and grant admin consent:
+    1. In **Select permissions**, add the following Graph API applications permissions to your Azure App:
         * `Calls.AccessMedia.All`
         * `Calls.Initiate.All`
         * `Calls.InitiateGroupCall.All`
@@ -103,12 +100,16 @@ items:
 
          :::image type="content" source="./assets/images/calls-and-meetings/api-permissions_1.png" alt-text="Screenshot of Calling-Meeting-Bot API permissions with Manage, API permissions, Add a permission, Microsoft Graph, Application permissions, and Add permissions highlighted in red." lightbox="./assets/images/calls-and-meetings/api-permissions_1.png":::
 
+     > [!NOTE]
+     > Ensure that your account can grant admin consent for Microsoft. After adding permissions, select `Grant admin consent for Microsoft` to know the status of the consent.
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
     [!INCLUDE [Azure client application](includes/get-started/azure-client-application.md)]
 
-    **Create a policy for a demo tenant user to create online meetings using the following PowerShell script**:
+    **Create a policy**
+
+    To create a policy for a demo tenant user to create online meetings using the PowerShell script, perform the following steps:
 
     1. Run Windows PowerShell PSI as an administrator and execute the script.
 
@@ -122,7 +123,7 @@ items:
         >   * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
         >   * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
 
-     1. Replace the following in **Windows PowerShell** script:
+     1. Replace the following fields in **Windows PowerShell** script:
 
         |Field | Description |
         |----------------|-----------------|
@@ -136,7 +137,9 @@ items:
 
          :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer.png" alt-text="Screenshot of Microsoft Graph with graph explorer highlighted in red.":::
 
-     1. Select **Run query**. A response is generated under **Response preview**.
+     1. Select **Run query**. 
+        A response is generated under **Response preview**.
+
      1. Copy the value of the `id` property from the **Response preview** and replace with the object ID in the PowerShell script.
 
          :::image type="content" source="~/assets/images/calls-and-meetings/graph-explorer-id.png" alt-text="Screenshot of graph explorer displaying the response preview." lightbox="~/assets/images/calls-and-meetings/graph-explorer-run-query.png":::
@@ -176,27 +179,27 @@ items:
     1. Get the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously.
     1. Get the `tenantId` or `UserId` from Teams. To get the `tenantId`, follow these steps:
           
-           1. Select **Teams**.
+         * Select **Teams**.
 
-           1. Select More options (...).
+         * Select More options (...).
 
-           1. Select **Get link to team**.
+         * Select **Get link to team**.
 
-             :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot of Teams with Get link to Team under overflow menu highlighted in red.":::
+          :::image type="content" source="./assets/images/calls-and-meetings/teams-final.png" alt-text="Screenshot of Teams with Get link to Team under overflow menu highlighted in red.":::
         
-           1. You can obtain the `displayName` and `id` from  site:
+         * You can obtain the `displayName` and `id` from  site:
 
-           1. Sign in to [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) using your Teams tenant account.
+         * Sign in to [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) using your Teams tenant account.
 
-           1. Add `Users` at the end of the URl in the search box.
+         * Add `Users` at the end of the URl in the search box.
 
-           1. Select **Run query**.
+         * Select **Run query**.
             
-             :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_1.png" alt-text="Screenshot of Microsoft Graph with users in the URI highlighted in red.":::
+           :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_1.png" alt-text="Screenshot of Microsoft Graph with users in the URI highlighted in red.":::
 
-              The display names and user IDs linked to your account are generated. 
+           The display names and user IDs linked to your account are generated. 
               
-           1. Select any three accounts and add them to the `DisplayName` and `UserId` in the appsettings.json file.
+         * Select any three accounts and add them to the `DisplayName` and `UserId` in the appsettings.json file.
        
               :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_2.png" alt-text="Screenshot of Tenant Contoso with `displayName` and `id` highlighted in red." lightbox="./assets/images/calls-and-meetings/graph-explorer_2.png":::
        
@@ -204,6 +207,7 @@ items:
             > `TenantId` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denote to whom you want to redirect or transfer the call.
 
     **Update app settings**
+    
     1. Go to the **appsettings.json** file in the cloned repository..
     1. Open the **appsettings.json** file in Visual Studio and update the following information:  
 
@@ -246,7 +250,7 @@ items:
 
        :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready." lightbox="~/assets/images/calls-and-meetings/your-bot-is-ready.png":::
 
-- title: Add meeting side panel to Teams
+- title: Add calling and meeting bot to Teams
   durationInMinutes: 1
   content: |
 
