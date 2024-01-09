@@ -60,28 +60,6 @@ items:
 
     A tenant is a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
 
-    ### Check for upload an app option
-
-    After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
-
-    > [!NOTE]
-    > Ensure that you enable app uploading to preview and test apps in Teams local environment.
-
-    Custom app upload is enabled through a tenant and admin must give an access to upload a custom app.
-    Do you already have a tenant and an admin access? Let's check if you really do!
-
-    Verify if you can upload apps in Teams:
-
-    1. In the Teams client, select the **Apps** icon.
-    1. Select **Manage your apps**.
-    1. Select **Upload an app**.
-    1. Look for the option to **Upload a customised app**. If the option is visible, you enabled custom app upload.
-
-    :::image type="content" source="~/assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of Upload a customised app.":::
-
-      > [!NOTE]
-      > Contact your Teams administrator, if you don't find the option to upload a customised app.
-
     ### Create a free Teams developer tenant (optional)
 
     If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
@@ -91,7 +69,7 @@ items:
     1. In the welcome screen, select **Set up E5 subscription**.
     1. Set up your administrator account. After you finish, the following screen appears.
 
-    :::image type="content" source="~/assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+        :::image type="content" source="~/assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
     1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a customised app** option in Teams.
    
@@ -113,8 +91,6 @@ items:
     ## Create your bot project workspace
 
     If the prerequisites are in place, let's begin!
-
-    # [Visual Studio Code](#tab/vsc)
 
     1. Open Visual Studio Code.
 
@@ -159,29 +135,7 @@ items:
 
             :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
-    # [Command line](#tab/cli)
-
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
-
-    ``` bash
-    teamsfx new
-    ```
-
-    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
-
-    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
-
-    1. Select **AI Chat Bot** and select **Enter**.
-
-    1. Select **JavaScript** as the programming language and select **Enter**.
-
-    1. Select **Enter** to select the default workspace folder.
-
-    1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
-
-    After you've answered all questions, your project is created.
-
-    ---
+            Now you've successfully created your AI chat bot project workspace.
 
     ## Take a tour of the bot app source code
 
@@ -208,8 +162,6 @@ items:
 
     Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-    # [Visual Studio Code](#tab/vsc)
-
     1. Open Visual Studio Code.
 
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
@@ -225,29 +177,6 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/test-tool/sideload.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
     Now you're ready to build the app and run it locally!
-
-    # [Command line](#tab/cli)
-
-    1. Sign in to Microsoft 365 with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login m365
-        ```
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-    2. Sign in to Azure with the TeamsFx CLI:
-
-        ``` bash
-        teamsfx account login azure
-        ```
-
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
-
-        The account logins are shared between Visual Studio Code and the TeamsFx CLI.
-
-        Congratulations, you have signed in your Azure account!
-        Now that the development environment is configured, you can create, build, and deploy your first Teams app.
-    ---
 
     ## Create an app registration in Microsoft Entra ID
 
