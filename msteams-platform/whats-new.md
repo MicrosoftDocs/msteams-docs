@@ -24,15 +24,12 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2023 December**
+**2024 January**
 
-* ***December 20, 2023***: [Incoming Webhooks are available in GCC-High environment.](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)
-* ***December 20, 2023***: [Introduced RSC permissions for users to access different resources.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access)
-* ***December 18, 2023***: [App caching in chat, channel, and meeting tab scopes is available for iOS](tabs/how-to/app-caching.md).
-* ***December 15, 2023***: [Bots can mention tags in text messages and Adaptive Cards posted in Teams channels](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention).
-* ***December 12, 2023***: [Use Teams AI library to build apps that can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md).
+***January 04, 2024***: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 
-* **December 12, 2023**: [Use Teams AI library to build apps that can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md).
+:::column-end:::
+:::row-end:::
 
 <br/>
 
@@ -42,6 +39,11 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|20/12/2023|Incoming Webhooks are available in GCC-High environment.|[Build webhooks and connectors](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md)|
+|20/12/2023|Introduced RSC permissions for users to access different resources.| Utilize Teams data with Microsoft Graph > [Resource-specific consent for your Teams app](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access) |
+|18/12/2023|App caching in chat, channel, and meeting tab scopes is available for iOS.| Buils tabs > [App caching for your tab app](tabs/how-to/app-caching.md) |
+|15/12/2023|Bots can mention tags in text messages and Adaptive Cards posted in Teams channels.| Build bots > Bot conversation > [Channel and group chat conversations with a bot](bots/how-to/conversations/channel-and-group-conversations.md#tag-mention) |
+|12/12/2023|Use Teams AI library to build apps that can leverage LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills.|Build bots > [Teams AI library](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)|
 |21/11/2023|Terminology update. LOB apps is referred to as custom apps built for your org (LOB apps).||
 |20/11/2023|Use captureImage API to capture an image or select media from the gallery for mobile clients.|Integrate device capabilities > [Integrate media capabilities](concepts/device-capabilities/media-capabilities.md)|
 |17/11/2023|Terminology update. Sideload is referred to as upload a custom app.||
@@ -206,7 +208,7 @@ Explore updates from the previous GA releases listed here.
 |10/05/2021| Hide Teams app until Admin allows to un-hide the app | Design your app > [Block apps by default for users until an admin approves](concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |10/05/2021| Plan your apps for Teams mobile | App fundamentals > [Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
 |10/04/2021| New Developer Portal for Teams introduced for managing your Teams apps | Tools and SDK > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md) |
-|09/21/2021|Teams supports Azure AD Object ID and UPN in user mention for bots and Incoming Webhooks | • Build cards and task modules > Build cards > [Azure AD Object ID and UPN in user mention](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • Build cards and task modules > Build cards > [Cards- Overview](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
+|09/21/2021|Teams supports Microsoft Entra Object ID and UPN in user mention for bots and Incoming Webhooks | • Build cards and task modules > Build cards > [Microsoft Entra Object ID and UPN in user mention](task-modules-and-cards/what-are-cards.md#support-for-azure-ad-object-id-and-upn-in-user-mention) </br> • Build cards and task modules > Build cards > [Cards- Overview](task-modules-and-cards/cards/cards-format.md#format-cards-with-markdown) |
 |08/16/2021| Support for input validation on Adaptive Cards (v1.3 for all capabilities) and Universal Actions (v1.4 for bot sent cards) | • Adaptive cards > Authoring cards > [Input validation](/adaptive-cards/authoring-cards/input-validation)</br> • Build cards and task modules > Build cards > Universal actions for adaptive cards > [Universal Actions for Adaptive Cards v1.4](task-modules-and-cards/cards/universal-actions-for-adaptive-cards/overview.md) |
 |08/30/2021| Custom Together Mode scenes feature combines participants into a single virtual scene and places their video streams in pre-determined seats | Build apps for Teams meetings > [Custom Together Mode scenes](~/apps-in-teams-meetings/teams-together-mode.md) |
 |08/25/2021| Introduced step-by-step guide to create a Teams bot with Single sign-on (SSO) | Add authentication > Bots > [Step-by-step guide to create Teams bot with SSO](sbs-bots-with-sso.yml) |
@@ -328,7 +330,7 @@ Explore updates from the previous GA releases listed here.
 | 05/29/2018 | Adaptive cards are supported in Teams. | [Adaptive card actions in Teams](task-modules-and-cards/cards/cards-reference.md) |
 | 04/17/2018 | replyToID is added to the payload for the `Invoke` and `MessageBack` card actions. This is especially useful if you need to update the message that the card action came from. | [Card actions](~/concepts/cards/cards-actions.md)|
 | 04/12/2018 | Added this topic to track changes to the Teams programming interface and this documentation set. | [What's new](~/whats-new.md)|
-| 04/10/2018 | Changed authentication URLs to consistently use the tenant ID in the path. | [Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab.md), [Azure AD Tab authentication](~/concepts/authentication/auth-tab-AAD.md)|
+| 04/10/2018 | Changed authentication URLs to consistently use the tenant ID in the path. | [Authentication flow for Tabs](~/concepts/authentication/auth-flow-tab.md), [Microsoft Entra Tab authentication](~/concepts/authentication/auth-tab-AAD.md)|
 | 04/06/2018 | Added design guidelines for using the Command Box. |[Command box](~/resources/design/framework/command-box.md)|
 | 04/02/2018 | Using bots to send notifications for your app. |[Notification-only bots](~/concepts/bots/bots-notification-only.md)|
 | 03/27/2018 | Expanded documentation for proactive messaging. |[Starting a conversation](./concepts/bots/bot-conversations/bots-conv-proactive.md)|
