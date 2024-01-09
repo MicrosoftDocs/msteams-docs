@@ -268,9 +268,9 @@ The following table lists the parameters available for `teamsapp package`:
 |:----------------  |:-------------|:-------------|
 | `--env` | No | Select an existing environment for the project. |
 | `--env-file` | No | Select an .env file that defines the variables to replace in the manifest template file. |
-| `--manifest-file` | No | Select the manifest file path, defaults to `${folder}/appPackage/manifest.json`. |
-| `--output-package-file` | No | Select the output path of the zipped app package, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. |
-| `--output-manifest-file` | No | Select the output manifest file path, defaults to `${folder}/appPackage/build//manifest.${env}.json`. |
+| `--manifest-file` | No | Select the manifest file path. Defaults to `${folder}/appPackage/manifest.json`. |
+| `--output-package-file` | No | Select the output path of the zipped app package. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. |
+| `--output-manifest-file` | No | Select the output manifest file path. Defaults to `${folder}/appPackage/build//manifest.${env}.json`. |
 | `--folder -f` | No | Select root folder of the project. Defaults to `./`. |
 
 ## `teamsapp validate`
@@ -285,10 +285,10 @@ The following table lists the parameters available for `teamsapp validate`:
 |:----------------  |:-------------|:-------------|
 | `--env` | No | Select an existing environment for the project. |
 | `--env-file` | No | Select an .env file that defines the variables to replace in the manifest template file. |
-| `--manifest-file` | No | Select the input Teams app manifest file path, defaults to `${folder}/appPackage/manifest.json`. |
+| `--manifest-file` | No | Select the input Teams app manifest file path. Defaults to `${folder}/appPackage/manifest.json`. |
 |`--package-file` | No | Select the zipped Teams app package file path.|
-|`--output-package-file` | No | Select the output zipped Teams app package file path, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`.|
-|`--output-manifest-file` | No | Select the output Teams app manifest file path, defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
+|`--output-package-file` | No | Select the output zipped Teams app package file path. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`.|
+|`--output-manifest-file` | No | Select the output Teams app manifest file path. Defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
 | `--folder -f` | No | Select root folder of the project. Defaults to `./`. |
 
 ## `teamsapp preview`
@@ -297,28 +297,28 @@ Preview the current application.
 
 ### Parameters for `teamsapp preview`
 
+The following table lists the parameters available for `teamsapp preview`:
+
 | Parameter | Required | Description |
 |:---------------- | :------------- | :------------- |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--env` | No | Select an existing env for the project. Defaults to `local`. |
-| `--teams-manifest-file -t` | No | Select the Teams app manifest template file path, defaults to `${folder}/appPackage/manifest.json`. |
-| `--run-command -c` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsapp` uses the auto detected one from project type (`npm run dev:teamsapp` or `dotnet run` or `func start`). If empty, `teamsapp` skips starting local service. |
-| `--running-pattern -p` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsapp` uses the default common pattern (started/successfully/finished/crashed/failed). If empty, `teamsapp` treats process start as ready signal. |
-| `--open-only -o` | No | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
+| `--teams-manifest-file -t` | No | Select the Teams app manifest template file path. Defaults to `${folder}/appPackage/manifest.json`. |
+| `--run-command -c` | No | The command to start local service. Works for `local` environment only. If undefined, `teamsapp` uses the auto detected service from project type (`npm run dev:teamsapp`,  `dotnet run`, `func start`). If empty, `teamsapp` skips starting local service. |
+| `--running-pattern -p` | No | The ready signal output that service is launched. Works for `local` environment only. If undefined, `teamsapp` uses the default common pattern (started/successfully/finished/crashed/failed). If empty, `teamsapp` treats process start as ready signal. |
+| `--open-only -o` | No | Works for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
 | `--m365-host -m` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app. The available options are `teams`, `outlook`, and `office`. The default value is `teams`. |
 | `--browser -b` | No | Select browser to open Teams web client. The available options are `chrome`, `edge`, and `default`. Defaults to `default`. |
-| `--browser-arg -ba` | No | Argument to pass to the browser, for example, --browser-args="--guest. |
-| `--exec-path -ep` | No | The paths that are added to the system environment variable PATH when the command is executed, defaults to `${folder}/devTools/func`. The default value is `devTools/func`.|
+| `--browser-arg -ba` | No | Argument to pass to the browser. For example, --browser-args="--guest. |
+| `--exec-path -ep` | No | The paths that are added to the system environment variable PATH when the command is executed. The default value is `devTools/func`.|
 
 ### Scenarios for `teamsapp preview`
 
 The following list provides the common scenarios for `teamsapp preview`:
 
-`teamsapp preview` expects users have already ran `teamsapp provision` and `teamsapp deploy`.
+`teamsapp preview` must be used after `teamsapp provision` and `teamsapp deploy`.
 
-* Local Preview
-
-  Dependencies:
+* Local Preview: The following are the dependencies to use local preview:
 
   * Node.js
   * .NET SDK
@@ -345,15 +345,17 @@ Run the publish stage in `teamsapp.yml`.
 
 ### Parameters for `teamsapp publish`
 
+The following table lists the parameters available for `teamsapp publish`:
+
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | No | Select an environment for the project. |
 | `--env-file` | No | Select an .env file that defines the variables to replace in the manifest template file. |
-| `--manifest-file` | No | Select the input Teams app manifest file path, defaults to `${folder}/appPackage/manifest.json`.|
-|`--package-file` | No | Select the zipped Teams app package file path.|
-|`--output-package-file` | No | Select the output zipped Teams app package file path, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`.|
-|`--output-manifest-file` | No | Select the output Teams app manifest file path, defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
-| `--folder -f` | No |Select root folder of the project. Defaults to `./`. |
+| `--manifest-file` | No | Select the input Teams app manifest file path. Defaults to `${folder}/appPackage/manifest.json`.|
+|`--package-file` | No | Select the Teams app package zip file path.|
+|`--output-package-file` | No | Select the output Teams app package zip file path. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`.|
+|`--output-manifest-file` | No | Select the output Teams app manifest file path. Defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
+| `--folder -f` | No |Select the root folder of the project. Defaults to `./`. |
 
 ## `teamsapp collaborator`
 
@@ -368,47 +370,45 @@ Check, grant, and list user permission to access and manage Teams application an
 
 ### Parameters for `teamsapp collaborator status`
 
+The following table lists the parameters available for `teamsapp collaborator status`:
+
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | No | Select an existing environment for the project. |
 | `--folder -f` | No | Select root folder of the project. Defaults to `./`. |
-| `--teams-manifest-file -t` | No | Select the manifest template file path, defaults to `${folder}/appPackage/manifest.json`. |
-| `--entra-app-manifest-file -a` | No | Select the Entra manifest template file path, defaults to `${folder}/aad.manifest.json`. |
+| `--teams-manifest-file -t` | No | Select the manifest template file path. Defaults to `${folder}/appPackage/manifest.json`. |
+| `--entra-app-manifest-file -a` | No | Select the Entra manifest template file path. Defaults to `${folder}/aad.manifest.json`. |
 | `--all -a` | No | List all collaborators. |
 
 ### Parameters for `teamsapp collaborator grant`
+
+The following table lists the parameters available for `teamsapp collaborator grant`:
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder -f` | No | Select root folder of the project. Defaults to `./`. |
 | `--email` | No | Input email address of the collaborator. |
-| `--teams-manifest-file -t` | No | Select the manifest template file path, defaults to `${folder}/appPackage/manifest.json`. |
-| `--entra-app-manifest-file -a` | No | Select the Entra app manifest file path, defaults to `${folder}/aad.manifest.json`. |
+| `--teams-manifest-file -t` | No | Select the manifest template file path. Defaults to `${folder}/appPackage/manifest.json`. |
+| `--entra-app-manifest-file -a` | No | Select the Entra app manifest file path. Defaults to `${folder}/aad.manifest.json`. |
 
 ### Scenarios for `teamsapp collaborator`
 
-* Grant permission
-
-  Grant permission for another Microsoft 365 account to collaborate on the Teams app:
+* Grant permission: Grant permission for another Microsoft 365 account to collaborate on the Teams application.
 
   ```typescript
   teamsapp collaborator grant -i false --teams-manifest-file ./appPackage/manifest.json --env dev --email other@email.com
   ```
 
-  After you receive the required permission, project creator and collaborators can share the project with the new collaborator by GitHub, and the new collaborator can have all the permissions for Microsoft 365 account.
+  After you receive the required permission, project creator and collaborators can share the project with the new collaborator by GitHub and the new collaborator can have all the permissions for Microsoft 365 account.
 
-* Show permission status
-
-  Project creator and collaborators can use `teamsapp collaborator status` command to view Microsoft 365 account permission for specific env:
+* Show permission status: Project creator and collaborators can use `teamsapp collaborator status` command to view Microsoft 365 account permission for specific env.
 
   ```typescript
   teamsapp permission status --env dev
   ```
 
-* List all collaborators
-
-  Project creator and collaborators can use `teamsapp collaborator status` command to view all collaborators for specific env:
+* List all collaborators: Project creator and collaborators can use `teamsapp collaborator status` command to view all collaborators for specific env.
 
   ```typescript
   teamsapp collaborator status --env dev --list-all-collaborators
@@ -420,14 +420,16 @@ Update the Teams app manifest to Teams Developer Portal.
 
 ### Parameters for `teamsapp update`
 
+The following table lists the parameters available for `teamsapp update`:
+
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env-file` |  | Select an .env file that defines the variables to replace in the manifest template file. |
 | `--folder -f` |  | Select root folder of the project. Defaults to `./` |
-| `--manifest-file` |  | Specifies the Teams app manifest file path. Default value: `./appPackage/manifest.json`. |
+| `--manifest-file` |  | Specifies the Teams app manifest file path. The default value is `./appPackage/manifest.json`. |
 | `--package-file` |  | Specifies the zipped Teams app package file path. |
-| `--output-package-file` |  | Specifies the output zipped Teams app package file path. Default value: `./appPackage/build/appPackage.${env}.zip`. |
-| `--output-manifest-file` |  | Specifies the final output Teams app manifest file path. Default value: `./appPackage/build/manifest.${env}.json`. |
+| `--output-package-file` |  | Specifies the output zipped Teams app package file path. The default value is `./appPackage/build/appPackage.${env}.zip`. |
+| `--output-manifest-file` |  | Specifies the final output Teams app manifest file path. The default value is `./appPackage/build/manifest.${env}.json`. |
 
 ## `teamsapp upgrade`
 
@@ -435,15 +437,19 @@ Upgrade the project to work with the latest version of Teams Toolkit.
 
 ### Parameters for `teamsapp upgrade`
 
+The following table lists the parameters available for `teamsapp upgrade`:
+
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
-| `--force -f` | No | Force upgrade the project to work with the latest version of Teams Toolkit. Defaults value: `false`. |
+| `--force -f` | No | Force upgrade the project to work with the latest version of Teams Toolkit. The defaults value is `false`. |
 
 ## `teamsapp install`
 
 Sideload a given application package across Microsoft 365.
 
 ### Parameters for `teamsapp install`
+
+The following table lists the parameters available for `teamsapp install`:
 
 | Command | Description |
 |:----------------  |:-------------|
@@ -466,13 +472,13 @@ teamsapp install --xml-path manifest.xml
 
 ### Scenarios for `teamsapp uninstall`
 
-Remove the acquired Microsoft 365 App by Title ID.
+Remove the acquired Microsoft 365 app by title ID.
 
 ```bash
 teamsapp uninstall --title-id U_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-Remove the acquired Microsoft 365 App by Manifest ID.
+Remove the acquired Microsoft 365 app by manifest ID.
 
 ```bash
 teamsapp uninstall --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -480,24 +486,26 @@ teamsapp uninstall --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## `teamsapp launchinfo`
 
-Get launch information of an acquired Microsoft 365 App.
+Get launch information of an acquired Microsoft 365 app.
 
 ### Parameters for `teamsapp launchinfo -h`
 
+The following table lists the parameters available for `teamsapp launchinfo -h`:
+
 | Command | Description |
 |:----------------  |:-------------|
-| `--title-id` | Title ID of the acquired Microsoft 365 App. |
-| `--manifest-id` | Manifest ID of the acquired Microsoft 365 App. |
+| `--title-id` | Title ID of the acquired Microsoft 365 app. |
+| `--manifest-id` | Manifest ID of the acquired Microsoft 365 app. |
 
 ### Scenarios for `teamsapp launchinfo`
 
-Get launch information of the acquired Microsoft 365 App by Title ID.
+Get launch information of the acquired Microsoft 365 app by title ID.
 
 ```bash
 teamsapp launchinfo --title-id U_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-Get launch information of the acquired M365 App by Manifest ID.
+Get launch information of the acquired M365 app by manifest ID.
 
 ```bash
 teamsapp launchinfo --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -505,14 +513,16 @@ teamsapp launchinfo --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## `teamsapp uninstall`
 
-Remove an acquired M365 App.
+Remove an acquired M365 app.
 
 ### Parameters for `teamsapp uninstall`
 
+The following table lists the parameters available for `teamsapp uninstall`:
+
 | Command | Description |
 |:----------------  |:-------------|
-| `--title-id` | Title ID of the acquired M365 App. |
-| `--manifest-id` | Manifest ID of the acquired M365 App. |
+| `--title-id` | Title ID of the acquired M365 app. |
+| `--manifest-id` | Manifest ID of the acquired M365 app. |
 
 ::: zone-end
 
