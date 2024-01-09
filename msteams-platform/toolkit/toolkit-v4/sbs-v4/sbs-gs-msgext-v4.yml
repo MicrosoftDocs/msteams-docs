@@ -457,67 +457,76 @@ items:
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/mex-card-sent-v4.png" alt-text="Screenshot that shows the card sent":::
     </details>
     <br>
+    
+    ## Other methods to open your message extension app
+
+    You created a card in the message extension app in the previous step. Now, learn the different ways to open the message extension app.
+    <br>
+    <br>
     <details>
-    <summary>To open your app from compose area</summary>
+    <summary>Open your app from command box</summary>
 
-    Choose one of the following ways to open your app.
-    
-    * **Using `@mention`:**
-    
-    1. Enter `@your-app-name` in the command area of your app.
+    1. Enter **/** followed by your message extension app's name in the command box.
         
-        The app opens the search box and you can use it to run a query.
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to mention the message extension app in the search bar of Teams.":::
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/mention-mex-app-v4.png" alt-text="Screenshot that shows how to @mention the message extension app":::
+        The app opens in the command box and you can use it to run a query.
 
-    1. Enter a search string, and select one from the search result.
+       > [!NOTE]
+       > * Using **/** to open your message extension app from the command box only works in the new Teams client.
+       > * Use **@** to open your message extension app from the command box in the classic Teams client.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-box-search-v4.png" alt-text="Screenshot that shows how to run a search using the message extension app":::
+    1. Enter a search string and select one of the search results.
 
-        It displays in the command area as a card.
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot shows how to use the search functionality of the message extension app.":::
 
-    1. Copy the card to paste it in the compose area.
+        The message extension displays the search result as a card in the command box.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-search-card-sent-v4.png" alt-text="Screenshot that shows search result in a card":::
+    1. Copy the card to paste it in the message compose area.
+
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot shows the search result in a card.":::
         
-    1. Send the card using the compose area.
+    1. Select **Enter**. The message extension app sends the card with the search result in the most recent chat.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-search-card-sent-v4.png" alt-text="Screenshot that shows search result in a chat":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the card sent in a chat.":::
 
-    * **Using three-dot icon:**
-    
-    1. Launch the message extension from three dots at the bottom of the composing area.
-    1. Select your message extension app.       
-
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/three-dot-mex-v4.png" alt-text="Screenshot that shows how to open the sample message extension app":::
-
-        The message extension app loads with the options to run a search and create adaptive cards.
     </details>
+
+    <br>
+    <details>
+    <summary>Open your app from message compose area</summary>
+
+    1. Select the three dots at the bottom of the message compose area.
+
+    1. Select your message extension app.
+
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension from the message compose area.":::
+
+         The message extension app loads with the options to run a search.
+
+    </details>
+
     <br>
     <details>
     <summary>Run the app from uploaded custom apps</summary>
 
-    You can open a uploaded Teams app from the list of uploaded apps. 
+    1. Select **Apps** > **Manage your apps**.
 
-    1. Select the **Apps** from the Teams sidebar.
-    1. Select the **Manage apps**.
-
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/sideloaded-apps-v4.png" alt-text="Screenshot that shows uploaded custom apps":::
-
-    1. Select the three dots icon for your app, and then select **View details**. You can also copy link to the app and use it to open the app.
-    1. Select **Open** to load the app, and then select **Try it**. 
+    1. Select the dropdown for your app from the list of apps and select **Personal app**.
         
-        The app loads in Teams.
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-scopes-mex-app.png" alt-text="Screenshot shows the app scope of your message extension app.":::
+
+    1. A dialog box appears suggesting you to try out your app. Select **Try it**.
+        
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-added-local-debug.png" alt-text="Screenshot shows the message to try the message extension app now or later.":::
+        
+    1. A list of your message extension apps appears in your most recent Teams chat. Select your message extension app from the list.
 
     </details>
-    <br>
-    <br>
-    <!-- markdownlint-disable MD033 -->
-    <details>
-    <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-    To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the prerequisites section.
-    </details>
+    ### Learn how to troubleshoot if your app doesn't run locally
+
+    To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the Prerequisites section.
 
 - title: Deploy your first Teams app
   durationInMinutes: 1
