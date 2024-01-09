@@ -136,7 +136,7 @@ The following table lists the parameters available for `teamsapp new`:
 |`--spfx-solution -s`| No| Create or import an existing SharePoint Framework solution. The available options are `new` and `import`. The default value is `new`.|
 |`--spfx-install-latest-package`| No| Install the latest version of SharePoint Framework. The default value is `true`.|
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-new-parameters.png" alt-text="Screenshot shows the teamsapp new parameters. lightbox="../assets/images/teams-toolkit-cli/teamsapp-new-parameters.png":::
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-new-parameters.png" alt-text="Screenshot shows the teamsapp new parameters."lightbox="../assets/images/teams-toolkit-cli/teamsapp-new-parameters.png":::
 
 ### `teamsapp new` scenarios
 
