@@ -321,15 +321,15 @@ items:
    <details>
    <summary>Open your app from command box</summary>
 
-   1. Enter */* followed by your message extension app's name in the command box.
+   1. Enter **/** followed by your message extension app's name in the command box.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to mention the message extension app in the search bar of Teams.":::
 
         The app opens in the command box and you can use it to run a query.
 
        > [!NOTE]
-       > * Using */* to open your message extension app from the command box only works in the new version of the Teams client.
-       > * Use *@* to open your message extension app from the command box in the classic version of the Teams client.
+       > * Using **/** to open your message extension app from the command box only works in the new version of the Teams client.
+       > * Use **@** to open your message extension app from the command box in the classic version of the Teams client.
 
    1. Enter a search string and select one of the search results.
 
@@ -351,20 +351,20 @@ items:
    <summary>Open your app from message compose area</summary>
     
    1. Select the three dots at the bottom of the message compose area.
-   
+
    1. Select your message extension app.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension from the message compose area.":::
 
         The message extension app loads with the options to run a search.
-   
+
    </details>
    <br>
    <details>
    <summary>Run the app from uploaded custom apps</summary>
 
    1. Select **Apps** > **Manage your apps**.
-   
+
    1. Select the dropdown for your app from the list of apps and select **Personal app**.
         
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-scopes-mex-app.png" alt-text="Screenshot shows the app scope of your message extension app.":::
@@ -376,7 +376,7 @@ items:
    1. A list of your message extension apps appears in your most recent Teams chat. Select your message extension app from the list.
 
    </details>
-   
+
    ### Learn how to troubleshoot if your app doesn't run locally
 
    To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the Prerequisites section.
