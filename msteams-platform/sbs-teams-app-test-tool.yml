@@ -77,7 +77,7 @@ items:
     1. Select **Upload an app**.
     1. Look for the option to **Upload a customised app**. If the option is visible, you enabled custom app upload.
 
-    :::image type="content" source="../../assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of Upload a customised app.":::
+    :::image type="content" source="~/assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of Upload a customised app.":::
 
       > [!NOTE]
       > Contact your Teams administrator, if you don't find the option to upload a customised app.
@@ -91,7 +91,7 @@ items:
     1. In the welcome screen, select **Set up E5 subscription**.
     1. Set up your administrator account. After you finish, the following screen appears.
 
-    :::image type="content" source="../../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
+    :::image type="content" source="~/assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
     1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a customised app** option in Teams.
    
