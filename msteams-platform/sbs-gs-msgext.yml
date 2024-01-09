@@ -313,32 +313,29 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot shows the search result sent in chat.":::
 
-   ## Other ways to open your message extension app
+   ## Other methods to open your message extension app
 
    You tested the search feature of the message extension app in the previous step. Now, learn the different ways to open the message extension app.
    <br>
    <br>
    <details>
-   <summary>Open your app from message compose area</summary>
+   <summary>Open your app from command box</summary>
 
-   There are two ways to open your app from the message compose area.
-    
-   * Use `@mention`:
-
-   > [!NOTE]
-   > Using `@mention` to open your message extension app only works in the classic version of the Teams client.
-
-   1. Enter your app's name in the search box.
+   1. Enter `/` followed by your message extension app's name in the command box.
         
-        The app opens in the search box and you can use it to run a query.
+        The app opens in the command box and you can use it to run a query.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to mention the message extension app in the search bar of Teams.":::
+
+   > [!NOTE]
+   > * Using `/` to open your message extension app from the command box only works in the new version of the Teams client.
+   > * Use '@' to open your message extension app from the command box in the classic version of the Teams client.
 
    1. Enter a search string and select one from the search result.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot shows how to use the search functionality of the message extension app.":::
 
-        The message extension displays the search string as a card in the search box.
+        The message extension displays the search string as a card in the command box.
 
    1. Copy the card to paste it in the message compose area.
 
@@ -348,7 +345,11 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the card sent in a chat.":::
 
-   * Use three-dot icon:
+   <details>
+   <br>
+   <br>
+   <details>
+   <summary>Open your app from message compose area</summary>
     
    1. Select the three dots at the bottom of the message compose area.
    
@@ -357,6 +358,7 @@ items:
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension from the message compose area.":::
 
      The message extension app loads with the options to run a search.
+   
    </details>
    <br>
    <details>
