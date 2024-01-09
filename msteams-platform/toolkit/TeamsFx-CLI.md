@@ -47,7 +47,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 |----------------|-------------|
 | `teamsfx new`| Create a new Microsoft Teams application.|
 | `teamsfx add`| Add feature to your Microsoft Teams application.|
-| `teamsfx account`| Manage Microsoft 365 and Azure accounts. The supported cloud services are 'Azure' and 'Microsoft 365'. |
+| `teamsfx account`| Manage Microsoft 365 and Azure accounts. The supported cloud services are Azure and Microsoft 365. |
 | `teamsfx env` | Manage environments. |
 | `teamsfx help` | Show Microsoft Teams Toolkit CLI help. |
 | `teamsfx list` | List available Microsoft Teams application templates and samples. |
@@ -58,7 +58,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 | `teamsfx publish` | Run the publish stage in teamsapp.yml.|
 | `teamsfx preview` | Preview the current application. |
 | `teamsfx m365`  | M365 App Management. |
-| `teamsfx permission`| Check, grant and list permissions for who can access and manage Microsoft Teams application and Microsoft Entra application. |
+| `teamsfx permission`| Check, grant, and list permissions for who can access and manage Microsoft Teams application and Microsoft Entra application. |
 | `teamsfx update` | Update the specific application manifest file. |
 | `teamsfx upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
 
@@ -330,12 +330,12 @@ Check, grant, and list user permission.
 
 ## `teamsfx update`
 
-Update the specific application manifest file.
+Update the specific app manifest file.
 
 | Command | Description |
 |:----------------  |:-------------|
 | `teamsfx update aad-app` | Update the Microsoft Entra App in the current application. |
-| `teamsfx update teams-app` | Update the Teams App manifest to Teams Developer Portal. |
+| `teamsfx update teams-app` | Update the Teams app manifest to Teams Developer Portal. |
 
 ### Parameters for `teamsfx update aad-app`
 
@@ -502,7 +502,7 @@ Provision the cloud resources in the current application.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx provision manifest` | Provision a Teams App in Teams Developer portal with corresponding information specified in the given manifest file. |
+| `teamsfx provision manifest` | Provision a Teams app in Teams Developer portal with corresponding information specified in the given app manifest file. |
 
 ### Parameters for `teamsfx provision`
 
@@ -801,7 +801,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 6. Modify `templates/azure/provision/frontendHosting.bicep`.
 
-7. Provision again. Teams Toolkit updates Microsoft Entra ID, and manifest for you.
+7. Provision again. Teams Toolkit updates Microsoft Entra ID, and app manifest for you.
 
 8. Find your `appPackage.dev.zip` in build, or AppPackage folder, and add to Teams.
 
