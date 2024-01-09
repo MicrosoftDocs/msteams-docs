@@ -451,14 +451,14 @@ To see both the app and the add-in running at the same time, take the following 
 1. In the **ACCOUNTS** section, verify that you are signed into Microsoft 365.
 1. Select **View** | **Run** in Visual Studio Code. In the **RUN AND DEBUG** drop down menu, select the option, **Launch App and Add-in Outlook Desktop (Edge Chromium)**, and then press F5. The project builds and a Webpack dev-server window opens to host the add-in. The tab app is hosted in the Visual Studio Code terminal. This process may take a couple of minutes. Eventually, both of the following will happen:
 
-    - Teams opens in a browser with a prompt to add your tab app. *If Teams has not opened by the time Outlook desktop opens, then automatic sideloading has failed.* You can manually sideload it to see both the app and the add-in running at the same time. For sideloading instructions, see [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload). You'll find the manifest.zip file to upload at `C:\Users\{yourname}\AppData\Local\Temp`.
+    - Teams opens in a browser with a prompt to add your tab app. *If Teams has not opened by the time Outlook desktop opens, then automatic sideloading has failed.* You can manually sideload it to see both the app and the add-in running at the same time. For sideloading instructions, see [Upload your app in Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload). You'll find the manifest.zip file to upload at `C:\Users\{yourname}\AppData\Local\Temp`.
     - Outlook desktop opens.
 
 1. In the Teams prompt, select **Add** and the tab will open.
 1. In Outlook, open the **Inbox** *of your Microsoft 365 account identity* and open any message. A **Contoso Add-in** tab with two buttons will appear on the **Home** ribbon (or the **Message** ribbon, if you have opened the message in its own window).
 1. Click the **Show Taskpane** button and a task pane opens. Click the **Perform an action** button and a small notification appears near the top of the message.
 1. To stop debugging and uninstall the add-in, select **Run** | **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window does not close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
-1. If you had to manually sideload the Teams Tab app, remove it from Teams as instructed in [Remove your app](../concepts/deploy-and-publish/apps-upload#remove-your-app). 
+1. If you had to manually sideload the Teams Tab app, remove it from Teams as instructed in [Remove your app](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload#remove-your-app). 
 
 ## Move the application to Azure
 
@@ -605,6 +605,6 @@ To see both the app and the add-in running at the same time, take the following 
 
 There are other commonly suggested next steps, for example:
 
-- Add authentication and make a Graph API call. For the tab capability, see [Add single sign-on to Teams app](../toolkit/add-single-sign-on). For the add-in capability, see [Enable single sign-on (SSO) in an Office Add-in](/office/dev/add-ins/develop/sso-in-office-add-ins).
+- Add authentication and make a Graph API call. For the tab capability, see [Add single sign-on to Teams app](/microsoftteams/toolkit/add-single-sign-on). For the add-in capability, see [Enable single sign-on (SSO) in an Office Add-in](/office/dev/add-ins/develop/sso-in-office-add-ins).
 - [Set up CI/CD pipelines](https://github.com/OfficeDev/TeamsFx/wiki/How-to-automate-cicd-pipelines)
 - [Call a backend API](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app)
