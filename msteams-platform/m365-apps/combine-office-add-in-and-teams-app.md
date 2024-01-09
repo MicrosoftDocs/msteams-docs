@@ -605,6 +605,6 @@ To see both the app and the add-in running at the same time, take the following 
 
 There are other commonly suggested next steps, for example:
 
-- Add authentication and make a Graph API call. For the tab capability, see [Add single sign-on to Teams app](/microsoftteams/toolkit/add-single-sign-on). For the add-in capability, see [Enable single sign-on (SSO) in an Office Add-in](/office/dev/add-ins/develop/sso-in-office-add-ins).
+- Add authentication and make a Graph API call. For the tab capability, see [Add single sign-on to Teams app](/microsoftteams/platform/toolkit/add-single-sign-on). For the add-in capability, see [Enable single sign-on (SSO) in an Office Add-in](/office/dev/add-ins/develop/sso-in-office-add-ins).
 - [Set up CI/CD pipelines](https://github.com/OfficeDev/TeamsFx/wiki/How-to-automate-cicd-pipelines)
 - [Call a backend API](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app)
