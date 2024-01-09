@@ -824,6 +824,9 @@
       - name: Build Adaptive Card-based Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
+  - name: Add an Outlook Add-in to a Teams app
+    href: m365-apps/combine-office-add-in-and-teams-app.md
+    displayName: Microsoft 365, Office 365, Outlook add-in
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
