@@ -82,7 +82,7 @@ In Visual Studio, press **F5** or choose **Start Debugging** from the **Debug** 
 
 ### Update your app package with Manifest editor
 
-After upload your app package into App Studio, you must finish configuring it.
+After uploading your app package into App Studio, you must finish configuring it.
 
 Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
