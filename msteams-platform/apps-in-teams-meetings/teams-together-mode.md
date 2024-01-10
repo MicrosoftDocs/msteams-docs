@@ -21,16 +21,6 @@ Discover a new way to collaborate with Custom Together Mode scenes in Microsoft 
 
 Get started and transform your Teams meetings with Custom Together Mode scenes.
 
-## Prerequisites
-
-Before you start, you must be familiar with the following prerequisites:
-
-* Scene and assign seats in a scene.
-* Microsoft Developer account and familiarity with the [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
-* [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
-
-Ensure that the administrator has granted permission to [upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app) and select all filters as part of app setup and meeting policies respectively.
-
 ## Custom Together Mode scene
 
 Custom Together Mode scene is an artifact and you can create a scene using Microsoft Scene studio. Participants have seats with video streams in a conceived scene setting, and the videos are rendered in those seats. A scene only app is still an app in Teams and we recommended to use scene only apps for better experience. Scene studio handles the app package creation in the background. Multiple scenes in a single app package appear as a flat list to the users.
@@ -44,7 +34,17 @@ Custom Together Mode scene is an artifact and you can create a scene using Micro
 > [!NOTE]
 > Users can't initiate Custom Together Mode on a mobile. However, if they join a meeting through mobile and Together Mode is enabled on desktop, their mobile video will appear in Together Mode on desktop.
 
-## Best practices to create a scene
+## Prerequisites
+
+Before you start, you must be familiar with the following prerequisites:
+
+* Scene and assign seats in a scene.
+* Microsoft Developer account and familiarity with the [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md).
+* [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+
+Ensure that the administrator has granted permission to [upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app) and select all filters as part of app setup and meeting policies respectively.
+
+## Limitations and best practices
 
 To create a best scene, ensure that you follow the following practices:
 
