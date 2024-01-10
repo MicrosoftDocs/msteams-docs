@@ -36,6 +36,7 @@ Features supported by the Live Share core package include:
 - Coordinate app state that disappears when users leave the session with `LiveState`.
 - Synchronize a countdown timer with `LiveTimer`.
 - Send real-time events to other clients in the session with `LiveEvent`.
+- Present to and follow other users with `LiveFollowMode`.
 - Leverage any feature of Fluid Framework, such as `SharedMap` and `SharedString`.
 
 You can find more information about this package on the [core capabilities page](./teams-live-share-capabilities.md).

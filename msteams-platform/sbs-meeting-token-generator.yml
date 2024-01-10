@@ -70,7 +70,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-- title: Register Azure AD app 
+- title: Register Microsoft Entra app 
   durationInMinutes: 5
   content: |
     The following steps help you to create and register your bot in Azure portal:
@@ -254,10 +254,10 @@ items:
 
        1. Select **Save**. 
        
-          Your test tenant can permit custom app sideloading.
+          Your test tenant can permit custom app upload.
 
           > [!NOTE]
-          > The sideloading takes some time to become active.
+          > Custom app upload takes some time to become active.
 
     1. Go to **Microsoft Teams**.
     
@@ -345,4 +345,3 @@ items:
     See how your application looks like in a real-time scenario:
 
     :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-realtime.png" alt-text="Screenshot of the meeting token generator of application in real-time scenario.":::
-

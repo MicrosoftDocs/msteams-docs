@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Collaborate on Teams project using Microsoft Teams Toolkit
 
-Multiple developers can work together to debug, provision, and deploy the same Teams Toolkit project, but it requires manually setting the right permissions of Teams App and Microsoft Azure Active Directory (Azure AD). Teams Toolkit's collaboration feature simplifies this process between developers and project owners.
+Multiple developers can work together to debug, provision, and deploy the same Teams Toolkit project, but it requires manually setting the right permissions of Teams App and Microsoft Entra ID. Teams Toolkit's collaboration feature simplifies this process between developers and project owners.
 
 ## Collaborate with other developers
 
@@ -35,7 +35,7 @@ The following sections guide us to understand the collaboration process as proje
         :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add-owner.png" alt-text="Screenshot shows the Add project owner.":::
         * (Optional) Select and confirm Teams `manifest.json` file.
         :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest.png" alt-text="Screenshot shows the Teams manifest file.":::
-        * (Optional) Select and confirm Azure AD app `aad.manifest.json` file.
+        * (Optional) Select and confirm Microsoft Entra app `aad.manifest.json` file.
         :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/browse-1.png" alt-text="Screenshot shows the Browse option.":::
         * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image.
         :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-owner.png" alt-text="Screenshot shows the owner name to confirm.":::
@@ -46,7 +46,7 @@ The following sections guide us to understand the collaboration process as proje
         :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/add-owner.png" alt-text="Screenshot shows the Add project owner.":::
         * (Optional) Select and confirm Teams `manifest.json` file.
         :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/manifest.png" alt-text="Screenshot shows the Teams manifest file.":::
-        * (Optional) Select and confirm Azure AD app `aad.manifest.json` file.
+        * (Optional) Select and confirm Microsoft Entra app `aad.manifest.json` file.
         :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/browse-1.png" alt-text="Screenshot shows the Browse option.":::
         * Input the M365 account email address you want to add as app owner. The account to be added must be on the same tenant as project owner for remote debug as shown in the image.
         :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/confirm-owner.png" alt-text="Screenshot shows the owner name to confirm.":::
@@ -79,10 +79,10 @@ Removing collaborators requires the following manual steps:
   * Select **Owners** from left panel.
   * Select and remove the collaborator.
 
-* Using Azure Active Directory
+* Using Microsoft Entra ID
 
-  * Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD app.
-  * Select **Owners** from left panel in Azure AD app management page.
+  * Go to [Microsoft Entra ID](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Microsoft Entra app.
+  * Select **Owners** from left panel in Microsoft Entra app management page.
   * Select and remove the collaborator.
 
     > [!NOTE]

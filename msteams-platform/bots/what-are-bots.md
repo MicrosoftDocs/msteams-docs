@@ -21,17 +21,17 @@ It's recommended to start with [build your first bot app using JavaScript](../sb
 >
 > * When a user changes the Teams theme in a bot, the theme doesn’t apply to the content shared using an Adaptive Card.
 
-Conversational bots allow users to interact with your web service using text, interactive cards, and task modules.
+Conversational bots allow users to interact with your web service using text, interactive cards, and dialogs (referred as task modules in TeamsJS v1.x).
 
 :::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="The screenshot is an example that shows a web service using text."lightbox="../assets/images/invokebotwithtext.png":::
 
 :::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="The screenshot is an example that shows a web service using interactive cards."lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
-:::image type="content" source="../assets/images/task-module-example.png" alt-text="The screenshot is an example that shows a web service using task module." lightbox="../assets/images/task-module-example-expanded.png":::
+:::image type="content" source="../assets/images/task-module-example.png" alt-text="The screenshot is an example that shows a web service using dialog." lightbox="../assets/images/task-module-example-expanded.png":::
 
 Conversational bots are incredibly flexible. Bots can handle a few basic commands or complex tasks that involve artificial intelligence and natural language processing. Bots can be part of a larger application or be standalone.
 
-Use the right mix of cards, text, and task modules to create a useful bot. The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
+Use the right mix of cards, text, and dialogs to create a useful bot. The following image shows a user conversing with a bot in a one-to-one chat using text and interactive cards.
 
 :::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="The screenshot is an example that shows a sample FAQ bot.":::
 
@@ -54,7 +54,7 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 You can add single sign-on authentication to your conversation bot using the following steps:
 
 * [Create Teams conversation bot](../sbs-teams-conversation-bot.yml)
-* [Configure your bot app in Azure AD](~/bots/how-to/authentication/bot-sso-register-aad.md)
+* [Configure your bot app in Microsoft Entra ID](~/bots/how-to/authentication/bot-sso-register-aad.md)
 
 <!--- TBD: For quick scanning, see if the above information can be itemized as a list.
 --->
@@ -85,6 +85,6 @@ Bot configuration experience helps the users to interact with the bot in Teams. 
 * [Test and debug your Microsoft Teams bot](../resources/bot-v3/bots-test.md)
 * [Build your first bot app using JavaScript](../sbs-gs-bot.yml)
 * [Add authentication to your Teams bot](how-to/authentication/add-authentication.md)
-* [Use task modules from bots](../task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Use dialogs from bots](../task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Create Incoming Webhooks](../webhooks-and-connectors/how-to/add-incoming-webhook.md)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)

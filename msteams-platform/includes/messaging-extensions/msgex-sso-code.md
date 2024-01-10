@@ -11,7 +11,7 @@ This section covers:
 
 ## Update development environment variables
 
-You've configured client secret and OAuth connection setting for the app in Azure AD. You must configure your app code with these variables.
+You've configured client secret and OAuth connection setting for the app in Microsoft Entra ID. You must configure your app code with these variables.
 
 To update the development environment variables:
 
@@ -19,9 +19,9 @@ To update the development environment variables:
 1. Open the `./env` file for your project.
 1. Update the following variables:
 
-    - For `MicrosoftAppId`, update the Bot registration ID from Azure AD.
+    - For `MicrosoftAppId`, update the Bot registration ID from Microsoft Entra ID.
     - For `MicrosoftAppPassword`, update the Bot registration client secret.
-    - For `ConnectionName`, update the name of the OAuth connection you configured in Azure AD.
+    - For `ConnectionName`, update the name of the OAuth connection you configured in Microsoft Entra ID.
     - For `MicrosoftAppTenantId`, update the tenant ID.
 
 1. Save the file.
@@ -227,7 +227,7 @@ When the app user selects the user name, the permission is granted and they can 
 
 :::image type="content" source="~/assets/images/authentication/teams-sso-mex/me-sso-completed.png" alt-text="SSO authentication completed for message extension app":::
 
-The consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. After consenting, the app user can access and use your message extension app for the granted permissions and scopes.
+The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. After consenting, the app user can access and use your message extension app for the granted permissions and scopes.
 
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
@@ -375,8 +375,8 @@ There are a number of libraries available that can handle JWT validation. Basic 
 
 Keep in mind the following guidelines when validating the token:
 
-- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token must start with this value.
-- The token's `aud1` parameter is set to the app ID generated during Azure AD app registration.
+- Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
+- The token's `aud1` parameter is set to the app ID generated during Microsoft Entra app registration.
 - The token's `scp` parameter is set to `access_as_user`.
 
 #### Example access token

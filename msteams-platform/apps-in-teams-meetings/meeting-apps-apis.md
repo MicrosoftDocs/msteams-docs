@@ -694,13 +694,13 @@ GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
 | Property name | Description |
 |---|---|
 | **user.id** | ID of the user. |
-| **user.aadObjectId** | Azure Active Directory object ID of the user. |
+| **user.aadObjectId** | Microsoft Entra object ID of the user. |
 | **user.name** | Name of the user. |
 | **user.givenName** | First Name of the user.|
 | **user.surname** | Last Name of the user. |
 | **user.email** | Mail ID of the user. |
 | **user.userPrincipalName** | UPN of the user. |
-| **user.tenantId** | Azure Active Directory tenant ID. |
+| **user.tenantId** | Microsoft Entra tenant ID. |
 | **user.userRole** | Role of the user. For example, 'admin' or 'user'. |
 | **meeting.role** | The participant's role in the meeting. For example, 'Organizer' or 'Presenter' or 'Attendee'. |
 | **meeting.inMeeting** | The value indicating if the participant is in the meeting. |
@@ -727,8 +727,8 @@ You can also send targeted in-meeting notification to a specific participant in 
 > [!NOTE]
 >
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
-> * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Azure Active Directory (Azure AD) ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
+> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-dialog) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Entra ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### Query parameter
 
@@ -885,7 +885,7 @@ You must configure your [app manifest](../resources/schema/manifest-schema.md) w
 
 > [!NOTE]
 >
-> * The API payload only permits a task module with a URL.
+> * The API payload only permits a dialog with a URL.
 > * The user ID formats **aadObjectid** and **UPN** aren't supported.
 
 Get supported user ID format for targeted in-meeting notification and app icon badging:
@@ -1249,8 +1249,8 @@ The JSON response body for meeting details API is as follows:
 | **conversation.conversationType** | The conversation type. |
 | **conversation.id** | The meeting chat ID. |
 | **organizer.id** | The Organizer's user ID. |
-| **organizer.aadObjectId** | The Organizer's Azure Active Directory object ID. |
-| **organizer.tenantId** | The Organizer's Azure Active Directory tenant ID. |
+| **organizer.aadObjectId** | The Organizer's Microsoft Entra object ID. |
+| **organizer.tenantId** | The Organizer's Microsoft Entra tenant ID. |
 
 In case of recurring meeting type:
 
@@ -1508,16 +1508,16 @@ The following code provides an example of meeting end event payload:
 | **channelId** | Channel this activity is associated with. |
 | **serviceUrl** | Service URL where responses to this activity should be sent. |
 | **from.id** | ID of the user that sent the request. |
-| **from.aadObjectId** | Azure Active Directory object ID of the user that sent the request. |
+| **from.aadObjectId** | Microsoft Entra object ID of the user that sent the request. |
 | **conversation.isGroup** | Boolean indicating whether conversation has more than two participants. |
-| **conversation.tenantId** | Azure Active Directory tenant ID of the conversation or meeting. |
+| **conversation.tenantId** | Microsoft Entra tenant ID of the conversation or meeting. |
 | **conversation.id** | The meeting chat ID. |
 | **recipient.id** | ID of the user that receives the request. |
 | **recipient.name** | Name of the user that receives the request. |
 | **entities.locale** | entity that contains metadata about locale. |
 | **entities.country** | entity that contains metadata about country. |
 | **entities.type** | entity that contains metadata about client. |
-| **channelData.tenant.id** | Azure Active Directory tenant ID. |
+| **channelData.tenant.id** | Microsoft Entra tenant ID. |
 | **channelData.source** | The source name from where event is fired or invoked. |
 | **channelData.meeting.id** | The default ID associated with the meeting. |
 | **value.MeetingType** | The type of meeting. |

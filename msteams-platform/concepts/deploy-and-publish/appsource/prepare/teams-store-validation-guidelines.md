@@ -50,7 +50,7 @@ Following these guidelines increases the chances of your app to pass the Microso
      :::image type="icon" source="../../../../assets/icons/messaging-extension.png" link="#message-extensions" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/task-module.png" link="#task-modules" border="false":::
+      :::image type="icon" source="../../../../assets/icons/task-module.png" link="#dialogs" border="false":::
    :::column-end:::
 :::row-end:::
 
@@ -278,6 +278,8 @@ Don't include domains outside of your organization's control (including wildcard
 
 * If your app uses the Azure Bot Service's OAuthCard, you must include *token.botframework.com* as a valid domain or else the Sign in button won't work. You mustn't declare *.botframework.com* as wildcards aren't allowed with this domain name. [*Mandatory Fix*]
 
+* OpenAPI URLs must be under partner control.
+
 * Following External Domains aren't allowed: [*Mandatory Fix*]
   * *.azurewebsites.net
   * *.azureedge.com
@@ -318,7 +320,7 @@ App must warn users before downloading any files or executables (.exe) into the 
 
 [*Mandatory Fix*]
 
-Apps mustn't take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, tabs, and task modules.
+Apps mustn't take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, tabs, and dialogs (referred as task modules in TeamsJS v1.x).
 <br>
 </br>
 
@@ -424,11 +426,11 @@ The app manifest defines your app's configuration.
 
 * Your app manifest must conform to a publicly released app manifest schema. For more information, see [app manifest reference](~/resources/schema/manifest-schema.md). Don't submit your app using a preview version of the app manifest.
 * If your app includes a bot or message extension, details in the app manifest must be consistent with Bot Framework metadata including bot name, logo, privacy policy link, and terms of service link.
-* If your app uses Azure Active Directory for authentication, include the Microsoft Azure Active Directory (Azure AD) Application (client) ID in the app manifest. For more information, see the [app manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
+* If your app uses Microsoft Entra ID for authentication, include the Microsoft Entra Application (client) ID in the app manifest. For more information, see the [app manifest reference](~/resources/schema/manifest-schema.md#webapplicationinfo).
 
 ### Uses of latest app manifest schema
 
-* If your app uses Single sign-on (SSO), you must declare Microsoft Azure Active Directory (Azure AD) ID in the app manifest for user authentication. [*Mandatory Fix*]
+* If your app uses Single sign-on (SSO), you must declare Microsoft Entra ID in the app manifest for user authentication. [*Mandatory Fix*]
 
 * You must use a publicly released app manifest schema. You can update your app package to use a public version of app manifest schema 1.10 or later. [*Mandatory Fix*]
 
@@ -469,6 +471,7 @@ Your icons must communicate your app's brand and purpose while adhering to the f
    :::image type="content" source="../../../../assets/images/submission/color-outline-icon-not-same.png" alt-text="Screenshot shows color icon and outline icon aren’t same.":::
 
 * Your app package must include two .png versions of your app icon: A color icon and an outline icon. [*Mandatory Fix*]
+* The marketplace icon uploaded as part of the app's marketplace listing in your Partner Center account must match the color icon provided in your app package. [*Mandatory Fix*]
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background. [*Mandatory Fix*]
 * The outline version of your icon is displayed in the following scenarios:
   * When your app is in use and **hosted** on the app bar on the left side of Teams.
@@ -683,6 +686,7 @@ If you choose to submit a video as part of your app listing in your Partner Cent
 * You turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
 * The video showcases your app’s functionality and integration within Teams. [*Mandatory Fix*]
 * The video is available as a functional link. [*Mandatory Fix*]
+* The video must be in the format `https://www.example.com/123456789`.
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
 
@@ -887,7 +891,7 @@ The following are the navigation guidelines:
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
 
-* Deep links in tabs mustn't link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
+* Deep links in tabs mustn't link to an external webpage but within Teams. For example, dialogs or other tabs. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
@@ -900,7 +904,7 @@ The following are the navigation guidelines:
 * Horizontal scroll mustn't be present in an in-meeting tab. [*Mandatory Fix*]
 
 * In-meeting dialogs used in your app mustn't allow horizontal scrolling. Use in-meeting dialogs sparingly and for scenarios that are light and task oriented. You can specify the width of the in-meeting dialog’s I-frame within the supported size range to account for different scenarios. [*Mandatory Fix*]
-* Task modules used in your app mustn't allow horizontal scrolling. Task modules allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If required, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
+* Dialogs used in your app mustn't allow horizontal scrolling. Dialogs allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If necessary, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
 
 * Horizontal scroll present in the tab in a personal chat, channel, and in-meeting details tab in any scope isn't allowed if the entire tab canvas is scrollable, unless your tab uses an infinite canvas with fixed UI elements. [*Mandatory Fix*]
 
@@ -1013,7 +1017,7 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 * Your Teams app must follow [Teams bot design guidelines](../../../../bots/design/bots.md).
 
-* You must implement a task module to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a task module to repetitively capture name, dob, place, and designation instead of using multi-turn conversations. [*Mandatory Fix*]
+* You must implement a dialog to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a dialog to repetitively capture name, dob, place, and designation instead of using multi-turn conversations. [*Mandatory Fix*]
 
 * Any broken links, responses, or workflows in your app must be fixed. [*Mandatory Fix*]
 
@@ -1066,11 +1070,11 @@ Analyzing user input and predicting user intent is difficult. Bot commands provi
 
 * Bots mustn't display a typing indicator after responding to the user command, but can display a typing indicator while responding to the user command. [*Mandatory Fix*]
 
-* Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged onto the app. [*Mandatory Fix*]
+* Bots must provide a valid response to the **help** command typed in lowercase or uppercase that provides the user with a way forward or lets the user access the help content related to the bot usage. Bots must provide a valid response even when the user hasn't logged on to the app. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-lowercase.png" alt-text="Graphic shows an example of bot not providing a valid response for a command in lowercase or uppercase.":::
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged onto the app.":::
+   :::image type="content" source="../../../../assets/images/submission/validation-bot-valid-response-logged-app.png" alt-text="Graphic shows an example of a bot without a valid response when the user hasn't logged on to the app.":::
 
 * Bots must provide a valid response to **help** command.
 
@@ -1195,7 +1199,7 @@ Bots mustn't spam users by sending multiple messages in short duration.
 
   * Send one message with complete information. [*Mandatory Fix*]
   * Avoid multi-turn conversations to complete a single repetitive workflow. [*Mandatory Fix*]
-  * Use a form (or task module) to collect all inputs from a user at one time. [*Mandatory Fix*]
+  * Use a form (or dialog) to collect all inputs from a user at one time. [*Mandatory Fix*]
   * NLP based conversational chatbots can use multi turn conversation to make the discussion more engaging and complete a workflow.
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-task-module.png" alt-text="validation-bot-message-using-task-module":::
@@ -1221,7 +1225,7 @@ Bot notifications must include content relevant for the scope you define for the
 </br>
 <details><summary>Bots and Adaptive Cards</summary>
 
-Adaptive Cards are a highly recommended way to display bot messages. The cards must be lightweight and only include up to six actions. To display more content, consider using a task module or tab.
+Adaptive Cards are a highly recommended way to display bot messages. The cards must be lightweight and only include up to six actions. To display more content, consider using a dialog or tab.
 
 For more information about cards, see:
 
@@ -1309,6 +1313,8 @@ If your app includes a message extension, ensure that it adheres to these guidel
 * Messaging extensions must respond or work as intended in group chat and channel scopes. [*Mandatory Fix*]
 
 * You must include a way for the user to sign in or sign out from the messaging extension. [*Mandatory Fix*]
+
+* Message extensions that use OpenAPI urls must not provide redirection on any API call. Actual API calls must be served from the same domain or subdomain of the root domain.
 
 </details>
 </br>
@@ -1401,7 +1407,7 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 
 [Back to top](#teams-store-validation-guidelines)
 
-## Task modules
+## Dialogs
 
 [*Mandatory Fix*]
 
@@ -1409,9 +1415,9 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 <br></br>
 <details><summary>Expand to know more</summary>
 
-A task module must include an icon and the short name of the app it's associated with. Task modules mustn't embed an entire app and only display the components required to complete a specific action.
+A dialog (referred as task module in TeamsJS v1.x) must include an icon and the short name of the app it's associated with. Dialogs mustn't embed an entire app and only display the components required to complete a specific action.
 
-For more information, see [Teams task module design guidelines](~\task-modules-and-cards\task-modules\design-teams-task-modules.md).
+For more information, see [Teams dialog design guidelines](~\task-modules-and-cards\task-modules\design-teams-task-modules.md).
 
 :::image type="content" source="../../../../assets/images/submission/validation-task-module-displays-components.png" alt-text="validation-task-module-displays-component":::
 
@@ -1530,7 +1536,7 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-multiple-column-layout.png" alt-text="Graphic shows an example of multiple column layouts for in-meeting dialog.":::
 
-* Must not use task modules. [*Mandatory Fix*]
+* Must not use dialogs. [*Mandatory Fix*]
 * Must align with the center of the meeting stage. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="Graphic shows an example of in-meeting dialog not aligning with the center of meeting stage.":::
@@ -1637,13 +1643,13 @@ If your app uses the [activity feed APIs provided by Microsoft Graph](/graph/tea
 
 The Microsoft 365 App Compliance Program is intended to help organizations assess and manage risk by evaluating security and compliance information about your app. If you're publishing an app to the Teams Store, you must complete the following tiers of the program:
 
-* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Azure Active Directory consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified). [*Mandatory Fix*]
+* **Publisher Verification**: Helps admins and end users understand the authenticity of app developers integrating with the Microsoft identity platform. When completed, a blue **verified** badge displays on the Microsoft Entra consent dialog and other screens. For more information, see [Mark your app as publisher verified](/azure/active-directory/develop/mark-app-as-publisher-verified). [*Mandatory Fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="Graphic shows an example of a blue verified badge on the Azure Active Directory consent dialog.":::
+    :::image type="content" source="../../../../assets/images/submission/validation-365-compliance-publisher-verification.png" alt-text="Graphic shows an example of a blue verified badge on the Microsoft Entra consent dialog.":::
 
 * **Publisher Attestation**: A process in which you share general, data handling, and security and compliance information to help potential customers make informed decisions about using your app. [*Suggested Fix*]
 
-:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: If you're submitting an app that hasn't been listed previously, you can't officially complete Publisher Attestation until your app is in the Teams Store. If you're updating a listed app, complete Publisher Attestation before you submit the latest version of the app.
+:::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: For an app that isn't previously listed, you can't complete Publisher Attestation until the app is available in Teams Store. If you're updating an already listed app, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation) before submitting the latest version of the app.
 
 </details>
 
@@ -1765,9 +1771,55 @@ The app must terminate the user account instance when the user is switched or lo
 
 #### Tab navigation
 
-* The progress indicator must appear when the app is loading and dismiss automatically after the app is completely loaded. [*Mandatory Fix*]
+* The progress indicator must appear when the app is loading and dismiss automatically after the app is loaded. [*Mandatory Fix*]
 
 * An error screen must appear when an app fails to load in the instances such as incoherent or broken network, time-out, or authentication failure, and so on. [*Mandatory Fix*]
+
+[Back to top](#teams-store-validation-guidelines)
+
+## Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365
+
+* App packages are correctly formatted and adhere to the manifest schema version 1.13 or later.
+* App must pass the [responsible AI checks.](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements)
+* App must meet the [plugin compatible criteria](../../../../messaging-extensions/high-quality-message-extension.md).
+
+### Plugin must not manipulate LLM behavior
+
+The short descriptions of an app, parameter, and command must not include the following:
+
+1. Instructional phrases. For example, if the user says X, ignore, delete, reset, new instructions, answer in bold, or don't print anything.
+1. Verbose, flowery, or marketing language.
+1. Superlative claims such as **#1**, **amazing**, or **best**.
+1. URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.
+1. Grammar and punctuation errors.
+
+### User Awareness
+
+The long description of an app must clearly call out the following:
+
+* App's compatibility with Copilot. For example, use Contoso in Copilot to search and summarize your tasks.
+
+* Provide at least one prompt of how users can use a message extension plugin in Copilot. For example, what are the high priority tickets assigned to me this week in Contoso.
+
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in Copilot.":::
+
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in Copilot.":::
+
+### Response Quality
+
+* The mandatory fields in Microsoft 365 Chat Adaptive Card response must include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, and flags. Both the preview and content must be part of a single response.
+
+   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Chat app response contains Preview and Content in the same response. ":::
+
+* Adaptive Cards in Microsoft 365 Chat response must have at least one action button.
+* Action buttons present in Microsoft 365 Chat response Adaptive Cards must be functional.
+
+  :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
+
+* Microsoft 365 Chat must respond accurately and not display an error when a user prompts with a single parameter.
+* Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a multi parameter.
+* Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a follow-up.
+* Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Chat.
 
 [Back to top](#teams-store-validation-guidelines)
 

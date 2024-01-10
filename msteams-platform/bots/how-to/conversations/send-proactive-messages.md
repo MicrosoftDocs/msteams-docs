@@ -29,14 +29,16 @@ Sending a proactive message is different from sending a regular message. There's
 
 To send a proactive message, follow these steps:
 
-1. [Get the user AAD ID, user ID, team ID, or channel ID](#get-the-user-aad-id-user-id-team-id-or-channel-id), if necessary.
+1. [Get the Microsoft Entra user ID, user ID, team ID, or channel ID](#get-the-user-aad-id-user-id-team-id-or-channel-id), if necessary.
 1. [Create the conversation](#create-the-conversation), if necessary.
 1. [Get the conversation ID](#get-the-conversation-id).
 1. [Send the message](#send-the-message).
 
 The code snippets in the [samples](#samples) section are to create a one-on-one conversation. For links to samples for both one-on-one conversations and group or channels messages, see [code sample](#code-sample). To use proactive messages effectively, see [best practices for proactive messaging](#best-practices-for-proactive-messaging).
 
-## Get the user AAD ID, user ID, team ID, or channel ID
+<a name='get-the-user-aad-id-user-id-team-id-or-channel-id'></a>
+
+## Get the Microsoft Entra user ID, user ID, team ID, or channel ID
 
 You can create a new conversation with a user or a conversation thread in a channel and you must have the correct ID. You can receive or retrieve this ID using any of the following ways:
 
@@ -421,7 +423,7 @@ The following table provides a simple code sample that incorporates basic conver
 
 * [**Teams proactive messaging code samples**](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-proactive-messaging/csharp)
 * [Channel and group chat conversations with a bot](~/bots/how-to/conversations/channel-and-group-conversations.md)
-* [Respond to the task module submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [Respond to the dialog submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 * [Send proactive notifications to users](/azure/bot-service/bot-builder-howto-proactive-message)
 * [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml)
 * [Build notification bot with JavaScript to send a proactive message](../../../sbs-gs-notificationbot.yml)

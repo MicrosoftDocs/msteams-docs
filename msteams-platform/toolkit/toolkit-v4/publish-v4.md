@@ -1,7 +1,7 @@
 ---
 title: Publish Teams apps using Teams Toolkit v4
 author: zyxiaoyuer
-description: In this module, learn how to publish Teams apps using Teams Toolkit v4 and publish to individual scope or sideload permission.
+description: In this module, learn how to publish Teams apps using Teams Toolkit v4 and publish to individual scope or custom app upload permission.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -22,7 +22,7 @@ After creating the app, you can distribute your app to different scopes, such as
 
 Here's what you'll learn in this section:
 
-* [Publish to individual scope or sideload permission](#publish-to-individual-scope-or-sideload-permission)
+* [Publish to individual scope or custom app upload permission](#publish-to-individual-scope-or-custom-app-upload-permission)
 * [Publish to your organization](#publish-to-your-organization)
 * [Publish to Microsoft Teams Store](#publish-to-teams-store)
 
@@ -33,9 +33,9 @@ Here's what you'll learn in this section:
 * Ensure that your app is running and accessible using HTTPs.
 * Ensure you have followed set of guidelines in the publish your app to the Teams Store to publish your app.
 
-## Publish to individual scope or sideload permission
+## Publish to individual scope or custom app upload permission
 
-You can add a custom app to Teams by uploading an [app package](~/concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as sideloading. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
+You can add a custom app to Teams by uploading an [app package](~/concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as custom app upload. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
 
 * Test and debug an app locally.
 * Build an app for yourself, such as to automate a workflow.
@@ -56,15 +56,15 @@ Perform the following steps to upload app package:
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-   :::image type="content" source="images/publish1_1-v4.png" alt-text="publish an app":::
+   :::image type="content" source="images/upload-an-app.png" alt-text="Screenshot of upload an app":::
 
    **Upload an app** window appears.
 
-2. Select **Upload a custom app**.
+2. Select **Upload a customised app**.
 
-   :::image type="content" source="images/upload_1-v4.png" alt-text="upload an app":::
+   :::image type="content" source="images/upload_1-v4.png" alt-text="Screenshot shows the option to upload a customised app.":::
 
-   Now the app is sideloaded into the Teams client and you can add and view.
+   Now the custom app is uploaded into the Teams client and you can add and view.
 
 ## Publish to your organization
 
@@ -118,17 +118,17 @@ The following steps help you to approve from Admin Center:
 
 1. Select the :::image type="icon" source="images/Showall-v4.png"::: icon > **Teams apps** > **Manage apps**.
 
-   :::image type="content" source="images/select-manage-apps-v4.png" alt-text="Select Manage apps":::
+   :::image type="content" source="images/select-manage-apps.png" alt-text="Screenshot of Select Manage apps":::
 
    You can view all Teams app for your organization.
 
    In the **Pending approval** widget at the top of the page lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publishes the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
 
-   :::image type="content" source="images/admin-approval-for-teams-app-1-v4.png" alt-text="approval":::
+   :::image type="content" source="images/admin-approval-for-teams-app.png" alt-text="Screenshot shows the option of custom app submitted for approval.":::
 
 1. Select the app name to go to the app details page. On the **About** tab, you can view details about the app, including description, status, and app ID.
 
-   :::image type="content" source="images/about-submitted-app-1-v4.png" alt-text="submitted app":::
+   :::image type="content" source="images/about-submitted-app.png" alt-text="Screenshot shows the option of custom app submitted.":::
 
 1. Select the status dropdown and change from **Submitted** to **Publish**.
 

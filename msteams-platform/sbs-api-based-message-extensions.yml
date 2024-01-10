@@ -37,26 +37,27 @@ items:
    |[Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
    |[Microsoft 365 developer account](concepts/build-and-test/prepare-your-o365-tenant.md)| Access to Teams account with the appropriate permissions to install an app. |
    |[Azure account](https://azure.microsoft.com/free/) | Access to Azure resources.|
-   
+   |OpenAPI Description (OAD) document| A document that describes the capabilities of your API. For more information, see [OpenAPI Description](https://learn.openapis.org/specification/structure.html).|
+
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
-   ### Check for sideloading option
+   ### Check for custom app upload option
 
-   After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+   After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
+    > custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-   Verify if you can sideload apps in Teams:
+   Verify if you can upload a custom app in Teams:
 
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
     1. Select **Upload an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/spfx-custom-new1.png" alt-text="Screenshot shows the bot home.":::
 
@@ -80,7 +81,7 @@ items:
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   Now you’ve got all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
+   You've all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
 
 - title: Create OpenAPI Description document
@@ -204,10 +205,10 @@ items:
     1. In the right pane, select **GET**.
     1. Select **Try it out**.
     1. Enter the values for the **search** parameter as **Tool to create music**.
-
+    1. Select **Execute**. The swagger editor displays a response with a list of products.
+    
        :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
 
-    1. Select **Execute**. The swagger editor displays a response with a list of products.
     1. Go to **Server response** > **Response Body**.
     1. Under `products`, copy the first product from the list and save it for future reference.
 
@@ -217,7 +218,7 @@ items:
   durationInMinutes: 5
   content: |
 
-   An OpenAPI Description document requires a response rendering template for the app to respond to the get requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
+   An OpenAPI Description document requires a response rendering template for the app to respond to the GET or POST requests. The response rendering template consists of an Adaptive Card template, Preview card template, and metadata.
 
    ### Adaptive Card template 
     
@@ -233,7 +234,7 @@ items:
                 "AI Detection"
             ],
             "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
-            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
             "name": "AI Music Generator",
             "opentools_url": "https://goto.opentools.ai/ai-music-generator",
             "platforms": [
@@ -314,7 +315,7 @@ items:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
        1. At the upper-left, go to **Select host app** and from the drop-down, select **Microsoft Teams**.
        1. Go to **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
-       1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you've saved earlier.
+       1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you saved earlier.
 
           :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
        
@@ -372,11 +373,11 @@ items:
 
            `responseLayout` specifies the layout of the attachments. Used for responses of type result. Supported types are list and grid. If the response body contains an object with multiple elements like text, title, and image, then the response layout must be set to `list`. If the API response contains only images or thumbnails, then the response layout must be set to `grid`.
 
-       1. `"responseCardTemplate"`: Paste the Adaptive Card template code you've saved earlier.
+       1. `"responseCardTemplate"`: Paste the Adaptive Card template code that you saved earlier.
 
            `responseCardTemplate` is an Adaptive Card template to map the JSON response to an Adaptive Card.
 
-       1. `"previewCardTemplate"`: Paste the preview card template code you've saved earlier.
+       1. `"previewCardTemplate"`: Paste the preview card template code that you saved earlier.
 
            `previewCardTemplate` is a preview card template is used to show a preview of results in the message extension flyout.
 
@@ -419,7 +420,7 @@ items:
             },
             {
             "type": "TextBlock",
-            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
             "wrap": true
             },
             {
@@ -554,16 +555,16 @@ items:
           * Outline icon 
 
     
-- title: Sideload the app to Teams
+- title: Upload a custom app to Teams
   durationInMinutes: 1
   content: |
 
-    Sign into Teams test environment to test your app in Teams. To sideload the app in Teams, follow these steps: 
+    Sign into Teams test environment to test your app in Teams. To upload a custom app in Teams, follow these steps: 
 
     1. Go to **Microsoft Teams** and sign in using your test tenant credentials. 
     1. Go to **Apps** > **Manage your app** > **Upload an app**.
     1. Select **Upload a customized app**.
-    1. Select the zip file you've created and select **Open**.
+    1. Select the zip file created and select **Open**.
     1. Select **Add**. The app is added to Teams.
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-add-app-teams.png" alt-text="Screenshot shows a pop-up window with the Add option.":::
@@ -571,7 +572,7 @@ items:
     1. Go to a chat and from the message compose area, select **+** and search for your app.
     1. Select the app and make a search query.
 
-       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat  menu and the app is displayed in the flyout menu.":::
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat menu and the app is displayed in the flyout menu.":::
 
     1. The app responds with an Adaptive Card in the chat window.
     1. Select **Send**.
