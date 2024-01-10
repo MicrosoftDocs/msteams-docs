@@ -13,7 +13,7 @@ ms.subservice: m365apps
 
 ## Introduction
 
-Office Add-ins are web apps that extend the functionality of Outlook. Some of the things that can be done with an Outlook Add-in:
+Outlook Add-ins are web apps that extend the functionality of Outlook. Some of the things that can be done with an Outlook Add-in:
 
 - Read and write the content of email messages and meeting invitations, as well as responses, cancellations, and appointments.
 - Read properties of the user's mailbox.
@@ -21,15 +21,17 @@ Office Add-ins are web apps that extend the functionality of Outlook. Some of th
 - Integrate with external services including CRM and project management.
 - Add custom ribbon buttons or menu items to perform specific tasks.
 
-For more information, start with [Outlook Add-ins Overview](/office/dev/add-ins/outlook/outlook-add-ins-overview).
+[Outlook Add-ins Overview](/office/dev/add-ins/outlook/outlook-add-ins-overview) which will give you information about what you can do with Outlook Add-ins, how they are structured, how they differ from older ways of extending Outlook, what platforms the add-in can run on (Windows, Mac, mobile, and the web), and how to get started creating one.
+
+Combining an Outlook Add-in with a Teams app enables scenarios that can't be satisfied with either of them separately. For example, consider an app that enables sales persons to insert a customized discount into an email for a customer, and then records the offer in a backend database. The app also enables the sales manager to view data about all the discounts that have been offered in a Teams tab. There is a sample of this app with animated screen shots at [Discount Offers](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
 
 ## Prerequisites
 
 To configure an Office Add-in as additional capability, you must meet the following conditions:
 
-- You have a Microsoft 365 account that includes Teams, or separate subscriptions to both Microsoft 365 and Teams, to test the application. For example, an *.onmicrosoft.com account.
+- You have a Microsoft 365 account that includes Teams, or separate subscriptions to both Microsoft 365 and Teams, to test the application. For example, an *.onmicrosoft.com test account through the [Microsoft 365 Developer Program](https://learn.microsoft.com/office/developer-program/microsoft-365-developer-program).
 - Your Microsoft 365 account has been added as an account in desktop Outlook. See [Add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726)
-- To deploy the Teams app to Azure as described in the last section of this article, you need an Azure account to an Azure subscription. Create your free Azure account if you don't already have one by using the link [Free Azure account](https://azure.microsoft.com/free/).
+- To deploy the Teams app to Azure as described in the last section of this article, you need an Azure account with an active subscription. Create your free Azure account if you don't already have one by using the link [Free Azure account](https://azure.microsoft.com/free/).
 
 ## Overview
 
@@ -37,7 +39,7 @@ The following are the major steps to adding an Outlook Add-in to a Teams app.
 
 1. [Prepare the Teams app project](#prepare-the-teams-app-project)
 1. [Create an Office Add-in project](#create-an-outlook-add-in-project) that is initially separate from your Teams app project.
-1. [Merge the manifest](#merge-the-manifest) from the Outlook Add-in project into the unified Microsoft 365 manifest.
+1. [Merge the manifest](#merge-the-manifest) from the Outlook Add-in project into the unified manifest for Microsoft 365.
 1. [Copy the Outlook Add-in files to the Teams app project](#copy-the-outlook-add-in-files-to-the-teams-app-project).
 1. [Edit the tooling configuration files](#edit-the-tooling-configuration-files).
 1. [Run the app and add-in locally at the same time](#run-the-app-and-add-in-locally-at-the-same-time)
@@ -600,6 +602,12 @@ To see both the app and the add-in running at the same time, take the following 
 1. In the **TERMINAL**, run `npx office-addin-dev-settings sideload .\appPackage\manifest.addinPreview.json`. This process can take a couple of minutes. Eventually, Outlook desktop opens. (If you're prompted to install `office-addin-dev-settings`, respond "yes".)
 1. Open the **Inbox** of *your Microsoft 365 account identity* and open any message. A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you open the message in its own window).
 1. Select the **Show Taskpane** button and a task pane opens. Select the **Perform an action button** and a small notification appears near the top of the message.
+
+## See also
+
+[Outlook Add-ins Overview](/office/dev/add-ins/outlook/outlook-add-ins-overview)
+[Office Add-ins with the unified app manifest for Microsoft 365 (preview)](/office/dev/add-ins/develop/unified-manifest-overview)
+[Build an Outlook add-in with the unified manifest for Microsoft 365 (preview)](/office/dev/add-ins/quickstarts/outlook-quickstart-json-manifest)
 
 ## What’s next
 
