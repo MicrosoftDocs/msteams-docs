@@ -99,14 +99,35 @@ async setItemId() {
 After obtaining the `itemId` of the triggering content, you can use the Graph API to read or modify the content, facilitating task completion for your users.
 
 ```javascript
-async readActionItem() {
-    try {
-        return await this.graphClient.api(`/users/${this.objectId}/drive/items/${this.itemId}`).get();
-    } catch (error) {
-        console.log("Error reading the content", error);
+app.getContext().then((context: app.Context) => {
+    const actionInfo = context.actionInfo;
+    if (actionInfo) {
+        // App was launched using an action    
+    } 
+    if (actionInfo && actionInfo.actionId == 'myActionId1') {
+        // Handle specific action    
+    } 
+    if (actionInfo) {
+        if (actionInfo.actionObject.type == app.ActionObjectType.M365Content) {
+            const itemId = actionInfo.actionObjects[0].itemId;
+            // Get the requested content from Mirosoft Graph by item id:
+        } 
     }
-}
+})
 ```
+
+### Enable Actions in Microsoft Admin Center
+
+> [!NOTE]
+> Actions are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+
+To use an app with Actions in your tenant, an admin must upload the app package to the Microsoft Admin Center as follows:
+
+1. Go to [Microsoft Admin Center](https://admin.microsoft.com/AdminPortal#/homepage).
+
+1. Select **Settings** > **Integrated Apps** > **Upload custom apps**.
+
+Follow instructions to preinstall your app for entire organization or user groups within your tenant.
 
 ## Test and deploy your Actions
 
@@ -131,28 +152,11 @@ To deploy your app in Teams Toolkit, follow these steps:
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 
-1. If you receive the following security warning, select **Yes**:
-
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
-
 A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
 
 You can now preview your Actions in the Microsoft 365 home page, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
-
-### Enable Actions in Microsoft Admin Center
-
-> [!NOTE]
-> Actions are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
-
-To use an app with Actions in your tenant, an admin must upload the app package to the Microsoft Admin Center as follows:
-
-1. Go to [Microsoft Admin Center](https://admin.microsoft.com/AdminPortal#/homepage).
-
-1. Select **Settings** > **Integrated Apps** > **Upload custom apps**.
-
-Follow instructions to preinstall your app for entire organization or user groups within your tenant.
 
 ## Code sample
 

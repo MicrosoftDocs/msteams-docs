@@ -29,6 +29,8 @@ Before you get started, ensure that you install the following tools:
 
 ### Build and run the sample app
 
+Let's learn how to build and run a sample app in your local environment. You'll use Teams Toolkit for Visual Studio Code to setup and sideload the application to your tenant. Let’s get started!
+
 1. Go to the [sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/m365-actions-preview/nodejs).
 
 1. Select **Code**.
@@ -53,15 +55,13 @@ Before you get started, ensure that you install the following tools:
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 
-1. If you receive the following security warning, select **Yes**:
-
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
-
 A browser window opens with Microsoft 365 home page and your app is available under **Apps**.
 
-You can now preview your Actions in the Microsoft 365 home page, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
+You can try your Actions in the Microsoft 365 home page, right-click a Word, Excel, or PPT file. You can see **Related tasks** in the context menu. Hover over **Add to** to view the **Add todo task** action.
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
+
+If you want to run Actions in the Microsoft 365 on Azure, see [sample.](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/m365-actions-preview/nodejs/README.md#optional-deploy-the-app-to-azure)
 
 ## See also
 

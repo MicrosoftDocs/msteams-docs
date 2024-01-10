@@ -1010,10 +1010,10 @@ The object is an array of action objects. This block is required only for soluti
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`| String | 64 characters | ✔️ | An identifier string in the default locale that is used to catalog actions. Must be unique across all actions for this app. For example, `openDocInContoso`.  |
-|`displayName`| String | 64 characters | | A display name for the action. Capitalize first letter and brand name. For example, Add to suppliers, Open in Contoso, and Request signatures.|
+|`displayName`| String | 64 characters | ✔️ | A display name for the action. Capitalize first letter and brand name. For example, Add to suppliers, Open in Contoso, and Request signatures.|
 |`description`| String | | ✔️ | Specifies the description of the actions. |
 |`intent`| String enum |  | ✔️ | Specifies the type of intent. The supported enum values are `open`, `addTo`, and `custom`. |
-|`handlers`| Array of objects | | ✔️ | An array of handlers object, defining how Actions can be handled. If an app has more than one handler, only one experience shows up at one entry point. The hub decides which Action to show up based on which experience is supported. |
+|`handlers`| Array of objects | | ✔️ | An array of handlers object, defining how Actions can be handled. If an app has more than one handler, only one experience shows up at one entry point. The Microsoft 365 platform decides which Action to show up based on which experience is supported. |
 
 ### actions.handlers
 
