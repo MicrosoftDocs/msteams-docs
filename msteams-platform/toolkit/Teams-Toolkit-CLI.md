@@ -48,7 +48,7 @@ Install `teamsapp-cli` from `npm` and run `teamsapp -h` to check all available c
   teamsapp -h
 ```
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/npm-package-install.png" alt-text="Screenshot shows the installation of npm package.":::
+:::image type="content" source="../assets/images/teams-toolkit-cli/npm-package-install.png" alt-text="Screenshot shows the installation of npm package." lightbox="../assets/images/teams-toolkit-cli/teamsapp-help.png":::
 
 ## Supported commands
 
@@ -224,7 +224,7 @@ The following table lists the parameters available for `teamsapp list`:
 
 The `teamsapp help` command displays all the commands available for Teams Toolkit CLI.
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-help.png" alt-text="Screenshot shows the teamsapp help commands.":::
+:::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-help.png" alt-text="Screenshot shows the teamsapp help commands." lightbox="../assets/images/teams-toolkit-cli/teamsapp-help.png":::
 
 ## `teamsapp provision`
 
