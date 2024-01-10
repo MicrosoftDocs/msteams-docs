@@ -43,7 +43,7 @@ After Azure creates the registration resource, it's included in the resource gro
 
 ![bot app channels registration group](~/assets/images/authentication/auth-bot-channels-registration-group.PNG)
 
-Once your bot channels registration is created, you need to enable the Teams channel.
+After Azure creates your bot channels registration, enable the Teams channel.
 
 1. In the [Azure portal](https://ms.portal.azure.com/#home), under Azure services, select the **Bot Channel Registration** you created.
 1. In the left panel, select **Channels**.

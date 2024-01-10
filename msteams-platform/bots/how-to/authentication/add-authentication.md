@@ -16,9 +16,9 @@ See [OAuth 2 Simplified](https://aka.ms/oauth2-simplified) for a basic understan
 
 For more information about how the Azure Bot Service handles authentication, see [User authentication within a conversation](/azure/bot-service/bot-builder-concept-authentication?view=azure-bot-service-4.0&preserve-view=true).
 
-In this article you learn:
+In this article you'll learn:
 
-- **How to create an authentication-enabled bot**. You use [cs-auth-sample][teams-auth-bot-cs] to handle user sign-in credentials and the generating the authentication token.
+- **How to create an authentication-enabled bot**. You'll use [cs-auth-sample][teams-auth-bot-cs] to handle user sign-in credentials and the generating the authentication token.
 - **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information, see  [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
 - **How to integrate the bot within Microsoft Teams**. Once the bot is integrated, you can sign in and exchange messages with it in a chat.
 
@@ -168,8 +168,8 @@ You need an identity provider for authentication. In this procedure, you use a M
 
 1. After it's created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
 
-    1. The **Application (client) ID** value. You use this value later as the *Client ID* when you register this Azure identity application with your bot.
-    1. The **Directory (tenant) ID** value. You use this value later as the *Tenant ID* to register this Azure identity application with your bot.
+    1. The **Application (client) ID** value. You'll use this value later as the *Client ID* when you register this Azure identity application with your bot.
+    1. The **Directory (tenant) ID** value. You'll use this value later as the *Tenant ID* to register this Azure identity application with your bot.
 
 1. In the left panel, select **Certificates & secrets** to create a client secret for your application.
 
@@ -177,7 +177,7 @@ You need an identity provider for authentication. In this procedure, you use a M
    1. Add a description to identify this secret from others you might need to create for this app, such as *Bot identity app in Teams*.
    1. Set **Expires** to your selection.
    1. Select **Add**.
-   1. Before leaving this page, **record the secret**. You use this value later as the *Client secret* when you register your Microsoft Entra application with your bot.
+   1. Before leaving this page, **record the secret**. You'll use this value later as the *Client secret* when you register your Microsoft Entra application with your bot.
 
 ### Configure the identity provider connection and register it with the bot
 
@@ -326,7 +326,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
    :::image type="content" source="../../../assets/images/authentication/auth-bot-app-service.png" alt-text="Screenshot shows how to enter required information for auth app service.":::
 
 1. Select **Create**.
-1. If the deployment completes successfully, you should see it reflected in Visual Studio. A page opens in your default browser with the message *Your bot is ready!*. The URL is similar to this one: `https://botteamsauth.azurewebsites.net/`. Save it to a file.
+1. If the deployment completes successfully, you should see it reflected in Visual Studio. A page opens in your default browser with the message *Your bot is ready!*. The URL is similar to `https://botteamsauth.azurewebsites.net/`. Save it to a file.
 1. In your browser, go to the [**Azure portal**][azure-portal].
 1. Check your resource group, the bot is listed along with the other resources. The following image is an example:
 
@@ -334,7 +334,7 @@ Alternatively, while in Visual Studio, you can follow these steps:
 
 1. In the resource group, select the bot registration name (link).
 1. In the left panel, select **Settings**.
-1. In the **Messaging endpoint** box, enter the URL you just obtained followed by `api/messages`. For example, see `https://botteamsauth.azurewebsites.net/api/messages`.
+1. In the **Messaging endpoint** box, enter the URL you just obtained followed by `api/messages`. For example, `https://botteamsauth.azurewebsites.net/api/messages`.
     > [!NOTE]
     > Only one messaging endpoint is allowed for a bot.
 1. Select the **Save** button in the upper left.

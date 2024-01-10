@@ -86,7 +86,7 @@ After upload your app package into App Studio, you must finish configuring it.
 
 Select the tile for your newly imported tab in the right panel of the Manifest editor welcome page.
 
-There's a list of steps in the left-hand side of the Manifest editor, and on the right-hand side, a list of properties that must have values for each of those steps. Much of the information is provided by your `manifest.json` but there are a few fields that you must update:
+There's a list of steps on the left side of the Manifest editor, and on the right side, a list of properties that must have values for each of those steps. Much of the information is provided by your `manifest.json` but there are a few fields that you must update:
 
 #### Details: App details
 
