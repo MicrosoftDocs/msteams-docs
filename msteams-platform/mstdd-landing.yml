@@ -47,7 +47,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Teams Toolkit Command Line Interface v3
+      - text: Teams Toolkit command line interface v3
         url: toolkit/Teams-Toolkit-CLI.md     
       - text: Apps for Teams meetings are available in Department of Defense (DOD)
         url: messaging-extensions/build-bot-based-plugin.md
