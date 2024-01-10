@@ -505,7 +505,7 @@ Get launch information of the acquired Microsoft 365 app by title ID.
 teamsapp launchinfo --title-id U_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 ```
 
-Get launch information of the acquired M365 app by manifest ID.
+Get launch information of the acquired Microsoft 365 app by manifest ID.
 
 ```bash
 teamsapp launchinfo --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
@@ -513,7 +513,7 @@ teamsapp launchinfo --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 ## `teamsapp uninstall`
 
-Remove an acquired M365 app.
+Remove an acquired Microsoft 365 app.
 
 ### Parameters for `teamsapp uninstall`
 
