@@ -37,7 +37,7 @@ Following is a list of main Teams Toolkit CLI features:
 * Preview your Teams application by uploading the custom app to Teams, Outlook, and the Microsoft 365 app.
 * Provision cloud resources and deploy the application to Azure.
 * Validate, package, and publish Teams application.
-* Manage multiple environments, Microsoft Entra-apps, and Teams app registrations.
+* Manage multiple environments, Microsoft Entra apps, and Teams app registrations.
 
 ## Get started
 
@@ -521,8 +521,8 @@ The following table lists the parameters available for `teamsapp uninstall`:
 
 | Command | Description |
 |:----------------  |:-------------|
-| `--title-id` | Title ID of the acquired M365 app. |
-| `--manifest-id` | Manifest ID of the acquired M365 app. |
+| `--title-id` | Title ID of the acquired Microsoft 365 app. |
+| `--manifest-id` | Manifest ID of the acquired Microsoft 365 app. |
 
 ::: zone-end
 
