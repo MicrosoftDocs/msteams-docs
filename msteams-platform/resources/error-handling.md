@@ -1,4 +1,4 @@
-    ---
+---
 
 title: Error handling messages
 description: In this article, display all the error handling messages for reference.
