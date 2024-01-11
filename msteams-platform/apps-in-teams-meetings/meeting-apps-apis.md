@@ -368,7 +368,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
                 "id": "MCMxOTptZWV0aW5nX05UWm1OVEkzT0RndE9XWmtPUzAwTmpnekxXSmhOVE10TURobE5qRTVaakF3WVdZeEB0aHJlYWQudjIjMA=="
             }
         }
-      ```
+   ```
 
   # [External user](#tab/external-user)
 
