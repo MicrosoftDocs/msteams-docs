@@ -255,6 +255,8 @@ items:
 
     1. Comment the OpenAI code lines and uncomment the Azure OpenAI code lines.
 
+    1. Enter your Azure Open AI deployment name in `azureDefaultDeployment`.
+
         ```JavaScript
         ...
         // Use OpenAI
@@ -266,8 +268,6 @@ items:
         azureEndpoint: config.azureOpenAIEndpoint,
         ...
         ```
-
-    1. Enter your Azure Open AI deployment name in `azureDefaultDeployment`.
 
     ## Debug and run your AI chat bot app
 
