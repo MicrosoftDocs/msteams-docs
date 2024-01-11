@@ -87,9 +87,12 @@ items:
 
     1. In the left pane, under **Manage**, select **API permissions**.
     1. Select **+ Add a permission**.
+       
+       :::image type="content" source=".\assets\images\calls-and-meetings\add-permission.png" alt-text="Screenshot shows an option to add the API permission.":::
+
     1. Select **Microsoft Graph**.
     1. Select **Application permissions**.
-    1. In **Select permissions**, add the following Graph API applications permissions to your Azure App:
+    1. Select the following permissions:
         * `Calls.AccessMedia.All`
         * `Calls.Initiate.All`
         * `Calls.InitiateGroupCall.All`
@@ -101,7 +104,8 @@ items:
          :::image type="content" source="./assets/images/calls-and-meetings/api-permissions_1.png" alt-text="Screenshot of Calling-Meeting-Bot API permissions with Manage, API permissions, Add a permission, Microsoft Graph, Application permissions, and Add permissions highlighted in red." lightbox="./assets/images/calls-and-meetings/api-permissions_1.png":::
 
      > [!NOTE]
-     > Ensure that your account can grant admin consent for Microsoft. After adding permissions, select `Grant admin consent for Microsoft` to know the status of the consent.
+     > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+     > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
@@ -109,7 +113,7 @@ items:
 
     **Create a policy**
 
-    To create a policy for a demo tenant user to create online meetings using the PowerShell script, perform the following steps:
+    To create a policy that allows a demo tenant user to create online meetings using a PowerShell script, perform the following steps:
 
     1. Run Windows PowerShell PSI as an administrator and execute the script.
 
@@ -158,8 +162,8 @@ items:
 
          :::image type="content" source="~/assets/images/calls-and-meetings/powershell-id.png" alt-text="Screenshot of Windows PowerShell ISE with Account details highlighted in red." lightbox="~/assets/images/calls-and-meetings/powershell-tenant-id.png":::
 
-    > [!NOTE]
-    > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
+         > [!NOTE]
+         > Ensure running scripts aren't disabled in your system. For more information, see [execution policies](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-7.2).
 
 - title: Create your bot 
   durationInMinutes: 1
@@ -176,7 +180,6 @@ items:
   durationInMinutes: 1
   content: |
 
-    1. Get the `MicrosoftAppId` from the bot's configuration page. The `MicrosoftAppPassword` is the value for client secret ID that you saved previously.
     1. Get the `tenantId` or `UserId` from Teams. To get the `tenantId`, follow these steps:
           
          * Select **Teams**.
@@ -208,14 +211,17 @@ items:
 
     **Update app settings**
     
-    1. Go to the **appsettings.json** file in the cloned repository..
+    1. Go to the **appsettings.json** file in the cloned repository.
+
+       :::image type="content" source=".\assets\images\calls-and-meetings\appsettings-location.png" alt-text="Screenshot shows the location of app settings json file in file explorer.":::
+       
     1. Open the **appsettings.json** file in Visual Studio and update the following information:  
 
-         * Replace `MicrosoftAppId`, `ClientId`, and `AppId` with **Microsoft App ID**.
-         * Replace `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` with **Value** of your bot's **Client secret**.
-         * Replace `BotBaseUrl` with `ngrok` URL.
-         * Replace `TenantId` with `UserId`.
-         * Replace `DisplayName` with `Id`.
+         * Replace `MicrosoftAppId`, `ClientId`, and `AppId` to your bot's **Microsoft App ID**.
+         * Replace `MicrosoftAppPassword`, `ClientSecret`, and `AppSecret` to **Value** of your bot's **Client secret**.
+         * Replace `BotBaseUrl` to the ngrok or dev tunnel domain name.
+         * Replace `TenantId` to the `UserId`.
+         * Replace `DisplayName` to the `Id`.
 
         :::image type="content" source="./assets/images/calls-and-meetings/appsettings_1.png" alt-text="Screenshot of Appsettings.json displaying the details of appsettings.":::
 
@@ -223,9 +229,9 @@ items:
 
     **Update app manifest**
 
-    1. In the **File Explorer**, go to **Microsoft-Teams-Samples-main** > **samples** > **bot-calling-meeting** > **csharp** > **Manifest** folder.
-    1. Open the `manifest.json` file in Visual Studio and make the following changes:
-         * Replace `{id}`` and `{BotId}` with your **Microsoft App ID**.
+    1. Go to the **manifest.json** file in the cloned repository.
+    1. Open the **manifest.json** file in Visual Studio and make the following changes:
+         * Replace `{id}`` and `{BotId}` to your **Microsoft App ID**.
          * Replace all occurrences of `{{domain-name}}` with your ngrok or dev tunnel domain name.
 
         :::image type="content" source="./assets/images/calls-and-meetings/manifest_1.png" alt-text="Screenshot of manifest displaying the details of manifest." lightbox= "./assets/images/calls-and-meetings/app_manifest.png" :::
@@ -238,26 +244,30 @@ items:
        1. Open **Visual Studio**.
        1. Go to **File** > **Open** > **Project/Solution..**.
 
-    1. Run the calling and meeting bot solution in Visual Studio.
+       :::image type="content" source="./assets/images/calls-and-meetings/open-project-solution.png" alt-text="Screenshot shows how to open a project/solution in visual studio." lightbox= "./assets/images/calls-and-meetings/app_manifest.png" :::
+       
+       1. Select the **CallingBotSample.sln** file from **csharp** > **Source** folder.
 
-    1. In the **File Explorer**, go to **Microsoft-Teams-Samples** > **samples** > **bot-calling-meeting** > **csharp** > **Source** > **CallingBotSample.sln**.
+       :::image type="content" source="./assets/images/calls-and-meetings/project-solution-location.png" alt-text="Screenshot shows the location project solution file in file explorer." lightbox= "./assets/images/calls-and-meetings/app_manifest.png" :::  
 
-    1. Open the **CallingBotSample.sln** file in Visual Studio.    
+       1. Press **F5** to run the project.
 
-    1. Press **F5** to run the project.
+          A webpage opens with a message **Your bot is ready!**.
 
-       A webpage opens with a message **Your bot is ready!**.
-
-       :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready." lightbox="~/assets/images/calls-and-meetings/your-bot-is-ready.png":::
+          :::image type="content" source="~/assets/images/calls-and-meetings/bot-is-ready.png" alt-text="Screenshot of localhost displaying your bot is ready." lightbox="~/assets/images/calls-and-meetings/your-bot-is-ready.png":::
 
 - title: Add calling and meeting bot to Teams
   durationInMinutes: 1
   content: |
 
-    1. In your cloned repository, go to **csharp > SidePanel > AppManifest**.    
-    1. Zip the contents of the **Manifest** folder to create `manifest.zip`.
-        > [!NOTE]
-        > The `manifest.zip` must not contain any extra folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
+    1. In your cloned repository, go to **csharp > Source > AppManifest**.    
+    1. Create a .zip file with the following files that are present in the **AppManifest** folder:
+       * manifest.json
+       * outline.png
+       * color.png
+       
+       > [!NOTE]
+       > The `manifest.zip` must not contain any extra folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         
     1. In the Teams client, select the **Apps** icon.
     
@@ -265,30 +275,32 @@ items:
 
     1. Select **Upload an app**.
    
-    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled. 
+    1. In the pop-up window, select **Upload a customised app**. 
+       If you see the option, custom app upload is enabled. 
 
        :::image type="content" source="~/assets/images/custom-app-upload.PNG" alt-text="Screenshot showing the selection of Upload a custom app.":::
 
-    1. Open `manifest.zip` from the repository folder in File Explorer.
+    1. Go to **csharp > Source > AppManifest**.
+    1. Select **Open** to upload the .zip file that you created in the **AppManifest** folder.
+       
+       :::image type="content" source="./assets/images/calls-and-meetings/select-zip.png" alt-text="Screenshot shows the location of the manifest zip file in file explorer.":::
 
     1. Select **Add** to install the **Calling bot** app in Teams.
 
         :::image type="content" source="./assets/images/calls-and-meetings/calling-bot-add.png" alt-text="Screenshot of Calling bot with Add option highlighted in red.":::
-
-        You can interact with this bot after debugging in Visual Studio.
 
 - title: Interact with calling and meeting bot
   durationInMinutes: 2
   content: |
     Bot allows you to access services and content in a dedicated space within a channel or in a chat.
 
-    Following steps describes how to use the bot:
+    Let's interact with the app in Teams!
 
-    1. In the left pane of the Teams, select More added apps (...) and select your app from the list.
-    1. Bot sends welcome text with Adaptive Card.
+    1. In the left pane of the Teams, select **View more apps (...)** and select your app from the list.
 
         :::image type="content" source="./assets/images/calls-and-meetings/bot-with-adaptive-card.png" alt-text="Screenshot of Calling bot displaying welcome text.":::
-
+        Bot sends welcome text with Adaptive Card.
+        
     1. Select **Create Call**. 
 
         :::image type="content" source="./assets/images/calls-and-meetings/placed-call.png" alt-text="Screenshot of Microsoft Teams Calling bot with Create Call option highlighted in red. The minimized calling screen appears in the lower-right corner of the screen.":::
