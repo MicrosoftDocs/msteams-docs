@@ -91,7 +91,7 @@ ms.date: 10/06/2023
 
 ## Developer Portal
 
-|Error code + message          |Scenario                |Resolution|
+|Error code + message                 |Scenario                            |Resolution|
 --|-----------|---
 **Code**: Manifest Error. <br>**Message**: Manifest is invalid due to missing `name.short` and `name.full` properties in the localization file. | A developer tried to upload a Teams app manifest with localization, but an error occurred due to missing `name.short` and `name.full` properties in the localization file. <br> Source: [View](https://github.com/microsoftdocs/msteams-docs/issues/7551) | Include `name.short` and `name.full` properties in the localization file. These fields are mandatory even if the application name isn't localizable.
 **Code**: File not found. <br>**Message**: The file couldn't be found in the app package. | A developer attempted to import the 'Hello World' app package to the Developer Portal in Microsoft Teams, but the import failed due to a missing file in the app package. The error persisted even after generating the app package using the 'gulp' command and manually creating the app package. <br> Source: [View](https://github.com/officedev/microsoft-teams-samples/issues/510) | Update the color and outline icon file names in the manifest file manually. If the issue persists, create a zip package manually that includes the color, outline, and manifest file, which is in the appPackage folder. If the issue still persists, check PR #525 for the updated changes.
