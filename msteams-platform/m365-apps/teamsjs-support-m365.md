@@ -1152,7 +1152,7 @@ Preview. This capability enables users to copy and paste to the system clipboard
 
 ## `dialog`
 
-[Reference](/javascript/api/@microsoft/teams-js/dialog)
+[Reference](/javascript/api/@microsoft/teams-js/dialog) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+dialog)
 
 Preview. This group of capabilities enables apps to show modal dialogs (referred as task modules in TeamsJS v1.x). There are two primary types of dialogs: URL-based dialogs and Adaptive Card dialogs. Both types of dialogs are shown on top of your app, preventing interaction with your app while they're displayed.
 
