@@ -583,7 +583,7 @@ Later in this article, you can find more information on each capability of the T
 
 ## `app`
 
-[Reference](/javascript/api/@microsoft/teams-js/app)
+[Reference](/javascript/api/@microsoft/teams-js/app) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/App.css) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+app)
 
 Namespace to interact with app initialization and lifecycle.
 
@@ -648,7 +648,7 @@ The `app` namespace is supported globally across all application hosts and, ther
 
 ## `appInitialization`
 
-[Reference](/javascript/api/@microsoft/teams-js/appInitialization)
+[Reference](/javascript/api/@microsoft/teams-js/appInitialization) [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/AppInstallDialog.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+appInitialization)
 
 Deprecated. Namespace for initializing an app. For new apps, use [app.initialize()](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-initialize) from the [app](#app) capability.
 
@@ -711,7 +711,7 @@ Deprecated. Namespace for initializing an app. For new apps, use [app.initialize
 
 ## `appInstallDialog`
 
-[Reference](/javascript/api/@microsoft/teams-js/appinstalldialog)
+[Reference](/javascript/api/@microsoft/teams-js/appinstalldialog) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/AppInstallDialog.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+appInstallDialog)
 
 Namespace used to open a dialog for installing an application.
 
@@ -774,7 +774,7 @@ Namespace used to open a dialog for installing an application.
 
 ## `authentication`
 
-[Reference](/javascript/api/@microsoft/teams-js/authentication)
+[Reference](/javascript/api/@microsoft/teams-js/authentication) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+authentication)
 
 Namespace to interact with the authentication-related part of the library. This module is used for starting or completing authentication flows.
 
@@ -839,7 +839,7 @@ The `authentication` namespace is supported globally across all application host
 
 ## `barCode`
 
-[Reference](/javascript/api/@microsoft/teams-js/barcode)
+[Reference](/javascript/api/@microsoft/teams-js/barcode) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+barCode)
 
 Preview. Namespace to interact with the barcode scanning-related part of the library.
 
@@ -902,7 +902,7 @@ Preview. Namespace to interact with the barcode scanning-related part of the lib
 
 ## `calendar`
 
-[Reference](/javascript/api/@microsoft/teams-js/calendar)
+[Reference](/javascript/api/@microsoft/teams-js/calendar) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+calendar)
 
 Namespace providing calendar-related functionality.
 
@@ -965,7 +965,7 @@ Namespace providing calendar-related functionality.
 
 ## `call`
 
-[Reference](/javascript/api/@microsoft/teams-js/call)
+[Reference](/javascript/api/@microsoft/teams-js/call) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Call.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+call)
 
 Namespace providing functionality to start a call with others.
 
@@ -1028,7 +1028,7 @@ Namespace providing functionality to start a call with others.
 
 ## `chat`
 
-[Reference](/javascript/api/@microsoft/teams-js/chat)
+[Reference](/javascript/api/@microsoft/teams-js/chat) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Chat.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+chat)
 
 Preview. Namespace providing functionality to start a chat with others.
 
@@ -1091,7 +1091,7 @@ Preview. Namespace providing functionality to start a chat with others.
 
 ## `clipboard`
 
-[Reference](/javascript/api/@microsoft/teams-js/clipboard)
+[Reference](/javascript/api/@microsoft/teams-js/dialog) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Dialog.Url.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+dialog)
 
 Preview. This capability enables users to copy and paste to the system clipboard.
 
@@ -1308,37 +1308,37 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
 
 ### `dialog.adaptiveCard`
 
-[Reference](/javascript/api/@microsoft/teams-js/dialog.adaptivecard)
+[Reference](/javascript/api/@microsoft/teams-js/dialog.adaptivecard) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Dialog.AdaptiveCard.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+dialog.adaptiveCard)
 
 Preview. Subcapability for interacting with Adaptive Card dialogs.
 
 ### `dialog.adaptiveCard.bot`
 
-[Reference](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot)
+[Reference](/javascript/api/@microsoft/teams-js/dialog.adaptivecard.bot) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Dialog.AdaptiveCard.Bot.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+dialog.adaptiveCard.bot)
 
 Preview. Subcapability for interaction with Adaptive Card dialogs that need to communicate with the Bot Framework.
 
 ### `dialog.update`
 
-[Reference](/javascript/api/@microsoft/teams-js/dialog.update)
+[Reference](/javascript/api/@microsoft/teams-js/dialog.update) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Dialog.Update.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+dialog.update)
 
 Preview. Namespace for updating dialogs.
 
 ### `dialog.url`
 
-[Reference](/javascript/api/@microsoft/teams-js/dialog.url)
+[Reference](/javascript/api/@microsoft/teams-js/dialog.url) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Dialog.Url.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+dialog.url)
 
 Preview. Subcapability for interacting with HTML-based dialogs.
 
 ### `dialog.url.bot`
 
-[Reference](/javascript/api/@microsoft/teams-js/dialog.url.bot)
+[Reference](/javascript/api/@microsoft/teams-js/dialog.url.bot) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Dialog.Url.Bot.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+dialog.url.bot)
 
 Preview. Subcapability for interacting with HTML-based dialogs that need to communicate with the Bot Framework.
 
 ## `geoLocation`
 
-[Reference](/javascript/api/@microsoft/teams-js/geolocation)
+[Reference](/javascript/api/@microsoft/teams-js/geolocation) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/GeoLocation.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+geoLocation)
 
 Preview. Namespace providing location-related functionality. This is the newer version of the location module.
 
@@ -1433,13 +1433,13 @@ When an API doesn't support or generates an error, add logic to fail or provide 
 
 ### `geoLocation.map`
 
-[Reference](/javascript/api/@microsoft/teams-js/geolocation.map)
+[Reference](/javascript/api/@microsoft/teams-js/geolocation.map) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/GeoLocation.map.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+geoLocation.map)
 
 Preview. Subcapability providing map-related functionality.
 
 ## `location`
 
-[Reference](/javascript/api/@microsoft/teams-js/location)
+[Reference](/javascript/api/@microsoft/teams-js/location) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+location)
 
 Deprecated. Namespace providing location-related functionality (get and show location). Use [geoLocation](#geolocation) for new apps.
 
@@ -1502,7 +1502,7 @@ Deprecated. Namespace providing location-related functionality (get and show loc
 
 ## `mail`
 
-[Reference](/javascript/api/@microsoft/teams-js/mail)
+[Reference](/javascript/api/@microsoft/teams-js/mail) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+mail)
 
 Namespace providing email-related functionality.
 
@@ -1565,7 +1565,7 @@ Namespace providing email-related functionality.
 
 ## `media`
 
-[Reference](/javascript/api/@microsoft/teams-js/media)
+[Reference](/javascript/api/@microsoft/teams-js/media) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+media)
 
 Namespace providing image file-related functionality.
 
@@ -1628,7 +1628,7 @@ Namespace providing image file-related functionality.
 
 ## `meeting`
 
-[Reference](/javascript/api/@microsoft/teams-js/meeting)
+[Reference](/javascript/api/@microsoft/teams-js/meeting) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+meeting)
 
 Namespace providing in-meeting app functionality.
 
@@ -1699,7 +1699,7 @@ Namespace providing in-meeting app functionality.
 
 ## `menus`
 
-[Reference](/javascript/api/@microsoft/teams-js/menus)
+[Reference](/javascript/api/@microsoft/teams-js/menus) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Menus.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+menus)
 
 Namespace to interact with the menu-related part of the library. This module is used to show *View Configuration*, *Action Menu*, and *Navigation Bar Menu*.
 
@@ -1762,7 +1762,7 @@ Namespace to interact with the menu-related part of the library. This module is 
 
 ## `pages`
 
-[Reference](/javascript/api/@microsoft/teams-js/pages)
+[Reference](/javascript/api/@microsoft/teams-js/pages) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Pages.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+pages)
 
 Navigation-related part of the TeamsJS library.
 
@@ -1939,37 +1939,37 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
 
 ### `pages.appButton`
 
-[Reference](/javascript/api/@microsoft/teams-js/pages.appbutton)
+[Reference](/javascript/api/@microsoft/teams-js/pages.appbutton) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Pages.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+pages.appButton)
 
 Provides APIs to interact with the app button part of the SDK.
 
 ### `pages.backStack`
 
-[Reference](/javascript/api/@microsoft/teams-js/pages.backstack)
+[Reference](/javascript/api/@microsoft/teams-js/pages.backstack) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/pagesSubCapability/NavigateBack.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+pages.backStack)
 
 Provides APIs for handling the user's navigational history.
 
 ### `pages.config`
 
-[Reference](/javascript/api/@microsoft/teams-js/pages.config)
+[Reference](/javascript/api/@microsoft/teams-js/pages.config) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+pages.config)
 
 Provides APIs to interact with the configuration-specific part of the SDK. This object is usable only on the configuration frame.
 
 ### `pages.currentApp`
 
-[Reference](/javascript/api/@microsoft/teams-js/pages.currentapp)
+[Reference](/javascript/api/@microsoft/teams-js/pages.currentapp) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Pages.Current.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+pages.currentApp)
 
 Provides functions for navigating without needing to specify your application ID.
 
 ### `pages.tabs`
 
-[Reference](/javascript/api/@microsoft/teams-js/pages.tabs)
+[Reference](/javascript/api/@microsoft/teams-js/pages.tabs) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+pages.tabs)
 
 Provides APIs for querying and navigating between contextual tabs of an application. Unlike personal tabs, contextual tabs are pages associated with a specific context, such as channel or chat.
 
 ## `people`
 
-[Reference](/javascript/api/@microsoft/teams-js/people)
+[Reference](/javascript/api/@microsoft/teams-js/people) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/People.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+people)
 
 Namespace providing functionality for [People Picker API](../concepts/device-capabilities/people-picker-capability.md).
 
@@ -2032,7 +2032,7 @@ Namespace providing functionality for [People Picker API](../concepts/device-cap
 
 ## `profile`
 
-[Reference](/javascript/api/@microsoft/teams-js/profile)
+[Reference](/javascript/api/@microsoft/teams-js/profile) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+profile)
 
 Preview. Namespace providing for profile-related functionality.
 
@@ -2098,7 +2098,7 @@ Preview. Namespace providing for profile-related functionality.
 
 ## `search`
 
-[Reference](/javascript/api/@microsoft/teams-js/search)
+[Reference](/javascript/api/@microsoft/teams-js/search) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+search)
 
 Preview. Allows your application to interact with the host Microsoft 365 application's search box. By integrating your application with the host's search box, users can search your app using the same search box they use elsewhere in Teams, Outlook, or Microsoft 365 app.
 
@@ -2161,7 +2161,7 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
 
 ## `secondaryBrowser`
 
-[Reference](/javascript/api/@microsoft/teams-js/secondaryBrowser)
+[Reference](/javascript/api/@microsoft/teams-js/secondaryBrowser) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+secondaryBrowser)
 
 Preview. Namespace supporting in-app browser experiences of the host app. For example, opening a URL in the host app inside a browser.
 
@@ -2224,7 +2224,7 @@ Preview. Namespace supporting in-app browser experiences of the host app. For ex
 
 ## `settings`
 
-[Reference](/javascript/api/@microsoft/teams-js/settings)
+[Reference](/javascript/api/@microsoft/teams-js/settings) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+settings)
 
 Deprecated. Provides settings-related functionality. Use equivalent APIs from the [pages](#pages) for new apps.
 
@@ -2287,7 +2287,7 @@ Deprecated. Provides settings-related functionality. Use equivalent APIs from th
 
 ## `sharing`
 
-[Reference](/javascript/api/@microsoft/teams-js/sharing)
+[Reference](/javascript/api/@microsoft/teams-js/sharing) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Sharing.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+sharing)
 
 Namespace to open a share dialog for web content. For more information, see [Share to Teams from personal app or tab](../concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md).
 
@@ -2353,7 +2353,7 @@ Namespace to open a share dialog for web content. For more information, see [Sha
 
 ## `stageView`
 
-[Reference](/javascript/api/@microsoft/teams-js/stageview)
+[Reference](/javascript/api/@microsoft/teams-js/stageview) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/StageView.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+stageView)
 
 Preview. Namespace to interact with the Stage View specific part of the library.
 
@@ -2416,7 +2416,7 @@ Preview. Namespace to interact with the Stage View specific part of the library.
 
 ## `tasks`
 
-[Reference](/javascript/api/@microsoft/teams-js/tasks)
+[Reference](/javascript/api/@microsoft/teams-js/tasks) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+tasks)
 
 The earlier version of the capability for providing modal dialogs (referred as task modules in TeamsJS v1.x) supports versions prior to TeamsJS v2.8.0. For new apps, use the [dialog](#dialog) capability.
 
@@ -2482,7 +2482,7 @@ The earlier version of the capability for providing modal dialogs (referred as t
 
 ## `teamsCore`
 
-[Reference](/javascript/api/@microsoft/teams-js/teamscore)
+[Reference](/javascript/api/@microsoft/teams-js/teamscore) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/TeamsCore.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+teamsCore)
 
 Namespace containing the set of APIs that support Teams-specific functionalities.
 
@@ -2545,7 +2545,7 @@ Namespace containing the set of APIs that support Teams-specific functionalities
 
 ## `video`
 
-[Reference](/javascript/api/@microsoft/teams-js/videoeffects)
+[Reference](/javascript/api/@microsoft/teams-js/videoeffects) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/Video.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+video)
 
 Preview. Namespace representing functionality for in-meeting video effects.
 
@@ -2614,7 +2614,7 @@ Preview. Namespace representing functionality for in-meeting video effects.
 
 ## `webStorage`
 
-[Reference](/javascript/api/@microsoft/teams-js/webstorage)
+[Reference](/javascript/api/@microsoft/teams-js/webstorage) | [Sample](https://github.com/vikramtha/microsoft-teams-library-js/blob/vikramtha/teamsjs-cc-app/apps/teams-cc-app/src/components/capabilities/WebStorage.tsx) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+webStorage)
 
 Preview. Contains functionality to allow web apps to store data in webview cache.
 
