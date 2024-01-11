@@ -48,7 +48,7 @@ Install `teamsapp-cli` from `npm` and run `teamsapp -h` to check all available c
   teamsapp -h
 ```
 
-:::image type="content" source="../assets/images/teams-toolkit-cli/npm-package-install.png" alt-text="Screenshot shows the installation of npm package." lightbox="../assets/images/teams-toolkit-cli/teamsapp-help.png":::
+:::image type="content" source="../assets/images/teams-toolkit-cli/npm-package-install.png" alt-text="Screenshot shows the installation of npm package." lightbox="../assets/images/teams-toolkit-cli/npm-package-install.png":::
 
 ## Supported commands
 
@@ -270,7 +270,7 @@ The following table lists the parameters available for `teamsapp package`:
 | `--env-file` | No | Select an .env file that defines the variables to replace in the manifest template file. |
 | `--manifest-file` | No | Select the manifest file path. Defaults to `${folder}/appPackage/manifest.json`. |
 | `--output-package-file` | No | Select the output path of the zipped app package. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. |
-| `--output-manifest-file` | No | Select the output manifest file path. Defaults to `${folder}/appPackage/build//manifest.${env}.json`. |
+| `--output-manifest-file` | No | Select the output manifest file path. Defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
 | `--folder -f` | No | Select root folder of the project. Defaults to `./`. |
 
 ## `teamsapp validate`
@@ -337,7 +337,7 @@ The following list provides the common scenarios for `teamsapp preview`:
   ```
 
   > [!NOTE]
-  > The logs of the background services, such as React is saved in ~/.fx/cli-log/local-preview/.
+  > The logs of the background services, such as React is saved in `~/.fx/cli-log/local-preview/`.
 
 ## `teamsapp publish`
 
