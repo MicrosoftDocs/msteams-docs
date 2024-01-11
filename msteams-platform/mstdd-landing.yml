@@ -166,7 +166,7 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
-        - text: Teams App Test Tool
+        - text: Debug your bot using Teams App Test Tool
           url: ~/sbs-teams-app-test-tool.yml
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml

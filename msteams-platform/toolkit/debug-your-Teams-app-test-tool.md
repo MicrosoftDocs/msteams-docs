@@ -480,7 +480,7 @@ No. We always recommend users to test their bot application in the Teams client 
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../sbs-teams-app-test-tool.yml) to create an AI chat bot using Teams App Test Tool.
+Follow the [step-by-step guide](../sbs-teams-app-test-tool.yml) to debug an AI chat bot using Teams App Test Tool.
 
 ## See also
 
