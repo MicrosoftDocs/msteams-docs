@@ -39,31 +39,31 @@ The following is an app manifest example for Actions that can be triggered on fi
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview",
-.
-.
-.
-"actions": [
+  .
+  .
+  .
+  "actions": [
     {
-        // Defining Action to open a personal tab
-        "id": "relatedTasks",
-        "displayName": "Related tasks",
-        "intent": "custom",
-        "description": "Shows tasks in the To do app that are related to this file.",
-        "handlers": [
-            {
-                "type": "openPage",
-                "supportedObjects": {
-                    "file": {
-                        "extensions": ["xlsx", "doc", "docx", "pdf", "pptx", "ppt"]
-                    }
-                },
-                "pageInfo": {
-                    "pageId": "index",
-                }
+      // Defining Action to open a personal tab
+      "id": "relatedTasks",
+      "displayName": "Related tasks",
+      "intent": "custom",
+      "description": "Shows tasks in the To do app that are related to this file.",
+      "handlers": [
+        {
+          "type": "openPage",
+          "supportedObjects": {
+            "file": {
+              "extensions": ["xlsx", "doc", "docx", "pdf", "pptx", "ppt"]
             }
-        ]
+          },
+          "pageInfo": {
+            "pageId": "index",
+          }
+        }
+      ]
     }
-]
+  ]
 }
 ```
 

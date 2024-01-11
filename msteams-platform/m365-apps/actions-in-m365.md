@@ -72,8 +72,7 @@ An Action in the context menu contains an app icon and display name.
 
 > [!NOTE]
 >
-> * The placement of Actions is determined by the Microsoft 365 platform.
-> * It's not mandatory for intents to be grouped and custom intents to be ungrouped.
+> The Microsoft 365 platform determines the placement of Actions, and there’s no requirement for intents to be grouped or for custom intents to be ungrouped.
 
 ## Next step
 
