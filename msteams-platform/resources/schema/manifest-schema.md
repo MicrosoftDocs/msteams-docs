@@ -580,8 +580,8 @@ Each command item is an object with the following structure:
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.url`|String|||Initial webview URL.|
 |`parameters`|Array of object|5 items||The list of parameters the command takes. Minimum: 1; maximum: 5.|
-|`parameters.name`|String|64 characters||The name of the parameter as it appears in the client. The parameter name is included in the user request.|
-|`parameters.title`|String|32 characters||User-friendly title for the parameter.|
+|`parameters.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
+|`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameters.value`|String|512 characters||Initial value for the parameter. Currently the value isn't supported|
 |`parameters.inputType`|String|||Defines the type of control displayed on a task module for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
