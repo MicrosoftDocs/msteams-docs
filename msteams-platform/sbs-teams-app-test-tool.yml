@@ -16,12 +16,12 @@ items:
   content: |
     > [!NOTE]
     >
-    > * Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit.
+    > * Teams App Test Tool is available only in the latest prerelease version of the Teams Toolkit.
     > * Teams App Test Tool is supported only for desktop and web clients.
     
-    Start Microsoft Teams app development with your Teams AI chat bot app and debug using Teams App Test Tool. Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. 
+    Start Microsoft Teams app development with your Teams AI chat bot app and debug with the Teams App Test Tool (Test Tool). Test Tool makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. 
 
-    This step-by-step guide helps you to build AI chat bot using Teams Toolkit and debug AI chat bot using Teams App Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
+    This step-by-step guide helps you to build AI chat bot using Teams Toolkit and debug AI chat bot with the Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
     
@@ -56,23 +56,6 @@ items:
    1. On the Teams Toolkit page, select the dropdown arrow next to **Install**.
 
    1. Select **Install Pre-Release Version**.
-
-   ## Set up your Teams development tenant
-
-    A tenant is a space or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where you upload and test your app. Let's verify if you're ready to develop with the tenant.
-
-    ### Create a free Teams developer tenant (optional)
-
-    If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
-
-    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
-    1. Select **Join Now** and follow the onscreen instructions.
-    1. In the welcome screen, select **Set up E5 subscription**.
-    1. Set up your administrator account. After you finish, the following screen appears.
-
-        :::image type="content" source="~/assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
-
-    1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a customised app** option in Teams.
    
 - title: Create project workspace for your AI chat bot app
   durationInMinutes: 1
@@ -152,7 +135,7 @@ items:
     |`src/app.js`| Handles business logics for the AI Chat Bot.|
     |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
     |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-    |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+    |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Test Tool.|
 
 - title: Build and run your AI chat bot app
   durationInMinutes: 1
