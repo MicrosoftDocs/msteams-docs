@@ -16,7 +16,8 @@ items:
   content: |
     > [!NOTE]
     >
-    > Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit. 
+    > * Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit.
+    > * Teams App Test Tool is supported only for desktop and web clients.
     
     Start Microsoft Teams app development with your Teams AI chat bot app and debug using Teams App Test Tool. Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. 
 
@@ -34,7 +35,7 @@ items:
    | [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or CSharp build environments. Use the latest version. |
    | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use pre-release version of Teams Toolkit.|
    | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-   | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+   | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
    | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 
@@ -92,7 +93,7 @@ items:
 
     If the prerequisites are in place, let's begin!
 
-    1. Open Visual Studio Code.
+    1. Open **Visual Studio Code**.
 
     1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
@@ -104,7 +105,7 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the Teams Toolkit app templates.":::
 
-    1. Select **AI Chat Bot**. If you need a different functionality for your bot, pick a different option.
+    1. Select **AI Chat Bot**. If you need a different functionality for your bot, select a different option.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
@@ -162,7 +163,7 @@ items:
 
     Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-    1. Open Visual Studio Code.
+    1. Open **Visual Studio Code**.
 
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
 
@@ -178,17 +179,13 @@ items:
 
     Now you're ready to build the app and run it locally!
 
-    ## Create an app registration in Microsoft Entra ID
-
-    Register a new app in Microsoft Entra ID and configure the tenancy and app's platform. You'll generate a new app ID that will be updated later in your Teams app manifest file.
-
-    ### Register your new chat bot AI in Microsoft Entra ID
+    ## Create Open AI key and Endpoint for your AI chat bot
 
     1. Go to the [Azure portal](https://ms.portal.azure.com/).
 
     1. Select **create a resource** and search for Azure Open AI.
 
-    1. Select Azure Open AI > select **Create**.
+    1. Select **Azure Open AI** and select **Create**.
 
         :::image type="content" source="~/assets/images/test-tool/azure-open-ai.png" alt-text="Screenshot shows the Azure open AI in Azure portal.":::
 
@@ -208,16 +205,18 @@ items:
 
         :::image type="content" source="~/assets/images/test-tool/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
 
-        Deployment is in progress.
+        You've successfully created key and endpoint for your AI chat bot.
 
         :::image type="content" source="~/assets/images/test-tool/deployment.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
 
      ### Get Azure Open AI keys and endpoint
 
     1. Select **Go to resources**.
-    1. Select **Keys and Endpoint** from the left pane and copy the **Key** and **Endpoint**.
+    1. Select **Keys and Endpoint** from the left pane and copy the **Key** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
 
         :::image type="content" source="~/assets/images/test-tool/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
+
+        Save the **Key** and **Endpoint** for further use.
 
     1. Select **Model deployments** from the left pane and select **Manage deployments.
 
@@ -267,7 +266,6 @@ items:
         azureEndpoint: config.azureOpenAIEndpoint,
         ...
         ```
-
 
     1. Enter your Azure Open AI deployment name in `azureDefaultDeployment`.
 
