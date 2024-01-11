@@ -193,7 +193,7 @@ items:
 
         :::image type="content" source="~/assets/images/test-tool/azure-open-ai-resource.png" lightbox="~/assets/images/test-tool/azure-open-ai-resource.png" alt-text="Screenshot shows you the Azure open AI subscription and resource group.":::
 
-    1. Select **All network including the internet, can access this resource.** and then select **Next**.
+    1. Select **All network including the internet, can access this resource** and then select **Next**.
 
         :::image type="content" source="~/assets/images/test-tool/azure-open-ai-network.png" lightbox="~/assets/images/test-tool/azure-open-ai-network.png" alt-text="Screenshot shows the Azure open AI network details.":::
     
@@ -218,22 +218,28 @@ items:
 
         Save the **Key** and **Endpoint** for further use.
 
-    1. Select **Model deployments** from the left pane and select **Manage deployments.
+    1. Select **Model deployments** from the left pane and select **Manage Deployments**.
 
         :::image type="content" source="~/assets/images/test-tool/model-deployments.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
     
-        Its opens Azure Open AI Studio.
+        Azure Open AI Studio window appears.
 
     1. Select **+ Create new deployments**.
 
         :::image type="content" source="~/assets/images/test-tool/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
 
-    1. Select the **gpt-35-turbo** from **Select a Model** dropdown list and **0301** for **Model version** from the dropdown list.
+    1. Select the following details.":::
+    
+        1. Select **gpt-35-turbo** from the **Select a Model** dropdown list 
+        1. Select **0301** from the **Model version** dropdown list.
+        1. Enter **Deployment name** and select **Create**.
 
         :::image type="content" source="~/assets/images/test-tool/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
 
-    1. Enter **Deployment name** and select **Create**.
-    1. Copy Deployment name.
+        > [!NOTE]
+        > Only **gpt-35-turbo** model is supported for AI chat bot.
+    
+    1. Copy and save the **Deployment name** for further use.
 
         :::image type="content" source="~/assets/images/test-tool/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
 
@@ -253,7 +259,7 @@ items:
 
     1. Go to **src** > **app.js** file.
 
-    1. Comment the OpenAI code lines and uncomment the Azure OpenAI code lines.
+    1. Comment the `OpenAI` code and uncomment the `Azure OpenAI` code.
 
     1. Enter your Azure Open AI deployment name in `azureDefaultDeployment`.
 
@@ -328,7 +334,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
-    1. Add `messageReaction` to customize the activity under the property `type` and invoke the custom activity.
+    1. Add `messageReaction` to customize the activity under the property `type` and update as follows:
 
         ```json
         {
