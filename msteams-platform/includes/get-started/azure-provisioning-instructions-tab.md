@@ -37,8 +37,6 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows the provisioning of dialog.":::
 
-   :::image type="content" source="~/assets/images/teams-toolkit-v2/provision-confirm.png" alt-text="Screenshot shows the selection of subscription.":::
-
    The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows the resource successfully provisioned in the cloud.":::
