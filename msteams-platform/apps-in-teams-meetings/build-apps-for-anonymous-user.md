@@ -222,11 +222,11 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 ## Known issues and limitations
 
-* Apps for anonymous users are't supported on Live event, VDI, and Linux platforms.
+* Apps for anonymous users aren't supported on Live event, VDI, and Linux platforms.
 
-* Apps for anonymous users are't supported on Firefox and Safari browsers.
+* Apps for anonymous users aren't supported on Firefox and Safari browsers.
 
-* Apps for anonymous users are't supported in Teams channel meetings.
+* Apps for anonymous users aren't supported in Teams channel meetings.
 
 * Currently, the `getContext` API doesn't return a user ID for the anonymous user though the bot APIs do and it's not possible to correlate the anonymous user between these two APIs.
 
