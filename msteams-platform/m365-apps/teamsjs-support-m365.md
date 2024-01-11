@@ -712,7 +712,6 @@ Deprecated. Namespace for initializing an app. For new apps, use [app.initialize
 ## `appInstallDialog`
 
 [Reference](/javascript/api/@microsoft/teams-js/appinstalldialog) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+appInstallDialog)
-
 Namespace used to open a dialog for installing an application.
 
 <br />
@@ -1091,7 +1090,7 @@ Preview. Namespace providing functionality to start a chat with others.
 
 ## `clipboard`
 
-[Reference](/javascript/api/@microsoft/teams-js/clipboard) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+dialog)
+[Reference](/javascript/api/@microsoft/teams-js/clipboard) |
 
 Preview. This capability enables users to copy and paste to the system clipboard.
 
