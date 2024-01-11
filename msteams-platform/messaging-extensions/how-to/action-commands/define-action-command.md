@@ -96,6 +96,12 @@ To create an action based message extension using Developer Portal for Teams, fo
 
    :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
+1. Under **Message extension type**, select **Bot**.
+
+   1. If you get a disclaimer, which reads **API Message extension is already in use by users. Would you like to change message extension type to bot?**, select **Yes, change**.
+
+   :::image type="content" source="../../../assets/images/Copilot/bot-based-me-tdp-type.png" alt-text="Screenshot shows API Message extension is already in use disclaimer when a user switches from API to bot message extension type.":::
+
 1. If you don't have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
 
    1. If don't have a Bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
@@ -130,15 +136,17 @@ To create an action based message extension using Developer Portal for Teams, fo
 
 **To add additional parameters**
 
-1. Select ellipse under command section and then select **Edit parameter**.
+1. Under command, select the ellipse (**...**) icon and then select **Edit parameter**.
 
    :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to add additional parameters for your message extension.":::
 
-1. Select **Add a Parameters** and enter all the parameters.
+1. Select **Add a Parameter** and update the parameter details.
 
    :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
-A search message extension using bot framework created.
+1. Select **Save**   
+
+A bot-based action message extension is created.
 
 ---
 

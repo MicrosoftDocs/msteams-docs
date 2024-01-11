@@ -292,11 +292,11 @@ To trigger the message extension through M365 Chat, follow these steps:
 > [!NOTE]
 > This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the M365 Chat response and leave a message tagged with [MessageExtension].
 
-<!--# [Developer Portal for Teams](#tab/developer-portal-for-teams)
+# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
 1. Go to **Teams Developer Portal**.
 1. Go to **Apps**.
-1. Select **Create a new app**.
+1. Select **+ New apps**.
 1. Under **Configure**, select **App features**.
 1. Select **Messaging extension**.
 
@@ -304,11 +304,15 @@ To trigger the message extension through M365 Chat, follow these steps:
 
 1. Under **Message extension type**, select **Bot**.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-tdp-select-bot.png" alt-text="Screenshot shows the Bot, Existing bot, and Enter Bot ID options for messaging extension app feature in Developer Portal for Teams.":::
+   1. If you get a disclaimer, which reads **API Message extension is already in use by users. Would you like to change message extension type to bot?**, select **Yes, change**.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-me-tdp-type.png" alt-text="Screenshot shows API Message extension is already in use disclaimer when a user switches from API to bot message extension type.":::
 
 1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
 
-   1. If don't have a Bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+   1. If don't have a Bot ID, you can select **Create a new bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+
+   :::image type="content" source="../assets/images/Copilot/bot-based-tdp-select-bot.png" alt-text="Screenshot shows the Bot, Existing bot, and Enter Bot ID options for messaging extension app feature in Developer Portal for Teams.":::
 
 1. Select **Save**.
 
@@ -329,9 +333,9 @@ To trigger the message extension through M365 Chat, follow these steps:
 
 1. Select **Save**.
 
-A bot-based message extension is created.
+A bot-based search message extension is created.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer Portal for Teams."::: -->
+:::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer Portal for Teams.":::
 
 ---
 

@@ -81,7 +81,7 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 </details>
 
-You can create an API-based message extension using Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
+You can create an API-based message extension using Developer Portal for Teams, Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
@@ -90,21 +90,37 @@ To create an API-based message extension using Developer Portal for Teams, follo
 1. Go to **[Teams Developer Portal](https://dev.teams.microsoft.com/home)**.
 1. Go to **Apps**.
 1. Select **+ New apps**.
-1. Enter a name of the app and select **Add**.
-1. In the left pane, under **Configure**, select **App features**.
+1. Enter a name of the app and select the **Manifest version** as **Latest prerelease (devPreview)**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-manifest-version.png" alt-text="Screenshot shows the app name and the manifest version selected as Latest prerelease (devPreview) in Developer Portal.":::
+
+1. Select **Add**.
+1. In the left pane, under **Configure**, update the following **Basic information**:
+
+   1. Full name
+   1. Short description
+   1. Long description
+   1. Developer or company name
+   1. Website (must be a valid HTTPS URL)
+   1. Privacy policy
+   1. Terms of use
+
+1. Select **Save**.
+
+1. Select **App features**.
 1. Select **Messaging extension**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
-1. Under **Message extension type**, select **API-based**.
+1. Under **Message extension type**, select **API**. 
 
-1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**, select **Yes, change**.
+   1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**, select **Yes, change**.
 
-1. Under **Open API spec**, select **Upload now**.
+1. Under **OpenAPI spec**, select **Upload now**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams Developer Portal.":::
 
-1. Select the Open OpenAPI Description document in JSON or YAML and select **Open**.
+1. Select the Open OpenAPI Description document in the YAML format and select **Open**.
 
 1. Select **Save**. A pop-up appears with the message **API spec saved successfully**.
 1. Select **Got it**.
@@ -124,7 +140,7 @@ You can add commands and parameters to your message extension, to add commands:
 
    A **Add command** pop-up appears with a list of all the available APIs from the Open API Description document.
 
-1. Select one or more APIs from the list and select **Next**.
+1. Select an API from the list and select **Next**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png" alt-text="Screenshot shows the list of APIs from the OpenAPI Description Document in the Add a command pop-up window.":::
 
@@ -135,7 +151,7 @@ You can add commands and parameters to your message extension, to add commands:
     :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
 
    > [!NOTE]
-   > If you have more than one API, ensure that you upload the **Adaptive card template** for all the APIs.
+   > If you have more than one API, ensure that you upload the **Adaptive card template** for each API.
 
 1. Select the Adaptive Card template file in JSON format and select **Open**.
 
@@ -150,7 +166,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Details**, update the **Command description**.
 
-1. If you want to launch a command using a trigger in Microsoft 365 chat, Turn on the **Automatically run the command when a user opens the extension** toggle.
+   1. If you want to launch a command using a trigger in Microsoft 365 chat, Turn on the **Automatically run the command when a user opens the extension** toggle.
 
 1. Select **Add**. The command is added successfully.
 
