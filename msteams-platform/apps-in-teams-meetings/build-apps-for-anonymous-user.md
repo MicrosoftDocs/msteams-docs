@@ -14,7 +14,7 @@ Anonymous users don't have a Microsoft Entra identity and aren't federated with 
 
 > [!NOTE]
 >
-> * Apps for anonymous users are supported in  multi-window chats in the new Teams desktop and mobile clients for Windows and Mac.
+> * Apps for anonymous users are supported in the new Teams desktop and mobile clients for Windows and Mac.
 > * Meeting apps for anonymous users are only supported in Microsoft Edge and Chrome.
 
 For anonymous users to interact with the apps in Teams meetings, ensure to:
@@ -23,6 +23,9 @@ For anonymous users to interact with the apps in Teams meetings, ensure to:
 2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in Teams admin center.
 
 ## App manifest update for anonymous users
+
+> [!NOTE]
+> The `supportsAnonymousGuestUsers` property in the app manifest schema v1.16 is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
 
 To allow anonymous users to interact with the tab app, update the `supportsAnonymousGuestUsers` property to `true` in your app manifest schema v1.16 or later. Following is an example of the manifest:
 
