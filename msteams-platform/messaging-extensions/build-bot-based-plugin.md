@@ -337,6 +337,12 @@ A bot-based search message extension is created.
 
 :::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer Portal for Teams.":::
 
+To test your bot-based message extension created in the Developer Portal for Teams, you can use the following methods:
+
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
+
+* **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
+
 ---
 
 ## Step-by-step guide

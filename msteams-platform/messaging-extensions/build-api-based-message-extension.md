@@ -176,6 +176,12 @@ You can add commands and parameters to your message extension, to add commands:
 
 An API-based message extension is created.
 
+To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
+
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
+ 
+* **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
+
 # [Visual Studio Code](#tab/visual-studio-code)
 
 > [!NOTE]
@@ -325,7 +331,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 1. Select **Next**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-create-project.png" alt-text="Screenshot shows the Search results from API, New API,  OpenAPI Description Document, and Create options in Visual Studio to create a new Project.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-create-project.png" alt-text="Screenshot shows the Search results from API, New API, OpenAPI Description Document, and Create options in Visual Studio to create a new Project.":::
 
 1. Based on the options selected in **step 7**, select the following:
 
