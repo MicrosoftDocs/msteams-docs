@@ -12,7 +12,7 @@ ms.author: v-ypalikila
 
 The document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing the app.
 
-:::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows the link unfurling experience in a tree chat for a Teams app installed or not installed in Teams and other apps, when the link is pasted in Teams compose message area." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
+:::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows the link unfurling experience for a Teams app installed or not installed in Teams and other apps." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
 
 > [!NOTE]
 >
@@ -44,7 +44,7 @@ See the following video to learn more about link unfurling:
 
 ## Add link unfurling to your app manifest
 
-To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com`. This matches exactly one segment of the domain; if you need to match `a.b.example.com`, then use `*.*.example.com`.
+To add link unfurling to your app manifest, add a new `messageHandlers` array to the `composeExtensions` section of your app manifest JSON. You can add the array with the help of Developer Portal or manually. Domain listings can include wildcards, for example `*.example.com` that matches exactly one segment of the domain. If you need to match `a.b.example.com`, then use `*.*.example.com`.
 
 > [!NOTE]
 > Ensure that you don't add domains that aren't in your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` isn't valid. The top-level domains are prohibited, for example, `*.com`, `*.org`.
@@ -376,7 +376,7 @@ To get your app ready for zero install link unfurling, follow these steps:
       }
       ```
 
-1. Preauth card (for auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. Users can learn about the app even before the installation.
+1. Preauth card (for auth only): Create a card preview to unfurl your links for users who don't have your app installed. You can either create a pre-templated card or add relevant placeholder fields for the users to update. Users can learn about the app even before installing it.
 
    You can create a customized card and add relevant fields. The users can fill in the required information as per the fields. The following image illustrates a customized card preview:
 
@@ -395,8 +395,8 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 Zero install link unfurling helps you provide enhanced experience to the users, such as:
 
-* Unfurl previews for your links that users share in Teams, even prior to the installation of your app.
-* Create welcome card for your app that displays a preview with the placeholder fields.
+* Unfurl previews for your links that users share in Teams even before the user installs your app.
+* Create a welcome card for your app to show a preview with the placeholder fields.
 
 # [Limitations](#tab/limitations)
 
@@ -404,7 +404,7 @@ The following are the limitations:
 
 * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtensions/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
 
-* The bot can't return a [Universal Actions for Adaptive Cards](../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md) when it receives a `composeExtensions/anonymousQueryLink` invoke request. This applies to both the result card and the pre-auth card in auth.
+* The bot can't send back an [Adaptive Cards with Universal Actions](../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md) in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
 * If the bot selects to send back the `"type": "auth"` property with a pre-auth card, Teams strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 
