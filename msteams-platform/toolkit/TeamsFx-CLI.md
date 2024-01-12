@@ -46,7 +46,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 | Command | Description |
 |----------------|-------------|
 | `teamsfx new`| Create a new Microsoft Teams application.|
-| `teamsfx add`| Add feature to your Microsoft Teams application.|
+| `teamsfx add`| Add a feature to your Microsoft Teams application.|
 | `teamsfx account`| Manage Microsoft 365 and Azure accounts. The supported cloud services are Azure and Microsoft 365. |
 | `teamsfx env` | Manage environments. |
 | `teamsfx help` | Show Microsoft Teams Toolkit CLI help. |
@@ -58,7 +58,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 | `teamsfx publish` | Run the publish stage in teamsapp.yml.|
 | `teamsfx preview` | Preview the current application. |
 | `teamsfx m365`  | M365 App Management. |
-| `teamsfx permission`| Check, grant, and list permissions for who can access and manage Microsoft Teams application and Microsoft Entra application. |
+| `teamsfx permission`| Check, grant, and list permissions for users who can access and manage Microsoft Teams application and Microsoft Entra application. |
 | `teamsfx update` | Update the specific application manifest file. |
 | `teamsfx upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
 
@@ -261,7 +261,7 @@ The following list provides the common scenarios for `teamsfx preview`:
 
 ## `teamsfx m365`
 
-M365 App Management.
+Manage Microsoft 365 app.
 
 ### Parameters for `teamsfx m365`
 
@@ -516,7 +516,7 @@ Provision the cloud resources in the current application.
 
 ## `teamsfx deploy`
 
-This command is used to deploy the current application. By default it deploys entire project but it's also possible to deploy partially. The options are `frontend-hosting`, `function`, `apim`, `bot`, `spfx`, `aad-manifest`, and `manifest`.
+The `teamsfx deploy` command is used to deploy the current application. By default, it deploys an entire project but it's also possible to deploy partially. The available options are `frontend-hosting`, `function`, `apim`, `bot`, `spfx`, `aad-manifest`, and `manifest`.
 
 ### Parameters for `teamsfx deploy`
 
@@ -786,7 +786,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 ## Deploy to Azure web app manually
 
-1. Create an SSO enable tab.
+1. Create an SSO enabled tab.
 2. Provision your project:
 
       ```bash
@@ -801,7 +801,7 @@ The following list provides required permissions for `TeamsFx` projects:
 
 6. Modify `templates/azure/provision/frontendHosting.bicep`.
 
-7. Provision again. Teams Toolkit updates Microsoft Entra ID, and app manifest for you.
+7. Provision again. Teams Toolkit updates Microsoft Entra ID and app manifest for you.
 
 8. Find your `appPackage.dev.zip` in build, or AppPackage folder, and add to Teams.
 
