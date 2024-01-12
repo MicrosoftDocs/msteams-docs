@@ -65,6 +65,8 @@ landingContent:
         url:  bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
       - text: Extend an action-based Teams message extension across Microsoft 365
         url:  m365-apps/extend-m365-teams-message-extension.md
+      - text: Teams App Test Tool streamlines the debug process of bot apps
+        url: toolkit/debug-your-Teams-app-test-tool.md
 
     - linkListType: reference
       links:
