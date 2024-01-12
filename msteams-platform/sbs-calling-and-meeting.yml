@@ -223,13 +223,16 @@ items:
          * Replace `TenantId` to the `UserId`.
          * Replace `DisplayName` to the `Id`.
 
-        :::image type="content" source="./assets/images/calls-and-meetings/appsettings_1.png" alt-text="Screenshot of Appsettings.json displaying the details of appsettings.":::
+        :::image type="content" source="./assets/images/calls-and-meetings/appsettings_1.png" alt-text="Screenshot of appsettings.json displaying the details of appsettings.":::
 
     1. Select **Save**.
 
     **Update app manifest**
 
     1. Go to the **manifest.json** file in the cloned repository.
+       
+       :::image type="content" source="./assets/images/calls-and-meetings/manifestlocation-file.png" alt-text="Screenshot shows the location of the app manifest file in file explorer.":::
+
     1. Open the **manifest.json** file in Visual Studio and make the following changes:
          * Replace `{id}`` and `{BotId}` to your **Microsoft App ID**.
          * Replace all occurrences of `{{domain-name}}` with your ngrok or dev tunnel domain name.
@@ -265,6 +268,8 @@ items:
        * manifest.json
        * outline.png
        * color.png
+
+         :::image type="content" source="~/assets/images/calls-and-meetings/manifest-zipfile.png" alt-text="Screenshot shows the app manifest zip file in file explorer.":::
        
        > [!NOTE]
        > The `manifest.zip` must not contain any extra folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
