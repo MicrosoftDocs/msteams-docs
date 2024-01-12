@@ -109,7 +109,7 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 
 ## Handle the `composeExtensions/queryLink` invoke
 
-After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
+After adding the domain to the app manifest, you must update your web service code to handle the `invoke` request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
 > [!Note]
 > The response from a bot must include a `preview` property.
@@ -236,7 +236,7 @@ contentType: "application/vnd.microsoft.card.thumbnail",
 
 ## Zero install for link unfurling
 
-Zero install link unfurling helps you unfurl previews for your shared links even before a user discovers or installs your app in Teams. You can anonymously unfurl cards with a new invoke request or create a preauthenticated Adaptive Card preview for users before they install or authenticate your app.
+Zero install link unfurling helps you unfurl previews for your shared links even before a user discovers or installs your app in Teams. You can anonymously unfurl cards with a new `invoke` request or create a preauthenticated Adaptive Card preview for users before they install or authenticate your app.
 
 The following image provides a sequential flow to enable and use zero install link unfurling:
 
@@ -248,13 +248,13 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](../../resources/schema/manifest-schema.md#composeextensions).
 
-1. Set your app to handle the new invoke request `composeExtensions/anonymousQueryLink`.
+1. Set your app to handle the new `invoke` request `composeExtensions/anonymousQueryLink`.
 
-   Example of the new invoke request:
+   Example of the new `invoke` request:
 
-   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the invoke request  `composeExtensions/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
+   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the `invoke` request  `composeExtensions/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
 
-   Example of the invoke request payload:
+   Example of the `invoke` request payload:
 
    ```json
    {
