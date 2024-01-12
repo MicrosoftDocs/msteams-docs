@@ -13,7 +13,7 @@ ms.subservice: m365apps
 
 ## Introduction
 
-Outlook Add-ins are web apps that extend the functionality of Outlook. Some of the things that can be done with an Outlook Add-in:
+[Outlook Add-ins](/office/dev/add-ins/outlook/outlook-add-ins-overview) are web apps that extend the functionality of Outlook. Some of the things that can be done with an Outlook Add-in:
 
 - Read and write the content of email messages and meeting invitations, as well as responses, cancellations, and appointments.
 - Read properties of the user's mailbox.
@@ -21,9 +21,9 @@ Outlook Add-ins are web apps that extend the functionality of Outlook. Some of t
 - Integrate with external services including CRM and project management.
 - Add custom ribbon buttons or menu items to perform specific tasks.
 
-[Outlook Add-ins Overview](/office/dev/add-ins/outlook/outlook-add-ins-overview) which will give you information about what you can do with Outlook Add-ins, how they are structured, how they differ from older ways of extending Outlook, what platforms the add-in can run on (Windows, Mac, mobile, and the web), and how to get started creating one.
-
 Combining an Outlook Add-in with a Teams app enables scenarios that can't be satisfied with either of them separately. For example, consider an app that enables sales persons to insert a customized discount into an email for a customer, and then records the offer in a backend database. The app also enables the sales manager to view data about all the discounts that have been offered in a Teams tab. There is a sample of this app with animated screen shots at [Discount Offers](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
+
+This article will walk you through the steps to add an Outlook Add-in to a Teams app, test it, then deploy it to Azure.
 
 ## Prerequisites
 
@@ -32,6 +32,7 @@ To configure an Office Add-in as additional capability, you must meet the follow
 - You have a Microsoft 365 account that includes Teams, or separate subscriptions to both Microsoft 365 and Teams, to test the application. For example, an *.onmicrosoft.com test account through the [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
 - Your Microsoft 365 account has been added as an account in desktop Outlook. See [Add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726)
 - To deploy the Teams app to Azure as described in the last section of this article, you need an Azure account with an active subscription. Create your free Azure account if you don't already have one by using the link [Free Azure account](https://azure.microsoft.com/free/).
+- A Teams app that was created with the latest version of Teams Toolkit.
 
 ## Overview
 
@@ -603,12 +604,6 @@ To see both the app and the add-in running at the same time, take the following 
 1. Open the **Inbox** of *your Microsoft 365 account identity* and open any message. A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you open the message in its own window).
 1. Select the **Show Taskpane** button and a task pane opens. Select the **Perform an action button** and a small notification appears near the top of the message.
 
-## See also
-
-[Outlook Add-ins Overview](/office/dev/add-ins/outlook/outlook-add-ins-overview)
-[Office Add-ins with the unified app manifest for Microsoft 365 (preview)](/office/dev/add-ins/develop/unified-manifest-overview)
-[Build an Outlook add-in with the unified manifest for Microsoft 365 (preview)](/office/dev/add-ins/quickstarts/outlook-quickstart-json-manifest)
-
 ## What’s next
 
 There are other commonly suggested next steps, for example:
@@ -616,3 +611,9 @@ There are other commonly suggested next steps, for example:
 - Add authentication and make a Graph API call. For the tab capability, see [Add single sign-on to Teams app](/microsoftteams/platform/toolkit/add-single-sign-on). For the add-in capability, see [Enable single sign-on (SSO) in an Office Add-in](/office/dev/add-ins/develop/sso-in-office-add-ins).
 - [Set up CI/CD pipelines](https://github.com/OfficeDev/TeamsFx/wiki/How-to-automate-cicd-pipelines)
 - [Call a backend API](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app)
+
+## See also
+
+- [Outlook Add-ins Overview](/office/dev/add-ins/outlook/outlook-add-ins-overview)
+- [Office Add-ins with the unified app manifest for Microsoft 365 (preview)](/office/dev/add-ins/develop/unified-manifest-overview)
+- [Build an Outlook add-in with the unified manifest for Microsoft 365 (preview)](/office/dev/add-ins/quickstarts/outlook-quickstart-json-manifest)
