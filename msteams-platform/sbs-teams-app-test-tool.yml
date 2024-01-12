@@ -65,7 +65,7 @@ items:
     
     The bot capability of a Teams app creates a chatbot or a conversational bot. You use it to run simple and automated tasks, for example, providing customer service. A bot talks with a web service and helps you use its offerings. You can get weather forecast, make reservations, or any other service offered using a conversational bot.
 
-    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Diagram showing this app has three features. Bot is highlighted.":::
+    :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/your-helloworld-app-bot.png" alt-text="Screenshot shows you the app with three features. Bot is highlighted.":::
     
     As you've already prepared for creating these apps, you can set up a new Teams project for creating the AI chat bot app.
     In this tutorial, you'll learn:
@@ -88,13 +88,13 @@ items:
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/create-new-app1.png" alt-text="Screenshot shows the Teams Toolkit app templates.":::
 
-    1. Select **AI Chat Bot**. If you need a different functionality for your bot, select a different option.
+    1. Select **AI Chat Bot**. If you need a different functionality for your bot, select another option.
 
         :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/ai-chat-bot.png" alt-text="Screenshot shows the app feature to add to your new app.":::
 
     1. Select **JavaScript**.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-bot/select-language-tab.png" alt-text="Screenshot shows the option to select the programming language.":::
+        :::image type="content" source="~/assets/images/test-tool/select-language-bot.png" alt-text="Screenshot shows the option to select the programming language.":::
 
     1. Select **Default folder**.
 
@@ -144,29 +144,29 @@ items:
 
     ## Sign in to your Microsoft 365 account
 
-    Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+    If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
     1. Open **Visual Studio Code**.
 
     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
 
-    1. Select **Sign in to M365**. Your default web browser opens to let you sign in to the account.
+    1. Select **Sign in to M365**. Your default web browser opens to allow you to sign in to the account.
 
     1. Sign in to your Microsoft 365 account using your credentials.
 
     1. Close the browser when prompted and return to Visual Studio Code.
 
-    1. Return to Teams Toolkit within Visual Studio Code. Use this account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+    1. Return to Teams Toolkit within Visual Studio Code.
 
         :::image type="content" source="../msteams-platform/assets/images/test-tool/sideload.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
-    Now you're ready to build the app and run it locally!
+    Now you're ready to build the app and debug.
 
     ## Create Open AI key and Endpoint for your AI chat bot
 
     1. Go to the [Azure portal](https://ms.portal.azure.com/).
 
-    1. Select **create a resource** and search for Azure Open AI.
+    1. Select **Create a resource** and search for **Azure Open AI**.
 
     1. Select **Azure Open AI** and select **Create**.
 
@@ -195,35 +195,33 @@ items:
      ### Get Azure Open AI keys and endpoint
 
     1. Select **Go to resources**.
-    1. Select **Keys and Endpoint** from the left pane and copy the **Key** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
+    1. Select **Keys and Endpoint** from the left pane and copy the **KEY** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
 
         :::image type="content" source="~/assets/images/test-tool/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
 
-        Save the **Key** and **Endpoint** for further use.
+        Save the **KEY** and **Endpoint** for further use.
 
     1. Select **Model deployments** from the left pane and select **Manage Deployments**.
 
         :::image type="content" source="~/assets/images/test-tool/model-deployments.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
     
-        Azure Open AI Studio window appears.
+        The Azure Open AI Studio window appears.
 
     1. Select **+ Create new deployments**.
 
         :::image type="content" source="~/assets/images/test-tool/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
 
-    1. Select the following details.":::
+    1. Select the following details:
     
-        1. Select **gpt-35-turbo** from the **Select a Model** dropdown list 
+        1. Select **gpt-35-turbo** from the **Select a Model** dropdown list.
+            > [!NOTE]
+            > Only **gpt-35-turbo** model is supported for AI chat bot.
         1. Select **0301** from the **Model version** dropdown list.
         1. Enter **Deployment name** and select **Create**.
 
         :::image type="content" source="~/assets/images/test-tool/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
 
-        > [!NOTE]
-        > Only **gpt-35-turbo** model is supported for AI chat bot.
-    
     1. Copy and save the **Deployment name** for further use.
-
         :::image type="content" source="~/assets/images/test-tool/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
 
     ## Update Azure Open AI key and endpoints
@@ -264,7 +262,7 @@ items:
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
  
-    1. Test Tool opens your AI chat bot in a webpage.
+    1. The Test Tool opens your AI chat bot in a webpage.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
@@ -311,7 +309,7 @@ items:
 
     ### Custom activity triggers
 
-    You can use **Custom activity** to customize activity triggers such as, `reactionsAdded`, to fit the requirements of your bot app. Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
+    You can use **Custom activity** to customize activity triggers such as, `reactionsAdded`, to meet the requirements of your bot app. The Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
 
     1. Select **Mock an Activity** > **Custom activity**.
 
