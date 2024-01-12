@@ -251,7 +251,7 @@ items:
        
        1. Select the **CallingBotSample.sln** file from **csharp** > **Source** folder.
 
-       :::image type="content" source="./assets/images/calls-and-meetings/project-solution-location.png" alt-text="Screenshot shows the location project solution file in file explorer." lightbox= "./assets/images/calls-and-meetings/app_manifest.png" :::  
+       :::image type="content" source="./assets/images/calls-and-meetings/project-solution-location.png" alt-text="Screenshot shows the location project solution file in file explorer." :::  
 
        1. Press **F5** to run the project.
 
@@ -304,6 +304,7 @@ items:
     1. In the left pane of the Teams, select **View more apps (...)** and select your app from the list.
 
         :::image type="content" source="./assets/images/calls-and-meetings/bot-with-adaptive-card.png" alt-text="Screenshot of Calling bot displaying welcome text.":::
+        
         Bot sends welcome text with Adaptive Card.
         
     1. Select **Create Call**. 
