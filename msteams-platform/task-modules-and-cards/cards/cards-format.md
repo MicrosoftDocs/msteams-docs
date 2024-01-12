@@ -721,7 +721,7 @@ To render the newline character, `\n` as part of the code snippet in the Adaptiv
 
 ### Limitations
 
-* Adaptive Card with `CodeBlock` is only avaible in web and desktop Teams clients.
+* Adaptive Card with `CodeBlock` is only available in web and desktop Teams clients.
 * The code snippet generated in the Adaptive Card is read-only and not editable.
 * The Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user has to select **Expand** to see the rest of the code snippet.
 * Adaptive Card with `CodeBlock` is supported in chats, channels, and meetings only when a bot is added to it.
