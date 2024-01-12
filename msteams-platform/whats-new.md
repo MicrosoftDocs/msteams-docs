@@ -361,12 +361,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2023 November**
+**2024 January**
 
-* ***November 27, 2023***: [Extend an action-based Teams message extension across Microsoft 365.](~/m365-apps/extend-m365-teams-message-extension.md)
-* ***November 14, 2023***: [Build a bot-based message extension and extend the message extension as plugin for Microsoft Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) and also check the [guidelines to create or upgrade a message extension plugin for Microsoft Copilot for Microsoft 365.](messaging-extensions/high-quality-message-extension.md)
-
-* ***November 02, 2023***: [Introduced Adaptive Card Previewer in public developer preview](concepts/build-and-test/adaptive-card-previewer.md).
+***January 12, 2024***: [Introduced Teams Toolkit command line interface v3.](toolkit/Teams-Toolkit-CLI.md)
 
 :::column-end:::
 :::row-end:::
@@ -377,6 +374,9 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|27/11/2023| Extend an action-based Teams message extension across Microsoft 365. | Extend your app across Microsoft 365 > [Extend m365 teams message extension](~/m365-apps/extend-m365-teams-message-extension.md)|
+|14/11/2023| Build a bot-based message extension and extend the message extension as plugin for Microsoft Copilot for Microsoft 365 and also check the guidelines to create or upgrade a message extension plugin for Microsoft Copilot for Microsoft 365. | Build message extension > [Build bot based plugin](messaging-extensions/build-bot-based-plugin.md) and [High quality message extension.](messaging-extensions/high-quality-message-extension.md)|
+|02/11/2023| Introduced Adaptive Card Previewer in public developer preview. | Tools > [Adaptive Card Previewer](concepts/build-and-test/adaptive-card-previewer.md)|
 |25/10/2023| Introduced the `extensions` property in public developer preview app manifest schema. | App manifest > [Public developer preview](resources/schema/manifest-schema-dev-preview.md#extensions)|
 |25/10/2023| Build message extensions using API (API-based) to interact directly with third-party data, apps, and services. | Build message extensions > [Build message extensions using API](messaging-extensions/api-based-overview.md)|
 |28/09/2023| Configure your bot during installation or after installation from the team or group chat where the bot is installed. | Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
