@@ -16,12 +16,7 @@ zone_pivot_groups: toolkit-cli
 > * Teams Toolkit CLI v3 is available in beta version.
 > * We recommend that you use Teams Toolkit CLI v3 to build your Teams app. TeamsFx CLI v1 and TeamsFx CLI v2 will soon be deprecated.
 
-Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications.
-
-For more information, see:
-
-* [Source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli)
-* [Package (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx-cli)
+Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. For more information, see [source code](https://github.com/OfficeDev/TeamsFx/tree/dev/packages/cli) and [npm package](https://www.npmjs.com/package/@microsoft/teamsfx-cli).
 
 ::: zone pivot="version-three"
 
@@ -29,9 +24,9 @@ Teams Toolkit CLI encapsulates common functionality and integration patterns, su
 
 Following is a list of main Teams Toolkit CLI features:
 
-* **Teams Toolkit CLI Collaboration**: Lets developers and project owner invite other collaborators to the Teams Toolkit CLI project. You can collaborate to debug and deploy a Teams Toolkit CLI project.
+* **Teams Toolkit CLI Collaboration**: Enables developers and project owners to invite other collaborators to the Teams Toolkit CLI project. You can collaborate to debug and deploy a Teams Toolkit CLI project.
 
-* **Teams Toolkit CLI**: Accelerates Teams application development. It also enables CI/CD scenario where you can integrate CLI in scripts for automation.
+* **Teams Toolkit CLI**: Accelerates Teams application development and enables CI/CD scenario where you can integrate CLI in scripts for automation.
 
 * Create new Teams application from templates and samples.
 * Preview your Teams application by uploading the custom app to Teams, Outlook, and the Microsoft 365 app.
@@ -56,7 +51,7 @@ The following table lists the supported commands to help developers build and ma
 
 | Command | Description |
 |----------------|-------------|
-| `teamsapp doctor` | The prerequisites for creating a Teams application.|
+| `teamsapp doctor` | Prerequisites to create a Teams application.|
 | `teamsapp new`| Create a new Teams application.|
 | `teamsapp add`| Add features to your Teams application.|
 | `teamsapp auth`| Manage authentication for cloud service accounts. The supported cloud services are Azure and Microsoft 365. |
@@ -74,7 +69,7 @@ The following table lists the supported commands to help developers build and ma
 | `teamsapp preview` | Preview the current application. |
 | `teamsapp update` |  Update the Teams app manifest to Teams Developer Portal. |
 | `teamsapp upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
-| `teamsapp collaborator`| Collaborate with other developers in same project.|
+| `teamsapp collaborator`| Collaborate with other developers in the same project.|
 | `teamsapp uninstall` | Remove an acquired Microsoft 365 App. |
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/list-of-commands.png" alt-text="Screenshot shows the list of available commands.":::
@@ -88,15 +83,15 @@ The following are the global options you can use with each command:
 | `--version -v` | Displays the version of Microsoft Teams Toolkit CLI.|
 | `--help -h` | Provides help for Microsoft Teams Toolkit CLI.|
 | `--interactive -i` | Executes the command in interactive mode. The default value is true.|
-| `--debug` | Outputs debug information. The default value is false.|
-| `--verbose` | Outputs diagnostic information. The default value is false.|
-| `--telemetry` | Enables or disables telemetry. The default value is true.|
+| `--debug` | Prints the debug information. The default value is false.|
+| `--verbose` | Prints the diagnostic information. The default value is false.|
+| `--telemetry` | Enables telemetry. The default value is true.|
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/global-options.png" alt-text="Screenshot shows the list of global options.":::
 
 ## Interactive mode
 
-Commands have different default interactive modes. Some commands are interactive by default, some are non-interactive. To determine the default interactive mode of a command, use the -h option with that command.
+Commands have different default interactive modes. Some commands are interactive by default and some are non-interactive. To determine the default interactive mode of a command, use the `-h` option with the specific command.
 
 ## `teamsapp doctor`
 
@@ -104,14 +99,14 @@ The `teamsapp doctor` command checks for prerequisites needed to build Microsoft
 
 ## `teamsapp new`
 
-By default, `teamsapp new` operates in interactive mode, providing guidance to create a new Teams application. To work `teamsapp new` in non-interactive mode, set the `--interactive` flag to `false`.
+The `teamsapp new` command operates in an interactive mode by default and provides guidance to create a new Teams application. To work `teamsapp new` in a non-interactive mode, set the `--interactive` flag to `false`.
 
 ```bash
 teamsapp new   
 teamsapp new -i false
 ```
 
-| Sub command | Description |
+| Command | Description |
 |:----------------  |:-------------|
 | `teamsapp new sample` | Creates a new Teams app from a pre-existing sample as a template. |
 | `teamsapp list samples` | Displays a list of all available pre-existing samples. |
