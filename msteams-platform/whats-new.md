@@ -362,7 +362,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 January**
 
-***January 11, 2024***: [Introduced Teams Toolkit command line interface v3.](toolkit/Teams-Toolkit-CLI.md)
+***January 12, 2024***: [Introduced Teams Toolkit command line interface v3.](toolkit/Teams-Toolkit-CLI.md)
 
 :::column-end:::
 :::row-end:::

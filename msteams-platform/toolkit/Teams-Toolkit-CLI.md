@@ -111,7 +111,7 @@ teamsapp new -i false
 | `teamsapp new sample` | Creates a new Teams app from a pre-existing sample as a template. |
 | `teamsapp list samples` | Displays a list of all available pre-existing samples. |
 
-### Parameters for `teamsapp new`
+### `teamsapp new` parameters
 
 The following table lists the parameters available for `teamsapp new`:
 
@@ -120,7 +120,7 @@ The following table lists the parameters available for `teamsapp new`:
 |`--app-name -n` | Yes|  Name of your Teams application.|
 |`--capability -c`| Yes| Select Teams application capabilities, the available options are `bot`, `ai-bot`, and `ai-assistant-bot`. Use `teamsapp list templates` to see all the available options.|
 |`--programming-language -l`| No| Programming language for the project. The available options are `javascript`, `typescript`, and `csharp`. The default value is `javascript`.|
-|`--folder -f`| No | Project directory. A sub folder with your app name is created under this directory. The default value is `./`.|
+|`--folder -f`| No | Project directory. A subfolder with your app name is created under this directory. The default value is `./`.|
 |`--spfx-framework-type -k`| No| Applicable if `framework` capability is selected. The available options are `minimal`, `react`, and `none`. The default value is `react`.|
 |`--spfx-web part-name -w`| No | Name for SharePoint Framework Web Part. The default value is `helloworld`.|
 |`--spfx-folder`| No | Directory or path that contains the existing SharePoint Framework solution.|
@@ -153,9 +153,9 @@ The following is a list of scenarios to control all the parameters with `teamsap
 
 The supported feature for Teams application.
 
-| Sub command | Description |
+| Command | Description |
 |:----------------  |:-------------|
-| `Integrate SPFxWebPart with Teams App` | Incorporate an auto-hosted SharePoint Framework (SPFx) web part into Microsoft Teams. An auto-hosted SPFx web part is a component that is automatically hosted in SharePoint Online. |
+| `Integrate SPFxWebPart with Teams App` | Incorporate an auto-hosted SharePoint Framework (SPFx) web part into Microsoft Teams. An auto-hosted SPFx web part is a component that is automatically hosted in SharePoint. |
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-add.png" alt-text="Screenshot shows the teamsapp add command.":::
 
@@ -204,7 +204,7 @@ teamsapp env add staging --env dev
 
 Displays available Microsoft Teams app templates and samples.
 
-### Parameters for `teamsapp list`
+### `teamsapp list` parameters
 
 The following table lists the parameters available for `teamsapp list`:
 
@@ -223,11 +223,11 @@ The `teamsapp help` command displays all the commands available for Teams Toolki
 
 ## `teamsapp provision`
 
-Run the provision stage in `teamsapp.yml`.
+The `teamsapp provision` command runs the provision stage in `teamsapp.yml`.
 
 To trigger the provision stage in `teamsapp.local.yml`, run `teamsapp provision --env local`.
 
-### Parameters for `teamsapp provision`
+### `teamsapp provision` parameters
 
 The following table lists the parameters available for `teamsapp provision`:
 
@@ -238,11 +238,11 @@ The following table lists the parameters available for `teamsapp provision`:
 
 ## `teamsapp deploy`
 
-Run the deploy stage in `teamsapp.yml`.
+The `teamsapp deploy` command runs the deploy stage in `teamsapp.yml`.
 
 To trigger the deploy stage in `teamsapp.local.yml`, run `teamsapp deploy --env local`.
 
-### Parameters for `teamsapp deploy`
+### `teamsapp deploy` parameters
 
 The following table lists the parameters available for `teamsapp deploy`:
 
@@ -255,7 +255,7 @@ The following table lists the parameters available for `teamsapp deploy`:
 
 Build your Teams app into a package for publishing.
 
-### Parameters for `teamsapp package`
+### `teamsapp package` parameters
 
 The following table lists the parameters available for `teamsapp package`:
 
@@ -272,7 +272,7 @@ The following table lists the parameters available for `teamsapp package`:
 
 Validate the Teams app using manifest schema or validation rules.
 
-### Parameters for `teamsapp validate`
+### `teamsapp validate` parameters
 
 The following table lists the parameters available for `teamsapp validate`:
 
@@ -290,7 +290,7 @@ The following table lists the parameters available for `teamsapp validate`:
 
 The `teamsapp preview` command allows you to preview your Teams app during development. This command provides a real-time view of your app, helping you identify and fix issues before deployment.
 
-### Parameters for `teamsapp preview`
+### `teamsapp preview` parameters
 
 The following table lists the parameters available for `teamsapp preview`:
 
@@ -299,19 +299,19 @@ The following table lists the parameters available for `teamsapp preview`:
 | `--folder` | No | Specifies the root folder of your project. Defaults to `./`. |
 | `--env` | No | Specifies an existing environment for the project. Defaults to `local`.|
 | `--teams-manifest-file -t` | No | Specifies the Teams app manifest template file path. Defaults to `${folder}/appPackage/manifest.json`. |
-| `--run-command -c` | No | Specifies the command to start the local service. This is applicable for `local` environment only. If not defined, `teamsapp` uses the auto-detected service from the project type (`npm run dev:teamsapp`,  `dotnet run`, `func start`). If empty, `teamsapp` skips starting the local service. |
-| `--running-pattern -p` | No | The ready signal output that service is launched. Works for `local` environment only. If undefined, `teamsapp` uses the default common pattern (started/successfully/finished/crashed/failed). If empty, `teamsapp` treats process start as ready signal. |
+| `--run-command -c` | No | Specifies the command to start the local service and applicable for `local` environment only. If not defined, `teamsapp` uses the auto-detected service from the project type (`npm run dev:teamsapp`, `dotnet run`, or `func start`). If empty, `teamsapp` skips starting the local service. |
+| `--running-pattern -p` | No | The ready signal output that service is launched. Works for `local` environment only. If undefined, `teamsapp` uses the default common pattern (started, successfully,finished, crashed, failed). If empty, `teamsapp` treats process start as ready signal. |
 | `--open-only -o` | No | Works for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
 | `--m365-host -m` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app. The available options are `teams`, `outlook`, and `office`. The default value is `teams`. |
 | `--browser -b` | No | Select browser to open Teams web client. The available options are `chrome`, `edge`, and `default`. Defaults to `default`. |
-| `--browser-arg -ba` | No | Argument to pass to the browser. For example, --browser-args="--guest. |
+| `--browser-arg -ba` | No | Argument to pass to the browser. For example, `--browser-args="--guest`. |
 | `--exec-path -ep` | No | The paths that are added to the system environment variable PATH when the command is executed. The default value is `devTools/func`.|
 
-### Scenarios for `teamsapp preview`
+### `teamsapp preview` scenarios
+
+The `teamsapp preview` command must be used after `teamsapp provision` and `teamsapp deploy`.
 
 The following list provides the common scenarios for `teamsapp preview`:
-
-`teamsapp preview` must be used after `teamsapp provision` and `teamsapp deploy`.
 
 * Local Preview: The following are the dependencies to use local preview:
 
@@ -336,9 +336,9 @@ The following list provides the common scenarios for `teamsapp preview`:
 
 ## `teamsapp publish`
 
-Run the publish stage in `teamsapp.yml`.
+The `teamsapp publish` command runs the publish stage in `teamsapp.yml`.
 
-### Parameters for `teamsapp publish`
+### `teamsapp publish` parameters
 
 The following table lists the parameters available for `teamsapp publish`:
 
@@ -363,7 +363,7 @@ Check, grant, and list user permission to access and manage Teams application an
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-collaborator.png" alt-text="Screenshot shows the teamsapp collaborator commands.":::
 
-### Parameters for `teamsapp collaborator status`
+### `teamsapp collaborator status` parameters
 
 The following table lists the parameters available for `teamsapp collaborator status`:
 
@@ -375,7 +375,7 @@ The following table lists the parameters available for `teamsapp collaborator st
 | `--entra-app-manifest-file -a` | No | Select the path for the Entra manifest template file. Defaults to `${folder}/aad.manifest.json`. |
 | `--all -a` | No | Display all collaborators. |
 
-### Parameters for `teamsapp collaborator grant`
+### `teamsapp collaborator grant` parameters
 
 The following table lists the parameters available for `teamsapp collaborator grant`:
 
@@ -387,7 +387,7 @@ The following table lists the parameters available for `teamsapp collaborator gr
 | `--teams-manifest-file -t` | No | Select the path for the manifest template file. Defaults to `${folder}/appPackage/manifest.json`. |
 | `--entra-app-manifest-file -a` | No | Select the path for the Entra app manifest file. Defaults to `${folder}/aad.manifest.json`. |
 
-### Scenarios for `teamsapp collaborator`
+### `teamsapp collaborator` scenarios
 
 * Grant permission: Grant permission for another Microsoft 365 account to collaborate on the Teams application.
 
@@ -395,15 +395,15 @@ The following table lists the parameters available for `teamsapp collaborator gr
   teamsapp collaborator grant -i false --teams-manifest-file ./appPackage/manifest.json --env dev --email other@email.com
   ```
 
-  After you receive the required permission, project creator and collaborators can share the project with the new collaborator by GitHub and the new collaborator can have all the permissions for Microsoft 365 account.
+  After you receive the required permission, project creators and collaborators can share the project with the new collaborator through GitHub and the new collaborator can have all the permissions for Microsoft 365 account.
 
-* Show permission status: Project creator and collaborators can use `teamsapp collaborator status` command to view Microsoft 365 account permission for specific env.
+* Show permission status: Project creators and collaborators can use the `teamsapp collaborator status` command to view Microsoft 365 account permission for specific env.
 
   ```typescript
   teamsapp permission status --env dev
   ```
 
-* List all collaborators: Project creator and collaborators can use `teamsapp collaborator status` command to view all collaborators for specific env.
+* List all collaborators: Project creator and collaborators can use the `teamsapp collaborator status` command to view all collaborators for specific env.
 
   ```typescript
   teamsapp collaborator status --env dev --list-all-collaborators
@@ -413,7 +413,7 @@ The following table lists the parameters available for `teamsapp collaborator gr
 
 Update the Teams app manifest to Teams Developer Portal.
 
-### Parameters for `teamsapp update`
+### `teamsapp update` parameters
 
 The following table lists the parameters available for `teamsapp update`:
 
@@ -424,13 +424,13 @@ The following table lists the parameters available for `teamsapp update`:
 | `--manifest-file` |  | Specifies the Teams app manifest file path. The default value is `./appPackage/manifest.json`. |
 | `--package-file` |  | Specifies the zipped Teams app package file path. |
 | `--output-package-file` |  | Specifies the output zipped Teams app package file path. The default value is `./appPackage/build/appPackage.${env}.zip`. |
-| `--output-manifest-file` |  | Specifies the final output Teams app manifest file path.. The default value is `./appPackage/build/manifest.${env}.json`. |
+| `--output-manifest-file` |  | Specifies the final output Teams app manifest file path. The default value is `./appPackage/build/manifest.${env}.json`. |
 
 ## `teamsapp upgrade`
 
 Upgrade the project to work with the latest version of Teams Toolkit.
 
-### Parameters for `teamsapp upgrade`
+### `teamsapp upgrade` parameters
 
 The following table lists the parameters available for `teamsapp upgrade`:
 
@@ -442,7 +442,7 @@ The following table lists the parameters available for `teamsapp upgrade`:
 
 Sideload an application package into Microsoft Teams.
 
-### Parameters for `teamsapp install`
+### `teamsapp install` parameters
 
 The following table lists the parameters available for `teamsapp install`:
 
@@ -451,7 +451,7 @@ The following table lists the parameters available for `teamsapp install`:
 | `--file-path` | Specifies the path to the Microsoft Teams app manifest zip package. |
 | `--xml-path` |  Specifies the path to the Microsoft Teams XML manifest file. |
 
-### Scenarios for `teamsapp install`
+### `teamsapp install` scenarios
 
 Sideload the application package with json based manifest to Teams, Outlook, and the Microsoft 365 app.
 
@@ -459,13 +459,13 @@ Sideload the application package with json based manifest to Teams, Outlook, and
 teamsapp install --file-path appPackage.zip
 ```
 
-Sideload the Outlook add-in application package with xml based manifest to Outlook.
+Sideload the Outlook add-in application package with XML based manifest to Outlook.
 
 ```bash
 teamsapp install --xml-path manifest.xml
 ```
 
-### Scenarios for `teamsapp uninstall`
+### `teamsapp uninstall` scenarios
 
 Remove the acquired Microsoft 365 app by title ID.
 
@@ -483,7 +483,7 @@ teamsapp uninstall --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 Get launch information of an acquired Microsoft 365 app.
 
-### Parameters for `teamsapp launchinfo -h`
+### `teamsapp launchinfo -h` parameters
 
 The following table lists the parameters available for `teamsapp launchinfo -h`:
 
@@ -492,7 +492,7 @@ The following table lists the parameters available for `teamsapp launchinfo -h`:
 | `--title-id` | Specifies the title ID of the acquired Microsoft 365 app. |
 | `--manifest-id` | Specifies the manifest ID of the acquired Microsoft 365 app. |
 
-### Scenarios for `teamsapp launchinfo`
+### `teamsapp launchinfo` scenarios
 
 Get launch information of the acquired Microsoft 365 app by title ID.
 
@@ -510,7 +510,7 @@ teamsapp launchinfo --manifest-id xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx
 
 Remove an acquired Microsoft 365 app.
 
-### Parameters for `teamsapp uninstall`
+### `teamsapp uninstall` parameters
 
 The following table lists the parameters available for `teamsapp uninstall`:
 
@@ -584,7 +584,7 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 |`--interactive`| No | Select the options interactively. The options are `true` and `false` and default value is `true`.|
 |`--capabilities`| No| Choose Teams application capabilities, the options are `tab`, `tab-non-sso`, `tab-spfx`, `bot`, `message-extension`, `notification`, `command-bot`, `sso-launch-page`, `search-app`. The default value is `tab`.|
 |`--programming-language`| No| Programming language for the project. The options are `javascript` or `typescript` and default value is `javascript`.|
-|`--folder`| No | Project directory. A sub folder with your app name is created under this directory. The default value is `./`.|
+|`--folder`| No | Project directory. A subfolder with your app name is created under this directory. The default value is `./`.|
 |`--spfx-framework-type`| No| Applicable if `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and default value is `none`.|
 |`--spfx-web part-name`| No | Applicable if `SPFx tab` capability is selected. The default value is "helloworld".|
 |`--bot-host-type-trigger`| No | Applicable if `Notification bot` capability is selected. The options are `http-restify`, `http-functions`, and `timer-functions`. The default value is `http-restify`.|
@@ -922,7 +922,7 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 | `teamsfx new template <template-name>`     | Create an app from an existing template |
 | `teamsfx new template list`     | List all the available templates |
 
-### Parameters for `teamsfx new`
+### `teamsfx new` parameters
 
 | Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
@@ -930,12 +930,12 @@ By default, `teamsfx new` is in interactive mode and guides to create new Teams 
 |`--interactive`| No | Select the options interactively. The options are `true` and `false` and default value is `true`.|
 |`--capabilities`| No| Choose Teams application capabilities, the options are `tab`, `tab-non-sso`, `tab-spfx`, `bot`, `message-extension`, `notification`, `command-bot`, `sso-launch-page`, `search-app`. The default value is `tab`.|
 |`--programming-language`| No| Programming language for the project. The options are `javascript` or `typescript` and default value is `javascript`.|
-|`--folder`| No | Project directory. A sub folder with your app name is created under this directory. The default value is `./`.|
-|`--spfx-framework-type`| No| Applicable if `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and default value is `none`.|
+|`--folder`| No | Project directory. A subfolder with your app name is created under this directory. The default value is `./`.|
+|`--spfx-framework-type`| No| Applicable if the `SPFx tab` capability is selected. Frontend Framework. The options are `none`, `react` and `minimal`, and default value is `none`.|
 |`--spfx-web part-name`| No | Applicable if `SPFx tab` capability is selected. The default value is "helloworld".|
 |`--bot-host-type-trigger`| No | Applicable if `Notification bot` capability is selected. The options are `http-restify`, `http-functions`, and `timer-functions`. The default value is `http-restify`.|
 
-### Scenarios for `teamsfx new`
+### `teamsfx new` scenarios
 
 You can use interactive mode to create a Teams app. The following list provides scenarios on controlling all the parameters with `teamsfx new`:
 
