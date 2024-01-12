@@ -195,9 +195,9 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
            "mySitePath": "/personal/admin_m365x94626565_onmicrosoft_com",
            "mySiteDomain": "m365x94626565-my.sharepoint.com"
           }
-         }
-    
-       ```
+  }
+
+  ```
 
   # [Instant meeting](#tab/instant-meeting)
 
@@ -252,10 +252,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
             "mySitePath": "/personal/admin_m365x654992_onmicrosoft_com",
             "mySiteDomain": "m365x654992-my.sharepoint.com"
           }
-        }
+  }
   ```
-
----
 
 * User type
 
@@ -264,7 +262,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
   The following is a JSON payload response in a scheduled private meeting for a guest user:
 
   ```json
-   {
+    {
           "app": {
            "locale": "en-us",
            "sessionId": "268beeb4-a52d-4ba8-b1c8-8b9f0b9b3492",
