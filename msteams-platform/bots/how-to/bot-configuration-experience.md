@@ -78,7 +78,7 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
                       value: {
                           card: adaptiveCard,
                           height: 400,
-                          title: 'Task module fetch response',
+                          title: 'Dialog fetch response',
                           width: 300
                       }
                   }
@@ -110,7 +110,7 @@ You can use `config/fetch` and `config/submit` properties in the `teamsBot.js` f
                       value: {
                           card: adaptiveCard,
                           height: 400,
-                          title: 'Task module submit response',
+                          title: 'Dialog submit response',
                           width: 300
                       }
                   }
