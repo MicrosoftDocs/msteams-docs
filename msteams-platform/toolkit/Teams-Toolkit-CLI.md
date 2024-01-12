@@ -95,7 +95,7 @@ Commands have different default interactive modes. Some commands are interactive
 
 ## `teamsapp doctor`
 
-The `teamsapp doctor` command checks for prerequisites needed to build Microsoft Teams applications.
+The `teamsapp doctor` command checks for the prerequisites needed to build Microsoft Teams applications.
 
 ## `teamsapp new`
 
@@ -118,7 +118,7 @@ The following table lists the parameters available for `teamsapp new`:
 | Parameter | Required | Description |
 |:---------------- |:-------------|:-------------|
 |`--app-name -n` | Yes|  Name of your Teams application.|
-|`--capability -c`| Yes| Select Teams application capabilities, the available options are `bot`, `ai-bot`, and `ai-assistant-bot`. Use `teamsapp list templates` to see all the available options.|
+|`--capability -c`| Yes| Select Teams application capabilities. The available options are `bot`, `ai-bot`, and `ai-assistant-bot`. Use `teamsapp list templates` to see all the available options.|
 |`--programming-language -l`| No| Programming language for the project. The available options are `javascript`, `typescript`, and `csharp`. The default value is `javascript`.|
 |`--folder -f`| No | Project directory. A subfolder with your app name is created under this directory. The default value is `./`.|
 |`--spfx-framework-type -k`| No| Applicable if `framework` capability is selected. The available options are `minimal`, `react`, and `none`. The default value is `react`.|
@@ -127,7 +127,7 @@ The following table lists the parameters available for `teamsapp new`:
 |`--me-architecture -m`| No | Architecture of search-based message extension. The available options are `new-api`, `api-spec`, and `bot`. The default value is `new-api`. |
 |`--openapi-spec-location -a`| No | OpenAPI description document location. |
 |`--api-operation -o`| No | Select Operation(s) that Teams can interact with. |
-|`--bot-host-type-trigger -t`| No | Applicable if `Chat Notification Message` capability is selected. The options are `http-restify`, `http-webapi`, and `http-and-timer-functions`. The default value is `http-restify`.|
+|`--bot-host-type-trigger -t`| No | Applicable if `Chat Notification Message` capability is selected. The available options are `http-restify`, `http-webapi`, and `http-and-timer-functions`. The default value is `http-restify`.|
 |`--spfx-solution -s`| No| Create or import an existing SharePoint Framework solution. The available options are `new` and `import`. The default value is `new`.|
 |`--spfx-install-latest-package`| No| Install the latest version of SharePoint Framework. The default value is `true`.|
 
@@ -300,7 +300,7 @@ The following table lists the parameters available for `teamsapp preview`:
 | `--env` | No | Specifies an existing environment for the project. Defaults to `local`.|
 | `--teams-manifest-file -t` | No | Specifies the Teams app manifest template file path. Defaults to `${folder}/appPackage/manifest.json`. |
 | `--run-command -c` | No | Specifies the command to start the local service and applicable for `local` environment only. If not defined, `teamsapp` uses the auto-detected service from the project type (`npm run dev:teamsapp`, `dotnet run`, or `func start`). If empty, `teamsapp` skips starting the local service. |
-| `--running-pattern -p` | No | The ready signal output that service is launched. Works for `local` environment only. If undefined, `teamsapp` uses the default common pattern (started, successfully,finished, crashed, failed). If empty, `teamsapp` treats process start as ready signal. |
+| `--running-pattern -p` | No | The ready signal output that service is launched. Works for `local` environment only. If undefined, `teamsapp` uses the default common pattern (started, successfully, finished, crashed, failed). If empty, `teamsapp` treats process start as ready signal. |
 | `--open-only -o` | No | Works for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
 | `--m365-host -m` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app. The available options are `teams`, `outlook`, and `office`. The default value is `teams`. |
 | `--browser -b` | No | Select browser to open Teams web client. The available options are `chrome`, `edge`, and `default`. Defaults to `default`. |
