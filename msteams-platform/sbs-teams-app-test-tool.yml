@@ -14,12 +14,13 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
+    
+    Start Microsoft Teams app development with your Teams AI chat bot app and debug with the Teams App Test Tool (Test Tool). Test Tool makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. You can also mock an activity in Test Tool using activity triggers.
+
     > [!NOTE]
     >
     > * Teams App Test Tool is available only in the latest prerelease version of the Teams Toolkit.
     > * Teams App Test Tool is supported only for desktop and web clients.
-    
-    Start Microsoft Teams app development with your Teams AI chat bot app and debug with the Teams App Test Tool (Test Tool). Test Tool makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. 
 
     This step-by-step guide helps you to build AI chat bot using Teams Toolkit and debug AI chat bot with the Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
 
@@ -182,34 +183,34 @@ items:
     
     1. Fill the required details and select **Next**.
 
-        :::image type="content" source="~/assets/images/test-tool/azure-open-ai-tags.png" alt-text="Screenshot shows the Azure open AI tags details.":::
+        :::image type="content" source="~/assets/images/test-tool/azure-open-ai-tags.png" lightbox="~/assets/images/test-tool/azure-open-ai-tags.png" alt-text="Screenshot shows the Azure open AI tags details.":::
 
     1. Select **Create**.
 
-        :::image type="content" source="~/assets/images/test-tool/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
+        :::image type="content" source="~/assets/images/test-tool/review-create.png" lightbox="~/assets/images/test-tool/review-create.png" alt-text="Screenshot shows you to preview and create Azure open AI.":::
 
         You've successfully created key and endpoint for your AI chat bot.
 
-        :::image type="content" source="~/assets/images/test-tool/deployment.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
+        :::image type="content" source="~/assets/images/test-tool/deployment.png" lightbox="~/assets/images/test-tool/deployment.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
 
      ### Get Azure Open AI keys and endpoint
 
     1. Select **Go to resources**.
     1. Select **Keys and Endpoint** from the left pane and copy the **KEY** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
 
-        :::image type="content" source="~/assets/images/test-tool/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
+        :::image type="content" source="~/assets/images/test-tool/key-endpoints.png" lightbox="~/assets/images/test-tool/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
 
         Save the **KEY** and **Endpoint** for further use.
 
     1. Select **Model deployments** from the left pane and select **Manage Deployments**.
 
-        :::image type="content" source="~/assets/images/test-tool/model-deployments.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
+        :::image type="content" source="~/assets/images/test-tool/model-deployments.png" lightbox="~/assets/images/test-tool/model-deployments.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
     
         The Azure Open AI Studio window appears.
 
     1. Select **+ Create new deployments**.
 
-        :::image type="content" source="~/assets/images/test-tool/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
+        :::image type="content" source="~/assets/images/test-tool/ai-studio.png" lightbox="~/assets/images/test-tool/ai-studio.png" alt-text="Screenshot shows the model deployments for Azure open AI.":::
 
     1. Select the following details:
     
@@ -219,10 +220,10 @@ items:
         1. Select **0301** from the **Model version** dropdown list.
         1. Enter **Deployment name** and select **Create**.
 
-        :::image type="content" source="~/assets/images/test-tool/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
+        :::image type="content" source="~/assets/images/test-tool/model-version.png" lightbox="~/assets/images/test-tool/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
 
     1. Copy and save the **Deployment name** for further use.
-        :::image type="content" source="~/assets/images/test-tool/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
+        :::image type="content" source="~/assets/images/test-tool/copy-deployment.png" lightbox="~/assets/images/test-tool/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
 
     ## Update Azure Open AI key and endpoints
 
@@ -260,7 +261,7 @@ items:
 
     1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool (Preview)** from the dropdown list.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" lightbox="~/assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
  
     1. The Test Tool opens your AI chat bot in a webpage.
 
