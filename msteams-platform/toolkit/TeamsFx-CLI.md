@@ -57,7 +57,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 | `teamsfx validate` | Validate the Microsoft Teams app using manifest schema or validation rules. |
 | `teamsfx publish` | Run the publish stage in teamsapp.yml.|
 | `teamsfx preview` | Preview the current application. |
-| `teamsfx m365`  | M365 App Management. |
+| `teamsfx m365`  | Manage M365 app. |
 | `teamsfx permission`| Check, grant, and list permissions for users who can access and manage Microsoft Teams application and Microsoft Entra application. |
 | `teamsfx update` | Update the specific application manifest file. |
 | `teamsfx upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
