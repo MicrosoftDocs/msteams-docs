@@ -95,84 +95,84 @@ items:
     > [!NOTE]
     > The Visual Studio Code UI shown is from Mac. It may differ depending on your operating system, Toolkit version, and environment.
 
-    # [Visual Studio Code](#tab/vsc)
+        # [Visual Studio Code](#tab/vsc)
 
-    1. Open Visual Studio Code.
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
+        1. Open Visual Studio Code.
+        1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-    1. Select **Create a New App**.
+        1. Select **Create a New App**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Screen shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-project.png" alt-text="Screen shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-    1. Select **Message Extension** to create an app using the Teams Toolkit.
+        1. Select **Message Extension** to create an app using the Teams Toolkit.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the Wizard start for Create New Project.":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the Wizard start for Create New Project.":::
 
-    1. Ensure that **Custom Search Result** is selected as the app feature that you want to build in your app.
+        1. Ensure that **Custom Search Result** is selected as the app feature that you want to build in your app.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex1.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex1.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
-    1. Select **JavaScript** as the programming language.
+        1. Select **JavaScript** as the programming language.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-language-tab.png" alt-text="Screenshot showing how to select the programming language.":::
 
-    1. Select **Default folder** to store your project root folder in default location.
+        1. Select **Default folder** to store your project root folder in default location.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-default-location.png" alt-text="Screenshot shows the selection of default location.":::
 
-        You can also change the default location by the following steps:
+            You can also change the default location by the following steps:
 
-        1. Select **Browse**.
+            1. Select **Browse**.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
-            
-        1. Select the location for project workspace.
+                :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-browse.png" alt-text="Screenshot shows the selection of browse location option.":::
+                
+            1. Select the location for project workspace.
 
-        1. Select the **Select Folder**.
+            1. Select the **Select Folder**.
 
-            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder.":::
+                :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot showing how to select the folder.":::
 
-    1. Enter a suitable name for your app. Select **Enter**.
+        1. Enter a suitable name for your app. Select **Enter**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/enter-project-name.png" alt-text="Screenshot showing how to enter the app name.":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/enter-project-name.png" alt-text="Screenshot showing how to enter the app name.":::
 
-        Teams Toolkit creates the app in a few seconds.
+            Teams Toolkit creates the app in a few seconds.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot showing the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png" alt-text="Screenshot showing the app created." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-created-mex.png":::
 
-        After your app is created, the Teams Toolkit displays the following message: 
+            After your app is created, the Teams Toolkit displays the following message: 
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows the localdebug.":::
+            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project-msg.png" alt-text="Screenshot shows the localdebug.":::
 
-        You can select **Local debug** to preview your project. 
+            You can select **Local debug** to preview your project. 
 
-      <details>
-      <summary>A quick recap of creating a Teams app.</summary>
-      Watch this short recap for creating a Teams app.
+        <details>
+        <summary>A quick recap of creating a Teams app.</summary>
+        Watch this short recap for creating a Teams app.
 
-      ![Create a Teams app](~/assets/videos/javascript-msg-ext-app1.gif)
-      </details>
+        ![Create a Teams app](~/assets/videos/javascript-msg-ext-app1.gif)
+        </details>
 
-    # [Command line](#tab/cli)
+        # [Command line](#tab/cli)
 
-    Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
+        Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
 
-    ``` bash
-    teamsfx new
-    ```
+        ``` bash
+        teamsfx new
+        ```
 
-    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+        You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
-    For example, Use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+        For example, Use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
 
-    1. Select **Create a new Teams app**.
-    1. Select **Message Extension** and deselect **Tab**.
-    1. Select **JavaScript** as the programming language.
-    1. Select **Enter** to select the default workspace folder.
-    1. Enter a suitable name for your app, like `HelloMsgExtn`.  The name of the app must consist only of alphanumeric characters.
+        1. Select **Create a new Teams app**.
+        1. Select **Message Extension** and deselect **Tab**.
+        1. Select **JavaScript** as the programming language.
+        1. Select **Enter** to select the default workspace folder.
+        1. Enter a suitable name for your app, like `HelloMsgExtn`.  The name of the app must consist only of alphanumeric characters.
 
-      After all the questions have been answered, your project is created.
+        After all the questions have been answered, your project is created.
 
     ---
 
