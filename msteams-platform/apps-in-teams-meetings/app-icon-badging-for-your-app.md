@@ -95,8 +95,8 @@ The following is an example of a payload:
             ]
         }
     }
-    
-    ```
+
+```
 
 [!INCLUDE [Response code](../includes/meeting-response-code.md)]
 
