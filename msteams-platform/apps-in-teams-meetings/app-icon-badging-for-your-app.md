@@ -81,19 +81,19 @@ TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
 
 ```json
 {
-  "type": "targetedMeetingNotification",
-  "value": {
-      "recipients": [
+    "type": "targetedMeetingNotification",
+    "value": {
+        "recipients": [
             "<participant1 MRI>",
             "<participant2 MRI>" 
         ],
         "surfaces": [
-        {
-          "surface": "meetingTabIcon",
-          "tabEntityId": "<tab id from tab sdk>" // optional           
-        }
+            {
+                "surface": "meetingTabIcon",
+                "tabEntityId": "<tab id from tab sdk>" // optional           
+            }
         ]
-  }
+    }
 }
 ```
 
