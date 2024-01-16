@@ -13,7 +13,7 @@ ms.date: 11/14/2023
 > [!IMPORTANT]
 >
 > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
-> Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
+> * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 
@@ -492,7 +492,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing M365 Chat app response contains Preview and Content in the same response. ":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing M365 Chat app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
 
   <details><summary>Adaptive Card response example</summary>
 
