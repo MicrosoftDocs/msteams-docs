@@ -11,7 +11,17 @@ Share to Teams allows users to share the content from personal app or tab to oth
 
 The following image shows the Share to Teams pop-up window:
 
-:::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="share-to-teams-pop-up":::
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="Screenshot shows you the share-to-teams-pop-up in personal app.":::
+
+# [Android](#tab/mobile)
+
+:::image type="content" source="../../assets/images/share-to-teams-mobile.png" alt-text="Screenshot shows you the share to teams experience in Teams.":::
+
+# [iOS](#tab/ios)
+
+---
 
 ## Enable Share to Teams button
 
