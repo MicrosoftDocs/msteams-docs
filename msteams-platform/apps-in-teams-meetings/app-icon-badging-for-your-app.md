@@ -95,8 +95,9 @@ TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
         ]
   }
 }
-
 ```
+
+---
 
 [!INCLUDE [Response code](../includes/meeting-response-code.md)]
 
