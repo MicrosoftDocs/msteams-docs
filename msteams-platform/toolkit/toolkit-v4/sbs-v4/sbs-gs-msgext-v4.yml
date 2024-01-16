@@ -550,17 +550,17 @@ items:
 
       You can create a new resource group with the following steps:
 
-      1. Select **+ New resource group**.
+           1. Select **+ New resource group**.
 
-      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-resource-new-resource.png" alt-text="Screenshot shows the option to create a new Azure resource group.":::
+                :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/select-resource-new-resource.png" alt-text="Screenshot shows the option to create a new Azure resource group.":::
 
-      1. Select the default name or enter a suitable name for your resource group.
+           1. Select the default name or enter a suitable name for your resource group.
 
-      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/new-resource-group-name.png" alt-text="Screenshot shows the default name of the new Azure resource group.":::
+                :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/new-resource-group-name.png" alt-text="Screenshot shows the default name of the new Azure resource group.":::
 
-      1. Select the location for your resource group.
+           1. Select the location for your resource group.
 
-      :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/new-resource-group-location.png" alt-text="Screenshot shows the options for the location of the new Azure resource group.":::
+                :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/new-resource-group-location.png" alt-text="Screenshot shows the options for the location of the new Azure resource group.":::
 
    1. A dialog box warns you that costs might be incurred when running resources in Azure. Select **Provision**.
 
