@@ -65,6 +65,12 @@ After you register the handler, it helps you to address the navigational request
 
 After the user starts using elements within a tab, by default, the focus remains with the elements of your iFrame until the user selects outside of it. If the iFrame is a part of the user navigating with keyboard shortcuts (the Tab key or the F6 key), you can focus on the host app. You can focus on the host app by using the [`pages.returnFocus()`](/javascript/api/@microsoft/teams-js/pages#@microsoft-teams-js-pages-returnfocus) function. The `returnFocus()` function accepts a Boolean indicating the direction to advance focus within the host app; `true` for forward and `false` for backwards. Generally, forward highlights the search bar and backwards highlights the app bar.
 
+## Code sample
+
+|**Sample name** | **Description** |**Node.js**|
+|----------------|-----------------|-----------|
+| Show navigation between tabs | Microsoft Teams tab sample code, which demonstrates tab navigation feature such as navigation between tabs within the app. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs)
+
 ## See also
 
 * [Extend a Teams personal tab across Microsoft 365](~/m365-apps/extend-m365-teams-personal-tab.md)
