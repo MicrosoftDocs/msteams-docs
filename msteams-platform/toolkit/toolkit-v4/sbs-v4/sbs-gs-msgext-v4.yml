@@ -406,7 +406,6 @@ items:
    ### How to invoke your message extension app
 
    You tested the search feature of the message extension app and learned how to create a card in the previous steps. Now, learn the different ways to open the message extension app.
-
    <br>
    <br>
    <details>
@@ -432,7 +431,7 @@ items:
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-search-card-send.png" alt-text="Screenshot shows search result in a card.":::
  
-   1. Select Enter. The message extension app sends the card with the search result in the most recent chat.
+   1. Select **Enter**. The message extension app sends the card with the search result in the most recent chat.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/command-search-card-sent-v4.png" alt-text="Screenshot shows search result in a chat.":::
 
