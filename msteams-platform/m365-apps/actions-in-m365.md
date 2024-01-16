@@ -74,7 +74,7 @@ Here are the guidelines for creating a sample display name:
 
 The following image is an example of correct and incorrect ways to format a sample name:
 
-:::image type="content" source="images/do-and-dont.png" alt-text="Screenshot shows the do and dont of the sample display name.":::
+:::image type="content" source="images/do-and-dont.png" alt-text="Screenshot shows the do and dont of the sample display name." lightbox="images/do-and-dont.png":::
 
 ### Context menu
 
