@@ -123,7 +123,7 @@ items:
         ```
      
         > [!NOTE]
-        > If you are using the Windows PowerShell PSI for the first time, execute the following commands:
+        > If you're using the Windows PowerShell PSI for the first time, execute the following commands:
         >   * Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope CurrentUser
         >   * Run Install-Module -Name MicrosoftTeams -Force -AllowClobber 
 
@@ -194,7 +194,7 @@ items:
 
          * Sign in to [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) using your Teams tenant account.
 
-         * Add `Users` at the end of the URl in the search box.
+         * Add `Users` at the end of the URL in the search box.
 
          * Select **Run query**.
             
