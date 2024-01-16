@@ -69,7 +69,7 @@ After the user starts using elements within a tab, by default, the focus remains
 
 |**Sample name** | **Description** |**Node.js**|
 |----------------|-----------------|-----------|
-| Show navigation between tabs | Microsoft Teams tab sample code, which demonstrates tab navigation feature such as navigation between tabs within the app. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs)
+|Tab app navigation | Sample code shows the tab navigation feature such as navigation between tabs within the app. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-navigation/nodejs)
 
 ## See also
 
