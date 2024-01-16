@@ -67,34 +67,34 @@ The following is an example of a payload:
 
 # [C#](#tab/csharp)
 
-    ```csharp
-    TeamsInfo.SendMeetingNotificationAsync(context, notificationPayload, meetingId);
-    ```
+```csharp
+TeamsInfo.SendMeetingNotificationAsync(context, notificationPayload, meetingId);
+```
 
 # [JavaScript](#tab/javascript)
 
-    ```javascript
-    TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
-    ```
+```javascript
+TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
+```
 
 # [JSON](#tab/json)
 
-    ```json
-    {
-        "type": "targetedMeetingNotification",
-        "value": {
-            "recipients": [
-                "<participant1 MRI>",
-                "<participant2 MRI>" 
-            ],
-            "surfaces": [
-                {
-                    "surface": "meetingTabIcon",
-                    "tabEntityId": "<tab id from tab sdk>" // optional           
-                }
-            ]
+```json
+{
+  "type": "targetedMeetingNotification",
+  "value": {
+      "recipients": [
+            "<participant1 MRI>",
+            "<participant2 MRI>" 
+        ],
+        "surfaces": [
+        {
+          "surface": "meetingTabIcon",
+          "tabEntityId": "<tab id from tab sdk>" // optional           
         }
-    }
+        ]
+  }
+}
 
 ```
 
