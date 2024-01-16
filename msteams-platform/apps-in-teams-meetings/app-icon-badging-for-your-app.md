@@ -63,7 +63,7 @@ App can also pass the `tabEntityId`, if there are multiple instances of the app 
 
 ### Example
 
-The following is an example of a payload:
+The following code is an example of the payload:
 
 # [C#](#tab/csharp)
 
