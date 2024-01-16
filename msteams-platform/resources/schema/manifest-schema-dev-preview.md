@@ -1040,8 +1040,8 @@ Required if the handler type is `openPage`. Object containing metadata of the pa
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`EntityId`| String | |  | Maps to the `EntityId` of the static tab. |
-|`SubEntityId`| String | |  | Maps to the `SubEntityId` of the static tab. |
+|`PageId`| String | |  | Maps to the `EntityId` of the static tab. |
+|`SubPageId`| String | |  | Maps to the `SubEntityId` of the static tab. |
 
 ## See also
 

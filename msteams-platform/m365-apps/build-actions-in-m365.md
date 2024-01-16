@@ -129,26 +129,12 @@ To use an app with Actions in your tenant, an admin must upload the app package 
 
 Follow instructions to preinstall your app for entire organization or user groups within your tenant.
 
-## Test and deploy your Actions
+## Sideload your app using Teams Toolkit
 
 > [!NOTE]
 > Actions are available in public developer preview, ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users to experience Actions in Microsoft 365 app.
 
-After you update the app package with the required information, you can run your app in Teams Toolkit to test your Actions.
-
-To deploy your app in Teams Toolkit, follow these steps:
-
-1. Go to Visual Studio Code.
-
-1. Select **File** > **Open Folder...**.
-
-1. Select the folder where your app is created.
-
-1. Select **Select Folder**.
-
-1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
-
-1. From the debug dropdown menu, select **Debug in the Microsoft 365 app (Edge) without backend**.
+After you update the app package with the required information, you can run your app in Teams Toolkit to test your Actions. Select **Run and Debug (Ctrl+Shift+D)** > **Debug in the Microsoft 365 app (Edge)**.
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 

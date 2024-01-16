@@ -28,11 +28,7 @@ The following graphic is an example of an Action that directs user to view list 
 
 ## Understand how Actions work
 
-Actions are built using a combination of Intent, Object, and Handler.
-
-* Intent and object: When a user wants to perform a task, the task can be represented as a combination of intent and object, where the intent is the verb describing the user's desired action and the object is the noun on which the action is to be performed. For example, opening a file is a verb and the file is an object.
-
-* Handler: You must listen to the user's task (intent and object) and create a handler that help users complete the task.
+Actions are built using a combination of Intent, Object, and Handler. When a user aims to complete a task, it's represented as intent and object. Intent is the verb that describes the user's desired action, while the object is the noun on which the action is performed. As a developer, you receive the user's intent and object as input and create the corresponding handler to enable task completion for the users. For example, opening a file is a intent and the file is an object.
 
 To build an action, you must define the intent, object, and handler in the app manifest and use Teams JavaScript library (Teams JS) to get the Action details to make it easy for the users to do specific tasks.
 
@@ -40,7 +36,7 @@ The following table lists the required elements and support information for Acti
 
 | &nbsp; | Name | Description | What is supported in this preview  
 | --- | --- | --- | ---|
-| &nbsp; | Intent | Intent is the objective a user wants to perform or achieve. Intent is typically represented by a verb, such as `Open`, `addTo`, or any other actions that a user intends to perform. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement of Actions. | You can create an intent for `Open`, `addTo`, and `custom` Actions. You can use `custom` Action to create a tailored action. |
+| &nbsp; | Intent | Intent is the objective a user wants to perform or achieve. Intent is typically represented by a verb, such as `Open`, `Add to`, or any other actions that a user intends to perform. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement of Actions. | You can create an intent for `Open`, `Add to`, and `custom` Actions. You can use `custom` Action to create a tailored action. |
 | &nbsp; | Object  | Object is the file on which the user wants to perform an action. Object represents the noun or context that defines what the user wants to perform an action on.  | Actions can be triggered on content objects (files) that have an extension, such as Word, PowerPoint, Excel, PDF, and images. The files must be available in OneDrive or SharePoint and must be accessible through Microsoft Graph. |
 | &nbsp; | Handlers | A handler refers to the method to fulfil the user's intent and perform the desired action on the specified object. Handler is responsible for implementing the logic and functionality of the Action, ensuring a seamless and meaningful user experience. | Actions support the `openPage` handler. The `openPage` handler allows you to directly guide users to your app's personal tab. The `openPage` handler helps you to drive users to your app's dedicated pages, providing them with a rich and expansive interface to accomplish their goals. |
 
@@ -50,13 +46,35 @@ Create app icons and display names in a context menu for Actions. A single actio
 
 :::image type="content" source="images/app-icon-context-menu.png" alt-text="The screenshot shows the app icon in context menu.":::
 
-* Ensure that the name of the app doesn't exceed more than 18 characters including spaces.
+* Start with the intent name, typically represented by a verb, such as `Open`, `Add to`. Followed by a concise description of the action's function or the app name.
 
-* Use one line for Actions title. Use verbs that show the result of selecting menu items that trigger Actions.
+* Ensure that the first letter is capitalized. When using a brand name, only the first letter of the brand name should be capitalized.
 
 In the following image is an anatomy of icon slot:
 
 :::image type="content" source="images/icon-slot.png" alt-text="The screenshot shows the icon slot in context menu.":::
+
+### Sample dispaly name
+
+Here are the guidelines for creating a sample display name:
+
+**Do**:
+
+* Add to Todo: Add to represents the intent and Todo is the app name.
+* Open in Contoso: Open represents the intent and Contoso is the app name.
+* Add to dashboard: Add to represents the intent and Contoso is the app name. However, Dashboard provides a more accurate description of the use case.
+* Request signatures: Start with the custom intent, followed by a comprehensive description of the action. The brand name or object name, Contoso sign, is not necessarily required.
+* Convert to PDF: Start with the custom intent, which is identified as the verb, to clearly express the action in the Contoso app.
+
+**Don't**:
+
+* Avoid using Contoso as the sole app name, as it doesn't adequately convey the app's functionality.
+* Open PDF, Word, PPT, or TXT files in Contoso is too long.
+* Custom sign document: Custom intent, no need to include custom in the display name. Start with the intent description with a verb.
+
+The following image is an example of correct and incorrect ways to format a sample name:
+
+:::image type="content" source="images/do-and-dont.png" alt-text="Screenshot shows the do and dont of the sample display name.":::
 
 ### Context menu
 
@@ -66,7 +84,7 @@ An Action in the context menu contains an app icon and display name.
 
     :::image type="content" source="images/context-menu-flat-list.png" alt-text="Screenshot shows the custom intent as a flat list at the end of the context menu.":::
 
-* Actions with **Open** or **Add to** intents are grouped.
+* Actions with **Add to Contoso** or **Open Fabrikom, Inc.** intents are grouped.
 
     :::image type="content" source="images/grouped-by-intent.png" alt-text="Screenshot shows the Actions grouped by intent in the context menu.":::
 

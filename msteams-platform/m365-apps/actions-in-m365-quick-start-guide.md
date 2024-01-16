@@ -51,7 +51,7 @@ Let's learn how to build and run a sample app in your local environment. You'll 
 
 1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
 
-1. From the debug dropdown menu, select **Debug in the Microsoft 365 app (Edge) without backend**.
+1. From the debug dropdown menu, select **Debug in the Microsoft 365 app (Edge)**.
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 
