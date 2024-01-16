@@ -247,11 +247,11 @@ items:
        1. Open **Visual Studio**.
        1. Go to **File** > **Open** > **Project/Solution..**.
 
-       :::image type="content" source="./assets/images/calls-and-meetings/open-project-solution.png" alt-text="Screenshot shows how to open a project/solution in visual studio." lightbox= "./assets/images/calls-and-meetings/app_manifest.png" :::
+          :::image type="content" source="./assets/images/calls-and-meetings/open-project-solution.png" alt-text="Screenshot shows how to open a project/solution in visual studio." lightbox= "./assets/images/calls-and-meetings/app_manifest.png" :::
        
        1. Select the **CallingBotSample.sln** file from **csharp** > **Source** folder.
 
-       :::image type="content" source="./assets/images/calls-and-meetings/project-solution-location.png" alt-text="Screenshot shows the location project solution file in file explorer." :::  
+          :::image type="content" source="./assets/images/calls-and-meetings/project-solution-location.png" alt-text="Screenshot shows the location project solution file in file explorer." :::  
 
        1. Press **F5** to run the project.
 
