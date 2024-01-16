@@ -202,12 +202,12 @@ items:
 
            The display names and user IDs linked to your account are generated. 
               
-         * Select any three accounts and add them to the `DisplayName` and `UserId` in the appsettings.json file.
+    2. Select any three accounts and add them to the `DisplayName` and `UserId` in the appsettings.json file.
        
-              :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_2.png" alt-text="Screenshot of Tenant Contoso with `displayName` and `id` highlighted in red." lightbox="./assets/images/calls-and-meetings/graph-explorer_2.png":::
+        :::image type="content" source="./assets/images/calls-and-meetings/graph-explorer_2.png" alt-text="Screenshot of Tenant Contoso with `displayName` and `id` highlighted in red." lightbox="./assets/images/calls-and-meetings/graph-explorer_2.png":::
        
-            > [!NOTE]
-            > `TenantId` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denote to whom you want to redirect or transfer the call.
+        > [!NOTE]
+        > `TenantId` or `UserId` of the Teams account denotes from where you want to initiate the call, and `DisplayName` and `UserId` of the users denote to whom you want to redirect or transfer the call.
 
     **Update app settings**
     
