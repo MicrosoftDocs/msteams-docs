@@ -65,24 +65,38 @@ App can also pass the `tabEntityId`, if there are multiple instances of the app 
 
 The following is an example of a payload:
 
-```json
-{
-    "type": "targetedMeetingNotification",
-    "value": {
-        "recipients": [
-            "<participant1 MRI>",
-            "<participant2 MRI>" 
-        ],
-        "surfaces": [
-            {
-                "surface": "meetingTabIcon",
-                "tabEntityId": "<tab id from tab sdk>" // optional           
-            }
-        ]
-    }
-}
+# [C#](#tab/csharp)
 
-```
+    ```csharp
+    TeamsInfo.SendMeetingNotificationAsync(context, notificationPayload, meetingId);
+    ```
+
+# [JavaScript](#tab/javascript)
+
+    ```javascript
+    TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
+    ```
+
+# [JSON](#tab/json)
+
+    ```json
+    {
+        "type": "targetedMeetingNotification",
+        "value": {
+            "recipients": [
+                "<participant1 MRI>",
+                "<participant2 MRI>" 
+            ],
+            "surfaces": [
+                {
+                    "surface": "meetingTabIcon",
+                    "tabEntityId": "<tab id from tab sdk>" // optional           
+                }
+            ]
+        }
+    }
+    
+    ```
 
 [!INCLUDE [Response code](../includes/meeting-response-code.md)]
 
