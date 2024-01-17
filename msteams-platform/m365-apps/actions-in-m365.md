@@ -18,17 +18,17 @@ Actions aim to integrate your app into your user's workflow by enabling easy dis
 
 The following graphic is an example of an Action that directs user to view list of suppliers related to the file:
 
+:::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user right-clicks on the excel file and select the related suppliers.":::
+
 | Steps | Description |
 | --- | --- |
 | 1 | In Microsoft 365, the user right-clicks on the Excel file. A context menu appears.|
 | 2 | The user selects **Related suppliers** to view the list of suppliers for the Northwind company.|
 | 3 | The Northwind page opens with the list of suppliers mentioned in the Excel file. The user saves time by checking the result with a single click on the Excel file without manually opening the file each time.|
 
-  :::image type="content" source="images/actions-in-m365-app.gif" alt-text="Graphic shows the user right-clicks on the excel file and select the related suppliers.":::
-
 ## Understand how Actions work
 
-Actions are built using three components: Intent, Object, and Handler. When a user aims to complete a task is represented by the intent and object. The intent serves as the verb, outlining the user's intended action, while the object is the noun on which the action is performed. As a developer, you take the user's intent and object as input, and then develop the appropriate handler to enable task completion for the users. For example, opening a file is an intent and the file is an object.
+Actions are built using an intent, object, and handler. When a user aims to complete a task it's called an Action and the Action is represented by the intent and object. The intent serves as the verb, outlining the user's intended action, while the object is the noun on which the action is performed. For example, opening a file is an intent and the file is an object. You must consider the user's intent and object as the input and create the appropriate handler to enable task completion for the user.
 
 To build an action, you must define the intent, object, and handler in the app manifest and use Teams JavaScript library (Teams JS) to get the Action details to make it easy for the users to do specific tasks.
 
@@ -50,27 +50,21 @@ Create app icons and display names in a context menu for Actions. A single actio
 
 * Ensure that the first letter is capitalized. When using a brand name, only the first letter of the brand name should be capitalized.
 
-In the following image is an anatomy of icon slot:
+The following image is an anatomy of an icon slot:
 
 :::image type="content" source="images/icon-slot.png" alt-text="The screenshot shows the icon slot in context menu.":::
 
 ### Display name
 
-The following are the guidelines to create a display name:
+The following tables lists the display name:
 
-**Do's**:
-
-* Add to Todo: Add to represents the intent and Todo is the app name.
-* Open in Contoso: Open represents the intent and Contoso is the app name.
-* Add to dashboard: Add to represents the intent and Contoso is the app name. However, Dashboard provides a more accurate description of the use case.
-* Request signatures: Start with the custom intent, followed by a comprehensive description of the action. The brand name or object name, Contoso sign, isn't necessarily required.
-* Convert to PDF: Start with the custom intent, which is identified as the verb, to clearly express the action in the Contoso app.
-
-**Don't**:
-
-* Avoid using Contoso as the only app name, as it doesn't adequately convey the app's functionality.
-* Open PDF, Word, PPT, or TXT files in Contoso is too long.
-* Custom sign document: Custom intent, no need to include custom in the display name. Start with the intent description with a verb.
+| ✔️ **Do's** | ❌ **Don't** |
+| --- | --- |
+|Add to Todo: Add to represents the intent and Todo is the app name.|Avoid using Contoso as the only app name, as it doesn't adequately convey the app's functionality.|
+|Open in Contoso: Open represents the intent and Contoso is the app name.|Open PDF, Word, PPT, or TXT files in Contoso is too long.|
+|Add to dashboard: Add to represents the intent and Contoso is the app name. However, dashboard provides a more accurate description of the use case.|Custom sign document: Custom intent, no need to include custom in the display name. Start with the intent description with a verb.|
+|Request signatures: Start with the custom intent, followed by a comprehensive description of the action. The brand name or object name, Contoso sign, isn't necessarily required.|&nbsp;|
+|Convert to PDF: Start with the custom intent, which is identified as the verb, to clearly express the action in the Contoso app.|
 
 The following image is an example of correct and incorrect ways to format a sample name:
 
