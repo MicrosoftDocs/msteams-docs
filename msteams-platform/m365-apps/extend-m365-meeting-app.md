@@ -70,10 +70,10 @@ To extend your existing Teams meeting app in Outlook, ensure the following:
 
 > [!div class="checklist"]
 >
-> * [Update your app manifest](#use-app-manifest-version-113-or-later).
+> * [Update your app manifest](#update-your-app-manifest).
 > * [Use JavaScript client library (TeamsJS) v2.5.0 or later](#use-teamsjs-version-250-or-later).
 > * [Configure Content Security Policy headers](#configure-csp-headers-for-outlook).
-> * [Update Microsoft Entra app registration for single sign-on (SSO)](#update-azure-ad-app-registration-for-sso).
+> * [Update Microsoft Entra app registration for single sign-on (SSO)](#update-microsoft-entra-app-registration-for-sso).
 > * [Sideload your updated app using TeamsFx CLI](#sideload-your-app-using-teamsfx-cli).
 
 If you have an existing meeting app, make a copy or a branch of your production project and update your app `id` in the app manifest to use a new identifier that is different from the production app ID for testing.
