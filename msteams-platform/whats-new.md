@@ -26,7 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2024 January**
 
-***January 04, 2024***: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
+* ***January 18, 2024*** : [Extend a Teams meeting app to preview in Outlook](m365-apps/extend-m365-meeting-app.md)
+* ***January 04, 2024***: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 :::column-end:::
 :::row-end:::
