@@ -579,7 +579,7 @@ Each command item is an object with the following structure:
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.url`|String|||Initial webview URL.|
-|`parameters`|Array of object|5 items|✔️|The list of parameters the command takes. Minimum: 1; maximum: 5.|
+|`parameters`|Array of object|5 items||The list of parameters the command takes. Minimum: 1; maximum: 5.|
 |`parameters.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
@@ -678,7 +678,7 @@ Indicates if a personal app is rendered without a tab header bar (signifying ful
 >
 > * `isFullScreen` only works for apps published to your organization. Uploaded and published third-party apps can't use this property (it's ignored).
 >
-> * `isFullScreen=true` removes the Teams-provided header bar and title from personal apps and task module dialogs.
+> * The `isFullScreen=true` parameter eliminates the header bar and title provided by Teams from personal apps and dialogs. However, it's recommended not to use the `isFullScreen=true` parameter with chat bot apps.
 
 ## activities
 
@@ -838,6 +838,9 @@ Specify meeting extension definition. For more information, see [custom Together
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
 |`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is **false**.|
 |`supportsAnonymousGuestUsers`|Boolean|||A value that indicates whether an app supports access for anonymous users. The default value is **false**.|
+
+> [!NOTE]
+> The `supportsAnonymousGuestUsers` property in the app manifest schema v1.16 is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
 
 ### meetingExtensionDefinition.scenes
 
