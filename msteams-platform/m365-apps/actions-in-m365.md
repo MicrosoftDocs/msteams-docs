@@ -28,7 +28,7 @@ The following graphic is an example of an Action that directs user to view list 
 
 ## Understand how Actions work
 
-Actions are built using an intent, object, and handler. When a user aims to complete a task it's called an Action and the Action is represented by the intent and object. The intent serves as the verb, outlining the user's intended action, while the object is the noun on which the action is performed. For example, opening a file is an intent and the file is an object. You must consider the user's intent and object as the input and create the appropriate handler to enable task completion for the user.
+Actions are built using an intent, object, and handler. When a user aims to complete a task it's called an Action, and the Action is represented by the intent and object. The intent serves as the verb, outlining the user's intended action, while the object is the noun on which the action is performed. For example, opening a file is an intent and the file is an object. You must consider the user's intent and object as the input and create the appropriate handler to enable task completion for the user.
 
 To build an action, you must define the intent, object, and handler in the app manifest and use Teams JavaScript library (Teams JS) to get the Action details to make it easy for the users to do specific tasks.
 
@@ -56,7 +56,7 @@ The following image is an anatomy of an icon slot:
 
 ### Display name
 
-The following tables lists the display name:
+The following tables list the display name:
 
 | ✔️ **Do's** | ❌ **Don't** |
 | --- | --- |
