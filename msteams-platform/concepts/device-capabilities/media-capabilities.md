@@ -40,6 +40,8 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
     "media",
 ],
 ```
+> [!NOTE]
+> The Media API isn't supported in the [new Teams client](../../resources/teams-updates.md). We recommend you to use HTML5 `media`.
 
 ## Media capability APIs
 
@@ -59,7 +61,6 @@ The [captureImage](/javascript/api/@microsoft/teams-js/media#@microsoft-teams-js
 > * The `selectMedia` API supports both camera and microphone capabilities through different input configurations.
 > * The `selectMedia` API for accessing microphone capability supports for mobile clients only.
 > * The maximum count of images uploaded is determined by [`maxMediaCount`](/javascript/api/@microsoft/teams-js/media.mediainputs#@microsoft-teams-js-media-mediainputs-maxmediacount) and also by the total size of array returned by the `selectMedia` API. Ensure that the array size doesn't exceed 20 MB, if the array size exceeds 20 MB, the API generates an error code 10000 that is SIZE_EXCEEDED error.
-> * The Media API isn't supported in the [new Teams client](../../resources/teams-updates.md). We recommend you to use HTML5 `Media`.
 
 The following table lists set of APIs to enable your device's media capabilities:
 
