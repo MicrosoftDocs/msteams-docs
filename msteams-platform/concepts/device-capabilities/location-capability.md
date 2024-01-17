@@ -66,6 +66,7 @@ Update your Teams app [manifest.json](../../resources/schema/manifest-schema.md#
 
 > [!NOTE]
 >
+> * The Location API isn't supported in the [new Teams client](../../resources/teams-updates.md). We recommend you to use HTML5 `Geolocation`.
 > * The **Request Permissions** prompt is automatically displayed when a relevant Teams API is initiated. For more information, see [request device permissions](native-device-permissions.md).
 > * Device permissions are different in the browser. For more information, see [browser device permissions](browser-device-permissions.md).
 
@@ -79,10 +80,11 @@ The following table lists the set of APIs to enable your device's location capab
 |`showLocation`| Shows location on map. |It takes a single input parameter location, which contains the coordinates of the location to be shown on the map.|
 
 > [!NOTE]
-> For `getLocation` API:
 >
-> * If `allowChooseLocation` is set to true, then `showMap` is ignored.
-> * `showMap`= false is not supported on Teams web or desktop.
+> * For `getLocation` API:
+    >   *If `allowChooseLocation` is set to true, then `showMap` is ignored.
+    >* `showMap`= false isn't supported on Teams web or desktop.
+> * The Location API isn't supported in the [new Teams client](../../resources/teams-updates.md). We recommend you to use HTML5 `Geolocation`.
 
 For more information on `getLocation` and `showLocation`, see [LocationProps](/javascript/api/@microsoft/teams-js/microsoftteams.location?view=msteams-client-js-latest#getLocation_LocationProps___error__SdkError__location__Location_____void_&preserve-view=true).
 
