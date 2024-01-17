@@ -28,7 +28,7 @@ The following graphic is an example of an Action that directs user to view list 
 
 ## Understand how Actions work
 
-Actions are built using a combination of Intent, Object, and Handler. When a user aims to complete a task, it's represented as intent and object. Intent is the verb that describes the user's desired action, while the object is the noun on which the action is performed. As a developer, you receive the user's intent and object as input and create the corresponding handler to enable task completion for the users. For example, opening a file is an intent and the file is an object.
+Actions are built using three components: Intent, Object, and Handler. When a user aims to complete a task is represented by the intent and object. The intent serves as the verb, outlining the user's intended action, while the object is the noun on which the action is performed. As a developer, you take the user's intent and object as input, and then develop the appropriate handler to enable task completion for the users. For example, opening a file is an intent and the file is an object.
 
 To build an action, you must define the intent, object, and handler in the app manifest and use Teams JavaScript library (Teams JS) to get the Action details to make it easy for the users to do specific tasks.
 
@@ -38,7 +38,7 @@ The following table lists the required elements and support information for Acti
 | --- | --- | --- | ---|
 | &nbsp; | Intent | Intent is the objective a user wants to perform or achieve. Intent is typically represented by a verb, such as `Open`, `Add to`, or any other actions that a user intends to perform. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement of Actions. | You can create an intent for `Open`, `Add to`, and `custom` Actions. You can use `custom` Action to create a tailored action. |
 | &nbsp; | Object  | Object is the file on which the user wants to perform an action. Object represents the noun or context that defines what the user wants to perform an action on.  | Actions can be triggered on content objects (files) that have an extension, such as Word, PowerPoint, Excel, PDF, and images. The files must be available in OneDrive or SharePoint and must be accessible through Microsoft Graph. |
-| &nbsp; | Handlers | A handler refers to the method to fulfill the user's intent and perform the desired action on the specified object. Handler is responsible for implementing the logic and functionality of the Action, ensuring a seamless and meaningful user experience. | Actions support the `openPage` handler. The `openPage` handler allows you to directly guide users to your app's personal tab. The `openPage` handler helps you to drive users to your app's dedicated pages, providing them with a rich and expansive interface to accomplish their goals. |
+| &nbsp; | Handlers | A handler refers to the method to fulfil the user's intent and perform the desired action on the specified object. Handler is responsible for implementing the logic and functionality of the Action, ensuring a seamless and meaningful user experience. | Actions support the `openPage` handler. The `openPage` handler allows you to directly guide users to your app's personal tab. The `openPage` handler helps you to drive users to your app's dedicated pages, providing them with a rich and expansive interface to accomplish their goals. |
 
 ## Design guidelines
 
