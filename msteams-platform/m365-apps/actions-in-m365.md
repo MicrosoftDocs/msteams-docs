@@ -38,7 +38,7 @@ The following table lists the required elements and support information for Acti
 | --- | --- | --- | ---|
 | &nbsp; | Intent | Intent is the objective a user wants to perform or achieve. Intent is typically represented by a verb, such as `Open`, `Add to`, or any other actions that a user intends to perform. Microsoft 365 uses intent to display Actions in locations that align with the user’s needs and intentions. Intent determines the placement of Actions. | You can create an intent for `Open`, `Add to`, and `custom` Actions. You can use `custom` Action to create a tailored action. |
 | &nbsp; | Object  | Object is the file on which the user wants to perform an action. Object represents the noun or context that defines what the user wants to perform an action on.  | Actions can be triggered on content objects (files) that have an extension, such as Word, PowerPoint, Excel, PDF, and images. The files must be available in OneDrive or SharePoint and must be accessible through Microsoft Graph. |
-| &nbsp; | Handlers | A handler refers to the method to fulfil the user's intent and perform the desired action on the specified object. Handler is responsible for implementing the logic and functionality of the Action, ensuring a seamless and meaningful user experience. | Actions support the `openPage` handler. The `openPage` handler allows you to directly guide users to your app's personal tab. The `openPage` handler helps you to drive users to your app's dedicated pages, providing them with a rich and expansive interface to accomplish their goals. |
+| &nbsp; | Handlers | A handler refers to the method to fulfill the user's intent and perform the desired action on the specified object. Handler is responsible for implementing the logic and functionality of the Action, ensuring a seamless and meaningful user experience. | Actions support the `openPage` handler. The `openPage` handler allows you to directly guide users to your app's personal tab. The `openPage` handler helps you to drive users to your app's dedicated pages, providing them with a rich and expansive interface to accomplish their goals. |
 
 ## Design guidelines
 
@@ -74,7 +74,7 @@ The following are the guidelines to create a display name:
 
 The following image is an example of correct and incorrect ways to format a sample name:
 
-:::image type="content" source="images/do-and-dont.png" alt-text="Screenshot shows the do and dont of the sample display name." lightbox="images/do-and-dont.png":::
+:::image type="content" source="images/do-and-dont.png" alt-text="Screenshot shows the do and don't of the sample display name." lightbox="images/do-and-dont.png":::
 
 ### Context menu
 
