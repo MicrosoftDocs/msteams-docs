@@ -134,7 +134,7 @@ Follow instructions to preinstall your app for entire organization or user group
 > [!NOTE]
 > Actions are available in public developer preview, ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users to experience Actions in Microsoft 365 app.
 
-After you update the app package with the required information, you can run your app in Teams Toolkit to test your Actions. Select **Run and Debug (Ctrl+Shift+D)** > **Debug in the Microsoft 365 app (Edge)**.
+After you update the app package with the required information, you can run your app in Teams Toolkit to test your Actions. Select the **F5** key to start debugging.
 
    :::image type="content" source="images/actions-debug.png" alt-text="The screenshot shows actions in debug.":::
 

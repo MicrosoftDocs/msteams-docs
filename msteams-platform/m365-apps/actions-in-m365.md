@@ -46,7 +46,7 @@ Create app icons and display names in a context menu for Actions. A single actio
 
 :::image type="content" source="images/app-icon-context-menu.png" alt-text="The screenshot shows the app icon in context menu.":::
 
-* Start with the intent name, typically represented by a verb, such as `Open`, `Add to`. Followed by a concise description of the action's function or the app name.
+* Start with the intent name, typically represented by a verb, such as `Open` or `Add to` and followed by a term that describes your app.
 
 * Ensure that the first letter is capitalized. When using a brand name, only the first letter of the brand name should be capitalized.
 
@@ -54,11 +54,11 @@ In the following image is an anatomy of icon slot:
 
 :::image type="content" source="images/icon-slot.png" alt-text="The screenshot shows the icon slot in context menu.":::
 
-### Sample display name
+### Display name
 
-Here are the guidelines for creating a sample display name:
+The following are the guidelines to create a display name:
 
-**Do**:
+**Do's**:
 
 * Add to Todo: Add to represents the intent and Todo is the app name.
 * Open in Contoso: Open represents the intent and Contoso is the app name.
@@ -68,7 +68,7 @@ Here are the guidelines for creating a sample display name:
 
 **Don't**:
 
-* Avoid using Contoso as the sole app name, as it doesn't adequately convey the app's functionality.
+* Avoid using Contoso as the only app name, as it doesn't adequately convey the app's functionality.
 * Open PDF, Word, PPT, or TXT files in Contoso is too long.
 * Custom sign document: Custom intent, no need to include custom in the display name. Start with the intent description with a verb.
 
@@ -80,13 +80,17 @@ The following image is an example of correct and incorrect ways to format a samp
 
 An Action in the context menu contains an app icon and display name.
 
-* Actions with custom intent show as a flat list at the end of the context menu.
+The following images are an example of flat list and grouped intents in a context menu:
+
+#### [Flat list](#tab/flatlist)
 
     :::image type="content" source="images/context-menu-flat-list.png" alt-text="Screenshot shows the custom intent as a flat list at the end of the context menu.":::
 
-* Actions with **Add to Contoso** or **Open Fabrikom, Inc.** intents are grouped.
+#### [Grouped](#tab/groupedlist)
 
     :::image type="content" source="images/grouped-by-intent.png" alt-text="Screenshot shows the Actions grouped by intent in the context menu.":::
+
+---
 
 > [!NOTE]
 >
