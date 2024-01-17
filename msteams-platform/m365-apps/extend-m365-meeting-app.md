@@ -142,10 +142,9 @@ You can [upload your custom app with TeamsFx CLI](#upload-your-custom-app-using-
 
 To run your app in Microsoft 365 and Outlook, upload your [app package](..//concepts/build-and-test/apps-package.md) to Teams using TeamsFx CLI.
 
-1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Teams toolkit, see [build app package.](~/toolkit/publish#build-app-package)
+1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Teams toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
     > [!NOTE]
     > If your Teams app manifest contains only `configurableTabs` then TeamsFx CLI is the only supported way to upload your Teams meeting app to preview in Outlook.
-
 
 1. Run the following command to install TeamsFx CLI:
 
