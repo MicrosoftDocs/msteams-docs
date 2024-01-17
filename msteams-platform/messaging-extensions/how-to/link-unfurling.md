@@ -10,7 +10,7 @@ ms.author: v-ypalikila
 
 [!include[v4-to-v3-SDK-pointer](~/includes/v4-to-v3-pointer-me.md)]
 
-The document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an `invoke` activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing the app.
+The document guides you on how to add link unfurling to your app manifest using Developer Portal and manually. With link unfurling, your app can register to receive an invoke activity when URLs with a particular domain are pasted into the compose message area. The `invoke` contains the full URL that was pasted into the compose message area, and you can respond with a card that the user can unfurl, providing additional information or actions. This works similar to a search command with the URL serving as the search term. You can now add link unfurling to Microsoft Teams without installing the app.
 
 :::image type="content" source="../../assets/images/tdp/link-unfurling-adaptive-cards1.png" alt-text="Screenshot shows the link unfurling experience for a Teams app installed or not installed in Teams and other apps." lightbox="../../assets/images/tdp/link-unfurling-adaptive-cards1.png":::
 
@@ -109,7 +109,7 @@ For a complete manifest example, see [manifest reference](~/resources/schema/man
 
 ## Handle the `composeExtensions/queryLink` invoke
 
-After adding the domain to the app manifest, you must update your web service code to handle the invoke request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
+After adding the domain to the app manifest, you must update your web service code to handle the `invoke` request. Use the received URL to search your service and create a card response. If you respond with more than one card, only the first card response is used.
 
 > [!Note]
 > The response from a bot must include a `preview` property.
@@ -236,7 +236,7 @@ contentType: "application/vnd.microsoft.card.thumbnail",
 
 ## Zero install for link unfurling
 
-Zero install link unfurling helps you unfurl previews for your shared links even before a user discovers or installs your app in Teams. You can anonymously unfurl cards with a new invoke request or create a preauthenticated Adaptive Card preview for users before they install or authenticate your app.
+Zero install link unfurling helps you unfurl previews for your shared links even before a user discovers or installs your app in Teams. You can anonymously unfurl cards with a new `invoke` request or create a preauthenticated Adaptive Card preview for users before they install or authenticate your app.
 
 The following image provides a sequential flow to enable and use zero install link unfurling:
 
@@ -248,13 +248,13 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. Set the property `supportsAnonymizedPayloads` to true in the [manifest schema](../../resources/schema/manifest-schema.md#composeextensions).
 
-1. Set your app to handle the new invoke request `composeExtensions/anonymousQueryLink`.
+1. Set your app to handle the new `invoke` request `composeExtensions/anonymousQueryLink`.
 
-   Example of the new invoke request:
+   Example of the new `invoke` request:
 
-   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the invoke request  `composeExtensions/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
+   :::image type="content" source="../../assets/images/tdp/link-unfurl_1.png" alt-text="Screenshot of the `invoke` request  `composeExtensions/anonymousQueryLink` declaration in the manifest." lightbox="../../assets/images/tdp/link-unfurl_1.png":::
 
-   Example of the invoke request payload:
+   Example of the `invoke` request payload:
 
    ```json
    {
@@ -433,7 +433,7 @@ To test zero install link unfurling, follow these steps:
 
 1. Select **Open** to upload the zip file for your test application.
 
-1. After you've successfully uploaded the app, Go to **Teams** > **Apps** > **Built for your org**.
+1. After app upload is successful, go to **Teams** > **Apps** > **Built for your org**.
 
     :::image type="content" source="../../assets/images/teams-link-unfurling/build-for-your-org.png" alt-text="Screenshot of Teams client with org uploaded Teams app":::
 
@@ -441,7 +441,7 @@ To test zero install link unfurling, follow these steps:
 
 ## Remove link unfurling cache
 
-When a user shares a link in a meeting, the Teams app unfurls the link to an Adaptive Card. The link unfurling result is cached in Teams for 30 minutes. You can update your app to set a cache policy and remove cache for the app, which helps you to show different content in an Adaptive Card when the app's link is shared in a different context in Teams.
+When a user shares a link in a meeting, the Teams app unfurls the link to an Adaptive Card. The link unfurling result is cached in Teams for 30 minutes. You can update your app to set a cache policy and remove cache for the app. This action helps you to show different content in an Adaptive Card when the app's link is shared in a different context in Teams.
 
 To remove link unfurling cache, update your bot with the `type` as `setcachepolicy` under the `suggestedActions` property. Teams doesn't cache the results for the app links with the `"type": "setCachePolicy"`.
 
