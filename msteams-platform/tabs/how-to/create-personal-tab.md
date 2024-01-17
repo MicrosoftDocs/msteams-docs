@@ -639,7 +639,7 @@ To install the Microsoft Teams Toolkit extension:
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor-vs-preview2/vs.install.PNG" alt-text="Screenshot of Visual Studio Enterprise Preview with the option Asp.NET, web development, and Microsoft Teams development tools under installation details and install highlighted in red.":::
 
-Your Visual Studio is installed in a few minutes.
+    Your Visual Studio is installed in a few minutes.
 
 # [Command line](#tab/cli)
 
@@ -780,15 +780,15 @@ Use Teams Toolkit to create your first tab project. The toolkit takes you throug
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/first-tab/create-tab.png" alt-text="Screenshot of Create a new Teams application with Tab and Create options highlighted in red.":::
 
-Your Teams tab app is created in few seconds.
+   Your Teams tab app is created in few seconds.
 
-:::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot of Visual Studio displaying tips to get started while building your app."lightbox="../../assets/images/teams-toolkit-v2/blazor/vs-tab-app.png":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/blazor/vs-tab-app.png" alt-text="Screenshot of Visual Studio displaying tips to get started while building your app."lightbox="../../assets/images/teams-toolkit-v2/blazor/vs-tab-app.png":::
 
-<details>
-<summary>A quick recap of creating a Teams tab app.</summary>
-Watch this short recap for creating a Teams tab app.
+   <details>
+   <summary>A quick recap of creating a Teams tab app.</summary>
+   Watch this short recap for creating a Teams tab app.
 
-:::image type="content" source="~/assets/videos/blazorapp.gif" alt-text="Graphical representation shows the process of creating the Teams tab app1.":::
+   :::image type="content" source="~/assets/videos/blazorapp.gif" alt-text="Graphical representation shows the process of creating the Teams tab app1.":::
 
 ### Take a tour of the source code for Teams tab app
 
