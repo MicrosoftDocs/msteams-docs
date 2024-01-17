@@ -120,7 +120,7 @@
     - name: Adaptive Cards
       href: task-modules-and-cards/cards/design-effective-cards.md
       displayName: column, ColumnSet 
-    - name: Task modules
+    - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
       displayname: Forms
     - name: Activity feed notifications
@@ -257,7 +257,7 @@
           - name: Deploy to the cloud
             href: toolkit/toolkit-v4/deploy-vs.md            
     - name: Teams Toolkit CLI
-      href: toolkit/TeamsFx-CLI.md
+      href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
       - name: Overview
@@ -518,10 +518,10 @@
       - name: Define action commands
         href: messaging-extensions/how-to/action-commands/define-action-command.md
         displayName: Command invoke locations, static list of parameters, action command manually
-      - name: Create and send task modules
+      - name: Create and send dialogs
         href: messaging-extensions/how-to/action-commands/create-task-module.md
         displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
-      - name: Respond to the task module submit action
+      - name: Respond to the dialog submit action
         href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
         displayName: Compose, Respond to initial submit action, configure the poll, attribution for bot messages, submit action
     - name: Search commands

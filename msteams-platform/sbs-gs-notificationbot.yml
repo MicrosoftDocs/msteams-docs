@@ -5,7 +5,7 @@ metadata:
   description: In this tutorial, you can learn to send notification by creating a new notification bot with Teams Toolkit.
   audience: Developer
   level: Beginner
-  ms.date: 05/04/2021
+  ms.date: 01/07/2024
   ms.topic: interactive-tutorial
   nextTutorialHref: ~/get-started/get-started-overview.md
   nextTutorialTitle: Back to Get started overview
@@ -278,7 +278,7 @@ items:
     1. Open Visual Studio Code.
     1. Open the project folder where you created the notification bot app.
     1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
-    1. Select **Sign-in to Azure** using your credentials.
+    1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
         > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step.

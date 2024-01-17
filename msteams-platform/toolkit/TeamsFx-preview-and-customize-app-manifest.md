@@ -406,7 +406,7 @@ In `manifest.template.json`, you can go to CodeLens to preview the values for `l
 > [!NOTE]
 > Provision the environment or execute local debug to generate values for placeholders.
 
-You can go to state file or configuration file by selecting the CodeLens, which provides a drop down list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
+You can go to state file or configuration file by selecting the CodeLens, which provides a dropdown list with all the environment names. After selecting one environment, the corresponding state file or configuration file opens.
 
 :::image type="content" source="toolkit-v4/images/select-environment-v4.png" alt-text="Screenshot is an example of showing the selection of an environment.":::
 
