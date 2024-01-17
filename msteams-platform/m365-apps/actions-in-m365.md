@@ -84,11 +84,11 @@ The following images are an example of flat list and grouped intents in a contex
 
 #### [Flat list](#tab/flatlist)
 
-    :::image type="content" source="images/context-menu-flat-list.png" alt-text="Screenshot shows the custom intent as a flat list at the end of the context menu.":::
+:::image type="content" source="images/context-menu-flat-list.png" alt-text="Screenshot shows the custom intent as a flat list at the end of the context menu.":::
 
 #### [Grouped](#tab/groupedlist)
 
-    :::image type="content" source="images/grouped-by-intent.png" alt-text="Screenshot shows the Actions grouped by intent in the context menu.":::
+:::image type="content" source="images/grouped-by-intent.png" alt-text="Screenshot shows the Actions grouped by intent in the context menu.":::
 
 ---
 
