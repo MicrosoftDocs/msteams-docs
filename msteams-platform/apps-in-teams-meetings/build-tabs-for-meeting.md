@@ -12,11 +12,11 @@ ms.date: 12/05/2023
 
 Every team has a different way of communicating and collaborating tasks. To achieve these different tasks, customize Teams with apps for meetings. Enable your apps for Teams meetings and configure the apps to be available in the meeting scope within their app manifest.
 
-Starting with app manifest version 1.13, meeting apps are supported on Microsoft Outlook. You can build meeting apps that can be configured and added to Teams meetings scheduled from the Outlook desktop client. See [Extend a Teams meeting app to Outlook](../m365-apps/extend-m365-meeting-app.md) for more on how to test meeting app support in Outlook.
-
 ## Tabs in Teams meetings
 
 Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
+
+Tabs in Teams meetings are also supported in Microsoft Outlook from app manifest version 1.13 or later. You can build meeting tab apps that can be configured and added to Teams meetings scheduled from Outlook for Windows. For more information, see [extend a Teams meeting app to Outlook](../m365-apps/extend-m365-meeting-app.md).
 
 Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view, and meeting Stage View.
 

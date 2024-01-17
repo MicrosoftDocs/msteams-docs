@@ -10,7 +10,7 @@ ms.subservice: m365apps
 ---
 # Extend Teams apps across Microsoft 365
 
-With the latest releases of [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) (TeamsJS version 2.0.0 and later), [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md) (version 1.13 and later), and [Teams Toolkit](../toolkit/visual-studio-code-overview.md), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to the Microsoft commercial marketplace ([Microsoft AppSource](https://appsource.microsoft.com/)) or your organization's private app store.
+With the latest releases of [Microsoft Teams JavaScript client library](../tabs/how-to/using-teams-client-library.md) (TeamsJS version 2.0.0 and later), [app manifest](../resources/schema/manifest-schema.md) (previously called Teams app manifest) (version 1.13 and later), and [Teams Toolkit](../toolkit/visual-studio-code-overview.md), you can build and update Teams apps to run in other high-usage Microsoft 365 products and publish them to the Microsoft commercial marketplace ([Microsoft AppSource](https://appsource.microsoft.com/)) or your organization's private app store.
 
 Extending your Teams app across Microsoft 365 provides a streamlined way to deliver cross-platform apps to an expanded user audience: from a single codebase, you can create app experiences tailored for Teams, Outlook, and Microsoft 365 app environments. End users don't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
 
@@ -54,7 +54,7 @@ On mobile, you can test and debug your Teams personal tab running on Microsoft 3
 
 ## Message extensions in Outlook
 
-You can extend your search-based [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook on the web and Windows desktop, enabling your customers to search and share results through the compose message area of Outlook, in addition to Microsoft Teams clients.
+You can extend your [Teams message extensions](extend-m365-teams-message-extension.md) to Outlook on the web and Windows in addition to Microsoft Teams clients.
 
 :::image type="content" source="images/outlook-teams-messaging-ext.png" alt-text="The screenshot is an example that shows Message extension running in Outlook and Teams.":::
 
@@ -66,7 +66,7 @@ Build your app with the latest [app manifest](../resources/schema/manifest-schem
 
 ## Meeting apps in Outlook
 
-Users can discover and use your meeting app right in the flow of their work when you [extend your meeting app to Outlook](extend-m365-meeting-app.md) for Windows desktop.
+Users can discover and use your meeting app right in the flow of their work when you [extend your meeting app to Outlook](extend-m365-meeting-app.md) for Windows.
 
 :::image type="content" source="images/outlook-teams-meeting-app.png" alt-text="Screenshot of a sample meeting app running in both Teams and Outlook":::
 
