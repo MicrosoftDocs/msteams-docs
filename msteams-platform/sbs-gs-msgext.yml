@@ -146,12 +146,12 @@ items:
 
         You can select **Local debug** to preview your project. 
 
-      <details>
-      <summary>A quick recap of creating a Teams app.</summary>
-      Watch this short recap for creating a Teams app.
+    <details>
+    <summary>A quick recap of creating a Teams app.</summary>
+    Watch this short recap for creating a Teams app.
 
-      ![Create a Teams app](~/assets/videos/javascript-msg-ext-app1.gif)
-      </details>
+    ![Create a Teams app](~/assets/videos/javascript-msg-ext-app1.gif)
+    </details>
 
     # [Command line](#tab/cli)
 
@@ -165,14 +165,13 @@ items:
 
     For example, Use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
-
     1. Select **Create a new Teams app**.
     1. Select **Message Extension** and deselect **Tab**.
     1. Select **JavaScript** as the programming language.
     1. Select **Enter** to select the default workspace folder.
     1. Enter a suitable name for your app, like `HelloMsgExtn`.  The name of the app must consist only of alphanumeric characters.
 
-      After all the questions have been answered, your project is created.
+    After all the questions have been answered, your project is created.
 
     ---
 
@@ -412,7 +411,6 @@ items:
         The app loads in Teams.
 
     </details>
-    <br>
     <br>
     <!-- markdownlint-disable MD033 -->
     <details>
