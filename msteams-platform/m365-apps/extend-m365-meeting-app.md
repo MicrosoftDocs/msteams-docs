@@ -1,7 +1,7 @@
 ---
 title: Extend a Teams meeting app to Outlook
 description: Here's how to ensure your Teams meeting app experience works seamlessly when extended to Outlook
-ms.date: 12/05/2023
+ms.date: 1/18/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: tutorial
@@ -152,7 +152,7 @@ To run your app in Microsoft 365 and Outlook, upload your [app package](..//conc
     npm install -g @microsoft/teamsfx-cli
     ```
 
-1. Run the following command to upload your app in Teams:
+1. Run the TeamsFx [m365 sideloading](/toolkit/teams-toolkit-cli?pivots=version-two#teamsfx-m365) command to upload your app in Teams:
 
     ```bash
     teamsfx m365 sideloading --file-path <path\to\appPackage.zip>
@@ -179,6 +179,7 @@ To preview your meeting app in Outlook for Windows ensure the app is running loc
 1. Select **Add**. Your meeting app displayed in the **Apps** section and in the side panel of the scheduling window.
 
 To remove or configure your app in the scheduling window, select the dropdown menu on your app and select the following:
+
 * **About**: How the app appears in the Microsoft Teams Store.
 * **Settings**: Update the app configuration for the specific meeting.
 * **Remove**: Remove the app from the meeting.
