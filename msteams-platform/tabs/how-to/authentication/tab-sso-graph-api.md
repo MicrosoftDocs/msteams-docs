@@ -64,7 +64,7 @@ If your application doesn't require a signed-in user, consider utilizing applica
 
 ## Configure authentication for different platforms
 
-Depending on the platform or device where you want to target your app, additional configuration may be required, such as redirect URIs, specific authentication settings, or details specific to the platform.
+Depending on the platform or device where you want to target your app, additional configuration might require, such as redirect URIs, specific authentication settings, or details specific to the platform.
 
 > [!NOTE]
 >
@@ -204,7 +204,7 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 > [!IMPORTANT]
 >
 > - As a best practice for security, always use [server-side code to make Microsoft Graph calls](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#middle-tier-access-token-request) or other calls that require passing an access token. This helps protect the token from being intercepted or leaked. DO NOT return the OBO token to the client because it would then enable the client to make direct calls to Microsoft Graph.
-> - If you're an app developer with two distinct apps registered in AAD and you need separate tokens for each, use OBO to enable communication between the two apps.
+> - If you're an app developer with two distinct apps registered in Azure AD and you need separate tokens for each, use OBO to enable communication between the two apps.
 > - Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
 
 ## Obtain consent
@@ -223,7 +223,7 @@ When asking for additional user consent using the Microsoft Teams JavaScript cli
 > [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101) sample provides code demonstrating following steps.
 
 1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Microsoft Entra [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure that you use the Azure AD v2 endpoint for this exchange.
-1. When you try to execute the token exchange for a user for the first time, if Microsoft Entra refuses to exchange tokens it might be because the user hasn't consented to give your app permission to the user's data. In these cases, your exchange fails with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multi-factor authentication or corporate device enrollment is required.
+1. When you try to execute the token exchange for a user for the first time, if Microsoft Entra refuses to exchange tokens it might be because the user hasn't consented to give your app permission to the user's data. In these cases, your exchange fails with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multifactor authentication or corporate device enrollment is required.
 1. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers an [Microsoft Entra consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
 1. To ask the user for consent for your app to access their data, you must include the `prompt=consent` property in your [query-string-parameter](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow#send-the-sign-in-request) to Microsoft Entra ID.
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
@@ -242,7 +242,7 @@ If your application is unaware of this behavior, it might ask the user for conse
 
 The wait-and-retry mechanism must keep track if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Microsoft Entra ID sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one-second wait.
 
-If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes, and you may have to prompt them to consent again.
+If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes, and you might have to prompt them to consent again.
 
 This approach helps reduce the possibility of user being prompted for consent more than once.
 
