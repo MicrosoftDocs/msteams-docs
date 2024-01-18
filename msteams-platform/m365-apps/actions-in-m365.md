@@ -56,7 +56,7 @@ The following image is an anatomy of an icon slot:
 
 ### Display name
 
-The following tables list the display name:
+The following table provides guidance on the do’s and don’ts for the display name:
 
 | ✔️ **Do's** | ❌ **Don't** |
 | --- | --- |

@@ -14,6 +14,7 @@ When you create an app ensure that you define user intent, determine the object 
 
 To build Actions for your app, follow these steps:
 
+1. [Prerequisites](#prerequisites).
 1. [Configure app manifest](#configure-app-manifest).
 1. [Retrieve Action information through context object](#retrieve-action-information-through-context-object).
 1. [Access content through Graph API](#access-content-through-graph-api).
