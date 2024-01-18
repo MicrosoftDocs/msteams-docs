@@ -64,7 +64,7 @@ You can build a Teams meeting app for Outlook through Teams Toolkit extension fo
 
     :::image type="content" source="images/teams-meeting-chat-view.png" alt-text="{alt-text}":::
 
-# [Enable an existing Teams meeting app in Outlook](#tab/existing-app)
+# [Extend an existing Teams meeting app to Outlook](#tab/existing-app)
 
 To extend your existing Teams meeting app in Outlook, ensure the following:
 
@@ -138,7 +138,7 @@ Teams tab applications are hosted within [iframe elements](https://developer.moz
 
 You can [upload your custom app with TeamsFx CLI](#upload-your-custom-app-using-teamsfx-cli) and [preview your meeting app in Outlook](#preview-your-meeting-app-in-outlook).
 
-## Upload your custom app using TeamsFx CLI
+### Upload your custom app using TeamsFx CLI
 
 To run your app in Microsoft 365 and Outlook, upload your [app package](..//concepts/build-and-test/apps-package.md) to Teams using TeamsFx CLI.
 
@@ -160,7 +160,7 @@ To run your app in Microsoft 365 and Outlook, upload your [app package](..//conc
 
 After your meeting app is uploaded to Teams, it's available in both Teams and Outlook. For your app to display in the **Apps** menu wait for few minutes and restart Outlook for Windows.
 
-## Preview your meeting app in Outlook
+### Preview your meeting app in Outlook
 
 To preview your meeting app in Outlook for Windows ensure the app is running locally and follow the steps:
 
