@@ -1,6 +1,6 @@
 ---
 title: Cards and dialogs
-description: Learn about types of cards supported in bots for Teams, such as, Adaptive, Hero and Thumbnail card, and its actions.
+description: Learn about types of cards supported in bots for Teams, such as, Adaptive, Hero, and Thumbnail card, and their actions.
 author: surbhigupta12
 ms.topic: conceptual
 ms.localizationpriority: medium

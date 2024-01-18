@@ -10,19 +10,26 @@ ms.date: 02/22/2023
 
 You can add modal dialogs (referred as task modules in TeamsJS v1.x) to your tabs to simplify the user experience for any workflows that require data input. Dialogs allow you to gather user input in a Microsoft Teams-Aware modal window. A good example of this is editing Planner cards. You can use dialogs to create a similar experience.
 
-To support the dialog feature, two new functions are added to the [Teams JavaScript client library](/javascript/api/overview/msteams-client). The following code shows an example of these two functions:
+The two main operations of dialogs involve opening and closing (submitting) them. The functions are slightly different for earlier versions (prior to v2.x.x) of the TeamsJS library:
 
 # [TeamsJs v2](#tab/teamsjs)
 
 ```typescript
- microsoftTeams.dialog.open(
-   urlDialogInfo: UrlDialogInfo, 
-   submitHandler?: DialogSubmitHandler, 
-   messageFromChildHandler?: PostMessageChannel
-): void])
+// Open HTML dialog
+microsoftTeams.dialog.url.open(
+    urlDialogInfo: UrlDialogInfo, 
+       submitHandler?: DialogSubmitHandler, 
+       messageFromChildHandler?: PostMessageChannel
+): void;
 
+// Open Adaptive Card dialog
+microsoftTeams.dialog.adaptiveCard.open(
+    adaptiveCardDialogInfo: AdaptiveCardDialogInfo,
+    submitHandler?: DialogSubmitHandler
+): void;
 
-   microsoftTeams.dialog.submit(
+// Submit HTML dialog (AC dialogs send result from Action.Submit)
+   microsoftTeams.dialog.url.submit(
     result?: string | any,
     appIds?: string | string[]
 ): void;
@@ -35,11 +42,13 @@ To support the dialog feature, two new functions are added to the [Teams JavaScr
 # [TeamsJs v1](#tab/teamsjs1)
 
 ```typescript
+// Same function is used for both HTML and Adaptive Card dialogs.
 microsoftTeams.tasks.startTask(
     taskInfo: TaskInfo,
     submitHandler?: (err: string, result: string | any) => void
 ): void;
 
+// Only works for HTML dialogs (AC dialogs send result from Action.Submit)
 microsoftTeams.tasks.submitTask(
     result?: string | any,
     appIds?: string | string[]
@@ -48,7 +57,7 @@ microsoftTeams.tasks.submitTask(
 
 ---
 
-You can see how invoking a dialog from a tab and submitting the result of a dialog works.
+The following sections explain the process of invoking a dialog from a tab and submitting the result.
 
 ## Invoke a dialog from a tab
 
