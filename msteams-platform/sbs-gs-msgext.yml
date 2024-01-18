@@ -313,8 +313,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot shows the search result sent in chat.":::
 
-   <br>
-   #<details>
+   <details>
    <summary><h2>How to open your message extension app</h2></summary>
 
    You tested the search feature of the message extension app in the previous step. Now, learn the different ways to open the message extension app in Teams.
