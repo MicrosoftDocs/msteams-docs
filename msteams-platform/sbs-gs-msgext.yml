@@ -157,12 +157,12 @@ items:
 
    1. CLI provides you with a series of options to choose from. Use arrow keys to select an option. After you make the choice, select Enter to confirm.
 
-     1. Select **Message Extension** for **New Project**.
-     1. Select **Custom Search Results** for **App Features Using a Message Extension**.
-     1. Select **Start with a Bot** for **Architecture of Search Based Message Extension**.
-     1. Select **JavaScript** for **Programming Language**.
-     1. Select **Enter** to select the default workspace folder for your app.
-     1. Enter a suitable name for your app. The name of the app must consist only of alphanumeric characters.
+      1. Select **Message Extension** for **New Project**.
+      1. Select **Custom Search Results** for **App Features Using a Message Extension**.
+      1. Select **Start with a Bot** for **Architecture of Search Based Message Extension**.
+      1. Select **JavaScript** for **Programming Language**.
+      1. Select **Enter** to select the default workspace folder for your app.
+      1. Enter a suitable name for your app. The name of the app must consist only of alphanumeric characters.
 
     CLI creates the project after you answer all the questions.
 
@@ -212,7 +212,7 @@ items:
 
    The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Teams Toolkit displays **Sideloading enabled**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot shows the user signed in to Microsoft 365 and the sideloading enabled message.":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot shows the user signed in to Microsoft 365 and the sideloading enabled message.":::
 
    Now you're ready to build the app and run it locally!
 
@@ -248,10 +248,11 @@ items:
         When you select **F5**, the Teams Toolkit performs the following functions:
 
         1. Checks the following prerequisites:
-          1. You're signed in with a Microsoft 365 account.
-          1. Custom app upload is enabled for your Microsoft 365 account.
-          1. Supported Node.js version is installed.
-          1. Port required by bot app is available.
+
+           1. You're signed in with a Microsoft 365 account.
+           1. Custom app upload is enabled for your Microsoft 365 account.
+           1. Supported Node.js version is installed.
+           1. Port required by bot app is available.
 
         2. Installs npm packages
         3. Starts Dev Tunnel to create an HTTP tunnel.
