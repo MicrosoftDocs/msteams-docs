@@ -109,7 +109,7 @@ items:
 
    1. Select **Start with a Bot**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-architecture-mex.png" alt-text="Screenshot shows the options for the architecture of the the message extension.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-architecture-mex.png" alt-text="Screenshot shows the options for the architecture of the message extension.":::
 
    1. Select **JavaScript**.
 
@@ -178,7 +178,7 @@ items:
    | --- | --- |
    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
    | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
-   | `.vscode/` | VSCode files for local debug. |
+   | `.vscode/` | VS Code files for local debug. |
    | `appPackage/` | Templates for the Teams application manifest. |
    | `infra/` | Templates for provisioning Azure resources. |
    | `index.js` | Application entry point and `restify` handler. |
@@ -284,9 +284,6 @@ items:
 
         - If you created a bot app before you created the message extension app, it loads in the bot app you created. Previous chat messages of the bot app are visible.
         - If you created a message extension first, your app is loaded in the most recent chat that is open on Teams.
-
-        > [!NOTE]
-        > You can extend your app to Outlook and Microsoft 365. In Visual Studio Code, under **RUN AND DEBUG** dropdown, select .
 
    ### Test your app
 
