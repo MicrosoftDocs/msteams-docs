@@ -64,7 +64,7 @@ items:
        > [!TIP]
        > If you encounter **ERR_NGROK_4018**, follow the steps, as displayed in the Command Prompt to sign up and authenticate ngrok. Then run the `ngrok http --host-header=localhost 3000` command.
 
-       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/ngrok-tab-device_1.png" alt-text=" ngrok tunnelling":::
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/ngrok-tunnel-tab.png" alt-text=" ngrok tunnelling":::
 
 - title: Set up manifest file
   durationInMinutes: 1
@@ -106,7 +106,7 @@ items:
         npm start
         ```
 
-         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/npm-start-install1.png" alt-text="install and start npm":::     
+         :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/npm-start-install.png" alt-text="install and start npm":::     
 
      1. You can see the following output in the browser:
 
