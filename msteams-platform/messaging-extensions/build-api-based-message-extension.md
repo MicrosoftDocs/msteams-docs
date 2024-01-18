@@ -120,7 +120,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams Developer Portal.":::
 
-1. Select the Open OpenAPI Description document in the YAML format and select **Open**.
+1. Select the Open OpenAPI Description document in the JSON or YAML format and select **Open**.
 
 1. Select **Save**. A pop-up appears with the message **API spec saved successfully**.
 1. Select **Got it**.
