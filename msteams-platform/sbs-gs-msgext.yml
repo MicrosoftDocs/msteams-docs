@@ -321,7 +321,7 @@ items:
    <details>
    <summary><b>Different ways to open your message extension app</b></summary>
 
-   1. Open your app from command box
+   1. **Open your app from command box**
 
        1. Enter **/** followed by your message extension app's name in the command box.
         
@@ -347,7 +347,7 @@ items:
 
            :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the card sent in a chat.":::
 
-   1. Open your app from message compose area
+   1. **Open your app from message compose area**
 
        1. Select the three dots at the bottom of the message compose area.
 
@@ -357,7 +357,7 @@ items:
 
            The message extension app loads with the options to run a search.
 
-   1. Open the app from uploaded custom apps</summary>
+   1. **Open the app from uploaded custom apps**
 
        1. Select **Apps** > **Manage your apps**.
 
