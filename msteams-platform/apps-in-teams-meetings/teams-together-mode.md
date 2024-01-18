@@ -57,7 +57,7 @@ To create a best scene, ensure that you follow the following practices:
       :::image type="content" source="../assets/images/apps-in-meetings/share-screen.png" alt-text="Share your scene using the Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#share-a-scene-using-the-scene-studio" border="false":::
 :::row-end:::
 
-## Build scene using Scene studio
+## Build a scene using the Scene studio
 
 You can build a scene using [Scenes Studio](https://dev.teams.microsoft.com/scenes) in Teams Developer Portal. A scene in the context of the Scene studio contains the following elements:
 
