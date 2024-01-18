@@ -1,18 +1,18 @@
 ## Prepare development environment
 
-After you install the required tools, you set up the development environment.
+After you install the required tools, set up the development environment.
 
 ### Install Teams Toolkit
 
 Microsoft Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app and publish to the Teams Store.
 
-You can use Teams Toolkit with Visual Studio Code or CLI (command-line interface) (TeamsFx).
+You can use Teams Toolkit with Visual Studio Code or a command-line interface called TeamsFx CLI.
 
 # [Visual Studio Code](#tab/vscode)
 
-1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** / **⌘⇧-X** or **View** > **Extensions**).
-1. In the search box, enter **Teams Toolkit**.
-1. Select **Install**.
+1. Open Visual Studio Code and select **Extensions** (**Ctrl+Shift+X** or **View** > **Extensions**).
+2. In the search box, enter **Teams Toolkit**.
+3. Select **Install**.
 
    :::image type="content" source="../../assets/images/include-files/install-toolkit-vs.png" alt-text="Screenshot shows the Teams Toolkit extension installation.":::
 
@@ -51,35 +51,34 @@ A tenant is a space or a container for your organization in Teams, where you cha
 
 ### Check for upload an app option
 
-After creating the app, you must load your app in Teams without distributing it. This process is known as app uploading. Sign in to your Microsoft 365 account to view this option.
+After creating your custom app, you must upload your app to Teams. Sign in to your Microsoft 365 account to view this option.
 
 > [!NOTE]
 > Ensure that you enable app uploading to preview and test apps in Teams local environment.
 
-Custom app upload is enabled through a tenant and admin must give an access to upload a custom app.
-Do you already have a tenant and an admin access? Let's check if you really do!
+Custom app upload is enabled through a tenant and an admin must give you access to upload a custom app.
 
 Verify if you can upload apps in Teams:
 
 1. In the Teams client, select the **Apps** icon.
-1. Select **Manage your apps**.
-1. Select **Upload an app**.
-1. Look for the option to **Upload a customised app**. If the option is visible, you enabled custom app upload.
+2. Select **Manage your apps**.
+3. Select **Upload an app**.
+4. Look for the option to **Upload a custom app**. If the option is visible, you've enabled custom app upload.
 
-   :::image type="content" source="../../assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of Upload a customised app.":::
+   :::image type="content" source="../../assets/images/include-files/custom-upload.png" alt-text="Screenshot shows the selection of upload a custom app option.":::
 
       > [!NOTE]
-      > Contact your Teams administrator, if you don't find the option to upload a customised app.
+      > Ff you don't find the option to upload a custom app, contact your Teams administrator.
 
 ### Create a free Teams developer tenant (optional)
 
-If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
+If you don't have a Teams developer account, join the Microsoft 365 developer program.
 
 1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
 1. Select **Join Now** and follow the onscreen instructions.
 1. In the welcome screen, select **Set up E5 subscription**.
-1. Set up your administrator account. After you finish, the following screen appears.
+1. Set up your administrator account. After you finish, the following screen appears:
 
    :::image type="content" source="../../assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
-1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a customised app** option in Teams.
+1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
