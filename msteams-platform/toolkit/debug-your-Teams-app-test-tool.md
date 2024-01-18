@@ -319,7 +319,7 @@ It's vital to recognize that updating the configuration file has three major imp
    | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
    | Sending Teams events | Available (mock activity) |Available |
    | Typing indicator | Not Available | Available |
-   | Tab, Messaging Extension, Dialogs (referred as task modules in TeamsJS v1.x), Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
+   | Tab, Message extension, Dialogs (referred as task modules in TeamsJS v1.x), Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
 
 ## Debug an existing app with Test Tool
 
