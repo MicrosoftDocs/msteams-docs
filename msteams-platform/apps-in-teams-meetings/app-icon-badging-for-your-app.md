@@ -67,11 +67,15 @@ The following code is an example of the payload:
 
 # [C#](#tab/csharp)
 
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8535a89765319f3940e2a4eac7a9eb517a980211/samples/meetings-app-icon-badging/csharp/AppIconBadgingInMeetings/Bots/AppIconBadgingInMeeting.cs#L108)
+
 ```csharp
 TeamsInfo.SendMeetingNotificationAsync(context, notificationPayload, meetingId);
 ```
 
 # [JavaScript](#tab/javascript)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8535a89765319f3940e2a4eac7a9eb517a980211/samples/meetings-app-icon-badging/nodejs/bots/teamsBot.js#L83)
 
 ```javascript
 TeamsInfo.sendMeetingNotification(context, notificationPayload, meetingId);
