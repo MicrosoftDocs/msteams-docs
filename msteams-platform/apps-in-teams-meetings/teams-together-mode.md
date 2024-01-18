@@ -110,16 +110,19 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 
    You can drag the images of the participants around the scene and place them in the required position. You can resize them using the resize arrow. After the scene is shipped, the participant seat placements are replaced with actual participant's video streams.
 
-1. Select any participant image and select **Assign Spot** to assign the spot to the participant.
+1. Select any participant image and select **Assign Spot** to assign role to the participant.
 
-1. Select **Meeting Organizer** or **Presenter** role for the participant.
-   In a meeting, one participant must be assigned the role of a meeting organizer.
+1. Select **Meeting organizer** or **Presenter** role for the participant.
+   In a meeting, one participant must be assigned the role of a meeting organizer. You can assign the role of **Meeting organizer** to one participant only.
 
     :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the Assign spot check box for the participant 3 in scene studio.":::
 
-1. Select **Save > View in Teams** to quickly test your scene in Teams.
-   A scene only app and is created and you can view the app and app package .json file in  **Apps** page in the Teams Developer Portal. You can test and try out scenes from the Scene studio. A screen opens in your Teams to add the scene app you've created.
+1. Select **Save** to save the scene you have created.
+1. Select **View in Teams** to quickly test your scene in Teams.
+   A scene only app is created and you can view the app and app package.json file in **Apps** page in the Teams Developer Portal. You can test and try out scenes from the Scene studio. A screen opens in your Teams to add the scene app you've created.
 
+1. Select **Preview in Teams**.
+   Teams page appears to add the scene only app you have created in Scene studio.
 1. Select **Add**.
 
     :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
