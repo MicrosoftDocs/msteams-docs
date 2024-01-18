@@ -17,7 +17,7 @@ items:
   content: |
    Start Microsoft Teams app development with your first Teams app using JavaScript. 
    
-   In this tutorial, you learn:
+   In this tutorial, you'll learn:
 
    - How to set up a new project with Teams Toolkit.
    - How to build a message extension app.
@@ -36,17 +36,17 @@ items:
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; |
-   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript, build environments. Use the latest version. |
+   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript or TypeScript build environments. Use the latest version. |
    | &nbsp; | [Teams Toolkit](#install-teams-toolkit) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
-   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+   | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Backend JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls in one place.|
    | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge)(recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-   | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app. |
+   | &nbsp; | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with appropriate permissions to install an app. |
    | **Optional** | &nbsp; | &nbsp; |
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
    | &nbsp; | [React Developer Tools for Microsoft Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) or [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) | A browser DevTools extension for the open-source React JavaScript library. |
    | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
-   | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
+   | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app to your organization or the Microsoft Teams Store. |
 
 
    > [!TIP]
@@ -81,7 +81,7 @@ items:
    > Message extensions rely on bots to provide a dialog between the user and your code.
 
 
-   In this tutorial, you learn:
+   In this tutorial, you'll learn:
 
    1. [How to set up a new message extension project with Teams Toolkit.](#create-your-message-extension-project-workspace)
    1. [The directory structure of your app project.](#take-a-tour-of-the-message-extension-app-source-code)
@@ -313,13 +313,13 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot shows the search result sent in chat.":::
 
-   ## Other methods to open your message extension app
-
-   You tested the search feature of the message extension app in the previous step. Now, learn the different ways to open the message extension app.
-   <br>
    <br>
    <details>
-   <summary>Open your app from command box</summary>
+   <summary>## How to open your message extension app</summary>
+
+   You tested the search feature of the message extension app in the previous step. Now, learn the different ways to open the message extension app in Teams.
+   
+   ### Open your app from command box
 
    1. Enter **/** followed by your message extension app's name in the command box.
         
@@ -345,11 +345,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the card sent in a chat.":::
 
-   </details>
-
-   <br>
-   <details>
-   <summary>Open your app from message compose area</summary>
+   ### Open your app from message compose area
 
    1. Select the three dots at the bottom of the message compose area.
 
@@ -359,11 +355,7 @@ items:
 
          The message extension app loads with the options to run a search.
 
-   </details>
-
-   <br>
-   <details>
-   <summary>Run the app from uploaded custom apps</summary>
+   ### Run the app from uploaded custom apps</summary>
 
    1. Select **Apps** > **Manage your apps**.
 
