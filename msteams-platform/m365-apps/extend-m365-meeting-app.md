@@ -164,7 +164,7 @@ After your meeting app is uploaded to Teams, it's available in both Teams and Ou
 
 To preview your meeting app in Outlook for Windows ensure the app is running locally and follow the steps:
 
-1.Open Outlook for Windows signed in with your test tenant account. If Outlook is already running, close and restart it again.
+1. Open Outlook for Windows signed in with your test tenant account. If Outlook is already running, close and restart it again.
 
 1. Open **Calendar** > **New Meeting**. For a meeting app to run in Outlook, ensure the meeting is a **Teams Meeting** as other meetings scheduled from Outlook aren't supported.
 
