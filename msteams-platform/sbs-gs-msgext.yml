@@ -103,7 +103,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/create-new-app1.png" alt-text="Screenshot shows the Wizard start for Create New Project.":::
 
-   1. Select **Custom Search Result**.
+   1. Select **Custom Search Results**.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/select-capabilities-mex1.png" alt-text="Screenshot showing how to add capabilities to your new app.":::
 
@@ -172,12 +172,12 @@ items:
 
    A message extension uses Bot Framework. You use it to interact with your service through a conversation. After scaffolding, view the project directories and files in EXPLORER.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/folder-structure-mex-app.png" alt-text="Screenshot shows the folder msg.":::
+          :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/folder-structure-mex-app.png" alt-text="Screenshot shows the folder msg.":::
 
    | Folder / File | Contents |
    | --- | --- |
-   | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-   | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+   | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stage. |
+   | `teamsapp.local.yml` | Overrides `teamsapp.yml` with actions that enable local execution and debugging. |
    | `.vscode/` | VS Code files for local debug. |
    | `appPackage/` | Templates for the Teams application manifest. |
    | `infra/` | Templates for provisioning Azure resources. |
@@ -212,9 +212,9 @@ items:
 
    The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Teams Toolkit displays **Sideloading enabled**.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot shows the user signed in to Microsoft 365 and the sideloading enabled message.":::
+          :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled-msg.png" alt-text="Screenshot shows the user signed in to Microsoft 365 and the sideloading enabled message.":::
 
-        Now you're ready to build the app and run it locally!
+   Now you're ready to build the app and run it locally!
 
    # [Command line](#tab/cline)
 
@@ -241,17 +241,17 @@ items:
         > [!NOTE]
         > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
 
-        <!-- markdownlint-disable MD033 -->
+        <br>
         <details>
         <summary>Learn what happens when you run your app locally in the debugger.</summary>
 
-        When you select **F5**, the Teams Toolkit:
+        When you select **F5**, the Teams Toolkit performs the following functions:
 
-        1. Checks all the following prerequisites:
-          - You're signed in with a Microsoft 365 account.
-          - Custom app upload is enabled for your Microsoft 365 account.
-          - Supported Node.js version is installed.
-          - Port required by bot app is available.
+        1. Checks the following prerequisites:
+               1. You're signed in with a Microsoft 365 account.
+               1. Custom app upload is enabled for your Microsoft 365 account.
+               1. Supported Node.js version is installed.
+               1. Port required by bot app is available.
 
         2. Installs npm packages
         3. Starts Dev Tunnel to create an HTTP tunnel.
@@ -265,10 +265,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot shows the debug process of the message extension app." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png":::
 
-        > [!NOTE]
-        > When you run the app for the first time, Teams downloads the dependencies and builds the app. A browser window opens when the build is complete. This process can take three to five minutes to complete.
-
-        Teams runs your app in a web browser.
+        When you debug the app for the first time, Teams downloads the dependencies and builds the app. This process can take three to five minutes to complete. A browser window opens when the build is complete.
         
    1. Sign in with your Microsoft 365 account, if prompted.
 
@@ -278,7 +275,7 @@ items:
 
         The message extension app is loaded in a chat bot app.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png" alt-text="Screenshot shows that custom app uploaded in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/app-added-mex-local-debug-2.png" alt-text="Screenshot shows that custom app uploaded in Teams." lightbox="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/app-added-mex-local-debug.png":::
 
         As message extension apps rely on bots for enabling communication between the user and the web service, your app loads in to a chat feature of a bot.
 
@@ -293,7 +290,7 @@ items:
 
    1. Enter a search string in the search box, such as **cli**. A list of the matching items appears.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2//first-msgext/mex-search-string.png" alt-text="Screenshot shows a search string in the message extension app.":::
+        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-string.png" alt-text="Screenshot shows a search string in the message extension app.":::
 
    1. Select one of the search results. The app creates a card with the result in the message compose area so you can send it in the channel.
 
@@ -303,7 +300,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mex-search-sent.png" alt-text="Screenshot shows the search result sent in chat.":::
 
-   ## Optional scenarios
+   ### How to open your message extension app
 
    You tested the search feature of the message extension app in the previous step. Now, learn the different ways to open the message extension app.
    <br>
