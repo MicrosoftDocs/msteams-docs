@@ -152,7 +152,7 @@ To run your app in Microsoft 365 and Outlook, upload your [app package](..//conc
     npm install -g @microsoft/teamsfx-cli
     ```
 
-1. Run the TeamsFx [m365 sideloading](/toolkit/teams-toolkit-cli?pivots=version-two#teamsfx-m365) command to upload your app in Teams:
+1. Run the TeamsFx [m365 sideloading](/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-two#teamsfx-m365) command to upload your app in Teams:
 
     ```bash
     teamsfx m365 sideloading --file-path <path\to\appPackage.zip>
