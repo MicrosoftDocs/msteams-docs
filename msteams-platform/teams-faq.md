@@ -371,7 +371,8 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 <details>
 <summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</summary>
 
-For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [TeamsFx Library](toolkit/TeamsFx-CLI.md).
+For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md).
+
 <br>
 &nbsp;
 </details>
@@ -793,9 +794,9 @@ The following resources can also assist:
 <details>
 <summary>How can I validate a user when they invoke an Adaptive Card? </summary>
 
-You can open the authentication page in the task module when the user selects the button.
+You can open the authentication page in the dialog (referred as task module in TeamsJS v1.x) when the user selects the button.
 
-You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/python) for opening the task module on button click. You can replace the taskInfo.url with your auth page.
+You can use the [code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-task-module/python) for opening the dialog on button click. You can replace the taskInfo.url with your auth page.
 
 <br>
 &nbsp;
@@ -809,9 +810,9 @@ For more information, see [Configure your app in Microsoft Entra ID](bots/how-to
 &nbsp;
 </details>
 <details>
-<summary>I want to open an iframe that contains a React app (that displays confidential information) from a bot task module securely. Can you suggest what is the best, easiest, and standard approach to perform this operation?</summary>
+<summary>I want to open an iframe that contains a React app (that displays confidential information) from a bot dialog (referred as task module in TeamsJS v1.x) securely. Can you suggest what is the best, easiest, and standard approach to perform this operation?</summary>
 
-Implement react page with tab SSO and render the content as required. You can open the same tab URL as task module from bot.
+Implement react page with tab SSO and render the content as required. You can open the same tab URL as dialog from bot.
 
 For more information, see [Enable SSO for tab app](tabs/how-to/authentication/tab-sso-overview.md).
 <br>
@@ -964,7 +965,7 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 Shared references to deploy the code using toolkit:
 
 * [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md)
-* [TeamsFx Command Line Interface](toolkit/TeamsFx-CLI.md)
+* [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
 

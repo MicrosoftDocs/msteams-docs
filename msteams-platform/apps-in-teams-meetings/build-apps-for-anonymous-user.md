@@ -10,9 +10,10 @@ ms.date: 02/07/2023
 
 # Build apps for anonymous users
 
-Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, and cards and task modules in your app to engage with anonymous meeting participants.
+Anonymous users don't have a Microsoft Entra identity and aren't federated with a tenant. The anonymous participants are external users but their identity isn't shown in the meeting. An anonymous user can be a presenter or an attendee but can't be an organizer. You can build bots, messaging extensions, cards, and dialogs (referred as task modules in TeamsJS v1.x) in your app to engage with anonymous meeting participants.
 
 > [!NOTE]
+>
 > * Apps for anonymous users are supported in Teams desktop and mobile clients and isn't supported in channel meetings.
 > * Meeting apps for anonymous users are only supported in Microsoft Edge and Chrome.
 
@@ -22,6 +23,9 @@ For anonymous users to interact with the apps in Teams meetings, ensure to:
 2. Enable the [anonymous user app interaction](#admin-setting-for-anonymous-user-app-interaction) in Teams admin center.
 
 ## App manifest update for anonymous users
+
+> [!NOTE]
+> The `supportsAnonymousGuestUsers` property in the app manifest schema v1.16 is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
 
 To allow anonymous users to interact with the tab app, update the `supportsAnonymousGuestUsers` property to `true` in your app manifest schema v1.16 or later. Following is an example of the manifest:
 
