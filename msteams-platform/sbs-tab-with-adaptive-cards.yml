@@ -90,7 +90,7 @@ items:
 
     1. Select **+ Add a permission**.
 
-       :::image type="content" source="../../assets/images/adaptive-cards/add-permission.png" alt-text="Screenshot show the option to select and add the permission.":::
+       :::image type="content" source="~/assets/images/adaptive-cards/add-permission.png" alt-text="Screenshot show the option to select and add the permission.":::
 
     1. Select **Microsoft Graph**.
 
@@ -100,7 +100,7 @@ items:
 
     1. Select **Add permissions**.
 
-       :::image type="content" source="../../assets/images/adaptive-cards/select-add-permission.png" alt-text="Screenshot show the option to select permissions.":::
+       :::image type="content" source="~/assets/images/adaptive-cards/select-add-permission.png" alt-text="Screenshot show the option to select permissions.":::
 
        > [!NOTE]
        >
