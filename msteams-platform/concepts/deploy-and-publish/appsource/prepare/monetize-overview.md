@@ -10,26 +10,24 @@ ms.date: 11/23/2022
 
 # Monetize your Teams app
 
+Microsoft Teams Store serves as a platform to monetize your app where you can create offers for your app and reach customers with the best and optimal solutions. It helps with better user engagement and widen your customer base. This guide is intended for developers looking to generate revenue from their apps.
 
-Monetizing your app is a crucial aspect of its success, and the Microsoft Teams Store provides a platform to monetize your app. 
-You can create offers for your applications and reach customers with the best solutions. It helps with better user engagement and widen your customer reach with optimal solutions.
+Microsoft commercial marketplace facilitates publishing offers through Azure Marketplace and Microsoft AppSource. The published offers are also available for purchase through Microsoft Teams Store.
 
-Microsoft commercial marketplace hosts publishing offers through Azure Marketplace and Microsoft AppSource. The published offers are also available for purchase through Microsoft Teams Store.
-
-There are four ways by which you can drive app monetization:
+Monetizing your app is a crucial step in the app development process. There are four ways by which you can drive app monetization:
 
 :::row:::
    :::column span="":::
       :::image type="content" source="../../../../assets/images/saas-offer/monetize-app.png" alt-text="Screenshot shows the monetization options.":::
    :::column-end:::
    :::column span="":::
-      * **Subscription**: To provide offers as subscriptions (transactable), free app, or allow your customer bring their licenses (bring your own license).
+      * **Subscription**: You can provide transactable offers that can be purchased. You can also provide a free app or allow your customers to bring their own licenses.
 
-      * **Free trial**: To provide free access to your app with limited time frame or functionality, and direct the user to purchase after the trial phase.
+      * **Free trial**: You can provide free access to your app for a limited time or with limited functionality. This encourages users to purchase the full version after the trial period.
 
-      * **Test drive**: To provide access to the preconfigured environment for a fixed period.
+      * **Test drive**: You can provide access to preconfigured environment for a fixed period.
 
-      * **Contact me**: To provide contact information for the users to reach you for offer details, specific needs, and their enquires.
+      * **Contact me**: You can allow users to contact you for specific offers, unique requirements, and any enquires.
    :::column-end:::
 :::row-end:::
 
