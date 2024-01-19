@@ -84,7 +84,29 @@ items:
     
     [!INCLUDE [Client secret](includes/get-started/create-client-secret.md)]
 
-    [!INCLUDE [API Permission](includes/get-started/azure-api-permissions.md)]
+    **Add API Permission**
+
+    1. In the left pane, under **Manage**, select **API permissions**.
+
+    1. Select **+ Add a permission**.
+
+       :::image type="content" source="../../assets/images/adaptive-cards/add-permission.png" alt-text="Screenshot show the option to select and add the permission.":::
+
+    1. Select **Microsoft Graph**.
+
+    1. Select **Delegated permissions**.
+
+    1. Select **User.Read** in permission.
+
+    1. Select **Add permissions**.
+
+       :::image type="content" source="../../assets/images/adaptive-cards/select-add-permission.png" alt-text="Screenshot show the option to select permissions.":::
+
+       > [!NOTE]
+       >
+       > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+       > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
+
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
@@ -144,21 +166,6 @@ items:
 - title: Set up app settings and manifest files
   durationInMinutes: 1
   content: |
-    Configure the bot sample to understand how to authenticate conversation bot in Teams.
-
-    **To configure and run your bot sample**
-
-    1. Open [Microsoft-Teams-Samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
-    1. Select **Code**.
-    1. From the dropdown menu, select **Open with GitHub Desktop**.
-
-       :::image type="content" source="../msteams-platform/assets/images/teams-file-upload-bot/clone-repository.png" alt-text="Screenshot showing the cloning of repository":::
-
-    1. Select **Clone**. 
-
-       > [!NOTE]
-       > Ensure that you note the path of the repository that you downloaded.
-
     1. Go to the **appsettings.json** file in the cloned repository.
            
        :::image type="content" source="./assets/images/adaptive-cards/appsetting-location_1.png" alt-text="appsetting location":::
@@ -231,7 +238,7 @@ items:
     1. Select your app from the list. The tab displays the Adaptive Card with action controls.
     1. Select **Sign In** and choose an account to access the tab.
 
-        :::image type="content" source="~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png" alt-text="Screenshot of Tab Adaptive card with action controls Tabadaptive on the left pane highlighted in red.":::
+        :::image type="content" source="~/assets/images/adaptive-cards/adaptive-cards-tab-action-controls.png" alt-text="Screenshot of Tab Adaptive card with action controls tab adaptive on the left pane highlighted in red.":::
     
     1. In the **Home** tab, select **Show Task Module**.
 
