@@ -1,6 +1,6 @@
 ---
 title: Publish Teams apps for Microsoft 365
-description: Learn how to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Microsoft 365 app through single tenant and multi tenant distribution.
+description: Learn how to make your Microsoft 365-enabled Teams apps discoverable to users in Teams, Outlook, and Microsoft 365 app through single tenant and multitenant distribution.
 ms.date: 10/10/2022
 ms.author: mosdevdocs
 author: erikadoyle
@@ -49,7 +49,7 @@ The [Microsoft commercial marketplace](https://appsource.microsoft.com/) (Micros
 > [!TIP]
 > Use Teams Developer Portal to [validate your app package](https://dev.teams.microsoft.com/validation) to resolve any errors or warnings before submitting it to the Teams Store (through [Microsoft Partner Network](https://partner.microsoft.com/)).
 
-See the following video to learn more about multi tenant apps:
+See the following video to learn more about multitenant apps:
 
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RWZb0O]
 
