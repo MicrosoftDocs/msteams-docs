@@ -149,7 +149,7 @@ Select **Hot Reload** to apply your changes in your Teams app when you want to u
 
 :::image type="content" source="images/vs-localdebug-hot-reload-v4.png" alt-text="Select hot reload icon":::
 
-Select the option **Hot Reload on File Save** from the drop-down to enable auto hot reload.
+Select the option **Hot Reload on File Save** from the dropdown to enable auto hot reload.
 
 :::image type="content" source="images/vs-localdebug-hot-reload-filesave-v4.png" alt-text="Select hot reload on file save":::
   
