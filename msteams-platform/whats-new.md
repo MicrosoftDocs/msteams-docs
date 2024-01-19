@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 January**
 
-* ***January 18, 2024***: [Use / to invoke message extensions from command box in the new Teams client.](messaging-extensions/build-bot-based-message-extension.md)
+* ***January 19, 2024***: [Use / to invoke message extensions from command box in the new Teams client.](messaging-extensions/build-bot-based-message-extension.md)
 * ***January 04, 2024***: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 
 :::column-end:::
