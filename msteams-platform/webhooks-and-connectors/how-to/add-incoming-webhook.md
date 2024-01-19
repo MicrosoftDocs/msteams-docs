@@ -52,9 +52,13 @@ The following table provides the features and description of an Incoming Webhook
 
 To add an Incoming Webhook to a Teams channel, follow these steps:
 
-1. Open the channel in which you want to add the webhook and select &#8226;&#8226;&#8226; from the upper-right corner.
+1. Select Teams icon and select &#8226;&#8226;&#8226; next to the channel name to which you want to add the webhook.
 
-1. Select **Connectors** from the dropdown menu.
+1. Select &#8226;&#8226;&#8226; from the upper-right corner.
+
+1. Select **Manage channel**.
+
+1. Select **Edit**.
 
    :::image type="content" source="../../assets/images/connectors_1.png" alt-text="This screenshot show how to select connector.":::
 
@@ -161,8 +165,9 @@ axios.post(webhookUrl , formatted_Card_Payload )
 
 To remove an Incoming Webhook from a Teams channel, follow these steps:
 
-1. Open the channel and select &#8226;&#8226;&#8226; from the upper-right corner.
-1. Select **Connectors** from the dropdown menu.
+1. Select Teams icon and select &#8226;&#8226;&#8226; next to the channel name to which you want to add the webhook.
+1. Select **Manage channel**.
+1. Select **Edit**.
 1. Select **Configured** under **MANAGE**.
 1. Select the **1 Configured** to see a list of your current connectors.
 
