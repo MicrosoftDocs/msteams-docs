@@ -58,8 +58,6 @@ items:
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   Next, let's set up your development environment and build your first message extension app.
-
 - title: Create project workspace for your message extension app
   durationInMinutes: 1
   content: |
@@ -170,7 +168,7 @@ items:
 
    ## Take a tour of the message extension app source code
 
-   A message extension uses Bot Framework. You use it to interact with your service through a conversation. After scaffolding, view the project directories and files in EXPLORER.
+   A message extension uses Bot Framework to interact with your service through a conversation. After scaffolding, view the project directories and files in EXPLORER.
 
       :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/folder-structure-mex-app.png" alt-text="Screenshot shows the files of the message extension app.":::
 
@@ -194,7 +192,7 @@ items:
 
    ## Sign in to your Microsoft 365 account
 
-   If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
+   Sign in with the admin account you created while joining the Microsoft 365 developer program.
 
    # [Visual Studio Code](#tab/vsc2)
 
@@ -202,11 +200,11 @@ items:
     
    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the activity bar.
  
-   1. Select **Sign in to Microsoft 365** using your credentials. Your default web browser opens to let you sign in to the account.
+   1. Select **Sign in to Microsoft 365** using your credentials. Your default web browser opens to let you sign in.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/ttk-sign-in-m365.png" alt-text="Screenshot shows where to sign in to Microsoft 365 and Azure.":::
 
-   1. Close the browser after signing in using your credentials. Return to Teams Toolkit for Visual Studio Code.
+   1. Close the browser after signing in using your credentials.
 
    1. Return to Teams Toolkit within Visual Studio Code.
 
@@ -226,7 +224,7 @@ items:
         teamsfx account login m365
         ```
 
-        Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+        Your default web browser opens to let you sign in. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
    ---
 
@@ -239,7 +237,7 @@ items:
    1. Select the **F5** key in Visual Studio Code to run your application in debug mode.
 
         > [!NOTE]
-        > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
+        > If Teams Toolkit is unable to verify a particular prerequisite, it prompts you to check.
 
         <br>
         <details>
@@ -266,7 +264,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png" alt-text="Screenshot shows the debug process of the message extension app." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/f5-build-and-run-mex.png":::
 
-        When you debug the app for the first time, Teams downloads the dependencies and builds the app. This process can take three to five minutes to complete. A browser window opens when the build is complete.
+        When you debug the app for the first time, Teams downloads the dependencies and builds the app. This process can take 3 to 5 minutes to complete. A browser window opens when the build is complete.
         
    1. Sign in with your Microsoft 365 account, if prompted.
 
@@ -310,8 +308,6 @@ items:
    <summary>Open your app from command box</summary>
 
    1. Enter **/** followed by your message extension app's name in the command box.
-        
-        The app opens the search box and you can use it to run a query.
 
         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to invoke the message extension app.":::
 
@@ -357,8 +353,6 @@ items:
    <details>
    <summary>Open your app from uploaded custom apps</summary>
 
-   You can open an uploaded Teams app from the list of uploaded custom apps. 
-
    1. Select **Apps** > **Manage your apps**.
 
    1. Select the dropdown for your app from the list of apps and select **Personal app**.
@@ -395,16 +389,14 @@ items:
 
    1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the activity bar.
 
-   1. Select **Sign in to Azure** using your credentials. Your default web browser opens to let you sign in to the account.
+   1. Select **Sign in to Azure** using your credentials. Your default web browser opens to let you sign in.
 
         > [!TIP]
-        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
+        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step.
      
    1. Close the browser when prompted and return to Visual Studio Code.
 
-   The **ACCOUNTS** section of the sidebar lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
-
-   Congratulations, you signed in to your Azure account! Let's learn how to deploy the app to Azure using the Teams Toolkit.
+   The **ACCOUNTS** section of the sidebar lists the number of usable Azure subscriptions available to you. Ensure that you have at least one usable Azure subscription available. If not, sign out and use a different account.
 
    # [Command Line](#tab/cli3)
 
@@ -416,7 +408,7 @@ items:
         teamsfx account login azure
         ```
 
-   1. Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+   1. Your default web browser opens to let you sign in. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
 
    Now, let's learn how to deploy the app to Azure using the Teams Toolkit.
 
@@ -426,7 +418,7 @@ items:
 
    ### Learn what happens when you deployed your app to Azure
 
-   Before deployment, the app runs locally:
+   Before deployment, the app runs locally.
 
       * The backend runs using Azure Functions Core Tools.
       * The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.

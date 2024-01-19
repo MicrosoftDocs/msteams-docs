@@ -44,7 +44,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/deploy-azure/provision-warning.png" alt-text="Screenshot shows a dialog box that warns the user that a cost might be incurred while provisioning Azure resources.":::
 
-   The provisioning process creates resources in the Azure cloud. It might take some time. You can monitor the progress by watching the dialog boxes in the lower-right corner of the screen. After a few minutes, you see the following message:
+   The provisioning process creates resources in the Azure cloud. It might take some time. After a few minutes, you see the following message:
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot shows a notice that displays the message extension app successfully provisioned in the cloud.":::
 
@@ -62,7 +62,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/deploy-azure/deploy-azure-confirm.png" alt-text="Screenshot shows the confirmation dialog box to deploy app in Azure.":::
 
-   As with provisioning, deployment takes some time. You can monitor the process by watching the dialog boxes in the lower-right corner of the screen. After a few minutes, you see a completion message.
+   As with provisioning, deployment takes some time. After a few minutes, you see a completion message.
 
 # [Command Line](#tab/cli4)
 
