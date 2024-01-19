@@ -57,13 +57,11 @@ To enable app icon badging, you must:
 
 To enable app icon badging, ensure that you've [enabled targeted in-meeting notification](in-meeting-notification-for-meeting.md#enable-targeted-in-meeting-notification).
 
-The [Targeted meeting notification and app icon badging API](meeting-apps-apis.md#targeted-meeting-notification-and-app-icon-badging-api) has been extended to support the app icon badging capability on the app icon and pass the user MRI IDs of the intended recipients. The `surfaces` parameter now supports `meetingTabIcon` value, which is used by the app.
+The [Targeted meeting notification and app icon badging API](meeting-apps-apis.md#targeted-meeting-notification-and-app-icon-badging-api) is extended to support the app icon badging capability on the app icon and pass the user MRI IDs of the intended recipients. The `surfaces` parameter now supports `meetingTabIcon` value, which is used by the app.
 
 App can also pass the `tabEntityId`, if there are multiple instances of the app added to the same meeting. If the `tabEntityId` isn't passed, then Teams displays the badge on the first app icon on the users meeting window.
 
 ### Example
-
-The following code is an example of the payload:
 
 # [C#](#tab/csharp)
 
