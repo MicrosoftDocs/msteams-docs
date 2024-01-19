@@ -222,6 +222,7 @@ items:
         :::image type="content" source="~/assets/images/test-tool/model-version.png" lightbox="~/assets/images/test-tool/model-version.png" alt-text="Screenshot shows the model and version for Azure open AI deployment.":::
 
     1. Copy and save the **Deployment name** for further use.
+    
         :::image type="content" source="~/assets/images/test-tool/copy-deployment.png" lightbox="~/assets/images/test-tool/copy-deployment.png" alt-text="Screenshot shows the deployment name for Azure open AI deployment.":::
 
     ## Update Azure Open AI key and endpoints
