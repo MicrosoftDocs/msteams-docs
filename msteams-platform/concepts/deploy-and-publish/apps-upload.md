@@ -23,7 +23,9 @@ You can upload Microsoft Teams apps without having to publish to your organizati
 >
 > * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
 > * App installation is supported only on Teams desktop client.
-> * From January 31, 2024, to chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents bots, users must be assigned to an app setup policy that allows uploading custom apps.
+> * From January 31, 2024, to chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents bots, ensure the following:
+>   * Users must be assigned to an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps. **OR**
+>   * Create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to the Teams app catalog for the tenant and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
 
 ## Prerequisites
 
