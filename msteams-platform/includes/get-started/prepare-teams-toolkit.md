@@ -20,7 +20,7 @@ You can use Teams Toolkit with Visual Studio Code or a command-line interface ca
 
 You can also install Teams Toolkit from the [Visual Studio Code Marketplace](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension).
 
-# [Command line](#tab/cli)
+# [Command Line](#tab/cli)
 
 To install the TeamsFx CLI, use the `npm` package manager and enter the following command in Command prompt:
 

@@ -18,7 +18,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/provisioning-commands.png" alt-text="Screenshot shows the selection of provision in the cloud under Teams toolkit.":::
 
-1. Select a subscription to use for the Azure resources.
+1. Select a subscription.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/select-azure-subscription-group.png" alt-text="Screenshot shows the Azure subscription group options to choose from.":::
 
@@ -26,7 +26,7 @@ Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-tool
 
    :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/select-resource.png" alt-text="Screenshot shows the subscription to use for the Azure resources.":::
 
-   You can create a new resource group with the following steps:
+   If you don't have a resource group to select, you can create a new resource group with the following steps:
 
    1. Select **+ New resource group**.
 
@@ -100,6 +100,6 @@ After the provisioning and deployment steps are complete, go to **Run and Debug*
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/deploy-azure/mex-added-dev.png" alt-text="Screenshot shows message to add the deployed app.":::
 
-   The message extension app is loaded in a chat bot app.
+   Teams opens the message extension app in the most recent chat.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/first-msgext/mex-loaded-chat-app.png" alt-text="Screenshot shows the message extension running in a bot app.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/first-msgext/mex-loaded-chat-app.png" alt-text="Screenshot shows the message extension open in a chat.":::
