@@ -10,7 +10,7 @@ ms.date: 09/01/2022
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-You can support external or third-party (3P) OAuth providers, such as Google, GitHub, LinkedIn, and Facebook using the updated `authenticate()` API:
+You can support external or third-party OAuth providers, such as Google, GitHub, LinkedIn, and Facebook using the updated `authenticate()` API:
 
 ```JavaScript
 function authenticate(authenticateParameters: AuthenticatePopUpParameters): Promise<string>
@@ -31,7 +31,7 @@ The following table provides the list of `authenticate()` API parameters (`Authe
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
 
 >[!NOTE]
-> The `authID` parameter is valid for the duration of the auth session which has a default timeout of 120 seconds or 2 minutes.
+> The `authID` parameter is valid for the duration of the auth session which has a default timeout of 120 seconds.
 
 For more information on parameters, see [authenticate (AuthenticatePopUpParameters)](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) function.
 
