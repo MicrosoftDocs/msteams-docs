@@ -260,7 +260,7 @@ items:
 
         When you debug the app for the first time, Teams downloads the dependencies and builds the app. This process can take 3 to 5 minutes to complete.
         
-   1. Teams opens in a browser window opens when the build is complete. Sign in with your Microsoft 365 account, if prompted.
+   1. Teams opens in a browser window when the build is complete. Sign in with your Microsoft 365 account, if prompted.
 
    1. A dialog box opens to let you add the message extension app to Teams. Select **Add**.
     
