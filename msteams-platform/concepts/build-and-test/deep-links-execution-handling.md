@@ -47,7 +47,7 @@ You can configure your app to post messages to a chat and add deep links to them
 
 ### Hyperlink text message
 
-When you add a deep link to a hyperlinked markdown text message, it's triggered and opened within Teams. Following is an example:
+When you add a deep link to a hyperlinked Markdown text message, it's triggered and opened within Teams. Following is an example:
 
 Example: `[App](https://teams.microsoft.com/l/app/{appId})`, where `appId` is your application ID. To know more about different app IDs used see, [app ID used for different apps](~/concepts/build-and-test/deep-link-application.md#app-id-used-for-different-apps).
 
@@ -97,4 +97,4 @@ When a deep link to a tab app is triggered, ensure that all parameters are set i
 
 When Teams navigates to the tab through a deep link, Teams verifies if the subpage ID exists and retrieves it through the TeamsJS library.
 
-If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) calls `microsoftTeams.getContext()` to verify if the subpage ID exists. In TeamsJS v1 library subpage ID is named as `subPageId` and in v2 it's `SubEntityId`. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
+If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) calls `microsoftTeams.getContext()` to verify if the subpage ID exists. In TeamsJS v2 library subpage ID is named as `subPageId` and in v1 it's `subEntityId`. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).

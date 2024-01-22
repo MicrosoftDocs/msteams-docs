@@ -9,7 +9,7 @@ ms.date: 05/04/2023
 
 # Build tabs for Teams
 
-Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client).
+Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client).
 
 > [!IMPORTANT]
 > Custom tabs are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
@@ -88,7 +88,7 @@ The following table helps you determine best fit for your app:
 >[!NOTE]
 > If you have both [configurable tab](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab](~/tabs/how-to/create-personal-tab.md) defined in your app manifest for a specific scope, Teams pins the static tab by default.
 
-You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) as part of a personal static tab, channel or group tab, or task module. You can [create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) that enables users to configure Microsoft Teams app and use it to configure a personal, channel, or group chat tab, a messaging extension, or a connector card for Microsoft 365 Groups. You can permit users to reconfigure your tab after installation and [create a tab removal page](~/tabs/how-to/create-tab-pages/removal-page.md) for your application. When you build a Teams app that includes a tab, you must test how your [tab functions on both the Android and iOS Teams clients](~/tabs/design/tabs-mobile.md). Your tab must [get context](~/tabs/how-to/access-teams-context.md) through basic information, locale and theme information, and `entityId` or `subEntityId` that identifies what is in the tab.
+You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) as part of a personal static tab, channel or group tab, or dialog (referred as task module in TeamsJS v1.x). You can [create a configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) that enables users to configure Microsoft Teams app and use it to configure a personal, channel, or group chat tab, a messaging extension, or a connector card for Microsoft 365 Groups. You can permit users to reconfigure your tab after installation and [create a tab removal page](~/tabs/how-to/create-tab-pages/removal-page.md) for your application. When you build a Teams app that includes a tab, you must test how your [tab functions on both the Android and iOS Teams clients](~/tabs/design/tabs-mobile.md). Your tab must [get context](~/tabs/how-to/access-teams-context.md) through basic information, locale and theme information, and `entityId` or `subEntityId` that identifies what is in the tab.
 
 > [!NOTE]
 > **Posts** and **Files** can't be moved from their positions.
@@ -98,11 +98,11 @@ You can [create a content page](~/tabs/how-to/create-tab-pages/content-page.md) 
 The tab features are as follows:
 
 * If a tab is added to an app that also has a bot, the bot is also added to the team.
-* Awareness of Microsoft Azure Active Directory (Azure AD) ID of the current user.
+* Awareness of Microsoft Entra ID of the current user.
 * Locale awareness for the user to indicate language that is `en-us`.
 * Single sign-on (SSO) capability, if supported.
 * Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example an individual work item.
-* The ability to open a task module from links within a tab.
+* The ability to open a modal dialog from links within a tab.
 * Reuse of SharePoint web parts within the tab.
 
 ## Tabs user scenarios

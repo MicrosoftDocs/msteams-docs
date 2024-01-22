@@ -11,7 +11,7 @@ This section covers:
 
 ## Update development environment variables
 
-You've configured client secret and OAuth connection setting for the app in Azure AD. You must configure your app code with these variables.
+You've configured client secret and OAuth connection setting for the app in Microsoft Entra ID. You must configure your app code with these variables.
 
 To update the development environment variables:
 
@@ -19,9 +19,9 @@ To update the development environment variables:
 1. Open the `./env` file for your project.
 1. Update the following variables:
 
-    - For `MicrosoftAppId`, update the Bot registration ID from Azure AD.
+    - For `MicrosoftAppId`, update the Bot registration ID from Microsoft Entra ID.
     - For `MicrosoftAppPassword`, update the Bot registration client secret.
-    - For `ConnectionName`, update the name of the OAuth connection you configured in Azure AD.
+    - For `ConnectionName`, update the name of the OAuth connection you configured in Microsoft Entra ID.
     - For `MicrosoftAppTenantId`, update the tenant ID.
 
 1. Save the file.
@@ -66,7 +66,7 @@ To update your app's code:
 
    # [C#](#tab/cs2)
 
-   After you add the `AdapterWithErrorHandler.cs`, your code should be as shown below:
+   After you add the `AdapterWithErrorHandler.cs`, the following code must appear:
 
    ```csharp
        public class AdapterWithErrorHandler : CloudAdapter
@@ -84,7 +84,7 @@ To update your app's code:
                OnTurnError = async (turnContext, exception) =>
                {
                    // Log any leaked exception from the application.
-                   // NOTE: In production environment, you should consider logging this to
+                   // NOTE: In production environment, you must consider logging this to
                    // Azure Application Insights. Visit https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp to see how
                    // to add telemetry capture to your bot.
                    logger.LogError(exception, $"[OnTurnError] unhandled error : {exception.Message}");
@@ -99,7 +99,7 @@ To update your app's code:
                        {
                            // Delete the conversationState for the current conversation to prevent the
                            // bot from getting stuck in an error-loop caused by being in a bad state.
-                           // ConversationState should be thought of as similar to "cookie-state" in a Web pages.
+                           // ConversationState must be thought of as similar to "cookie-state" in a Web pages.
                            await conversationState.DeleteAsync(turnContext);
                        }
                        catch (Exception e)
@@ -121,7 +121,7 @@ To update your app's code:
 
    # [JavaScript](#tab/js2)
 
-    After you add the code to `index.js`, your code should be as shown below:
+    After you add the code to `index.js`, the following code must appear:
 
    ```JavaScript
        // index.js is used to setup and configure your bot.
@@ -165,7 +165,7 @@ To update your app's code:
        adapter.use(tokenExchangeMiddleware);
        adapter.onTurnError = async (context, error) => {
            // This check writes out errors to console log .vs. app insights.
-           // NOTE: In production environment, you should consider logging this to Azure application insights. See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp for telemetry configuration instructions.
+           // NOTE: In production environment, you must consider logging this to Azure application insights. See https://learn.microsoft.com/en-us/azure/bot-service/bot-builder-telemetry?view=azure-bot-service-4.0&tabs=csharp for telemetry configuration instructions.
            console.error(`\n [onTurnError] unhandled error: ${ error }`);
     
            // Send a trace activity, which will be displayed in Bot Framework Emulator.
@@ -219,7 +219,7 @@ To update your app's code:
 
 ### Consent dialog for getting access token
 
-If the app user is using your app for the first time, they may be required to consent for SSO authentication.
+If the app user is using your app for the first time, they're required to consent for SSO authentication.
 
 :::image type="content" source="~/assets/images/authentication/teams-sso-mex/me-sso-profile-select.png" alt-text="SSO authentication for message extension app":::
 
@@ -227,7 +227,7 @@ When the app user selects the user name, the permission is granted and they can 
 
 :::image type="content" source="~/assets/images/authentication/teams-sso-mex/me-sso-completed.png" alt-text="SSO authentication completed for message extension app":::
 
-The consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. After consenting, the app user can access and use your message extension app for the granted permissions and scopes.
+The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. After consenting, the app user can access and use your message extension app for the granted permissions and scopes.
 
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
@@ -300,7 +300,7 @@ private async Task<DialogTurnResult> LoginStepAsync(WaterfallStepContext stepCon
    # [JavaScript](#tab/js3)
 
    ```JavaScript
-    class MainDailog {
+    class MainDialog {
       
             this.addDialog(new OAuthPrompt(OAUTH_PROMPT, {
                         connectionName: process.env.connectionName,
@@ -375,13 +375,13 @@ There are a number of libraries available that can handle JWT validation. Basic 
 
 Keep in mind the following guidelines when validating the token:
 
-- Valid SSO tokens are issued by Azure AD. The `iss` claim in the token should start with this value.
-- The token's `aud1` parameter will be set to the app ID generated during Azure AD app registration.
-- The token's `scp` parameter will be set to `access_as_user`.
+- Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
+- The token's `aud1` parameter is set to the app ID generated during Microsoft Entra app registration.
+- The token's `scp` parameter is set to `access_as_user`.
 
 #### Example access token
 
-The following is a typical decoded payload of an access token.
+The following code snippet is a typical decoded payload of an access token:
 
 ```javascript
 {

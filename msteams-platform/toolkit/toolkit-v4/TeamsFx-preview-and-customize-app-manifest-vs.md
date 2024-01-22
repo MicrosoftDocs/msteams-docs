@@ -89,7 +89,7 @@ The changes are updated to Developer Portal.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-overwrite.png" alt-text="Screenshot shows overwrite of app in teams developer portal.":::
 
-When you create a Teams command bot using Visual Studio, two app IDs are registered in Azure Active Directory (Azure AD). You can identify the app IDs in Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
+When you create a Teams command bot using Visual Studio, two app IDs are registered in Microsoft Entra ID. You can identify the app IDs in Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
 
 :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-dev-portal-basic-info.png" alt-text="Screenshot shows basic information of the app in teams developer portal.":::
 
@@ -156,7 +156,7 @@ If the environment hasn't been provisioned, or the Teams app dependencies haven'
 
 ## Preview app manifest file
 
-You can either sideload for local, or deploy for Azure to preview the app manifest file. You can preview the app manifest file by performing the following steps:
+You can either upload your custom app for local, or deploy for Azure to preview the app manifest file. You can preview the app manifest file by performing the following steps:
 
 1. Select **Project** > **Teams Toolkit**.
 
@@ -208,7 +208,7 @@ The changes are updated to Developer Portal.
 
 :::image type="content" source="images/vs-overwrite-v4.png" alt-text="Screenshot is an example of showing the update warning." lightbox="images/vs-overwrite-v4.png":::
 
-When you create a Teams command bot using Visual Studio, two app IDs are registered in Microsoft Azure Active Directory (Azure AD). You can identify the app IDs in Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
+When you create a Teams command bot using Visual Studio, two app IDs are registered in Microsoft Entra ID. You can identify the app IDs in Developer Portal as **Application (client) ID** under **Basic information** and existing **bot ID** under **App features**.
 
 :::image type="content" source="images/vs-dev-portal-basic-info-v4.png" alt-text="Developer portal showing basic info app id" lightbox="images/vs-dev-portal-basic-info-v4.png":::
 

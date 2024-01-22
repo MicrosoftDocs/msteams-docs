@@ -31,11 +31,11 @@ The following image is an example of the Collaborative Stage View:
 
 :::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Teams.":::
 
-### Stage View vs. Task module
+### Stage View vs. Dialog
 
-| Stage View | Task module|
+| Stage View | Dialog (referred as task module in TeamsJS v1.x)|
 |:-----------|:-----------|
-| Stage View is useful to display rich content to the users, such as a page, a dashboard, or a file. It provides rich features that help to render your content in the new pop-up window and the full-screen canvas. <br><br> After your app content opens in Stage View, users can choose to pin the content as a tab. <br><br> For more collaborative capabilities, opening your content in Collaborative Stage View (through an Adaptive Card) allows users to engage with content and conversation side-by-side, while enabling multi-window scenarios.| [Task module](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that need users' attention, or collect information required to move to the next step.|
+| Stage View is useful to display rich content to the users, such as a page, a dashboard, or a file. It provides rich features that help to render your content in the new pop-up window and the full-screen canvas. <br><br> After your app content opens in Stage View, users can choose to pin the content as a tab. <br><br> For more collaborative capabilities, opening your content in Collaborative Stage View (through an Adaptive Card) allows users to engage with content and conversation side-by-side, while enabling multi-window scenarios.| [Dialog](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that need users' attention, or collect information required to move to the next step.|
 
 ### Invoke Stage View through deep link
 
@@ -167,7 +167,7 @@ Following is the process to invoke Collaborative Stage View:
 > * `invoke` workflow is similar to the `appLinking` workflow.
 > * To maintain consistency, it is recommended to name `Action.Submit` as `Open`.
 > * `websiteUrl` is a required property to be passed in the `TabInfo` object.
-> * If you don't have an optimized mobile experience for Teams mobile client, the Stage View for apps distributed through the [Teams store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> * If you don't have an optimized mobile experience for Teams mobile client, the Stage View for apps distributed through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 #### Query parameters
 

@@ -166,12 +166,7 @@ If meeting extension isn't installed:
 
 ## Generate a deep link to share content to stage in meetings
 
-You can also generate a deep link to share the app to stage and start or join a meeting.
-
-> [!NOTE]
-> Deep link to share content to stage in meeting is supported in Teams desktop client only.
-
-When a deep link is selected in an app by a user who is part of an ongoing meeting, then the app is shared to the stage and a permission pop-up window appears. Users can grant access to the participants to collaborate with an app.
+You can also generate a deep link to share the app to stage and start or join a meeting. When a deep link is selected in an app by a user who is part of an ongoing meeting, then the app is shared to the stage and a permission pop-up window appears. Users can grant access to the participants to collaborate with an app.
 
 :::image type="content" source="../../assets/images/integrate-with-teams/screenshot-of-pop-up-permission.png" alt-text="The screenshot is an example that shows a permission pop-up window.":::
 
@@ -208,7 +203,7 @@ const encodedContext = encodeURIComponent(appContext).replace(/'/g,"%27").replac
 const encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22");
 ```
 
-A deep link can be launched either from the Teams web or from the Teams desktop client.
+A deep link can be launched either from the Teams web or from the Teams desktop or mobile client.
 
 * **Teams web**: Use the following format to launch a deep link from the Teams web to share content on stage:
 
@@ -221,7 +216,7 @@ A deep link can be launched either from the Teams web or from the Teams desktop 
     |To share the app and open Teams calendar, when `useMeeetNow` is **false**, default.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
     |To share the app and initiate instant meeting, when `useMeeetNow` is **true**.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
 
-* **Team desktop client**: Use the following format to launch a deep link from the Teams desktop client to share content on stage:
+* **Teams desktop or mobile client**: Use the following format to launch a deep link from the Teams desktop or mobile client to share content on stage:
 
     `msteams:/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink&appContext={encoded app context}`
 

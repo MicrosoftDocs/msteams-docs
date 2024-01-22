@@ -51,7 +51,7 @@ items:
    | &nbsp; | [Azure Tools for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.vscode-node-azure-pack) and [Azure CLI](/cli/azure/install-azure-cli) | Azure tools to access stored data or to deploy a cloud-based backend for your Teams app in Azure. |
    | &nbsp; | [React Developer Tools for Chrome](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi) OR [React Developer Tools for Microsoft&nbsp;Edge](https://microsoftedge.microsoft.com/addons/detail/react-developer-tools/gpphkfbcpidddadnkolkpfckpihlkkil) | A browser DevTools extension for the open-source React JavaScript library. |
    | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | Microsoft Graph Explorer, a browser-based tool that lets you run a query from Microsoft Graph data. |
-   | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Teams store. |
+   | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | Web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store. |
 
 
    > [!TIP]
@@ -65,7 +65,7 @@ items:
 
    ### Install the Teams Toolkit
 
-   The Microsoft Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams store, and more. 
+   The Microsoft Teams Toolkit helps simplify the development process with tools to provision and deploy cloud resources for your app, publish to the Teams Store, and more. 
     
    You can use the toolkit with Visual Studio Code, or CLI (command-line interface), called `TeamsFx`.
 
@@ -115,25 +115,25 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your sideload and test your app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
-   ### Check for sideloading option
+   ### Check for custom app upload option
 
-   After creating the app, you must load your app in Teams without distributing it. This process is known as sideloading. Sign in to your Microsoft 365 account to view this option.
+   After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Sideloading is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
+    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you will not be able to preview and test your app in Teams locally.
 
    Do you already have a tenant, and do you have the admin access? Let's check if you really do!
 
-   Verify if you can sideload apps in Teams:
+   Verify if you can upload a custom app in Teams:
 
-    1. In the Teams client, select the **Store** icon.
+    1. In the Teams client, select the **Apps**.
     1. Select **Manage your apps**.
-    1. Select **Publish an app**.
-    1. Look for the option to **Upload a custom app**. If you see the option, sideloading apps is enabled.
+    1. Select **Upload an app**.
+    1. Look for the option to **Upload a customised app**. If you see the option, custom app upload is enabled.
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-javascript-v4/spfx-custom-new1-v4.png" alt-text="bot home":::
+        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-javascript-v4/upload-custom-app-v4.png" alt-text="Screenshot shows the option to Upload a customised app in Teams.":::
 
         > [!NOTE]
         > If you don't have the option to upload a custom app, talk to your Teams administrator.
@@ -310,7 +310,7 @@ items:
     1. Close the browser when prompted and return to Visual Studio Code.
     1. Return to Teams Toolkit within Visual Studio Code.
 
-        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. Teams Toolkit displays **Sideloading enabled** if sideloading is enabled for your Microsoft 365 account.
+        The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Teams Toolkit displays **Sideloading enabled**.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-javascript-v4/m365-sideloading-enabled-v4.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
 
@@ -355,7 +355,7 @@ items:
 
         1. Checks for the following prerequisites:
           * You're logged in with a Microsoft 365 account.
-          * Sideloading is enabled for your Microsoft 365 account.
+          * Custom app upload is enabled for your Microsoft 365 account.
           * Supported Node.js version is installed.
           * Development certificate for localhost is installed.           
           * Port is available for the tab app.
@@ -364,10 +364,10 @@ items:
           > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check it.
 
         2. Install NPM packages.
-        3. Registers the app with Azure AD and configures the app.
+        3. Registers the app with Microsoft Entra ID and configures the app.
         4. Registers the app in Teams Developer Portal and configures the app.
         5. Starts the tab app.
-        6. Starts Teams in a web browser and sideloads the tab app.
+        6. Starts Teams in a web browser and uploads the tab app.
 
         </details>
 
@@ -393,7 +393,7 @@ items:
 
     1. Sign in with your Microsoft 365 account, if prompted.
 
-    1. Select **Add** when prompted to sideload the app onto Teams on your local machine.
+    1. Select **Add** when prompted to upload a custom app onto Teams on your local machine.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-javascript-v4/add-tab-app-local-debug-v4.png" alt-text="Add the app to Teams":::
 
@@ -408,7 +408,7 @@ items:
       <details>
       <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
 
-      To successfully run your app in Teams, ensure that you've enabled sideloading in your Teams account. You can learn more about sideloading in the Prerequisites section.
+      To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
 
       </details>
 

@@ -69,6 +69,10 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 Typeahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a type-ahead static search within a list with limited number of choices. The mobile and desktop clients support type ahead dynamic search experience.
 
+### Media elements in Adaptive Cards
+
+Media elements in Adaptive Card provides enhanced media experience and increases engagement with the Adaptive Card. You can add media files such as audio or video clips to your Adaptive Card. For more information, see [Media elements in Adaptive Card](cards/media-elements-in-adaptive-cards.md).
+
 ### Adaptive Cards and Incoming Webhooks
 
 > [!NOTE]
@@ -82,9 +86,11 @@ Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible ca
 
 Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card.
 
-## Support for Azure AD Object ID and UPN in user mention
+<a name='support-for-azure-ad-object-id-and-upn-in-user-mention'></a>
 
-Bots with Adaptive Cards support user mention IDs, such as Microsoft Azure Active Directory (Azure AD) Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming Webhooks start to support user mention in Adaptive Card with the Azure AD Object ID and UPN.
+## Support for Microsoft Entra Object ID and UPN in user mention
+
+Bots with Adaptive Cards support user mention IDs, such as Microsoft Entra Object ID and User Principle Name (UPN) in addition to the existing IDs. Incoming Webhooks start to support user mention in Adaptive Card with the Microsoft Entra Object ID and UPN.
 
 ## Next step
 

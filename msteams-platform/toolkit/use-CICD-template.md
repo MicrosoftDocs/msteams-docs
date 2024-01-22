@@ -60,7 +60,7 @@ Two categories of sign in credentials are involved in CI/CD workflows:
 |AZURE_TENANT_ID |To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME |The Microsoft 365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD |The password of the Microsoft 365 account.|
-|M365_TENANT_ID |To identify the tenant in which the Teams App gets created or published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on how to find your Microsoft 365 tenant ID.|
+|M365_TENANT_ID |To identify the tenant in which the Teams App gets created or published. This value is optional unless you have a multitenant account and you want to use another tenant. Read more on how to find your Microsoft 365 tenant ID.|
 
 > [!NOTE]
 >
@@ -214,9 +214,9 @@ To provision and deploy resources targeting Azure inside CI/CD, you must create 
 
 Perform the following steps to create Azure service principals:
 
-1. Register a Microsoft Azure Active Directory (Azure AD) application in single tenant.
-2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
-3. Create a new Azure AD application secret.
+1. Register a Microsoft Entra application in single tenant.
+2. Assign a role to your Microsoft Entra application to access your Azure subscription. The `Contributor` role is recommended.
+3. Create a new Microsoft Entra application secret.
 
 > [!TIP]
 > Save your tenant id, application id (AZURE_SERVICE_PRINCIPAL_NAME), and the secret (AZURE_SERVICE_PRINCIPAL_PASSWORD) for future use.
