@@ -48,7 +48,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Share code snippets as richly formatted Adaptive Cards with `CodeBlock`
-        url: cards/cards-format.md#codeblock-in-adaptive-cards
+        url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
       - text: Use / to invoke message extensions from command box in the new Teams client
         url: messaging-extensions/build-bot-based-message-extension.md
       - text: Teams Toolkit command line interface v3
