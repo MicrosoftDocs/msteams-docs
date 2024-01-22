@@ -128,18 +128,18 @@ Test Tool offers a faster debug experience for bot applications when compared to
     teamsapp new   
     ```
 
- You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
- For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
 
-  1. Select **New Project**.
-  1. Select **Bot**.
-  1. Select **Basic Bot** as the app features.
-  1. Select **JavaScript** as the programming language.
-  1. Select **Enter** to select the default workspace folder.
-  1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
+      1. Select **New Project**.
+      1. Select **Bot**.
+      1. Select **Basic Bot** as the app features.
+      1. Select **JavaScript** as the programming language.
+      1. Select **Enter** to select the default workspace folder.
+      1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
 
- After you've answered all questions, your project is created.
+    After you've answered all questions, your project is created.
 
 1. Install required dependencies and npm packages.
 
