@@ -643,11 +643,9 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ### CodeBlock in Adaptive Cards
 
-You can share code snippets as richly formatted Adaptive Cards in Teams chats and channels through bots with the `CodeBlock` element. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. You can add action buttons to view the code in its source or in integrated development environments (IDEs) such as Visual Studio or Visual Studio Code.
+You can share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element in Teams. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. You can add action buttons to view the code in its source or in integrated development environments (IDEs) such as Visual Studio or Visual Studio Code.
 
-Teams automatically unfurls permalinks of code snippets from external sources like websites, repositories, or IDEs and renders an Adaptive Card with the code snippet.
-
-:::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
+  :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
 
 The `CodeBlock` element supports the following languages:
 
@@ -724,7 +722,6 @@ To render the newline character, `\n` as part of the code snippet in the Adaptiv
 * Adaptive Card with `CodeBlock` is only available in web and desktop Teams clients.
 * The code snippet generated in the Adaptive Card is read-only and not editable.
 * The Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user has to select **Expand** to see the rest of the code snippet.
-* Adaptive Card with `CodeBlock` is supported in chats, channels, and meetings only when a bot is added to it.
 
 ## Adaptive Cards overflow menu
 
