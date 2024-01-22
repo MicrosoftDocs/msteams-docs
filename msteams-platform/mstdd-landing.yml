@@ -41,33 +41,32 @@ landingContent:
 #        url: ~/concepts/device-capabilities/browser-device-permissions.md
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
-#      - text: Adaptive Cards overflow menu
-#        url: ~/task-modules-and-cards/cards/cards-format.md
 
-- title: Whats new
+
+- title: What's new
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Use / to invoke message extensions from command box in the new Teams client
+        url: messaging-extensions/build-bot-based-message-extension.md
+      - text: Teams Toolkit command line interface v3
+        url: toolkit/Teams-Toolkit-CLI.md     
+      - text: Apps for Teams meetings are available in Department of Defense (DOD)
+        url: messaging-extensions/build-bot-based-plugin.md
+      - text: Incoming Webhooks are available in GCC-High
+        url: webhooks-and-connectors/what-are-webhooks-and-connectors.md
+      - text: Introduced RSC permissions for users to access different resources
+        url:  graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access
+      - text: App caching in chat, channel, and meeting tab scopes is available for iOS
+        url:  tabs/how-to/app-caching.md
+      - text: Bots can mention tags in Teams channels
+        url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
+      - text: Teams AI library
+        url:  bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
       - text: Extend an action-based Teams message extension across Microsoft 365
         url:  m365-apps/extend-m365-teams-message-extension.md
-      - text: Use captureImage API to capture an image or select media from the gallery for mobile clients
-        url: concepts/device-capabilities/media-capabilities.md
       - text: Teams App Test Tool streamlines the debug process of bot apps
         url: toolkit/debug-your-Teams-app-test-tool.md
-      - text: Build bot-based message extension plugin
-        url: messaging-extensions/build-bot-based-plugin.md
-      - text: Guidelines to extend bot-based message extension as plugin 
-        url: messaging-extensions/high-quality-message-extension.md
-      - text: Use callRecording API to fetch meeting recording from all meetings
-        url: graph-api/meeting-transcripts/overview-transcripts.md
-      - text: Introduced systemDefault reserved activity type for send activity feed notifications
-        url: tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications
-      - text: Apps for Teams meetings are available in GCC-High
-        url: apps-in-teams-meetings/teams-apps-in-meetings.md
-      - text: Introduced Adaptive Card Previewer in public developer preview
-        url: concepts/build-and-test/adaptive-card-previewer.md
-      - text: Introduced the extensions property in public developer preview app manifest schema
-        url: resources/schema/manifest-schema-dev-preview.md#extensions
 
     - linkListType: reference
       links:
@@ -155,7 +154,7 @@ landingContent:
       url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
     - text: Build webhooks and connectors
       url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - text: Build cards and task modules
+    - text: Build cards and dialogs
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
@@ -199,7 +198,7 @@ landingContent:
           url: ~/sbs-file-handling-in-bot.yml
         - text: Generate meeting content bubble
           url: ~/sbs-meeting-content-bubble.yml
-        - text: Invoke task modules from Microsoft Teams
+        - text: Invoke dialogs from Microsoft Teams
           url: ~/sbs-botbuilder-taskmodule.yml
         - text: Build search based message extension
           url: ~/sbs-messagingextension-searchcommand.yml

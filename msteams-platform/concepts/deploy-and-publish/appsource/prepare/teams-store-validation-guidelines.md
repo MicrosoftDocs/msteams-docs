@@ -50,7 +50,7 @@ Following these guidelines increases the chances of your app to pass the Microso
      :::image type="icon" source="../../../../assets/icons/messaging-extension.png" link="#message-extensions" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/task-module.png" link="#task-modules" border="false":::
+      :::image type="icon" source="../../../../assets/icons/task-module.png" link="#dialogs" border="false":::
    :::column-end:::
 :::row-end:::
 
@@ -92,6 +92,59 @@ Following these guidelines increases the chances of your app to pass the Microso
 ## Value proposition
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
+
+Apps must provide value to the users by enabling them to complete functional workflows that encourage repeated use. Expand the following sections to know more about the value proposition:
+<br><br>
+
+<details><summary>Tabs</summary>
+
+Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
+
+:::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
+
+</details>
+<br>
+
+<details><summary>Notification bots</summary>
+A notification provides value in Teams if:
+
+1. Posted card or text provides adequate details requiring no further user action.
+1. Posted card or text provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
+
+Apps that provide only notifications with content such as, **You have a new notification**, **click to view** and require the user to navigate outside Teams for everything else don't provide significant value within Teams.
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="Screenshot shows an example of a notification only bit with inadequate information in the preview.":::
+
+</details>
+<br>
+
+<details><summary>Message extensions</summary>
+
+[*Mandatory Fix*]
+
+Apps that consist of search-based message extension provide user value by sharing cards that allow for contextual conversations without context switching.
+
+To pass validation for a search-based message extension only app, the following are required as baseline to ensure that the user experience isn't broken. A card shared via a message extension provides value in Teams if:
+
+1. Posted card provides adequate details requiring no further user action.
+1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
+
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
+
+</details>
+<br>
+
+<details><summary>Link unfurling </summary>
+
+Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
+
+</details>
+<br>
+
 
 [Back to top](#teams-store-validation-guidelines)
 
@@ -280,9 +333,6 @@ Don't include domains outside of your organization's control (including wildcard
 
 * OpenAPI URLs must be under partner control.
 
-  > [!NOTE]
-  > We should also link to the WIP doc on guidelines to create a message plug under the newly created Teams apps extensible as Microsoft 365 Chat plugin section.  Please run grammar check and structure this content better.
-
 * Following External Domains aren't allowed: [*Mandatory Fix*]
   * *.azurewebsites.net
   * *.azureedge.com
@@ -323,7 +373,7 @@ App must warn users before downloading any files or executables (.exe) into the 
 
 [*Mandatory Fix*]
 
-Apps mustn't take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, tabs, and task modules.
+Apps mustn't take users out of Teams for core user scenarios. App content and interactions must occur within Teams capabilities, such as bots, Adaptive Cards, tabs, and dialogs (referred as task modules in TeamsJS v1.x).
 <br>
 </br>
 
@@ -474,6 +524,7 @@ Your icons must communicate your app's brand and purpose while adhering to the f
    :::image type="content" source="../../../../assets/images/submission/color-outline-icon-not-same.png" alt-text="Screenshot shows color icon and outline icon aren’t same.":::
 
 * Your app package must include two .png versions of your app icon: A color icon and an outline icon. [*Mandatory Fix*]
+* The marketplace icon uploaded as part of the app's marketplace listing in your Partner Center account must match the color icon provided in your app package. [*Mandatory Fix*]
 * The color version of your icon must be 192x192 pixels. Your icon symbol can be any color or colors, but it must sit on a solid or fully transparent square background. [*Mandatory Fix*]
 * The outline version of your icon is displayed in the following scenarios:
   * When your app is in use and **hosted** on the app bar on the left side of Teams.
@@ -893,7 +944,7 @@ The following are the navigation guidelines:
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-improper-navigation-leveles.png" alt-text="Screenshot that shows an example of in-meeting dialog with multiple navigation levels.":::
 
-* Deep links in tabs mustn't link to an external webpage but within Teams. For example, task modules or other tabs. [*Mandatory Fix*]
+* Deep links in tabs mustn't link to an external webpage but within Teams. For example, dialogs or other tabs. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-navigation-view-button-not-linked-static-tab.png" alt-text="validation-nav-view-button-not-linked-static-tab":::
 
@@ -906,7 +957,7 @@ The following are the navigation guidelines:
 * Horizontal scroll mustn't be present in an in-meeting tab. [*Mandatory Fix*]
 
 * In-meeting dialogs used in your app mustn't allow horizontal scrolling. Use in-meeting dialogs sparingly and for scenarios that are light and task oriented. You can specify the width of the in-meeting dialog’s I-frame within the supported size range to account for different scenarios. [*Mandatory Fix*]
-* Task modules used in your app mustn't allow horizontal scrolling. Task modules allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If necessary, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
+* Dialogs used in your app mustn't allow horizontal scrolling. Dialogs allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If necessary, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
 
 * Horizontal scroll present in the tab in a personal chat, channel, and in-meeting details tab in any scope isn't allowed if the entire tab canvas is scrollable, unless your tab uses an infinite canvas with fixed UI elements. [*Mandatory Fix*]
 
@@ -936,12 +987,6 @@ The following are the navigation guidelines:
 </br>
 
 <details><summary>Usability</summary>
-
-* Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
-
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
-
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
 
 * Content mustn't truncate or overlap within the tab. [*Mandatory Fix*]
 
@@ -1019,7 +1064,7 @@ If your app includes a bot, ensure that it adheres to these guidelines.
 
 * Your Teams app must follow [Teams bot design guidelines](../../../../bots/design/bots.md).
 
-* You must implement a task module to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a task module to repetitively capture name, dob, place, and designation instead of using multi-turn conversations. [*Mandatory Fix*]
+* You must implement a dialog to avoid multi-turn bot response when the workflow involves the user performing repetitive tasks. For example, use a dialog to repetitively capture name, dob, place, and designation instead of using multi-turn conversations. [*Mandatory Fix*]
 
 * Any broken links, responses, or workflows in your app must be fixed. [*Mandatory Fix*]
 
@@ -1201,7 +1246,7 @@ Bots mustn't spam users by sending multiple messages in short duration.
 
   * Send one message with complete information. [*Mandatory Fix*]
   * Avoid multi-turn conversations to complete a single repetitive workflow. [*Mandatory Fix*]
-  * Use a form (or task module) to collect all inputs from a user at one time. [*Mandatory Fix*]
+  * Use a form (or dialog) to collect all inputs from a user at one time. [*Mandatory Fix*]
   * NLP based conversational chatbots can use multi turn conversation to make the discussion more engaging and complete a workflow.
 
     :::image type="content" source="../../../../assets/images/submission/validation-bot-messages-using-task-module.png" alt-text="validation-bot-message-using-task-module":::
@@ -1227,7 +1272,7 @@ Bot notifications must include content relevant for the scope you define for the
 </br>
 <details><summary>Bots and Adaptive Cards</summary>
 
-Adaptive Cards are a highly recommended way to display bot messages. The cards must be lightweight and only include up to six actions. To display more content, consider using a task module or tab.
+Adaptive Cards are a highly recommended way to display bot messages. The cards must be lightweight and only include up to six actions. To display more content, consider using a dialog or tab.
 
 For more information about cards, see:
 
@@ -1242,15 +1287,6 @@ Bot experience must be fully responsive on mobile. Bot responses must provide a 
 <details><summary>Notification only bots</summary>
 
 Apps that consist of notification only bots provide user value by triggering user notifications based on certain triggers or events in the core app or backend. For example, a new sales lead or prospect is added for the sales team to follow up on. A high-quality notification only bot notifies the users regularly on certain event completions such as workflow completions or alerts.
-
-A notification provides value in Teams if:
-
-1. Posted card or text provides adequate details requiring no further user action.
-1. Posted card or text provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
-
-Apps that provide only notifications with content such as, **You have a new notification**, **click to view** and require the user to navigate outside Teams for everything else don't provide significant value within Teams.
-
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="Screenshot shows an example of a notification only bit with inadequate information in the preview.":::
 
 > [!TIP]
 > Preview information and provide basic in line user actions in the posted card so that the user isn't required to navigate outside Teams for all actions (irrespective of complexity).
@@ -1386,30 +1422,10 @@ Action-based message extensions must do the following:
     :::image type="content" source="../../../../assets/images/submission/validation-search-command-unclear-executable.png" alt-text="validation-search-commands-unclear-executable":::
 
 </details>
-</br>
-
-<details><summary>Action commands for Search based message extension</summary>
-
-[*Mandatory Fix*]
-
-Apps that consist of search-based message extension provide user value by sharing cards that allow for contextual conversations without context switching.
-
-To pass validation for a search-based message extension only app, the following are required as baseline to ensure that the user experience isn't broken. A card shared via a message extension provides value in Teams if:
-
-1. Posted card provides adequate details requiring no further user action.
-1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
-
-    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
-
-    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
-
-Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
-
-</details>
 
 [Back to top](#teams-store-validation-guidelines)
 
-## Task modules
+## Dialogs
 
 [*Mandatory Fix*]
 
@@ -1417,9 +1433,9 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 <br></br>
 <details><summary>Expand to know more</summary>
 
-A task module must include an icon and the short name of the app it's associated with. Task modules mustn't embed an entire app and only display the components required to complete a specific action.
+A dialog (referred as task module in TeamsJS v1.x) must include an icon and the short name of the app it's associated with. Dialogs mustn't embed an entire app and only display the components required to complete a specific action.
 
-For more information, see [Teams task module design guidelines](~\task-modules-and-cards\task-modules\design-teams-task-modules.md).
+For more information, see [Teams dialog design guidelines](~\task-modules-and-cards\task-modules\design-teams-task-modules.md).
 
 :::image type="content" source="../../../../assets/images/submission/validation-task-module-displays-components.png" alt-text="validation-task-module-displays-component":::
 
@@ -1538,7 +1554,7 @@ For more information, see [Teams task module design guidelines](~\task-modules-a
 
   :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-multiple-column-layout.png" alt-text="Graphic shows an example of multiple column layouts for in-meeting dialog.":::
 
-* Must not use task modules. [*Mandatory Fix*]
+* Must not use dialogs. [*Mandatory Fix*]
 * Must align with the center of the meeting stage. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-in-meeting-dialog-not-aligned.png" alt-text="Graphic shows an example of in-meeting dialog not aligning with the center of meeting stage.":::

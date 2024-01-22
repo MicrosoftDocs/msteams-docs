@@ -28,7 +28,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 # [Windows](#tab/Windows)
 
-1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser option.":::
 
@@ -58,7 +58,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 # [macOS](#tab/macOS)
 
-1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser lists.":::
 
@@ -247,7 +247,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 # [Windows](#tab/Windows)
 
-1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="toolkit-v4/images/debug-run-v4.png" alt-text="Browser option":::
 
@@ -255,21 +255,21 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
    :::image type="content" source="toolkit-v4/images/start-debugging-v4.png" alt-text="Start debugging":::
 
-3. Select **Sign in** to Microsoft 365 account.
+1. Select **Sign in** to Microsoft 365 account.
 
    :::image type="content" source="toolkit-v4/images/microsoft365-signin-v4.PNG" alt-text="Sign in":::
 
    > [!TIP]
    > You can select **Read more** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account with your credentials.
 
-4. Select **Install** to install the development certificate for localhost.
+1. Select **Install** to install the development certificate for localhost.
 
     :::image type="content" source="toolkit-v4/images/install-certificate-v4.PNG" alt-text="certificate":::
 
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
-5. Select **Yes** in the **Security Warning** dialog box:
+1. Select **Yes** in the **Security Warning** dialog box:
 
     :::image type="content" source="toolkit-v4/images/development-certificate-v4.PNG" alt-text="certification authority":::
 
@@ -277,7 +277,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 # [macOS](#tab/macOS)
 
-1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="toolkit-v4/images/debug-run-v4.png" alt-text="Browser lists":::
 
@@ -285,21 +285,21 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
    :::image type="content" source="toolkit-v4/images/start-debugging-v4.png" alt-text="Debug your app":::
 
-3. Select **Sign in** to Microsoft 365 account.
+1. Select **Sign in** to Microsoft 365 account.
 
    :::image type="content" source="toolkit-v4/images/microsoft365-signin-v4.PNG" alt-text="Sign into M365 account":::
 
    > [!TIP]
    > You can select **Read more** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account using your credentials.
 
-4. Select **Install** to install the development certificate for localhost.
+1. Select **Install** to install the development certificate for localhost.
 
     :::image type="content" source="toolkit-v4/images/install-certificate-v4.PNG" alt-text="certificate":::
 
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
-5. Enter your **User Name** and **Password**, then select **Update Settings**.
+1. Enter your **User Name** and **Password**, then select **Update Settings**.
 
     :::image type="content" source="toolkit-v4/images/mac-settings-v4.png" alt-text="mac sign in":::
 

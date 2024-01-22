@@ -49,7 +49,7 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
    |Develop Single Sign-on Experience in Teams | [How to Develop Single Sign-on Experience](https://github.com/OfficeDev/TeamsFx/wiki/Develop-single-sign-on-experience-in-Teams) |
 
 > [!NOTE]
-> When SSO is enabled, Teams Toolkit by default provisions a single-tenant Microsoft Entra app, which means only user and guest accounts in the same directory as your M365 account can sign in to your Teams app. For more information on supporting multi-tenant to update your TeamsFx project, see [Multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
+> When SSO is enabled, Teams Toolkit by default provisions a single-tenant Microsoft Entra app, which means only user and guest accounts in the same directory as your M365 account can sign in to your Teams app. For more information on supporting multitenant to update your TeamsFx project, see [Multi-tenancy support for Microsoft Entra app](https://github.com/OfficeDev/TeamsFx/wiki/Multi-tenancy-Support-for-Azure-AD-app).
 
 ## See also
 
@@ -90,14 +90,14 @@ Teams Toolkit helps you to add SSO to the following Teams capabilities in Visual
 You can perform the following steps to add SSO using Teams Toolkit in Visual Studio Code:
 
 1. Open **Visual Studio Code**.
-2. Select **Teams Toolkit** from the Visual Studio Code activity bar.
-3. Select **Add features** under **DEVELOPMENT**.
+1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
+1. Select **Add features** under **DEVELOPMENT**.
 
    :::image type="content" source="toolkit-v4/images/sso-add features_1-v4.png" alt-text="Screenshot shows the Add features option under the Development option in the Visual Studio Code.":::
 
-   * You can select **View** > **Command Palette...** to view **Add features** window.
+1. You can select **View** > **Command Palette...** to view **Add features** window.
 
-4. Select **Single Sign-On**.
+1. Select **Single Sign-On**.
 
    :::image type="content" source="toolkit-v4/images/sso-select features_1-v4.png" alt-text="Screenshot shows the Single Sign-on feature highlighted in red in the Visual Studio Code.":::
 
@@ -160,7 +160,7 @@ To enable SSO in your application, follow these steps:
 
 </details>
 <details>
-<summary><b>Bot project
+<summary><b>Command bot project
 </b></summary>
 
 <a name='set-up-the-azure-ad-redirects'></a>
