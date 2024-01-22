@@ -320,7 +320,7 @@ To trigger the message extension through M365 Chat, follow these steps:
 
    Add a command page appears.
 
-1. In the **Add a command** page, select the **Search** as the type of command and update the following:
+1. In the **Add a command** page, select the **Search** as the type of command and update the following fields:
    * Command ID
    * Command title
    * Command description

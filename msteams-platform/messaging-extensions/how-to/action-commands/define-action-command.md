@@ -114,7 +114,7 @@ To create an action-based message extension using Developer Portal for Teams, fo
 
 1. In the Command details page, select **Action** and then select parameter type.
     
-1. Select **Action** as the type of command and update the following:
+1. Select **Action** as the type of command and update the following fields:
    * Command ID
    * Command title
    * Command description
