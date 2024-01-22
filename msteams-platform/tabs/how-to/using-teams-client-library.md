@@ -29,9 +29,6 @@ The remainder of this article walks you through the structure and latest updates
 
 TeamsJS v.2.0 introduces the ability for certain types of Teams apps to run across the Microsoft 365 ecosystem. Currently, other Microsoft 365 application hosts (including Microsoft 365 app and Outlook) for Teams apps support a subset of the application types and capabilities you can build for the Teams platform. This support expands over time. For a summary of host support for Teams apps, see [TeamsJS capability support across Microsoft 365](../../m365-apps/teamsjs-support-m365.md).
 
-> [!NOTE]
-> Update your TeamsJS to version 2.19.0 or later to avoid any breaking changes to your Teams app.
-
 ## What's new in TeamsJS version 2.x.x
 
 There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and later:
