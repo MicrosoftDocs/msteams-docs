@@ -279,7 +279,7 @@ items:
 
    The first time your app loads, the message extension app is open for you to test. This sample app lets you search open-source npm packages from the software registry.
     
-   #### Run a search query
+   #### How to run a search query
 
    # [Message Extension](#tab/msgext)
 
