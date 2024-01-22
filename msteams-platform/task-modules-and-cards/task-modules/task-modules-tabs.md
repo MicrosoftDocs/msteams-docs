@@ -247,7 +247,7 @@ function validateForm() {
 ## Dialog invocation errors
 
 > [!NOTE]
-> This section pertains to usage patterns for the `tasks` (task module) namespace, which is now replaced by the `dialog` namespace and its sub-namespaces for HTML (`url`), Adaptive Card (`adaptiveCard`), and bot-based (`dialog.url.bot` and `dialog.adaptiveCard.bot`) functionality.
+> The `tasks` namespace is replaced by the `dialog` namespace. The `dialog` namespace includes sub-namespaces for HTML (`url`), Adaptive Card (`adaptiveCard`), and bot-based (`dialog.url.bot` and `dialog.adaptiveCard.bot`) functionality.
 
 The following table provides the possible values of `err` that can be received by your `submitHandler`:
 
