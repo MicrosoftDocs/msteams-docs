@@ -114,7 +114,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 
 1. Under **Message extension type**, select **API**. 
 
-   1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**, select **Yes, change**.
+   1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**. Select **Yes, change**.
 
 1. Under **OpenAPI spec**, select **Upload now**.
 
@@ -130,7 +130,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 **Add commands**
 
 > [!NOTE]
-> Message extensions built from an API only support single parameter.
+> Message extensions built from an API only support a single parameter.
 
 You can add commands and parameters to your message extension, to add commands:
 
@@ -138,7 +138,7 @@ You can add commands and parameters to your message extension, to add commands:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Teams Developer Portal.":::
 
-   A **Add command** pop-up appears with a list of all the available APIs from the Open API Description document.
+   An **Add command** pop-up appears with a list of all the available APIs from the Open API Description document.
 
 1. Select an API from the list and select **Next**.
 
@@ -166,7 +166,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Details**, update the **Command description**.
 
-   1. If you want to launch a command using a trigger in Microsoft 365 chat, Turn on the **Automatically run the command when a user opens the extension** toggle.
+   1. If you want to launch a command using a trigger in Microsoft 365 chat, turn on the **Automatically run the command when a user opens the extension** toggle.
 
 1. Select **Add**. The command is added successfully.
 

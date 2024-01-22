@@ -98,7 +98,7 @@ To create an action-based message extension using Developer Portal for Teams, fo
 
 1. Under **Message extension type**, select **Bot**.
 
-   1. If you get a disclaimer, which reads **API Message extension is already in use by users. Would you like to change message extension type to bot?**, select **Yes, change**.
+   1. If you get a disclaimer, which reads **API Message extension is already in use by users. Would you like to change message extension type to bot?**. Select **Yes, change**.
 
    :::image type="content" source="../../../assets/images/Copilot/bot-based-me-tdp-type.png" alt-text="Screenshot shows API Message extension is already in use disclaimer when a user switches from API to bot message extension type.":::
 
