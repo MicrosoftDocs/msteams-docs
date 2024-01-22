@@ -54,7 +54,7 @@ To create a best scene, ensure that you follow the following practices:
 :::row:::
       :::image type="content" source="../assets/images/apps-in-meetings/build-scene.png" alt-text="Build scene using Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#build-scene-using-scene-studio" border="false":::
       :::image type="content" source="../assets/images/apps-in-meetings/test-scene.png" alt-text="Test Custom Together Mode scenes in Teams." link="~/apps-in-teams-meetings/teams-together-mode.md#test-custom-together-mode-scenes-in-teams" border="false":::
-      :::image type="content" source="../assets/images/apps-in-meetings/share-screen.png" alt-text="Share your scene using Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#share-scene-using-scene-studio" border="false":::
+      :::image type="content" source="../assets/images/apps-in-meetings/share-scene.png" alt-text="Share your scene using Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#share-scene-using-scene-studio" border="false":::
 :::row-end:::
 
 ## Build scene using Scene studio
