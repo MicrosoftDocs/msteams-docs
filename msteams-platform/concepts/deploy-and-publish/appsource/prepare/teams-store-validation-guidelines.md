@@ -93,6 +93,59 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
+Apps must provide value to the users by enabling them to complete functional workflows that encourage repeated use. Expand the following sections to know more about the value proposition:
+<br><br>
+
+<details><summary>Tabs</summary>
+
+Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
+
+:::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
+
+</details>
+<br>
+
+<details><summary>Notification bots</summary>
+A notification provides value in Teams if:
+
+1. Posted card or text provides adequate details requiring no further user action.
+1. Posted card or text provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
+
+Apps that provide only notifications with content such as, **You have a new notification**, **click to view** and require the user to navigate outside Teams for everything else don't provide significant value within Teams.
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="Screenshot shows an example of a notification only bit with inadequate information in the preview.":::
+
+</details>
+<br>
+
+<details><summary>Message extensions</summary>
+
+[*Mandatory Fix*]
+
+Apps that consist of search-based message extension provide user value by sharing cards that allow for contextual conversations without context switching.
+
+To pass validation for a search-based message extension only app, the following are required as baseline to ensure that the user experience isn't broken. A card shared via a message extension provides value in Teams if:
+
+1. Posted card provides adequate details requiring no further user action.
+1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
+
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
+
+</details>
+<br>
+
+<details><summary>Link unfurling </summary>
+
+Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
+
+</details>
+<br>
+
+
 [Back to top](#teams-store-validation-guidelines)
 
 ### App Name
@@ -935,12 +988,6 @@ The following are the navigation guidelines:
 
 <details><summary>Usability</summary>
 
-* Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
-
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
-
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
-
 * Content mustn't truncate or overlap within the tab. [*Mandatory Fix*]
 
     :::image type="content" source="../../../../assets/images/submission/validation-usability-content-truncation.png" alt-text="validation-usability-content-truncations":::
@@ -1241,15 +1288,6 @@ Bot experience must be fully responsive on mobile. Bot responses must provide a 
 
 Apps that consist of notification only bots provide user value by triggering user notifications based on certain triggers or events in the core app or backend. For example, a new sales lead or prospect is added for the sales team to follow up on. A high-quality notification only bot notifies the users regularly on certain event completions such as workflow completions or alerts.
 
-A notification provides value in Teams if:
-
-1. Posted card or text provides adequate details requiring no further user action.
-1. Posted card or text provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
-
-Apps that provide only notifications with content such as, **You have a new notification**, **click to view** and require the user to navigate outside Teams for everything else don't provide significant value within Teams.
-
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="Screenshot shows an example of a notification only bit with inadequate information in the preview.":::
-
 > [!TIP]
 > Preview information and provide basic in line user actions in the posted card so that the user isn't required to navigate outside Teams for all actions (irrespective of complexity).
 
@@ -1382,26 +1420,6 @@ Action-based message extensions must do the following:
 * @mention executables must be clear, easy to understand, and readable.
 
     :::image type="content" source="../../../../assets/images/submission/validation-search-command-unclear-executable.png" alt-text="validation-search-commands-unclear-executable":::
-
-</details>
-</br>
-
-<details><summary>Action commands for Search based message extension</summary>
-
-[*Mandatory Fix*]
-
-Apps that consist of search-based message extension provide user value by sharing cards that allow for contextual conversations without context switching.
-
-To pass validation for a search-based message extension only app, the following are required as baseline to ensure that the user experience isn't broken. A card shared via a message extension provides value in Teams if:
-
-1. Posted card provides adequate details requiring no further user action.
-1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
-
-    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
-
-    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
-
-Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
 
 </details>
 
