@@ -61,6 +61,8 @@ To use a Teams bot on Test Tool, you need to provide:
 
 Test Tool offers a faster debug experience for bot applications when compared to the Teams client.
 
+# [Visual Studio Code](#tab/vscode)
+
 1. Open Visual Studio Code.
 
 1. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
@@ -111,6 +113,57 @@ Test Tool offers a faster debug experience for bot applications when compared to
 1. Test Tool opens the bot in a webpage.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
+# [Command line](#tab/cli)
+
+1. Install `teamsapp-cli` from `npm`:
+
+```bash
+  npm install -g @microsoft/teams-app-test-tool
+```
+
+1. Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
+
+```bash
+teamsapp new   
+```
+
+You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+
+For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+
+  1. Select **New Project**.
+  1. Select **Bot**.
+  1. Select **Basic Bot** as the app features.
+  1. Select **JavaScript** as the programming language.
+  1. Select **Enter** to select the default workspace folder.
+  1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
+
+After you've answered all questions, your project is created.
+
+1. Install required dependencies and npm packages.
+
+```bash
+teamsapp deploy --env=testtool
+```
+
+1. Start your bot app.
+
+```bash
+npm run dev:teamsapp:testtool
+```
+
+1. Initiate the Teams App Test Tool by executing the command in a separate terminal.
+
+```bash
+npm run dev:teamsapp:launch-testtool
+```
+
+1. Test Tool opens the bot in a webpage.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
+
+---
 
 ## Activity triggers
 
