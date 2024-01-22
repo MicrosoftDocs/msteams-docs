@@ -105,7 +105,7 @@ If you're not re-uploading an updated package, ensure that the ID is unique.
   * Uninstall the app from the specific meeting.
   * Delete the service principal for the app to remove RSC permissions for all meetings instances where the app is installed.
 * Tenant admin must disable the `Calls.JoinGroupCall.All` application permission.
-* Tenant admin must disable the option for **Anonymous users can join a meeting**. For more information, see [manage anonymous meeting join for the organization](/microsoftteams/anonymous-users-in-meetings).
+* Tenant admin must disable the option for **Anonymous users can join a meeting**. For more information, see [manage anonymous meeting join for the organization](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization).
 
 ## See also
 
