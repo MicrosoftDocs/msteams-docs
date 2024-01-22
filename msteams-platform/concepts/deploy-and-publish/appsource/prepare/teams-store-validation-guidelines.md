@@ -92,6 +92,8 @@ Following these guidelines increases the chances of your app to pass the Microso
 ## Value proposition
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
+
+Apps must provide value to users by enabling them to complete functional workflows that encourage repeated use.
 <br>
 
 <details><summary>Tabs</summary>
