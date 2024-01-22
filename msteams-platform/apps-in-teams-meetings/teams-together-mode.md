@@ -52,14 +52,25 @@ To create a best scene, ensure that you follow the following practices:
 * From the right pane, select **Transparent** checkbox when an image is selected to indicate that the images are overlapping images in the scene.
 
 :::row:::
-      :::image type="content" source="../assets/images/apps-in-meetings/build-scene.png" alt-text="Build a scene using the Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#build-a-scene-using-the-scene-studio" border="false":::
-      :::image type="content" source="../assets/images/apps-in-meetings/test-scene.png" alt-text="Test your scene in Teams." link="~/apps-in-teams-meetings/teams-together-mode.md#test-custom-together-mode-scenes-in-teams" border="false":::
-      :::image type="content" source="../assets/images/apps-in-meetings/share-screen.png" alt-text="Share your scene using the Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#share-a-scene-using-the-scene-studio" border="false":::
+      :::image type="content" source="../assets/images/apps-in-meetings/build-scene.png" alt-text="Build scene using Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#build-scene-using-scene-studio" border="false":::
+      :::image type="content" source="../assets/images/apps-in-meetings/test-scene.png" alt-text="Test Custom Together Mode scenes in Teams." link="~/apps-in-teams-meetings/teams-together-mode.md#test-custom-together-mode-scenes-in-teams" border="false":::
+      :::image type="content" source="../assets/images/apps-in-meetings/share-screen.png" alt-text="Share your scene using Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#share-scene-using-scene-studio" border="false":::
 :::row-end:::
 
-## Build a scene using the Scene studio
+## Build scene using Scene studio
 
 You can build a scene using [Scenes Studio](https://dev.teams.microsoft.com/scenes) in Teams Developer Portal. A scene in the context of the Scene studio contains the following elements:
+
+### Elements of a scene
+
+A scene consists of bitmap images, sprites, and rectangles to put participant videos in the Custom Together mode. The following are the elements of a scene:
+
+|Value|Description|
+|---|---|
+| **Scene:** | Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene. |
+| **Asset:** | Each asset contains a filename, width, height, and position on the X and Y-axis. |
+| **Participants:** | Each participant has their own video feed, which is segmented to render only the foreground. Custom Together Mode scenes support **ZoomIn** in on the current meeting participants. |
+| **Seat:** | Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is automatically generated and is altered according to preference. The seating order number corresponds to the order of people joining the call. |
 
 * Seats reserved for meeting organizer and meeting presenters. The presenter doesn't refer to the user who is actively sharing. For more information, see [meeting role](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
@@ -68,6 +79,15 @@ You can build a scene using [Scenes Studio](https://dev.teams.microsoft.com/scen
 * Seat and image XYZ coordinates.
 
 * Collection of images that are camouflaged as one image.
+
+Ensure to go through the following list while creating a scene:
+
+|Value|Description|
+|---|---|
+| Sprite | A Sprite is a static bitmap image positioned in the world. These sprites and participant boxes are defined in a world coordinate system. |
+| **X**-axis | The X-axis points to the right. |
+| **Y**-axis | The Y-axis points downwards. |
+| `zOrder` | The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. It determines the position of the sprite. For more information, see [example](#example). The sample uses the `zOrder`. |
 
 The following image shows each participant in a scene:
 
@@ -113,41 +133,17 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 1. Select any participant image and select **Assign Spot** to assign role to the participant.
 
 1. Select **Meeting organizer** or **Presenter** role for the participant.
-   In a meeting, one participant must be assigned the role of a meeting organizer. You can assign the role of **Meeting organizer** to one participant only.
+   In a meeting, one participant must be assigned the role of a meeting organizer.
 
     :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the Assign spot check box for the participant 3 in scene studio.":::
 
-1. Select **Save** to save the scene you have created.
+1. Select **Save**.
 1. Select **View in Teams** to quickly test your scene in Teams.
-   A scene only app is created and you can view the app and app package.json file in **Apps** page in the Teams Developer Portal. You can test and try out scenes from the Scene studio. A screen opens in your Teams to add the scene app you've created.
+   A scene only app is created and you can view the app and app package.json file in **Apps** page in the Teams Developer Portal. A screen opens in your Teams to add the scene app you've created.
 
 1. Select **Preview in Teams**.
    Teams page appears to add the scene only app you have created in Scene studio.
 1. Select **Add**.
-
-    :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
-
-### Elements of a scene
-
-A scene consists of bitmap images, sprites, and rectangles to put participant videos in the Custom Together mode. The following are the elements of a scene:
-
-|Value|Description|
-|---|---|
-| **Scene:** | Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene. |
-| **Asset:** | Each asset contains a filename, width, height, and position on the X and Y-axis. |
-| **Participants:** | Each participant has their own video feed, which is segmented to render only the foreground. Custom Together Mode scenes support **ZoomIn** in on the current meeting participants. |
-| **Seat:** | Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is automatically generated and is altered according to preference. The seating order number corresponds to the order of people joining the call. |
-
-Ensure to go through the following list while creating a scene:
-
-|Value|Description|
-|---|---|
-| Sprite | A Sprite is a static bitmap image positioned in the world. These sprites and participant boxes are defined in a world coordinate system. |
-| **X**-axis | The X-axis points to the right. |
-| **Y**-axis | The Y-axis points downwards. |
-| `zOrder` | The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. It determines the position of the sprite See the step-by-step getting started sample. The sample uses the `zOrder`. |
-
-For more information, see [example](#example).
 
 ## Test Custom Together Mode scenes in Teams
 
@@ -171,41 +167,42 @@ Join the Teams meeting and follow the steps to test the Custom Together Mode:
 
 1. Select **Apply**. Teams installs the app for the user and applies the scene.
 
-    Optionally, the meeting organizer and presenter can select **View** > **Change scene** in the meeting.
+    Optionally, the meeting organizer and presenter can select **View** > **Change scene** in the meeting to select any existing scene available.
 
     >[!NOTE]
     > Only one scene is used uniformly for the entire meeting. If a presenter or organizer changes the scene, it changes for everyone. Participants can switch in or out of Custom Together Mode scenes individually, but when using Custom Together Mode scenes, all participants share the same scene.
 
-1. The meeting organizer and presenter can select **View** > **Change scene** in the meeting to select any existing scene available.
+    :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
-## Share a scene using the Scene studio
+## Share scene using Scene studio
 
 You can view the scene you've created in the **Your scenes** section of **Scene studio**. Additionally, you can share and export the scene.
 
 To share a scene, follow the steps:
 
-1. From the **Save** drop-down menu, select **Share**.
+1. From the **Save** drop-down, select **Share**.
 
 1. In **Share the scene app** window, select **Share Test together mode with everyone** toggle to create a shareable link of your scenes to share for others to use.
 
-1. **Copy** the link.
+1. Select **Copy**.
 
     The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
 
-To export a scene, Follow the steps:
+To export a scene, follow the steps:
 
-1. In Scene studio, in the upper-right corner, select **Save**.
+1. In Scene studio, From the **Save** drop-down, select **Save**.
 1. Select **Export** from the dropdown list to retrieve the scene package.
-   A .zip file, which is the scene package, is downloaded. The Scene package includes a scene.json and the PNG assets used to build a scene. The scene package is reviewed for incorporating other changes. </br>
+   A .zip file is downloaded. The .zip file contains the scene package that includes a scene.json and the PNG assets used to build a scene. </br>
 
    :::image type="content" source="../assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
 
 To delete a scene you created, select **Delete scene**.
 
-### Import and share a scene package
+### Import a scene
 
-You can share the scene package, which is a .zip file retrieved from the Scene studio to other creators to further enhance the scene.
+You can import the scene package, which is a .zip file retrieved from the Scene studio to other creators to further enhance the scene.
 
+1. Go to Scene studio.
 1. Select **Import a scene**.
 
    :::image type="content" source="../assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in scene studio.":::
