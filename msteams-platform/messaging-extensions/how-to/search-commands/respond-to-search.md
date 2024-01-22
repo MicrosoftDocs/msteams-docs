@@ -91,63 +91,13 @@ Your service must respond with the results matching the user query. The response
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
+:::image type="content" source="../../../assets/images/messaging-extension/respond-to-search.png" alt-text="Flow chart":::
+
 ### `config` response type
 
-`config` response is used when you want  user to set up the message extension before start using it. It asks the user to set up the message extension and request the user to provide additional configuration.
+`config` response is used when you want user to set up the message extension before start using it. It asks the user to set up the message extension and request the user to provide additional configuration.
 
-If message extension use a configuration page, the handler for onQuery should first check for any stored configuration information, if the message extension isn't configured, return a config response with a link to your configuration such as following example:
-
-```HTML
-<html>
-<body>
-<form>
-<fieldset>
-<legend>What would you like to search?</legend>
-<input type="radio" name="includeInSearch" value="nuget">Nuget<br>
-<input type="radio" name="includeInSearch" value="email">Email (requires AAD Authentication)<br>
-</fieldset>
-<br />
-<input type="button" onclick="onSubmit()" value="Save"> <br />
-</form>
-<script src='https://statics.teams.cdn.office.net/sdk/v1.5.2/js/MicrosoftTeams.min.js'></script>
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function () 
-{
-    var urlParams = new URLSearchParams(window.location.search);
-    var settings = urlParams.get('settings');
-    if (settings) 
-    {
-        var checkboxes = document.getElementsByName("includeInSearch");
-        for (var i = 0; i < checkboxes.length; i++) 
-        {
-            var thisCheckbox = checkboxes[i];
-            if (settings.includes(thisCheckbox.value)) 
-            {
-                checkboxes[i].checked = true;
-            }
-        }
-    }
-});
-</script>
-<script type="text/javascript">
-microsoftTeams.initialize();
-function onSubmit() 
-{
-    var newSettings = [];
-    var checkboxes = document.getElementsByName("includeInSearch");
-    for (var i = 0; i < checkboxes.length; i++) 
-    {
-        if (checkboxes[i].checked) 
-        {
-            newSettings.push(checkboxes[i].value);
-        }
-    }
-    microsoftTeams.authentication.notifySuccess(JSON.stringify(newSettings));
-}
-</script>
-</body>
-</html>
-```
+If message extension use a configuration page, the handler for onQuery should first check for any stored configuration information, if the message extension isn't configured, return a config response with a link to your configuration.
 
 The response from the configuration page is also handled by onQuery. The sole exception is when the configuration page is called by the handler for onQuerySettingsUrl. The handler for onQuerySettingsUrl returns the URL for the configuration page. After the configuration page closes, the handler for onSettingsUpdate accepts and saves the returned state as shown in the following example:
 
