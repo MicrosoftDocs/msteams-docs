@@ -359,40 +359,40 @@ items:
     </details>
     <br>
     <details>
-    <summary>To open your app from compose area</summary>
+    <summary>To open your app from command box and compose message area</summary>
 
     Choose one of the following ways to open your app.
     
-    * **Using `@mention`:**
-    
-    1. Enter `@your-app-name` in the command area of your app.
+    * **Command box:**
+
+      1. Enter **/your-app-name** in the command box of Teams. If you're using the classic Teams, message extension app is invoked by @mentioning in the command box. For example, **@your-app-name**.
+       
+         The app opens the search box and you can use it to run a query.
+
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to invoke the message extension app.":::
+
+      1. Enter a search string and select one from the search result.
+
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot shows how to run a search using the message extension app.":::
+
+         It displays in the command area as a card.
+
+      1. Copy the card to paste it in the compose area.
+
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot shows the search result in a card.":::
         
-        The app opens the search box and you can use it to run a query.
+      1. Send the card using the compose area.
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/mention-mex-app.png" alt-text="Screenshot shows how to @mention the message extension app.":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the search result in a chat.":::
 
-    1. Enter a search string, and select one from the search result.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-box-search.png" alt-text="Screenshot shows how to run a search using the message extension app.":::
-
-        It displays in the command area as a card.
-
-    1. Copy the card to paste it in the compose area.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card.png" alt-text="Screenshot shows the search result in a card.":::
-        
-    1. Send the card using the compose area.
-
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/command-search-card-sent.png" alt-text="Screenshot shows the search result in a chat.":::
-
-    * **Using three-dot icon:**
+    * **Compose message area:**
     
-    1. Launch the message extension from three dots at the bottom of the composing area.
-    1. Select your message extension app.       
+      1. Open the message extension from three dots at the bottom of the composing area.
+      1. Select your message extension app.       
 
-        :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension app.":::
+         :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-msgext/three-dot-mex.png" alt-text="Screenshot shows how to open the sample message extension app.":::
 
-        The message extension app loads with the options to run a search and create adaptive cards.
+         The message extension app loads with the options to run a search and create adaptive cards.
     </details>
     <br>
     <details>
