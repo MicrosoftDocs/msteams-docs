@@ -93,8 +93,10 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
-Apps must provide value to users by enabling them to complete functional workflows that encourage repeated use.
-<br>
+Apps must provide value to the users by enabling them to complete functional workflows that encourage repeated use. 
+
+Expand the following sections to know more about the value proposition for a Teams app:
+<br><br>
 
 <details><summary>Tabs</summary>
 Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
@@ -106,7 +108,7 @@ Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
 </details>
 <br>
 
-<details><summary>Notification only bots</summary>
+<details><summary>Notification bots</summary>
 A notification provides value in Teams if:
 
 1. Posted card or text provides adequate details requiring no further user action.
@@ -119,7 +121,7 @@ Apps that provide only notifications with content such as, **You have a new noti
 </details>
 <br>
 
-<details><summary>Search based message extension</summary>
+<details><summary>Message extensions</summary>
 
 [*Mandatory Fix*]
 
@@ -142,7 +144,7 @@ To pass validation for a search-based message extension only app, the following 
 Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
 
 </details>
-
+<br>
 
 
 [Back to top](#teams-store-validation-guidelines)
