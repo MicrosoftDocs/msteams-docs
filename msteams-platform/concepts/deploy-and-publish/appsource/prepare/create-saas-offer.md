@@ -138,7 +138,7 @@ On the **Offer listing** page, under **Marketplace details**, complete the follo
 
 ### Set the preview audience
 
-You can define a limited audience who can review your SaaS offer before you publish it live in the marketplace.
+You can define a limited audience who can review your SaaS offer before you publish it live in the marketplace. The email address must be either of Azure Active Directory (Azure AD) or Microsoft.
 
 1. On the **Preview Audience** page, add a single Azure Active Directory or MSA email address and an optional description in the boxes provided.
 1. To add another email address, select the **Add another email** link.
