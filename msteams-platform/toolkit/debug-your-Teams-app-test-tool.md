@@ -118,15 +118,15 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Install `teamsapp-cli` from `npm`:
 
-```bash
-  npm install -g @microsoft/teams-app-test-tool
-```
+    ```bash
+    npm install -g @microsoft/teams-app-test-tool
+    ```
 
 1. Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
 
-```bash
-teamsapp new   
-```
+    ```bash
+    teamsapp new   
+    ```
 
 You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
@@ -143,21 +143,21 @@ After you've answered all questions, your project is created.
 
 1. Install required dependencies and npm packages.
 
-```bash
-teamsapp deploy --env=testtool
-```
+    ```bash
+    teamsapp deploy --env=testtool
+    ```
 
 1. Start your bot app.
 
-```bash
-npm run dev:teamsapp:testtool
-```
+    ```bash
+    npm run dev:teamsapp:testtool
+    ```
 
 1. Initiate the Teams App Test Tool by executing the command in a separate terminal.
 
-```bash
-npm run dev:teamsapp:launch-testtool
-```
+    ```bash
+    npm run dev:teamsapp:launch-testtool
+    ```
 
 1. Test Tool opens the bot in a webpage.
 
