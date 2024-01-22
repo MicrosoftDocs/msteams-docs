@@ -96,9 +96,9 @@ Following these guidelines increases the chances of your app to pass the Microso
 <details><summary>Tabs</summary>
 Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
 
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
+:::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
 
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
+:::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
 
 </details>
 <br>
@@ -111,7 +111,7 @@ A notification provides value in Teams if:
 
 Apps that provide only notifications with content such as, **You have a new notification**, **click to view** and require the user to navigate outside Teams for everything else don't provide significant value within Teams.
 
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="Screenshot shows an example of a notification only bit with inadequate information in the preview.":::
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="Screenshot shows an example of a notification only bit with inadequate information in the preview.":::
 
 </details>
 <br>
