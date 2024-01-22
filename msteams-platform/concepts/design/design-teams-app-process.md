@@ -5,7 +5,7 @@ description: Learn how and when you might use Microsoft tools and resources to d
 ms.localizationpriority: medium
 ms.author: surbhigupta
 ms.topic: overview
-ms.date: 06/28/2022
+ms.date: 01/07/2024
 ---
 # Design process for Microsoft Teams apps
 

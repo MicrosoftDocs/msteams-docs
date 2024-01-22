@@ -95,7 +95,7 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
 1. Select **Install Another Version...** from the dropdown list.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/InstallAnotherVersion.jpg" alt-text="Screenshot shows the option to select other version of Visual Studio Code.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/InstallAnotherVersion.png" alt-text="Screenshot shows the option to select other version of Visual Studio Code.":::
 
 1. Select the required version to install.
 
@@ -122,7 +122,7 @@ The Teams Toolkit for Visual Studio Code extension is available in a pre-release
 
 ::: zone pivot="visual-studio-code-v4"
 
-The Microsoft Azure Active Directory (Azure AD) manifest contain definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
+The Microsoft Entra manifest contain definitions of all the attributes of a Microsoft Entra application object in the Microsoft identity platform.
 
 ## Prerequisites
 

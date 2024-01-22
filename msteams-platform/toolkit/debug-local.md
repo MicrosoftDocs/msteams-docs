@@ -11,7 +11,7 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Debug your Teams app locally
 
-Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and sideloads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
+Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ::: zone pivot="visual-studio-code-v5"
 
@@ -28,7 +28,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 # [Windows](#tab/Windows)
 
-1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser option.":::
 
@@ -58,7 +58,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 # [macOS](#tab/macOS)
 
-1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser lists.":::
 
@@ -94,7 +94,7 @@ After the initial setup process, Teams Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
 * [Launches debug configurations](#launches-debug-configurations)
-* [Sideloads the Teams app](#sideloads-the-teams-app)
+* [Uploads the Teams app](#uploads-the-teams-app)
 
 ### Starts app services
 
@@ -200,9 +200,9 @@ The following table lists the debug configuration names and types for project wi
 |  Bot or message extension  |   **Attach to Bot** |  node  |
 |  Azure Functions |  **Attach to Backend** |  node |
 
-### Sideloads the Teams app
+### Uploads the Teams app
 
-The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams sideloads the Teams app that is controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
+The configuration **Attach to Frontend** or **Launch App** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, upload Teams app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png" alt-text="Screenshot shows the Add local debug." lightbox="../assets/images/teams-toolkit-v2/debug/hello-local-debug.png":::
 
@@ -247,7 +247,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 # [Windows](#tab/Windows)
 
-1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="toolkit-v4/images/debug-run-v4.png" alt-text="Browser option":::
 
@@ -255,21 +255,21 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
    :::image type="content" source="toolkit-v4/images/start-debugging-v4.png" alt-text="Start debugging":::
 
-3. Select **Sign in** to Microsoft 365 account.
+1. Select **Sign in** to Microsoft 365 account.
 
    :::image type="content" source="toolkit-v4/images/microsoft365-signin-v4.PNG" alt-text="Sign in":::
 
    > [!TIP]
    > You can select **Read more** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account with your credentials.
 
-4. Select **Install** to install the development certificate for localhost.
+1. Select **Install** to install the development certificate for localhost.
 
     :::image type="content" source="toolkit-v4/images/install-certificate-v4.PNG" alt-text="certificate":::
 
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
-5. Select **Yes** in the **Security Warning** dialog box:
+1. Select **Yes** in the **Security Warning** dialog box:
 
     :::image type="content" source="toolkit-v4/images/development-certificate-v4.PNG" alt-text="certification authority":::
 
@@ -277,7 +277,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 # [macOS](#tab/macOS)
 
-1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="toolkit-v4/images/debug-run-v4.png" alt-text="Browser lists":::
 
@@ -285,21 +285,21 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
    :::image type="content" source="toolkit-v4/images/start-debugging-v4.png" alt-text="Debug your app":::
 
-3. Select **Sign in** to Microsoft 365 account.
+1. Select **Sign in** to Microsoft 365 account.
 
    :::image type="content" source="toolkit-v4/images/microsoft365-signin-v4.PNG" alt-text="Sign into M365 account":::
 
    > [!TIP]
    > You can select **Read more** to learn about Microsoft 365 Developer Program. Your default web browser opens to let you sign-in to your Microsoft 365 account using your credentials.
 
-4. Select **Install** to install the development certificate for localhost.
+1. Select **Install** to install the development certificate for localhost.
 
     :::image type="content" source="toolkit-v4/images/install-certificate-v4.PNG" alt-text="certificate":::
 
    > [!TIP]
    > You can select **Learn More** to know about the development certificate.
 
-5. Enter your **User Name** and **Password**, then select **Update Settings**.
+1. Enter your **User Name** and **Password**, then select **Update Settings**.
 
     :::image type="content" source="toolkit-v4/images/mac-settings-v4.png" alt-text="mac sign in":::
 
@@ -313,7 +313,7 @@ After the initial setup process, Teams Toolkit starts the following processes:
 
 * [Starts app services](#starts-app-services)
 * [Launches debug configurations](#launches-debug-configurations)
-* [Sideloads the Teams app](#sideloads-the-teams-app)
+* [Uploads the Teams app](#uploads-the-teams-app)
 
 ### Starts app services
 
@@ -351,9 +351,9 @@ The following table lists the debug configuration names and types for project wi
 |  Bot or message extension  |   **Attach to Bot** |  pwa-node  |
 |  Azure Functions |  **Attach to Backend** |  pwa-node |
 
-### Sideloads the Teams app
+### Uploads the Teams app
 
-The configuration **Attach to Frontend** or **Launch Bot** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams side-loads the Teams app that is controlled by the sideloading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
+The configuration **Attach to Frontend** or **Launch Bot** launches Microsoft Edge or Chrome browser instance to load Teams client in web page. After the Teams client is loaded, Teams uploads the custom app that is controlled by the uploading URL defined in the launch configurations [Microsoft Teams](https://teams.microsoft.com/l/app/>${localTeamsAppId}?installAppPackage=true&webjoin=true&${account-hint}). When Teams client loads in the web browser, select **Add** or select an option from the dropdown as per your requirement.
 
    :::image type="content" source="toolkit-v4/images/hello-local-debug-v4.png" alt-text="Add local debug" lightbox="toolkit-v4/images/hello-local-debug-v4.png":::
 
