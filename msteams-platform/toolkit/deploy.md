@@ -242,9 +242,8 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+> * We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> * Teams Toolkit v4 extension will soon be deprecated.
 
 Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 

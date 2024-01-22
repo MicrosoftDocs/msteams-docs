@@ -171,9 +171,8 @@ To learn more about the directory structure of different types of scenario-based
 
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](~/toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+> * We've introduced the [Teams Toolkit v5](~/toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> * Teams Toolkit v4 extension will soon be deprecated.
 
 In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code and Visual Studio.
 

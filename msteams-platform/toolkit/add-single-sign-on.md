@@ -64,9 +64,8 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 ::: zone pivot="visual-studio-code-v4"
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+> * We've introduced the [Teams Toolkit v5](teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> * Teams Toolkit v4 extension will soon be deprecated.
 
 Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Entra ID flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
 
