@@ -27,8 +27,6 @@ From January 31 2024, users can't chat with bots that aren't connected to a Micr
 If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through an direct link to a chat.
 
 
-
-
 ## Prerequisites
 
 * Ensure to create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/appvalidation.html) for errors.
