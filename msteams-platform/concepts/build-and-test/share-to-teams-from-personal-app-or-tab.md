@@ -13,11 +13,11 @@ The following image shows the Share to Teams pop-up window:
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="Screenshot shows you the share-to-teams-pop-up in personal app.":::
+:::image type="content" source="../../assets/images/share-to-teams/share-to-teams.PNG" alt-text="Screenshot shows you the share-to-teams-pop-up in personal app." lightbox="../../assets/images/share-to-teams/share-to-teams.PNG":::
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/share-to-teams-mobile.png" alt-text="Screenshot shows you the share to teams experience in Teams.":::
+:::image type="content" source="../../assets/images/share-to-teams-mobile.png" alt-text="Screenshot shows you the share to teams experience in Teams." lightbox="../../assets/images/share-to-teams-mobile.png":::
 
 ---
 
