@@ -137,7 +137,7 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 
 1. Add the number of participants for the scene from the **Number of participants** box and select **Add**.
 
-    :::image type="content" source="~/assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Screenshot shows the option to add participants to a scene in scene studio.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/add-particpant.png" alt-text="Screenshot shows the option to add participants to a scene in scene studio.":::
 
    You can drag the images of the participants around the scene and place them in the required position. You can resize them using the resize arrow. After the scene is shipped, the participant seat placements are replaced with actual participant's video streams.
 
