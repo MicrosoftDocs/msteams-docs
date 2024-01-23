@@ -36,7 +36,7 @@ A dialog includes the following as shown in the previous image:
 
 1. Your app's [`color` icon](~/resources/schema/manifest-schema.md#icons).
 2. Your app's [`short` name](~/resources/schema/manifest-schema.md#name).
-3. The dialog's title specified in the `title` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object).
+3. The dialog's title specified in the `title` property of the [DialogInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-dialoginfo-object).
 4. The dialog's close or cancel button. If the user selects this button, your app receives an `err` event. For more information, see [example for submitting the result of a dialog](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-dialog).
 
     > [!NOTE]
