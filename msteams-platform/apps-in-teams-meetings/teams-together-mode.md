@@ -116,7 +116,7 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
     You can select **Close** to toggle between closing or reopening the right pane.
     You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
 
-    :::image type="content" source="~/assets/images/apps-in-meetings/scene-name-toggle.png" alt-text="Screenshot shows the choices of templates for a scene in scene studio.":::
+    :::image type="content" source="~/assets/images/apps-in-meetings/scene-name-toggle.png" alt-text="Screenshot shows the toggle option in scene studio.":::
 
 1. To add the image to the environment, select **Add images**.
 
