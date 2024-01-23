@@ -211,101 +211,101 @@ Starting with TeamsJS v.2.0, APIs are organized into *capabilities* by way of na
 
 The `app` namespace contains top-level APIs required for overall app usage, across Teams, Microsoft 365 app, and Outlook. All the APIs from various other TeamsJS namespaces are moved to the `app` namespace as of TeamsJS v.2.0:
 
-| Original namespace `global (window)` | New namespace `app`                |
-| ------------------------------------ | ---------------------------------- |
-| `executeDeepLink`                    | `app.openLink` (renamed)           |
-| `initialize`                         | `app.initialize`                   |
-| `getContext`                         | `app.getContext`                   |
-| `registerOnThemeChangeHandler`       | `app.registerOnThemeChangeHandler` |
+| Original namespace `global (window)` | New namespace `app` |
+| - | - |
+| `executeDeepLink` | `app.openLink` (renamed) |
+| `initialize` | `app.initialize` |
+| `getContext` | `app.getContext` |
+| `registerOnThemeChangeHandler` | `app.registerOnThemeChangeHandler` |
 
-| Original namespace `appInitialization`           | New namespace `app`           |
-| ------------------------------------------------ | ----------------------------- |
-| `appInitialization.notifyAppLoaded`              | `app.notifyAppLoaded`         |
-| `appInitialization.notifySuccess`                | `app.notifySuccess`           |
-| `appInitialization.notifyFailure`                | `app.notifyFailure`           |
-| `appInitialization.notifyExpectedFailure`        | `app.notifyExpectedFailure`   |
-| `appInitialization.FailedReason` enum            | `app.FailedReason`            |
-| `appInitialization.ExpectedFailureReason` enum   | `app.ExpectedFailureReason`   |
-| `appInitialization.IFailedRequest` enum          | `app.IFailedRequest`          |
+| Original namespace `appInitialization` | New namespace `app` |
+| - | - |
+| `appInitialization.notifyAppLoaded` | `app.notifyAppLoaded` |
+| `appInitialization.notifySuccess` | `app.notifySuccess` |
+| `appInitialization.notifyFailure` | `app.notifyFailure` |
+| `appInitialization.notifyExpectedFailure` | `app.notifyExpectedFailure` |
+| `appInitialization.FailedReason` enum | `app.FailedReason` |
+| `appInitialization.ExpectedFailureReason` enum | `app.ExpectedFailureReason` |
+| `appInitialization.IFailedRequest` enum | `app.IFailedRequest` |
 | `appInitialization.IExpectedFailureRequest` enum | `app.IExpectedFailureRequest` |
 
 ##### *pages* namespace
 
 The `pages` namespace includes functionality for running and navigating webpages within various Microsoft 365 hosts, including Teams, Microsoft 365 app, and Outlook. It also includes several subcapabilities, implemented as subnamespaces.
 
-| Original namespace `global (window)` | New namespace `pages`              |
-| ------------------------------------ | ---------------------------------- |
-| `setFrameContext`                    | `pages.setCurrentFrame` (renamed)  |
-| `initializeWithFrameContext`         | `pages.initializeWithFrameContext` |
-| `registerFocusEnterHandler`          | `pages.registerFocusEnterHandler`  |
-| `registerFullScreenHandler`          | `pages.registerFullScreenHandler`  |
-| `returnFocus`                        | `pages.returnFocus`                |
-| `shareDeepLink`                      | `pages.shareDeepLink`              |
+| Original namespace `global (window)` | New namespace `pages` |
+| - | - |
+| `setFrameContext` | `pages.setCurrentFrame` (renamed) |
+| `initializeWithFrameContext` | `pages.initializeWithFrameContext` |
+| `registerFocusEnterHandler` | `pages.registerFocusEnterHandler`
+| `registerFullScreenHandler` | `pages.registerFullScreenHandler` |
+| `returnFocus` | `pages.returnFocus` |
+| `shareDeepLink` | `pages.shareDeepLink` |
 
-| Original namespace `settings` | New namespace `pages`       |
-| ----------------------------- | --------------------------- |
-| `settings.getSettings`        | `pages.getConfig` (renamed) |
+| Original namespace `settings` | New namespace `pages`  |
+| - | - |
+| `settings.getSettings` | `pages.getConfig` (renamed)
 
 ###### *pages.tabs*
 
-| Original namespace `global (window)` | New namespace `pages.tabs`      |
-| ------------------------------------ | ------------------------------- |
-| `getTabInstances`                    | `pages.tabs.getTabInstances`    |
-| `getMruTabInstances`                 | `pages.tabs.getMruTabInstances` |
+| Original namespace `global (window)` | New namespace `pages.tabs` |
+| - | - |
+| `getTabInstances` |  `pages.tabs.getTabInstances` |
+| `getMruTabInstances` | `pages.tabs.getMruTabInstances` |
 
 | Original namespace `navigation` | New namespace `pages.tabs` |
-| ------------------------------- | -------------------------- |
-| `navigation.navigateToTab`      | `pages.tabs.navigateToTab` |
+| - | - |
+| `navigation.navigateToTab` | `pages.tabs.navigateToTab` |
 
 ###### *pages.config*
 
-| Original namespace `settings`       | New namespace `pages.config`            |
-| ----------------------------------- | --------------------------------------- |
-| `settings.setSettings`              | `pages.config.setConfig` (renamed)      |
-| `settings.setValidityState`         | `pages.config.setValidityState`         |
-| `settings.initialize`               | `pages.config.initialize`               |
-| `settings.registerOnSaveHandler`    | `pages.config.registerOnSaveHandler`    |
-| `settings.registerOnRemoveHandler`  | `pages.config.registerOnRemoveHandler`  |
-| `settings.Settings` interface       | `pages.config.Config` (renamed)         |
-| `settings.SaveEvent` interface      | `pages.config.SaveEvent` (renamed)      |
-| `settings.RemoveEvent` interface    | `pages.config.RemoveEvent` (renamed)    |
-| `settings.SaveParameters` interface | `pages.config.SaveParameters` (renamed) |
-| `settings.SaveEventImpl` interface  | `pages.config.SaveEventImpl` (renamed)  |
+| Original namespace `settings` | New namespace `pages.config`  |
+| - | - |
+| `settings.setSettings` | `pages.config.setConfig` (renamed)
+| `settings.setValidityState`| `pages.config.setValidityState`
+| `settings.initialize` | `pages.config.initialize`
+| `settings.registerOnSaveHandler`| `pages.config.registerOnSaveHandler`
+| `settings.registerOnRemoveHandler` | `pages.config.registerOnRemoveHandler`
+| `settings.Settings` interface | `pages.config.Config` (renamed)
+| `settings.SaveEvent` interface | `pages.config.SaveEvent` (renamed)
+| `settings.RemoveEvent` interface | `pages.config.RemoveEvent` (renamed)
+| `settings.SaveParameters` interface | `pages.config.SaveParameters` (renamed)
+| `settings.SaveEventImpl` interface | `pages.config.SaveEventImpl` (renamed)
 
-| Original namespace `global (window)` | New namespace `pages.config`                         |
-| ------------------------------------ | ---------------------------------------------------- |
-| `registerChangeConfigHandler`        | `pages.config.registerChangeConfigHandler` (renamed) |
+| Original namespace `global (window)` | New namespace `pages.config` |
+| - | - |
+| `registerChangeConfigHandler` | `pages.config.registerChangeConfigHandler` (renamed)
 
 ###### *pages.backStack*
 
-| Original namespace `navigation` | New namespace `pages.backStack` |
-| ------------------------------- | ------------------------------- |
-| `navigation.navigateBack`       | `pages.backStack.navigateBack`  |
+| Original namespace `navigation` | New namespace `pages.backStack`  |
+| - | - |
+| `navigation.navigateBack` | `pages.backStack.navigateBack`
 
-| Original namespace `global (window)` | New namespace `pages.backStack`             |
-| ------------------------------------ | ------------------------------------------- |
-| `registerBackButtonHandler`          | `pages.backStack.registerBackButtonHandler` |
+| Original namespace `global (window)` | New namespace `pages.backStack`  |
+| - | - |
+| `registerBackButtonHandler` | `pages.backStack.registerBackButtonHandler`
 
 ###### *pages.appButton*
 
-| Original namespace `global (window)` | New namespace `pages.appButton`          |
-| ------------------------------------ | ---------------------------------------- |
-| `registerAppButtonClickHandler`      | `pages.appButton.onClick` (renamed)      |
-| `registerAppButtonHoverEnterHandler` | `pages.appButton.onHoverEnter` (renamed) |
-| `registerAppButtonHoverLeaveEnter`   | `pages.appButton.onHoverLeave` (renamed) |
-| `FrameContext` interface             | `pages.appButton.FrameInfo` (renamed))   |
+| Original namespace `global (window)` | New namespace `pages.appButton`  |
+| - | - |
+| `registerAppButtonClickHandler` | `pages.appButton.onClick` (renamed)
+| `registerAppButtonHoverEnterHandler` | `pages.appButton.onHoverEnter` (renamed)
+| `registerAppButtonHoverLeaveEnter` | `pages.appButton.onHoverLeave` (renamed)
+| `FrameContext` interface | `pages.appButton.FrameInfo` (renamed) |
 
 ##### *dialog* namespace
 
 The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are renamed:
 
-| Original namespace `tasks`       | New namespace `dialog`                                                                               |
-| -------------------------------- | ---------------------------------------------------------------------------------------------------- |
-| `tasks.startTask`                | `dialog.url.open`, `dialog.url.bot.open`, `dialog.adaptiveCard.open`, `dialog.adaptiveCard.bot.open` |
-| `tasks.submitTask`               | `dialog.url.submit` (renamed)                                                                        |
-| `tasks.updateTask`               | `dialog.update` (renamed)                                                                            |
-| `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed)                                                                   |
-| `tasks.TaskInfo` interface       | `dialog.DialogInfo` (renamed)                                                                        |
+| Original namespace `tasks` | New namespace `dialog`  |
+| - | - |
+| `tasks.startTask` | `dialog.url.open`, `dialog.url.bot.open`, `dialog.adaptiveCard.open`, `dialog.adaptiveCard.bot.open` |
+| `tasks.submitTask` | `dialog.url.submit` (renamed) |
+| `tasks.updateTask` | `dialog.update` (renamed) |
+| `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
+| `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
 Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
 
@@ -313,12 +313,12 @@ Additionally, this capability is split into two main subcapabilities, `dialog.ur
 
 To generalize the TeamsJS library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
 
-| Original namespace `global (window)` | New namespace `teamsCore`               |
-| ------------------------------------ | --------------------------------------- |
-| `enablePrintCapability`              | `teamsCore.enablePrintCapability`       |
-| `print`                              | `teamsCore.print`                       |
-| `registerOnLoadHandler`              | `teamsCore.registerOnLoadHandler`       |
-| `registerBeforeUnloadHandler`        | `teamsCore.registerBeforeUnloadHandler` |
+| Original namespace `global (window)` | New namespace `teamsCore`  |
+| - | - |
+| `enablePrintCapability` | `teamsCore.enablePrintCapability`
+| `print` | `teamsCore.print`
+| `registerOnLoadHandler` | `teamsCore.registerOnLoadHandler`
+| `registerBeforeUnloadHandler` | `teamsCore.registerBeforeUnloadHandler`
 
 #### Updates to the *Context* interface
 
@@ -328,52 +328,52 @@ A new property `app.Context.app.host.name` is added to enable tabs to differenti
 
 You can also visualize the changes by reviewing the `transformLegacyContextToAppContext` function in the [TeamsJS version 2.x.x source](https://github.com/OfficeDev/microsoft-teams-library-js/blob/main/packages/teams-js/src/public/app.ts)  (*app.ts* file).
 
-| Original name in `Context` interface | New location in `app.Context`                 |
-| ------------------------------------ | --------------------------------------------- |
-| `appIconPosition`                    | `app.Context.app.iconPositionVertical`        |
-| `appLaunchId`                        | *NOT IN TeamsJS v.2.0*                        |
-| `appSessionId`                       | `app.Context.app.sessionId`                   |
-| `channelId`                          | `app.Context.channel.id`                      |
-| `channelName`                        | `app.Context.channel.displayName`             |
-| `channelRelativeUrl`                 | `app.Context.channel.relativeUrl`             |
-| `channelType`                        | `app.Context.channel.membershipType`          |
-| `chatId`                             | `app.Context.chat.id`                         |
-| `defaultOneNoteSectionId`            | `app.Context.channel.defaultOneNoteSectionId` |
-| `entityId`                           | `app.Context.page.id`                         |
-| `frameContext`                       | `app.Context.page.frameContext`               |
-| `groupId`                            | `app.Context.team.groupId`                    |
-| `hostClientType`                     | `app.Context.app.host.clientType`             |
-| `hostTeamGroupId`                    | `app.Context.channel.ownerGroupId`            |
-| `hostTeamTenantId`                   | `app.Context.channel.ownerTenantId`           |
-| `isCallingAllowed`                   | `app.Context.user.isCallingAllowed`           |
-| `isFullScreen`                       | `app.Context.page.isFullScreen`               |
-| `isMultiWindow`                      | `app.Context.page.isMultiWindow`              |
-| `isPSTNCallingAllowed`               | `app.Context.user.isPSTNCallingAllowed`       |
-| `isTeamArchived`                     | `app.Context.team.isArchived`                 |
-| `locale`                             | `app.Context.app.locale`                      |
-| `loginHint`                          | `app.Context.user.loginHint`                  |
-| `meetingId`                          | `app.Context.meeting.id`                      |
-| `osLocaleInfo`                       | `app.Context.app.osLocaleInfo`                |
-| `parentMessageId`                    | `app.Context.app.parentMessageId`             |
-| `ringId`                             | `app.Context.app.host.ringId`                 |
-| `sessionId`                          | `app.Context.app.host.sessionId`              |
-| `sourceOrigin`                       | `app.Context.page.sourceOrigin`               |
-| `subEntityId`                        | `app.Context.page.subPageId`                  |
-| `teamId`                             | `app.Context.team.internalId`                 |
-| `teamSiteDomain`                     | `app.Context.sharepointSite.domain`           |
-| `teamSitePath`                       | `app.Context.sharepointSite.path`             |
-| `teamSiteUrl`                        | `app.Context.sharepointSite.url`              |
-| `teamTemplateId`                     | `app.Context.team.templateId`                 |
-| `teamType`                           | `app.Context.team.type`                       |
-| `tenantSKU`                          | `app.Context.user.tenant.teamsSku`            |
-| `tid`                                | `app.Context.user.tenant.id`                  |
-| `upn`                                | `app.Context.user.userPrincipalName`          |
-| `userClickTime`                      | `app.Context.app.userClickTime`               |
-| `userFileOpenPreference`             | `app.Context.app.userFileOpenPreference`      |
-| `userLicenseType`                    | `app.Context.user.licenseType`                |
-| `userObjectId`                       | `app.Context.user.id`                         |
-| `userTeamRole`                       | `app.Context.team.userRole`                   |
-| NA                                   | `app.Context.app.host.name`                   |
+| Original name in `Context` interface | New location in `app.Context` |
+| - | - |
+| `appIconPosition` | `app.Context.app.iconPositionVertical` |
+| `appLaunchId`| *NOT IN TeamsJS v.2.0* |
+| `appSessionId` | `app.Context.app.sessionId`|
+| `channelId`| `app.Context.channel.id` |
+| `channelName`| `app.Context.channel.displayName`|
+| `channelRelativeUrl` | `app.Context.channel.relativeUrl`|
+| `channelType`| `app.Context.channel.membershipType` |
+| `chatId` | `app.Context.chat.id`|
+| `defaultOneNoteSectionId`| `app.Context.channel.defaultOneNoteSectionId`|
+| `entityId` | `app.Context.page.id`|
+| `frameContext` | `app.Context.page.frameContext`|
+| `groupId`| `app.Context.team.groupId` |
+| `hostClientType` | `app.Context.app.host.clientType`|
+| `hostTeamGroupId`| `app.Context.channel.ownerGroupId` |
+| `hostTeamTenantId` | `app.Context.channel.ownerTenantId`|
+| `isCallingAllowed` | `app.Context.user.isCallingAllowed`|
+| `isFullScreen` | `app.Context.page.isFullScreen`|
+| `isMultiWindow`| `app.Context.page.isMultiWindow` |
+| `isPSTNCallingAllowed` | `app.Context.user.isPSTNCallingAllowed`|
+| `isTeamArchived` | `app.Context.team.isArchived`|
+| `locale` | `app.Context.app.locale` |
+| `loginHint`| `app.Context.user.loginHint` |
+| `meetingId`| `app.Context.meeting.id` |
+| `osLocaleInfo` | `app.Context.app.osLocaleInfo` |
+| `parentMessageId`| `app.Context.app.parentMessageId`|
+| `ringId` | `app.Context.app.host.ringId`|
+| `sessionId`| `app.Context.app.host.sessionId` |
+| `sourceOrigin` | `app.Context.page.sourceOrigin`|
+| `subEntityId`| `app.Context.page.subPageId` |
+| `teamId` | `app.Context.team.internalId`|
+| `teamSiteDomain` | `app.Context.sharepointSite.domain`|
+| `teamSitePath` | `app.Context.sharepointSite.path`|
+| `teamSiteUrl`| `app.Context.sharepointSite.url` |
+| `teamTemplateId` | `app.Context.team.templateId`|
+| `teamType` | `app.Context.team.type`|
+| `tenantSKU`| `app.Context.user.tenant.teamsSku` |
+| `tid`| `app.Context.user.tenant.id` |
+| `upn` | `app.Context.user.userPrincipalName` |
+|`userClickTime`| `app.Context.app.userClickTime`|
+| `userFileOpenPreference` | `app.Context.app.userFileOpenPreference` |
+| `userLicenseType`| `app.Context.user.licenseType` |
+| `userObjectId` | `app.Context.user.id`|
+| `userTeamRole` | `app.Context.team.userRole`|
+| NA | `app.Context.app.host.name`|
 
 ## Updating to TeamsJS version 2.0
 
