@@ -309,7 +309,7 @@ Azure Static Web Apps.
       resourceId: ${{AZURE_STATIC_WEB_APPS_RESOURCE_ID}}
     writeToEnvironmentFile:
       deploymentToken: SECRET_TAB_SWA_DEPLOYMENT_TOKEN
-
+```
 
 ### script
 
