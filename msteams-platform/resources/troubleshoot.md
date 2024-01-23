@@ -27,7 +27,7 @@ If you aren't seeing your content in the tab view, it could be:
 
 ### Changes to my web app aren't reflected in its Teams tab
 
-If you experience consistent or intermittent caching issues where updates to your web app aren't appearing when it's hosted within a Teams tab, check your server cache settings and use [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) headers to ensure your desired client caching behavior.
+If you experienced consistent or intermittent caching issues where updates to your web app aren't appearing when it's hosted within a Teams tab, check your server cache settings and use [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) headers to ensure your desired client caching behavior.
 
 ### The Save button isn't enabled on the settings dialog
 
@@ -91,7 +91,7 @@ Common reasons for manifest read errors:
 
 * Invalid JSON. Use an IDE such as [Visual Studio Code](https://code.visualstudio.com) or [Visual Studio](https://www.visualstudio.com/vs/) that automatically validates the JSON syntax.
 * Encoding issues. Use UTF-8 for the *manifest.json* file. Other encodings, specifically with the BOM, may not be readable.
-* Malformed .zip package. The *manifest.json* file must be at the top level of the .zip file. Note that default Mac file compression might place the *manifest.json* in a subdirectory, which won't properly load in Microsoft Teams.
+* Malformed .zip package. The *manifest.json* file must be at the top level of the .zip file. Default Mac file compression might place the *manifest.json* in a subdirectory, which won't properly load in Microsoft Teams.
 
 ### Another extension with same ID exists
 
