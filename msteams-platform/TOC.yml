@@ -257,7 +257,7 @@
           - name: Deploy to the cloud
             href: toolkit/toolkit-v4/deploy-vs.md            
     - name: Teams Toolkit CLI
-      href: toolkit/TeamsFx-CLI.md
+      href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
       - name: Overview
@@ -638,7 +638,7 @@
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
     displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
-- name: Build cards and task modules
+- name: Build cards and dialogs
   items:
   - name: Overview
     href: task-modules-and-cards/cards-and-task-modules.md
@@ -680,17 +680,17 @@
         displayName: Sequential Workflows
       - name: Up to date cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
-  - name: Build task modules
+  - name: Build dialogs
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
-    - name: Invoke and dismiss task modules
+    - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
-      displayName: JavaScript task modules, keyboard and accessibility guidelines, module sizing, css
-    - name: Use task modules in tabs
+      displayName: JavaScript dialogs (task modules), keyboard and accessibility guidelines, module sizing, css
+    - name: Use dialogs in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
       displayName: payload
-    - name: Use task modules from bots
+    - name: Use dialogs from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Add authentication
   items:

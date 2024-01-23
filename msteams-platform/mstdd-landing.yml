@@ -41,13 +41,16 @@ landingContent:
 #        url: ~/concepts/device-capabilities/browser-device-permissions.md
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
-#      - text: Adaptive Cards overflow menu
-#        url: ~/task-modules-and-cards/cards/cards-format.md
+
 
 - title: What's new
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Use / to invoke message extensions from command box in the new Teams client
+        url: messaging-extensions/build-bot-based-message-extension.md
+      - text: Teams Toolkit command line interface v3
+        url: toolkit/Teams-Toolkit-CLI.md     
       - text: Apps for Teams meetings are available in Department of Defense (DOD)
         url: messaging-extensions/build-bot-based-plugin.md
       - text: Incoming Webhooks are available in GCC-High
@@ -62,12 +65,8 @@ landingContent:
         url:  bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
       - text: Extend an action-based Teams message extension across Microsoft 365
         url:  m365-apps/extend-m365-teams-message-extension.md
-      - text: Use captureImage API to capture an image or select media from the gallery for mobile clients
-        url: concepts/device-capabilities/media-capabilities.md
       - text: Teams App Test Tool streamlines the debug process of bot apps
         url: toolkit/debug-your-Teams-app-test-tool.md
-      - text: Build bot-based message extension plugin
-        url: messaging-extensions/build-bot-based-plugin.md
 
     - linkListType: reference
       links:
