@@ -204,7 +204,7 @@ items:
 
        1. Press **F5** to run the project. You can run the project using Visual Studio or .NET in the appropriate folder.
     
-       A webpage appears with a message, **Your bot is ready!**
+          A webpage appears with a message, **Your bot is ready!**
 
            :::image type="content" source="~/assets/images/adaptive-cards/bot-home-page.png" alt-text="Screenshot shows the webpage that displays that your bot is ready."::: 
 
