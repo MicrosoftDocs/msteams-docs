@@ -54,7 +54,7 @@ groups:
     title: Visual Studio
 - id: teams-toolkit-platform
   title: Teams Toolkit platform
-  prompt: Select the tool version to begin. We recommend you to use Teams Toolkit v5 to build your Teams app.
+  prompt: Select the tool version to begin. We recommend using Teams Toolkit v5 to build your Teams app.
   pivots:
   - id: visual-studio-code-v5
     title: Version 5
