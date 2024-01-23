@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Debug your bot using Teams App Test Tool
+title: Debug your AI chat bot using Teams App Test Tool
 metadata:
-  title: Debug your bot using Teams App Test Tool
-  description: With this learning module, you learn how to emulate the Teams experience for your bot in Teams App Test Tool.
+  title: Debug your AI chat bot using Teams App Test Tool
+  description: With this learning module, you learn how to emulate the Teams experience for your AI chat bot in Teams App Test Tool.
   audience: Developer
   level: Advanced
   ms.date: 10/21/2021
@@ -18,7 +18,7 @@ items:
 
     > [!NOTE]
     >
-    > * Teams App Test Tool is available only in the latest prerelease version of the Teams Toolkit.
+    > * Teams App Test Tool is available only in the Teams Toolkit v5.4.0.
     > * Teams App Test Tool is supported only for desktop and web clients.
 
     This step-by-step guide helps you to build AI chat bot using Teams Toolkit and debug AI chat bot with the Test Tool. You'll see the following output after you've completed this guide, where the user can access and use the AI chat bot:
@@ -33,29 +33,10 @@ items:
    | Install | For using... |
    | --- | --- |
    | [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or CSharp build environments. Use the latest version. |
-   | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use pre-release version of Teams Toolkit.|
+   | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5.4.0. For more information, see [install Teams Toolkit](/microsoftteams/platform/toolkit/install-teams-toolkit?tabs=vscode&pivots=visual-studio-code-v5#install-teams-toolkit-for-visual-studio-code).|
    | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-   | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
    | [OpenAI](https://openai.com/api/) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
    | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
-
-   ## Prepare development environment
-
-   After you've installed the required tools, set up the development environment.
-
-   ### Install the pre-release version of Teams Toolkit
-
-   The Teams Toolkit for Visual Studio Code extension is available in a pre-release version. To install a Teams Toolkit pre-release version, follow these steps:
-
-   1. Open **Visual Studio Code**.
-
-   1. Select **Extensions** :::image type="icon" source="~/toolkit/toolkit-v4/images/extension icon-v4.png" border="false"::: from the Visual Studio Code activity bar.
-
-   1. Enter **Teams Toolkit** in the search box.
-
-   1. On the Teams Toolkit page, select the dropdown arrow next to **Install**.
-
-   1. Select **Install Pre-Release Version**.
    
 - title: Create project workspace for your AI chat bot app
   durationInMinutes: 1
@@ -127,7 +108,7 @@ items:
     
     :::image type="content" source="../msteams-platform/assets/images/test-tool/source-code.png" alt-text="Screenshot shows the Teams Toolkit sample bot folder Structure.":::
     
-    | Folder name | Contents |
+    | Folder or file name | Contents |
     | --- | --- |
     | `env/.env.testtool.user` |Configuration file for local environment used by `teamsapp.testtool.yml` to customize the provisioning and deployment rules.  |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
@@ -140,27 +121,7 @@ items:
 - title: Build and run your AI chat bot app
   durationInMinutes: 1
   content: |
-    After you set up your project workspace with Teams Toolkit, build your AI chat bot project. Ensure that you've signed in to your Microsoft 365 account.
-
-    ## Sign in to your Microsoft 365 account
-
-    If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
-
-    1. Open **Visual Studio Code**.
-
-    1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/icons/vsc-toolkit.png" border="false"::: icon in the sidebar.
-
-    1. Select **Sign in to M365**. Your default web browser opens to allow you to sign in to the account.
-
-    1. Sign in to your Microsoft 365 account using your credentials.
-
-    1. Close the browser when prompted and return to Visual Studio Code.
-
-    1. Return to Teams Toolkit within Visual Studio Code.
-
-        :::image type="content" source="../msteams-platform/assets/images/test-tool/sideload.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
-
-    Now you're ready to build the app and debug.
+    After you set up your project workspace with Teams Toolkit, build your AI chat bot project.
 
     ## Create Open AI key and Endpoint for your AI chat bot
 
@@ -283,7 +244,7 @@ items:
       | Category | Activity | Handler |
       | --- | --- | --- |
       | Trigger Installation Update Activity | Install bot <br><br><br> Uninstall bot | `onInstallationUpdate` <br> `onInstallationUpdateAdded` <br><br> `onInstallationUpdate` <br> `onInstallationUpdateRemove`|
-      | Trigger Conversation Update Activity | Add user <br><br> Add bot <br><br> Add channel | `onMembersAdded`<br><br> `onTeamsMembersAddedEvent` <br><br> `onTeamsChannelRenamedEvent` |
+      | Trigger Conversation Update Activity | Add user <br><br> Add bot <br><br> Add channel | `onMembersAdded`or `onTeamsMembersAddedEvent` <br><br> `onMembersAdded` or `onTeamsMembersAddedEvent` <br><br> `onTeamsChannelCreatedEvent` |
       | | Remove user <br><br><br> Remove bot <br><br><br> Remove channel <br><br> Remove team | `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onTeamsChannelDeletedEvent` <br><br> `onTeamsTeamDeletedEvent` |
       | | Rename channel <br><br> Rename team | `onTeamsChannelRenamedEvent` <br><br> `onTeamsTeamRenamedEvent` |
 
