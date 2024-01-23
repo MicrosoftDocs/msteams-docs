@@ -176,7 +176,7 @@ items:
          * Replace `"ConnectionName"` to your bot's Name.
          * Replace `"ApplicationBaseUrl"` to the ngrok or dev tunnel domain name.
          
-        :::image type="content" source="~/assets/images/adaptive-cards/appsettings-json.png" alt-text="Screenshot of Visual Studio displaying appsettings.json file.":::
+           :::image type="content" source="~/assets/images/adaptive-cards/appsettings-json.png" alt-text="Screenshot of Visual Studio displaying appsettings.json file.":::
     
     1. Go to the **manifest.json** file in the cloned repository. 
 
@@ -219,10 +219,10 @@ items:
        * outline.png
        * color.png 
 
-       :::image type="content" source="./assets/images/adaptive-cards/zip.png" alt-text="Screeenshot shows the manifest zip file.":::
+          :::image type="content" source="./assets/images/adaptive-cards/zip.png" alt-text="Screeenshot shows the manifest zip file.":::
 
-        > [!NOTE]
-        > The `manifest.zip` must not contain any additional folders in it. It must have **manifest** json source file, **color** icon, and **outline** icon inside the zip folder.
+          > [!NOTE]
+          > The `manifest.zip` must not contain any additional folders in it. It must have **manifest** json source file, **color** icon, and **outline** icon inside the zip folder.
 
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
