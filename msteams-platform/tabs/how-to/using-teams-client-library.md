@@ -293,7 +293,7 @@ The `pages` namespace includes functionality for running and navigating webpages
 | `registerAppButtonClickHandler` | `pages.appButton.onClick` (renamed)
 | `registerAppButtonHoverEnterHandler` | `pages.appButton.onHoverEnter` (renamed)
 | `registerAppButtonHoverLeaveEnter` | `pages.appButton.onHoverLeave` (renamed)
-| `FrameContext` interface | `pages.appButton.FrameInfo` (renamed)) |
+| `FrameContext` interface | `pages.appButton.FrameInfo` (renamed) |
 
 ##### *dialog* namespace
 
