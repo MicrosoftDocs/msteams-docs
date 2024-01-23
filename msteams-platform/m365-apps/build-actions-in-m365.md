@@ -10,6 +10,10 @@ ms.subservice: m365apps
 
 # Build Actions in Microsoft 365
 
+> [!NOTE]
+>
+> Actions are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+
 When you create an app ensure that you define user intent, determine the object to perform the action, and construct the corresponding handler that facilitates task completion for the user.
 
 To build Actions for your app, follow these steps:
@@ -40,12 +44,9 @@ The following is an app manifest example for Actions that can be triggered on fi
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
   "manifestVersion": "devPreview",
-  .
-  .
-  .
+
   "actions": [
     {
-      // Defining Action to open a personal tab
       "id": "relatedTasks",
       "displayName": "Related tasks",
       "intent": "custom",
@@ -90,15 +91,6 @@ async setItemId() {
 }
 ```
 
-| &nbsp; | Name | Description |
-| --- | --- | --- |
-| &nbsp; | `actionObjects` | Array of corresponding action objects. |
-| &nbsp; | `itemId` | The app receives the ID as the content and uses it to query the Microsoft Graph. |
-
-## Access content through Graph API
-
-After obtaining the `itemId` of the triggering content, you can use the Graph API to read or modify the content, facilitating task completion for your users.
-
 ```javascript
 app.getContext().then((context: app.Context) => {
     const actionInfo = context.actionInfo;
@@ -117,23 +109,23 @@ app.getContext().then((context: app.Context) => {
 })
 ```
 
-### Enable Actions in Microsoft Admin Center
+| &nbsp; | Name | Description |
+| --- | --- | --- |
+| &nbsp; | `actionObjects` | Array of corresponding action objects. |
+| &nbsp; | `itemId` | The app receives the ID as the content and uses it to query the Microsoft Graph. |
+| &nbsp; | `actionInfo` | Definition required. |
 
-> [!NOTE]
-> Actions are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+## Access content through Graph API
 
-To use an app with Actions in your tenant, an admin must upload the app package to the Microsoft Admin Center as follows:
+After obtaining the `itemId` of the triggering content, you can use the [Graph API](/graph/api/driveitem-get?view=graph-rest-1.0&tabs=http) to read or modify the content, facilitating task completion for your users.
 
-1. Go to [Microsoft Admin Center](https://admin.microsoft.com/AdminPortal#/homepage).
+**HTTP request**
 
-1. Select **Settings** > **Integrated Apps** > **Upload custom apps**.
-
-Follow instructions to preinstall your app for entire organization or user groups within your tenant.
+```http
+GET /users/{user-id}/drive/items/{item-id}
+```
 
 ## Sideload your app using Teams Toolkit
-
-> [!NOTE]
-> Actions are available in public developer preview, ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users to experience Actions in Microsoft 365 app.
 
 After you update the app package with the required information, you're ready to test your Actions in the Teams Toolkit. To initiate debugging, select the **F5** key.
 
@@ -144,6 +136,19 @@ A browser window opens with Microsoft 365 home page and your app is available un
 You can now preview your Actions in the Microsoft 365 home page, right-click a file that is supported by your Actions. Actions appear in the context menu, for example **Add todo task**.
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
+
+## Preinstall Actions for users in Microsoft365 Admin Center
+
+> [!NOTE]
+> Actions are available in public developer preview, ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users to experience Actions in Microsoft 365 app.
+
+To use an app with Actions in your tenant, an admin must upload the app package with devPreview manifest to the Microsoft Admin Center as follows:
+
+1. Go to [Microsoft Admin Center](https://admin.microsoft.com/AdminPortal#/homepage).
+
+1. Select **Settings** > **Integrated Apps** > **Upload custom apps**.
+
+Follow instructions to preinstall your app for entire organization or user groups within your tenant.
 
 ## Code sample
 

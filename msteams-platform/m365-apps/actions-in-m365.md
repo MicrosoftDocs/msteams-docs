@@ -46,7 +46,7 @@ Create app icons and display names in a context menu for Actions. A single actio
 
 :::image type="content" source="images/app-icon-context-menu.png" alt-text="The screenshot shows the app icon in context menu.":::
 
-* Start with the intent name, typically represented by a verb, such as `Open` or `Add to` and followed by a term that describes your app.
+* Start with the intent name, typically represented by a verb, such as `Open` or `Add to` and followed by a term that describes your app or what your action does.
 
 * Ensure that the first letter is capitalized. When using a brand name, only the first letter of the brand name should be capitalized.
 
@@ -88,7 +88,7 @@ The following images are an example of flat list and grouped intents in a contex
 
 > [!NOTE]
 >
-> The Microsoft 365 platform determines the placement of Actions, and there’s no requirement for intents to be grouped or for custom intents to be ungrouped.
+> The Microsoft 365 platform determines the placement of Actions.
 
 ## Next step
 
