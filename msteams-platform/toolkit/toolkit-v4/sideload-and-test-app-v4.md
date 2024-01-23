@@ -12,9 +12,8 @@ ms.date: 03/03/2022
 
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+> * We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> * Teams Toolkit v4 extension will soon be deprecated.
 
 After adding API connection, you can test API connection in the Teams Toolkit local environment and deploy your application to the cloud. In CI/CD pipeline, after set-up with different platform, you need to create Azure service principal to provision and deploy resources.
 

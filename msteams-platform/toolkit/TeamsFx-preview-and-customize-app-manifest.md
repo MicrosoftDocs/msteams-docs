@@ -11,6 +11,11 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Customize app manifest
 
+> [!IMPORTANT]
+>
+> * We've introduced the [Teams Toolkit v5](teams-toolkit-fundamentals.md#teams-toolkit-overview) extension within Visual Studio Code. This version comes to you with many new app development features.
+> * Teams Toolkit v4 extension will soon be deprecated.
+
 ::: zone pivot="visual-studio-code-v5"
 
 App manifest (previously called Teams app manifest) describes how your app integrates into Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
@@ -169,10 +174,6 @@ To preview values for all the environment, you can hover over the placeholder. I
 ::: zone-end
 
 ::: zone pivot="visual-studio-code-v4"
-> [!IMPORTANT]
->
-> * We've introduced the [Teams Toolkit v5](teams-toolkit-fundamentals.md#teams-toolkit-overview) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
-> * Teams Toolkit v4 extension will soon be deprecated.
 
 ## Customize app manifest for Visual Studio Code
 

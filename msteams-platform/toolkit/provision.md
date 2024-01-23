@@ -13,6 +13,11 @@ zone_pivot_groups: teams-toolkit-platform
 
 TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
 
+> [!IMPORTANT]
+>
+> * We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features.
+> * Teams Toolkit v4 extension will soon be deprecated.
+
 ::: zone pivot="visual-studio-code-v5"
 
 ## Provision using Teams Toolkit in Microsoft Visual Studio Code
@@ -442,12 +447,6 @@ You can follow the steps to add environment variables to the .env files to use a
 ::: zone-end
 
 ::: zone pivot="visual-studio-code-v4"
-
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
 
 TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
 
