@@ -206,7 +206,7 @@ items:
     
           A webpage appears with a message, **Your bot is ready!**
 
-           :::image type="content" source="~/assets/images/adaptive-cards/bot-home-page.png" alt-text="Screenshot shows the webpage that displays that your bot is ready."::: 
+           :::image type="content" source="~/assets/images/adaptive-cards/bot-ready.png" alt-text="Screenshot shows the webpage that displays your bot is ready."::: 
 
 
 - title: Configure and upload the app in Teams
