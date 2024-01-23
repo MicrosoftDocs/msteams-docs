@@ -80,7 +80,7 @@ You can offer a free trial version of your app to get more customers to try it. 
 :::row-end:::
 :::row:::
     :::column:::
-        image type="content" source="~/assets/images/saas-offer/pricing-in-app-purchases.png" alt-text="Diagram represents the free app.":::
+        :::image type="content" source="../../../../assets/images/saas-offer/pricing-in-app-purchases.png" alt-text="Diagram represents the free app.":::
     :::column-end:::
     :::column span="2":::
 
