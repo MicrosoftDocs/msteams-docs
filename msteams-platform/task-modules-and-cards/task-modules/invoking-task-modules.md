@@ -12,7 +12,7 @@ ms.date: 01/29/2023
 Dialogs (referred as task modules in TeamsJS v1.x) can be invoked from tabs, bots, or deep links. The response can be either in HTML, JavaScript, or as an Adaptive Card. There's a numerous flexibilities in terms of how dialogs are invoked and how to deal with the response of the user's interaction. The following table summarizes how this works.
 
 > [!NOTE]
-> The *task module* concept has been renamed to ***dialog*** and the *tasks* capability (namespace) has been replaced by the `dialog` capability for use in both HTML dialogs (since TeamsJS v.2.0.0) and Adaptive Card-based dialogs (starting with TeamsJS v.2.8.0 See [notes on Dialog](./../../m365-apps/teamsjs-support-m365.md#dialog) for more information.
+> The `task` capability is replaced with `dialog` capability in both HTML-based dialogs (starting with TeamsJS v.2.0.0) and Adaptive Card-based dialogs (starting with TeamsJS v.2.8.0). For more information, see [dialog](./../../m365-apps/teamsjs-support-m365.md#dialog).
 
 | Invoked using | Dialog with HTML or JavaScript | Dialog with Adaptive Card |
 | --- | --- | --- |
@@ -34,11 +34,11 @@ The base `DialogInfo` object contains basic metadata for a dialog:
 
 ### UrlDialogInfo object
 
-The `UrlDialogInfo` object for HTML-based dialogs extends the *DialogInfo* object and also includes:
+The `UrlDialogInfo` object for HTML-based dialogs extends the `DialogInfo` object and also includes:
 
 | Attribute | Type | Description |
 | --- | --- | --- |
-| `url` | string | This attribute is the URL of the page loaded as an `<iframe>` inside the dialog. The URL's domain must be in the app's [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in your app's manifest. |
+| `url` | string | This attribute is the URL of the page loaded as an `<iframe>` inside the dialog. The URLs domain must be in the app's [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in your app's manifest. |
 
 ### AdaptiveCardDialogInfo object
 
@@ -75,7 +75,7 @@ The next section provides examples of embedding dialogs in a YouTube video and a
 
 ## CSS for HTML or JavaScript dialogs
 
-HTML or JavaScript-based dialogs have access to the entire area of the dialog below the header. While that offers a great deal of flexibility, if you want padding around the edges to align with the header elements and avoid unnecessary scroll bars, you'll need to specify the CSS. The next sections provide examples for common use cases.
+HTML or JavaScript-based dialogs have access to the entire area of the dialog below the header. While that offers a great deal of flexibility, if you want padding around the edges to align with the header elements and avoid unnecessary scroll bars, you must specify the CSS. The next sections provide examples for common use cases.
 
 ### Example 1: YouTube video
 
@@ -151,7 +151,7 @@ The next section provides details on invoking your card using Adaptive Card or A
 
 Depending on how you're invoking your card, you'll need to use either an Adaptive Card or an Adaptive Card bot card attachment (an Adaptive Card wrapped in an `attachment` object).
 
-If you're invoking from a tab, the use an Adaptive Card:
+If you're invoking from a tab, use an Adaptive Card:
 
 ```json
 {
@@ -198,7 +198,7 @@ The next section provides details on dialog accessibility.
 
 ## Keyboard and accessibility guidelines
 
-With HTML or JavaScript-based dialogs, you'll want to ensure your customers can interact with your dialog with a keyboard. Screen reader programs also depend on the ability to navigate using the keyboard. Most important are the following considerations:
+With HTML or JavaScript-based dialogs, you must ensure that users can interact with your dialog with a keyboard. Screen reader programs also depend on the ability to navigate using the keyboard. Following are the important considerations:
 
 * Using the [tabindex attribute](https://developer.mozilla.org/docs/Web/HTML/Global_attributes/tabindex) in your HTML tags to control which elements can be focused. Also, use tabindex attribute to identify where it participates in sequential keyboard navigation usually with the <kbd>Tab</kbd> and <kbd>Shift-Tab</kbd> keys.
 * Handling the <kbd>Esc</kbd> key in the JavaScript for your dialog. The following code provides an example of how to handle the <kbd>Esc</kbd> key:
