@@ -101,7 +101,7 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 1. Select **Create a new scene**.
    A new window appears to select the templates.
 
-1. From the **Select a template to get started** window, select **Blank Scene** template .
+1. From the **Select a template to get started** window, select **Blank Scene** template.
 
    Alternatively, you can select **Blank Scene** under **Create a scene**.
 
@@ -120,7 +120,7 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 
 1. To add the image to the environment, select **Add images**.
 
-    :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the Add images option highlighted in red in scene studio.":::
+    :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the option to add images to the scene in scene studio.":::
 
 1. Select **Choose File**.
 1. Select the image you need to add in the scene.
@@ -164,7 +164,7 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 
     :::image type="content" source="~/assets/images/apps-in-meetings/preview-teams.png" alt-text="Screenshot shows the options to preview the scene in teams.":::
 
-   Teams page appears to add the scene only app you have created in Scene studio.
+   Teams page appears to add the scene only app you've created in Scene studio.
 
 1. Select **Add**.
 
@@ -182,7 +182,11 @@ Join the Teams meeting and follow the steps to test the Custom Together Mode:
 
 1. In Teams meeting window, select **View** and select **Together Mode** from the drop-down list.
 
+    :::image type="content" source="~/assets/images/apps-in-meetings/view-together-mode.png" alt-text="Screenshot shows the options select together mode in teams meeting.":::
+
 1. In the **Select a scene** window, select the scene you've added to Teams from Scene studio.
+
+    :::image type="content" source="~/assets/images/apps-in-meetings/select-scene.png" alt-text="Screenshot shows the options to apply together mode in teams meeting.":::
 
 1. Select **Assign seats** to assign specific seats for meeting participants.
 
@@ -207,9 +211,13 @@ To share a scene, follow the steps:
 
 1. From the **Save** drop-down, select **Share**.
 
+    :::image type="content" source="~/assets/images/apps-in-meetings/share-scene-studio.png" alt-text="Screenshot shows the option to share a scene in scene studio.":::
+
 1. In **Share the scene app** window, select **Share Test together mode with everyone** toggle to create a shareable link of your scenes to share for others to use.
 
 1. Select **Copy**.
+
+    :::image type="content" source="~/assets/images/apps-in-meetings/share-scene-copy-link.png" alt-text="Screenshot shows the option to copy the link and share a scene in scene studio.":::
 
     The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
 
@@ -219,7 +227,7 @@ To export a scene, follow the steps:
 1. Select **Export** from the dropdown list to retrieve the scene package.
    A .zip file is downloaded. The .zip file contains the scene package that includes a scene.json and the PNG assets used to build a scene. </br>
 
-   :::image type="content" source="../assets/images/apps-in-meetings/build-a-scene.png" alt-text="Screenshot shows the Export option to export a scene.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/export-scene-studio.png" alt-text="Screenshot shows the export option to export a scene in scene studio.":::
 
 To delete a scene you created, select **Delete scene**.
 
@@ -230,7 +238,7 @@ You can import the scene package, which is a .zip file retrieved from the Scene 
 1. Go to Scene studio.
 1. Select **Import a scene**.
 
-   :::image type="content" source="../assets/images/apps-in-meetings/scene-zip-file.png" alt-text="Screenshot shows the Import a scene option highlighted in red in scene studio.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/import-scene.png" alt-text="Screenshot shows the option to import a scene in scene studio.":::
 
 1. Select the scene package file you wish to import.
    This functionality helps you to unwrap a scene package and enhance the scene.
