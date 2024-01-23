@@ -36,14 +36,14 @@ A dialog includes the following as shown in the previous image:
 
 1. Your app's [`color` icon](~/resources/schema/manifest-schema.md#icons).
 2. Your app's [`short` name](~/resources/schema/manifest-schema.md#name).
-3. The dialog's title specified in the `title` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object).
+3. The dialog's title specified in the `title` property of the [DialogInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object).
 4. The dialog's close or cancel button. If the user selects this button, your app receives an `err` event. For more information, see [example for submitting the result of a dialog](~/task-modules-and-cards/task-modules/task-modules-tabs.md#example-of-submitting-the-result-of-a-dialog).
 
     > [!NOTE]
     > It is currently not possible to detect the `err` event when a dialog is invoked from a bot.
 
-5. The blue rectangle is where your web page appears if you're loading your own web page using the `url` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object). For more information, see [dialog sizing](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-sizing).
-6. If you're displaying an Adaptive Card using the `card` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object) the padding is added for you. For more information, see [dialog CSS for HTML or JavaScript dialogs](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialog-css-for-html-or-javascript-dialogs).
+5. The blue rectangle is where your web page appears if you're loading your own web page using the `url` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object). For more information, see [Invoke and dismiss dialogs](~/task-modules-and-cards/task-modules/invoking-task-modules.md).
+6. If you're displaying an Adaptive Card using the `card` property of the [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object) the padding is added for you. For more information, see [CSS for HTML or JavaScript dialogs](~/task-modules-and-cards/task-modules/invoking-task-modules.md#css-for-html-or-javascript-dialogs).
 7. Adaptive Card buttons render after you select **Sign up**. When using your own page, create your own buttons. By design, the primary button style (solid) is applied to the last root action in an Adaptive Card.  For all other actions, the default button style is applied.
 
 ## Next step
