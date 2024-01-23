@@ -10,6 +10,26 @@ ms.date: 06/05/2023
 
 # Tabs link unfurling and Stage View
 
+Microsoft Teams provides multiple methods for opening your app content in immersive canvas experiences. These canvases allow your users to embrace multi-tasking workflows inside Teams, collaborate with others directly in a Teams multi-window or complete focused work in an immersive Teams Stageview.
+
+There are three modes to open your app content:
+
+* Collaborative Stage View
+* Teams multi-window
+* Stage View modal
+
+## Collaborative Stage
+
+The Collaborative Stage mode allows multiple users to interact with your app simultaneously. It's ideal for collaborative tasks that require real-time interaction among team members.
+
+## Teams Window
+
+The Teams Window mode opens your app in a separate window within Teams. This mode is perfect for tasks that require a dedicated workspace but still need access to the Teams environment.
+
+## Stage Modal
+
+The Stage Modal mode provides an immersive, full-screen experience for your app. Use this mode when users need to focus on tasks without any distractions.
+
 Stage View is a user interface (UI) component that allows you to render content in a full screen within Teams or as a new window.
 
 > [!NOTE]
