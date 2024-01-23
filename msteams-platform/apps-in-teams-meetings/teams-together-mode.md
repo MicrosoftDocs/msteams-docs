@@ -49,7 +49,6 @@ To create a best scene, ensure that you follow the following practices:
 * Ensure that the images in final package mustn't exceed 1920 x 1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
 * Ensure that the maximum scene size is within 10 MB.
 * Ensure that the maximum size of each image is within 5 MB. A scene is a collection of multiple images. This limit is for each individual image.
-* From the right pane, select **Transparent** checkbox when an image is selected to indicate that the images are overlapping images in the scene.
 
 :::row:::
       :::image type="content" source="../assets/images/apps-in-meetings/build-scene.png" alt-text="Build scene using Scene studio." link="~/apps-in-teams-meetings/teams-together-mode.md#build-scene-using-scene-studio" border="false":::
@@ -89,9 +88,11 @@ Ensure to go through the following list while creating a scene:
 | **Y**-axis | The Y-axis points downwards. |
 | `zOrder` | The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. It determines the position of the sprite. For more information, see [example](#example). The sample uses the `zOrder`. |
 
-The following image shows each participant in a scene:
+The following images show each participant in a scene and elements of a scene:
 
-:::image type="content" source="../assets/images/apps-in-meetings/scene-design-studio.png" alt-text="Screenshot shows seven avatars representing the participants in scene studio.":::
+:::image type="content" source="~/assets/images/apps-in-meetings/scene-participant.png" alt-text="Screenshot shows representation of participants in a scene in scene studio." lightbox="~/assets/images/apps-in-meetings/scene-participant-view.png":::
+
+:::image type="content" source="~/assets/images/apps-in-meetings/scene-element.png" alt-text="Screenshot shows elements of a scene in scene studio." lightbox="~/assets/images/apps-in-meetings/scene-element-view.png":::
 
 To build a scene using the Scene studio in Teams Developer Portal, follow these steps:
 
@@ -102,6 +103,10 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 
 1. From the **Select a template to get started** window, select **Blank Scene** template .
 
+   Alternatively, you can select **Blank Scene** under **Create a scene**.
+
+    :::image type="content" source="~/assets/images/apps-in-meetings/create-new-scene.png" alt-text="Screenshot shows the options to create a new scene in scene studio." lightbox="~/assets/images/apps-in-meetings/create-new-scene-view.png":::
+
    You can select any template of your choice. **Blank Scene** allows you to create custom scenes.
 
     :::image type="content" source="../assets/images/apps-in-meetings/scene-template.png" alt-text="Screenshot shows the choices of templates for a scene in scene studio.":::
@@ -110,6 +115,8 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 
     You can select **Close** to toggle between closing or reopening the right pane.
    You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
+
+       :::image type="content" source="~/assets/images/apps-in-meetings/scene-name-toggle.png" alt-text="Screenshot shows the choices of templates for a scene in scene studio.":::
 
 1. To add the image to the environment, select **Add images**.
 
@@ -123,27 +130,45 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 
     :::image type="content" source="../assets/images/apps-in-meetings/image-alignment.png" alt-text="Screenshot shows the resize option to align the image in scene studio.":::
 
+1. From the right pane, select **Transparent** checkbox when an image is selected to indicate that the images are overlapping images in the scene.
+
 1. Select anywhere outside of the image to view the **Layers** in the right pane.
 1. In the **Layers** section, select **Participants**.
 
 1. Add the number of participants for the scene from the **Number of participants** box and select **Add**.
+
+    :::image type="content" source="~/assets/images/apps-in-meetings/add-during-meeting.png" alt-text="Screenshot shows the option to add participants to a scene in scene studio.":::
 
    You can drag the images of the participants around the scene and place them in the required position. You can resize them using the resize arrow. After the scene is shipped, the participant seat placements are replaced with actual participant's video streams.
 
 1. Select any participant image and select **Assign Spot** to assign role to the participant.
 
 1. Select **Meeting organizer** or **Presenter** role for the participant.
-   In a meeting, one participant must be assigned the role of a meeting organizer.
 
-    :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the Assign spot check box for the participant 3 in scene studio.":::
+    :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the assign spot check box for the participant 3 in scene studio.":::
+
+    In a meeting, one participant must be assigned the role of a meeting organizer.
+
+    :::image type="content" source="~/assets/images/apps-in-meetings/organizer-presenter.png" alt-text="Screenshot shows the assign spot section with information about assigning the spot of meeting organizer.":::
+
+   You can use **Bring forward**, **Send backward**, and **Order** options in the right pane to align the image and participant seats.
 
 1. Select **Save**.
 1. Select **View in Teams** to quickly test your scene in Teams.
+
+    :::image type="content" source="~/assets/images/apps-in-meetings/save-view-in-teams.png" alt-text="Screenshot shows the options to save the scene and view in teams.":::
+
    A scene only app is created and you can view the app and app package.json file in **Apps** page in the Teams Developer Portal. A screen opens in your Teams to add the scene app you've created.
 
 1. Select **Preview in Teams**.
+
+    :::image type="content" source="~/assets/images/apps-in-meetings/preview-teams.png" alt-text="Screenshot shows the options to preview the scene in teams.":::
+
    Teams page appears to add the scene only app you have created in Scene studio.
+
 1. Select **Add**.
+
+    :::image type="content" source="~/assets/images/apps-in-meetings/add-in-teams.png" alt-text="Screenshot shows the options to add the scene in teams.":::
 
 ## Test Custom Together Mode scenes in Teams
 
