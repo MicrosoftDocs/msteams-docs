@@ -643,7 +643,7 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ### CodeBlock in Adaptive Cards
 
-You can share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element in Teams. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. You can add action buttons to view the code in its source or in integrated development environments (IDEs) such as Visual Studio or Visual Studio Code.
+You can share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. You can add action buttons to view the code in its source or edit the code in integrated development environments (IDEs) such as Visual Studio or Visual Studio Code.
 
   :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
 
@@ -665,8 +665,8 @@ The `CodeBlock` element supports the following languages:
 
 > [!NOTE]
 >
-> * `CodeBlock` doesn't recognize languages like Dart, Fortran, or Apache.
 > * `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
+ * `CodeBlock` doesn't recognize languages like Dart, Fortran, or Apache.
 
 The following code shows an example of an Adaptive Card displaying a code snippet.
 
@@ -715,7 +715,7 @@ The `CodeBlock` element supports the following properties:
 | `language` | Enum | Yes | The language of the code snippet to be displayed in the Adaptive Card. |
 | `startLineNumber` | Number | No | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
 
-To render the newline character, `\n` as part of the code snippet in the Adaptive Card, ensure that it is escaped as `\\n` in the `codeSnippet` property. Otherwise, Teams renders the code after the `\n` in the next line of the card.
+To display the newline character `\n` as part of the code snippet in the Adaptive Card, ensure that it is escaped as `\\n` in the `codeSnippet` property. Else, Teams renders the code after the `\n` in the next line of the card.
 
 ### Limitations
 

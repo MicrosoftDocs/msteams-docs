@@ -27,7 +27,7 @@ Teams platform features that are available to all app developers.
 **2024 January**
 
 
-* ***January 30, 2024***: [Share code snippets as richly formatted Adaptive Cards with `CodeBlock`.](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)
+* ***January 30, 2024***: [Share code snippets as richly formatted Adaptive Cards with the CodeBlock property.](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)
 * ***January 19, 2024***: [Use / to invoke message extensions from command box in the new Teams client.](messaging-extensions/build-bot-based-message-extension.md)
 * ***January 04, 2024***: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 
