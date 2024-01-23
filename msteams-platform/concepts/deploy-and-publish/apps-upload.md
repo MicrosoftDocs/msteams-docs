@@ -20,11 +20,11 @@ You can upload Microsoft Teams apps without having to publish to your organizati
 >
 > * Custom app upload is possible only in Government Community Cloud (GCC) and isn't possible in GCC-High and Department of Defense (DOD).
 > * App installation is supported only on Teams desktop client.
-> * Uploading your messaging extension app multiple times displays more than one instance for messaging extensions.
+> * We recommend you to avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
 
 From January 31 2024, users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to the Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy). 
 
-If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through an direct link to a chat.
+If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through a direct link to a chat.
 
 
 ## Prerequisites
@@ -59,7 +59,7 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 
 If your app fails to upload or encounters any issues to upload, check the following options:
 
-1. Ensure that you've followed all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
+1. Ensure that you follow all the instructions for [creating your app package](../../concepts/build-and-test/apps-package.md).
 1. [Validate your app package](https://dev.teams.microsoft.com/appvalidation.html).
 1. Ensure your app manifest matches with the latest [schema](../../resources/schema/manifest-schema.md).
 
@@ -120,7 +120,7 @@ To remove app from Teams, follow the steps:
 
 1. Select **Remove** to remove your app.
 
-    :::image type="content" source="../../assets/images/publish-app/remove-app-teams.png" alt-text="Screenshot shows the option to select remove for an app from teams.":::
+    :::image type="content" source="../../assets/images/publish-app/remove-app-teams.png" alt-text="Screenshot shows the option to select remove option in teams.":::
 
 > [!NOTE]
 >
