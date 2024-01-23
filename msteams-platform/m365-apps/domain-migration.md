@@ -15,11 +15,15 @@ Microsoft’s cloud services that Teams apps use are hosted on multiple domains 
 
 ## Benefits of a consolidated domain
 
-Consolidating authenticated user-facing Microsoft experiences onto a single domain benefits all stakeholders in several ways. For end users, it streamlines the overall experience by reducing sign-in prompts, redirects, and delays when navigating across apps. For admins, it drastically reduces the complexity of managing permissions to help your tenant stay secure while enabling users to access the apps and services they need. For developers, it lays the foundation for better and tighter integration across the Microsoft ecosystem by streamlining development and improving performance of cross-app experiences.
+Consolidating authenticated user-facing Microsoft experiences onto a single domain benefits all stakeholders in several ways.
+
+* For end users, it streamlines the overall experience by reducing sign-in prompts, redirects, and delays when navigating across apps.
+* For admins, it drastically reduces the complexity of managing permissions to help your tenant stay secure while enabling users to access the apps and services they need.
+* For developers, it lays the foundation for better and tighter integration across the Microsoft ecosystem by streamlining development and improving performance of cross-app experiences.
 
 ## Domain changes for Teams apps extended across Outlook and Microsoft 365
 
-| **Old Domain** | **New Domain** |
+| **Existing Domain** | **New Domain** |
 | -------------- | -------------- |
 | *teams.microsoft.com* | *teams.cloud.microsoft* |
 | *outlook.microsoft.com* | *outlook.cloud.microsoft* |
@@ -34,7 +38,7 @@ Microsoft is dedicated to helping developers avoid their apps from losing critic
 2. Update your `x-frame-options` and Content Security Policy headers in your Teams app to allow your app to access the following new domains:
     1. *teams.cloud.microsoft*
 
-3. If you want to extend your Teams app across Outlook and Microsoft 365, along with the *teams.cloud.microsoft* domain, ensure you allow the following new domains: 
+3. If your Teams app is extended across Outlook and Microsoft 365, along with the *teams.cloud.microsoft* domain, ensure you allow the following new domains:
     1. *outlook.cloud.microsoft*
     2. *m365.cloud.microsoft*
 
