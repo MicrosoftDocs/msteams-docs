@@ -38,7 +38,7 @@ SaaS applications published in Microsoft commercial marketplace for purchase are
 > [!NOTE]
 > To create and publish your offer, you must have a commercial marketplace account in Partner Center.
 
-When creating a SaaS offer, you must determine the publishing option, specifically if you're selling through Microsoft or if you're managing transaction =s independently. You can select the publishing option that aligns with your requirements. Learn in detail about publishing options when [planning for a SaaS offer](include-saas-offer.md).
+When creating a SaaS offer, you must determine the publishing option, specifically if you're selling through Microsoft or if you're managing transaction independently. You can select the publishing option that aligns with your requirements. Learn in detail about publishing options when [planning for a SaaS offer](include-saas-offer.md).
 
 Here are some features you can integrate with the SaaS offer:
 

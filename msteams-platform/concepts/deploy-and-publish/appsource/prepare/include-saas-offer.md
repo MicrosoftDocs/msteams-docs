@@ -10,7 +10,7 @@ ms.date: 03/21/2023
 
 # Plan your SaaS offer
 
-Software as a Service (SaaS) applications can be purchased from Microsoft Teams Store and Microsoft AppSource. This article provides an overview of the features in an offer and assists in planning your offer. 
+Software as a Service (SaaS) applications can be purchased from Microsoft Teams Store and Microsoft AppSource. This article provides an overview of the features in an offer and helps planning your offer.
 
 :::row:::
    :::column:::
@@ -35,16 +35,16 @@ Software as a Service (SaaS) applications can be purchased from Microsoft Teams 
 
 Understanding the features of your SaaS offer is crucial in the planning process. Plan on the following features before creating an offer.
 
-* Publishing option
-* Offer details
-* Offer plan
-* Additional features
+* [Publishing option](#publishing-option)
+* [Offer details](#offer-details)
+* [Offer plan](#offer-plan)
+* [Additional features](#additional-features)
 
 ## Publishing option
 
 The initial step to create a SaaS offer is to determine the listing or publishing option, which decides how the offer is available in the marketplace. The listing option you select when creating the offer is available as a call-to-action button on the offer purchase landing page.
 
-YOu can select from one of the four listing options to can publish a SaaS offer:
+You can select from one of the four listing options to can publish a SaaS offer:
 
 * Sell through Microsoft
 * Free trials
@@ -74,13 +74,13 @@ If you decide not to sell through Microsoft, you can manage your transactions in
 
 **Free trials**
 
-You can offer a free trial version of your app to get more customers to try it. To encourage customers to buy the full version, you can limit the features in the trial version, such as allowing only a limited number of responses for a week, or setting a specific trial period.
+You can offer a free trial version of your app to get more customers to try it. To encourage customers to buy the full version, you can limit the features in the trial version. You can allow only a limited number of responses for a week or set a specific trial period.
 
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column:::
-        image type="content" source="../../../../assets/images/saas-offer/pricing-in-app-purchases.png" alt-text="Diagram represents the free app.":::
+        image type="content" source="~/assets/images/saas-offer/pricing-in-app-purchases.png" alt-text="Diagram represents the free app.":::
     :::column-end:::
     :::column span="2":::
 
@@ -109,7 +109,7 @@ You can further allow Microsoft to manage licenses on your behalf. If you select
 
 ## Offer details
 
-When planning on the information available on your offer's landing page, take into account the following key features. These information boost your offer's discoverability and usability.
+When planning on the information available on your offer's landing page, take into account the following key features. It helps boost your offer's discoverability and usability.
 
 * **Offer categories and industries**: Identify the primary and secondary categories for your offer. These categories determine the marketplace where your offer is published and help users identify your app.
 * **Offer details**: Design a distinctive logo, select relevant keywords, and write a compelling description to enhance your offer's discoverability and value.
@@ -119,7 +119,7 @@ When planning on the information available on your offer's landing page, take in
 
 ## Offer plan
 
-SaaS offers published through Microsoft must have at least one plan added. The plan features facilitate appropriate purchase options for the target users.
+SaaS offers published through Teams Store or AppSource must have at least one plan added. The plan features facilitate appropriate purchase options for the target users.
 
 ### Plan the subscription model
 
@@ -143,15 +143,15 @@ The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) def
 
 ## Additional features
 
-In addition to the basic and essential planning, you can provide additional features to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers.
+In addition to the basic and essential planning, you can provide more features to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers.
 
 ### Free trails
 
-When selling through Microsoft, you have the option to provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period.
+When selling through Microsoft, you can provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period.
 
 ### Test drive
 
-You can add test drive for your SaaS app. This provides access to the preconfigured environment of your app for fixed hours. For more information, see [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer).
+You can add test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer).
 
 ### Mobile version
 
