@@ -61,7 +61,9 @@ The `BotAdaptiveCardDialogInfo` object for bot-based Adaptive Card dialogs exten
 
 The next section specifies dialog sizing that enables the user to set the height and width of the dialog.
 
-The values of `DialogInfo.width` and `DialogInfo.height` set the height and width of the dialog in pixels. Depending on the size of the Team's window and screen resolution, these values might be reduced proportionally while maintaining aspect ratio.
+## Dialog sizing
+
+The values of `DialogInfo.width` and `DialogInfo.height` set the height and width of the dialog in pixels. Depending on the size of the Teams window and screen resolution, these values might be reduced proportionally while maintaining aspect ratio.
 
 If `DialogInfo.width` and `DialogInfo.height` are `"small"`, `"medium"`, or `"large"`, the size of the red rectangle in the following image is a proportion of the available space, 20%, 50%, and 60% for `width` and 20%, 50%, and 66% for `height`:
 

@@ -15,7 +15,7 @@ ms.date: 05/05/2023
 The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
-* [Task modules (Dialogs)](../../task-modules-and-cards/what-are-task-modules.md)
+* [Dialogs (referred as task modules in TeamsJS v1.x)](../../task-modules-and-cards/what-are-task-modules.md)
 
 Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) is refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
@@ -301,13 +301,13 @@ The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are
 
 | Original namespace `tasks` | New namespace `dialog`  |
 | - | - |
-| `tasks.startTask` | `dialog.url.open`, `dialog.url.bot.open`, `dialog.adaptiveCard.open`, `dialog.adaptiveCard.bot.open` (renamed and differentiated by HTML / Adaptive Card and page / bot variants) |
+| `tasks.startTask` | `dialog.url.open`, `dialog.url.bot.open`, `dialog.adaptiveCard.open`, `dialog.adaptiveCard.bot.open` |
 | `tasks.submitTask` | `dialog.url.submit` (renamed) |
-| `tasks.updateTask` | `dialog.update.resize` (renamed) |
+| `tasks.updateTask` | `dialog.update` (renamed) |
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability has been split into two main subcapabilities: `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
+Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 

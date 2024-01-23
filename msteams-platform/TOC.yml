@@ -257,7 +257,7 @@
           - name: Deploy to the cloud
             href: toolkit/toolkit-v4/deploy-vs.md            
     - name: Teams Toolkit CLI
-      href: toolkit/TeamsFx-CLI.md
+      href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
       - name: Overview
@@ -686,7 +686,7 @@
       href: task-modules-and-cards/what-are-task-modules.md
     - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
-      displayName: JavaScript dialogs, keyboard and accessibility guidelines, module sizing, css
+      displayName: JavaScript dialogs (task modules), keyboard and accessibility guidelines, module sizing, css
     - name: Use dialogs in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
       displayName: payload
