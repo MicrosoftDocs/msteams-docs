@@ -110,7 +110,7 @@ items:
     
     | Folder or file name | Contents |
     | --- | --- |
-    | `.env.testtool` | The configuration file with environment variables that can be committed to git.  |
+    | `env/.env.testtool` | The configuration file with environment variables that can be committed to git.  |
     | `env/.env.testtool.user` |The configuration file with environment variables, including credentials, which aren't committed to Git by default.  |
     | `appPackage` | App manifest template files and app icons (color.png and outline.png). |
     | `appPackage/manifest.json` | App manifest for running the app in local and remote environment.  |
