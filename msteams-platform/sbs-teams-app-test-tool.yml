@@ -155,7 +155,7 @@ items:
         :::image type="content" source="~/assets/images/test-tool/deployment.png" lightbox="~/assets/images/test-tool/deployment.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
 
         >[!NOTE]
-        > You can also get OpenAI API key to debug your AI chat bot. For more information, see [Setup your API key](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key).
+        > You can also get OpenAI API key to debug your AI chat bot. For more information, see [setup your API key](https://platform.openai.com/docs/quickstart/step-2-setup-your-api-key).
 
      ### Get Azure Open AI keys and endpoint
 
