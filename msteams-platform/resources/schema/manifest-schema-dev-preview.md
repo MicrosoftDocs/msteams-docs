@@ -1013,7 +1013,7 @@ The object is an array of action objects. This block is required only for soluti
 |`displayName`| String | 64 characters | ✔️ | A display name for the action. Capitalize first letter and brand name. For example, Add to suppliers, Open in Contoso, and Request signatures.|
 |`description`| String | | ✔️ | Specifies the description of the actions. |
 |`intent`| String enum |  | ✔️ | Specifies the type of intent. The supported enum values are `open`, `addTo`, and `custom`. |
-|`handlers`| Array of objects | | ✔️ | An array of handlers object, defining how Actions can be handled. If an app has more than one handler, only one experience shows up at one entry point. The Microsoft 365 platform decides which Action to show up based on which experience is supported. |
+|`handlers`| Array of objects | | ✔️ | An array of handler objects defines how Actions are managed. In the current public preview, add a single handler for each action. |
 
 ### actions.handlers
 
