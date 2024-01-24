@@ -801,6 +801,9 @@
     displayName: Application, Outlook, and Office as application hosts, extend 
   - name: Prerequisites
     href: m365-apps/prerequisites.md
+  - name: Teams Domain Migration
+    href: m365-apps/domain-migration.md
+    displayName: Teams, Outlook, Microsoft 365, domain, consolidation  
   - name: Teams tabs in Microsoft 365 and Outlook
     items:
     - name: Enable a Teams personal tab for Microsoft 365

@@ -50,22 +50,22 @@ Alternately, you can use a basic single sign-on (SSO) **hello world** app that's
 Use the Teams Toolkit extension for Visual Studio Code to start with a personal tab that's enabled to run in Teams, Outlook, and Microsoft 365.
 
 1. Open **Visual Studio Code**.
-1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the activity bar.
-1. Select **Create a New App**.
-1. Select **Tab**.
-1. Select **Basic Tab**.
+2. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the activity bar.
+3. Select **Create a New App**.
+4. Select **Tab**.
+5. Select **Basic Tab**.
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Screenshot shows the Basic Tab option highlighted to create a new app feature using a tab.":::
 
-1. Select a preferred programming language.
-1. Select a location on your local machine for the workspace folder and enter your application name.
-1. Once your app is created, within the Teams Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options are available in the **ACCOUNTS** section of the extension.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Enter **Teams: Provision** to create the Teams app resources such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account. Alternatively, you can select **Provision** under **LIFECYCLE** section of the extension.
-1. Select a subscription and a resource group. If you choose to create a new resource group, you need to specify the location.
-1. Select **Provision**.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under the **LIFECYCLE** section of the extension.
+6. Select a preferred programming language.
+7. Select a location on your local machine for the workspace folder and enter your application name.
+8. Once your app is created, within the Teams Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options are available in the **ACCOUNTS** section of the extension.
+9. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+10. Enter **Teams: Provision** to create the Teams app resources such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account. Alternatively, you can select **Provision** under **LIFECYCLE** section of the extension.
+11. Select a subscription and a resource group. If you choose to create a new resource group, you need to specify the location.
+12. Select **Provision**.
+13. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+14. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under the **LIFECYCLE** section of the extension.
 
 From here, you can skip ahead to [upload your custom app in Teams](#upload-your-custom-app-in-teams) and preview your app in Outlook and the Microsoft 365 app. The app manifest and TeamsJS API calls are already updated for Microsoft 365 app.
 

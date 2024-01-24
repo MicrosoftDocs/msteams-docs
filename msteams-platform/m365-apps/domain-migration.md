@@ -46,14 +46,15 @@ The following steps need to be performed in order to ensure your Teams app doesn
     2. *m365.cloud.microsoft*
 
 > [!NOTE]
-> From TeamsJS SDK 2.19.0 onwards, the list of trusted domains is migrated to a new content delivery network (CDN) endpoint that would be called upon app initialization. This list is dynamic and doesn't require you to update the SDK for any future changes to the list. The new CDN endpoint ensures that your Teams app extended across Outlook and Microsoft is always enabled to run with full functionality.
+> * From TeamsJS SDK 2.19.0 onwards, the list of trusted domains is migrated to a new content delivery network (CDN) endpoint that would be called upon app initialization.
+> * This list is dynamic and doesn't require you to update the SDK for any future changes to the list.
+> * The new CDN endpoint ensures that your Teams app extended across Outlook and Microsoft 365 is always enabled to run with full functionality.
 
 ## See also
 
 * [Extend Teams apps across Microsoft 365](overview.md)
-* [[Extend a Teams personal tab across Microsoft 365](extend-m365-teams-personal-tab.md)
+* [Extend a Teams personal tab across Microsoft 365](extend-m365-teams-personal-tab.md)
 * [Set up your dev environment for extending Teams apps across Microsoft 365](prerequisites.md)]
 * [Prerequisites](../tabs/how-to/tab-requirements.md)
 * [Guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](../messaging-extensions/high-quality-message-extension.md)
 * [Debug for mobile](../toolkit/debug-mobile.md)
-* 

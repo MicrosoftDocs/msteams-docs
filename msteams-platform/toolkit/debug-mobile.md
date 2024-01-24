@@ -77,10 +77,10 @@ You can view the project folders and files under **Explorer** in the Visual Stud
 
     :::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="Screenshot shows the login page.":::
 
-> [!IMPORTANT]
-> Microsoft is consolidating new and existing domains to the new *cloud.microsoft* domain, which includes the current Teams, Outlook, and Microsoft 365 domains. Hence, you need to update the CSP headers of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](domain-migration.md).
+    > [!IMPORTANT]
+    > Microsoft is consolidating new and existing domains to the new *cloud.microsoft* domain, which includes the current Teams, Outlook, and Microsoft 365 domains. Hence, you need to update the `X-FRAME-Options of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](domain-migration.md).
 
-1. Remove `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
+2. Remove `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
 
     ```javascript
     - uses: script 
@@ -90,7 +90,7 @@ You can view the project folders and files under **Explorer** in the Visual Stud
           echo "::set-teamsfx-env TAB_ENDPOINT=https://localhost:53000";
     ```
 
-1. If you're using React, add the configuration `WDS_SOCKET_PORT=0` in `teamsapp.local.yml` file to activate hot reloading while debugging in React after utilizing the tunnel service.
+3. If you're using React, add the configuration `WDS_SOCKET_PORT=0` in `teamsapp.local.yml` file to activate hot reloading while debugging in React after utilizing the tunnel service.
 
     ```javascript
       - uses: file/createOrUpdateEnvironmentFile
@@ -109,9 +109,9 @@ You can view the project folders and files under **Explorer** in the Visual Stud
 
 ## Run the deployed app
 
-1. Open the debug panel (**Ctrl+Shift+D** / **⌘⇧-D** or **View > Run**) from Visual Studio Code.
-1. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.
-1. Select the Start debugging (F5) button.
+1. Open the debug panel (**Ctrl+Shift+D** or **View > Run**) from Visual Studio Code.
+2. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.
+3. Select the Start debugging (F5) button.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows how to launch the app remotely.":::
 
