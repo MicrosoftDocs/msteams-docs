@@ -16,7 +16,7 @@ Teams apps use cloud services that are hosted across multiple domains. This divi
 > [!WARNING]
 > If you don't update your Teams app to run on the new domains by June 1, 2024, your app might lose critical functionality.
 
-The following table lists the domains that are migrated to the new `*.cloud.microsoft` domain and the apps affected by the migration. For a comprehensive list of Microsoft 365 domains, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide)
+The following table lists the domains that are migrated to the new `*.cloud.microsoft` domain and the apps affected by the migration. For a comprehensive list of Microsoft 365 domains, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true)
 
 | **Existing Domain** | **New Domain** | **App Type** |
 | ---- | ---- | ---- |
