@@ -47,7 +47,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Teams domain migration to the new *.cloud.microsoft* domain
+      - text: Teams domain migration to the new .cloud.microsoft domain
         url: m365-apps/domain-migration.md
       - text: Use / to invoke message extensions from command box in the new Teams client
         url: messaging-extensions/build-bot-based-message-extension.md
