@@ -421,6 +421,8 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 
 <b> After March 14th, 2024 </b>
 
+Admins will adjust Team RSC and Chat RSC settings via PowerShell cmndlets. The following states are available when adjusting Team RSC and Chat RSC. Each section below will show examples of how to use these states to adjust your settings.
+
 | PowerShell State | Description |
 | ---- | :----: |
 | ManagedByMicrosoft |  Any RSC enabled app can be consented to by users in your tenant. With these settings enabled, preapproval of RSC permissions is not needed as all RSC enabled apps are approved for use. These settings are managed by Microsoft and may be changed at any time |
@@ -428,17 +430,19 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 | ApprovedForPreApprovedApps |  RSC enabled apps can be consented on an app-by-app basis. Admins can choose which apps are approved for which RSC permissions. |
 | DisabledForAllApps|  No RSC permissions can be consented to by users. In this state, preapproval of RSC permissions will have no effect on users ability to consent to RSC enabled apps |
 
-
-
 <details>
 
 <summary><b>Configure Team RSC via PowerShell cmndlets</b></summary>
 
 Team owners can authorize applications, such as applications published by third-party vendors, to access your organization's data associated with a group. For example, a Team owner in Microsoft Teams can allow an app to read all Teams messages in the team, or list the basic profile of a Team's members.
  
-You can configure which users are allowed to consent to apps accessing their Teams' data, or you can disable the setting for all users.
+You can configure which users are allowed to consent to apps accessing their Teams' data by using the available PowerShell states. ApprovedForAllApps, ApprovedForPreApprovedApps, & DisabledForAllApps
 
-[PS]
+### Disable Team RSC using PowerShell and the DisabledForAllApps state:
+
+```powershell
+Set-MgBetaTeamRscConfiguration -State DisabledForAllApps
+```
 
 </details>
 <br>
@@ -448,7 +452,11 @@ You can configure which users are allowed to consent to apps accessing their Tea
 
 You can enable or disable Chat RSC via PowerShell cmndlets:
 
-[PS]
+### Disable Chat RSC using PowerShell and the DisabledForAllApps state:
+
+```powershell
+Set-MgBetaChatRscConfiguration -State DisabledForAllApps
+```
 
 </details>
 <br>
