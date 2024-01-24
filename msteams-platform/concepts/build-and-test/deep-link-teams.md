@@ -63,11 +63,11 @@ else { /* handle case where capability isn't supported */ }
 
 ## Deep link to navigate to a chat
 
-You can use the following deep link format to go to a particular chat conversation in Teams:
+To navigate to a specific chat conversation in Teams, use the following deep link format:
 
 `https://teams.microsoft.com/l/chat/<chatId>/conversations`
 
-The query parameter is `chatId`, chat ID of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
+Here, the query parameter is `chatId`, which represents chat ID of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
 
 Example: `https://teams.microsoft.com/l/chat/19:c6d70e392a384916c3262b15406d763e@thread.v2/conversations`
 
