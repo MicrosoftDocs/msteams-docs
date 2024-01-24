@@ -292,10 +292,11 @@ Azure Storage.
 
 #### What it is
 
-This action will get deployment token from Azure Static Web Apps.
+This action retrieves the deployment token from Azure Static Web Apps.
 
 #### Version Info
-Available since v1.4
+
+v1.4
 
 #### What resource it operates
 

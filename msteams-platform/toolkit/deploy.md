@@ -185,7 +185,7 @@ This action upload and deploy the project to Azure Functions using the [zip depl
 
 #### azureStorage/deploy
 
-This action upload and deploy the project to Azure Storage.
+This action uploads and deploys the project to Azure Storage.
 
 **Sample**
 
@@ -209,7 +209,7 @@ This action upload and deploy the project to Azure Storage.
 
 #### azureStorage/deploy
 
-This action upload and deploy the project to Azure Storage.
+This action uploads and deploys the project to Azure Storage.
 
 **Sample**
 
