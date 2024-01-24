@@ -77,6 +77,9 @@ You can view the project folders and files under **Explorer** in the Visual Stud
 
     :::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="Screenshot shows the login page.":::
 
+> [!IMPORTANT]
+> Microsoft is consolidating new and existing domains to the new *cloud.microsoft* domain, which includes the current Teams, Outlook, and Microsoft 365 domains. Hence, you need to update the CSP headers of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](domain-migration.md).
+
 1. Remove `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
 
     ```javascript
