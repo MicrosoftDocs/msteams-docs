@@ -103,7 +103,7 @@ app.getContext().then((context: app.Context) => {
 | --- | --- | --- |
 | &nbsp; | `actionObjects` | Array of corresponding action objects. |
 | &nbsp; | `itemId` | The app receives the ID as the content and uses it to query the Microsoft Graph. |
-| &nbsp; | `actionInfo` | Definition required. |
+| &nbsp; | `actionInfo` | The context object contains an object that holds all the information related to the current action. |
 
 ## Access content through Graph API
 
