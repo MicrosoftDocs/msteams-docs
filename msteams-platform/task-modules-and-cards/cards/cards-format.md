@@ -1,6 +1,6 @@
 ---
 title: Text formatting in cards
-description: In this module, learn what is card text formatting in Microsoft Teams and format cards with markdown.
+description: In this module, learn what is card text formatting in Microsoft Teams and format cards with Markdown.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
@@ -208,7 +208,7 @@ Example for user mention in bots with Adaptive Cards as follows:
   "body": [
     {
       "type": "TextBlock",
-      "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
+      "text": "Hi <at>Adele UPN</at>, <at>Adele Microsoft Entra ID</at>"
     }
   ],
   "msteams": {
@@ -223,7 +223,7 @@ Example for user mention in bots with Adaptive Cards as follows:
       },
       {
         "type": "mention",
-        "text": "<at>Adele Azure AD</at>",
+        "text": "<at>Adele Microsoft Entra ID</at>",
         "mentioned": {
           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
           "name": "Adele Vance"
@@ -268,7 +268,7 @@ Example for user mention in Incoming Webhook as follows:
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele Microsoft Entra ID</at>"
                 }
             ],
             "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -285,7 +285,7 @@ Example for user mention in Incoming Webhook as follows:
                       },
                       {
                         "type": "mention",
-                        "text": "<at>Adele Azure AD</at>",
+                        "text": "<at>Adele Microsoft Entra ID</at>",
                         "mentioned": {
                           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
                           "name": "Adele Vance"
@@ -902,9 +902,9 @@ You can test formatting in your own cards by modifying this code.
 
 ## See also
 
-* [Cards and task modules](../cards-and-task-modules.md)
+* [Cards and dialogs](../cards-and-task-modules.md)
 * [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
-* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Use dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create Incoming Webhooks](../../webhooks-and-connectors/how-to/add-incoming-webhook.md)

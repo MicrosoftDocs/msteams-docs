@@ -313,7 +313,7 @@ items:
 
     1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
-       1. At the upper-left, go to **Select host app** and from the drop-down, select **Microsoft Teams**.
+       1. At the upper-left, go to **Select host app** and from the dropdown, select **Microsoft Teams**.
        1. Go to **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
        1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you saved earlier.
 
