@@ -461,7 +461,7 @@ You can follow the steps to add environment variables to the .env files to use a
 
 ## See also
 
-* [Deploy Teams app to the cloud](deploy.md)
+[Deploy Teams app to the cloud](deploy.md)
 
 ::: zone-end
 
