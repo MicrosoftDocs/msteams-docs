@@ -16,7 +16,7 @@ Teams apps use cloud services that are hosted across multiple domains. This divi
 > [!WARNING]
 > If you don't update your Teams app to run on the new domains by June 1, 2024, your app might lose critical functionality.
 
-The following table lists the domains that are migrated to the new *cloud.microsoft* domain and affect Teams apps. For a comprehensive list of Microsoft 365 domains, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true).
+The following table lists the domains that are migrated to the new *cloud.microsoft* domain and affect Teams apps.
 
 | **Existing Domain** | **New Domain** | **App Type** |
 | ---- | ---- | ---- |
@@ -24,7 +24,9 @@ The following table lists the domains that are migrated to the new *cloud.micros
 | *outlook.microsoft.com* | *outlook.cloud.microsoft* | Teams app extended to Outlook |
 | *m365.microsoft.com* | *m365.cloud.microsoft* | Teams app extended to Microsoft 365 |
 
-For Teams apps extended across Outlook and Microsoft 365, the list of trusted domains in TeamsJS SDK (v2.19.0 or higher) is migrated to a new content delivery network (CDN) endpoint that Teams calls upon app initialization. This list is dynamic and doesn't require you to update the SDK if any changes are made to the domains in the list in the future. The new CDN endpoint ensures that your Teams app extended across Outlook and Microsoft 365 is always enabled to run with full functionality.
+For a comprehensive list of Microsoft 365 domains, see [Office 365 URLs and IP address ranges](/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide&preserve-view=true).
+
+For Teams apps extended across Outlook and Microsoft 365, the list of trusted domains in TeamsJS SDK (v.2.19.0 or higher) is migrated to a new content delivery network (CDN) endpoint that Teams calls upon app initialization. This list is dynamic and doesn't require you to update the SDK if any changes are made to the domains in the list in the future. The new CDN endpoint ensures that your Teams app extended across Outlook and Microsoft 365 is always enabled to run with full functionality.
 
 ## Configure your app to migrated domains
 

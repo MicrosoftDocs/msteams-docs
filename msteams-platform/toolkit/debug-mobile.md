@@ -75,8 +75,8 @@ You can view the project folders and files under **Explorer** in the Visual Stud
     > * When the dev tunnel access value is set to `private`, the tab app cannot be displayed within an iframe on the web client. The login page is hosted on **login.microsoftonline.com**, which has the `X-FRAME-Options` header set to DENY.
     > * To preview the tab app on the mobile client and debug it on web clients, set the access value to `public`. Any user with the app's URL can visit the tab.
 
-    > [!IMPORTANT]
-    > The Teams, Outlook, and Microsoft 365 domains are migrated to the new *cloud.microsoft* domain. Hence, you need to update the `X-Frame-Options` or CSP headers of your Teams app to run on these new domains. For more information, see [Teams domain migration](../m365-apps/domain-migration.md).
+    > [!WARNING]
+    > The Teams, Outlook, and Microsoft 365 domains are migrated to the new *cloud.microsoft* domain. We recommend you to configure your app to run on these new domains by June 1, 2024, as it affects your app's critical functionality. For more information, see [Teams domain migration](../m365-apps/domain-migration.md).
 
 2. Remove `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
 
