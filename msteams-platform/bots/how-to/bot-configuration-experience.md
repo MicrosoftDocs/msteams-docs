@@ -68,9 +68,9 @@ You can enable the configuration settings for your bot using the following metho
 
 * For C#:
 
-  * `OnInvokeActivityAsync`
+  * `OnTeamsConfigFetchAsync`
   
-  * `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync`
+  * `OnTeamsConfigSubmitAsync`
 
 #### Javascript code snippets
 
@@ -78,205 +78,9 @@ The following code snippets shows an example of `onInvokeActivity` and `handleTe
 
 # [JS1](#tab/bot-framework-js)
 
-When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `config/fetch`, `handleTeamsConfigFetch` or `OnTeamsConfigFetchAsync` methods defined in the teamsBot.js file. The bot responds with an Adaptive Card and the user provides relevant information in the Adaptive Card and selects Submit. After the user selects Submit, a `config/submit`, `handleTeamsConfigSubmit`, or `OnTeamsConfigSubmitAsync` is returned to the bot and the bot configuration is complete.
+This method handles specific invoke activities associated with fetching and submitting configurations. Upon receiving an invoke activity, the bot examines the activity's name to identify the operation type. If the activity is a `config/fetch` request, the bot produces a configuration response for authentication. On the other hand, if the activity is a `config/submit` request, the bot generates a Task Module Continue response that includes an Adaptive Card for additional interaction. This methodical approach enables the bot to respond suitably to various configuration-related requests.
 
 ```javascript
-//Invoked when an invoke activity is received from bot.
-    async onInvokeActivity(context) {
-if (context._activity.name == "config/fetch") {
-    const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
-    try {
-        return {
-            status: 200,
-            body: {
-                config: {
-                    type: 'continue',
-                    value: {
-                        card: adaptiveCard,
-                        height: 400,
-                        title: 'Task module fetch response',
-                        width: 400
-                    }
-                }
-            }
-        }
-    } catch (e) {
-        console.log(e);
-    }
-}
-
-if (context._activity.name == "config/submit") {
-
-    const choice = context._activity.value.data.choiceselect.split(" ")[0];
-    chosenFlow = choice;
-
-    if (choice === "static_option_2") {
-        const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
-
-        return {
-            status: 200,
-            body: {
-                config: {
-                    type: 'continue',
-                    value: {
-                        card: adaptiveCard,
-                        height: 400,
-                        title: 'Task module submit response',
-                        width: 400
-                    }
-                }
-            }
-        }
-    }
-    else {
-
-        try {
-            return {
-                status: 200,
-                body: {
-                    config: {
-                        type: 'message',
-                        value: "Submitted successfully!"
-                    }
-                }
-            }
-        }
-        catch (e) {
-            console.log(e);
-
-        }
-    }
-    return await super.onInvokeActivity(context);
-}
-}
-```
-
-# [JS2](#tab/teams-bot-sdk-js)
-
-The handleTeamsConfigFetch and handleTeamsConfigSubmit handle the fetching and submission of Teams configuration data.
-
-* `handleTeamsConfigFetch`: If the command is 'card', the function sets the response.config object to contain suggested actions and a type of 'auth'. If the command is 'message', the function creates an AdaptiveCard with the text 'Bot Config Fetch' and sets the response.config object to contain the card and a type of 'continue'. The function returns the response object.
-
-* `handleTeamsConfigSubmit`: if the command is 'card', the function creates an AdaptiveCard with the text 'Bot Config Submit' and sets the response.config object to contain the card and a type of 'continue'. If the command is 'message', the function sets the response.config object to contain a value of 'config submit text' and a type of 'message'. The function returns the response object.
-
-```javascript
-// extending both handlers
- 
-    async handleTeamsConfigFetch(_context, configData) {
-        let response = {};
-        switch (configData.command) {
-            case 'card':
-                {
-                    response.config = {
-                        suggestedActions: {
-                            actions: [
-                                {
-                                    type: 'bot config auth',
-                                    title: 'bot config title',
-                                    image:
-                                        'https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40',
-                                    value: 'bot config auth value',
-                                },
-                            ],
-                        },
-                        type: 'auth',
-                    };
-                }
-                break;
-            case 'message':
-                {
-                    const cardJson = {
-                        type: 'AdaptiveCard',
-                        version: '1.4',
- 
-                        body: [
-                            {
-                                type: 'TextBlock',
-                                text: 'Bot Config Fetch',
-                            },
-                        ],
-                    };
-                    const card = CardFactory.adaptiveCard(cardJson);
- 
-                    response = {
-                        config: {
-                            value: {
-                                height: 200,
-                                width: 200,
-                                title: 'test card fetch',
-                                card,
-                            },
-                            type: 'continue',
-                        },
-                    };
-                }
-                break;
-            default:
-                console.log('no default');
-        }
- 
-        return response;
-    }
- 
-    async handleTeamsConfigSubmit(_context, configData) {
-        let response = {};
-        switch (configData.command) {
-            case 'card':
-                {
-                    const cardJson = {
-                        type: 'AdaptiveCard',
-                        version: '1.4',
- 
-                        body: [
-                            {
-                                type: 'TextBlock',
-                                text: 'Bot Config Submit',
-                            },
-                        ],
-                    };
-                    const card = CardFactory.adaptiveCard(cardJson);
- 
-                    response = {
-                        config: {
-                            value: {
-                                height: 200,
-                                width: 200,
-                                title: 'test card submit',
-                                card,
-                            },
-                            type: 'continue',
-                        },
-                    };
-                }
-                break;
-            case 'message':
-                {
-                    response = {
-                        config: {
-                            value: 'config submit text',
-                            type: 'message',
-                        },
-                    };
-                }
-                break;
-            default:
-                console.log('no default');
-                break;
-        }
- 
-        return response;
-    }
-```
-
----
-
-#### C# code snippets
-
-The following code snippets shows an example of `OnTeamsConfigSubmitAsync` and `OnInvokeActivityAsync`, `OnTeamsConfigFetchAsync`:
-
-# [C# 1](#tab/teams-bot-sdk2)
-
-```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
 {
     if (turnContext.Activity.Name == "config/fetch")
@@ -350,7 +154,13 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
     return null;
 }
+```
 
+# [JS2](#tab/teams-bot-sdk-js)
+
+`OnInvokeActivityAsync` method in a bot application, which is designed to handle specific invoke activities related to fetching and submitting configurations. When an invoke activity is received, the bot checks the activity’s name to determine the type of operation. If the activity is a `config/submit` request, the bot generates a TaskModuleMessageResponse with a message. On the other hand, if the activity is a `config/fetch` request, the bot creates a `TaskModuleContinueResponse` containing an Adaptive Card for further interaction.
+
+```javascript
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
 {
     if (turnContext.Activity.Name == "config/submit")
@@ -414,12 +224,17 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 }
 ```
 
-# [C# 2](#tab/teams-bot-sdk)
+---
 
-When a user installs the bot in a team or group chat scope, the `OnTeamsConfigFetchAsync` method is called. The `OnTeamsConfigSubmitAsync` method is called when the user submits the bot configuration. The methods  return `ConfigResponseBase` object that contain the bot configuration, and can be used to create suggested actions, display messages, and configure the bot’s dialog.
+#### C# code snippets
+
+The following code snippets shows an example of `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` :
+
+# [C# 1](#tab/teams-bot-sdk2)
+
+`OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` methods are engineered to manage particular invoke activities associated with fetching and submitting configurations. The `OnTeamsConfigFetchAsync` method produces a configuration response for authentication upon receiving a configuration fetch request. It forms a `BotConfigAuth` object with suggested actions and delivers this response. Conversely, the `OnTeamsConfigSubmitAsync` method deals with configuration submit requests. It creates a `TaskModuleMessageResponse` with a test message and returns this response.
 
 ```csharp
- 
 protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
 {
  
@@ -459,8 +274,13 @@ protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContex
  
     return Task.FromResult(response);
 }
- 
- 
+```
+
+# [C# 2](#tab/teams-bot-sdk)
+
+`OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` methods are specifically designed to manage invoke activities associated with fetching and submitting configurations on Microsoft Teams. Each method invokes the `createConfigContinueResponse` function, generating a `TaskModuleContinueResponse` that includes an Adaptive Card. This card is built with a text block that displays the text bot config test. The `TaskModuleContinueResponse` is subsequently returned as the response for both fetch and submit operations.
+
+```csharp
 protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
 {
     ConfigResponseBase response = createConfigContinueResponse();
@@ -515,7 +335,6 @@ private ConfigResponseBase createConfigContinueResponse()
  
     return response;
 }
- 
 ```
 
 ---
