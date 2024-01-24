@@ -107,7 +107,7 @@ app.getContext().then((context: app.Context) => {
 
 ## Access content through Graph API
 
-After obtaining the `itemId` of the triggering content, you can use the [Graph API](/graph/api/driveitem-get?view=graph-rest-1.0&tabs=http) to read or modify the content, facilitating task completion for your users.
+After obtaining the `itemId` of the triggering content, you can use the [Graph API](/graph/api/driveitem-get?view=graph-rest-1.0&tabs=http&preserve-view=true) to read or modify the content, facilitating task completion for your users.
 
 **HTTP request**
 
