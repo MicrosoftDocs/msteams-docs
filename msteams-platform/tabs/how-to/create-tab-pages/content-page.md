@@ -18,7 +18,7 @@ You must present an <iframe> HTML content page in your tab, if you need to add y
 
 This article is specific to using content pages as tabs; however, most of the guidance here applies regardless of how the content page is presented to the user.
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md#)]
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ## Tab content and design guidelines
 
