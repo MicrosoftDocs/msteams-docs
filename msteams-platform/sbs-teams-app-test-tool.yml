@@ -161,7 +161,10 @@ items:
 
      ### Get Azure Open AI keys and endpoint
 
-    1. Select **Go to resources** in Azure portal.
+    1. Select **Go to resources**.
+
+        :::image type="content" source="~/assets/images/test-tool/deployment-azure.png" alt-text="Screenshot shows you the deployment of the Azure open AI.":::
+
     1. Select **Keys and Endpoint** from the left pane and copy the **KEY** and **Endpoint**. You can copy either **KEY 1** or **KEY 2**.
 
         :::image type="content" source="~/assets/images/test-tool/key-endpoints.png" lightbox="~/assets/images/test-tool/key-endpoints.png" alt-text="Screenshot shows the keys and endpoints.":::
