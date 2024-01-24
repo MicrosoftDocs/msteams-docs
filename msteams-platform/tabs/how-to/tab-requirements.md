@@ -16,7 +16,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
     [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
 
 > [!NOTE]
-> Microsoft is consolidating new and existing domains to the new *cloud.microsoft* domain, which includes the current Teams, Outlook, and Microsoft 365 domains. Hence, you need to update the CSP headers of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](domain-migration.md).
+> Microsoft is consolidating new and existing domains to the new *cloud.microsoft* domain, which includes the current Teams, Outlook, and Microsoft 365 domains. Hence, you need to update the CSP headers of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](../../m365-apps/domain-migration.md).
 
 * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy`. Alternately, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but most browsers still accept it.
 

@@ -75,10 +75,8 @@ You can view the project folders and files under **Explorer** in the Visual Stud
     > * When the dev tunnel access value is set to `private`, the tab app cannot be displayed within an iframe on the web client. The login page is hosted on **login.microsoftonline.com**, which has the `X-FRAME-Options` header set to DENY.
     > * To preview the tab app on the mobile client and debug it on web clients, set the access value to `public`. Any user with the app's URL can visit the tab.
 
-    :::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="Screenshot shows the login page.":::
-
     > [!IMPORTANT]
-    > Microsoft is consolidating new and existing domains to the new *cloud.microsoft* domain, which includes the current Teams, Outlook, and Microsoft 365 domains. Hence, you need to update the `X-FRAME-Options of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](domain-migration.md).
+    > Microsoft is consolidating new and existing domains to the new *cloud.microsoft* domain, which includes the current Teams, Outlook, and Microsoft 365 domains. Hence, you need to update the `X-FRAME-Options of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](../m365-apps/domain-migration.md).
 
 2. Remove `TAB_DOMAIN` and `TAB_ENDPOINT` from the `teamsapp.local.yml` file.
 
@@ -107,13 +105,21 @@ You can view the project folders and files under **Explorer** in the Visual Stud
             WDS_SOCKET_PORT: 0 
     ```
 
-## Run the deployed app
+4. Run the deployed app
 
-1. Open the debug panel (**Ctrl+Shift+D** or **View > Run**) from Visual Studio Code.
-2. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.
-3. Select the Start debugging (F5) button.
+   1. Open the debug panel (**Ctrl+Shift+D** or **View > Run**) from Visual Studio Code.
+   2. Select **Launch Remote in Teams (Edge)** from the launch configuration dropdown.
+   3. Select the Start debugging (F5) button.
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/launch-remote.png" alt-text="Screenshot shows how to launch the app remotely.":::
+
+   4. You'll be prompted to upload a custom app into Teams. Select **Add**.
+
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot shows an app being installed.":::
+
+        The app opens as a personal tab.
+
+        :::image type="content" source="../assets/images/debug-mobile/login.PNG" alt-text="Screenshot shows the personal tab app page.":::
 
 # [Command Line](#tab/cline)
 
@@ -134,10 +140,6 @@ You can view the project folders and files under **Explorer** in the Visual Stud
 1. Execute the command `teamsfx preview --env local` in your project directory.
 
 ---
-
-You'll be prompted to upload a custom app into Teams. Select **Add**.
-
-:::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/remote-app-client.png" alt-text="Screenshot shows an app being installed.":::
 
 ## Test your tab app on mobile client
 

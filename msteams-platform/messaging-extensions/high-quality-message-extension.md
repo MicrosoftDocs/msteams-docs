@@ -622,7 +622,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 | Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
 
 > [!NOTE]
-> Microsoft is consolidating new and existing domains to the new *cloud.microsoft* domain, which includes the current Teams, Outlook, and Microsoft 365 domains. Hence, you need to update the CSP headers of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](domain-migration.md).
+> Microsoft is consolidating new and existing domains to the new *cloud.microsoft* domain, which includes the current Teams, Outlook, and Microsoft 365 domains. Hence, you need to update the CSP headers of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](../m365-apps/domain-migration.md).
 
 ## Code samples
 
