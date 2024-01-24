@@ -26,7 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2024 January**
 
-* ***January 25, 2024***: [Share to Teams from personal app or tab for mobile clients](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* ***January 30, 2024***: [Share to Teams from personal app or tab for mobile clients](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
+* ***January 24, 2024***: [Introduced advanced step-by-step guide to learn how to debug your AI chat bot using Teams App Test Tool.](sbs-teams-app-test-tool.yml)
 * ***January 19, 2024***: [Use / to invoke message extensions from command box in the new Teams client.](messaging-extensions/build-bot-based-message-extension.md)
 * ***January 04, 2024***: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
 
