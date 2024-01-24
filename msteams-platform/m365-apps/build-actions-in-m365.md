@@ -82,16 +82,6 @@ When a user selects Add option from the app's context menu, a personal tab opens
 The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a page from an Action and the content that initiated the Action.
 
 ```javascript
-async setItemId() {
-    const context = await app.getContext();
-    const itemId = context.actionInfo && context.actionInfo.actionObjects[0].itemId;
-    this.setState({
-        itemId: itemId
-    });
-}
-```
-
-```javascript
 app.getContext().then((context: app.Context) => {
     const actionInfo = context.actionInfo;
     if (actionInfo) {
