@@ -13,10 +13,10 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 * Enable discovery of your tab pages in an iFrame by utilizing X-Frame-Options and [Content-Security-Policy HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) response headers.
   * Set Content Security Policy headers to allow Teams and any other [host applications](../../m365-apps/overview.md) of your app:
 
-    [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
+    > [!NOTE]
+    > The Teams, Outlook, and Microsoft 365 domains are migrated to the new *cloud.microsoft* domain. Hence, you need to update the `X-Frame-Options` or CSP headers of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](domain-migration.md).
 
-> [!NOTE]
-> Microsoft is consolidating new and existing domains to the new *cloud.microsoft* domain, which includes the current Teams, Outlook, and Microsoft 365 domains. Hence, you need to update the CSP headers of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](../../m365-apps/domain-migration.md).
+    [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
 
 * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy`. Alternately, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but most browsers still accept it.
 
