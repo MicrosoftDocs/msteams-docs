@@ -14,7 +14,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
   * Set Content Security Policy headers to allow Teams and any other [host applications](../../m365-apps/overview.md) of your app:
 
     > [!NOTE]
-    > The Teams, Outlook, and Microsoft 365 domains are migrated to the new *cloud.microsoft* domain. Hence, you need to update the `X-Frame-Options` or CSP headers of your Teams app to run on these new domains. For more information, see [Teams Domain Migration](domain-migration.md).
+    > The Teams, Outlook, and Microsoft 365 domains are migrated to the new *cloud.microsoft* domain. Hence, you need to update the `X-Frame-Options` or CSP headers of your Teams app to run on these new domains. For more information, see .
 
     [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
 
