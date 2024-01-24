@@ -384,7 +384,7 @@
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication
+    displayName: Slow load times, iFrame constraints, invoke activities, dialog, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stage View
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in Stage View, Collaborative Stage View 

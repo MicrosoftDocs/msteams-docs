@@ -435,13 +435,13 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. <br>Default value: `false`|
+|`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch dialog (referred as task module in TeamsJS v1.x) dynamically. <br>Default value: `false`|
 |`team.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`team.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.url`|String|2048 characters||Initial webview URL.|
-|`groupChat.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. <br>Default value: `false`|
-|`groupChat.taskInfo`|Object|||Task module to be launched when fetch task set to false.<br>Default value: `false`|
+|`groupChat.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch dialog dynamically. <br>Default value: `false`|
+|`groupChat.taskInfo`|Object|||Dialog to be launched when fetch task set to false.<br>Default value: `false`|
 |`groupChat.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`groupChat.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`groupChat.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
@@ -509,8 +509,8 @@ Each command item is an object with the following structure:
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command runs initially with no parameters. <br>Default value: `false`|
 |`context`|Array of Strings|3 characters||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
-|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically.|
-|`taskInfo`|Object|||Specify the task module to preload when using a message extension command.|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog dynamically.|
+|`taskInfo`|Object|||Specify the dialog to preload when using a message extension command.|
 |`taskInfo.title`|String|64 characters||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
@@ -519,7 +519,7 @@ Each command item is an object with the following structure:
 |`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request. </br> For Api-based message extension, The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters. |
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameter.inputType`|String|||Defines the type of control displayed on a task module for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
+|`parameter.inputType`|String|||Defines the type of control displayed on a dialog for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
 |`parameter.value`|String|512 characters||Initial value for the parameter.|
 |`parameter.choices`|Array of objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
 |`parameter.choices.title`|String|128 characters||Title of the choice.|
@@ -606,7 +606,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 Indicates whether to show the loading indicator when an app or tab is loading. <br>Default value: `false`
 > [!NOTE]
 >
-> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and dialogs as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 > * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen
