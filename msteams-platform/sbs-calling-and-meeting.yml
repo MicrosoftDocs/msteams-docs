@@ -269,8 +269,7 @@ items:
        * outline.png
        * color.png
 
-         :::image type="content" source="~/assets/images/calls-and-meetings/manifest-zipfile.png" alt-text="Screenshot shows the app manifest zip file in file explorer.":::
-       
+       :::image type="content" source="~/assets/images/calls-and-meetings/manifest-zip-file.png" alt-text="Screenshot shows the app manifest zip file in file explorer.":::       
        > [!NOTE]
        > The `manifest.zip` must not contain any extra folders in it. It must have `manifest json` source file, `color` icon, and `outline` icon inside the zip folder.
         
@@ -283,7 +282,7 @@ items:
     1. In the pop-up window, select **Upload a custom app**. 
        If you see the option, custom app upload is enabled. 
 
-       :::image type="content" source="~/assets/images/custom-app-upload.PNG" alt-text="Screenshot showing the selection of Upload a custom app.":::
+       :::image type="content" source="~/assets/images/custom-app-upload.PNG" alt-text="Screenshot showing the selection of upload a custom app.":::
 
     1. Go to **csharp > Source > AppManifest**.
     1. Select **Open** to upload the .zip file that you created in the **AppManifest** folder.
