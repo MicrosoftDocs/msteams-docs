@@ -346,12 +346,13 @@ To install your app on which you've enabled RSC permission in a team, chat, or u
 1. [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
 
 ### Configure consent settings
->[!WARNING]
->The way you manage settings for application RSC permissions is changing in 2024. Instructions below have been updated to include dates for when new settings will be available for admins to modify
 
 The tenant-level controls of application RSC permissions vary based on the resource type.
 
 For delegated permissions, any authorized user can consent to the permissions requested by the app.
+
+>[!WARNING]
+>The way you manage settings for application RSC and chat RSC permissions is changing in 2024. Instructions below have been updated to include dates for when new settings will be available for admins to modify
 
 <b> Before March 14th, 2024 </b>
 
@@ -419,6 +420,15 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 <br>
 
 <b> After March 14th, 2024 </b>
+
+| PowerShell State | Description |
+| ---- | :----: |
+| ManagedByMicrosoft |  Any RSC enabled app can be consented to by users in your tenant. With these settings enabled, preapproval of RSC permissions is not needed as all RSC enabled apps are approved for use. These settings are managed by Microsoft and may be changed at any time |
+| ApprovedForAllApps |  Any RSC enabled app can be consented to by users in your tenant. With these settings enabled, preapproval of RSC permissions is not needed as all RSC enabled apps are approved for use |
+| ApprovedForPreApprovedApps |  RSC enabled apps can be consented on an app-by-app basis. Admins can choose which apps are approved for which RSC permissions. |
+| DisabledForAllApps|  No RSC permissions can be consented to by users. In this state, preapproval of RSC permissions will have no effect on users ability to consent to RSC enabled apps |
+
+
 
 <details>
 
