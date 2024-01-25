@@ -24,7 +24,7 @@ The following images show the configuration of an HTML content page and the outp
 
 |Content page configuration| Output in web | Output in tab |
 |---|---|---|
-|:::image type="content" source="~/assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot shows the html content page in visual studio." lightbox="~/assets/images/tab-images/configure-tab-with-red.png":::|:::image type="content" source="~/assets/images/tab-images/personal-tab-web.png" alt-text="Screenshot shows the output of content page in web." lightbox="~/assets/images/tab-images/personal-tab-web.png":::|:::image type="content" source="~/assets/images/tab-images/personal-tab-in-teams.png" alt-text="Screenshot shows the output of content page in teams tab." lightbox="~/assets/images/tab-images/personal-tab-in-teams.png":::|
+|:::image type="content" source="~/assets/images/tab-images/content-page-html.png" alt-text="Screenshot shows the html content page in visual studio." lightbox=""~/assets/images/tab-images/content-page-html.png":::|:::image type="content" source="~/assets/images/tab-images/personal-tab-web.png" alt-text="Screenshot shows the output of content page in web." lightbox="~/assets/images/tab-images/personal-tab-web.png":::|:::image type="content" source="~/assets/images/tab-images/personal-tab-in-teams.png" alt-text="Screenshot shows the output of content page in teams tab." lightbox="~/assets/images/tab-images/personal-tab-in-teams.png":::|
 
 ## Tab content and design guidelines
 
