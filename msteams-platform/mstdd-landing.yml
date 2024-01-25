@@ -47,7 +47,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Teams, Outlook, Microsoft 365 domains are migrating to the new cloud.microsoft domain
+      - text: Teams, Outlook, and Microsoft 365 web domains are migrating to the new cloud.microsoft domain
         url: m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers 
       - text: Micro-capabilities for website links
         url: messaging-extensions/how-to/micro-capabilities-for-website-links.md

@@ -1,7 +1,5 @@
 > [!WARNING]
-> Microsoft's cloud services, including web versions of Teams (*teams.microsoft.com*), Outlook (*outlook.com*), and Microsoft 365 (*microsoft365.com*) domains are migrating to the new *cloud.microsoft* domain by June 1, 2024. The migration affects your app's critical functionality and requires you to configure your app to ensure uninterrupted end user experience.
->
-> To ensure your Teams app doesn't lose critical functionality, perform the following steps before June 1, 2024:
+> Microsoft's cloud services, including web versions of Teams (*teams.microsoft.com*), Outlook (*outlook.com*), and Microsoft 365 (*microsoft365.com*) domains are migrating to the new *cloud.microsoft* domain by June 1, 2024. The migration affects your app's critical functionality and requires you to perform the following steps before June 1, 2024:
 >
 > 1. Update TeamsJS SDK to v.2.19.0 or higher. For more information about the latest release of TeamsJS SDK, see [@microsoft/teams-js - npm](https://www.npmjs.com/package/@microsoft/teams-js).
 >
