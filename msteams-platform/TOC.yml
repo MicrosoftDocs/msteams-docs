@@ -824,6 +824,17 @@
       - name: Build Adaptive Card-based Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
+  - name: Actions in Microsoft 365
+    items:
+      - name: Overview
+        href: m365-apps/actions-in-m365.md
+        displayName: actions design
+      - name: Build Actions in Microsoft 365
+        href: m365-apps/build-actions-in-m365.md
+        displayName: build actions, retrieve action  
+      - name: Quick start guide
+        href: m365-apps/actions-in-m365-quick-start-guide.md
+        displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
