@@ -1,6 +1,6 @@
 ---
 title: DevTools for Microsoft Teams tabs
-description: In this module, learn how to get to the DevTools when using the Microsoft Teams Desktop Client and debugging
+description: In this module, learn how to get to the DevTools when using the Microsoft Teams Desktop Client and debugging.
 ms.localizationpriority: medium
 ms.topic: how-to
 ms.date: 08/29/2022
@@ -21,7 +21,7 @@ When Teams is running in a browser, it's easy to access the browser's DevTools: 
 
 While the web version and the desktop version of Teams are almost the same, there are some differences concerning authentication. Sometimes the only way to figure out what is going on is to use the DevTools. To use DevTools in the desktop client, you must:
 
-1. Ensure you have enabled [developer preview](~/resources/dev-preview/developer-preview-intro.md).
+1. Ensure you have enabled [Enable developer preview](../../resources/dev-preview/developer-preview-intro.md#enable-developer-preview).
 1. Open up a tab so you have something to inspect with the DevTools.
 1. Open the DevTools one of the following ways:
     * On Windows, you open DevTools via the Microsoft Teams icon in the desktop tray.

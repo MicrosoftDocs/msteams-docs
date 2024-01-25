@@ -1,5 +1,5 @@
 ---
-title: Add Capabilities of Teams Toolkit v4 to Your Teams apps
+title: Add Capabilities of Teams Toolkit to Your Teams apps
 author: surbhigupta
 description:  In this module, learn how to add Capabilities of Teams Toolkit v4
 ms.author: surbhigupta
@@ -8,13 +8,13 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Add capabilities of Teams Toolkit v4 to Microsoft Teams app
+# Add capabilities of Teams Toolkit to Microsoft Teams app
 
 > [!IMPORTANT]
 >
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+> * We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> * Teams Toolkit v4 extension will soon be deprecated.
+> * This article is applicable only to Teams Toolkit version 4. For more information on how to add capabilities to your app using Teams Toolkit version 5, see [How-to guides](../add-How-to-guides-v5.md).
 
 Adding capabilities with Teams Toolkit allows you to extend the functionality of your existing Microsoft Teams app. The advantage of adding more capabilities is that you can add more functions to your app by using Teams Toolkit to automatically add necessary code and project files. You can select different capabilities based on the app project you've created for your Teams app. The following table lists the Teams app capabilities:
 
@@ -22,7 +22,7 @@ Adding capabilities with Teams Toolkit allows you to extend the functionality of
 |--------|-------------|-----------------|
 |**Basic Teams app**|&nbsp;|&nbsp;|
 | **Tab** |  Basic tabs are simple HTML tags that refer to domains declared in the app manifest. You can add tabs as a part of channel inside a team, group chat, or personal app for an individual user.|Basic tab, notification bot, command bot, basic bot, and basic message extension|
-| **Bot** |  Bots help to interact with your web service through text, interactive cards, and task modules.|Basic message extension, SSO-enabled tab, and basic tab|
+| **Bot** |  Bots help to interact with your web service through text, interactive cards, and dialogs (referred as task modules in TeamsJS v1.x).|Basic message extension, SSO-enabled tab, and basic tab|
 | **Message extension** | Message extensions help to interact with your web service through buttons and forms in the Microsoft Teams client.|Basic bot, SSO-enabled tab, and basic tab|
 |**Scenario-based Teams app**|&nbsp;|&nbsp;|
 | **Notification bot** | Notification bot proactively sends messages in Teams channel or group chat, or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts. |SSO-enabled tab and basic tab|
@@ -114,12 +114,12 @@ The following table shows the changes that you can see in the files of your app 
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
 * [Build bots for Teams](~/bots/what-are-bots.md)
 * [Build tabs for Teams](~/tabs/what-are-tabs.md)
 * [Build message extensions for Teams](~/messaging-extensions/what-are-messaging-extensions.md)
 * [App manifest schema](~/resources/schema/manifest-schema.md)
 * [Authenticate users in Microsoft Teams](~/concepts/authentication/authentication.md)
-* [Provision cloud resources](provision-v4.md)
-* [Create new Teams project](create-new-project-v4.md)
+* [Provision cloud resources](../provision.md)
+* [Create new Teams project](../create-new-project.md)
 * [Combine bots with tabs](~/resources/bot-v3/bots-with-tabs.md)

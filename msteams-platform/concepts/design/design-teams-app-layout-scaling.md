@@ -11,11 +11,11 @@ ms.date: 05/23/2023
 
 A grid layout allows your app to be consistent and guarantees recognizable relationships between design components. You can learn about your grid system and tips for scaling and zoom levels in your app to pass submission criteria.
 
-Scaling and responsive design are essential to all Teams apps so that users can successfully interact with all interfaces with certainty. In order to pass Teams store review, the entire text must be visible and not truncated.
+Scaling and responsive design are essential to all Teams apps so that users can successfully interact with all interfaces with certainty. In order to pass Microsoft Teams Store review, the entire text must be visible and not truncated.
 
 ## Layout design
 
-The 4-pixel base unit of grid allows components to scale consistently across all display size in Teams. In the following example, the corner radius of each button is 4 pixels.
+The 4-pixel base unit of grid allows components to scale consistently across all display sizes in Teams. In the following example, the corner radius of each button is 4 pixels.
 
 :::image type="content" source="../../assets/images/design-guidelines/layout-pixel.png" alt-text="Example shows an example of pixels in layout." lightbox="../../assets/images/design-guidelines/layout-pixel.png":::
 
@@ -51,6 +51,21 @@ The minimum size for desktop is 550 pixels.
 
 :::image type="content" source="../../assets/images/design-guidelines/responsive-desktop.png" alt-text="Example shows a responsive layout on desktop.":::
 
+## Page orientation
+
+### Mobile
+
+> [!NOTE]
+> Apps in Teams mobile support both landscape and portrait mode.
+
+#### Portrait mode
+
+:::image type="content" source="~/assets/images/design-guidelines/mobile-portrait-mode.png" alt-text="Example shows a portrait mode page orientation in Teams mobile.":::
+
+#### Landscape mode
+
+:::image type="content" source="~/assets/images/design-guidelines/mobile-landscape-mode.png" alt-text="Example shows a landscape mode page orientation in Teams mobile.":::
+
 ## Best practices
 
 :::row:::
@@ -82,11 +97,11 @@ Avoid truncation with reflow, prioritizing call to actions (CTAs), and action it
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/word-wrap-width-dont.png" alt-text="Example shows that the text and CTAs are not usable without word wrap.":::
+:::image type="content" source="../../assets/images/design-guidelines/word-wrap-width-dont.png" alt-text="Example shows that the text and CTAs aren't usable without word wrap.":::
 
 #### Don’t: Let text or CTAs get cut off or become illegible as window width changes
 
-Without word wrapping, the text and CTAs are not usable.
+Without word wrapping, the text and CTAs aren't usable.
 
    :::column-end:::
 :::row-end:::
@@ -105,7 +120,7 @@ Use responsive design to avoid text overlap and truncation.
 
 #### Don’t: Truncate and cut off content at any zoom level
 
-It is recommended to test up to 200% zoom.
+It's recommended to test up to 200% zoom.
 
    :::column-end:::
 :::row-end:::
@@ -116,7 +131,7 @@ It is recommended to test up to 200% zoom.
 
 #### Do: Text and colors for accessibility
 
-The entire text must be visible and used for all users, meaning that it must exceed certain color ratios, depending on its usage. To check your contrast levels check out the WebAIM contrast checker.
+The entire text must be visible and used for all users, meaning that it must exceed certain color ratios, depending on its usage. To check your contrast levels, check out the WebAIM contrast checker.
 
    :::column-end:::
    :::column span="":::
@@ -124,7 +139,7 @@ The entire text must be visible and used for all users, meaning that it must exc
 
 #### Don’t: Submit your app with text that doesn’t pass contrast standards
 
-Teams apps need to be accessible to all users with any level of visual impairment or disability. Submissions with inaccessible text is not accepted.
+Teams apps need to be accessible to all users with any level of visual impairment or disability. Submissions with inaccessible text aren't accepted.
 
    :::column-end:::
 :::row-end:::
@@ -139,7 +154,7 @@ Avoid text overlap and truncation.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/resolution-dont.png" alt-text="Example shows a bad resolution which doesn't meet the standards.":::
+:::image type="content" source="../../assets/images/design-guidelines/resolution-dont.png" alt-text="Example shows a bad resolution that doesn't meet the standards.":::
 
 ##### Don’t: Submit your app for review without testing at Teams default resolution
 
@@ -181,7 +196,66 @@ If the headers truncate, use a tooltip so that users can read headers by hoverin
 
 ##### Don’t: Truncate headers without a hover feature
 
-Your app won't pass Teams submission if it has illegible headers without a hover functionality.
+Your app won't pass Teams submission if it has illegible headers without hover functionality.
 
    :::column-end:::
 :::row-end:::
+
+## Page orientation FAQs
+
+<details>
+<summary>Do I need to make any changes in the app to get the landscape mode?</summary>
+
+No. You can use apps in landscape mode by default.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>What if my app doesn't support one of the modes, or if the scenario is only intended to work in one of the modes?</summary>
+
+Teams supports both modes by default. The apps in Teams aren't supported to work in one mode only. If your app demands this requirement, reach out to the [support team](../../feedback.md).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How can I fix the scroll missing in the app empty state?</summary>
+
+Add `<FlexColumn scroll></FlexColumn>` to the empty state for the app.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How can I test my app compatibility in both landscape and portrait modes?</summary>
+
+To test your app's compatibility in both modes, run the app on Teams mobile in different device orientations. Ensure that all elements, including buttons, text, and images are correctly aligned and displayed without any UI distortions or cut-offs.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Are there any best practices for designing apps that work well in both landscape and portrait modes?</summary>
+Yes, when designing apps for Teams, it's essential to follow responsive design principles to ensure optimal performance and user experience in both landscape and portrait modes. Use flexible layouts and adaptive components to accommodate different screen sizes and orientations.
+<br>
+&nbsp;
+</details>
+<details>
+
+<summary>Does landscape mode support both Android and iOS Teams apps?</summary>
+
+Yes, the landscape mode is supported on both Android and iOS Teams apps, providing consistent experience for users across both platforms.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Can I customize the app's behavior differently for landscape and portrait modes?</summary>
+
+The behavior of the app remains consistent across both modes. However, if you have specific use cases or requirements that require different behaviors in each mode, reach out to the [support team](../../feedback.md) with your feedback and suggestions.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Is there any impact on the performance of apps in landscape mode?</summary>
+
+No, the landscape mode support in Teams doesn't have any negative effect on app performance. Teams ensures a smooth and seamless experience for users, regardless of the device orientation.
+<br>
+&nbsp;
+</details>

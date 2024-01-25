@@ -16,7 +16,7 @@ ms.date: 11/29/2021
 >
 > Teams Toolkit v4 extension will soon be deprecated.
 
-Multiple developers can work together to debug, provision and deploy for the same TeamsFx project, but it requires manually setting the right permissions of Teams App and Microsoft Azure Active Directory (Azure AD). Teams Toolkit supports collaboration feature to allow developers and project owner to invite other developers or collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
+Multiple developers can work together to debug, provision and deploy for the same TeamsFx project, but it requires manually setting the right permissions of Teams App and Microsoft Entra ID. Teams Toolkit supports collaboration feature to allow developers and project owner to invite other developers or collaborators to the TeamsFx project to debug, provision, and deploy the same TeamsFx project.
 
 ## Collaborate with other developers
 
@@ -25,21 +25,21 @@ The following sections guide us to understand the collaboration process as proje
 ### As project owner
 
   > [!NOTE]
-  > Before adding collaborators for an environment, project owner needs to [provision](provision-v4.md) the project first.
+  > Before adding collaborators for an environment, project owner needs to [Provision cloud resources](../provision.md) the project first.
 
   1. Select **Teams Toolkit** in the activity bar.
   
      :::image type="content" source="images/select-teams-toolkit-v4.png" alt-text="Select teams toolkit from activity bar":::
 
-  1. In **ENVIRONMENT** section, select collaborators, that displays as option **1** **Add Microsoft 365 Teams App (with Azure AD App) Owners** and **2** **List Microsoft 365 Teams App (with Azure AD App) Owners** as shown in the following image:
+  1. In **ENVIRONMENT** section, select collaborators, that displays as option **1** **Add Microsoft 365 Teams App (with Microsoft Entra App) Owners** and **2** **List Microsoft 365 Teams App (with Microsoft Entra App) Owners** as shown in the following image:
 
      :::image type="content" source="images/add collaborators-v4.png" alt-text="collaborators":::
 
-  2. Select **Add Microsoft 365 Teams App (with Azure AD App) Owners** and add other Microsoft 365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug as shown in the image:
+  2. Select **Add Microsoft 365 Teams App (with Microsoft Entra App) Owners** and add other Microsoft 365 account email address as collaborator. The account to be added must be on the same tenant as project owner for remote debug as shown in the image:
 
      :::image type="content" source="images/add-owner-v4.png" alt-text="Add project owner":::
 
-  3. To view collaborators in current environment, select **List Microsoft 365 Teams App (with Azure AD App) Owners**, then you can see collaborators listed in the output channel as shown in following image:
+  3. To view collaborators in current environment, select **List Microsoft 365 Teams App (with Microsoft Entra App) Owners**, then you can see collaborators listed in the output channel as shown in following image:
 
      :::image type="content" source="images/list of collaborators-v4.png" alt-text="list":::
 
@@ -69,10 +69,10 @@ If you want to remove collaborators from Teams Toolkit extension, you need to re
   * Select **Owners** from left panel.
   * Select and remove the collaborator.
 
-* Using Azure Active Directory
+* Using Microsoft Entra ID
 
-  * Go to [Azure Active Directory](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Azure AD App.
-  * Select **Owners** from left panel in Azure AD App management page.
+  * Go to [Microsoft Entra ID](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps), select **App registration** from left panel, and find your Microsoft Entra App.
+  * Select **Owners** from left panel in Microsoft Entra App management page.
   * Select and remove the collaborator.
 
     > [!NOTE]
@@ -83,7 +83,7 @@ If you want to remove collaborators from Teams Toolkit extension, you need to re
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
-* [Provision cloud resources](provision-v4.md)
-* [Deploy Teams app to the cloud](deploy-v4.md)
+* [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
+* [Provision cloud resources](../provision.md)
+* [Deploy Teams app to the cloud](../deploy.md)
 * [Manage multiple environments](TeamsFx-multi-env-v4.md)

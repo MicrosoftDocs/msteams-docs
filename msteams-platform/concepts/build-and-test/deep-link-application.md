@@ -10,17 +10,17 @@ ms.date: 05/04/2023
 
 # Deep link to an application
 
-You can configure deep links to a tab, to open an app install dialog, to browse within the app, and more. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it. Deep links to custom apps are supported, however, if there's an app in the Teams store with the same app ID as the custom app ID specified in its custom app manifest, then deep link opens the app from the Teams store instead of the custom app.
+You can configure deep links to a tab, to open an app install dialog, to browse within the app, and more. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages that inform users about changes to your tab, or to items within it. Deep links to custom apps are supported, however, if there's an app in the Microsoft Teams Store with the same app ID as the custom app ID specified in its app manifest (previously called Teams app manifest), then deep link opens the app from the Teams Store instead of the custom app.
 
 If your app is approved for Teams mobile platform, you can create a deep link to the app on mobile. If you want the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID for the deep link to work. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 Deep links allow users to know more about an app and install it in different scopes. You can also create deep links for your app users to go to specific pages within your app. In this article, learn how to create a deep link:
 
-- [To open application install dialog](#deep-link-to-open-application-install-dialog)
-- [To browse within your app](#deep-link-to-browse-within-your-app)
-- [To go to a chat with the application](#deep-link-to-a-chat-with-the-application)
-- [Share deep link for a tab](#share-deep-link-for-a-tab)
-- [To open a task module](#deep-link-to-open-a-task-module)
+* [To open application install dialog](#deep-link-to-open-application-install-dialog)
+* [To browse within your app](#deep-link-to-browse-within-your-app)
+* [To go to a chat with the application](#deep-link-to-a-chat-with-the-application)
+* [Share deep link for a tab](#share-deep-link-for-a-tab)
+* [To open a dialog (referred as task module in TeamsJS v1.x)](#deep-link-to-open-a-dialog)
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -35,7 +35,7 @@ You can use deep links to allow app user to open an app install dialog to know m
 
 Following is the deep link format to open an app install dialog from your Teams client:
 
-`https://teams.microsoft.com/l/app/<your-app-id>&tenantId=<tenantId>`
+`https://teams.microsoft.com/l/app/<your-app-id>?tenantId=<tenantId>`
 
 Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bcb4). To know more about different app IDs see, [app ID used for different apps](#app-id-used-for-different-apps).
 
@@ -43,11 +43,11 @@ Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bc
 
 Following are the different app IDs that are used for deep links:
 
-* Side loaded apps: Manifest ID
-* Apps submitted to org catalog: Org catalog ID
-* Apps submitted to Teams app store: Store ID
+* Custom app uploaded in Teams: Manifest ID
+* Apps submitted to org catalog: Org catalog ID. For more information, see [how to find ID based on the app manifest ID](/graph/api/appcatalogs-list-teamsapps#example-3-find-application-based-on-the-teams-app-manifest-id).
+* Apps submitted to Teams Store: Store ID
 
-#### Configure deep link using TeamsJS library 
+#### Configure deep link using TeamsJS library
 
 Applications can use the TeamsJS library to open the app install dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS at the trigger of your choice in the app:
 
@@ -88,7 +88,7 @@ You can configure deep links to browse within your app in the following ways:
 * [Configure deep link to browse within your app manually](#configure-deep-link-to-browse-within-your-app-manually)
 * [Configure deep link to a tab using TeamsJS library](#configure-deep-link-to-a-tab-using-teamsjs-library)
 
-#### Configure deep link to browse within your app manually 
+#### Configure deep link to browse within your app manually
 
 Use the following format for a deep link in a bot, connector, or message extension card:
 
@@ -103,13 +103,13 @@ The query parameters are:
 | Parameter name | Description | Example |
 |:------------|:--------------|:---------------------|
 | `appId`&emsp; | The ID from Microsoft Teams admin center. |fe4a8eba-2a31-4737-8e33-e5fae6fee194|
-| `entityId`&emsp; | The ID of the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking, continue to use entity ID as a parameter name in the URL. When configuring the tab, the context object refers to the entityID as {page.id}. |Tasklist123|
+| `entityId`&emsp; | The ID of the tab, which you provided when [configuring the tab](~/tabs/how-to/create-tab-pages/configuration-page.md). When generating a URL for deep linking, continue to use entity ID as a parameter name in the URL. When configuring the tab, the context object refers to the `entityId` as `page.id`. |Tasklist123|
 | `entityWebUrl` or `subEntityWebUrl`&emsp; | An optional field with a fallback URL to use if the client doesn't support rendering the tab. | `https://tasklist.example.com/123` or `https://tasklist.example.com/list123/task456` |
 | `entityLabel` or `subEntityLabel`&emsp; | A label for the item in your tab to use when displaying the deep link. | Task List 123 or Task 456 |
-| `context.subEntityId`&emsp; | An ID for the item within the tab. When generating a URL for deep linking, continue to use subEntityId as the parameter name in the URL. When configuring the tab, the context object refers to the subEntityID as subPageID. |Task456 |
-| `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is available only in configurable tabs with a scope of **team**. It isn't available in static tabs, which has a **personal** scope.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
+| `context.subEntityId`&emsp; | An ID for the item within the tab. When generating a URL for deep linking, continue to use `subEntityId` as the parameter name in the URL. When configuring the tab, the context object refers to the `subEntityId` as `page.subPageId`. |Task456 |
+| `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is available only in configurable tabs with a scope of **team**. It isn't available in static tabs, which has a **personal** scope.| 19:<cbe3683f25094106b826c9cada3afbe0@thread.skype> |
 | `context.chatId`&emsp; | Chat ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat. | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
-| `context.contextType`&emsp; |  Chat is the only supported contextType for meetings. | chat |
+| `context.contextType`&emsp; |  Chat is the only supported `contextType` for meetings. | chat |
 |`&openInMeeting=false`| `openInMeeting` is used to control the user experience when the target tab is associated with a meeting. If user interacts with the deep link in an ongoing meeting experience, by default Teams opens the app in the in-meeting side panel. Set this value to `false` to always open the app in the meeting chat tab rather than the side panel, regardless of the meeting status. Teams ignores any value other than `false`. | `false` |
 
 > [!NOTE]
@@ -252,15 +252,15 @@ The query parameters are:
 
 Example: `https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123&TaskList`
 
-## Deep link to open a task module
+## Deep link to open a dialog
 
-A task module deep link is a serialization of the `TaskInfo` object with two other details, the `APP_ID` and optionally the `BOT_APP_ID`:
+A dialog deep link is a serialization of the `TaskInfo` object with two other details, the `APP_ID` and optionally the `BOT_APP_ID`:
 
 * `https://teams.microsoft.com/l/task/APP_ID?url=<TaskInfo.url>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
 * `https://teams.microsoft.com/l/task/APP_ID?card=<TaskInfo.card>&height=<TaskInfo.height>&width=<TaskInfo.width>&title=<TaskInfo.title>&completionBotId=BOT_APP_ID`
 
-For the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.card>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`, see [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#the-taskinfo-object).
+For the data types and allowable values for `<TaskInfo.url>`, `<TaskInfo.card>`, `<TaskInfo.height>`, `<TaskInfo.width>`, and `<TaskInfo.title>`, see [TaskInfo object](~/task-modules-and-cards/task-modules/invoking-task-modules.md#dialoginfo-object).
 
 > [!TIP]
 > Encode the deep link URL when using the `card` parameter, for example, JavaScript [`encodeURI()` function](https://www.w3schools.com/jsref/jsref_encodeURI.asp).
@@ -269,7 +269,7 @@ The following table provides information on `APP_ID` and `BOT_APP_ID`:
 
 | Value | Type | Required | Description |
 | --- | --- | --- | --- |
-| `APP_ID` | string | Yes | For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. For Line of business (LOB) or custom apps, use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a task module is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
+| `APP_ID` | string | Yes | For third-party apps, use the app `id` from manifest or the `APP_ID` from Teams admin center as they're identical. For custom apps or custom apps built for your org (LOB apps), use the `APP_ID` from Teams admin center or use the [Graph API](/graph/api/application-list). The [validDomains array](~/resources/schema/manifest-schema.md#validdomains) in the manifest for `APP_ID` must contain the domain for `url` if `url` is present in the deep-link URL. The app ID is already known when a dialog is invoked from a tab or a bot, which is why it isn't included in `TaskInfo`. |
 | `BOT_APP_ID` | string | No | If a value for `completionBotId` is specified, the `result` object is sent using a `task/submit invoke` message to the specified bot. `BOT_APP_ID` must be specified as a bot in the app's manifest, which you can't send it to any bot. |
 
 > [!NOTE]
@@ -309,7 +309,6 @@ Deep link doesn't open in the meeting side panel in the following scenarios:
 * If `openInMeeting=false` is set in the deep link.
 * If deep link is selected outside of the meeting window or component.
 * If deep link doesn't match the current meeting for example, deep link is created from another meeting.
-
 
 ## Code Sample
 

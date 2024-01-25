@@ -220,9 +220,9 @@ To provision and deploy resources targeting Azure inside CI/CD, you must create 
 
 Perform the following steps to create Azure service principals:
 
-1. Register an Microsoft Azure Active Directory (Azure AD) application in single tenant.
-2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
-3. Create a new Azure AD application secret.
+1. Register a Microsoft Entra application in single tenant.
+2. Assign a role to your Microsoft Entra application to access your Azure subscription. The `Contributor` role is recommended.
+3. Create a new Microsoft Entra application secret.
 
 > [!TIP]
 > Save your tenant id, application id (AZURE_SERVICE_PRINCIPAL_NAME), and the secret (AZURE_SERVICE_PRINCIPAL_PASSWORD) for future use.
@@ -246,7 +246,7 @@ Perform the following steps to publish your app:
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals-v4.md)
+* [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
 * [Quick Start for GitHub Actions](https://docs.github.com/en/actions/quickstart#creating-your-first-workflow)
 * [Create your first Azure DevOps Pipeline](/azure/devops/pipelines/create-first-pipeline)
 * [Create your first Jenkins Pipeline](https://www.jenkins.io/doc/pipeline/tour/hello-world/)

@@ -23,9 +23,9 @@ A workflow bot can be installed into a team, group chat, or as personal app, dep
    > [!NOTE]
    > You can select the capability that you want to install, when adding the app. For more information, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 
-You can create a workflow bot to respond to the Adaptive Card triggered by users. Adaptive Card action handler powered by TeamsFx SDK can execute the Adaptive Card universal action `Action.Execute` triggered by users. In response to this respective card action in the conversation, the Adaptive Card action handler sends another Adaptive card.
+You can create a workflow bot to respond to the Adaptive Card triggered by users. Adaptive Card action handler powered by TeamsFx SDK can execute the Adaptive Card universal action `Action.Execute` triggered by users. In response to this respective card action in the conversation, the Adaptive Card action handler sends another Adaptive Card.
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Workflow bot final output with a button" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" :::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" alt-text="Screenshot shows the final output of a workflow bot in Teams." lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-final-output.png" :::
 
 ## Card action handler
 
@@ -33,7 +33,7 @@ To simplify the creation of a workflow bot, the TeamsFx SDK provides an Adaptive
 
 The following diagram illustrates how to respond to an Adaptive Card action with TeamsFx SDK:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="workflow bot card action handler diagram" lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png" alt-text="Diagram shows workflow bot card action handler." lightbox="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-action-card.png":::
 
 1. **Action card**: The card where you define your action that users can invoke, for example the `DoStuff`.
 1. **Card action handler**: Triggered when users invoke the corresponding card action, its `triggerVerb` is same as the `verb` property in Adaptive Card action. It can send a response card to respond to the action.
@@ -249,17 +249,17 @@ You can use the `adaptiveCardResponse` property in handler to customize how the 
 
 * The response card is replaced by the current card where the button is defined for the interactor that triggers the action. The users in the conversation can still view the original action card `AdaptiveCardResponse.ReplaceForInteractor` by default.
 
-   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png" alt-text="Customize how the bot sends adaptive card" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png":::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png" alt-text="Screenshot shows how to customize how the bot sends an adaptive card." lightbox="../../../assets/images/sbs-workflow-bot/replace-for-interactor.png":::
 
 * The response card is replaced by the action card for all users in the chat, and they can view the response card `AdaptiveCardResponse.ReplaceForAll`.
 
-   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all1.png" alt-text="Replaced the action card for all with the acknowledge button" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all1.png":::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all1.png" alt-text="Screenshot shows the replaced the action card for all users in the chat with the acknowledge button." lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all1.png":::
 
-   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all2.png" alt-text="Replaced the action card for all" lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all2.png":::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/replace-for-all2.png" alt-text="Screenshot shows the replaced the action card for all users in the chat without the acknowledge button." lightbox="../../../assets/images/sbs-workflow-bot/replace-for-all2.png":::
 
 * The response card is sent as a separate message in the conversation that can't replace the action card. All users in the chat can view the response card `AdaptiveCardResponse.NewForAll`.
 
-   :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.png" alt-text="Response card sent for all as new" lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.png":::
+   :::image type="content" source="../../../assets/images/sbs-workflow-bot/new-for-all.png" alt-text="Screenshot shows the response card sent for all as users in the chat as a separate message." lightbox="../../../assets/images/sbs-workflow-bot/new-for-all.png":::
 
 ### Respond with text message
 
@@ -273,13 +273,13 @@ async handleActionInvoked(context: TurnContext, actionData: any): Promise<Invoke
 
 You can see the following response message in Teams:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/sample-card-action-response.png" alt-text="sample card response displayed":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sample-card-action-response.png" alt-text="Screenshot shows a sample card response.":::
 
 ### Respond with error messages
 
 When you want to return an error response message to the client, you can apply `InvokeResponseFactory.errorResponse` to build your invoke response. The following image shows error message in Adaptive Card:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/error-message-response.png" alt-text="error response message displayed":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/error-message-response.png" alt-text="Screenshot shows an error response message.":::
 
 > [!NOTE]
 > For more information about the invoke response format, see [response format](/adaptive-cards/authoring-cards/universal-action-model?branch=pr-en-us-7193).
@@ -296,7 +296,7 @@ You can also add new cards, if needed for your application. To build different t
 
 When Adaptive Cards are sent in a Teams channel or group chat, all users can see the same card content. With the new refresh model for Adaptive Cards universal action, users can have a user-specific view. The auto-refresh also facilitates scenarios such as approvals, poll creator controls, ticketing, incident management, and project management cards. The following diagram illustrates how to provide user-specific view with `refresh` model:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card-refresh.png" alt-text="Diagramatic view of user specific auto-refresh model.":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/sbs-workflow-bot-base-card-refresh.png" alt-text="Diagram shows a user specific auto-refresh model.":::
 
 1. **Base card**: The bot sends a message with the base version of the card. This base card can be sent as a bot notification, command response, or any other card action response. All members of the conversation can view the same response. The base card is automatically refreshed to the user defined `userId` in the `refresh` property of the base card.
 
@@ -304,7 +304,7 @@ When Adaptive Cards are sent in a Teams channel or group chat, all users can see
 
 The following image illustrates how user-specific view is displayed in Teams:
 
-:::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-views.png" alt-text="User-specific view in teams displayed" lightbox="../../../assets/images/sbs-workflow-bot/user-specific-views.png":::
+:::image type="content" source="../../../assets/images/sbs-workflow-bot/user-specific-views.png" alt-text="Screenshot shows a user-specific view in Teams." lightbox="../../../assets/images/sbs-workflow-bot/user-specific-views.png":::
 
 ### Add user-specific view
 

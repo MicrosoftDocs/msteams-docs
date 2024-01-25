@@ -29,7 +29,7 @@ Teams Toolkit checks the following prerequisites during the debugging process:
 * Teams Toolkit checks if Node.js is installed. If Node.js isn't installed, the debugging terminates.
 * Teams Toolkit checks if Node.js version matches the versions defined in `package.json` file. If the version doesn't match, Teams Toolkit displays a warning message in output channel.
 * Teams Toolkit prompts you to sign in to Microsoft 365 account, if you haven't signed in with your valid credentials.
-* Custom app uploading or sideloading for your developer tenant is turned on to prevent local debug termination.
+* Custom app upload for your developer tenant is turned on to prevent local debug termination.
 * If Ngrok isn't installed or the version doesn't match the requirement, Teams Toolkit installs Ngrok npm package `ngrok@4.2.2` in `~/.fx/bin/ngrok`. Ngrok binary version 2.3 is applicable for bot and message extension and is managed by Ngrok npm package in `/.fx/bin/ngrok/node modules/ngrok/bin`.
 
   > [!NOTE]
@@ -126,4 +126,4 @@ For more information on the project folder structure, see [Teams Toolkit project
 * [Debug your Teams app using Teams Toolkit](debug-local.md)
 * [Use Teams Toolkit to provision cloud resources](provision.md)
 * [Deploy to the cloud](deploy.md)
-* [Preview and customize Teams app manifest](TeamsFx-preview-and-customize-app-manifest.md)
+* [Preview and customize app manifest](TeamsFx-preview-and-customize-app-manifest.md)

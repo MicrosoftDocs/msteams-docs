@@ -387,9 +387,6 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 * * *
 
-> [!NOTE]
-> `OnTeamsMessagingExtensionSelectItemAsync` is not triggered in mobile Teams application.
-
 ## Default query
 
 If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the message extension. Your service can respond to this query with a set of pre-populated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that isn't dependent on user input.
@@ -427,7 +424,7 @@ The default query has the same structure as any regular user query, with the `na
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Add authentication to a message extension](~/messaging-extensions/how-to/add-authentication.md)
+> [Add third party authentication to message extension](~/messaging-extensions/how-to/add-authentication.md)
 
 ## See also
 
