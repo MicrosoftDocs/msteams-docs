@@ -9,8 +9,6 @@ ms.date: 01/31/2023
 ---
 # Prerequisites to create an offer
 
-For a SaaS offer you create, ensure to have the required technical information and fulfill the technical configurations. It helps negate any blockers while creating the offer. This article provides detailing on the technical configurations and requirements for creating a SaaS offer.
-
 :::row:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow1.png" link="include-saas-offer.md" border="false":::
@@ -32,21 +30,26 @@ For a SaaS offer you create, ensure to have the required technical information a
    :::column-end:::
 :::row-end:::
 
-> [!NOTE]
-> The *Contact me* listing option have no technical configurations to be done.
+To create a SaaS offer, you must have the required technical information and fulfill the technical configurations. It helps negate any blockers while creating the offer. This article details on the technical information and the technical configurations for creating a SaaS offer.
 
-## Technical configuration
+> [!div class="checklist"]
+>
+> * [Set up Microsoft and Microsoft Entra account](#set-up-microsoft-and-azure-ad-accounts)
+> * [Create a landing page](#create-a-landing-page)
+> * [API integrations](#api-integration) specific to sell through Microsoft offers
 
-The technical configurations differ based on the listing option. If you have opted for **Get it now (Free)**, **Free trial**, or **Sell through Microsoft**, the following technical configurations must be done:
-
-* [Set up Microsoft and Microsoft Entra account](#set-up-microsoft-and-azure-ad-accounts)
-* [Create a landing page](#create-a-landing-page)
-
-For Sell through Microsoft listing option, you need to do the [API integrations](#api-integration) after the user purchase the offer, in addition to the basic setup.
+The technical configurations differ based on the listing option. The following illustration can help you understand the configurations for each offer type.
 
 :::image type="content" source="../../../../assets/images/saas-offer/tech-config-offer.png" alt-text="Diagram shows the technical configuration per the type of listing option.":::
 
-### Set up Microsoft and Azure AD accounts
+## Technical configuration
+
+If you have opted for **Get it now (Free)**, **Free trial**, or **Sell through Microsoft**, the following technical configurations must be done:
+
+> [!NOTE]
+> The *Contact me* listing option have no technical configurations to be done.
+
+### Set up Microsoft and Microsoft Entra accounts
 
 To start with, you must set up the required accounts to create an offer.
 
@@ -87,10 +90,12 @@ When you create the SaaS offer, you must provide the following technical informa
 
 ## API integration
 
-When the user purchase the offer and is redirected to the landing page from the configuration link, a set of user information is required to confirm and activate the subscription. You must integrate Microsoft Graph API and SaaS Fulfillment APIs to retrieve user information.
+API integrations are specific for Sell through Microsoft listing option, in addition to the basic setup.
+
+When the user purchases the offer and is redirected to the landing page from the configuration link, a set of user information is required to confirm and activate the subscription. You must integrate Microsoft Graph API and SaaS Fulfillment APIs to retrieve user information.
 
 > [!NOTE]
-> API integrations are part of technical configuration that can be done after the user purchases the license or subscription for the SaaS offer.
+> API integrations can also be done after the user purchases the SaaS app subscription.
 
 ### Integrate with SaaS fulfillment API
 
@@ -111,9 +116,7 @@ Integrate with Graph usageRights API to manage user permissions at the time of a
 You can call Graph APIs to determine if the currently logged in user with a valid subscription of the plan has access to your app. To call Graph usageRights API to check user permissions, follow the steps:
 
   1. Get user OBO token: [Get access on behalf of a user](/graph/auth-v2-user).
-
   1. Call Graph to get the user’s object ID: [Use the Microsoft Graph API](/graph/use-the-api).
-
   1. Call usageRights API to determine the user has a license to the plan: [List user usageRights API](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
 
   > [!NOTE]

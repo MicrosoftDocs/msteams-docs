@@ -10,8 +10,6 @@ ms.date: 03/21/2023
 
 # Plan your SaaS offer
 
-Software as a Service (SaaS) applications can be purchased from Microsoft Teams Store and Microsoft AppSource. This article provides an overview of the features in an offer and helps planning your offer.
-
 :::row:::
    :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow1a.png" link="include-saas-offer.md" border="false":::
@@ -33,7 +31,9 @@ Software as a Service (SaaS) applications can be purchased from Microsoft Teams 
    :::column-end:::
 :::row-end:::
 
-Understanding the features of your SaaS offer is crucial in the planning process. Plan on the following features before creating an offer.
+If you're planning to monetize your app then understanding the features of your SaaS offer is crucial in the planning process. This article provides an overview of the features in an offer that aids you tp plan better.
+
+Here are the features you can plan for before creating an offer:
 
 * [Publishing option](#publishing-option)
 * [Offer details](#offer-details)
@@ -42,7 +42,7 @@ Understanding the features of your SaaS offer is crucial in the planning process
 
 ## Publishing option
 
-The initial step to create a SaaS offer is to determine the listing or publishing option, which decides how the offer is available in the marketplace. The listing option you select when creating the offer is available as a call-to-action button on the offer purchase landing page.
+The initial step to create a SaaS offer is to decide the listing or publishing option. The listing option you select when creating the offer is available as a call-to-action button on the offer purchase landing page.
 
 You can select from one of the four listing options to can publish a SaaS offer:
 
@@ -59,7 +59,7 @@ You can select from one of the four listing options to can publish a SaaS offer:
 
 **Sell through Microsoft**
 
-You can opt to sell your SaaS apps through Microsoft where Microsoft hosts all your transactions for the licenses purchased. Offers sold through Microsoft are transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) where you can sell subscription plans directly from your Teams Store.
+You can opt to sell your SaaS apps through Microsoft where Microsoft hosts all your transactions for the licenses purchased. Offers sold are transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) where you can sell subscription plans directly from the Teams Store.
 
     :::column-end:::
 :::row-end:::
@@ -109,23 +109,23 @@ You can further allow Microsoft to manage licenses on your behalf. If you select
 
 ## Offer details
 
-When planning on the information available on your offer's landing page, take into account the following key features. It helps boost your offer's discoverability and usability.
+Offer details are the basic information available on the offer's landing page. As you plan on offer details, consider the following key features that enhances discoverability and usability of your offer.
 
-* **Offer categories and industries**: Identify the primary and secondary categories for your offer. These categories determine the marketplace where your offer is published and help users identify your app.
+* **Offer categories and industries**: Identify the primary and secondary categories for your offer. These categories determine the marketplace where your offer is published and help the users to identify your app.
 * **Offer details**: Design a distinctive logo, select relevant keywords, and write a compelling description to enhance your offer's discoverability and value.
-* **Preview audience**: Identify the audience and collate their email address to allow them to use and verify the preview offer before publishing live.
-* **Legal terms and conditions**: Provide clear and comprehensive information about the terms of use for the users understand their rights and responsibilities.
-* **Customer Relationship Management (CRM)**: Provide contact information to receive customer leads and address queries.
+* **Preview audience**: Identify the audience and collate their email address to allow them to use and verify the preview offer.
+* **Legal terms and conditions**: Provide clear and comprehensive information about the terms of use for the users to understand their rights and responsibilities.
+* **Customer Relationship Management (CRM)**: Provide contact information to receive customer leads and to address queries.
 
 ## Offer plan
 
-SaaS offers published through Teams Store or AppSource must have at least one plan added. The plan features facilitate appropriate purchase options for the target users.
+SaaS offers published through Teams Store or AppSource must have at least one plan added to the offer. The plan features facilitate appropriate purchase options for the target users.
 
 ### Plan the subscription model
 
-The subscription model or plan visibility decides if the plans can be public or private. Public plans are available for all customers while private plans are customized and visible only for targeted customers. For more information, see the [private plans in Microsoft commercial marketplace](/partner-center/marketplace/private-plans?branch=main).
+The subscription model or plan visibility decides if the plans can be public or private. Public plans are available for all customers while private plans are customized and visible only for targeted customers. For more information, see [private plans in Microsoft commercial marketplace](/partner-center/marketplace/private-plans?branch=main).
 
-Offers with private plans are published in Azure portal. A private plan can be converted to public plan but can't be configured as private plan again.
+Offers with private plans gets published in Azure portal. A private plan can be converted to public plan but can't be configured as private plan again.
 
 ### Plan the pricing options
 
