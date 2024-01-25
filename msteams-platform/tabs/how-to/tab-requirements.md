@@ -1,6 +1,6 @@
 ---
 title: Prerequisites
-description: In this article, learn the prerequisites to build Microsoft Teams personal, channel, or group tab. Know the tools required to build your tab.
+description: In this article, learn about the prerequisites and tools needed to build a Microsoft Teams personal, channel, or group tab.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 03/28/2023

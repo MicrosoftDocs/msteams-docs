@@ -621,6 +621,9 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
 
+> [!IMPORTANT]
+> If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
+
 ## Code samples
 
 |Sample name | Description |TypeScript | 
