@@ -26,7 +26,6 @@ Teams platform features that are available to all app developers.
 
 **2024 January**
 
-* ***January 25, 2024***: [Teams domain migration to the new *.cloud.microsoft* domain.](m365-apps/domain-migration.md)
 * ***January 24, 2024***: [Introduced advanced step-by-step guide to learn how to debug your AI chat bot using Teams App Test Tool.](sbs-teams-app-test-tool.yml)
 * ***January 19, 2024***: [Use / to invoke message extensions from command box in the new Teams client.](messaging-extensions/build-bot-based-message-extension.md)
 * ***January 04, 2024***: [Apps for Teams meetings are available in Department of Defense (DOD) environment.](apps-in-teams-meetings/teams-apps-in-meetings.md)
@@ -436,6 +435,8 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 :::column span="2":::
 
 Teams platform features that aren't available.
+
+* ***January 25, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to the new *cloud.microsoft* domain. Update your app by June 1, 2024 to ensure it continues to run seamlessly across Teams, Outlook, and Microsoft 365. For more information, see [Teams domain migration](m365-apps/domain-migration.md).
 
 * ***October 11, 2023***: Adaptive Card tabs **are** deprecated in the new Microsoft Teams. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
