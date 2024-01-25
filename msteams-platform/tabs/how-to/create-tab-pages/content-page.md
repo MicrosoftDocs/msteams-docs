@@ -20,6 +20,12 @@ This article is specific to using content pages as tabs; however, most of the gu
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
+The following images show the configuration of an HTML content page and the output of content page in tab:
+
+|Content page configuration| Output in web | Output in tab |
+|---|---|---|
+|:::image type="content" source="~/assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot shows the html content page in visual studio.":::|:::image type="content" source="~/assets/images/tab-images/personal-tab-web.png" alt-text="Screenshot shows the output of content page in web.":::|:::image type="content" source="~/assets/images/tab-images/personal-tab-in-teams.png" alt-text="Screenshot shows the output of content page in teams tab.":::|
+
 ## Tab content and design guidelines
 
 Your tab's overall objective is to provide access to the meaningful and engaging content that has a practical value and an evident purpose.
