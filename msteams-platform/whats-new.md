@@ -439,7 +439,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***January 25, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to the new *cloud.microsoft* domain. The old domains **will be** deprecated on June 1, 2024. Update your app before June 1, 2024 to ensure continued functionality across Teams, Outlook, and Microsoft 365. For more information, see [Configure Content Security Policy headers](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
+* ***January 25, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to the new *cloud.microsoft* domain. The old domains **will be** deprecated on June 1, 2024. Configure your app to run on these new domains before June 1, 2024 to ensure continued functionality across Teams, Outlook, and Microsoft 365. For more information, see [Configure Content Security Policy headers](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
 
 * ***October 11, 2023***: Adaptive Card tabs **are** deprecated in the new Microsoft Teams. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 

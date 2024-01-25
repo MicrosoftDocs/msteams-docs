@@ -7,10 +7,7 @@
 >
 > 2. Update your [`X-Frame-Options`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options) or [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the *teams.cloud.microsoft* domain.
 >
-> 3. If your Teams app extends across Outlook and Microsoft 365, ensure you allow the following domains:
->     a. *outlook.cloud.microsoft*
->     b. *m365.cloud.microsoft*
->     c. *teams.cloud.microsoft*
+> 3. If your Teams app extends across Outlook and Microsoft 365, ensure you allow your app to access *teams.cloud.microsoft*, *outlook.cloud.microsoft*, and *m365.cloud.microsoft* domains.
 >
 > For more information regarding Microsoft's domain consolidation, see .
 
