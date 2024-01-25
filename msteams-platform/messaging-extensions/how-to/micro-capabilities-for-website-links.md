@@ -634,7 +634,6 @@ The following is a JSON code sample for the Education template:
 
 ```
 
-
 |Property |Description  |
 |---------|---------|
 |`@type`     |   Course      |
@@ -885,8 +884,6 @@ The following is a JSON code sample for the Restaurant template:
 |aggregateRating.ratingValue       | Average Rating of the restaurant.        |
 |address     |  Physical address of the restaurant.       |
 |url     | Link to the restaurant's website.        |
-|geo.latitude     | Latitude of the restaurant location.       |
-|geo.longitude      |  Longitude of the restaurant location.       |
 |aggregateRating.reviewCount      | Average number of reviews for the restaurant.        |
 |aggregateRating.ratingCount      | Average number of ratings for the restaurant.        |
 
