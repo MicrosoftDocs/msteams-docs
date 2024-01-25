@@ -69,7 +69,7 @@ Depending on the platform or device where you want to target your app, additiona
 > [!NOTE]
 >
 > - If your tab app hasn't been granted IT admin consent, app users need to provide consent the first time they use your app on a different platform.
-> - Implicit grant isn't required if SSO is enabled on a tab app.
+> - Implicit grant isn't required if single sign-on (SSO) is enabled on a tab app.
 
 You can configure authentication for multiple platforms as long as the URL is unique.
 
@@ -116,7 +116,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 You need to acquire an access token for Microsoft Graph. You can do so by using Microsoft Entra on-behalf-of (OBO) flow.
 
-The current implementation for single sign-on (SSO) is limited to user-level permissions, which aren't usable for making Graph calls. To get the permissions and scopes needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript library for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
+The current implementation for SSO is limited to user-level permissions, which aren't usable for making Graph calls. To get the permissions and scopes needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript library for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
 
 After you've configured Graph permissions in Microsoft Entra ID, you'll need to get the token ID from the Teams client and then exchange it with the server-side token.
 
@@ -219,7 +219,7 @@ Your app can obtain consent for Graph permissions globally from the tenant admin
 
 When asking for additional user consent using the Microsoft Teams JavaScript client library (TeamsJS) [authentication](/javascript/api/@microsoft/teams-js/authentication) capability, keep in mind the following considerations:
 
-The [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101) sample code describes to implement authentication in the following steps:
+To implement SSO authentication in a personal tab, follow these steps:
 
 1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Microsoft Entra OBO flow to get access to those other Graph APIs. Ensure that you use the Microsoft Entra v2 endpoint for this exchange.
 1. When you try to execute the token exchange for a user for the first time, if Microsoft Entra refuses to exchange tokens it might be because the user hasn't consented to give your app permission to the user's data. In these cases, your exchange fails with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multifactor authentication or corporate device enrollment is required.
@@ -229,7 +229,9 @@ The [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microso
     - Ensure that the `{scopes}` property includes all the scopes you're prompting the user for. For example, `Mail.Read` or `User.Read`.
 
     To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
-1. After the app user has granted more permissions, retry the OBO flow to get access to additional Graph APIs.
+1. After the app user has granted more permissions, retry the OBO flow to get access to additional Graph APIs. For more information, see
+[Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101)
+sample code.
 
 ## Race condition when making an OBO call after invalid grant exception
 
