@@ -30,7 +30,7 @@ The following images show the configuration of an HTML content page and the outp
 
 Your tab's overall objective is to provide access to the meaningful and engaging content that has a practical value and an evident purpose.
 
-You need to focus on making your tab design clean, navigation intuitive, and content immersive.For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
+You need to focus on making your tab design clean, navigation intuitive, and content immersive. For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
 ## Integrate your code with Teams
 
@@ -88,28 +88,20 @@ The following code provides an example of how your page and the Teams client com
 
 You can access additional content by using TeamsJS to interact with Teams, creating deep links, using dialogs, and verifying if URL domains are included in the `validDomains` array.
 
-### Use TeamsJS to interact with Teams
+* **Use TeamsJS to interact with Teams**: The [Teams client JavaScript library](~/tabs/how-to/using-teams-client-library.md) provides many more functions that you can find useful while developing your content page.
 
-The [Teams client JavaScript library](~/tabs/how-to/using-teams-client-library.md) provides many more functions that you can find useful while developing your content page.
+* **Deep links**: You can create deep links to entities in Teams. They're used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
 
-### Deep links
+* **Dialogs**: A dialog is a modal pop-up experience that you can trigger from your tab. In a content page, use dialogs to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
-You can create deep links to entities in Teams. They're used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
-
-### Dialogs
-
-A dialog is a modal pop-up experience that you can trigger from your tab. In a content page, use dialogs to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
-
-### Valid domains
-
-Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference.
+* **Valid domains**: Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference.
 
 > [!NOTE]
 > The core functionality of your tab exists within Teams and not outside of Teams.
 
 ## Show a native loading indicator
 
-Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator). For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [dialogs in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+You can configure and show a native loading indicator to a tab. Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator). For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [dialogs in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
 >
