@@ -886,6 +886,7 @@ The following is a JSON code sample for the Restaurant template:
 |url     | Link to the restaurant's website.        |
 |aggregateRating.reviewCount      | Average number of reviews for the restaurant.        |
 |aggregateRating.ratingCount      | Average number of ratings for the restaurant.        |
+|streetAddress| The street address of the restaurant|
 
 Example of the unfurling experience for the restaurant type:
 :::image type="content" source="../../assets/images/messaging-extension/micro-capabilities-template-restaurant.png" alt-text="Screenshot shows the unfurling experience of the restaurant template in Microsoft Teams.":::
