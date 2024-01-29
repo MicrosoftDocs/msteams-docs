@@ -86,6 +86,53 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 Teams Toolkit launches your browser instance and opens a webpage to load Teams client.
 
+# [Command line](#tab/cli)
+
+1. Install [dev tunnel.](/azure/developer/dev-tunnels/get-started?tabs=windows)
+
+1. Login to dev tunnel.
+
+    ```bash
+    devtunnel user login
+    ```
+
+1. Initiate your local tunnel service by executing the command.
+
+    ```bash
+    devtunnel host -p 3978 --protocol http --allow-anonymous
+    ```
+
+1. In the `env/.env.local` file, update the values for `BOT_DOMAIN` and `BOT_ENDPOINT` with your dev tunnel URL.
+
+    ```bash
+    BOT_DOMAIN=sample-id-3978.devtunnels.ms
+    BOT_ENDPOINT=https://sample-id-3978.devtunnels.ms/
+    ```
+
+1. Provision the app to Teams.
+
+    ```bash
+    teamsapp provision --env local
+    ```
+
+1. Deploy the app to Teams.
+
+    ```bash
+    teamsapp deploy --env local
+    ```
+
+1. If you're previewing a notification bot hosted on Azure Functions, run the following command in your project directory.
+
+    ```bash
+    npm run prepare-storage:teamsfx
+    ```
+
+1. Preview the current application locally.
+
+    ```bash
+    teamsapp preview --env local
+    ```
+
 ---
 
 ## Debug your app
