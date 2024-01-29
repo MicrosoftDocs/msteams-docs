@@ -47,6 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Introduced systemDefault reserved activity type for send activity feed notifications (Developer preview)
+        url: tabs/send-activity-feed-notification.md
       - text: Micro-capabilities for website links
         url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
       - text: Actions in Microsoft 365
