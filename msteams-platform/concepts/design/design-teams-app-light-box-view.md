@@ -10,17 +10,9 @@ ms.date: 01/29/2023
 
 # Designing lightbox for your Microsoft Teams app
 
-A lightbox is a content display that disables the page layout behind it to highlight important information. Lightboxes show uneditable, non-interactive content.
+A lightbox is a content display that disables the page layout behind it to highlight important information, which is uneditable and non-interactive content.
 
-Lightbox view lets users glimpse media content — like images, videos, audio files, documents, PDFs in a large surface on top of the main Teams window. This component is primarily for viewing content at a glance:
-Session time usually measured in seconds 
-No desire to make changes to the file
-Minimal in-file navigation (scrolling or timeline scrubbing)
-Likely taking a quick look to reply to a conversation
-Most common filetypes likely: image, short PDF or docs, short video clips
-
-
-Lightbox component is intended for the quick glance for review, understanding or gut-check. It doesn’t permit actions for editing or collaborating with others. 
+Lightbox view lets users glimpse media content — like images, videos, audio files, documents, PDFs in a large surface on top of the main Teams window. Lightbox component is intended for the quick glance for review, understanding, or gut-check. It doesn’t permit actions for editing or collaborating with others. 
 
 Most common filetypes will likely be: images, short PDF or docs, short video clips. Users can pop out the Lightbox in the new Teams child window or directly open in a native app or browser. 
 
@@ -72,15 +64,15 @@ Recommended best practices for Lightbox
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/light-box/interactions-lightbox-do.png" alt-text="Example shows an image sizing with lightbox view in the Teams..":::
+:::image type="content" source="../../assets/images/light-box/interactions-lightbox-do.png" alt-text="Example shows the use of a lightbox component to preview files.":::
 
-#### Do: Use a Lightbox component to preview files that present media such an image, video, audio in a full-screen view.
+#### Do: Use a lightbox component to preview files that present media such an image, video, audio in a full-screen view.
 
 Help to save time during file opening. Opening on top of the main content. With easy navigation through the files and fast soft dismiss.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/light-box/interactions-lightbox-dont.png" alt-text="Example of interactions for lightbox view.":::
+:::image type="content" source="../../assets/images/light-box/interactions-lightbox-dont.png" alt-text="Example shows the use of a lightbox component for content editing.":::
 
 #### Don’t: Use a lightbox for content editing or interaction
 
@@ -91,7 +83,7 @@ Provide clear options in **Open in** menu, where users can start to interact wit
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-preview-do.png" alt-text="Example of interactions for lightbox view.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-preview-do.png" alt-text="Example shows the use of a lightbox component to preview documents.":::
 
 #### Do: Use a Lightbox component to preview documents
 
@@ -99,7 +91,7 @@ Documents which are intended just for the preview option or have **Preview** opt
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-preview-dont.png" alt-text="Example of interactions for lightbox view.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-preview-dont.png" alt-text="Example shows the use of a lightbox component in collaborative environments.":::
 
 #### Don’t: Use a lightbox in collaborative environments where it’s helpful to see live presence
 
@@ -110,13 +102,13 @@ Users won’t be able to see who else is in the file and making changes from the
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-back-do.png" alt-text="Example of interactions for lightbox view.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-back-do.png" alt-text="Example shows the use of a lightbox component with back button in the header.":::
 
-#### Do: Back button in the Header will take to the previous screen and close the Lightbox - OR - clicking on the sides from the main content. 
+#### Do: Back button in the header will take to the previous screen and close the lightbox or clicking on the sides from the main content. 
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-back-dont.png" alt-text="Example of interactions for lightbox view.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-back-dont.png" alt-text="Example shows the use of a lightbox component with more back buttons.":::
 
 #### Don’t use more button to close the lightbox 
 
@@ -127,13 +119,13 @@ There are two ways how to close the lightbox, back to previous screen and soft d
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example of interactions for lightbox view.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example shows the use of a lightbox component with highlighted chat panel.":::
 
 #### Do: Highlight the chat panel for communicating about the previewed file
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example of interactions for lightbox view.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example shows the use of a lightbox component with commenting in the chat panel.":::
 
 #### Don’t: Refer to commenting in a lightbox experience
 
