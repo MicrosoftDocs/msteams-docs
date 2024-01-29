@@ -62,74 +62,45 @@ Contains all media files from the current chat, channel post, or file folder.
 
 Recommended best practices for Lightbox
 
-:::row:::
-   :::column span="":::
-:::image type="content" source="../../assets/images/light-box/interactions-lightbox-do.png" alt-text="Example shows the use of a lightbox component to preview files.":::
-
 #### Do: Use a lightbox component to preview files that present media such an image, video, audio in a full-screen view.
 
 Help to save time during file opening. Opening on top of the main content. With easy navigation through the files and fast soft dismiss.
 
-   :::column-end:::
-   :::column span="":::
-:::image type="content" source="../../assets/images/light-box/interactions-lightbox-dont.png" alt-text="Example shows the use of a lightbox component for content editing.":::
+:::image type="content" source="../../assets/images/light-box/interactions-lightbox-do.png" alt-text="Example shows the use of a lightbox component to preview files.":::
 
 #### Don’t: Use a lightbox for content editing or interaction
 
 Provide clear options in **Open in** menu, where users can start to interact with content. 
 
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-preview-do.png" alt-text="Example shows the use of a lightbox component to preview documents.":::
+:::image type="content" source="../../assets/images/light-box/interactions-lightbox-dont.png" alt-text="Example shows the use of a lightbox component for content editing.":::
 
 #### Do: Use a Lightbox component to preview documents
 
 Documents which are intended just for the preview option or have **Preview** option from the **More option**.
 
-   :::column-end:::
-   :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-preview-dont.png" alt-text="Example shows the use of a lightbox component in collaborative environments.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-preview-do.png" alt-text="Example shows the use of a lightbox component to preview documents.":::
 
 #### Don’t: Use a lightbox in collaborative environments where it’s helpful to see live presence
 
 Users won’t be able to see who else is in the file and making changes from the lightbox.
 
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-back-do.png" alt-text="Example shows the use of a lightbox component with back button in the header.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-preview-dont.png" alt-text="Example shows the use of a lightbox component in collaborative environments.":::
 
 #### Do: Back button in the header will take to the previous screen and close the lightbox or clicking on the sides from the main content. 
 
-   :::column-end:::
-   :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-back-dont.png" alt-text="Example shows the use of a lightbox component with more back buttons.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-back-do.png" alt-text="Example shows the use of a lightbox component with back button in the header.":::
 
 #### Don’t use more button to close the lightbox 
 
 There are two ways how to close the lightbox, back to previous screen and soft dismiss.
 
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example shows the use of a lightbox component with highlighted chat panel.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-back-dont.png" alt-text="Example shows the use of a lightbox component with more back buttons.":::
 
 #### Do: Highlight the chat panel for communicating about the previewed file
 
-   :::column-end:::
-   :::column span="":::
-:::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example shows the use of a lightbox component with commenting in the chat panel.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example shows the use of a lightbox component with highlighted chat panel.":::
 
 #### Don’t: Refer to commenting in a lightbox experience
 
 Users can’t comment in lightbox files so mentioning comments might be confusing. 
-
-   :::column-end:::
-:::row-end:::
+:::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example shows the use of a lightbox component with commenting in the chat panel.":::
