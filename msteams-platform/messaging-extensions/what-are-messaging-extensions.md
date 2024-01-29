@@ -134,6 +134,11 @@ The following table helps you select a message extension type to get started:
     :::column-end:::
 :::row-end:::
 
+### Message extension as plugin for Copilot for Teams meetings
+
+Message extension plugins are supported in Copilot for Teams meetings. You can send static and dynamic or real-time prompts based on live transcription in an ongoing meeting.
+
+
 ## Code sample
 
 | **Sample name** | **Description** | **.NET** | **Node.js** | **Python** | **Manifest**|
