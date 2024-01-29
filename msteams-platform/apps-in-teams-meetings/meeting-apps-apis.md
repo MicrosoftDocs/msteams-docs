@@ -255,6 +255,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
   }
   ```
 
+---
+
 * User type
 
 # [Guest user](#tab/guest-user)
@@ -435,6 +437,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
   ```
 
+---
+
 * Call type
 
 # [One-on-One call](#tab/one-on-one-call)
@@ -580,6 +584,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
         
   ```
+
+---
 
 ## Get participant API
 
