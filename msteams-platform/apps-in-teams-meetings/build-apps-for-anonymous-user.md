@@ -225,7 +225,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 ## Known issues and limitations
 
-* Apps for anonymous users aren't supported on live event, VDI, and Linux platforms.
+* Apps for anonymous users aren't supported on live event, Virtual desktop infrastructure (VDI), and Linux platforms.
 
 * Apps for anonymous users aren't supported on Firefox and Safari browsers.
 
