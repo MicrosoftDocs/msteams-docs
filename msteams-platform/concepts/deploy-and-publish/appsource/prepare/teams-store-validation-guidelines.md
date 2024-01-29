@@ -93,6 +93,59 @@ Following these guidelines increases the chances of your app to pass the Microso
 
 :::image type="icon" source="../../../../assets/icons/certificate-icon-16.png"::: This section is in line with [Microsoft commercial certification policy number 1140.1](/legal/marketplace/certification-policies#11401-value-proposition-and-offer-requirements) and provides additional guidance to developers of Microsoft Teams apps on their offer’s value proposition.
 
+Apps must provide value to the users by enabling them to complete functional workflows that encourage repeated use. Expand the following sections to know more about the value proposition:
+<br><br>
+
+<details><summary>Tabs</summary>
+
+Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
+
+:::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
+
+:::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
+
+</details>
+<br>
+
+<details><summary>Notification bots</summary>
+A notification provides value in Teams if:
+
+1. Posted card or text provides adequate details requiring no further user action.
+1. Posted card or text provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
+
+Apps that provide only notifications with content such as, **You have a new notification**, **click to view** and require the user to navigate outside Teams for everything else don't provide significant value within Teams.
+
+:::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="Screenshot shows an example of a notification only bit with inadequate information in the preview.":::
+
+</details>
+<br>
+
+<details><summary>Message extensions</summary>
+
+[*Mandatory Fix*]
+
+Apps that consist of search-based message extension provide user value by sharing cards that allow for contextual conversations without context switching.
+
+To pass validation for a search-based message extension only app, the following are required as baseline to ensure that the user experience isn't broken. A card shared via a message extension provides value in Teams if:
+
+1. Posted card provides adequate details requiring no further user action.
+1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
+
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
+
+    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
+
+</details>
+<br>
+
+<details><summary>Link unfurling </summary>
+
+Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
+
+</details>
+<br>
+
+
 [Back to top](#teams-store-validation-guidelines)
 
 ### App Name
@@ -112,7 +165,7 @@ An app's name plays a critical role in how users discover it in the Teams Store.
 * Must not contain profane or derogatory terms. The name also mustn't include racially or culturally insensitive language. [*Mandatory Fix*]
 * Must be unique. If your app (Contoso) is listed in the Teams Store and Microsoft AppSource and you want to list another app specific to a geography such as Contoso Mexico, your submission must meet the following criteria:
   * Call out the app's region-specific functionality in the title, metadata, first response app experience, and help sections. For example, title must be Contoso Mexico. App title must clearly differentiate an existing app from the same developer to avoid end-user confusion. [*Mandatory Fix*]
-  * When uploading the app package in Partner Center, select the right **Markets** where the app will be available in the **Availability** section. [*Mandatory Fix*]
+  * When uploading the app package in Partner Center, select the right **Markets** where the app is available in the **Availability** section. [*Mandatory Fix*]
 
 * App name mustn't lead with a core Teams feature such as Chat, Contacts, Calendar, Calls, Files, Activity, Teams, and Help. The app name doesn't shortens to either Chat, Contacts, Calendar, Calls, Files, Activity, Teams, and Help on install in the left navigation. [*Mandatory Fix*]
 
@@ -496,7 +549,7 @@ You must have a short and long description for your app. App description helps i
 <br></br>
 <details><summary>Expand to know more</summary>
 
-Descriptions mustn't directly or through insinuation disparage another brand (Microsoft owned or otherwise). Ensure that your description doesn’t include claims that can’t be substantiated. For example, Guaranteed 200 percent increase in efficiency.
+Descriptions mustn't directly or through suggestion derogate another brand (Microsoft owned or otherwise). Ensure that your description doesn’t include claims that can’t be substantiated. For example, Guaranteed 200 percent increase in efficiency.
 
 * App description mustn't contain comparative marketing information. For example, don't use competitor logos or trademarks in the offer listing including tags or other metadata that references competing offers or marketplaces. [*Mandatory Fix*]
 
@@ -537,7 +590,7 @@ Descriptions mustn't directly or through insinuation disparage another brand (Mi
 
 #### Short description
 
-A short description is a concise summary of your app that highlights its value proposition and is directed at your target audience.
+A short description must be a concise summary of your app that highlights its value proposition and is directed at your target audience.
 
 **Dos:**
 
@@ -554,13 +607,17 @@ Use the word **app** in the short description.
 
 #### Long description
 
-The long description can provide an engaging narrative that highlights your app's value proposition, primary audience, and target industry. While this description can be as long as 4,000 characters, most users will only read between 300-500 words.
+The long description must provide an engaging narrative that highlights your app's value proposition, primary audience, and target industry. While the description can be as long as 4,000 characters, we recommended you to have a concise description of around 1000 characters.
 
 **Dos:**
 
 * Use [Markdown](https://support.office.com/article/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772) to format your description.
 
 * Use active voice and speak to users directly. For example, **You can ...**.
+
+* List the key benefits to highlight the advantages of using your app. Add up to three benefits.
+
+* Add the key value proposition of your app in Teams.
 
 * List features with bullet points so it's easier to scan the description.
 
@@ -615,6 +672,8 @@ The long description can provide an engaging narrative that highlights your app'
 
 * Make unverified claims. For example, best, top, and ranked, unless it comes with the source of the claim.
 * Compare your offer with other marketplace offers.
+
+For guidance on how to create an accurate, concise, and informative short and long description, see [checklist to write app descriptions](submission-checklist.md#write-descriptions).
 
 </details>
 
@@ -678,17 +737,25 @@ Remember the following:
 
 ### Videos
 
-A video in your app listing is one of the most effective ways to communicate why people should use your app. You can add a URL for your YouTube or Vimeo video.
+A video in your app listing is one of the most effective ways to communicate why people must use your app. You can add your YouTube or Vimeo video URL that provides the value of your app. Also, as a best practice, we recommended that you add a video that provides the demo or scenario walkthrough of your app. [*Suggested fix*]
 
-If you choose to submit a video as part of your app listing in your Partner Center account, ensure the following:
+If you choose to submit a video as part of your app listing in your Partner Center account, ensure that you meet the following criteria:
 
-* The duration of the video doesn't exceed 90 seconds. [*Suggested Fix*]
-* You turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
-* The video showcases your app’s functionality and integration within Teams. [*Mandatory Fix*]
-* The video is available as a functional link. [*Mandatory Fix*]
+* The video must be short, clear, engaging, and of good quality.
+* The video must demonstrate how to set up and use the app.
+* The video must be in a narrative form.
+* The duration of the video must be within 60-90 seconds for a value video and the recommended duration for a walkthrough video is 3-5 minutes. [*Suggested Fix*]
+* You must turn off advertisements from your YouTube or Vimeo account settings before submitting the video link in the app listing. [*Mandatory Fix*]
+* The video must highlight your app’s functionalities and integration within Teams. [*Mandatory Fix*]
+* The video must be available as a functional link. [*Mandatory Fix*]
 * The video must be in the format `https://www.example.com/123456789`.
 
    :::image type="content" source="../../../../assets/images/submission/video-app-listing-partner-center.png" alt-text="Screenshot shows the failed scenario of video submitted as part of app listing in partner center.":::
+
+* The video can be surfaced in the first position of the screenshots or videos carousel in the app details (Teams Store and Admin Center) and AppSource pages. [*Suggested Fix*]
+* The video on demo or scenario walkthrough must intend to educate users and not to promote your app.
+
+For more information on the criteria for creating an app value video or walkthrough video, see the [checklist to create a video](submission-checklist.md#create-a-video).
 
 <br></br>
 
@@ -698,7 +765,7 @@ If you choose to submit a video as part of your app listing in your Partner Cent
 
 The privacy policy can be specific to your Teams app or an overall policy for all your services.
 
-* If you use a generic privacy policy template, you must add a reference to **services**, **applications**, or **platforms in the scope of your privacy policy**. You don’t need to specify your Teams app in the scope, if you include a reference to **services**, **applications**, and **platforms**. The app validation process will interpret these references to include your Teams app along with your other services or websites.
+* If you use a generic privacy policy template, you must add a reference to services, applications, or platforms in the scope of your privacy policy. You don’t need to specify your Teams app in the scope, if you include a reference to services, applications, and platforms. The app validation process interprets these references to include your Teams app along with your other services or websites.
 * Must include how you handle user data storage, retention, and deletion. You must describe the security controls for data protection.
 * Must include your contact information.
 * Must not include URLs that are broken or for beta or staging purposes.
@@ -934,12 +1001,6 @@ The following are the navigation guidelines:
 </br>
 
 <details><summary>Usability</summary>
-
-* Tabs must provide value beyond hosting an existing website. [*Mandatory Fix*]
-
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-app-provides-workflows.png" alt-text="Graphic shows an example of an app with a workflow valuable to channel members within a team.":::
-
-    :::image type="content" source="../../../../assets/images/submission/validation-usability-website-i-framed.png" alt-text="Graphic shows an example of an app with entire website in an I-frame without any back option.":::
 
 * Content mustn't truncate or overlap within the tab. [*Mandatory Fix*]
 
@@ -1241,15 +1302,6 @@ Bot experience must be fully responsive on mobile. Bot responses must provide a 
 
 Apps that consist of notification only bots provide user value by triggering user notifications based on certain triggers or events in the core app or backend. For example, a new sales lead or prospect is added for the sales team to follow up on. A high-quality notification only bot notifies the users regularly on certain event completions such as workflow completions or alerts.
 
-A notification provides value in Teams if:
-
-1. Posted card or text provides adequate details requiring no further user action.
-1. Posted card or text provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
-
-Apps that provide only notifications with content such as, **You have a new notification**, **click to view** and require the user to navigate outside Teams for everything else don't provide significant value within Teams.
-
-   :::image type="content" source="../../../../assets/images/submission/validation-bot-notification-only-inadequete-info.png" alt-text="Screenshot shows an example of a notification only bit with inadequate information in the preview.":::
-
 > [!TIP]
 > Preview information and provide basic in line user actions in the posted card so that the user isn't required to navigate outside Teams for all actions (irrespective of complexity).
 
@@ -1384,26 +1436,6 @@ Action-based message extensions must do the following:
     :::image type="content" source="../../../../assets/images/submission/validation-search-command-unclear-executable.png" alt-text="validation-search-commands-unclear-executable":::
 
 </details>
-</br>
-
-<details><summary>Action commands for Search based message extension</summary>
-
-[*Mandatory Fix*]
-
-Apps that consist of search-based message extension provide user value by sharing cards that allow for contextual conversations without context switching.
-
-To pass validation for a search-based message extension only app, the following are required as baseline to ensure that the user experience isn't broken. A card shared via a message extension provides value in Teams if:
-
-1. Posted card provides adequate details requiring no further user action.
-1. Posted card provides adequate preview information for a user to take action or decide to view further details in a link opening outside Teams.
-
-    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-adequete-info.png" alt-text="validation-search-base-messaging-ext-adequete-info":::
-
-    :::image type="content" source="../../../../assets/images/submission/validation-search-based-messaging-ext-inadequete-info.png" alt-text="validation-search-base-messaging-ext-inadequete-info":::
-
-Link unfurling only apps don't provide significant value within Teams. Consider building additional workflows in your app, if your app only supports link unfurling and has no other functionality.
-
-</details>
 
 [Back to top](#teams-store-validation-guidelines)
 
@@ -1477,7 +1509,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 
    :::image type="content" source="../../../../assets/images/submission/validation-apps-redirecting-competitor-chat-platform.png" alt-text="Graphic shows an example of an app redirecting to competitor chat based platform.":::
 
-* If your app supports role based views and certain workflows are unavailable to all participants, we recommend that you implement proper messaging for participants in tab and side-panel stating that the app is currently for organizer's view and provide details about how the attendees will receive the meeting notes, action items, and update agendas. [*Mandatory Fix*]
+* If your app supports role based views and certain workflows are unavailable to all participants, we recommend that you implement proper messaging for participants in tab and side-panel stating that the app is for organizer's view and provide details about how the attendees receive the meeting notes, action items, and update agendas. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-way-forward-not-available-for-role-based-views.png" alt-text="Graphic shows an example of an app without a way forward for participants in a role based view.":::
 
@@ -1488,7 +1520,7 @@ For more information, see [Teams dialog design guidelines](~\task-modules-and-ca
 
 * Pre and post meeting screens must adhere to general tab design guidelines. For more information, see [Teams design guidelines](~/tabs/design/tabs.md). [*Mandatory Fix*]
 * Tabs must have an organized layout when displaying multiple items. For example, more than 10 polls or surveys, see [example layout](~/apps-in-teams-meetings/design/designing-apps-in-meetings.md#after-a-meeting). [*Mandatory Fix*]
-* Your app mustn'tify users when the results of a survey or poll are exported by stating, **Results successfully downloaded**. [*Mandatory Fix*]
+* Your app must notify users when the results of a survey or poll are exported by stating, **Results successfully downloaded**. [*Mandatory Fix*]
 
    :::image type="content" source="../../../../assets/images/submission/validation-meeting-experience-tab-design-guidelines-fail.png" alt-text="Graphic shows an example of tab not following tab design guidelines.":::
 
@@ -1683,7 +1715,7 @@ You must demonstrate compliance with all laws where your app is distributed, if 
 
 * Rewards or incentivizes users with cryptocurrency tokens for completing a task.
 
-After an internal Microsoft review, if the compliance demonstration is satisfactory, Microsoft may proceed with further certification of your app. If the compliance demonstration is unsatisfactory, Microsoft will keep you informed of the decision to not proceed with certification of your app.
+After an internal Microsoft review, if the compliance demonstration is satisfactory, Microsoft may proceed with further certification of your app. If the compliance demonstration is unsatisfactory, Microsoft keeps you informed of the decision to not proceed with certification of your app.
 
 [Back to top](#teams-store-validation-guidelines)
 
