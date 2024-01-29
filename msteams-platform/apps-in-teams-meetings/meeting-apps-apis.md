@@ -580,7 +580,6 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "mySiteDomain": undefined
          }
         }
-        
   ```
 ---
 
