@@ -13,7 +13,7 @@ The search command is invoked from any one or both of the following locations:
 * Compose message area: The buttons at the bottom of the compose message area.
 * Command box: By using / in the command box. For example, **/your-app-name**. If you're using the classic Teams, search command is invoked by @mentioning in the command box. For example, **@your-app-name**. 
 
-When a search command is invoked from the compose message area, the user sends the results to the conversation. When it's invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
+When a search command is invoked from the compose message area, the user sends the results to the conversation. When a search command invoked from the command box, the user interacts with the resulting card, or copies it for use elsewhere.
 
 The following image displays the invoke locations of the search command:
 
@@ -33,7 +33,7 @@ Before you get started, ensure that you meet the following requirements:
 
 * [Node.js](https://nodejs.org/en). The supported versions are 16, 18.
 * [Microsoft 365 account for development](../../../toolkit/tools-prerequisites.md#microsoft-365-developer-program)
-* [Set up your dev environment for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) After you've enrolled your developer tenant in Office 365 Targeted Release, it may take a couple of days for the enrollment to take effect.
+* [Set up your dev environment for extending Teams apps across Microsoft 365.](../../../m365-apps/prerequisites.md) After you've enrolled your developer tenant in Office 365 Targeted Release, it might take a couple of days for the enrollment to take effect.
 * [Teams Toolkit Visual Studio Code Extension](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) version 5.2.0 and higher or Teams Toolkit CLI.
 
 # [Teams Toolkit](#tab/Teams-toolkit)
@@ -83,7 +83,7 @@ To run the message extension in Teams, follow these steps:
 
 1. If you have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
     
-   1. If you don't have a bot ID, select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+   1. If you don't have an existing bot ID, select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you created.
 
 1. Select **Save**.
 
@@ -104,7 +104,7 @@ To run the message extension in Teams, follow these steps:
    * Select the type of input
 
 1. Select **Save**. A search message extension using bot framework created.
-1. At the upper-right, select **Preview in Teams**. The app opens in Teams desktop or web client.
+1. At the upper-right corner, select **Preview in Teams**. The app opens in Teams desktop or web client.
 
 ---
 
@@ -201,7 +201,7 @@ async handleTeamsMessagingExtensionQuery(context, query) {
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------------|
-|Teams message extension search   |  This sample shows how to build a search-based message extension. It searches nudget packages and displays the results in search-based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension search   |  This sample shows how to build a search-based message extension. It searches NuGet packages and displays the results in search-based messaging extension.        |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 
 ## Step-by-step guide
 

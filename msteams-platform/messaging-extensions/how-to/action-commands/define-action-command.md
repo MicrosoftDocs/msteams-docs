@@ -12,8 +12,8 @@ ms.author: anclear
 Before creating the action command, you must decide the following factors:
 
 1. [Where can the action command be triggered from?](#select-action-command-invoke-locations)
-1. [How will the dialog (referred as task module in TeamsJS v1.x) be created?](#select-how-to-create-your-dialog)
-1. [Will the final message or card be sent to the channel from a bot, or will the message or card be inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
+1. [How is the dialog (referred as task module in TeamsJS v1.x) created?](#select-how-to-create-your-dialog)
+1. [Is the final message or card sent to the channel from a bot, or is the message or card inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
 
 See the following video to learn how to define message extension action commands:
 <br>
@@ -22,7 +22,7 @@ See the following video to learn how to define message extension action commands
 
 ## Select action command invoke locations
 
-First, you must decide the location from where your action command must be invoked. By specifying the `context` in your app manifest (previously called Teams app manifest), your command can be invoked from one or more of the following locations:
+First, you must decide the location from where your action command must be invoked. When you specify the `context` property in your app manifest (previously called Teams app manifest), your command can be invoked from one or more of the following locations:
 
 * Compose message area: The buttons at the bottom of the compose message area.
 
@@ -104,7 +104,7 @@ To create an action-based message extension using Developer Portal for Teams, fo
 
 1. If you don't have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
    
-   1. If you don't have a bot ID, select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+   1. If you don't have a bot ID, select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you created.
 
 1. Select the required scopes.
 
