@@ -92,9 +92,10 @@ To create an API-based message extension using Developer Portal for Teams, follo
 1. Select **+ New apps**.
 1. Enter a name of the app and select the **Manifest version** as **Latest prerelease (devPreview)**.
 
+1. Select **Add**.
+
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-manifest-version.png" alt-text="Screenshot shows the app name and the manifest version selected as Latest prerelease (devPreview) in Developer Portal.":::
 
-1. Select **Add**.
 1. In the left pane, under **Configure**, update the following **Basic information**:
 
    1. Full name
@@ -112,7 +113,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
-1. Under **Message extension type**, select **API**. 
+1. Under **Message extension type**, select **API**.
 
    1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**. Select **Yes, change**.
 
@@ -120,7 +121,7 @@ To create an API-based message extension using Developer Portal for Teams, follo
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams Developer Portal.":::
 
-1. Select the Open OpenAPI Description document in the JSON or YAML format and select **Open**.
+1. Select the OpenAPI Description document in the JSON or YAML format and select **Open**.
 
 1. Select **Save**. A pop-up appears with the message **API spec saved successfully**.
 1. Select **Got it**.
@@ -138,7 +139,7 @@ You can add commands and parameters to your message extension, to add commands:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Teams Developer Portal.":::
 
-   An **Add command** pop-up appears with a list of all the available APIs from the Open API Description document.
+   An **Add command** pop-up appears with a list of all the available APIs from the OpenAPI Description document.
 
 1. Select an API from the list and select **Next**.
 
@@ -146,7 +147,7 @@ You can add commands and parameters to your message extension, to add commands:
 
    A **Command details** appears.
 
-1. Under Command details, go to **Adaptive card template** and select **Upload now**.
+1. Under **Command details**, go to **Adaptive card template** and select **Upload now**.
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
 
@@ -172,14 +173,14 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Select **Save**.
 
-    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
-
 An API-based message extension is created.
+
+:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
 
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
 * **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
- 
+
 * **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
 # [Visual Studio Code](#tab/visual-studio-code)
