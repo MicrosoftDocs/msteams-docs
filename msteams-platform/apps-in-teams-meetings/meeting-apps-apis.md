@@ -254,7 +254,6 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           }
   }
   ```
-
 ---
 
 * User type
@@ -436,7 +435,6 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
 
   ```
-
 ---
 
 * Call type
@@ -584,7 +582,6 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
         
   ```
-
 ---
 
 ## Get participant API
