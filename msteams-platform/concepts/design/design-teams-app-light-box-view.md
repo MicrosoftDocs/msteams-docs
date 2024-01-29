@@ -32,6 +32,8 @@ Most common filetypes will likely be: images, short PDF or docs, short video cli
 
 :::image type="content" source="../../assets/images/light-box/lightbox-mobile.png" alt-text="Example shows the default lightbox view in the Teams mobile.":::
 
+---
+
 ## Anatomy
 
 Lightbox view includes a header, center stage, and carousel.
@@ -62,13 +64,15 @@ Contains all media files from the current chat, channel post, or file folder.
 
 :::image type="content" source="../../assets/images/light-box/image-sizing.png" alt-text="Example shows carousel sizing with lightbox view in the Teams.":::
 
+---
+
 ## Best practices
 
 Recommended best practices for Lightbox
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/light-box/interactions-lightbox-do.png" alt-text="Example of interactions for lightbox view.":::
+:::image type="content" source="../../assets/images/light-box/interactions-lightbox-do.png" alt-text="Example shows an image sizing with lightbox view in the Teams..":::
 
 #### Do: Use a Lightbox component to preview files that present media such an image, video, audio in a full-screen view.
 
