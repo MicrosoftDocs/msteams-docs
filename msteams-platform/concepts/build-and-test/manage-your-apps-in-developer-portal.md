@@ -140,6 +140,8 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 * **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The app definition refers to the configuration and settings associated with the application. The Icon tab shows the icon used for your app.
 
+* **App validation**: The app validation tool checks your app package against the test cases that Microsoft uses to review your app. App validation tool shows errors and warnings in your app package, if any, and also suggests guidelines to resolve. For more information, see [validate your app package](#validate-your-app-package).
+
 ## Test your app directly in Teams
 
 The Developer Portal provides options for testing and debugging your app:
@@ -173,6 +175,29 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
   > [!NOTE]
   > Bot ID doesn't support environment variables.
+
+## Validate your app package
+
+The following are the steps to validate your app package in Teams developer portal:
+
+1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
+1. Go to **Publish** > **App validation** > **Get started**.
+
+    :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the app validation in Teams developer portal.":::
+
+1. Check the validation acknowledgements and select the **Start validation**.
+
+    :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgement of your app package.":::
+
+    Teams Developer Portal validates your app package:
+
+    :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the app validation in progress.":::
+
+1. After the validation completed, it shows the list of test cases.
+
+    :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
+
+Now, you've successfully validated your app package in Teams Developer Portal. You can check and update your app package as per Microsoft test case results.
 
 ## See also
 
