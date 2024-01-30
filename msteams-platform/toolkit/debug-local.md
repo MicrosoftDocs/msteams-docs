@@ -292,7 +292,7 @@ Teams Toolkit in Microsoft Visual Studio Code gives you the features to automate
 
 The following steps help you set up your Teams Toolkit before you initiate the debug process:
 
-# [Windows](#tab/Windows)
+# [Windows](#tab/Windows1)
 
 1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
@@ -322,7 +322,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 Toolkit launches a new Microsoft Edge or Chrome browser instance based on your selection and opens a web page to load Teams client.  
 
-# [macOS](#tab/macOS)
+# [macOS](#tab/macOS1)
 
 1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** dropdown.
 
