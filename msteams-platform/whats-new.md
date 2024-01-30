@@ -364,7 +364,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 January**
 
-* ***January 29, 2024***: [Introduced systemDefault reserved activity type for send activity feed notifications](tabs/send-activity-feed-notification.md).
+* ***January 30, 2024***: [Introduced systemDefault reserved activity type for send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis).
 * ***January 25, 2024***: [Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content](m365-apps/actions-in-m365.md).
 * ***January 12, 2024***: [Introduced Teams Toolkit command line interface v3.](toolkit/Teams-Toolkit-CLI.md)
 
