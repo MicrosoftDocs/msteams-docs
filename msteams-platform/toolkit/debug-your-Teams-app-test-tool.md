@@ -173,9 +173,9 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
 1. Start your bot app.
 
-```bash
-dotnet run --launch-profile "Teams App Test Tool (browser)"
-```
+    ```bash
+    dotnet run --launch-profile "Teams App Test Tool (browser)"
+    ```
 
 1. Define your bot message endpoint using the `BOT_ENDPOINT` environment variable. After setting this, initiate the Teams App Test Tool and run the command in a separate terminal.
 
