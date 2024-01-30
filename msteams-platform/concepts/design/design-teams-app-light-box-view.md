@@ -10,11 +10,13 @@ ms.date: 01/29/2023
 
 # Designing lightbox for your Microsoft Teams app
 
-A lightbox is a content display that disables the page layout behind it to highlight important information, which is uneditable and non-interactive content.
+The lightbox is a display component that emphasizes important information by deactivating the page layout behind it. Information in the lightbox is non-editable and non-interactive. The lightbox view enables users to preview media content, including images, videos, audio files, documents, and PDFs, on a large surface over the main Teams window. 
 
-Lightbox view lets users glimpse media content — like images, videos, audio files, documents, PDFs in a large surface on top of the main Teams window. Lightbox component is intended for the quick glance for review, understanding, or gut-check. It doesn’t permit actions for editing or collaborating with others. 
+The lightbox component is designed for quick reviews, understanding, or verification. 
+It don't support actions for editing or collaboration. 
+The most frequently used file types in the lightbox are images, short PDFs or documents, and short video clips. 
 
-Most common filetypes will likely be: images, short PDF or docs, short video clips. Users can pop out the Lightbox in the new Teams child window or directly open in a native app or browser. 
+Users can initiate the lightbox in a new Teams child window or open it directly in a native app or browser. 
 
 # [Desktop](#tab/desktop)
 
@@ -103,4 +105,5 @@ There are two ways how to close the lightbox, back to previous screen and soft d
 #### Don’t: Refer to commenting in a lightbox experience
 
 Users can’t comment in lightbox files so mentioning comments might be confusing. 
+
 :::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example shows the use of a lightbox component with commenting in the chat panel.":::
