@@ -22,10 +22,9 @@ You can upload Microsoft Teams apps without having to publish to your organizati
 > * App installation is supported only on Teams desktop client.
 > * We recommend you to avoid multiple uploads of your message extension app to Teams, as it results in multiple instances of the message extension.
 
-From January 31 2024, users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to the Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy). 
+From January 31 2024, users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to the Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy).
 
 If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through a direct link to a chat.
-
 
 ## Prerequisites
 
@@ -43,9 +42,9 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 
     :::image type="content" source="~/assets/images/publish-app/upload-an-app.png" alt-text="Screenshot shows the option to upload an app highlighted in red.":::
 
-1. Select **Upload a customised app**.
+1. Select **Upload a custom app**.
 
-   :::image type="content" source="~/assets/images/publish-app/upload-customised-app.png" alt-text="Screenshot shows the option to upload a customised app.":::
+   :::image type="content" source="~/assets/images/publish-app/upload-customised-app.png" alt-text="Screenshot shows the option to upload a custom app.":::
 
 1. Select your app package .zip file.
 1. Add your app to Teams as per your requirement:</br>
@@ -53,7 +52,7 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
    a. Select **Add** to add your personal app.</br>
    b. Use the dropdown menu to add your app to a Team or chat.
 
-    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot shows the customised app to add in Teams or chat.":::
+    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot shows the custom app to add in Teams or chat.":::
 
 ## Troubleshoot
 
