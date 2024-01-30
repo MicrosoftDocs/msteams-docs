@@ -435,13 +435,13 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. <br>Default value: `false`|
+|`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch dialog (referred as task module in TeamsJS v1.x) dynamically. <br>Default value: `false`|
 |`team.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`team.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.url`|String|2048 characters||Initial webview URL.|
-|`groupChat.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch task module dynamically. <br>Default value: `false`|
-|`groupChat.taskInfo`|Object|||Task module to be launched when fetch task set to false.<br>Default value: `false`|
+|`groupChat.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch dialog dynamically. <br>Default value: `false`|
+|`groupChat.taskInfo`|Object|||Dialog to be launched when fetch task set to false.<br>Default value: `false`|
 |`groupChat.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`groupChat.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`groupChat.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
@@ -509,8 +509,8 @@ Each command item is an object with the following structure:
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command runs initially with no parameters. <br>Default value: `false`|
 |`context`|Array of Strings|3 characters||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
-|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically.|
-|`taskInfo`|Object|||Specify the task module to preload when using a message extension command.|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog dynamically.|
+|`taskInfo`|Object|||Specify the dialog to preload when using a message extension command.|
 |`taskInfo.title`|String|64 characters||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
@@ -519,7 +519,7 @@ Each command item is an object with the following structure:
 |`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request. </br> For Api-based message extension, The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters. |
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameter.inputType`|String|||Defines the type of control displayed on a task module for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
+|`parameter.inputType`|String|||Defines the type of control displayed on a dialog for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
 |`parameter.value`|String|512 characters||Initial value for the parameter.|
 |`parameter.choices`|Array of objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
 |`parameter.choices.title`|String|128 characters||Title of the choice.|
@@ -606,7 +606,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 Indicates whether to show the loading indicator when an app or tab is loading. <br>Default value: `false`
 > [!NOTE]
 >
-> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and dialogs as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 > * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen
@@ -996,6 +996,52 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
+
+## actions
+
+> [!NOTE]
+>
+> * Actions for Microsoft 365 is available in [public developer preview](../dev-preview/developer-preview-intro.md).
+>
+> * Actions is supported for Microsoft 365 (Office) app for web and desktop.
+
+The object is an array of action objects. This block is required only for solutions that provides Actions.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 64 characters | ✔️ | An identifier string in the default locale that is used to catalog actions. Must be unique across all actions for this app. For example, `openDocInContoso`.  |
+|`displayName`| String | 64 characters | ✔️ | A display name for the action. Capitalize first letter and brand name. For example, Add to suppliers, Open in Contoso, and Request signatures.|
+|`description`| String | | ✔️ | Specifies the description of the actions. |
+|`intent`| String enum |  | ✔️ | Specifies the type of intent. The supported enum values are `open`, `addTo`, and `custom`. |
+|`handlers`| Array of objects | | ✔️ | An array of handler objects defines how Actions are managed. In the current public preview, add a single handler for each action. |
+
+### actions.handlers
+
+Defines the handlers of the Action. The handlers is an array of handler objects. Each Action must have at least one handler.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`supportedObjects`| Object | |  | Objects defining what objects can trigger this Action. |
+|`type`| String enum | | ✔️ | Specifies the handler type of Actions. The supported enum value is  `openPage`. |
+|`pageInfo`| Object | |  | Required if the handler type is `openPage`. Object containing metadata of the page to open. |
+
+### actions.handlers.supportedObjects
+
+The supported object types that can trigger this Action.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`file`| Object | |  | Supported file types. |
+|`file.extensions`| Array of strings | |  | Array of strings. File extensions of the file types the Action can trigger. For example, pdf and docx.|
+
+### actions.handlers.pageInfo
+
+Required if the handler type is `openPage`. Object containing metadata of the page to open.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`PageId`| String | |  | Maps to the `EntityId` of the static tab. |
+|`SubPageId`| String | |  | Maps to the `SubEntityId` of the static tab. |
 
 ## See also
 
