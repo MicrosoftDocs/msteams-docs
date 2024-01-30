@@ -44,7 +44,7 @@ You can upload your app to a team, chat, meeting, or for personal use depending 
 
 1. Select **Upload a custom app**.
 
-   :::image type="content" source="~/assets/images/publish-app/upload-customised-app.png" alt-text="Screenshot shows the option to upload a custom app.":::
+   :::image type="content" source="~/assets/images/publish-app/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app.":::
 
 1. Select your app package .zip file.
 1. Add your app to Teams as per your requirement:</br>
