@@ -49,20 +49,20 @@ landingContent:
       links:
       - text: Share to Teams from personal app or tab for Teams mobile clients
         url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
+      - text: Micro-capabilities for website links
+        url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
+      - text: Actions in Microsoft 365
+        url: m365-apps/actions-in-m365.md    
       - text: Use / to invoke message extensions from command box in the new Teams client
         url: messaging-extensions/build-bot-based-message-extension.md
       - text: Teams Toolkit command line interface v3
         url: toolkit/Teams-Toolkit-CLI.md     
       - text: Apps for Teams meetings are available in Department of Defense (DOD)
         url: messaging-extensions/build-bot-based-plugin.md
-      - text: Incoming Webhooks are available in GCC-High
-        url: webhooks-and-connectors/what-are-webhooks-and-connectors.md
       - text: Introduced RSC permissions for users to access different resources
         url:  graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access
       - text: App caching in chat, channel, and meeting tab scopes is available for iOS
         url:  tabs/how-to/app-caching.md
-      - text: Bots can mention tags in Teams channels
-        url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
       - text: Teams AI library
         url:  bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
       - text: Extend an action-based Teams message extension across Microsoft 365
