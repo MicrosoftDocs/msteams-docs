@@ -47,6 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Application RSC permissions for chat scope are now generally available
+        url: graph-api/rsc/resource-specific-consent.md#types-of-rsc-permissions
       - text: Micro-capabilities for website links
         url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
       - text: Actions in Microsoft 365

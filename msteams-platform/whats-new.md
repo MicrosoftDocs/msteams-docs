@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 January**
 
+* ***January 30, 2024***: [Application RSC permissions for chat scope are now generally available.](graph-api/rsc/resource-specific-consent.md#types-of-rsc-permissions)
 * ***January 25, 2024***: [Use Micro-capability templates to show rich unfurl previews of your links without installing your app in Microsoft Teams](messaging-extensions/how-to/micro-capabilities-for-website-links.md).
 * ***January 24, 2024***: [Introduced advanced step-by-step guide to learn how to debug your AI chat bot using Teams App Test Tool.](sbs-teams-app-test-tool.yml)
 * ***January 19, 2024***: [Use / to invoke message extensions from command box in the new Teams client.](messaging-extensions/build-bot-based-message-extension.md)
