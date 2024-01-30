@@ -140,7 +140,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 * **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The app definition refers to the configuration and settings associated with the application. The Icon tab shows the icon used for your app.
 
-* **App validation**: The app validation tool checks your app package against the test cases that Microsoft uses to review your app. App validation tool shows errors and warnings in your app package, if any, and also suggests guidelines to resolve. For more information, see [validate your app package](#validate-your-app-package).
+* **App validation**: The app validation tool evaluates your app package based on the test cases that Microsoft uses to review your app. The app validation tool identifies any errors or warnings in your app package and provides guidelines for resolution. You can also download the validation report. For more information, see [validate your app package](#validate-your-app-package).
 
 ## Test your app directly in Teams
 
@@ -156,7 +156,7 @@ The Developer Portal also includes tools to help you build key features of Teams
 * **Scene studio**: Design [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
-* **Teams store app validation**: Check your app package against the test cases that Microsoft uses to review your app.
+* **Teams store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend you to use [app validation](#validate-your-app-package) for the latest
 * **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
 To add a bot:
@@ -178,7 +178,7 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
 ## Validate your app package
 
-The following are the steps to validate your app package in Teams developer portal:
+To ensure your app functions as expected on the Teams, validate your app package using the **App validation**:
 
 1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
 1. Go to **Publish** > **App validation** > **Get started**.
@@ -189,15 +189,15 @@ The following are the steps to validate your app package in Teams developer port
 
     :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgement of your app package.":::
 
-    Teams Developer Portal validates your app package:
+    Teams Developer Portal now starts to validate your app package:
 
     :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the app validation in progress.":::
 
-1. After the validation completed, it shows the list of test cases.
+1. After validation, it shows the list of test cases your app has passed or failed.
 
     :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
 
-Now, you've successfully validated your app package in Teams Developer Portal. You can check and update your app package as per Microsoft test case results.
+You've successfully validated your app package in the Teams Developer Portal. If your app failed any test cases, review the feedback and make necessary updates to your app package based on the Microsoft test case results.
 
 ## See also
 
