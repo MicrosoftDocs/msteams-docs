@@ -466,7 +466,7 @@ The following table provides the properties of the connector card for Microsoft 
 | text | Rich text | Text appears under the subtitle. For formatting options, see [card formatting](~/task-modules-and-cards/cards/cards-format.md). |
 
 > [!NOTE]
-> themeColor property has been deprecated.
+> The `themeColor` property for defining card borders has been deprecated.
 
 For more information on the properties of the connector card for Microsoft 365 Groups, see [card fields](/outlook/actionable-messages/message-card-reference).
 
@@ -486,8 +486,6 @@ Each connector card can display a maximum of 10 sections, and each section can c
 > Any additional sections, images, or actions in a message do not appear.
 
 All text fields support Markdown and HTML. You can control which sections use Markdown or HTML by setting the `markdown` property in a message. By default, `markdown` is set to `true`. If you want to use HTML instead, set `markdown` to `false`.
-
-If you specify the `themeColor` property, it overrides the `accentColor` property in the app manifest.
 
 To specify the rendering style for `activityImage`, you can set `activityImageType` as shown in the following table:
 
