@@ -47,22 +47,20 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Share code snippets as richly formatted Adaptive Cards with the CodeBlock property
-        url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
+      - text: Micro-capabilities for website links
+        url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
+      - text: Actions in Microsoft 365
+        url: m365-apps/actions-in-m365.md    
       - text: Use / to invoke message extensions from command box in the new Teams client
         url: messaging-extensions/build-bot-based-message-extension.md
       - text: Teams Toolkit command line interface v3
         url: toolkit/Teams-Toolkit-CLI.md     
       - text: Apps for Teams meetings are available in Department of Defense (DOD)
         url: messaging-extensions/build-bot-based-plugin.md
-      - text: Incoming Webhooks are available in GCC-High
-        url: webhooks-and-connectors/what-are-webhooks-and-connectors.md
       - text: Introduced RSC permissions for users to access different resources
         url:  graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access
       - text: App caching in chat, channel, and meeting tab scopes is available for iOS
         url:  tabs/how-to/app-caching.md
-      - text: Bots can mention tags in Teams channels
-        url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
       - text: Teams AI library
         url:  bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
       - text: Extend an action-based Teams message extension across Microsoft 365
@@ -165,6 +163,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Debug your AI chat bot using Teams App Test Tool
+          url: ~/sbs-teams-app-test-tool.yml
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
@@ -181,13 +181,11 @@ landingContent:
           url: ~/sbs-bots-with-sso.yml
         - text: Generate meeting token
           url: ~/sbs-meeting-token-generator.yml
-        - text: Generate meeting side panel
-          url: ~/sbs-meetings-sidepanel.yml
-
-
 
     - linkListType: tutorial
       links:
+        - text: Generate meeting side panel
+          url: ~/sbs-meetings-sidepanel.yml
         - text: Build an in-meeting document signing app
           url:  ~/sbs-inmeeting-document-signing.yml
         - text: Build command bot with JavaScript
@@ -206,12 +204,12 @@ landingContent:
           url: ~/sbs-meetingextension-action.yml
         - text: Build Outgoing Webhooks
           url: ~/sbs-outgoing-webhooks.yml
-        - text: Unfurl links in Teams using bot
-          url: ~/sbs-botbuilder-linkunfurling.yml
 
 
     - linkListType: tutorial
       links:
+        - text: Unfurl links in Teams using bot
+          url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
         - text: Send activity feed notification 
