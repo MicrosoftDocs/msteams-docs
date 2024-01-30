@@ -96,13 +96,13 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     devtunnel user login
     ```
 
-1. Initiate your local tunnel service by executing the command.
+1. Start your local tunnel service.
 
     ```bash
     devtunnel host -p 3978 --protocol http --allow-anonymous
     ```
 
-1. In the `env/.env.local` file, update the values for `BOT_DOMAIN` and `BOT_ENDPOINT` with your dev tunnel URL.
+1. Update the `BOT_DOMAIN` and `BOT_ENDPOINT` values in the `env/.env.local` file using your development tunnel URL.
 
     ```bash
     BOT_DOMAIN=sample-id-3978.devtunnels.ms
@@ -121,13 +121,13 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     teamsapp deploy --env local
     ```
 
-1. If you're previewing a notification bot hosted on Azure Functions, run the following command in your project directory.
+1. To preview a notification bot hosted on Azure Functions, run the following command in your project directory.
 
     ```bash
     npm run prepare-storage:teamsfx
     ```
 
-1. Preview the current application locally.
+1. To preview your application locally.
 
     ```bash
     teamsapp preview --env local

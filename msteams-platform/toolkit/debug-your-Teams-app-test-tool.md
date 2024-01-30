@@ -114,7 +114,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
-# [Command line](#tab/cli)
+# [Command line in JS/TS](#tab/cli)
 
 1. Install `teamsapp-cli` from `npm`:
 
@@ -162,6 +162,38 @@ Test Tool offers a faster debug experience for bot applications when compared to
 1. Test Tool opens the bot in a webpage.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
+
+# [Command line in C#](#tab/clicsharp)
+
+Run the following commands in the directory that contains `teamsapp.yml` file:
+
+1. Download the Teams App Test Tool CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
+
+1. Unzip the downloaded package into a folder, such as `C:\teams-app-test-tool`. In this folder, you'll find an executable binary file `teamsapptester.exe`.
+
+1. Start your bot app.
+
+```bash
+dotnet run --launch-profile "Teams App Test Tool (browser)"
+```
+
+1. Define your bot message endpoint using the `BOT_ENDPOINT` environment variable. After setting this, initiate the Teams App Test Tool and run the command in a separate terminal.
+
+    1. For Command Prompt:
+
+        ```bash
+        set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
+        C:\teams-app-test-tool\teamsapptester.exe start
+        ```
+
+    1. For Power Shell
+
+        ```bash
+        $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
+        C:\teams-app-test-tool\teamsapptester.exe start
+        ```
+
+  A browser will pop up to open Teams App Test Tool and you can test your bot. If the test tool fails to start due to a port conflict, modify the port number of the test tool. To do this, set the `TEAMSAPPTESTER_PORT` environment variable prior to executing the `teamsapptester.exe` command.
 
 ---
 
