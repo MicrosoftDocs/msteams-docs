@@ -10,13 +10,13 @@ ms.date: 09/01/2022
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
-You can support external or third-party (3P) OAuth providers, such as Google, GitHub, LinkedIn, and Facebook using the updated `authenticate()` API:
+You can support external or third-party OAuth providers, such as Google, GitHub, LinkedIn, and Facebook using the updated `authenticate()` API:
 
 ```JavaScript
 function authenticate(authenticateParameters: AuthenticatePopUpParameters): Promise<string>
 ```
 
-The following are added to the `authenticate()` API to support external OAuth providers:
+Add the following values to the `authenticate()` API to support external OAuth providers:
 
 * `isExternal` parameter
 * Three placeholder values in the existing `url` parameter
@@ -27,8 +27,11 @@ The following table provides the list of `authenticate()` API parameters (`Authe
 | --- | --- |
 |`isExternal` | The type of parameter is Boolean, which indicates that the auth window opens in an external browser.|
 |`height` |The preferred height for the pop-up. The value can be ignored if outside the acceptable bounds.|
-|`url`  <br>|The URL of third-party app server for the authentication pop-up, with the following three parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. The Teams platform replaces this placeholder with a deeplink or web page, which updates the app server if the call comes from a mobile platform.</br> <br> - `authId`: UUID (Universal unique identifer) replaces this placeholder. The app server uses it to maintain session. <br> - `hostRedirectUrl`: pass placeholder in `{}`. The current platform and client replace this placeholder with a redirect URL, which redirects the user to the correct client after completing authentication. </br>|
+|`url`  <br>|The URL of third-party app server for the authentication pop-up, with the following three parameter placeholders:</br> <br> - `oauthRedirectMethod`: Pass placeholder in `{}`. The Teams platform replaces this placeholder with a deep link or webpage, which updates the app server if the call comes from a mobile platform.</br> <br> - `authId`: UUID (Universal unique identifer) replaces this placeholder. The app server uses it to maintain the session.</br> <br> - `hostRedirectUrl`: pass placeholder in `{}`. The current platform and client replace this placeholder with a redirect URL, which redirects the user to the correct client after completing authentication. </br>|
 |`width`|The preferred width for the pop-up. The value can be ignored if outside the acceptable bounds.|
+
+>[!NOTE]
+> The `authID` parameter is valid for the duration of the auth session, which has a default timeout of 120 seconds.
 
 For more information on parameters, see [authenticate (AuthenticatePopUpParameters)](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate) function.
 
@@ -68,8 +71,8 @@ The following image provides the flow to add authentication to external browsers
 
    | Parameter | Description|
    | --- | --- |
-   | `oauthRedirectMethod` |Indicates how the third-party app must send the response of authentication request back to Teams, with one of the two values: deeplink or page.|
-   |`authId` | The request-id Teams created for this specific authentication request that needs to be sent back to Teams through deeplink.|
+   | `oauthRedirectMethod` |Indicates how the third-party app must send the response of authentication request back to Teams, with one of the two values: deep link or page.|
+   |`authId` | The request-id Teams creates for this specific authentication request that needs to be sent back to Teams through a deep link.|
 
     > [!TIP]
     > The app can marshal `authId`, `oauthRedirectMethod` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId` and `oauthRedirectMethod`, when OAuthProvider redirects back to the server and the app uses the values for sending authentication response back to Teams as described in step 6.
@@ -84,7 +87,7 @@ The following image provides the flow to add authentication to external browsers
 
 1. Sign in to external browser. The OAuth providers redirect back to the `redirect_uri` with the auth code and the state object.
 
-1. The third-party app server handles the response and checks `oauthRedirectMethod`, which is returned from external OAuth provider in the state object to determine whether the response needs to be returned through the auth-callback deeplink or through web page that calls `notifySuccess()`.
+1. The third-party app server handles the response and checks `oauthRedirectMethod`, which is returned from external OAuth provider in the state object to determine whether the response needs to be returned through the auth-callback deep link or through web page that calls `notifySuccess()`.
 
       ```JavaScript
       const state = JSON.parse(req.query.state)
@@ -96,7 +99,7 @@ The following image provides the flow to add authentication to external browsers
       …
       ```
 
-1. The third-party app generates a deeplink for Teams mobile in the following format, and sends the auth code with the session ID back to Teams.
+1. The third-party app generates a deep link for Teams mobile in the following format, and sends the auth code with the session ID back to Teams.
 
    ```JavaScript
    return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)

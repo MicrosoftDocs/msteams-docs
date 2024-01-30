@@ -139,7 +139,7 @@ The following code is an example of the `invoke` request:
    }
 ```
 
-Following is an example of the response:
+Example of the response:
 
 ```json
 {
@@ -233,6 +233,37 @@ contentType: "application/vnd.microsoft.card.thumbnail",
 ```
 
 ---
+
+## Micro-capabilities for website links
+
+The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link into an Adaptive Card with the information such as image, title, and a description.
+
+You can show rich unfurl previews of your links without installing your app in Microsoft Teams. Add the [schema.org metadata](https://schema.org/docs/gs.html) to your website in the [JASON-LD format](https://json-ld.org/) and use the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> that match your product. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
+
+### Enable Rich unfurl previews of links
+
+If you've already added [schema.org](<https://schema.org/>) to your website, you can view the rich unfurl preview of your link by pasting it in the Teams message compose area.
+
+:::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-experience.png" alt-text="Screenshot shows an example of rich unfurl preview experience when a link is pasted in the Teams message compose area." lightbox="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-experience-teams.png":::
+
+If you've not added [schema.org](<https://schema.org/>) to your website, you can manually check the rich unfurl preview experience by following these steps:
+
+1. Add the [schema.org](https://schema.org/) metadata with the [JASON-LD format](https://json-ld.org/) to your website.
+1. In your website, check for the supported `@type` attribute and copy the metadata under the script tag `application/ld+json`.
+1. Open [Adaptive Card designer](https://www.adaptivecards.io/designer/) and create a new file.
+1. In the **SAMPLE DATA EDITOR**, paste the json metadata from your website.
+
+   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-sample-data-editor.png" alt-text="Screenshot shows an example of website metadata in the sample data editor section of the Adaptive Card Designer.":::
+
+1. Check the micro-capability template and add the template code in the **CARD PAYLOAD EDITOR**.
+
+   :::image type="content" source="../../assets/images/messaging-extension/link-unfurling-app-less-adaptive-card-payload-editor.png" alt-text="Screenshots shows an example of micro-capability template added in the card payload editor in Adaptive Card Designer.":::
+
+   If required, add new attributes from the template to your website metadata in the **SAMPLE DATA EDITOR**.
+
+1. To preview the Adaptive Card unfurl experience, select **Preview mode**.
+
+For more information, see [Micro-capabilities for website links](micro-capabilities-for-website-links.md).
 
 ## Zero install for link unfurling
 
@@ -391,23 +422,22 @@ To get your app ready for zero install link unfurling, follow these steps:
 
 1. **Advantages and limitations**:
 
-# [Advantages](#tab/advantages)
+    # [Advantages](#tab/advantages)
+    
+    Zero install link unfurling helps you provide enhanced experience to the users, such as:
+    
+    * Unfurl previews for your links that users share in Teams even before they've installed your app.
+    * Create a welcome card for your app to show a preview with the placeholder fields.
 
-Zero install link unfurling helps you provide enhanced experience to the users, such as:
+    # [Limitations](#tab/limitations)
 
-* Unfurl previews for your links that users share in Teams even before the user installs your app.
-* Create a welcome card for your app to show a preview with the placeholder fields.
+    The following are the limitations:
 
-# [Limitations](#tab/limitations)
+    * The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtensions/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
 
-The following are the limitations:
+    * The bot can't send back an [Adaptive Cards with Universal Actions](../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md) in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
-* The bot can only send back a response as `result` or `auth` as the value for the `type` property in response to the `composeExtensions/anonymousQueryLink` invoke request. The user can log an error for all other response types, such as, *silentAuth* and *config*.
-
-* The bot can't send back an [Adaptive Cards with Universal Actions](../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md) in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
-
-* If the bot selects to send back the `"type": "auth"` property with a pre-auth card, Teams strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
-
+    * If the bot selects to send back the `"type": "auth"` property with a pre-auth card, Teams strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
 ---
 
 ## How to test zero install link unfurling
