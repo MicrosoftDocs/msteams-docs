@@ -193,7 +193,7 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
         C:\teams-app-test-tool\teamsapptester.exe start
         ```
 
-  A browser will pop up to open Teams App Test Tool and you can test your bot. If the test tool fails to start due to a port conflict, modify the port number of the test tool. To do this, set the `TEAMSAPPTESTER_PORT` environment variable prior to executing the `teamsapptester.exe` command.
+A browser will pop up to open Teams App Test Tool and you can test your bot. If the test tool fails to start due to a port conflict, modify the port number of the test tool. To do this, set the `TEAMSAPPTESTER_PORT` environment variable prior to executing the `teamsapptester.exe` command.
 
 ---
 
