@@ -8,7 +8,7 @@ ms.date: 11/23/2022
 
 # Create a content page
 
-Content page is the base level page where a developer can add the content of a tab. A content page is a webpage that is rendered within the Teams client, which is necessary to create any of the following:
+Content page is the base level page where a developer can add the content of a tab. A content page is a webpage that is rendered within Microsoft Teams client, which is necessary to create any of the following:
 
 * A personal-scoped custom tab: In this case, the content page is the first page the user encounters.
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
@@ -28,7 +28,7 @@ The following images show the configuration of an HTML content page and the outp
 
 ## Tab content and design guidelines
 
-Your tab's overall objective is to provide access to the meaningful and engaging content that has a practical value and an evident purpose.
+Your tab's overall objective is to provide access to meaningful and engaging content that has a practical value and a clear purpose.
 
 You need to focus on making your tab design clean, navigation intuitive, and content immersive. For more information, see [tab design guidelines](~/tabs/design/tabs.md) and [Microsoft Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md).
 
@@ -39,7 +39,7 @@ For your page to display in Teams, you must include the [Microsoft Teams JavaScr
 > [!NOTE]
 > It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
 
-The following code provides an example of how your page and the Teams client communicate:
+The following code gives an example of how your page and the Teams client communicate:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -94,7 +94,7 @@ You can access additional content by using TeamsJS to interact with Teams, creat
 
 * **Dialogs**: A dialog is a modal pop-up experience that you can trigger from your tab. In a content page, use dialogs to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
-* **Valid domains**: Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the manifest schema reference.
+* **Valid domains**: Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [app manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the app manifest schema reference.
 
 > [!NOTE]
 > The core functionality of your tab exists within Teams and not outside of Teams.
@@ -111,7 +111,7 @@ If you indicate `showLoadingIndicator : true`  in your app manifest, then all ta
 
 To show the loading indicator:
 
-1. Add `"showLoadingIndicator": true` to your manifest.
+1. Add `"showLoadingIndicator": true` to your app manifest.
 1. Call `app.initialize();`.
 1. Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app has successfully loaded. If applicable, Teams hides the loading indicator. If `notifySuccess`  isn't called within 30 seconds, Teams assumes that your app has timed out, and displays an error screen with a retry option. For app updates, this step is applicable for already configured tabs. If you don't perform this step, an error screen is displayed for the existing users. *[Mandatory]*
 1. If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can hide the loading indicator manually by calling `app.notifyAppLoaded();`. *[Optional]*
