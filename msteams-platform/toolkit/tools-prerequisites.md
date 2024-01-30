@@ -171,9 +171,9 @@ You can use this method to verify custom app upload permission only after you ha
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/upload-an-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
-1. Check if you can see the option **Upload a customised app**.
+1. Check if you can see the option **Upload a custom app**.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-customised-app.png" alt-text="Screenshot shows the option to Upload a customised app in Teams.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
 </details>
 
