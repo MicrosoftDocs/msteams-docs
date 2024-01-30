@@ -337,6 +337,154 @@ private ConfigResponseBase createConfigContinueResponse()
 }
 ```
 
+# [C# 3](#tab/teams-bot-sdk3)
+
+The `OnInvokeActivityAsync` method manages incoming invoke activities for a bot application. It accepts a `turnContext` object, which represents the activity, and a cancellationToken for asynchronous operations. The method determines the requested operation type by examining the activity’s name. If the name is `config/fetch`, the bot forms a `ConfigResponse<BotConfigAuth>` object that includes bot configuration details and returns it as an `InvokeResponse` with a 200 status code. If the name is `config/submit`, the bot generates a `ConfigResponse<TaskModuleResponseBase>` that encapsulates the necessary configuration details in an Adaptive Card and also returns it with a 200 status code.
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "config/fetch")
+    {
+        var response = new ConfigResponse<BotConfigAuth>
+        {
+            Config = new BotConfigAuth
+            {
+                SuggestedActions = new SuggestedActions
+                {
+                    Actions = new List<CardAction>
+                    {
+                        new CardAction
+                        {
+                            Type = "bot config type",
+                            Title = "bot config title",
+                            Image = "https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40",
+                             Value = "bot config value"
+                        }
+                    }
+                },
+                Type = "auth"
+            }
+
+        };
+        
+        return new InvokeResponse { Status = 200, Body = response };
+
+    }
+    else if (turnContext.Activity.Name == "config/submit")
+    {
+        AdaptiveCard card = new AdaptiveCard("1.2")
+        {
+            Body = new List<AdaptiveElement>()
+        };
+        
+        card.Body.Add(new AdaptiveContainer
+        {
+            Items = new List<AdaptiveElement>
+            {
+                new AdaptiveTextBlock
+                {
+                    Size = AdaptiveTextSize.Large,
+                    Text = "bot config test",
+                    Type = "TextBlock"
+                }
+            }
+        });
+
+        var response = new ConfigResponse<TaskModuleResponseBase>
+        {
+            Config = new TaskModuleContinueResponse
+            {
+                Value = new TaskModuleTaskInfo
+                {
+                    Height = 123,
+                    Width = 456,
+                    Title = "test title",
+                    Card = new Attachment
+                    {
+                        ContentType = AdaptiveCard.ContentType,
+                        Content = card
+                    }
+                },
+                Type = "continue"
+            }
+        };
+
+        return new InvokeResponse { Status = 200, Body = response };
+    }
+
+    return null;
+}
+```
+
+# [C# 4](#tab/teams-bot-sdk4)
+
+The `OnInvokeActivityAsync` method, which is tasked with managing incoming invoke activities in a bot application. It begins by inspecting the name of the incoming activity using `turnContext.Activity.Name`. If the activity name is `config/submit`, it formulates a `ConfigResponse<TaskModuleResponseBase>` that includes a simple message response and returns it as an `InvokeResponse` with a status code of 200. Alternatively, if the activity name is `config/fetch`, it constructs an AdaptiveCard to symbolize configuration data and encapsulates it within a `ConfigResponse<TaskModuleResponseBase>`. This response comprises details such as card content, dimensions, and title, and is returned with a status code of 200. If the incoming activity’s name doesn’t match either `config/submit` or `config/fetch`, the method returns null, indicating that the activity does not necessitate a specific action.
+
+```csharp
+protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+{
+    if (turnContext.Activity.Name == "config/submit")
+    {
+        var response = new ConfigResponse<TaskModuleResponseBase>
+        {
+            Config = new TaskModuleMessageResponse
+            {
+                Value = "this is a message"
+            }
+        };
+        return new InvokeResponse { Status = 200, Body = response };
+
+    }
+    else if (turnContext.Activity.Name == "config/fetch")
+    {
+        AdaptiveCard card = new AdaptiveCard("1.2")
+        {
+            Body = new List<AdaptiveElement>()
+        };
+        
+        card.Body.Add(
+            new AdaptiveContainer
+            {
+                Items = new List<AdaptiveElement>
+                {
+                    new AdaptiveTextBlock
+                    {
+                        Size = AdaptiveTextSize.Large,
+                        Text = "bot config test",
+                        Type = "TextBlock"
+                    }
+                }
+            });
+        
+        // Construct a task module response with the task module URL and any data to be passed to the task module
+
+        var response = new ConfigResponse<TaskModuleResponseBase>
+        {
+            Config = new TaskModuleContinueResponse
+            {
+                Value = new TaskModuleTaskInfo
+                {
+                    Height = 123,
+                    Width = 456,
+                    Title = "test title",
+                    Card = new Attachment
+                    {
+                        ContentType = AdaptiveCard.ContentType,
+                        Content = card
+                    }
+                },
+                Type = "continue"
+            }
+        };
+
+        return new InvokeResponse { Status = 200, Body = response };
+    }
+
+    return null;
+}
+```
+
 ---
 
 ## Bot configuration experience in Teams
