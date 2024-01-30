@@ -18,7 +18,7 @@ Graph scopes, such as `User.Read` or `Mail.Read`, indicate what your app can acc
 
 You can configure additional Graph scopes in Microsoft Entra ID for your app. These are delegated permissions, which are used by apps that require signed-in access. A signed-in app user or administrator must initially consent to them. Thereafter, your tab app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
-If your application doesn't require a signed-in user, consider utilizing application permissions, also recognized as the app-only access scenario. Only administrators have the authority to grant consent for application permissions. For more information, see [application permissions](/graph/permissions-overview#application-permissions).
+We recommend using delegated permissions for the signed-in user. If your application doesn't need a signed-in user, consider using application permissions, also known as the app-only access scenario. Only administrators can grant consent for application permissions. For more information, see [application permissions](/graph/permissions-overview#application-permissions).
 
 ### To configure API permissions
 
@@ -116,7 +116,7 @@ You can configure authentication for multiple platforms as long as the URL is un
 
 You need to acquire an access token for Microsoft Graph. You can do so by using Microsoft Entra on-behalf-of (OBO) flow.
 
-The current implementation for SSO is limited to user-level permissions, which aren't usable for making Graph calls. To get the permissions and scopes needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript library for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
+The current implementation for single sign-on (SSO) is limited to user-level permissions, which aren't usable for making Graph calls. To get the permissions and scopes needed to make a Graph call, SSO apps must implement a custom web service to exchange the token received from the Teams JavaScript library for a token that includes the needed scopes. You can use Microsoft Authentication Library (MSAL) for fetching the token from the client side.
 
 After you've configured Graph permissions in Microsoft Entra ID, you'll need to get the token ID from the Teams client and then exchange it with the server-side token.
 
