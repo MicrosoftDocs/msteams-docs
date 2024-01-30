@@ -11,7 +11,7 @@ ms.date: 01/26/2024
 > [!NOTE]
 > Adaptive Card-based Loop components require Adaptive Cards version 1.6 or later.
 
-Adaptive Card-based Loop components enable you to build collaborative experiences within your Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch context between Microsoft 365 apps, such as Teams and Outlook.
+Adaptive Card-based Loop components enable you to build collaborative experiences within your Microsoft Teams [message extensions](../messaging-extensions/what-are-messaging-extensions.md) that work across Microsoft 365. Adaptive Card-based Loop components have actionable content that enables users to make live updates without having to switch context between Microsoft 365 apps, such as Teams and Outlook.
 
 [Loop components](https://support.microsoft.com/office/first-things-to-know-about-loop-components-in-microsoft-teams-ee2a584b-5785-4dd6-8a2d-956131a29c81) were first released in Teams followed by other Microsoft 365 apps such as Outlook, Whiteboard, and Loop app. Loop components allow users to collaborate and share live content with others in the chat, email, meeting, Whiteboard or Loop app. Because Loop components stay in sync across different Microsoft 365 apps, they enable users to coauthor content and make real-time updates on their content. For more information, see [overview of Loop components in the Microsoft 365 ecosystem](/microsoft-365/loop/loop-components-teams).
 
@@ -68,7 +68,7 @@ The following is a JSON example of an Adaptive Card-based Loop component with th
 
 ## Test your Loop component
 
-You can test the Loop component in the developer environments of Microsoft Teams and Outlook for web.
+You can test the Loop component in the developer environments of Teams and Outlook for web.
 
 ### Test in Microsoft Teams
 

@@ -95,7 +95,7 @@ The platform provides the component header and includes standard elements such a
 
 **App name** is drawn from the component contract. We recommend to use a concise name for your app.
 
-**App logo** is drawn from the component contract. Ensure that the logo provided works on both light and dark backgrounds since the same asset is used for light, dark, and high contrast themes in Teams.
+**App logo** is drawn from the component contract. Ensure that the logo provided works on both light and dark backgrounds since the same asset is used for light, dark, and high contrast themes in Microsoft Teams.
 
 ## Loop component border
 
