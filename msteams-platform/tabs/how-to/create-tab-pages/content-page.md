@@ -8,7 +8,7 @@ ms.date: 11/23/2022
 
 # Create a content page
 
-Content page is the base level page where a developer can add the content of a tab. A content page is a webpage that is rendered within Microsoft Teams client, which is necessary to create any of the following:
+Content page is the base level page where a developer can add the content of a tab. A content page is a webpage that is rendered within Microsoft Teams client, which is necessary to create any of the following tabs:
 
 * A personal-scoped custom tab: In this case, the content page is the first page the user encounters.
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
