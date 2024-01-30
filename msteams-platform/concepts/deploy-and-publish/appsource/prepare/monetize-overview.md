@@ -25,11 +25,12 @@ There are four ways by which you can drive app monetization:
 
       * **Free trial**: You can provide free access to your app for a limited time or with limited functionality. This encourages users to purchase the full version after the trial period.
 
-      * **Test drive**: You can provide access to preconfigured environment for a fixed period.
-
-      * **Contact me**: You can allow users to contact you for specific offers, unique requirements, and any enquires.
    :::column-end:::
 :::row-end:::
+
+* **Test drive**: You can provide access to preconfigured environment for a fixed period.
+
+* **Contact me**: You can allow users to contact you for specific offers, unique requirements, and any enquires.
 
 ## SaaS offer
 
@@ -38,7 +39,7 @@ Software as a Service (SaaS) applications published in Microsoft commercial mark
 > [!NOTE]
 > To create and publish your offer, you must have a [commercial marketplace account in Partner Center](/partner-center/create-account).
 
-When creating a SaaS offer, you must determine the publishing option, specifically if you're selling through Microsoft or managing transaction independently. You can select the publishing option that aligns with your requirements. For more information on publishing options, see [planning for a SaaS offer](include-saas-offer.md).
+When creating a SaaS offer, you must determine the publishing option, specifically if you're selling through Microsoft or managing transaction independently. For more information on publishing options, see [planning for a SaaS offer](include-saas-offer.md).
 
 Here are some features you can integrate with the SaaS offer:
 
