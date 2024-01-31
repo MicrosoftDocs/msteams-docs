@@ -176,7 +176,7 @@ Deep link without any openMode specified (defaults to Collaborative Stageview).
 
 In conclusion, the Stageview Multi-window in Microsoft Teams provides a versatile and immersive canvas for your app content. Whether you want to facilitate multitasking, enhance collaboration, or provide a focused user experience, the Stageview Multi-window has a mode to suit your needs. Remember to consider the context in which your app is being used and ensure that your app works in that context. Happy coding!
 
-Microsoft Teams provides multiple methods for opening your app content in immersive canvas experiences. These canvases allow your users to embrace multi-tasking workflows inside Teams, collaborate with others directly in a Teams multi-window or complete focused work in an immersive Teams Stageview.
+Microsoft Teams provides multiple methods for opening your app content in immersive canvas experiences. These canvases allow your users to embrace multi-tasking workflows inside Teams, collaborate with others directly in a Teams multi-window or complete focused work in an immersive Teams Stage View.
 
 There are three modes to open your app content:
 
