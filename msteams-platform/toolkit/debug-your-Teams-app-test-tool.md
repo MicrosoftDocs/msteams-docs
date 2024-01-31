@@ -128,9 +128,9 @@ Test Tool offers a faster debug experience for bot applications when compared to
     teamsapp new   
     ```
 
-    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
+    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions.
 
-    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm it.
+    For example, use arrow keys to select an option. After you make the choice, select **Enter** to confirm:
 
       1. Select **New Project**.
       1. Select **Bot**.
@@ -169,7 +169,7 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
 1. Download the Teams App Test Tool CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
 
-1. Unzip the downloaded package into a folder, such as `C:\teams-app-test-tool`. In this folder, you'll find an executable binary file `teamsapptester.exe`.
+1. Unzip the downloaded package to a folder. You'll find an executable binary file `teamsapptester.exe`.
 
 1. Start your bot app.
 
