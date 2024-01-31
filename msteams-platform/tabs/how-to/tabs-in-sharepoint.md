@@ -12,11 +12,11 @@ You can get a rich integration experience between Microsoft Teams and SharePoint
 
 ## Rich integration between Teams and SharePoint
 
-With the November release of Teams and SharePoint Framework v.1.7, developers have two powerful capabilities:
+With the latest release of Teams and SharePoint Framework, developers have two powerful capabilities:
 
 ### Teams tabs in SharePoint
 
-With SharePoint Framework v.1.7, you can host your Teams tabs in SharePoint. As tabs hosted in SharePoint get a similar **full page** experience, exposing all the features of Teams tabs while retaining the context and familiarity of a SharePoint site.
+With SharePoint Framework (*check if it's supported in the latest*), you can host your Teams tabs in SharePoint. As tabs hosted in SharePoint get a similar **full page** experience, exposing all the features of Teams tabs while retaining the context and familiarity of a SharePoint site.
 
 Create rich app experiences in SharePoint by bringing your [Teams app into SharePoint](#introduction).
 
@@ -51,7 +51,7 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 
 1. Open Microsoft Teams.
 1. Select **Apps** > **Manage your apps** > **Upload an app**.
-1. Select **Upload a customised app**. 
+1. Select **Upload a customised app**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option."  lightbox="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png":::
 
