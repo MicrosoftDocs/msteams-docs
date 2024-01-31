@@ -14,7 +14,7 @@ Anonymous users don't have a Microsoft Entra identity and aren't federated with 
 
 > [!NOTE]
 >
-> * Apps for anonymous users are supported in Teams desktop and mobile clients and isn't supported in channel meetings.
+> * Apps for anonymous users are supported in the new Teams desktop and mobile clients for Windows and Mac.
 > * Meeting apps for anonymous users are only supported in Microsoft Edge and Chrome.
 
 For anonymous users to interact with the apps in Teams meetings, ensure to:
@@ -224,6 +224,12 @@ cancellationToken);
 Anonymous users can view and interact with Adaptive Cards in the meeting chat. Adaptive Card actions behave the same way for anonymous and non-anonymous users. For more information, see [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json).
 
 ## Known issues and limitations
+
+* Apps for anonymous users aren't supported on live event, Virtual desktop infrastructure (VDI), and Linux platforms.
+
+* Apps for anonymous users aren't supported on Firefox and Safari browsers.
+
+* Apps for anonymous users aren't supported in Teams channel meetings.
 
 * Currently, the `getContext` API doesn't return a user ID for the anonymous user though the bot APIs do and it's not possible to correlate the anonymous user between these two APIs.
 
