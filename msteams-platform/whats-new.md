@@ -365,6 +365,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 January**
 
+* ***January 31, 2024***: [Enable developer mode on Microsoft 365 Chat in Teams to view a plugin debug info card for each search intent where search is triggered.](messaging-extensions/build-bot-based-plugin.md#developer-mode-for-plugins-for-copilot-for-microsoft-365)
+
 * ***January 25, 2024***: [Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content](m365-apps/actions-in-m365.md).
 
 * ***January 12, 2024***: [Introduced Teams Toolkit command line interface v3.](toolkit/Teams-Toolkit-CLI.md)
