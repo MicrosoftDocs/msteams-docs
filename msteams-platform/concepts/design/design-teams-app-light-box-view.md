@@ -56,7 +56,7 @@ Default sizing for the container with main content. Following is the default con
 
 Contains all media files from the current chat, channel post, or file folder. 
 
-:::image type="content" source="../../assets/images/light-box/carousel-sizing.png" alt-text="Example shows carousel sizing with lightbox view in the Teams." lightbox="../../assets/images/light-box/image-sizing.png":::
+:::image type="content" source="../../assets/images/light-box/carousel-sizing.png" alt-text="Example shows carousel sizing with lightbox view in the Teams." lightbox="../../assets/images/light-box/carousel-sizing.png":::
 
 ---
 
