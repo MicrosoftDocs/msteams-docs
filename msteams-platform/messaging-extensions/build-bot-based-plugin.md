@@ -340,7 +340,7 @@ A bot-based message extension is created.
 You can enable developer mode on Microsoft 365 Chat in Teams. When the developer mode is enabled, a plugin debug info card is displayed for each search intent where search is triggered. The plugin debug info card contains the following information:
 
 * **Enabled plugins**: A list of plugins enabled by users through plugin flyout.
-* **Matched functions**: A list of plugins/ plugin functions matched in the runtime app index lookup.
+* **Matched functions**: A list of plugins or plugin functions matched in the runtime app index lookup.
 * **Selected functions for execution**: A list of plugin functions selected for invocation based on LLM reasoning.  
 * **Function execution details**: Request and response execution status executed by the plugins.
 
