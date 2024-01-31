@@ -18,7 +18,7 @@ The deprecation will be carried out in two phases to ensure a smooth transition.
 
 |Timeframe|Action|Impact|
 |---|---|---|
-|February 2024|The Collaboration controls will no longer be available to install from AppSource.|- New deployments of the collaboration controls in Power Apps environments aren't be possible. </br> - Current installations aren't affected.|
+|February 2024|The Collaboration controls will no longer be available to install from AppSource.|- New deployments of the collaboration controls in Power Apps environments aren't possible. </br> - Current installations aren't affected.|
 |May 2024|The internal service that powers the controls will be retired.|- From this point, the controls will no longer support integration with Microsoft 365 and will return errors to users. </br> There will be no impact on data generated and managed through the controls. For more information, see the table later in this article.|
 
 Artifacts created and managed through the controls will continue to exist after the service is retired.
