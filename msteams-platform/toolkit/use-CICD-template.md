@@ -65,7 +65,7 @@ Two categories of sign in credentials are involved in CI/CD workflows:
 > [!NOTE]
 >
 > * Currently, a non-interactive authentication style for Microsoft 365 is used in CI/CD workflows, so ensure that your Microsoft 365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Refer to the [Configure Microsoft 365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
-> * Currently, service principal for Azure is used in CI/CD workflows, and to create Azure service principals for use, refer to [here](https://github.com/devdiv-azure-service-dmitryr/teamsfx-docs/blob/main/V5-doc-update/cicd.md#how-to-create-azure-service-principals-for-use).
+> * Currently, service principal for Azure is used in CI/CD workflows, and to create Azure service principals for use, refer to [here](#how-to-create-azure-service-principals-for-use).
 
 ## Host types
 
