@@ -17,7 +17,7 @@ To enable, you'll need an extra step of passing an XML string to each instance o
 > [!NOTE]
 > Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-[!INCLUDE [deprecation-label](includes/collaboration-controls-deprecation.md)]
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
 To create external tasks, follow the steps:
 

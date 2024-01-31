@@ -17,7 +17,7 @@ The Collaboration controls core solution includes a set of [virtual tables](/pow
 > [!NOTE]
 > Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-[!INCLUDE [deprecation-label](includes/collaboration-controls-deprecation.md)]
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
 > [!TIP]
 > [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.

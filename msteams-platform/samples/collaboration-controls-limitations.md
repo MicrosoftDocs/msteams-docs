@@ -13,7 +13,7 @@ ms.date: 09/30/2022
 > [!NOTE]
 > Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-[!INCLUDE [deprecation-label](includes/collaboration-controls-deprecation.md)]
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
 Following are the limitations for Collaboration controls:
 
