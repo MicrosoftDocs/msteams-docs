@@ -346,6 +346,15 @@ You can enable developer mode on Microsoft 365 Chat in Teams. When the developer
 
 :::image type="content" source="../assets/images/Copilot/plugin-developer-mode.png" alt-text="Screenshot shows the plugin debug info card and a table with enabled plugins, matched functions, selected functions for execution, and function execution details.":::
 
+To enable developer mode in M365 chat in Teams, follow these steps:
+
+1. Go to **Microsoft Teams**.
+1. Go to **M365 Chat**.
+1. In the message compose area, enter `-developer on`. M365 chat responds with a message **Successfully enabled developer mode**.
+1. Select the search intent to see the plugin debug info card.
+
+:::image type="content" source="../assets/images/Copilot/m365-chat-developer-on.png" alt-text="Screenshot shows the developer on command in M365 chat.":::
+
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.yml) to build a bot-based search message extension plugin for M365 Chat.
