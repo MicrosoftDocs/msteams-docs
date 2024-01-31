@@ -12,11 +12,11 @@ ms.date: 11/14/2023
 
 > [!NOTE]
 >
-> * Copilot for Microsoft 365 is in private preview. Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
+> * Copilot for Microsoft 365 is in preview. Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 > * Bot-based search message extension plugin is available in [**public developer preview**](../resources/dev-preview/developer-preview-intro.md).
-> * Only bot-based search message extension can be extended as a plugin for Copilot for Microsoft 365.
+> * Only *bot-based*, *search* message extensions can be extended as plugins for Copilot for Microsoft 365.
 
 Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot for Microsoft 365 can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot for Microsoft 365, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. You can achieve this extension by developing a plugin or connecting to an external data source.
 
@@ -334,6 +334,8 @@ A bot-based message extension is created.
 :::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer Portal for Teams."::: -->
 
 ---
+
+For more on testing your plugin with M365 Chat, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/orchestrator?tabs=tasks#debugging-plugin-selection).
 
 ## Step-by-step guide
 
