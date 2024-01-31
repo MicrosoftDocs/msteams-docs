@@ -1,6 +1,7 @@
 --- 
 title: Collaboration controls (Preview) for Model Driven Apps are deprecated 
 author: v-npaladugu 
+description: Learn about the timelines 
 ms.localizationpriority: medium 
 ms.topic: reference 
 ms.author: surbhigupta 
@@ -34,4 +35,4 @@ Artifacts that were created and managed via the controls will persist after the 
 
 We advise to remove the Collaboration controls and Collaboration connector from all Power Apps solutions and to prepare users for the upcoming Collaboration control retirement.
 
-description: Learn how to use lightbox UI component from Teams UI kit to build Microsoft Teams apps. 
+ 
