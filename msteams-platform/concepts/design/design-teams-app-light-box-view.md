@@ -32,7 +32,7 @@ Users can initiate the lightbox in a new Teams child window or open it directly 
 
 Lightbox view includes a header, center stage, and carousel.
 
-:::image type="content" source="../../assets/images/light-box/lightbox-anatomy.png" alt-text="Design anatomy of the lightbox view in the Teams.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-anatomy.png" alt-text="Design anatomy of the lightbox view in the Teams." lightbox="../../assets/images/light-box/lightbox-anatomy.png":::
 
 |Counter|Description|
 |----------|-----------|
@@ -50,13 +50,13 @@ Default sizing for the container with main content. Following is the default con
 
 # [Image](#tab/image)
 
-:::image type="content" source="../../assets/images/light-box/image-sizing.png" alt-text="Example shows an image sizing with lightbox view in the Teams.":::
+:::image type="content" source="../../assets/images/light-box/image-sizing.png" alt-text="Example shows an image sizing with lightbox view in the Teams." lightbox="../../assets/images/light-box/image-sizing.png":::
 
 # [Carousel](#tab/carousel)
 
 Contains all media files from the current chat, channel post, or file folder. 
 
-:::image type="content" source="../../assets/images/light-box/image-sizing.png" alt-text="Example shows carousel sizing with lightbox view in the Teams.":::
+:::image type="content" source="../../assets/images/light-box/image-sizing.png" alt-text="Example shows carousel sizing with lightbox view in the Teams." lightbox="../../assets/images/light-box/image-sizing.png":::
 
 ---
 
