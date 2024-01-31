@@ -10,7 +10,7 @@ ms.date: 04/20/2022
 
 # Set up CI/CD pipelines
 
-TeamsFx helps to automate your development workflow while building Teams application. The tools and templates to set up CI/CD pipelines are create workflow templates and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision resources, you can create Azure service principals and use the Provision pipeline or do it manually by leveraging bicep files. To publish Teams app, you can use the Publish pipeline or do it manually by leveraging [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+TeamsFx helps to automate your development workflow while building Teams application. The tools and templates to set up CI/CD pipelines are create workflow templates and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision resources, you can create Azure service principals and use the Provision pipeline or do it manually by using bicep files. To publish Teams app, you can use the Publish pipeline or do it manually by leveraging [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 ## Tools and Templates
 
@@ -229,7 +229,7 @@ For more information, see [Azure service principals guidelines](/azure/active-di
 
 ## Publish Teams app using Teams Developer Portal
 
-If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may use [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 Perform the following steps to publish your app:
 
