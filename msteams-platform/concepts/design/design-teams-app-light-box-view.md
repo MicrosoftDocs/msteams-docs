@@ -94,7 +94,7 @@ Users won’t be able to see who else is in the file and making changes from the
 
 #### Don’t use more button to close the lightbox 
 
-There are two ways how to close the lightbox, back to previous screen and soft dismiss.
+You can exit the lightbox by either going back to the previous screen or tapping outside of it.
 
 :::image type="content" source="../../assets/images/light-box/lightbox-back-dont.png" alt-text="Example shows the use of a lightbox component with more back buttons.":::
 
@@ -106,4 +106,4 @@ There are two ways how to close the lightbox, back to previous screen and soft d
 
 Users can’t comment in lightbox files so mentioning comments might be confusing. 
 
-:::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example shows the use of a lightbox component with commenting in the chat panel.":::
+:::image type="content" source="../../assets/images/light-box/lightbox-highlight-dont.png" alt-text="Example shows the use of a lightbox component with commenting in the chat panel.":::
