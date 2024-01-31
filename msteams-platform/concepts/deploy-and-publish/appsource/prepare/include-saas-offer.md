@@ -21,9 +21,6 @@ ms.date: 03/21/2023
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="manage-third-party-apps-license.md" border="false":::
-   :::column-end:::
-   :::column:::
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-apps.md" border="false":::
    :::column-end:::
    :::column:::
@@ -33,7 +30,7 @@ ms.date: 03/21/2023
 
 If you're planning to monetize your app then understanding the features of your SaaS offer is important. This article provides an overview of the features in an offer that aids you to plan better.
 
-Here are the features you can plan for before creating an offer:
+Here are the features you can plan to create an offer:
 
 * [Publishing option](#publishing-option)
 * [Offer details](#offer-details)
@@ -42,7 +39,7 @@ Here are the features you can plan for before creating an offer:
 
 ## Publishing option
 
-The initial step to create a SaaS offer is to decide the listing or publishing option that aligns with your requirements. The listing option you select when creating the offer is available as a call-to-action button on the offer purchase landing page.
+The initial step to create a SaaS offer is to decide the listing or publishing option that aligns with your requirements. The listing option you select, when creating the offer, is available as a call-to-action button on the offer purchase landing page.
 
 You can select from one of the four listing options to can publish a SaaS offer:
 
@@ -54,7 +51,7 @@ You can select from one of the four listing options to can publish a SaaS offer:
 
 **Sell through Microsoft**
 
-You can opt to sell your SaaS apps through Microsoft where Microsoft hosts all your transactions for the licenses purchased. Offers sold are transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) where you can sell subscription plans directly from the Teams Store.
+You can opt to sell your SaaS apps through Microsoft where Microsoft hosts all your transactions for the licenses purchased. Offers sold are transactable [SaaS offers](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md) where you can sell subscription plans directly from the Teams Store. You can further allow Microsoft to manage licenses on your behalf.
 
     :::column-end:::
 :::row-end:::
@@ -69,7 +66,7 @@ If you decide not to sell through Microsoft, you can manage your transactions in
 
 **Free trials**
 
-You can offer a free trial version of your app to get more customers to try it. To encourage customers to buy the full version, you can limit the features in the trial version. You can allow only a limited number of responses for a week or set a specific trial period.
+You can offer a free trial version of your app to get more customers to try it. To encourage customers to buy the full version, you can limit the features in the trial version. For example, you can allow only a limited number of responses for a week or set a specific trial period.
 
     :::column-end:::
 :::row-end:::
@@ -81,7 +78,7 @@ You can offer a free trial version of your app to get more customers to try it. 
 
 **Get it now (Free)**
 
-You can allow the user to subscribe and use your application at no cost. The features in free version can be limited, with the option for users to upgrade through subscriptions.
+You can allow the user to subscribe and use your application at no cost. The features in free version can be limited with the option for users to upgrade through subscriptions.
 
     :::column-end:::
 :::row-end:::
@@ -106,8 +103,8 @@ You can further allow Microsoft to manage licenses on your behalf. If you select
 
 Offer details are the basic information available on the offer's landing page. Consider the following key features that enhances discoverability and usability of your offer.
 
-|---|---|
 | Category |Description|
+|---|---|
 | **Offer categories and industries** | Identify the primary and secondary categories for your offer. These categories determine the marketplace where your offer is published and help the users to identify your app. |
 | **Offer details** | Design a distinctive logo, select relevant keywords, and write a compelling description to enhance your offer's discoverability and value. |
 | **Preview audience** | Identify the audience and collate their email address to allow them to use and verify the preview offer. |
@@ -148,17 +145,11 @@ The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) def
 
 In addition to the basic and essential planning, you can provide more features to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers.
 
-### Free trails
-
-When selling through Microsoft, you can provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period.
-
-### Test drive
-
-You can add test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer).
-
-### Mobile version
-
-To adhere to third-party app store policies, your app mustn't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the [related commercial marketplace certification policies](/legal/marketplace/certification-policies).
+| Category |Description|
+|---|---|
+| **Free trails** | When selling through Microsoft, you can provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period. |
+| **Test drive** | You can add test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [Test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer). |
+| **Mobile version** | To adhere to third-party app store policies, your app mustn't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the [related commercial marketplace certification policies](/legal/marketplace/certification-policies). |
 
 For comprehensive guidance on planning the offer, see [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
 

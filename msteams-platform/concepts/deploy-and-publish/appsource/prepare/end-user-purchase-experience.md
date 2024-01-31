@@ -155,6 +155,12 @@ The following example shows how users can manage licenses for third-party apps f
 
 Admins can manage the app subscriptions and licenses in the Teams admin center. For more information, see [Purchase third-party Teams apps and manage subscriptions](/microsoftteams/purchase-third-party-apps).
 
+## Check license usage in Partner Center analytics
+
+1. Sign in to [Partner Center](https://partner.microsoft.com/).
+1. In the left pane, go to **Commercial Marketplace > Analyze > Licensing**.
+1. Select **Plan and Tenant** in the reporting widget to see the month wise usage.
+
 ## See also
 
 * [Monetize your app](monetize-overview.md)
