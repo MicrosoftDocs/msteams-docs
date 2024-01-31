@@ -15,6 +15,8 @@ Collaboration controls are designed for [model-driven applications](/power-apps/
 > [!NOTE]
 > Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
+[!INCLUDE [deprecation-label](includes/collaboration-controls-deprecation.md)]
+
 ## Create a model-driven application
 
 1. Open [https://make.powerapps.com.](https://make.powerapps.com/) or [https://make.preview.powerapps.com.](https://make.preview.powerapps.com/)

@@ -15,6 +15,8 @@ Developers can use the Collaboration controls and Settings REST API to manage se
 > [!NOTE]
 > Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
+[!INCLUDE [deprecation-label](includes/collaboration-controls-deprecation.md)]
+
 This article provides reference for the Collaboration controls and Settings REST API reference.
 
 ## REST Operations: Collaboration - Custom API

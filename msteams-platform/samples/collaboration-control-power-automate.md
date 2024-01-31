@@ -17,6 +17,8 @@ Collaboration control connector enables developers to access Collaboration contr
 > [!NOTE]
 > Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
+[!INCLUDE [deprecation-label](includes/collaboration-controls-deprecation.md)]
+
 In this version, the connector enables makers to set up triggers:
 
 1. When a Collaboration session is created.
