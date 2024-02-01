@@ -8,18 +8,18 @@ ms.author: surbhigupta
 ms.date: 01/31/2023 
 ---
 
-# Collaboration controls for Model Driven Apps
+# Deprecation of Collaboration controls for model-driven application
 
 Collaboration controls, initially designed to provide Power Apps with low-code solutions for Microsoft 365 users, will be deprecated. The rise in market demand for Copilot and the influence of generative AI have surpassed the original need for these controls.
 
 Support for collaboration controls will be discontinued at the end of May 2024.
 
-The deprecation will be carried out in two phases to ensure a smooth transition. Below is a timeline detailing the deprecation process and its impacts:
+The deprecation will be carried out in two phases to ensure a smooth transition. Following table details the timeline of the deprecation process and its impacts:
 
 |Timeframe|Action|Impact|
 |---|---|---|
-|February 2024|The Collaboration controls will no longer be available to install from AppSource.|- New deployments of the collaboration controls in Power Apps environments aren't possible. </br> - Current installations aren't affected.|
-|May 2024|The internal service that powers the controls will be retired.|- From this point, the controls will no longer support integration with Microsoft 365 and will return errors to users. </br> There will be no impact on data generated and managed through the controls. For more information, see the table later in this article.|
+|February 2024|Collaboration controls will no longer be available to install from AppSource.|- New deployments of the collaboration controls in Power Apps environments aren't possible. </br> - Current installations aren't affected.|
+|May 2024|The internal service that powers the controls will be retired.|- The controls will no longer support integration with Microsoft 365 and return errors to users. </br> There will be no impact on data generated and managed through the controls. For more information, see the table later in this article.|
 
 Artifacts created and managed through the controls will continue to exist after the service is retired.
 
