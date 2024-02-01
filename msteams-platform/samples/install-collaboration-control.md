@@ -16,10 +16,7 @@ In this article, you'll learn how to install Collaboration Controls. The followi
 * **Power apps**: To build and run Model Driven Applications using the Collaboration controls.
 * **M365 E3 or higher**: To deploy custom applications to Microsoft Teams and store tasks in Planner, files in SharePoint, and meetings in Outlook.
 
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
-To install the components into a Power Platform environment the following roles are required:
+Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). To install the components into a Power Platform environment the following roles are required:
 
 * System customizer
 * Environment maker
