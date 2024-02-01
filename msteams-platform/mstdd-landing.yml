@@ -48,7 +48,7 @@ landingContent:
     - linkListType: whats-new
       links:
       - text: Share code snippets as Adaptive Cards with the CodeBlock element
-        url:  m365-apps/extend-m365-teams-message-extension.md
+        url:  task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
       - text: Micro-capabilities for website links
         url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
       - text: Actions in Microsoft 365
