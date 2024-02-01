@@ -29,7 +29,7 @@ ms.date: 01/31/2023
 
 To create a Software as a Service (SaaS) offer, ensure you have the necessary technical information and complete the required technical configurations. The preparation helps negate any blockers while creating the offer.
 
-These are the extended information on planning your offer that comes in as prerequisites.
+*These are the extended information on planning your offer that comes in as prerequisites.*
 
 Here's a quick checklist to stay on track:
 
@@ -80,7 +80,7 @@ When you create the SaaS offer, you must provide the following technical informa
 
 * **Landing page URL**: The SaaS site URL that users get redirected to after purchasing the offer, initiating the configuration process for the new SaaS subscription. The URL receives a token that you can use to invoke the fulfillment APIs, providing the necessary provisioning details for your interactive registration page.
 
-* **Connection webhook URL**: For Microsoft to notify you of all asynchronous events (for example, when a SaaS subscription gets cancelled), you must provide a [connection webhook URL](/partner-center/marketplace/create-new-saas-offer-technical). Define it in the **Technical configuration** page to receive any subscription changes from the user.
+* **Connection webhook URL**: For Microsoft to notify you of all asynchronous events (for example, when a SaaS subscription gets canceled), you must provide a [connection webhook URL](/partner-center/marketplace/create-new-saas-offer-technical). Define it in the **Technical configuration** page to receive any subscription changes from the user.
 
 * **Microsoft Entra tenant ID**: Register an application within the Microsoft Entra portal to obtain the tenant ID. You can then add to the access control list (ACL) of the API, ensuring you have the authorization to call it. You can find the tenant ID under **App registrations** in Microsoft Entra portal.
 

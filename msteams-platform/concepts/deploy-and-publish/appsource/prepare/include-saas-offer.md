@@ -28,7 +28,7 @@ ms.date: 03/21/2023
    :::column-end:::
 :::row-end:::
 
-If you're planning to monetize your app then understanding the features of your SaaS offer is important. This article provides an overview of the features in an offer that aids you to plan better.
+To monetize your SaaS app, it's important that you understand the features of a SaaS offer. This article provides an overview of the features in an offer that aids you to plan better.
 
 Here are the features you can plan to create an offer:
 
@@ -101,7 +101,7 @@ You can further allow Microsoft to manage licenses on your behalf. If you select
 
 ## Offer details
 
-Offer details are the basic information available on the offer's landing page. Consider the following key features that enhances discoverability and usability of your offer.
+Offer details are the basic information available on the offer's landing page. Consider the following key features that enhance discoverability and usability of your offer.
 
 | Category |Description|
 |---|---|

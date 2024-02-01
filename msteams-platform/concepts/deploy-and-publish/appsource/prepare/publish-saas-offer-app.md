@@ -36,13 +36,13 @@ This article walks you through offer go live, configuring the offer to the app, 
 
 Upon successful testing, your offer is now ready to go live.
 
-After testing the offer, go live gets you app to be published in the marketplace. The pointers given below helps you understand the phases in the go live stage.
+After testing the offer, go live gets your app to be published in the marketplace. The following pointers help you understand the phases in the go live stage.
 
-* Click **Go live** Initiate the validation checks for your offer before publishing.
+* Select **Go live** Initiate the validation checks for your offer before publishing.
 * Keep track of the publishing status on the **Offer overview** page.
-* In case of validation errors, rectify them and resubmit your offer for publishing. These errors could range from missing information to non-compliance with marketplace standards.
+* If there are validation errors, rectify them and resubmit your offer for publishing. These errors could range from missing information to noncompliance with marketplace standards.
 * Upon successful validation, the offer is published live in the marketplace.
-* Post-publication, link your live SaaS offer to your SaaS app. Subsequently, publish the subscriptions to the Store.
+* Post-publication, link your live SaaS offer to your SaaS app and publish the subscription to Teams Store.
 
 For a comprehensive understanding of validation and certification, check [Review and publish offers](/partner-center/marketplace/review-publish-offer).
 
@@ -107,7 +107,7 @@ The SaaS app with suitable offers is available in the Microsoft Teams Store for 
 
 ## License management
 
-After activating the subscription, the user is redirected from the landing page to Teams license management. Microsoft manages licenses on your behalf if you've opted for the same during offer configuration.
+After the subscription activation, the user is redirected from the landing page to Teams license management. Microsoft manages licenses on your behalf if you've opted for the same during offer configuration.
 
 For more information on license management, see [manage app licenses](end-user-purchase-experience.md#license-management-experience).
 

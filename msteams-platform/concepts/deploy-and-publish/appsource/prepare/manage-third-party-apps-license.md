@@ -84,7 +84,7 @@ Offers sold through Microsoft are called transactable offers, which means Micros
 
 ### Set up Microsoft license management
 
-If you have opted to sell through Microsoft, you must further select if you want to allow Microsoft to manage licenses on your behalf.
+If you decide to sell through Microsoft, you must further select if you want to allow Microsoft to manage licenses on your behalf.
 
 1. If you would like Microsoft to manage customer licenses for you, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
@@ -108,7 +108,7 @@ If you have opted to sell through Microsoft, you must further select if you want
 
 ### Set up the offer properties
 
-On the **Properties** tab, you define the categories and industries applicable to your offer, your app version, and legal contracts. You must provide complete and accurate details for the offer to be identified by the right set of customers.
+On the **Properties** tab, you define the categories and industries applicable to your offer, your app version, and legal contracts. You must provide complete and accurate details, for the right set of customers to identify the offer.
 
 1. Under **Category**, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
 1. Under **Industries**, select up to two industries and two subindustries (also called verticals).
@@ -130,9 +130,9 @@ On the **Offer listing** page, under **Marketplace details**, complete the follo
 
 ### Set the preview audience
 
-You can define a limited audience who can review your SaaS offer before you publish it live in the marketplace. The email address must be either of Azure Active Directory (Azure AD) or Microsoft.
+You can define a limited audience who can review your SaaS offer before you publish it live in the marketplace. The email address must be either of Microsoft Entra ID or Microsoft.
 
-1. On the **Preview Audience** page, add a single Azure Active Directory or MSA email address and an optional description in the boxes provided.
+1. On the **Preview Audience** page, add a single Microsoft Entra or MSA email address and an optional description in the boxes provided.
 1. To add another email address, select the **Add another email** link.
 1. Select **Save draft**.
 
@@ -187,7 +187,7 @@ You can configure a free trial for each plan in your offer.
 
 1. Under **Free Trial**, select **Allow a one-month free trial**.
 
-1. Select **Plan overview** at the top of the page to go to the listing page that shows all the plans you've created for this offer.
+1. Select **Plan overview** at the top of the page to go to the listing page that shows all the plans created for this offer.
 
 After you create one or more plans, you see the plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the **Plan overview** tab.
 
@@ -201,7 +201,7 @@ Copy the service ID of the plan you created to integrate with Microsoft Graph [u
 
 After you create the plans for your offer and finish the required configurations, you must validate the offer. You can then submit the offer from Partner Center for validation and publishing. The **Offer overview** page displays the **Publish status** where you can track the progress.
 
-When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under the **Go live** button to test the offer. Upon successful validation, it's recommended to [test the offer](Test-preview-for-monetized-apps.md) with the given preview links before you publish the offer in the marketplace.
+When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under the **Go live** button to test the offer. Upon successful validation, we recommended to [test the offer](Test-preview-for-monetized-apps.md) with the given preview links before you publish the offer in the marketplace.
 
 ## Next step
 

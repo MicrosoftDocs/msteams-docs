@@ -115,9 +115,9 @@ If you've purchased a Teams app subscription or if you want to manage one for yo
 > [!NOTE]
 > You can only manage subscriptions you purchased.
 
-You can take additional actions related to your subscription, such as editing your billing profile or recurring billing settings in [M365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
+You can take additional actions related to your subscription, such as editing your billing profile or recurring billing settings in [Microsoft 365 admin center](https://www.microsoft.com/en-in/microsoft-365/business/office-365-administration?rtc=1).
 
-:::image type="content" source="../../../../assets/images/saas-offer/manage more in M365 admin center.png" alt-text="Screenshot shows you to manage the additional subscriptions in M365 admin center.":::
+:::image type="content" source="../../../../assets/images/saas-offer/manage more in Microsoft 365 admin center.png" alt-text="Screenshot shows you to manage the additional subscriptions in Microsoft 365 admin center.":::
 
 ## License management experience
 
@@ -127,7 +127,7 @@ The following example shows how users can manage licenses for third-party apps f
 
 1. Select **Apps** > **Manage your apps**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/client-experience.png" alt-text="Screenshot shows the apps screen to select manage your apps option highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/client-experience.png" alt-text="Screenshot shows the apps screen to select the manage your apps option highlighted in red.":::
 
 1. Select **Subscriptions**. A tab appears with a list of purchases made in the tenant.
 
@@ -153,7 +153,7 @@ The following example shows how users can manage licenses for third-party apps f
 
 Here are some best practices you can implement for license management.
 
-* With transactable SaaS offers for Teams apps, subscription plans (licenses) should be assigned to individual users rather than groups or an entire organisation.
+* With transactable SaaS offers for Teams apps, subscription plans (licenses) should be assigned to individual users rather than groups or an entire organization.
 * When users are assigned a subscription plan, notify them through a Teams bot or email. In the messaging, include information on how to add the app to Teams and get started.
 * Support the idea of multiple admins. In other words, multiple users in the same org can purchase and manage their subscriptions.
 
