@@ -142,7 +142,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 * **App validation**: The app validation tool evaluates your app package based on the test cases that Microsoft uses to review your app. The app validation tool identifies any errors or warnings in your app package and provides guidelines for resolution.
 
-    If your app failed any test cases, can also download the validation report and review the feedback and make necessary updates to your app package based on the Microsoft test case results. For more information, see [validate your app package](#validate-your-app-package).
+    If your app failed any test cases, can also download the validation report and review the feedback and make necessary updates to your app package based on the Microsoft test case results.
 
     &nbsp;
     </details>
