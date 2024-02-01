@@ -142,58 +142,58 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 * **App validation**: The app validation tool evaluates your app package based on the test cases that Microsoft uses to review your app. The app validation tool identifies any errors or warnings in your app package and provides guidelines for resolution.
 
-If your app failed any test cases, can also download the validation report and review the feedback and make necessary updates to your app package based on the Microsoft test case results. For more information, see [validate your app package](#validate-your-app-package).
+    If your app failed any test cases, can also download the validation report and review the feedback and make necessary updates to your app package based on the Microsoft test case results. For more information, see [validate your app package](#validate-your-app-package).
 
-&nbsp;
-</details>
-<details>
-<summary><b>Microsoft's test cases<b></summary>
-* Verify that the manifest lists at least one bot command with a proper title and description, if the app supports a bot.
-* Ensure that the manifest includes at least one capability.
-* Confirm that special characters are prefixed in bot commands.
-* Verify that the provided support link doesn't redirect to an error page.
-* Check for any unwanted files in the app package.
-* Determine if the short description uses the word 'app'.
-* Check if the long description abbreviates 'Microsoft' as 'MS' or 'MSFT'.
-* Review the long description for typos, grammatical errors, and unnecessary capitalizations.
-* Verify that the long description doesn't include any links to AppSource.
-* Ensure that the app name doesn't include any Microsoft product names, such as Teams or Excel, which could falsely indicate co-branding or co-selling.
-* Confirm that the privacy policy link is valid and not broken.
-* Verify that the first reference to Teams is written as 'Microsoft Teams' and not shortened to 'Teams'.
-* Upload the manifest.zip file to MS Teams.
-* Add the app to a team by creating a new team and adding the app to it.
-* Check the welcome message from the app in the team channel.
-* Test the response of generic bot commands, such as 'Hi', 'Hello', and 'Help'.
-* Verify the response of bots in the team scope with the commands listed in the app's manifest.json file.
-* Test the response of bots in the personal scope with the commands listed in the app's manifest.json file.
-* If the app supports localization, confirm that it includes localization files in the app package.
-<br>
-&nbsp;
-</details>
+    &nbsp;
+    </details>
+    <details>
+    <summary><b>Microsoft's test cases<b></summary>
+    * Verify that the manifest lists at least one bot command with a proper title and description, if the app supports a bot.
+    * Ensure that the manifest includes at least one capability.
+    * Confirm that special characters are prefixed in bot commands.
+    * Verify that the provided support link doesn't redirect to an error page.
+    * Check for any unwanted files in the app package.
+    * Determine if the short description uses the word 'app'.
+    * Check if the long description abbreviates 'Microsoft' as 'MS' or 'MSFT'.
+    * Review the long description for typos, grammatical errors, and unnecessary capitalizations.
+    * Verify that the long description doesn't include any links to AppSource.
+    * Ensure that the app name doesn't include any Microsoft product names, such as Teams or Excel, which could falsely indicate co-branding or co-selling.
+    * Confirm that the privacy policy link is valid and not broken.
+    * Verify that the first reference to Teams is written as 'Microsoft Teams' and not shortened to 'Teams'.
+    * Upload the manifest.zip file to MS Teams.
+    * Add the app to a team by creating a new team and adding the app to it.
+    * Check the welcome message from the app in the team channel.
+    * Test the response of generic bot commands, such as 'Hi', 'Hello', and 'Help'.
+    * Verify the response of bots in the team scope with the commands listed in the app's manifest.json file.
+    * Test the response of bots in the personal scope with the commands listed in the app's manifest.json file.
+    * If the app supports localization, confirm that it includes localization files in the app package.
+    <br>
+    &nbsp;
+    </details>
 
-<details>
-<summary><b>Validate your app package<b></summary>
-To ensure that your app functions as expected on Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
+    <details>
+    <summary><b>Validate your app package<b></summary>
+    To ensure that your app functions as expected on Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
 
-1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
-1. Go to **Publish** > **App validation** > **Get started**.
+    1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
+    1. Go to **Publish** > **App validation** > **Get started**.
 
-    :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the app validation in Teams developer portal.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the app validation in Teams developer portal.":::
 
-1. Select the validation acknowledgments checkbox and select the **Start validation**.
+    1. Select the validation acknowledgments checkbox and select the **Start validation**.
 
-    :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgment of your app package.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgment of your app package.":::
 
-    Teams Developer Portal now starts to validate your app package:
+        Teams Developer Portal now starts to validate your app package:
 
-    :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the app validation in progress.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the app validation in progress.":::
 
-1. After validation, it shows the list of test cases your app has passed or failed.
+    1. After validation, it shows the list of test cases your app has passed or failed.
 
-    :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
 
-You've successfully validated your app package in the Teams Developer Portal.
-</details>
+    You've successfully validated your app package in the Teams Developer Portal.
+    </details>
 
 ## Test your app directly in Teams
 
