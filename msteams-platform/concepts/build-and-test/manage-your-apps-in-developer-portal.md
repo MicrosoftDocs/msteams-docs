@@ -148,7 +148,6 @@ If your app failed any test cases, can also download the validation report and r
 </details>
 <details>
 <summary><b>Microsoft's test cases<b></summary>
-
 * Verify that the manifest lists at least one bot command with a proper title and description, if the app supports a bot.
 * Ensure that the manifest includes at least one capability.
 * Confirm that special characters are prefixed in bot commands.
@@ -168,16 +167,12 @@ If your app failed any test cases, can also download the validation report and r
 * Verify the response of bots in the team scope with the commands listed in the app's manifest.json file.
 * Test the response of bots in the personal scope with the commands listed in the app's manifest.json file.
 * If the app supports localization, confirm that it includes localization files in the app package.
-
 <br>
 &nbsp;
 </details>
 
-&nbsp;
-</details>
 <details>
 <summary><b>Validate your app package<b></summary>
-
 To ensure that your app functions as expected on Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
 
 1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
@@ -198,9 +193,6 @@ To ensure that your app functions as expected on Teams, use the **App validation
     :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
 
 You've successfully validated your app package in the Teams Developer Portal.
-
-<br>
-&nbsp;
 </details>
 
 ## Test your app directly in Teams
