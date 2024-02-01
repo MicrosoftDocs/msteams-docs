@@ -104,7 +104,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/first-bot/vsc-trust-authors.png" alt-text="Screenshot shows the dialog to trust or not the authors of the files in this folder.":::
 
-1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool** in dropdown list.
+1. From the left pane, select **Run and Debug** (`Ctrl+Shift+D`) and select **Debug in Test Tool (Preview)** in dropdown list.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/select-debug-in-test-tool.png" alt-text="Screenshot shows the option to select debug in test tool.":::
 
@@ -319,7 +319,7 @@ It's vital to recognize that updating the configuration file has three major imp
    | Bot Framework APIs (TeamsInfo.getPagedMembers()...) |Available (respond with mocked data) | Available |
    | Sending Teams events | Available (mock activity) |Available |
    | Typing indicator | Not Available | Available |
-   | Tab, Messaging Extension, Task Module, Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
+   | Tab, Message extension, Dialogs (referred as task modules in TeamsJS v1.x), Single sign-on (SSO), and non-Adaptive Cards | Not Available | Available |
 
 ## Debug an existing app with Test Tool
 
@@ -451,7 +451,7 @@ Test Tool successfully debugs your existing bot.
 <details>
 <summary>How can I test my bot if Test Tool doesn't support its features?</summary>
 
-You can always use the Teams client to test the features that Test Tool doesn't support. Select the option **Debug (Edge)** or **Debug (Chrome)** to test your application in the Teams client.
+You can always use the Teams client to test the features that Test Tool doesn't support. Select the option **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** to test your application in the Teams client.
 <br>
 &nbsp;
 </details>
@@ -477,6 +477,10 @@ No. We always recommend users to test their bot application in the Teams client 
 |Sample name | Description | Node.js |
 |----------------|-----------------|--------------|
 | Test Tool Sample App | A sample bot app to explore Test Tool. | [View](https://github.com/OfficeDev/TeamsFx-Samples/tree/v3/test-tool-sample-app) |
+
+## Step-by-step guide
+
+Follow the [step-by-step guide](../sbs-teams-app-test-tool.yml) to debug an AI chat bot using Teams App Test Tool.
 
 ## See also
 

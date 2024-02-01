@@ -24,9 +24,9 @@ Before you submit your app to [Partner Center](/office/dev/store/use-partner-cen
 
 While your app may be working in a test environment, you should check your app package to avoid running into issues during the submission process.
 
-The Microsoft Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during Teams Store validation.
+The Teams app validation tool helps you identify and fix issues before submitting to Partner Center. The tool automatically checks your app's configurations against the same test cases used during Teams Store validation.
 
-1. Go to the [Microsoft Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
+1. Go to the [Teams app validation tool](https://dev.teams.microsoft.com/appvalidation.html).
 
    You can also validate your app using [Developer Portal for Teams.](~/concepts/build-and-test/teams-developer-portal.md)
 
@@ -98,7 +98,7 @@ You must have a short and long description of your app. App description helps im
 
 #### Short description
 
-A concise summary of your app that should be original, engaging, and directed at your target audience. Keep the short description to one sentence.
+A concise summary of your app that is original, engaging, and directed at your target audience. Keep the short description to one sentence that focuses on the key value of your app.
 
 :::row:::
 
@@ -114,23 +114,18 @@ Make sure your short description adheres to the [Teams Store validation guidelin
 
 #### Long description
 
-The long description can provide a narrative that highlights your apps:
+The long description must provide information that highlights your app's key features, user benefits, and unique value proposition in Teams.
 
-* Main features
-* The problems it solves
-* Target audience
+Ensure that you provide the following information in your app's long description:
 
-While this description can be as long as 4,000 characters, most users only read between 300-500 words.
+* Define your product, state its primary features, and its target audience.
+* Describe the unique value proposition of your app within Teams.
+* Describe your app's capabilities and scenarios in Teams.
+* Highlight how your app contributes to resolving customer problems and assists them in their everyday work.
+* List the key benefits that your app provides to customers. We recommend that you add up to three benefits.
+* If there are specific requirements to use your app, mention them clearly in the description for the benefit of users and admins looking to install and use your app.
 
-:::row:::
-
-:::column span="3":::
-:::image type="content" source="~/assets/images/store-detail-page/specifying-long-description-under-submission.png" alt-text="Example screenshot highlights where an app's long description displays in a Teams Store listing.":::
-:::column-end:::
-:::column span="1":::
-:::column-end:::
-
-:::row-end:::
+Your Partner Center account allows you to add a long description of up to 4000 characters. However, for better readability, we recommended to keep your app's long description concise.
 
 Make sure your long description adheres to the [Teams Store validation guidelines](~/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#long-description).
 
@@ -168,21 +163,30 @@ For best practices, see the following resources:
 
 ### Create a video
 
-A video in your listing can be the most effective way to communicate why people should use your app. Address the following questions in a video:
+A video in your listing can be the most effective way to communicate with the users about your app. You can add the URL of videos hosted on YouTube or Vimeo in the format `https://www.example.com/123456789`.
 
-* Who is your app for?
-* What problems can your app solve?
-* How does your app work?
-* What other benefits do you get from using your app?
+For the benefit of the customers and admins who wants to install and use your app, we recommend that you add a video that addresses the value your app brings to the users. Also, as a best practice, we recommend that you add a demo or scenario walkthrough video that describes the end-to-end usage of your app to the users.
 
-You can add a URL for your YouTube or Vimeo video.
+When providing a video that educates the users of the value your app provides, ensure to cover the following information in the video:
 
-#### Best practices for videos
+* Who's the intended target audience and customer for your app?
+* What unique value does your app provide to the users?
+* Is there any measurable impact that your app guarantees to deliver for users?
+* What are the key problems that your app resolves for users?
+* Are there other key benefits of using your app?
+* What are the primary features of your app?
 
-* Keep your video between 60-90 seconds.
-* Aim for quality. In a listing, users see your video before screenshots.
-* Communicate the value of the product in narrative form.
-* Demonstrate how the product works.
+A demo or scenario walkthrough video is more like an educational video that provides the users or IT admins with a walkthrough of app configuration and usage experience. If you decide to add a demo or walkthrough video, provide the following details:
+
+* How can the users start with your app as first-time users and how do they set up your app?
+* How do they use the different capabilities or features in your app?
+* What are the major features of your app and how do they get to use them?
+* Provide an end-to-end demonstration of your app with all the key workflows and key scenarios that your app supports.
+* If there are any specific training videos on how users can learn to use the app, ensure that you provide the related information.
+* Use voice-over instructions wherever applicable to make it easier for the users to understand.
+* Ensure that the video intends to educate users and not to promote your app.
+
+For other best practices on creating videos, see [store validation guidelines](teams-store-validation-guidelines.md#videos).
 
 ### Select a category for your app
 
