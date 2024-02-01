@@ -668,7 +668,7 @@ The `CodeBlock` element supports the following languages:
 > [!NOTE]
 >
 > * `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
-> * `CodeBlock` doesn't recognize other languages apart from the ones listed in the table, including languages that are built-in for specific tools or platforms.
+> * `CodeBlock` doesn't recognize other languages apart from the ones listed in the table.
 
 The following code shows an example of an Adaptive Card displaying a code snippet.
 
