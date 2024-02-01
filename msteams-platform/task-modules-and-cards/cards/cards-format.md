@@ -649,7 +649,7 @@ The following screenshot shows an Adaptive Card displaying a code snippet:
 
   :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
 
-The `CodeBlock` element supports the following languages:
+The `CodeBlock` element supports the following languages only:
 
 | Language | Supported | Language | Supported |
 |:---|:---:|:---|:---:|
@@ -667,8 +667,7 @@ The `CodeBlock` element supports the following languages:
 
 > [!NOTE]
 >
-> * `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
-> * `CodeBlock` doesn't recognize other languages apart from the ones listed in the table.
+> `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
 
 The following code shows an example of an Adaptive Card displaying a code snippet.
 
