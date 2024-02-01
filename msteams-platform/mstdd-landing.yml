@@ -47,6 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Adaptive Card-based Loop components are now generally available
+        url: m365-apps/cards-loop-component.md
       - text: Micro-capabilities for website links
         url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
       - text: Actions in Microsoft 365
