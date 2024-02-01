@@ -668,7 +668,7 @@ The `CodeBlock` element supports the following languages:
 > [!NOTE]
 >
 > * `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
-> * `CodeBlock` doesn't recognize other languages apart from the ones listed in the table, including languages that are built-in for specific tools or platforms, like Dart, Fortran, or Apache.
+> * `CodeBlock` doesn't recognize other languages apart from the ones listed in the table, including languages that are built-in for specific tools or platforms.
 
 The following code shows an example of an Adaptive Card displaying a code snippet.
 
@@ -717,7 +717,7 @@ The `CodeBlock` element supports the following properties:
 | `language` | Enum | Yes | The language of the code snippet to be displayed in the Adaptive Card. |
 | `startLineNumber` | Number | No | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
 
-> [!IMPORTANT]
+> [!TIP]
 >
 > * Special characters have specific functions in the `codeSnippet` property. For example, the newline character `\n` triggers a line break.
 > * To display the newline character `\n` as part of the code snippet in the Adaptive Card, ensure that it's escaped as `\\n` in the `codeSnippet` property. Else, Teams renders the code after the `\n` in the next line of the card.
