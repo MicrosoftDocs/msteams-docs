@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 February**
 
-***February 01, 2024***: [Application RSC permissions for chat scope are now generally available.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting)
+***February 01, 2024***: [Use application RSC permissions for chat scope.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting)
 
 :::column-end:::
 :::row-end:::
