@@ -152,13 +152,13 @@ If your app failed any test cases, can also download the validation report and r
 * Verify that the manifest lists at least one bot command with a proper title and description, if the app supports a bot.
 * Ensure that the manifest includes at least one capability.
 * Confirm that special characters are prefixed in bot commands.
-* Verify that the provided support link does not redirect to an error page.
+* Verify that the provided support link doesn't redirect to an error page.
 * Check for any unwanted files in the app package.
 * Determine if the short description uses the word 'app'.
 * Check if the long description abbreviates 'Microsoft' as 'MS' or 'MSFT'.
 * Review the long description for typos, grammatical errors, and unnecessary capitalizations.
-* Verify that the long description does not include any links to AppSource.
-* Ensure that the app name does not include any Microsoft product names, such as Teams or Excel, which could falsely indicate co-branding or co-selling.
+* Verify that the long description doesn't include any links to AppSource.
+* Ensure that the app name doesn't include any Microsoft product names, such as Teams or Excel, which could falsely indicate co-branding or co-selling.
 * Confirm that the privacy policy link is valid and not broken.
 * Verify that the first reference to Teams is written as 'Microsoft Teams' and not shortened to 'Teams'.
 * Upload the manifest.zip file to MS Teams.
@@ -185,9 +185,9 @@ To ensure that your app functions as expected on Teams, use the **App validation
 
     :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the app validation in Teams developer portal.":::
 
-1. Select the validation acknowledgements checkbox and select the **Start validation**.
+1. Select the validation acknowledgments checkbox and select the **Start validation**.
 
-    :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgement of your app package.":::
+    :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgment of your app package.":::
 
     Teams Developer Portal now starts to validate your app package:
 
@@ -217,7 +217,7 @@ The Developer Portal also includes tools to help you build key features of Teams
 * **Scene studio**: Design [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
-* **Teams store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend you to use [app validation](#validate-your-app-package) for the latest
+* **Teams Store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend you to use latest app validation tool in your app under [**Publish**](#publish) section.
 * **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
 To add a bot:
