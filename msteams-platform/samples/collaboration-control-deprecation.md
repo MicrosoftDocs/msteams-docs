@@ -1,20 +1,20 @@
 --- 
-title: Deprecation of Collaboration controls for model-driven application
+title: Retirement of Collaboration controls for model-driven application
 author: v-npaladugu 
-description: Learn about the timelines for the deprecation of Collaboration controls model-driven apps 
+description: Learn about the timelines for the retirement of Collaboration controls model-driven apps 
 ms.localizationpriority: medium 
 ms.topic: reference 
 ms.author: surbhigupta 
 ms.date: 01/31/2023 
 ---
 
-# Deprecation of Collaboration controls for model-driven application
+# Retirement of Collaboration controls for model-driven application
 
-Collaboration controls, initially designed to provide Power Apps with low-code solutions for Microsoft 365 users, will be deprecated. The rise in market demand for Copilot and the influence of generative AI have surpassed the original need for these controls.
+Collaboration controls, initially designed to provide Power Apps with low-code solutions for Microsoft 365 users, will be retired. The rise in market demand for Copilot and the influence of generative AI have surpassed the original need for these controls.
 
 Support for collaboration controls will be discontinued at the end of May 2024.
 
-The deprecation will be carried out in two phases to ensure a smooth transition. Following table details the timeline of the deprecation process and its impacts:
+The retirement will be carried out in two phases to ensure a smooth transition. Following table details the timeline of the retirement process and its impacts:
 
 |Timeframe|Action|Impact|
 |---|---|---|
@@ -29,8 +29,8 @@ Artifacts created and managed through the controls will continue to exist after 
 |**Files**|Files managed in the Files control will remain in SharePoint but will no longer be accessible in the Files control.|
 |**Meetings**|Meetings created in the Meeting control will remain in Outlook and Teams calendars but will no longer be accessible in the Meetings control.|
 |**Notes**|Notes created in the Notes control will remain in the Dataverse notes table.|
-|**Tasks**|Tasks created via the Task control will remain in Planner but will no longer be accessible in the Task control.|
+|**Tasks**|Tasks created in the Task control will remain in Planner but will no longer be accessible in the Task control.|
 
-We recommend removing the collaboration controls and Collaboration connector from all Power Apps solutions and preparing users for the upcoming retirement of the collaboration controls. 
+We recommend removing the Collaboration controls and Collaboration connector from all Power Apps solutions and prepare users for the upcoming Collaboration controls retirement. 
 
  
