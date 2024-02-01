@@ -939,28 +939,25 @@
     displayName: Pricing model, SaaS offer, purchase experience, Price
   - name: Plan your SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    displayName: license, Transactable Software-as-a-Service, Recloud app
+    displayName: license, transactable Software-as-a-Service, Recloud app
   - name: Prerequisites
     href: concepts/deploy-and-publish/appsource/prepare/prerequisites.md
     displayName: SaaS API, landing page, graph usageRights API
-  - name: Create your SaaS offer
-    href: concepts/deploy-and-publish/appsource/prepare/create-saas-offer.md
-    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Create an offer plan for license purchase
+  - name: Create a SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
-    displayName: ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
-  - name: Test and publish a SaaS offer to the marketplace
+    displayName: create SaaS offer, ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
+  - name: Test a SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
-    displayName: paid, AppSource, fee
-  - name: Publish a monetized app to Teams Store
+    displayName: paid, AppSource, fee, test SaaS offer
+  - name: Publish the app with SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/publish-saas-offer-app.md
     displayName: configure, apps, publish app
   - name: Configure in-app purchases
     href: concepts/deploy-and-publish/appsource/prepare/in-app-purchase-flow.md
     displayName: manifest, purchase experience API, purchase
-  - name: Purchase and manage app subscriptions and licenses
+  - name: App subscriptions and licenses
     href: concepts/deploy-and-publish/appsource/prepare/end-user-purchase-experience.md
-    displayName: Purchase, apps, License, manage
+    displayName: Purchase license, purchase subscription, apps, License, manage
 - name: Grow your app
   items:
     - name: Strategize and execute growth for your app

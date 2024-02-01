@@ -1,6 +1,6 @@
 ---
-title: Create your SaaS
-description: Learn how to create a SaaS offer in Partner Center and configure the offer.
+title: Create SaaS offer
+description: Learn how to create a SaaS offer in Partner Center and configure.
 author: v-preethah
 ms.author: surbhigupta
 ms.topic: how-to
@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 07/11/2023
 ---
 
-# Create your SaaS offer
+# Create SaaS offer
 
 This article helps you to create an offer in Partner Center and configure the offer with suitable options. You must also have a commercial marketplace account in Partner Center to create offers.
 

@@ -28,18 +28,24 @@ ms.date: 04/06/2023
    :::column-end:::
 :::row-end:::
 
-This article helps you to create an offer in Partner Center, configure the offer with suitable options and create an offer plan. You must also have a commercial marketplace account in Partner Center to create offers.
+This article helps you to create an offer in Partner Center, configure the offer with suitable options, and create an offer plan. You must also have a commercial marketplace account in Partner Center to create offers.
 
 > [!NOTE]
 > You can create premium and enterprise SaaS offers on top of the existing basic free app.
 
-## Create the offer in Partner Center
+The table below guides you through the offer creation
+
+| [Create an offer](#create-an-offer-in-partner-center) | [Configure the offer](#configure-your-saas-offer) | [Create a plan](#create-a-plan) |
+| --- | --- | --- |
+| Offer ID <br> Offer alias | [Offer setup](#offer-setup) <br> [Microsoft License Management](#set-up-microsoft-license-management) <br> [Offer properties](#set-up-the-offer-properties) <br> [Offer listing](#set-up-offer-details) <br> [Preview audience](#set-the-preview-audience) <br> [Technical configuration](#add-the-technical-information) | Plan ID <br> Plan name <br> Pricing model <br> Free trail |
+
+## Create an offer in Partner Center
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/) and select **Partner Center**.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="Screenshot shows how to sign in to the Partner Center account.":::
 
-1. On the **Home** page, select **Marketplace offers** tab to define commercial marketplace offers.
+1. On the **Home** page, select **Marketplace offers** tile.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="Screenshot shows the home page and Marketplace offer tab in the Partner Center.":::
 
@@ -52,7 +58,7 @@ This article helps you to create an offer in Partner Center, configure the offer
 1. Enter **Offer ID** and **Offer alias**.
 
    > [!NOTE]
-   > If you're creating an offer for testing purposes, append the text **-ISVPILOT** to the end of your offer alias. This informs the certification team that the offer is for testing purposes. Microsoft periodically deletes offers with **-ISVPILOT**. Therefore, refrain from using this tag for reasons other than testing the license management capability.
+   > If you're creating an offer for testing, append **-ISVPILOT** to the end of Offer alias. This informs the certification team that the offer is for testing purposes. Microsoft periodically deletes offers with **-ISVPILOT**. Therefore, refrain from using this tag for reasons other than testing.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="Screenshot shows how to enter Offer ID and Offer alias in the Partner Center.":::
 
@@ -60,19 +66,9 @@ This article helps you to create an offer in Partner Center, configure the offer
 
 ## Configure your SaaS offer
 
-Set up the offer by configuring with the required details. You need to do the following configurations:
+You can configure the offer based on the planning done. Set up the offer by configuring with the required details.
 
-* [Offer setup](#set-up-offer-selling): Select if you're selling through Microsoft or independently.
-* [License management](#set-up-microsoft-license-management): Select if you're allowing Microsoft to manage your licenses or not.
-* [Offer properties](#set-up-the-offer-properties): Select the options that decides the marketplace where the offer is available.
-* [Offer listing](#set-up-offer-details): Provide the information that's to be available on the landing page of your offer.
-* [Preview audience](#set-the-preview-audience): Add specific users who can test the prerelease version of the offer.
-* [Technical configuration](#add-the-technical-information): Add details that help users to integrate with your offer with ease.
-* [Create a plan](#create-a-plan): Provide the pricing, billing, and other plan details to purchase the subscription license.
-
-You can configure the offer based on the planning done.
-
-### Set up offer selling
+### Offer setup
 
 Offers sold through Microsoft are called transactable offers, which means Microsoft facilitates the exchange of money for a software license on the publisher's behalf.
 
@@ -86,14 +82,9 @@ Offers sold through Microsoft are called transactable offers, which means Micros
 
         * Select from the [listed options](/partner-center/marketplace/plan-saas-offer). You can change to a different listing option after publishing the offer.
 
-        > [!NOTE]
-        > The technical requirements and configuration differ based on the selection.
-
 ### Set up Microsoft license management
 
-Independent software vendors (ISVs) can configure Microsoft license management for third-party SaaS apps in Partner Center as part of the offer publishing.
-
-To enable Microsoft to manage licenses for a third-party app in Teams, you must allow Microsoft to manage licenses on your behalf while creating the offer.
+If you have opted to sell through Microsoft, you must further select if you want to allow Microsoft to manage licenses on your behalf.
 
 1. If you would like Microsoft to manage customer licenses for you, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
@@ -105,6 +96,9 @@ To enable Microsoft to manage licenses for a third-party app in Teams, you must 
     >
     > * This is a one-time setting and you can't change it once your offer is published. This allows the customer to manage licenses for your app within Teams.
     > * The app manifest supports only one offer for an app. Select an appropriate license management solution for all the plans available in your offer and you can't change this option after the offer is pushed to live.
+    > The technical requirements and configuration differ based on the selection.
+
+### Test drive
 
 1. To enable a test drive, under **Test drive**, select the **Enable a test drive** checkbox.
 
@@ -117,8 +111,8 @@ To enable Microsoft to manage licenses for a third-party app in Teams, you must 
 On the **Properties** tab, you define the categories and industries applicable to your offer, your app version, and legal contracts. You must provide complete and accurate details for the offer to be identified by the right set of customers.
 
 1. Under **Category**, select at least one and up to two categories for grouping your offer into the appropriate marketplace search areas.
-1. Under **Industries**, select up to two industries and two subindustries (also called verticals) for each industry.
-1. In the **App version** box, enter a version number.
+1. Under **Industries**, select up to two industries and two subindustries (also called verticals).
+1. In the **App version** box, enter a suitable version number.
 1. Under **Legal**, provide terms and conditions for your offer. You can use standard contracts with some amendments or use your own terms and conditions.
 1. Select **Save draft**.
 
@@ -154,14 +148,6 @@ On the **Technical configuration** tab, add the technical details that the comme
 
 After the initial configurations are done, you must create one or more plans with suitable purchase options for the offer that's to be published in the marketplace.
 
-## Create an offer plan for license purchase
-
-Offers sold as a transactable SaaS offers must have at least one plan. To create a plan that enable users to purchase licenses and to submit the offer for validation, see [create a plan](manage-third-party-apps-license.md).
-
-SaaS offer published in the marketplace must have suitable offers. After the offer configurations are done, you must then create one or more subscription plans for your offer, where the user can purchase suitable subscription as license to use your app.
-
-If you have enabled Microsoft license management, then the Teams admin or an user can purchase, assign, unassign, use, and track SaaS licenses for their third-party app subscriptions within Teams. Microsoft can manage the purchased licenses on your behalf.
-
 ## Create a plan
 
 Transactable SaaS offers sold through the Microsoft commercial marketplace must have at least one plan. You can create various plans with different subscription options within the same offer.
@@ -174,27 +160,17 @@ Transactable SaaS offers sold through the Microsoft commercial marketplace must 
 
 1. Select the plan listed under **Plan overview** to add pricing and availability information.
 
-### Define plan listing
-
-On the **Plan listing** tab, you can define the plan name and description as you want them to appear in the commercial marketplace.
-
 1. Under **Plan listing**, enter the **Plan name** and **Plan description**.
 
     :::image type="content" source="~/assets/images/first-party-license-mgt/plan-listing.png" alt-text="Screenshot shows the plan page to add plan name and plan description for your app.":::
 
 1. Select **Save draft**.
 
-### Define markets
-
-Every plan must be available in at least one market. On the **Pricing and availability** tab, you can configure the markets for the plan.
-
 1. Select **Pricing and availability** from the left pane.
+
 1. Under **Markets**, select **Edit markets**.
+
 1. In the dialog that appears, select the market locations where you want to make your plan available. You must select a minimum of one and can select a maximum of 141 markets.
-
-### Define the pricing
-
-You must associate a pricing model with each plan either flat rate or per user. All plans in an offer must use the same pricing model.
 
 1. Select **Pricing and availability** from the left pane.
 1. Under **Pricing**, select **Flat rate** or **Per User**.
@@ -213,11 +189,11 @@ You can configure a free trial for each plan in your offer.
 
 1. Select **Plan overview** at the top of the page to go to the listing page that shows all the plans you've created for this offer.
 
-    After you create one or more plans, you see the plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the **Plan overview** tab.
+After you create one or more plans, you see the plan name, plan ID, pricing model, availability (Public or Private), current publishing status, and any available actions on the **Plan overview** tab.
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="Screenshot shows plan listing page with service ID, pricing model, availability, status and action.":::
 
-1. Copy the service ID of the plan you created to integrate with Microsoft Graph [usageRights API](/partner-center/marketplace/isv-app-license-saas).
+Copy the service ID of the plan you created to integrate with Microsoft Graph [usageRights API](/partner-center/marketplace/isv-app-license-saas).
 
 [Integrate with Graph usageRights API](prerequisites.md#integrate-with-graph-usagerights-api) to manage user permissions at the time of app launch by a customer who has a purchase license.
 
