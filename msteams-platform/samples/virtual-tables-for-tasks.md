@@ -10,24 +10,19 @@ ms.date: 01/11/2023
 
 # Virtual tables for Tasks, Meetings, Files
 
-A new capability with this release is a set of Virtual tables. These enable developers to interact with Graph via OData APIs.
-
-The Collaboration controls core solution includes a set of [virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve), which can be used for programmatic access to the data created by the Collaboration controls.
-
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
 [!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
-> [!TIP]
-> [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
+A new capability with this release is a set of Virtual tables. These enable developers to interact with Graph via OData APIs.
+
+The Collaboration controls core solution includes a set of [virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve), which can be used for programmatic access to the data created by the Collaboration controls. Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 The external system that is used by the Collaboration controls is Microsoft Graph. There are virtual tables for group calendar events, booking appointments, planner plans or tasks and SharePoint drives, folders, and files.
 
 This article provides samples, which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update, and Delete) operations.
 
 > [!TIP]
-> For more information on the Dataverse REST API, see [use the Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview).
+> * [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
+> * For more information on the Dataverse REST API, see [use the Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview).
 
 * Virtual tables use the standard Dataverse Web API, which makes it easy to use the virtual tables to populate data in your application.
 * Virtual tables implement complex workflows required to support Collaboration controls and these execute within Microsoft data centers for optimum performance.  

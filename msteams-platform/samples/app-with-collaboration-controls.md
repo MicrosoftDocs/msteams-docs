@@ -10,12 +10,9 @@ ms.date: 10/07/2022
 
 # Create a new model-driven app with Collaboration controls for Teams
 
-Collaboration controls are designed for [model-driven applications](/power-apps/maker/model-driven-apps/model-driven-app-overview). The following section covers how to create a model-driven app.
-
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
 [!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
+
+Collaboration controls are designed for [model-driven applications](/power-apps/maker/model-driven-apps/model-driven-app-overview). Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). The following section covers how to create a model-driven app.
 
 ## Create a model-driven application
 

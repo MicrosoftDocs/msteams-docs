@@ -10,14 +10,9 @@ ms.date: 01/10/2023
 
 # Collaboration control and Settings REST API reference
 
-Developers can use the Collaboration controls and Settings REST API to manage settings, start, map, and retrieve collaboration activities with their own business model entities.
-
-> [!NOTE]
-> Currently Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
 [!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
-This article provides reference for the Collaboration controls and Settings REST API reference.
+Developers can use the Collaboration controls and Settings REST API to manage settings, start, map, and retrieve collaboration activities with their own business model entities. Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## REST Operations: Collaboration - Custom API
 

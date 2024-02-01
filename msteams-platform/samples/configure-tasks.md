@@ -10,14 +10,11 @@ ms.date: 09/30/2022
 
 # Configure Tasks for external clients
 
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
+
 External tasks that can be assigned to users who aren't part of your organization or don't have access to your application such as assigning a task to a customer.
 
 To enable, you'll need an extra step of passing an XML string to each instance of Tasks PCF control attached to the sub grid component on desired MDA form. XML string is a parametrized query that allows the control to extract the required data from a table that contains customer information.
-
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
-[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
 To create external tasks, follow the steps:
 
