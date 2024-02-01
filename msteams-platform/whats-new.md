@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 February**
 
-***February 01, 2024***: [Adaptive Card-based Loop components are now generally available.](m365-apps/cards-loop-component.md)
+***February 01, 2024***: [Build Adaptive Card-based Loop components](m365-apps/cards-loop-component.md)
 
 :::column-end:::
 :::row-end:::
