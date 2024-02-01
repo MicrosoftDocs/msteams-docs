@@ -168,7 +168,40 @@ If your app failed any test cases, can also download the validation report and r
 * Verify the response of bots in the team scope with the commands listed in the app's manifest.json file.
 * Test the response of bots in the personal scope with the commands listed in the app's manifest.json file.
 * If the app supports localization, confirm that it includes localization files in the app package.
+
 <br>
+&nbsp;
+</details>
+
+&nbsp;
+</details>
+<details>
+<summary><b>Validate your app package<b></summary>
+
+To ensure that your app functions as expected on Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
+
+1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
+1. Go to **Publish** > **App validation** > **Get started**.
+
+    :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the app validation in Teams developer portal.":::
+
+1. Select the validation acknowledgements checkbox and select the **Start validation**.
+
+    :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgement of your app package.":::
+
+    Teams Developer Portal now starts to validate your app package:
+
+    :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the app validation in progress.":::
+
+1. After validation, it shows the list of test cases your app has passed or failed.
+
+    :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
+
+You've successfully validated your app package in the Teams Developer Portal.
+
+<br>
+&nbsp;
+</details>
 
 ## Test your app directly in Teams
 
@@ -203,29 +236,6 @@ From the Developer Portal, you can go to Bot Framework portal and configure your
 
   > [!NOTE]
   > Bot ID doesn't support environment variables.
-
-## Validate your app package
-
-To ensure that your app functions as expected on Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
-
-1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
-1. Go to **Publish** > **App validation** > **Get started**.
-
-    :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the app validation in Teams developer portal.":::
-
-1. Select the validation acknowledgements checkbox and select the **Start validation**.
-
-    :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgement of your app package.":::
-
-    Teams Developer Portal now starts to validate your app package:
-
-    :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the app validation in progress.":::
-
-1. After validation, it shows the list of test cases your app has passed or failed.
-
-    :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
-
-You've successfully validated your app package in the Teams Developer Portal.
 
 ## See also
 
