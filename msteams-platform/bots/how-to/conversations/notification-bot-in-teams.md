@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
 The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, a travel agency builds an app in Teams for their users to keep them up-to-date with the weather forecast. In the following flowchart, a Teams app notifies about the weather forecast to the users using an Adaptive Card:
 
@@ -635,3 +635,4 @@ Follow the [step-by-step](../../../sbs-gs-notificationbot.yml) guide to build Te
 * [TeamsFx SDK](../../../toolkit/TeamsFx-SDK.md)
 * [Bot Framework SDK](/azure/bot-service/bot-builder-basics)
 * [Send proactive installation messages](../../../graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md)
+* [Build your app using C#](../../../sbs-gs-csharp.yml)
