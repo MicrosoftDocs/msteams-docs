@@ -33,20 +33,6 @@ Teams platform features that are available to all app developers.
 :::row-end:::
 <br/>
 
-<details>
-
-<summary><b>2024</b></summary>
-
-| **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
-|25/01/2024|Use Micro-capability templates to show rich unfurl previews of your links without installing your app in Microsoft Teams.|Build message extension > Build message extensions using Bot Framework > [Micro-capabilities for website links](messaging-extensions/how-to/micro-capabilities-for-website-links.md)|
-|24/01/2024|Introduced advanced step-by-step guide to learn how to debug your AI chat bot using Teams App Test Tool.|[Debug your AI chat bot using Teams App Test Tool](sbs-teams-app-test-tool.yml)|
-|19/01/2024|Use / to invoke message extensions from command box in the new Teams client.|Build message extension > [Build message extensions using Bot Framework](messaging-extensions/build-bot-based-message-extension.md)|
-|04/01/2024|Apps for Teams meetings are available in Department of Defense (DOD) environment.|[Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
-
-<br/>
-</details>
-
 </br>
 
 <details>
