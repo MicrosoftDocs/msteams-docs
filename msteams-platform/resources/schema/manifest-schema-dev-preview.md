@@ -1097,7 +1097,7 @@ Properties related to app support for Microsoft Intune.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`supportedMobileAppManagementVersion`| String | 64 characters |  | Supported mobile app management version that the app is compliant with. |
+|`supportedMobileAppManagementVersion`| String | 64 characters |  | Supported Microsoft Intune mobile app management (MAM) version that the app is compliant with. Expected value is a single version number, in the form of `integer.integer` (for example, `1.2`), that represents the maximum version of support to which this app attests. If no value is specified, the app does not attest to be mobile app management compliant. |
 
 ## See also
 
