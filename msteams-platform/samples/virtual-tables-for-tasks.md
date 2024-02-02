@@ -21,6 +21,7 @@ The external system that is used by the Collaboration controls is Microsoft Grap
 This article provides samples, which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update, and Delete) operations.
 
 > [!TIP]
+>
 > * [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
 > * For more information on the Dataverse REST API, see [use the Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview).
 
@@ -178,7 +179,7 @@ Create a Planner Task with `PlanId` and `collaborationRootId`. you can create se
 ```
 
 * `collaborationRootId`: Identifies the collaboration session we want to associate this plan with, use the value from task 2
-* `planId`: Identifies the plan this task will be assigned to, use the value from the previous step
+* `planId`: Identifies the plan this task is assigned to, use the value from the previous step
 * `taskTitle`: Title for the task
 
 # [Response](#tab/response2)
@@ -417,9 +418,9 @@ Header: If-Match: {{@odata.etag}}
 }   
 ```
 
-* `@odata.etag`: Etag for the task, you must perform a read to retrieve the most up to date version.
+* `@odata.etag`: Etag for the task, you must perform a read to retrieve the latest version.
 * `planTitle`: Updated title for the task.
-* `@details.etag`: Etag for the task details, you must perform a read using the query $select query parameter to include the `m365_details` column to retrieve the most up to date version. This value is included in the `m365_details` column of the response. This value isn't the same as the `@odata.etag` because in the Planner backend, the Task and its details are stored separately.
+* `@details.etag`: Etag for the task details, you must perform a read using the query $select query parameter to include the `m365_details` column to retrieve the latest version. This value is included in the `m365_details` column of the response. This value isn't the same as the `@odata.etag` because in the Planner backend, the Task and its details are stored separately.
 
 # [Response](#tab/response7)
 
@@ -550,7 +551,7 @@ To resolve this issue, you must always provide a valid `collaborationRootId` pro
 
 ### Attempt to read a virtual record without a Collaboration map
 
-Virtual tables allow you to execute requests, which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: $filter=m365_planid eq`{{planId}}`. One issue that happens if you use such a query is that records are returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record, the request fails because the virtual table can't find the associated collaboration map.  
+Virtual tables allow you to execute requests, which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a `$filter` system query like `$filter=m365_planid eq {{planId}}`. One issue that happens if you use such a query is that records are returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record, the request fails because the virtual table can't find the associated collaboration map.  
 
 # [Request](#tab/request9)
 
@@ -650,7 +651,7 @@ Header: If-Match: {{@odata.etag}}
 
 ### Querying for Associated Virtual Records
 
-In Task 5 of above, described how to Retrieve Associated Planner Tasks. This operation is supported for all of the virtual tables. When executing this request, you must include a `$filter` query, which specifies the Collaboration Root ID as shown below:
+In Task 5, described how to Retrieve Associated Planner Tasks. This operation is supported for all of the virtual tables. When executing this request, you must include a `$filter` query, which specifies the Collaboration Root ID as follows:
 
 # [Request](#tab/request12)
 
@@ -660,12 +661,12 @@ In Task 5 of above, described how to Retrieve Associated Planner Tasks. This ope
 
 ---
 
-* Other filtering options can't be combined with this `$filter` query and if there they'll be ignored.
+* Other filtering options can't be combined with this `$filter` query and if there they're ignored.
 * Other filtering must be performed directly on the response from the request.
 
 ### Querying for Virtual records with required key attributes
 
-When, Dataverse Web API is called to retrieve multiple records from the following virtual tables a mandatory key attribute is required. Graph Booking Appointments requires a valid `m365_bookingbusinessid` is included in the query. If the key attribute isn't provided, then the request fails as follows:
+When the Dataverse Web API is called to retrieve multiple records from the following virtual tables, a mandatory key attribute is required. Graph Booking Appointments requires a valid `m365_bookingbusinessid` is included in the query. If the key attribute isn't provided, then the request fails as follows:
 
 # [Response](#tab/response13)
 
