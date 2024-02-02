@@ -8,7 +8,7 @@ ms.date: 02/22/2023
 
 # Use dialogs in tabs
 
-You can add modal dialogs (referred as task modules in TeamsJS v1.x) to your tabs to simplify the user experience for any workflows that require data input. Dialogs allow you to gather user input in a Microsoft Teams-Aware modal window. A good example of this is editing Planner cards. You can use dialogs to create a similar experience.
+Add modal dialogs (referred as task modules in TeamsJS v1.x) to your tabs to simplify the user experience for any workflows that require data input. Dialogs allow you to gather user input in a Microsoft Teams-Aware modal window, such as editing Planner cards. You can use dialogs to create a similar experience.
 
 The two main operations of dialogs involve opening and closing (submitting) them. The functions are slightly different for earlier versions (prior to v2.x.x) of the TeamsJS library:
 
@@ -74,6 +74,13 @@ You can invoke either an HTML or Adaptive Card dialog from a tab.
 
 The value of `UrlDialogInfo.url` is set to the location of the content of your dialog. The dialog window opens and `UrlDialogInfo.url` is loaded as an `<iframe>` inside it. JavaScript in the dialog page calls `microsoftTeams.app.initialize()`. If there's a `submitHandler` function on the page and there's an error when invoking `microsoftTeams.dialog.url.open()`, then `submitHandler` is invoked with `err` set to the error string indicating the same.
 
+> [!WARNING]
+> Microsoft's cloud services, including web versions of Teams (*teams.microsoft.com*), Outlook (*outlook.com*), and Microsoft 365 (*microsoft365.com*) domains are migrating to the *cloud.microsoft* domain. Perform the following steps before June 2024 to ensure your app continues to render on the Teams web client:
+>
+> 1. Update TeamsJS SDK to v.2.19.0 or higher. For more information about the latest release of TeamsJS SDK, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
+>
+> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the ***teams.cloud.microsoft*** domain. If your Teams app extends across Outlook and Microsoft 365, ensure you allow your app to access ***teams.cloud.microsoft***, ***outlook.cloud.microsoft***, and ***m365.cloud.microsoft*** domains.
+
 ### Adaptive Card dialog
 
 ```typescript
@@ -91,7 +98,6 @@ The following image displays the dialog:
 :::image type="content" source="../../assets/images/task-module/task-module-custom-form.png" alt-text="Task Module Custom Form":::
 
 The following code is adapted from [the dialog sample](~/task-modules-and-cards/task-modules/invoking-task-modules.md#code-sample):
-
 
 # [TeamsJs v2](#tab/teamsjs3)
 
@@ -152,7 +158,7 @@ If there's no invocation error and the user doesn't select **X** to dismiss the 
 
 ### HTML or JavaScript dialogs
 
-After validating user input, call `microsoftTeams.dialog.url.submit()`. You can call `submit()` without any parameters if you want Teams to close the dialog, or you can pass an object or string `result` back to your app as the first parameter, and an `appId` of the app that opened the dialog as the second parameter. If you call `submit()` with a `result` parameter, you must pass an `appId` (or an array of `appId` strings of apps authorized to receive the result of the dialog). This enables Teams to validate that the app sending the result is the same as the invoked dialog.
+After validating user input, call `microsoftTeams.dialog.url.submit()`. You can call `submit()` without any parameters if you want Teams to close the dialog, or you can pass an object or string `result` back to your app as the first parameter, and an `appId` of the app that opened the dialog as the second parameter. If you call `submit()` with a `result` parameter, you must pass an `appId` (or an array of `appId` strings of apps authorized to receive the result of the dialog). This action enables Teams to validate that the app sending the result is the same as the invoked dialog.
 
 Teams will then invoke your `submitHandler` where `err` is *null* and `result` is the object or string you passed to `submit()`.
 
@@ -163,7 +169,7 @@ When you invoke the dialog with a `submitHandler` and the user selects an `Actio
 The Adaptive Card body as filled in by the user is sent to the bot using a `task/submit invoke` message when the user selects an `Action.Submit` button. The schema for the object you receive is similar to [the schema you receive for task/fetch and task/submit messages](../../task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 The only difference is that the schema of the JSON object is an Adaptive Card object as opposed to an object containing an Adaptive Card object as [when Adaptive cards are used with bots](../../task-modules-and-cards/task-modules/task-modules-bots.md#payload-of-taskfetch-and-tasksubmit-messages).
 
-The following is the example of payload:
+The following code is the example of payload:
 
 ```json
 {
@@ -182,7 +188,7 @@ The following is the example of payload:
 }
 ```
 
-The following is the example of Invoke request:
+The following code is the example of Invoke request:
 
 ```javascript
 let adaptiveCardDialogInfo = {
@@ -228,7 +234,7 @@ Taking up the earlier [example of invoking an HTML dialog](#example-of-invoking-
 <form method="POST" id="customerForm" action="/register" onSubmit="return validateForm()">
 ```
 
-There are five fields on this form but for this example only three values are required, `name`, `email`, and `favoriteBook`.
+There are five fields on this form but this example requires only three values, `name`, `email`, and `favoriteBook`.
 
 The following code gives an example of the `validateForm()` function that calls `submit()`:
 
@@ -249,12 +255,12 @@ function validateForm() {
 > [!NOTE]
 > The `tasks` namespace is replaced by the `dialog` namespace. The `dialog` namespace includes sub-namespaces for HTML (`url`), Adaptive Card (`adaptiveCard`), and bot-based (`dialog.url.bot` and `dialog.adaptiveCard.bot`) functionality.
 
-The following table provides the possible values of `err` that can be received by your `submitHandler`:
+The following table provides the possible values of `err` that your `submitHandler` receives:
 
 | Problem | Error message that is value of `err` |
 | ------- | ------------------------------ |
 | Values for both `TaskInfo.url` and `TaskInfo.card` were specified. | Values for both card and URL were specified. One or the other, but not both, are allowed. |
-| Neither `TaskInfo.url` nor `TaskInfo.card` specified. | You must specify a value for either card or URL. |
+| `TaskInfo.url` and `TaskInfo.card` specified. | You must specify a value for either card or URL. |
 | Invalid `appId`. | Invalid app ID. |
 | User selected X button, closing it. | User canceled or closed the dialog. |
 
