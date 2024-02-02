@@ -1,10 +1,10 @@
 > [!WARNING]
-> The Collaboration controls for model-driven applications will be retired from the end of May 2024. Retirement will be carried out in two phases to ensure a smooth transition. Following table details the timeline of the retirement process and its impacts:
+> The Collaboration controls for model-driven applications are set to retire by May 2024. Retirement will be carried out in two phases to ensure a smooth transition. Following table details the timeline of the retirement process and its impacts:
 >    
 > | Timeframe | Action | Impact |
 > |---|---|---|
-> | February 2024 |Collaboration controls will no longer be available to install from AppSource.|- New deployments of the collaboration controls in Power Apps environments aren't possible. </br> - Current installations aren't affected.|
-> | May 2024 |The internal service that powers the controls will be retired.|- The controls will no longer support integration with Microsoft 365 and return errors to users. </br> There will be no impact on data generated and managed through the controls. For more information, see the table later in this article.|
+> | February 2024 |Collaboration controls will no longer be available to install from AppSource.|- New deployments of the collaboration controls in Power Apps environments aren't possible. </br> - Existing installations aren't affected.|
+> | May 2024 |The internal service that powers the controls will be retired.|- The controls will stop supporting integration with Microsoft 365 and will return errors to users. </br> Data generated and managed through the controls won't be impacted. For more information, see the table later in this article.|
 >             
 > Artifacts created and managed through the controls will continue to exist after the service is retired.
 >            
