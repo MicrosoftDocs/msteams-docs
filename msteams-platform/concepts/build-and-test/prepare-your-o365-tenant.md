@@ -56,6 +56,11 @@ To turn on the custom app uploading for your developer tenant:
 
     :::image type="content" source="../../assets/images/prepare-test-tenant/upload-for-contoso.png" alt-text="Screenshot shows the upload app view.":::
 
+5. Go to **Teams apps** > **Manage apps** > **Org-wide app settings** > **Custom apps** and turn on the
+   **Upload custom apps for personal use** toggle.
+
+    :::image type="content" source="../../assets/images/prepare-test-tenant/Org-wide-app-settings.png" alt-text="Screenshot shows the org-side app settings for custom app upload.":::
+
 For complete information on how these settings interact, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings) and [manage app setup policies in Teams](/microsoftteams/teams-app-setup-policies).
 
 ## Next step
