@@ -1,7 +1,7 @@
 ---
 title: Build message extensions using API
 author: v-ypalikila
-description: Learn how to build a message extension using an OpenAPI description document (API).
+description: Learn how to build a message extension from an OpenAPI description document (API) using Teams Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
