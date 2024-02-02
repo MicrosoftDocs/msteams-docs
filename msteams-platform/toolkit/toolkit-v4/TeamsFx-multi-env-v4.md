@@ -10,10 +10,7 @@ ms.date: 11/29/2021
 
 # Manage multiple environments in Teams Toolkit v4
 
-> [!IMPORTANT]
->
-> * We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
-> * Teams Toolkit v4 extension will soon be deprecated.
+:::image type="content" source="~/assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
  Teams Toolkit provides a simple way for you to create and manage multiple environments. You can use environments to provision resources and deploy artifacts to the target environment for your Microsoft Teams app.
 
@@ -39,7 +36,7 @@ To create a new environment:
 2. Select the **Teams Toolkit** from the Visual Studio Code activity bar.
 3. Select **+ Create new environment** under **ENVIRONMENT**.
 
-   :::image type="content" source="images/create_new _env_1-v4.PNG" alt-text="Create new environment":::
+   :::image type="content" source="images/create_new_env_1-v4.PNG" alt-text="Create new environment":::
 
    If you've more than one environment, you need to select an existing environment to create the new environment. The command copies the file contents of `config.<newEnv>.json` and `azure.parameters.<newEnv>.json` from the selected environment to the new environment that you’re creating.
 

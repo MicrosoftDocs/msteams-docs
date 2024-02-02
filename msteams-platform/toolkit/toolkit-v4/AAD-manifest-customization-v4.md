@@ -10,10 +10,7 @@ ms.date: 05/20/2022
 
 # Edit Microsoft Entra manifest in Teams Toolkit v4
 
-> [!IMPORTANT]
->
-> * We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
-> * Teams Toolkit v4 extension will soon be deprecated.
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 The Microsoft Entra manifest contain definitions of all the attributes of a Microsoft Entra application object in the Microsoft identity platform.
 
