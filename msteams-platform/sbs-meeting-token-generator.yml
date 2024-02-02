@@ -59,11 +59,6 @@ items:
     
     You must have working knowledge of the following technologies:
 
-    * [C#](/dotnet/csharp/fundamentals/tutorials/how-to-display-command-line-arguments)
-    * [ECMAScript6](http://es6-features.org/#Constants)
-    * [Latest version of ASP.NET core](/aspnet/core/?view=aspnetcore-3.1)
-    * [Latest version of React.JS](https://reactjs.org/tutorial/tutorial.html) 
-    
 - title: Set up local environment
   durationInMinutes: 1
   content: |
@@ -141,7 +136,7 @@ items:
         > [!NOTE]
         > `WebAppDomain` is your ngrok domain, so the content bubble URL is similar to `https://ae57****.ngrok.io/contentBubble.html`.
 
-        :::image type="content" source="~/assets/images/meeting-token-generator/sbs app setting Latest.png" alt-text="Screenshot of appsettings JSON file with appsettings information.":::
+        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-app-setting-latest.png" alt-text="Screenshot shows the updated information of appsettings.":::
 
 - title: Set up manifest file
   durationInMinutes: 1
@@ -159,14 +154,11 @@ items:
          * Replace the following sections to your fully qualified domain name:
            * `websiteUrl`
            * `privacyUrl`
-           * `termsOfUseUrl`
-
-          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 1 latest new.png" alt-text="Screenshot of Schema, ID, Resource, Company name, website Url, privacy Url, and termsofUseUrl are highlighted in red.":::
-
+           * `termsOfUseUrl` 
          * Replace all occurrences of `WebAppDomainName` with your ngrok domain name.
          * Replace all occurrences of `MicrosoftAppId` with your bot's **Microsoft App ID**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-manifest 2 Latest.png" alt-text="Screenshot of manifest page with the ConfigurationUrl, bot ID, and valid Domains highlighted in red.":::
+          :::image type="content" source="~/assets/images/meeting-token-generator/sbs-app-manifest.png" alt-text="Screenshot shows the update of Schema, ID, Resource, Company name, website Url, privacy Url, and termsofUseUrl.":::
 
 - title: Build client app using npm install
   durationInMinutes: 1
@@ -175,7 +167,7 @@ items:
     1. Copy the **App** folder path.
     1. Open a new **Command Prompt** window, change the current directory to the copied **App** path.
 
-       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-command-prompt-new1.png" alt-text="Screenshot of Command Prompt displaying C# path.":::
+       :::image type="content" source="~/assets/images/meeting-token-generator/command-prompt.png" alt-text="Screenshot shows the loaction of client app in csharp folder.":::
 
     1. Run the following command in the **Command Prompt** to download packages and dependencies.
     
@@ -278,8 +270,8 @@ items:
 
     1. Create a .zip file with the following files that are present in the **Manifest** folder: 
        * manifest.json
-       * icon-outline.png
-       * icon-color.png
+       * outline.png
+       * color.png
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-cshrap-manifest.png" alt-text="Screenshot of cloned repository with path and Meeting token generator zip file highlighted in red."::: 
     
