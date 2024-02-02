@@ -181,10 +181,6 @@ items:
        ```
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-buildapp.png" alt-text="Screenshot of Command Prompt displaying the commands.":::
 
-       The process generates the distributable or **/dist** folder inside the **App** folder where the assets get copied. The server identifies the static files from the location.
-
-       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-distfolder.png" alt-text="Screenshot of Microsoft Teams Samples displaying the static files from the location.":::
-
 - title: Build and run the service
   durationInMinutes: 1
   content: |
@@ -234,7 +230,7 @@ items:
        
        1. Select **Setup Policies**.
 
-          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setuppolicies.png" alt-text="Screenshot of Microsoft Teams admin center with Teams apps and Setup policies highlighted in red."::: 
+          :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-setup-policies.png" alt-text="Screenshot of Microsoft Teams admin center with Teams apps and Setup policies highlighted in red."::: 
 
        1. Select **Global**.
 
