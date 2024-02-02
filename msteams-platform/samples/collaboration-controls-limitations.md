@@ -10,8 +10,7 @@ ms.date: 09/30/2022
 
 # Limitations and known issues
 
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
 Following are the limitations for Collaboration controls:
 
@@ -61,7 +60,7 @@ The text on the “clear" button displayed on the Tasks filter isn't translated.
 
 **Tasks: Grid context menu appears cropped**
 
-When the Tasks grid is populated by a low number of Tasks the grid context menu may appear cropped and require use of scrollbars.
+When the Tasks grid is populated by a low number of Tasks the grid context menu might appear cropped and require use of scrollbars.
 
 **Tasks: Keyword search filter use “BeginsWith” operator for “Guest” tasks**
 
@@ -69,7 +68,7 @@ When search Tasks using the keyword text filter, “Guest” tasks are returned 
 
 ## Files
 
-When navigating into the Archive folder after archiving files, users might experience duplicate archive folders.  Navigating from the archive folder(s) to the files main view resolves the issue, and files that are archived won't be removed.
+When navigating into the Archive folder after archiving files, users might experience duplicate archive folders.  Navigating from the archive folder(s) to the files main view resolves the issue, and files that are archived aren't removed.
 
 ## Controls
 
@@ -107,7 +106,7 @@ The controls provide the following methods to debug your application.
 
 1. **Browser logging** for UI controls. This is standard console logging.
 
-    1. It's supported when using a browser to run the Collaboration Manager app via Power Platform and Teams web.
+    1. It'sBrowser logging is supported when using a browser to run the Collaboration Manager app through Power Platform and Teams web.
     1. Within the console tab, you can search for errors using the Collaboration Manager error message or searching for Collaboration Manager control names such as Tasks.
 
 > [!TIP]
