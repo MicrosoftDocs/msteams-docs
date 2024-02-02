@@ -14,6 +14,9 @@ Across the Microsoft 365 ecosystem, most monthly users schedule their Microsoft 
 
 Meeting apps are essentially Teams tab apps that are designed to foster collaboration before, during, and after meetings. You can specify which contexts your meeting app supports from the app manifest (previously called Teams app manifest) through the [configurableTabs.context](../resources/schema/manifest-schema.md#configurabletabs) property.
 
+> [!NOTE]
+> In addition to `configurableTabs`, your meeting app must contain at least one [app capability in personal scope](/concepts/design/personal-apps) (for example, `staticTabs`), for it to be available in Outlook.
+
 The following table shows the Teams meeting app contexts supported in Outlook:
 
 | Teams meeting context | App manifest value | TeamsJS value | Outlook support |
@@ -138,25 +141,19 @@ Teams tab applications are hosted within [iframe elements](https://developer.moz
 
 You can [upload your custom app with TeamsFx CLI](#upload-your-custom-app-using-teamsfx-cli) and [preview your meeting app in Outlook](#preview-your-meeting-app-in-outlook).
 
-### Upload your custom app using TeamsFx CLI
+### Upload your custom app in Teams
 
-To run your app in Microsoft 365 and Outlook, upload your [app package](..//concepts/build-and-test/apps-package.md) to Teams using TeamsFx CLI.
+To run your app in Microsoft 365 and Outlook, upload your [app package](..//concepts/build-and-test/apps-package.md) to Teams.
 
 1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Teams toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
-    > [!NOTE]
-    > If your Teams app manifest contains only `configurableTabs` then TeamsFx CLI is the only supported way to upload your Teams meeting app to preview in Outlook.
 
-1. Run the following command to install TeamsFx CLI:
+1. Open Teams and select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
 
-    ```bash
-    npm install -g @microsoft/teamsfx-cli
-    ```
+    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
 
-1. Run the TeamsFx [m365 sideloading](/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-two#teamsfx-m365) command to upload your app in Teams:
+1. Choose the **Upload a custom app** option and select your app package.
 
-    ```bash
-    teamsfx m365 sideloading --file-path <path\to\appPackage.zip>
-    ```
+    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the option to upload an app in Teams.":::
 
 After your meeting app is uploaded to Teams, it's available in both Teams and Outlook. For your app to display in the **Apps** menu wait for few minutes and restart Outlook for Windows.
 

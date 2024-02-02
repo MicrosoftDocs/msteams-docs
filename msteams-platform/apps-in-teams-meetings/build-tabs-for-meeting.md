@@ -16,8 +16,6 @@ Every team has a different way of communicating and collaborating tasks. To achi
 
 Tabs allow the meeting participants to access services and content in a specific space within a meeting. If you're new to Microsoft Teams tab development, see [build tabs for Teams](/microsoftteams/platform/tabs/what-are-tabs).
 
-Tabs in Teams meetings are also supported in Microsoft Outlook from app manifest version 1.13 or later. You can build meeting tab apps that can be configured and added to Teams meetings scheduled from Outlook for Windows. For more information, see [extend a Teams meeting app to Outlook](../m365-apps/extend-m365-meeting-app.md).
-
 Before creating a meeting tab, it's important to learn about the surfaces that are available to target the meeting chat view, meeting details view, meeting side panel view, and meeting Stage View.
 
 ### Meeting details view
@@ -158,6 +156,10 @@ In public scheduled channel meetings, after a meeting tab is added, you can sele
 
 > [!NOTE]
 > On mobile, anonymous users can't access apps in scheduled public channel meetings.
+
+### Meeting apps in Outlook
+
+Tabs in Teams meetings are also supported in Microsoft Outlook from app manifest version 1.13 or later. You can build meeting tab apps that can be configured and added to Teams meetings scheduled from Outlook for Windows. For more information, see [extend a Teams meeting app to Outlook](../m365-apps/extend-m365-meeting-app.md).
 
 ### Advanced tab APIs
 
