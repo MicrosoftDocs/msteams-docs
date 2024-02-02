@@ -30,15 +30,11 @@ ms.date: 07/11/2023
 
 When the SaaS offer is successfully tested, you can push the offer to go live. After the offer is published live, you must link the offer to your SaaS app and publish the subscriptions to the Store.
 
-This article walks you through offer go live, configuring the offer to the app, and publishing the monetized app.
-
 ## Go live
 
-Upon successful testing, your offer is now ready to go live.
+Upon successful testing, your offer is now ready to [Go live](/partner-center/marketplace/test-publish-saas-offer) publishes the offer in the marketplace. The following pointers help you understand the phases in the go live stage.
 
-After testing the offer, go live gets your app to be published in the marketplace. The following pointers help you understand the phases in the go live stage.
-
-* Select **Go live** Initiate the validation checks for your offer before publishing.
+* Select **Go live** to initiate the validation checks before publishing.
 * Keep track of the publishing status on the **Offer overview** page.
 * If there are validation errors, rectify them and resubmit your offer for publishing. These errors could range from missing information to noncompliance with marketplace standards.
 * Upon successful validation, the offer is published live in the marketplace.
@@ -101,13 +97,13 @@ The SaaS app with suitable offers is available in the Microsoft Teams Store for 
 
 ### Post purchase
 
-1. Upon successful subscription purchase, the user is redirected to the app landing page for subscription activation. This is the existing experience for user purchasing [Monetized apps in Teams](https://aka.ms/TMTG).
+1. Upon successful subscription purchase, the user is redirected to the app landing page for subscription activation. To check the existing experience for user purchase, see [monetized apps in Teams](https://aka.ms/TMTG).
 
 1. After the user activates the subscription purchase on the landing page, the user is redirected to the subscription page in Teams via a [redirect URL](https://teams.microsoft.com/_#/subscriptionManagement) link or button that the user selects on the publisher landing page.
 
 ## License management
 
-After the subscription activation, the user is redirected from the landing page to Teams license management. Microsoft manages licenses on your behalf if you've opted for the same during offer configuration.
+After the subscription activation, the user is redirected from the landing page to Teams license management. Microsoft manages licenses on your behalf if you opted for the same during offer configuration.
 
 For more information on license management, see [manage app licenses](end-user-purchase-experience.md#license-management-experience).
 

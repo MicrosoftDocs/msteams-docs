@@ -34,7 +34,7 @@ There are four ways by which you can drive app monetization:
 
 ## SaaS offer
 
-Software as a Service (SaaS) applications published in Microsoft commercial marketplace for purchase are SaaS offers. As a publisher, you can create your marketplace offers in Partner Center and publish for purchase.
+Software as a Service (SaaS) applications with subscriptions that are published in Microsoft commercial marketplace for purchase are SaaS offers. As a publisher, you can create your marketplace offers in Partner Center and publish for purchase.
 
 > [!NOTE]
 > To create and publish your offer, you must have a [commercial marketplace account in Partner Center](/partner-center/create-account).
@@ -43,11 +43,11 @@ When creating a SaaS offer, you must determine the publishing option, specifical
 
 Here are some features you can integrate with the SaaS offer:
 
-* **In-app purchases**: Allow users to upgrade from a free to a paid version from within the app. Whether your app is free or paid, in-app purchases can generate an ongoing revenue stream. </br>
+* **In-app purchases**: Allow users to upgrade from a free to a paid version within the app. Whether your app is free or paid, in-app purchases can generate an ongoing revenue stream. </br>
 
 * **Test drive**: Allow users to test the end-to-end purchase experience of your app for a fixed time. Test drive and free trials are different, and you can provide one or both the features to the customers.</br>
 
-* **Microsoft license management**: Enable Microsoft to manage app licenses on your behalf that tracks and manages licenses from the Teams Store. For more information, see [Set up Microsoft license management](create-saas-offer.md#set-up-microsoft-license-management).
+* **Microsoft license management**: Enable Microsoft to manage app licenses on your behalf that tracks and manages licenses from the Teams Store. For more information, see [Set up Microsoft license management](manage-third-party-apps-license.md#set-up-microsoft-license-management).
 
 Now that we know about the monetizing options and a SaaS offer, let's learn in detail on planning and publishing the SaaS offer for your app.
 

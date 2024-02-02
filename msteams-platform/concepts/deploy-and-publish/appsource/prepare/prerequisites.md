@@ -27,9 +27,7 @@ ms.date: 01/31/2023
    :::column-end:::
 :::row-end:::
 
-To create a Software as a Service (SaaS) offer, ensure you have the necessary technical information and complete the required technical configurations. The preparation helps negate any blockers while creating the offer.
-
-*These are the extended information on planning your offer that comes in as prerequisites.*
+To create a Software as a Service (SaaS) offer, ensure you have the necessary technical information and complete the required technical configurations. The preparation helps negate any blockers while creating the offer. It's an extended planning phase where you work on the prerequisites.
 
 Here's a quick checklist to stay on track:
 
@@ -40,12 +38,9 @@ Here's a quick checklist to stay on track:
 > * [Gather the required technical information](#technical-information)
 > * [Perform API integrations](#api-integration) specific to sell through Microsoft offers
 
-The technical configurations differ based on the listing option. The following illustration can help you understand the configurations for each offer type.
+The following illustration helps you understand the technical configurations based on the listing option.
 
 :::image type="content" source="../../../../assets/images/saas-offer/tech-config-offer.png" alt-text="Diagram shows the technical configuration per the type of listing option.":::
-
-> [!NOTE]
-> The *Contact me* listing option have no technical configurations to be done.
 
 ## Set up Microsoft and Microsoft Entra accounts
 
@@ -59,14 +54,14 @@ To start with, you must set up the required accounts to create an offer.
 
 After a user successfully purchases a subscription plan, commercial marketplace directs them to the offer landing page where they can manage the subscription (such as assign a license to a specific user in their organization).
 
-To create a landing that provides a seamless sign-in and onboarding experience, see the following articles:
+To create a landing that provides a seamless sign-in and onboarding experience, check the following articles:
 
 * [Build the landing page for your transactable SaaS offer](/partner-center/marketplace/azure-ad-transactable-saas-landing-page).
 * [Build landing page for your free or trial SaaS offer](/partner-center/marketplace/azure-ad-free-or-trial-landing-page)
 
 ### Best practices for landing pages
 
-Consider the following approaches when building a landing page. See an example landing page in the [End-user purchase experience](end-user-purchase-experience.md).
+Consider the following approaches when building a landing page. Check the sample landing page in the [End-user purchase experience](end-user-purchase-experience.md).
 
 * Provide the name and details of the offer and user's account details.
 * Enable users to sign in from offer landing page only using the same Microsoft Entra credentials they used for subscription purchase.
@@ -78,7 +73,7 @@ Consider the following approaches when building a landing page. See an example l
 
 When you create the SaaS offer, you must provide the following technical information during the [offer configuration](create-saas-offer.md#add-the-technical-information).
 
-* **Landing page URL**: The SaaS site URL that users get redirected to after purchasing the offer, initiating the configuration process for the new SaaS subscription. The URL receives a token that you can use to invoke the fulfillment APIs, providing the necessary provisioning details for your interactive registration page.
+* **Landing page URL**: The SaaS site URL where the user gets redirected to after purchasing the offer. The URL receives a token that you can use to invoke the fulfillment APIs, providing the necessary provisioning details for your interactive registration page.
 
 * **Connection webhook URL**: For Microsoft to notify you of all asynchronous events (for example, when a SaaS subscription gets canceled), you must provide a [connection webhook URL](/partner-center/marketplace/create-new-saas-offer-technical). Define it in the **Technical configuration** page to receive any subscription changes from the user.
 
@@ -109,7 +104,7 @@ For comprehensive instructions and API reference, see [SaaS Fulfillment APIs](/a
 
 ### Integrate with Graph usageRights API
 
-Integrate with Graph usageRights API to manage user permissions at the time of app launch by a customer who has a purchase license. Use a Graph call to the usageRights API to determine the user’s permissions for the app.
+Integrate with Graph usageRights API to manage user permissions at the time of app launch by a customer who has a purchase license. You can call Graph APIs to determine if the currently logged in user with a valid subscription of the plan has access to your app.
 
 To call Graph usageRights API to check user permissions, follow the steps:
 
@@ -138,10 +133,11 @@ By integrating APIs and constructing a landing page for managing subscriptions, 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Create your SaaS offer](create-saas-offer.md)
+> [Create a SaaS offer](create-saas-offer.md)
 
 ## See also
 
 * [Monetize your app](monetize-overview.md)
 * [SaaS app listing requirements](/partner-center/marketplace/marketplace-criteria-content-validation)
 * [Create a commercial marketplace account in Partner Center](/partner-center/create-account)
+* [Technical requirements](/partner-center/marketplace/plan-saas-offer)

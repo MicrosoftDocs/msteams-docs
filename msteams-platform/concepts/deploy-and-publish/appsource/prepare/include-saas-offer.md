@@ -28,9 +28,9 @@ ms.date: 03/21/2023
    :::column-end:::
 :::row-end:::
 
-To monetize your SaaS app, it's important that you understand the features of a SaaS offer. This article provides an overview of the features in an offer that aids you to plan better.
+To monetize your SaaS app, it's important that you understand the features of a SaaS offer. Here's a brief overview of the features in an offer that aids you to plan better.
 
-Here are the features you can plan to create an offer:
+The key features are:
 
 * [Publishing option](#publishing-option)
 * [Offer details](#offer-details)
@@ -39,7 +39,7 @@ Here are the features you can plan to create an offer:
 
 ## Publishing option
 
-The initial step to create a SaaS offer is to decide the listing or publishing option that aligns with your requirements. The listing option you select, when creating the offer, is available as a call-to-action button on the offer purchase landing page.
+The initial step to create a SaaS offer is to decide the listing or publishing option that aligns with your requirements. The listing option you select, when creating an offer, appears as a call-to-action button on the offer purchase landing page.
 
 You can select from one of the four listing options to can publish a SaaS offer:
 
@@ -95,13 +95,13 @@ Customers can share their contact details and request that you contact them abou
     :::column-end:::
 :::row-end:::
 
-The listing option you select determines the technical configurations and requirements to create the specific offer in Microsoft Partner Center. Ensure to fulfill the [prerequisites](prerequisites.md) before you start creating the plan.
+Based on the listing option, there are certain technical configurations and requirements that needs to be done. Fulfill the [prerequisites](prerequisites.md) before you start creating the plan.
 
 You can further allow Microsoft to manage licenses on your behalf. If you select Microsoft to manage licenses, you must [integrate the offer with Microsoft Graph APIs](prerequisites.md#integrate-with-graph-usagerights-api) to verify customer eligibility.
 
 ## Offer details
 
-Offer details are the basic information available on the offer's landing page. Consider the following key features that enhance discoverability and usability of your offer.
+Offer details are the basic information available on the offer's landing page. The following key features enhance the discoverability and usability of your offer.
 
 | Category |Description|
 |---|---|
@@ -156,7 +156,7 @@ For comprehensive guidance on planning the offer, see [how to plan a SaaS offer 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prerequisites to create an offer](prerequisites.md)
+> [Prerequisites to create a SaaS offer](prerequisites.md)
 
 ## See also
 
