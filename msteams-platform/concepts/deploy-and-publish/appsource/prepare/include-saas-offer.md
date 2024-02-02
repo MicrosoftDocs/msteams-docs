@@ -41,7 +41,7 @@ The key features are:
 
 The initial step to create a SaaS offer is to decide the listing or publishing option that aligns with your requirements. The listing option you select, when creating an offer, appears as a call-to-action button on the offer purchase landing page.
 
-You can select from one of the four listing options to can publish a SaaS offer:
+You can select from one of the four listing options to publish a SaaS offer:
 
 :::row:::
     :::column:::
@@ -56,7 +56,7 @@ You can opt to sell your SaaS apps through Microsoft where Microsoft hosts all y
     :::column-end:::
 :::row-end:::
 
-If you decide not to sell through Microsoft, you can manage your transactions independently through one of the following listing options.
+If you decide not to sell through Microsoft, you can manage your transactions independently through one of the following listing options:
 
 :::row:::
     :::column:::
@@ -101,7 +101,7 @@ You can further allow Microsoft to manage licenses on your behalf. If you select
 
 ## Offer details
 
-Offer details are the basic information available on the offer's landing page. The following key features enhance the discoverability and usability of your offer.
+Offer details are the basic information available on the offer's landing page. The following key features enhance the discoverability and usability of your offer:
 
 | Category |Description|
 |---|---|
@@ -161,7 +161,6 @@ For comprehensive guidance on planning the offer, see [how to plan a SaaS offer 
 ## See also
 
 * [Monetize your app](monetize-overview.md)
-* [Plan a SaaS offer](/partner-center/marketplace/plan-saas-offer)
 * [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
 * [Marketplace categories and industries](/partner-center/marketplace/marketplace-categories-industries)
 * [Plans and pricing for commercial marketplace offers](/partner-center/marketplace/plans-pricing)

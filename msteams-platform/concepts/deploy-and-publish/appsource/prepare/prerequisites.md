@@ -79,7 +79,7 @@ When you create the SaaS offer, you must provide the following technical informa
 
 * **Microsoft Entra tenant ID**: Register an application within the Microsoft Entra portal to obtain the tenant ID. You can then add to the access control list (ACL) of the API, ensuring you have the authorization to call it. You can find the tenant ID under **App registrations** in Microsoft Entra portal.
 
-* **Microsoft Entra application ID**: The application ID corresponds to your publisher ID in your Partner Center account. Ensure you use the same application ID for all offers within that account.
+* **Microsoft Entra application ID**: The application ID corresponds to your publisher ID in your Partner Center account. Ensure that you use the same application ID for all offers within that account.
 
 For more information, see [technical information to create an offer](/partner-center/marketplace/plan-saas-offer).
 
@@ -94,23 +94,23 @@ API integrations, which extend beyond the initial setup, are specific to the Sel
 
 Integrating with the SaaS Fulfillment APIs help to manage the lifecycle of a subscription plan after the user purchases the plan.
 
-In general, you implement the following steps using the APIs after a subscription is purchased and the customer selects to configure:
+You must implement the following steps to integrate the APIs after the user purchases subscription and starts the configuration:
 
-  1. You receive a notification about the purchase where your landing page URL opens with the [purchase identification token](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle).
+  1. You receive a notification about the purchase where your landing page URL opens with the purchase identification token.
   1. You must pass the token by calling SaaS Resolve API to retrieve subscription details.
   1. After the user signs in and configures, call the Activate Subscription API to notify the commercial marketplace that the subscription is activated.
 
-For comprehensive instructions and API reference, see [SaaS Fulfillment APIs](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis) and [SaaS Fulfillment purchase flow](/partner-center/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle) documentation.
+For comprehensive instructions and API reference, see [SaaS Fulfillment APIs](/azure/marketplace/partner-center-portal/pc-saas-fulfillment-apis) and [SaaS Fulfillment purchase flow](/partner-center/marketplace/partner-center-portal/pc-saas-fulfillment-life-cycle).
 
 ### Integrate with Graph usageRights API
 
-Integrate with Graph usageRights API to manage user permissions at the time of app launch by a customer who has a purchase license. You can call Graph APIs to determine if the currently logged in user with a valid subscription of the plan has access to your app.
+Integrate with Graph usageRights API to manage user permissions at the time of app launch by a customer who has a purchase license. You can call Graph APIs to determine if the logged in user with a valid subscription of the plan has access to your app.
 
 To call Graph usageRights API to check user permissions, follow the steps:
 
-  1. Get user OBO token: [Get access on behalf of a user](/graph/auth-v2-user).
-  1. Call Graph to get the user’s object ID: [Use the Microsoft Graph API](/graph/use-the-api).
-  1. Call usageRights API to determine the user has a license to the plan: [List user usageRights API](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true).
+  1. Get [user On Behalf Of token](/graph/auth-v2-user).
+  1. Call [Graph API](/graph/use-the-api) to get the user’s object ID.
+  1. Call [usageRights API](/graph/api/user-list-usagerights?view=graph-rest-beta&tabs=http&preserve-view=true) to determine if the user has a license to the plan.
 
   > [!NOTE]
   >
@@ -118,7 +118,7 @@ To call Graph usageRights API to check user permissions, follow the steps:
   > The usageRights API is currently in beta version. After the version is updated to V1, users must upgrade from beta to V1 version.
   > * If the Microsoft Entra app is used for both SaaS Fulfillment APIs and usageRights API, ensure that the tenant under which the Microsoft Entra app is created is either the publishing tenant or the associated tenant in the Partner Center.
 
-For detailed information, see [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas).
+For more information, see [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas).
 
 To determine if the tenant for the Microsoft Entra app is part of the Partner Center setup, follow these steps:
 
@@ -128,7 +128,7 @@ To determine if the tenant for the Microsoft Entra app is part of the Partner Ce
   1. In the left pane, select **Tenants**.
     You can see all tenants associated with the Microsoft Partner Network (MPN) account. The tenant, who is the owner of the Microsoft Entra app, must be available in the list. If the tenant isn’t on the list, you can use the **Associate Azure ID** button to link the tenant.
 
-By integrating APIs and constructing a landing page for managing subscriptions, you can effectively track and manage your offers right from the start and provide a seamless user experience.
+By integrating APIs and constructing a landing page for managing subscriptions, you can effectively track and manage your offers  and provide a seamless user experience.
 
 ## Next step
 
