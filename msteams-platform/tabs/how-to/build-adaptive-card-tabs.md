@@ -11,7 +11,7 @@ ms.date: 05/02/2023
 # Build tabs with Adaptive Cards
 
 > [!WARNING]
-> Adaptive Card tabs aren't available in the new Teams client. The classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../what-are-tabs.md).
+> Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../what-are-tabs.md).
 
 When developing a tab using the traditional method, you might run into these issues:
 
