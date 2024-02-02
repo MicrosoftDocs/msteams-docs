@@ -72,6 +72,8 @@ You can enable the configuration settings for your bot using the following metho
   
   * `OnTeamsConfigSubmitAsync`
 
+  * `onInvokeActivity`
+
 #### Javascript code snippets
 
 The following code snippets shows an example of `onInvokeActivity` and `handleTeamsConfigFetch`, `handleTeamsConfigSubmit`:
@@ -228,11 +230,18 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 #### C# code snippets
 
-The following code snippets shows an example of `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` :
+The following code snippets shows an example of:
+
+| **Sample name** | **Method** |
+|-----------------|-----------------|
+|C# 1|`OnTeamsConfigFetchAsync`|
+|C# 2|`OnTeamsConfigSubmitAsync`|
+|C# 3|`OnInvokeActivityAsync`: For `config/fetch`, use `config/auth`; for `config/submit`, use `config/continue`.|
+|C# 4|`OnInvokeActivityAsync`: For `config/fetch`, use `config/continue`; for `config/submit`, use `config/message`.|
 
 # [C# 1](#tab/teams-bot-sdk2)
 
-`OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` methods are engineered to manage particular invoke activities associated with fetching and submitting configurations. The `OnTeamsConfigFetchAsync` method produces a configuration response for authentication upon receiving a configuration fetch request. It forms a `BotConfigAuth` object with suggested actions and delivers this response. Conversely, the `OnTeamsConfigSubmitAsync` method deals with configuration submit requests. It creates a `TaskModuleMessageResponse` with a test message and returns this response.
+Method 1: `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` methods are engineered to manage particular invoke activities associated with fetching and submitting configurations. The `OnTeamsConfigFetchAsync` method produces a configuration response for authentication upon receiving a configuration fetch request. It forms a `BotConfigAuth` object with suggested actions and delivers this response. Conversely, the `OnTeamsConfigSubmitAsync` method deals with configuration submit requests. It creates a `TaskModuleMessageResponse` with a test message and returns this response.
 
 ```csharp
 protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
@@ -278,7 +287,7 @@ protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContex
 
 # [C# 2](#tab/teams-bot-sdk)
 
-`OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` methods are specifically designed to manage invoke activities associated with fetching and submitting configurations on Microsoft Teams. Each method invokes the `createConfigContinueResponse` function, generating a `TaskModuleContinueResponse` that includes an Adaptive Card. This card is built with a text block that displays the text bot config test. The `TaskModuleContinueResponse` is subsequently returned as the response for both fetch and submit operations.
+Method 2: `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` methods are specifically designed to manage invoke activities associated with fetching and submitting configurations on Microsoft Teams. Each method invokes the `createConfigContinueResponse` function, generating a `TaskModuleContinueResponse` that includes an Adaptive Card. This card is built with a text block that displays the text bot config test. The `TaskModuleContinueResponse` is subsequently returned as the response for both fetch and submit operations.
 
 ```csharp
 protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
@@ -339,7 +348,7 @@ private ConfigResponseBase createConfigContinueResponse()
 
 # [C# 3](#tab/teams-bot-sdk3)
 
-The `OnInvokeActivityAsync` method manages incoming invoke activities for a bot application. It accepts a `turnContext` object, which represents the activity, and a cancellationToken for asynchronous operations. The method determines the requested operation type by examining the activity’s name. If the name is `config/fetch`, the bot forms a `ConfigResponse<BotConfigAuth>` object that includes bot configuration details and returns it as an `InvokeResponse` with a 200 status code. If the name is `config/submit`, the bot generates a `ConfigResponse<TaskModuleResponseBase>` that encapsulates the necessary configuration details in an Adaptive Card and also returns it with a 200 status code.
+Method 1: The `OnInvokeActivityAsync` method manages incoming invoke activities for a bot application. It accepts a `turnContext` object, which represents the activity, and a `cancellationToken` for asynchronous operations. The method determines the requested operation type by examining the activity’s name. If the name is `config/fetch`, the bot forms a `ConfigResponse<BotConfigAuth>` object that includes bot configuration details and returns it as an `InvokeResponse` with a 200 status code. If the name is `config/submit`, the bot generates a `ConfigResponse<TaskModuleResponseBase>` that encapsulates the necessary configuration details in an Adaptive Card and also returns it with a 200 status code.
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -419,7 +428,7 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
 
 # [C# 4](#tab/teams-bot-sdk4)
 
-The `OnInvokeActivityAsync` method, which is tasked with managing incoming invoke activities in a bot application. It begins by inspecting the name of the incoming activity using `turnContext.Activity.Name`. If the activity name is `config/submit`, it formulates a `ConfigResponse<TaskModuleResponseBase>` that includes a simple message response and returns it as an `InvokeResponse` with a status code of 200. Alternatively, if the activity name is `config/fetch`, it constructs an AdaptiveCard to symbolize configuration data and encapsulates it within a `ConfigResponse<TaskModuleResponseBase>`. This response comprises details such as card content, dimensions, and title, and is returned with a status code of 200. If the incoming activity’s name doesn’t match either `config/submit` or `config/fetch`, the method returns null, indicating that the activity does not necessitate a specific action.
+Method 2: The `OnInvokeActivityAsync` method, which is tasked with managing incoming invoke activities in a bot application. It begins by inspecting the name of the incoming activity using `turnContext.Activity.Name`. If the activity name is `config/submit`, it formulates a `ConfigResponse<TaskModuleResponseBase>` that includes a simple message response and returns it as an `InvokeResponse` with a status code of 200. Alternatively, if the activity name is `config/fetch`, it constructs an AdaptiveCard to symbolize configuration data and encapsulates it within a `ConfigResponse<TaskModuleResponseBase>`. This response comprises details such as card content, dimensions, and title, and is returned with a status code of 200. If the incoming activity’s name doesn’t match either `config/submit` or `config/fetch`, the method returns null, indicating that the activity does not necessitate a specific action.
 
 ```csharp
 protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
