@@ -77,7 +77,7 @@ To extend your existing Teams meeting app in Outlook, ensure the following:
 > * [Use Microsoft Teams JavaScript client library (TeamsJS) v2.5.0 or later](#use-teamsjs-version-250-or-later).
 > * [Configure Content Security Policy headers](#configure-csp-headers-for-outlook).
 > * [Update Microsoft Entra app registration for single sign-on (SSO)](#update-microsoft-entra-app-registration-for-sso).
-> * [Upload your updated app in Teams](#upload-your-custom-app-in-teams).
+> * [Upload your updated app in Teams Admin Center](#upload-your-custom-app-in-teams-admin-center).
 
 If you have an existing meeting app, make a copy or a branch of your production project and update your app `id` in the app manifest to use a new identifier that is different from the production app ID for testing.
 
@@ -139,23 +139,19 @@ Teams tab applications are hosted within [iframe elements](https://developer.moz
 
 ---
 
-You can [upload your custom app in Teams](#upload-your-custom-app-in-teams) and [preview your meeting app in Outlook](#preview-your-meeting-app-in-outlook).
+You can [upload your custom app in Teams admin center](#upload-your-custom-app-in-teams-admin-center) and [preview your meeting app in Outlook](#preview-your-meeting-app-in-outlook).
 
-### Upload your custom app in Teams
+### Upload your custom app in Teams admin center
 
-To run your app in Microsoft 365 and Outlook, upload your [app package](../concepts/build-and-test/apps-package.md) to Teams.
+To test your app in Microsoft 365 and Outlook, upload your [app package](../concepts/build-and-test/apps-package.md) to Teams admin center.
 
 1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Teams toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
-1. Open Teams and select **Apps** to open the **Manage your apps** pane. Then select **Upload an app**.
+1. From [Microsoft Teams admin center](https://admin.teams.microsoft.com), go to **Teams apps** > **Manage apps**.
 
-    :::image type="content" source="images/teams-manage-your-apps.png" alt-text="Screenshot shows the Upload an app option under Manage your apps.":::
+1. Select **Upload new app**, and select your app package.
 
-1. Choose the **Upload a custom app** option and select your app package.
-
-    :::image type="content" source="images/teams-upload-custom-app.png" alt-text="Screenshot shows the option to upload an app in Teams.":::
-
-After your meeting app is uploaded to Teams, it's available in both Teams and Outlook. For your app to display in the **Apps** menu wait for few minutes and restart Outlook for Windows.
+After your meeting app is uploaded to Teams admin center, it's available in both Teams and Outlook. For your app to display in the **Apps** menu wait for few minutes and restart Outlook for Windows.
 
 ### Preview your meeting app in Outlook
 
