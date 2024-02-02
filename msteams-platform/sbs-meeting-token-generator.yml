@@ -36,9 +36,9 @@ items:
       > [!NOTE]
       > Skip is available only to the meeting organizers.
     
-    This step-by-step guide helps you to generate meeting token for all the participants to interact in the meeting. You'll see the following output:
+    This step-by-step guide helps you to generate meeting token for all the participants to interact in the meeting. You see the following output:
 
-       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="Screenshot shows the meeting token generator output after you have successfully completed the step-by-step guide.":::
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="Screenshot shows the final output screen.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -167,7 +167,7 @@ items:
     1. Copy the **App** folder path.
     1. Open a new **Command Prompt** window, change the current directory to the copied **App** path.
 
-       :::image type="content" source="~/assets/images/meeting-token-generator/command-prompt.png" alt-text="Screenshot shows the loaction of client app in csharp folder.":::
+       :::image type="content" source="~/assets/images/meeting-token-generator/command-prompt.png" alt-text="Screenshot shows the location of client app in csharp folder.":::
 
     1. Run the following command in the **Command Prompt** to download packages and dependencies.
     
@@ -205,7 +205,7 @@ items:
 
          A webpage opens with a message **App is ready!**.
 
-         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png" alt-text="Screenshot of the webpage that displays Your bot is ready!.":::
+         :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-appisready.png" alt-text="Screenshot shows the webpage that displays Your bot is ready.":::
 
    # [Command line](#tab/cli)
 
@@ -323,7 +323,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="Screenshot shows the meeting token generator output after you have successfully completed the step-by-step guide.":::
+    :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="Screenshot shows the final output screen.":::
 
 - content: |
     You've completed the tutorial to get started with a Meeting Token Generator app.
