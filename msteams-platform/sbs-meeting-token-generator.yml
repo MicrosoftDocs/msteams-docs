@@ -38,7 +38,7 @@ items:
     
     This step-by-step guide helps you to generate meeting token for all the participants to interact in the meeting. You'll see the following output:
 
-       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="Screenshot of the meeting token generator output after you have successfully completed the step-by-step guide.":::
+       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="Screenshot shows the meeting token generator output after you have successfully completed the step-by-step guide.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -271,21 +271,19 @@ items:
 
        :::image type="content" source="~/assets/images/meeting-token-generator/sbs-cshrap-manifest.png" alt-text="Screenshot of cloned repository with path and Meeting token generator zip file highlighted in red."::: 
     
-    1. Create a meeting with a few presenters and attendees.
-   
-    1. After the meeting is created, go to the meeting details page and select **Add** **an app**.
+    1. Create a meeting in Teams with a few presenters and attendees.
 
-       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-addanapp.png" alt-text="Screenshot of Teams meeting displaying Add an app highlighted in red."::: 
+    1. Join the meeting.
    
-    1. In the pop-up window, select **Manage apps**.
-
-       :::image type="content" source="~/assets/images/meeting-token-generator/sbs-find-app.png" alt-text="Screenshot of Find an app with Manage apps highlighted in red.":::
-   
-    1. Select **Upload a custom app**. 
-
-       :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-uploadcustomapp.png" alt-text="Screenshot of Upload a custom app under Manage your apps in Microsoft Teams highlighted in red.":::
+    1. After the meeting has started, select **Apps**.
     
-    1. Select **Open** to upload the .zip file that you created in the **Manifest** folder.
+    1. In the pop-up window, select **Manage apps**.
+   
+       :::image type="content" source="~/assets/images/meeting-token-generator/add-app-teams.png" alt-text="Screenshot shows how to add an app in a meeting.":::
+    
+    1. Select **Upload an app**.
+
+    1. Select the .zip file you've created in the **AppManifest** folder and select **Open**.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-selectzip.png" alt-text="Screenshot of the cloned repository path and Meeting token generator .zip file highlighted in red. ":::
 
@@ -325,11 +323,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-yourtokennumber.png" alt-text="Screenshot of the meeting token generator output after you have successfully completed the step-by-step guide.":::
+    :::image type="content" source="~/assets/images/meeting-token-generator/sbs-final-output.png" alt-text="Screenshot shows the meeting token generator output after you have successfully completed the step-by-step guide.":::
 
 - content: |
     You've completed the tutorial to get started with a Meeting Token Generator app.
-
-    See how your application looks like in a real-time scenario:
-
-    :::image type="content" source="~/assets/images/meeting-token-generator/meeting-token-generator-realtime.png" alt-text="Screenshot of the meeting token generator of application in real-time scenario.":::
