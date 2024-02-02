@@ -15,7 +15,7 @@ Across the Microsoft 365 ecosystem, most monthly users schedule their Microsoft 
 Meeting apps are essentially Teams tab apps that are designed to foster collaboration before, during, and after meetings. You can specify which contexts your meeting app supports from the app manifest (previously called Teams app manifest) through the [configurableTabs.context](../resources/schema/manifest-schema.md#configurabletabs) property.
 
 > [!NOTE]
-> In addition to `configurableTabs`, your meeting app must contain at least one [app capability in personal scope](../concepts/design/personal-apps) (for example, `staticTabs`), for it to be available in Outlook.
+> In addition to `configurableTabs`, your meeting app must contain at least one [app capability in personal scope](../concepts/design/personal-apps.md) (for example, `staticTabs`), for it to be available in Outlook.
 
 The following table shows the Teams meeting app contexts supported in Outlook:
 
@@ -143,7 +143,7 @@ You can [upload your custom app in Teams](#upload-your-custom-app-in-teams) and 
 
 ### Upload your custom app in Teams
 
-To run your app in Microsoft 365 and Outlook, upload your [app package](..//concepts/build-and-test/apps-package.md) to Teams.
+To run your app in Microsoft 365 and Outlook, upload your [app package](../concepts/build-and-test/apps-package.md) to Teams.
 
 1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Teams toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
