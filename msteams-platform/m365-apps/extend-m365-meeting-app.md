@@ -15,7 +15,7 @@ Across the Microsoft 365 ecosystem, most monthly users schedule their Microsoft 
 Meeting apps are essentially Teams tab apps that are designed to foster collaboration before, during, and after meetings. You can specify which contexts your meeting app supports from the app manifest (previously called Teams app manifest) through the [configurableTabs.context](../resources/schema/manifest-schema.md#configurabletabs) property.
 
 > [!NOTE]
-> In addition to `configurableTabs`, your meeting app must contain at least one [app capability in personal scope](/concepts/design/personal-apps) (for example, `staticTabs`), for it to be available in Outlook.
+> In addition to `configurableTabs`, your meeting app must contain at least one [app capability in personal scope](../concepts/design/personal-apps) (for example, `staticTabs`), for it to be available in Outlook.
 
 The following table shows the Teams meeting app contexts supported in Outlook:
 
@@ -77,7 +77,7 @@ To extend your existing Teams meeting app in Outlook, ensure the following:
 > * [Use Microsoft Teams JavaScript client library (TeamsJS) v2.5.0 or later](#use-teamsjs-version-250-or-later).
 > * [Configure Content Security Policy headers](#configure-csp-headers-for-outlook).
 > * [Update Microsoft Entra app registration for single sign-on (SSO)](#update-microsoft-entra-app-registration-for-sso).
-> * [Upload your updated app using TeamsFx CLI](#upload-your-custom-app-using-teamsfx-cli).
+> * [Upload your updated app in Teams](#upload-your-custom-app-in-teams).
 
 If you have an existing meeting app, make a copy or a branch of your production project and update your app `id` in the app manifest to use a new identifier that is different from the production app ID for testing.
 
@@ -139,7 +139,7 @@ Teams tab applications are hosted within [iframe elements](https://developer.moz
 
 ---
 
-You can [upload your custom app with TeamsFx CLI](#upload-your-custom-app-using-teamsfx-cli) and [preview your meeting app in Outlook](#preview-your-meeting-app-in-outlook).
+You can [upload your custom app in Teams](#upload-your-custom-app-in-teams) and [preview your meeting app in Outlook](#preview-your-meeting-app-in-outlook).
 
 ### Upload your custom app in Teams
 
