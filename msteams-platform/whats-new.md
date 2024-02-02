@@ -26,13 +26,28 @@ Teams platform features that are available to all app developers.
 
 **2024 February**
 
-* ***February 02, 2024***: [Share code snippets as Adaptive Cards with the CodeBlock element.](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)
-* ***February 01, 2024***: [Application RSC permissions for chat scope are now generally available.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting)
+* ***February 01, 2024***: [Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365.](m365-apps/cards-loop-component.md)
+* ***February 01, 2024***: [Use application RSC permissions for chat scope.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting)
 
 :::column-end:::
 :::row-end:::
+<br/>
+
+<details>
+
+<summary><b>2024</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+|25/01/2024|Use Micro-capability templates to show rich unfurl previews of your links without installing your app in Microsoft Teams.|Build message extension > Build message extensions using Bot Framework > [Micro-capabilities for website links](messaging-extensions/how-to/micro-capabilities-for-website-links.md)|
+|24/01/2024|Introduced advanced step-by-step guide to learn how to debug your AI chat bot using Teams App Test Tool.|[Debug your AI chat bot using Teams App Test Tool](sbs-teams-app-test-tool.yml)|
+|19/01/2024|Use / to invoke message extensions from command box in the new Teams client.|Build message extension > [Build message extensions using Bot Framework](messaging-extensions/build-bot-based-message-extension.md)|
+|04/01/2024|Apps for Teams meetings are available in Department of Defense (DOD) environment.|[Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 
 <br/>
+</details>
+
+</br>
 
 <details>
 
