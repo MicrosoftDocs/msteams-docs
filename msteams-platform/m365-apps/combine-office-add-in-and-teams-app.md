@@ -13,26 +13,26 @@ ms.subservice: m365apps
 
 ## Introduction
 
-[Outlook Add-ins](/office/dev/add-ins/outlook/outlook-add-ins-overview) are web apps that extend the functionality of Outlook. Some of the things that can be done with an Outlook Add-in:
+[Outlook Add-ins](/office/dev/add-ins/outlook/outlook-add-ins-overview) are web apps that extend the functionality of Outlook. With an Outlook Add-in, you can:
 
-- Read and write the content of email messages and meeting invitations, as well as responses, cancellations, and appointments.
+- Read and write email messages and engage in meeting invitations, responses, cancellations, and appointments.
 - Read properties of the user's mailbox.
-- Respond automatically to events, such as the sending of an email.
-- Integrate with external services including CRM and project management.
+- Respond to events automatically, such as sending an email.
+- Integrate with external services including CRM and project management tools.
 - Add custom ribbon buttons or menu items to perform specific tasks.
 
-Combining an Outlook Add-in with a Teams app enables scenarios that can't be satisfied with either of them separately. For example, consider an app that enables sales persons to insert a customized discount into an email for a customer, and then records the offer in a backend database. The app also enables the sales manager to view data about all the discounts that have been offered in a Teams tab. There is a sample of this app with animated screen shots at [Discount Offers](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
+Combining an Outlook Add-in with a Teams app enables scenarios that can't be satisfied with either of them separately. For example, consider an app that enables a salesperson to insert a customized discount in an email to a customer and records the offer in a backend database. The sales manager can also view data about all the discounts that have been offered in a Teams tab. For more information, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
 
 This article will walk you through the steps to add an Outlook Add-in to a Teams app, test it, then deploy it to Azure.
 
-## Prerequisites
+## Prerequisites 
 
-To configure an Office Add-in as additional capability, you must meet the following conditions:
+To configure an Office Add-in, ensure that you meet the following requirements: 
 
-- You have a Microsoft 365 account that includes Teams, or separate subscriptions to both Microsoft 365 and Teams, to test the application. For example, an *.onmicrosoft.com test account through the [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program).
-- Your Microsoft 365 account has been added as an account in desktop Outlook. See [Add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726)
-- To deploy the Teams app to Azure as described in the last section of this article, you need an Azure account with an active subscription. Create your free Azure account if you don't already have one by using the link [Free Azure account](https://azure.microsoft.com/free/).
-- A Teams app that was created with the latest version of Teams Toolkit.
+- A Microsoft 365 account that includes Teams to test the appl. Alternatively, you can have separate subscriptions to both Microsoft 365 and Teams. For example, a test account with *.onmicrosoft.com through the [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program). 
+- Your Microsoft 365 account is added as an account in desktop Outlook. For more information, see [add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726).
+ - An Azure account with active subscription to deploy the Teams app to Azure. If you don't already have one, you can create your [free Azure account](https://azure.microsoft.com/free/).
+ - A Teams app created using the latest version of Teams Toolkit.
 
 ## Overview
 
