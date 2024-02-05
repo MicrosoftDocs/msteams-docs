@@ -2,16 +2,13 @@
 title: Loop component design guidelines 
 description: In this article, learn how to design Adaptive Card-based Loop components.
 ms.author: mobajemu
-ms.date: 06/15/2023
+ms.date: 01/26/2024
 ms.topic: tutorial
 ms.custom: m365apps
 ms.localizationpriority: medium
 ---
 
 # Loop component design guidelines
-
-> [!NOTE]
-> Adaptive Card-based Loop components are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
 Microsoft Loop components are live, actionable units of productivity that stay in sync and move freely across Microsoft 365 apps. It includes the capability for you to create Loop components by evolving an existing Adaptive Card into a Loop component or creating a new Adaptive Card-based Loop component.
 
@@ -98,7 +95,7 @@ The platform provides the component header and includes standard elements such a
 
 **App name** is drawn from the component contract. We recommend to use a concise name for your app.
 
-**App logo** is drawn from the component contract. Ensure that the logo provided works on both light and dark backgrounds since the same asset is used for light, dark, and high contrast themes in Teams.
+**App logo** is drawn from the component contract. Ensure that the logo provided works on both light and dark backgrounds since the same asset is used for light, dark, and high contrast themes in Microsoft Teams.
 
 ## Loop component border
 
