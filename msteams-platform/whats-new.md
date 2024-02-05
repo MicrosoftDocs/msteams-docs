@@ -380,7 +380,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 February**
 
-* ***February 13, 2024***: [Introduced Adaptive Card Previewer in public developer preview for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-visual-studio.md).
+* ***February 13, 2024***: [Introduced Adaptive Card Previewer in public developer preview for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-visual-studio.md)
 
 :::column-end:::
 :::row-end:::
@@ -397,7 +397,6 @@ Developer preview is a public program that provides early access to unreleased T
 </details>
 </br>
 
-<br>
 <details>
 <summary><b>2023</b></summary>
 
