@@ -22,11 +22,6 @@ An Incoming Webhook lets external applications share content in Microsoft Teams 
 > * The message size limit is 28 KB. When the size exceeds 28 KB, you receive an error. For more information, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
 > * If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate. A [retry logic with exponential backoff](/azure/architecture/patterns/retry) can mitigate rate limiting for cases where requests exceed the limits within a second. To avoid hitting the rate limits, see [HTTP 429 responses](../../bots/how-to/rate-limit.md#handle-http-429-responses).
 
-See the following video to learn how to create Incoming Webhooks:
-<br>
-
-> [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4ODcY]
-
 ## Key features of Incoming Webhooks
 
 The following table provides the features and description of an Incoming Webhook:
@@ -48,7 +43,7 @@ The following table provides the features and description of an Incoming Webhook
 > * Teams bots, message extensions, Incoming Webhook, and the Bot Framework support Adaptive Cards. Adaptive Card is an open cross-card platform framework that is used in all platforms such as Windows, Android, iOS, and so on. Currently, [Teams connectors](../../webhooks-and-connectors/how-to/connectors-creating.md) don't support Adaptive Cards. However, it is possible to create a [flow](https://flow.microsoft.com/blog/microsoft-flow-in-microsoft-teams/) that posts Adaptive Cards to a Teams channel.
 > * For more information on cards and webhooks, see [Adaptive cards and Incoming Webhooks](~/task-modules-and-cards/what-are-cards.md#adaptive-cards-and-incoming-webhooks).
 
-## Create Incoming Webhooks
+## Create an Incoming Webhook
 
 To add an Incoming Webhook to a Teams channel, follow these steps:
 
@@ -66,6 +61,9 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 
 1. Search for **Incoming Webhook** and select **Configure**.
 
+    > [!NOTE]
+    > If you're adding incoming webhook for the first time, you must **Add** the Incoming Webhook to Teams and **Configure**.
+
    :::image type="content" source="../../assets/images/configure_1.png" alt-text="The screenshot shows how to configure and upload an image for your webhooks.":::
 
 1. Provide a name and upload an image for your webhook if necessary.
@@ -82,7 +80,11 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 
 The webhook is now available in the Teams channel.
 
-You can create and send actionable messages through Incoming Webhook or connector for Microsoft 365 Groups. For more information, see [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
+The following graphical representation provides the steps to create an Incoming Webhook:
+
+:::image type="content" source="../../assets/images/create-incoming-webhook.gif" alt-text="Graphical representation shows the steps to create an Incoming Webhook.":::
+
+You can create and send actionable messages through Incoming Webhook or connector for Microsoft 365 Groups. For more information, see [create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 > [!NOTE]
 > In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
