@@ -997,6 +997,52 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`hide.customOfficeAddin`| | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
 
+## actions
+
+> [!NOTE]
+>
+> * Actions for Microsoft 365 is available in [public developer preview](../dev-preview/developer-preview-intro.md).
+>
+> * Actions is supported for Microsoft 365 (Office) app for web and desktop.
+
+The object is an array of action objects. This block is required only for solutions that provides Actions.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | 64 characters | ✔️ | An identifier string in the default locale that is used to catalog actions. Must be unique across all actions for this app. For example, `openDocInContoso`.  |
+|`displayName`| String | 64 characters | ✔️ | A display name for the action. Capitalize first letter and brand name. For example, Add to suppliers, Open in Contoso, and Request signatures.|
+|`description`| String | | ✔️ | Specifies the description of the actions. |
+|`intent`| String enum |  | ✔️ | Specifies the type of intent. The supported enum values are `open`, `addTo`, and `custom`. |
+|`handlers`| Array of objects | | ✔️ | An array of handler objects defines how Actions are managed. In the current public preview, add a single handler for each action. |
+
+### actions.handlers
+
+Defines the handlers of the Action. The handlers is an array of handler objects. Each Action must have at least one handler.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`supportedObjects`| Object | |  | Objects defining what objects can trigger this Action. |
+|`type`| String enum | | ✔️ | Specifies the handler type of Actions. The supported enum value is  `openPage`. |
+|`pageInfo`| Object | |  | Required if the handler type is `openPage`. Object containing metadata of the page to open. |
+
+### actions.handlers.supportedObjects
+
+The supported object types that can trigger this Action.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`file`| Object | |  | Supported file types. |
+|`file.extensions`| Array of strings | |  | Array of strings. File extensions of the file types the Action can trigger. For example, pdf and docx.|
+
+### actions.handlers.pageInfo
+
+Required if the handler type is `openPage`. Object containing metadata of the page to open.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`PageId`| String | |  | Maps to the `EntityId` of the static tab. |
+|`SubPageId`| String | |  | Maps to the `SubEntityId` of the static tab. |
+
 ## See also
 
 * [Understand the Microsoft Teams app structure](~/concepts/design/app-structure.md)
