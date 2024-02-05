@@ -3,7 +3,7 @@ title: Microsoft Adaptive Card Previewer Visual Studio
 author: v-ganr
 description: In this article, learn more about the Microsoft Adaptive Card previewer, features, advantages, limitations and preview of the Adaptive Card Previewer.
 ms.localizationpriority: medium
-ms.topic: overview
+ms.topic: Adaptive Card Previewer overview
 ms.author: surbhigupta
 ms.date: 02/13/2024
 ---
@@ -25,9 +25,7 @@ Adaptive Card Previewer provides faster and more reliable solutions to preview A
 
   image
 
-* **Instant preview**: Allows you to preview Adaptive Cards in the Visual Studio Code editor through CodeLens 
-
-   You can select **Preview Adaptive Card** suggestion in the Adaptive Card template file to preview the Adaptive Card in the right pane.
+* **Instant preview**: Allows you to preview Adaptive Cards in the Visual Studio Code editor through CodeLens.
 
    image
 

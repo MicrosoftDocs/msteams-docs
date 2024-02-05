@@ -378,14 +378,24 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 January**
+**2024 February**
 
-* ***January 25, 2024***: [Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content](m365-apps/actions-in-m365.md).
-
-* ***January 12, 2024***: [Introduced Teams Toolkit command line interface v3.](toolkit/Teams-Toolkit-CLI.md)
+* ***February 13, 2024***: [Introduced Adaptive Card Previewer in public developer preview for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-visual-studio.md).
 
 :::column-end:::
 :::row-end:::
+
+<br>
+<details>
+<summary><b>2024</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+|25/01/2024| Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content. | Extend your app across Microsoft 365 > [Actions in Microsoft 365](m365-apps/actions-in-m365.md)|
+|12/01/2024| Introduced Teams Toolkit command line interface v3. | [Teams Toolkit command line interface](toolkit/Teams-Toolkit-CLI.md)|
+
+</details>
+</br>
 
 <br>
 <details>
