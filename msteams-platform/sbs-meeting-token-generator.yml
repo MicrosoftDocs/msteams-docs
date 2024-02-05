@@ -163,9 +163,9 @@ items:
 - title: Build client app using npm install
   durationInMinutes: 1
   content: |
-    1. Go to the **App** folder in cloned repository.
-    1. Copy the **App** folder path.
-    1. Open a new **Command Prompt** window, change the current directory to the copied **App** path.
+    1. Go to the **ClientApp** folder in cloned repository.
+    1. Copy the **ClientApp** folder path.
+    1. Open a new **Command Prompt** window, change the current directory to the copied **ClientApp** path.
 
        :::image type="content" source="~/assets/images/meeting-token-generator/command-prompt.png" alt-text="Screenshot shows the location of client app in csharp folder.":::
 
@@ -262,9 +262,9 @@ items:
 - title: Add meeting token to Teams
   durationInMinutes: 1
   content: |
-    1. In your cloned repository, go to **csharp > Resources > Manifest**.
+    1. In your cloned repository, go to **csharp > AppManifest**.
 
-    1. Create a .zip file with the following files that are present in the **Manifest** folder: 
+    1. Create a .zip file with the following files that are present in the **AppManifest** folder: 
        * manifest.json
        * outline.png
        * color.png
