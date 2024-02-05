@@ -93,11 +93,12 @@ Your service must respond with the results matching the user query. The response
 
 ### `config` response type
 
-`config` response is used when you want user to set up the message extension before start using it. It asks the user to set up the message extension and request the user to provide additional configuration.
+`config` response is used when a user configures the message extension for the first time. 
+It triggers a prompt for the user to set up the message extension and provide any necessary configuration.
 
-If message extension use a configuration page, the handler for onQuery should first check for any stored configuration information, if the message extension isn't configured, return a config response with a link to your configuration.
+If message extension uses a configuration page, the `onQuery` handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration.
 
-The response from the configuration page is also handled by onQuery. The sole exception is when the configuration page is called by the handler for onQuerySettingsUrl. The handler for onQuerySettingsUrl returns the URL for the configuration page. After the configuration page closes, the handler for onSettingsUpdate accepts and saves the returned state as shown in the following example:
+The `onQuery` handler also manages the response from the configuration page. The only exception occurs when the configuration page is invoked by the `onQuerySettingsUrl` handler. This handler provides the URL for the configuration page. After closing the configuration page, the `onSettingsUpdate` handler receives and stores the returned state, as shown in the following example:
 
 ```csharp
 
