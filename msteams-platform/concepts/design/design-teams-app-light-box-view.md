@@ -10,7 +10,7 @@ ms.date: 01/29/2023
 
 # Designing lightbox for your Microsoft Teams app
 
-The lightbox is a display component that emphasizes important information by deactivating the page layout behind it. Information in the lightbox is non-editable and non-interactive. The lightbox view enables users to preview media content, including images, videos, audio files, documents, and PDFs, on a large surface over the main Teams window. 
+The lightbox is a display component that emphasizes important information by deactivating the page layout behind it. Information in the lightbox is noneditable and non-interactive. The lightbox view enables users to preview media content, including images, videos, audio files, documents, and PDFs, on a large surface over the main Teams window. 
 
 The lightbox component is designed for quick reviews, understanding, or verification. It doesn't support actions for editing or collaboration. Users can initiate the lightbox in a new Teams window or open it directly in a native app or browser. 
 
@@ -68,13 +68,13 @@ Help to save time during file opening. Opening on top of the main content. With 
 
 #### Don’t: Use a lightbox for content editing or interaction
 
-Information in the lightbox is non-editable and non-interactive. Provide clear options in **Open in** menu, where users can start to interact with content. 
+Information in the lightbox is noneditable and non-interactive. Provide clear options in **Open in** menu, where users can start to interact with content. 
 
 :::image type="content" source="../../assets/images/light-box/interactions-lightbox-dont.png" alt-text="Example shows the use of a lightbox component for content editing.":::
 
 #### Do: Use a Lightbox component to preview documents
 
-Documents which are intended just for the preview option or have **Preview** option from **More option**.
+Documents, which are intended just for the preview option or have **Preview** option from **More option**.
 
 :::image type="content" source="../../assets/images/light-box/lightbox-preview-do.png" alt-text="Example shows the use of a lightbox component to preview documents.":::
 
