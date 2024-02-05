@@ -96,9 +96,11 @@ Your service must respond with the results matching the user query. The response
 `config` response is used when a user configures the message extension for the first time. 
 It triggers a prompt for the user to set up the message extension and provide any necessary configuration.
 
-If message extension uses a configuration page, the `onQuery` handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration.
+If message extension uses a configuration page, the [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration.
 
-The `onQuery` handler also manages the response from the configuration page. The only exception occurs when the configuration page is invoked by the `onQuerySettingsUrl` handler. This handler provides the URL for the configuration page. After closing the configuration page, the `onSettingsUpdate` handler receives and stores the returned state, as shown in the following example:
+The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler also manages the response from the configuration page. `onQuerySettingsUrl` handler provides the URL for the configuration page. After closing the configuration page, the `onSettingsUpdate` method is called to accept and save the returned state. The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler then retrieves the updated settings and uses them to update the behavior of the messaging extension.
+
+The following code handles a users request for the configuration page of a messaging extension. It fetches the user's existing configuration settings, escapes them, and builds a response. This response includes the configuration page's URL with the escaped settings added as a query parameter.
 
 ```csharp
 
