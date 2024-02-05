@@ -32,7 +32,7 @@ Using an app that contains developer preview features might cause clients that h
 To enable the public developer preview on a desktop or web client:
 
 1. Enable custom app upload for your developer tenant. For more information, see [enable custom app upload](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
-1. Select the Settings and more (**...**) next to your user profile.
+1. Select **Settings and more** (**...**) next to your user profile.
 1. Select **Settings** > **About Teams**.
 1. Under **Early access**, select the **Public preview** checkbox.
 
