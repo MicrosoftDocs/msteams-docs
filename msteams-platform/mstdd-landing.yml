@@ -47,6 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Share code snippets as Adaptive Cards with the CodeBlock property
+        url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
       - text: Teams, Outlook, and Microsoft 365 web domains are migrating to cloud.microsoft domain
         url: m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers
       - text: Build Adaptive Card-based Loop components
@@ -65,8 +67,6 @@ landingContent:
         url: messaging-extensions/build-bot-based-plugin.md
       - text: Introduced RSC permissions for users to access different resources
         url:  graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access
-      - text: App caching in chat, channel, and meeting tab scopes is available for iOS
-        url:  tabs/how-to/app-caching.md
 
     - linkListType: reference
       links:
