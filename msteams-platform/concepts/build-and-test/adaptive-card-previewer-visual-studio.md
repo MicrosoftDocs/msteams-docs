@@ -66,5 +66,5 @@ You can use an existing Adaptive Card template file or download the [Adaptive Ca
 
 ## See also
 
-[Design Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
-[Microsoft Adaptive Card Previewer Visual Studio Code](adaptive-card-previewer.md)
+* [Design Adaptive Cards](../../task-modules-and-cards/cards/design-effective-cards.md)
+* [Microsoft Adaptive Card Previewer Visual Studio Code](adaptive-card-previewer.md)
