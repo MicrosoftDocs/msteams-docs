@@ -944,7 +944,7 @@
     href: concepts/deploy-and-publish/appsource/prepare/prerequisites.md
     displayName: SaaS API, landing page, graph usageRights API
   - name: Create a SaaS offer
-    href: concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md
+    href: concepts/deploy-and-publish/appsource/prepare/create-saas-offer.md
     displayName: create SaaS offer, ISVs, Manage, License, third party, SaaS, Partner Center, UsageRights
   - name: Test a SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/Test-preview-for-monetized-apps.md
