@@ -10,10 +10,9 @@ ms.date: 10/07/2022
 
 # Create a new model-driven app with Collaboration controls for Teams
 
-Collaboration controls are designed for [model-driven applications](/power-apps/maker/model-driven-apps/model-driven-app-overview). The following section covers how to create a model-driven app.
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+Collaboration controls are designed for [model-driven applications](/power-apps/maker/model-driven-apps/model-driven-app-overview). Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). The following section covers how to create a model-driven app.
 
 ## Create a model-driven application
 
@@ -115,7 +114,7 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 
 5. Select ‘Hide Label’ on the Properties.
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Screenshot shows how to select hide label.":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-label-properties.png" alt-text="Screenshot shows how to select the Hide Label option.":::
 
 1. The Tasks control appears now.
 
@@ -124,7 +123,7 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
 1. Repeat the Tasks steps to add Approvals, Files, Meetings, and Notes controls to your app.
 1. After you add all the controls, you'll see the controls rendered below in Form Designer. If a control doesn't render in Form Designer, for example shows a blank form, run your app in Power Apps and the presence of a 'configure' page or an 'empty state' means the control was successfully added.
 
-     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Screenshot shows Controls form designer are successfully added.":::
+     :::image type="content" source="../assets/images/collaboration-control/new-collab-approval.png" alt-text="Screenshot shows Controls form the designer are successfully added.":::
 
 1. You can now run your power app in Power Apps by selecting it.
 
@@ -141,7 +140,7 @@ Following are the steps to add Collaboration control capabilities such as Tasks,
      > [!TIP]
      > The controls are only visible after a record is saved in the application. If the control tabs don't appear in your record, try to refresh your browser or republish the app from Power Apps.
 
-Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings haven't yet been configured, you'll not be able to create entities such as Tasks, or Meetings until those are added.
+Now you’ve successfully added the Collaboration controls to your application. You can now run your application in Power Apps and launch the controls. As settings aren't configured yet, you can't create entities such as Tasks, or Meetings until those are added.
 
 ## Define Settings for your Collaboration
 
@@ -180,7 +179,7 @@ Use the following instructions to retrieve the Group ID of your Teams team for A
 
 Use the following instructions to retrieve the Retrieve the SharePoint Site ID and Drive ID for Files:
 
-1. To use the Files control, you'll need to configure to an existing SharePoint site or create a new SharePoint site. To create a new site, see [create a site](/sharepoint/create-site-collection).
+1. To use the Files control, you need to configure to an existing SharePoint site or create a new SharePoint site. To create a new site, see [create a site](/sharepoint/create-site-collection).
 
 1. Now retrieve the Setting Values of Site ID and Drive ID, which can be called using the details in your SharePoint site.
 
@@ -205,7 +204,7 @@ Use the following instructions to retrieve the Retrieve the SharePoint Site ID a
 
      1. A Json response is returned with a parameter value of type array or list of drive objects. Look through the Json for the Json object whose name parameter matches the name of your document library. Save the value of the Drive ID parameter.
 
-To create meetings with users outside of your organization such as customers and to use virtual visit features within your app you would need to provide a Bookings business. For more information, see [Microsoft Bookings](/microsoft-365/bookings/bookings-overview?view=o365-worldwide&preserve-view=true).
+To create meetings with users outside of your organization such as customers and use virtual visit features within your app you would need to provide a Bookings business. For more information, see [Microsoft Bookings](/microsoft-365/bookings/bookings-overview?view=o365-worldwide&preserve-view=true).
 
 ## Add Settings to your Collaboration Manager app
 
@@ -248,7 +247,7 @@ Explore collaboration in the Tasks tab by selecting the Tasks tab, which opens a
 
      :::image type="content" source="../assets/images/collaboration-control/add-task.png" alt-text="Screenshot describes on how to add a task.":::
 
-1. The saved task will appear in the tasks list.
+1. The saved task appears in the tasks list.
 
 1. As all the tasks are backed by Microsoft Planner. Users can use the Tasks app within Microsoft Teams to see all the tasks that are assigned. To get started, select ellipses **…** in Teams left pane. Search and select Tasks by Planner and To Do.
 
@@ -285,11 +284,11 @@ Users can see both Internal meetings and Customer Bookings on their meeting list
 
 As the meetings are backed by Outlook, users can go to either Bookings, or Outlook Calendar to see all the meetings listed in a single calendar. Internal meetings are listed in shared calendar.
 
-Following are the steps to add a shared calendar to your Outlook (optional) :
+Following are the steps to add a shared calendar to your Outlook (optional):
 
-1. On the Home tab of the ribbon, in the Manage Calendars section, select Open Calendar > Open Shared Calendar.
+1. On the Home tab of the ribbon, in the **Manage Calendars** section, select **Open Calendar** > **Open Shared Calendar**.
 
-1. In the Open a Shared Calendar dialog , enter the person's name. Select the person you're looking for and then select OK.
+1. In the Open a Shared Calendar dialog, enter the person's name. Select the person you're looking for and then select **OK**.
 
 In the left Pane, under Shared Calendars you should now see an additional calendar with the person's name.
 
