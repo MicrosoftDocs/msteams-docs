@@ -14,9 +14,6 @@ An Incoming Webhook lets external applications share content in Microsoft Teams 
 * Message extensions
 * Connectors
 
-> [!IMPORTANT]
-> You can choose to build notification bot Teams app other than Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download and explore [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). For more information, see [Teams Toolkit documents](../../toolkit/teams-toolkit-fundamentals.md).
-
 > [!NOTE]
 >
 > * The message size limit is 28 KB. When the size exceeds 28 KB, you receive an error. For more information, see [Limits and specifications for Microsoft Teams](/microsoftteams/limits-specifications-teams).
@@ -62,7 +59,7 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 1. Search for **Incoming Webhook** and select **Configure**.
 
     > [!NOTE]
-    > If you're adding Incoming Webhook for the first time, you must **Add** the Incoming Webhook to Teams and **Configure**.
+    > If you're adding Incoming Webhook for the first time, you must **Add** the Incoming Webhook to Teams and then **Configure**.
 
    :::image type="content" source="../../assets/images/configure_1.png" alt-text="The screenshot shows how to configure and upload an image for your webhooks.":::
 
@@ -74,22 +71,23 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 
 1. Copy and save the unique webhook URL present in the dialog. The URL maps to the channel and you can use it to send information to Teams.
 
-1. Select **Done**.
+1. Select **Done**. The webhook is now available in the Teams channel.
 
    :::image type="content" source="../../assets/images/url_1.png" alt-text="This screenshot shows the unique webhook URL.":::
-
-The webhook is now available in the Teams channel.
 
 The following graphical representation provides the steps to create an Incoming Webhook:
 
 :::image type="content" source="../../assets/images/create-incoming-webhook.gif" alt-text="Graphical representation shows the steps to create an Incoming Webhook.":::
+
+> [!IMPORTANT]
+> You can choose to build a notification bot Teams app other than an Incoming Webhooks. They perform similarly but notification bot has more functionalities. For more information, see [Build notification bot with JavaScript](../../sbs-gs-notificationbot.yml) or [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification). To get started, download and explore [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension). For more information, see [Teams Toolkit documents](../../toolkit/teams-toolkit-fundamentals.md).
 
 You can create and send actionable messages through Incoming Webhook or connector for Microsoft 365 Groups. For more information, see [create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 > [!NOTE]
 > In Teams, select **Settings** > **Member permissions** > **Allow members to create, update, and remove connectors**, so that any team member can add, modify, or delete a connector.
 
-**Example**
+### Example
 
 # [C#](#tab/dotnet)
 
@@ -169,7 +167,7 @@ axios.post(webhookUrl , formatted_Card_Payload )
 
 To remove an Incoming Webhook from a Teams channel, follow these steps:
 
-1. In the Teams client, select the Teams icon :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to remove an incoming webhook.
+1. In the Teams client, select the Teams icon :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to remove an Incoming Webhook.
 
 1. Select &#8226;&#8226;&#8226; in the right side of the channel name.
 
