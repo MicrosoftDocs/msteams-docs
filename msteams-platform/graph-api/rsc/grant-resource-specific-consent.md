@@ -352,7 +352,7 @@ The tenant-level controls of application RSC permissions vary based on the resou
 For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
 >[!WARNING]
->The way you manage settings for team RSC and chat RSC permissions is changing in 2024. Instructions below have been updated to include dates for when new settings will be available for admins to modify. These setting will not change for governmnet clouds and seperate communication will be sent when those settings are changed.
+>The way you manage settings for team RSC and chat RSC permissions is changing in 2024. Instructions below have been updated to include dates for when new settings will be available for admins to modify. These settings will not change for government clouds and separate communication will be sent when those settings are changed.
 
 <b> Before March 14th, 2024 </b>
 
@@ -417,6 +417,10 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 
 </details>
 
+<br>
+
+>[!IMPORTANT]
+>The pre-selection period for the transition from Group Owner Consent to PowerShell based Team RSC has started and will remain active through March 4th, 2024. After then, the transition to Team RSC policies managed by PowerShell will begin
 <br>
 
 <b> After March 14th, 2024 </b>
