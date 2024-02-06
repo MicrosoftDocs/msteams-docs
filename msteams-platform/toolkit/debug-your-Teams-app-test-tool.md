@@ -179,13 +179,13 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
 1. In a separate terminal, define your bot message endpoint:
 
-    1. For Command Prompt:
+    1. For command prompt:
 
         ```bash
         set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
         ```
 
-    1. For Power Shell:
+    1. For PowerShell:
 
         ```bash
         $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
@@ -193,13 +193,13 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
 1. Initiate the Teams App Test Tool:
 
-    1. For Command Prompt:
+    1. For command prompt:
 
         ```bash
         teamsapptester.exe start
         ```
 
-    1. For Power Shell:
+    1. For PowerShell:
 
         ```bash
         teamsapptester.exe start
