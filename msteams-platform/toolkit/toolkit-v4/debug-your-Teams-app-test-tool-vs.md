@@ -8,7 +8,7 @@ ms.author: surbhigupta
 ms.date: 02/13/2024
 ---
 
-# Teams App Test Tool
+# Teams App Test Tool for Visual Studio
 
 > [!NOTE]
 >
