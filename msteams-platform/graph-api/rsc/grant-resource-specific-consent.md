@@ -432,6 +432,7 @@ Admins adjust team and chat RSC settings through PowerShell cmdlets. The followi
 | ManagedByMicrosoft | This is the default state for all tenants. It allows chat and team RSC permissions to be consented for all users but can be changed at any time at Microsoft's discretion. |
 | EnabledForAllApps | Any app requesting RSC permissions can be consented to by users (resource owners) in your tenant. |
 | DisabledForAllApps | No RSC permissions can be consented to by users. |
+
 <br>
 <details>
 
