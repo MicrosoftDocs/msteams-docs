@@ -147,13 +147,13 @@ Test Tool offers a faster debug experience for bot applications when compared to
     teamsapp deploy --env=testtool
     ```
 
-1. Start your bot app.
+1. Start your bot app:
 
     ```bash
     npm run dev:teamsapp:testtool
     ```
 
-1. Initiate the Teams App Test Tool by executing the command in a separate terminal.
+1. In a separate terminal, initiate the Teams App Test Tool:
 
     ```bash
     npm run dev:teamsapp:launch-testtool
@@ -171,29 +171,45 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
 1. Unzip the downloaded package to a folder. You'll find an executable binary file `teamsapptester.exe`.
 
-1. Start your bot app.
+1. To launch profile:
 
     ```bash
     dotnet run --launch-profile "Teams App Test Tool (browser)"
     ```
 
-1. Define your bot message endpoint using the `BOT_ENDPOINT` environment variable. After setting this, initiate the Teams App Test Tool and run the command in a separate terminal.
+1. In a separate terminal, define your bot message endpoint:
 
     1. For Command Prompt:
 
         ```bash
         set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
-        C:\teams-app-test-tool\teamsapptester.exe start
         ```
 
-    1. For Power Shell
+    1. For Power Shell:
 
         ```bash
         $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
-        C:\teams-app-test-tool\teamsapptester.exe start
         ```
 
-A browser will pop up to open Teams App Test Tool and you can test your bot. If the test tool fails to start due to a port conflict, modify the port number of the test tool. To do this, set the `TEAMSAPPTESTER_PORT` environment variable prior to executing the `teamsapptester.exe` command.
+1. Initiate the Teams App Test Tool:
+
+    1. For Command Prompt:
+
+        ```bash
+        teamsapptester.exe start
+        ```
+
+    1. For Power Shell:
+
+        ```bash
+        teamsapptester.exe start
+        ```
+
+1. Test Tool opens the bot in a webpage.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
+
+In case the test tool doesn't initiate because of a port conflict, alter the test tool's port number. Set the `TEAMSAPPTESTER_PORT` environment variable before executing the `teamsapptester.exe` command.
 
 ---
 
