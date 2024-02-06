@@ -171,7 +171,7 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
 1. Unzip the downloaded package to a folder. You'll find an executable binary file `teamsapptester.exe`.
 
-1. To launch profile:
+1. Run the following command to launch profile:
 
     ```bash
     dotnet run --launch-profile "Teams App Test Tool (browser)"
@@ -179,7 +179,7 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
 1. In a separate terminal, define your bot message endpoint:
 
-    1. For command prompt:
+    1. For Command Prompt:
 
         ```bash
         set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
@@ -191,9 +191,9 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
         $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
         ```
 
-1. Initiate the Teams App Test Tool:
+1. Run the following command to initiate Teams App Test Tool:
 
-    1. For command prompt:
+    1. For Command Prompt:
 
         ```bash
         teamsapptester.exe start
@@ -209,7 +209,7 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
 
-In case the test tool doesn't initiate because of a port conflict, alter the test tool's port number. Set the `TEAMSAPPTESTER_PORT` environment variable before executing the `teamsapptester.exe` command.
+In case the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable.
 
 ---
 
