@@ -29,8 +29,7 @@ Custom Together Mode scene is an artifact and participants have seats with video
 
 > [!NOTE]
   >
-  > * Users can't initiate Custom Together Mode on a mobile. However, if they join a meeting through mobile and Together Mode is enabled on desktop, their mobile video appears in Together Mode on desktop.
-  > * Multiple scenes in a single app package appear as a flat list to the users.
+  > Users can't initiate Custom Together Mode on a mobile. However, if they join a meeting through mobile and Together Mode is enabled on desktop, their mobile video appears in Together Mode on desktop.
 
 ## Prerequisites
 
@@ -212,7 +211,7 @@ You can view the scene you've created in the **Your scenes** section of **Scene 
 
 To share a scene, follow the steps:
 
-1. From the dropdown next to **Save**, select **Share**.
+1. From the dropdown next to **Save** button, select **Share**.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/share-scene-studio.png" alt-text="Screenshot shows the option to share a scene in scene studio.":::
 
@@ -222,13 +221,17 @@ To share a scene, follow the steps:
 
     :::image type="content" source="~/assets/images/apps-in-meetings/share-scene-copy-link.png" alt-text="Screenshot shows the option to copy the link and share a scene in scene studio.":::
 
-    The user can open the link to install the scene and start using it. After preview, the scene is shipped as an app to Teams by following the steps for app submission. This step requires the app package. For the scene that is designed, the app package is different from the scene package. The app package created automatically is found in the **Apps** section in the Teams Developer Center. </br>
+1. Open the link you've copied to install the scene and start using it.
+1. Preview the scene.
+   The scene is shipped as an app to Teams by following the steps for app submission.
+1. Obtain the app package, which is different from the scene package for the designed scene
+   For the scene that is designed, the app package is different from the scene package.
+1. Find the automatically created app package in the **Apps** section of the Teams Developer Center.
 
 To export a scene, follow the steps:
 
-1. In Scene studio, From the **Save** drop-down, select **Save**.
-1. Select **Export** from the dropdown list to retrieve the scene package.
-   A .zip file is downloaded. The .zip file contains the scene package that includes a scene.json and the PNG assets used to build a scene. </br>
+1. In Scene studio, select **Export** from the dropdown next to **Save** button to retrieve the scene package.
+A zip file containing the scene package is downloaded. This package includes a scene.json file and the PNG assets used to build the scene.
 
    :::image type="content" source="~/assets/images/apps-in-meetings/export-scene-studio.png" alt-text="Screenshot shows the export option to export a scene in scene studio.":::
 
@@ -243,8 +246,8 @@ You can import the scene package, which is a .zip file retrieved from the Scene 
 
    :::image type="content" source="~/assets/images/apps-in-meetings/import-scene.png" alt-text="Screenshot shows the option to import a scene in scene studio.":::
 
-1. Select the scene package file you wish to import.
-   This functionality helps you to unwrap a scene package and enhance the scene.
+1. Select the scene package file you want to import.
+   This functionality allows you to unwrap a scene package and enhance the scene.
 
 ## Example
 
