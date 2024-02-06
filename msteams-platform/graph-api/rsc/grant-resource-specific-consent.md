@@ -381,7 +381,7 @@ In addition, you can enable or disable group owner consent using PowerShell. Fol
 <summary><b>Configure chat owner consent settings for RSC in a chat using Graph APIs [Will be deprecated in May 2024]</b></summary>
 
 >[!IMPORTANT]
->After March 14th, 2024 Microsoft suggests disabling this setting and utlizing the PowerShell cmdlets listed below to manage your Chat RSC settings. See the section below titled "Configure Chat RSC via PowerShell cmdlets".
+>After March 14th, you will need to use PowerShell cmdlets listed below to manage your Chat RSC settings. See the section below titled "Configure Chat RSC via PowerShell cmdlets".
 
 You can enable or disable RSC for chats using Graph API. The property `isChatResourceSpecificConsentEnabled` in [teamsAppSettings](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
 
@@ -428,11 +428,11 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 Admins will adjust Team RSC and Chat RSC settings via PowerShell cmdlets. Below are the available states for the PowerShell settings. Each section below will show examples of how to use these states to adjust your settings.
 
 | PowerShell State | Description |
-| ---- | :----: |
+| ---- | :---- |
 | ManagedByMicrosoft |  This is the default state for all tenants, it allows Chat RSC and Team RSC permissions to be consented for all users, but can be changed at any time at Microsofts discretion |
 | EnabledForAllApps |  Any app requesting RSC permissions can be consented to by users (resource owners) in your tenant |
 | DisabledForAllApps|  No RSC permissions can be consented to by users. |
-
+<br>
 <details>
 
 <summary><b>Configure Team RSC via PowerShell cmdlets</b></summary>
