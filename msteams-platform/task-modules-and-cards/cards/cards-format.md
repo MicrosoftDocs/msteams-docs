@@ -492,6 +492,23 @@ The following image shows the default view of the Adaptive Card when you have no
 
 :::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Small width Adaptive Card view":::
 
+### Adaptive Card responsive layout
+
+Adaptive Card responsive layout allows developers to create cards that can adapt to different screen sizes and endpoints. This approach offers flexibility without requiring new element types, ensuring seamless adaptation to various screen sizes.
+
+#### Construct Adaptive Card responsive layout
+
+Add a `targetWidth` property to all elements in an Adaptive Card to specify different layouts for different card widths. You can set the `targetWidth` property with four predefined values that are `very narrow`, `narrow`, `standard`, and `wide`. You shouldn't depend on pixel sizes of screen. The values of `targetWidth` refer to the relative width of the card and allows more flexibility in adapting to different screen sizes. For example, `veryNarrow` refers to the right narrow pane in the meeting chat, while `narrow` refers to the mobile screen.
+
+#### Sample Adaptive Card responsive layout
+
+To make a responsive Adaptive Card, your app must include the elements from the following code sample:
+
+``` json
+To be added
+
+```
+
 ### Typeahead support
 
 Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter and select a sizeable number of choices can significantly slow down task completion. Typeahead support within Adaptive Cards can simplify input selection by narrowing or filtering the set of input choices as the user types the input.
