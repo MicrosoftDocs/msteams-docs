@@ -47,9 +47,9 @@ The following table provides the features and description of an Incoming Webhook
 
 To add an Incoming Webhook to a Teams channel, follow these steps:
 
-1. In the Teams client, select the Teams icon :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to add an incoming webhook.
+1. In the Teams client, select **Teams** :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to add an Incoming Webhook.
 
-1. Select &#8226;&#8226;&#8226; in the right side of the channel name.
+1. Select &#8226;&#8226;&#8226; on the right side of the channel name.
 
 1. Select **Manage channel**.
 
@@ -62,11 +62,11 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 1. Search for **Incoming Webhook** and select **Configure**.
 
     > [!NOTE]
-    > If you're adding incoming webhook for the first time, you must **Add** the Incoming Webhook to Teams and **Configure**.
+    > If you're adding Incoming Webhook for the first time, you must **Add** the Incoming Webhook to Teams and **Configure**.
 
    :::image type="content" source="../../assets/images/configure_1.png" alt-text="The screenshot shows how to configure and upload an image for your webhooks.":::
 
-1. Provide a name and upload an image for your webhook if necessary.
+1. Provide a name for your webhook and upload an image if necessary.
 
 1. Select **Create**.
 
