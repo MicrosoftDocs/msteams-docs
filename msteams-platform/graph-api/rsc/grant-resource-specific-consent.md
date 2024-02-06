@@ -428,7 +428,7 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 Admins will adjust Team RSC and Chat RSC settings via PowerShell cmdlets. Below are the available states for the PowerShell settings. Each section below will show examples of how to use these states to adjust your settings.
 
 | PowerShell State | Description |
-| ---- | :---- |
+| ---- | ---- |
 | ManagedByMicrosoft | This is the default state for all tenants, it allows Chat RSC and Team RSC permissions to be consented for all users, but can be changed at any time at Microsofts discretion |
 | EnabledForAllApps | Any app requesting RSC permissions can be consented to by users (resource owners) in your tenant |
 | DisabledForAllApps | No RSC permissions can be consented to by users. |
