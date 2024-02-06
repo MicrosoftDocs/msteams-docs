@@ -11,9 +11,11 @@ ms.date: 04/07/2022
 # Custom Together Mode scenes in Teams
 
 > [!NOTE]
-> Customer Together Mode scenes for Teams meetings are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md). Teams users need the [Teams Premium license](/microsoftteams/enhanced-teams-experience) to use Custom Together Mode after the preview.
+>
+> * Customer Together Mode scenes for Teams meetings are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Teams users need the [Teams Premium license](/microsoftteams/enhanced-teams-experience) to use Custom Together Mode after the preview.
 
-Discover a new way to collaborate with Custom Together Mode scenes in Microsoft Teams. Custom Together Mode helps you create an immersive and engaging environment by digitally combining participants into a single virtual scene. The benefits of Custom Together Mode are as follows:
+Collaborate in a new way with Custom Together Mode scenes in Microsoft Teams.  Custom Together Mode creates an immersive and engaging environment by digitally combining participants into a single virtual scene. The benefits of Custom Together Mode are as follows:
 
 * Bring people together and encourage them to turn on their video.
 * Combine participants digitally into a single virtual scene.
@@ -39,14 +41,14 @@ Before you start, you must be familiar with the following prerequisites:
 * [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md)
 * [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md)
 
-Ensure that the administrator has granted permission to [upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app) and select all filters as part of app setup and meeting policies respectively.
+Ensure that the administrator has granted the necessary permissions to [upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app). Then, select all filters during the app setup and meeting policies configuration.
 
 ## Best practices
 
 To create a best scene, ensure that you follow the following practices:
 
 * Ensure that all images are in PNG format.
-* Ensure that the images in final package mustn't exceed 1920 x 1080 resolution. The resolution is an even number. This resolution is a requirement for scenes to be shown successfully.
+* Ensure that the images in final package mustn't exceed 1920 x 1080 resolution. The resolution is an even number. This even numbered resolution is required for scenes to display successfully.
 * Ensure that the maximum scene size is within 10 MB.
 * Ensure that the maximum size of each image is within 5 MB. A scene is a collection of multiple images. This limit is for each individual image.
 
@@ -180,7 +182,7 @@ Before you start, you must create a new Teams meeting to test and launch Custom 
 
 Join the Teams meeting and follow the steps to test the Custom Together Mode:
 
-1. In Teams meeting window, select **View** and select **Together Mode** from the drop-down list.
+1. In Teams meeting window, select **View** > **Together Mode** from the dropdown list.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/view-together-mode.png" alt-text="Screenshot shows the options select together mode in teams meeting.":::
 
@@ -199,7 +201,8 @@ Join the Teams meeting and follow the steps to test the Custom Together Mode:
     Optionally, the meeting organizer and presenter can select **View** > **Change scene** in the meeting to select any existing scene available.
 
     >[!NOTE]
-    > Only one scene is used uniformly for the entire meeting. If a presenter or organizer changes the scene, it changes for everyone. Participants can switch in or out of Custom Together Mode scenes individually, but when using Custom Together Mode scenes, all participants share the same scene.
+    > * Only one scene is used uniformly for the entire meeting. If a presenter or organizer changes the scene, it changes for everyone.
+    > * Participants can switch in or out of Custom Together Mode scenes individually, but when using Custom Together Mode scenes, all participants share the same scene.
 
     :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
@@ -209,7 +212,7 @@ You can view the scene you've created in the **Your scenes** section of **Scene 
 
 To share a scene, follow the steps:
 
-1. From the **Save** drop-down, select **Share**.
+1. From the dropdown next to **Save**, select **Share**.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/share-scene-studio.png" alt-text="Screenshot shows the option to share a scene in scene studio.":::
 
