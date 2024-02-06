@@ -1,0 +1,193 @@
+---
+title: Debug bot using Teams App Test Tool Visual Studio
+author: v-ganr
+description: Learn how to emulate the Teams experience for your bot in Teams App Test Tool in Visual Studio.
+ms.localizationpriority: medium
+ms.topic: Teams App Test Tool overview
+ms.author: surbhigupta
+ms.date: 02/13/2024
+---
+
+# Teams App Test Tool
+
+> [!NOTE]
+>
+> Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit. Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version) of the Teams Toolkit.
+
+Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
+
+The following image shows a sample app displaying an Adaptive Card with a list of commands in Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/sample-app-output.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
+
+The following are the advantages of Test Tool:
+
+* **Sandbox environment**: The sandbox environment of Test Tool emulates the behavior, look, and user experience of Teams.
+
+* **Tunneling**: An external tunnel service isn't necessary as Test Tool runs on a local server that your bot can communicate with.
+
+* **Reduce account dependencies**: Microsoft 365 Developer tenant and the app uploading permissions aren't necessary to debug the bot.
+
+* **Rapid inner-loop iterations**: Optimizes the process of making changes to the app design and bot logic without having to redeploy the bot to the cloud.
+
+* **Mock data and activities**: Test Tool makes it easy to test complex scenarios such as, sending a welcome message when a new member joins the channel, using mock data and activity triggers.
+
+* **Reliable**: Test Tool is reliable as the bot's Adaptive Card utilizes the same rendering technology as in Teams.
+
+* **Integration with existing Teams bot applications**: Test Tool integrates effortlessly with existing Teams bot applications built with Bot Framework SDK.
+
+* **Support for different scopes**: Test Tool supports testing in personal, team, and group chat scopes.
+
+## Prerequisites
+
+Ensure you install the following tools for building and deploying your bots in Test Tool:
+
+| &nbsp; | Install | For using... |
+| --- | --- | --- |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
+| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+
+## Understand Test Tool
+
+Test Tool is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
+
+To use a Teams bot on Test Tool, you need to provide:
+
+* Message endpoint: A bot message endpoint is the URL that links Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
+* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
+
+## Test Tool experience in Teams Toolkit
+
+Test Tool offers a faster debug experience for bot applications when compared to the Teams client.
+
+1. Open Visual Studio.
+
+1. Select **Create a new project**.
+
+    :::image type="content" source="../../assets/images/include-files/create-new-project.png" alt-text="Screenshot shows the selection to create a new project.":::
+
+1. In the search box, enter **Microsoft Teams App**. From the search results, select **Microsoft Teams App**.
+
+1. Select **Next**.
+
+    :::image 
+
+1. Enter **Project name** and select **Create**.
+
+    image
+
+1. Select **AI Chat Bot** and select **Create**.
+
+    :::image 
+
+    An overview window appears.
+
+    :::image 
+
+1. In the debug dropdown list, select **Teams App Test Tool (browser)**.
+
+    :::image
+
+1. Test Tool opens the bot in a webpage.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+
+## Activity triggers
+
+You can mock an activity in Test Tool using activity triggers. There are two types of activity triggers:
+
+1. [Predefined activity triggers](#predefined-activity-triggers)
+1. [Custom activity triggers](#custom-activity-triggers)
+
+### Predefined activity triggers
+
+Test Tool provides predefined activity triggers to test the functionalities of your bot.
+
+| Category | Activity | Handler |
+| --- | --- | --- |
+| Trigger Installation Update Activity | Install bot <br><br><br> Uninstall bot | `onInstallationUpdate` <br> `onInstallationUpdateAdded` <br><br> `onInstallationUpdate` <br> `onInstallationUpdateRemove`|
+| Trigger Conversation Update Activity | Add user <br><br> Add bot <br><br> Add channel | `onMembersAdded`<br><br> `onTeamsMembersAddedEvent` <br><br> `onTeamsChannelRenamedEvent` |
+| | Remove user <br><br><br> Remove bot <br><br><br> Remove channel <br><br> Remove team | `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onMembersRemoved` <br> `onTeamsMembersRemovedEvent` <br><br> `onTeamsChannelDeletedEvent` <br><br> `onTeamsTeamDeletedEvent` |
+| | Rename channel <br><br> Rename team | `onTeamsChannelRenamedEvent` <br><br> `onTeamsTeamRenamedEvent` |
+
+> [!NOTE]
+> All types of activities aren't available in all scopes. For example, you can't add or remove a channel in a personal chat or a group chat.
+
+Predefined activity triggers are available in the **Mock an Activity** menu in Test Tool.
+
+To mock an **Add user** activity, follow these steps:
+
+1. In Test Tool, go to **Mock an Activity** and select **Add user**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
+
+   A pop-up window appears to preview the activity handler.
+
+1. Select **Send activity**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
+
+   Bot sends a response.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
+
+### Custom activity triggers
+
+You can use **Custom activity** to customize activity triggers such as, `reactionsAdded`, to fit the requirements of your bot app. Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
+
+1. Select **Mock an Activity** > **Custom activity**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
+
+1. Add `messageReaction` to customize the activity under the property `type` and invoke the custom activity.
+
+    ```json
+    {
+      "type": "messageReaction",
+      "reactionsAdded": [
+        {
+          "type": "like"
+        }
+      ],
+      "replyToId": "d60fd1cb-3e8f-44ef-849c-404806ba1b47"
+    }
+    ```
+
+1. Select **Send activity**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
+
+   Bot sends an `onReactionsAdded` handler in response.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
+
+## Customize Teams context
+
+The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. The file provides mock data for testing Bot Framework APIs or Bot Builder SDK methods such as `TeamsInfo.getTeamMembers`.
+
+
+## Limitations
+
+* Bot features enabled through the Teams app manifest aren't available as Test Tool doesn't process it.
+
+* Test Tool doesn't support all types of cards except Adaptive Cards.
+
+* Test Tool doesn't support the following Adaptive Card features:
+
+  * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
+  * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
+  * [Stage View](../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+  * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
+
+* Test Tool doesn't support the following experiences:
+
+  * Mobile
+  * Meeting
+
+## See also
+
+* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
+* [Install Teams Toolkit](install-Teams-Toolkit.md)
+* [Build bots for Teams](../bots/what-are-bots.md)
+* [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [Bot Framework SDK](https://dev.botframework.com/)
