@@ -1072,7 +1072,7 @@ Defines the icon properties of a given dashboard card.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`iconUrl`| String | 2048 characters | | Location of the icon for the card, to be displayed in the toolbox and card bar. |
-|`officeUIFabricIconName`| String | 255 characters | | Office UI Fabric/Fluent UI icon friendly name for the card. This value will be used if *iconUrl* is not specified. |
+|`officeUIFabricIconName`| String | 255 characters | | Office UI Fabric or Fluent UI icon friendly name for the card. This value is used if *iconUrl* is not specified. |
 
 ### dashboardCards.dashboardCard.contentSource
 
