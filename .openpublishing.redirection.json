@@ -931,6 +931,10 @@
       {
         "source_path": "msteams-platform/toolkit/teamsfx-cli.md",
         "redirect_url": "msteams-platform/toolkit/Teams-Toolkit-CLI"
+      }, 
+      {
+        "source_path": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/manage-third-party-apps-license.md",
+        "redirect_url": "msteams-platform/concepts/deploy-and-publish/appsource/prepare/create-saas-offer.md"
       }      
     ]
 }
