@@ -442,11 +442,11 @@ Admins adjust team and chat RSC settings through PowerShell cmdlets. The followi
 You can configure which users are allowed to consent to apps accessing their teams' data by using the available PowerShell states, such as ManagedByMicrosoft, EnabledForAllApps, and DisabledForAllApps.
 <br>
 
-The following example shows how to disable team RSC for all apps: 
+The following example shows how to enable team RSC for all apps: 
 <br>
 
 ```powershell
-Set-MgBetaTeamRscConfiguration -State DisabledForAllApps
+Set-MgBetaTeamRscConfiguration -State EnabledForAllApps
 ```
 
 </details>
@@ -459,11 +459,11 @@ Set-MgBetaTeamRscConfiguration -State DisabledForAllApps
 You can configure which users are allowed to consent to apps accessing their chats' data by using the available PowerShell states, such as ManagedByMicrosoft, EnabledForAllApps, and DisabledForAllApps.
 <br>
 
-The following example shows how to disable chat RSC for all apps: 
+The following example shows how to enable chat RSC for all apps: 
 <br>
 
 ```powershell
-Set-MgBetaChatRscConfiguration -State DisabledForAllApps
+Set-MgBetaChatRscConfiguration -State EnabledForAllApps
 ```
 
 </details>
