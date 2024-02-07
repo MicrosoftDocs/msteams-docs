@@ -12,13 +12,13 @@ ms.date: 02/13/2024
 
 > [!NOTE]
 >
-> Teams App Test Tool is available in the latest prerelease version of the Teams Toolkit. Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version) of the Teams Toolkit.
+> Teams App Test Tool is available in the latest version of the Teams Toolkit. Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version) of the Teams Toolkit.
 
 Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
 
 The following image shows a sample app displaying an Adaptive Card with a list of commands in Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/sample-app-output.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
+ Screenshot shows the Teams App Test Tool Adaptive Card.
 
 The following are the advantages of Test Tool:
 
@@ -64,13 +64,13 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Select **Create a new project**.
 
-    :::image type="content" source="../../assets/images/include-files/create-new-project.png" alt-text="Screenshot shows the selection to create a new project.":::
+  Screenshot shows the selection to create a new project.
 
 1. In the search box, enter **Microsoft Teams App**. From the search results, select **Microsoft Teams App**.
 
 1. Select **Next**.
 
-    :::image 
+    image 
 
 1. Enter **Project name** and select **Create**.
 
@@ -78,19 +78,19 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Select **AI Chat Bot** and select **Create**.
 
-    :::image 
+    image 
 
     An overview window appears.
 
-    :::image 
+    image 
 
 1. In the debug dropdown list, select **Teams App Test Tool (browser)**.
 
-    :::image
+   image
 
 1. Test Tool opens the bot in a webpage.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
+   image 
 
 ## Activity triggers
 

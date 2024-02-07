@@ -15,7 +15,7 @@ ms.date: 02/13/2024
 
 The Microsoft Adaptive Card Previewer, integrated with the Teams Toolkit of Visual Studio, enables real-time previews of Adaptive Cards created for Teams bots. You can open a side-by-side preview to observe live changes, switch between different themes and refine your designs to ensure they're accurate and effective.
 
-image 
+Image
 
 ## Explore Adaptive Card Previewer
 
@@ -23,17 +23,15 @@ Adaptive Card Previewer provides faster and more reliable solutions to preview A
 
 * **Teams Toolkit Integration**: Enables Just-in-Time (JIT) installation of Adaptive Card Previewer when you update Adaptive Cards generated from a Teams Toolkit project.
 
-  image
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-example-vs.png" alt-text="Screenshot shows an example of Adaptive Card in the right pane.":::
 
-* **Instant preview**: Allows you to preview Adaptive Cards in the Visual Studio Code editor through CodeLens.
-
-   image
+* **Instant preview**: Allows you to preview Adaptive Cards in the Visual Studio editor through CodeLens.
 
 * **Data separation**: Enables you to separate data from the layout in an Adaptive Card [template language](/adaptive-cards/templating/). Use the command `Adaptive Card: New Data File` to add a data file for a template, which generates an empty file where you can bind data to the Adaptive Card template.
 
 * **Switch themes**: Allows you to switch between light, dark, and high contrast themes to preview your Adaptive Cards.
 
-  image
+ :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-select-theme-vs.gif" alt-text="Graphic shows the Adaptive Card preview in light, dark, and high contrast themes.":::
 
 ## Advantages
 
@@ -60,7 +58,7 @@ You can use an existing Adaptive Card template file or download the [Adaptive Ca
 1. Open an existing Adaptive Card template file or an Adaptive Card template file from the downloaded sample in Visual Studio.
 1. In the Adaptive Card template pane, select **Preview**.
 
-    image
+    :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-example-vs.png" alt-text="Screenshot shows the option to select preview option to open a preview of Adaptive Card in the right pane.":::
 
     A preview of the Adaptive Card opens in the right pane. You can select the theme of the preview from the **Theme** dropdown list.
 
