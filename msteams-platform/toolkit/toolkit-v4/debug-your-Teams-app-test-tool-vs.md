@@ -10,15 +10,11 @@ ms.date: 02/13/2024
 
 # Teams App Test Tool for Visual Studio
 
-> [!NOTE]
->
-> Teams App Test Tool is available in the latest version of the Teams Toolkit. Ensure that you install the [latest prerelease version](install-Teams-Toolkit.md#install-a-pre-release-version) of the Teams Toolkit.
-
 Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
 
 The following image shows a sample app displaying an Adaptive Card with a list of commands in Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
 
- Screenshot shows the Teams App Test Tool Adaptive Card.
+ :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
 The following are the advantages of Test Tool:
 
@@ -64,33 +60,33 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Select **Create a new project**.
 
-  Screenshot shows the selection to create a new project.
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/create-new-project-vs.png" alt-text="Screenshot shows the selection to create a new project.":::
 
 1. In the search box, enter **Microsoft Teams App**. From the search results, select **Microsoft Teams App**.
 
 1. Select **Next**.
 
-    image 
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/new-project-template-vs.png" alt-text="s":::
 
 1. Enter **Project name** and select **Create**.
 
-    image
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-name-vs.png" alt-text="image":::
 
 1. Select **AI Chat Bot** and select **Create**.
 
-    image 
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="image"::: 
 
     An overview window appears.
 
-    image 
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="image"::: 
 
 1. In the debug dropdown list, select **Teams App Test Tool (browser)**.
 
-   image
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-test-tool.png" alt-text="image":::
 
 1. Test Tool opens the bot in a webpage.
 
-   image 
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool.png" alt-text="image." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-test-tool-vs.png"::: 
 
 ## Activity triggers
 
@@ -119,25 +115,24 @@ To mock an **Add user** activity, follow these steps:
 
 1. In Test Tool, go to **Mock an Activity** and select **Add user**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-user.png" alt-text="Screenshot shows the add user option under mock an activity.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-user-vs.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
    A pop-up window appears to preview the activity handler.
 
 1. Select **Send activity**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-request.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-a-user-request-vs.png" alt-text="Screenshot shows the option to send activity for predefined mock activity add user.":::
 
    Bot sends a response.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/add-a-user-response.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
-
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-a-user-response-vs.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
 ### Custom activity triggers
 
 You can use **Custom activity** to customize activity triggers such as, `reactionsAdded`, to fit the requirements of your bot app. Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
 
 1. Select **Mock an Activity** > **Custom activity**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/mock-activity.png" alt-text="Screenshot shows the list of option under mock an activity.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/mock-activity-vs.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
 1. Add `messageReaction` to customize the activity under the property `type` and invoke the custom activity.
 
@@ -155,16 +150,15 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
 
 1. Select **Send activity**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-request.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-request-vs.png" alt-text="Screenshot shows the option to send activity after customization on mock activity.":::
 
    Bot sends an `onReactionsAdded` handler in response.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/custom-activity-response.png" alt-text="Screenshot shows the response of custom mock activity.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-response-vs.png" alt-text="Screenshot shows the response of custom mock activity.":::
 
 ## Customize Teams context
 
 The configuration file in the project's root folder allows you to customize Teams context information such as chats, teams, and users. The file provides mock data for testing Bot Framework APIs or Bot Builder SDK methods such as `TeamsInfo.getTeamMembers`.
-
 
 ## Limitations
 
@@ -174,10 +168,10 @@ The configuration file in the project's root folder allows you to customize Team
 
 * Test Tool doesn't support the following Adaptive Card features:
 
-  * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
-  * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
-  * [Stage View](../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
-  * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
+  * [Typeahead](../../task-modules-and-cards/cards/dynamic-search.md)
+  * [User mention](../../task-modules-and-cards/cards/cards-format.md#microsoft-entra-object-id-and-upn-in-user-mention)
+  * [Stage View](../../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+  * [Full width Adaptive Card](../../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 * Test Tool doesn't support the following experiences:
 
@@ -186,8 +180,7 @@ The configuration file in the project's root folder allows you to customize Team
 
 ## See also
 
-* [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Install Teams Toolkit](install-Teams-Toolkit.md)
-* [Build bots for Teams](../bots/what-are-bots.md)
-* [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
+* [Teams Toolkit Overview](../teams-toolkit-fundamentals.md)
+* [Build bots for Teams](../../bots/what-are-bots.md)
+* [Adaptive Card](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
 * [Bot Framework SDK](https://dev.botframework.com/)
