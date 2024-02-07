@@ -494,19 +494,90 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Adaptive Card responsive layout
 
-Adaptive Card responsive layout allows developers to create cards that can adapt to different screen sizes and endpoints. This approach offers flexibility without requiring new element types, ensuring seamless adaptation to various screen sizes.
+Adaptive Card responsive layout allows developers to create cards that can adapt to different screen sizes and endpoints. This functionality offers flexibility without the need of new element types, and ensures seamless adaptation to various screen sizes.
 
 #### Construct Adaptive Card responsive layout
 
-Add a `targetWidth` property to all elements in an Adaptive Card to specify different layouts for different card widths. You can set the `targetWidth` property with four predefined values that are `very narrow`, `narrow`, `standard`, and `wide`. You shouldn't depend on pixel sizes of screen. The values of `targetWidth` refer to the relative width of the card and allows more flexibility in adapting to different screen sizes. For example, `veryNarrow` refers to the right narrow pane in the meeting chat, while `narrow` refers to the mobile screen.
+Add `targetWidth` property to all elements in an Adaptive Card to specify different layouts for different card widths. This property allows you to control the visibility of any element by linking it to a host width. You can set the `targetWidth` property with four predefined values that are `very narrow`, `narrow`, `standard`, and `wide`. You shouldn't depend on pixel sizes of screen. The values of `targetWidth` refer to the relative width of the card and allows more flexibility in adapting to different screen sizes. For example, `veryNarrow` refers to the right narrow pane in the meeting chat, while `narrow` refers to the mobile screen.
+
+The `hostWidth` property allows the host application to set the width that it provides to the card through `targetWidth` property. The host application is responsible for mapping the actual widths to the named values. For example, Teams would most likely set hostWidth to "narrow" on mobile, "wide" on desktop in chats and channels, and "veryNarrow" in the meeting chat pane. For more information, see the following examples:
+
+If you set `targetWidth` to`standard`, the element is only visible when the `hostWidth` property is set to `wide`.
+
+If you set `targetWidth` to `atMost:narrow`, the element is only visible if the `hostWidth` property is set to `veryNarrow` or `narrow`.
+
+If you set `targetWidth` to `atLeast:standard`, the element is only visible if the `hostWidth` property is set to `standard` or `wide`.
+
+The following image shows how an Adaptive Card renders when you set the `targetWidth` property to specific values:
+
+:::image type="content" source="../../assets/images/Cards/responsive-adaptive-card.png" alt-text="Screenshot shows the responsive adaptive card when you set specific values to the target width property.":::
 
 #### Sample Adaptive Card responsive layout
 
 To make a responsive Adaptive Card, your app must include the elements from the following code sample:
 
 ``` json
-To be added
-
+{ 
+  "type": "AdaptiveCard", 
+  "body": [ 
+    { 
+      "type": "ColumnSet", 
+      "columns": [ 
+        { 
+          "type": "Column", 
+          "items": [ 
+            { 
+              "type": "Image", 
+              "style": "Person", 
+              "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg", 
+              "size": "Small"
+            } 
+          ], 
+          "width": "auto" 
+        }, 
+        { 
+          "type": "Column", 
+          "spacing": "medium", 
+          "items": [ 
+            { 
+              "type": "TextBlock", 
+              "weight": "Bolder", 
+              "text": "Matt Hidinger", 
+              "wrap": true 
+            }, 
+            { 
+              "type": "TextBlock", 
+              "targetWidth": "narrow", 
+              "spacing": "None", 
+              "text": "Principal Program Manager", 
+              "isSubtle": true, 
+              "wrap": true 
+            } 
+          ], 
+          "width": "auto", 
+          "verticalContentAlignment": "center" 
+        }, 
+        { 
+          "type": "Column", 
+          "targetWidth": "atLeast:standard", 
+          "spacing": "medium", 
+          "items": [ 
+            { 
+              "type": "TextBlock", 
+              "text": "Principal Program Manager", 
+              "isSubtle": true, 
+              "wrap": true 
+            } 
+          ], 
+          "width": "stretch", 
+          "verticalContentAlignment": "center" 
+        } 
+      ] 
+    } 
+  ], 
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
+  "version": "1.5" 
+} 
 ```
 
 ### Typeahead support
