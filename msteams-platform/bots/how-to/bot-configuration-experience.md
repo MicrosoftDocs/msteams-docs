@@ -191,69 +191,65 @@ async handleTeamsConfigSubmit(_context, configData) {
 
 # [JS2](#tab/teams-bot-sdk-js)
 
-`OnInvokeActivityAsync` method in a bot application, which is designed to handle specific invoke activities related to fetching and submitting configurations. When an invoke activity is received, the bot checks the activity’s name to determine the type of operation. If the activity is a `config/submit` request, the bot generates a TaskModuleMessageResponse with a message. On the other hand, if the activity is a `config/fetch` request, the bot creates a `TaskModuleContinueResponse` containing an Adaptive Card for further interaction.
+The code block provided evaluates incoming activities based on their name property. If the activity name is `config/fetch`, it generates an Adaptive Card for dynamic search, constructs a response object with a status code of 200, and encapsulates the card details within the response body, indicating a continuation of the dialog. Alternatively, if the activity name is `config/submit`, the code determines the appropriate action based on the selected choice. If the choice corresponds to `static_option_2`, it creates an Adaptive Card for static search, prepares a response object with a status code of 200, and embeds the card details for further dialog continuation. If the choice differs or encounters an exception, it returns a message indicating the end of the dialog.
 
 ```javascript
-protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-{
-    if (turnContext.Activity.Name == "config/submit")
-    {
-        var response = new ConfigResponse<TaskModuleResponseBase>
-        {
-            Config = new TaskModuleMessageResponse
-            {
-                Value = "this is a message"
-            }
-        };
-        return new InvokeResponse { Status = 200, Body = response };
-
-    }
-    else if (turnContext.Activity.Name == "config/fetch")
-    {
-        AdaptiveCard card = new AdaptiveCard("1.2")
-        {
-            Body = new List<AdaptiveElement>()
-        };
-        
-        card.Body.Add(
-            new AdaptiveContainer
-            {
-                Items = new List<AdaptiveElement>
-                {
-                    new AdaptiveTextBlock
-                    {
-                        Size = AdaptiveTextSize.Large,
-                        Text = "bot config test",
-                        Type = "TextBlock"
+if (context._activity.name == "config/fetch") {
+    const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
+    try {
+        return {
+            status: 200,
+            body: {
+                config: {
+                    type: 'continue',
+                    value: {
+                        card: adaptiveCard,
+                        height: 400,
+                        title: 'Dialog fetch response',
+                        width: 300
                     }
                 }
-            });
-        
-        // Construct a task module response with the task module URL and any data to be passed to the task module
-
-        var response = new ConfigResponse<TaskModuleResponseBase>
-        {
-            Config = new TaskModuleContinueResponse
-            {
-                Value = new TaskModuleTaskInfo
-                {
-                    Height = 123,
-                    Width = 456,
-                    Title = "test title",
-                    Card = new Attachment
-                    {
-                        ContentType = AdaptiveCard.ContentType,
-                        Content = card
-                    }
-                },
-                Type = "continue"
             }
-        };
-
-        return new InvokeResponse { Status = 200, Body = response };
+        }
+    } catch (e) {
+        console.log(e);
     }
+} else if (context._activity.name == "config/submit") {
+    const choice = context._activity.value.data.choiceselect.split(" ")[0];
+    chosenFlow = choice;
 
-    return null;
+    if (choice === "static_option_2") {
+        const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
+
+        return {
+            status: 200,
+            body: {
+                config: {
+                    type: 'continue',
+                    value: {
+                        card: adaptiveCard,
+                        height: 400,
+                        title: 'Dialog submit response',
+                        width: 300
+                    }
+                }
+            }
+        }
+    } else {
+        try {
+            return {
+                status: 200,
+                body: {
+                    config: {
+                        type: 'message',
+                        value: "end"
+                    }
+                }
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    }
 }
 ```
 
