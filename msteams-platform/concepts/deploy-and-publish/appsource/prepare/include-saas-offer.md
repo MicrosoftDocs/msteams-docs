@@ -141,14 +141,14 @@ The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) def
 > * An offer can have only one pricing model. For example, a SaaS offer can't have one plan that's a flat rate and another plan that's per user.
 > * The pricing model and billing terms can’t be changed once the offer is published.
 
-## Additional features
+## Additional offer features
 
 In addition to the basic and essential planning, you can provide more features to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers.
 
 | Category |Description|
 |---|---|
 | Free trails | When selling through Microsoft, you can provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period. |
-| Test drive | You can add test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer). |
+| Test drive | When selling through Microsoft, you can add test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer). |
 | Mobile version | To adhere to third-party app store policies, your app mustn't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the [related commercial marketplace certification policies](/legal/marketplace/certification-policies). |
 
 For comprehensive guidance on planning the offer, see [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).

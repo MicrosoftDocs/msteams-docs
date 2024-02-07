@@ -54,7 +54,7 @@ Now that we know about the monetizing options and a SaaS offer, let's learn in d
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Plan your SaaS offer](include-saas-offer.md)
+> [Plan a SaaS offer](include-saas-offer.md)
 
 ## See also
 

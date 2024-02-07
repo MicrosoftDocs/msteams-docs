@@ -27,7 +27,7 @@ ms.date: 01/31/2023
    :::column-end:::
 :::row-end:::
 
-As an extended phase of planning your offer, you must fulfill the required technical configurations to create a Software as a Service (SaaS) offer. You must also have the technical information handy to update the offer configuration. Having the prerequisites in place helps avoid any blockers when creating the offer.
+As an extended phase of planning your offer, you must fulfill the required technical configurations to create a Software as a Service (SaaS) offer. You must also have the technical information handy to update the offer configuration.
 
 Here's a quick checklist to stay on track:
 
@@ -40,13 +40,13 @@ Here's a quick checklist to stay on track:
 
 ## Technical information
 
-When you create the SaaS offer, you must provide the following technical information during the [offer configuration](create-saas-offer.md#add-the-technical-information).
+When you create the SaaS offer, you must provide the following technical information during the [offer configuration](create-saas-offer.md#add-the-technical-information):
 
-* **Landing page URL**: The SaaS site URL where the user gets redirected to after purchasing the offer. The URL receives a token that you can use to invoke the fulfillment APIs, providing the necessary provisioning details for your interactive registration page.
+* **Landing page URL**: The SaaS site URL where the user gets redirected to after purchasing the offer. The URL receives a token that you can use to invoke the fulfillment APIs and provides the required provisioning details for your interactive registration page.
 
-* **Connection webhook URL**: For Microsoft to notify you of all asynchronous events (for example, when a SaaS subscription gets canceled), you must provide a [connection webhook URL](/partner-center/marketplace/create-new-saas-offer-technical). Define it in the **Technical configuration** page to receive any subscription changes from the user.
+* **Connection webhook URL**: You must provide a [connection webhook URL](/partner-center/marketplace/create-new-saas-offer-technical) for Microsoft to notify you of all asynchronous events (for example, when a SaaS subscription gets canceled).
 
-* **Microsoft Entra tenant ID**: Register an application within the Microsoft Entra portal to obtain the tenant ID. You can then add to the access control list (ACL) of the API, ensuring you have the authorization to call it. You can find the tenant ID under **App registrations** in Microsoft Entra portal.
+* **Microsoft Entra tenant ID**: Register an application within the Azure portal to obtain the tenant ID. You can then add the tenant ID to the access control list (ACL) of the API, ensuring you have the authorization to call it.
 
 * **Microsoft Entra application ID**: The application ID corresponds to your publisher ID in your Partner Center account. Ensure that you use the same application ID for all offers within that account.
 
@@ -56,7 +56,7 @@ For more information, see [technical information to create an offer](/partner-ce
 
 The following illustration helps you understand the technical configurations based on the listing option:
 
-:::image type="content" source="../../../../assets/images/saas-offer/tech-config-offer.png" alt-text="Diagram shows the technical configuration per the type of listing option.":::
+:::image type="content" source="../../../../assets/images/saas-offer/tech-config-offer.png" alt-text="Diagram shows the technical configuration per the type of listing option." lightbox="../../../../assets/images/saas-offer/tech-config-offer.png":::
 
 ### Set up Microsoft and Microsoft Entra accounts
 
@@ -64,26 +64,28 @@ To start with, you must set up the required accounts to create an offer.
 
 * Enable Microsoft Accounts (MSA) and ensure you have a [Microsoft Partner Center account](/partner-center/marketplace/open-a-developer-account).
 
-* Microsoft Entra ID provides an easier and secure purchase experience. Enable [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/) for authenticating buyers on your site.  With [Microsoft Entra integration](/partner-center/marketplace/azure-ad-saas), you can automatically provision the users to their SaaS apps and also allow buyers to sign in to your app using Microsoft Entra single sign-on (SSO). For more information, see [Microsoft Entra ID and transactable SaaS offers](/partner-center/marketplace/azure-ad-saas).
+* Microsoft Entra ID provides an easier and secure purchase experience. Enable [Microsoft Entra ID](https://azure.microsoft.com/services/active-directory/) for authenticating buyers on your site.  With [Microsoft Entra ID integration](/partner-center/marketplace/azure-ad-saas), you can automatically provision the users to their SaaS apps and also allow buyers to sign in to your app using Microsoft Entra single sign-on (SSO). For more information, see [Microsoft Entra ID and transactable SaaS offers](/partner-center/marketplace/azure-ad-saas).
 
 ### Create a landing page
 
-After a user successfully purchases a subscription plan, commercial marketplace directs them to the offer landing page where they can manage the subscription (such as assign a license to a specific user in their organization).
+After a user successfully purchases a subscription plan, commercial marketplace directs them to the offer landing page to manage the subscription.
 
-To create a landing that provides a seamless sign-in and onboarding experience, check the following articles:
+Refer the following articles to create a landing that provides a seamless sign-in and onboarding experience:
 
 * [Build the landing page for your transactable SaaS offer](/partner-center/marketplace/azure-ad-transactable-saas-landing-page).
 * [Build landing page for your free or trial SaaS offer](/partner-center/marketplace/azure-ad-free-or-trial-landing-page)
 
 #### Best practices for landing pages
 
-Consider the following approaches when building a landing page. Check the sample landing page in the [End-user purchase experience](end-user-purchase-experience.md).
+Consider the following approaches when building a landing page:
 
-* Provide the name and details of the offer and user's account details.
-* Enable users to sign in from offer landing page only using the same Microsoft Entra credentials they used for subscription purchase.
+* Provide the name and details of the offer and the user's account details.
+* Enable users to sign in from offer landing page only using the same Microsoft Entra credentials they used for purchase subscription.
 * Provide an introduction on how to use your app.
 * Add support options, such as FAQs, knowledge base, or contact email.
 * Provide a link that lets the subscriber return to the landing page with ease.
+
+You can view the landing page experience in [end-user purchase experience](end-user-purchase-experience.md).
 
 ### API integration
 
