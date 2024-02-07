@@ -215,7 +215,7 @@ To share a scene, follow the steps:
 
     :::image type="content" source="~/assets/images/apps-in-meetings/share-scene-studio.png" alt-text="Screenshot shows the option to share a scene in scene studio.":::
 
-1. In **Share the scene app** window, select **Share Test together mode with everyone** toggle to create a shareable link of your scenes to share for others to use.
+1. In **Share the scene app** window, select **Share Custom Together Mode with everyone** toggle to create a shareable link of your scenes to share for others to use.
 
 1. Select **Copy**.
 
