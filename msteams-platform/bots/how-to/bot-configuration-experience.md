@@ -78,7 +78,71 @@ You can enable the configuration settings for your bot using the following metho
 
 The following code snippets shows an example of `onInvokeActivity` and `handleTeamsConfigFetch`, `handleTeamsConfigSubmit`:
 
-# [JS1](#tab/bot-framework-js)
+# [JS1](#tab/teams-bot-sdk-js)
+
+The code block provided evaluates incoming activities based on their name property. If the activity name is `config/fetch`, it generates an Adaptive Card for dynamic search, constructs a response object with a status code of 200, and encapsulates the card details within the response body, indicating a continuation of the dialog. Alternatively, if the activity name is `config/submit`, the code determines the appropriate action based on the selected choice. If the choice corresponds to `static_option_2`, it creates an Adaptive Card for static search, prepares a response object with a status code of 200, and embeds the card details for further dialog continuation. If the choice differs or encounters an exception, it returns a message indicating the end of the dialog.
+
+```javascript
+if (context._activity.name == "config/fetch") {
+    const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
+    try {
+        return {
+            status: 200,
+            body: {
+                config: {
+                    type: 'continue',
+                    value: {
+                        card: adaptiveCard,
+                        height: 400,
+                        title: 'Dialog fetch response',
+                        width: 300
+                    }
+                }
+            }
+        }
+    } catch (e) {
+        console.log(e);
+    }
+} else if (context._activity.name == "config/submit") {
+    const choice = context._activity.value.data.choiceselect.split(" ")[0];
+    chosenFlow = choice;
+
+    if (choice === "static_option_2") {
+        const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
+
+        return {
+            status: 200,
+            body: {
+                config: {
+                    type: 'continue',
+                    value: {
+                        card: adaptiveCard,
+                        height: 400,
+                        title: 'Dialog submit response',
+                        width: 300
+                    }
+                }
+            }
+        }
+    } else {
+        try {
+            return {
+                status: 200,
+                body: {
+                    config: {
+                        type: 'message',
+                        value: "end"
+                    }
+                }
+            }
+        } catch (e) {
+            console.log(e);
+        }
+    }
+}
+```
+
+# [JS2](#tab/bot-framework-js)
 
 The `handleTeamsConfigFetch` and `handleTeamsConfigSubmit` methods are extended to manage configuration fetch and submit operations in Teams. The `handleTeamsConfigFetch` method inspects the command type in the `configData` parameter and formulates a response. If the command is card, an Adaptive Card with bot configuration details is generated. If it's message, a simple message response is created. In a similar manner, the `handleTeamsConfigSubmit` method evaluates the command type in `configData` and generates either an Adaptive Card or a message response, depending on the command type.
 
@@ -187,70 +251,6 @@ async handleTeamsConfigSubmit(_context, configData) {
     return response;
 }
 
-```
-
-# [JS2](#tab/teams-bot-sdk-js)
-
-The code block provided evaluates incoming activities based on their name property. If the activity name is `config/fetch`, it generates an Adaptive Card for dynamic search, constructs a response object with a status code of 200, and encapsulates the card details within the response body, indicating a continuation of the dialog. Alternatively, if the activity name is `config/submit`, the code determines the appropriate action based on the selected choice. If the choice corresponds to `static_option_2`, it creates an Adaptive Card for static search, prepares a response object with a status code of 200, and embeds the card details for further dialog continuation. If the choice differs or encounters an exception, it returns a message indicating the end of the dialog.
-
-```javascript
-if (context._activity.name == "config/fetch") {
-    const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
-    try {
-        return {
-            status: 200,
-            body: {
-                config: {
-                    type: 'continue',
-                    value: {
-                        card: adaptiveCard,
-                        height: 400,
-                        title: 'Dialog fetch response',
-                        width: 300
-                    }
-                }
-            }
-        }
-    } catch (e) {
-        console.log(e);
-    }
-} else if (context._activity.name == "config/submit") {
-    const choice = context._activity.value.data.choiceselect.split(" ")[0];
-    chosenFlow = choice;
-
-    if (choice === "static_option_2") {
-        const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
-
-        return {
-            status: 200,
-            body: {
-                config: {
-                    type: 'continue',
-                    value: {
-                        card: adaptiveCard,
-                        height: 400,
-                        title: 'Dialog submit response',
-                        width: 300
-                    }
-                }
-            }
-        }
-    } else {
-        try {
-            return {
-                status: 200,
-                body: {
-                    config: {
-                        type: 'message',
-                        value: "end"
-                    }
-                }
-            }
-        } catch (e) {
-            console.log(e);
-        }
-    }
-}
 ```
 
 ---
