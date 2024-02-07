@@ -26,7 +26,7 @@ The following table provides the features and description of an Incoming Webhook
 | Features | Description |
 | -------- | ----------- |
 |Adaptive Cards using an Incoming Webhook | Adaptive Cards can be sent through Incoming Webhooks. For more information, see [Send Adaptive Cards using Incoming Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
-|Actionable messaging support|Actionable message cards are supported in all Microsoft 365 groups including Teams. If you send messages through cards, you must use the actionable message card format. For more information, see [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://messagecardplayground.azurewebsites.net).|
+|Actionable messaging support | Actionable message cards are supported in all Microsoft 365 groups including Teams. If you send messages through cards, you must use the actionable message card format. For more information, see [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://messagecardplayground.azurewebsites.net).|
 |Independent HTTPS messaging support|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an Incoming Webhook.|
 |Markdown support|All text fields in actionable messaging cards support basic Markdown. Don't use HTML markup in your cards. HTML is ignored and treated as plain text.|
 |Scoped configuration|Incoming Webhook is scoped and configured at the channel level.|
@@ -44,7 +44,7 @@ The following table provides the features and description of an Incoming Webhook
 
 To add an Incoming Webhook to a Teams channel, follow these steps:
 
-# [Teams 2.1](#tab/newteams)
+# [New Teams client](#tab/newteams)
 
 1. In the Teams client, select **Teams** :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to add an Incoming Webhook.
 
@@ -65,7 +65,7 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 
    :::image type="content" source="../../assets/images/configure_1-new-teams.png" alt-text="The screenshot shows how to configure and upload an image for your webhooks.":::
 
-1. Provide a name for your webhook and upload an image if necessary.
+1. Provide a name for the webhook and upload an image if necessary.
 
 1. Select **Create**.
 
@@ -93,7 +93,7 @@ The following graphical representation provides the steps to create an Incoming 
 
    :::image type="content" source="../../assets/images/configure_1.png" alt-text="This screenshot shows how to configure and upload an image for your webhooks.":::
 
-1. Provide a name and upload an image for your webhook if necessary.
+1. Provide a name for the webhook and upload an image if necessary.
 
 1. Select **Create**.
 
