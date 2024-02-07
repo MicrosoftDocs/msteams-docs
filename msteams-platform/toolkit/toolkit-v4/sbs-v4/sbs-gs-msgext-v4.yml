@@ -455,7 +455,7 @@ items:
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/sideloaded-apps-v4.png" alt-text="Screenshot shows uploaded custom apps in Teams.":::
 
-   1. A dialog box appears suggesting you to try out your app. Select **Try it**.
+   1. A dialog box appears suggesting you to try out your app. If you select **Got it**, the dialog box disappears. Select **Try it**.
 
         :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/mex-try-it.png" alt-text="Screenshot shows the message to try the message extension app now or later.":::
 
@@ -599,7 +599,7 @@ items:
    ---
 
    > [!NOTE]
-   > If you run into an `unknown.ZipDeployError` while deploying the app, ensure that **Basic Auth Publishing Credentials** is set to **On** in your application's **Configuration** on the Azure portal. 
+   > If you run into an `unknown.ZipDeployError` while deploying the app, ensure that **Basic Auth Publishing Credentials** is enabled under your application's configuration settings in the Azure portal. 
 
    ## Run the deployed app
 
