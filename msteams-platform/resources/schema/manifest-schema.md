@@ -573,8 +573,8 @@ Each command item is an object with the following structure:
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
 |`context`|Array of strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
-|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
-|`taskInfo`|Object|||Specify the task module to pre-load when using a message extension command.|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog (referred as task module in TeamsJS v1.x) dynamically. Default is **false**.|
+|`taskInfo`|Object|||Specify the dialog to pre-load when using a message extension command.|
 |`taskInfo.title`|String|64 characters||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
@@ -584,7 +584,7 @@ Each command item is an object with the following structure:
 |`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameters.value`|String|512 characters||Initial value for the parameter. Currently the value isn't supported|
-|`parameters.inputType`|String|||Defines the type of control displayed on a task module for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|String|||Defines the type of control displayed on a dialog for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|Array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|String|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|String|512 characters|✔️|Value of the choice.|
@@ -665,7 +665,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
 >[!NOTE]
 >
-> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and dialogs as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 > * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen
@@ -688,7 +688,7 @@ Define the properties your app uses to post a user activity feed.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`activityTypes`|Array of objects|128 items| | Provide the types of activities that your app can post to a users activity feed. The `systemDefault` activity type is a reserved and invalid string.|
+|`activityTypes`|Array of objects|128 items| | Provide the types of activities that your app can post to a users activity feed.|
 
 ### activities.activityTypes
 
