@@ -328,8 +328,6 @@ items:
         
         </details>
 
-        :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/f5-build-and-run-mex-v4.png" alt-text="Screenshot shows the debug process of the message extension app." lightbox="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/f5-build-and-run-mex-v4.png":::
-
         When you debug the app for the first time, Teams downloads the dependencies and builds the app. This process can take 3 to 5 minutes to complete.
         
    1. Teams opens in a browser window when the build is complete. Sign in with your Microsoft 365 account, if prompted.
@@ -599,7 +597,9 @@ items:
    ---
 
    > [!NOTE]
-   > If you run into an `unknown.ZipDeployError` while deploying the app, ensure that **SCM Basic Auth Publishing Credentials** and **FTP Basic Auth Publishing Credentials** is enabled under your application's configuration settings in the Azure portal. 
+   > If you run into an `unknown.ZipDeployError` while deploying the app, ensure that **SCM Basic Auth Publishing Credentials** and **FTP Basic Auth Publishing Credentials** are enabled under your application's configuration settings in the [Azure portal](https://ms.portal.azure.com).
+   >
+   >       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/basic-auth-publish.png" alt-text="Screenshot shows the option to enable basic auth publishing credentials."::: 
 
    ## Run the deployed app
 
