@@ -28,7 +28,7 @@ ms.date: 07/11/2023
    :::column-end:::
 :::row-end:::
 
-SaaS offer that's created must be published live in the Microsoft commercial marketplace. You must then link the SaaS offer to your app and publish the SaaS app. The SaaS app is available in the Microsoft Teams Store with the configured subscriptions for purchase.
+The SaaS offer created must be published live in the Microsoft commercial marketplace. You must then link the SaaS offer to your app and publish the SaaS app. The SaaS app is available in the Microsoft Teams Store with the configured subscriptions for purchase.
 
 ## Go live
 
@@ -39,6 +39,8 @@ Upon successful testing, your can submit the offer to [Go live](/partner-center/
 * If there are validation errors, rectify them and resubmit your offer for publishing. These errors could range from missing information to noncompliance with marketplace standards.
 * Upon successful validation, the offer is published live in the marketplace.
 * Post-publication, link the live SaaS offer to your SaaS app and publish the subscription to Teams Store.
+
+:::image type="content" source="../../../../assets/images/saas-offer/go-live-publish.png" alt-text="The screenshot shows the go live and offer publishing phase.":::
 
 For a comprehensive understanding of validation and certification, check [Review and publish offers](/partner-center/marketplace/review-publish-offer).
 
@@ -114,9 +116,11 @@ If you decide to unlink your SaaS offer from the app, follow these steps:
 1. Go to the [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
 1. On the **Apps** page, select the app you're removing the offer from.
 1. Go to the **Plans and pricing** page and select **Revert**.
-1. After unlinking the offer, do the following steps to update your store listing:
-   1. Select **Distribute** > **Publish to the Teams store**.
-   1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
+
+After unlinking the offer, do the following steps to update your store listing:
+
+1. Select **Distribute** > **Publish to the Teams store**.
+1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
 If you unlink a SaaS offer included in your Teams Store listing, you must republish your app to see the change in the Teams Store.
 

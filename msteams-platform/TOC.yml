@@ -939,7 +939,7 @@
     displayName: Pricing model, SaaS offer, purchase experience, Price
   - name: Plan a SaaS offer
     href: concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md
-    displayName: license, transactable Software-as-a-Service, Recloud app
+    displayName: license, transactable Software-as-a-Service, recloud app
   - name: Prerequisites
     href: concepts/deploy-and-publish/appsource/prepare/prerequisites.md
     displayName: SaaS API, landing page, graph usageRights API
