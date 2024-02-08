@@ -599,7 +599,7 @@ items:
    ---
 
    > [!NOTE]
-   > If you run into an `unknown.ZipDeployError` while deploying the app, ensure that **Basic Auth Publishing Credentials** is enabled under your application's configuration settings in the Azure portal. 
+   > If you run into an `unknown.ZipDeployError` while deploying the app, ensure that **SCM Basic Auth Publishing Credentials** and **FTP Basic Auth Publishing Credentials** is enabled under your application's configuration settings in the Azure portal. 
 
    ## Run the deployed app
 
