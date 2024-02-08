@@ -380,8 +380,10 @@ Developer preview is a public program that provides early access to unreleased T
 **2024 February**
 
 * ***February 13, 2024***: [Introduced Adaptive Card Previewer in public developer preview for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-vs.md)
+
 * ***February 13, 2024***: [[Introduced Teams App Test Tool in public developer preview for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-visual-studio.md)](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)
-***February 06, 2024***: [Introduced systemDefault reserved activity type for send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis).
+
+* ***February 06, 2024***: [Introduced systemDefault reserved activity type for send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis).
 
 :::column-end:::
 :::row-end:::
