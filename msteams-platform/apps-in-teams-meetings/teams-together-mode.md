@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 > [!NOTE]
 >
-> * Customer Together Mode scenes for Teams meetings are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> * Custom Together Mode scenes for Teams meetings are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 > * Teams users need the [Teams Premium license](/microsoftteams/enhanced-teams-experience) to use Custom Together Mode after the preview.
 
 Collaborate in a new way with Custom Together Mode scenes in Microsoft Teams.  Custom Together Mode creates an immersive and engaging environment by digitally combining participants into a single virtual scene. The benefits of Custom Together Mode are as follows:
@@ -25,11 +25,11 @@ Get started and transform your Teams meetings with Custom Together Mode scenes.
 
 ## Custom Together Mode scene
 
-Custom Together Mode scene is an artifact and participants have seats with video streams in a conceived scene setting, and the videos are rendered in those seats. You can create a scene using Microsoft Scene studio. Scene studio handles the app package creation in the background and creates a scene only app. We recommended to use scene only apps for better experience.
+Custom Together Mode scene is an artifact and participants have seats with video streams in a conceived scene setting, and the videos are rendered in those seats. You can create a scene using Microsoft Scene studio. Scene studio handles the app package creation in the background and creates a scene only app. We recommend to use scene only apps for better experience.
 
 > [!NOTE]
   >
-  > Users can't initiate Custom Together Mode on a mobile. However, if they join a meeting through mobile and Together Mode is enabled on desktop, their mobile video appears in Together Mode on desktop.
+  > Users can't initiate Custom Together Mode on mobile devices. However, if they join a meeting through mobile and Together Mode is enabled on desktop, their mobile video appears in Together Mode on desktop.
 
 ## Prerequisites
 
@@ -59,7 +59,7 @@ To create a best scene, ensure that you follow the following practices:
 
 ## Build scene using Scene studio
 
-You can build a scene using [Scenes Studio](https://dev.teams.microsoft.com/scenes) in Teams Developer Portal. A scene in the context of the Scene studio contains the following elements:
+You can build a scene using [Scene Studio](https://dev.teams.microsoft.com/scenes) in Teams Developer Portal. A scene in the context of the Scene studio contains the following elements:
 
 ### Elements of a scene
 
@@ -224,8 +224,7 @@ To share a scene, follow the steps:
 1. Open the link you've copied to install the scene and start using it.
 1. Preview the scene.
    The scene is shipped as an app to Teams by following the steps for app submission.
-1. Obtain the app package, which is different from the scene package for the designed scene
-   For the scene that is designed, the app package is different from the scene package.
+1. Get the app package, which is different from the scene package for the designed scene.
 1. Find the automatically created app package in the **Apps** section of the Teams Developer Center.
 
 To export a scene, follow the steps:
@@ -239,7 +238,7 @@ To delete a scene you created, select **Delete scene**.
 
 ### Import a scene
 
-You can import the scene package, which is a .zip file retrieved from the Scene studio to other creators to further enhance the scene.
+You can import the scene package, which is a zip file retrieved from the Scene studio to other creators to further enhance the scene.
 
 1. Go to Scene studio.
 1. Select **Import a scene**.
