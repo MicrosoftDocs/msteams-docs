@@ -24,6 +24,8 @@ Here are some scenarios where you can build apps using deep links in Teams:
 
     For more information, see [deep link to an app](~/concepts/build-and-test/deep-link-application.md).
 
+    :::image type="content" source="~/assets/images/deeplink-tasks.gif" alt-text="Graphical representation shows the user experience of deep links in tab app.":::
+
 * **Deep link to a chat**: Use a deep link to navigate to a channel conversation, chat messages, or a file within a channel.
 
     For more information, see [deep link to a chat](~/concepts/build-and-test/deep-link-teams.md).
@@ -32,7 +34,11 @@ Here are some scenarios where you can build apps using deep links in Teams:
 
     For more information, see [deep link to a workflow](~/concepts/build-and-test/deep-link-workflow.md).
 
+    :::image type="content" source="~/assets/images/deeplink-schedule.gif" alt-text="Graphical representation shows the user experience of deep links to launch a meeting scheduling dialog.":::
+
 The Microsoft Teams JavaScript library (TeamsJS) for navigation within your tab, such as navigating to content and information or launching a chat dialog. The TeamsJS typed APIs provide an improved experience and are recommended for Teams apps that may run in other hosts, such as Outlook or Microsoft 365 apps. These APIs also provide a way to check if the host supports the capability being used.
+
+## Limitations
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 
