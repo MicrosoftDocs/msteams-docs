@@ -10,7 +10,7 @@ ms.date: 01/29/2023
 
 # Designing lightbox for your Microsoft Teams app
 
-The lightbox is a display component that emphasizes important information by deactivating the page layout behind it. Information in the lightbox is noneditable and non-interactive. The lightbox view enables users to preview media content, including images, videos, audio files, documents, and PDFs, on a large surface over the main Teams window. 
+The lightbox is a display component that emphasizes important information by deactivating the page layout behind it. Information in the lightbox is noneditable and non-interactive. The lightbox view enables users to preview media content, including images, videos, audio files on a large surface over the main Teams window. 
 
 The lightbox component is designed for quick reviews, understanding, or verification. It doesn't support actions for editing or collaboration. Users can initiate the lightbox in a new Teams window or open it directly in a native app or browser. 
 
@@ -26,6 +26,8 @@ The lightbox component is designed for quick reviews, understanding, or verifica
 
 ## Anatomy
 
+# [Desktop](#tab/desktop)
+
 The lightbox view includes a header, center stage, and carousel.
 
 :::image type="content" source="../../assets/images/light-box/lightbox-anatomy.png" alt-text="Design anatomy of the lightbox view in the Teams." lightbox="../../assets/images/light-box/lightbox-anatomy.png":::
@@ -36,9 +38,20 @@ The lightbox view includes a header, center stage, and carousel.
 |2|**Open in**: Button (basic or split) to navigate to the external window|
 |3|Buttons with content actions: Zoom in or out, Share, Download, Popout (open new child window), open chat panel|
 |4|Chevrons for slide show|
-|A|**Lightbox Header**: Actionable|
+|A|**Lightbox header**: Actionable|
 |B|**Center stage**: Main content container|
 |C|**Carousel**: Actionable|
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/light-box/lightbox-mobile-anatomy.png" alt-text="Design anatomy of the lightbox view in the Teams mobile client." lightbox="../../assets/images/light-box/lightbox-mobile-anatomy.png":::
+
+|Counter|Description|
+|----------|-----------|
+|A|**Header**: Provide file name and additional functions as Chat, Download, Share|
+|1|**Content**: Center stage|
+
+---
 
 ## Sizing of the components
 
