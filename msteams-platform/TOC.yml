@@ -799,7 +799,7 @@
     displayName: Permissions, delegated, user, team, chat, application
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
-  - name: Import third-party messages
+  - name: Import third party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
     href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
