@@ -245,9 +245,6 @@
           items: 
           - name: Overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
-          - name: Debug bot using Teams App Test Tool
-            href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
-            displayName: Mock activity, custom activity, predefined activity, test tool, app test tool
           - name: Debug your Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
           - name: Debug background process
@@ -283,9 +280,6 @@
       - name: Install Adaptive Card Previewer
         href: concepts/build-and-test/install-adaptive-card-previewer.md
         displayName: install, Adaptive Card Previewer, ACP
-    - name: Adaptive Card Previewer for Visual Studio
-      href: concepts/build-and-test/adaptive-card-previewer-vs.md
-      displayName: preview, Adaptive Card, ACP 
     - name: Yeoman generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams 
   - name: SDKs
@@ -799,7 +793,7 @@
     displayName: Permissions, delegated, user, team, chat, application
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
-  - name: Import third party messages
+  - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
     href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
