@@ -10,9 +10,9 @@ zone_pivot_groups: teams-toolkit-platform
 ---
 # Install Teams Toolkit
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
 ::: zone pivot="visual-studio-code-v5"
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 This section helps you to know about the prerequisites, install Teams Toolkit for Visual Studio Code, and install a different version of Teams Toolkit.
 
@@ -117,6 +117,8 @@ The Teams Toolkit for Visual Studio Code extension is available in a pre-release
 ::: zone-end
 
 ::: zone pivot="visual-studio-code-v4"
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 The Microsoft Entra manifest contain definitions of all the attributes of a Microsoft Entra application object in the Microsoft identity platform.
 

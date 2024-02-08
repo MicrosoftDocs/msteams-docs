@@ -11,9 +11,9 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Customize app manifest
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
 ::: zone pivot="visual-studio-code-v5"
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 App manifest (previously called Teams app manifest) describes how your app integrates into Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
 
@@ -173,6 +173,8 @@ To preview values for all the environment, you can hover over the placeholder. I
 ::: zone pivot="visual-studio-code-v4"
 
 ## Customize app manifest for Visual Studio Code
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 App manifest (previously called Teams app manifest) describes how your app integrates into Teams. The app manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
 

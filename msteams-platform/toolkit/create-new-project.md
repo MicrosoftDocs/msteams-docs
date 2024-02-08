@@ -11,9 +11,9 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Create a new Teams app
 
-In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code.
-
 :::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+
+In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code.
 
 ::: zone pivot="visual-studio-code-v5"
 

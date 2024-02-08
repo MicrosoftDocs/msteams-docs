@@ -10,9 +10,9 @@ zone_pivot_groups: teams-toolkit-platform
 ---
 # Add single sign-on to Teams app
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
 ::: zone pivot="visual-studio-code-v5"
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting few of the Microsoft Entra ID flows and integrations behind simple APIs. This enables you to add SSO features easily to your Teams app.
 
@@ -63,6 +63,8 @@ You can perform the following steps to add SSO using Teams Toolkit in Visual Stu
 ::: zone-end
 
 ::: zone pivot="visual-studio-code-v4"
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph and other APIs. Teams Toolkit facilitates the interaction by abstracting some of the Microsoft Entra ID flows and integrations behind some simple APIs. This enables you to add SSO features easily to your Teams app.
 
