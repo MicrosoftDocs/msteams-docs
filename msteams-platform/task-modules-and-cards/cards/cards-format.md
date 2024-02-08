@@ -498,7 +498,7 @@ Adaptive Card responsive layout allows developers to create cards that can adapt
 
 #### Construct Adaptive Card responsive layout
 
-Add `targetWidth` property to all elements in an Adaptive Card to define different layouts for different card widths. This property allows you to control the visibility of any element by linking it to a host width. You can set the `targetWidth` property with the following predefined values:
+Add `targetWidth` property for all elements in an Adaptive Card to define different layouts for different card widths. This property allows you to control the visibility of any element by linking it to a host width. You can set the `targetWidth` property with the following predefined values:
 
 |Value  |Description  |
 |---------|---------|
@@ -511,7 +511,7 @@ The values of `targetWidth` refer to the relative width of the card and allows m
 
 The `hostWidth` property allows the host application to define the width it provides to the card through `targetWidth` property. The host application is responsible for mapping the actual widths to these named values. For example, Teams typically assigns `hostWidth` to `narrow` on mobile, `wide` on desktop in chats and channels, and `veryNarrow` in the meeting chat pane. For more information, see the following examples:
 
-* If you set `targetWidth` to`standard`, the element is only visible when the `hostWidth` property is set to `wide`.
+* If you set `targetWidth` to `standard`, the element is only visible when the `hostWidth` property is set to `wide`.
 
 * If you set `targetWidth` to `atMost:narrow`, the element is only visible if the `hostWidth` property is set to `veryNarrow` or `narrow`.
 
