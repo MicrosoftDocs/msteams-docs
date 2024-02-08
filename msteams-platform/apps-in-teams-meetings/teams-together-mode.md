@@ -63,7 +63,7 @@ You can build a scene using [Scenes Studio](https://dev.teams.microsoft.com/scen
 
 ### Elements of a scene
 
-A scene consists of bitmap images, sprites, and rectangles to put participant videos in the Custom Together mode. The following are the elements of a scene:
+A scene consists of bitmap images, sprites, and rectangles to put participant videos in the Custom Together Mode. The following are the elements of a scene:
 
 |Value|Description|
 |---|---|
