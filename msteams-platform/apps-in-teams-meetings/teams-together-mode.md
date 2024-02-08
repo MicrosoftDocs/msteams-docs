@@ -203,7 +203,7 @@ Join the Teams meeting and follow the steps to test the Custom Together Mode:
     > * Only one scene is used uniformly for the entire meeting. If a presenter or organizer changes the scene, it changes for everyone.
     > * Participants can switch in or out of Custom Together Mode scenes individually, but when using Custom Together Mode scenes, all participants share the same scene.
 
-    :::image type="content" source="../assets/images/apps-in-meetings/launchtogethermode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
+    :::image type="content" source="../assets/images/apps-in-meetings/launch-together-mode.png" alt-text="Screenshot shows the custom scene launched in a Teams meeting.":::
 
 ## Share scene using Scene studio
 
