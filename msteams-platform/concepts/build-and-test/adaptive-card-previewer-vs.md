@@ -15,8 +15,6 @@ ms.date: 02/13/2024
 
 The Microsoft Adaptive Card Previewer, integrated with the Teams Toolkit of Visual Studio, enables real-time previews of Adaptive Cards created for Teams bots. You can open a side-by-side preview to observe live changes, switch between different themes and refine your designs to ensure they're accurate and effective.
 
-Image
-
 ## Explore Adaptive Card Previewer
 
 Adaptive Card Previewer provides faster and more reliable solutions to preview Adaptive Card designs. Adaptive Card Previewer supports the following features:
@@ -31,7 +29,7 @@ Adaptive Card Previewer provides faster and more reliable solutions to preview A
 
 * **Switch themes**: Allows you to switch between light, dark, and high contrast themes to preview your Adaptive Cards.
 
- :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-select-theme-vs.gif" alt-text="Graphic shows the Adaptive Card preview in light, dark, and high contrast themes.":::
+  :::image type="content" source="../../assets/images/previewer-adaptive-card/acp-select-theme-vs.gif" alt-text="Graphic shows the Adaptive Card preview in light, dark, and high contrast themes.":::
 
 ## Advantages
 
