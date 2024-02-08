@@ -7,8 +7,7 @@ ms.date: 05/16/2023
 ---
 # Teams app tutorials and related code samples
 
-> [!NOTE]
-> Support for Teams Toolkit v4 will deprecate soon. We recommend you to use Teams Toolkit v5 to build your apps.
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 > [!IMPORTANT]
 > We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features.
