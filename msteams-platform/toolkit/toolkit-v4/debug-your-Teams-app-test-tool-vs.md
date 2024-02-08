@@ -83,6 +83,10 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio."::: 
 
+1. Update [OpenAI](https://openai.com/api/) in the `appsettings.TestTool.json`
+
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot shows the OpenAI updated.":::
+
 1. In the debug dropdown list, select **Teams App Test Tool (browser)**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Teams app test tool from the dropdown list.":::
