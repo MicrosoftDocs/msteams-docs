@@ -195,7 +195,7 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
     1. For Command Prompt:
 
-        ```bash
+        ```cmd
         teamsapptester.exe start
         ```
 
