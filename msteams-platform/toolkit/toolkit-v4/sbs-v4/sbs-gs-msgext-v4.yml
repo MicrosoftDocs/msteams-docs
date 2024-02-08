@@ -232,7 +232,7 @@ items:
 
    A message extension uses Bot Framework. You use it to interact with your service through a conversation. After scaffolding, view the project directories and files under **EXPLORER**.
 
-   :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/folder-structure-mex-app-v4.png" alt-text="Screenshot shows the the files of the message extension app.":::
+   :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/folder-structure-mex-app-v4.png" alt-text="Screenshot shows the files of the message extension app.":::
 
    | Folder name | Contents |
    | --- | --- |
@@ -597,7 +597,7 @@ items:
    ---
 
    > [!NOTE]
-   > If you run into an `unknown.ZipDeployError` while deploying the app, ensure that **SCM Basic Auth Publishing Credentials** and **FTP Basic Auth Publishing Credentials** are enabled under your application's configuration settings in the [Azure portal](https://ms.portal.azure.com).
+   > If you run into an `unknown.ZipDeployError` while deploying the app, ensure that **SCM Basic Auth Publishing Credentials** and **FTP Basic Auth Publishing Credentials** are enabled under your application's configuration settings in the [Azure portal](https://portal.azure.com).
    >
    >       :::image type="content" source="~/toolkit/toolkit-v4/sbs-v4/images-sbs/sbs-gs-msgext/basic-auth-publish.png" alt-text="Screenshot shows the option to enable basic auth publishing credentials."::: 
 
