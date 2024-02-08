@@ -47,7 +47,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Use app validation tool in Teams Developer Portal to validate your Teams app
+      - text: Use app validation tool to validate your Teams app in Teams Developer Portal
         url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
       - text: Introduced systemDefault reserved activity type for send activity feed notifications (Developer preview)
         url: tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis

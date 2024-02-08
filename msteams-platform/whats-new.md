@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 February**
 
-* ***February 12, 2024***: [Use app validation tool in Teams Developer Portal to validate your Teams app.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish)
+* ***February 12, 2024***: [Use app validation tool to validate your Teams app in Teams Developer Portal.](concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish)
 * ***February 01, 2024***: [Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365.](m365-apps/cards-loop-component.md)
 * ***February 01, 2024***: [Use application RSC permissions for chat scope.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting)
 
