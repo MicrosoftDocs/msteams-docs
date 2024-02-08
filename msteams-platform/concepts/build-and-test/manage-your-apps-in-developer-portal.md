@@ -140,13 +140,14 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 * **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The app definition refers to the configuration and settings associated with the application. The Icon tab shows the icon used for your app.
 
-* **App validation**: The app validation tool evaluates your app package based on the test cases that Microsoft uses to review your app. This allows you to The app validation tool identifies any errors or warnings in your app package and provides guidelines for resolution.
+* **App validation**: The app validation tool evaluates your app package based on the test cases that Microsoft uses to review your app. The app validation tool identifies any errors or warnings in your app package and provides guidelines for resolution.
 
     If your app failed any test cases, you can review the guidelines and make necessary updates to your app package based on the Microsoft test case results. You can also download your app package and validation report.
 
     <br>
     <details>
-    <summary><b>Validate your app package<b></summary>
+    <summary><b>Validate your app package<b></summary><br>
+
     To ensure that your app functions as expected on Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
 
     1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
