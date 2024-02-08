@@ -21,10 +21,10 @@ ms.date: 03/21/2023
       :::image type="icon" source="~/assets/images/saas-offer/monetize-flow3.png" link="create-saas-offer.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="Test-preview-for-monetized-apps.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow4.png" link="Test-preview-for-monetized-apps.md" border="false":::
    :::column-end:::
    :::column:::
-      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow6.png" link="publish-saas-offer-app.md" border="false":::
+      :::image type="icon" source="~/assets/images/saas-offer/monetize-flow5.png" link="publish-saas-offer-app.md" border="false":::
    :::column-end:::
 :::row-end:::
 
@@ -35,7 +35,7 @@ The key features are:
 * [Publishing option](#publishing-option)
 * [Offer details](#offer-details)
 * [Offer plan](#offer-plan)
-* [Additional features](#additional-features)
+* [Additional SaaS offer features](#additional-saas-offer-features)
 
 ## Publishing option
 
@@ -108,6 +108,7 @@ Offer details are the basic information available on the offer's landing page. T
 | Offer categories and industries | Identify the primary and secondary categories for your offer. These categories determine the marketplace where your offer is published and help the users to identify your app. |
 | Offer details | Design a distinctive logo, select relevant keywords, and write a compelling description to enhance your offer's discoverability. |
 | Preview audience | Identify the audience and collate their email address to allow them to use and verify the preview offer. |
+| Technical configuration | The [technical information](prerequisites.md#technical-information) that the commercial marketplace uses to communicate to your SaaS app. |
 | Legal terms and conditions | Provide clear and comprehensive information about the terms of use for the users to understand their rights and responsibilities. |
 | Customer Relationship Management (CRM) | Provide contact information to receive customer leads and to address queries. |
 
@@ -141,13 +142,13 @@ The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) def
 > * An offer can have only one pricing model. For example, a SaaS offer can't have one plan that's a flat rate and another plan that's per user.
 > * The pricing model and billing terms can’t be changed once the offer is published.
 
-## Additional offer features
+## Additional SaaS offer features
 
 In addition to the basic and essential planning, you can provide more features to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers.
 
 | Category |Description|
 |---|---|
-| Free trails | When selling through Microsoft, you can provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period. |
+| Free trails | When selling through Microsoft, you can provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period. This is different from the free trail in the listing option. |
 | Test drive | When selling through Microsoft, you can add test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer). |
 | Mobile version | To adhere to third-party app store policies, your app mustn't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the [related commercial marketplace certification policies](/legal/marketplace/certification-policies). |
 
