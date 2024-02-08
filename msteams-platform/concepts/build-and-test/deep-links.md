@@ -8,27 +8,31 @@ ms.date: 04/13/2023
 
 # Configure deep links
 
-Deep links are a navigation mechanism that helps users to connect with features and information within Teams and Teams apps. The following are few scenarios where deep links are useful:
+Deep links function as URLs that direct users straight to particular content within an app. In Microsoft Teams, you can use deep links to go to a specific chat, message, or tab within an app, among other things. They also enable certain operations, such as initiating a new chat or call, or sharing content during a meeting. For example, a deep link might be used to direct a user straight to a specific message within a chat, eliminating the need to navigate through several screens.
 
-* App users can browse through the contents within a tab. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user selects the notification, the deep link navigates to the tab where the user can view more details about the activity.
+Here are some scenarios where you can build apps using deep links in Teams:
 
-  :::image type="content" source="~/assets/images/deeplink-tasks.gif" alt-text="Graphical representation shows the user experience of deep links in tab app.":::
+* Deep link to an app.
 
-* App users can enjoy enhanced app experience by using simplified or automated user tasks, such as creating a new chat and scheduling a meeting by prepopulating the deep links with required parameters.
+* Deep link to a chat.
 
-  :::image type="content" source="~/assets/images/deeplink-schedule.gif" alt-text="Graphical representation shows the user experience of deep links to launch a meeting scheduling dialog.":::
-
-Deep links can be categorized as follows:
+* Deep link to a workflow.
 
 :::image type="content" source="~/assets/images/deep-links.png" alt-text="Diagram that shows different scenarios for deep links.":::
 
-* **Deep link to an app**: You can open the app install dialog, navigate within your app, and generate a deep link and navigate to your tab through [deep link to an app](~/concepts/build-and-test/deep-link-application.md).
+* **Deep link to an app**: Open the app installation dialog, navigate within your app, and generate a deep link. This deep link enables navigation to your tab. Users of your app have the ability to browse the content within a tab. For example, your app might include a bot that sends messages to alert the user of significant activities. After the user selects the notification, the deep link directs them to the tab where they can see more details about the activity.
 
-* **Deep link to a chat**: You can navigate to a channel conversation, chat messages, and to file in a channel through [deep link to a chat](~/concepts/build-and-test/deep-link-teams.md).
+For more information, see [deep link to an app](~/concepts/build-and-test/deep-link-application.md).
 
-* **Deep link to a workflow**: You can create a deep link to perform a specific task in Teams, such as to create a new chat, open a scheduling dialog, and navigate to audio-video call through [deep link to a workflow](~/concepts/build-and-test/deep-link-workflow.md).
+* **Deep link to a chat**: Use a deep link to navigate to a channel conversation, chat messages, or a file within a channel.
 
-The Microsoft Teams JavaScript client library (TeamsJS) can be used for navigation. For scenarios, such as navigating to content and information within your tab or launching a chat dialog, TeamsJS typed APIs provide improved experience. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Microsoft 365 app), as they also provide a way to check that the capability used is supported by the host.
+For more information, see [deep link to a chat](~/concepts/build-and-test/deep-link-teams.md).
+
+* **Deep link to a workflow**: You've the ability to generate a deep link to execute a specific task in Teams. Tasks might include initiating a new chat, opening a scheduling dialog, or navigating to an audio-video call. App users can benefit from an improved app experience by utilizing simplified or automated user tasks. These tasks include initiating a new chat or scheduling a meeting, which are made easier by prepopulating the deep links with necessary parameters.
+
+For more information, see [deep link to a workflow](~/concepts/build-and-test/deep-link-workflow.md).
+
+The Microsoft Teams JavaScript library (TeamsJS) for navigation within your tab, such as navigating to content and information or launching a chat dialog. The TeamsJS typed APIs provide an improved experience and are recommended for Teams apps that may run in other hosts, such as Outlook or Microsoft 365 apps. These APIs also provide a way to check if the host supports the capability being used.
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 
