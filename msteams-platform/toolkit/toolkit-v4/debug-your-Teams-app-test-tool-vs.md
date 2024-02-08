@@ -15,7 +15,7 @@ ms.date: 02/13/2024
 
 Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
 
-The following image shows a sample app displaying an Adaptive Card with a list of commands in Test Tool. It also provides a description of the commands so that you can test your app without manually searching your code:
+The following image shows a sample app displaying a response in Test Tool:
 
  :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool-sample-app-output-vs.png" alt-text="Screenshot shows the Teams App Test Tool Adaptive Card.":::
 
@@ -43,7 +43,7 @@ Ensure you install the following tools for building and deploying your bots in T
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
+| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. |
 | &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
 
 ## Understand Test Tool
@@ -81,15 +81,15 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     An overview window appears.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the applicationin Visual Studio."::: 
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio."::: 
 
 1. In the debug dropdown list, select **Teams App Test Tool (browser)**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Teams app test tool from the drop down list.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Teams app test tool from the dropdown list.":::
 
 1. Test Tool opens the bot in a webpage.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot open the test tool in web page." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-test-tool-vs.png"::: 
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-test-tool-vs.png"::: 
 
 ## Activity triggers
 
