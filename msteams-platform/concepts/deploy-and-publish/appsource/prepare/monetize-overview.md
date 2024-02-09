@@ -39,7 +39,7 @@ Software as a Service (SaaS) applications with subscriptions that are published 
 > [!NOTE]
 > To create and publish your offer, you must have a [commercial marketplace account in Partner Center](/partner-center/create-account).
 
-When creating a SaaS offer, you must determine the publishing option, specifically if you're selling through Microsoft or managing transaction independently. For more information on publishing options, see [planning for a SaaS offer](include-saas-offer.md).
+When creating a SaaS offer, you must determine the publishing option, specifically, if you're selling through Microsoft or managing transaction independently. For more information on publishing options, see [plan for a SaaS offer](include-saas-offer.md).
 
 Here are some features you can integrate with the SaaS offer:
 
