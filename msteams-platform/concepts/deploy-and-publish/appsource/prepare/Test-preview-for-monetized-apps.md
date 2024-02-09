@@ -120,7 +120,7 @@ Upon successful testing, you can push the offer to Go live where app validations
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Publish the app with SaaS offer](publish-saas-offer-app)
+> [Publish the app with SaaS offer](publish-saas-offer-app.md)
 
 ## See also
 
