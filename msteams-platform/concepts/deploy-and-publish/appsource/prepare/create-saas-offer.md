@@ -1,5 +1,5 @@
 ---
-title: Create your SaaS offer
+title: Create a SaaS offer
 description: Learn how to create a SaaS offer in Partner Center and configure the offer, Also, create an offer plan for the third-party apps purchased from Teams storefront and submit the offer for validation.
 author: v-preethah
 ms.author: surbhigupta

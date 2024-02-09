@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 03/21/2023
 ---
 
-# Plan your SaaS offer
+# Plan a SaaS offer
 
 :::row:::
    :::column:::
