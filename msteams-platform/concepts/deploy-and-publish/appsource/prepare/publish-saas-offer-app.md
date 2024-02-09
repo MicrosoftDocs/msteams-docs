@@ -107,7 +107,7 @@ The SaaS app with suitable offers is available in the Microsoft Teams Store and 
 
 Microsoft manages licenses on your behalf if you opted for the same during offer configuration. After the subscription activation, the user is redirected from the landing page to Teams license management.
 
-For more information on license management, see [manage app licenses](end-user-purchase-experience.md#license-management-experience).
+For more information on license management, see [manage app licenses](end-user-purchase-experience.md#license-management).
 
 ## Remove a SaaS offer from your app
 
