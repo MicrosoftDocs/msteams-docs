@@ -28,26 +28,22 @@ ms.date: 04/06/2023
    :::column-end:::
 :::row-end:::
 
-SaaS offers allows you to license software solutions to customers through subscriptions. To sell your SaaS apps in Microsoft Teams Store, you must create an offer in Microsoft Partner Center. For any offer created, you must add suitable plans that provide various subscription options. The users can select a suitable subscription that best suits their requirements.
+Software as a Service (SaaS) offers allow you to license software solutions to customers through subscriptions. To sell your SaaS apps in Microsoft Teams Store, you must create an offer in Microsoft Partner Center. For any offer created, you must add suitable plans that provide various subscription options. The users can select a suitable subscription that best suits their requirements.
 
 > [!NOTE]
 > You must have a [commercial marketplace account in Partner Center](/partner-center/create-account) to create offers.
 
 The following table provides the three phases to create an offer and the steps involved in each phase:
 
-| [Create an offer](#create-an-offer-in-partner-center) | [Configure the offer](#configure-your-saas-offer) | [Create a plan](#create-a-plan) |
+| [1. Create an offer](#create-an-offer-in-partner-center) | [2. Configure the offer](#configure-your-saas-offer) | [3. Create a plan](#create-a-plan) |
 | --- | --- | --- |
-| Provide the following details <br> - Offer ID <br> - Offer alias | - [Offer setup](#offer-setup) <br> - [Microsoft License Management](#set-up-microsoft-license-management) <br> - [Offer properties](#set-up-the-offer-properties) <br> - [Offer listing](#set-up-offer-details) <br> - [Preview audience](#set-the-preview-audience) <br> - [Technical configuration](#add-the-technical-information) | Provide the following details <br> - Plan ID <br> - Plan name <br> - Pricing model <br> - Free trail |
+| Provide the following details: <br> - Offer ID <br> - Offer alias | - [Offer setup](#offer-setup) <br> - [Microsoft License Management](#set-up-microsoft-license-management) <br> - [Offer properties](#set-up-the-offer-properties) <br> - [Offer listing](#set-up-offer-details) <br> - [Preview audience](#set-the-preview-audience) <br> - [Technical configuration](#add-the-technical-information) | Provide the following details: <br> - Plan ID <br> - Plan name <br> - Pricing model <br> - Free trail |
 
 ## Create an offer in Partner Center
 
 1. Sign in to [Partner Center](https://partner.microsoft.com/dashboard/home).
 
-   :::image type="content" source="~/assets/images/first-party-license-mgt/partner-center-home-page.png" alt-text="Screenshot shows how to sign in to the Partner Center account.":::
-
 1. On the **Home** page, select **Marketplace offers**.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/home-page.png" alt-text="Screenshot shows the home page and Marketplace offer tab in the Partner Center.":::
 
 1. From the left pane, select **Overview**.
 
@@ -59,8 +55,6 @@ The following table provides the three phases to create an offer and the steps i
 
    > [!NOTE]
    > If you're creating an offer for testing, append **-ISVPILOT** to Offer alias. This informs the certification team that the offer is for testing purposes. Microsoft periodically deletes offers with **-ISVPILOT**. Therefore, refrain from using this tag for reasons other than testing.
-
-   :::image type="content" source="~/assets/images/first-party-license-mgt/saas.png" alt-text="Screenshot shows how to enter Offer ID and Offer alias in the Partner Center.":::
 
 1. Select **Create**. The offer is created and you can continue to configure the offer.
 
@@ -95,8 +89,6 @@ If you decide to sell through Microsoft, you must further select if you want to 
 1. If you would like Microsoft to manage customer licenses for you, select **Yes, I would like Microsoft to manage customer licenses on my behalf**.
 
 1. If you want to manage customer licenses yourself, select **No, I would prefer to manage customer licenses myself**.
-
-    :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Screenshot shows the offer setup page to set up license to manage for your app within Teams.":::
 
     > [!NOTE]
     >
@@ -225,10 +217,8 @@ We recommended to test the offer with the given preview links before you publish
 
 ## See also
 
-* [Monetize your app](monetize-overview.md)
 * [Create plans for SaaS offer](/partner-center/marketplace/create-new-saas-offer-plans)
 * [Test and publish SaaS offer](/partner-center/marketplace/test-publish-saas-offer)
 * [Configure properties](/partner-center/marketplace/create-new-saas-offer-properties)
 * [Configure offer listing](/partner-center/marketplace/create-new-saas-offer-listing)
 * Configure [preview audience](/partner-center/marketplace/create-new-saas-offer-preview) and [technical details](/partner-center/marketplace/create-new-saas-offer-technical)
-* [Test and publish SaaS offer](/partner-center/marketplace/test-publish-saas-offer)

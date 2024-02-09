@@ -117,9 +117,13 @@ Upon successful testing, you can push the offer to Go live where app validations
 |-----------------|-----------------|----------------|----------------|----------------|
 | Tab app monetization | This is a sample tab application that shows how to open a purchase dialog and trigger purchase flow using Teams JS SDK.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-app-monetization/nodejs/demo-manifest/tab-app-monetization.zip)|
 
+## Next step
+
+> [!div class="nextstepaction"]
+> [Publish the app with SaaS offer](publish-saas-offer-app)
+
 ## See also
 
-* [Monetize your app](monetize-overview.md)
 * [Preview creation phase](/azure/marketplace/review-publish-offer)
 * [Preview and subscribe](/partner-center/marketplace/test-saas-preview-offer)
 * [Unsubscribe from a test plan](/partner-center/marketplace/test-saas-unsubscribe)

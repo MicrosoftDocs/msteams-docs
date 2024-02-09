@@ -67,7 +67,7 @@ The following example shows how users can assign and unassign licenses for third
 
 1. Select **Apps** > **Manage your apps**.
 
-    :::image type="content" source="../../../../assets/images/saas-offer/client-experience.png" alt-text="Screenshot shows the apps screen to select the manage your apps option highlighted in red.":::
+    :::image type="content" source="../../../../assets/images/saas-offer/client-experience.png" alt-text="Screenshot shows the apps screen to select the manage your apps option highlighted in red." lightbox="../../../../assets/images/saas-offer/client-experience-lightbox.png":::
 
 1. Select **Subscriptions**. A tab appears with a list of purchases made in the tenant.
 

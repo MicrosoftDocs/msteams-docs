@@ -135,7 +135,6 @@ By integrating APIs and constructing a landing page to manage subscriptions, you
 
 ## See also
 
-* [Monetize your app](monetize-overview.md)
 * [SaaS app listing requirements](/partner-center/marketplace/marketplace-criteria-content-validation)
 * [Create a commercial marketplace account in Partner Center](/partner-center/create-account)
 * [Technical requirements](/partner-center/marketplace/plan-saas-offer)

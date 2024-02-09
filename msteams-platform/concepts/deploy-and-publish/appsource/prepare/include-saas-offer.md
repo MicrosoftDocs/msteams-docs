@@ -28,7 +28,7 @@ ms.date: 03/21/2023
    :::column-end:::
 :::row-end:::
 
-To monetize your SaaS app, it's important that you understand the features of a SaaS offer. Here's a brief overview of the features in an offer that aids you to plan better.
+To monetize your Software as a Service (SaaS) app, it's important that you understand the features of a SaaS offer. Here's a brief overview of the features in an offer that aids you to plan better.
 
 The key features are:
 
@@ -161,7 +161,6 @@ For comprehensive guidance on planning the offer, see [how to plan a SaaS offer 
 
 ## See also
 
-* [Monetize your app](monetize-overview.md)
-* [Validation guidelines for apps linked to SaaS offer](teams-store-validation-guidelines.md#apps-linked-to-saas-offer)
+* [Plan a SaaS offer](/partner-center/marketplace/plan-saas-offer)
 * [Marketplace categories and industries](/partner-center/marketplace/marketplace-categories-industries)
 * [Plans and pricing for commercial marketplace offers](/partner-center/marketplace/plans-pricing)
