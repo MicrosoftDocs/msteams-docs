@@ -170,10 +170,6 @@ To learn more about the directory structure of different types of scenario-based
 
 ::: zone pivot="visual-studio-code-v4"
 
-## Create a new Teams project using Teams Toolkit
-
-In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code and Visual Studio.
-
 ## Create a new Teams project for Visual Studio Code
 
 You can build a new Teams project by selecting **Create a new Teams app** in Teams Toolkit. You can create the following types of apps in Teams Toolkit:
