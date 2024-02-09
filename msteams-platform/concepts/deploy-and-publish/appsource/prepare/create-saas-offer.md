@@ -78,7 +78,7 @@ To sell through Microsoft and have Microsoft facilitate transactions for you,
 
 1. Select **Yes, I would like to sell through Microsoft and have Microsoft host transactions on my behalf**.
 
-        :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Screenshot shows the offer setup page to set up license to manage for your app within Teams.":::
+    :::image type="content" source="~/assets/images/first-party-license-mgt/saas-isvpilot.png" alt-text="Screenshot shows the offer setup page to set up license to manage for your app within Teams.":::
 
 To manage transactions independently,
 
@@ -207,7 +207,7 @@ After you create one or more plans, you can view the list of plans on the **Plan
 
    :::image type="content" source="~/assets/images/first-party-license-mgt/list-of-plans-created.png" alt-text="Screenshot shows plan listing page with service ID, pricing model, availability, status and action.":::
 
-Copy the service ID of the plan to [integrate with usageRights Graph API](prerequisites.md#integrate-with-graph-usagerights-api) to manage user permissions at the time of app launch.
+Copy the service ID of the plan to [integrate with usageRights Graph API](prerequisites.md#integrate-with-usagerights-graph-api) to manage user permissions at the time of app launch.
 
 ## Submit the offer
 

@@ -93,7 +93,7 @@ After linking the offer to your app, you can submit your monetized app through P
 
 Once published, users can view the **Buy a subscription** option in the app details dialog when they try to add your app to Teams.
 
-image
+:::image type="content" source="~/assets/images/saas-offer/buysubscriptionplan.png" alt-text="Screenshot shows buying the subscription for the selected app.":::
 
 The SaaS app with suitable offers is available in the Microsoft Teams Store and the marketplace for purchase where the users can purchase subscriptions.
 
@@ -113,11 +113,11 @@ For more information on license management, see [manage app licenses](end-user-p
 
 If you decide to unlink your SaaS offer from the app, follow these steps:
 
-1. Go to the [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
+1. Sign in to [Developer Portal](https://dev.teams.microsoft.com/) and select **Apps**.
 1. On the **Apps** page, select the app you're removing the offer from.
 1. Go to the **Plans and pricing** page and select **Revert**.
 
-After unlinking the offer, do the following steps to update your store listing:
+After unlinking the offer, perform the following steps to update your store listing:
 
 1. Select **Distribute** > **Publish to the Teams store**.
 1. Select **Open Partner Center** to begin the process of republishing your app without the offer.

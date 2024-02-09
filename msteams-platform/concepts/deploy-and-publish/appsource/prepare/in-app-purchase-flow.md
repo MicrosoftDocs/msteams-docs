@@ -10,7 +10,7 @@ ms.date: 01/31/2023
 
 # Configure in-app purchases
 
-Microsoft Teams provides APIs to implement in-app purchases, allowing users to upgrade from free to paid plans within your app. The in-app purchase option is applicable only if the app is enabled with a transactable SaaS offer.
+In-app purchases are upgrade options where users can upgrade from free to paid plans within your app. Microsoft Teams provides APIs to implement in-app purchases. The in-app purchase option is applicable only if the app is enabled with a transactable SaaS offer.
 
 Users can buy new paid subscriptions through in-app purchases. However, they can't purchase additional or different licenses with existing paid subscriptions. To change plans, users must first cancel their current subscription before acquiring a new plan through in-app purchases.
 
@@ -21,7 +21,7 @@ Users can buy new paid subscriptions through in-app purchases. However, they can
 
 To facilitate an in-app purchase experience for your app users, ensure the following prerequisites are met:
 
-* The app is built with [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js).
+* The app is built using [Microsoft Teams JavaScript client library (TeamsJS)](https://github.com/OfficeDev/microsoft-teams-library-js).
 
 * The app is enabled with a transactable [SaaS offer](~/concepts/deploy-and-publish/appsource/prepare/include-saas-offer.md).
 
@@ -29,11 +29,14 @@ To facilitate an in-app purchase experience for your app users, ensure the follo
 
 * The app is invoked with [`openPurchaseExperience` API](#purchase-experience-api).
 
-You can activate the in-app purchase experience either by updating `manifest.json` file or by enabling **Show in-app purchase offers** in the **Permissions** section of **Developer Portal**.
+You can activate the in-app purchase experience through one of the following ways:
+
+* Update `manifest.json` file.
+* Enable **Show in-app purchase offers** in the **Permissions** section of **Teams Developer Portal**.
 
 ### Update manifest
 
-To enable the in-app purchase experience, update your Teams app `manifest.json` file by adding the RSC permissions. It allows your app users to upgrade to a paid version of your app and access new features. The update for app manifest is as follows:
+To enable the in-app purchase experience, update your Teams app `manifest.json` file by adding the [RSC permissions](../../../../graph-api/rsc/grant-resource-specific-consent.md). It allows your app users to upgrade to a paid version of your app and access new features. Update the app manifest as given in the following code snippet:
 
 ```json
 
@@ -51,11 +54,9 @@ To enable the in-app purchase experience, update your Teams app `manifest.json` 
 
 ### Purchase Experience API
 
-To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app.
+To trigger in-app purchase for the app, invoke the `openPurchaseExperience` API from your web app. The following code snippet is an example of calling the API from the Teams app built using TeamsJS:
 
-The following code snippet is an example of calling the API from the Teams app built using TeamsJS:
-
-# [TeamsJS V2](#tab/jsonV2)
+# [TeamsJS v2](#tab/jsonV2)
 
 ```json
 <div>
@@ -75,7 +76,7 @@ The following code snippet is an example of calling the API from the Teams app b
 </script>
 ```
 
-# [TeamsJS v1](#tab/jsonV11)
+# [TeamsJS v1](#tab/jsonV1)
 
 ```json
 <div> 
@@ -106,3 +107,4 @@ The following code snippet is an example of calling the API from the Teams app b
 
 * [Monetize your app](monetize-overview.md)
 * [App Manifest](../../../../resources/schema/manifest-schema-dev-preview.md)
+* [RSC permissions](../../../../graph-api/rsc/resource-specific-consent.md)

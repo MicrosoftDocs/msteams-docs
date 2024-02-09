@@ -35,7 +35,7 @@ The key features are:
 * [Publishing option](#publishing-option)
 * [Offer details](#offer-details)
 * [Offer plan](#offer-plan)
-* [Additional SaaS offer features](#additional-saas-offer-features)
+* [Other SaaS offer features](#other-saas-offer-features)
 
 ## Publishing option
 
@@ -95,7 +95,7 @@ Customers can share their contact details and request that you contact them abou
     :::column-end:::
 :::row-end:::
 
-You can further allow Microsoft to manage licenses on your behalf. If you select Microsoft to manage licenses, you must [integrate the offer with Microsoft Graph APIs](prerequisites.md#integrate-with-graph-usagerights-api) to verify customer eligibility.
+You can further allow Microsoft to manage licenses on your behalf. If you select Microsoft to manage licenses, you must [integrate the offer with Microsoft Graph APIs](prerequisites.md#integrate-with-usagerights-graph-api) to verify customer eligibility.
 
 Based on the listing option, you must fulfill the technical requirements. For more information, see [prerequisites to create a SaaS offer](prerequisites.md).
 
@@ -114,7 +114,7 @@ Offer details are the basic information available on the offer's landing page. T
 
 ## Offer plan
 
-SaaS offers published through commercial marketplace must have at least one plan added to the offer. The plan features facilitate appropriate purchase options for the target users.
+SaaS offers, published through commercial marketplace, must have at least one plan added to the offer. The plan features facilitate appropriate purchase options for the target users.
 
 ### Plan the subscription model
 
@@ -142,13 +142,13 @@ The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) def
 > * An offer can have only one pricing model. For example, a SaaS offer can't have one plan that's a flat rate and another plan that's per user.
 > * The pricing model and billing terms can’t be changed once the offer is published.
 
-## Additional SaaS offer features
+## Other SaaS offer features
 
 In addition to the basic and essential planning, you can provide more features to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers.
 
 | Category |Description|
 |---|---|
-| Free trails | When selling through Microsoft, you can provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period. This is different from the free trail in the listing option. |
+| Free trails | When selling through Microsoft, you can provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period. Free trail in SaaS offer is different from the free trail in the listing option. |
 | Test drive | When selling through Microsoft, you can add test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer). |
 | Mobile version | To adhere to third-party app store policies, your app mustn't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the [related commercial marketplace certification policies](/legal/marketplace/certification-policies). |
 
