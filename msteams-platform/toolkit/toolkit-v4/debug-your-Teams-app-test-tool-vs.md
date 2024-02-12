@@ -41,8 +41,8 @@ The following are the advantages of Test Tool:
 
 Ensure you install the following tools for building and deploying your bots in Test Tool:
 
-| &nbsp; | Install | For using... |
-| --- | --- | --- |
+| Install | For using... |
+| --- | --- |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. |
 | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
 | [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
@@ -57,7 +57,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/create-new-project-vs.png" alt-text="Screenshot shows the selection to create a new project.":::
 
-1. In the search box, enter **Microsoft Teams App**. From the search results, select **Microsoft Teams App**.
+1. In the search box, enter **Microsoft Teams**. From the search results, select **Microsoft Teams App**.
 
 1. Select **Next**.
 
