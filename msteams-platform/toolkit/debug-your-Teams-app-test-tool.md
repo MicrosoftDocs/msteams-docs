@@ -118,13 +118,13 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Install Teams App Test Tool CLI from `npm`:
 
-    ```bash
+    ```cmd
     npm install -g @microsoft/teams-app-test-tool
     ```
 
 1. Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
 
-    ```bash
+    ```cmd
     teamsapp new   
     ```
 
@@ -143,19 +143,19 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Install required dependencies and npm packages.
 
-    ```bash
+    ```cmd
     teamsapp deploy --env=testtool
     ```
 
 1. Start your bot app:
 
-    ```bash
+    ```cmd
     npm run dev:teamsapp:testtool
     ```
 
 1. In a separate terminal, initiate the Teams App Test Tool:
 
-    ```bash
+    ```cmd
     npm run dev:teamsapp:launch-testtool
     ```
 
@@ -173,7 +173,7 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
 1. Run the following command to launch profile:
 
-    ```bash
+    ```cmd
     dotnet run --launch-profile "Teams App Test Tool (browser)"
     ```
 
@@ -181,13 +181,13 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
     1. For Command Prompt:
 
-        ```bash
+        ```cmd
         set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
         ```
 
     1. For PowerShell:
 
-        ```bash
+        ```powershell
         $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
         ```
 
@@ -201,7 +201,7 @@ Run the following commands in the directory that contains `teamsapp.yml` file:
 
     1. For PowerShell:
 
-        ```bash
+        ```powershell
         teamsapptester.exe start
         ```
 
