@@ -56,12 +56,33 @@ Add JavaScript code snippet to the tab app to:
 The following code snippet shows an example of calling `getAuthToken()`.
 
 ```javascript
-microsoftTeams.initialize();
-var authTokenRequest = {
-  successCallback: function(result) { console.log("Success: " + result); },
-  failureCallback: function(error) { console.log("Error getting token: " + error); }
-};
-microsoftTeams.authentication.getAuthToken(authTokenRequest);
+microsoftTeams.app.initialize().then(() => {
+    getClientSideToken()
+        .then((clientSideToken) => {
+            return getServerSideToken(clientSideToken);
+        })
+        .then((profile) => {
+            return useServerSideToken(profile);
+        })
+        .catch((error) => {
+            ...
+        })
+}
+
+    function getClientSideToken() {
+
+        return new Promise((resolve, reject) => {
+            display("1. Get auth token from Microsoft Teams");
+            
+            microsoftTeams.authentication.getAuthToken().then((result) => {
+                display(result);
+
+                resolve(result);
+            }).catch((error) => {
+                reject("Error getting token: " + error);
+            });
+        });
+    }
 ```
 
 You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
@@ -131,21 +152,41 @@ If you need to pass the access token to get Microsoft Graph data, see [Extend ta
 The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method. The `GET` is sufficient to send the access token when you're not writing to the server.
 
 ```javascript
-$.ajax({
-    type: "POST",
-    url: "/api/DoSomething",
-    headers: {
-        "Authorization": "Bearer " + accessToken
-    },
-    data: { /* some JSON payload */ },
-    contentType: "application/json; charset=utf-8"
-}).done(function (data) {
-    // Handle success
-}).fail(function (error) {
-    // Handle error
-}).always(function () {
-    // Cleanup
-});
+function getServerSideToken(clientSideToken) {
+        return new Promise((resolve, reject) => {
+            microsoftTeams.app.getContext().then((context) => {
+                fetch('/getProfileOnBehalfOf', {
+                    method: 'post',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        'tid': context.user.tenant.id,
+                        'token': clientSideToken
+                    }),
+                    mode: 'cors',
+                    cache: 'default'
+                })
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        reject(response.error);
+                    }
+                })
+                .then((responseJson) => {
+                    if (responseJson.error) {
+                        reject(responseJson.error);
+                    } else {
+                        const profile = responseJson;
+
+                        resolve(profile);
+                    }
+                });
+            });
+        });
+    }
+
 ```
 
 ### Validate the access token
