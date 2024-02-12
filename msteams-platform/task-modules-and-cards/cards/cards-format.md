@@ -520,12 +520,15 @@ The `hostWidth` property allows the host application to define the width it prov
 The following images show how an Adaptive Card renders when you set the `targetWidth` property to specific values:
 
 **`targetWidth`: `wide`**
+
 :::image type="content" source="../../assets/images/Cards/responsive-ac-wide.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to wide.":::
 
 **`targetWidth`: `narrow`**
+
 :::image type="content" source="../../assets/images/Cards/responsive-ac-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to narrow.":::
 
 **`targetWidth`: `very narrow`**
+
 :::image type="content" source="../../assets/images/Cards/responsive-ac-very-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to very narrow.":::
 
 #### Sample Adaptive Card responsive layout
