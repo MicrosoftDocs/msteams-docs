@@ -60,6 +60,42 @@ Perform the following the steps to select templates and app capbaility:
 
 You can save time and let the toolkit automatically register the app in Teams Developer Portal. When you first run or debug the app, Teams Toolkit automatically registers the Teams app to your Microsoft 365 tenant and configures settings such as Microsoft Entra ID for your Teams app. Sign in with your Microsoft 365 account to control where the app is configured and customize the Microsoft Entra manifest.
 
+### CodeLens to trigger Teams Toolkit lifecycle
+
+The Teams Toolkit provides developers with lifecycle actions and access to configuration definitions in the teamsapp.yml file. You can now preview and trigger these predefined lifecycle actions using the CodeLens feature in the teamsapp.yml file.
+
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/codelens-trigger-teams-toolkit.png" alt-text="Screenshot shows the lefwcyscle access amd access through codelens in teamsapp.yml file.":::
+
+### Teams Toolkit Documentations
+
+To access the Teams Toolkit documentation, follow these steps: 
+
+1. Select **Project** > **Teams Toolkit**.
+
+1. Select **Teams Toolkit Documentation** to view the docuemantation in web page.
+
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-documentation.png" alt-text="Screenshot shows the option to select and view the documentation.":::
+
+### Copilot plugin
+
+This version of Teams Toolkit added several preview features to support developing for Microsoft Copilot. Turn on the preview feature flag to try out the new features.
+
+The latest version of Teams Toolkit is added severak preview features to support developing for Microsoft Copilot. To enable the preview feature flag, follow these steps:
+
+1. Select **Tools** > **Options...**.
+
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-tools-option.png" alt-text="Screenshot shows the selection of Options under Tools menu.":::
+
+A pop up window appears.
+
+1. Enter **Copilot**, select **Preview Features**.
+
+1. Select the Check box **Teams Toolkit: Develop Copilot Plugin (requires restart)**.
+
+1. Select **OK**.
+
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of Copilot plugin from preview featue.":::
+
 #### TeamsFx .NET SDK reference
 
 * [Microsoft.Extensions.DependencyInjection Namespace](/../dotnet/api/Microsoft.Extensions.DependencyInjection)
