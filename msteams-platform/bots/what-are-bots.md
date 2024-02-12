@@ -49,6 +49,19 @@ With Microsoft Graph APIs for calls and online meetings, Teams apps can now inte
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
+Following are the three ways by which you can add or update the bot icon and other bot information:
+
+1. From your bot settings in [Azure portal](/azure/bot-service/bot-service-manage-overview#settings).
+
+   If you update your bot icon from the bot settings in Azure, this updates the conversation bot icon and the bot icon that displays when you send your new message from the Compose Area in Teams where you bot has installed.
+   This does not update the bot's profile or app image. These must be updated from a new manifest.
+
+2. Using app [manifest](/resources/schema/manifest-schema.md#icons) used for loading a custom app.
+
+3. Once you uploaded the app in Teams Admin Center, you can update the bot icon through the [Teams admin center.](/microsoftteams/customize-apps#customize-an-app)
+
+Bot Icon is cached until user signs out and sign in again.
+
 ## Add SSO authentication to your conversation bots
 
 You can add single sign-on authentication to your conversation bot using the following steps:
