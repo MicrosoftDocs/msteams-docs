@@ -68,7 +68,6 @@ Teams platform features that are available to all app developers.
 |17/11/2023|Introduced Teams App Test Tool that streamlines the debug process of bot-based apps.|Tools and SDKs > Tools > Teams Toolkit for Visual Studio Code > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Teams app Test Tool](toolkit/debug-your-Teams-app-test-tool.md) |
 |14/11/2023|Use callRecording API to fetch meeting recording from all meetings.|Build apps for Teams meetings and calls > [Get meeting transcripts and recordings using Graph APIs](graph-api/meeting-transcripts/overview-transcripts.md)|
 |14/11/2023|Branding update. Azure Active Directory (Azure AD) is referred to as Microsoft Entra ID.||
-|03/11/2023|Introduced systemDefault reserved activity type for send activity feed notifications.| Build tabs > [Send activity feed notifications](tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications)|
 |03/11/2023|Apps for Teams meetings are available in GCC-High environment.|[Build apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md)|
 |25/10/2023|Configure your bot to receive meeting participant events. | Build apps for Teams meetings and calls > Enable and configure apps for Teams meetings > [Meeting apps APIs](apps-in-teams-meetings/meeting-apps-apis.md#receive-meeting-participant-events)|
 |11/10/2023|Introduced the new Microsoft Teams client to provide better experience for your apps and users. | Resources > [Introducing the new Microsoft Teams client](resources/teams-updates.md)|
@@ -378,16 +377,29 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 January**
+**2024 February**
 
-* ***January 25, 2024***: [Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content](m365-apps/actions-in-m365.md).
+* ***February 12, 2024***: [Build API-based message extension using Developer Protal for Teams.](messaging-extensions/build-api-based-message-extension.md)
 
-* ***January 12, 2024***: [Introduced Teams Toolkit command line interface v3.](toolkit/Teams-Toolkit-CLI.md)
+* ***February 06, 2024***: [Introduced systemDefault reserved activity type for send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis).
 
 :::column-end:::
 :::row-end:::
 
 <br>
+
+<details>
+
+<summary><b>2024</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+|25/01/2024| Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content. | Extend your app across Microsoft 365 > [Actions in Microsoft 365](m365-apps/actions-in-m365.md)|
+|12/01/2024| Introduced Teams Toolkit command line interface v3. | Tools and SDKs > Tools > [Teams Toolkit command line interface](toolkit/Teams-Toolkit-CLI.md)|
+
+</details>
+</br>
+
 <details>
 <summary><b>2023</b></summary>
 
@@ -453,6 +465,8 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 :::column span="2":::
 
 Teams platform features that aren't available.
+
+* ***February 07, 2024***: Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
 * ***February 02, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to *cloud.microsoft* domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before June 2024 to ensure continued functionality.
 
