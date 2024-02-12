@@ -41,6 +41,9 @@ The following are the key features of Teams Toolkit:
 
 * [Project templates](#project-templates)
 * [Automatic registration and configuration](#automatic-registration-and-configuration)
+* [CodeLens to trigger Teams Toolkit lifecycle](#codelens-to-trigger-teams-toolkit-lifecycle)
+* [Teams Toolkit Documentation](#teams-toolkit-documentation)
+* [Copilot plugin](#copilot-plugin)
 
 ### Project templates
 
@@ -66,7 +69,7 @@ The Teams Toolkit provides developers with lifecycle actions and access to confi
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/codelens-trigger-teams-toolkit.png" alt-text="Screenshot shows the lefwcyscle access amd access through codelens in teamsapp.yml file.":::
 
-### Teams Toolkit Documentations
+### Teams Toolkit Documentation
 
 To access the Teams Toolkit documentation, follow these steps: 
 
