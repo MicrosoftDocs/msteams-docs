@@ -415,7 +415,7 @@ For more information on responding to the initial `fetchTask` event, see [respon
 
 ### Respond to botMessagePreview send
 
-After the user selects the **Send**, you receive a `composeExtensions/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service must create and send a proactive message with the Adaptive Card to the conversation, and also reply to the invoke.
+After the user selects the **Send**, you receive a `composeExtensions/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service must create and send a message with the Adaptive Card to the conversation, and also reply to the invoke.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -559,18 +559,31 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
 # [C#/.NET](#tab/dotnet-1)
 
 ```csharp
-    OnBehalfOf = new []
-    {
-      new
-      {
-        ItemId = 0,
-        MentionType = "person",
-        Mri = turnContext.Activity.From.Id,
-        DisplayName = turnContext.Activity.From.Name
-      }  
-    }
+channelData: {
+    onBehalfOf: [ {
+        itemId: 0,
+            mentionType: 'person',
+            mri: context.activity.from.id,
+            displayName: context.activity.from.name
+    } ]
+}
 
 ```
+
+# [JavaScript/Node.js](#tab/javascript-1)
+
+```javascript
+channelData: {
+    onBehalfOf: [ {
+        itemId: 0,
+            mentionType: 'person',
+            mri: context.activity.from.id,
+            displayName: context.activity.from.name
+    } ]
+}
+
+```
+
 
 # [JSON](#tab/json-1)
 
