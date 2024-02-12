@@ -48,7 +48,3 @@ The Microsoft Teams JavaScript library (TeamsJS) for navigation within your tab,
 * Check for markdownlint errors.
 * Table with just a row isn't really needed. Provide the content without tabulating it.
 --->
-
-## See also
-
-[Integrate web apps](../../samples/integrate-web-apps-overview.md)
