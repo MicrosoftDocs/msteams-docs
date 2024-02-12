@@ -263,7 +263,7 @@ The following table lists the parameters available for `teamsapp package`:
 |:----------------  |:-------------|:-------------|
 | `--env` | No | Select an existing environment for the project. |
 | `--env-file` | No | Select an .env file that defines the variables to replace in the manifest template file. |
-| `--manifest-file` | No | Select the manifest file path. Defaults to `${folder}/appPackage/manifest.json`. |
+| `--teams-manifest-file` | No | Select the manifest file path. Defaults to `${folder}/appPackage/manifest.json`. |
 | `--output-package-file` | No | Select the output path for the zipped app package. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. |
 | `--output-manifest-file` | No | Select the output path for the manifest file. Defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
 | `--folder -f` | No | Select the root folder of the project. Defaults to `./`. |
@@ -280,7 +280,7 @@ The following table lists the parameters available for `teamsapp validate`:
 |:----------------  |:-------------|:-------------|
 | `--env` | No | Select an existing environment for the project. |
 | `--env-file` | No | Select an .env file that defines the variables to replace in the manifest template file. |
-| `--manifest-file` | No | Select the input Teams app manifest file path. Defaults to `${folder}/appPackage/manifest.json`. |
+| `--teams-manifest-file` | No | Select the input Teams app manifest file path. Defaults to `${folder}/appPackage/manifest.json`. |
 |`--package-file` | No | Select the path for the zipped Teams app package file.|
 |`--output-package-file` | No | Select the path for the output zipped Teams app package file. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`.|
 |`--output-manifest-file` | No | Select the path for the output Teams app manifest file. Defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
@@ -346,7 +346,7 @@ The following table lists the parameters available for `teamsapp publish`:
 |:----------------  |:-------------|:-------------|
 | `--env` | No | Select an environment for the project. |
 | `--env-file` | No | Select an .env file that defines the variables for the manifest template file.|
-| `--manifest-file` | No | Select the path for the input Teams app manifest file. Defaults to `${folder}/appPackage/manifest.json`.|
+| `--teams-manifest-file` | No | Select the path for the input Teams app manifest file. Defaults to `${folder}/appPackage/manifest.json`.|
 |`--package-file` | No | Select the path for the Teams app package zip file.|
 |`--output-package-file` | No | Select the path for the output Teams app package zip file. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`.|
 |`--output-manifest-file` | No | Select the path for the output Teams app manifest file. Defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
@@ -421,7 +421,7 @@ The following table lists the parameters available for `teamsapp update`:
 |:----------------  |:-------------|:-------------|
 | `--env-file` |  | Select an .env file that defines the variables to replace in the manifest template file. |
 | `--folder -f` |  | Select root folder of the project. Defaults to `./` |
-| `--manifest-file` |  | Specifies the Teams app manifest file path. The default value is `./appPackage/manifest.json`. |
+| `--teams-manifest-file` |  | Specifies the Teams app manifest file path. The default value is `./appPackage/manifest.json`. |
 | `--package-file` |  | Specifies the zipped Teams app package file path. |
 | `--output-package-file` |  | Specifies the output zipped Teams app package file path. The default value is `./appPackage/build/appPackage.${env}.zip`. |
 | `--output-manifest-file` |  | Specifies the final output Teams app manifest file path. The default value is `./appPackage/build/manifest.${env}.json`. |
@@ -709,7 +709,7 @@ Build your Teams app into a package for publishing.
 |Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
-| `--manifest-file-path` | No | Select the Teams app manifest template path, defaults to `${folder}/appPackage/manifest.json`. |
+| `--teams-manifest-file` | No | Specifies the Microsoft Teams app manifest template file path, it can be either absolute path or relative path to project root folder, defaults to './appPackage/manifest.json' Default value: "./appPackage/manifest.json". |
 | `--output-zip-path` | No | Select the output path of the zipped app package, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. |
 | `--output-manifest-path` | No | Select the output path of the generated manifest path, defaults to `${folder}/appPackage/build/manifest.${env}.json`. |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
@@ -724,7 +724,7 @@ Preview the current application.
 |:---------------- | :------------- | :------------- |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 | `--env` | No | Select an existing env for the project. Defaults to `local`. |
-| `--manifest-file-path` | No | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`. |
+| `--teams-manifest-file` | No | Select the Teams app `manifest file path`, defaults to `${folder}/appPackage/manifest.json`. |
 | `--run-command` | No | The command to start local service. Work for `local` environment only. If undefined, `teamsfx` uses the auto detected one from project type (`npm run dev:teamsfx` or `dotnet run` or `func start`). If empty, `teamsfx` skips starting local service. |
 | `--running-pattern` | No | The ready signal output that service is launched. Work for `local` environment only. If undefined, `teamsfx` uses the default common pattern ("started/successfully/finished/crashed/failed"). If empty, `teamsfx` treats process start as ready signal. |
 | `--open-only` | No | Work for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
@@ -846,7 +846,7 @@ Update the specific app manifest file.
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
-| `--manifest-file-path` | No | Enter the Microsoft Entra app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
+| `--teams-manifest-file` | No | Enter the Microsoft Entra app manifest template file path, it's a relative path to project root folder, defaults to `./aad.manifest.json`. |
 
 ### Parameters for `teamsfx update teams-app`
 
@@ -854,7 +854,7 @@ Update the specific app manifest file.
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./` |
-| `--manifest-file-path` | No | Enter the Teams app manifest template file path, it's a relative path to project root folder, defaults to `./appPackage/manifest.json`. |
+| `--teams-manifest-file` | No | Enter the Teams app manifest template file path, it's a relative path to project root folder, defaults to `./appPackage/manifest.json`. |
 
 ## `teamsfx upgrade`
 
