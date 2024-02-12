@@ -112,11 +112,22 @@ Yes, you can. Ensure that you have a descriptive app manifest and have uploaded 
 
 </details>
 </br>
+
+<details>
+<summary>What are the validation guilines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365? </summary>
+
+You can review the validation guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365 are available at [Teams Store validation guidelines.](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365)
+
+</details>
+</br>
+
 <details>
 
 <summary> What is the certification process?</summary>
 
-After publishing their plugin, developers opt into the App Compliance flow in Partner Center. If they haven't completed Publisher Verification, they'll be prompted to do so before starting the Microsoft 365 Certification process.  The next step is to complete Publisher Attestation, which collects self-attested information about their plugin, company, and operations. This information is published on a [Microsoft 365 App Compliance Program site](/microsoft-365-app-certification/teams/teams-apps). The developer then starts the Microsoft 365 Certification process by uploading initial documents to help scope the assessment to their plugin and operating environment. Based on the scope, the developer will then be required to provide evidence for specific controls related to application security, operational security, and data handling/privacy. Developers that build on Azure can also use the App Compliance Automation Tool (ACAT). This tool automatically scans their environment and produces evidence for several controls, reducing the developer's manual work.
+After publishing the plugin, start the App Compliance flow in Partner Center. If Publisher Verification is incomplete, ensure that the App Compliance flowis completed before the Microsoft 365 Certification process. Then, complete Publisher Attestation, which gathers self-attested data about the plugin, company, and operations and is available at [Microsoft 365 App Compliance Program site](/microsoft-365-app-certification/teams/teams-apps).
+
+To start the Microsoft 365 Certification process, upload initial documents that define the assessment scope for the plugin and operating environment. Depending on the scope, provide evidence for specific controls related to application security, operational security, and data handling/privacy. If you build your plugin on Azure, you can use the App Compliance Automation Tool (ACAT) to scan the environment and generate evidence for several controls, reducing the manual workload.
 
 </details>
 </br>
@@ -132,4 +143,11 @@ After passing the proactive validation, developers of both existing and new mess
 <summary> How are new plugins certified?</summary>
 
 Developers will be encouraged to certify their new plugin after successfully completing validation.
+</details>
+</br>
+
+<details>
+<summary>How can I create or upgrade a message extension plugin for Copilot for Microsoft 365?</summary>
+
+ You can [create or upgrade a message extension as a plugin in Copilot for Microsoft 365](build-bot-based-plugin.md), to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](high-quality-message-extension.md).
 </details>

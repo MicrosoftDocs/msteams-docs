@@ -97,13 +97,12 @@ App registration is disabled for the user or the user doesn't have enough permis
 
 <summary>Why isn't Microsoft 365 Chat including my plugin in a response?</summary>
 
-Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, make sure you've uploaded the app package to Outlook and interacted with the app, including authentication.
+Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, make sure you've uploaded  the app package to Outlook and interacted with the app, including authentication.
 
-If the problem continues, use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
-<br>
-&nbsp;
+If the problem continues, use the thumbs down indicator in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
 
 </details>
+</br>
 <details>
 
 <summary> What descriptions should I include in app manifest? </summary>
@@ -167,65 +166,70 @@ Here's an example description that work for NPM Finder.
 
 ```
 
-<br>
-&nbsp;
-
 </details>
-
+</br>
 <details>
 
 <summary> Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
 
 Use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
-<br>
-&nbsp;
-</details>
 
+</details>
+</br>
 <details>
 
 <summary> Can I build my own Teams message extension? </summary>
 
-Yes, you can. Ensure that you have a descriptive app manifest and have uploaded the app to Outlook and interacted with it, including authentication.
-<br>
-&nbsp;
+Yes, you can. Ensure that you have a descriptive app manifest and have uploaded the app to Outlook and interacted with it, including authentication.</br>
 </details>
-
+</br>
 <details>
 
-<summary> How can I get my existing Teams message extension to work with Microsoft Copilot for Microsoft 365? </summary>
+<summary> How can I get my existing Teams message extension to work with Microsoft 365 Chat? </summary>
 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.
-<br>
 
-&nbsp;
 </details>
+</br>
+
+<details>
+<summary>What are the validation guilines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365? </summary>
+
+You can review the validation guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365 are available at [Teams Store validation guidelines.](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365)
+
+</details>
+</br>
 
 <details>
 
 <summary> What is the certification process?</summary>
 
-After publishing their plugin, developers opt into the App Compliance flow in Partner Center. If they haven't completed Publisher Verification, they'll be prompted to do so before starting the Microsoft 365 Certification process.  The next step is to complete Publisher Attestation, which collects self-attested information about their plugin, company, and operations. This information is published on a [Microsoft 365 App Compliance Program site](/microsoft-365-app-certification/teams/teams-apps).  The developer then starts the Microsoft 365 Certification process by uploading initial documents to help scope the assessment to their plugin and operating environment. Based on the scope, the developer will then be required to provide evidence for specific controls related to application security, operational security, and data handling/privacy. Developers that build on Azure can also use the App Compliance Automation Tool (ACAT). This tool automatically scans their environment and produces evidence for several controls, reducing the developer's manual work.
-<br>
-&nbsp;
-</details>
+After publishing the plugin, start the App Compliance flow in Partner Center. If Publisher Verification is incomplete, ensure that the App Compliance flowis completed before the Microsoft 365 Certification process. Then, complete Publisher Attestation, which gathers self-attested data about the plugin, company, and operations and is available at [Microsoft 365 App Compliance Program site](/microsoft-365-app-certification/teams/teams-apps).
 
+To start the Microsoft 365 Certification process, upload initial documents that define the assessment scope for the plugin and operating environment. Depending on the scope, provide evidence for specific controls related to application security, operational security, and data handling/privacy. If you build your plugin on Azure, you can use the App Compliance Automation Tool (ACAT) to scan the environment and generate evidence for several controls, reducing the manual workload.
+
+</details>
+</br>
 <details>
 
 <summary> How are plugins certified?</summary>
 
 After passing the proactive validation, developers of both existing and new message extensions that haven't been certified will be encouraged to certify their plugin. This will be communicated through an email confirming their message extension has been validated.
-<br>
-&nbsp;
 </details>
-
+</br>
 <details>
 
 <summary> How are new plugins certified?</summary>
 
 Developers will be encouraged to certify their new plugin after successfully completing validation.
-<br>
-&nbsp;
+</details>
+</br>
+
+<details>
+<summary>How can I create or upgrade a message extension plugin for Copilot for Microsoft 365?</summary>
+
+ You can [create or upgrade a message extension as a plugin in Copilot for Microsoft 365](build-bot-based-plugin.md), to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](high-quality-message-extension.md).
 </details>
 
 ## Live share
