@@ -42,7 +42,7 @@ To enable the public developer preview on Teams desktop or web client:
 
 # [Classic Teams](#tab/classic-teams)
 
-To enable the public developer preview on a Teams desktop or web client:
+To enable the public developer preview on Teams desktop or web client:
 
 1. Enable custom app upload for your developer tenant. For more information, see [enable custom app upload](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading).
 1. Select the **Settings and more** (**...**) next to your user profile.
