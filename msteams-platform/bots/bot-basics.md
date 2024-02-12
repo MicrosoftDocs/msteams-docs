@@ -1,5 +1,5 @@
 ---
-title: Bot activity handlers
+title: Activity handlers for Microsoft Teams bot
 author: surbhigupta
 description: Learn about Microsoft Teams events and activity handlers for messages, channels, teams, members, mentions, auth, card actions using Microsoft Bot Framework SDK.
 ms.topic: conceptual
@@ -10,13 +10,40 @@ ms.date: 01/22/2023
 
 # Bot activity handlers
 
-This document builds on the article on [how bots work](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0&preserve-view=true) in the core [Bot Framework documentation](/azure/bot-service/?view=azure-bot-service-4.0&preserve-view=true). The primary difference between bots developed for Microsoft Teams and the core Bot Framework is in the features provided in Teams.
 
-An activity handler is used to organize the conversational logic for your bot. Activities are handled in two ways using Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions. The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter.
+## Activity handler
+
+An activity handler is an event-driven approach to organize the conversational logic for your bot. Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type.
+
+An activity handler processes activities in two ways, through Teams-specific activity handlers for Teams-specific events and interactions, and through the bot object for general conversational logic.
+
+## Bot logic
+
+The bot object contains the conversational reasoning or logic for a [turn](/azure/bot-service/bot-builder-basics#turn) and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter. The bot logic processes incoming activities from one or more of your bots channels and generates outgoing activities in response. This is still true of bot derived from the Teams activity handler class, which first checks for Teams activities, then passes all other activities to the Bot Framework's activity handler.
+
+`{Sequence or flow chart}`
+
+
+For example, when the bot receives a message activity, the turn handler identifies this incoming activity and forwards it to the `onMessageActivity` handler. As a developer, you place your logic for managing and responding to messages in this `onMessageActivity` handler. Here's a simple code snippet to illustrate this:
+
+```javascript
+this.onMessageActivity(async (context, next) => {
+    // Your logic here
+    await next();
+});
+```
+
+Similarly, you place your logic for managing members added to the conversation in the `onMembersAdded` handler. 
+This handler gets triggered whenever a new member joins the conversation. Here's how you can use the `onMembersAdded` handler:
+
+```javascript
+this.onMembersAdded(async (context, next) => {
+    // Your logic here
+    await next();
+});
+```
 
 ## Teams activity handlers
-
-Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled.
 
 When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
 
@@ -25,25 +52,30 @@ When a bot for Teams receives an activity, it's routed to the activity handlers.
 
 # [C#](#tab/csharp)
 
-Bots are created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `OnMessageActivityAsync` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `OnConversationUpdateActivityAsync`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
+Teams bots created using the Bot Framework. If the bots receive a message activity, then the turn handler receives a notification of that incoming activity. The turn handler then sends the incoming activity to the `OnMessageActivityAsync` activity handler. In Teams, this functionality remains the same. If the bot receives a conversation update activity, then the turn handler receives a notification of that incoming activity and sends the incoming activity to `OnConversationUpdateActivityAsync`. The Teams activity handler first checks for any Teams specific events. If no events are found, it then passes them along to the Bot Framework's activity handler.
 
 In the Teams activity handler class, there are two primary Teams activity handlers, `OnConversationUpdateActivityAsync` and `OnInvokeActivityAsync`. `OnConversationUpdateActivityAsync` routes all conversation update activities and `OnInvokeActivityAsync` routes all Teams invoke activities.
 
-To implement your logic for Teams specific activity handlers, you must override the methods in your bot as shown in the [bot logic](#bot-logic) section. There's no base implementation for these handlers. Therefore, add the logic that you want in your override.
+| Event | Handler | Description |
+| :-- | :-- | :-- |
+| Channel created | `OnTeamsChannelCreatedAsync` | This method can be overridden to handle a Teams channel being created. For more information, see [channel created](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-created) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events). |
 
-The code snippets for Teams activity handlers:
-
-`OnTeamsChannelCreatedAsync`
+<details><summary>Code snippet for `OnTeamsChannelCreatedAsync`</summary>
 
 ```csharp
-
 protected override Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
         {
             // Code logic here
         }
 ```
+</details>
 
-`OnTeamsChannelDeletedAsync`
+| Event | Handler | Description |
+| :-- | :-- | :-- |
+| Channel deleted | `OnTeamsChannelDeletedAsync` | This method can be overridden to handle a Teams channel being deleted. For more information, see [channel deleted](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-deleted) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
+
+
+<details><summary> Code snippet for `OnTeamsChannelDeletedAsync` </summary>
 
 ```csharp
 
@@ -52,8 +84,13 @@ protected override Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, Team
             // Code logic here
         }
 ```
+</details>
 
-`OnTeamsChannelRenamedAsync`
+| Event | Handler | Description |
+| :-- | :-- | :-- |
+| Channel renamed | `OnTeamsChannelRenamedAsync` | This method can be overridden to handle a Teams channel being renamed. For more information, see [channel renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#channel-renamed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
+
+<details><summary>Code snippet for `OnTeamsChannelRenamedAsync` </summary>
 
 ```csharp
 
@@ -62,8 +99,13 @@ protected override Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, Team
    // Code logic here
   }
 ```
+</details>
 
-`OnTeamsTeamRenamedAsync`
+| Event | Handler | Description |
+| :-- | :-- | :-- |
+| teamRenamed | `OnTeamsTeamRenamedAsync` | `return Task.CompletedTask;` This method can be overridden to handle a Teams team being renamed. For more information, see [team renamed](https://aka.ms/azure-bot-subscribe-to-conversation-events#team-renamed) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
+
+<details><summary>Code snippet for `OnTeamsTeamRenamedAsync` </summary>
 
 ```csharp
 
@@ -72,8 +114,13 @@ protected override Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<
    // Code logic here
   }
 ```
+</details>
 
-`OnTeamsMembersAddedAsync`
+| Event | Handler | Description |
+| :-- | :-- | :-- |
+| MembersAdded | `OnTeamsMembersAddedAsync` | This method calls the `OnMembersAddedAsync` method in `ActivityHandler`. The method can be overridden to handle members joining a team. For more information, see [team members added](how-to/conversations/subscribe-to-conversation-events.md#members-added) in [Conversation update events](how-to/conversations/subscribe-to-conversation-events.md#conversation-update-events).|
+
+<details><summary>Code snippet for `OnTeamsMembersAddedAsync`</summary>
 
 ```csharp
 
@@ -82,6 +129,7 @@ protected override Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> team
    // Code logic here
   }
 ```
+</details>
 
 `OnTeamsMembersRemovedAsync`
 

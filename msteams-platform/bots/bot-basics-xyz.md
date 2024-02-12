@@ -8,17 +8,13 @@ ms.author: anclear
 ms.date: 01/22/2023
 ---
 
-
-
-# Understanding and Implementing Bot Activity Handlers in Microsoft Teams
+# Bot activity handlers
 
 Welcome to the comprehensive guide on Bot Activity Handlers in Microsoft Teams. This document provides an in-depth understanding of how bots work in Microsoft Teams, focusing on the unique features that Microsoft Teams offers over the core Bot Framework. 
 
 An activity handler is a key component that manages the conversational flow of your bot. It processes activities in two ways: through Teams-specific activity handlers for Teams-specific events and interactions, and through the bot object for general conversational logic. 
 
 When a bot for Teams receives an activity, it's directed to the appropriate activity handlers. All activities first pass through a base handler, the turn handler, which then calls the specific activity handler needed for the received activity. 
-
-This guide will help you understand how to implement your own logic within Teams-specific activity handlers, and how to handle different types of activities. It's a must-read for developers looking to build or enhance bots for Microsoft Teams. Continue reading to delve deeper into the world of bot activity handlers in Microsoft Teams.
 
 ## Bot Activity Handlers in Microsoft Teams
 
@@ -77,7 +73,8 @@ You can also refer to the following resources for more information:
 ## Conclusion
 
 In conclusion, understanding and implementing bot activity handlers is crucial for creating bots that can interact effectively with users on Microsoft Teams. This guide has provided you with the necessary information and code snippets to implement these handlers in your bot. Remember to refer to the provided resources for further information and guidance. Happy coding!
-Sequence Diagram Result: ```mermaid
+Sequence Diagram Result:
+```mermaid
 sequenceDiagram
     participant TeamsApp as Teams App
     participant TeamsActivityHandler as Teams Activity Handler
