@@ -38,8 +38,6 @@ Here are some scenarios where you can build apps using deep links in Teams:
 
 The Microsoft Teams JavaScript library (TeamsJS) for navigation within your tab, such as navigating to content and information or launching a chat dialog. The TeamsJS typed APIs provide an improved experience and are recommended for Teams apps that may run in other hosts, such as Outlook or Microsoft 365 apps. These APIs also provide a way to check if the host supports the capability being used.
 
-## Limitations
-
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 
 * An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
