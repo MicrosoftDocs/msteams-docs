@@ -116,7 +116,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 <details>
 <summary>What are the validation guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365? </summary>
 
-You can review the validation guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365 are available at [Teams Store validation guidelines.](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365)
+You can read the validation guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365 in the [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365) article.
 
 </details>
 </br>
