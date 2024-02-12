@@ -196,8 +196,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and have uploaded 
 <details>
 <summary>What are the validation guilines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365? </summary>
 
-You can review the validation guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365 are available at [Teams Store validation guidelines.](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365)
-
+You can review the validation guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365 are available at [Teams Store validation guidelines.](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365)
 </details>
 </br>
 
@@ -229,7 +228,7 @@ Developers will be encouraged to certify their new plugin after successfully com
 <details>
 <summary>How can I create or upgrade a message extension plugin for Copilot for Microsoft 365?</summary>
 
- You can [create or upgrade a message extension as a plugin in Copilot for Microsoft 365](build-bot-based-plugin.md), to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](high-quality-message-extension.md).
+ You can [create or upgrade a message extension as a plugin in Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md), to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](messaging-extensions/high-quality-message-extension.md).
 </details>
 
 ## Live share
