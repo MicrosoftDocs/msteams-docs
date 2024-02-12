@@ -494,7 +494,7 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Adaptive Card responsive layout
 
-Adaptive Card responsive layout allows developers to create cards that can adapt to different screen sizes and endpoints. This functionality offers flexibility without the need of new element types, and ensures seamless adaptation to various screen sizes.
+Adaptive Card responsive layout allows you to create cards that can adapt to different screen sizes. It aims better user experience whether you're using a computer screen or a mobile screen. This feature offers flexibility and ensures seamless adaptation to various screen sizes.
 
 #### Construct Adaptive Card responsive layout
 
@@ -517,9 +517,16 @@ The `hostWidth` property allows the host application to define the width it prov
 
 * If you set `targetWidth` to `atLeast:standard`, the element is only visible if the `hostWidth` property is set to `standard` or `wide`.
 
-The following image shows how an Adaptive Card renders when you set the `targetWidth` property to specific values:
+The following images show how an Adaptive Card renders when you set the `targetWidth` property to specific values:
 
-:::image type="content" source="../../assets/images/Cards/responsive-adaptive-card.png" alt-text="Screenshot shows the responsive adaptive card when you set specific values to the target width property.":::
+**`targetWidth`: `wide`**
+:::image type="content" source="../../assets/images/Cards/responsive-ac-wide.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to wide.":::
+
+**`targetWidth`: `narrow`**
+:::image type="content" source="../../assets/images/Cards/responsive-ac-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to narrow.":::
+
+**`targetWidth`: `very narrow`**
+:::image type="content" source="../../assets/images/Cards/responsive-ac-very-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to very narrow.":::
 
 #### Sample Adaptive Card responsive layout
 
