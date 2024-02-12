@@ -18,48 +18,31 @@ Open Stageview Multi-window in Microsoft Teams provides a versatile and immersiv
 
 The Open Stageview Multi-window feature enhances productivity and collaboration by offering developers the flexibility to create more engaging applications and businesses the opportunity to streamline workflows.
 
-## Modes to Open Your App Content
+## Modes to open Stageview Multi-window
 
 The Open Stageview Multi-window offers three modes to open your app content:
 
-:::row:::
-    :::column:::
-        :::image type="content" source="~/assets/images/tab-images/collab-stage-view.png" alt-text="The illustration shows the collaborative stageview.":::
-    :::column-end:::
-    :::column span="2":::
+* Collaborative Stageview
+* Teams Multi-window
+* Stageview Modal
 
-**Collaborative Stageview**
+### Collaborative Stageview
 
-Collaborative Stageview enables multitasking scenarios for your app content in Teams. Users can open and view your app content in a new Teams window, accompanied by a side panel conversation. This allows for meaningful content engagement and collaboration within the same window.
+Collaborative Stageview enables multitasking scenarios for your app content in Teams. Users can open and view your app content in a new Teams window, accompanied by a side panel conversation. This allows for meaningful content engagement and collaboration within the same window. We recommend Collaborative Stageview when user opens content from chat, channel, or channel tab.
 
-    :::column-end:::
-:::row-end:::
+:::image type="content" source="~/assets/images/tab-images/collab-stage-view.png" alt-text="The illustration shows the collaborative stageview.":::
 
-:::row:::
-    :::column:::
-        :::image type="content" source="~/assets/images/tab-images/multi-window.png" alt-text="The illustration shows the multi-window stage view.":::
-    :::column-end:::
-    :::column span="2":::
+### Teams Multi-window
 
-**Teams Multi-window**
+Teams Multi-window is useful for scenarios that require a user to multitask in Teams without the need for collaboration. This opens your content in a new window without a side-panel conversation, allowing your user to focus on the singular task at hand through your app. We recommend Collaborative Stageview when user isn't opening content from personal app.
 
-Teams Multi-window is useful for scenarios that require a user to multitask in Teams without the need for ad-hoc collaboration. This opens your content in a new window without a side-panel conversation, allowing your user to focus on the singular task at hand through your app.
+:::image type="content" source="~/assets/images/tab-images/multi-window.png" alt-text="The illustration shows the multi-window stage view.":::
 
-    :::column-end:::
-:::row-end:::
+### Stageview modal
 
-:::row:::
-    :::column:::
-        :::image type="content" source="~/assets/images/tab-images/modal-view.png" alt-text="The illustration shows the stage view modal.":::
-    :::column-end:::
-    :::column span="2":::
+Stageview modal is a full-screen UI component that can be used to render your app content inside the main Teams window, providing users with a focused experience to engage with your app. It is the default mode when multi-window isn't supported and the only mode available in Teams web client.
 
-**Stageview Modal**
-
-Stageview Modal is a full-screen UI component that can be used to render your app content inside the main Teams window, providing users with a focused experience to engage with your app.
-
-    :::column-end:::
-:::row-end:::
+:::image type="content" source="~/assets/images/tab-images/modal-view.png" alt-text="The illustration shows the stage view modal.":::
 
 ## Ways to invoke Open Stageview Multi-window
 
@@ -75,8 +58,9 @@ Opening Collaborative Stageview from an adaptive card allows users to engage wit
 
 Here's how to invoke Collaborative Stageview:
 
-When the user shares a URL in a Microsoft Teams chat, the bot receives a composeExtensions/queryLink invoke request. The bot returns an Adaptive Card with the type tab/tabInfoAction.
-â€¢ After the user selects the action button on the Adaptive Card, Collaborative Stage View opens based on the content in the Adaptive Card.
+1. When the user shares a URL in a Microsoft Teams chat, the bot receives a composeExtensions/queryLink invoke request. The bot returns an Adaptive Card with the type tab/tabInfoAction.
+
+1. After the user selects the action button on the Adaptive Card, Collaborative Stage View opens based on the content in the Adaptive Card.
 
 The following code sample is an example to create a Collaborative Stageview button in an Adaptive Card:
 
@@ -110,13 +94,28 @@ The following code sample is an example to create a Collaborative Stageview butt
 
 ## Invoke from StageView API
 
-The StageView API from the Microsoft Teams JS Client SDK allows you to open any of the three openModes. If an openMode is not defined, by default the Collaborative Stageview will open with an associated side panel conversation. This side panel conversation will be the same thread from where the Collaborative Stageview was invoked (for example, chat, group chat). A threadId can also be specified (optional), allowing you to define the conversation that's brought into the side panel. The `openMode` parameter can be used to dictate whether content should be opened in Teams Multi-window (popout) or Stageview modal (modal).
+The StageView API from the Microsoft Teams JS Client SDK allows you to open in any one of the Stageview Multi-window experience based on the `openMode` defined. The three values of `openModes` in StageView API are:
 
-The StageView API from the Teams JS Client SDK allows you to open any of the three â€˜openModesâ€™. If an openMode is not defined, by default the Collaborative Stageview will open with an associated sidepanel conversation.
+* `modal`
+* `popout`
+* `popoutWithChat`
 
-For more information, see [StageView module - Teams | Microsoft Learn](https://docs.microsoft.com/en-us/javascript/api/@microsoft/teams-js/stageview?view=msteams-client-js-latest)
+If no value is passed, openMode defaults to â€œpopoutWithChatâ€ (Collaborative Stageview). In the scenario that pop-outs are not supported (e.g., Microsoft Teams in browser), the experience falls back to modal. As such, the fallback hierarchy is popoutWithChat -> popout -> modal.
 
-### StageView API Parameters
+| Input | Result |
+| ---| ---|
+| openMode not defined | Opens by default in Collaborative Stageview |
+| openMode defined as `popoutWithChat` | Opens in Collaborative Stageview |
+| openMode defined as `popout`| Opens in Teams Multi-window |
+| openMode defined as `modal` | Opens in StageView modal |
+
+If an openMode is not defined, by default the Collaborative Stageview will open with an associated side panel conversation.
+
+The `openMode` parameter can be used to dictate whether content should be opened in Teams Multi-window (popout) or Stageview modal (modal).
+
+For more information, see [StageView module](/javascript/api/@microsoft/teams-js/stageview).
+
+### StageView API parameters
 
 | Property name | Type | Character Limit | Description |
 | --- | --- | --- | --- |
@@ -125,54 +124,56 @@ For more information, see [StageView module - Teams | Microsoft Learn](https://d
 | contentUrl | String | 2048 | [Required] This property is the https:// URL that points to the entity UI to be displayed in the Microsoft Teams canvas. |
 | websiteUrl | String | 2048 | [Required] This property is the https:// URL to point at, if a user selects to view in a browser. |
 | threadId | String | 2048 | [Optional] This property defines the conversation shown in the Collaborative Stageview sidepanel. It can contain a chat threadId (channel threadId is not supported). If no value passed, threadId is inherited from the context where Collaborative Stageview is opened. |
-| openMode | String | 2048 | [Optional] This property defines the open behavior for stage content in the Desktop client. It can contain one of three values :â€œmodalâ€, â€œpopoutâ€, and â€œpopoutWithChatâ€. If no value is passed, openMode defaults to â€œpopoutWithChatâ€ (Collaborative Stageview). In the scenario that pop-outs are not supported (e.g., Microsoft Teams in browser), the experience falls back to modal. As such, the fallback hierarchy is popoutWithChat -> popout -> modal . |
+| openMode | String | 2048 | [Optional] This property defines the open behavior for stage content in the Desktop client. |
 
-StageViewParams with no open mode (defaults to Collaborative Stageview):
+* StageViewParams with no open mode (defaults to Collaborative Stageview):
 
-```json
-{
-  "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-  "contentUrl": "https://teams-test-tab.azurewebsites.net",
-  "title": "Test tab ordering",
-  "websiteUrl": "https://teams-test-tab.azurewebsites.net"
-}
-```
+    ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net"
+    }
+    ```
 
-StageViewParams for Stageview modal:
+This side panel conversation will be the same thread from where the Collaborative Stageview was invoked (for example, chat, group chat). A threadId can also be specified (optional), allowing you to define the conversation that's brought into the side panel.
 
-```json
-{
-  "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-  "contentUrl": "https://teams-test-tab.azurewebsites.net",
-  "title": "Test tab ordering",
-  "websiteUrl": "https://teams-test-tab.azurewebsites.net",
-  "openMode": "modal"
-}
-```
+* StageViewParams for Collaborative Stageview:
 
-StageViewParams for Teams Multi-Window:
+    ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+      "openMode": "popoutWithChat"
+    }
+    ```
 
-```json
-{
-  "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-  "contentUrl": "https://teams-test-tab.azurewebsites.net",
-  "title": "Test tab ordering",
-  "websiteUrl": "https://teams-test-tab.azurewebsites.net",
-  "openMode": "popout"
-}
-```
+* StageViewParams for Teams Multi-Window:
 
-StageViewParams for Collaborative Stageview:
+    ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+      "openMode": "popout"
+    }
+    ```
 
-```json
-{
-  "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-  "contentUrl": "https://teams-test-tab.azurewebsites.net",
-  "title": "Test tab ordering",
-  "websiteUrl": "https://teams-test-tab.azurewebsites.net",
-  "openMode": "popoutWithChat"
-}
-```
+* StageViewParams for Stageview modal:
+
+    ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+      "openMode": "modal"
+    }
+    ```
 
 > [!NOTE]
 >
