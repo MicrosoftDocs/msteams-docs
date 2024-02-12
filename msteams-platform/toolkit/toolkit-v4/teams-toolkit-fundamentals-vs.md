@@ -46,7 +46,7 @@ The following are the key features of Teams Toolkit:
 
 You can start with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for custom app built for org scenarios and smart defaults to accelerate your time to production.
 
-Perform the following the steps to select templates and app capbaility:
+Perform the following the steps to select templates and app capability:
 
 1. Select **File > New > Project**.
 
@@ -72,7 +72,7 @@ To access the Teams Toolkit documentation, follow these steps:
 
 1. Select **Project** > **Teams Toolkit**.
 
-1. Select **Teams Toolkit Documentation** to view the docuemantation in web page.
+1. Select **Teams Toolkit Documentation** to view the documentation in web page.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-documentation.png" alt-text="Screenshot shows the option to select and view the documentation.":::
 
@@ -80,13 +80,13 @@ To access the Teams Toolkit documentation, follow these steps:
 
 This version of Teams Toolkit added several preview features to support developing for Microsoft Copilot. Turn on the preview feature flag to try out the new features.
 
-The latest version of Teams Toolkit is added severak preview features to support developing for Microsoft Copilot. To enable the preview feature flag, follow these steps:
+The latest version of Teams Toolkit is added several preview features to support developing for Microsoft Copilot. To enable the preview feature flag, follow these steps:
 
 1. Select **Tools** > **Options...**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-tools-option.png" alt-text="Screenshot shows the selection of Options under Tools menu.":::
 
-A pop up window appears.
+A pop-up window appears.
 
 1. Enter **Copilot**, select **Preview Features**.
 
@@ -94,7 +94,7 @@ A pop up window appears.
 
 1. Select **OK**.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of Copilot plugin from preview featue.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of Copilot plugin from preview feature.":::
 
 #### TeamsFx .NET SDK reference
 
