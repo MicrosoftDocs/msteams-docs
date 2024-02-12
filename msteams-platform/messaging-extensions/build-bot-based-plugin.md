@@ -38,7 +38,7 @@ A plugin allows Copilot for Microsoft 365 to interact directly with third-party 
 
 All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
 
-You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolki CLI, or Developer Portal for Teams and extend the message extension to function as a plugin in Copilot for Microsoft 365.
+You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit CLI, or Developer Portal for Teams and extend the message extension to function as a plugin in Copilot for Microsoft 365.
 
 ## Prerequisites
 
