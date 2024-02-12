@@ -494,7 +494,7 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Adaptive Card responsive layout
 
-Adaptive Card responsive layout allows you to create cards that can adapt to different screen sizes. It aims better user experience whether you're using a computer screen or a mobile screen. This feature offers flexibility and ensures seamless adaptation to various screen sizes.
+Adaptive Card responsive layout allows you to create cards that that adapt to different screen sizes. This feature offers flexibility and ensures seamless adaptation of Adaptive Card to various screen sizes. The new `targetWidth` property makes your cards responsive and ensures better user experience on any device, from mobile to desktop, regardless of the screen size.
 
 #### Construct Adaptive Card responsive layout
 
