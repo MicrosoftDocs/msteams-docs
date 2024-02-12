@@ -65,19 +65,21 @@ You can save time and let the toolkit automatically register the app in Teams De
 
 ### CodeLens to trigger Teams Toolkit lifecycle
 
-The Teams Toolkit provides developers with lifecycle actions and access to configuration definitions in the teamsapp.yml file. You can now preview and trigger these predefined lifecycle actions using the CodeLens feature in the teamsapp.yml file.
+Teams Toolkit provides developers with lifecycle actions and access to configuration definitions in the teamsapp.yml file. You can now preview and trigger these predefined lifecycle actions using the CodeLens feature in the teamsapp.yml file.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/codelens-trigger-teams-toolkit.png" alt-text="Screenshot shows the lefwcyscle access amd access through codelens in teamsapp.yml file.":::
 
 ### Teams Toolkit Documentation
 
-To access the Teams Toolkit documentation, follow these steps: 
+You can view the documentation for Teams Toolkit from Teams Toolkit. To view the documentation follow these steps: 
 
 1. Select **Project** > **Teams Toolkit**.
 
-1. Select **Teams Toolkit Documentation** to view the documentation in web page.
+1. Select **Teams Toolkit Documentation**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-documentation.png" alt-text="Screenshot shows the option to select and view the documentation.":::
+
+A browser window opens to view the documentation.
 
 ### Copilot plugin
 

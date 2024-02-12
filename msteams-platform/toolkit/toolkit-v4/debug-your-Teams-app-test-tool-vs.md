@@ -43,17 +43,9 @@ Ensure you install the following tools for building and deploying your bots in T
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. |
-| &nbsp; | [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
-
-## Understand Test Tool
-
-Test Tool is an npm package that has a CLI command called `teamsapptester`. When you run `teamsapptester start`, it opens a web app on your local machine that emulates the Teams web client and Bot Framework service. This web app doesn't need any cloud resources as it uses mock data to simulate the contextual information of Teams.
-
-To use a Teams bot on Test Tool, you need to provide:
-
-* Message endpoint: A bot message endpoint is the URL that links Test Tool and your bot. You can update the endpoint with the `BOT_ENDPOINT` environment variable or use the default value of `http://localhost:3978/api/messages`.
-* Configuration file (Optional): A configuration file informs Test Tool about your customized contextual information in Teams. The file is named **teamsapptesttool.yml** in the project's root folder. If Teams can't find this file, it uses the default configuration. For more information, see [customize Teams context](#customize-teams-context).
+| [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. |
+| [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the latest version. |
+| [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
 ## Test Tool experience in Visual Studio
 
@@ -83,9 +75,9 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio."::: 
 
-1. Update [OpenAI](https://openai.com/api/) in the `appsettings.TestTool.json`
+1. Update OpenAI ApiKey in the `appsettings.TestTool.json`.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot shows the OpenAI updated.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot shows the OpenAI key updated.":::
 
 1. In the debug dropdown list, select **Teams App Test Tool (browser)**.
 
