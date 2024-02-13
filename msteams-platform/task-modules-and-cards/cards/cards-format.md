@@ -525,7 +525,7 @@ The following are the key elements to create a responsive Adaptive Card:
   | `standard` | The `hostWidth` for chats and channels in desktop. |
   | `wide` | The default value for `hostWidth`. |
 
-  You can add the target width property any element with a prefix to the predefined value that is `atLeast` or `atMost`. When you specify the targetWidth value to a predefined value with a prefix, the elements are displayed or hidden based on the `hostWidth`, providing you with the control over layout responsiveness.
+  You can add the `targetWidth` property to any element with a prefix to the predefined value that is `atLeast` or `atMost`. When you specify the targetWidth value to a predefined value with a prefix, the elements are displayed or hidden based on the `hostWidth`, providing you with the control over layout responsiveness.
 
   The following examples explain how the elements can be made visible or hidden based on the condition with `targetWidth` and `hostWidth`: 
 
