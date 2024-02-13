@@ -53,8 +53,7 @@ Following are the three ways by which you can add or update the bot icon and oth
 
 1. From your bot settings in [Azure portal](/azure/bot-service/bot-service-manage-overview#settings).
 
-   If you update your bot icon from the bot settings in Azure, this updates the conversation bot icon and the bot icon that displays when you send your new message from the Compose Area in Teams where you bot has installed.
-   This does not update the bot's profile or app image. These must be updated from a new manifest.
+   If you update your bot icon from the bot settings in Azure, this updates the conversation bot icon and the bot icon that displays when you send your new message from the Compose Area in Teams where you bot has installed. This does not update the bot's profile or app image. These must be updated from a new manifest.
 
 2. Using app [manifest](/resources/schema/manifest-schema.md#icons) used for loading a custom app.
 
