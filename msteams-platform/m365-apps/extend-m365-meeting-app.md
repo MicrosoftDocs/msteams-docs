@@ -43,7 +43,7 @@ To preview your Teams meeting app in Outlook, you can either build a new meeting
 
 # [Build Teams meeting app for Outlook](#tab/ttk)
 
-You can build a Teams meeting app for Outlook through Teams Toolkit extension for Visual Studio Code. To build a Teams meeting app to preview in Outlook:
+You can build a Teams meeting app for Outlook through the Teams Toolkit extension for Visual Studio Code. To build a Teams meeting app to preview in Outlook:
 
 1. Go to Teams and sign in using your sandbox tenant account.
 
