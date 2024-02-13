@@ -383,6 +383,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 * ***February 13, 2024***: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)
 
+* ***February 12, 2024***: [Build API-based message extension using Developer Protal for Teams.](messaging-extensions/build-api-based-message-extension.md)
+
 * ***February 06, 2024***: [Introduced systemDefault reserved activity type for send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis).
 
 :::column-end:::
