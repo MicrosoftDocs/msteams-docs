@@ -81,22 +81,22 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. To Update 'appsettings.TestTool.json` file, follow either OpenAi or Azure OpenAI steps"
 
-# [OpenAI](#tab/openai)
-
-1. Update OpenAI ApiKey in the `appsettings.TestTool.json` file.
-
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot shows the OpenAI key updated.":::
-
-# [Azure OpenAI](#tab/azureopenai)
-
-1. Update Azure OpenAIApiKey and OpenAIEndpoint in the `appsettings.TestTool.json` file.
-
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool-azureAI.png" alt-text="Screenshot shows the OpenAI key updated.":::
-
-1. Replace model name with model deployment name in `Program.cs` file.
-
-     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/azure-openai-model-deployment-name.png" alt-text="Screenshot shows the AzureOpenAI model deployement name updated.":::
----
+    # [OpenAI](#tab/openai)
+    
+    1. Update OpenAI ApiKey in the `appsettings.TestTool.json` file.
+    
+        :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot shows the OpenAI key updated.":::
+    
+    # [Azure OpenAI](#tab/azureopenai)
+    
+    1. Update Azure OpenAIApiKey and OpenAIEndpoint in the `appsettings.TestTool.json` file.
+    
+        :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool-azureAI.png" alt-text="Screenshot shows the Azure OpenAI key and endpoint updated.":::
+    
+    1. Replace model name with model deployment name in `Program.cs` file.
+    
+         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/azure-openai-model-deployment-name.png" alt-text="Screenshot shows the AzureOpenAI model deployement name updated.":::
+    ---
 
 1. In the debug dropdown list, select **Teams App Test Tool (browser)**.
 
