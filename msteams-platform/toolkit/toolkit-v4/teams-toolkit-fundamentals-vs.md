@@ -42,8 +42,11 @@ The following are the key features of Teams Toolkit:
 * [Project templates](#project-templates)
 * [Automatic registration and configuration](#automatic-registration-and-configuration)
 * [CodeLens to trigger Teams Toolkit lifecycle](#codelens-to-trigger-teams-toolkit-lifecycle)
-* [Teams Toolkit Documentation](#teams-toolkit-documentation)
+* [Teams Toolkit documentation](#teams-toolkit-documentation)
 * [Copilot plugin](#copilot-plugin)
+
+> [!NOTE]
+> CodeLens to trigger Teams Toolkit lifecyscle, Teams Toolkit documentation and Copilot plugin is available in public developer preview.
 
 ### Project templates
 
@@ -65,11 +68,11 @@ You can save time and let the toolkit automatically register the app in Teams De
 
 ### CodeLens to trigger Teams Toolkit lifecycle
 
-Teams Toolkit provides developers with lifecycle actions and access to configuration definitions in the teamsapp.yml file. You can now preview and trigger these predefined lifecycle actions using the CodeLens feature in the teamsapp.yml file.
+Teams Toolkit provides developers with lifecycle actions and grants access to configuration definitions within the teamsapp.yml file. You can now preview and trigger these predefined lifecycle actions using the CodeLens feature directly within the teamsapp.yml file. This streamlined process enhances the development workflow.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/codelens-trigger-teams-toolkit.png" alt-text="Screenshot shows the lifecycle access and access through CodeLens in teamsapp.yml file.":::
 
-### Teams Toolkit Documentation
+### Teams Toolkit documentation
 
 To view the Teams Toolkit documentation, follow these steps from within the Teams Toolkit:
 
@@ -83,9 +86,7 @@ A browser window opens to view the documentation.
 
 ### Copilot plugin
 
-This version of Teams Toolkit added several preview features to support developing for Microsoft Copilot. Turn on the preview feature flag to try out the new features.
-
-The latest version of Teams Toolkit is added several preview features to support developing for Microsoft Copilot. To enable the preview feature flag, follow these steps:
+The latest version of Teams Toolkit incorporates numerous preview features designed to support in Microsoft Copilot development. To enable and activate the preview feature, follow these steps:
 
 1. Select **Tools** > **Options...**.
 
@@ -100,6 +101,10 @@ A pop-up window appears.
 1. Select **OK**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of Copilot plugin from preview feature.":::
+
+Enhance the capabilities of Microsoft Copilot by converting your app into a plugin that helps user productivity in daily tasks and workflows. Activate these plugins for Copilot using the Teams Toolkit. Teams Toolkit Copilot plugins support specific capabilities, as follows: 
+- Custom Search Results 
+- AI Assistant Bot [Preview]
 
 #### TeamsFx .NET SDK reference
 
