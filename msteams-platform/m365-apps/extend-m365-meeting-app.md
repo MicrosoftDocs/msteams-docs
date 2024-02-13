@@ -146,7 +146,7 @@ You can [upload your custom app in Teams admin center](#upload-your-custom-app-i
 
 To test your app in Microsoft 365 and Outlook, upload your [app package](../concepts/build-and-test/apps-package.md) to Teams admin center.
 
-1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Teams toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
+1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
 1. From [Microsoft Teams admin center](https://admin.teams.microsoft.com), go to **Teams apps** > **Manage apps**.
 
