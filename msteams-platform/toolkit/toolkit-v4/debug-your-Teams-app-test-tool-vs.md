@@ -71,7 +71,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project."::: 
 
-    An Get Started window appears.
+    A Get Started window appears.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio."::: 
 
