@@ -100,7 +100,7 @@ Use TeamsJS client library version 2.5.0 or later to extend your Teams meeting a
 
 If you need to upgrade your TeamsJS npm package from v1.x.x to the latest v2.x.x TeamsJS, you can use Teams Toolkit to help identify and automate the required code changes. For more information, see [TeamsJS library](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
-Following are the steps to update your TeamsJS to the latest version using Teams toolkit:
+Follow these steps to update your TeamsJS to the latest version using Teams Toolkit:
 
 1. Open your app in Visual Studio Code and select **Teams Toolkit** extension.
 1. Under **View**, select **Command Palette...** or **Ctrl+Shift+P**.
