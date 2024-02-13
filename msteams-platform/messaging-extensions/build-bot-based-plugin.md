@@ -53,6 +53,8 @@ Before you get started, ensure that you're familiar with the following standards
 > [!IMPORTANT]
 > Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
 
+Let's create a bot-based search message extension that can search npm registries in Teams and Copilot and share results through the compose message area of the Microsoft Teams client.
+
 # [Visual Studio Code](#tab/visual-studio-code)
 
 Before you get started, ensure that you install the following tools to build and deploy your message extension:
@@ -108,7 +110,7 @@ To trigger the message extension as plugin in M365 Chat, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the message compose area, send a message to M365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
+1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
 
@@ -190,7 +192,7 @@ To trigger the message extension as plugin in M365 Chat, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-me-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message area, send a message to M365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
+1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the Adaptive Card response with content and preview card from M365 Chat. The response contains a list of four products with Contoso product name. ":::
 
@@ -285,7 +287,7 @@ To trigger the message extension through M365 Chat, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the compose message area, send a message to M365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
+1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
 
