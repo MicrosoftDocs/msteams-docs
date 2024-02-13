@@ -494,7 +494,7 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Adaptive Card responsive layout support
 
-Adaptive Cards are known for their ability to adapt to the host application's overall styling.However, their adaptability is limited when it comes to the static layout. The static layout approach results in unsatisfactory user experiences, especially across different screen sizes and resolutions.
+Adaptive Cards are known for their ability to adapt to the host application's overall styling. However, their adaptability is limited when it comes to layout. The static layout approach results in unsatisfactory user experiences, especially across different screen sizes and resolutions.
 
 Adaptive Card responsive layout support feature allows you to design Adaptive Cards that adapt to different screen sizes. Responsive Adaptive Cards would dynamically adjust their layout based on the available screen width, ensuring optimal display regardless of the device or screen size. You can design an Adaptive Card by defining the new `targetWidth` property in the Adaptive Card schema. This property makes your cards responsive and ensures a better user experience on any device, from mobile to desktop, regardless of the screen size.
 
@@ -513,7 +513,7 @@ The following elements are  the key design elements to create a responsive Adapt
 
   The values of `targetWidth` refer to the relative width of the card and allows more flexibility in adapting to different screen sizes. You shouldn't depend on pixel sizes of screen.
 
-* `CardElement.hostWidth`: The `hostWidth` property allows the host application to define the width it provides to the card through `targetWidth` property. The host application is responsible for mapping the actual widths to these named values.
+* `CardElement.hostWidth`: The `hostWidth` property allows the host application to define the width it provides to the card through `targetWidth` property. The host application is responsible for mapping the actual widths to these named values. You can set `hostWidth` property to the following values:
 
   |Value  |Description  |
   |---------|---------|
@@ -602,7 +602,7 @@ To make a responsive Adaptive Card, your app must include the elements from the 
 
 The following images show the design guidelines and how an Adaptive Card renders when you set the `targetWidth` property to specific values:
 
-##### [`targetWidth`:`wide`](#tab/wide-md)
+[`targetWidth`:`wide`](#tab/wide-md)
 
 The following image shows the design guidelines for `targetWidth` property set to `wide`:
 
@@ -612,7 +612,7 @@ The following images show how an Adaptive Card renders when you set the `targetW
 
 :::image type="content" source="../../assets/images/Cards/responsive-ac-wide.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to wide.":::
 
-##### [`targetWidth`:`narrow`](#tab/narrow-md)
+[`targetWidth`:`narrow`](#tab/narrow-md)
 
 The following image shows the design guidelines for `targetWidth` property set to `narrow`:
 
@@ -622,7 +622,7 @@ The following images show how an Adaptive Card renders when you set the `targetW
 
 :::image type="content" source="../../assets/images/Cards/responsive-ac-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to narrow.":::
 
-##### [`targetWidth`:`veryNarrow`](#tab/veryNarrow-md)
+[`targetWidth`:`veryNarrow`](#tab/veryNarrow-md)
 
 The following image shows the design guidelines for `targetWidth` property set to `veryNarrow`:
 
