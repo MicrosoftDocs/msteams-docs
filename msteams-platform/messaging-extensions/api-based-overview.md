@@ -1,7 +1,7 @@
 ---
 title: Build message extensions using API
 author: v-ypalikila
-description: Learn how to build a message extension using an OpenAPI description document (API).
+description: Learn how to build a message extension from an OpenAPI description document (API) using Teams Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -22,9 +22,6 @@ Message extensions built using API (API-based) use a web service to manage user 
 * Perform actions on behalf of the user, for example, create a Contoso ticket.
 
 You can create an API-based message extension using an [OpenAPI Description (OAD)](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Description document, upload the OpenAPI Description document to Teams Toolkit to generate and integrate the client code in your app's project. Create or generate a response rendering template to manage the responses from the API.
-
->[!IMPORTANT]
-> You can build an API-based message extension now and starting early next year, the extensions will function as plugins within Copilot and enhance Copilot experience for your extensions.
 
 See the video to learn more about building an API-based message extension using Teams Toolkit:
 </br>

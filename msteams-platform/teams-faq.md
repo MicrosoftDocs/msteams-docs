@@ -205,7 +205,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and have uploaded 
 
 <summary> What is the certification process?</summary>
 
-After publishing their plugin, developers opt into the App Compliance flow in Partner Center. If they haven't completed Publisher Verification, they'll be prompted to do so before starting the Microsoft 365 Certification process.  The next step is to complete Publisher Attestation, which collects self-attested information about their plugin, company, and operations. This information is published on a [Microsoft 365 App Compliance Program site](/microsoft-365-app-certification/teams/teams-apps).  The developer then starts the Microsoft 365 Certification process by uploading initial documents to help scope the assessment to their plugin and operating environment. Based on the scope, the developer will then be required to provide evidence for specific controls related to application security, operational security, and data handling/privacy. Developers that build on Azure can also use the App Compliance Automation Tool (ACAT). This tool automatically scans their environment and produces evidence for several controls, reducing the developer's manual work. For more information, see this video.
+After publishing their plugin, developers opt into the App Compliance flow in Partner Center. If they haven't completed Publisher Verification, they'll be prompted to do so before starting the Microsoft 365 Certification process.  The next step is to complete Publisher Attestation, which collects self-attested information about their plugin, company, and operations. This information is published on a [Microsoft 365 App Compliance Program site](/microsoft-365-app-certification/teams/teams-apps).  The developer then starts the Microsoft 365 Certification process by uploading initial documents to help scope the assessment to their plugin and operating environment. Based on the scope, the developer will then be required to provide evidence for specific controls related to application security, operational security, and data handling/privacy. Developers that build on Azure can also use the App Compliance Automation Tool (ACAT). This tool automatically scans their environment and produces evidence for several controls, reducing the developer's manual work.
 <br>
 &nbsp;
 </details>
@@ -371,7 +371,8 @@ You can use the following Graph API [Get user mailbox settings](/graph/api/user-
 <details>
 <summary>How can I deploy the code in Azure using Teams Toolkit, and use Graph API to get a user profile photo?</summary>
 
-For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [TeamsFx Library](toolkit/TeamsFx-CLI.md).
+For more information on Teams Toolkit, see [Create a new Teams project](toolkit/create-new-project.md) and [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md).
+
 <br>
 &nbsp;
 </details>
@@ -964,7 +965,7 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 Shared references to deploy the code using toolkit:
 
 * [Create a new Teams app using Teams Toolkit](toolkit/create-new-project.md)
-* [TeamsFx Command Line Interface](toolkit/TeamsFx-CLI.md)
+* [Teams Toolkit CLI](toolkit/Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
 
