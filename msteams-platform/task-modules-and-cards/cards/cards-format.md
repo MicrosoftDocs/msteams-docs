@@ -602,37 +602,37 @@ To make a responsive Adaptive Card, your app must include the elements from the 
 
 The following images show the design guidelines and how an Adaptive Card renders when you set the `targetWidth` property to specific values:
 
-[`targetWidth`:`wide`](#tab/wide-md)
+##### [`targetWidth`:`wide`](#tab/wide-md)
 
-The following image shows the design guidelines for `targetWidth` property set to `wide`:
+  The following image shows the design guidelines for `targetWidth` property set to `wide`:
 
-:::image type="content" source="../../assets/images/Cards/design-layout-wide.png" alt-text="Screenshot shows the design guidelines for a responsive adaptive card when you set target width to wide.":::
+  :::image type="content" source="../../assets/images/Cards/design-layout-wide.png" alt-text="Screenshot shows the design guidelines for a responsive adaptive card when you set target width to wide.":::
 
-The following images show how an Adaptive Card renders when you set the `targetWidth` to `wide`:
+  The following images show how an Adaptive Card renders when you set the `targetWidth` to `wide`:
 
-:::image type="content" source="../../assets/images/Cards/responsive-ac-wide.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to wide.":::
+  :::image type="content" source="../../assets/images/Cards/responsive-ac-wide.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to wide.":::
 
-[`targetWidth`:`narrow`](#tab/narrow-md)
+##### [`targetWidth`:`narrow`](#tab/narrow-md)
 
-The following image shows the design guidelines for `targetWidth` property set to `narrow`:
+  The following image shows the design guidelines for `targetWidth` property set to `narrow`:
 
-:::image type="content" source="../../assets/images/Cards/design-layout-narrow.png" alt-text="Screenshot shows the design guidelines for a responsive adaptive card when you set target width to narrow.":::
+  :::image type="content" source="../../assets/images/Cards/design-layout-narrow.png" alt-text="Screenshot shows the design guidelines for a responsive adaptive card when you set target width to narrow.":::
 
-The following images show how an Adaptive Card renders when you set the `targetWidth` to `narrow`:
+  The following images show how an Adaptive Card renders when you set the `targetWidth` to `narrow`:
 
-:::image type="content" source="../../assets/images/Cards/responsive-ac-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to narrow.":::
+  :::image type="content" source="../../assets/images/Cards/responsive-ac-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to narrow.":::
 
-[`targetWidth`:`veryNarrow`](#tab/veryNarrow-md)
+##### [`targetWidth`:`veryNarrow`](#tab/veryNarrow-md)
 
-The following image shows the design guidelines for `targetWidth` property set to `veryNarrow`:
+  The following image shows the design guidelines for `targetWidth` property set to `veryNarrow`:
 
-:::image type="content" source="../../assets/images/Cards/design-layout-narrow.png" alt-text="Screenshot shows the design guidelines for a responsive adaptive card when you set target width to very narrow.":::
+  :::image type="content" source="../../assets/images/Cards/design-layout-narrow.png" alt-text="Screenshot shows the design guidelines for a responsive adaptive card when you set target width to very narrow.":::
 
-The following images show how an Adaptive Card renders when you set the `targetWidth` to `veryNarrow`:
+  The following images show how an Adaptive Card renders when you set the `targetWidth` to `veryNarrow`:
 
-:::image type="content" source="../../assets/images/Cards/responsive-ac-very-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to very narrow.":::
+  :::image type="content" source="../../assets/images/Cards/responsive-ac-very-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to very narrow.":::
 
----
+  ---
 
 ### Typeahead support
 
