@@ -500,9 +500,9 @@ Adaptive Card responsive layout support feature allows you to design Adaptive Ca
 
 #### Construct Adaptive Card responsive layout support
 
-The following elements are  the key design elements to create a responsive Adaptive Card:
+The following elements are the key design elements to create a responsive Adaptive Card:
 
-* `CardElement.targetWidth`: Add `targetWidth` property for all elements in an Adaptive Card to define different layouts for different card widths. This property allows you to control the visibility of any element by linking it to a host width. You can set the `targetWidth` property with the following predefined values:
+* `CardElement.targetWidth`: Add the `targetWidth` property for all elements in an Adaptive Card to define different layouts for different card widths. This property allows you to control the visibility of any element by linking it to a host width. You can set the `targetWidth` property with the following predefined values:
 
   |Value  |Description  |
   |---------|---------|
@@ -602,7 +602,7 @@ To make a responsive Adaptive Card, your app must include the elements from the 
 
 The following images show the design guidelines and how an Adaptive Card renders when you set the `targetWidth` property to specific values:
 
-* `targetWidth`:`wide`
+* `targetWidth`: `wide`
 
   The following image shows the design guidelines for `targetWidth` property set to `wide`:
 
@@ -612,7 +612,7 @@ The following images show the design guidelines and how an Adaptive Card renders
 
   :::image type="content" source="../../assets/images/Cards/responsive-ac-wide.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to wide.":::
 
-* `targetWidth`:`narrow`
+* `targetWidth`: `narrow`
 
   The following image shows the design guidelines for `targetWidth` property set to `narrow`:
 
@@ -622,7 +622,7 @@ The following images show the design guidelines and how an Adaptive Card renders
 
   :::image type="content" source="../../assets/images/Cards/responsive-ac-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to narrow.":::
 
-* `targetWidth`:`veryNarrow`
+* `targetWidth`: `veryNarrow`
 
   The following image shows the design guidelines for `targetWidth` property set to `veryNarrow`:
 
