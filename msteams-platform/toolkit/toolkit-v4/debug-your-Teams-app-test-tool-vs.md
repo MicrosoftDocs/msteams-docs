@@ -75,11 +75,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio."::: 
 
-1. Update OpenAI ApiKey in the `appsettings.TestTool.json` file.
-
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot shows the OpenAI key updated.":::
-
-1. To Update 'appsettings.TestTool.json` file, follow either OpenAi or Azure OpenAI steps"
+1. To Update `appsettings.TestTool.json` file, follow either OpenAI or Azure OpenAI steps:
 
     # [OpenAI](#tab/openai)
     
