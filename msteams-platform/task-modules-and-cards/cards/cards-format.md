@@ -602,7 +602,7 @@ To make a responsive Adaptive Card, your app must include the elements from the 
 
 The following images show the design guidelines and how an Adaptive Card renders when you set the `targetWidth` property to specific values:
 
-# [`targetWidth`:`wide`](#tab/wide-md)
+* `targetWidth`:`wide`
 
   The following image shows the design guidelines for `targetWidth` property set to `wide`:
 
@@ -612,7 +612,7 @@ The following images show the design guidelines and how an Adaptive Card renders
 
   :::image type="content" source="../../assets/images/Cards/responsive-ac-wide.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to wide.":::
 
-# [`targetWidth`:`narrow`](#tab/narrow-md)
+* `targetWidth`:`narrow`
 
   The following image shows the design guidelines for `targetWidth` property set to `narrow`:
 
@@ -622,7 +622,7 @@ The following images show the design guidelines and how an Adaptive Card renders
 
   :::image type="content" source="../../assets/images/Cards/responsive-ac-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to narrow.":::
 
-# [`targetWidth`:`veryNarrow`](#tab/veryNarrow-md)
+* `targetWidth`:`veryNarrow`
 
   The following image shows the design guidelines for `targetWidth` property set to `veryNarrow`:
 
@@ -631,8 +631,6 @@ The following images show the design guidelines and how an Adaptive Card renders
   The following images show how an Adaptive Card renders when you set the `targetWidth` to `veryNarrow`:
 
   :::image type="content" source="../../assets/images/Cards/responsive-ac-very-narrow.png" alt-text="Screenshot shows the responsive adaptive card when you set target width to very narrow.":::
-
----
 
 ### Typeahead support
 
