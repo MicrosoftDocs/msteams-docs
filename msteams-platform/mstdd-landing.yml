@@ -49,6 +49,8 @@ landingContent:
       links:
       - text: Use app validation tool to validate your Teams app in Teams Developer Portal
         url: concepts/build-and-test/manage-your-apps-in-developer-portal.md#publish
+      - text: Build API-based message extension using Developer Portal for Teams
+        url: messaging-extensions/build-api-based-message-extension.md
       - text: Introduced systemDefault reserved activity type for send activity feed notifications (Developer preview)
         url: tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis
       - text: Teams, Outlook, and Microsoft 365 web domains are migrating to cloud.microsoft domain
@@ -64,9 +66,7 @@ landingContent:
       - text: Use / to invoke message extensions from command box in the new Teams client
         url: messaging-extensions/build-bot-based-message-extension.md
       - text: Teams Toolkit command line interface v3
-        url: toolkit/Teams-Toolkit-CLI.md     
-      - text: Apps for Teams meetings are available in Department of Defense (DOD)
-        url: messaging-extensions/build-bot-based-plugin.md
+        url: toolkit/Teams-Toolkit-CLI.md
 
     - linkListType: reference
       links:
