@@ -8,19 +8,19 @@ ms.localizationpriority: high
 ms.date: 06/05/2023
 ---
 
-# Teams tab Multi-window and Stage View
+# Teams tab StageView
 
-Open Stageview Multi-window in Microsoft Teams provides a versatile and immersive canvas experience and enables different ways to open app content. Multiwindow is a powerful platform that improves user experience and designed to:
+Open Stageview in Microsoft Teams provides a versatile and immersive canvas experience and enables different ways to open app content. The platform improves user experience and designed to:
 
 * Facilitate multitasking within Teams
 * Collaborate directly in a Teams multi-window
 * Focus on specific tasks in an immersive Teams Stageview
 
-The Open Stageview Multi-window feature enhances productivity and collaboration by offering developers the flexibility to create more engaging applications and businesses the opportunity to streamline workflows.
+The Open Stageview feature enhances productivity and collaboration by offering developers the flexibility to create more engaging applications and streamline workflows.
 
-## Modes to open Stageview Multi-window
+## Types of Stageview
 
-The Open Stageview Multi-window offers three modes to open your app content:
+Open Stageview offers three modes to open your app content:
 
 * Collaborative Stageview
 * Teams Multi-window
