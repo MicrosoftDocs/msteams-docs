@@ -53,6 +53,7 @@ A limited set of RSC permissions have been reviewed by Microsoft privacy and sec
 | Permission name | Action | Type: Delegated | Type: Application |
 | ----- | ----- | :-----: | :-----: |
 |`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
+|`TeamsActivity.Send.User`|Send activity feed notifications to the user. | NA | Supported |
 
 ### RSC-based data access APIs
 
