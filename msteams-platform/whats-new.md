@@ -24,6 +24,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
+**2024 February**
+
+* ***February 14, 2024***: [Error handling messages](resources/Error-handling.md)
+
 **2024 January**
 
 * ***January 19, 2024***: [Use / to invoke message extensions from command box in the new Teams client.](messaging-extensions/build-bot-based-message-extension.md)
