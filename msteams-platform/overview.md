@@ -63,4 +63,4 @@ Here's why Teams is best suited for your app needs:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [From ideas to Teams app](overview-story.md)
+> [Explore Teams platform features](overview-explore.md)

@@ -50,7 +50,7 @@ If you've already built some Teams apps, you can now extend your apps across Mic
 
 ## Next step
 
-You've had a short tour through some of Teams platform features. You're ready to see how you can use them to build your app.
+You've had a short tour through some of Teams platform features. You're ready to build your first Teams app.
 
 > [!div class="nextstepaction"]
-> [The Teams solution](overview-solution.md)
+> [Get started](get-started/get-started-overview.md)
