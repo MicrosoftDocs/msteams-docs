@@ -116,7 +116,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 # [Command line](#tab/cli)
 
-## [Command line in JS/TS](#tab/clijs)
+# [Command line in JS/TS](#tab/clijs)
 
     1. Install Teams App Test Tool CLI from `npm`:
     
@@ -165,7 +165,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
 
-## [Command line in C#](#tab/clicsharp)
+# [Command line in C#](#tab/clicsharp)
 
     Run the following commands in the directory that contains `teamsapp.yml` file:
     
