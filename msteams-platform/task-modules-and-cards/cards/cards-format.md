@@ -511,7 +511,7 @@ The key element to create a responsive Adaptive Card is `CardElement.targetWidth
 
   
 
-  The values of `targetWidth` refers to the relative width of the card and allows more flexibility in adapting to different screen sizes. You can decide that certain elements are visible as per the width of the card you're designing. For example, when you design a responsive card, you can decide that certain elements are only visible when the width of the card is very narrow. To do that, you should set `targetWidth`:`veryNarrow` on that specific element.
+  The value of `targetWidth` refers to the relative width of the card and allows more flexibility in adapting to different screen sizes. You can decide that certain elements are visible as per the width of the card you're designing. For example, when you design a responsive card, you can decide that certain elements are only visible when the width of the card is very narrow. To do that, you should set `targetWidth`:`veryNarrow` on that specific element.
 
   You can add the `targetWidth` property to any element with a prefix to a valid value that is `atLeast` or `atMost`. When you specify the targetWidth value to a value with a prefix, the elements are displayed or hidden based on the card width.
 
@@ -525,7 +525,7 @@ The key element to create a responsive Adaptive Card is `CardElement.targetWidth
 
   * If you set `targetWidth` to `atMost:narrow`, the element is only visible when the card width is either very narrow or narrow and not when the card width is standard or wide. 
 
-The following images shows an example of a non responsive and responsive Adaptive Cards:
+The following images show an example of a non responsive and responsive Adaptive Cards:
 
 **Adaptive Card without `targetWidth` configuration**
 
@@ -679,7 +679,7 @@ The following code shows an example of Adaptive Card with typeahead support:
 
 ### Stage View for images in Adaptive Cards
 
-In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stage View selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following is an example of the `msteams` property:
+In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stage View selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following code is an example of the `msteams` property:
 
 ``` json
 {
