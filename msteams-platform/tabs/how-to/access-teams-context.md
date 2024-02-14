@@ -57,7 +57,7 @@ For example, in your app manifest if you set your tab *configurationUrl* attribu
 * They're a member of the Microsoft 365 group with ID **00209384-etc**.
 * The user has set their Teams theme to **dark**.
 
-Teams will call the following URL when configuring the tab:
+Teams calls the following URL when configuring the tab:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -369,7 +369,7 @@ The following image shows the dark theme option in the Teams:
 
 ## Code sample
 
-| Sample name           | Description | Javascript|
+| Sample name           | Description | JavaScript|
 :---------------------|:--------------|:---------|
 |Tab channel context|This sample shows how to use the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
 
