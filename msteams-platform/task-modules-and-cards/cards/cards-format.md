@@ -496,24 +496,24 @@ The following image shows the default view of the Adaptive Card when you have no
 
 Adaptive Cards are known for their ability to adapt to the host application's overall styling. However, their adaptability is limited when it comes to the layout. The static layout approach results in unsatisfactory user experiences, especially across different screen sizes and resolutions.
 
-Adaptive Card responsive layout allows you to design Adaptive Cards that adapt to different card widths. Responsive Adaptive Cards dynamically adjust their layout based on the based on the actual width of the card, ensuring optimal display regardless of the context in which the card is displayed. When you design an Adaptive Card for your app, use the `targetWidth` property to make your card responsive and provide a better experience to your users on Teams mobile or desktop, regardless of the screen size.
+Adaptive Card responsive layout allows you to design Adaptive Cards that adapt to different card widths. Responsive Adaptive Cards dynamically adjust their layout based on the actual width of the card, ensuring optimal display regardless of the context in which the card is displayed. When you design an Adaptive Card for your app, use the `targetWidth` property to make your card responsive and provide a better experience to your users on Teams mobile or desktop, regardless of the screen size.
 
 #### Configure Adaptive Card responsive layout
 
-The key element to create a responsive Adaptive Card is `CardElement.targetWidth`. The `targetWidth` property allows you to control the visibility of any element by linking it to the width of the card. Add the `targetWidth` property for all elements in an Adaptive Card to define different layouts for different card widths. The value of `targetWidth` can either be `veryNarrow`, `narrow`, `standard` or `wide`:
+The key element to create a responsive Adaptive Card is `CardElement.targetWidth`. The `targetWidth` property allows you to control the visibility of any element by linking it to the width of the card. Add the `targetWidth` property for all elements in an Adaptive Card to define different layouts for different card widths. The value of `targetWidth` can either be `veryNarrow`, `narrow`, `standard`, or, `wide`:
 
   |Value  |Description  |
   |---------|---------|
   | `veryNarrow` | The card width on a meeting chat pane on desktop. |
   | `narrow` | The card width on a mobile phone in portrait mode. |
   | `standard` | The card width on a mobile phone in landscape mode, tablet in portrait mode, and chats in desktop. |
-  | `wide` | The card width on a tablet in landscape mode and chats and channels in desktop. |
+  | `wide` | The card width on a tablet in landscape mode, and chats and channels in desktop. The card width on a chat pane on desktop can vary from `standard` to `wide`. |
 
-  The card width on a chat pane on desktop can vary from `standard` to `wide`.
+  
 
-  The values for `targetWidth` refers to the relative width of the card and allows more flexibility in adapting to different screen sizes. You can decide that certain elements are visible as per the width of the card you've designing. For example, when you design a responsive card, you can decide that certain elements are only visible when the width of the card is very narrow. To do that, you must should set `targetWidth`:`veryNarrow` on the that specific element.
+  The values of `targetWidth` refers to the relative width of the card and allows more flexibility in adapting to different screen sizes. You can decide that certain elements are visible as per the width of the card you're designing. For example, when you design a responsive card, you can decide that certain elements are only visible when the width of the card is very narrow. To do that, you should set `targetWidth`:`veryNarrow` on that specific element.
 
-  You can add the `targetWidth` property to any element with a prefix to a valid value that is `atLeast` or `atMost`. When you specify the targetWidth value to a predefined value with a prefix, the elements are displayed or hidden based on the card width, providing you with the control over layout responsiveness.
+  You can add the `targetWidth` property to any element with a prefix to a valid value that is `atLeast` or `atMost`. When you specify the targetWidth value to a value with a prefix, the elements are displayed or hidden based on the card width.
 
   The following examples explain how the elements can be made visible or hidden based on the card width:
 
@@ -521,9 +521,19 @@ The key element to create a responsive Adaptive Card is `CardElement.targetWidth
 
   * If you set `targetWidth` to `veryNarrow`, the element is only visible when the card width is very narrow.
 
-  * If you set `targetWidth` to `atLeast:narrow`, the element is only visible when the card width is either narrow, standard or wide and not when the card width is very narrow.
+  * If you set `targetWidth` to `atLeast:narrow`, the element is only visible when the card width is either narrow, standard, or wide and not when the card width is very narrow.
 
   * If you set `targetWidth` to `atMost:narrow`, the element is only visible when the card width is either very narrow or narrow and not when the card width is standard or wide. 
+
+The following images shows an example of a non responsive and responsive Adaptive Cards:
+
+**Adaptive Card without `targetWidth` configuration**
+
+:::image type="content" source="../../assets/images/Cards/non-responsive-adaptive-card.png" alt-text="Screenshot shows how adaptive card renders without the targetWidth configuration.":::
+
+**Adaptive Card responsive layout with `targetWidth` configuration**
+
+:::image type="content" source="../../assets/images/Cards/adaptive-card-responsive-layout.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth is configured to respective card widths.":::
 
 #### Sample Adaptive Card responsive layout
 
