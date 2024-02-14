@@ -53,9 +53,9 @@ Perform the following steps to upload app package:
 
    The **Upload an app** window appears.
 
-2. Select **Upload a customised app**.
+2. Select **Upload a custom app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload-custom-app.png" alt-text="Screenshot shows the upload an app option.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
    Now, the custom app is uploaded into the Teams client and you can add and view it.
 
