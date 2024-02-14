@@ -7,6 +7,7 @@ ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.date: 01/22/2023
 ---
+# Event-driven conversations with activity handlers
 
 When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
 
