@@ -8,7 +8,11 @@ ms.author: v-vanisreeth
 ms.date: 10/06/2023
 ---
 
-# Error handling messages  
+# Teams error handling messages
+
+An error handling message is a message that informs the user of an error that occurred while using Teams and provides some guidance on how to resolve it. An error handling message should be clear, and concise.
+
+Here are some examples of error handling messages for Teams, based on some common scenarios:
 
 ## Adaptive Card
 
