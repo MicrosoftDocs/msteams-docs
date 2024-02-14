@@ -3,7 +3,7 @@ title: Teams AI library
 description: In this article, learn about Teams conversation AI.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: michaelmaillot
+ms.author: v-ypalikila
 ms.date: 02/12/2024
 ---
 
@@ -34,25 +34,6 @@ You can focus on writing your business logic, and allow Teams to handle the comp
 The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a  mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
 
 The following are some of the main features available through Teams AI library:
-
-- [Teams AI library](#teams-ai-library)
-  - [Why use Teams AI library?](#why-use-teams-ai-library)
-  - [Simple Teams-centric component scaffolding](#simple-teams-centric-component-scaffolding)
-  - [Natural language modeling](#natural-language-modeling)
-  - [Prompt engineering](#prompt-engineering)
-  - [Conversational session history](#conversational-session-history)
-  - [Localization](#localization)
-  - [LLM modularity](#llm-modularity)
-  - [Responsible AI](#responsible-ai)
-  - [Predictive engine for mapping intents to actions](#predictive-engine-for-mapping-intents-to-actions)
-  - [Action Planner](#action-planner)
-  - [Prompt management](#prompt-management)
-  - [Augmentation](#augmentation)
-    - [Vector data sources](#vector-data-sources)
-  - [Enhanced reasoning](#enhanced-reasoning)
-  - [Feedback loop](#feedback-loop)
-  - [Code samples](#code-samples)
-  - [Next step](#next-step)
 
 ## Simple Teams-centric component scaffolding
 
