@@ -83,7 +83,9 @@ The following graphical representation provides the steps to create an Incoming 
 
 # [Classic Teams](#tab/classicteams)
 
-1. Open the channel in which you want to add the webhook and select **More options** &#8226;&#8226;&#8226; from the upper-right corner.
+1. In the Teams client, select **Teams** :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to add an Incoming Webhook.
+
+1. Select **More options** &#8226;&#8226;&#8226; from the upper-right corner.
 
 1. Select **Connectors** from the dropdown menu.
 
@@ -240,7 +242,8 @@ The webhook is now removed from the Teams channel.
 
 # [Classic Teams](#tab/classicteams)
 
-1. Open the channel and select **More option** &#8226;&#8226;&#8226; from the upper-right corner.
+1. In the Teams client, select the Teams icon :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to remove an Incoming Webhook.
+1. Select **More options** &#8226;&#8226;&#8226; from the upper-right corner.
 1. Select **Connectors** from the dropdown menu.
 1. In the left pane, select **Configured**.
 1. Select **1 Configured** to see a list of your current connectors.
