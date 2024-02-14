@@ -4,6 +4,7 @@ description: In this article, learn about Teams conversation AI.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: v-ypalikila
+author: michaelmaillot
 ms.date: 02/12/2024
 ---
 
