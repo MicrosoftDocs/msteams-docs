@@ -425,7 +425,7 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 
 <b> After March 14th, 2024 </b>
 
-Before you can manage your Team and Chat RSC settings with PowerShell, you need to connect PowerShell to your tenant using Microsoft Graph. You can learn more about managing Microsoft Graph settings with PowerShell [here](/manage-teams-with-microsoft-teams-powershell).
+Before you can manage your Team and Chat RSC settings with PowerShell, you need to connect PowerShell to your tenant using Microsoft Graph. You can learn more about managing Microsoft Graph settings with PowerShell [here](/powershell/microsoftgraph/get-started?view=graph-powershell-1.0).
 You can use the `Connect-MgGraph` cmdlet to do this. You will need to connect with the following permissions. 
 
 1. `TeamworkAppSettings.ReadWrite.All`
