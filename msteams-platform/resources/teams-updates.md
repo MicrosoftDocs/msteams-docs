@@ -49,8 +49,6 @@ The following Teams features aren't currently supported (will be available soon)
 * [GetMruTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-latest#@microsoft-teams-js-pages-tabs-getmrutabinstances&preserve-view=true) and [GetTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-#@microsoft-teams-js-pages-tabs-gettabinstances&preserve-view=true) APIs aren't supported in the new Teams client. We recommend to use the [chat](/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) and [channel tabs](/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) Graph APIs.
 
 * [Pinning and unpinning apps](https://support.microsoft.com/office/pin-an-app-for-easy-access-in-microsoft-teams-3045fd44-6604-4ba7-8ecc-1c0d525e89ec) from the left side of Teams isn't supported in the new Teams client.
-
-* [DevTools](/microsoft-edge/devtools-guide-chromium/overview) isn't supported in the new Teams client.
   
 * [App caching](~/tabs/how-to/app-caching.md) isn't supported in the new Teams client.
 
