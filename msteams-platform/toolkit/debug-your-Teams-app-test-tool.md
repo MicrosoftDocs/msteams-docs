@@ -116,6 +116,8 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 # [Command line](#tab/cli)
 
+---
+
 ## [Command line in JS/TS](#tab/clijs)
 
 1. Install Teams App Test Tool CLI from `npm`:
