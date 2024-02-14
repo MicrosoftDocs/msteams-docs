@@ -252,23 +252,11 @@ Users can screen share content to the meeting stage in the following scenarios:
     > [!NOTE]
     > If the value for the sharingProtocol property is set as `screenShare`, you don't need to declare any Resource-Specific Consent (RSC) permissions in the app manifest and don't need to set `MeetingStage` in the `getContext` object of the manifest.
 
-* **Deep link to the meeting**: The deep link format is updated with the `sharingProtocol` property. The supported values are `Collaborative` and `ScreenShare`. Default is `Collaborative`.
-
-  Deep link format: `{ "appSharingUrl" : "<URL>", "appId": "<APPID>" , "useMeetNow": <true/false>, “sharingProtocol”: <“collaborative/screenShare”}`
-
-  Example: `{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false, “sharingProtocol”: “screenShare” }`
-
-* **Share in Meeting**: The share in meeting method is updated with the `protocol` property to support screen share.
-
-    | Property | HTML Attribute | Type | Required | Default | Description |
-    | --- | --- | --- | --- | --- | --- |
-    | `Protocol` | `data-protocol` | String | No | `collaborative` | Specifies the sharing protocol used. Supported values are `collaborative` and `screenShare` .|
-
 ### User scenarios
 
 |Scenario|Example|
 |-------------|--------------|
-|Seismic App| Rocky, a sales rep for Contoso, pins the Seismic app to his upcoming meeting with Rani, the VP of HR at NorthWest. During the meeting, Rocky opens the Seismic side panel and sees a list of pre-curated content that he can share in the meeting to aid his sales pitch. Rani can consume the content on her Teams meeting window and ask questions based on the content shown.|
+|Sales enablement app| Rocky, a sales rep for Contoso, pins the Sales enablement app to his upcoming meeting with Rani, the VP of HR at NorthWest. During the meeting, Rocky opens the Sales enablement app side panel and sees a list of pre-curated content that he can share in the meeting to aid his sales pitch. Rani can consume the content on her Teams meeting window and ask questions based on the content shown.|
 |Contoso Cloud Board| Robert, a technical program manager at Contoso, helps run the daily scrum meetings of various teams in the organization. For each scrum, he pins the pod-relevant board as a tab to the standup meeting. During the meeting, he opens the side panel of the Contoso app and selects the Share button provided within the side panel. This allows the board to take over the meeting stage for all participants such that everyone views the same board. As each member shares their updates, Rocky makes appropriate changes in the sprint board, which is then reflected for all other attendees.|
 
 ### Advantages
