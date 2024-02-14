@@ -44,11 +44,11 @@ The following table provides the features and description of an Incoming Webhook
 
 To add an Incoming Webhook to a Teams channel, follow these steps:
 
-# [New Teams client](#tab/newteams)
+# [New Teams](#tab/newteams)
 
 1. In the Teams client, select **Teams** :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to add an Incoming Webhook.
 
-1. Select &#8226;&#8226;&#8226; on the right side of the channel name.
+1. Select **More options** &#8226;&#8226;&#8226; on the right side of the channel name.
 
 1. Select **Manage channel**.
 
@@ -61,7 +61,7 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 1. Search for **Incoming Webhook** and select **Configure**.
 
     > [!NOTE]
-    > If you're adding Incoming Webhook for the first time, you must **Add** the Incoming Webhook to Teams and then **Configure**.
+    > If you're adding Incoming Webhook for the first time, you must add the Incoming Webhook to Teams and then configure.
 
    :::image type="content" source="../../assets/images/configure_1-new-teams.png" alt-text="The screenshot shows how to configure and upload an image for your webhooks.":::
 
@@ -79,17 +79,20 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 
 The following graphical representation provides the steps to create an Incoming Webhook:
 
-:::image type="content" source="../../assets/images/create-incoming-webhook.gif" alt-text="Graphical representation shows the steps to create an Incoming Webhook.":::
+:::image type="content" source="../../assets/images/create-incoming-webhook.gif" alt-text="The graphical representation shows the steps to create an Incoming Webhook.":::
 
 # [Classic Teams](#tab/classicteams)
 
-1. Open the channel in which you want to add the webhook and select &#8226;&#8226;&#8226; from the upper-right corner.
+1. Open the channel in which you want to add the webhook and select **More options** &#8226;&#8226;&#8226; from the upper-right corner.
 
 1. Select **Connectors** from the dropdown menu.
 
    :::image type="content" source="../../assets/images/connectors_1.png" alt-text="This screenshot show how to select connector.":::
 
 1. Search for **Incoming Webhook** and select **Configure**.
+
+    > [!NOTE]
+    > If you're adding Incoming Webhook for the first time, you must add the Incoming Webhook to Teams and then configure.
 
    :::image type="content" source="../../assets/images/configure_1.png" alt-text="This screenshot shows how to configure and upload an image for your webhooks.":::
 
@@ -197,9 +200,11 @@ axios.post(webhookUrl , formatted_Card_Payload )
 
 To remove an Incoming Webhook from a Teams channel, follow these steps:
 
+# [New Teams](#tab/newteams)
+
 1. In the Teams client, select the Teams icon :::image type="icon" source="../../assets/images/teams-icon.png" border="false"::: and navigate to the channel where you want to remove an Incoming Webhook.
 
-1. Select &#8226;&#8226;&#8226; in the right side of the channel name.
+1. Select **More options** &#8226;&#8226;&#8226; on the right side of the channel name.
 
 1. Select **Manage channel**.
 
@@ -209,13 +214,13 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
     :::image type="content" source="../../assets/images/edit-connector-new-teams.png" alt-text="The screenshot shows the edit option under Connectors option.":::
 
-1. Select **Configured** under **MANAGE**.
+1. In the left pane, select **Configured**.
 
 1. Select **1 Configured** to see a list of your current connectors.
 
    :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="This screenshot shows how to configure to see list of your current connectors.":::
 
-1. Select **Manage** for the connector that you want to remove.
+1. Select **Manage**.
 
    :::image type="content" source="../../assets/images/manage_1.png" alt-text="This screenshot shows how to manage for connector that you want to remove.":::
 
@@ -231,6 +236,36 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
    :::image type="content" source="../../assets/images/finalremove_1.png" alt-text="This screenshot shows how to remove an Incoming Webhooks from Teams channel.":::
 
+The webhook is now removed from the Teams channel.
+
+# [Classic Teams](#tab/classicteams)
+
+1. Open the channel and select **More option** &#8226;&#8226;&#8226; from the upper-right corner.
+1. Select **Connectors** from the dropdown menu.
+1. In the left pane, select **Configured**.
+1. Select **1 Configured** to see a list of your current connectors.
+
+   :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="The screenshot shows how to configure to see list of your current connectors.":::
+
+1. Select **Manage**.
+
+   :::image type="content" source="../../assets/images/manage_1.png" alt-text="The screenshot shows how to manage for connector that you want to remove.":::
+
+1. Select **Remove**.
+
+   :::image type="content" source="../../assets/images/Select_Remove.png" alt-text="Select remove"lightbox="../../assets/images/Select_Remove.png":::
+
+   The **Remove Configuration** window appears.
+
+1. Select the required checkboxes.
+1. Select **Remove**.
+
+   :::image type="content" source="../../assets/images/finalremove_1.png" alt-text="This screenshot shows how to remove an Incoming Webhooks from Teams channel.":::
+
+The webhook is now removed from the Teams channel.
+
+---
+
 ## Code sample
 
 | Sample Name       | Description | .NET    |  Node.js |
@@ -239,13 +274,8 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 ## See also
 
-* [Webhooks and connectors](../what-are-webhooks-and-connectors.md)
 * [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
-* [Create connectors for Microsoft 365 Groups](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
 * [Build bots for Teams](../../bots/what-are-bots.md)
 * [Message extensions](../../messaging-extensions/what-are-messaging-extensions.md)
-* [Card actions](../../task-modules-and-cards/cards/cards-actions.md)
 * [Integrate web apps](../../samples/integrate-web-apps-overview.md)
 * [Share to Teams from web apps](../../concepts/build-and-test/share-to-teams-from-web-apps.md)
-* [Secure access and data in Azure Logic Apps](/azure/logic-apps/logic-apps-securing-a-logic-app?tabs=azure-portal)
