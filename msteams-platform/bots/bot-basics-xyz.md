@@ -1,90 +1,456 @@
 ---
-title: Bot activity handlers
+title: Event-driven conversations with activity handlers
 author: surbhigupta
-description: Learn about Microsoft Teams events and activity handlers for messages, channels, teams, members, mentions, auth, card actions using Microsoft Bot Framework SDK.
+description: Learn about Microsoft Teams events and activity handlers for bot messages, channels, teams, members, mentions, auth, card actions using Microsoft Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
-ms.author: anclear
+ms.author: v-npaladugu
 ms.date: 01/22/2023
 ---
 
-# Bot activity handlers
+When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
 
-Welcome to the comprehensive guide on Bot Activity Handlers in Microsoft Teams. This document provides an in-depth understanding of how bots work in Microsoft Teams, focusing on the unique features that Microsoft Teams offers over the core Bot Framework. 
+Trigger a welcome message when your bot is added to a team.
+Trigger a welcome message when a new team member is added or removed.
+Trigger a notification when a channel is created, renamed, or deleted.
+Trigger a notification when a bot message is liked by a user.
+Identify the default channel for your bot from user input (selection) during installation.
 
-An activity handler is a key component that manages the conversational flow of your bot. It processes activities in two ways: through Teams-specific activity handlers for Teams-specific events and interactions, and through the bot object for general conversational logic. 
+## Activity handler
 
-When a bot for Teams receives an activity, it's directed to the appropriate activity handlers. All activities first pass through a base handler, the turn handler, which then calls the specific activity handler needed for the received activity. 
+An activity handler is an event-driven approach to organize the conversational logic for your bot. Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type.
 
-## Bot Activity Handlers in Microsoft Teams
+An activity handler processes activities in two ways, through Teams-specific activity handlers for Teams-specific events and interactions, and through the bot object for general conversational logic. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
 
-Are you looking to build a bot that can interact effectively with users on Microsoft Teams? Understanding bot activity handlers is key. This guide is designed for developers who are building bots for Microsoft Teams using the Microsoft Bot Framework SDK. 
+## Bot logic
 
-Bot activity handlers are used to organize the conversational logic for your bot. They handle activities in two ways: Teams activity handlers and bot logic. The Teams activity handler adds support for Teams-specific events and interactions, while the bot object contains the conversational logic for a turn and exposes a turn handler. 
+The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter. The bot logic processes incoming activities from one or more of your bots channels and generates outgoing activities in response. This is still true of bot derived from the Teams activity handler class, which first checks for Teams activities, then passes all other activities to the Bot Framework's activity handler.
 
-This guide will help you understand how to implement these handlers in your bot, providing code snippets for each handler in C#, JavaScript, and Python. It also explains the different types of activities that can be handled, such as messages, channels, teams, members, mentions, auth, and card actions. 
+Following are the different types of events for bot conversations:
 
-This information is crucial for developers as it helps them understand how to handle different types of activities in their bot, which is key to creating a bot that can interact effectively with users. It also helps developers understand how to handle Teams-specific events and interactions, which is important for creating bots that can fully leverage the capabilities of Microsoft Teams. 
+* Conversation events
+* Channel events
+* Members events
+* Team events
+* Reaction events
+* Installation events
 
-This guide is applicable to bots developed for Microsoft Teams on all platforms - mobile, desktop, and web.
+## Conversation update events
 
-## Implementing Bot Activity Handlers
+You can use conversation update events to provide better notifications and effective bot actions.
 
-### Teams Activity Handlers
+> [!IMPORTANT]
+>
+> * You can add new events any time and your bot begins to receive them.
+> * You must design your bot to receive unexpected events.
+> * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
-Teams activity handler is derived from Microsoft Bot Framework's activity handler. It routes all Teams activities before allowing any non-Teams specific activities to be handled. 
+A bot receives a `conversationUpdate` event in either of the following cases:
 
-When a bot for Teams receives an activity, it's routed to the activity handlers. All activities are routed through one base handler called the turn handler. The turn handler calls the required activity handler to manage any activity received. 
+* When bot has been added to a conversation.
+* Other members are added to or removed from a conversation.
+* Conversation metadata has changed.
 
-The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
+The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
 
-### Bot Logic
+## Channel events
 
-The bot logic processes incoming activities from one or more of your bot channels and in response generates outgoing activities. It's still true of bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
+### Channel created
 
-## Code Snippets
+The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed.
 
-The guide provides detailed code snippets for implementing Teams activity handlers and bot logic in C#, JavaScript, and Python. These code snippets cover a wide range of activities, including messages, channels, teams, members, mentions, auth, and card actions. 
+<details><summary><b>The code shows an example of channel created event:</b></summary>
 
-## Limitations and Best Practices
+# [C#](#tab/dotnet)
 
-If the bot activity takes more than 15 seconds to process, Teams send a retry request to bot endpoint. Hence, you'll see duplicate requests in your bot.
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
 
-## Code Sample
+```csharp
+protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
+    // Sends an activity to the sender of the incoming activity.
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
 
-The guide also provides links to code samples that demonstrate how to use different bot conversation events available in Bot Framework v4. These samples are available in C#, Node.js, and Python.
-
-## Next Steps
-
-After reading this guide, you can proceed to learn about [Conversation basics](~/bots/how-to/conversations/conversation-basics.md) in Microsoft Teams.
-
-## See Also
-
-You can also refer to the following resources for more information:
-
-- [Build bots for Teams](what-are-bots.md)
-- [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md)
-- [App manifest schema for Teams](../resources/schema/manifest-schema.md)
-- [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
-- [Get Teams specific context for your bot](how-to/get-teams-context.md)
-- [Messages in bot conversations](how-to/conversations/conversation-messages.md)
-- [Component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs) 
-
-## Conclusion
-
-In conclusion, understanding and implementing bot activity handlers is crucial for creating bots that can interact effectively with users on Microsoft Teams. This guide has provided you with the necessary information and code snippets to implement these handlers in your bot. Remember to refer to the provided resources for further information and guidance. Happy coding!
-Sequence Diagram Result:
-```mermaid
-sequenceDiagram
-    participant TeamsApp as Teams App
-    participant TeamsActivityHandler as Teams Activity Handler
-    participant BotFrameworkActivityHandler as Bot Framework Activity Handler
-    participant BotLogic as Bot Logic
-
-    TeamsApp->>TeamsActivityHandler: Receives an activity
-    TeamsActivityHandler->>TeamsActivityHandler: Checks for Teams specific events
-    TeamsActivityHandler->>BotFrameworkActivityHandler: Passes non-Teams specific activities
-    BotFrameworkActivityHandler->>BotLogic: Sends activity to Bot Logic
-    BotLogic->>TeamsApp: Generates outgoing activities
-    Note over TeamsApp,TeamsActivityHandler: If activity takes more than 15 seconds to process, Teams sends a retry request to bot endpoint.
 ```
+
+# [TypeScript](#tab/typescript)
+
+<!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
+
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Channel Created', `${channelInfo.name} is the Channel created`);
+            const message = MessageFactory.attachment(card);
+            // Sends a message activity to the sender of the incoming activity.
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:34:07.478Z",
+    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+    "id": "f:dd6ec311",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+            "name": "FunDiscussions"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "channelCreated",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# [Python](#tab/python)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
+
+```python
+async def on_teams_channel_created(
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+):
+ # Sends a message activity to the sender of the incoming activity.
+ return await turn_context.send_activity(
+  MessageFactory.text(
+   f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
+  )
+ )
+```
+
+---
+
+</details>
+
+### Channel renamed
+
+The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed.
+
+<details><summary><b>The following code shows an example of channel renamed event:</b></summary>
+
+# [C#](#tab/dotnet)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrenamedasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L341)
+
+```csharp
+protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var heroCard = new HeroCard(text: $"{channelInfo.Name} is the new Channel name");
+    // Sends an activity to the sender of the incoming activity.
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
+
+```
+
+# [TypeScript](#tab/typescript)
+
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrenamedevent&preserve-view=true)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsChannelRenamedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Channel Renamed', `${channelInfo.name} is the new Channel name`);
+            const message = MessageFactory.attachment(card);
+            // Sends a message activity to the sender of the incoming activity.
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:34:07.478Z",
+    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+    "id": "f:dd6ec311",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+            "name": "PhotographyUpdates"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "channelRenamed",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# [Python](#tab/python)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-renamed&preserve-view=true)
+
+```python
+async def on_teams_channel_renamed(
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+):
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The new channel name is {channel_info.name}")
+ )
+```
+
+---
+
+</details>
+
+### Channel deleted
+
+The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
+
+<details><summary><b>The following code shows an example of channel deleted event:</b></summary>
+
+# [C#](#tab/dotnet)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschanneldeletedasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L347)
+
+```csharp
+protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel deleted");
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
+
+```
+
+# [TypeScript](#tab/typescript)
+
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschanneldeletedevent&preserve-view=true)
+
+```typescript
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsChannelDeletedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Channel Deleted', `${channelInfo.name} is the Channel deleted`);
+            const message = MessageFactory.attachment(card);
+            // Sends a message activity to the sender of the incoming activity.
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:34:07.478Z",
+    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+    "id": "f:dd6ec311",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+            "name": "PhotographyUpdates"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "channelDeleted",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# [Python](#tab/python)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-deleted&preserve-view=true)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?&preserve-view=true)
+
+```python
+async def on_teams_channel_deleted(
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+):
+ # Sends a message activity to the sender of the incoming activity.
+ return await turn_context.send_activity(
+  MessageFactory.text(f"The deleted channel is {channel_info.name}")
+ )
+```
+
+---
+
+</details>
+
+### Channel restored
+
+The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
+
+<details><summary><b>The following code shows an example of channel restored event:</b></summary>
+
+# [C#](#tab/dotnet)
+
+* [SDK refernce](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
+
+```csharp
+protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel restored.");
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
+
+```
+
+# [TypeScript](#tab/typescript)
+
+* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrestoredevent&preserve-view=true)
+
+```typescript
+
+export class MyBot extends TeamsActivityHandler {
+    constructor() {
+        super();
+        this.onTeamsChannelRestoredEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+            const card = CardFactory.heroCard('Channel Restored', `${channelInfo.name} is the Channel restored`);
+            const message = MessageFactory.attachment(card);
+            // Sends a message activity to the sender of the incoming activity.
+            await turnContext.sendActivity(message);
+            await next();
+        });
+    }
+}
+
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "type": "conversationUpdate",
+    "timestamp": "2017-02-23T19:34:07.478Z",
+    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+    "id": "f:dd6ec311",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "channel",
+        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+    },
+    "recipient": {
+        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+        "name": "SongsuggesterBot"
+    },
+    "channelData": {
+        "channel": {
+            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+            "name": "FunDiscussions"
+        },
+        "team": {
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "eventType": "channelRestored",
+        "tenant": {
+            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        }
+    }
+}
+```
+
+# [Python](#tab/python)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-restored&preserve-view=true)
+
+```python
+async def on_teams_channel_restored(
+ self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+):
+ # Sends a message activity to the sender of the incoming activity.
+ return await turn_context.send_activity(
+  MessageFactory.text(
+   f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
+  )
+ )
+```
+
+---
+
+</details>
+
+
+
+
+
+
+
+
