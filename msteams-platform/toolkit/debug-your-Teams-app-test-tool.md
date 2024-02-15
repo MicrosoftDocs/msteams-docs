@@ -182,44 +182,44 @@ To debug your Teams app test tool, use command line in JavaScript, TypeScript, o
 
       1. Run the following command to launch profile:
 
-        ```cmd
-        dotnet run --launch-profile "Teams App Test Tool (browser)"
-        ```
+          ```cmd
+          dotnet run --launch-profile "Teams App Test Tool (browser)"
+          ```
 
       1. Run the following command in a separate terminal, define your bot message endpoint:
 
-        1. For Command Prompt:
+          1. For Command Prompt:
 
-            ```cmd
-            set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
-            ```
+              ```cmd
+              set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
+              ```
 
-        1. For PowerShell:
+          1. For PowerShell:
 
-            ```powershell
-            $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
-            ```
+              ```powershell
+              $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
+              ```
 
       1. Run the following command to initiate Teams App Test Tool:
 
-        1. For Command Prompt:
+          1. For Command Prompt:
 
-            ```cmd
-            teamsapptester.exe start
-            ```
+              ```cmd
+              teamsapptester.exe start
+              ```
 
-        1. For PowerShell:
+          1. For PowerShell:
 
-            ```powershell
-            teamsapptester.exe start
-            ```
+              ```powershell
+              teamsapptester.exe start
+              ```
 
       1. Test Tool opens the bot in a webpage.
 
           :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
 
           In case the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
-       ---
+   ---
 
 ---
 
