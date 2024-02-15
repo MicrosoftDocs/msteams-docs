@@ -182,7 +182,14 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 |`taskInfo.height`|Task module height, either a number in pixels or default layout such as `large`, `medium`, or `small`.|No | 1.4 |
 |`taskInfo.url`|Initial web view URL.|No | 1.4 |
 
-For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
+For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).  
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Define message extension action commands](how-to/action-commands/define-action-command.md)
+
+---
 
 ## Extend your message extension to Copilot in Bing
 
@@ -221,14 +228,7 @@ If you have Search message extension v1.13 or higher and have enabled the M365 c
 
 * Validate that the app works as expected across Micrososft 365 apps such as Teams, Outlook, office.com, mobile, and Microsoft Copilot for Microsoft 365 in Teams and copilot.microsoft.com.
 
-* Complete organization’s formal publishing process for production.  
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Define message extension action commands](how-to/action-commands/define-action-command.md)
-
----
+* Complete organization’s formal publishing process for production.
 
 ## See also
 
