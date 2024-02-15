@@ -54,9 +54,9 @@ Stage View modal is a full-screen UI component that can be used to render your a
 
 You can invoke Stage View experience through one of the following ways:
 
-* Invoke from Adaptive Card
-* Invoke from StageView API
-* Invoke from Deeplink
+* [Invoke from Adaptive Card](#invoke-collaborative-stage-view-from-adaptive-card)
+* [Invoke from StageView API](#invoke-from-stageview-api)
+* [Invoke from Deeplink](#invoke-from-deeplink)
 
 The following table provides details on the default and defined responses for each invoke type:
 
@@ -135,6 +135,65 @@ The following table provides the responses of the `openMode`properties:
 
 For more information, see [StageView module](/javascript/api/@microsoft/teams-js/stageview).
 
+# [No openMode](#tab/noopenmode)
+
+[StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) with no `openMode` (defaults to Collaborative Stage View):
+
+If no value is passed, `openMode` defaults to `popoutWithChat` (Collaborative Stage View). The side panel conversation is the same thread from where the Collaborative Stage View was invoked (for example, chat, group chat). A threadId can also be specified (optional), allowing you to define the conversation that's brought into the side panel.
+
+  ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net"
+    }
+  ```
+
+# [popoutWithChat](#tab/withchat)
+
+StageViewParams for Collaborative Stage View:
+
+  ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+      "openMode": "popoutWithChat"
+    }
+  ```
+
+# [popout](#tab/popout)
+
+StageViewParams for Multi-window Stage View:
+
+  ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+      "openMode": "popout"
+    }
+  ```
+
+# [Modal](#tab/modal)
+
+StageViewParams for Stage View modal:
+
+  ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+      "openMode": "modal"
+    }
+  ```
+
+---
+
 #### StageView API parameters
 
 | Property name | Type | Character Limit | Description |
@@ -145,65 +204,6 @@ For more information, see [StageView module](/javascript/api/@microsoft/teams-js
 | websiteUrl | String | 2048 | [Required] This property is the https:// URL to point at, if a user selects to view in a browser. |
 | threadId | String | 2048 | [Optional] This property defines the conversation shown in the Collaborative Stage View side panel. It can contain a chat threadId (channel threadId isn't supported). If no value passed, threadId is inherited from the context where Collaborative Stage View is opened. |
 | openMode | String | 2048 | [Optional] This property defines the open behavior for stage content in the Desktop client. |
-
-# [Open mode undefined](#tab/noopenmode)
-
-* [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams?view=msteams-client-js-latest) with no `openMode` (defaults to Collaborative Stage View):
-
-    If no value is passed, `openMode` defaults to `popoutWithChat` (Collaborative Stage View). The side panel conversation is the same thread from where the Collaborative Stage View was invoked (for example, chat, group chat). A threadId can also be specified (optional), allowing you to define the conversation that's brought into the side panel.
-
-    ```json
-    {
-      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-      "contentUrl": "https://teams-test-tab.azurewebsites.net",
-      "title": "Test tab ordering",
-      "websiteUrl": "https://teams-test-tab.azurewebsites.net"
-    }
-    ```
-
-# [popoutWithChat](#tab/withchat)
-
-* StageViewParams for Collaborative Stage View:
-
-    ```json
-    {
-      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-      "contentUrl": "https://teams-test-tab.azurewebsites.net",
-      "title": "Test tab ordering",
-      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
-      "openMode": "popoutWithChat"
-    }
-    ```
-
-# [popout](#tab/popout)
-
-* StageViewParams for Multi-window Stage View:
-
-    ```json
-    {
-      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-      "contentUrl": "https://teams-test-tab.azurewebsites.net",
-      "title": "Test tab ordering",
-      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
-      "openMode": "popout"
-    }
-    ```
-
-# [Modal](#tab/modal)
-
-* StageViewParams for Stage View modal:
-
-    ```json
-    {
-      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
-      "contentUrl": "https://teams-test-tab.azurewebsites.net",
-      "title": "Test tab ordering",
-      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
-      "openMode": "modal"
-    }
-    ```
-
----
 
 > [!NOTE]
 >
