@@ -184,6 +184,41 @@ If you're using an embedded web view, you can optionally add the `taskInfo` obje
 
 For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 
+## Extend your message extension to Copilot in Bing
+
+If you have Search ME v1.13 or higher and have enabled the M365 channel, your application will work in Copilot in Teams. However, to ensure that your application also works in Copilot in Bing, you need to make the following three changes. Note that none of these changes require you to republish your app.
+
+### Upgrade TeamsJS Version to 2.18.0
+
+Upgrade your TeamsJS version to 2.18.0 by installing the `@microsoft/teams-js` package from npm. This will ensure that your application continues to work with Bing domains.
+
+### Update Azure AD App Registration for SSO
+
+Azure Active Directory (AD) single sign-on (SSO) for message extensions works the same way in Bing as it does in Teams or Outlook. However, you need to add Bing’s client application identifiers to your bot's Azure AD app registration in your tenant's App registrations portal.
+
+To do this, follow these steps:
+
+1. Sign in to the Azure portal with your sandbox tenant account.
+2. Open App registrations.
+3. Select the name of your application to open its app registration.
+4. Select Expose an API (under Manage).
+5. In the Authorized client applications section, ensure that the following Client ID values are listed:
+
+| Microsoft 365 client application | Client ID |
+| --- | --- |
+| Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
+| Bing (Staging) | ef47e344-4bff-4e28-87da-6551a21ffbe0 |
+
+### Configure Content Security Policy Headers
+
+If your app uses Content Security Policy (CSP) headers, make sure to allow the following frame-ancestors in your CSP headers:
+
+| Microsoft 365 app host | frame-ancestor permission |
+| --- | --- |
+| Bing | edgeservices.bing.com, <www.bing.com>, <www.staging-bing-int.com>, copilot.microsoft.com |
+
+By making these changes, you can ensure that your Search ME works seamlessly in Copilot in Bing.
+
 ## Next step
 
 > [!div class="nextstepaction"]
