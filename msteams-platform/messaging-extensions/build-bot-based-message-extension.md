@@ -193,7 +193,7 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 ## Best practices to extend message extension to Copilot
 
-If you have Search message extension v1.13 or higher and have enabled the M365 channel, your application will work in Copilot in Teams. However, to ensure that your application also works in Copilot in Bing, you need to make the following three changes.
+If you have Search message extension v1.13 or higher and have enabled the M365 channel, your application will work in Copilot in Teams. To enable your message extensions as a plugin in Microsoft Copilot, we recommed you to implement the following best practices:
 
 * **Upgrade TeamsJS Version**: Upgrade your TeamsJS version to 2.18.0 by installing the `@microsoft/teams-js` package from npm. This will ensure that your application continues to work with Bing domains.
 
