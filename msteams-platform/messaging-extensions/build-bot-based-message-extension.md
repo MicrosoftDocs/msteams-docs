@@ -191,7 +191,7 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 ---
 
-## Extend your message extension to Copilot in Bing
+## Best practices to extend message extension to Copilot
 
 If you have Search message extension v1.13 or higher and have enabled the M365 channel, your application will work in Copilot in Teams. However, to ensure that your application also works in Copilot in Bing, you need to make the following three changes.
 
