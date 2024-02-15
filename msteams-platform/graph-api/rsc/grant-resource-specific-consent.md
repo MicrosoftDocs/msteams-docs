@@ -425,7 +425,15 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 
 <b> After March 14th, 2024 </b>
 
-Admins adjust team and chat RSC settings through PowerShell cmdlets. The following are the available states for the PowerShell settings and each section shows examples of how to use these states to adjust your settings:
+Before you manage your team and chat RSC settings with PowerShell, you need to connect PowerShell to your tenant using Microsoft Graph. For more information on managing Microsoft Graph settings with PowerShell, see [get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
+You can use the `Connect-MgGraph` cmdlet and connect with the following permissions:
+
+1. `TeamworkAppSettings.ReadWrite.All`
+1. `Policy.ReadWrite.Authorization`
+1. `Policy.ReadWrite.PermissionGrant`
+1. `AppCatalog.Read.All`
+
+The following are the available states for the PowerShell settings and each section shows examples of how to use these states to adjust your settings:
 
 | PowerShell State | Description |
 | ---- | ---- |
