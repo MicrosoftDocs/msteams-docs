@@ -112,7 +112,6 @@ Your package.json file references `@microsoft/teams-js@2.x.x` and your `*.js/.ts
 * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx) for `teams-js@2.x.x`.
 * New "`TODO`" comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface) interface changes.
 * New "`TODO`" comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-library.md#callbacks-converted-to-promises).
-* `TODO` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-library.md#callbacks-converted-to-promises).
 
 > [!NOTE]
 >
