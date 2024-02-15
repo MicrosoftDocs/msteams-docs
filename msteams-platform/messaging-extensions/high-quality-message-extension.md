@@ -498,86 +498,95 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
   ```json
    {
-        "version": "1.0",
-        "responseLayout": "grid",
-        "responseCardTemplate": {
-            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-            "type": "AdaptiveCard",
-            "version": "1.4",
-            "body": [
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "type": "AdaptiveCard",
+      "version": "1.5",
+      "body": [
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${companyName}",
+              "size": "Medium",
+              "wrap": true,
+              "style": "heading"
+            },
+            {
+              "type": "TextBlock",
+              "text": "${stockExchange} ${stockSymbol}",
+              "isSubtle": true,
+              "spacing": "None",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "${formattedDate} ${formattedTime}",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "type": "Container",
+          "spacing": "None",
+          "items": [
+            {
+              "type": "ColumnSet",
+              "columns": [
                 {
-                    "type": "Container",
-                    "items": [
+                  "type": "Column",
+                  "width": "stretch",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "${currentPrice} ",
+                      "size": "ExtraLarge",
+                      "wrap": true
+                    },
+                    {
+                      "type": "TextBlock",
+                      "text": "${priceChange} ${percentChange}",
+                      "color": "${changeColor}",
+                      "spacing": "None",
+                      "wrap": true
+                    }
+                  ]
+                },
+                {
+                  "type": "Column",
+                  "width": "auto",
+                  "items": [
+                    {
+                      "type": "FactSet",
+                      "facts": [
                         {
-                            "type": "ColumnSet",
-                            "columns": [
-                                {
-                                    "type": "Column",
-                                     "width": "stretch",
-                                    "items": [
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Title: ${if(title, title, 'N/A')}",
-                                            "wrap": true
-                                        },
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Description: ${if(description, description, 'N/A')}",
-                                            "wrap": true
-                                        },
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
-                                            "wrap": true
-                                        },
-                                        {
-                                            "type": "Image",
-                                            "url": "${image}",
-                                            "size": "Medium",
-                                            "$when": "${image != null}"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Column",
-                                    "width": "auto",
-                                    "items": [
-                                        {
-                                            "type": "Image",
-                                            "url": "${if(image, image, '')}",
-                                            "size": "Medium"
-                                        }
-                                    ]
-                                }
-                            ]
+                          "title": "Open",
+                          "value": "${openPrice} "
                         },
                         {
-                            "type": "FactSet",
-                            "facts": [
-                                {
-                                    "title": "Repair ID:",
-                                    "value": "${if(id, id, 'N/A')}"
-                                },
-                                {
-                                    "title": "Date:",
-                                    "value": "${if(date, date, 'N/A')}"
-                                }
-                            ]
+                          "title": "High",
+                          "value": "${highPrice} "
+                        },
+                        {
+                          "title": "Low",
+                          "value": "${lowPrice} "
                         }
-                    ]
+                      ]
+                    }
+                  ]
                 }
-            ]
-        },
-        "previewCardTemplate": {
-            "title": "Title: ${if(title, title, 'N/A')}",
-            "subtitle": "Description: ${if(description, description, 'N/A')}",
-            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
-            "image": {
-            "url": "${image}",
-            "$when": "${image != null}"
-              }
+              ]
             }
+          ]
         }
+      ],
+      "previewCard": {
+        "contentType": "application/vnd.microsoft.card.hero",
+        "content": {
+          "title": "${companyName}",
+          "text": "${stockSymbol}"
+        }
+      }
     }
   ```
 
@@ -626,7 +635,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 ## Code samples
 
-|Sample name | Description |TypeScript | 
+|Sample name | Description |TypeScript |
 |----------------|-----------------|--------------|
 | Northwind inventory message extension| This sample demonstrates how to use a Teams message extension as a plugin in Microsoft Copilot for Microsoft 365. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |
 
