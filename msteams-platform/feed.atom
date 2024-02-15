@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2023-12-07T04:15:01+05:30</updated>
+	<updated>2024-01-22T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[Platform update: Introduced Teams Toolkit CLI v3]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-three</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/toolkit/teams-toolkit-cli?pivots=version-three?referrer=whats.new.rssfeed"/>
+		<updated>2024-01-22T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[Teams Toolkit command line interface (Teams Toolkit CLI) is a text-based command line interface that accelerates Teams application development. It aims to provide keyboard centric experience while building Teams applications. We recommend that you use Teams Toolkit CLI v3 to build your Teams app. TeamsFx CLI v1 and TeamsFx CLI v2 will soon be deprecated.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%209821a370-031a-b977-6cbd-c575ea3ad21f%0A*%20Version%20Independent%20ID%3A%209821a370-031a-b977-6cbd-c575ea3ad21f%0A*%20Content%3A%20%5BTeams%20Toolkit%20Command%20Line%20Interface%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Ftoolkit%2Fteams-toolkit-cli%3Fpivots%3Dversion-three)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Ftoolkit%2FTeams-Toolkit-CLI.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Ftoolkit%2FTeams-Toolkit-CLI.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40MuyangAmigo%0A*%20Microsoft%20Alias%3A%20**zhany**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Platform update: Extend a Teams message extension across Microsoft 365]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension?tabs=ttk%2Csearch-based-message-extension</id>
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/m365-apps/extend-m365-teams-message-extension?tabs=ttk%2Csearch-based-message-extension?referrer=whats.new.rssfeed"/>
@@ -115,14 +122,6 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview?referrer=whats.new.rssfeed"/>
 		<updated>2023-05-23T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[Microsoft BUILD 2023: Introduced Teams AI library, which is available in public developer preview to help build AI-powered Teams apps. Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines. This moderates the need for you to take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with large language models (LLMs) </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203df9a819-4eb0-e650-ef6b-5eeaa265c317%0A*%20Version%20Independent%20ID%3A%20ed71ed64-970d-7820-4229-c1e6896a8896%0A*%20Content%3A%20%5BPrepare%20your%20store%20submission%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fsubmission-checklist%23distribute-your-app-to-specific-countries)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fsubmission-checklist.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fsubmission-checklist.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Platform update: Distribute your app to specific countries]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist#distribute-your-app-to-specific-countries</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist#distribute-your-app-to-specific-countries?referrer=whats.new.rssfeed"/>
-		<updated>2023-05-17T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[Microsoft BUILD 2023: If you want to cater your app to a specific audience, you can select from the available list of countries and communicate what’s great about your app in ways that are relevant to users. This is known as Geo-filtering. Geo-filtering is applicable only for apps listed in the Teams store. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%203df9a819-4eb0-e650-ef6b-5eeaa265c317%0A*%20Version%20Independent%20ID%3A%20ed71ed64-970d-7820-4229-c1e6896a8896%0A*%20Content%3A%20%5BPrepare%20your%20store%20submission%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fsubmission-checklist%23distribute-your-app-to-specific-countries)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fsubmission-checklist.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fprepare%2Fsubmission-checklist.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
