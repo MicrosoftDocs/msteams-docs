@@ -55,7 +55,7 @@ To add or update the bot icon and other bot information, there are three methods
 
    If you update the bot icon in Azure Portal, it affects the conversation bot icon and the bot icon displayed when sending a new message from the Compose Area in Teams where your bot is installed. However, it doesn't update the bot's profile or app image. You need to update these from a new app manifest.
 
-2. Use [app manifest](/resources/schema/manifest-schema.md#icons) to upload a custom app.
+2. Use [app manifest](../resources/schema/manifest-schema.md#icons) to upload a custom app.
 
 3. Upload the app in the [Teams Admin Center](/microsoftteams/customize-apps#customize-an-app), update the bot icon.
 
