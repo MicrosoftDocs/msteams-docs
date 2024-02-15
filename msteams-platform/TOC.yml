@@ -6,12 +6,12 @@
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions, welcome, new word, meaning
-- name: Overview
+- name: Build apps with Teams
   expanded: false 
   items:
   - name: Teams app that fits
     href: overview.md
-    displayName: Why build apps with Microsoft Teams platform
+    displayName: Build apps with Microsoft Teams platform
   - name: Explore Teams platform features
     href: overview-explore.md
 

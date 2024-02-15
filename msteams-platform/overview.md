@@ -1,18 +1,18 @@
 ---
-title: Build apps for the Microsoft Teams platform
+title: Build apps for Microsoft Teams platform
 author: heath-hamilton
 description: Learn about Microsoft Teams apps, why should you build apps on Teams platform, and how Teams apps help meet business needs.
 ms.topic: overview
 ms.localizationpriority: high
 ms.date: 05/24/2021
 ---
-# Build apps with Microsoft Teams platform
+# Teams app that fits
 
-Microsoft Teams offers various apps provided by Microsoft and third-party services. Teams apps can be tabs, bots, message extensions, or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 to enhance their collaborative experience.
+Microsoft Teams is a collaborative platform that prvoides a workspace for organizations to collaborate through apps for communication, meetings, and file sharing. Teams offers proprietary Microsoft and third-party apps. Teams apps can be tabs, bots, message extensions, or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 to enhance their collaborative experience.
 
 Apps can be personal or shared. A personal app enables a one-on-one communication and a shared app lets multiple users share app space to collaborate.
 
-## Driving organizational goals
+## Drive organizational goals
 
 Organizations use apps as a collaborative platform to connect with their customers, provide services, and share information. A well-placed app helps build a cohesive environment for external and internal business needs.
 
@@ -20,7 +20,7 @@ You can build apps with Teams platform to increase user engagement, automate rep
 
 :::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories."lightbox="assets/images/overview/dev-persona.png":::
 
-## Build apps with Microsoft Teams platform
+## Why build apps with Teams
 
 Teams apps help your workspace become more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
 
