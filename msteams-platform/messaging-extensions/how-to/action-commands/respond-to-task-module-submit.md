@@ -559,14 +559,19 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
 # [C#/.NET](#tab/dotnet-1)
 
 ```csharp
-channelData: {
-    onBehalfOf: [ {
-        itemId: 0,
-            mentionType: 'person',
-            mri: context.activity.from.id,
-            displayName: context.activity.from.name
-    } ]
-}
+// Attribute the message to the user on whose behalf the bot is posting
+  responseActivity.ChannelData = new {
+    OnBehalfOf = new []
+    {
+      new
+      {
+        ItemId = 0,
+        MentionType = "person",
+        Mri = turnContext.Activity.From.Id,
+        DisplayName = turnContext.Activity.From.Name
+      }  
+    }
+  };
 
 ```
 
