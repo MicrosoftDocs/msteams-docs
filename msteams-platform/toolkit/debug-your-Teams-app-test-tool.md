@@ -116,7 +116,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 # [Command line](#tab/cli)
 
-To debug your Teams app test tool, use command line in JavaScript or TypeScript and C# as follows:
+   To debug your Teams app test tool, use command line in JavaScript or TypeScript and C# as follows:
 
    # [JavaScript/TypeScript](#tab/clijs)
 
