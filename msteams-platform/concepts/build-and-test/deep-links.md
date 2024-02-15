@@ -30,6 +30,8 @@ Here are some scenarios where you can build apps using deep links in Teams:
 
     For more information, see [deep link to a chat](~/concepts/build-and-test/deep-link-teams.md).
 
+    :::image type="content" source="~/assets/images/deeplink-chat.gif" alt-text="Graphical representation shows the user experience of deep links in chat.":::
+
 * **Deep link to a workflow**: You've the ability to generate a deep link to execute a specific task in Teams. Tasks might include initiating a new chat, opening a scheduling dialog, or navigating to an audio-video call. App users can benefit from an improved app experience by utilizing simplified or automated user tasks. These tasks include initiating a new chat or scheduling a meeting, which are made easier by prepopulating the deep links with necessary parameters.
 
     For more information, see [deep link to a workflow](~/concepts/build-and-test/deep-link-workflow.md).

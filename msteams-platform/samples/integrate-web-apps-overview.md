@@ -69,9 +69,7 @@ You can get a rich integration experience between Teams and SharePoint by adding
 
 ## Create deep link
 
-You can create deep links to the entities in Teams. You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience.
-
-For more information, see [Configure deep links.](../concepts/build-and-test/deep-links.md)
+You can create deep links to the entities in Teams. You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience. For more information, see [Configure deep links.](../concepts/build-and-test/deep-links.md)
 
 ## Integrate device capabilities
 
