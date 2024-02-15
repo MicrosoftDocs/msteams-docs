@@ -186,38 +186,42 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 ## Extend your message extension to Copilot in Bing
 
-If you have Search ME v1.13 or higher and have enabled the M365 channel, your application will work in Copilot in Teams. However, to ensure that your application also works in Copilot in Bing, you need to make the following three changes. Note that none of these changes require you to republish your app.
+If you have Search message extension v1.13 or higher and have enabled the M365 channel, your application will work in Copilot in Teams. However, to ensure that your application also works in Copilot in Bing, you need to make the following three changes.
 
-### Upgrade TeamsJS Version to 2.18.0
+* **Upgrade TeamsJS Version**: Upgrade your TeamsJS version to 2.18.0 by installing the `@microsoft/teams-js` package from npm. This will ensure that your application continues to work with Bing domains.
 
-Upgrade your TeamsJS version to 2.18.0 by installing the `@microsoft/teams-js` package from npm. This will ensure that your application continues to work with Bing domains.
+* **Update Microsoft Entra ID app registration for SSO**: Microsoft Entra ID single sign-on (SSO) for message extensions works the same way in Bing as it does in Teams or Outlook. However, you need to add Bing’s client application identifiers to your bot's Azure AD app registration in your tenant's App registrations portal. To do this, follow these steps:
 
-### Update Azure AD App Registration for SSO
+   1. Sign in to the Azure portal with your sandbox tenant account.
+   1. Open App registrations.
+   1. Select the name of your application to open its app registration.
+   1. Select Expose an API (under Manage).
+   1. In the Authorized client applications section, ensure that the following Client ID values are listed:
 
-Azure Active Directory (AD) single sign-on (SSO) for message extensions works the same way in Bing as it does in Teams or Outlook. However, you need to add Bing’s client application identifiers to your bot's Azure AD app registration in your tenant's App registrations portal.
+    | Microsoft 365 client application | Client ID |
+    | --- | --- |
+    | Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
+    | Bing (Staging) | ef47e344-4bff-4e28-87da-6551a21ffbe0 |
 
-To do this, follow these steps:
+* **Configure Content Security Policy Headers**: If your app uses Content Security Policy (CSP) headers, make sure to allow the following frame-ancestors in your CSP headers:
 
-1. Sign in to the Azure portal with your sandbox tenant account.
-2. Open App registrations.
-3. Select the name of your application to open its app registration.
-4. Select Expose an API (under Manage).
-5. In the Authorized client applications section, ensure that the following Client ID values are listed:
+   | Microsoft 365 app host | frame-ancestor permission |
+   | --- | --- |
+   | Bing | edgeservices.bing.com, <www.bing.com>, <www.staging-bing-int.com>, copilot.microsoft.com |
 
-| Microsoft 365 client application | Client ID |
-| --- | --- |
-| Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
-| Bing (Staging) | ef47e344-4bff-4e28-87da-6551a21ffbe0 |
+* Validate that network connectivity to your application endpoints is available.
 
-### Configure Content Security Policy Headers
+* Configure [app setup policies](/microsoftteams/teams-app-setup-policies#assign-a-custom-policy-in-app-setup-policy-to-users-and-groups) to allow custom apps upload. *[Optional]*.
 
-If your app uses Content Security Policy (CSP) headers, make sure to allow the following frame-ancestors in your CSP headers:
+* Create a [Teams app package](../concepts/build-and-test/apps-package.md), which consists  an app manifest and app icons.
 
-| Microsoft 365 app host | frame-ancestor permission |
-| --- | --- |
-| Bing | edgeservices.bing.com, <www.bing.com>, <www.staging-bing-int.com>, copilot.microsoft.com |
+* Upload the app package for a single developer or for the tenant.
 
-By making these changes, you can ensure that your Search ME works seamlessly in Copilot in Bing.
+* If your're publishing the app to the tenant, configure an [app permissions policy](/microsoftteams/teams-app-permission-policies) to limit access to specific users.
+
+* Validate that the app works as expected across Micrososft 365 apps such as Teams, Outlook, office.com, mobile, and Microsoft Copilot for Microsoft 365 in Teams and copilot.microsoft.com.
+
+* Complete organization’s formal publishing process for production.  
 
 ## Next step
 
