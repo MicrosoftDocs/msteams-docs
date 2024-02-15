@@ -8,9 +8,9 @@ ms.localizationpriority: medium
 ---
 # Create a bot resource in Microsoft Entra ID
 
-Your Teams bot app can access resources available in Microsoft Entra ID. You need to create a bot resource with Microsoft Entra ID. This process registers your bot app with Azure AI Bot Service and enable the bot app to connect to Teams channels.
+For your Teams bot app to access resources available in Microsoft Entra ID, you'll need to create a bot resource with Microsoft Entra ID. The following process registers your bot app with Azure AI Bot Service and enables the app to connect to Teams channels.
 
-In this section, you will:
+In this section, you'll:
 
 - [Create and deploy bot resource](#create-a-bot-resource-in-microsoft-entra-id)
 - [Configure the client secret](#create-client-secret)
@@ -34,7 +34,7 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
     :::image type="content" source="../assets/images/authentication/select-azure-bot-marketplace.png" alt-text="Screenshot shows the Azure bot in the Azure Marketplace.":::
 
-    The **Azure Bot** page appears, and the plan is preselected as Azure Bot.
+    When the **Azure Bot** page appears, ensure the selected plan is **Azure Bot**.
 
 1. Select **Create**.
 
@@ -44,7 +44,7 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
 1. Under **Project details**, enter the following details:
 
-    1. Enter a unique identifier as the bot handle. It isn't the display name, and you can choose a different display name later.
+    1. Enter a unique identifier as the bot handle, such as _azure-teams-bot_. This isn't the display name, and can be changed at a later point.
 
     1. Select a subscription plan.
 
@@ -94,17 +94,17 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
     :::image type="content" source="../assets/images/authentication/initialize-deployment-message.png" alt-text="Screenshot shows a message stating the deployment of the resource is initializing.":::
 
-    The **Overview** page opens as the deployment is in progress. Once the deployment is complete, you get a **Deployment succeeded** message. This means that the bot resource is successfully created and the selected resources are provisioned.
+    The **Overview** page opens as the deployment is in progress. Once the deployment is complete, a**Deployment succeeded** message is displayed. This message confirms that the bot resource has been created successfully and the selected resources provisioned.
 
 1. Under **Next steps** dropdown, select **Go to resource**.
 
     :::image type="content" source="../assets/images/authentication/go-to-bot-resource.png" alt-text="Screenshot shows the Azure bot resource deployment page.":::
 
-     You can see the details of the bot resource you deployed.
+     The bot resource details are displayed on this page.
 
     :::image type="content" source="../assets/images/authentication/bot-resource-overview-page.png" alt-text="Screenshot shows the overview page of the resource bot":::
 
-After you create your bot resource, you need to add a client secret and enable the bot to work in Teams.
+After you create your bot resource, you'll need to create a client secret to enable the bot to work in Teams.
 
 ### Create client secret
 

@@ -8,7 +8,7 @@ ms.localizationpriority: medium
 ---
 # Register Teams app in Microsoft Entra ID
 
-Registering your Teams app in Microsoft Entra ID allows the app to access Azure resources and enable Azure-related functions such as single sign-on (SSO) or multitenancy.
+Registering your Teams app in Microsoft Entra ID allows the app to access Azure resources and enables Azure-related functions, such as single sign-on (SSO) or multitenancy.
 
 ## Before you register your app
 
@@ -46,7 +46,7 @@ To register a new app in Microsoft Entra ID:
 
     The **Register an application** page appears.
 
-1. Enter the name of your app that you want the app user to see. You can change this name at a later stage if you want to.
+1. Enter a name for your app that you want the user to see. You can change this name at a later stage if you want to.
 
     :::image type="content" source="../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="Screenshot shows the register an app page.":::
 
@@ -56,7 +56,7 @@ To register a new app in Microsoft Entra ID:
 
     :::image type="content" source="../assets/images/authentication/teams-app-created-message.png" alt-text="Screenshot shows a message stating that the app was created.":::
 
-    Your app is registered in Microsoft Entra ID. The app overview page appears.
+    When your app is registered in Microsoft Entra ID, the app overview page appears displaying the following details:
 
     :::image type="content" source="../assets/images/authentication/teams-app-overview-page.png" alt-text="Screenshot shows the app registration overview page.":::
 
