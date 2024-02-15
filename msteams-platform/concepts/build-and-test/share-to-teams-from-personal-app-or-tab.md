@@ -17,7 +17,7 @@ The following image shows the Share to Teams pop-up window:
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="../../assets/images/share-to-teams-mobile.png" alt-text="Screenshot shows you the share to teams experience in Teams." lightbox="../../assets/images/share-to-teams-mobile.png":::
+:::image type="content" source="../../assets/images/share-to-teams-mobile.png" alt-text="Screenshot shows you the share to teams experience in Teams mobile client." lightbox="../../assets/images/share-to-teams-mobile.png":::
 
 ---
 
