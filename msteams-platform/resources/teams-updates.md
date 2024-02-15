@@ -8,6 +8,9 @@ ms.topic: reference
 ---
 # Introducing the new Microsoft Teams client
 
+> [!IMPORTANT]
+> The Classic Teams client is expected to be deprecated by March 31, 2024.
+
 [The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside the Classic Teams, the app will most likely run in the new Teams client without any issues.
 
 The following are the advantages of the new Teams client:
@@ -38,7 +41,7 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 >
 > * The new Teams client is supported in Windows and Mac clients and Government Community Cloud (GCC) and GCC-High environments.
 > * We recommend you to test the functionality of  apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC-High environments after switching from the Classic Teams client to the new Teams client.
-> * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
+> * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
 The following Teams features aren't currently supported (will be available soon) in the new Teams client:
 
