@@ -114,102 +114,105 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
-# [Command line in JS/TS](#tab/clijs)
+# [Command line](#tab/cli)
 
-1. Install Teams App Test Tool CLI from `npm`:
+  # [Command line in JS/TS](#tab/clijs)
 
-    ```cmd
-    npm install -g @microsoft/teams-app-test-tool
-    ```
+  1. Install Teams App Test Tool CLI from `npm`:
 
-1. Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
+      ```cmd
+      npm install -g @microsoft/teams-app-test-tool
+      ```
 
-    ```cmd
-    teamsapp new   
-    ```
+  1. Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
 
-    You can use the CLI to create a new Teams app. The CLI leads you through a series of questions.Use the arrow keys to select an option. After you make the choice, select **Enter** to confirm:
+      ```cmd
+      teamsapp new   
+      ```
 
-    Screenshot to be added.
+      You can use the CLI to create a new Teams app. The CLI leads you through a series of questions.Use the arrow keys to select an option. After you make the choice, select **Enter** to confirm:
 
-      1. Select **New Project**.
-      1. Select **Bot**.
-      1. Select **Basic Bot** as the app features.
-      1. Select **JavaScript** as the programming language.
-      1. Select **Enter** to select the default workspace folder.
-      1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
+      Screenshot to be added.
 
-    Your project is created.
+        1. Select **New Project**.
+        1. Select **Bot**.
+        1. Select **Basic Bot** as the app features.
+        1. Select **JavaScript** as the programming language.
+        1. Select **Enter** to select the default workspace folder.
+        1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
 
-1. Install required dependencies and npm packages.
+      Your project is created.
 
-    ```cmd
-    teamsapp deploy --env=testtool
-    ```
+  1. Install required dependencies and npm packages.
 
-1. Start your bot app:
+      ```cmd
+      teamsapp deploy --env=testtool
+      ```
 
-    ```cmd
-    npm run dev:teamsapp:testtool
-    ```
+  1. Start your bot app:
 
-1. In a separate terminal, initiate the Teams App Test Tool:
+      ```cmd
+      npm run dev:teamsapp:testtool
+      ```
 
-    ```cmd
-    npm run dev:teamsapp:launch-testtool
-    ```
+  1. In a separate terminal, initiate the Teams App Test Tool:
 
-1. Test Tool opens the bot in a webpage.
+      ```cmd
+      npm run dev:teamsapp:launch-testtool
+      ```
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
+  1. Test Tool opens the bot in a webpage.
 
-# [Command line in C#](#tab/clicsharp)
+      :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
 
-Run the following commands in the directory that contains `teamsapp.yml` file:
+  # [Command line in C#](#tab/clicsharp)
 
-1. Download the Teams App Test Tool CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
+  Run the following commands in the directory that contains `teamsapp.yml` file:
 
-1. Unzip the downloaded package to a folder. You'll find an executable binary file `teamsapptester.exe`.
+  1. Download the Teams App Test Tool CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
 
-1. Run the following command to launch profile:
+  1. Unzip the downloaded package to a folder. You'll find an executable binary file `teamsapptester.exe`.
 
-    ```cmd
-    dotnet run --launch-profile "Teams App Test Tool (browser)"
-    ```
+  1. Run the following command to launch profile:
 
-1. In a separate terminal, define your bot message endpoint:
+      ```cmd
+      dotnet run --launch-profile "Teams App Test Tool (browser)"
+      ```
 
-    1. For Command Prompt:
+  1. In a separate terminal, define your bot message endpoint:
 
-        ```cmd
-        set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
-        ```
+      1. For Command Prompt:
 
-    1. For PowerShell:
+          ```cmd
+          set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
+          ```
 
-        ```powershell
-        $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
-        ```
+      1. For PowerShell:
 
-1. Run the following command to initiate Teams App Test Tool:
+          ```powershell
+          $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
+          ```
 
-    1. For Command Prompt:
+  1. Run the following command to initiate Teams App Test Tool:
 
-        ```cmd
-        teamsapptester.exe start
-        ```
+      1. For Command Prompt:
 
-    1. For PowerShell:
+          ```cmd
+          teamsapptester.exe start
+          ```
 
-        ```powershell
-        teamsapptester.exe start
-        ```
+      1. For PowerShell:
 
-1. Test Tool opens the bot in a webpage.
+          ```powershell
+          teamsapptester.exe start
+          ```
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
+  1. Test Tool opens the bot in a webpage.
 
-In case the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
+      :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
+
+  In case the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
+  ---
 
 ---
 
