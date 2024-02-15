@@ -578,15 +578,15 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
 # [JavaScript/Node.js](#tab/javascript-1)
 
 ```javascript
-channelData: {
-    onBehalfOf: [ {
-        itemId: 0,
-            mentionType: 'person',
-            mri: context.activity.from.id,
-            displayName: context.activity.from.name
-    } ]
-}
-
+    const responseActivity = { type: 'message', attachments: [adaptiveCard], channelData: {
+        onBehalfOf: [ { 
+            itemId: 0, 
+            mentionType: 'person', 
+            mri: context.activity.from.id, 
+            displayname: context.activity.from.name 
+            }
+        ]
+    }};
 ```
 
 
