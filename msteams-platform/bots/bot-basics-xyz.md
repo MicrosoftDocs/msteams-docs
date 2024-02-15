@@ -9,13 +9,15 @@ ms.date: 01/22/2023
 ---
 # Event-driven conversations with activity handlers
 
-When building your conversational bots for Microsoft Teams, you can work with conversation events. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take the following actions:
+An event in bot workflow is something that triggers the bot to perform a certain action or task. For example, a user sending a message, clicking a button, or uploading an image can be events that start a bot workflow. 
 
-Trigger a welcome message when your bot is added to a team.
-Trigger a welcome message when a new team member is added or removed.
-Trigger a notification when a channel is created, renamed, or deleted.
-Trigger a notification when a bot message is liked by a user.
-Identify the default channel for your bot from user input (selection) during installation.
+Events and handlers are two related concepts in bot workflow. Events are actions or occurrences that trigger the bot to perform a certain task or response. Handlers are functions or methods that contain the logic for how the bot should handle different types of events. For example, when a user sends a message to the bot, that is an event. The bot has a handler for message events, which defines what the bot should do or say in response to the user’s message.
+
+You can think of events as the inputs for the bot, and handlers as the outputs. Events tell the bot what happened, and handlers tell the bot what to do. Different events may require different handlers, depending on the goal and the context of the conversation. For example, a bot may have a handler for greeting new users, a handler for answering FAQs, a handler for collecting user feedback, and so on.
+
+To create a bot workflow, you need to define both the events and the handlers that the bot will use. You can use predefined events and handlers from the bot framework, or you can create your own custom events and handlers.
+
+
 
 ## Activity handler
 
