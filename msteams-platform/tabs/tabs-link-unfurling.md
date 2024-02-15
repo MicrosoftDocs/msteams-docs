@@ -56,7 +56,7 @@ You can invoke Stage View experience through one of the following ways:
 
 * [Invoke from Adaptive Card](#invoke-collaborative-stage-view-from-adaptive-card)
 * [Invoke from StageView API](#invoke-from-stageview-api)
-* [Invoke from Deeplink](#invoke-from-deeplink)
+* [Invoke from deep link](#invoke-from-deep-link)
 
 The following table provides details on the default and defined responses for each invoke type:
 
@@ -64,7 +64,7 @@ The following table provides details on the default and defined responses for ea
 | ---| ---| --- |
 | Adaptive Card | Opens in Collaborative Stage View | Opens in Stage View modal, if Collaborative Stage View or Multi-window Stage View isn't supported. |
 | StageView API | Opens in Collaborative Stage View | Define `openMode` to open in Teams Multi-window or Stage View modal. |
-| Deeplink| Opens in Collaborative Stage View | Define `openMode` to open in Teams Multi-window or Stage View modal. |
+| Deep link| Opens in Collaborative Stage View | Define `openMode` to open in Teams Multi-window or Stage View modal. |
 
 ### Invoke Collaborative Stage View from Adaptive Card
 
@@ -210,9 +210,9 @@ StageViewParams for Stage View modal:
 > * The optional threadId parameter only supports chat threads. If a channel threadId is used, the side panel isn't displayed.
 > * When you launch Stage View from a certain context, ensure that your app works in that context. For example, if the Stage View is launched from a personal app, you must ensure your app has a personal scope.
 
-### Invoke from Deeplink
+### Invoke from deep link
 
-The default behavior of Stage View deeplink is to open in Collaborative Stage View with an associated side panel conversation. To invoke the deeplink from your tab or personal app, you must wrap the deeplink URL in the app.openLink(url) API.
+The default behavior of Stage View deep link is to open in Collaborative Stage View with an associated side panel conversation. To invoke the deep link from your tab or personal app, you must wrap the deep link URL in the [app.openLink(url) API](/javascript/api/%40microsoft/teams-js/app#@microsoft-teams-js-app-openlink).
 
 The `openMode` parameters defined in the API determine the way the chat content opens. The three `openMode`properties are:
 
@@ -229,18 +229,18 @@ The following table provides the responses of the `openMode`properties:
 | openMode defined as `popout`| Opens in Multi-window  Stage View. |
 | openMode defined as `modal` | Opens in Stage View modal. |
 
-Unless a threadId is specified, the side panel conversation brings the groupchat/channel thread from which the deeplink is invoked.
+Unless a threadId is specified, the side panel conversation brings the groupchat/channel thread from which the deep link is invoked.
 
 #### Syntax
 
-The following is the deeplink syntax for Collaborative Stage View:
+The following is the deep link syntax for Collaborative Stage View:
 
 `https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso","openMode":"popOutWithChat"}`
 
 > [!NOTE]
 >
-> * Deeplink without any `openMode` specified defaults to Collaborative Stage View.
-> * All deeplinks must be encoded before pasting the URL. Unencoded URLs aren't supported.
+> * Deep link without any `openMode` specified defaults to Collaborative Stage View.
+> * All deep links must be encoded before pasting the URL. Unencoded URLs aren't supported.
 
 `https://teams.microsoft.com/l/stage/2c19df50-1c3c-11ea-9327-cd28e4b6f7ba/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-test-tab.azurewebsites.net%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-test-tab.azurewebsites.net%22%7D`
 
