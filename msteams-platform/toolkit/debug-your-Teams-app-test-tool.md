@@ -115,16 +115,16 @@ Test Tool offers a faster debug experience for bot applications when compared to
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
 # [Command line](#tab/cli)
+1. test
+   # [Command line in JS/TS](#tab/clijs)
 
-  # [Command line in JS/TS](#tab/clijs)
-
-  1. Install Teams App Test Tool CLI from `npm`:
+   1. Install Teams App Test Tool CLI from `npm`:
 
       ```cmd
       npm install -g @microsoft/teams-app-test-tool
       ```
 
-  1. Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
+   1. Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
 
       ```cmd
       teamsapp new   
@@ -143,43 +143,43 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
       Your project is created.
 
-  1. Install required dependencies and npm packages.
+   1. Install required dependencies and npm packages.
 
       ```cmd
       teamsapp deploy --env=testtool
       ```
 
-  1. Start your bot app:
+   1. Start your bot app:
 
       ```cmd
       npm run dev:teamsapp:testtool
       ```
 
-  1. In a separate terminal, initiate the Teams App Test Tool:
+   1. In a separate terminal, initiate the Teams App Test Tool:
 
       ```cmd
       npm run dev:teamsapp:launch-testtool
       ```
 
-  1. Test Tool opens the bot in a webpage.
+   1. Test Tool opens the bot in a webpage.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
 
-  # [Command line in C#](#tab/clicsharp)
+   # [Command line in C#](#tab/clicsharp)
 
-  Run the following commands in the directory that contains `teamsapp.yml` file:
+   Run the following commands in the directory that contains `teamsapp.yml` file:
 
-  1. Download the Teams App Test Tool CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
+   1. Download the Teams App Test Tool CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
 
-  1. Unzip the downloaded package to a folder. You'll find an executable binary file `teamsapptester.exe`.
+   1. Unzip the downloaded package to a folder. You'll find an executable binary file `teamsapptester.exe`.
 
-  1. Run the following command to launch profile:
+   1. Run the following command to launch profile:
 
       ```cmd
       dotnet run --launch-profile "Teams App Test Tool (browser)"
       ```
 
-  1. In a separate terminal, define your bot message endpoint:
+   1. In a separate terminal, define your bot message endpoint:
 
       1. For Command Prompt:
 
@@ -193,7 +193,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
           $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
           ```
 
-  1. Run the following command to initiate Teams App Test Tool:
+   1. Run the following command to initiate Teams App Test Tool:
 
       1. For Command Prompt:
 
@@ -207,12 +207,12 @@ Test Tool offers a faster debug experience for bot applications when compared to
           teamsapptester.exe start
           ```
 
-  1. Test Tool opens the bot in a webpage.
+   1. Test Tool opens the bot in a webpage.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
 
-  In case the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
-  ---
+      In case the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
+     ---
 
 ---
 
