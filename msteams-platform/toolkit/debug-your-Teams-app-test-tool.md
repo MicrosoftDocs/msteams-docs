@@ -116,6 +116,8 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 # [Command line](#tab/cli)
 
+Install
+
   # [Command line in JS/TS](#tab/clijs)
 
     1. Install Teams App Test Tool CLI from `npm`:
@@ -213,7 +215,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
     
     In case the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
 
-  ---
+
 ---
 
 ## Activity triggers
