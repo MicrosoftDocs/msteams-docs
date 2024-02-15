@@ -116,7 +116,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 # [Command line](#tab/cli)
 
-To debug your Teams app test tool, use command line in JavaScript, TypeScript, or C# as follows:
+  To debug your Teams app test tool, use command line in JavaScript, TypeScript, or C# as follows:
 
    # [JavaScript/TypeScript](#tab/clijs)
 
@@ -125,7 +125,7 @@ To debug your Teams app test tool, use command line in JavaScript, TypeScript, o
       ```cmd
       npm install -g @microsoft/teams-app-test-tool
       ```
-     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
+        :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
 
 
    1. Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
