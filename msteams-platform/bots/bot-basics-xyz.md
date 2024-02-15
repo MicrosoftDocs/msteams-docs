@@ -23,9 +23,13 @@ An activity handler is an event-driven approach to organize the conversational l
 
 An activity handler processes activities in two ways, through Teams-specific activity handlers for Teams-specific events and interactions, and through the bot object for general conversational logic. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
 
+`example`
+
 ## Bot logic
 
 The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter. The bot logic processes incoming activities from one or more of your bots channels and generates outgoing activities in response. This is still true of bot derived from the Teams activity handler class, which first checks for Teams activities, then passes all other activities to the Bot Framework's activity handler.
+
+`{Sequence or flow chart}`
 
 Following are the different types of events for bot conversations:
 
