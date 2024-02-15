@@ -71,6 +71,8 @@ You can get a rich integration experience between Teams and SharePoint by adding
 
 You can create deep links to the entities in Teams. You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience.
 
+For more information, see [Configure deep links.](../concepts/build-and-test/deep-links.md)
+
 ## Integrate device capabilities
 
 Teams platform is continuously enhancing developer capabilities aligning with built-in first-party experiences. The enhanced Teams platform allows partners to access and integrate the native device capabilities, such as camera, QR or barcode scanner, photo gallery, microphone, and location using dedicated APIs available in Microsoft Teams JavaScript client library.
@@ -81,7 +83,7 @@ You can integrate the Teams native people picker control that allows users to se
 
 ## Integrate Teams in your external app
 
-You can embed your own experiences into Teams by building Teams apps. If you'd like to *reverse* this model and integrate Teams or other communication capabilities into your own external app experience, see [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services are cloud-based services with REST APIs and client libraries to help you integrate communication into your own custom applications. You can embed generic or Teams-styled React Web components for calling and chat with the help of the [UI library](https://azure.github.io/communication-ui-library/).
+You can embed your own experiences into Teams by building Teams apps. If you'd like to *reverse* this model and integrate Teams or other communication capabilities into your own external app experience, see [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services is cloud-based services with REST APIs and client libraries to help you integrate communication into your own custom applications. You can embed generic or Teams-styled React Web components for calling and chat with the help of the [UI library](https://azure.github.io/communication-ui-library/).
 
 Azure Communication Services applications can use public preview functionality to [interoperate with Teams](/azure/communication-services/concepts/teams-interop) and enable your custom application to join Teams meetings anonymously. For example, you can integrate video calling into a mobile banking application and allow end-users to virtually meet with bank employees using Teams.
 
