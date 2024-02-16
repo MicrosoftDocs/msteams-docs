@@ -467,7 +467,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***February 16,2024***:  The feedback option, **This page**, located in the **Submit and view feedback** section of the article, will be deprecated soon in the near future. You can select :::image type="icon" source="assets/icons/feedback-icon.png" border="false"::: **Feedback** in the upper-right corner of the article to submit feedback.
+* ***February 16,2024***:  The feedback option, **This page**, located in the **Submit and view feedback** section of the article, will be deprecated soon. You can select :::image type="icon" source="assets/icons/feedback-icon.png" border="false"::: **Feedback** in the upper-right corner of the article to submit feedback.
 
 * ***February 07, 2024***: Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
