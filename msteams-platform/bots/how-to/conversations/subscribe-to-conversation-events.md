@@ -32,7 +32,7 @@ You can use conversation update events to provide better notifications and effec
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
-* When bot has been added to a conversation.
+* When the bot is added to a conversation.
 * Other members are added to or removed from a conversation.
 * Conversation metadata has changed.
 
@@ -349,7 +349,7 @@ The following code shows an example of channel restored event:
 
 # [C#](#tab/dotnet)
 
-* [SDK refernce](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
 ```csharp
