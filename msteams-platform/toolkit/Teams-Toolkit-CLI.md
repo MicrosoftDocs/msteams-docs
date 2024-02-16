@@ -411,7 +411,7 @@ The following table lists the parameters available for `teamsapp collaborator gr
 
 ## `teamsapp update`
 
-Update the Teams app manifest to Teams Developer Portal.
+Update the app manifest to Teams Developer Portal.
 
 ### `teamsapp update` parameters
 
@@ -838,7 +838,7 @@ Update the specific app manifest file.
 | Command | Description |
 |:----------------  |:-------------|
 | `teamsfx update aad-app` | Update the Microsoft Entra App in the current application. |
-| `teamsfx update teams-app` | Update the Teams app manifest to Teams Developer Portal. |
+| `teamsfx update teams-app` | Update the app manifest to Teams Developer Portal. |
 
 ### Parameters for `teamsfx update aad-app`
 
