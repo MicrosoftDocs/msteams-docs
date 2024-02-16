@@ -116,7 +116,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 # [Command line](#tab/cli)
 
-  To debug your Teams app test tool, use command line in JavaScript, TypeScript, or C# as follows:
+To debug your Teams app test tool, use command line in JavaScript, TypeScript, or C# as follows:
 
    # [JavaScript/TypeScript](#tab/clijs)
 
@@ -125,8 +125,8 @@ Test Tool offers a faster debug experience for bot applications when compared to
       ```cmd
       npm install -g @microsoft/teams-app-test-tool
       ```
-        :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
 
+        :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
 
    1. Use the `teamsapp` CLI to create your first project. Start from the folder where you want to create the project folder.
 
@@ -152,7 +152,8 @@ Test Tool offers a faster debug experience for bot applications when compared to
       ```cmd
       teamsapp deploy --env=testtool
       ```
-       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teamsapp-deploy-env-testtool.png" alt-text="Screenshot shows the process of installing the required dependencies and npm packages.":::      
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teamsapp-deploy-env-testtool.png" alt-text="Screenshot shows the process of installing the required dependencies and npm packages.":::
 
    1. Run the following command to start your bot app:
 
@@ -172,8 +173,8 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
    # [C#](#tab/clicsharp)
 
-   1. [Create a new Teams app](../toolkit/toolkit-v4/create-new-project-vs).    
-   
+   1. [Create a new Teams app](toolkit-v4/create-new-project-vs.md).
+
    1. Run the following commands in the directory that contains `teamsapp.yml` file:
 
       1. Download the Teams App Test Tool CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
@@ -219,6 +220,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
           :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
 
           In case the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
+
    ---
 
 ---
