@@ -8,23 +8,17 @@ ms.date: 11/23/2022
 
 # Create a content page
 
-Content page is the base level page where a developer can add the content of a tab. A content page is a webpage that is rendered within Microsoft Teams client, which is necessary to create any of the following tabs:
+Content page is the base level webpage that is rendered within Microsoft Teams client where a developer can add the content of a tab. It allows you to seamlessly integrate your web content within the Teams client, creating a more immersive and engaging environment for users. For instance, you can use content pages to display custom data, integrate third-party services, or create a more personalized user experience. A content page is necessary to create any of the following tabs:
 
 * A personal-scoped custom tab: In this case, the content page is the first page the user encounters.
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
 * A [dialog](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a dialog (referred as task module in TeamsJS v1.x). The page is rendered inside the modal pop-up.
 
-You must present an `<iframe>` HTML content page in your tab, if you need to add your tab within a channel or group, or personal scope. For static tabs, the content URL is set directly in your  [app manifest](../../../resources/schema/manifest-schema.md#statictabs).
+You must present an HTML content page in your tab, if you need to add your tab within a channel or group, or personal scope. For static tabs, the content URL is set directly in your  [app manifest](../../../resources/schema/manifest-schema.md#statictabs).
 
 This article is specific to using content pages as tabs; however, most of the guidance here applies regardless of how the content page is presented to the user.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
-
-The following images show the configuration of an HTML content page and the output of content page in tab:
-
-|Content page configuration| Output in web | Output in tab |
-|---|---|---|
-|:::image type="content" source="~/assets/images/tab-images/content-page-html.png" alt-text="Screenshot shows the html content page in visual studio." lightbox="~/assets/images/tab-images/content-page-html.png":::|:::image type="content" source="~/assets/images/tab-images/personal-tab-web.png" alt-text="Screenshot shows the output of content page in web." lightbox="~/assets/images/tab-images/personal-tab-web.png":::|:::image type="content" source="~/assets/images/tab-images/personal-tab-in-teams.png" alt-text="Screenshot shows the output of content page in teams tab." lightbox="~/assets/images/tab-images/personal-tab-in-teams.png":::|
 
 ## Tab content and design guidelines
 
@@ -34,7 +28,7 @@ You need to focus on making your tab design clean, navigation intuitive, and con
 
 ## Integrate your code with Teams
 
-For your page to display in Teams, you must include the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) and include a call to `app.initialize()` after your page loads.
+To display your page in Teams, you'll need to include the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) in your code and call `app.initialize()` after your page loads.
 
 > [!NOTE]
 > It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
@@ -84,6 +78,22 @@ The following code gives an example of how your page and the Teams client commun
 
 ***
 
+For more information on how to create and add a content page to a personal tab, see [add a content page to personal tab](../create-personal-tab.md#add-a-content-page-to-the-personal-tab).
+
+The following images show the configuration of an HTML content page and the output of content page in tab:
+
+**Content page configuration**
+
+:::image type="content" source="~/assets/images/tab-images/content-page-html.png" alt-text="Screenshot shows the html content page in visual studio." lightbox="~/assets/images/tab-images/content-page-html.png":::
+
+**Output in web**
+
+:::image type="content" source="~/assets/images/tab-images/personal-tab-web.png" alt-text="Screenshot shows the output of content page in web.":::
+
+**Output in tab**
+
+:::image type="content" source="~/assets/images/tab-images/personal-tab-in-teams.png" alt-text="Screenshot shows the output of content page in teams tab.":::
+
 ## Access additional content
 
 You can access additional content by using TeamsJS to interact with Teams, creating deep links, using dialogs, and verifying if URL domains are included in the `validDomains` array.
@@ -92,7 +102,7 @@ You can access additional content by using TeamsJS to interact with Teams, creat
 
 * **Deep links**: You can create deep links to entities in Teams. They're used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
 
-* **Dialogs**: A dialog is a modal pop-up experience that you can trigger from your tab. In a content page, use dialogs to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
+* **Dialogs**: A dialog is a modal pop-up experience that you can trigger from your tab. Use dialogs in a content page to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 * **Valid domains**: Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [app manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the app manifest schema reference.
 
@@ -101,7 +111,7 @@ You can access additional content by using TeamsJS to interact with Teams, creat
 
 ## Show a native loading indicator
 
-You can configure and show a native loading indicator to a tab. Starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md), you can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator). For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [dialogs in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
+You can configure and show a native loading indicator to a tab. You can provide a [native loading indicator](../../../resources/schema/manifest-schema.md#showloadingindicator) starting with [manifest schema v1.7](../../../resources/schema/manifest-schema.md). For example, [tab content page](#integrate-your-code-with-teams), [configuration page](configuration-page.md), [removal page](removal-page.md), and [dialogs in tabs](../../../task-modules-and-cards/task-modules/task-modules-tabs.md).
 
 > [!NOTE]
 >
@@ -109,12 +119,16 @@ You can configure and show a native loading indicator to a tab. Starting with [m
 
 If you indicate `showLoadingIndicator : true`  in your app manifest, then all tab configuration, content, removal pages, and all iframe-based dialogs must follow these steps:
 
-To show the loading indicator:
+Use the following steps to show the native loading indicator:
 
 1. Add `"showLoadingIndicator": true` to your app manifest.
+
 1. Call `app.initialize();`.
+
 1. Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app has successfully loaded. If applicable, Teams hides the loading indicator. If `notifySuccess`  isn't called within 30 seconds, Teams assumes that your app has timed out, and displays an error screen with a retry option. For app updates, this step is applicable for already configured tabs. If you don't perform this step, an error screen is displayed for the existing users. *[Mandatory]*
+
 1. If you're ready to print to the screen and wish to lazy load the rest of your application's content, you can hide the loading indicator manually by calling `app.notifyAppLoaded();`. *[Optional]*
+
 1. If your application doesn't load, you can call `app.notifyFailure({reason: app.FailedReason.Timeout, message: "failure message"});` to let Teams know about the failure. The `message` property is currently not used, therefore the failure message doesn't appear in the UI, and a generic error screen appears to the user. The following code shows the enumeration that defines the possible reasons you can indicate for the application's failure to load:
 
     ```typescript
