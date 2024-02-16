@@ -12,7 +12,7 @@ Registering your Teams app in Microsoft Entra ID allows the app to access Azure 
 
 ## Before you register your app
 
-It's helpful if you learn about the configuration for registering your app in Microsoft Entra ID beforehand. Ensure that you're prepared to configure the following details prior to registering your app:
+It's helpful if you learn about the configuration for [registering your app in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) beforehand. Ensure that you're prepared to configure the following details prior to registering your app:
 
 * **Single or multitenant options**: Choose single tenant if your app is only used in its home tenant, or choose multitenant if many Microsoft 365 tenants use it regularly. For example, apps created for a single organization are typically single tenant. On the other hand, apps created by an independent software publisher that is used by many customers need to be multitenant so each customer's tenant can access the app.
 

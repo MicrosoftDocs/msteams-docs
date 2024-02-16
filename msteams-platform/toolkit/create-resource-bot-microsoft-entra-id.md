@@ -10,11 +10,21 @@ ms.localizationpriority: medium
 
 For your Teams bot app to access resources available in Microsoft Entra ID, you'll need to create a bot resource with Microsoft Entra ID. The following process registers your bot app with Azure AI Bot Service and enables the app to connect to Teams channels.
 
+## Prerequisites
+
+- An Azure account with an active subscription. If you don't already have one, [create an account for free](https://portal.azure.com).
+
 In this section, you'll:
 
-- [Create and deploy bot resource](#create-a-bot-resource-in-microsoft-entra-id)
-- [Configure the client secret](#create-client-secret)
-- [Enable the bot resource for Teams](#enable-bot-for-teams)
+- [Create a bot resource in Microsoft Entra ID](#create-a-bot-resource-in-microsoft-entra-id)
+  - [Prerequisites](#prerequisites)
+  - [Create and deploy bot resource in Microsoft Entra ID](#create-and-deploy-bot-resource-in-microsoft-entra-id)
+    - [To create and deploy bot resource](#to-create-and-deploy-bot-resource)
+    - [Create client secret](#create-client-secret)
+      - [To create client secret for the bot](#to-create-client-secret-for-the-bot)
+    - [Enable bot for Teams](#enable-bot-for-teams)
+      - [To enable bot app for Teams](#to-enable-bot-app-for-teams)
+  - [See also](#see-also)
 
 ## Create and deploy bot resource in Microsoft Entra ID
 
@@ -78,15 +88,15 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
     1. Enter the app ID of the Microsoft Entra app you have already registered.
 
-1. Select **Next** and the **Tags** tab opens. This step is optional and tags can be configured from the bot resource's overview page anytime.
+    1. Select **Next**.
 
-    1. Enter the name and value tags for categorizing resources you provisioned.
+1. The **Tags** tab opens. This step is optional and tags can be configured from the bot resource's overview page anytime. Enter the name and value tags for categorizing resources you provisioned.
 
     :::image type="content" source="../assets/images/authentication/name-value-tag-azure-bot.png" alt-text="Screenshot shows the tags tab in the create an Azure bot screen.":::
 
-1. Select **Review + create**. Microsoft Entra ID validates the entered details.
+2. Select **Review + create**. Microsoft Entra ID validates the entered details.
 
-1. Review your bot resource and select **Create** to create the bot.
+3. Review your bot resource and select **Create** to create the bot.
 
     :::image type="content" source="../assets/images/authentication/resource-bot-creation-final-preview.png" alt-text="Screenshot shows the final preview screen before creating a bot in Azure portal.":::
 
@@ -94,9 +104,9 @@ You can create a bot resource in Microsoft Entra ID for a single or multitenant 
 
     :::image type="content" source="../assets/images/authentication/initialize-deployment-message.png" alt-text="Screenshot shows a message stating the deployment of the resource is initializing.":::
 
-    The **Overview** page opens as the deployment is in progress. Once the deployment is complete, a**Deployment succeeded** message is displayed. This message confirms that the bot resource has been created successfully and the selected resources provisioned.
+    The **Overview** page opens as the deployment is in progress. Once the deployment is complete, a **Deployment succeeded** message is displayed. This message confirms that the bot resource has been created successfully and the selected resources provisioned.
 
-1. Under **Next steps** dropdown, select **Go to resource**.
+4. Under **Next steps** dropdown, select **Go to resource**.
 
     :::image type="content" source="../assets/images/authentication/go-to-bot-resource.png" alt-text="Screenshot shows the Azure bot resource deployment page.":::
 
@@ -147,7 +157,7 @@ A client secret is a string that the bot app uses to prove its identity when req
 
 ### Enable bot for Teams
 
-You must enable the Teams channel to let the bot interact with Microsoft Teams.
+You must enable the bot to interact with Microsoft Teams. Without this permission, your bot is incapable to communicating with Teams.
 
 #### To enable bot app for Teams
 
