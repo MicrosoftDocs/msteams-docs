@@ -14,7 +14,7 @@ A bot, chatbot, or conversational bot is an app that responds to simple commands
 
 ## Prerequisites
 
-To configure bot as additional capability, please make sure:
+To configure bot as additional capability, make sure:
 
 * You have a Teams application and its manifest.
 * You have a Microsoft 365 account to test the application.
@@ -35,7 +35,7 @@ Following are the steps to add Bot capability to a tab app:
 
 ### Create a bot app using Teams Toolkit
 
-Please check the guide [Create a bot app with Teams Toolkit](create-new-project.md).
+Check the guide [Create a bot app with Teams Toolkit](create-new-project.md).
 
 ### Configure bot capability in Teams application manifest
 
@@ -77,7 +77,7 @@ You can configure bot in appPackage/manifest.json. You can also refer to bot sch
 
 ### Bring bot code to your project
 
-Bring your own bot app code into your project. If you don't have one, you can use the bot app project previously created and copy the source code to into your current project. We suggest you to copy them into a bot/ folder. Your folder structure will be like:
+Bring your own bot app code into your project. If you don't have one, you can use the bot app project previously created and copy the source code to into your current project. We suggest you copy them into a bot/ folder. Your folder structure is like:
 
 ```yml
     |-- .vscode/
@@ -104,7 +104,7 @@ Bring your own bot app code into your project. If you don't have one, you can us
     |-- teamsapp.yml
 ```
 
-We suggest you to re-organize the folder structure and create a root package.json as following. You can create a root package.json using command "npm init -y".
+We suggest you re-organize the folder structure and create a root package.json as following. You can create a root package.json using command "npm init -y".
 
 ```yml
     |-- .vscode/
@@ -132,7 +132,7 @@ We suggest you to re-organize the folder structure and create a root package.jso
     |-- teamsapp.yml
 ```
 
-Add following to your root package.json
+Add following to your root package.json:
 
 ```json
     "scripts": {
@@ -293,9 +293,9 @@ Update teamsapp.local.yml. Add action botAadApp/create and botFramework/create u
             BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
 ```
 
-Here is an sample project for reference.
+Here's a sample project for reference.
 
-Open the Run and Debug Activity Panel and select Debug (Edge) or Debug (Chrome). Press F5 to preview your Teams app locally.
+Open the Run and Debug Activity Panel and select Debug (Microsoft Edge) or Debug (Chrome). Press F5 to preview your Teams app locally.
 
 ### Move the application to Azure
 
@@ -429,13 +429,13 @@ Update your `teamsapp.yml` file. Add "botAadApp/create" action in "provision" se
           resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
 ```
 
-Here is an sample project for reference.
+Here's a sample project for reference.
 
 Run `Teams: Provision` command in Visual Studio Code to apply the bicep to Azure.
 
 Run `Teams: Deploy` command in Visual Studio Code to deploy your app code to Azure.
 
-Open the Run and Debug Activity Panel and select Launch Remote (Edge) or Launch Remote (Chrome). Press F5 to preview your Teams app.
+Open the Run and Debug Activity Panel and select Launch Remote (Microsoft Edge) or Launch Remote (Chrome). Press F5 to preview your Teams app.
 
 ## Add bot to a message extension Teams app
 
@@ -449,7 +449,7 @@ Following are the steps to add bot capability to a message extension app:
 
 ### Create a bot app using Teams Toolkit
 
-Please check the guide Create a bot app with Teams Toolkit
+Check the guide Create a bot app with Teams Toolkit.
 
 ### Configure bot capability in Teams application manifest
 
@@ -491,7 +491,7 @@ You can configure bot in appPackage/manifest.json. You can also refer to bot sch
 
 ### Bring bot code to your project
 
-If you are adding bot to a message extension Teams app, then you should already have a class that extends TeamsActivityHandler. Bring your own bot code, or copy code from your previously created bot app to your own class. Below is an example if you copy code from Teams Toolkit created bot app:
+If you're adding bot to a message extension Teams app, then you should already have a class that extends TeamsActivityHandler. Bring your own bot code, or copy code from your previously created bot app to your own class. Below is an example if you copy code from Teams Toolkit created bot app:
 
 ```json
       public class YourHandler extends TeamsActivityHandler{
