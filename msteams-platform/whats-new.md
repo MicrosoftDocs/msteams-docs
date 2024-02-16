@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 February**
 
+* ***February 15, 2024***: [Share to Teams from personal app or tab for mobile clients.](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
 * ***February 01, 2024***: [Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365.](m365-apps/cards-loop-component.md)
 * ***February 01, 2024***: [Use application RSC permissions for chat scope.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting)
 
@@ -465,6 +466,8 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 :::column span="2":::
 
 Teams platform features that aren't available.
+
+* ***February 16,2024***:  The feedback option, **This page**, located in the **Submit and view feedback** section of the article, will be deprecated by May 31, 2024. You can select :::image type="icon" source="assets/icons/feedback-icon.png" border="false"::: **Feedback** in the upper-right corner of the article to submit feedback.
 
 * ***February 07, 2024***: Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
