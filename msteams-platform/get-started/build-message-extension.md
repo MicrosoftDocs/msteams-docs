@@ -8,13 +8,13 @@ ms.topic: reference
 
 # Build message extension
 
-A message extension allows the users to interact with your web service through buttons and forms in the Microsoft Teams client. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card.
+A message extension allows the users to interact with your web service through buttons and forms in Teams. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to Teams in the form of a richly formatted card.
 
 :::image type="content" border="false" source="../assets/images/get-started/get-started-me.png" alt-text="Screenshot shows you the conceptual message extension in Teams client.":::
 
-In this tutorial, you'll learn to build a search-based message extension app, and the app allows users to search npm packages from the Node Package Manager (npm) directory.
+In this tutorial, you'll learn to build a search-based message extension app, and the app allows users to search Node Package Manager (npm) packages from the npm directory.
 
-Get familiarized with search based message extension app in one of the following ways:
+Create a search based message extension app in one of the following ways:
 
 * **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code), where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
 * **Step-by-step guide**: Allows you to set up your development environment and build a Teams app from start.
@@ -25,7 +25,7 @@ Before you create your codespace, ensure that you have the following prerequisit
 
 * A GitHub account to create your codespace instance
 * A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with custom app upload permission
-* A [Microsoft 365 tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
+* A [Microsoft 365 developer tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
 > [GitHub Codespaces](https://github.com/features/codespaces) offers free plan up to a fixed amount of usage per month. If you need to free up more space, go to [github.com/codespaces](https://github.com/codespaces) and delete the codespaces that you no longer need.
