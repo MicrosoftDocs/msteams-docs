@@ -192,7 +192,7 @@ To trigger the message extension as plugin in M365 Chat, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-me-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
+1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npmsearchlocal.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the Adaptive Card response with content and preview card from M365 Chat. The response contains a list of four products with Contoso product name. ":::
 
