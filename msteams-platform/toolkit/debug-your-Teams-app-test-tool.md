@@ -115,7 +115,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool.":::
 
 # [Command line](#tab/cli)
-   To debug your Teams app test tool, use command line in JavaScript, TypeScript, or C# as follows:
+1. To debug your Teams app test tool, use command line in JavaScript, TypeScript, or C# as follows:
    # [JavaScript/TypeScript](#tab/clijs)
 
    1. Run the following command to install Teams App Test Tool CLI from `npm`:
@@ -165,10 +165,6 @@ Test Tool offers a faster debug experience for bot applications when compared to
       npm run dev:teamsapp:launch-testtool
       ```
 
-   1. Test Tool opens the bot in a webpage.
-
-      :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
-
    # [C#](#tab/clicsharp)
 
    1. [Create a new Teams app](toolkit-v4/create-new-project-vs.md).
@@ -213,13 +209,13 @@ Test Tool offers a faster debug experience for bot applications when compared to
               teamsapptester.exe start
               ```
 
-      1. Test Tool opens the bot in a webpage.
-
-          :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
-
-          In case the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
-
    ---
+1. Test Tool opens the bot in a webpage.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
+
+In C#, if the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
+
 ---
 
 ## Activity triggers
