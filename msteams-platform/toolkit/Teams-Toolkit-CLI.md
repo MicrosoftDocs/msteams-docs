@@ -68,7 +68,7 @@ The following table lists the supported commands to help developers build and ma
 | `teamsapp publish` | Publish the app to Teams.|
 | `teamsapp preview` | Preview the current application. |
 | `teamsapp update` |  Update the app manifest (previously called Teams app manifest) to Teams Developer Portal. |
-| `teamsapp upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
+| `teamsapp upgrade` | Upgrade the project to work with the latest version of Microsoft Teams Toolkit. |
 | `teamsapp collaborator`| Collaborate with other developers in the same project.|
 | `teamsapp uninstall` | Remove an acquired Microsoft 365 App. |
 
@@ -563,7 +563,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 | `teamsfx m365`  | Manage M365 app. |
 | `teamsfx permission`| Check, grant, and list permissions for users who can access and manage Teams application and Microsoft Entra application. |
 | `teamsfx update` | Update the specific application app manifest file. |
-| `teamsfx upgrade` | Upgrade the project to work with the latest version of Teams Toolkit. |
+| `teamsfx upgrade` | Upgrade the project to work with the latest version of Microsoft Teams Toolkit. |
 
 ## Interactive mode
 
