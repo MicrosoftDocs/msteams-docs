@@ -33,7 +33,7 @@ The Classic Teams client is represented using the `teams` field and the new Team
 
 To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
 
-* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues aren't currently supported and will be available soon in the new Teams client.
+* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues aren't currently supported in the new Teams client.
 
 ## Known issues
 
@@ -43,7 +43,7 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 > * We recommend you to test the functionality of  apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC-High environments after switching from the Classic Teams client to the new Teams client.
 > * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-The following Teams features aren't currently supported (will be available soon) in the new Teams client:
+The following Teams features aren't currently supported in the new Teams client:
 
 * [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation, and Media.
 
