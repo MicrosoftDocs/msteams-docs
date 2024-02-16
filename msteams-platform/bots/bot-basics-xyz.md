@@ -9,36 +9,34 @@ ms.date: 01/22/2023
 ---
 # Event-driven conversations with activity handlers
 
-## Bot event
+Events and handlers are two related concepts in a bot workflow. An event in bot workflow depicts an activity that triggers the bot to perform a certain action or task.
 
-An event in bot workflow is depicts an activity that triggers the bot to perform a certain action or task. For example, a user sending a message, clicking a button, or uploading an image can be events that start a bot workflow. 
+Activity handlers are functions or methods that contain the bot logic for how the bot should handle different types of events. For example, when a user reacts to the bot message, that is an event. The bot has a handler for message events, which defines what the bot should do or say in response to the user’s action.
 
-Events and handlers are two related concepts in bot workflow. Events are actions or occurrences that trigger the bot to perform a certain task or response. Handlers are functions or methods that contain the logic for how the bot should handle different types of events. For example, when a user sends a message to the bot, that is an event. The bot has a handler for message events, which defines what the bot should do or say in response to the user’s message.
+To create a event-driven conversations, you need to define the handlers that the bot will use when the event is occured.
 
-You can think of events as the inputs for the bot, and handlers as the outputs. Events tell the bot what happened, and handlers tell the bot what to do. Different events may require different handlers, depending on the goal and the context of the conversation. For example, a bot may have a handler for greeting new users, a handler for answering FAQs, a handler for collecting user feedback, and so on.
-
-To create a bot workflow, you need to define the handlers that the bot will use when the event is occured.
 
 `{Sequence or flow chart}`
 
 
-## Activity handler
+## Events with activity handlers
 
-An activity handler is an event-driven approach to organize the conversational logic for your bot. Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type.
+Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type. 
 
-An activity handler processes activities in two ways, through Teams-specific activity handlers for Teams-specific events and interactions, and through the bot object for general conversational logic. The Teams bot is derived from `TeamsActivityHandler` class, which is derived from the Bot Framework's `ActivityHandler` class.
+For example, when the bot receives a message activity, the turn handler identifies this incoming activity and forwards it to the `onMessageActivity` handler. As a developer, you place your logic for managing and responding to messages in this `onMessageActivity` handler.
 
-`example`
+```javascript
+this.onMessageActivity(async (context, next) => {
+    // Your logic here
+    await next();
+});
+```
 
-### Bot logic
+Following are the two primary Teams activity handlers:
 
-The bot object contains the conversational reasoning or logic for a turn and exposes a turn handler, which is the method that can accept incoming activities from the bot adapter. The bot logic processes incoming activities from one or more of your bots channels and generates outgoing activities in response. This is still true of bot derived from the Teams activity handler class, which first checks for Teams activities, then passes all other activities to the Bot Framework's activity handler.
+* `OnConversationUpdateActivityAsync`: Routes all the conversation update activities
+* `OnInvokeActivityAsync`: Routes all Teams invoke activities.
 
-`{Sequence or flow chart}`
-
-## Events with handlers
-
-Following are the different types of events for bot conversations:
 
 * Conversation events
 * Channel events
