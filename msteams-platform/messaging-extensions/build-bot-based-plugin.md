@@ -121,7 +121,7 @@ To trigger the message extension as plugin in M365 Chat, follow these steps:
 
 Before you get started, ensure that you install the following tools to build and deploy your message extension:
 
-* Install the Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0 and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
+* Install the Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0 or later and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
 * Ensure that the Copilot feature flag is enabled. To enable the feature flag, follow these steps:
   1. Open **Visual Studio**.
   1. Go to **Tools** > **Options**.
