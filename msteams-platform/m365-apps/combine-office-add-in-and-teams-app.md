@@ -31,7 +31,7 @@ This article will walk you through the steps to add an Outlook Add-in to a Teams
 
 To configure an Office Add-in, ensure that you meet the following requirements: 
 
-- A Microsoft 365 account that includes Teams to test the appl. Alternatively, you can have separate subscriptions to both Microsoft 365 and Teams. For example, a test account with *.onmicrosoft.com through the [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program). 
+- A Microsoft 365 account that includes Teams to test the application. Alternatively, you can have separate subscriptions to both Microsoft 365 and Teams. For example, a test account with *.onmicrosoft.com through the [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program). 
 - Your Microsoft 365 account is added as an account in desktop Outlook. For more information, see [add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726).
  - An Azure account with active subscription to deploy the Teams app to Azure. If you don't already have one, you can create your [free Azure account](https://azure.microsoft.com/free/).
  - A Teams app created using the latest version of Teams Toolkit.
