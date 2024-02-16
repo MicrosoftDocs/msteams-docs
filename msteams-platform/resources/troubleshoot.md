@@ -99,13 +99,15 @@ If you're attempting to upload an updated package with the same ID again, choose
 
 If you're not re-uploading an updated package, ensure that the ID is unique.
 
-## Disable anonymous users or bot joining Teams meeting
+## Disable anonymous bot and user joining Teams meeting
 
-* Disable RSC permissions for all apps, which prevent apps added for new meetings without users consent. Apps that users already installed for existing meetings might still access those meetings. To remove RSC permission for existing apps in the meeting:
-  1. Delete the service principal for the app to remove RSC permissions for all meetings instances where the app is installed.
-  1. Uninstall the app from the specific meeting.
-* Tenant admin must disable the `Calls.JoinGroupCall.All` application permission.
-* Tenant admin must disable the option for **Anonymous users can join a meeting**. For more information, see [manage anonymous meeting join for the organization](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization).
+To block an anonymous bot from joining a meeting, ensure the following:
+
+* Tenant admin doesn't permit an anonymous bot to join a meeting in their tenant.
+* Users within a meeting aren't allowed to install an app that includes the bot into a meeting.
+* Tenant admin and meeting organizer doesn't permit the user to install the apps.
+
+To block an anonymous user from joining a meeting, tenant admin must disable the option for **Anonymous users can join a meeting**. For more information, see [manage anonymous meeting join for the organization](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization).
 
 ## See also
 
