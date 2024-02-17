@@ -49,17 +49,15 @@ With Microsoft Graph APIs for calls and online meetings, Teams apps can now inte
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
-To add or update the bot icon and other bot information, there are three methods as follows:
+The bot icon is cached until the user signs out and signs back in Teams. Following are different ways to add or update the bot icon:
 
-1. Update from your bot settings in [Azure Portal](/azure/bot-service/bot-service-manage-overview#settings).
+* [Azure Portal](/azure/bot-service/bot-service-manage-overview#settings): You can update your bot icon or other bot information for custom apps built for your org (LOB apps) and apps built for Teams Store through the Azure portal. 
 
-   If you update the bot icon in Azure Portal, it affects the conversation bot icon and the bot icon displayed when sending a new message from the Compose Area in Teams where your bot is installed. However, it doesn't update the bot's profile or app image. You need to update these from a new app manifest.
+   Updating the bot icon in the Azure portal, updates the bot icon in conversations and when sending a new message from the compose area in Teams where your bot is installed. However, this doesn't refresh the bot's profile or app image. You need to update these from a new app manifest.
 
-2. Use [app manifest](../resources/schema/manifest-schema.md#icons) to upload a custom app.
+* [Teams admin center](/microsoftteams/customize-apps#customize-an-app): You can update your bot icon or other bot information for custom apps built for your org (LOB apps) through the Teams admin center.
 
-3. Upload the app in the [Teams Admin Center](/microsoftteams/customize-apps#customize-an-app), update the bot icon.
-
-The bot icon is cached until the user signs out and signs back in.
+* [App manifest](../resources/schema/manifest-schema.md#icons): When uploading a custom app in Teams, you can update your bot information through the app manifest.
 
 ## Add SSO authentication to your conversation bots
 
