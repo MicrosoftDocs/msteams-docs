@@ -29,6 +29,7 @@ The apps built with JavaScript or TypeScript have the following advantages:
 * Provides quick upgrades to the existing apps.
 * Distributes apps on multiple platforms, such as Android and iOS.
 * Compatible for creating an app with the existing APIs.
+* An app created in Teams Toolkit also supports React.
 
 Teams Toolkit in Visual Studio Code supports building the following apps using JavaScript or TypeScript:
 
