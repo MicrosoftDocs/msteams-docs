@@ -172,8 +172,6 @@ To preview values for all the environment, you can hover over the placeholder. I
 
 ::: zone pivot="visual-studio-code-v4"
 
-## Customize app manifest for Visual Studio Code
-
 :::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 App manifest (previously called Teams app manifest) describes how your app integrates into Teams. The app manifest template file `manifest.template.json` is available under `templates/appPackage` folder after scaffolding. The template file with placeholders, and the actual values are resolved by Teams Toolkit using files under `.fx/configs` and `.fx/states` for different environments.
