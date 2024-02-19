@@ -268,7 +268,7 @@ The webhook is now removed from the Teams channel.
 
    :::image type="content" source="../../assets/images/Select_Remove.png" alt-text="Select remove"lightbox="../../assets/images/Select_Remove.png":::
 
-   The **Remove Configuration** window appears.
+   The Remove Configuration dialog appears.
 
 1. Select the required checkboxes.
 1. Select **Remove**.
@@ -281,7 +281,7 @@ The webhook is now removed from the Teams channel.
 
 ## Code sample
 
-| Sample Name       | Description | .NET    |  Node.js |
+| Sample name       | Description | .NET    |  Node.js |
 |---------------------|--------------|---------|--------|
 | Incoming Webhook |This sample shows how to implement and use an Incoming Webhook. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/incoming-webhook/nodejs)|
 
