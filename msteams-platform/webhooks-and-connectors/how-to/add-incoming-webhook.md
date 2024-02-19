@@ -62,12 +62,12 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 
    :::image type="content" source="../../assets/images/search-add-webhook.png" alt-text="Screenshot shows the Add option to add an Incoming Webhook.":::
 
-    > [!NOTE]
-    > If an Incoming Webhook was already added, you see the **Configure** option. You can provide the details and create an Incoming Webhook.
-
 1. Select **Add**.
 
-:::image type="content" source="../../assets/images/add-incoming-webhook.png" alt-text="Screenshot shows the Add option in the Incoming Webhook dialog." lightbox="../../assets/images/add-incoming-webhook-lightbox.png":::
+    :::image type="content" source="../../assets/images/add-incoming-webhook.png" alt-text="Screenshot shows the Add option in the Incoming Webhook dialog." lightbox="../../assets/images/add-incoming-webhook-lightbox.png":::
+
+        > [!NOTE]
+    > If an Incoming Webhook was already added, you'll see the **Configure** option. Select **Configure** to create an Incoming Webhook.
 
 1. Provide a name for the webhook and upload an image if necessary.
 
@@ -95,12 +95,16 @@ The following graphical representation provides the steps to create an Incoming 
 
    :::image type="content" source="../../assets/images/connectors_1.png" alt-text="This screenshot show how to select connector.":::
 
-1. Search for **Incoming Webhook** and select **Configure**.
+1. Search for **Incoming Webhook** and select **Add**.
 
-    > [!NOTE]
-    > If you're adding Incoming Webhook for the first time, you must add the Incoming Webhook to Teams and then configure.
+   :::image type="content" source="../../assets/images/search-add-webhook.png" alt-text="Screenshot shows the Add option to add an Incoming Webhook.":::
 
-   :::image type="content" source="../../assets/images/configure_1.png" alt-text="This screenshot shows how to configure and upload an image for your webhooks.":::
+1. Select **Add**.
+
+    :::image type="content" source="../../assets/images/add-incoming-webhook.png" alt-text="Screenshot shows the Add option in the Incoming Webhook dialog." lightbox="../../assets/images/add-incoming-webhook-lightbox.png":::
+
+        > [!NOTE]
+    > If an Incoming Webhook was already added, you'll see the **Configure** option. Select **Configure** to create an Incoming Webhook.
 
 1. Provide a name for the webhook and upload an image if necessary.
 
