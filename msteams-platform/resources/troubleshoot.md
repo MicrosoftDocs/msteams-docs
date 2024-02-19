@@ -105,7 +105,7 @@ To block an anonymous bot from joining a meeting, ensure the following:
 
 * Tenant admin doesn't permit an anonymous bot to join a meeting in their tenant.
 * Users within a meeting aren't allowed to install an app that includes the bot into a meeting.
-* Tenant admin and meeting organizer doesn't permit the user to install the apps.
+* Tenant admin and meeting organizer don't permit the user to install the apps.
 
 To block an anonymous user from joining a meeting, tenant admin must disable the option for **Anonymous users can join a meeting**. For more information, see [manage anonymous meeting join for the organization](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization).
 
