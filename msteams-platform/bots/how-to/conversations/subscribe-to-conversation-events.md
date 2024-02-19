@@ -28,7 +28,7 @@ You can use conversation update events to provide better notifications and effec
 > * You can add new events any time and your bot begins to receive them.
 > * You must design your bot to receive unexpected events.
 > * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
-> * When an Azure Communication Services (ACS) user joins or leaves the Teams meeting, no conversation update events are triggered.
+> * When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
