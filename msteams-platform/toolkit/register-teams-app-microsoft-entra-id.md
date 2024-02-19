@@ -10,6 +10,13 @@ ms.localizationpriority: medium
 
 Registering your Teams app in Microsoft Entra ID allows the app to access Azure resources and enables Azure-related functions, such as single sign-on (SSO) or multitenancy.
 
+## Prerequisites
+
+1. An Azure account with an active subscription. If you don't already have one, [create an account for free](https://portal.azure.com).
+2. The latest version of [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/) with ASP.NET and web development workloads installed.
+3. [Ngrok](https://ngrok.com/download), a reverse proxy software tool to create a temporary tunnel to a local web server's publicly available HTTPS endpoints.
+4. A registered Microsoft 365 developer tenant account. If you don't have one, join the [Microsoft 365 developer program](https://developer.microsoft.com/en-us/microsoft-365/dev-program).
+
 ## Before you register your app
 
 It's helpful if you learn about the configuration for [registering your app in Microsoft Entra ID](/entra/identity-platform/quickstart-register-app) beforehand. Ensure that you're prepared to configure the following details prior to registering your app:
@@ -22,9 +29,9 @@ It's helpful if you learn about the configuration for [registering your app in M
 
 The following steps help you to create and register your app in Microsoft Entra ID:
 
-* Create an app registration in Microsoft Entra ID.
+* [Create an app registration in Microsoft Entra ID](#create-an-app-registration-in-microsoft-entra-id)
 
-* Use Visual Studio or ngrok to create a tunnel.
+* [Use Visual Studio or ngrok to create a tunnel](#create-a-tunnel)
 
 ### Create an app registration in Microsoft Entra ID
 
