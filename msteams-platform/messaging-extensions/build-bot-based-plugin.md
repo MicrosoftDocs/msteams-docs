@@ -38,7 +38,7 @@ A plugin allows Copilot for Microsoft 365 to interact directly with third-party 
 
 All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
 
-You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit CLI, or Developer Portal for Teams and extend the message extension to function as a plugin in Copilot for Microsoft 365.
+You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as a plugin in Copilot for Microsoft 365.
 
 ## Prerequisites
 
@@ -152,7 +152,7 @@ To create a bot-based search message extension plugin using Visual Studio, follo
     The tunnel you created is listed under **Dev Tunnels > (name of the tunnel)**.
 
 1. Go to **Solution Explorer** and select your project.
-1. Right-click the project menu and select  **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Right-click the project menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../assets/images/Copilot/bot-based-VS-teams-app-dependencies.png" alt-text="Screenshot shows the Prepare Teams app dependencies option under Teams Toolkit in Visual Studio app project.":::
 
@@ -181,7 +181,7 @@ To trigger the message extension as plugin in M365 Chat, follow these steps:
 1. Go to **Visual Studio**.
 1. In the debug dropdown, select **Copilot (browser)**. Visual Studio launches Teams web client.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-debug-Copilot.png" alt-text="Screenshot shows the Copilot (Browser)  debug option in Visual Studio.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-VSC-debug-Copilot.png" alt-text="Screenshot shows the Copilot (Browser) debug option in Visual Studio.":::
 
 1. Go to **Teams web client** > **Apps**.
 1. Search for **M365 Chat** and open the **M365 Chat** app.
@@ -279,7 +279,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 To trigger the message extension through M365 Chat, follow these steps:
 
 1. Select **Apps**.
-1. Search for **M365 Chat**  and open the **M365 Chat** app.
+1. Search for **M365 Chat** and open the **M365 Chat** app.
 1. Select **Plugins**.
 1. From the list of plugins, turn on the toggle for your app.
 
@@ -293,6 +293,8 @@ To trigger the message extension through M365 Chat, follow these steps:
 > This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the M365 Chat response and leave a message tagged with [MessageExtension].
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
+
+To create a bot-based search message extension plugin using Developer portal for Teams, follow these steps:
 
 1. Go to **Teams Developer Portal**.
 1. Go to **Apps**.

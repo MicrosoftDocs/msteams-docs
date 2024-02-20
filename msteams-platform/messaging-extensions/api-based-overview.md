@@ -1,7 +1,7 @@
 ---
 title: Build message extensions using API
 author: v-ypalikila
-description: Learn how to build a message extension from an OpenAPI description document (API) using Teams Toolkit.
+description: Learn how to build a message extension from an OpenAPI description document (OAD) using using Developer Portal for Teams, Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -15,13 +15,13 @@ ms.date: 10/19/2023
 > * API-based message extensions only support search commands.
 > * API-based message extensions are available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Teams Toolkit. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
+Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Developer Portal for Teams, Visual Studio Code, Teams Toolkit command line interface (CLI), or Visual Studio. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
 
 * Retrieve real-time information, such as latest news coverage on a product launch.
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
 * Perform actions on behalf of the user, for example, create a Contoso ticket.
 
-You can create an API-based message extension using an [OpenAPI Description (OAD)](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Description document, upload the OpenAPI Description document to Teams Toolkit to generate and integrate the client code in your app's project. Create or generate a response rendering template to manage the responses from the API.
+You can create an API-based message extension using an [OpenAPI Description (OAD)](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Description document, use the OpenAPI Description document to generate and integrate the client code in your app's project. Create or generate a response rendering template to manage the responses from the API.
 
 See the video to learn more about building an API-based message extension using Teams Toolkit:
 </br>
@@ -236,7 +236,7 @@ The following code is an example of a Response rendering template: <br/>
 |Property  |Type  |Description  |Required  |
 |--------- |---------|---------|---------|
 |`version` |  `string` | The schema version of the current response rendering template.        |  Yes       |
-|`jsonPath`     | `string`        | The path  to the relevant section in the results to which the responseCardTemplate and previewCardTemplate should be applied. If not set, the root object is treated as the relevant section. If the relevant section is an array, each entry is mapped to the responseCardTemplate and the previewCardTemplate.        |   No      |
+|`jsonPath`     | `string`        | The path to the relevant section in the results to which the responseCardTemplate and previewCardTemplate should be applied. If not set, the root object is treated as the relevant section. If the relevant section is an array, each entry is mapped to the responseCardTemplate and the previewCardTemplate.        |   No      |
 |`responseLayout`    | `responseLayoutType`        |  Specifies the layout of the results in the message extension flyout. The Supported types are `list` and `grid`.       |    Yes     |
 |`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an Adaptive Card from a result entry.      |   Yes      |
 |`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is displayed in the message extension flyout menu.        |  Yes       |
@@ -441,7 +441,7 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 
 |Name  |Description  |
 |---------|---------|
-|`composeExtensions.composeExtensionType`     |  Compose extension type.  Update the value to `apiBased`. |
+|`composeExtensions.composeExtensionType`     |  Compose extension type. Update the value to `apiBased`. |
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
 |`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationId` available in the OpenAPI Description.       |
 |`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
