@@ -62,6 +62,8 @@ To add an Incoming Webhook to a Teams channel, follow these steps:
 
    :::image type="content" source="../../assets/images/search-add-webhook.png" alt-text="Screenshot shows the Add option to add an Incoming Webhook.":::
 
+    The Incoming Webhook dialog appears.
+
 1. Select **Add**.
 
     :::image type="content" source="../../assets/images/add-incoming-webhook.png" alt-text="Screenshot shows the Add option in the Incoming Webhook dialog." lightbox="../../assets/images/add-incoming-webhook-lightbox.png":::
@@ -228,7 +230,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
 1. In the left pane, select **Configured**.
 
-1. Select **1 Configured** to see a list of your current connectors.
+1. Under Incoming Webhook, select **1 Configured**.
 
    :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="Screenshot shows how to configure to see list of your current connectors.":::
 
@@ -240,7 +242,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
    :::image type="content" source="../../assets/images/Select_Remove.png" alt-text="Select remove"lightbox="../../assets/images/Select_Remove.png":::
 
-   The **Remove Configuration** window appears.
+   The Remove Configuration window appears.
 
 1. Select the required checkboxes.
 
@@ -256,7 +258,7 @@ The webhook is now removed from the Teams channel.
 1. Select **More options** &#8226;&#8226;&#8226; from the upper-right corner.
 1. Select **Connectors** from the dropdown menu.
 1. In the left pane, select **Configured**.
-1. Select **1 Configured** to see a list of your current connectors.
+1. Under Incoming Webhook, select **1 Configured**.
 
    :::image type="content" source="../../assets/images/configured_1-new-teams.png" alt-text="The screenshot shows how to configure to see list of your current connectors.":::
 
