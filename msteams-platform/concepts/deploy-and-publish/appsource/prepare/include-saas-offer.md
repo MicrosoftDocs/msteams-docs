@@ -32,12 +32,12 @@ To monetize your Software as a Service (SaaS) app, it's important that you under
 
 The key features are:
 
-* [Publishing option](#publishing-option)
+* [Offer type](#offer-type)
 * [Offer details](#offer-details)
 * [Offer plan](#offer-plan)
 * [Other SaaS offer features](#other-saas-offer-features)
 
-## Publishing option
+## Offer type
 
 The initial step to create a SaaS offer is to decide the listing or publishing option that aligns with your requirements. The listing option you select, when creating an offer, appears as a call-to-action button on the offer purchase landing page.
 
@@ -148,8 +148,8 @@ In addition to the basic and essential planning, you can provide more features t
 
 | Category |Description|
 |---|---|
-| Free trails | When selling through Microsoft, you can provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period. Free trail in SaaS offer is different from the free trail in the listing option. |
-| Test drive | When selling through Microsoft, you can add test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [test drive for SaaS offer](/partner-center/marketplace/create-new-saas-offer). |
+| Free trials | When selling through Microsoft, you can provide a one-month free trial. Microsoft automatically transitions the user to a paid subscription after the trial period. Free trail in SaaS offer is different from the free trail in the listing option. |
+| Test drive | When selling through Microsoft, you can add test drive for your SaaS app that provides access to the preconfigured environment of your app for fixed hours. For more information, see [test drive for SaaS offer](Test-preview-for-monetized-apps.md). |
 | Mobile version | To adhere to third-party app store policies, your app mustn't include links that allow users to purchase subscription plans on mobile. However, you can still indicate if your app has features that require a subscription plan. For more information, see the [related commercial marketplace certification policies](/legal/marketplace/certification-policies). |
 
 For comprehensive guidance on planning the offer, see [how to plan a SaaS offer for the Microsoft commercial marketplace](/azure/marketplace/plan-saas-offer).
