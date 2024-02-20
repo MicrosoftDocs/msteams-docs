@@ -51,9 +51,9 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 
 1. Open Microsoft Teams.
 1. Select **Apps** > **Manage your apps** > **Upload an app**.
-1. Select **Upload a customised app**.
+1. Select **Upload a custom app**.
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option."  lightbox="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png":::
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
 1. The file to upload is located in your **Downloads** folder. It's called TalentMgmt-Azure.zip. The following image displays the corresponding screen:
 
