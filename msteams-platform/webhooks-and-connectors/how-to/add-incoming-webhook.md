@@ -242,7 +242,7 @@ To remove an Incoming Webhook from a Teams channel, follow these steps:
 
    :::image type="content" source="../../assets/images/Select_Remove.png" alt-text="Select remove"lightbox="../../assets/images/Select_Remove.png":::
 
-   The Remove Configuration window appears.
+   The Remove Configuration dialog appears.
 
 1. Select the required checkboxes.
 
