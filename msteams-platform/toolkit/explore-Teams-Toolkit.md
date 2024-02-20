@@ -71,11 +71,13 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/environment1.png" alt-text="Screenshot shows the Environment section.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/environment.png" alt-text="Screenshot shows the Environment section.":::
    :::column-end:::
    :::column span="":::
 
         To deploy your Teams app, you need the following environments:
+
+       * **testtool**: Deploy your app in the testool environment with testtool environment configurations.
         
        * **local**: Deploy your app in the default local environment with local environment configurations.
 
@@ -98,6 +100,8 @@ From the task pane, you can see the following sections:
         * **View Samples**: Select any of the Teams Toolkit's sample apps. The toolkit downloads the app code from GitHub and you can build the sample app.
 
         * **View How-to Guides**: Select to view Teams app scenario guides and development guides.
+
+        * **Preview Your Teams App (F5)**: Select to view the Teams app debug options.
    :::column-end:::
 :::row-end:::
 
@@ -135,27 +139,17 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/help-and-feedback1.png" alt-text="Screenshot shows the Help section.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/help-and-feedback1.png" alt-text="Screenshot shows the Help and feedback section.":::
    :::column-end:::
    :::column span="":::
 
-        To access more information on Teams Toolkit, you need the following documentation and resources:
+        To access more information and giving us your feedback on Teams Toolkit, you need the following documentation and resources:
         
         * **Documentation**: Select to access the Microsoft Teams Developer documentation.
 
         * **Get Started**: View Teams Toolkit Get started help within Visual Studio Code.
 
         * **Report Issues on GitHub**: Select to access GitHub page and raise any issues.
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/feedback.png" alt-text="Screenshot shows the Feedback section.":::
-   :::column-end:::
-   :::column span="":::
-
-        You can help us improve by giving us your feedbacks!
    :::column-end:::
 :::row-end:::
 
