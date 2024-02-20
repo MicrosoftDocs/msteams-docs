@@ -8,7 +8,7 @@ ms.date: 09/29/2023
 ---
 # Government clouds
 
-Microsoft Teams plays a pivotal role in facilitating secure and efficient communication within government sectors and agencies. To cater to the stringent security and compliance requirements of these entities, Microsoft offers three specialized government cloud services: Government Community Cloud (GCC), GCC High (GCCH), and Department of Defense (DoD). These services, accessible via Microsoft 365 Government plans, are exclusively for use within the United States.
+Microsoft Teams plays a pivotal role in facilitating secure and efficient communication within government sectors and agencies. To meet the stringent security and compliance requirements of these entities, Microsoft offers three specialized government cloud services:
 
 :::image type="content" source="../assets/images/app-fundamentals/cloud-type.png" alt-text="Illustration shows the types of government clouds.":::
 
@@ -21,8 +21,6 @@ Government Community Cloud (GCC), GCC High (GCCH), and Department of Defense (Do
 ## Teams capabilities for Government clouds
 
 Understanding the Teams apps and capabilities supported by each cloud is crucial for effective utilization of Teams within government clouds. Here's a brief overview of the Teams apps and capabilities for GCC, GCCH, and DoD:
-
-To make effective use of Teams within government clouds for your organization, you must know about the Teams apps and capabilities that each government cloud supports.
 
 The following table includes Teams apps supported for GCC, GCCH, and DoD:
 
