@@ -39,7 +39,7 @@ Admins can set up an app governance process that manages your organization's IT 
 
 ## Understand how you can drive app adoption
 
-Following the below five easy steps, you can encourage customers to adopt your apps through admin recommendations to their users, for maximum adoption in an organization. Consider the following elements for app adoption.
+By following these five easy steps, you make it easy for your customers to maximum adoption within their organizations.
 
 :::row:::
    :::column span="1":::
@@ -299,9 +299,9 @@ Enable and train your customer-facing teams such as enablement, consulting, supp
 
 In your app’s help documentation, consider providing some or all the following information for your customers and admins:
 
-* Contact method for support information, for example, email, phone, community forum, or web portal.
+* Contact method such as email, phone, community forum, or web portal for customers who want to contact you for app support.
 * Explain features for users, app rollout and configuration methods for admins, and troubleshooting to supporting functions.
-* Explain different personas required to configure an app, for example, an app that works with a CRM or a bug tracking system may require the server-admin to configure app connection or provision an account for the app.
+* Explain the different personas that are required to configure your app. For example, an app that works with a CRM or a bug tracking system may require an admin to provision accounts for app users or to create an account for the app to fetch your organization's information.
 * Understanding of how IT admins can control which users have access to apps by using [app centric management](/microsoftteams/app-centric-management) and [permission policies](/microsoftteams/app-policies#app-permission-policies), depending on their tenant configuration.
 * Language support provided by the app in case the app is available in any non-English language.
 * Latest release date and version that imparts app freshness and hence inspires confidence.
