@@ -166,7 +166,7 @@ You can use this method to verify custom app upload permission only after you ha
 
 1. Check if you can see the option **Upload a custom app** as you can see in the following image:
 
-    :::image type="content" source="images/upload-custom-app1_1-v4.png" alt-text="Screenshot showing the selection of Upload a custom app.":::
+    :::image type="content" source="images/upload-custom-app-v4.png" alt-text="Screenshot shows the option to upload a custom app.":::
 
 </details>
 

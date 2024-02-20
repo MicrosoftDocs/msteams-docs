@@ -10,12 +10,11 @@ ms.date: 09/30/2022
 
 # Configure Tasks for external clients
 
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
+
 External tasks that can be assigned to users who aren't part of your organization or don't have access to your application such as assigning a task to a customer.
 
-To enable, you'll need an extra step of passing an XML string to each instance of Tasks PCF control attached to the sub grid component on desired MDA form. XML string is a parametrized query that allows the control to extract the required data from a table that contains customer information.
-
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+To enable, you need an extra step of passing an XML string to each instance of Tasks PCF control attached to the sub grid component on desired MDA form. XML string is a parametrized query that allows the control to extract the required data from a table that contains customer information.
 
 To create external tasks, follow the steps:
 
@@ -26,7 +25,7 @@ To create external tasks, follow the steps:
     1. Email
     1. Parent (Lookup to the parent table such as Inspections)
     > [!NOTE]
-    > The customer entity created above is, where the task control pulls the customer information from when assigning an external task. The Parent field ensures that the customer entity is linked to an Inspection record.
+    > The customer entity created is where the task control pulls the customer information from when assigning an external task. The Parent field ensures that the customer entity is linked to an Inspection record.
 
 1. Generate a Fetch XML file to allow the PCF control to pull the right customer information.
 
@@ -81,9 +80,9 @@ To create external tasks, follow the steps:
 
 1. In the property dialog, set the properties as shown in the following image:
 
-    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Sceenshot shows to set the properties in the Tasks property settings.":::
+    :::image type="content" source="~/assets/images/collaboration-control/tasks-property.png" alt-text="Sceenshot shows an example of the updated properties in the Tasks property settings.":::
 
-1. Go to the Controls tab and select :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="Screenshot shows how to edit the tasks."::: on Custom Tasks property to add the Fetch XML generated above.
+1. Go to the Controls tab and select :::image type="icon" source="~/assets/images/collaboration-control/edit-icon.png" alt-text="Screenshot shows how to edit the tasks."::: on Custom Tasks property to add the Fetch XML generated.
 
 1. Paste the Fetch XML
 
