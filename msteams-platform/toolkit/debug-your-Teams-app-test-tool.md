@@ -210,7 +210,6 @@ Test Tool offers a faster debug experience for bot applications when compared to
               ```powershell
               teamsapptester.exe start
               ```
-
    ---
 1. Test Tool opens the bot in a webpage.
 
