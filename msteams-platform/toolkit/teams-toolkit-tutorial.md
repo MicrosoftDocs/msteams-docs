@@ -9,9 +9,6 @@ ms.date: 05/16/2023
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
-> [!IMPORTANT]
-> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features.
-
 You can build your own Teams app with different capabilities using the step-by-step guide or tutorial and code samples.
 
 ## Teams app tutorials
