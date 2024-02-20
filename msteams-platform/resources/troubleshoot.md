@@ -99,15 +99,15 @@ If you're attempting to upload an updated package with the same ID again, choose
 
 If you're not re-uploading an updated package, ensure that the ID is unique.
 
-## Disable anonymous bot and user joining Teams meeting
+## Manage anonymous bot and user joining Teams meeting
 
-To block an anonymous bot from joining a meeting:
+If you want to disable anonymous bot from joining a meeting, ensure the following conditions:
 
-* Tenant admin doesn't permit an anonymous bot to join a meeting in their tenant.
-* Users within a meeting aren't allowed to install an app that includes the bot into a meeting.
-* Tenant admin and meeting organizer don't permit the user to install the apps.
+* Tenant admin mustn't permit an anonymous bot to join a meeting in their tenant.
+* Tenant admin and meeting organizer mustn't permit the user to install the apps.
+* If the user still has the permissions to install apps, the tenant admin must block the apps that contain a bot.
 
-To block an anonymous user from joining a meeting, tenant admin must disable the option for **Anonymous users can join a meeting**. For more information, see [manage anonymous meeting join for the organization](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization).
+If you want to disable anonymous user from joining a meeting, tenant admin must disable the option for **Anonymous users can join a meeting**. For more information, see [manage anonymous meeting join for the organization](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization).
 
 ## See also
 
