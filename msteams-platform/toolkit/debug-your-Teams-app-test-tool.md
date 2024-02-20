@@ -212,7 +212,6 @@ Test Tool offers a faster debug experience for bot applications when compared to
               ```
 
    ---
-
 1. Test Tool opens the bot in a webpage.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
