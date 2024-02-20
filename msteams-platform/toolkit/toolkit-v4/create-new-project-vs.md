@@ -6,17 +6,12 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
-zone_pivot_groups: teams-toolkit-platform-vs
 ---
 # Create a new Teams project using Teams Toolkit in Visual Studio
 
-::: zone pivot="visual-studio-v17-7"
-
 You can create Teams apps in Visual Studio using the app templates. You can search and select any of the following Teams template to create a new app.
 
-* Notification Bot
-* Command Bot
-* Workflow Bot
+* Bot
 * Tab
 * Message Extension
 
