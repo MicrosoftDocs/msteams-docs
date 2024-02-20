@@ -139,7 +139,7 @@ From the task pane, you can see the following sections:
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/help-and-feedback1.png" alt-text="Screenshot shows the Help and feedback section.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/help-and-feedback.png" alt-text="Screenshot shows the Help and feedback section.":::
    :::column-end:::
    :::column span="":::
 
