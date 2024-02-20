@@ -50,17 +50,13 @@ SharePoint hosts SPFx web parts without the need for external services like Azur
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/custom-tab-add-to-team.png" alt-text="Screenshot shows how to add a custom app to a team.":::
 
-6. Select the team you where you want to install the app.
-
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/select-team-custom-tab.png" alt-text="Screenshot shows the option to select a team.":::
-
-7. Select **Set up**.
+6. Select the team you where you want to install the app and select **Set up**.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/set-up-custom-tab.png" alt-text="Screenshot shows the option to select set-up a tab in a team.":::
 
-8. A new **Candidates** tab is added to your team's channels. You can experiment with the app and test its features.
+7. A new **Candidates** tab is added to your team's channels. You can experiment with the app and test its features.
 
-:::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/teams-tab-custom-app.png" alt-text="Screenshot shows a new tab added in a team.":::
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/teams-tab-custom-app.png" alt-text="Screenshot shows a new tab added in a team.":::
 
 > [!NOTE]
 > SharePoint extension commands aren’t supported in the Teams **Files** tab. You can [add a SharePoint page, list, or document library as a tab in Teams](https://support.microsoft.com/office/add-a-sharepoint-page-list-or-document-library-as-a-tab-in-teams-131edef1-455f-4c67-a8ce-efa2ebf25f0b).
