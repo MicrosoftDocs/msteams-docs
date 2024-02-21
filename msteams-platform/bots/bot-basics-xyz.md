@@ -542,9 +542,7 @@ The following code shows an example of channel created event:
 
    ---
 
----
-
-# [Channel deleted](#tab/Channel-deleted)
+# [Channel deleted](#tab/Chdeleted)
 
 The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed.
 
