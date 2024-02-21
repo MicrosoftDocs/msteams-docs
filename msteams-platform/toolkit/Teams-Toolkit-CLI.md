@@ -155,7 +155,7 @@ The supported feature for Teams application.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `Integrate SPFxWebPart with Teams App` | Incorporate an auto-hosted SharePoint Framework (SPFx) web part into Teams. An auto-hosted SPFx web part is a component that is automatically hosted in SharePoint. |
+| `Integrate SPFxWebPart with Teams App` | Incorporate an autohosted SharePoint Framework (SPFx) web part into Teams. An autohosted SPFx web part is a component that is automatically hosted in SharePoint. |
 
 :::image type="content" source="../assets/images/teams-toolkit-cli/teamsapp-add.png" alt-text="Screenshot shows the teamsapp add command.":::
 
@@ -299,7 +299,7 @@ The following table lists the parameters available for `teamsapp preview`:
 | `--folder` | No | Specifies the root folder of your project. Defaults to `./`. |
 | `--env` | No | Specifies an existing environment for the project. Defaults to `local`.|
 | `--teams-manifest-file -t` | No | Specifies the app manifest template file path. Defaults to `${folder}/appPackage/manifest.json`. |
-| `--run-command -c` | No | Specifies the command to start the local service and applicable for `local` environment only. If not defined, `teamsapp` uses the auto-detected service from the project type (`npm run dev:teamsapp`, `dotnet run`, or `func start`). If empty, `teamsapp` skips starting the local service. |
+| `--run-command -c` | No | Specifies the command to start the local service and applicable for `local` environment only. If not defined, `teamsapp` uses the autodetected service from the project type (`npm run dev:teamsapp`, `dotnet run`, or `func start`). If empty, `teamsapp` skips starting the local service. |
 | `--running-pattern -p` | No | The ready signal output that service is launched. Works for `local` environment only. If undefined, `teamsapp` uses the default common pattern (started, successfully, finished, crashed, failed). If empty, `teamsapp` treats process start as ready signal. |
 | `--open-only -o` | No | Works for `local` environment only. If true, directly open web client without launching local service. Defaults to `false`. |
 | `--m365-host -m` | No | Preview the application in Teams, Outlook, or the Microsoft 365 app. The available options are `teams`, `outlook`, and `office`. The default value is `teams`. |
@@ -560,7 +560,7 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 | `teamsfx validate` | Validate the Teams app using the app manifest schema or validation rules. |
 | `teamsfx publish` | Run the publish stage in teamsapp.yml.|
 | `teamsfx preview` | Preview the current application. |
-| `teamsfx m365`  | Manage M365 app. |
+| `teamsfx m365`  | Manage Microsoft 365 app. |
 | `teamsfx permission`| Check, grant, and list permissions for users who can access and manage Teams application and Microsoft Entra application. |
 | `teamsfx update` | Update the specific application app manifest file. |
 | `teamsfx upgrade` | Upgrade the project to work with the latest version of Microsoft Teams Toolkit. |
@@ -619,7 +619,7 @@ The following table lists different features to your Teams application along wit
 
 | Command | Description |
 |:----------------  |:-------------|
-| `teamsfx add SPFxWebPart` | Auto-hosted SPFx web part tightly integrated with Teams. |
+| `teamsfx add SPFxWebPart` | Autohosted SPFx web part tightly integrated with Teams. |
 
 ## `teamsfx account`
 
@@ -770,8 +770,8 @@ Manage Microsoft 365 app.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `sideloading [options]` | Sideloading an M365 App with corresponding information specified in the given app manifest package. |
-| `unacquire [options]` | Remove an acquired M365 App. |
+| `sideloading [options]` | Sideloading a Microsoft 365 App with corresponding information specified in the given app manifest package. |
+| `unacquire [options]` | Remove an acquired Microsoft 365 App. |
 | `launchinfo [options]` | Get launch information of an acquired M365 App. |
 
 ## `teamsfx permission`
@@ -965,7 +965,7 @@ The following table lists different features to your Teams application along wit
 | `teamsfx add bot` | Hello world chatbot to run simple and repetitive tasks by user. |
 | `teamsfx add message-extension` | Hello world message extension allowing interactions through buttons and forms. |
 | `teamsfx add azure-function`| A serverless, event-driven compute solution that allows you to write less code. |
-| `teamsfx add azure-apim` | A hybrid, multi-cloud management platform for APIs across all environments.|
+| `teamsfx add azure-apim` | A hybrid, multicloud management platform for APIs across all environments.|
 | `teamsfx add azure-sql` | An always-up-to-date relational database service built for the cloud. |
 | `teamsfx add azure-keyvault` | A cloud service for securely storing and accessing secrets. |
 | `teamsfx add sso` | Develop a single sign-on (SSO) feature for Teams tabs and bot capability. |
