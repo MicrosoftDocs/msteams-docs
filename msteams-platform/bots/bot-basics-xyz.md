@@ -20,7 +20,7 @@ To create a event-driven conversations, you need to define the handlers that the
 
 ## Events with activity handlers
 
-Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type. 
+Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type.
 
 For example, when the bot receives a message activity, the turn handler identifies this incoming activity and forwards it to the `onMessageActivity` handler. As a developer, you place your logic for managing and responding to messages in this `onMessageActivity` handler.
 
@@ -444,29 +444,30 @@ async def on_teams_channel_restored(
 </details>
 
 # [Channel created](#tab/Channel-created)
-The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed.
 
-The following code shows an example of channel created event:
+The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed. The following code shows an example of channel created event:
+
    # [C#](#tab/dotnet)
+
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
-    
-   ```csharp
-    protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
-        var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
-        // Sends an activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-    }
+
+    ```csharp
+        protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
+            // Sends an activity to the sender of the incoming activity.
+            await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+        }
     
    ```
-    
+
    # [TypeScript](#tab/typescript)
-    
+
     <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
     
-    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
-    
+   * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
+
    ```typescript
     export class MyBot extends TeamsActivityHandler {
         constructor() {
@@ -482,9 +483,9 @@ The following code shows an example of channel created event:
     }
     
    ```
-    
+
    # [JSON](#tab/json)
-    
+
    ```json
     {
         "type": "conversationUpdate",
@@ -520,11 +521,11 @@ The following code shows an example of channel created event:
         }
     }
    ```
-    
+
    # [Python](#tab/python)
-    
+
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
-    
+
    ```python
     async def on_teams_channel_created(
      self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
@@ -536,204 +537,210 @@ The following code shows an example of channel created event:
       )
      )
    ```
-   ---
 
-# [Channel deleted](#tab/Channel-deleted)
-The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed.
-
-The following code shows an example of channel created event:
-
-   # [C#](#tab/dotnet)
-    
-   * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
-    
-    ```csharp
-    protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
-        var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
-        // Sends an activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-    }
-    
-    ```
-    
-   # [TypeScript](#tab/typescript)
-    
-    <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
-    
-    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
-    
-    ```typescript
-    export class MyBot extends TeamsActivityHandler {
-        constructor() {
-            super();
-            this.onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-                const card = CardFactory.heroCard('Channel Created', `${channelInfo.name} is the Channel created`);
-                const message = MessageFactory.attachment(card);
-                // Sends a message activity to the sender of the incoming activity.
-                await turnContext.sendActivity(message);
-                await next();
-            });
-        }
-    }
-    
-    ```
-    
-   # [JSON](#tab/json)
-    
-   ```json
-    {
-        "type": "conversationUpdate",
-        "timestamp": "2017-02-23T19:34:07.478Z",
-        "localTimestamp": "2017-02-23T12:34:07.478-07:00",
-        "id": "f:dd6ec311",
-        "channelId": "msteams",
-        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-        "from": {
-            "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
-        },
-        "conversation": {
-            "isGroup": true,
-            "conversationType": "channel",
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-        },
-        "recipient": {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-            "name": "SongsuggesterBot"
-        },
-        "channelData": {
-            "channel": {
-                "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
-                "name": "FunDiscussions"
-            },
-            "team": {
-                "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-            },
-            "eventType": "channelCreated",
-            "tenant": {
-                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-            }
-        }
-    }
-    ```
-    
-   # [Python](#tab/python)
-    
-   * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
-    
-    ```python
-    async def on_teams_channel_created(
-     self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
-    ):
-     # Sends a message activity to the sender of the incoming activity.
-     return await turn_context.send_activity(
-      MessageFactory.text(
-       f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
-      )
-     )
-   ```
-   ---
-
-# [Channel renamed](#tab/Channel-renamed)
-The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed.
-
-The following code shows an example of channel created event:
-
-   # [C#](#tab/dotnet)
-    
-   * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
-    
-    ```csharp
-    protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
-        var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
-        // Sends an activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-    }
-    
-    ```
-    
-   # [TypeScript](#tab/typescript)
-    
-    <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
-    
-    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
-    
-    ```typescript
-    export class MyBot extends TeamsActivityHandler {
-        constructor() {
-            super();
-            this.onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-                const card = CardFactory.heroCard('Channel Created', `${channelInfo.name} is the Channel created`);
-                const message = MessageFactory.attachment(card);
-                // Sends a message activity to the sender of the incoming activity.
-                await turnContext.sendActivity(message);
-                await next();
-            });
-        }
-    }
-    
-    ```
-    
-   # [JSON](#tab/json)
-    
-   ```json
-    {
-        "type": "conversationUpdate",
-        "timestamp": "2017-02-23T19:34:07.478Z",
-        "localTimestamp": "2017-02-23T12:34:07.478-07:00",
-        "id": "f:dd6ec311",
-        "channelId": "msteams",
-        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-        "from": {
-            "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
-        },
-        "conversation": {
-            "isGroup": true,
-            "conversationType": "channel",
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-        },
-        "recipient": {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-            "name": "SongsuggesterBot"
-        },
-        "channelData": {
-            "channel": {
-                "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
-                "name": "FunDiscussions"
-            },
-            "team": {
-                "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-            },
-            "eventType": "channelCreated",
-            "tenant": {
-                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-            }
-        }
-    }
-    ```
-    
-   # [Python](#tab/python)
-    
-   * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
-    
-    ```python
-    async def on_teams_channel_created(
-     self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
-    ):
-     # Sends a message activity to the sender of the incoming activity.
-     return await turn_context.send_activity(
-      MessageFactory.text(
-       f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
-      )
-     )
-   ```
    ---
 
 ---
 
+# [Channel deleted](#tab/Channel-deleted)
+
+The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed.
+
+The following code shows an example of channel created event:
+
+# [C#](#tab/dotnet)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
+
+    ```csharp
+    protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+    {
+        var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
+        // Sends an activity to the sender of the incoming activity.
+        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+    }
+    
+    ```
+
+# [TypeScript](#tab/typescript)
+
+    <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
+    
+    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
+    
+    ```typescript
+    export class MyBot extends TeamsActivityHandler {
+        constructor() {
+            super();
+            this.onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+                const card = CardFactory.heroCard('Channel Created', `${channelInfo.name} is the Channel created`);
+                const message = MessageFactory.attachment(card);
+                // Sends a message activity to the sender of the incoming activity.
+                await turnContext.sendActivity(message);
+                await next();
+            });
+        }
+    }
+    
+    ```
+
+# [JSON](#tab/json)
+
+   ```json
+    {
+        "type": "conversationUpdate",
+        "timestamp": "2017-02-23T19:34:07.478Z",
+        "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+        "id": "f:dd6ec311",
+        "channelId": "msteams",
+        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+        "from": {
+            "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+        },
+        "conversation": {
+            "isGroup": true,
+            "conversationType": "channel",
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "recipient": {
+            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+            "name": "SongsuggesterBot"
+        },
+        "channelData": {
+            "channel": {
+                "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+                "name": "FunDiscussions"
+            },
+            "team": {
+                "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            },
+            "eventType": "channelCreated",
+            "tenant": {
+                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            }
+        }
+    }
+    ```
+    
+   # [Python](#tab/python)
+    
+   * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
+    
+    ```python
+    async def on_teams_channel_created(
+     self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+    ):
+     # Sends a message activity to the sender of the incoming activity.
+     return await turn_context.send_activity(
+      MessageFactory.text(
+       f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
+      )
+     )
+   ```
+
+   ---
+
+# [Channel renamed](#tab/Channel-renamed)
+
+The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed.
+
+The following code shows an example of channel created event:
+
+# [C#](#tab/dotnet)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
+
+    ```csharp
+    protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+    {
+        var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
+        // Sends an activity to the sender of the incoming activity.
+        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+    }
+    
+    ```
+
+# [TypeScript](#tab/typescript)
+
+    <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
+    
+    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
+    
+    ```typescript
+    export class MyBot extends TeamsActivityHandler {
+        constructor() {
+            super();
+            this.onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+                const card = CardFactory.heroCard('Channel Created', `${channelInfo.name} is the Channel created`);
+                const message = MessageFactory.attachment(card);
+                // Sends a message activity to the sender of the incoming activity.
+                await turnContext.sendActivity(message);
+                await next();
+            });
+        }
+    }
+    
+    ```
+
+# [JSON](#tab/json)
+
+   ```json
+    {
+        "type": "conversationUpdate",
+        "timestamp": "2017-02-23T19:34:07.478Z",
+        "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+        "id": "f:dd6ec311",
+        "channelId": "msteams",
+        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+        "from": {
+            "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+        },
+        "conversation": {
+            "isGroup": true,
+            "conversationType": "channel",
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "recipient": {
+            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+            "name": "SongsuggesterBot"
+        },
+        "channelData": {
+            "channel": {
+                "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+                "name": "FunDiscussions"
+            },
+            "team": {
+                "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            },
+            "eventType": "channelCreated",
+            "tenant": {
+                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            }
+        }
+    }
+    ```
+    
+   # [Python](#tab/python)
+    
+   * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
+    
+    ```python
+    async def on_teams_channel_created(
+     self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+    ):
+     # Sends a message activity to the sender of the incoming activity.
+     return await turn_context.send_activity(
+      MessageFactory.text(
+       f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
+      )
+     )
+   ```
+
+   ---
+
+---
 
 ## Members event
 
@@ -742,15 +749,15 @@ The following code shows an example of channel created event:
 | Members added   | membersAdded   | OnTeamsMembersAddedAsync   | A member is removed | All |
 
 A member added event is sent to your bot in the following scenarios:
+
 1. When the bot, itself, is installed and added to a conversation
     In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.
-2. When a user is added to a conversation where the bot is installed. 
+2. When a user is added to a conversation where the bot is installed.
     User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
 
 The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
 
 Use the [`InstallationUpdate` event](#installation-update-event) to determine when when your bot is added or removed from a conversation.
-
 
 | Action taken        | EventType         | Method called              | Description                | Scope |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
@@ -1155,7 +1162,6 @@ async def on_teams_team_renamed(
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | Team deleted        | teamDeleted       | OnTeamsTeamDeletedAsync    | The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.       | Team |
 
-
 <details><summary><b>The following code shows an example of team deleted event:</summary></b>
 
 # [C#](#tab/dotnet)
@@ -1244,7 +1250,6 @@ async def on_teams_team_deleted(
 | Team restored        | teamRestored      | OnTeamsTeamRestoredAsync    | [A team is restored](#team-restored)       | Team |
 
 ### Team renamed
-
 
 Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object.
 
@@ -2127,12 +2132,15 @@ It's important to know that new events can be added anytime in the future and yo
 ## Message events
 
 ### Message edit
+
 `messageEdit`
 
 ### Message restore
+
 `OnTeamsMessageUndeleteAsync`
 
 ### Message soft delete
+
 `OnTeamsMessageSoftDeleteAsync`
 
 ## Invoke activity
@@ -2195,8 +2203,3 @@ When a bot encounters an error while handling different events or activities, do
 :::image type="content" source="~/assets/images/handling-error.png" alt-text="Screenshot shows you the error message response in bot conversation.":::
 
 In the development phase, it's always helpful to send meaningful messages in conversations, which provide additional details about a specific error for better debugging. However, in the production environment, you must log the errors or events to Azure Application Insights. For more information, see [add telemetry to your bot](https://aka.ms/bottelemetry).
-
-
-
-
-
