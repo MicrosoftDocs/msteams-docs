@@ -33,15 +33,17 @@ this.onMessageActivity(async (context, next) => {
 Following are the two primary Teams activity handlers:
 
 * `OnConversationUpdateActivityAsync`: Routes all the conversation update activities.
-* `OnInvokeActivityAsync`: Routes all Teams invoke activities.
+* `OnInvokeActivityAsync`: Routes all Teams [invoke activities](#invoke-activity).
 
-Following are the different 
-* Conversation events
-* Channel events
-* Members events
-* Team events
-* Reaction events
-* Installation events
+Following are the different type of conversation events:
+
+* [Conversation events](#conversation-update-events)
+* [Channel events](#channel-events)
+* [Members events](#members-event)
+* [Team events](#team-events)
+* [Reaction events](#reaction-events)
+* [Installation events](#installation-events)
+* [Message events](#message-events)
 
 ## Conversation update events
 
@@ -57,11 +59,14 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
 ## Channel events
 
-### Channel created
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| Channel created     | channelCreated    | OnTeamsChannelCreatedAsync | The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed. | Team |
+| Channel renamed     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
+| Channel deleted     | channelDeleted    | OnTeamsChannelDeletedAsync | The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed. | Team |
+| Channel restored    | channelRestored    | OnTeamsChannelRestoredAsync | The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed. | Team |
 
-The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed.
-
-<details><summary><b>The code shows an example of channel created event:</b></summary>
+<details><summary><b>The following code shows an example of channel created event:</b></summary>
 
 # [C#](#tab/dotnet)
 
@@ -158,10 +163,6 @@ async def on_teams_channel_created(
 
 </details>
 
-### Channel renamed
-
-The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed.
-
 <details><summary><b>The following code shows an example of channel renamed event:</b></summary>
 
 # [C#](#tab/dotnet)
@@ -251,10 +252,6 @@ async def on_teams_channel_renamed(
 ---
 
 </details>
-
-### Channel deleted
-
-The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed.
 
 <details><summary><b>The following code shows an example of channel deleted event:</b></summary>
 
@@ -349,10 +346,6 @@ async def on_teams_channel_deleted(
 ---
 
 </details>
-
-### Channel restored
-
-The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed.
 
 <details><summary><b>The following code shows an example of channel restored event:</b></summary>
 
@@ -451,19 +444,22 @@ async def on_teams_channel_restored(
 
 ## Members event
 
-### Members added
-
-A member added event is sent to your bot in the following scenarios:
-
-1. When the bot, itself, is installed and added to a conversation
-
-   > In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.
-
-2. When a user is added to a conversation where the bot is installed
-
-   > User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| Members added   | membersAdded   | OnTeamsMembersAddedAsync   | A member added event is sent to your bot in the following scenarios: <br> 1. When the bot, itself, is installed and added to a conversation <br> &nbsp; &nbsp; In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.<br> 2. When a user is added to a conversation where the bot is installed. <br> &nbsp; &nbsp; User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user. | All |
 
 The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
+
+Use the [`InstallationUpdate` event](#installation-update-event) to determine when when your bot is added or removed from a conversation.
+
+
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| Members removed | membersRemoved | OnTeamsMembersRemovedAsync | [A member is removed](#members-removed). | All |
+
+### Members added
+
+
 
 > [!TIP]
 > Use the [`InstallationUpdate` event](#installation-update-event) to determine when when your bot is added or removed from a conversation.
@@ -762,6 +758,8 @@ async def on_teams_members_removed(
 </details>
 
 ## Team events
+
+
 
 ### Team renamed
 
@@ -1642,6 +1640,70 @@ When you use these install and uninstall events, there are some instances where 
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
 It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
+
+## Message events
+
+### Message edit
+`messageEdit`
+
+### Message restore
+`OnTeamsMessageUndeleteAsync`
+
+### Message soft delete
+`OnTeamsMessageSoftDeleteAsync`
+
+## Invoke activity
+
+An invoke activity is a type of activity that is sent to a bot when a user performs an action, such as clicking a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses. Invoke activities are typically used to send back confirmations, item selections, and to provide feedback or input to the bot.
+
+# [C#](#tab/dotnet)
+
+The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following invoke types:
+
+| Invoke types                    | Handler                              | Description                                                  |
+| :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
+| CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       | When the connector receives a card action invoke activity, this method is invoked. |
+| fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | When a user accepts a file consent card, this method is invoked. |
+| fileConsent/invoke              | `OnTeamsFileConsentAsync`            | When the connector receives a file consent card activity, this method is invoked. |
+| fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | When a user declines a file consent card, this method is invoked. |
+| actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | When the connector receives a connector card for Microsoft 365 Groups action activity, this method is invoked. |
+| signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | When the connector receives a `signIn` verify state activity, this method is invoked. |
+| task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | You can override this method in a derived class to provide logic when a dialog (referred as task module in TeamsJS v1.x) is fetched. |
+| task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | You can override this method in a derived class to provide logic when a dialog is submitted. |
+
+# [JavaScript](#tab/javascript)
+
+The following table provides the list of Teams activity handlers called from the `onInvokeActivity` Teams activity handler:
+
+| Invoke types                    | Handler                              | Description                                                  |
+| :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
+| CardAction.Invoke               | `handleTeamsCardActionInvoke`       | This method is invoked when a card action invoke activity is received from the connector. |
+| fileConsent/invoke              | `handleTeamsFileConsentAccept`      | This method is invoked when the user accepts a file consent card. |
+| fileConsent/invoke              | `handleTeamsFileConsent`            | This method is invoked when a file consent card activity is received from the connector. |
+| fileConsent/invoke              | `handleTeamsFileConsentDecline`     | This method is invoked when the user declines a file consent card. |
+| actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
+| signin/verifyState              | `handleTeamsSigninVerifyState`      | This method is invoked when a `signIn` verify state activity is received from the connector. |
+| task/fetch                      | `handleTeamsTaskModuleFetch`        | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
+| task/submit                     | `handleTeamsTaskModuleSubmit`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
+
+# [Python](#tab/python)
+
+The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following invoke types:
+
+| Invoke types                    | Handler                              | Description                                                  |
+| :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
+| CardAction.Invoke               | `on_teams_card_action_invoke`       | This method is invoked when a card action invoke activity is received from the connector. |
+| fileConsent/invoke              | `on_teams_file_consent_accept`      | This method is invoked when the user accepts a file consent card. |
+| fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
+| fileConsent/invoke              | `on_teams_file_consent_decline`     | This method is invoked when the user declines a file consent card. |
+| actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
+| signin/verifyState              | `on_teams_signin_verify_state`      | This method is invoked when a `signIn` verify state activity is received from the connector. |
+| task/fetch                      | `on_teams_task_module_fetch`        | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
+| task/submit                     | `on_teams_task_module_submit`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
+
+---
+
+The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## Handling errors in conversation events
 
