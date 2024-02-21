@@ -1630,7 +1630,7 @@ async def on_installation_update(self, turn_context: TurnContext):
 
 When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
 
-:::image type="content" source="../../../assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="../../../assets/images/bots/uninstallbot.png"border="true":::
+:::image type="content" source="~/assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="~/assets/images/bots/uninstallbot.png":::
 
 ### Event handling for install and uninstall events
 
@@ -1709,7 +1709,7 @@ The invoke activities listed in this section are for conversational bots in Team
 
 When a bot encounters an error while handling different events or activities, don't send messages that have no meaningful context to the conversation as shown in the following screenshot:
 
-:::image type="content" source="../../../assets/images/handling-error.png" alt-text="Screenshot shows you the error message response in bot conversation.":::
+:::image type="content" source="~/assets/images/handling-error.png" alt-text="Screenshot shows you the error message response in bot conversation.":::
 
 In the development phase, it's always helpful to send meaningful messages in conversations, which provide additional details about a specific error for better debugging. However, in the production environment, you must log the errors or events to Azure Application Insights. For more information, see [Add telemetry to your bot](https://aka.ms/bottelemetry).
 
