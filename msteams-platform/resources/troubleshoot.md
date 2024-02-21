@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot your app
-description: Troubleshoot issues or errors while building apps for Microsoft Teams.
+description: Troubleshoot issues or errors while building apps for Microsoft Teams
 keywords: teams apps development troubleshooting
 localization_priority: Normal
 ms.topic: troubleshooting
@@ -13,7 +13,7 @@ ms.date: 07/09/2018
 
 ### Access DevTools
 
-You can open [DevTools in the Teams client](~/tabs/how-to/developer-tools.md) for a similar experience as pressing F12 (on Windows) or Command-Option-I (on macOS) in a browser.
+You can open [DevTools in the Teams client](~/tabs/how-to/developer-tools.md) for a similar experience as pressing F12 (on Windows) or Command-Option-I (on MacOS) in a browser.
 
 ### Blank tab screen
 
@@ -27,7 +27,7 @@ If you aren't seeing your content in the tab view, it could be:
 
 ### Changes to my web app aren't reflected in its Teams tab
 
-If you experienced consistent or intermittent caching issues where updates to your web app aren't appearing when it's hosted within a Teams tab, check your server cache settings and use [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) headers to ensure your desired client caching behavior.
+If you experience consistent or intermittent caching issues where updates to your web app aren't appearing when it's hosted within a Teams tab, check your server cache settings and use [`Cache-Control`](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Cache-Control) headers to ensure your desired client caching behavior.
 
 ### The Save button isn't enabled on the settings dialog
 
@@ -90,8 +90,8 @@ Most  manifest errors provide a hint at what specific field is missing or invali
 Common reasons for manifest read errors:
 
 * Invalid JSON. Use an IDE such as [Visual Studio Code](https://code.visualstudio.com) or [Visual Studio](https://www.visualstudio.com/vs/) that automatically validates the JSON syntax.
-* Encoding issues. Use UTF-8 for the *manifest.json* file. Other encodings, specifically with the BOM, might not be readable.
-* Malformed .zip package. The *manifest.json* file must be at the top level of the .zip file. Default Mac file compression might place the *manifest.json* in a subdirectory, which won't properly load in Microsoft Teams.
+* Encoding issues. Use UTF-8 for the *manifest.json* file. Other encodings, specifically with the BOM, may not be readable.
+* Malformed .zip package. The *manifest.json* file must be at the top level of the .zip file. Note that default Mac file compression might place the *manifest.json* in a subdirectory, which won't properly load in Microsoft Teams.
 
 ### Another extension with same ID exists
 
