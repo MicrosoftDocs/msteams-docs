@@ -12,15 +12,15 @@ Deep links are a navigation mechanism that helps users to connect with features 
 
 * App users can browse through the contents within a tab. For instance, your app can have a bot that sends messages notifying the user of an important activity. When the user selects the notification, the deep link navigates to the tab where the user can view more details about the activity.
 
-  :::image type="content" source="~/assets/images/deeplink-tasks.gif" alt-text="Graphical representation shows the user experience of deep links in tab app.":::
+  :::image type="content" source="~/assets/images/deeplink-tasks.gif" alt-text="Screenshot shows the user experience of deep links in tab app.":::
 
-* App users can enjoy enhanced app experience by using simplified or automated user tasks, such as creating a new chat and scheduling a meeting by prepopulating the deep links with required parameters.
+* App users can enjoy an enhanced app experience by using simplified or automated user tasks, such as creating a new chat and scheduling a meeting by prepopulating the deep links with required parameters.
 
-  :::image type="content" source="~/assets/images/deeplink-schedule.gif" alt-text="Graphical representation shows the user experience of deep links to launch a meeting scheduling dialog.":::
+  :::image type="content" source="~/assets/images/deeplink-schedule.gif" alt-text="Screenshot shows the user experience of deep links to launch a meeting scheduling dialog.":::
 
-Deep links can be categorized as follows:
+Teams supports the following types of deep links:
 
-:::image type="content" source="~/assets/images/deep-links.png" alt-text="Diagram that shows different scenarios for deep links.":::
+:::image type="content" source="~/assets/images/deep-links.png" alt-text="Diagram shows different scenarios for deep links.":::
 
 * **Deep link to an app**: You can open the app install dialog, navigate within your app, and generate a deep link and navigate to your tab through [deep link to an app](~/concepts/build-and-test/deep-link-application.md).
 
@@ -28,7 +28,20 @@ Deep links can be categorized as follows:
 
 * **Deep link to a workflow**: You can create a deep link to perform a specific task in Teams, such as to create a new chat, open a scheduling dialog, and navigate to audio-video call through [deep link to a workflow](~/concepts/build-and-test/deep-link-workflow.md).
 
-The Microsoft Teams JavaScript client library (TeamsJS) can be used for navigation. For scenarios, such as navigating to content and information within your tab or launching a chat dialog, TeamsJS typed APIs provide improved experience. These APIs are recommended for Teams apps that might be run in other hosts (Outlook, Microsoft 365 app), as they also provide a way to check that the capability used is supported by the host.
+The Microsoft Teams JavaScript client library (TeamsJS) can be used for navigation. For scenarios, such as navigating to content and information within your tab or launching a chat dialog, TeamsJS typed APIs provide improved experience. These APIs are recommended for Teams apps extended across Outlook and Microsoft 365 as they provide a way to check if the capability used is supported by the host.
+
+## Protocol handlers in deep links
+
+Teams deep links support two types of protocol handlers:
+
+1. The default `https://` protocol handler that is used in most hyperlinks. Using this protocol handler in a Teams deep link opens the deep link in a browser window which gives you three options:
+    1. Open the deep link in the Teams desktop client if it's installed
+    2. Download the Teams desktop client if it's not installed
+    3. Open the deep link in the Teams web client
+
+:::image type="content" source="../../assets/images/deep-link-open.png" alt-text="Screenshot shows a deep link opened in a browser.":::
+
+1. The `msteams://` protocol handler opens the deep link directly in the Teams desktop client.
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 
@@ -43,4 +56,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) can be used for navigati
 
 ## See also
 
-[Integrate web apps](../../samples/integrate-web-apps-overview.md)
+* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
+* [Deep link to an application](deep-link-application.md)
+* [Deep link to Teams chat](deep-link-teams.md)
+* [Deep link to a workflow in Teams](deep-link-workflow.md)

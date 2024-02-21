@@ -10,17 +10,29 @@ ms.date: 01/31/2023
 
 # Deep link to a workflow in Teams
 
+> [!NOTE]
+>
+> Use the `msteams://` protocol handler to configure deep links to open in the Teams desktop client directly and skip the client selection screen. To know more about protocol handlers in Teams deep links, see [Protocol handlers in deep links](deep-links.md#protocol-handlers-in-deep-links).
+
 You can create a deep link to perform a specific task in Teams, such as to create a new chat, open a scheduling dialog, and navigate to audio-video call.
 
 In this article, you’ll learn to create a deep link:
 
-* [To start a new chat](#deep-link-to-start-a-new-chat)
-* [To open a meeting scheduling dialog](#deep-link-to-open-a-meeting-scheduling-dialog)
-* [To start an audio-video call](#deep-link-to-start-an-audio-video-call-with-users)
-* [To share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)
-* [To meeting side panel](#deep-link-to-meeting-side-panel)
-* [To join a meeting](#deep-link-to-join-a-meeting)
-* [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
+- [Deep link to a workflow in Teams](#deep-link-to-a-workflow-in-teams)
+  - [Deep link to start a new chat](#deep-link-to-start-a-new-chat)
+  - [Deep link to open a meeting scheduling dialog](#deep-link-to-open-a-meeting-scheduling-dialog)
+      - [Configure deep link manually to open a meeting scheduling dialog](#configure-deep-link-manually-to-open-a-meeting-scheduling-dialog)
+      - [Configure deep link using TeamsJS library to open a meeting scheduling dialog](#configure-deep-link-using-teamsjs-library-to-open-a-meeting-scheduling-dialog)
+- [TeamsJS v2](#teamsjs-v2)
+- [TeamsJS v1](#teamsjs-v1)
+  - [Deep link to start an audio-video call with users](#deep-link-to-start-an-audio-video-call-with-users)
+      - [Configure deep link manually to start audio-video call with users](#configure-deep-link-manually-to-start-audio-video-call-with-users)
+      - [Configure deep link using TeamsJS library to start audio-video call with users](#configure-deep-link-using-teamsjs-library-to-start-audio-video-call-with-users)
+  - [Generate a deep link to share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+  - [Deep link to meeting side panel](#deep-link-to-meeting-side-panel)
+  - [Deep link to join a meeting](#deep-link-to-join-a-meeting)
+  - [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
+  - [Code Sample](#code-sample)
 
 ## Deep link to start a new chat
 

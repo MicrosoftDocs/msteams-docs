@@ -10,14 +10,23 @@ ms.date: 01/31/2023
 
 # Deep link to Teams chat
 
+> [!NOTE]
+>
+> Use the `msteams://` protocol handler to configure deep links to open in the Teams desktop client directly and skip the client selection screen. To know more about protocol handlers in Teams deep links, see [Protocol handlers in deep links](deep-links.md#protocol-handlers-in-deep-links).
+
 You can create a deep link to a Teams chat, such as to start a new chat, browse to a channel conversation, and to a file in a channel.
 
 In this article, you’ll learn to create a deep link:
 
-* [To start a new chat](#deep-link-to-start-a-new-chat)
-* [To navigate to channel conversation](#deep-links-to-navigate-to-channel-conversation)
-* [To navigate to chat messages](#deep-links-to-navigate-to-chat-messages)
-* [To file in a channel](#generate-deep-links-to-file-in-a-channel)
+- [Deep link to Teams chat](#deep-link-to-teams-chat)
+  - [Deep link to start a new chat](#deep-link-to-start-a-new-chat)
+      - [Configure deep link to start a chat manually](#configure-deep-link-to-start-a-chat-manually)
+      - [Configure deep link to start a chat using TeamsJS library](#configure-deep-link-to-start-a-chat-using-teamsjs-library)
+  - [Deep links to navigate to channel conversation](#deep-links-to-navigate-to-channel-conversation)
+  - [Deep links to navigate to chat messages](#deep-links-to-navigate-to-chat-messages)
+  - [Generate deep links to file in a channel](#generate-deep-links-to-file-in-a-channel)
+    - [Serialization of this object](#serialization-of-this-object)
+  - [Code Sample](#code-sample)
 
 ## Deep link to start a new chat
 
