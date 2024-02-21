@@ -54,7 +54,7 @@ SharePoint hosts SPFx web parts without the need for external services like Azur
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/set-up-custom-tab.png" alt-text="Screenshot shows the option to select set-up a tab in a team.":::
 
-7. A new **Candidates** tab is added to your team's channels. You can experiment with the app and test its features.
+7. A new **Candidates** static tab is added to your team's channels. You can experiment with the app and test its various features including configurable tabs and a chatbot.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/teams-tab-custom-app.png" alt-text="Screenshot shows a new tab added in a team.":::
 
