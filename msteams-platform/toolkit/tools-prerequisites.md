@@ -5,7 +5,7 @@ description: In this module, learn the prerequisites required for Tools and SDK.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 21/02/2024
+ms.date: 02/21/2024
 ---
 # Prerequisites for creating your Teams app
 
