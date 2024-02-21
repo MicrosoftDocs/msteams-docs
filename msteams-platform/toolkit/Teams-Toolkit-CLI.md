@@ -270,7 +270,7 @@ The following table lists the parameters available for `teamsapp package`:
 
 ## `teamsapp validate`
 
-Validate the Teams app using manifest schema or validation rules.
+Validate the Teams app using the app manifest schema or validation rules.
 
 ### `teamsapp validate` parameters
 
@@ -279,7 +279,7 @@ The following table lists the parameters available for `teamsapp validate`:
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | No | Select an existing environment for the project. |
-| `--env-file` | No | Select an .env file that defines the variables to replace in the manifest template file. |
+| `--env-file` | No | Select an .env file that defines the variables to replace in the app manifest template file. |
 | `--teams-manifest-file` | No | Select the input app manifest file path. Defaults to `${folder}/appPackage/manifest.json`. |
 |`--package-file` | No | Select the path for the zipped Teams app package file.|
 |`--output-package-file` | No | Select the path for the output zipped Teams app package file. Defaults to `${folder}/appPackage/build/appPackage.${env}.zip`.|
@@ -449,11 +449,11 @@ The following table lists the parameters available for `teamsapp install`:
 | Command | Description |
 |:----------------  |:-------------|
 | `--file-path` | Specifies the path to the app manifest zip package. |
-| `--xml-path` |  Specifies the path to the Teams XML manifest file. |
+| `--xml-path` |  Specifies the path to the Teams XML app manifest file. |
 
 ### `teamsapp install` scenarios
 
-Sideload the application package with json based manifest to Teams, Outlook, and the Microsoft 365 app.
+Sideload the application package with json based app manifest to Teams, Outlook, and the Microsoft 365 app.
 
 ```bash
 teamsapp install --file-path appPackage.zip
@@ -549,15 +549,15 @@ Install `teamsfx-cli` from `npm` and run `teamsfx -h` to check all available com
 | Command | Description |
 |----------------|-------------|
 | `teamsfx new`| Create a new Teams application.|
-| `teamsfx add`| Add a feature to existing Teams application.|
+| `teamsfx add`| Add a feature to your Teams application.|
 | `teamsfx account`| Manage Microsoft 365 and Azure accounts. The supported cloud services are Azure and Microsoft 365. |
 | `teamsfx env` | Manage environments. |
 | `teamsfx help` | Show Teams Toolkit CLI help. |
-| `teamsfx list` | Explore the available Teams application templates and samples. |
+| `teamsfx list` | List the available Teams application templates and samples. |
 | `teamsfx provision` | Run the provision stage in teamsapp.yml or teamsapp.local.yml.|
 | `teamsfx deploy` | Run the deploy stage in teamsapp.yml or teamsapp.local.yml. |
 | `teamsfx package` | Build your Teams app into a package for publishing.|
-| `teamsfx validate` | Validate the Teams app using app manifest schema or validation rules. |
+| `teamsfx validate` | Validate the Teams app using the app manifest schema or validation rules. |
 | `teamsfx publish` | Run the publish stage in teamsapp.yml.|
 | `teamsfx preview` | Preview the current application. |
 | `teamsfx m365`  | Manage M365 app. |
@@ -676,14 +676,14 @@ Running `teamsfx deploy --env local` triggers the deploy stage in `teamsapp.loca
 
 ## `teamsfx validate`
 
-Validate the Teams app using app manifest schema or validation rules.
+Validate the Teams app using the app manifest schema or validation rules.
 
 ### Parameters for `teamsfx validate`
 
 | Parameter | Required | Description |
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
-| `--manifest-path` | No | Select the input app manifest file path, defaults to `${folder}/appPackage/manifest.json`. This manifest is validated using manifest schema. |
+| `--manifest-path` | No | Select the input the app manifest file path, defaults to `${folder}/appPackage/manifest.json`. This  app manifest is validated using the app manifest schema. |
 |`--app-package-file-path` | No | Select the zipped Teams app package path, defaults to `${folder}/appPackage/build/appPackage.${env}.zip`. This package is validated with validation rules. |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
 
@@ -770,7 +770,7 @@ Manage Microsoft 365 app.
 
 | Command | Description |
 |:----------------  |:-------------|
-| `sideloading [options]` | Sideloading an M365 App with corresponding information specified in the given manifest package. |
+| `sideloading [options]` | Sideloading an M365 App with corresponding information specified in the given app manifest package. |
 | `unacquire [options]` | Remove an acquired M365 App. |
 | `launchinfo [options]` | Get launch information of an acquired M365 App. |
 
@@ -799,8 +799,8 @@ Check, grant, and list user permission.
 |:----------------  |:-------------|:-------------|
 | `--env` | Yes | Select an existing environment for the project. |
 | `--folder` | No | Select root folder of the project. Defaults to `./`. |
-| `--teams-app-manifest` | No | Manifest of Your Teams app. |
-| `--aad-app-manifest` | No | Manifest of your Microsoft Entra app. |
+| `--teams-app-manifest` | No | App manifest of Your Teams app. |
+| `--aad-app-manifest` | No | App manifest of your Microsoft Entra app. |
 | `--list-all-collaborators` | No | To list all collaborators. |
 
 ### Scenarios for `teamsfx permission`
@@ -838,7 +838,7 @@ Update the specific app manifest file.
 | Command | Description |
 |:----------------  |:-------------|
 | `teamsfx update aad-app` | Update the Microsoft Entra App in the current application. |
-| `teamsfx update teams-app` | Update the app manifest to Teams Developer Portal. |
+| `teamsfx update teams-app` | Update the app manifest file to Teams Developer Portal. |
 
 ### Parameters for `teamsfx update aad-app`
 
@@ -960,8 +960,8 @@ The following table lists different features to your Teams application along wit
 |:----------------  |:-------------|
 | `teamsfx add notification` | Send notification to Teams through various triggers. |
 | `teamsfx add command-and-response` | Respond to simple commands in the Teams chat.|
-| `teamsfx add sso-tab` | Teams identity aware webpages embedded in the Teams.|
-| `teamsfx add tab` | Hello world webpages embedded in the Teams.|
+| `teamsfx add sso-tab` | Teams identity aware webpages embedded in Teams.|
+| `teamsfx add tab` | Hello world webpages embedded in Teams.|
 | `teamsfx add bot` | Hello world chatbot to run simple and repetitive tasks by user. |
 | `teamsfx add message-extension` | Hello world message extension allowing interactions through buttons and forms. |
 | `teamsfx add azure-function`| A serverless, event-driven compute solution that allows you to write less code. |
@@ -1034,7 +1034,7 @@ The `teamsfx deploy` command is used to deploy the current application. By defau
 
 ## `teamsfx validate`
 
-Validate current application. This command validates your application's app manifest file.
+Validate current application. This command validates your application's the app manifest file.
 
 ### Parameters for `teamsfx validate`
 
