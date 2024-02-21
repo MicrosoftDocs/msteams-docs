@@ -166,7 +166,7 @@ async def on_teams_channel_created(
 
 <details><summary><b>The following code shows an example of channel renamed event:</b></summary>
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrenamedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L341)
@@ -181,7 +181,7 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript1)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrenamedevent&preserve-view=true)
 
@@ -199,7 +199,7 @@ export class MyBot extends TeamsActivityHandler {
     }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json1)
 
 ```json
 {
@@ -237,7 +237,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python1)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-renamed&preserve-view=true)
 
@@ -256,7 +256,7 @@ async def on_teams_channel_renamed(
 
 <details><summary><b>The following code shows an example of channel deleted event:</b></summary>
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschanneldeletedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L347)
@@ -270,7 +270,7 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript2)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschanneldeletedevent&preserve-view=true)
 
@@ -290,7 +290,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 ```json
 {
@@ -328,7 +328,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python2)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-deleted&preserve-view=true)
 
@@ -350,7 +350,7 @@ async def on_teams_channel_deleted(
 
 <details><summary><b>The following code shows an example of channel restored event:</b></summary>
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet3)
 
 * [SDK refernce](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
@@ -364,7 +364,7 @@ protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInf
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript3)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrestoredevent&preserve-view=true)
 
@@ -385,7 +385,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json3)
 
 ```json
 {
@@ -423,7 +423,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python3)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-restored&preserve-view=true)
 
@@ -443,11 +443,14 @@ async def on_teams_channel_restored(
 
 </details>
 
-# [Channel created](#tab/Channel-created)
+# [Channel created](#tab/chcreated)
+
 The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed.
 
 The following code shows an example of channel created event:
-   # [C#](#tab/dotnet)
+
+   # [C#](#tab/dotnet4)
+
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
     
@@ -461,7 +464,7 @@ The following code shows an example of channel created event:
     
    ```
     
-   # [TypeScript](#tab/typescript)
+   # [TypeScript](#tab/typescript4)
     
     <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
     
@@ -483,7 +486,7 @@ The following code shows an example of channel created event:
     
    ```
     
-   # [JSON](#tab/json)
+   # [JSON](#tab/json4)
     
    ```json
     {
@@ -521,7 +524,7 @@ The following code shows an example of channel created event:
     }
    ```
     
-   # [Python](#tab/python)
+   # [Python](#tab/python4)
     
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
     
@@ -543,7 +546,7 @@ The channelCreated event is sent to your bot whenever a new channel is created i
 
 The following code shows an example of channel created event:
 
-   # [C#](#tab/dotnet)
+   # [C#](#tab/dotnet5)
     
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
@@ -558,7 +561,7 @@ The following code shows an example of channel created event:
     
     ```
     
-   # [TypeScript](#tab/typescript)
+   # [TypeScript](#tab/typescript5)
     
     <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
     
@@ -580,7 +583,7 @@ The following code shows an example of channel created event:
     
     ```
     
-   # [JSON](#tab/json)
+   # [JSON](#tab/json5)
     
    ```json
     {
@@ -618,7 +621,7 @@ The following code shows an example of channel created event:
     }
     ```
     
-   # [Python](#tab/python)
+   # [Python](#tab/python5)
     
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
     
@@ -640,7 +643,7 @@ The channelCreated event is sent to your bot whenever a new channel is created i
 
 The following code shows an example of channel created event:
 
-   # [C#](#tab/dotnet)
+   # [C#](#tab/dotnet6)
     
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
@@ -655,7 +658,7 @@ The following code shows an example of channel created event:
     
     ```
     
-   # [TypeScript](#tab/typescript)
+   # [TypeScript](#tab/typescript6)
     
     <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
     
@@ -677,7 +680,7 @@ The following code shows an example of channel created event:
     
     ```
     
-   # [JSON](#tab/json)
+   # [JSON](#tab/json6)
     
    ```json
     {
@@ -715,7 +718,7 @@ The following code shows an example of channel created event:
     }
     ```
     
-   # [Python](#tab/python)
+   # [Python](#tab/python6)
     
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
     
