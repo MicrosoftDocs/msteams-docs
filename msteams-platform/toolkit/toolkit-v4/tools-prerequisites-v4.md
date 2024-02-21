@@ -5,7 +5,7 @@ description: In this module, learn the prerequisites required for Tools and SDK,
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
-ms.date: 21/02/2024
+ms.date: 02/21/2024
 ---
 # Prerequisites for creating your Teams app using Visual Studio
 
@@ -26,7 +26,7 @@ Ensure that the following tools are installed on the device where you’ll creat
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| C# and Blazor |
 | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | C# and Blazor |
 | **Optional** | &nbsp; | &nbsp; | &nbsp; |
-| &nbsp; | [Azure development workload for Visual Studio](https://learn.microsoft.com/dotnet/azure/configure-visual-studio) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back-end for your Teams app in Azure. | C# and Blazor |
+| &nbsp; | [Azure development workload for Visual Studio](/dotnet/azure/configure-visual-studio) and [Azure CLI](/cli/azure/install-azure-cli) | Access stored data or deploy a cloud-based back-end for your Teams app in Azure. | C# and Blazor |
 | &nbsp; | [Microsoft Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) | A browser-based tool that lets you run a query from Microsoft Graph data. |  C# and Blazor |
 | &nbsp; | [Developer Portal for Teams](https://dev.teams.microsoft.com/) | A web-based portal to configure, manage, and distribute your Teams app including to your organization or the Microsoft Teams Store.| C# and Blazor |
 
