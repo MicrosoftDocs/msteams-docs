@@ -11,6 +11,8 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Debug your Teams app
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+
 Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
 ::: zone pivot="visual-studio-code-v5"
@@ -315,12 +317,6 @@ Teams Toolkit utilizes Visual Studio Code multi-target debugging to debug tab, b
 ::: zone-end
 
 ::: zone pivot="visual-studio-code-v4"
-
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
 
 Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
