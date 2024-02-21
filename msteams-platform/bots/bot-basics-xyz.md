@@ -2206,12 +2206,12 @@ In the development phase, it's always helpful to send meaningful messages in con
 
 # [Channel renamed](#tab/Chrenamed)
 
-The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed.
+   The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed.
 
-The following code shows an example of channel created event:
+   The following code shows an example of channel created event:
 
    # [C++](#tab/C++)
-    
+
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
     
@@ -2302,110 +2302,5 @@ The following code shows an example of channel created event:
    ```
 
    ---
-
----
-
-# [Command line](#tab/cli)
-
-1. To debug your Teams app in Test Tool, use command line in JavaScript, TypeScript, or C# as follows:
-
-   # [JavaScript/TypeScript](#tab/clijs)
-
-   1. Run the following command to install Teams app in Test Tool CLI from `npm`:
-
-      ```cmd
-      npm install -g @microsoft/teams-app-test-tool
-      ```
-
-        :::image type="content" source="../assets/images/teams-toolkit-v2/debug/npm-teams-app-test-tool.png" alt-text="Screenshot shows install teams app test tool cli.":::
-
-   1. Use the `teamsapp` command from [Teams Toolkit CLI](Teams-Toolkit-CLI.md) to create your first project. Start from the folder where you want to create the project folder.
-
-      ```cmd
-      teamsapp new   
-      ```
-
-      You can use the CLI to create a new Teams app. The CLI leads you through a series of questions.Use the arrow keys to select an option. After you make the choice, select **Enter** to confirm:
-
-        1. Select **New Project**.
-        1. Select **Bot**.
-        1. Select **Basic Bot** as the app features.
-        1. Select **JavaScript** as the programming language.
-        1. Select **Enter** to select the default workspace folder.
-        1. Enter a suitable name for your app, like `HelloBot`. The name of the app must consist only of alphanumeric characters.
-
-       Your project is created.
-
-       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teamsapp-new.png" alt-text="Screenshot shows the process of creating a new app on Teams.":::
-
-   1. Run the following command to install the required dependencies and npm packages.
-
-      ```cmd
-      teamsapp deploy --env=testtool
-      ```
-
-       :::image type="content" source="../assets/images/teams-toolkit-v2/debug/teamsapp-deploy-env-testtool.png" alt-text="Screenshot shows the process of installing the required dependencies and npm packages.":::
-
-   1. Run the following command to start your bot app:
-
-      ```cmd
-      npm run dev:teamsapp:testtool
-      ```
-
-   1. Run the following command in a separate terminal, initiate the Teams App Test Tool:
-
-      ```cmd
-      npm run dev:teamsapp:launch-testtool
-      ```
-
-   # [C#](#tab/clicsharp)
-
-   1. [Create a new Teams app](toolkit-v4/create-new-project-vs.md).
-
-   1. Run the following commands in the directory that contains `teamsapp.yml` file:
-
-      1. Download the Teams App Test Tool CLI from the [GitHub](https://github.com/OfficeDev/TeamsFx/releases?q=teams-app-test-tool&expanded=true) release.
-
-      1. Unzip the downloaded package to a folder. You'll find an executable binary file `teamsapptester.exe`.
-
-      1. Run the following command to launch profile:
-
-          ```cmd
-          dotnet run --launch-profile "Teams App Test Tool (browser)"
-          ```
-
-      1. Run the following command in a separate terminal, define your bot message endpoint:
-
-          1. For Command Prompt:
-
-              ```cmd
-              set BOT_ENDPOINT=http://127.0.0.1:5130/api/messages
-              ```
-
-          1. For PowerShell:
-
-              ```powershell
-              $env:BOT_ENDPOINT = "http://127.0.0.1:5130/api/messages"
-              ```
-
-      1. Run the following command to initiate Teams App Test Tool:
-
-          1. For Command Prompt:
-
-              ```cmd
-              teamsapptester.exe start
-              ```
-
-          1. For PowerShell:
-
-              ```powershell
-              teamsapptester.exe start
-              ```
-   ---
-1. Test Tool opens the bot in a webpage.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
-
-In C#, if the Test Tool doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
 
 ---
