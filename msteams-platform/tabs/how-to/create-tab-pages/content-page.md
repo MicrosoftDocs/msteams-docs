@@ -46,15 +46,17 @@ The following code gives an example of how your page and the Teams client commun
       integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
       crossorigin="anonymous" >
     </script>
-...
-</head>
-<body>
-...
     <script>
+    // Initialize the library
     await microsoftTeams.app.initialize();
     </script>
-...
+</head>
+<body>
+...<h1>Personal Tab</h1>
+  <p><img src="/assets/icon.png"></p>
+  <p>This is your personal tab!</p>
 </body>
+</html>
 ```
 
 # [TeamsJS v1](#tab/teamsjs-v1)
@@ -64,16 +66,21 @@ The following code gives an example of how your page and the Teams client commun
 <html>
 <head>
 ...
-    <script src= 'https://statics.teams.cdn.office.net/sdk/v1.10.0/js/MicrosoftTeams.min.js'></script>
-...
-</head>
-<body>
-...
+    <script src="https://res.cdn.office.net/teams-js/2.2.0/js/MicrosoftTeams.min.js" 
+      integrity="sha384yBjE++eHeBPzIg+IKl9OHFqMbSdrzY2S/LW3qeitc5vqXewEYRWegByWzBN/chRh" 
+      crossorigin="anonymous" >
+    </script>
     <script>
+    // Initialize the library
     microsoftTeams.initialize();
     </script>
-...
+</head>
+<body>
+...<h1>Personal Tab</h1>
+  <p><img src="/assets/icon.png"></p>
+  <p>This is your personal tab!</p>
 </body>
+</html>
 ```
 
 ***
