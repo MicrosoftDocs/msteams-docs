@@ -67,10 +67,6 @@ landingContent:
         url: messaging-extensions/build-bot-based-message-extension.md
       - text: Teams Toolkit command line interface v3
         url: toolkit/Teams-Toolkit-CLI.md     
-      - text: Apps for Teams meetings are available in Department of Defense (DOD)
-        url: messaging-extensions/build-bot-based-plugin.md
-      - text: Introduced RSC permissions for users to access different resources
-        url:  graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access
 
     - linkListType: reference
       links:
