@@ -539,6 +539,7 @@ The following code shows an example of channel created event:
      )
    ```
    ---
+
 ---
 
 
