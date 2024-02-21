@@ -18,7 +18,7 @@ Teams Toolkit scaffolds the necessary files based on the feature and configurati
 
 ## Open your app in Visual Studio Code
 
-In Teams Developer Portal, you can open and launch your project in Visual Studio Code.
+In Teams Developer Portal, you can open and launch your project (React app) in Visual Studio Code.
 
 Following are the steps to open your app in Visual Studio Code:
 
