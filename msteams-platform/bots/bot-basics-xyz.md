@@ -447,13 +447,11 @@ async def on_teams_channel_restored(
 The channelCreated event is sent to your bot whenever a new channel is created in a team where your bot is installed.
 
 The following code shows an example of channel created event:
-
    # [C#](#tab/dotnet)
-    
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
     
-    ```csharp
+   ```csharp
     protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
     {
         var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
@@ -461,7 +459,7 @@ The following code shows an example of channel created event:
         await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
     }
     
-    ```
+   ```
     
    # [TypeScript](#tab/typescript)
     
@@ -469,7 +467,7 @@ The following code shows an example of channel created event:
     
     * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
     
-    ```typescript
+   ```typescript
     export class MyBot extends TeamsActivityHandler {
         constructor() {
             super();
@@ -483,7 +481,7 @@ The following code shows an example of channel created event:
         }
     }
     
-    ```
+   ```
     
    # [JSON](#tab/json)
     
@@ -521,13 +519,13 @@ The following code shows an example of channel created event:
             }
         }
     }
-    ```
+   ```
     
    # [Python](#tab/python)
     
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
     
-    ```python
+   ```python
     async def on_teams_channel_created(
      self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
     ):
