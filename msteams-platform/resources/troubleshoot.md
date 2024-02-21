@@ -61,7 +61,7 @@ For more information about authentication, see [how to authenticate a user](~/co
 
 ### Static tabs not showing up
 
-There's a known issue where updating an existing bot app with a new or updated static tab won't show that tab change when accessing the app from a personal chat conversation. To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
+There's a known issue where updating an existing bot app with a new or updated static tab won't show that tab change when accessing the app from a personal chat conversation.  To see the change, you should test on a new user or test instance, or access the bot from the Apps flyout.
 
 ## To troubleshoot bots
 
@@ -98,15 +98,6 @@ Common reasons for manifest read errors:
 If you're attempting to upload an updated package with the same ID again, choose the **Replace** icon at the end of the tab's table row rather than the **Upload** button.
 
 If you're not re-uploading an updated package, ensure that the ID is unique.
-
-## Manage anonymous bot and user joining Teams meeting
-
-If you want to disable anonymous bot from joining a meeting:
-
-* Tenant admin mustn't permit an anonymous bot to join a meeting in their tenant.
-* Tenant admin and meeting organizer mustn't permit the user to install the app. If the user still has the permissions to install the app, the tenant admin must block the apps that contain a bot.
-
-If you want to disable anonymous user from joining a meeting, tenant admin must disable the option for **Anonymous users can join a meeting**. For more information, see [manage anonymous meeting join for the organization](/microsoftteams/anonymous-users-in-meetings#manage-anonymous-meeting-join-for-the-organization).
 
 ## See also
 
