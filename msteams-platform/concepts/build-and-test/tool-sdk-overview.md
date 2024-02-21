@@ -33,7 +33,7 @@ Teams platform brings you different tools to build and develop your Teams apps. 
 | &nbsp; | Teams Toolkit | Yeoman Teams project |
 | -------- | ------------- | ----------------- |
 | Environment variables | Use `.env` file | Use `.env` file |
-| Generate manifest | Teams Toolkit auto-generates when creating projects. | gulp manifest |
+| Generate manifest | Teams Toolkit autogenerates when creating projects. | gulp manifest |
 | Deploy Teams app | Automatically update use command `Teams: Update Teams App` |gulp tenant: deploy |
 | Create Microsoft Entra app | Automatically create when debugging or provisioning the project. Users can also use their existing Microsoft Entra app by filling in Teams app ID in `.env` file. | Manual |
 | Add SSO | Provide SSO-enabled samples and how-to guides to add SSO. | Manual |
@@ -54,7 +54,7 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 
 :::image type="icon" source="../../assets/icons/blue-dot.png" border="false"::: Library that requires another library to build apps. Your project automatically pulls into another library.</br>
 :::image type="icon" source="../../assets/icons/red-dot.png" border="false"::: Library that passes your app a reference to another library. </br>
-:::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: Library that's often used with another library, but there's no formal dependency. </br>
+:::image type="icon" source="../../assets/icons/yellow-dot.png" border="false"::: Library often used with another library, but there's no formal dependency. </br>
 :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Library that's underlying service or API. </br>
 
 ### Teams Developer Platform SDKs & libraries
@@ -89,7 +89,14 @@ The following flow diagram explains the different SDKs, libraries, and its relat
 | SDKs and libraries | Why do you need? | Related SDKs and libraries |
 | ----------------- | -------------- | ----------------------- |
 | [Azure Bot Services](/azure/bot-service/bot-service-overview) | Azure Bot Service is a collection of libraries, tools, and services that let you build, test, deploy, and manage intelligent bots. | :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Used for **Bot Framework SDK**. |
-| [Azure OpenAI](/azure/cognitive-services/openai/overview) | Azure OpenAI Service provides REST API access to OpenAI's powerful language models including the GPT-3, Codex and Embeddings model series. Besides, the new GPT-4 and ChatGPT (gpt-35-turbo) model series are now available in preview. These models can be adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. | :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Used for **Teams AI Library**. |
+| [Azure OpenAI](/azure/cognitive-services/openai/overview) | Azure OpenAI Service provides REST API access to OpenAI's powerful language models including the GPT-3, Codex, and Embeddings model series. Besides, the new GPT-4 and ChatGPT (gpt-35-turbo) model series are now available in preview. These models can be adapted to your specific task including but not limited to content generation, summarization, semantic search, and natural language to code translation. | :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Used for **Teams AI Library**. |
 | [Microsoft Graph](/graph/sdks/sdks-overview) | Microsoft Graph is the gateway to data and intelligence in Microsoft 365. It provides a unified programmability model that you can use to access the tremendous amount of data in Microsoft 365, Windows, and Enterprise Mobility + Security. Use the wealth of data in Microsoft Graph to build apps for organizations and consumers that interact with millions of users. | :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Used for **Microsoft Graph SDK**. |
 | [SharePoint REST API](/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service?tabs=csom) | You can remotely engage with SharePoint data using any technology that supports Representational State Transfer (REST) web requests. You can perform basic create, read, update, and delete (CRUD) operations by using the REST interface provided by SharePoint. |  :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Used for **SharePoint Framework (SPFx)**. |
 | [Azure Fluid Relay](/azure/azure-fluid-relay/overview/overview) | The Fluid Framework is an open source, platform independent framework. Azure Fluid Relay is a managed service for the Fluid Framework that helps developers build real-time collaborative experiences and replicate states across connected JavaScript clients in real-time. | :::image type="icon" source="../../assets/icons/grey-dot.png" border="false"::: Used for **Fluid Framework**. |
+
+### Recommendations
+
+| Tool | Details |
+| ----------------- | -------------- |
+| Teams Toolkit | We recommend using [Teams Toolkit v5](../../toolkit/teams-toolkit-fundamentals.md) to build your apps, as Teams Toolkit v4 is available only with limited functionality. |
+| Teams Toolkit CLI | We recommend that you use [Teams Toolkit CLI v3](../../toolkit/Teams-Toolkit-CLI.md) to build your Teams app, as TeamsFx CLI v1 and TeamsFx CLI v2 are available only with limited functionality. |
