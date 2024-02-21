@@ -9,15 +9,13 @@ ms.date: 01/22/2023
 ---
 # Event-driven conversations with activity handlers
 
-Events and handlers are two related concepts in a bot workflow. An event in bot workflow depicts an activity that triggers the bot to perform a certain action or task.
+Events and handlers are two related concepts in a bot workflow. An event in bot workflow depicts an invoke activity that triggers the bot to perform a certain action or task.
 
 Activity handlers are functions or methods that contain the bot logic for how the bot should handle different types of events. For example, when a user reacts to the bot message, that is an event. The bot has a handler for message events, which defines what the bot should do or say in response to the user’s action.
 
+:::image type="content" source="../assets/images/bots/bot-event-activity-flowchart.png" alt-text="Diagram that shows the flow of the event flow from activity handlers to bot logic." lightbox="../assets/images/bots/bot-event-activity-flowchart.png":::
+
 To create a event-driven conversations, you need to define the handlers that the bot will use when the event is occured.
-
-
-`{Sequence or flow chart}`
-
 
 ## Events with activity handlers
 
@@ -34,10 +32,10 @@ this.onMessageActivity(async (context, next) => {
 
 Following are the two primary Teams activity handlers:
 
-* `OnConversationUpdateActivityAsync`: Routes all the conversation update activities
+* `OnConversationUpdateActivityAsync`: Routes all the conversation update activities.
 * `OnInvokeActivityAsync`: Routes all Teams invoke activities.
 
-
+Following are the different 
 * Conversation events
 * Channel events
 * Members events
@@ -47,13 +45,7 @@ Following are the two primary Teams activity handlers:
 
 ## Conversation update events
 
-You can use conversation update events to provide better notifications and effective bot actions.
-
-> [!IMPORTANT]
->
-> * You can add new events any time and your bot begins to receive them.
-> * You must design your bot to receive unexpected events.
-> * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them. You must design your bot to receive unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
@@ -456,7 +448,6 @@ async def on_teams_channel_restored(
 ---
 
 </details>
-
 
 ## Members event
 
