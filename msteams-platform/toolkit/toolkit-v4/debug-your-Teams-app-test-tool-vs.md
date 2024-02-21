@@ -127,6 +127,18 @@ Predefined activity triggers are available in the **Mock an Activity** menu in T
 
 To mock an **Add user** activity, follow these steps:
 
+1. In Visual Studio Code, go to **Solution Explorer**.
+1. Select **Program.cs** file.
+1. Under `builder.Services.AddTransient<IBot>(sp =>`, add the following code in **Program.cs** file:
+
+    
+    ```json
+    app.OnConversationUpdate("membersAdded", async (context, state, cancellationToken) =>
+    {
+    await context.SendActivityAsync($"new member added", cancellationToken: cancellationToken);
+    });
+    ```
+
 1. In Test Tool, go to **Mock an Activity** and select **Add user**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-user-vs.png" alt-text="Screenshot shows the add user option under mock an activity.":::
@@ -140,15 +152,30 @@ To mock an **Add user** activity, follow these steps:
    Bot sends a response.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-a-user-response-vs.png" alt-text="Screenshot shows the response of predefined mock activity add user.":::
+
 ### Custom activity triggers
 
 You can use **Custom activity** to customize activity triggers such as, `reactionsAdded`, to fit the requirements of your bot app. Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties.
 
+1. In Visual Studio Code, go to **Solution Explorer**.
+1. Select **Program.cs** file.
+1. Under `builder.Services.AddTransient<IBot>(sp =>`, add the following code in **Program.cs** file:
+
+    
+    ```json
+    app.OnMessageReactionsAdded(async (context, state, cancellationToken) =>
+    {
+    await context.SendActivityAsync($"reaction added.", cancellationToken: cancellationToken);
+    });
+    ```
+
+1. Select the latest response from Log Panel and copy `replyToId`.
 1. Select **Mock an Activity** > **Custom activity**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/mock-activity-vs.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
 1. Add `messageReaction` to customize the activity under the property `type` and invoke the custom activity.
+1. Update the the latest `replyToId`.
 
     ```json
     {
