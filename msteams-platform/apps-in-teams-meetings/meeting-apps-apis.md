@@ -578,7 +578,6 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "mySiteDomain": undefined
          }
         }
-        
   ```
 
 ## Get participant API
@@ -1688,6 +1687,7 @@ The `getIncomingClientAudioState` API allows an app to get the incoming audio st
 > [!NOTE]
 >
 > * The `getIncomingClientAudioState` API for mobile is available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+> * The `toggleIncomingClientAudio` API is available in the new Teams client.
 > * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
 
 ### Manifest
