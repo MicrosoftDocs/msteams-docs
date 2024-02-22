@@ -11,6 +11,8 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Debug your Teams app locally
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+
 Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ::: zone pivot="visual-studio-code-v5"
@@ -225,12 +227,6 @@ The configuration **Attach to Frontend** or **Launch App** launches Microsoft Ed
 ::: zone-end
 
 ::: zone pivot="visual-studio-code-v4"
-
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
 
 Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side-loads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
