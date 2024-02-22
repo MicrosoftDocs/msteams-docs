@@ -15,7 +15,7 @@ ms.date: 04/07/2022
 > * Custom Together Mode scenes for Teams meetings are available in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 > * Teams users need the [Teams Premium license](/microsoftteams/enhanced-teams-experience) to use Custom Together Mode after the preview.
 
-Collaborate in a new way with Custom Together Mode scenes in Microsoft Teams.  Custom Together Mode creates an immersive and engaging environment by digitally combining participants into a single virtual scene. The benefits of Custom Together Mode are as follows:
+Collaborate in a new way with Custom Together Mode scenes in Microsoft Teams. Custom Together Mode creates an immersive and engaging environment by digitally combining participants into a single virtual scene. The benefits of Custom Together Mode are as follows:
 
 * Bring people together and encourage them to turn on their video.
 * Combine participants digitally into a single virtual scene.
@@ -25,7 +25,7 @@ Get started and transform your Teams meetings with Custom Together Mode scenes.
 
 ## Custom Together Mode scene
 
-Custom Together Mode scene is an artifact and participants have seats with video streams in a conceived scene setting, and the videos are rendered in those seats. You can create a scene using Microsoft Scene studio. Scene studio handles the app package creation in the background and creates a scene only app. We recommend to use scene only apps for better experience.
+Custom Together Mode scene is an artifact and participants have seats with video streams in a conceived scene setting, and the videos are rendered in those seats. You can create a scene using Microsoft Scene studio. Scene studio handles the app package creation in the background and creates a scene only app. We recommend you to use scene only apps for better experience.
 
 > [!NOTE]
   >
