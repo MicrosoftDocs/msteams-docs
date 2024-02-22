@@ -56,7 +56,7 @@ Teams automatically crops your icon to display a square with rounded corners in 
 
 An outline icon displays in two scenarios:
 
-* When your app is in use and “hoisted” on the app bar on the left side of Teams.
+* When your app is in use and pinned to the app bar on the left side of Teams or Outlook, your icon in displayed full quality with a transparent background.
 * When a user pins your app's message extension.
 
 Ensure the icon is 32x32 pixels. It should be either white with a transparent background or transparent with a white background. No other colors are allowed. The outline icon mustn't contain any additional padding around the symbol.
