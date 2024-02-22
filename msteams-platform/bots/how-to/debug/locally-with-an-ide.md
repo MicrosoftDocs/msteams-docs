@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Test and debug your bot locally with IDE
 
-When testing your bot, you need to consider both the contexts you want your bot to run in, and any functionality you may have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you choose to test your bot aligns with its functionality.
+When testing your bot, you need to consider both the contexts you want your bot to run in, and any functionality you have added to your bot that requires data specific to Microsoft Teams. Ensure that the method you choose to test your bot aligns with its functionality.
 
 ## Test by uploading to Teams
 
@@ -41,7 +41,7 @@ Use the https endpoint provided by ngrok in your [app manifest](../../../resourc
 
 ## Test your bot without uploading to Teams
 
-Occasionally, it's necessary to test your bot without installing it as an app in Teams. We provide two methods for testing the bot. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding. However, it won't allow you to test the full breadth of Microsoft Teams functionality you've added to your bot. If you want to fully test your bot, see [testing by uploading](#test-by-uploading-to-teams).
+Occasionally, it's necessary to test your bot without installing it as an app in Teams. We provide two methods for testing the bot. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding. However, it doesn't allow you to test the full breadth of Microsoft Teams functionality you've added to your bot. If you want to fully test your bot, see [testing by uploading](#test-by-uploading-to-teams).
 
 ### Use the Bot Emulator
 
@@ -52,7 +52,9 @@ For more information, see [complete instructions on the Bot Framework Emulator](
 ### Talk to your bot directly by ID
 
 > [!Important]
-> Talking to your bot by ID is intended for basic testing purposes only. Any Teams-specific functionality you have added to your bot fails to work.
+>
+> * Talking to your bot by ID is intended for basic testing purposes only. Any Teams-specific functionality you have added to your bot fails to work.
+> * From January 31 2024, users can't chat with bots that aren't connected to a Microsoft Teams app such as Azure bots created through the Bot Framework or Power Virtual Agents. We recommend you to create a new Teams app connected to the Azure Bot using the [Developer Portal](../../../concepts/build-and-test/manage-your-apps-in-developer-portal.md#configure), publish it to Teams, and allow users to install the app using the [app permission policies](/microsoftteams/teams-app-permission-policies#edit-an-app-permission-policy). If you want to test the app, you can assign users an [app setup policy](/microsoftteams/teams-app-setup-policies#manage-app-setup-policies) that allows uploading custom apps and chat with the Azure bot through a direct link to a chat.
 
 Initiate a conversation with your bot by using its ID. When a bot is added through one of these methods, it isn't addressable in channel conversations, and you can't take advantage of other Teams app capabilities like tabs or message extensions. Initiate a conversation in one of the following ways:
 
