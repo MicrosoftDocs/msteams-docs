@@ -40,7 +40,7 @@ Before you start, you must be familiar with the following prerequisites:
 * [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md)
 * [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md)
 
-Ensure that the administrator has granted the necessary permissions to [upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app). Then, select all filters during the app setup and meeting policies configuration.
+Ensure that the administrator granted the necessary permissions to [upload a custom app](../concepts/deploy-and-publish/apps-upload.md#upload-your-app). Then, select all filters during the app setup and meeting policies configuration.
 
 ## Best practices
 
@@ -85,8 +85,8 @@ Ensure to go through the following list while creating a scene:
 |Value|Description|
 |---|---|
 | Sprite | A Sprite is a static bitmap image positioned in the world. These sprites and participant boxes are defined in a world coordinate system. |
-| **X**-axis | The X-axis points to the right. |
-| **Y**-axis | The Y-axis points downwards. |
+| **X**-axis | The X-axis value defines the horizontal alignment of scene image. |
+| **Y**-axis | The Y-axis value defines the vertical alignment of scene image. |
 | `zOrder` | The `zOrder` represents the order of placing images and seats along the Z-axis. It gives a sense of depth or partition if necessary. It determines the position of the sprite. For more information, see [example](#example). The sample uses the `zOrder`. |
 
 The following images show each participant in a scene and elements of a scene:
@@ -160,13 +160,13 @@ To build a scene using **Scene studio** in Teams Developer Portal, follow these 
 
     :::image type="content" source="~/assets/images/apps-in-meetings/save-view-in-teams.png" alt-text="Screenshot shows the options to save the scene and view in teams.":::
 
-   A scene only app is created and you can view the app and app package.json file in **Apps** page in the Teams Developer Portal. A screen opens in your Teams to add the scene app you've created.
+   A scene only app is created and you can view the app and app package.json file in **Apps** page in the Teams Developer Portal. A screen opens in your Teams to add the scene app created.
 
 1. Select **Preview in Teams**.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/preview-teams.png" alt-text="Screenshot shows the options to preview the scene in teams.":::
 
-   Teams page appears to add the scene only app you've created in Scene studio.
+   Teams page appears to add the scene only app created in Scene studio.
 
 1. Select **Add**.
 
@@ -186,7 +186,7 @@ Join the Teams meeting and follow these steps to test the Custom Together Mode:
 
     :::image type="content" source="~/assets/images/apps-in-meetings/view-together-mode.png" alt-text="Screenshot shows the options select together mode in teams meeting.":::
 
-1. In the **Select a scene** window, select the scene you've added to Teams from **Scene studio**.
+1. In the **Select a scene** window, select the scene added to Teams from **Scene studio**.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/select-scene.png" alt-text="Screenshot shows the options to apply together mode in teams meeting.":::
 
@@ -208,7 +208,7 @@ Join the Teams meeting and follow these steps to test the Custom Together Mode:
 
 ## Share scene using Scene studio
 
-You can view the scene you've created in the **Your scenes** section of **Scene studio**. Additionally, you can share and export the scene.
+You can view the scene created in the **Your scenes** section of **Scene studio**. Additionally, you can share and export the scene.
 
 To share a scene, follow these steps:
 
@@ -222,7 +222,7 @@ To share a scene, follow these steps:
 
     :::image type="content" source="~/assets/images/apps-in-meetings/share-scene-copy-link.png" alt-text="Screenshot shows the option to copy the link and share a scene in scene studio.":::
 
-1. Open the link you've copied to install the scene and start using it.
+1. Open the link copied to install the scene and start using it.
 1. Preview the scene.
    The scene is shipped as an app to Teams by following the steps for app submission.
 1. Get the app package, which is different from the scene package for the designed scene.
