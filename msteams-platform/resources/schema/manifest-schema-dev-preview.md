@@ -1043,52 +1043,6 @@ Required if the handler type is `openPage`. Object containing metadata of the pa
 |`PageId`| String | |  | Maps to the `EntityId` of the static tab. |
 |`SubPageId`| String | |  | Maps to the `SubEntityId` of the static tab. |
 
-## dashboardCards
-
-**Optional** &ndash; Array
-
-Defines a list of cards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information.
-
-This item is an array of `dashboardCard` elements of type `object`.
-
-### dashboardCards.dashboardCard
-
-Defines a single dashboard card and its properties.
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`id`| String | | ✔️ |  A unique identifier for this dashboard card. ID must be a GUID. |
-|`displayName`| String | 255 characters | ✔️ | Display name of the card.|
-|`description`| String | 255 characters | ✔️ | Description of the card.|
-|`pickerGroupId`| String | | ✔️ | ID of the group in the card picker. ID must be a GUID.|
-|`icon`| Object | | | Specifies icon for the card. |
-|`contentSource`| Object | | ✔️ | Specifies the source of the card's content |
-|`defaultSize`| String | | ✔️ | Rendering size for the dashboard card. Options: `medium` or `large`. |
-
-### dashboardCards.dashboardCard.icon
-
-Defines the icon properties of a given dashboard card.
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`iconUrl`| String | 2048 characters | | Location of the icon for the card, to be displayed in the toolbox and card bar. |
-|`officeUIFabricIconName`| String | 255 characters | | Office UI Fabric or Fluent UI icon friendly name for the card. This value is used if *iconUrl* is not specified. |
-
-### dashboardCards.dashboardCard.contentSource
-
-Defines the content source of a given dashboard card.
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`sourceType`| String | | | Represents the source of a card's content. Options: `bot`.
-|`botConfiguration`| Object | | | The configuration for the bot source. Required if the *sourceType* is set to `bot`.
-
-#### dashboardCards.dashboardCard.contentSource.botConfiguration
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. ID must be a GUID.
-
 ## intuneInfo
 
 **Optional** &ndash; Object
