@@ -133,9 +133,9 @@ items:
 
     1. Select **Upload an app**.
 
-    1. Look for the option to **Upload a customised app**. If you see the option, custom app upload is enabled.
+    1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
-       :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the upload a custom app.":::
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-a-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
       
        > [!NOTE]
        > Contact your Teams administrator, if you don't find the option to upload a custom app.
@@ -173,7 +173,7 @@ items:
 
     1. Look for the option to **Upload a custom app**. If you see the option, custom app upload is enabled.
 
-       :::image type="content" source="~/assets/images/tab-device-permission/custom-upload.png" alt-text="Screenshot shows the custom upload.":::
+       :::image type="content" source="../msteams-platform/assets/images/tab-device-permission/upload-a-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
        > [!NOTE]
        > Contact your Teams administrator, if you don't find the option to upload a custom app. 

@@ -12,8 +12,8 @@ ms.author: anclear
 Before creating the action command, you must decide the following factors:
 
 1. [Where can the action command be triggered from?](#select-action-command-invoke-locations)
-1. [How will the dialog (referred as task module in TeamsJS v1.x) be created?](#select-how-to-create-your-dialog)
-1. [Will the final message or card be sent to the channel from a bot, or will the message or card be inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
+1. [How is the dialog (referred as task module in TeamsJS v1.x) created?](#select-how-to-create-your-dialog)
+1. [Is the final message or card sent to the channel from a bot, or is the message or card inserted into the compose message area for the user to submit?](#select-how-the-final-message-is-sent)
 
 See the following video to learn how to define message extension action commands:
 <br>
@@ -22,22 +22,22 @@ See the following video to learn how to define message extension action commands
 
 ## Select action command invoke locations
 
-First, you must decide the location from where your action command must be invoked. By specifying the `context` in your app manifest, your command can be invoked from one or more of the following locations:
+First, you must decide the location from where your action command must be invoked. When you specify the `context` property in your app manifest (previously called Teams app manifest), your command can be invoked from one or more of the following locations:
 
 * Compose message area: The buttons at the bottom of the compose message area.
 
-    Command context = compose
+    Commands context = `compose`
 
-* Command box: By @mentioning your app in the command box.
+* Command box: By using / in the command box. For example, **/your-app-name**. If you're using the classic Teams, action command is invoked by @mentioning in the command box. For example, **@your-app-name**.
 
-    Commands context = commandBox
+    Commands context = `commandBox`
 
    > [!NOTE]
-   > If message extension is invoked from the command box, you cannot respond with a bot message inserted directly into the conversation.
+   > If a message extension is invoked from the command box, you can't respond with a bot message inserted directly into the conversation.
 
 * Message: Directly from an existing message through the `...` overflow menu on a message.
 
-    Commands context = message
+    Commands context = `message`
 
    > [!NOTE]
    >
@@ -71,7 +71,7 @@ You can create an action command using **Teams Toolkit** and **Developer Portal 
 
 # [Teams Toolkit](#tab/Teams-toolkit)
 
-To create an action based message extension using Teams Toolkit, follow these steps:
+To create an action-based message extension using Teams Toolkit, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
@@ -86,7 +86,7 @@ Teams Toolkit scaffolds your project and creates an action message extension.
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
-To create an action based message extension using Developer Portal for Teams, follow these steps:
+To create an action-based message extension using Developer Portal for Teams, follow these steps:
 
 1. Go to [**Developer Portal for Teams**](https://dev.teams.microsoft.com/home).
 1. Go to **Apps**.
@@ -96,9 +96,15 @@ To create an action based message extension using Developer Portal for Teams, fo
 
    :::image type="content" source="../../../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
-1. If you don't have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
+1. Under **Message extension type**, select **Bot**.
 
-   1. If don't have a Bot ID, you can select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you've created.
+   1. If you get a disclaimer, which reads **API Message extension is already in use by users. Would you like to change message extension type to bot?**. Select **Yes, change**.
+
+   :::image type="content" source="../../../assets/images/Copilot/bot-based-me-tdp-type.png" alt-text="Screenshot shows API Message extension is already in use disclaimer when a user switches from API to bot message extension type.":::
+
+1. If you don't have an existing bot, select **Existing bot** or if you have a bot ID, select **Enter Bot ID**.
+   
+   1. If you don't have a bot ID, select **Create a bot**, to create a new bot and enter the bot ID of the new bot that you created.
 
 1. Select the required scopes.
 
@@ -107,8 +113,8 @@ To create an action based message extension using Developer Portal for Teams, fo
    A command details page appears.
 
 1. In the Command details page, select **Action** and then select parameter type.
-
-1. 1. Select **Action**  as the type of command and update the following:
+    
+1. Select **Action** as the type of command and update the following fields:
    * Command ID
    * Command title
    * Command description
@@ -130,21 +136,23 @@ To create an action based message extension using Developer Portal for Teams, fo
 
 **To add additional parameters**
 
-1. Select ellipse under command section and then select **Edit parameter**.
+1. Under command, select the ellipse (**...**) icon and then select **Edit parameter**.
 
    :::image type="content" source="../../../assets/images/tdp/edit-parameters.PNG" alt-text="Screenshots shows how to add additional parameters for your message extension.":::
 
-1. Select **Add a Parameters** and enter all the parameters.
+1. Select **Add a Parameter** and update the parameter details.
 
    :::image type="content" source="../../../assets/images/tdp/add-parameter.PNG" alt-text="Screenshot shows how to add additional parameters for your message extension."lightbox="../../../assets/images/tdp/add-a-parameters.PNG":::
 
-A search message extension using bot framework created.
+1. Select **Save**   
+
+A bot-based action message extension is created.
 
 ---
 
 ## Code snippets
 
-The following code provides an example of action based for message extensions:
+The following code provides an example of action-based for message extensions:
 
 # [C#](#tab/dotnet)
 
@@ -231,7 +239,7 @@ protected override Task<MessagingExtensionActionResponse> OnTeamsMessagingExtens
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action based message extension.
+Follow the [step-by-step guide](../../../sbs-meetingextension-action.yml) to build Teams action-based message extension.
 
 ## Next step
 
