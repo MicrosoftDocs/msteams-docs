@@ -35,7 +35,7 @@ Custom Together Mode scene is an artifact and participants have seats with video
 
 Before you start, you must be familiar with the following prerequisites:
 
-* Scene and [elements of a scene](#elements-of-a-scene)
+* [Elements of a scene](#elements-of-a-scene)
 * [Microsoft Developer account](https://developer.microsoft.com/en-us/microsoft-365/dev-program)
 * [Teams Developer Portal](../concepts/build-and-test/teams-developer-portal.md)
 * [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md)
@@ -44,10 +44,10 @@ Ensure that the administrator has granted the necessary permissions to [upload a
 
 ## Best practices
 
-To create a best scene, ensure that you follow the following practices:
+To create a best scene, we recommend the following practices:
 
 * Ensure that all images are in PNG format.
-* Ensure that the images in final package mustn't exceed 1920 x 1080 resolution. The resolution is an even number. This even numbered resolution is required for scenes to display successfully.
+* Ensure that the images in final package mustn't exceed 1920 x 1080 resolution. The resolution must be an even number, which is required for scenes to display successfully.
 * Ensure that the maximum scene size is within 10 MB.
 * Ensure that the maximum size of each image is within 5 MB. A scene is a collection of multiple images. This limit is for each individual image.
 
@@ -59,7 +59,7 @@ To create a best scene, ensure that you follow the following practices:
 
 ## Build scene using Scene studio
 
-You can build a scene using [Scene Studio](https://dev.teams.microsoft.com/scenes) in Teams Developer Portal. A scene in the context of the Scene studio contains the following elements:
+You can build a scene using [Scene Studio](https://dev.teams.microsoft.com/scenes) in Teams Developer Portal. A scene in the context of Scene studio contains the following elements:
 
 ### Elements of a scene
 
@@ -67,10 +67,10 @@ A scene consists of bitmap images, sprites, and rectangles to put participant vi
 
 |Value|Description|
 |---|---|
-| **Scene:** | Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene. |
-| **Asset:** | Each asset contains a filename, width, height, and position on the X and Y-axis. |
-| **Participants:** | Each participant has their own video feed, which is segmented to render only the foreground. Custom Together Mode scenes support **ZoomIn** in on the current meeting participants. |
-| **Seat:** | Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is automatically generated and is altered according to preference. The seating order number corresponds to the order of people joining the call. |
+| **Scene** | Each scene has a unique ID and name. A scene.json file along with the images indicate the exact position of the seats. The scene.json file also contains information on all the assets used for the scene. |
+| **Asset** | Each asset contains a filename, width, height, and position on the X and Y-axis. |
+| **Participants** | Each participant has their own video feed, which is segmented to render only the foreground. Custom Together Mode scenes support **ZoomIn** in on the current meeting participants. |
+| **Seat** | Each seat contains a seat ID, width, height, and position on the X and Y-axis. The seating order is automatically generated and is altered according to preference. The seating order number corresponds to the order of people joining the call. |
 
 * Seats reserved for meeting organizer and meeting presenters. The presenter doesn't refer to the user who is actively sharing. For more information, see [meeting role](https://support.microsoft.com/office/roles-in-a-teams-meeting-c16fa7d0-1666-4dde-8686-0a0bfe16e019).
 
@@ -95,7 +95,7 @@ The following images show each participant in a scene and elements of a scene:
 
 :::image type="content" source="~/assets/images/apps-in-meetings/scene-element.png" alt-text="Screenshot shows elements of a scene in scene studio." lightbox="~/assets/images/apps-in-meetings/scene-element-view.png":::
 
-To build a scene using the Scene studio in Teams Developer Portal, follow these steps:
+To build a scene using **Scene studio** in Teams Developer Portal, follow these steps:
 
 1. Go to [Scene studio](https://dev.teams.microsoft.com/scenes).
 
@@ -115,17 +115,18 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 1. In the **Scene Name** field, enter a name for the scene.
 
     You can select **Close** to toggle between closing or reopening the right pane.
-    You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/scene-name-toggle.png" alt-text="Screenshot shows the toggle option in scene studio.":::
 
 1. To add the image to the environment, select **Add images**.
 
-    :::image type="content" source="../assets/images/apps-in-meetings/addimages.png" alt-text="Screenshot shows the option to add images to the scene in scene studio.":::
-
 1. Select **Choose File**.
 1. Select the image you need to add in the scene.
 1. Select **Open**.
+
+    :::image type="content" source="../assets/images/apps-in-meetings/add-images.png" alt-text="Screenshot shows the option to add images to the scene in scene studio.":::
+
+    You can zoom in or zoom out of the scene using the zoom bar for a better view of the scene.
 
 1. From the right pane, select an alignment for the image or use **Resize** to adjust the image size.
 
@@ -148,7 +149,7 @@ To build a scene using the Scene studio in Teams Developer Portal, follow these 
 
     :::image type="content" source="../assets/images/apps-in-meetings/assign-spot.png" alt-text="Screenshot shows the assign spot check box for the participant 3 in scene studio.":::
 
-    In a meeting, one participant must be assigned the role of a meeting organizer.
+    In a meeting, at least one participant must be assigned the role of a meeting organizer.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/organizer-presenter.png" alt-text="Screenshot shows the assign spot section with information about assigning the spot of meeting organizer.":::
 
@@ -179,13 +180,13 @@ Before you start, you must create a new Teams meeting to test and launch Custom 
 >
 > You can apply a Custom Together Mode scene that is deployed by your tenant admin only if you've a [Teams Premium license](/MicrosoftTeams/enhanced-teams-experience?branch=danismith-t-pre-licensing).
 
-Join the Teams meeting and follow the steps to test the Custom Together Mode:
+Join the Teams meeting and follow these steps to test the Custom Together Mode:
 
 1. In Teams meeting window, select **View** > **Together Mode** from the dropdown list.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/view-together-mode.png" alt-text="Screenshot shows the options select together mode in teams meeting.":::
 
-1. In the **Select a scene** window, select the scene you've added to Teams from Scene studio.
+1. In the **Select a scene** window, select the scene you've added to Teams from **Scene studio**.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/select-scene.png" alt-text="Screenshot shows the options to apply together mode in teams meeting.":::
 
@@ -209,13 +210,13 @@ Join the Teams meeting and follow the steps to test the Custom Together Mode:
 
 You can view the scene you've created in the **Your scenes** section of **Scene studio**. Additionally, you can share and export the scene.
 
-To share a scene, follow the steps:
+To share a scene, follow these steps:
 
 1. From the dropdown next to **Save** button, select **Share**.
 
     :::image type="content" source="~/assets/images/apps-in-meetings/share-scene-studio.png" alt-text="Screenshot shows the option to share a scene in scene studio.":::
 
-1. In **Share the scene app** window, select **Share Custom Together Mode with everyone** toggle to create a shareable link of your scenes to share for others to use.
+1. In **Share the scene app** window, select **Share Custom Together Mode with everyone** toggle to create a shareable link of your scene.
 
 1. Select **Copy**.
 
@@ -227,22 +228,28 @@ To share a scene, follow the steps:
 1. Get the app package, which is different from the scene package for the designed scene.
 1. Find the automatically created app package in the **Apps** section of the Teams Developer Center.
 
-To export a scene, follow the steps:
+To export a scene, follow these steps:
 
-1. In Scene studio, select the dropdown button next to **Save**.
+1. In **Scene studio**, select the dropdown button next to **Save**.
 1. Select **Export** to retrieve the scene package.
 
-   :::image type="content" source="~/assets/images/apps-in-meetings/export-scene-studio.png" alt-text="Screenshot shows the export option to export a scene in scene studio.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/export-scene-studio.png" alt-text="Screenshot shows the option to export a scene in scene studio.":::
 
    A zip file containing the scene package is downloaded. This package includes a scene.json file and the PNG assets used to build the scene.
 
-To delete a scene you created, select **Delete scene**.
+To delete a scene you created, follow these steps:
+
+1. Select **Delete scene**.
+1. In the **Delete** window, select **Do you want to delete this app?**.
+1. Select **Delete**.
+
+   :::image type="content" source="~/assets/images/apps-in-meetings/delete-scene.png" alt-text="Screenshot shows the option to delete a scene in scene studio.":::
 
 ### Import a scene
 
-You can import the scene package, which is a zip file retrieved from the Scene studio to other creators to further enhance the scene.
+You can import the scene package, which is a zip file retrieved from **Scene studio** to further enhance the scene.
 
-1. Go to Scene studio.
+1. Go to **Scene studio**.
 1. Select **Import a scene**.
 
    :::image type="content" source="~/assets/images/apps-in-meetings/import-scene.png" alt-text="Screenshot shows the option to import a scene in scene studio.":::
