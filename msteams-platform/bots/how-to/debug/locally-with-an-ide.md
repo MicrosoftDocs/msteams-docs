@@ -61,13 +61,13 @@ Initiate a conversation with your bot by using its ID. When a bot is added throu
 * On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Channels**, select **Add to Microsoft Teams**. Teams launches a personal chat with your bot.
 
 * Directly reference your bot's app ID from within Teams:
-   1. On the [Bot Dashboard](https://dev.botframework.com/bots) page for your bot, under **Details**, copy the **Microsoft App ID** for your bot.
+   1. Go to [Bot Dashboard](https://dev.botframework.com/bots) > **Details** and copy the **Microsoft App ID** for your bot.
+
+      :::image type="content" source="../../../assets/images/bots_appid_botframework.png" alt-text="Screenshot shows the Microsoft App ID in the details page.":::
   
-      ![Getting the AppID for the bot](~/assets/images/bots_appid_botframework.png)
-  
-   2. Open Microsoft Teams, on the Chat pane, selects the **Add chat** icon. In **To:**, paste your bot's Microsoft App ID.
-  
-      ![Uploading bots](~/assets/images/bots_uploading.png)
+   2. Open Microsoft Teams, on the Chat pane, select the **New chat** icon. In the **To:** filed, enter your bot's Microsoft App ID.
+
+      :::image type="content" source="../../../assets/images/bots_uploading.png" alt-text="Screenshot shows the New chat icon and the To field in Teams.":::
 
       The app ID must resolve to your bot name.
 
@@ -83,7 +83,7 @@ Your bot receives the `conversationUpdate` event as you add the bots to a team, 
 
 Users can choose to block your bot from sending personal chat messages. They might toggle this by right-clicking your bot in the chat channel and choosing **Block bot conversation**. This means, your bots continue to send messages, however, the user doesn't receive the messages.
 
-![Blocking a bot](~/assets/images/bots/botdisable.png)
+:::image type="content" source="../../../assets/images/bots/botdisable.png" alt-text="Screenshot shows the block bot conversation option in the personal chat.":::
 
 ## Remove a bot from a team
 
