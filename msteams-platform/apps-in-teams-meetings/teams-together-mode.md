@@ -229,10 +229,12 @@ To share a scene, follow the steps:
 
 To export a scene, follow the steps:
 
-1. In Scene studio, select **Export** from the dropdown next to **Save** button to retrieve the scene package.
-A zip file containing the scene package is downloaded. This package includes a scene.json file and the PNG assets used to build the scene.
+1. In Scene studio, select the dropdown button next to **Save**.
+1. Select **Export** to retrieve the scene package.
 
    :::image type="content" source="~/assets/images/apps-in-meetings/export-scene-studio.png" alt-text="Screenshot shows the export option to export a scene in scene studio.":::
+
+   A zip file containing the scene package is downloaded. This package includes a scene.json file and the PNG assets used to build the scene.
 
 To delete a scene you created, select **Delete scene**.
 
