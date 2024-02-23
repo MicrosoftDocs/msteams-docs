@@ -646,7 +646,7 @@ You can set the `targetWidth` property to make an element visible when the width
 
   ```
 
-For more information, see responsive Adaptive Card design guidelines.
+For more information on how to design an Adaptive Card, [designing Adaptive Cards for your Microsoft Teams app](design-effective-cards.md).
 
 ### Typeahead support
 
