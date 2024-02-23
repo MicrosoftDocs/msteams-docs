@@ -549,8 +549,7 @@ In the Stage View, users can zoom in and zoom out of the image. You can select t
 > [!NOTE]
 >
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
-> * For Teams mobile apps, Stage View functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stage View by simply tapping on the image, irrespective of whether the `allowExpand` property is present or not.
-> * Stage View for images in Adaptive Cards doesn't support Base64 encoded images.
+> * For Teams mobile apps, Stage View functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stage View by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
 # [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 

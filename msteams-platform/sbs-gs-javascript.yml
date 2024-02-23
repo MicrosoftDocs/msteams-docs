@@ -384,7 +384,7 @@ items:
       Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
 
       * The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
-      * The frontend application is be deployed to an Azure Storage account configured for static web hosting.
+      * The frontend application is deployed to an Azure Storage account configured for static web hosting.
 
       </details>
 
