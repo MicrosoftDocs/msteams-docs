@@ -72,7 +72,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | **Channel created**     | channelCreated    | OnTeamsChannelCreatedAsync | The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed. | Team |
 
-The following code shows an example of channel created event:
+1. The following code shows an example of channel created event:
 
    # [C#](#tab/dotnet)
 
@@ -154,16 +154,16 @@ The following code shows an example of channel created event:
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
 
    ```python
-async def on_teams_channel_created(
- self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
-):
- # Sends a message activity to the sender of the incoming activity.
- return await turn_context.send_activity(
-  MessageFactory.text(
-   f"The new channel is {channel_info.name}. The channel id is {channel_info.id}"
-  )
- )
-```
+   async def on_teams_channel_created(
+   self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+   ):
+   # Sends a message activity to the sender of the incoming activity.
+   return await turn_context.send_activity(
+   MessageFactory.text(
+   "The new channel is {channel_info.name}. The channel id is {channel_info.id}"
+   )
+   )
+   ```
 
    ---
 
@@ -171,29 +171,29 @@ async def on_teams_channel_created(
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
 
-The following code shows an example of channel renamed event:
+1. The following code shows an example of channel renamed event:
 
    # [C#](#tab/dotnet1)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrenamedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L341)
+   * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrenamedasync?view=botbuilder-dotnet-stable&preserve-view=true)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L341)
 
-```csharp
-protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-{
+   ```csharp
+   protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+   {
     var heroCard = new HeroCard(text: $"{channelInfo.Name} is the new Channel name");
     // Sends an activity to the sender of the incoming activity.
     await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-}
+   }
 
-```
+   ```
 
    # [TypeScript](#tab/typescript1)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrenamedevent&preserve-view=true)
+   * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrenamedevent&preserve-view=true)
 
-```typescript
-export class MyBot extends TeamsActivityHandler {
+   ```typescript
+   export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
         this.onTeamsChannelRenamedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
@@ -204,12 +204,12 @@ export class MyBot extends TeamsActivityHandler {
             await next();
         });
     }
-```
+   ```
 
    # [JSON](#tab/json1)
 
-```json
-{
+   ```json
+   {
     "type": "conversationUpdate",
     "timestamp": "2017-02-23T19:34:07.478Z",
     "localTimestamp": "2017-02-23T12:34:07.478-07:00",
@@ -241,8 +241,8 @@ export class MyBot extends TeamsActivityHandler {
             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
     }
-}
-```
+   }
+   ```
 
    # [Python](#tab/python1)
 
@@ -263,97 +263,97 @@ export class MyBot extends TeamsActivityHandler {
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
 | **Channel deleted**     | channelDeleted    | OnTeamsChannelDeletedAsync | The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed. | Team |
 
-The following code shows an example of channel deleted event:
+1. The following code shows an example of channel deleted event:
 
-# [C#](#tab/dotnet2)
+   # [C#](#tab/dotnet2)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschanneldeletedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L347)
+   * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschanneldeletedasync?view=botbuilder-dotnet-stable&preserve-view=true)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L347)
 
-```csharp
-protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-{
-    var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel deleted");
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-}
-
-```
-
-# [TypeScript](#tab/typescript2)
-
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschanneldeletedevent&preserve-view=true)
-
-```typescript
-export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onTeamsChannelDeletedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-            const card = CardFactory.heroCard('Channel Deleted', `${channelInfo.name} is the Channel deleted`);
-            const message = MessageFactory.attachment(card);
-            // Sends a message activity to the sender of the incoming activity.
-            await turnContext.sendActivity(message);
-            await next();
-        });
+   ```csharp
+    protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+    {
+        var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel deleted");
+        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
     }
-}
 
-```
+   ```
 
-# [JSON](#tab/json2)
+   # [TypeScript](#tab/typescript2)
 
-```json
-{
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:34:07.478Z",
-    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
-    "id": "f:dd6ec311",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-    "from": {
-        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
-    },
-    "conversation": {
-        "isGroup": true,
-        "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-    },
-    "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
-    },
-    "channelData": {
-        "channel": {
-            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
-            "name": "PhotographyUpdates"
-        },
-        "team": {
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-        },
-        "eventType": "channelDeleted",
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+   * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschanneldeletedevent&preserve-view=true)
+
+   ```typescript
+    export class MyBot extends TeamsActivityHandler {
+        constructor() {
+            super();
+            this.onTeamsChannelDeletedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+                const card = CardFactory.heroCard('Channel Deleted', `${channelInfo.name} is the Channel deleted`);
+                const message = MessageFactory.attachment(card);
+                // Sends a message activity to the sender of the incoming activity.
+                await turnContext.sendActivity(message);
+                await next();
+            });
         }
     }
-}
-```
 
-# [Python](#tab/python2)
+   ```
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-deleted&preserve-view=true)
+   # [JSON](#tab/json2)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?&preserve-view=true)
+   ```json
+    {
+        "type": "conversationUpdate",
+        "timestamp": "2017-02-23T19:34:07.478Z",
+        "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+        "id": "f:dd6ec311",
+        "channelId": "msteams",
+        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+        "from": {
+            "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
+        },
+        "conversation": {
+            "isGroup": true,
+            "conversationType": "channel",
+            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+        },
+        "recipient": {
+            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+            "name": "SongsuggesterBot"
+        },
+        "channelData": {
+            "channel": {
+                "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+                "name": "PhotographyUpdates"
+            },
+            "team": {
+                "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            },
+            "eventType": "channelDeleted",
+            "tenant": {
+                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            }
+        }
+    }
+   ```
 
-```python
-async def on_teams_channel_deleted(
- self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
-):
- # Sends a message activity to the sender of the incoming activity.
- return await turn_context.send_activity(
-  MessageFactory.text(f"The deleted channel is {channel_info.name}")
- )
-```
+   # [Python](#tab/python2)
 
----
+   * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-deleted&preserve-view=true)
+
+   * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?&preserve-view=true)
+
+   ```python
+    async def on_teams_channel_deleted(
+     self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+    ):
+     # Sends a message activity to the sender of the incoming activity.
+     return await turn_context.send_activity(
+      MessageFactory.text(f"The deleted channel is {channel_info.name}")
+     )
+   ```
+
+   ---
 
 | Action taken        | EventType         | Method called              | Description                | Scope |
 | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
