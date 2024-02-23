@@ -180,7 +180,7 @@ The following code shows an example of Adaptive Card with a mention:
 
 ### Microsoft Entra Object ID and UPN in user mention
 
-Teams platform allows to mention users with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
+Teams platform allows you to mention users with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
 
 The following table describes the newly supported user mention IDs:
 
@@ -494,25 +494,26 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Adaptive Card responsive layout
 
-Adaptive Cards typically maintain the style of the host application, but they have a fixed layout that remains consistent across different card widths. This is a challenge to design a single card layout that seamlessly adapts to desktop, mobile, and meeting chat.
+Adaptive Cards typically match the look and feel of the host application and have a fixed layout that remains consistent across Teams mobile and desktop.
 
-The Adaptive Card responsive layout feature allows you to design Adaptive Cards with different layout that adapts to different card widths ensuring optimal display of your card regardless of the context in which the card is displayed.
- When you design an Adaptive Card for your app, use the `targetWidth` property to make your card responsive and provide a better experience to your users.
+Adaptive Card responsive layout helps you to design Adaptive Cards with different layouts that adapt to different card widths in the context where the card is displayed. When you design an Adaptive Card for your app, ensure that you provide a better user experience across chat, channels, and meeting chat in Teams desktop and mobile.
 
 #### Design responsive Adaptive Cards
 
-The key element to create a responsive Adaptive Card is the `targetWidth` property that allows you to control the visibility of any element by linking it to the width of the card. The `targetWidth` property lets you show or hide any element based on the card width. Set the `targetWidth` property for the required elements in an Adaptive Card to define different layouts for different card widths. The value of `targetWidth` can be `veryNarrow`, `narrow`, `standard`, or, `wide`.
+You can design a responsive Adaptive Card using the `targetWidth` property, which allows you show or hide any element based on the card width. You can add the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths.
 
-The following table explains the available values of the `targetWidth` property:
+The following table provides the available values of the `targetwidth` property for different layouts:
 
   |Value  |Description  |
   |---------|---------|
-  | `veryNarrow` | The card width on a meeting chat in desktop mode. |
-  | `narrow` | The card width on a mobile phone in portrait mode. |
-  | `standard` | The card width on a mobile phone in landscape mode, a tablet in portrait mode, or a chat in desktop mode. This is the `default` card size value.|
-  | `wide` | The card width on a tablet in landscape mode, or a chat or channels in desktop mode has the card width as `full width`. This makes the card adjust to the container width. |
+  | `veryNarrow` | Use for an Adaptive Card on a desktop mode in a meeting chat. |
+  | `narrow` | Use for an Adaptive Card on a mobile phone in portrait mode. |
+  | `standard` | Use for an Adaptive Card  on a mobile phone in landscape mode, a tablet in portrait mode, or a chat in desktop mode. `standard` is the default value.|
+  | `wide` | Use for an Adaptive Card on a tablet in landscape mode, or a chat or channels in desktop mode has the card width as `full width`. |
 
-  When designing your card, consider the optimal layout of elements for different card widths. Use the `targetWidth` property to ensure specific elements are displayed only when the card reaches a certain width and remaining elements are hidden. In the following code sample, the `targetWidth` property is set to `veryNarrow` and the `TextBlock` element is only displayed when the card width is very narrow:
+You can decide that certain elements are only visible based on the width of the card. For example,
+
+When designing your card, ensure that specific elements are displayed only when the card reaches a certain width and the remaining elements are hidden. For example, if you want the Adaptive Card to be visible when the layout is for a meeting chat in Teams, set the `targetWidth` property to `veryNarrow`.
 
   ```json
   {
@@ -526,9 +527,12 @@ The following table explains the available values of the `targetWidth` property:
       }
     ]
   }
+
   ```
 
-  In certain scenarios, you should define the `targetWidth` property to ensure that an element is visible when the width of the card is at least or at most a certain value. This can be achieved by defining the `atLeast` and `atMost` modifier prefixes, followed by a semicolon and actual `targetWidth` value. For example, see the following code sample:
+  You can define the `targetWidth` property to ensure that an element is visible when the width of the card is at least or at most a certain value using the `atLeast` and `atMost` modifier prefixes, followed by a semicolon and actual `targetWidth` value.
+  
+  For example, in the following code, the `targetwidth` property is set to `atLeast:Narrow`. Adaptive Card is only visible when the card's width is `standard` or `wide` and isn't visible when the card's width is `veryNarrow`:
 
   ```json
   {
@@ -552,21 +556,29 @@ The following table explains the available values of the `targetWidth` property:
 
 The following samples and images show an example of a non responsive and responsive Adaptive Cards:
 
-#### Sample Adaptive Card without using `targetWidth`
+**Adaptive Card designed without using `targetWidth`**
+
+:::image type="content" source="../../assets/images/Cards/non-responsive-adaptive-card.png" alt-text="Screenshot shows how adaptive card renders without setting the targetWidth property.":::
+
+The following code is an exmaple of Adaptive Card designed without using `targetWidth`:
 
 ```json
 To be added
 ```
 
-**Adaptive Card designed without using `targetWidth`**
+**Responsive Adaptive Card designed using `targetWidth`**
 
-:::image type="content" source="../../assets/images/Cards/non-responsive-adaptive-card.png" alt-text="Screenshot shows how adaptive card renders without setting the targetWidth property.":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-responsive-layout.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to respective card widths.":::
 
-#### Sample Adaptive Card responsive layout
+  | Counter |Description  |
+  |---------|---------|
+  | 1 | The Adaptive card rendered when the `targetWidth` property is set to `wide` or `standard`. |
+  | 2 | The Adaptive card rendered when the `targetWidth` property is set to `narrow`. |
+  | 3 | The Adaptive card rendered when the `targetWidth` property is set to `veryNarrow`. |
 
-To make a responsive Adaptive Card, your app must include the elements from the following code sample:
+  The following code is an example of Adaptive Card designed using `targetWidth`:
 
-``` json
+  ``` json
 { 
   "type": "AdaptiveCard", 
   "body": [ 
@@ -629,16 +641,6 @@ To make a responsive Adaptive Card, your app must include the elements from the 
   "version": "1.5" 
 } 
 ```
-
-**Responsive Adaptive Card designed using `targetWidth`**
-
-:::image type="content" source="../../assets/images/Cards/adaptive-card-responsive-layout.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to respective card widths.":::
-
-  | Counter |Description  |
-  |---------|---------|
-  | 1 | The Adaptive card rendered when the `targetWidth` property is set to `wide` or `standard`. |
-  | 2 | The Adaptive card rendered when the `targetWidth` property is set to `narrow`. |
-  | 3 | The Adaptive card rendered when the `targetWidth` property is set to `veryNarrow`. |
 
 ### Typeahead support
 
@@ -807,7 +809,7 @@ To enable overflow menu, configure the `mode` property with the value as `primar
 
 |Property|Type|Required|Description|
 |---|---|---|---|
-|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action. Secondary actions will be collapsed into an overflow menu.|
+|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action. Secondary actions are collapsed into an overflow menu.|
 
 The following is an example of the `mode` property in the `actions` type and the `ActionSet` element:
 
