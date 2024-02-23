@@ -498,7 +498,7 @@ Adaptive Cards usually match the look and feel of the host application and have 
 
 Adaptive Card responsive layout helps you to design Adaptive Cards with different layouts that adapt to different card widths in the context where the card is displayed. When you design Adaptive Card for your app, ensure that you provide a better user experience across chat, channels, and meeting chat in Teams desktop and mobile clients.
 
-[Add image for resposive Adaptive card in mobile and desktop]
+[Add image for resposive Adaptive card in mobile and desktop.]
 
 #### Design responsive Adaptive Cards
 
@@ -510,7 +510,7 @@ The following images and JSON samples show an example of Adaptive Card designed 
 
   [Image for non responsive adaptive card to be added.]
 
-   The following code is an exmaple of Adaptive Card designed without using `targetWidth`:
+   The following code is an example of Adaptive Card designed without using `targetWidth`:
 
     ```json
     To be added
@@ -645,6 +645,8 @@ You can set the `targetWidth` property to make an element visible when the width
   }
 
   ```
+
+For more information, see responsive Adaptive Card design guidelines.
 
 ### Typeahead support
 
