@@ -167,14 +167,11 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
    ---
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
 
-
-
-   ---
-   
+---
 # [Invoke activities](#tab/activities)
 
 In this article, you’ll get to know about different invoke activities. If you would like to know about different events with activity handlers, select conversation events at the start of this article.
