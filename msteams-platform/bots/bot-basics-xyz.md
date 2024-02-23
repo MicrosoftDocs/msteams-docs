@@ -17,11 +17,15 @@ Activity handlers are functions or methods that contain the bot logic for how th
 
 :::image type="content" source="../assets/images/bots/bot-event-activity-flowchart.png" alt-text="Diagram that shows the flow of the event flow from activity handlers to bot logic." lightbox="../assets/images/bots/bot-event-activity-flowchart.png":::
 
-To create a event-driven conversations, you need to define the [handlers](#events-with-activity-handlers) that the bot will use when the event is occured. You can also add invoke activity to the handler logic. An [invoke activity](#invoke-activity) is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
+To create a event-driven conversations, you need to define the handlers that the bot will use when the event is occured. You can also add invoke activity to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
+
+In this article, you’ll get to know about different events and the activity handlers associated with those events. If you would like to know about invoke activities, select invoke activities at the start of this article.
 
 ::: zone pivot="conversation-event"
 
 ## Events with activity handlers
+
+In this article, you’ll get to know about different events and the activity handlers associated with those events. If you would like to know about invoke activities, select invoke activities at the start of this article.
 
 Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type.
 
@@ -1651,6 +1655,8 @@ It's important to know that new events can be added anytime in the future and yo
 ::: zone pivot="invoke-activity"
 
 ## Invoke activity
+
+In this article, you’ll get to know about different invoke activities. If you would like to know about different events with activity handlers, select conversation events at the start of this article.
 
 An invoke activity is a type of activity that is sent to a bot when a user performs an action, such as clicking a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses. Invoke activities are typically used to send back confirmations, item selections, and to provide feedback or input to the bot.
 
