@@ -45,7 +45,6 @@ Following are the different type of conversation events:
 * [Channel events](#channel-events)
 * [Members events](#members-event)
 * [Team events](#team-events)
-* [Reaction events](#reaction-events)
 * [Installation events](#installation-events)
 * [Message events](#message-events)
 
@@ -168,7 +167,7 @@ async def on_teams_channel_created(
 
 The following code shows an example of channel renamed event:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet1)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrenamedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L341)
@@ -183,7 +182,7 @@ protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript1)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrenamedevent&preserve-view=true)
 
@@ -201,7 +200,7 @@ export class MyBot extends TeamsActivityHandler {
     }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json1)
 
 ```json
 {
@@ -239,7 +238,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python1)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-renamed&preserve-view=true)
 
@@ -260,7 +259,7 @@ async def on_teams_channel_renamed(
 
 The following code shows an example of channel deleted event:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschanneldeletedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L347)
@@ -274,7 +273,7 @@ protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript2)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschanneldeletedevent&preserve-view=true)
 
@@ -332,7 +331,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python2)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-deleted&preserve-view=true)
 
@@ -356,7 +355,7 @@ async def on_teams_channel_deleted(
 
 The following code shows an example of channel restored event:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet3)
 
 * [SDK refernce](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
@@ -370,7 +369,7 @@ protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInf
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript3)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrestoredevent&preserve-view=true)
 
@@ -391,7 +390,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json3)
 
 ```json
 {
@@ -429,7 +428,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python3)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-restored&preserve-view=true)
 
@@ -466,7 +465,7 @@ You can use the [`InstallationUpdate`](#installation-update-event) event to dete
 
 The following code shows an example of team members added event:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet4)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmembersaddedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L133)
@@ -494,7 +493,7 @@ protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript4)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersaddedevent&preserve-view=true)
 
@@ -520,7 +519,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json4)
 
 The message your bot receives when the bot is added to a team.
 
@@ -610,7 +609,7 @@ The message your bot receives when the bot is added to a one-to-one chat.
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python4)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-members-added&preserve-view=true)
 
@@ -644,7 +643,7 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
 
 The following code shows an example of team members removed event:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet5)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmembersremovedasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L157)
@@ -670,7 +669,7 @@ protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> m
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript5)
 
 [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersremovedevent&preserve-view=true)
 
@@ -696,7 +695,7 @@ export class MyBot extends TeamsActivityHandler {
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json5)
 
 The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
 
@@ -738,7 +737,7 @@ The `channelData` object in the following payload example is based on adding a m
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python5)
 
 * [SDK  reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-members-removed&preserve-view=true)
 
@@ -764,7 +763,7 @@ async def on_teams_members_removed(
 
 The following code shows an example of team renamed event:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet6)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrenamedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L370)
@@ -778,7 +777,7 @@ protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript6)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamrenamedevent&preserve-view=true)
 
@@ -799,7 +798,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json6)
 
 ```json
 { 
@@ -834,7 +833,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python6)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-renamed&preserve-view=true)
 
@@ -857,7 +856,7 @@ async def on_teams_team_renamed(
 
 The following code shows an example of team deleted event:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet7)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamdeletedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
@@ -868,7 +867,7 @@ protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnCo
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript7)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamdeletedevent&preserve-view=true)
 
@@ -885,7 +884,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json7)
 
 ```json
 { 
@@ -920,7 +919,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python7)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-deleted&preserve-view=true)
 
@@ -941,7 +940,7 @@ async def on_teams_team_deleted(
 
 The following code shows an example of team restored event:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet8)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrestoredasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
@@ -954,7 +953,7 @@ protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnC
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript8)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamrestoredevent&preserve-view=true)
 
@@ -974,7 +973,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json8)
 
 ```json
 { 
@@ -1009,7 +1008,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python8)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-restored&preserve-view=true)
 
@@ -1032,7 +1031,7 @@ async def on_teams_team_restored(
 
 The following code shows an example of team archived event:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet9)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamarchivedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
@@ -1045,7 +1044,7 @@ protected override async Task OnTeamsTeamArchivedAsync(TeamInfo teamInfo, ITurnC
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript9)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamarchivedevent&preserve-view=true)
 
@@ -1065,7 +1064,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json9)
 
 ```json
 { 
@@ -1100,7 +1099,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python9)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-archived&preserve-view=true)
 
@@ -1123,7 +1122,7 @@ async def on_teams_team_archived(
 
 The following code shows an example of team unarchived event:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet10)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamunarchivedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
@@ -1136,7 +1135,7 @@ protected override async Task OnTeamsTeamUnarchivedAsync(TeamInfo teamInfo, ITur
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript10)
 
 * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamunarchivedevent&preserve-view=true)
 
@@ -1156,7 +1155,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json10)
 
 ```json
 { 
@@ -1191,7 +1190,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python10)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-unarchived&preserve-view=true)
 
@@ -1234,7 +1233,7 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 The following code shows an example of reactions to a bot message:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet12)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsaddedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L26)
@@ -1252,7 +1251,7 @@ protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messa
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript12)
 
 * [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onreactionsadded&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
@@ -1285,7 +1284,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json12)
 
 ```json
 {
@@ -1330,7 +1329,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python12)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-added&preserve-view=true)
 
@@ -1364,7 +1363,7 @@ async def on_reactions_added(
 
 The following code shows an example of reactions removed from bot message:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet13)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsremovedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L44)
@@ -1383,7 +1382,7 @@ protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> mes
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript13)
 
 * [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onreactionsremoved&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
@@ -1415,7 +1414,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json13)
 
 ```json
 {
@@ -1460,7 +1459,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python13)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-removed&preserve-view=true)
 
@@ -1510,7 +1509,7 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 > [!NOTE]
 > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet14)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.oninstallationupdateactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-activityhandler-oninstallationupdateactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinstallationupdateactivity))-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L73)
@@ -1540,7 +1539,7 @@ protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstall
 }
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript14)
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L72-L78)
 
@@ -1558,7 +1557,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
     }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json14)
 
 ```json
 {
@@ -1615,7 +1614,7 @@ async onInstallationUpdateActivity(context: TurnContext) {
     }
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python14)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-installation-update&preserve-view=true)
 
@@ -1655,7 +1654,7 @@ It's important to know that new events can be added anytime in the future and yo
 
 An invoke activity is a type of activity that is sent to a bot when a user performs an action, such as clicking a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses. Invoke activities are typically used to send back confirmations, item selections, and to provide feedback or input to the bot.
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet15)
 
 The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following invoke types:
 
@@ -1670,7 +1669,7 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | You can override this method in a derived class to provide logic when a dialog (referred as task module in TeamsJS v1.x) is fetched. |
 | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | You can override this method in a derived class to provide logic when a dialog is submitted. |
 
-# [JavaScript](#tab/javascript)
+# [JavaScript](#tab/javascript15)
 
 The following table provides the list of Teams activity handlers called from the `onInvokeActivity` Teams activity handler:
 
@@ -1685,7 +1684,7 @@ The following table provides the list of Teams activity handlers called from the
 | task/fetch                      | `handleTeamsTaskModuleFetch`        | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
 | task/submit                     | `handleTeamsTaskModuleSubmit`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
 
-# [Python](#tab/python)
+# [Python](#tab/python15)
 
 The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following invoke types:
 
