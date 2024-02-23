@@ -163,9 +163,9 @@ In this article, you’ll get to know about different events and the activity ha
      ```
      ---
 
- | Action taken        | EventType         | Method called              | Description                | Scope |
- | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
- | **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
+   | Action taken        | EventType         | Method called              | Description                | Scope |
+   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+   | **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
 
 1. The following code shows an example of channel renamed event:
 
