@@ -1706,7 +1706,7 @@ The invoke activities listed in this section are for conversational bots in Team
 
 ::: zone-end
 
-## Handling errors in conversation events
+## Handling errors in events
 
 When a bot encounters an error while handling different events or activities, don't send messages that have no meaningful context to the conversation as shown in the following screenshot:
 
