@@ -64,11 +64,11 @@ In this article, you’ll get to know about different events and the activity ha
 
    The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
 
-   ## Channel events
+## Channel events
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Channel created**     | channelCreated    | OnTeamsChannelCreatedAsync | The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed. | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Channel created**     | channelCreated    | OnTeamsChannelCreatedAsync | The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed. | Team |
 
 1. The following code shows an example of channel created event:
 
@@ -165,9 +165,9 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
 
 1. The following code shows an example of channel renamed event:
 
@@ -257,9 +257,9 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Channel deleted**     | channelDeleted    | OnTeamsChannelDeletedAsync | The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed. | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Channel deleted**     | channelDeleted    | OnTeamsChannelDeletedAsync | The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed. | Team |
 
 1. The following code shows an example of channel deleted event:
 
@@ -353,9 +353,9 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Channel restored**    | channelRestored    | OnTeamsChannelRestoredAsync | The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed. | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Channel restored**    | channelRestored    | OnTeamsChannelRestoredAsync | The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed. | Team |
 
 1. The following code shows an example of channel restored event:
 
@@ -450,11 +450,11 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    ## Members event
+## Members event
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Members added**   | membersAdded   | OnTeamsMembersAddedAsync   | The `membersAdded` event is sent to your bot whenever a new user or bot is added to a conversation. | All |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Members added**   | membersAdded   | OnTeamsMembersAddedAsync   | The `membersAdded` event is sent to your bot whenever a new user or bot is added to a conversation. | All |
 
     A member added event is sent to your bot in the following scenarios:
 
@@ -631,9 +631,9 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Members removed** | membersRemoved | OnTeamsMembersRemovedAsync | The `membersRemoved` event is sent to your bot whenever a user or bot is removed to a conversation. | All |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Members removed** | membersRemoved | OnTeamsMembersRemovedAsync | The `membersRemoved` event is sent to your bot whenever a user or bot is removed to a conversation. | All |
 
     A member removed event is sent to your bot in the following scenarios:
 
@@ -759,11 +759,11 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    ## Team events
+## Team events
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Team renamed**        | teamRenamed       | OnTeamsTeamRenamedAsync    | Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Team renamed**        | teamRenamed       | OnTeamsTeamRenamedAsync    | Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. | Team |
 
 1. The following code shows an example of team renamed event:
 
@@ -854,9 +854,9 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Team deleted**        | teamDeleted       | OnTeamsTeamDeletedAsync    | The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.       | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Team deleted**        | teamDeleted       | OnTeamsTeamDeletedAsync    | The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.       | Team |
 
 1. The following code shows an example of team deleted event:
 
@@ -938,9 +938,9 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Team restored**        | teamRestored      | OnTeamsTeamRestoredAsync    | The bot receives a notification when a team is restored after being deleted. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.       | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Team restored**        | teamRestored      | OnTeamsTeamRestoredAsync    | The bot receives a notification when a team is restored after being deleted. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.       | Team |
 
 1. The following code shows an example of team restored event:
 
@@ -1120,9 +1120,9 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | Team unarchived        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | The bot receives a notification when the team is installed and unarchived. It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object.       | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| Team unarchived        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | The bot receives a notification when the team is installed and unarchived. It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object.       | Team |
 
 1. The following code shows an example of team unarchived event:
 
@@ -1219,11 +1219,11 @@ In this article, you’ll get to know about different events and the activity ha
 
    `OnTeamsMessageSoftDeleteAsync`
 
-    The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
+The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
-    | EventType       | Payload object   | Description                                                             | Scope |
-    | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-    | **messageReaction** | reactionsAdded   |`{WIP}`| All   |
+| EventType       | Payload object   | Description                                                             | Scope |
+| --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
+| **messageReaction** | reactionsAdded   |`{WIP}`| All   |
 
 1. The following code shows an example of reactions to a bot message:
 
@@ -1351,9 +1351,9 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    | EventType       | Payload object   | Description                                                             | Scope |
-    | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-    | **messageReaction** | reactionsRemoved | `{WIP}` | All |
+| EventType       | Payload object   | Description                                                             | Scope |
+| --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
+| **messageReaction** | reactionsRemoved | `{WIP}` | All |
 
 1. The following code shows an example of reactions removed from bot message:
 
@@ -1625,20 +1625,20 @@ In this article, you’ll get to know about different events and the activity ha
 
    ---
 
-    ### Uninstall behavior for personal app with bot
+### Uninstall behavior for personal app with bot
 
-    When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
+When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
 
-    :::image type="content" source="~/assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="~/assets/images/bots/uninstallbot.png":::
+:::image type="content" source="~/assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="~/assets/images/bots/uninstallbot.png":::
 
-    ### Event handling for install and uninstall events
+### Event handling for install and uninstall events
 
-    When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
+When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
 
-    * You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
-    * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
+* You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
+* You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
-    It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
+It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
 
    ---
    
