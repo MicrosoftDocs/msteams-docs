@@ -74,7 +74,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
 1. The following code shows an example of channel created event:
 
-   # [C#](#tab/dotnet)
+   # [C#](#tab/dotnet0)
 
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
@@ -89,7 +89,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
    ```
 
-   # [TypeScript](#tab/typescript)
+   # [TypeScript](#tab/typescript0)
 
    <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
@@ -111,7 +111,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
    ```
 
-   # [JSON](#tab/json)
+   # [JSON](#tab/json0)
 
    ```json
    {
@@ -149,7 +149,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
    }
    ```
 
-   # [Python](#tab/python)
+   # [Python](#tab/python0)
 
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
 
