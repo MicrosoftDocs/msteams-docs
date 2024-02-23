@@ -1647,15 +1647,15 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
    The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following invoke types:
 
      | Invoke types| Handler| Description|
-     | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
-     | CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       | When the connector receives a card action invoke activity, this method is invoked. |
-     | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | When a user accepts a file consent card, this method is invoked. |
-     | fileConsent/invoke              | `OnTeamsFileConsentAsync`            | When the connector receives a file consent card activity, this method is invoked. |
-     | fileConsent/invoke              | `OnTeamsFileConsentDeclineAsync`     | When a user declines a file consent card, this method is invoked. |
+     | :--------------------  | :--------------------- | :-------------------- |
+     | CardAction.Invoke | `OnTeamsCardActionInvokeAsync` | When the connector receives a card action invoke activity, this method is invoked. |
+     | fileConsent/invoke | `OnTeamsFileConsentAcceptAsync` | When a user accepts a file consent card, this method is invoked. |
+     | fileConsent/invoke  | `OnTeamsFileConsentAsync` | When the connector receives a file consent card activity, this method is invoked. |
+     | fileConsent/invoke  | `OnTeamsFileConsentDeclineAsync` | When a user declines a file consent card, this method is invoked. |
      | actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | When the connector receives a connector card for Microsoft 365 Groups action activity, this method is invoked. |
-     | signin/verifyState              | `OnTeamsSigninVerifyStateAsync`      | When the connector receives a `signIn` verify state activity, this method is invoked. |
-     | task/fetch                      | `OnTeamsTaskModuleFetchAsync`        | You can override this method in a derived class to provide logic when a dialog (referred as task module in TeamsJS v1.x) is fetched. |
-     | task/submit                     | `OnTeamsTaskModuleSubmitAsync`       | You can override this method in a derived class to provide logic when a dialog is submitted. |
+     | signin/verifyState  | `OnTeamsSigninVerifyStateAsync` | When the connector receives a `signIn` verify state activity, this method is invoked. |
+     | task/fetch  | `OnTeamsTaskModuleFetchAsync` | You can override this method in a derived class to provide logic when a dialog (referred as task module in TeamsJS v1.x) is fetched. |
+     | task/submit  | `OnTeamsTaskModuleSubmitAsync`  | You can override this method in a derived class to provide logic when a dialog is submitted. |
 
    # [JavaScript](#tab/javascript15)
 
