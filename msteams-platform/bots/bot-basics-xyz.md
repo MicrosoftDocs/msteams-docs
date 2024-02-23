@@ -76,27 +76,27 @@ The following code shows an example of channel created event:
 
    # [C#](#tab/dotnet)
 
-* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
+   * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
 
-```csharp
-protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-{
+   ```csharp
+   protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+   {
     var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
     // Sends an activity to the sender of the incoming activity.
     await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-}
+   }
 
-```
+   ```
 
    # [TypeScript](#tab/typescript)
 
-<!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
+   <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
+   * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
 
-```typescript
-export class MyBot extends TeamsActivityHandler {
+   ```typescript
+   export class MyBot extends TeamsActivityHandler {
     constructor() {
         super();
         this.onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
@@ -107,14 +107,14 @@ export class MyBot extends TeamsActivityHandler {
             await next();
         });
     }
-}
+   }
 
-```
+   ```
 
    # [JSON](#tab/json)
 
-```json
-{
+   ```json
+   {
     "type": "conversationUpdate",
     "timestamp": "2017-02-23T19:34:07.478Z",
     "localTimestamp": "2017-02-23T12:34:07.478-07:00",
@@ -146,8 +146,8 @@ export class MyBot extends TeamsActivityHandler {
             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
         }
     }
-}
-```
+   }
+   ```
 
    # [Python](#tab/python)
 
