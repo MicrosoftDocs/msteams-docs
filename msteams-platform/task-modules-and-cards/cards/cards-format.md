@@ -500,7 +500,7 @@ Adaptive Card responsive layout helps you to design Adaptive Cards with differen
 
 #### Design responsive Adaptive Cards
 
-You can design a responsive Adaptive Card using the `targetWidth` property, which allows you to show or hide any element based on the card width. You can add the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths.
+You can design a responsive Adaptive Card using the `targetWidth` property, which allows you to show or hide any element based on the card width. You can set the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths. The available values for the `targetWidth` property are `veryNarrow`, `narrow`, `standard`, and `wide`.
 
 The following table provides the available values of the `targetwidth` property for different layouts:
 
@@ -552,11 +552,11 @@ When designing your card,  you can display specific elements when the card reach
 
   ```
 
-The following samples and images show an example of Adaptive Card designed using `targetWidth` and without using `targetWidth`:
+The following images and JSON samples show an example of Adaptive Card designed using `targetWidth` and without using `targetWidth`:
 
 * Adaptive Card designed without using `targetWidth`.
 
-  :::image type="content" source="../../assets/images/Cards/non-responsive-adaptive-card.png" alt-text="Screenshot shows how adaptive card renders without setting the targetWidth property.":::
+  [Image for non responsive adaptive card to be added.]
 
    The following code is an exmaple of Adaptive Card designed without using `targetWidth`:
 
