@@ -496,24 +496,22 @@ The following image shows the default view of the Adaptive Card when you have no
 
 Adaptive Cards typically match the look and feel of the host application and have a fixed layout that remains consistent across Teams mobile and desktop.
 
-Adaptive Card responsive layout helps you to design Adaptive Cards with different layouts that adapt to different card widths in the context where the card is displayed. When you design an Adaptive Card for your app, ensure that you provide a better user experience across chat, channels, and meeting chat in Teams desktop and mobile.
+Adaptive Card responsive layout helps you to design Adaptive Cards with different layouts that adapt to different card widths in the context where the card is displayed. When you design Adaptive Card for your app, ensure that you provide a better user experience across chat, channels, and meeting chat in Teams desktop and mobile.
 
 #### Design responsive Adaptive Cards
 
-You can design a responsive Adaptive Card using the `targetWidth` property, which allows you show or hide any element based on the card width. You can add the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths.
+You can design a responsive Adaptive Card using the `targetWidth` property, which allows you to show or hide any element based on the card width. You can add the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths.
 
 The following table provides the available values of the `targetwidth` property for different layouts:
 
   |Value  |Description  |
   |---------|---------|
-  | `veryNarrow` | Use for an Adaptive Card on a desktop mode in a meeting chat. |
-  | `narrow` | Use for an Adaptive Card on a mobile phone in portrait mode. |
-  | `standard` | Use for an Adaptive Card  on a mobile phone in landscape mode, a tablet in portrait mode, or a chat in desktop mode. `standard` is the default value.|
-  | `wide` | Use for an Adaptive Card on a tablet in landscape mode, or a chat or channels in desktop mode has the card width as `full width`. |
+  | `veryNarrow` | Use for Adaptive Card on a desktop mode in a meeting chat. |
+  | `narrow` | Use for Adaptive Card on a mobile phone in portrait mode. |
+  | `standard` | Use for Adaptive Card  on a mobile phone in landscape mode, a tablet in portrait mode, or a chat in desktop mode. `standard` is the default value.|
+  | `wide` | Use for Adaptive Card on a tablet in landscape mode, or a chat or channels in desktop mode with the card width as `full width`. |
 
-You can decide that certain elements are only visible based on the width of the card. For example,
-
-When designing your card, ensure that specific elements are displayed only when the card reaches a certain width and the remaining elements are hidden. For example, if you want the Adaptive Card to be visible when the layout is for a meeting chat in Teams, set the `targetWidth` property to `veryNarrow`.
+When designing your card,  you can display specific elements when the card reaches a certain width and hide the remaining elements. For example, if you want Adaptive Card to be visible only when the layout is for a meeting chat in Teams, set the `targetWidth` property to `veryNarrow`.
 
   ```json
   {
@@ -530,7 +528,7 @@ When designing your card, ensure that specific elements are displayed only when 
 
   ```
 
-  You can define the `targetWidth` property to ensure that an element is visible when the width of the card is at least or at most a certain value using the `atLeast` and `atMost` modifier prefixes, followed by a semicolon and actual `targetWidth` value.
+  You can define the `targetWidth` property to ensure that an element is visible when the width of the card is at least or at most of a certain value using the `atLeast` and `atMost` modifier prefixes, followed by a semicolon and actual `targetWidth` value.
   
   For example, in the following code, the `targetwidth` property is set to `atLeast:Narrow`. Adaptive Card is only visible when the card's width is `standard` or `wide` and isn't visible when the card's width is `veryNarrow`:
 
@@ -554,21 +552,21 @@ When designing your card, ensure that specific elements are displayed only when 
 
   ```
 
-The following samples and images show an example of a non responsive and responsive Adaptive Cards:
+The following samples and images show an example of Adaptive Card designed using `targetWidth` and without using `targetWidth`:
 
-**Adaptive Card designed without using `targetWidth`**
+* Adaptive Card designed without using `targetWidth`.
 
-:::image type="content" source="../../assets/images/Cards/non-responsive-adaptive-card.png" alt-text="Screenshot shows how adaptive card renders without setting the targetWidth property.":::
+  :::image type="content" source="../../assets/images/Cards/non-responsive-adaptive-card.png" alt-text="Screenshot shows how adaptive card renders without setting the targetWidth property.":::
 
-The following code is an exmaple of Adaptive Card designed without using `targetWidth`:
+   The following code is an exmaple of Adaptive Card designed without using `targetWidth`:
 
-```json
-To be added
-```
+    ```json
+    To be added
+    ```
 
-**Responsive Adaptive Card designed using `targetWidth`**
+* Responsive Adaptive Card designed using `targetWidth`.
 
-:::image type="content" source="../../assets/images/Cards/adaptive-card-responsive-layout.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to respective card widths.":::
+  :::image type="content" source="../../assets/images/Cards/adaptive-card-responsive-layout.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to respective card widths.":::
 
   | Counter |Description  |
   |---------|---------|
@@ -578,69 +576,69 @@ To be added
 
   The following code is an example of Adaptive Card designed using `targetWidth`:
 
-  ``` json
-{ 
-  "type": "AdaptiveCard", 
-  "body": [ 
-    { 
-      "type": "ColumnSet", 
-      "columns": [ 
-        { 
-          "type": "Column", 
-          "items": [ 
-            { 
-              "type": "Image", 
-              "style": "Person", 
-              "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg", 
-              "size": "Small"
-            } 
-          ], 
-          "width": "auto" 
-        }, 
-        { 
-          "type": "Column", 
-          "spacing": "medium", 
-          "items": [ 
-            { 
-              "type": "TextBlock", 
-              "weight": "Bolder", 
-              "text": "Matt Hidinger", 
-              "wrap": true 
+    ``` json
+    {
+      "type": "AdaptiveCard",
+      "body": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "Image", 
+                  "style": "Person", 
+                  "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg", 
+                  "size": "Small"
+                } 
+              ], 
+              "width": "auto" 
+            },
+            {
+              "type": "Column",
+              "spacing": "medium",
+              "items": [
+                {
+                  "type": "TextBlock", 
+                  "weight": "Bolder", 
+                  "text": "Matt Hidinger", 
+                  "wrap": true
+                },
+                {
+                  "type": "TextBlock", 
+                  "targetWidth": "narrow", 
+                  "spacing": "None", 
+                  "text": "Principal Program Manager", 
+                  "isSubtle": true, 
+                  "wrap": true 
+                } 
+              ], 
+              "width": "auto", 
+              "verticalContentAlignment": "center" 
             }, 
             { 
-              "type": "TextBlock", 
-              "targetWidth": "narrow", 
-              "spacing": "None", 
-              "text": "Principal Program Manager", 
-              "isSubtle": true, 
-              "wrap": true 
+              "type": "Column", 
+              "targetWidth": "atLeast:standard", 
+              "spacing": "medium", 
+              "items": [ 
+                { 
+                  "type": "TextBlock", 
+                  "text": "Principal Program Manager", 
+                  "isSubtle": true, 
+                  "wrap": true 
+                } 
+              ], 
+              "width": "stretch", 
+              "verticalContentAlignment": "center" 
             } 
-          ], 
-          "width": "auto", 
-          "verticalContentAlignment": "center" 
-        }, 
-        { 
-          "type": "Column", 
-          "targetWidth": "atLeast:standard", 
-          "spacing": "medium", 
-          "items": [ 
-            { 
-              "type": "TextBlock", 
-              "text": "Principal Program Manager", 
-              "isSubtle": true, 
-              "wrap": true 
-            } 
-          ], 
-          "width": "stretch", 
-          "verticalContentAlignment": "center" 
+          ] 
         } 
-      ] 
+      ], 
+      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
+      "version": "1.5" 
     } 
-  ], 
-  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
-  "version": "1.5" 
-} 
-```
+    ```
 
 ### Typeahead support
 
