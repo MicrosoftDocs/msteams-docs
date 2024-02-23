@@ -511,7 +511,13 @@ The following table provides the available values of the `targetwidth` property 
   | `standard` | Use for Adaptive Card  on a mobile phone in landscape mode, a tablet in portrait mode, or a chat in desktop mode. `standard` is the default value.|
   | `wide` | Use for Adaptive Card on a tablet in landscape mode, or a chat or channels in desktop mode with the card width as `full width`. |
 
-When designing your card,  you can display specific elements when the card reaches a certain width and hide the remaining elements. For example, if you want Adaptive Card to be visible only when the layout is for a meeting chat in Teams, set the `targetWidth` property to `veryNarrow`.
+When designing your card,  you can display specific elements when the card reaches a certain width and hide the remaining elements. For example:
+
+* If the `targetWidth` is set to `standard`, Adaptive Card shows the element only for standard width.
+
+* If the `targetWidth` set to `veryNarrow`, Adaptive Card shows the element only for very narrow width.
+
+In the following code sample, the `targetWidth` property is set to `veryNarrow`. Adaptive Card is visible only when the layout is for for very narrow width.
 
   ```json
   {
@@ -528,9 +534,12 @@ When designing your card,  you can display specific elements when the card reach
 
   ```
 
-  You can set the `targetWidth` property to make an element visible when the width of the card is at least or at most of a certain value such as `"targetWidth": atLeast:Narrow` or `"targetWidth": atMost:Narrow`.
-  
-  For example, in the following code, the `targetwidth` property is set to `atLeast:Narrow`. Adaptive Card is only visible when the card's width is standard or wide and isn't visible when the card's width is very narrow:
+You can set the `targetWidth` property to make an element visible when the width of the card is at least or at most of a certain value such as `"targetWidth": atLeast:Narrow` or `"targetWidth": atMost:Narrow`. For example:
+
+* If the `targetWidth` is set to `atLeast:narrow`, Adaptive Card shows the element for narrow, standard, or wide widths, but not for very narrow width.
+* If the `targetWidth` set to `atMost:narrow`, Adaptive Card shows the element for very narrow or narrow widths, but not for standard or wide widths.
+
+In the following code, the `targetwidth` property is set to `atLeast:Narrow`. Adaptive Card is only visible when the card's width is standard or wide and isn't visible when the card's width is very narrow:
 
   ```json
   {
