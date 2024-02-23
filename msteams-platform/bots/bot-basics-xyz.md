@@ -30,12 +30,12 @@ In this article, you’ll get to know about different events and the activity ha
 
    For example, when the bot receives a message activity, the turn handler identifies this incoming activity and forwards it to the `onMessageActivity` handler. As a developer, you place your logic for managing and responding to messages in this `onMessageActivity` handler.
 
-    ```javascript
-    this.onMessageActivity(async (context, next) => {
+     ```javascript
+     this.onMessageActivity(async (context, next) => {
         // Your logic here
         await next();
-    });
-    ```
+     });
+     ```
 
    Following are the two primary Teams activity handlers:
 
@@ -49,7 +49,6 @@ In this article, you’ll get to know about different events and the activity ha
    * [Members events](#members-event)
    * [Team events](#team-events)
    * [Installation events](#installation-events)
-   * [Message events](#message-events)
 
    ## Conversation update events
 
@@ -1630,6 +1629,7 @@ In this article, you’ll get to know about different events and the activity ha
       When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
 
        * You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
+
        * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
       It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
@@ -1637,12 +1637,6 @@ In this article, you’ll get to know about different events and the activity ha
       ---
    
 # [Invoke activities](#tab/activities)
-
-In this article, you’ll get to know about different invoke activities. If you would like to know about different events with activity handlers, select conversation events at the start of this article.
-
----
-
-## Invoke activity
 
 In this article, you’ll get to know about different invoke activities. If you would like to know about different events with activity handlers, select conversation events at the start of this article.
 
