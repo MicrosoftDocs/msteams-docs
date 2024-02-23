@@ -21,8 +21,6 @@ To create a event-driven conversations, you need to define the handlers that the
 
 In this article, you’ll get to know about different events and the activity handlers associated with those events. If you would like to know about invoke activities, select invoke activities at the start of this article.
 
-::: zone pivot="conversation-event"
-
 # [Receive events](#tab/events)
 
 ## Events with activity handlers
@@ -131,7 +129,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
  An invoke activity is a type of activity that is sent to a bot when a user performs an action, such as clicking a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses. Invoke activities are typically used to send back confirmations, item selections, and to provide feedback or input to the bot.
 
 ---
-
+::: zone pivot="conversation-event"
 ::: zone-end
 
 ::: zone pivot="invoke-activity"
