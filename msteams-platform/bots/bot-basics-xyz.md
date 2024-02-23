@@ -350,9 +350,9 @@ In this article, you’ll get to know about different events and the activity ha
 
      ---
 
-   | Action taken        | EventType         | Method called              | Description                | Scope |
-   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-   | **Channel restored**    | channelRestored    | OnTeamsChannelRestoredAsync | The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed. | Team |
+    | Action taken        | EventType         | Method called              | Description                | Scope |
+    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+    | **Channel restored**    | channelRestored    | OnTeamsChannelRestoredAsync | The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed. | Team |
 
 1. The following code shows an example of channel restored event:
 
