@@ -23,6 +23,8 @@ In this article, you’ll get to know about different events and the activity ha
 
 ::: zone pivot="conversation-event"
 
+# [Receive events](#tab/events)
+
 ## Events with activity handlers
 
 In this article, you’ll get to know about different events and the activity handlers associated with those events. If you would like to know about invoke activities, select invoke activities at the start of this article.
@@ -1649,6 +1651,10 @@ When you use these install and uninstall events, there are some instances where 
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
 It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
+
+# [Invoke activities](#tab/activities)
+
+---
 
 ::: zone-end
 
