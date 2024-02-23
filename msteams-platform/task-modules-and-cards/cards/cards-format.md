@@ -514,10 +514,9 @@ The following table provides the available values of the `targetwidth` property 
 When designing your card,  you can display specific elements when the card reaches a certain width and hide the remaining elements. For example:
 
 * If the `targetWidth` is set to `standard`, Adaptive Card shows the element only for standard width.
-
 * If the `targetWidth` set to `veryNarrow`, Adaptive Card shows the element only for very narrow width.
 
-In the following code sample, the `targetWidth` property is set to `veryNarrow`. Adaptive Card is visible only when the layout is for for very narrow width.
+In the following code sample, the `targetWidth` property is set to `veryNarrow`. Adaptive Card is visible only when the card's width is very narrow.
 
   ```json
   {
@@ -561,7 +560,7 @@ In the following code, the `targetwidth` property is set to `atLeast:Narrow`. Ad
 
   ```
 
-The following images and JSON samples show an example of Adaptive Card designed using `targetWidth` and without using `targetWidth`:
+The following images and JSON samples show an example of Adaptive Card designed without using `targetWidth` and using `targetWidth`:
 
 * Adaptive Card designed without using `targetWidth`.
 
