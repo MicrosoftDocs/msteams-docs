@@ -74,107 +74,62 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
 1. The following code shows an example of channel created event:
 
-   # [C#](#tab/new-api2)
-   * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
+   # [New API](#tab/new-api2)
 
-    ```csharp
-    protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
-        var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
-        // Sends an activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-    }
+   1. To get started, you must update the source code in the following files:
 
-    ```
+      |File  |Contents |
+      |---------|---------|
+      |`repair.cs` | The main file of a function in Azure Functions. Defines an Azure Function that retrieves and filters repair records based on a query parameter from an HTTP GET request, and returns the results as a JSON response.|
+      |`RepairData.cs`|The data source for the repair API. Contains a method that returns a hardcoded list of car repair tasks. |
+      |`Models/RepairModel.cs`|Defines a data model that represents a repair task with properties such as ID, Title, Description, AssignedTo, Date, and Image.|
+      |`appPackage/apiSpecificationFiles/repair.yml` |  A file that describes the structure and behavior of the repair API.|
+      |`appPackage/responseTemplates/repair.json` |  A generated Adaptive Card that used to render API response.|
 
-   # [TypeScript](#tab/openapi-specification2)
+   1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
 
+      :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
 
-   <!-- From sample: botbuilder-js\libraries\botbuilder\tests\teams\conversationUpdate\src\conversationUpdateBot.ts -->
+   1. Select the account to create the tunnel. The supported account types are Azure, Microsoft Account (MSA), and GitHub.
+      1. **Name**: Enter a name for the tunnel.
+      1. **Tunnel Type**: Select **Persistent** or **Temporary**.
+      1. **Access**: Select **Public**.
+      1. Select **OK**. Visual Studio displays a confirmation message that a tunnel is created.
 
-   * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
+       The tunnel you've created is listed under **Dev Tunnels**.
 
-   ```typescript
-    export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-            const card = CardFactory.heroCard('Channel Created', `${channelInfo.name} is the Channel created`);
-            const message = MessageFactory.attachment(card);
-            // Sends a message activity to the sender of the incoming activity.
-            await turnContext.sendActivity(message);
-            await next();
-        });
-    }
-   }
+   1. Go to **Solution Explorer** and select your project.
+   1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-   ```
+      If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
 
-   # [JSON](#tab/json)
+   1. Select the **F5** key or select **Debug** > **Start Debugging**. Visual Studio launches a Teams web client.
 
-   ```json
-   {
-        "type": "conversationUpdate",
-        "timestamp": "2017-02-23T19:34:07.478Z",
-        "localTimestamp": "2017-02-23T12:34:07.478-07:00",
-        "id": "f:dd6ec311",
-        "channelId": "msteams",
-        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-        "from": {
-            "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
-        },
-        "conversation": {
-            "isGroup": true,
-            "conversationType": "channel",
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-        },
-        "recipient": {
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-            "name": "SongsuggesterBot"
-        },
-        "channelData": {
-            "channel": {
-                "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
-                "name": "FunDiscussions"
-            },
-            "team": {
-                "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-            },
-            "eventType": "channelCreated",
-            "tenant": {
-                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-            }
-        }
-   }
-   ```
+   # [OpenAPI Description](#tab/openapi-specification2)
 
-   # [Python](#tab/python)
+   1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
+   1. Select the dropdown and select the APIs from the list.
+   1. Select **Create**. The project is scaffolded and you can find API specification, manifest, and response template files in the **appPackage** folder.
+   1. Go to **Solution Explorer** and select your project.
+   1. Right-click the menu and select **Teams Toolkit** > **Provision in the Cloud**.
 
-   * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
+      :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Teams Toolkit in Visual Studio.":::
 
-    ```python
-    async def on_teams_channel_created(
-    self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
-    ):
-    # Sends a message activity to the sender of the incoming activity.
-    return await turn_context.send_activity(
-    MessageFactory.text(
-    "The new channel is {channel_info.name}. The channel id is {channel_info.id}"
-    )
-    )
-    ```
-   ---
+      If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
 
- | Action taken        | EventType         | Method called              | Description                | Scope |
- | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
- | **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
+   1. Right-click your project and select **Teams Toolkit** > **Preview in** > **Teams**.
+   1. Select the **manifest.json** file and select **Open**. Visual Studio launches a Teams web client.
+
+    ---
+
+1. Go to a chat and select **Actions and apps**.
 
  ---
 # [Invoke activities](#tab/activities)
 
  In this article, you’ll get to know about different invoke activities. If you would like to know about different events with activity handlers, select conversation events at the start of this article.
  An invoke activity is a type of activity that is sent to a bot when a user performs an action, such as clicking a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses. Invoke activities are typically used to send back confirmations, item selections, and to provide feedback or input to the bot.
+
 ---
 
 ::: zone-end
