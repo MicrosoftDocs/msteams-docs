@@ -1229,7 +1229,7 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| **messageReaction** | reactionsAdded   | [Reactions added to bot message](#reactions-added-to-bot-message).           | All   |
+| **messageReaction** | reactionsAdded   |`{WIP}`| All   |
 
 The following code shows an example of reactions to a bot message:
 
@@ -1359,7 +1359,7 @@ async def on_reactions_added(
 
 | EventType       | Payload object   | Description                                                             | Scope |
 | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| **messageReaction** | reactionsRemoved | [Reactions removed from bot message](#reactions-removed-from-bot-message). | All |
+| **messageReaction** | reactionsRemoved | `{WIP}` | All |
 
 The following code shows an example of reactions removed from bot message:
 
