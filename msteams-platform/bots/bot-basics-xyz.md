@@ -1471,7 +1471,7 @@ In this article, you’ll get to know about different events and the activity ha
        return
       ```
 
-     --
+     ---
 
    ## Installation events
 
@@ -1646,7 +1646,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
    # [C#](#tab/dotnet15)
    The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following invoke types:
 
-     | Invoke types                    | Handler                              | Description                                                  |
+     | Invoke types| Handler| Description|
      | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
      | CardAction.Invoke               | `OnTeamsCardActionInvokeAsync`       | When the connector receives a card action invoke activity, this method is invoked. |
      | fileConsent/invoke              | `OnTeamsFileConsentAcceptAsync`      | When a user accepts a file consent card, this method is invoked. |
