@@ -254,9 +254,9 @@ In this article, you’ll get to know about different events and the activity ha
      ```
      ---
 
- | Action taken        | EventType         | Method called              | Description                | Scope |
- | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
- | **Channel deleted**     | channelDeleted    | OnTeamsChannelDeletedAsync | The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed. | Team |
+   | Action taken        | EventType         | Method called              | Description                | Scope |
+   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+   | **Channel deleted**     | channelDeleted    | OnTeamsChannelDeletedAsync | The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed. | Team |
 
 1. The following code shows an example of channel deleted event:
 
@@ -350,9 +350,9 @@ In this article, you’ll get to know about different events and the activity ha
 
      ---
 
- | Action taken        | EventType         | Method called              | Description                | Scope |
- | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
- | **Channel restored**    | channelRestored    | OnTeamsChannelRestoredAsync | The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed. | Team |
+   | Action taken        | EventType         | Method called              | Description                | Scope |
+   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+   | **Channel restored**    | channelRestored    | OnTeamsChannelRestoredAsync | The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed. | Team |
 
 1. The following code shows an example of channel restored event:
 
@@ -445,22 +445,22 @@ In this article, you’ll get to know about different events and the activity ha
       ```
      ---
 
-## Members event
+   ## Members event
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Members added**   | membersAdded   | OnTeamsMembersAddedAsync   | The `membersAdded` event is sent to your bot whenever a new user or bot is added to a conversation. | All |
+   | Action taken        | EventType         | Method called              | Description                | Scope |
+   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+   | **Members added**   | membersAdded   | OnTeamsMembersAddedAsync   | The `membersAdded` event is sent to your bot whenever a new user or bot is added to a conversation. | All |
 
-    A member added event is sent to your bot in the following scenarios:
+   A member added event is sent to your bot in the following scenarios:
 
     1. When the bot, itself, is installed and added to a conversation.
         In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.
     2. When a user is added to a conversation where the bot is installed.
         User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
 
-    The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
+   The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
 
-    You can use the [`InstallationUpdate`](#installation-update-event) event to determine when your bot is added or removed from a conversation.
+   You can use the [`InstallationUpdate`](#installation-update-event) event to determine when your bot is added or removed from a conversation.
 
 1. The following code shows an example of team members added event:
 
@@ -469,54 +469,54 @@ In this article, you’ll get to know about different events and the activity ha
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmembersaddedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L133)
 
-    ```csharp
-    protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded , TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
-        foreach (TeamsChannelAccount member in teamsMembersAdded)
-        {
-            if (member.Id == turnContext.Activity.Recipient.Id)
-            {
-                // Send a message to introduce the bot to the team.
-                var heroCard = new HeroCard(text: $"The {member.Name} bot has joined {teamInfo.Name}");
-                // Sends an activity to the sender of the incoming activity.
-                await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-            }
-            else
-            {
-                var heroCard = new HeroCard(text: $"{member.Name} joined {teamInfo.Name}");
-                // Sends an activity to the sender of the incoming activity.
-                await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-            }
-        }
-    }
+      ```csharp
+       protected override async Task OnTeamsMembersAddedAsync(IList<TeamsChannelAccount> teamsMembersAdded , TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+       {
+          foreach (TeamsChannelAccount member in teamsMembersAdded)
+          {
+              if (member.Id == turnContext.Activity.Recipient.Id)
+              {
+                 // Send a message to introduce the bot to the team.
+                 var heroCard = new HeroCard(text: $"The {member.Name} bot has joined {teamInfo.Name}");
+                 // Sends an activity to the sender of the incoming activity.
+                 await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+              }
+             else
+              {
+                 var heroCard = new HeroCard(text: $"{member.Name} joined {teamInfo.Name}");
+                 // Sends an activity to the sender of the incoming activity.
+                 await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+              }
+          }
+       }
 
-    ```
+      ```
 
    # [TypeScript](#tab/typescript5)
 
    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersaddedevent&preserve-view=true)
 
-    ```typescript
-    export class MyBot extends TeamsActivityHandler {
-        constructor() {
-            super();
-            this.onTeamsMembersAddedEvent(async (membersAdded: ChannelAccount[], teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-                    let newMembers: string = '';
-                    console.log(JSON.stringify(membersAdded));
-                    membersAdded.forEach((account) => {
-                        newMembers += account.id + ' ';
-                    });
-                    const name = !teamInfo ? 'not in team' : teamInfo.name;
-                    const card = CardFactory.heroCard('Account Added', `${newMembers} joined ${name}.`);
-                    const message = MessageFactory.attachment(card);
-                    // Sends a message activity to the sender of the incoming activity.
-                    await turnContext.sendActivity(message);
-                    await next();
-            });
-        }
-    }
+      ```typescript
+       export class MyBot extends TeamsActivityHandler {
+          constructor() {
+             super();
+             this.onTeamsMembersAddedEvent(async (membersAdded: ChannelAccount[], teamInfo:  TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+                     let newMembers: string = '';
+                     console.log(JSON.stringify(membersAdded));
+                     membersAdded.forEach((account) => {
+                         newMembers += account.id + ' ';
+                     });
+                     const name = !teamInfo ? 'not in team' : teamInfo.name;
+                     const card = CardFactory.heroCard('Account Added', `${newMembers} joined ${name}.`);
+                     const message = MessageFactory.attachment(card);
+                     // Sends a message activity to the sender of the incoming activity.
+                     await turnContext.sendActivity(message);
+                     await next();
+             });
+         }
+      }
 
-    ```
+      ```
 
    # [JSON](#tab/json5)
 
@@ -525,34 +525,34 @@ In this article, you’ll get to know about different events and the activity ha
     > [!NOTE]
     > In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` will be the id of the channel that the user selected during app installation or where installation was triggered from.
 
-    ```json
-    {
-        "type": "conversationUpdate",
-        "membersAdded": [
-            {
-                "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
-            }
-        ],
-        "timestamp": "2021-12-07T22:34:56.534Z",
-        "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
-        "channelId": "msteams",
-        "serviceUrl": "https://smba.trafficmanager.net/amer/",
-        "from": {
+     ```json
+     {
+         "type": "conversationUpdate",
+         "membersAdded": [
+             {
+                 "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
+             }
+         ],
+         "timestamp": "2021-12-07T22:34:56.534Z",
+         "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
+         "channelId": "msteams",
+         "serviceUrl": "https://smba.trafficmanager.net/amer/",
+         "from": {
             "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
             "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
-        },
-        "conversation": {
+         },
+         "conversation": {
             "isGroup": true,
             "conversationType": "channel",
             "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
             "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
             "name": "2021 Test Channel"
-        },
-        "recipient": {
+         },
+         "recipient": {
             "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
             "name": "Test Bot"
-        },
-        "channelData": {
+         },
+         "channelData": {
             "settings": {
                 "selectedChannel": {
                     "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
@@ -567,78 +567,78 @@ In this article, you’ll get to know about different events and the activity ha
             "tenant": {
                 "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
             }
-        }
-    }
-    ```
+         }
+     }
+      ```
 
 1. The message your bot receives when the bot is added to a one-to-one chat.
 
-    ```json
-    {
-    "membersAdded": [{
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
-        },
-        {
-        "id": "29:<userID>",
-        "aadObjectId": "***"
-        }
-    ],
-    "type": "conversationUpdate",
-    "timestamp": "2019-04-23T10:17:44.349Z",
-    "id": "f:5f85c2ad",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-    "from": {
+      ```json
+     {
+       "membersAdded": [{
+         "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+         },
+         {
+         "id": "29:<userID>",
+         "aadObjectId": "***"
+         }
+     ],
+     "type": "conversationUpdate",
+     "timestamp": "2019-04-23T10:17:44.349Z",
+     "id": "f:5f85c2ad",
+     "channelId": "msteams",
+     "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+     "from": {
         "id": "29:<USERID>",
         "aadObjectId": "***"
-    },
-    "conversation": {
+     },
+     "conversation": {
         "conversationType": "personal",
         "id": "***"
-    },
-    "recipient": {
+     },
+     "recipient": {
         "id": "28:<BOT ID>",
         "name": "<BOT NAME>"
-    },
-    "channelData": {
+     },
+     "channelData": {
         "tenant": {
         "id": "<TENANT ID>"
         }
-    }
-    }
-    ```
+     }
+     }
+      ```
 
    # [Python](#tab/python5)
 
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-members-added&preserve-view=true)
 
-    ```python
-    async def on_teams_members_added(
-    self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
-    ):
-    for member in teams_members_added:
-    .. # Sends a message activity to the sender of the incoming activity.
-    await turn_context.send_activity(
-    MessageFactory.text(f"Welcome your new team member {member.id}")
-    )
-    return
-    ```
+     ```python
+      async def on_teams_members_added(
+      self, teams_members_added: [TeamsChannelAccount], turn_context: TurnContext
+      ):
+      for member in teams_members_added:
+      .. # Sends a message activity to the sender of the incoming activity.
+      await turn_context.send_activity(
+      MessageFactory.text(f"Welcome your new team member {member.id}")
+      )
+      return
+      ```
 
-   ---
+     ---
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Members removed** | membersRemoved | OnTeamsMembersRemovedAsync | The `membersRemoved` event is sent to your bot whenever a user or bot is removed to a conversation. | All |
+   | Action taken        | EventType         | Method called              | Description                | Scope |
+   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+   | **Members removed** | membersRemoved | OnTeamsMembersRemovedAsync | The `membersRemoved` event is sent to your bot whenever a user or bot is removed to a conversation. | All |
 
     A member removed event is sent to your bot in the following scenarios:
 
-    1. When the bot, itself, is uninstalled and removed from a conversation.
-    2. When a user is removed from a conversation where the bot is installed.
+     1. When the bot, itself, is uninstalled and removed from a conversation.
+     1. When a user is removed from a conversation where the bot is installed.
 
-    The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
+     The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
 
-    > [!NOTE]
-    > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
+     > [!NOTE]
+     > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
 1. The following code shows an example of team members removed event:
 
@@ -647,9 +647,9 @@ In this article, you’ll get to know about different events and the activity ha
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmembersremovedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L157)
 
-    ```csharp
-    protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
+      ```csharp
+      protected override async Task OnTeamsMembersRemovedAsync(IList<ChannelAccount> membersRemoved, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+      {
         foreach (TeamsChannelAccount member in membersRemoved)
         {
             if (member.Id == turnContext.Activity.Recipient.Id)
@@ -664,16 +664,16 @@ In this article, you’ll get to know about different events and the activity ha
                 await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
             }
         }
-    }
+      }
 
-    ```
+      ```
 
    # [TypeScript](#tab/typescript6)
 
-   [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersremovedevent&preserve-view=true)
+    [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersremovedevent&preserve-view=true)
 
-    ```typescript
-    export class MyBot extends TeamsActivityHandler {
+     ```typescript
+     export class MyBot extends TeamsActivityHandler {
         constructor() {
             super();
             this.onTeamsMembersRemovedEvent(async (membersRemoved: ChannelAccount[], teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
@@ -690,16 +690,16 @@ In this article, you’ll get to know about different events and the activity ha
                 await next();
             });
         }
-    }
+      }
 
-    ```
+     ```
 
    # [JSON](#tab/json6)
 
    The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
 
-    ```json
-    {
+     ```json
+     {
         "membersRemoved": [
             {
                 "id": "29:1_LCi5Up14pAy65yZuaJzG1uIT7ujYhjjSTsUNqjORsZHjLHKiQIBJa4cX2XsAsRoaY7va2w6ZymA9-1VtSY_g"
@@ -733,32 +733,32 @@ In this article, you’ll get to know about different events and the activity ha
                 "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
             }
         }
-    }
-    ```
+     }
+     ```
 
    # [Python](#tab/python6)
 
    * [SDK  reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-members-removed&preserve-view=true)
 
-    ```python
-    async def on_teams_members_removed(
-    self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
-    ):
-    for member in teams_members_removed:
-    ..# Sends a message activity to the sender of the incoming activity.
-    await turn_context.send_activity(
-    MessageFactory.text(f"Say goodbye to {member.id}")
-    )
-    return
-    ```
+     ```python
+     async def on_teams_members_removed(
+     self, teams_members_removed: [TeamsChannelAccount], turn_context: TurnContext
+     ):
+     for member in teams_members_removed:
+     ..# Sends a message activity to the sender of the incoming activity.
+     await turn_context.send_activity(
+     MessageFactory.text(f"Say goodbye to {member.id}")
+     )
+     return
+     ```
 
    ---
 
-## Team events
+   ## Team events
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Team renamed**        | teamRenamed       | OnTeamsTeamRenamedAsync    | Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. | Team |
+   | Action taken        | EventType         | Method called              | Description                | Scope |
+   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+   | **Team renamed**        | teamRenamed       | OnTeamsTeamRenamedAsync    | Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. | Team |
 
 1. The following code shows an example of team renamed event:
 
@@ -767,21 +767,21 @@ In this article, you’ll get to know about different events and the activity ha
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrenamedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L370)
 
-    ```csharp
-    protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
+     ```csharp
+      protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+     {
         var heroCard = new HeroCard(text: $"{teamInfo.Name} is the new Team name");
         // Sends an activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-    }
-    ```
+     }
+      ```
 
    # [TypeScript](#tab/typescript7)
 
    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamrenamedevent&preserve-view=true)
 
-    ```typescript
-    export class MyBot extends TeamsActivityHandler {
+      ```typescript
+       export class MyBot extends TeamsActivityHandler {
         constructor() {
             super();
             // Bot is notified when the team is renamed.
@@ -794,13 +794,13 @@ In this article, you’ll get to know about different events and the activity ha
                 await next();
             });
         }
-    }
-    ```
+      }
+      ```
 
    # [JSON](#tab/json7)
 
-    ```json
-    { 
+      ```json
+       { 
         "type": "conversationUpdate",
         "timestamp": "2017-02-23T19:35:56.825Z",
         "localTimestamp": "2017-02-23T12:35:56.825-07:00",
@@ -829,29 +829,29 @@ In this article, you’ll get to know about different events and the activity ha
             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
             }
         }
-    }
-    ```
+      }
+      ```
 
    # [Python](#tab/python7)
 
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-renamed&preserve-view=true)
 
-    ```python
-    # Bot is notified when the team is renamed.
-    async def on_teams_team_renamed(
-    self, team_info: TeamInfo, turn_context: TurnContext
-    ):
-    # Sends an activity to the sender of the incoming activity.
-    return await turn_context.send_activity(
-    MessageFactory.text(f"The new team name is {team_info.name}")
-    )
-    ```
+      ```python
+       # Bot is notified when the team is renamed.
+       async def on_teams_team_renamed(
+       self, team_info: TeamInfo, turn_context: TurnContext
+       ):
+       # Sends an activity to the sender of the incoming activity.
+       return await turn_context.send_activity(
+       MessageFactory.text(f"The new team name is {team_info.name}")
+       )
+      ```
 
    ---
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Team deleted**        | teamDeleted       | OnTeamsTeamDeletedAsync    | The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.       | Team |
+   | Action taken        | EventType         | Method called              | Description                | Scope |
+   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+   | **Team deleted**        | teamDeleted       | OnTeamsTeamDeletedAsync    | The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.       | Team |
 
 1. The following code shows an example of team deleted event:
 
@@ -859,83 +859,80 @@ In this article, you’ll get to know about different events and the activity ha
 
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamdeletedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
-    ```csharp
-    protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
+      ```csharp
+       protected override async Task OnTeamsTeamDeletedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+      {
         // Handle delete event.
-    }
-    ```
+      }
+      ```
 
    # [TypeScript](#tab/typescript8)
 
    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamdeletedevent&preserve-view=true)
 
-    ```typescript
-    export class MyBot extends TeamsActivityHandler {
-        constructor() {
-            super();
-            // Invoked when a Team Deleted event activity is received from the connector. Team Deleted corresponds to the user deleting a team.
-            this.onTeamsTeamDeletedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+      ```typescript
+        export class MyBot extends TeamsActivityHandler {
+          constructor() {
+             super();
+              // Invoked when a Team Deleted event activity is received from the connector. Team Deleted corresponds to the user deleting a team.
+              this.onTeamsTeamDeletedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
                 // Handle delete event.
                 await next();
-            });
-        }
-    }
-    ```
+             });
+         }
+       }
+      ```
 
    # [JSON](#tab/json8)
 
-    ```json
-    { 
-        "type": "conversationUpdate",
-        "timestamp": "2017-02-23T19:35:56.825Z",
-        "localTimestamp": "2017-02-23T12:35:56.825-07:00",
-        "id": "f:1406033e",
-        "channelId": "msteams",
-        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
-        "from": { 
+      ```json
+      { 
+         "type": "conversationUpdate",
+         "timestamp": "2017-02-23T19:35:56.825Z",
+         "localTimestamp": "2017-02-23T12:35:56.825-07:00",
+         "id": "f:1406033e",
+         "channelId": "msteams",
+         "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/", 
+         "from": { 
             "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA"
-        }, 
-        "conversation": {
-            "isGroup": true,
-            "conversationType": "channel",
-            "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-        },
-        "recipient": { 
-            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-            "name": "SongsuggesterLocal"
-        },
-        "channelData": {
-            "team": {
-                "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
-                "name": "Team Name"
-            },
-            "eventType": "teamDeleted",
-            "tenant": { 
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-            }
-        }
-    }
-    ```
+         }, 
+         "conversation": {
+             "isGroup": true,
+             "conversationType": "channel",
+             "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+         },
+         "recipient": { 
+             "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+             "name": "SongsuggesterLocal"
+         },
+          "channelData": {
+             "team": {
+                 "id": "19:efa9296d959346209fea44151c742e73@thread.skype",
+                 "name": "Team Name"
+             },
+             "eventType": "teamDeleted",
+             "tenant": { 
+             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+             }
+         }
+      }
+      ```
 
    # [Python](#tab/python8)
 
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-deleted&preserve-view=true)
-
+    
     ```python
-    # Invoked when a Team Deleted event activity is received from the connector. Team Deleted corresponds to the user deleting a team.
-    async def on_teams_team_deleted(
-    self, team_info: TeamInfo, turn_context: TurnContext
-    ):
-    # Handle delete event.
-    )
-    ```
+     # Invoked when a Team Deleted event activity is received from the connector. 
+      Team Deleted corresponds to the user deleting a team.
+      async def on_teams_team_deleted(self, team_info: TeamInfo, turn_context: TurnContext):
+     # Handle delete event.
+     ```
+     ---
 
-   ---
-
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Team restored**        | teamRestored      | OnTeamsTeamRestoredAsync    | The bot receives a notification when a team is restored after being deleted. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.       | Team |
+   | Action taken        | EventType         | Method called              | Description                | Scope |
+   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+   | **Team restored**        | teamRestored      | OnTeamsTeamRestoredAsync    | The bot receives a notification when a team is restored after being deleted. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.       | Team |
 
 1. The following code shows an example of team restored event:
 
@@ -943,21 +940,21 @@ In this article, you’ll get to know about different events and the activity ha
 
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsteamrestoredasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
 
-    ```csharp
-    protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
+     ```csharp
+     protected override async Task OnTeamsTeamrestoredAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+     {
         var heroCard = new HeroCard(text: $"{teamInfo.Name} is the team name");
         // Sends an activity to the sender of the incoming activity.
         await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-    }
-    ```
+     }
+      ```
 
    # [TypeScript](#tab/typescript9)
 
    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamrestoredevent&preserve-view=true)
 
-    ```typescript
-    export class MyBot extends TeamsActivityHandler {
+      ```typescript
+      export class MyBot extends TeamsActivityHandler {
         constructor() {
             super();
             // Invoked when a Team Restored event activity is received from the connector. Team Restored corresponds to the user restoring a team.
@@ -969,13 +966,13 @@ In this article, you’ll get to know about different events and the activity ha
                 await next();
             });
         }
-    }
-    ```
+      }
+      ```
 
    # [JSON](#tab/json9)
 
-    ```json
-    { 
+     ```json
+     { 
         "type": "conversationUpdate",
         "timestamp": "2017-02-23T19:35:56.825Z",
         "localTimestamp": "2017-02-23T12:35:56.825-07:00",
@@ -1004,29 +1001,29 @@ In this article, you’ll get to know about different events and the activity ha
             "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
             }
         }
-    }
-    ```
+     }
+     ```
 
    # [Python](#tab/python9)
 
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-team-restored&preserve-view=true)
 
-    ```python
-    # Invoked when a Team Restored event activity is received from the connector. Team Restored corresponds to the user restoring a team.
-    async def on_teams_team_restored(
-    self, team_info: TeamInfo, turn_context: TurnContext
-    ):
-    # Sends an activity to the sender of the incoming activity.
-    return await turn_context.send_activity(
-    MessageFactory.text(f"The team name is {team_info.name}")
-    )
-    ```
+     ```python
+     # Invoked when a Team Restored event activity is received from the connector. Team Restored corresponds to the user restoring a team.
+     async def on_teams_team_restored(
+     self, team_info: TeamInfo, turn_context: TurnContext
+     ):
+     # Sends an activity to the sender of the incoming activity.
+     return await turn_context.send_activity(
+     MessageFactory.text(f"The team name is {team_info.name}")
+     )
+      ```
 
    ---
 
-    | Action taken        | EventType         | Method called              | Description                | Scope |
-    | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-    | **Team archived**        | teamArchived       | OnTeamsTeamArchivedAsync    | The bot receives a notification when the team is installed and archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.       | Team |
+   | Action taken        | EventType         | Method called              | Description                | Scope |
+   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+   | **Team archived**        | teamArchived       | OnTeamsTeamArchivedAsync    | The bot receives a notification when the team is installed and archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.       | Team |
 
 1. The following code shows an example of team archived event:
 
@@ -1707,3 +1704,4 @@ When a bot encounters an error while handling different events or activities, do
 :::image type="content" source="~/assets/images/handling-error.png" alt-text="Screenshot shows you the error message response in bot conversation.":::
 
 In the development phase, it's always helpful to send meaningful messages in conversations, which provide additional details about a specific error for better debugging. However, in the production environment, you must log the errors or events to Azure Application Insights. For more information, see [add telemetry to your bot](https://aka.ms/bottelemetry).
+
