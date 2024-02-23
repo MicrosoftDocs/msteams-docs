@@ -99,6 +99,6 @@ groups:
   prompt: Select the action of the event to add to your bot.
   pivots:
   - id: conversation-event
-    title: Conversation events
+    title: Receive events
   - id: invoke-activity
     title: Invoke activities
