@@ -18,21 +18,13 @@ You can create a deep link to perform a specific task in Teams, such as to creat
 
 In this article, you’ll learn to create a deep link:
 
-- [Deep link to a workflow in Teams](#deep-link-to-a-workflow-in-teams)
-  - [Deep link to start a new chat](#deep-link-to-start-a-new-chat)
-  - [Deep link to open a meeting scheduling dialog](#deep-link-to-open-a-meeting-scheduling-dialog)
-      - [Configure deep link manually to open a meeting scheduling dialog](#configure-deep-link-manually-to-open-a-meeting-scheduling-dialog)
-      - [Configure deep link using TeamsJS library to open a meeting scheduling dialog](#configure-deep-link-using-teamsjs-library-to-open-a-meeting-scheduling-dialog)
-- [TeamsJS v2](#teamsjs-v2)
-- [TeamsJS v1](#teamsjs-v1)
-  - [Deep link to start an audio-video call with users](#deep-link-to-start-an-audio-video-call-with-users)
-      - [Configure deep link manually to start audio-video call with users](#configure-deep-link-manually-to-start-audio-video-call-with-users)
-      - [Configure deep link using TeamsJS library to start audio-video call with users](#configure-deep-link-using-teamsjs-library-to-start-audio-video-call-with-users)
-  - [Generate a deep link to share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)
-  - [Deep link to meeting side panel](#deep-link-to-meeting-side-panel)
-  - [Deep link to join a meeting](#deep-link-to-join-a-meeting)
-  - [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
-  - [Code Sample](#code-sample)
+* [Deep link to start a new chat](#deep-link-to-start-a-new-chat)<br>
+* [Deep link to open a meeting scheduling dialog](#deep-link-to-open-a-meeting-scheduling-dialog)<br>
+* [Deep link to start an audio-video call with users](#deep-link-to-start-an-audio-video-call-with-users)<br>
+* [Generate a deep link to share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)<br>
+* [Deep link to meeting side panel](#deep-link-to-meeting-side-panel)<br>
+* [Deep link to join a meeting](#deep-link-to-join-a-meeting)<br>
+* [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
 
 ## Deep link to start a new chat
 
@@ -147,12 +139,12 @@ You can configure deep links in one of the following two ways:
 
 While the use of the typed APIs of TeamsJS library is recommended, you can also use a manually configured deep link to start a call. Refer to the following formats:
 
-| Deep link | Format | Example |
-|-----------|--------|---------|
-| Make an audio call | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com` |
-| Make an audio and video call | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true` |
-|Make an audio and video call with an optional parameter source | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true&source=demoApp` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp` |  
-| Make an audio and video call to a combination of VoIP and PSTN users | `https://teams.microsoft.com/l/call/0/0?users=<user1>,4:<phonenumber>` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210` |
+| Deep link                                                            | Format                                                                                       | Example                                                                                      |
+| -------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Make an audio call                                                   | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>`                               | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com`                               |
+| Make an audio and video call                                         | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true`                | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true`                |
+| Make an audio and video call with an optional parameter source       | `https://teams.microsoft.com/l/call/0/0?users=<user1>,<user2>&withVideo=true&source=demoApp` | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com&withVideo=true&source=demoApp` |
+| Make an audio and video call to a combination of VoIP and PSTN users | `https://teams.microsoft.com/l/call/0/0?users=<user1>,4:<phonenumber>`                       | `https://teams.microsoft.com/l/call/0/0?users=joe@contoso.com,4:9876543210`                  |
   
 Following are the query parameters:
 
@@ -215,6 +207,6 @@ To invoke the Stage View through deep link from your tab, you must wrap the deep
 
 ## Code Sample
 
-| Sample name | Description | .NET |Node.js|
-|-------------|-------------|------|----|
-|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deep links for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+| Sample name                      | Description                                                                                                                                                                                         | .NET                                                                                               | Node.js                                                                                            |
+| -------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deep links for navigate to app, navigate to chat, open profile dialog and open scheduling dialog. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs) |
