@@ -528,9 +528,9 @@ When designing your card,  you can display specific elements when the card reach
 
   ```
 
-  You can define the `targetWidth` property to ensure that an element is visible when the width of the card is at least or at most of a certain value using the `atLeast` and `atMost` modifier prefixes, followed by a semicolon and actual `targetWidth` value.
+  You can set the `targetWidth` property to make an element visible when the width of the card is at least or at most of a certain value such as `"targetWidth": atLeast:Narrow` or `"targetWidth": atMost:Narrow`.
   
-  For example, in the following code, the `targetwidth` property is set to `atLeast:Narrow`. Adaptive Card is only visible when the card's width is `standard` or `wide` and isn't visible when the card's width is `veryNarrow`:
+  For example, in the following code, the `targetwidth` property is set to `atLeast:Narrow`. Adaptive Card is only visible when the card's width is standard or wide and isn't visible when the card's width is very narrow:
 
   ```json
   {
