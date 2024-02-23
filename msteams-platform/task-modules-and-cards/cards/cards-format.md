@@ -396,7 +396,7 @@ The following table lists the query parameters:
 |`displayName`     |   Name of the user     |
 |`userPrincipalName`|The user's principal name of the account in Microsoft Entra ID|
 
-Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute.  The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
+Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute. The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
@@ -494,25 +494,25 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Adaptive Card responsive layout
 
-Adaptive Cards typically maintain the style of the host app, but they have a fixed layout that remains consistent across different screen sizes. This is a challenge to design a single card layout that seamlessly adapts to desktop, mobile, and meeting chat screens.
+Adaptive Cards typically maintain the style of the host application, but they have a fixed layout that remains consistent across different screen sizes. This is a challenge to design a single card layout that seamlessly adapts to desktop, mobile, and meeting chat screens.
 
 The Adaptive Card responsive layout feature allows you to design Adaptive Cards with different layout that adapts to different screen sizes ensuring optimal display of your card.
  When you design an Adaptive Card for your app, use the `targetWidth` property to make your card responsive and provide a better experience to your users on Teams mobile or desktop, regardless of the screen size.
 
 #### Design responsive Adaptive Cards
 
-The key element to create a responsive Adaptive Card is the `targetWidth` property which allows you to control the visibility of any element by linking it to the width of the card. The `targetWidth` property lets you show or hide any element based on the card width. Set the `targetWidth` property for the required elements in an Adaptive Card to define different layouts for different card widths. The value of `targetWidth` can be `veryNarrow`, `narrow`, `standard`, or, `wide`.
+The key element to create a responsive Adaptive Card is the `targetWidth` property that allows you to control the visibility of any element by linking it to the width of the card. The `targetWidth` property lets you show or hide any element based on the card width. Set the `targetWidth` property for the required elements in an Adaptive Card to define different layouts for different card widths. You can add the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths. The value of `targetWidth` can be `veryNarrow`, `narrow`, `standard`, or, `wide`.
 
-The following table explains the valid values of `targetWidth` property:
+The following table explains the valid values of the `targetWidth` property:
 
   |Value  |Description  |
   |---------|---------|
   | `veryNarrow` | The card width on a meeting chat in desktop mode. |
   | `narrow` | The card width on a mobile phone in portrait mode. |
-  | `standard` | The card width on a mobile phone in landscape mode, a tablet in portrait mode, or a chat in desktop. This is the `default` card size value.|
-  | `wide` | The card width on a tablet in landscape mode, chat or channels in desktop with the card width as `full width`. This makes the card adjust to the container width. |
+  | `standard` | The card width on a mobile phone in landscape mode, a tablet in portrait mode, or a chat in desktop mode. This is the `default` card size value.|
+  | `wide` | The card width on a tablet in landscape mode, or a chat or channels in desktop mode has the card width as `full width`. This makes the card adjust to the container width. |
 
-  The card width on a chat pane on desktop can vary from `standard` to `wide`.
+  The card width on a chat pane in desktop mode can vary from `standard` to `wide`.
 
   When designing your card, consider the optimal layout of elements for different card widths. Use the `targetWidth` property to ensure specific elements are displayed only when the card reaches a certain width and remaining elements are hidden. See the following code sample:
 
@@ -552,7 +552,7 @@ The following table explains the valid values of `targetWidth` property:
 
   ```
 
-The following images and samples show an example of a non responsive and responsive Adaptive Cards:
+The following samples and images show an example of a non responsive and responsive Adaptive Cards:
 
 #### Sample Adaptive Card without using `targetWidth`
 
@@ -562,7 +562,7 @@ To be added
 
 **Adaptive Card designed without using `targetWidth`**
 
-:::image type="content" source="../../assets/images/Cards/non-responsive-adaptive-card.png" alt-text="Screenshot shows how adaptive card renders without the targetWidth configuration.":::
+:::image type="content" source="../../assets/images/Cards/non-responsive-adaptive-card.png" alt-text="Screenshot shows how adaptive card renders without setting the targetWidth property.":::
 
 #### Sample Adaptive Card responsive layout
 
@@ -634,7 +634,7 @@ To make a responsive Adaptive Card, your app must include the elements from the 
 
 **Responsive Adaptive Card designed using `targetWidth`**
 
-:::image type="content" source="../../assets/images/Cards/adaptive-card-responsive-layout.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth is configured to respective card widths.":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-responsive-layout.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to respective card widths.":::
 
 ### Typeahead support
 
