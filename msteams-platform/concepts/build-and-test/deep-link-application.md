@@ -12,7 +12,7 @@ ms.date: 05/04/2023
 
 > [!NOTE]
 >
-> Use the `msteams://` protocol handler to configure deep links to open in the Teams desktop client directly and skip the client selection screen. To know more about protocol handlers in Teams deep links, see [Protocol handlers in deep links](deep-links.md#protocol-handlers-in-deep-links).
+> Use the `msteams://` protocol handler to skip the client selection screen and configure deep links to open in the Teams desktop client directly. For more information, see [Protocol handlers in deep links](deep-links.md#protocol-handlers-in-deep-links).
 
 You can configure deep links to a tab, to open an app install dialog, to browse within the app, and more. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages to inform users about changes to your tab or items within your tab. Teams supports deep links to custom apps. However, if there's an app in the Microsoft Teams Store with the same app ID as the custom app ID specified in its app manifest (previously called Teams app manifest), then the deep link opens the app from the Teams Store instead of the custom app.
 
@@ -85,9 +85,9 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/<appId>");
 
 ## Deep link to browse within your app
 
-App users can browse through content in Teams from your tab using TeamsJS library. This is useful if your tab needs to connect users with other content in Teams, such as a channel, message, another tab, or open a scheduling dialog. In few instances, navigation can also be accomplished using the TeamsJS library and it's recommended to use typed capabilities of the TeamsJS library wherever possible.
+App users can browse through content in Teams from your tab using TeamsJS library. This capability is useful if your tab needs to connect users with other content in Teams, such as a channel, message, another tab, or open a scheduling dialog. In few instances, you can also accoomplish navigation using the TeamsJS library. We recommended you to use typed capabilities of the TeamsJS library wherever possible.
 
-One of the benefits of using TeamsJS, particularly for Teams app extended across Outlook and Microsoft 365, is that it's possible to check if the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. TeamsJS library organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace, you can check the returned Boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and app's UI.  
+One of the benefits of using TeamsJS, particularly for Teams app extended across Outlook and Microsoft 365, is that it's possible to check if the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. TeamsJS library organizes APIs into capabilities by way of namespaces. For example, before using an API in the `pages` namespace, you can check the returned Boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and app's UI.  
 
 For more information about capabilities and the APIs in the TeamsJS library, see [Building tabs and other hosted experiences with the TeamsJS library](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
@@ -118,7 +118,7 @@ The query parameters are:
 | `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is available only in configurable tabs with a scope of **team**. It isn't available in static tabs, which has a **personal** scope.| 19:cbe3683f25094106b826c9cada3afbe0@thread.skype |
 | `context.chatId`&emsp; | Chat ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat. | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `context.contextType`&emsp; |  Chat is the only supported `contextType` for meetings. | chat |
-|`&openInMeeting=false`| `openInMeeting` is used to control the user experience when the target tab is associated with a meeting. If user interacts with the deep link in an ongoing meeting experience, Teams opens the app in the in-meeting side panel. Set this value to `false` to always open the app in the meeting chat tab rather than the side panel, regardless of the meeting status. Teams ignores any value other than `false`. | `false` |
+|`&openInMeeting=false`| Use `openInMeeting` to control the user experience when the target tab is associated with a meeting. If user interacts with the deep link in an ongoing meeting experience, Teams opens the app in the in-meeting side panel. Set this value to `false` to always open the app in the meeting chat tab rather than the side panel, regardless of the meeting status. Teams ignores any value other than `false`. | `false` |
 
 > [!NOTE]
 >
@@ -191,13 +191,13 @@ The navigation behavior of a Teams app extended across Microsoft 365 Office is d
 1. The target that the deep link points to.
 1. The host where the Teams app is running.
 
-If the Teams app is running within the host where the deep link is targeted, your app opens directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app will first open in the browser.
+If the Teams app is running within the host where the deep link is targeted, your app opens directly within the host. However, if the Teams app is running in a different host from where the deep link is targeted, the app first opens in the browser.
 
 ## Deep link to a chat with the application
 
 You can allow app users browse to a personal chat with the application by configuring the deep link manually using the following format:
 
-`https://teams.microsoft.com/l/entity/<appId>/conversations?tenantId=<tenantId>`, where `appId` is your application ID. To know about different app IDs used see, [app ID used for different apps](#app-id-used-for-different-apps).
+`https://teams.microsoft.com/l/entity/<appId>/conversations?tenantId=<tenantId>`, where `appId` is your application ID. To know about different app IDs used see, see [App ID for different types of apps](#app-id-for-different-types-of-apps).
 
 ## Share deep link for a tab
 
@@ -310,16 +310,16 @@ By default, a deep link opens in a meeting side panel. To open a deep link direc
 
 For more information, see [deep link to a tab](#configure-deep-link-to-browse-within-your-app-manually).
 
-Deep link doesn't open in the meeting side panel in the following scenarios:
+Deep link doesn't open in the meeting side panel in the following scenarios if:
 
-* If there's no active meeting.
-* If the app doesn't have `sidePanel` context declared in the app manifest.
-* If `openInMeeting=false` is set in the deep link.
-* If deep link is selected outside of the meeting window or component.
-* If deep link doesn't match the current meeting for example, deep link is created from another meeting.
+* There's no active meeting.
+* The app doesn't have `sidePanel` context declared in the app manifest.
+* `openInMeeting=false` is set in the deep link.
+* The deep link is selected outside of the meeting window or component.
+* The deep link doesn't match the current meeting, for example, if the deep link is created from another meeting.
 
 ## Code Sample
 
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
-|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deep links for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+| Deep link consuming Subentity ID | This sample shows how to use a deep link from bot chat to tab consuming the Subentity ID. It also shows deep links for:<br>- Navigating to an app<br>- Navigating to a chat<br>- Open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
