@@ -500,18 +500,11 @@ Adaptive Card responsive layout helps you to design Adaptive Cards with differen
 
 #### Design responsive Adaptive Cards
 
-You can design a responsive Adaptive Card using the `targetWidth` property, which allows you to show or hide any element based on the card's width. You can set the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths. The following table provides the available values of the `targetwidth` property for different layouts:
-
-  |Value  |Description  |
-  |---------|---------|
-  | `veryNarrow` | Use for Adaptive Card on a desktop mode in a meeting chat. |
-  | `narrow` | Use for Adaptive Card on a mobile phone in portrait mode. |
-  | `standard` | Use for Adaptive Card  on a mobile phone in landscape mode, a tablet in portrait mode, or a chat in desktop mode. The default value is `standard`.|
-  | `wide` | Use for Adaptive Card on a tablet in landscape mode, or a chat or channels in desktop mode with the card width as `full width`. |
+You can design a responsive Adaptive Card using the `targetWidth` property, which allows you to show or hide any element based on the card's width.
 
 The following images and JSON samples show an example of Adaptive Card designed without using `targetWidth` and using `targetWidth`:
 
-* Adaptive Card designed without using `targetWidth`.
+* **Adaptive Card designed without using `targetWidth`**.
 
   [Image for non responsive adaptive card to be added.]
 
@@ -521,7 +514,7 @@ The following images and JSON samples show an example of Adaptive Card designed 
     To be added
     ```
 
-* Responsive Adaptive Card designed using `targetWidth`.
+* **Responsive Adaptive Card designed using `targetWidth`**.
 
   :::image type="content" source="../../assets/images/Cards/adaptive-card-responsive-layout.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to respective card widths.":::
 
@@ -596,6 +589,15 @@ The following images and JSON samples show an example of Adaptive Card designed 
       "version": "1.5" 
     } 
     ```
+
+You can set the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths. The following table provides the available values of the `targetwidth` property for different layouts:
+
+  |Value  |Description  |
+  |---------|---------|
+  | `veryNarrow` | Use for Adaptive Card on a desktop mode in a meeting chat. |
+  | `narrow` | Use for Adaptive Card on a mobile phone in portrait mode. |
+  | `standard` | Use for Adaptive Card  on a mobile phone in landscape mode, a tablet in portrait mode, or a chat in desktop mode. The default value is `standard`.|
+  | `wide` | Use for Adaptive Card on a tablet in landscape mode, or a chat or channels in desktop mode with the card width as `full width`. |
 
 When designing your card,  you can display specific elements when the card reaches a certain width and hide the remaining elements. For example:
 
