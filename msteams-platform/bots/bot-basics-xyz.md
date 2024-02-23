@@ -1654,6 +1654,8 @@ It's important to know that new events can be added anytime in the future and yo
 
 # [Invoke activities](#tab/activities)
 
+In this article, you’ll get to know about different invoke activities. If you would like to know about different events with activity handlers, select conversation events at the start of this article.
+
 ---
 
 ::: zone-end
