@@ -12,7 +12,7 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 * Enable discovery of your tab pages in an iFrame by utilizing X-Frame-Options and [Content-Security-Policy HTTP](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) response headers.
 
-* For security reasons, ensure all Teams apps are hosted on HTTPS endpoints.
+* For security reasons, ensure all Teams app pages are hosted on HTTPS endpoints.
 
 * Set Content Security Policy headers to allow Teams and any other [host applications](../../m365-apps/overview.md) of your app:
 
