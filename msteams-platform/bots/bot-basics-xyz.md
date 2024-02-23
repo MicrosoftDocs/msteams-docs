@@ -6,7 +6,6 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.date: 01/22/2023
-zone_pivot_groups: bot-handler-activities
 ---
 
 # Event-driven conversations with activity handlers
@@ -151,23 +150,22 @@ In this article, you’ll get to know about different events and the activity ha
 
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-created&preserve-view=true)
 
-   ```python
-   async def on_teams_channel_created(
-   self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
-   ):
-   # Sends a message activity to the sender of the incoming activity.
-   return await turn_context.send_activity(
-   MessageFactory.text(
-   "The new channel is {channel_info.name}. The channel id is {channel_info.id}"
-   )
-   )
-   ```
+     ```python
+     async def on_teams_channel_created(
+     self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+     ):
+     # Sends a message activity to the sender of the incoming activity.
+     return await turn_context.send_activity(
+     MessageFactory.text(
+     "The new channel is {channel_info.name}. The channel id is {channel_info.id}"
+     )
+     )
+     ```
+     ---
 
-   ---
-
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
+ | Action taken        | EventType         | Method called              | Description                | Scope |
+ | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+ | **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
 
 1. The following code shows an example of channel renamed event:
 
@@ -246,20 +244,19 @@ In this article, you’ll get to know about different events and the activity ha
 
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-renamed&preserve-view=true)
 
-   ```python
-   async def on_teams_channel_renamed(
-   self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
-   ):
-   return await turn_context.send_activity(
-   MessageFactory.text(f"The new channel name is {channel_info.name}")
-   )
-   ```
+     ```python
+      async def on_teams_channel_renamed(
+      self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+       ):
+      return await turn_context.send_activity(
+      MessageFactory.text(f"The new channel name is {channel_info.name}")
+      )
+     ```
+     ---
 
-   ---
-
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Channel deleted**     | channelDeleted    | OnTeamsChannelDeletedAsync | The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed. | Team |
+ | Action taken        | EventType         | Method called              | Description                | Scope |
+ | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+ | **Channel deleted**     | channelDeleted    | OnTeamsChannelDeletedAsync | The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed. | Team |
 
 1. The following code shows an example of channel deleted event:
 
@@ -268,39 +265,39 @@ In this article, you’ll get to know about different events and the activity ha
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschanneldeletedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L347)
 
-   ```csharp
-    protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
+     ```csharp
+      protected override async Task OnTeamsChannelDeletedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+      {
         var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel deleted");
         await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-    }
+      }
 
-   ```
+     ```
 
    # [TypeScript](#tab/typescript3)
 
    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschanneldeletedevent&preserve-view=true)
 
-   ```typescript
-    export class MyBot extends TeamsActivityHandler {
-        constructor() {
-            super();
-            this.onTeamsChannelDeletedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-                const card = CardFactory.heroCard('Channel Deleted', `${channelInfo.name} is the Channel deleted`);
-                const message = MessageFactory.attachment(card);
-                // Sends a message activity to the sender of the incoming activity.
-                await turnContext.sendActivity(message);
-                await next();
-            });
-        }
-    }
+     ```typescript
+         export class MyBot extends TeamsActivityHandler {
+         constructor() {
+             super();
+             this.onTeamsChannelDeletedEvent(async (channelInfo: ChannelInfo, teamInfo:  TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+                 const card = CardFactory.heroCard('Channel Deleted', `${channelInfo.name} is the Channel deleted`);
+                 const message = MessageFactory.attachment(card);
+                 // Sends a message activity to the sender of the incoming activity.
+                 await turnContext.sendActivity(message);
+                 await next();
+             });
+         }
+     }
 
-   ```
+     ```
 
    # [JSON](#tab/json3)
 
-   ```json
-    {
+     ```json
+      {
         "type": "conversationUpdate",
         "timestamp": "2017-02-23T19:34:07.478Z",
         "localTimestamp": "2017-02-23T12:34:07.478-07:00",
@@ -332,8 +329,8 @@ In this article, you’ll get to know about different events and the activity ha
                 "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
             }
         }
-    }
-   ```
+     }
+     ```
 
    # [Python](#tab/python3)
 
@@ -341,21 +338,21 @@ In this article, you’ll get to know about different events and the activity ha
 
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?&preserve-view=true)
 
-   ```python
-    async def on_teams_channel_deleted(
-     self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
-    ):
-     # Sends a message activity to the sender of the incoming activity.
-     return await turn_context.send_activity(
-      MessageFactory.text(f"The deleted channel is {channel_info.name}")
-     )
-   ```
+     ```python
+        async def on_teams_channel_deleted(
+        self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+        ):
+        # Sends a message activity to the sender of the incoming activity.
+        return await turn_context.send_activity(
+        MessageFactory.text(f"The deleted channel is {channel_info.name}")
+        )
+     ```
 
-   ---
+     ---
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Channel restored**    | channelRestored    | OnTeamsChannelRestoredAsync | The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed. | Team |
+ | Action taken        | EventType         | Method called              | Description                | Scope |
+ | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+ | **Channel restored**    | channelRestored    | OnTeamsChannelRestoredAsync | The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed. | Team |
 
 1. The following code shows an example of channel restored event:
 
@@ -364,23 +361,22 @@ In this article, you’ll get to know about different events and the activity ha
    * [SDK refernce](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
-    ```csharp
-    protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-    {
+     ```csharp
+      protected override async Task OnTeamsChannelRestoredAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+     {
         var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel restored.");
         await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-    }
+     }
 
-    ```
+     ```
 
    # [TypeScript](#tab/typescript4)
 
    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrestoredevent&preserve-view=true)
 
-    ```typescript
-
-    export class MyBot extends TeamsActivityHandler {
-        constructor() {
+      ```typescript
+         export class MyBot extends TeamsActivityHandler {
+          constructor() {
             super();
             this.onTeamsChannelRestoredEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
                 const card = CardFactory.heroCard('Channel Restored', `${channelInfo.name} is the Channel restored`);
@@ -390,14 +386,14 @@ In this article, you’ll get to know about different events and the activity ha
                 await next();
             });
         }
-    }
+      }
 
-    ```
+      ```
 
    # [JSON](#tab/json4)
 
-    ```json
-    {
+      ```json
+      {
         "type": "conversationUpdate",
         "timestamp": "2017-02-23T19:34:07.478Z",
         "localTimestamp": "2017-02-23T12:34:07.478-07:00",
@@ -429,26 +425,25 @@ In this article, you’ll get to know about different events and the activity ha
                 "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
             }
         }
-    }
-    ```
+      }
+      ```
 
    # [Python](#tab/python4)
 
    * [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-restored&preserve-view=true)
 
-    ```python
-    async def on_teams_channel_restored(
-    self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
-    ):
-    # Sends a message activity to the sender of the incoming activity.
-    return await turn_context.send_activity(
-    MessageFactory.text(
-    f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
-    )
-    )
-    ```
-
-   ---
+      ```python
+       async def on_teams_channel_restored(
+       self, channel_info: ChannelInfo, team_info: TeamInfo, turn_context: TurnContext
+      ):
+      # Sends a message activity to the sender of the incoming activity.
+      return await turn_context.send_activity(
+      MessageFactory.text(
+      f"The restored channel is {channel_info.name}. The channel id is {channel_info.id}"
+      )
+      )
+      ```
+     ---
 
 ## Members event
 
