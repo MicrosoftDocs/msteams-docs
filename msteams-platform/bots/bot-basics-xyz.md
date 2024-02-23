@@ -1,7 +1,7 @@
 ---
 title: Event-driven conversations with activity handlers
 author: surbhigupta
-description: Learn about Microsoft Teams events and activity handlers for bot messages, channels, teams, members, mentions, auth, card actions using Microsoft Bot Framework SDK.
+description: Learn about Microsoft Teams events, activity handlers and invoke activities for bot messages, channels, teams, members, mentions, auth, card actions using Microsoft Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-npaladugu
@@ -11,13 +11,13 @@ zone_pivot_groups: bot-handler-activities
 
 # Event-driven conversations with activity handlers
 
-Events and handlers are two related concepts in a bot workflow. An event in bot workflow depicts an invoke activity that triggers the bot to perform a certain action or task.
+Events and handlers are two related concepts in a bot workflow. An event in bot workflow depicts an activity that triggers the bot to perform a certain action or task, which are invoke activities.
 
 Activity handlers are functions or methods that contain the bot logic for how the bot should handle different types of events. For example, when a user reacts to the bot message, that is an event. The bot has a handler for message events, which defines what the bot should do or say in response to the user’s action.
 
 :::image type="content" source="../assets/images/bots/bot-event-activity-flowchart.png" alt-text="Diagram that shows the flow of the event flow from activity handlers to bot logic." lightbox="../assets/images/bots/bot-event-activity-flowchart.png":::
 
-To create a event-driven conversations, you need to define the handlers that the bot will use when the event is occured.
+To create a event-driven conversations, you need to define the [handlers](#events-with-activity-handlers) that the bot will use when the event is occured. You can also add invoke activity to the handler logic. An [invoke activity](#invoke-activity) is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
 
 ::: zone pivot="conversation-event"
 
