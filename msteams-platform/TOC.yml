@@ -126,6 +126,9 @@
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
+    - name: App notifications
+      href: concepts/design/design-app-notification.md
+      displayName: notification, notify
 - name: Tools and SDKs
   items:
   - name: Overview
