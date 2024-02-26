@@ -1186,15 +1186,50 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
 
      ---
 
-     Now that you've worked with the conversation update events, you can understand the message reaction events that occur for different reactions to a message.
+## Message events
 
-     `messageEdit`
+1. **Edit message**: 
+   
+   # [C#](#tab/dotnet16)
 
-     `OnTeamsMessageUndeleteAsync`
+     ```csharp
+      protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+      {
+        var replyActivity = MessageFactory.Text("Message is updated");
+        // Sends an activity to the sender of the incoming activity.
+        await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+     }
+      ```
 
-     `OnTeamsMessageSoftDeleteAsync`
+1. **Message restore**:
 
-     The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
+   # [C#](#tab/dotnet17)
+
+   ```csharp
+    protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
+        {
+            var replyActivity = MessageFactory.Text("Message is undeleted");
+            // Sends an activity to the sender of the incoming activity.
+            await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+        }
+   ```
+
+1. **Message delete**: 
+    
+    # [C#](#tab/dotnet18)
+
+   ```csharp
+     protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken)
+        {
+            var replyActivity = MessageFactory.Text("Message is soft deleted");
+            // Sends an activity to the sender of the incoming activity.
+            await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+        }
+   ```
+
+### Message reaction events
+
+The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
      | EventType       | Payload object   | Description                                                             | Scope |
      | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
@@ -1456,7 +1491,7 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
 
      ---
 
-   ## Installation events
+## Installation events
 
    ### Installation update event
 
@@ -1600,23 +1635,21 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
 
      ---
 
-     ### Uninstall behavior for personal app with bot
+### Uninstall behavior for personal app with bot
 
-      When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
+When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
 
-      :::image type="content" source="~/assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="~/assets/images/bots/uninstallbot.png":::
+:::image type="content" source="~/assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="~/assets/images/bots/uninstallbot.png":::
 
-     ### Event handling for install and uninstall events
+### Event handling for install and uninstall events
 
-      When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
+When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
 
-      * You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
+* You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
 
-      * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
+* You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
-      It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
-
-      ---
+  It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
    
 # [Invoke activities](#tab/activities)
 
@@ -1634,13 +1667,66 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
      | Invoke types| Handler| Description|
      | :--------------------  | :--------------------- | :-------------------- |
      | CardAction.Invoke | `OnTeamsCardActionInvokeAsync` | When the connector receives a card action invoke activity, this method is invoked. |
+
+     | | | |
+     | ---|--- |---|
      | fileConsent/invoke | `OnTeamsFileConsentAcceptAsync` | When a user accepts a file consent card, this method is invoked. |
+      ```csharp
+       async handleTeamsFileConsentAccept(context, fileConsentCardResponse) {
+       //Write your logic here
+       }
+      ```
+
+     | | | |
+     | ---|--- |---|
      | fileConsent/invoke  | `OnTeamsFileConsentAsync` | When the connector receives a file consent card activity, this method is invoked. |
      | fileConsent/invoke  | `OnTeamsFileConsentDeclineAsync` | When a user declines a file consent card, this method is invoked. |
+      ```csharp
+        protected override async Task OnTeamsFileConsentDeclineAsync(ITurnContext<IInvokeActivity> turnContext, FileConsentCardResponse fileConsentCardResponse, CancellationToken cancellationToken)
+        {
+           //Write your logic here
+        }
+      ```
+
+     | | | |
+     | ---|--- |---|
      | actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | When the connector receives a connector card for Microsoft 365 Groups action activity, this method is invoked. |
+     ```csharp
+       protected override async Task OnTeamsO365ConnectorCardActionAsync(ITurnContext<IInvokeActivity> turnContext, O365ConnectorCardActionQuery query, CancellationToken cancellationToken)
+        {
+            //Write your logic here
+        }
+     ```
+     
+     | | | |
+     | ---|--- |---|
      | signin/verifyState  | `OnTeamsSigninVerifyStateAsync` | When the connector receives a `signIn` verify state activity, this method is invoked. |
+     ```csharp
+       protected override async Task OnTeamsSigninVerifyStateAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+        {
+            //Write your logic here
+        }
+     ```
+
+     | | | |
+     | ---|--- |---|
      | task/fetch  | `OnTeamsTaskModuleFetchAsync` | You can override this method in a derived class to provide logic when a dialog (referred as task module in TeamsJS v1.x) is fetched. |
+     ```csharp
+       protected override async Task<TaskModuleResponse> OnTeamsTaskModuleFetchAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
+        {
+            //Write your logic here
+        }
+     ```
+     
+     | | | |
+     | ---|--- |---|
      | task/submit  | `OnTeamsTaskModuleSubmitAsync`  | You can override this method in a derived class to provide logic when a dialog is submitted. |
+      ```csharp
+       protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(ITurnContext<IInvokeActivity> turnContext, TaskModuleRequest taskModuleRequest, CancellationToken cancellationToken)
+        {
+            // Write your logic here
+        }
+      ```
 
    # [JavaScript](#tab/javascript15)
 
@@ -1649,13 +1735,61 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
      | Invoke types                    | Handler                              | Description                                                  |
      | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
      | CardAction.Invoke               | `handleTeamsCardActionInvoke`       | This method is invoked when a card action invoke activity is received from the connector. |
+
      | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | This method is invoked when the user accepts a file consent card. |
+     ```javascript
+       protected override async Task OnTeamsFileConsentAcceptAsync(ITurnContext<IInvokeActivity> turnContext, FileConsentCardResponse fileConsentCardResponse, CancellationToken cancellationToken)
+        {
+            //Write your logic here
+        }
+     ```
+
+     | | | |
+     | ---|--- |---|
      | fileConsent/invoke              | `handleTeamsFileConsent`            | This method is invoked when a file consent card activity is received from the connector. |
      | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | This method is invoked when the user declines a file consent card. |
+     ```javascript
+     async handleTeamsFileConsentDecline(context, fileConsentCardResponse) {
+        // Write your logic here
+    }
+     ```
+     | | | |
+     | ---|--- |---|
      | actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
+     ```javascript
+      async handleTeamsO365ConnectorCardAction(context, query) {
+      // Write your logic here
+      }
+     ```
+
+     | | | |
+     | ---|--- |---|
      | signin/verifyState              | `handleTeamsSigninVerifyState`      | This method is invoked when a `signIn` verify state activity is received from the connector. |
+     ```javascript
+       async handleTeamsSigninVerifyState(context, state) {
+        await this.dialog.run(context, this.dialogState);
+      }
+   
+     ```
+
+     | | | |
+     | ---|--- |---|
      | task/fetch                      | `handleTeamsTaskModuleFetch`        | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
+     ```javascript
+     handleTeamsTaskModuleFetch(context, request) {
+            const Id = request.data.Id;
+             // Write your logic here
+        }
+     ```
+
+     | | | |
+     | ---|--- |---|
      | task/submit                     | `handleTeamsTaskModuleSubmit`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
+     ```javascript
+       async handleTeamsTaskModuleSubmit(context, taskModuleRequest) {
+        // Write your logic here
+      }
+     ```
 
    # [Python](#tab/python15)
 
@@ -1665,14 +1799,51 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
      | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
      | CardAction.Invoke               | `on_teams_card_action_invoke`       | This method is invoked when a card action invoke activity is received from the connector. |
      | fileConsent/invoke              | `on_teams_file_consent_accept`      | This method is invoked when the user accepts a file consent card. |
+      ```python
+       async def on_teams_file_consent_accept(
+            self,
+            turn_context: TurnContext,
+            file_consent_card_response: FileConsentCardResponse
+         );
+        // Write your logic here
+        
+      ```
+
+     | | | |
+     | ---|--- |---|
      | fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
      | fileConsent/invoke              | `on_teams_file_consent_decline`     | This method is invoked when the user declines a file consent card. |
+     ```python
+     async def on_teams_file_consent_decline(
+            self,
+            turn_context: TurnContext,
+            file_consent_card_response: FileConsentCardResponse
+    ):
+       // Write your logic here
+     
+      ```
+
+     | | | |
+     | ---|--- |---|
      | actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
      | signin/verifyState              | `on_teams_signin_verify_state`      | This method is invoked when a `signIn` verify state activity is received from the connector. |
      | task/fetch                      | `on_teams_task_module_fetch`        | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
-     | task/submit                     | `on_teams_task_module_submit`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
-
+     ```python
+       async def on_teams_task_module_fetch(
+        self, turn_context: TurnContext, task_module_request: TaskModuleRequest
+    ) -> TaskModuleResponse:
+        // Write you logic here
+     ```
      
+     | | | |
+     | ---|--- |---|
+     | task/submit                     | `on_teams_task_module_submit`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
+     ```python
+        async def on_teams_task_module_submit(
+        self, turn_context: TurnContext, task_module_request: TaskModuleRequest
+        ) -> TaskModuleResponse:
+        // Write your logic here
+     ```
 
      The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
