@@ -18,8 +18,6 @@ Activity handlers are functions or methods that contain the bot logic for how th
 
 To create a event-driven conversations, you need to define the handlers that the bot will use when the event is occured. You can also add invoke activity to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
 
-In this article, you’ll get to know about different events and the activity handlers associated with those events. If you would like to know about invoke activities, select invoke activities at the start of this article.
-
 # [Receive events](#tab/events)
 
 ## Events with activity handlers
@@ -65,11 +63,9 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
 ## Channel events
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Channel created**     | channelCreated    | OnTeamsChannelCreatedAsync | The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed. | Team |
-
-1. The following code shows an example of channel created event:
+1.  **Channel created**: The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed in the `Team` scope.
+   
+   The following code shows an example of channel created event:
 
    # [C#](#tab/dotnet1)
 
@@ -163,11 +159,10 @@ The `conversationUpdate` event is sent to your bot when it receives information 
      ```
      ---
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
-
-1. The following code shows an example of channel renamed event:
+1. **Channel renamed**: The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed in the `Team` scope.
+   
+   
+   The following code shows an example of channel renamed event:
 
    # [C#](#tab/dotnet2)
 
@@ -254,11 +249,9 @@ The `conversationUpdate` event is sent to your bot when it receives information 
      ```
      ---
 
-   | Action taken        | EventType         | Method called              | Description                | Scope |
-   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-   | **Channel deleted**     | channelDeleted    | OnTeamsChannelDeletedAsync | The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed. | Team |
+1. **Channel deleted**: The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed in the `Team` scope..
 
-1. The following code shows an example of channel deleted event:
+   The following code shows an example of channel deleted event:
 
    # [C#](#tab/dotnet3)
 
@@ -350,11 +343,9 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
      ---
 
-     | Action taken        | EventType         | Method called              | Description                | Scope |
-     | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-     | **Channel restored**    | channelRestored    | OnTeamsChannelRestoredAsync | The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed. | Team |
-
-1. The following code shows an example of channel restored event:
+1. **Channel restored**: The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed in the `Team` scope.
+   
+   The following code shows an example of channel restored event:
 
    # [C#](#tab/dotnet4)
 
