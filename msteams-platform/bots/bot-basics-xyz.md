@@ -1231,9 +1231,9 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
 
 The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
 
-     | EventType       | Payload object   | Description                                                             | Scope |
-     | --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-     | **messageReaction** | reactionsAdded   |`{WIP}`| All   |
+| EventType       | Payload object   | Description                                                             | Scope |
+| --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
+| **messageReaction** | reactionsAdded   |`{WIP}`| All   |
 
 1. The following code shows an example of reactions to a bot message:
 
@@ -1493,25 +1493,25 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 ## Installation events
 
-   ### Installation update event
+### Installation update event
 
-    The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
+The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
 
-    > [!NOTE]
-    > When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
+> [!NOTE]
+> When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
 
-    ### Install update event
+### Install update event
 
-    Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
+Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
-    Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
+Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
 
-    In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
+In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
 
-    ![Create a selected channel](~/assets/videos/addteam.gif)
+![Create a selected channel](~/assets/videos/addteam.gif)
 
-    > [!NOTE]
-    > The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
+> [!NOTE]
+> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
 
    # [C#](#tab/dotnet14)
 
@@ -1615,7 +1615,7 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
             }
         },
         "action": "add"
-        }
+        }}
      ```
 
    # [Python](#tab/python14)
@@ -1668,7 +1668,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
      | :--------------------  | :--------------------- | :-------------------- |
      | CardAction.Invoke | `OnTeamsCardActionInvokeAsync` | When the connector receives a card action invoke activity, this method is invoked. |
 
-     | | | |
+     |x | y| z|
      | ---|--- |---|
      | fileConsent/invoke | `OnTeamsFileConsentAcceptAsync` | When a user accepts a file consent card, this method is invoked. |
       ```csharp
@@ -1677,7 +1677,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
        }
       ```
 
-     | | | |
+     | x|y |z |
      | ---|--- |---|
      | fileConsent/invoke  | `OnTeamsFileConsentAsync` | When the connector receives a file consent card activity, this method is invoked. |
      | fileConsent/invoke  | `OnTeamsFileConsentDeclineAsync` | When a user declines a file consent card, this method is invoked. |
@@ -1688,7 +1688,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
       ```
 
-     | | | |
+     | x| y|z |
      | ---|--- |---|
      | actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | When the connector receives a connector card for Microsoft 365 Groups action activity, this method is invoked. |
      ```csharp
@@ -1698,7 +1698,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
      ```
      
-     | | | |
+     |x |y | z|
      | ---|--- |---|
      | signin/verifyState  | `OnTeamsSigninVerifyStateAsync` | When the connector receives a `signIn` verify state activity, this method is invoked. |
      ```csharp
@@ -1708,7 +1708,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
      ```
 
-     | | | |
+     |x|y|z|
      | ---|--- |---|
      | task/fetch  | `OnTeamsTaskModuleFetchAsync` | You can override this method in a derived class to provide logic when a dialog (referred as task module in TeamsJS v1.x) is fetched. |
      ```csharp
@@ -1718,7 +1718,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
      ```
      
-     | | | |
+     | x| y| z|
      | ---|--- |---|
      | task/submit  | `OnTeamsTaskModuleSubmitAsync`  | You can override this method in a derived class to provide logic when a dialog is submitted. |
       ```csharp
@@ -1744,7 +1744,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
      ```
 
-     | | | |
+     | x|y | z|
      | ---|--- |---|
      | fileConsent/invoke              | `handleTeamsFileConsent`            | This method is invoked when a file consent card activity is received from the connector. |
      | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | This method is invoked when the user declines a file consent card. |
@@ -1753,7 +1753,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         // Write your logic here
     }
      ```
-     | | | |
+     | x|y |z |
      | ---|--- |---|
      | actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
      ```javascript
@@ -1762,7 +1762,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
       }
      ```
 
-     | | | |
+     | x|y |z |
      | ---|--- |---|
      | signin/verifyState              | `handleTeamsSigninVerifyState`      | This method is invoked when a `signIn` verify state activity is received from the connector. |
      ```javascript
@@ -1772,7 +1772,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
    
      ```
 
-     | | | |
+     |x |y |z |
      | ---|--- |---|
      | task/fetch                      | `handleTeamsTaskModuleFetch`        | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
      ```javascript
@@ -1782,7 +1782,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
      ```
 
-     | | | |
+     |x | y| z|
      | ---|--- |---|
      | task/submit                     | `handleTeamsTaskModuleSubmit`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
      ```javascript
@@ -1809,7 +1809,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         
       ```
 
-     | | | |
+     |x |y | z|
      | ---|--- |---|
      | fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
      | fileConsent/invoke              | `on_teams_file_consent_decline`     | This method is invoked when the user declines a file consent card. |
@@ -1823,7 +1823,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
      
       ```
 
-     | | | |
+     | x| y| z|
      | ---|--- |---|
      | actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
      | signin/verifyState              | `on_teams_signin_verify_state`      | This method is invoked when a `signIn` verify state activity is received from the connector. |
@@ -1835,7 +1835,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         // Write you logic here
      ```
      
-     | | | |
+     | x| y| z|
      | ---|--- |---|
      | task/submit                     | `on_teams_task_module_submit`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
      ```python
