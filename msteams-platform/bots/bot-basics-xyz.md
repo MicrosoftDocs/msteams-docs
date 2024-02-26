@@ -70,15 +70,15 @@ The `conversationUpdate` event is sent to your bot when it receives information 
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L335)
 
-   ```csharp
-   protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-   {
-    var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
-    // Sends an activity to the sender of the incoming activity.
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-   }
-
-   ```
+     ```csharp
+       protected override async Task OnTeamsChannelCreatedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+       {
+        var heroCard = new HeroCard(text: $"{channelInfo.Name} is the Channel created");
+        // Sends an activity to the sender of the incoming activity.
+        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+       }
+    
+      ```
 
    # [TypeScript](#tab/typescript1)
 
@@ -86,59 +86,59 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelcreatedevent&preserve-view=true)
 
-   ```typescript
-   export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-            const card = CardFactory.heroCard('Channel Created', `${channelInfo.name} is the Channel created`);
-            const message = MessageFactory.attachment(card);
-            // Sends a message activity to the sender of the incoming activity.
-            await turnContext.sendActivity(message);
-            await next();
-        });
-    }
-   }
-
-   ```
+     ```typescript
+       export class MyBot extends TeamsActivityHandler {
+        constructor() {
+            super();
+            this.onTeamsChannelCreatedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+                const card = CardFactory.heroCard('Channel Created', `${channelInfo.name} is the Channel created`);
+                const message = MessageFactory.attachment(card);
+                // Sends a message activity to the sender of the incoming activity.
+                await turnContext.sendActivity(message);
+                await next();
+            });
+        }
+       }
+    
+     ```
 
    # [JSON](#tab/json1)
 
-   ```json
-   {
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:34:07.478Z",
-    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
-    "id": "f:dd6ec311",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-    "from": {
-        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
-    },
-    "conversation": {
-        "isGroup": true,
-        "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-    },
-    "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
-    },
-    "channelData": {
-        "channel": {
-            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
-            "name": "FunDiscussions"
+     ```json
+       {
+        "type": "conversationUpdate",
+        "timestamp": "2017-02-23T19:34:07.478Z",
+        "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+        "id": "f:dd6ec311",
+        "channelId": "msteams",
+        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+        "from": {
+            "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
         },
-        "team": {
+        "conversation": {
+            "isGroup": true,
+            "conversationType": "channel",
             "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
         },
-        "eventType": "channelCreated",
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        "recipient": {
+            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+            "name": "SongsuggesterBot"
+        },
+        "channelData": {
+            "channel": {
+                "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+                "name": "FunDiscussions"
+            },
+            "team": {
+                "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            },
+            "eventType": "channelCreated",
+            "tenant": {
+                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            }
         }
-    }
-   }
-   ```
+       }
+      ```
 
    # [Python](#tab/python1)
 
@@ -164,71 +164,71 @@ The `conversationUpdate` event is sent to your bot when it receives information 
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrenamedasync?view=botbuilder-dotnet-stable&preserve-view=true)
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L341)
 
-   ```csharp
-   protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-   {
-    var heroCard = new HeroCard(text: $"{channelInfo.Name} is the new Channel name");
-    // Sends an activity to the sender of the incoming activity.
-    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-   }
-
-   ```
+     ```csharp
+       protected override async Task OnTeamsChannelRenamedAsync(ChannelInfo channelInfo, TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+       {
+        var heroCard = new HeroCard(text: $"{channelInfo.Name} is the new Channel name");
+        // Sends an activity to the sender of the incoming activity.
+        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+       }
+    
+     ```
 
    # [TypeScript](#tab/typescript2)
 
    * [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamschannelrenamedevent&preserve-view=true)
 
-   ```typescript
-   export class MyBot extends TeamsActivityHandler {
-    constructor() {
-        super();
-        this.onTeamsChannelRenamedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-            const card = CardFactory.heroCard('Channel Renamed', `${channelInfo.name} is the new Channel name`);
-            const message = MessageFactory.attachment(card);
-            // Sends a message activity to the sender of the incoming activity.
-            await turnContext.sendActivity(message);
-            await next();
-        });
-    }
-   ```
+       ```typescript
+       export class MyBot extends TeamsActivityHandler {
+        constructor() {
+            super();
+            this.onTeamsChannelRenamedEvent(async (channelInfo: ChannelInfo, teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+                const card = CardFactory.heroCard('Channel Renamed', `${channelInfo.name} is the new Channel name`);
+                const message = MessageFactory.attachment(card);
+                // Sends a message activity to the sender of the incoming activity.
+                await turnContext.sendActivity(message);
+                await next();
+            });
+        }
+       ```
 
    # [JSON](#tab/json2)
 
-   ```json
-   {
-    "type": "conversationUpdate",
-    "timestamp": "2017-02-23T19:34:07.478Z",
-    "localTimestamp": "2017-02-23T12:34:07.478-07:00",
-    "id": "f:dd6ec311",
-    "channelId": "msteams",
-    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-    "from": {
-        "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
-    },
-    "conversation": {
-        "isGroup": true,
-        "conversationType": "channel",
-        "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
-    },
-    "recipient": {
-        "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
-        "name": "SongsuggesterBot"
-    },
-    "channelData": {
-        "channel": {
-            "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
-            "name": "PhotographyUpdates"
+       ```json
+       {
+        "type": "conversationUpdate",
+        "timestamp": "2017-02-23T19:34:07.478Z",
+        "localTimestamp": "2017-02-23T12:34:07.478-07:00",
+        "id": "f:dd6ec311",
+        "channelId": "msteams",
+        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+        "from": {
+            "id": "29:1wR7IdIRIoerMIWbewMi75JA3scaMuxvFon9eRQW2Nix5loMDo0362st2IaRVRirPZBv1WdXT8TIFWWmlQCizZQ"
         },
-        "team": {
+        "conversation": {
+            "isGroup": true,
+            "conversationType": "channel",
             "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
         },
-        "eventType": "channelRenamed",
-        "tenant": {
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+        "recipient": {
+            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+            "name": "SongsuggesterBot"
+        },
+        "channelData": {
+            "channel": {
+                "id": "19:6d97d816470f481dbcda38244b98689a@thread.skype",
+                "name": "PhotographyUpdates"
+            },
+            "team": {
+                "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            },
+            "eventType": "channelRenamed",
+            "tenant": {
+                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            }
         }
-    }
-   }
-   ```
+       }
+       ```
 
    # [Python](#tab/python2)
 
