@@ -157,9 +157,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
      )
      ```
      ---
-
 1. **Channel renamed**: The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed in the `Team` scope.
-   
    
    The following code shows an example of channel renamed event:
 
@@ -247,7 +245,6 @@ The `conversationUpdate` event is sent to your bot when it receives information 
       )
      ```
      ---
-
 1. **Channel deleted**: The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed in the `Team` scope..
 
    The following code shows an example of channel deleted event:
@@ -339,9 +336,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
         MessageFactory.text(f"The deleted channel is {channel_info.name}")
         )
      ```
-
      ---
-     
 1. **Channel restored**: The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed in the `Team` scope.
    
    The following code shows an example of channel restored event:
