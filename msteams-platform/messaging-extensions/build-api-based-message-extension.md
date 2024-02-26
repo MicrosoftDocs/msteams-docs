@@ -81,7 +81,7 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 </details>
 
-You can create an API-based message extension using Developer Portal for Teams, Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
+You can create an API-based message extension using Developer Portal for Teams, Visual Studio Code, Teams Toolkit command line interface (CLI), or Visual Studio.
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
@@ -188,7 +188,7 @@ To test your API-based message extension created in the Developer Portal for Tea
 > [!NOTE]
 > Teams Toolkit support for API-based message extension is available only in Teams Toolkit pre-release version. Before you get started, ensure that you've installed a [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version)
 
-To build am API-based message extension using Visual Studio Code, follow these steps:
+To build am API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
@@ -248,7 +248,7 @@ To build am API-based message extension using Visual Studio Code, follow these s
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
 
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
-1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window.
+1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select your message extension from the list and enter a search command in the search box.
 1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
@@ -260,6 +260,8 @@ To build am API-based message extension using Visual Studio Code, follow these s
 :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
 # [Teams Toolkit CLI](#tab/teams-toolkit-cli)
+
+To create an API-based message extension using Teams Toolkit CLI, follow these steps:
 
 1. Go to **Command Prompt**.
 

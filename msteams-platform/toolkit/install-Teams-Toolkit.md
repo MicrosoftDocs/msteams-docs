@@ -13,6 +13,8 @@ ms.date: 07/29/2022
 >
 > The latest version of Teams Toolkit comes with many new app development features and recommend to use Teams Toolkit v5 for building your Teams app.
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+
 This section helps you to know about the prerequisites, install Teams Toolkit for Visual Studio Code, and install a different version of Teams Toolkit.
 
 ## Prerequisites

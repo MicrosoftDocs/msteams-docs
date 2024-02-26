@@ -10,6 +10,8 @@ ms.date: 11/29/2021
 
 # Deploy Teams app to the cloud using Microsoft Visual Studio Code
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+
 Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
 You can deploy to the following types of cloud resources:

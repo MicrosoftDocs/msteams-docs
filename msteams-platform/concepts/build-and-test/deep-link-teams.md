@@ -15,6 +15,7 @@ You can create a deep link to a Teams chat, such as to start a new chat, browse 
 In this article, you’ll learn to create a deep link:
 
 * [To start a new chat](#deep-link-to-start-a-new-chat)
+* [To navigate to a chat](#deep-link-to-navigate-to-a-chat)
 * [To navigate to channel conversation](#deep-links-to-navigate-to-channel-conversation)
 * [To navigate to chat messages](#deep-links-to-navigate-to-chat-messages)
 * [To file in a channel](#generate-deep-links-to-file-in-a-channel)
@@ -60,6 +61,16 @@ if(chat.isSupported()) {
 else { /* handle case where capability isn't supported */ }
 ```
 
+## Deep link to navigate to a chat
+
+To navigate to a specific chat conversation in Teams, use the following deep link format:
+
+`https://teams.microsoft.com/l/chat/<chatId>/conversations`
+
+The query parameter is `chatId`, which represents chat ID of the conversation. The supported format for `chatId` is 19:xxx.
+
+Example: `https://teams.microsoft.com/l/chat/19:c6d70e392a384916c3262b15406d763e@thread.v2/conversations`
+
 ## Deep links to navigate to channel conversation
 
 You can use the following deep link format to go to a particular conversation within channel thread:
@@ -90,7 +101,7 @@ Example: `https://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f02
 
 The query parameters are:
 
-* `chatId`: ChatID of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
+* `chatId`: Chat ID of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.</br>
    Apps can read a chat ID through app context in Teams, incoming payload to bot, or through [Microsoft Graph APIs](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
    > [!NOTE]
    > For one-on-one chats with bot, the incoming payload to bot contains the conversation ID in a:xxx format.
