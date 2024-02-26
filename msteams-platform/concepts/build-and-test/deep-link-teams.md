@@ -67,7 +67,7 @@ To navigate to a specific chat conversation in Teams, use the following deep lin
 
 `https://teams.microsoft.com/l/chat/<chatId>/conversations`
 
-The query parameter is `chatId`, which represents chat ID of the conversation. The supported format for `chatId` is 19:xxx.
+The query parameter is `chatId`, which represents chat ID of the conversation. The supported format for `chatId` is 19: xxx.
 
 Example: `https://teams.microsoft.com/l/chat/19:c6d70e392a384916c3262b15406d763e@thread.v2/conversations`
 
@@ -101,7 +101,7 @@ Example: `https://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f02
 
 The query parameters are:
 
-* `chatId`: Chat ID of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.</br>
+* `chatId`: Chat ID of the conversation. The supported format for `chatId` is 19: xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.</br>
    Apps can read a chat ID through app context in Teams, incoming payload to bot, or through [Microsoft Graph APIs](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
    > [!NOTE]
    > For one-on-one chats with bot, the incoming payload to bot contains the conversation ID in a:xxx format.
