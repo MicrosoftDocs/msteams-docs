@@ -194,7 +194,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
    # [JSON](#tab/json2)
 
-       ```json
+     ```json
        {
         "type": "conversationUpdate",
         "timestamp": "2017-02-23T19:34:07.478Z",
@@ -228,7 +228,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
             }
         }
        }
-       ```
+     ```
 
    # [Python](#tab/python2)
 
