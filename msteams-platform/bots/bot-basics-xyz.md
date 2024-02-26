@@ -341,7 +341,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
      ```
 
      ---
-
+     
 1. **Channel restored**: The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed in the `Team` scope.
    
    The following code shows an example of channel restored event:
