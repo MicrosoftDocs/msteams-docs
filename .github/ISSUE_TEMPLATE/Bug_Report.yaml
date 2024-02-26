@@ -1,0 +1,63 @@
+name: Bug report 🐛
+description: Report errors or unexpected behavior 🤔
+body:
+- type: markdown
+  attributes:
+    value: >
+      This repository is **ONLY** for Microsoft Teams Platform related issues.
+- type: textarea
+  attributes:
+    label: Steps to reproduce
+    description: >
+      List of steps, sample code, failing test or link to a project that reproduces the behavior.
+      Make sure you place a stack trace inside a code (```) block to avoid linking unrelated issues.
+    placeholder: >
+      I am experiencing a problem with X.
+      I think Y should be happening but Z is actually happening.
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Expected behavior
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Actual behavior
+  validations:
+    required: true
+- type: textarea
+  attributes:
+    label: Error details
+    description: Paste the error your are getting in console or your output window.
+- type: markdown
+  attributes:
+    value: "## 🚧 Article information 🚧"
+- type: markdown
+  attributes:
+    value: "*Don't modify the following fields*. They are automatically filled in for you. Doing so will disconnect your issue from the affected article. *Don't edit them*."
+- type: input
+  id: pageUrl
+  validations:
+    required: true
+  attributes:
+    label: Page URL
+- type: input
+  id: contentSourceUrl
+  validations:
+    required: true
+  attributes:
+    label: Content source URL
+- type: input
+  id: author
+  validations:
+    required: true
+  attributes:
+    label: Author
+    description: GitHub Id of the author
+- type: input
+  id: documentVersionIndependentId
+  validations:
+    required: true
+  attributes:
+    label: Document Id
