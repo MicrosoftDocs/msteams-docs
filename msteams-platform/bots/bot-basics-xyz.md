@@ -22,44 +22,46 @@ In this article, you’ll get to know about different events and the activity ha
 
 # [Receive events](#tab/events)
 
-   ## Events with activity handlers
+## Events with activity handlers
 
-   In this article, you’ll get to know about different events and the activity handlers associated with those events. If you would like to know about invoke activities, select invoke activities at the start of this article.
+In this article, you’ll get to know about different events and the activity handlers associated with those events. If you would like to know about invoke activities, select invoke activities at the start of this article.
 
-   Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type.
+Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type.
 
-   For example, when the bot receives a message activity, the turn handler identifies this incoming activity and forwards it to the `onMessageActivity` handler. As a developer, you place your logic for managing and responding to messages in this `onMessageActivity` handler.
-     ```javascript
-         this.onMessageActivity(async (context, next) => {
-          // Your logic here
-           await next();
-          });
-      ```
+For example, when the bot receives a message activity, the turn handler identifies this incoming activity and forwards it to the `onMessageActivity` handler. As a developer, you place your logic for managing and responding to messages in this `onMessageActivity` handler.
+   
+```javascript
+    this.onMessageActivity(async (context, next) => {
+    // Your logic here
+    await next();
+    });
+```
 
-   Following are the two primary Teams activity handlers:
+Following are the two primary Teams activity handlers:
 
-   * `OnConversationUpdateActivityAsync`: Routes all the conversation update activities.
-   * `OnInvokeActivityAsync`: Routes all Teams invoke activities (#invoke-activity).
+* `OnConversationUpdateActivityAsync`: Routes all the conversation update activities.
+* `OnInvokeActivityAsync`: Routes all Teams [invoke activities](#invoke-activity).
 
-   Following are the different type of conversation events:
+Following are the different type of conversation events:
 
-   * [Conversation events](#conversation-update-events)
-   * [Channel events](#channel-events)
-   * [Members events](#members-event)
-   * [Team events](#team-events)
-   * [Installation events](#installation-events)
+* [Conversation events](#conversation-update-events)
+* [Channel events](#channel-events)
+* [Members events](#members-event)
+* [Team events](#team-events)
+* [Installation events](#installation-events)
+* [Message events](#message-events)
 
-   ## Conversation update events
+## Conversation update events
 
-   You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them. You must design your bot to receive unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them. You must design your bot to receive unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
-   A bot receives a `conversationUpdate` event in either of the following cases:
+A bot receives a `conversationUpdate` event in either of the following cases:
 
-   * When bot has been added to a conversation.
-   * Other members are added to or removed from a conversation.
-   * Conversation metadata has changed.
+* When bot has been added to a conversation.
+* Other members are added to or removed from a conversation.
+* Conversation metadata has changed.
 
-   The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
+The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
 
 ## Channel events
 
@@ -161,9 +163,9 @@ In this article, you’ll get to know about different events and the activity ha
      ```
      ---
 
-   | Action taken        | EventType         | Method called              | Description                | Scope |
-   | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-   | **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Channel renamed**     | channelRenamed    | OnTeamsChannelRenamedAsync | The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed. | Team |
 
 1. The following code shows an example of channel renamed event:
 
@@ -443,22 +445,22 @@ In this article, you’ll get to know about different events and the activity ha
       ```
      ---
 
-     ## Members event
+## Members event
 
-     | Action taken        | EventType         | Method called              | Description                | Scope |
-     | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-     | **Members added**   | membersAdded   | OnTeamsMembersAddedAsync   | The `membersAdded` event is sent to your bot whenever a new user or bot is added to a conversation. | All |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Members added**   | membersAdded   | OnTeamsMembersAddedAsync   | The `membersAdded` event is sent to your bot whenever a new user or bot is added to a conversation. | All |
 
-     A member added event is sent to your bot in the following scenarios:
+A member added event is sent to your bot in the following scenarios:
 
-      1. When the bot, itself, is installed and added to a conversation.
-        In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.
-      1. When a user is added to a conversation where the bot is installed.
-        User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
+1. When the bot, itself, is installed and added to a conversation.
+   In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.
+1. When a user is added to a conversation where the bot is installed.
+   User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
 
-     The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
+The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
 
-     You can use the [`InstallationUpdate`](#installation-update-event) event to determine when your bot is added or removed from a conversation.
+You can use the [`InstallationUpdate`](#installation-update-event) event to determine when your bot is added or removed from a conversation.
 
 1. The following code shows an example of team members added event:
 
@@ -626,19 +628,19 @@ In this article, you’ll get to know about different events and the activity ha
 
      ---
 
-     | Action taken        | EventType         | Method called              | Description                | Scope |
-     | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-     | **Members removed** | membersRemoved | OnTeamsMembersRemovedAsync | The `membersRemoved` event is sent to your bot whenever a user or bot is removed to a conversation. | All |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Members removed** | membersRemoved | OnTeamsMembersRemovedAsync | The `membersRemoved` event is sent to your bot whenever a user or bot is removed to a conversation. | All |
 
-     A member removed event is sent to your bot in the following scenarios:
+A member removed event is sent to your bot in the following scenarios:
 
-      1. When the bot, itself, is uninstalled and removed from a conversation.
-      1. When a user is removed from a conversation where the bot is installed.
+1. When the bot, itself, is uninstalled and removed from a conversation.
+1. When a user is removed from a conversation where the bot is installed.
 
-     The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
+The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
 
-     > [!NOTE]
-     > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
+> [!NOTE]
+> When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
 1. The following code shows an example of team members removed event:
 
@@ -754,11 +756,11 @@ In this article, you’ll get to know about different events and the activity ha
 
      ---
 
-     ## Team events
+## Team events
 
-     | Action taken        | EventType         | Method called              | Description                | Scope |
-     | ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-     | **Team renamed**        | teamRenamed       | OnTeamsTeamRenamedAsync    | Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. | Team |
+| Action taken        | EventType         | Method called              | Description                | Scope |
+| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
+| **Team renamed**        | teamRenamed       | OnTeamsTeamRenamedAsync    | Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. | Team |
 
 1. The following code shows an example of team renamed event:
 
@@ -1638,6 +1640,8 @@ In this article, you’ll get to know about different events and the activity ha
 # [Invoke activities](#tab/activities)
 
 In this article, you’ll get to know about different invoke activities. If you would like to know about different events with activity handlers, select conversation events at the start of this article.
+
+## Invoke activity
 
 An invoke activity is a type of activity that is sent to a bot when a user performs an action, such as clicking a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses. Invoke activities are typically used to send back confirmations, item selections, and to provide feedback or input to the bot.
 
