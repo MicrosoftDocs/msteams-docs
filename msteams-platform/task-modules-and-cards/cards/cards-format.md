@@ -512,9 +512,121 @@ The following images and JSON samples show an example of Adaptive Card designed 
 
    The following code is an example of Adaptive Card designed without using `targetWidth`:
 
+   |Property name  |description  |
+   |---------|---------|
+   |
+
     ```json
-    To be added
+    { 
+
+    "type": "AdaptiveCard", 
+
+    "body": [ 
+
+        { 
+
+            "type": "ColumnSet", 
+
+            "columns": [ 
+
+                { 
+
+                    "type": "Column", 
+
+                    "items": [ 
+
+                        { 
+
+                            "type": "Image", 
+
+                            "style": "Person", 
+
+                            "url": "https://aka.ms/AAp9xo4", 
+
+                            "size": "Small" 
+
+                        } 
+
+                    ], 
+
+                    "width": "auto" 
+
+                }, 
+
+                { 
+
+                    "type": "Column", 
+
+                    "spacing": "medium", 
+
+                    "verticalContentAlignment": "center", 
+
+                    "items": [ 
+
+                        { 
+
+                            "type": "TextBlock", 
+
+                            "weight": "Bolder", 
+
+                            "text": "David Claux", 
+
+                            "wrap": true 
+
+                        } 
+
+                    ], 
+
+                    "width": "auto" 
+
+                }, 
+
+                { 
+
+                    "type": "Column", 
+
+                    "spacing": "medium", 
+
+                    "items": [ 
+
+                        { 
+
+                            "type": "TextBlock", 
+
+                            "text": "Platform Architect", 
+
+                            "isSubtle": true, 
+
+                            "wrap": true 
+
+                        } 
+
+                    ], 
+
+                    "width": "stretch", 
+
+                    "verticalContentAlignment": "center" 
+
+                } 
+
+            ] 
+
+        } 
+
+    ], 
+
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
+
+    "version": "1.5" 
+
+    } 
     ```
+
+| Rendered when Adaptive Card designed without using targetWidth:
+
+<br> card width is wide:   :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the it's designed without using targetWidth property."::: </br>
+<br> card width is standard or narrow:   :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the it's designed without using targetWidth property."::: </br>
+<br> card width is very narrow:   :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the it's designed without using targetWidth property."::: </br>|
 
 * **Responsive Adaptive Card designed using `targetWidth`**.
 
