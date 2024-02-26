@@ -1,55 +1,46 @@
+- name: Microsoft Teams developer documentation
+  href: index.yml
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview 
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions, welcome, new word, meaning
-- name: Overview
-  expanded: false 
-  items:
-  - name: Teams app that fits
-    href: overview.md
-    displayName: Why build apps with Microsoft Teams platform
-  - name: From ideas to Teams app
-    href: overview-story.md
-    displayName: Teams app user experience
-  - name: Explore Teams platform features
-    href: overview-explore.md
-  - name: The Teams solution
-    href: overview-solution.md
 - name: Get started
   expanded: false
   items:
-  - name: Overview
+  - name: The Teams platform
     href: get-started/get-started-overview.md
-    displayName: First Teams app, Python, .NET, Java, Node.js, get started
-  - name: Build a tab app
+    items:
+      - name: Teams app capabilities
+        href: concepts/design/overview-analytics.md
+      - name: Teams app manifest
+        href: concepts/design/strategize-measure.md
+      - name: Package a Teams app
+        href: concepts/design/plan-code-instrumentation.md
+  - name: Next-generation developer tools
     href: get-started/build-basic-tab-app.md
-  - name: Build a notification bot app
+  - name: Set up your development environment
     href: get-started/build-notification-bot.md
-  - name: Build a message extension app
+  - name: Build your first Teams app
     href: get-started/build-message-extension.md
-  - name: Teams app tutorials and code samples
-    href: get-started/teams-toolkit-tutorial.md
-  - name: Choose what suits you
-    href: get-started/choose-what-suits-you.md
- 
 - name: Plan your app
+  expanded: false
   items:
-  - name: Overview
+  - name: Choose Teams capabilities
     href: concepts/app-fundamentals-overview.md
     displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DOD), GCC-High (GCCH)
-  - name: Understand use case
+  - name: Configure the scope of your app
     href: concepts/design/understand-use-cases.md
     displayName: App scope, Teams app features, capabilities
-  - name: Map use case to Teams features
+  - name: Design patterns and templates
     href: concepts/design/map-use-cases.md
-  - name: Teams app planning checklist
+  - name: Decide what to measure
     href: concepts/design/planning-checklist.md
     displayName: HTTPs, localhost, host your Teams app
-  - name: Plan responsive tabs for Teams mobile
+  - name: User scenario for a Hero card
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-  - name: Plan analytics for your Teams app
+- name: Plan analytics for your Teams app
     items:
       - name: Overview
         href: concepts/design/overview-analytics.md
@@ -57,9 +48,9 @@
         href: concepts/design/strategize-measure.md
       - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
-  - name: Plan to monetize your app
-    href: concepts/design/plan-to-monetize.md
-    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
+      - name: Plan to monetize your app
+        href: concepts/design/plan-to-monetize.md
+        displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
 - name: Design your app
   items:
   - name: Overview
