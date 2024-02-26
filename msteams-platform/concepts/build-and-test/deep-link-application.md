@@ -10,7 +10,7 @@ ms.date: 05/04/2023
 
 # Deep link to an application
 
-Deep links are configured to perform various actions such as opening a tab, initiating an app install dialog, or browsing within the app. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages to inform users about changes to your tab or its items. While deep links to custom apps are supported, if an app in the Microsoft Teams Store shares the same app ID as the custom app ID specified in its app manifest (previously called Teams app manifest), the deep link opens the Teams Store app instead of the custom app.
+Deep links are configured to perform various actions such as opening a tab, initiating an app install dialog, or browsing within the app. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages to inform users about changes to your tab or its items. Deep links to custom apps are supported, if an app in the Microsoft Teams Store shares the same app ID as the custom app ID specified in its app manifest (previously called Teams app manifest), the deep link opens the Teams Store app instead of the custom app.
 
 After your app is approved for the Teams mobile platform, you can create a deep link to the app for mobile. For the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
@@ -26,14 +26,14 @@ Deep links allow users to know more about an app and install it in different sco
 
 ## Deep link to open application install dialog
 
-You can use deep links to allow app user to open an app install dialog to know more information about the app or install it in other contexts. You can create a deep link in the following ways:
+Deep links allow app users to open an app installation dialog to know more information about the app or installing it in different contexts. To create a deep link, follow these steps:
 
 * [Configure deep link manually using your app ID](#configure-deep-link-manually-using-your-app-id).
 * [Configure deep link using TeamsJS library](#configure-deep-link-using-teamsjs-library).
 
 #### Configure deep link manually using your app ID
 
-Following is the deep link format to open an app install dialog from your Teams client:
+Here is the deep link format you need to open an app install dialog from your Teams client:
 
 `https://teams.microsoft.com/l/app/<your-app-id>?tenantId=<tenantId>`
 
@@ -41,7 +41,7 @@ Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bc
 
 ##### App ID used for different apps
 
-Following are the different app IDs that are used for deep links:
+The different app IDs used for deep links are as follows:
 
 * Custom app uploaded in Teams: Manifest ID
 * Apps submitted to org catalog: Org catalog ID. For more information, see [how to find ID based on the app manifest ID](/graph/api/appcatalogs-list-teamsapps#example-3-find-application-based-on-the-teams-app-manifest-id).
@@ -49,7 +49,9 @@ Following are the different app IDs that are used for deep links:
 
 #### Configure deep link using TeamsJS library
 
-Applications can use the TeamsJS library to open the app install dialog without manually generating the deep link. Following is an example to open the app install dialog using TeamsJS at the trigger of your choice in the app:
+Applications can leverage the TeamsJS library to initiate the app installation dialog, eliminating the need for manual deep link generation. Here's an example of how to trigger the app installation dialog using TeamsJS within your application:
+
+Applications can use the TeamsJS library to open the app install dialog without manually generating the deep link. Here's an example of how to trigger the app install dialog using TeamsJS within your app:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
