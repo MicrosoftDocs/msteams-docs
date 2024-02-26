@@ -43,7 +43,7 @@
         "ms.service": "msteams",
         "ms.author": "surbhigupta",
         "searchScope": [ "Teams" ],
-        "feedback_system": "GitHub",
+        "feedback_system": "OpenSource",
         "feedback_github_repo": "MicrosoftDocs/msteams-docs",
         "feedback_product_url": "https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472",
         "titleSuffix": "Teams",
