@@ -60,7 +60,7 @@ The following table provides details on the default and defined responses for ea
 | StageView API | Opens in Collaborative Stageview | Define `openMode` to open in Stageview Multi-window or Stageview modal. |
 | Deep link| Opens in Collaborative Stageview | Define `openMode` to open in Stageview Multi-window or Stageview modal. |
 
-`openMode` property defined in a StageView API or deep link determines the type of Stageview response. The three `openMode`properties are:
+`openMode` property defined in a StageView API and deep link determines the type of Stageview response. The three `openMode`properties are:
 
 * `popoutWithChat`
 * `popout`
@@ -128,8 +128,6 @@ The StageView API from the Teams JS Client SDK allows you to open in any one of 
 > * In scenarios were pop-outs aren't supported (for example, Teams in browser), the experience falls back to Stageview modal.
 > * The fallback hierarchy is `popoutWithChat` -> `popout` -> `modal`.
 
-For more information, see [stageView module](/javascript/api/@microsoft/teams-js/stageview).
-
 # [No openMode](#tab/noopenmode)
 
 [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) with no value passed, `openMode` defaults to `popoutWithChat` (Collaborative Stageview).
@@ -189,6 +187,8 @@ StageViewParams for Stageview modal:
 
 ---
 
+For more information, see [stageView module](/javascript/api/@microsoft/teams-js/stageview).
+
 #### StageView API parameters
 
 | Property name | Type | Character Limit | Description |
@@ -224,7 +224,7 @@ Following is the deep link examples to invoke Stageview:
 <br>
 
 <details>
-<summary><b>Example </b></summary>
+<summary><b>Example</b></summary>
 
 Encoded URL:
 
@@ -277,6 +277,7 @@ Stageview modal is useful to display rich content to the users, such as a page, 
 <details>
 
 <summary>I'm able to open Collaborative Stageview, but content is loading into the main canvas.</summary>
+
 Ensure that your contentUrl domain is accurately reflected in the manifest `validDomains` property. For more information, see [App manifest schema](../resources/schema/manifest-schema.md).
 
 </br>
@@ -288,6 +289,28 @@ Ensure that your contentUrl domain is accurately reflected in the manifest `vali
 <summary>My contentUrl matches my `validDomains`, but I'm still unable to view any content showing up.</summary>
 
 Call app.notifySuccess() in all iframe-based contents to notify Teams that your app has successfully loaded. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out, and displays an error screen with a retry option. For app updates, this step is applicable for already configured tabs. If you don't perform this step, an error screen is displayed for the existing users. [*Mandatory*]
+
+</br>
+
+</details>
+
+<details>
+
+<summary>Can I include a deeplink in my contentUrl?</summary>
+
+Deeplinks are currently not supported in contentUrls.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>How do I keep a specific thread shown alongside my content?</summary>
+
+Opening Collaborative Stageview from a deeplink or API comes with the additional threadId parameter. You are able to explicitly define which thread is shown in the sidepanel for your specific contentUrl. For more information about retrieving a threadId, see [Get conversation thread](/graph/api/group-get-thread?view=graph-rest-1.0&tabs=http).
+
+</br>
 
 </details>
 
