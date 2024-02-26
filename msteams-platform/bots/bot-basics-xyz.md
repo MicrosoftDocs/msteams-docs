@@ -1563,8 +1563,8 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 
    # [JSON](#tab/json14)
 
-     ```json
-     {
+      ```json
+       {
         {
         "type": "installationUpdate",
         "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
@@ -1616,7 +1616,7 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
         },
         "action": "add"
         }}
-     ```
+      ```
 
    # [Python](#tab/python14)
 
