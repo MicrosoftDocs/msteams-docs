@@ -66,7 +66,6 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 1.  **Channel created**: The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed in the `Team` scope.
    
    The following code shows an example of channel created event:
-
    # [C#](#tab/dotnet1)
 
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
