@@ -11,6 +11,8 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Deploy Teams app to the cloud using Microsoft Visual Studio Code
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+
 Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
 ::: zone pivot="visual-studio-code-v5"
@@ -263,12 +265,6 @@ This action upload and deploys generated sppkg to SharePoint app catalog. You ca
 ::: zone-end
 
 ::: zone pivot="visual-studio-code-v4"
-
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
 
 Teams Toolkit helps to deploy or upload the front-end and back-end code in your app to your provisioned cloud resources in Azure.
 
