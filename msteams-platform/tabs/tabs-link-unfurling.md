@@ -270,7 +270,7 @@ Collaborative Stageview allows the users to open content and a conversation with
 
 <summary>What's the difference between Stageview modal and Dialogs?</summary>
 
-Stageview modal is useful to display rich content to the users, such as a page, a dashboard, or a file. Dialogs are useful to display messages that need users' attention or  collect information required to move to the next step.
+Stageview modal is useful to display rich content to the users, such as a page, a dashboard, or a file. Dialogs are useful to display messages that need users' attention or collect information required to move to the next step.
 
 </br>
 
