@@ -498,7 +498,7 @@ Adaptive Cards usually match the look and feel of the host application and have 
 
 Adaptive Card responsive layout helps you to design Adaptive Cards with different layouts that adapt to different card widths in the context where the card is displayed. When you design Adaptive Card for your app, ensure that you provide a better user experience across chat, channels, and meeting chat in Teams desktop and mobile clients.
 
-[Add image for resposive Adaptive card in mobile and desktop.]
+[Add image for responsive Adaptive card in mobile and desktop.]
 
 #### Design responsive Adaptive Cards
 
@@ -508,13 +508,12 @@ The following images and JSON samples show an example of Adaptive Card designed 
 
 * **Adaptive Card designed without using `targetWidth`**.
 
-  [Image for non responsive adaptive card to be added.]
+  <br> Adaptive Card with card width wide rendered :
+:::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the it's designed without using targetWidth property."::: </br>
+<br> Adaptive Card with card width standard or narrow:   :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the it's designed without using targetWidth property."::: </br>
+<br> Adaptive Card with card width very narrow:   :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the it's designed without using targetWidth property."::: </br>|
 
    The following code is an example of Adaptive Card designed without using `targetWidth`:
-
-   |Property name  |description  |
-   |---------|---------|
-   |
 
     ```json
     { 
@@ -622,25 +621,18 @@ The following images and JSON samples show an example of Adaptive Card designed 
     } 
     ```
 
-| Rendered when Adaptive Card designed without using targetWidth:
-
-<br> card width is wide:   :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the it's designed without using targetWidth property."::: </br>
-<br> card width is standard or narrow:   :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the it's designed without using targetWidth property."::: </br>
-<br> card width is very narrow:   :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the it's designed without using targetWidth property."::: </br>|
-
 * **Responsive Adaptive Card designed using `targetWidth`**.
 
-  :::image type="content" source="../../assets/images/Cards/adaptive-card-responsive-layout.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to respective card widths.":::
-
-  | Counter |Description  |
-  |---------|---------|
-  | 1 | The Adaptive card rendered when the `targetWidth` property is set to `wide` or `standard`. |
-  | 2 | The Adaptive card rendered when the `targetWidth` property is set to `narrow`. |
-  | 3 | The Adaptive card rendered when the `targetWidth` property is set to `veryNarrow`. |
+<br> Adaptive card renders when the `targetWidth` property is set to `wide`.
+:::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to wide."::: </br>
+<br> Adaptive card renders when the `targetWidth` property is set to `standard` or `narrow`.
+:::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to standard or narrow."::: </br>
+<br> Adaptive card renders when the `targetWidth` property is set to `wide`.
+:::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to veryNarrow."::: </br>
 
   The following code is an example of Adaptive Card designed using `targetWidth`:
 
-    ``` json
+  ``` json
     {
       "type": "AdaptiveCard",
       "body": [
@@ -702,7 +694,7 @@ The following images and JSON samples show an example of Adaptive Card designed 
       "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
       "version": "1.5" 
     } 
-    ```
+  ```
 
 You can set the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths. The following table provides the available values of the `targetwidth` property for different layouts:
 
