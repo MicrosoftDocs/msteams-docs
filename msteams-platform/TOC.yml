@@ -1,5 +1,3 @@
-- name: Microsoft Teams Developer documentation
-  href: mstdd-landing.yml
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview 
