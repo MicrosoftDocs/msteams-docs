@@ -62,8 +62,9 @@ The `conversationUpdate` event is sent to your bot when it receives information 
 
 ## Channel events
 
-1.  **Channel created**: The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed in the `Team` scope.
+1.  **Channel created**: The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed in the `Team` scope.</br>
    The following code shows an example of channel created event:
+
    # [C#](#tab/dotnet1)
 
    * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelcreatedasync?view=botbuilder-dotnet-stable&preserve-view=true)
@@ -155,7 +156,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
      )
      ```
      ---
-1. **Channel renamed**: The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed in the `Team` scope.
+1. **Channel renamed**: The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed in the `Team` scope.</br>
    The following code shows an example of channel renamed event:
 
    # [C#](#tab/dotnet2)
@@ -242,7 +243,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
       )
      ```
      ---
-1. **Channel deleted**: The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed in the `Team` scope..
+1. **Channel deleted**: The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed in the `Team` scope.</br>
    The following code shows an example of channel deleted event:
 
    # [C#](#tab/dotnet3)
@@ -333,7 +334,7 @@ The `conversationUpdate` event is sent to your bot when it receives information 
         )
      ```
      ---
-1. **Channel restored**: The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed in the `Team` scope.
+1. **Channel restored**: The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed in the `Team` scope.</br>
    The following code shows an example of channel restored event:
 
    # [C#](#tab/dotnet4)
