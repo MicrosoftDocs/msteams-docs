@@ -36,7 +36,7 @@ The lightbox view includes a header, center stage, and carousel.
 |----------|-----------|
 |1|**Back**: Button to navigate to the previoius screen|
 |2|**Open in**: Button (basic or split) to navigate to the external window|
-|3|Buttons with content actions: Zoom in or out, Share, Download, Popout (open new child window), open chat panel|
+|3|Buttons with content actions: Zoom in or out, Share, Download, or open chat panel|
 |4|Chevrons for slide show|
 |A|**Lightbox header**: Actionable|
 |B|**Center stage**: Main content container|
@@ -79,7 +79,7 @@ Help to save time during file opening. Opening on top of the main content. With 
 
 :::image type="content" source="../../assets/images/light-box/interactions-lightbox-do.png" alt-text="Example shows the use of a lightbox component to preview files.":::
 
-#### Don’t: Use a lightbox for content editing or interaction
+#### Don't: Use a lightbox for content editing or interaction
 
 Information in the lightbox is noneditable and non-interactive. Provide clear options in **Open in** menu, where users can start to interact with content. 
 
@@ -91,7 +91,7 @@ Documents, which are intended just for the preview option or have **Preview** op
 
 :::image type="content" source="../../assets/images/light-box/lightbox-preview-do.png" alt-text="Example shows the use of a lightbox component to preview documents.":::
 
-#### Don’t: Use a lightbox in collaborative environments where it’s helpful to see live presence
+#### Don't: Use a lightbox in collaborative environments where it’s helpful to see live presence
 
 Users won’t be able to see who else is in the file and making changes from the lightbox.
 
@@ -101,7 +101,7 @@ Users won’t be able to see who else is in the file and making changes from the
 
 :::image type="content" source="../../assets/images/light-box/lightbox-back-do.png" alt-text="Example shows the use of a lightbox component with back button in the header.":::
 
-#### Don’t use more button to close the lightbox 
+#### Don't use more button to close the lightbox 
 
 You can exit the lightbox by either going back to the previous screen or tapping outside of it.
 
@@ -111,8 +111,16 @@ You can exit the lightbox by either going back to the previous screen or tapping
 
 :::image type="content" source="../../assets/images/light-box/lightbox-highlight-do.png" alt-text="Example shows the use of a lightbox component with highlighted chat panel.":::
 
-#### Don’t: Refer to commenting in a lightbox experience
+#### Don't: Refer to commenting in a lightbox experience
 
 Users can’t comment in lightbox files. 
 
 :::image type="content" source="../../assets/images/light-box/lightbox-highlight-dont.png" alt-text="Example shows the use of a lightbox component with commenting in the chat panel.":::
+
+#### Do: Open the file in a new window if the file requires more time to focus and is editable.
+
+:::image type="content" source="../../assets/images/light-box/lightbox-file-window-do.png" alt-text="Example shows the use of a lightbox component to open the file in a new window.":::
+
+#### Don't: Use lightbox for files as Word, Excel, PowerPoint, and PDF. Lightbox is a good component for content preview.
+
+:::image type="content" source="../../assets/images/light-box/lightbox-file-dont.png" alt-text="Example shows the use of a lightbox component for files as Word, Excel, PowerPoint, and PDF.":::
