@@ -8,52 +8,60 @@ ms.date: 02/23/2024
 ---
 # Design app notifications
 
-Notification is one of the most effective ways to engage and retain users. In Microsoft Teams, platform app send notifications into activity using Graph API, send Adaptive Cards through bots or post messages to Teams channels using incoming webhooks. This article helps you design effective notifications and choose the right framework for your app.
+Notification is one of the most effective ways to engage and retain users. Within Microsoft Teams, platform apps can send notifications to the activity feed using the Graph API, send Adaptive Cards through bots, or post messages to Teams channels through incoming webhooks. In this guide, you’ll discover effective notification design principles and learn how to select the most suitable framework for your app.
 
-In the digital world, notifications are a vital part of our daily interactions with applications, serving as a crucial link between the user and the application by delivering timely updates and prompting necessary actions. This document provides an in-depth exploration into designing app notifications for Microsoft Teams, a platform that offers a wide array of options for creating and managing these important alerts.
-
-## Understanding Activity notifications
+## Activity notifications
 
 The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use.
 
-## Key features of activity notifications
+# [Desktop](#tab/desktop)
 
-* Notify users proactively with highly customized personal notifications.
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed."  lightbox="../../assets/images/activity-feed/desktop-overview.png":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed on mobile.":::
+
+---
+
+### Key features of activity notifications
+
+* Proactively notify users with highly customized personal notifications.
 * Need immediate attention and action, include rich experience in main pane.  
-* Double badge on Activity icon and Teams app icon.
+* Double badge on activity icon and Teams app icon.
 * Broadcast messages and details for all the members of the chat or channel.
-* Broadcast messages and details quickly to  a large batch of users.
-* Toast users with OS notifications (pop-out banner & sound).
-* Handle localization automatically via manifest.
+* Broadcast messages and details quickly to a large batch of users.
+* Prompt users with operating system notifications that include a pop-out banner and sound.
+* Handle localization automatically through app manifest.
 
-## Understanding notification Bot
+## Notification Bot
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as Bot notifications to a personal, group chat, or a channel in Teams. You can send Bot notifications as plain text or Adaptive Cards. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
+Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal, group chat, or a channel in Teams. These notifications can be sent as plain text or Adaptive Cards. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request.
 
-## Key features of notification Bots
+### Key features of notification Bots
 
 * Notify everyone in a channel or chat about the same or related content.
 * Highly customizable UI in a Card.
 * Need quick response, include media content, or action buttons.
 * Send scheduled notifications
-* Light up double badges on both Activity and Chat, Channel or App
-* Handling localization manually.
+* Light up double badges on both Activity and Chat, Channel or app.
+* Handle localization manually.
 
 ## Choose the right notification framework for your app
 
-Sending notifications to users are great ways to improve user engagement and retention. When designing your apps, consider using notifications to effectively engage users:
+When designing your apps, consider using notifications to effectively engage and retain users in Teams. Ask yourself the following questions:
 
-* When or in what events do you want to notify users.
-* What is the targeted user experience in Teams.
-* Are the notifications proactive or interactive.
-* Do you require localization support or batch send faster.
+* When or in what events do you want to notify users?
+* What is the targeted user experience in Teams?
+* Are the notifications proactive or interactive?
+* Do you require localization support or batch send faster?
 
 ## End-user experience
 
 The key difference between the two notification frameworks is where users read notifications:
 
-1. Users read Activity notification in a preview. Teams Activity is a place to triage most important notifications. If the notification preview interests the user, user select to launch full content in Teams main pane.
-1. Users read a Bot notification in an Adaptive Card. When a notification Bot sends a message, the Bot conversation is bold or dotted in Teams Chat.
+1. Users read activity notification in a preview. Teams Activity is a place to triage most important notifications. If the notification preview attracts the user, they can select the notification and open the content in the Teams main pane.
+1. Users read a bot notification in an Adaptive Card. When a notification bot sends a message, the bot conversation is bold or dotted in Teams Chat.
 
 Comparing with Adaptive Card, Teams main pane has larger surface to load more assets in a Tab app or a Personal app. If your app already has Tab or Personal app, we don't recommend building a Bot just for sending notifications.
 
@@ -61,16 +69,22 @@ Comparing with Adaptive Card, Teams main pane has larger surface to load more as
 
 Evaluate whether your notifications are proactive or interactive.  
 
-* Proactive notifications inform users about news, events, requests, and reminders that require users’ immediate attention and/or specific actions.
-* Interactive notifications encourage users to respond to the sender with the information needed for continuous communication.
+* **Proactive notifications** inform users about news, events, requests, and reminders that require users’ immediate attention and/or specific actions.
+* **Interactive notifications** encourage users to respond to the sender with the information required for continuous communication.
 
-Activity notifications are good for proactive notifications: attention-grabbing alert, announcements, reminders, and “action-needed” requests. Notification Bot is good for interactive notifications: need quick response in a light weighted & highly customizable Card.
+Activity notifications are good for proactive notifications, attention-grabbing alert, announcements, reminders, and action-needed requests.
 
-## Other considerations
+Notification bot is good for interactive notifications that require quick response in a light weighted and highly customizable cards.
 
-**Localization**: Activity notifications are supported with manifest string localization. Templated text in your notification will be automatically translated into users’ preferred locale.  
+Some notifications are both proactive and interactive, in that case either type of notifications will work for the scenario.
 
-**Batch send**: Activity notifications support batch send to 100 users in one request, which is suitable for “Announcement” type of notifications. You can also send a notification to everyone in a Chat or Channel. When fanning out large number of notifications, Activity notifications are faster than Notification Bot, because of higher throttling threshold in Graph APIs.
+In scenarios where notifications required both proactive and interactive, either type can be effective.
+
+### Other considerations
+
+**Localization**: Activity notifications support with app manifest string localization. Templated text in your notification will be automatically translates into users’ preferred locale.  
+
+**Batch send**: Activity notifications enable batch sending to up to 100 users in a single request, which is suitable for **announcement** type of notifications. You can also send a notification to all participants in a chat or channel. When you send a large number of notifications, activity notifications are faster than notification bot due to the higher throttling threshold in Graph APIs.
 
 ## See also
 
