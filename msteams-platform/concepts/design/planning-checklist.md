@@ -139,6 +139,13 @@ You can provide your Microsoft Teams app to an individual, team, organization, o
 Suggestion: Options that help determine the best distribution model.
 
 </details>
+<br>
+<details>
+<summary>Plan for app notifications</summary>
+
+You can send notifications to Microsoft Teams users in multiple ways. Notification is a simple way to engage users regularly. For more information, see design app notifications.
+
+</details>
 
 ## Plan for hosting your Teams app
 
