@@ -1522,60 +1522,59 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 
    # [JSON](#tab/json14)
 
-      ```json
-       {
-        {
-        "type": "installationUpdate",
-        "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
-        "timestamp": "2021-11-09T04:47:30.91Z",
-        "serviceUrl": "https://smba.trafficmanager.net/amer/",
-        "channelId": "msteams",
-        "from": {
-            "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
-            "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
-        },
-        "recipient": {
-            "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
-            "name": "Test Bot"
-        },
-        "locale": "en-US",
-        "entities": [
-            {
-                "type": "clientInfo",
-                "locale": "en-US"
-            }
-        ],
-        "conversation": {
-            "isGroup": true,
-            "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
-            "name": "2021 Test Channel",
-            "conversationType": "channel",
-            "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
-        },
-        "channelData": {
-            "settings": {
-                "selectedChannel": {
+         ```json
+           {
+            "type": "installationUpdate",
+            "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
+            "timestamp": "2021-11-09T04:47:30.91Z",
+            "serviceUrl": "https://smba.trafficmanager.net/amer/",
+            "channelId": "msteams",
+            "from": {
+                "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+                "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
+            },
+            "recipient": {
+                "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+                "name": "Test Bot"
+            },
+            "locale": "en-US",
+            "entities": [
+                {
+                    "type": "clientInfo",
+                    "locale": "en-US"
+                }
+            ],
+            "conversation": {
+                "isGroup": true,
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+                "name": "2021 Test Channel",
+                "conversationType": "channel",
+                "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+            },
+            "channelData": {
+                "settings": {
+                    "selectedChannel": {
+                        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+                    }
+                },
+                "channel": {
                     "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+                },
+                "team": {
+                    "aadGroupId": "da849743-4259-475f-ae7a-4f4b0fb49943",
+                    "name": "TestTeam2022",
+                    "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
+                },
+                "tenant": {
+                    "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+                },
+                "source": {
+                    "name": "message"
                 }
             },
-            "channel": {
-                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
-            },
-            "team": {
-                "aadGroupId": "da849743-4259-475f-ae7a-4f4b0fb49943",
-                "name": "TestTeam2022",
-                "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
-            },
-            "tenant": {
-                "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
-            },
-            "source": {
-                "name": "message"
+            "action": "add"
             }
-        },
-        "action": "add"
-        }}
-      ```
+         ```
 
    # [Python](#tab/python14)
 
