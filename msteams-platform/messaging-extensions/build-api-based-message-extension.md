@@ -137,13 +137,13 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Message extension type**, select **Add**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Teams Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Teams Developer Portal." lightbox="../assets/images/Copilot/api-based-me-tdp-add-commands.png":::
 
    An **Add command** pop-up appears with a list of all the available APIs from the OpenAPI Description document.
 
 1. Select an API from the list and select **Next**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png" alt-text="Screenshot shows the list of APIs from the OpenAPI Description Document in the Add a command pop-up window.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png" alt-text="Screenshot shows the list of APIs from the OpenAPI Description Document in the Add a command pop-up window." lightbox="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png":::
 
    A **Command details** appears.
 
