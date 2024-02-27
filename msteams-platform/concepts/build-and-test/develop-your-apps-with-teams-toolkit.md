@@ -18,7 +18,7 @@ Teams Toolkit scaffolds the necessary files based on the feature and configurati
 
 ## Open your app in Visual Studio Code
 
-In Teams Developer Portal, you can open and launch your project in Visual Studio Code.
+In Teams Developer Portal, you can open and launch your project (React app) in Visual Studio Code.
 
 Following are the steps to open your app in Visual Studio Code:
 
@@ -27,6 +27,9 @@ Following are the steps to open your app in Visual Studio Code:
     :::image type="content" source="../../assets/images/tdp/open-in-teams-toolkit.png" alt-text="Screenshot shows the Developer Portal with Open in Teams Toolkit highlighted in red." lightbox="../../assets/images/tdp/open-in-teams-toolkit.png":::
 
     A dialog is displayed.
+
+    > [!NOTE]
+    > To enable your app to open, install the latest version of [Teams Toolkit for Visual Studio Code](../../toolkit/install-Teams-Toolkit.md).
 
 1. Select **Open**.
 
@@ -93,6 +96,9 @@ Following are the steps to open your app in Visual Studio:
     :::image type="content" source="../../assets/images/tdp/vs-scaffold.png" alt-text="Screenshot shows you the scaffolding of your project in visual studio. ":::
 
 After you open your app in Teams Toolkit, you can now [develop](/microsoftteams/platform/toolkit/teamsfx-multi-env) and [debug](../../toolkit/debug-overview.md) your Teams app in Teams Toolkit.
+
+  > [!NOTE]
+  > You can work in Teams Toolkit through Developer Portal in preview version only.
 
 ## See also
 
