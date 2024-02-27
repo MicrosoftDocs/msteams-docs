@@ -137,26 +137,26 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Message extension type**, select **Add**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Teams Developer Portal." lightbox="../assets/images/Copilot/api-based-me-tdp-add-commands.png":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Teams Developer Portal." :::
 
-   An **Add command** pop-up appears with a list of all the available APIs from the OpenAPI Description document.
+   An **Add a command** pop-up appears with a list of all the available APIs from the OpenAPI Description document.
 
 1. Select an API from the list and select **Next**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png" alt-text="Screenshot shows the list of APIs from the OpenAPI Description Document in the Add a command pop-up window." lightbox="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png" alt-text="Screenshot shows the list of APIs from the OpenAPI Description Document in the Add a command pop-up window." :::
 
-   A **Command details** appears.
+   A **Add a command** page appears.
 
 1. Under **Add a command**, go to **Response template** and select **Upload now**.
 
-    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
+    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card response template in for the command.":::
 
    > [!NOTE]
-   > If you have more than one API, ensure that you upload the **Adaptive card template** for each API.
+   > If you have more than one API, ensure that you upload the **Response template** for each API.
 
-1. Select the Adaptive Card template file in JSON format and select **Open**.
+1. Select the response template file in JSON format and select **Open**.
 
-   The following attributes are updated automatically from the Adaptive Card template:
+   The following attributes are updated automatically from the response template:
    * Command Type
    * Command ID
    * Command title
