@@ -41,8 +41,7 @@ Ensure you install the following tools for building and deploying your bots in T
 | Install | For using... |
 | --- | --- |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. |
-| [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the version 17.9 Preview 3.0 or later. |
-| [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API Secret key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
+| [Visual Studio 2022](https://visualstudio.microsoft.com)<br> | You can install the enterprise version in Visual Studio 2022, and install the ASP.NET and web development workloads. Use the version 17.9 or later. |
 
 ## Test Tool experience in Visual Studio
 
@@ -65,6 +64,9 @@ Test Tool offers a faster debug experience for bot applications when compared to
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-name-vs.png" alt-text="Screenshot shows the option to enter the project name.":::
 
 1. Select **AI Chat Bot** and select **Create**.
+
+  > [!NOTE]
+  > [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug AI Chat Bot app.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project."::: 
 
