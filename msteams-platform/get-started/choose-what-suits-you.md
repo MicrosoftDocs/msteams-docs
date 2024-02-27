@@ -8,28 +8,23 @@ ms.topic: reference
 
 # Choose what suits you
 
-You've built your first tab app, notification bot, and message extension. You can build a Teams app as per your app's requirements. Based on factors such as business needs, development environment, and domain knowledge, select the environment and tools to build your app.
-
-A Teams app offers you the flexibility of choosing your build environment. It includes tools, framework, and languages to approach your app development. Build your Teams app in the environment that's best suited for your app. You can even select a combination. For example, you can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
+You've built your first tab app, notification bot, and message extension. You can build a Teams app as per your organization's requirements. Based on factors such as business needs, development environment, and domain knowledge, Teams platform offers you the flexibility to select the tools, framework, languages, and environment to build your app. For example, you can use Teams Toolkit to build an app with JavaScript and host it on a SharePoint site.
 
 This section takes you through the various options for building your Teams app.
 
-* [Teams collaborative platform](#teams-collaborative-platform)
-* [Tools and SDKs](#tools-and-sdks)
-
 ## Teams collaborative platform
 
-As a collaborative platform for building apps, Teams offers the full range of apps and tools. Teams platform supports your app development at every stage from planning to distributing it.
+As a collaborative platform for building apps, Teams supports your app development at every stage from planning to distributing it.
 
-You can use various tools and services to build your app. Following is an example development flow.
+The following development flow is an example of how you can build your Teams app:
 
-1. Plan your project and figure out the requirement.
-1. Design your app. Use Teams UI Kit and UI Library for designing tabs UI.
-1. Build your app with JavaScript using Teams Toolkit.
-1. Extend functionality by adding more Teams capabilities and Microsoft 365 data with :::image type="icon" source="../assets/icons/graph-small-icon.png"::: Microsoft Graph.
-1. Test the app on a developer tenant with sample user data.
-1. Deploy the app to Azure.
-1. Manage and publish the app to Microsoft Teams Store with Developer Portal. Monetize your app with options, such as SaaS offers, in-app purchases, and more.
+1. Plan your project's needs and figure out the Teams app's requirements.
+2. Design your app with Teams UI Kit and UI Library for designing tabs UI.
+3. Build your app with JavaScript or TypeScript using Teams Toolkit in Visual Studio or Visual Studio Code.
+4. Extend your app's functionality by adding more Teams capabilities and Microsoft 365 data with :::image type="icon" source="../assets/icons/graph-small-icon.png"::: Microsoft Graph.
+5. Test the app on a developer tenant with sample user data.
+6. Deploy the app to Azure.
+7. Manage and publish the app to Microsoft Teams Store with Developer Portal. Monetize your app with SaaS offers, in-app purchases, and more.
 
 ## Tools and SDKs
 
@@ -37,13 +32,11 @@ You can build your Microsoft Teams app with the help of the following tools and 
 
 :::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Flow chart shows you the SDKs and tools you need to build your Teams app."lightbox="../assets/images/overview/choose-what-you-need.png":::
 
-To start building your Teams app, you can select the tools and SDKs based on your app requirements.
-
 1. **App capabilities**: You can choose a single or a combination of capabilities based on your app requirements.
-1. **SDKs you need**: For example, if you're building AI capability for your bot app, you select Teams AI library.
-1. **UI  Components**: Choose the UI components to design your app based on your app capability.
-1. **Languages**: Choose the language in which you want to build your app.
-1. **Recommended Tools**: Choose the tools based on the language that you've selected. You can also use the Teams Developer Portal to manage and publish your app. The Teams Toolkit and Yo Teams allows you to build your app with JavaScript and TypeScript or with C# in Visual Studio Code (VS Code) or Visual Studio.
+2. **SDKs you need**: For example, if you're building AI capability for your bot app, you select Teams AI library.
+3. **UI  Components**: Choose the UI components to design your app based on your app capability.
+4. **Languages**: Choose the language in which you want to build your app.
+5. **Recommended Tools**: Choose the tools based on the language that you've selected. You can also use the Teams Developer Portal to manage and publish your app. The Teams Toolkit and Yo Teams allows you to build your app with JavaScript and TypeScript or with C# in Visual Studio Code (VS Code) or Visual Studio.
 
 | App capabilities | User interactions | Recommended tools | SDKs | Languages |
 |--------|-------------|--------|--------|--------|
