@@ -22,8 +22,6 @@ To create a event-driven conversations, you need to define the handlers that the
 
 ## Events with activity handlers
 
-In this article, you’ll get to know about different events and the activity handlers associated with those events. If you would like to know about invoke activities, select invoke activities at the start of this article.
-
 Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type.
 
 For example, when the bot receives a message activity, the turn handler identifies this incoming activity and forwards it to the `onMessageActivity` handler. As a developer, you place your logic for managing and responding to messages in this `onMessageActivity` handler.
@@ -1185,47 +1183,6 @@ The member removed activity `eventType` is set to `teamMemberRemoved` when the e
      ```
 
      ---
-
-## Message events
-
-1. **Edit message**: 
-   
-   # [C#](#tab/dotnet16)
-
-     ```csharp
-      protected override async Task OnTeamsMessageEditAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
-      {
-        var replyActivity = MessageFactory.Text("Message is updated");
-        // Sends an activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync(replyActivity, cancellationToken);
-     }
-      ```
-
-1. **Message restore**:
-
-   # [C#](#tab/dotnet17)
-
-   ```csharp
-    protected override async Task OnTeamsMessageUndeleteAsync(ITurnContext<IMessageUpdateActivity> turnContext, CancellationToken cancellationToken)
-        {
-            var replyActivity = MessageFactory.Text("Message is undeleted");
-            // Sends an activity to the sender of the incoming activity.
-            await turnContext.SendActivityAsync(replyActivity, cancellationToken);
-        }
-   ```
-
-1. **Message delete**: 
-    
-    # [C#](#tab/dotnet18)
-
-   ```csharp
-     protected override async Task OnTeamsMessageSoftDeleteAsync(ITurnContext<IMessageDeleteActivity> turnContext, CancellationToken cancellationToken)
-        {
-            var replyActivity = MessageFactory.Text("Message is soft deleted");
-            // Sends an activity to the sender of the incoming activity.
-            await turnContext.SendActivityAsync(replyActivity, cancellationToken);
-        }
-   ```
 
 ### Message reaction events
 
