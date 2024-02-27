@@ -203,12 +203,12 @@ Test Tool offers a faster debug experience for bot applications when compared to
          ```powershell
             teamsapptester.exe start
          ```
+
+      If the Test Tool for C# doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.   
    ---
 1. Test Tool opens the bot in a webpage.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/debug/test-tool.png" lightbox="../assets/images/teams-toolkit-v2/debug/test-tool.png" alt-text="Screenshot shows the bot open in Test Tool."
-
-If the Test Tool for C# doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
 
 ---
 
