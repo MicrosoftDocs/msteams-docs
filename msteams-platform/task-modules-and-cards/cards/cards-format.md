@@ -508,12 +508,12 @@ The following images and JSON samples show an example of Adaptive Card designed 
 
 * **Adaptive Card designed without using `targetWidth`**.
 
-  <br> Adaptive Card with card width wide:
-  :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the it's designed without using targetWidth property."::: </br>
-  <br> Adaptive Card with card width standard or narrow:
-  :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the it's designed without using targetWidth property."::: </br>
-  <br> Adaptive Card with card width very narrow:
-  :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the it's designed without using targetWidth property."::: </br>
+  <br> Adaptive Card with card width wide:</br>
+  <br>:::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the it's designed without using targetWidth property."::: </br>
+  <br> Adaptive Card with card width standard or narrow: </br>
+  <br>:::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the it's designed without using targetWidth property."::: </br>
+  <br> Adaptive Card with card width very narrow: </br>
+  <br>:::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the it's designed without using targetWidth property."::: </br>
 
    The following code is an example of Adaptive Card designed without using `targetWidth`:
 
@@ -625,12 +625,12 @@ The following images and JSON samples show an example of Adaptive Card designed 
 
 * **Responsive Adaptive Card designed using `targetWidth`**.
 
-   <br> Adaptive card renders when the `targetWidth` property is set to `wide`.
-   :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to wide."::: </br>
-   <br> Adaptive card renders when the `targetWidth` property is set to `standard` or `narrow`.
-   :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to standard or narrow."::: </br>
-   <br> Adaptive card renders when the `targetWidth` property is set to `wide`.
-   :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to veryNarrow."::: </br>
+   <br> Adaptive card renders when the `targetWidth` property is set to `wide`.</br>
+   <br>:::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to wide."::: </br>
+   <br> Adaptive card renders when the `targetWidth` property is set to `standard` or `narrow`.</br>
+   <br>:::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to standard or narrow."::: </br>
+   <br> Adaptive card renders when the `targetWidth` property is set to `wide`.</br>
+   <br>:::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to veryNarrow."::: </br>
 
   The following code is an example of Adaptive Card designed using `targetWidth`:
 
