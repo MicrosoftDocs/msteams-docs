@@ -65,8 +65,8 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
 1. Select **AI Chat Bot** and select **Create**.
 
-  > [!NOTE]
-  > [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug AI Chat Bot app.
+   > [!NOTE]
+   > [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug AI Chat Bot app.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project."::: 
 
@@ -131,7 +131,7 @@ To mock an **Add user** activity, follow these steps:
 1. In the **Program.cs** file under `builder.Services.AddTransient<IBot>(sp =>`, add the following code:
 
     
-    ```CS
+    ```csharp 
        app.OnConversationUpdate("membersAdded", async (context, state, cancellationToken) =>
        {
        await context.SendActivityAsync($"new member added", cancellationToken: cancellationToken);
@@ -162,8 +162,7 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
 1. Select **Program.cs** file.
 1. In the **Program.cs** file under `builder.Services.AddTransient<IBot>(sp =>`, add the following code:
 
-    
-    ```CS
+    ```csharp
        app.OnMessageReactionsAdded(async (context, state, cancellationToken) =>
        {
        await context.SendActivityAsync($"reaction added.", cancellationToken: cancellationToken);
