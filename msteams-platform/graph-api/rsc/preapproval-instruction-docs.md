@@ -1,9 +1,8 @@
 ---
-title: Add, update, and remove preapprovals for RSC enabled applications in Teams
+title: Preapproval of RSC permissions
 description: In this article, learn more about creating, managing, and deleting preapprovals for RSC enabled applications in MS Teams
 ms.localizationpriority: medium
-author: MSFTRickyCastaneda
-ms.author: rcastaneda
+ms.author: v-sdhakshina
 ms.topic: Conceptual
 ms.date: 08/29/2023
 ---
@@ -12,14 +11,14 @@ ms.date: 08/29/2023
 
 Preapproval of resource-specific consent (RSC) permissions allows admins to approve RSC on an app-by-app basis in Microsoft Teams. Previously, admins had the ability to toggle RSC on or off in their tenant. Admins had to approve or block all RSC enabled apps with no granularity to declare which apps they wanted to allow.
 
-Through preapproved RSC, admins can choose which RSC-enabled apps they allow their tenant users to install in Teams without having to allow or block all apps that utilize RSC permissions.
+Through preapproved RSC, admins can select which RSC-enabled apps they allow their tenant users to install in Teams without having to allow or block all apps that utilize RSC permissions.
 
 > [!NOTE]
-> Preapproval of RSC permissions is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> Preapproval of RSC permissions is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 ## PowerShell set up to manage preapproval of RSC permissions
 
-Preapproval of RSC permissions is managed through Microsoft Teams PowerShell. For more information, see [Manage Teams with Microsoft Teams Powershell](/microsoftteams/teams-powershell-managing-teams)
+Preapproval of RSC permissions is managed through Microsoft Teams PowerShell. For more information, see [manage Teams with Microsoft Teams Powershell](/microsoftteams/teams-powershell-managing-teams)
 
 Before you can create and manage preapprovals, connect PowerShell to your tenant using Microsoft Graph `Connect-MgGraph` cmdlet. To create, manage, and delete preapproval policies, use the following permissions to connect:
 
@@ -35,7 +34,7 @@ connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite
 
 ## Enable preapproval for RSC permissions
 
-Change your RSC settings using the `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets to allow preapproved apps only. The following are the available configurations:
+To enable preapproval for RSC permissions, change your RSC settings with the `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets to allow preapproved apps only. The following are the available configurations:
 
 |Configuration| Description|
 |---|---|
@@ -48,14 +47,14 @@ Change your RSC settings using the `Set-MgBetaChatRscConfiguration` and `Set-MgB
 
 ### Enable preapproval for chat RSC permissions
 
-You can check and change the current state of your chat RSC configurations using the following cmdlets:
+You can check and change the current state of your chat RSC configurations with the following cmdlets:
 
 1. `Get-MgBetaChatRscConfiguration`
 1. `Set-MgBetaChatRscConfiguration -State EnabledForPreApprovedAppsOnly`
 
 ### Enable preapproval for team RSC permissions
 
-You can check the current state of your team RSC configurations by using the following cmdlets:
+You can check the current state of your team RSC configurations with the following cmdlets:
 
 1. `Get-MgBetaTeamRscConfiguration`
 1. `Set-MgBetaTeamRscConfiguration -State EnabledForPreApprovedAppsOnly`
@@ -100,8 +99,7 @@ New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 
 > [!WARNING]
 >
-> * If you associate the wrong permissions with the wrong permission type in your cmdlet, the preapproval creation may fail. Chat RSC permissions end in chat and team RSC permissions end in .Group.
-> * Create a preapproval with a sensitivity label.
+> If you associate the wrong permissions with the wrong permission type in your cmdlet, the preapproval creation might fail. The chat RSC permissions end in chat and team RSC permissions end in .Group.
 
 ### Create a preapproval with a sensitivity label
 
