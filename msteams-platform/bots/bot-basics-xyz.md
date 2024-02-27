@@ -1522,7 +1522,7 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
 
    # [JSON](#tab/json14)
 
-         ```json
+   ```json
            {
             "type": "installationUpdate",
             "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
@@ -1574,7 +1574,7 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
             },
             "action": "add"
             }
-         ```
+   ```
 
    # [Python](#tab/python14)
 
@@ -1622,11 +1622,11 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
    # [C#](#tab/dotnet15)
    The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following invoke types:
 
-     | Invoke types| Handler| Description|
+     | Invoke type| Handler| Description|
      | :--------------------  | :--------------------- | :-------------------- |
      | CardAction.Invoke | `OnTeamsCardActionInvokeAsync` | When the connector receives a card action invoke activity, this method is invoked. |
 
-     |x | y| z|
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | fileConsent/invoke | `OnTeamsFileConsentAcceptAsync` | When a user accepts a file consent card, this method is invoked. |
       ```csharp
@@ -1635,9 +1635,11 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
        }
       ```
 
-     | x|y |z |
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | fileConsent/invoke  | `OnTeamsFileConsentAsync` | When the connector receives a file consent card activity, this method is invoked. |
+
+     | Invoke type| Handler| Description|
      | fileConsent/invoke  | `OnTeamsFileConsentDeclineAsync` | When a user declines a file consent card, this method is invoked. |
       ```csharp
         protected override async Task OnTeamsFileConsentDeclineAsync(ITurnContext<IInvokeActivity> turnContext, FileConsentCardResponse fileConsentCardResponse, CancellationToken cancellationToken)
@@ -1646,7 +1648,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
       ```
 
-     | x| y|z |
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | actionableMessage/executeAction | `OnTeamsO365ConnectorCardActionAsync` | When the connector receives a connector card for Microsoft 365 Groups action activity, this method is invoked. |
      ```csharp
@@ -1656,7 +1658,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
      ```
      
-     |x |y | z|
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | signin/verifyState  | `OnTeamsSigninVerifyStateAsync` | When the connector receives a `signIn` verify state activity, this method is invoked. |
      ```csharp
@@ -1666,7 +1668,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
      ```
 
-     |x|y|z|
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | task/fetch  | `OnTeamsTaskModuleFetchAsync` | You can override this method in a derived class to provide logic when a dialog (referred as task module in TeamsJS v1.x) is fetched. |
      ```csharp
@@ -1676,7 +1678,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
      ```
      
-     | x| y| z|
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | task/submit  | `OnTeamsTaskModuleSubmitAsync`  | You can override this method in a derived class to provide logic when a dialog is submitted. |
       ```csharp
@@ -1690,10 +1692,11 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
 
    The following table provides the list of Teams activity handlers called from the `onInvokeActivity` Teams activity handler:
 
-     | Invoke types                    | Handler                              | Description                                                  |
+     | Invoke type                    | Handler                              | Description                                                  |
      | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
      | CardAction.Invoke               | `handleTeamsCardActionInvoke`       | This method is invoked when a card action invoke activity is received from the connector. |
 
+     | Invoke type| Handler| Description|
      | fileConsent/invoke              | `handleTeamsFileConsentAccept`      | This method is invoked when the user accepts a file consent card. |
      ```javascript
        protected override async Task OnTeamsFileConsentAcceptAsync(ITurnContext<IInvokeActivity> turnContext, FileConsentCardResponse fileConsentCardResponse, CancellationToken cancellationToken)
@@ -1702,16 +1705,19 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
      ```
 
-     | x|y | z|
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | fileConsent/invoke              | `handleTeamsFileConsent`            | This method is invoked when a file consent card activity is received from the connector. |
+
+     | Invoke type| Handler| Description|
      | fileConsent/invoke              | `handleTeamsFileConsentDecline`     | This method is invoked when the user declines a file consent card. |
      ```javascript
      async handleTeamsFileConsentDecline(context, fileConsentCardResponse) {
         // Write your logic here
     }
      ```
-     | x|y |z |
+
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | actionableMessage/executeAction | `handleTeamsO365ConnectorCardAction` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
      ```javascript
@@ -1720,7 +1726,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
       }
      ```
 
-     | x|y |z |
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | signin/verifyState              | `handleTeamsSigninVerifyState`      | This method is invoked when a `signIn` verify state activity is received from the connector. |
      ```javascript
@@ -1730,7 +1736,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
    
      ```
 
-     |x |y |z |
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | task/fetch                      | `handleTeamsTaskModuleFetch`        | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
      ```javascript
@@ -1740,7 +1746,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         }
      ```
 
-     |x | y| z|
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | task/submit                     | `handleTeamsTaskModuleSubmit`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
      ```javascript
@@ -1753,9 +1759,11 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
 
    The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following invoke types:
 
-     | Invoke types                    | Handler                              | Description                                                  |
+     | Invoke type                    | Handler                              | Description                                                  |
      | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
      | CardAction.Invoke               | `on_teams_card_action_invoke`       | This method is invoked when a card action invoke activity is received from the connector. |
+
+     | Invoke type| Handler| Description|
      | fileConsent/invoke              | `on_teams_file_consent_accept`      | This method is invoked when the user accepts a file consent card. |
       ```python
        async def on_teams_file_consent_accept(
@@ -1767,9 +1775,11 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         
       ```
 
-     |x |y | z|
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
+
+     | Invoke type| Handler| Description|
      | fileConsent/invoke              | `on_teams_file_consent_decline`     | This method is invoked when the user declines a file consent card. |
      ```python
      async def on_teams_file_consent_decline(
@@ -1778,13 +1788,16 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
             file_consent_card_response: FileConsentCardResponse
     ):
        // Write your logic here
-     
       ```
 
-     | x| y| z|
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
+
+     | Invoke type| Handler| Description|
      | signin/verifyState              | `on_teams_signin_verify_state`      | This method is invoked when a `signIn` verify state activity is received from the connector. |
+
+     | Invoke type| Handler| Description|
      | task/fetch                      | `on_teams_task_module_fetch`        | This method can be overridden in a derived class to provide logic when a dialog is fetched. |
      ```python
        async def on_teams_task_module_fetch(
@@ -1793,7 +1806,7 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         // Write you logic here
      ```
      
-     | x| y| z|
+     | Invoke type| Handler| Description|
      | ---|--- |---|
      | task/submit                     | `on_teams_task_module_submit`       | This method can be overridden in a derived class to provide logic when a dialog is submitted. |
      ```python
