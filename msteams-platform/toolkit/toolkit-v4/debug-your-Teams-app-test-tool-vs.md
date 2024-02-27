@@ -129,11 +129,11 @@ To mock an **Add user** activity, follow these steps:
 1. In the **Program.cs** file under `builder.Services.AddTransient<IBot>(sp =>`, add the following code:
 
     
-    ```json
-    app.OnConversationUpdate("membersAdded", async (context, state, cancellationToken) =>
-    {
-    await context.SendActivityAsync($"new member added", cancellationToken: cancellationToken);
-    });
+    ```CS
+       app.OnConversationUpdate("membersAdded", async (context, state, cancellationToken) =>
+       {
+       await context.SendActivityAsync($"new member added", cancellationToken: cancellationToken);
+       });
     ```
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-a-user-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for predefined mock activity add user.":::
@@ -161,11 +161,11 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
 1. In the **Program.cs** file under `builder.Services.AddTransient<IBot>(sp =>`, add the following code:
 
     
-    ```json
-    app.OnMessageReactionsAdded(async (context, state, cancellationToken) =>
-    {
-    await context.SendActivityAsync($"reaction added.", cancellationToken: cancellationToken);
-    });
+    ```CS
+       app.OnMessageReactionsAdded(async (context, state, cancellationToken) =>
+       {
+       await context.SendActivityAsync($"reaction added.", cancellationToken: cancellationToken);
+       });
     ```
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for customization on mock activity.":::
