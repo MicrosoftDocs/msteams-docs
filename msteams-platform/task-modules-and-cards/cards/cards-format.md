@@ -580,7 +580,7 @@ The following images and JSON samples show an example of Adaptive Card designed 
    <br>:::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to wide."::: </br>
    <br> Adaptive card renders when the `targetWidth` property is set to `standard` or `narrow`.</br>
    <br>:::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to standard or narrow."::: </br>
-   <br> Adaptive card renders when the `targetWidth` property is set to `wide`.</br>
+   <br> Adaptive card renders when the `targetWidth` property is set to `veryNarrow`.</br>
    <br>:::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to veryNarrow."::: </br>
 
   The following code is an example of Adaptive Card designed using `targetWidth`:
