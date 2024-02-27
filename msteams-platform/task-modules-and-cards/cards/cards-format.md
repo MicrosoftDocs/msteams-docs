@@ -519,107 +519,58 @@ The following images and JSON samples show an example of Adaptive Card designed 
 
     ```json
     { 
-
     "type": "AdaptiveCard", 
-
     "body": [ 
-
         { 
-
             "type": "ColumnSet", 
-
             "columns": [ 
-
                 { 
-
                     "type": "Column", 
-
                     "items": [ 
-
                         { 
-
                             "type": "Image", 
-
                             "style": "Person", 
-
                             "url": "https://aka.ms/AAp9xo4", 
-
                             "size": "Small" 
-
                         } 
-
                     ], 
-
                     "width": "auto" 
-
                 }, 
-
                 { 
-
                     "type": "Column", 
-
                     "spacing": "medium", 
-
                     "verticalContentAlignment": "center", 
-
                     "items": [ 
-
                         { 
-
                             "type": "TextBlock", 
-
                             "weight": "Bolder", 
-
                             "text": "David Claux", 
-
                             "wrap": true 
-
                         } 
-
                     ], 
-
-                    "width": "auto" 
+                  "width": "auto" 
 
                 }, 
-
                 { 
-
                     "type": "Column", 
-
-                    "spacing": "medium", 
+                   "spacing": "medium", 
 
                     "items": [ 
-
                         { 
-
                             "type": "TextBlock", 
-
                             "text": "Platform Architect", 
-
                             "isSubtle": true, 
-
                             "wrap": true 
-
                         } 
-
                     ], 
-
                     "width": "stretch", 
-
                     "verticalContentAlignment": "center" 
-
                 } 
-
             ] 
-
         } 
-
     ], 
-
     "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
-
     "version": "1.5" 
-
     } 
     ```
 
@@ -698,7 +649,7 @@ The following images and JSON samples show an example of Adaptive Card designed 
     } 
   ```
 
-You can set the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths. The following table provides the available values of the `targetwidth` property for different layouts:
+You can set the `targetWidth` property to any element in your Adaptive Card to create different layouts for different card widths. The following table provides the available values of the `targetWidth` property for different layouts:
 
   |Value  |Description  |
   |---------|---------|
