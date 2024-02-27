@@ -133,9 +133,9 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
 
 If you want to preview a notification bot hosted on Azure Functions, run the following command in your project directory:
 
-    ```cmd
-    npm run prepare-storage:teamsapp
-    ```
+```cmd
+npm run prepare-storage:teamsapp
+```
 ---
 
 ## Debug your app
