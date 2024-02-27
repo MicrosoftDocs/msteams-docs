@@ -66,7 +66,8 @@ Test Tool offers a faster debug experience for bot applications when compared to
 1. Select **AI Chat Bot** and select **Create**.
 
    > [!NOTE]
-   > [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug AI Chat Bot app.
+   > * [OpenAI](https://platform.openai.com/apps) or  [Azure OpenAI](https://oai.azure.com/portal) are the prerequisite to debug **AI Chat Bot** app.
+   > * Test Tool provides support for all bot app features. In this scenario, we're using **AI Chat Bot** as an example.
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project."::: 
 
