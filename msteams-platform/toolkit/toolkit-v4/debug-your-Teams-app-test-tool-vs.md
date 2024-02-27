@@ -10,10 +10,7 @@ ms.date: 02/13/2024
 
 # Teams App Test Tool for Visual Studio
 
-> [!NOTE]
-> Teams App Test Tool is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-
-Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
+Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Microsoft Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool.
 
 The following image shows a sample app displaying a response in Test Tool:
 
@@ -129,7 +126,7 @@ To mock an **Add user** activity, follow these steps:
 
 1. In Visual Studio Code, go to **Solution Explorer**.
 1. Select **Program.cs** file.
-1. Under `builder.Services.AddTransient<IBot>(sp =>`, add the following code in **Program.cs** file:
+1. In the **Program.cs** file under `builder.Services.AddTransient<IBot>(sp =>`, add the following code:
 
     
     ```json
@@ -139,7 +136,9 @@ To mock an **Add user** activity, follow these steps:
     });
     ```
 
-1. In Test Tool, go to **Mock an Activity** and select **Add user**.
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-a-user-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for predefined mock activity add user.":::
+
+1. In the Test Tool, go to **Mock an Activity** and select **Add user**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-user-vs.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
@@ -159,7 +158,7 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
 
 1. In Visual Studio Code, go to **Solution Explorer**.
 1. Select **Program.cs** file.
-1. Under `builder.Services.AddTransient<IBot>(sp =>`, add the following code in **Program.cs** file:
+1. In the **Program.cs** file under `builder.Services.AddTransient<IBot>(sp =>`, add the following code:
 
     
     ```json
@@ -169,13 +168,18 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
     });
     ```
 
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for customization on mock activity.":::
+
 1. Select the latest response from Log Panel and copy `replyToId`.
+
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-reply-to-do.png" alt-text="Screenshot shows the selection of replyToID to copy for customization on mock activity.":::
+
 1. Select **Mock an Activity** > **Custom activity**.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/mock-activity-vs.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
 1. Add `messageReaction` to customize the activity under the property `type` and invoke the custom activity.
-1. Update the the latest `replyToId`.
+1. Update with the latest `replyToId`.
 
     ```json
     {
@@ -199,7 +203,7 @@ You can use **Custom activity** to customize activity triggers such as, `reactio
 
 ## Limitations
 
-* Bot features enabled through the Teams app manifest aren't available as Test Tool doesn't process it.
+* Bot features enabled through app manifest aren't available as Test Tool doesn't process it.
 
 * Test Tool doesn't support all types of cards except Adaptive Cards.
 
