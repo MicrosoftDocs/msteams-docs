@@ -147,7 +147,7 @@ You can add commands and parameters to your message extension, to add commands:
 
    A **Command details** appears.
 
-1. Under **Command details**, go to **Adaptive card template** and select **Upload now**.
+1. Under **Add a command**, go to **Response template** and select **Upload now**.
 
     :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
 
