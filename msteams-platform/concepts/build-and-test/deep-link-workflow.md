@@ -10,10 +10,6 @@ ms.date: 01/31/2023
 
 # Deep link to a workflow in Teams
 
-> [!NOTE]
->
-> Use the `msteams://` protocol handler to skip the client selection screen and configure deep links to open in the Teams desktop client directly. For more information, see [Protocol handlers in deep links](deep-links.md#protocol-handlers-in-deep-links).
-
 You can create a deep link to perform a specific task in Teams, such as to create a new chat, open a scheduling dialog, and navigate to audio-video call.
 
 In this article, you’ll learn to create a deep link:

@@ -10,10 +10,6 @@ ms.date: 01/31/2023
 
 # Deep link to Teams chat
 
-> [!NOTE]
->
-> Use the `msteams://` protocol handler to skip the client selection screen and configure deep links to open in the Teams desktop client directly. For more information, see [Protocol handlers in deep links](deep-links.md#protocol-handlers-in-deep-links).
-
 You can create a deep link to a Teams chat, such as to start a new chat, browse to a channel conversation, and to a file in a channel.
 
 In this article, you’ll learn to create:

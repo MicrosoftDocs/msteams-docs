@@ -47,7 +47,7 @@ Teams deep links support two types of protocol handlers:
     2. Download the Teams desktop client if it's not installed
     3. Open the deep link in the Teams web client
 
-:::image type="content" source="../../assets/images/deep-link-open.png" alt-text="Screenshot shows a deep link opened in a browser.":::
+    :::image type="content" source="../../assets/images/deep-link-open.png" alt-text="Screenshot shows a deep link opened in a browser.":::
 
 1. **MSTEAMS**: The `msteams://` protocol handler skips the client selection screen in the browser and opens the deep link directly in the Teams desktop client.
 

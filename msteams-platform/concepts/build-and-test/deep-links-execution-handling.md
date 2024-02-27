@@ -9,10 +9,6 @@ ms.localizationpriority: high
 
 # Configuration and handling of deep links
 
-> [!NOTE]
->
-> Use the `msteams://` protocol handler to skip the client selection screen and configure deep links to open in the Teams desktop client directly. For more information, see [Protocol handlers in deep links](deep-links.md#protocol-handlers-in-deep-links).
-
 You can configure your Teams app to execute deep links from different contexts such as personal tab, shared tab, chat message, and bot.
 
 ## Personal or Shared tab
