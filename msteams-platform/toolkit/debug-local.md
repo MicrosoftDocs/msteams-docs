@@ -125,18 +125,17 @@ Teams Toolkit launches your browser instance and opens a webpage to load Teams c
     ```
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/deploy-env-local.png" alt-text="Screenshot shows deploy the app to Teams.":::
 
-1. To preview a notification bot hosted on Azure Functions, run the following command in your project directory:
-
-    ```cmd
-    npm run prepare-storage:teamsapp
-    ```
-
 1. Run the following command to preview your application locally:
 
     ```cmd
     teamsapp preview --env local
     ```
 
+If you want to preview a notification bot hosted on Azure Functions, run the following command in your project directory:
+
+    ```cmd
+    npm run prepare-storage:teamsapp
+    ```
 ---
 
 ## Debug your app
