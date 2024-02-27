@@ -10,7 +10,7 @@ ms.date: 01/31/2023
 
 # Deep link to Teams chat
 
-You can create a deep link to a Teams chat, such as to start a new chat, navigate to a channel conversation, and access a file within a channel.
+You can create a deep link to a Teams chat, such as to start a new chat, go to a channel conversation, and access a file within a channel.
 
 In this article, you’ll learn to create a deep link:
 
@@ -24,7 +24,7 @@ In this article, you’ll learn to create a deep link:
 
 You can navigate to or create private chats between users with the Microsoft Teams JavaScript client library (TeamsJS) by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat.
 
-When a user creates a new chat using a deep link, Teams creates the new chat in the draft state until the user sends the first message. You can also provide the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. Consider this a shortcut, for the user taking the manual action of navigating to or creating the chat, and then compose the message.
+When a user creates a new chat using a deep link, Teams creates the new chat in the draft state until the user sends the first message. You can also provide the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. Consider this a shortcut for the user taking the manual action of navigating to or creating the chat and then compose the message.
 
 As a use-case example, if you’re retrieving a Microsoft 365 user profile information from your bot as a card, this deep link can allow the app user to easily chat with that person.
 
@@ -49,7 +49,7 @@ Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@conto
 
 #### Configure deep link to start a chat using TeamsJS library
 
-The following example demonstrates how to open a chat message to a group of participants with an initial message. You can target the deep link to an existing or a new chat. If a chat already exists, the deep link opens within that chat.
+The following example demonstrates how to open a chat message to a group of participants with an initial message. You can target the deep link to an existing or a new chat. If a chat already exists, the deep link opens in that chat.
 
 ```javascript
 if(chat.isSupported()) {
@@ -67,7 +67,7 @@ To navigate to a specific chat conversation in Teams, use the following deep lin
 
 `https://teams.microsoft.com/l/chat/<chatId>/conversations`
 
-The query parameter is `chatId`, which represents chat ID of the conversation. The supported format for `chatId` is 19: xxx.
+The query parameter is `chatId`, which represents chat ID of the conversation. The supported format for `chatId` is 19:xxx.
 
 Example: `https://teams.microsoft.com/l/chat/19:c6d70e392a384916c3262b15406d763e@thread.v2/conversations`
 

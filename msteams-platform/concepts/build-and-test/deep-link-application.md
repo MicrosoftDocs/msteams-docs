@@ -12,9 +12,7 @@ ms.date: 05/04/2023
 
 Deep links are configured to perform various actions such as opening a tab, initiating an app install dialog, or browsing within the app. Use deep links in [bot](~/bots/what-are-bots.md) and [connector](~/webhooks-and-connectors/what-are-webhooks-and-connectors.md) messages to inform users about changes to your tab or its items.
 
-Deep links to custom apps are supported, if an app in the Microsoft Teams Store shares the same app ID as the custom app ID specified in its app manifest (previously called Teams app manifest), the deep link opens the Teams Store app instead of the custom app.
-
-After your app is approved for the Teams mobile platform, you can create a deep link to the app for mobile. For the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
+You can create a deep links for a custom app, however, if an app in the Microsoft Teams Store shares the same app ID as the custom app ID, the deep link opens the app from Teams Store instead of the custom app. You can also create a deep link to the app for mobile, after your app is approved for the Teams mobile platform. For the deep link to work on Teams iOS, you need the Apple App Store Connect Team ID. For more information, see [how to update Apple App Store Connect Team ID](../deploy-and-publish/appsource/prepare/update-apple-store-team-connect-id.md).
 
 Deep links allow users to know more about an app and install it in different scopes. You can also create deep links for your app users to go to specific pages within your app. In this article, learn how to create a deep link:
 
@@ -28,22 +26,22 @@ Deep links allow users to know more about an app and install it in different sco
 
 ## Deep link to open application install dialog
 
-Deep links allow app users to open an app installation dialog to know more information about the app or installing it in different contexts. To create a deep link, follow these steps:
+Deep links allow app users to open an application install dialog to know more information about the app or install it in different contexts. You can create a deep link to application in the following ways:
 
 * [Configure deep link manually using your app ID](#configure-deep-link-manually-using-your-app-id).
 * [Configure deep link using TeamsJS library](#configure-deep-link-using-teamsjs-library).
 
 #### Configure deep link manually using your app ID
 
-Here's the deep link format you need to open an app install dialog from your Teams client:
+Here's the deep link format you need to open an app install dialog from your Teams client using app ID:
 
 `https://teams.microsoft.com/l/app/<your-app-id>?tenantId=<tenantId>`
 
-Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bcb4). To know more about different app IDs see, [app ID used for different apps](#app-id-used-for-different-apps).
+Where `<your-app-id>` is your application ID (f46ad259-0fe5-4f12-872d-c737b174bcb4).
 
 ##### App ID used for different apps
 
-The different app IDs used for deep links are as follows:
+Following are the different app IDs that are used for deep links:
 
 * Custom app uploaded in Teams: Manifest ID
 * Apps submitted to org catalog: Org catalog ID. For more information, see [how to find ID based on the app manifest ID](/graph/api/appcatalogs-list-teamsapps#example-3-find-application-based-on-the-teams-app-manifest-id).
@@ -51,9 +49,7 @@ The different app IDs used for deep links are as follows:
 
 #### Configure deep link using TeamsJS library
 
-Applications can use the TeamsJS library to initiate the app installation dialog, eliminating the need for manual deep link generation. Here's an example of how to trigger the app installation dialog using TeamsJS within your application:
-
-Applications can use the TeamsJS library to open the app install dialog without manually generating the deep link. Here's an example of how to trigger the app install dialog using TeamsJS within your app:
+Applications can use TeamsJS library to initiate the app installation dialog, eliminating the need for manual deep link generation. Here's an example of how to trigger the app installation dialog using TeamsJS within your application:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -81,16 +77,16 @@ microsoftTeams.executeDeepLink("https://teams.microsoft.com/l/app/<appId>");
 
 ## Deep link to browse within your app
 
-App users can browse through content in Teams from your tab using TeamsJS library. Deep link is useful if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab, or to open a scheduling dialog. In few instances navigation can also be accomplished using the TeamsJS library and it's recommended to use typed capabilities of the TeamsJS library wherever possible.
+App users can browse through content in Teams from your tab using TeamsJS. You can use deep link to browse within your app, if your tab needs to connect users with other content in Teams, such as to a channel, message, another tab, or to open a scheduling dialog. In few instances navigation can also be accomplished using TeamsJS and it's recommended to use typed capabilities of TeamsJS wherever possible.
 
-One of the benefits of using TeamsJS, particularly for Teams app that might run in other hosts (Outlook and Office), is that it's possible to check if the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. The TeamsJS library organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace, you can check the returned Boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and app's UI.  
+One of the benefits of using TeamsJS, particularly for Teams app that might run in other hosts (Outlook and Office), is that it's possible to check if the host supports the capability you're attempting to use. To check a host's support of a capability, you can use the `isSupported()` function associated with the namespace of the API. TeamsJS organizes APIs into capabilities by way of namespaces. For example, prior to usage of an API in the `pages` namespace, you can check the returned Boolean value from `pages.isSupported()` and take the appropriate action within the context of your app and app's UI.  
 
-For more information about capabilities and the APIs in the TeamsJS library, see [Building tabs and other hosted experiences with the TeamsJS library](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
+For more information about capabilities and the APIs in TeamsJS, see [Building tabs and other hosted experiences with the TeamsJS library](~/tabs/how-to/using-teams-client-sdk.md#apis-organized-into-capabilities).
 
 You can configure deep links to browse within your app in the following ways:
 
 * [Configure deep link to browse within your app manually](#configure-deep-link-to-browse-within-your-app-manually)
-* [Configure deep link to a tab using TeamsJS library](#configure-deep-link-to-a-tab-using-teamsjs-library)
+* [Configure deep link to a tab using TeamsJS](#configure-deep-link-to-a-tab-using-teamsjs)
 
 #### Configure deep link to browse within your app manually
 
@@ -152,9 +148,9 @@ The query parameters are:
 > var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
 > ```
 
-#### Configure deep link to a tab using TeamsJS library
+#### Configure deep link to a tab using TeamsJS
 
-You can configure deep links in your app through the TeamsJS library to allow the app users browse different pages within your app. The following code demonstrates how to navigate to a specific entity within your Teams app:
+You can configure deep links in your app through TeamsJS to allow the app users browse different pages within your app. The following code demonstrates how to navigate to a specific entity within your Teams app:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
