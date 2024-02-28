@@ -657,7 +657,7 @@ The following are JSON samples for Adaptive Card designed without using `targetW
     :::column-end:::
 :::row-end:::
 
-The following table compares the rendering of Adaptive Cards designed with and without using the targetWidth property for different card widths:
+The following table compares the rendering of Adaptive Cards designed with and without using the `targetWidth` property for different card widths:
 
 | Card width |Card designed without using `targetWidth`  | Card designed using `targetWidth` |
 |---------|---------|---------|
