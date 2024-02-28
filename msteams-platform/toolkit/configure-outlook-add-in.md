@@ -14,7 +14,7 @@ Office Add-ins are web apps that extend the functionality of Outlook. Some of th
 
 * Read and write the content of email messages and meeting invitations, as well as responses, cancellations, and appointments.
 * Read properties of the user's mailbox.
-* Respond automatically to events, such as the sending of an email.
+* Respond automatically to events, such as sending an email.
 * Integrate with external services including CRM and project management.
 * Add custom ribbon buttons or menu items to perform specific tasks.
 
@@ -22,7 +22,7 @@ For more information, see [Outlook Add-ins Overview](/office/dev/add-ins/outlook
 
 ## Prerequisites
 
-To configure an Office Add-in as additional capability, you must meet the following conditions:
+To configure an Office Add-in as an additional capability, you must meet the following conditions:
 
 * You must have a Microsoft 365 account that includes Teams, or separate subscriptions to both Microsoft 365 and Teams, to test the application. For example, an *.onmicrosoft.com account.
 
