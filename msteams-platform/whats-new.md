@@ -380,7 +380,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 February**
 
-* ***February 12, 2024***: [Build API-based message extension using Developer Protal for Teams.](messaging-extensions/build-api-based-message-extension.md)
+* ***February 12, 2024***: [Build API-based message extension using Developer Portal for Teams.](messaging-extensions/build-api-based-message-extension.md)
 
 * ***February 06, 2024***: [Introduced systemDefault reserved activity type for send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis).
 
@@ -466,6 +466,8 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 :::column span="2":::
 
 Teams platform features that aren't available.
+
+* ***February 16,2024***:  The feedback option, **This page**, located in the **Submit and view feedback** section of the article, will be deprecated by May 31, 2024. You can select :::image type="icon" source="assets/icons/feedback-icon.png" border="false"::: **Feedback** in the upper-right corner of the article to submit feedback.
 
 * ***February 07, 2024***: Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
