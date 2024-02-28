@@ -123,6 +123,9 @@
     - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
       displayname: Forms
+    - name: Lightbox view
+      href: concepts/design/design-teams-app-light-box-view.md
+      displayName: hide page layout  
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
