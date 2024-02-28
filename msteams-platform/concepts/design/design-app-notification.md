@@ -18,7 +18,7 @@ Teams offers the following notification frameworks for your app:
 
 ### Activity notification
 
-Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates.It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use.
+Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates. It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use.
 <br>
 <br>
 Users can read the activity notifications in a preview within Teams Activity. If the preview captures the user’s interest, they can select the notification to view the content in the Teams main pane.
@@ -32,7 +32,7 @@ Users can read the activity notifications in a preview within Teams Activity. If
 Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal, group chat, or a channel in Teams. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request.
 <br>
 <br>
-Users read a bot notification in an Adaptive Card. When a notification bot send a message, the bot conversation is highlighted in bold or dotted in Teams Chat.
+Users read a bot notification in an Adaptive Card. When a notification bot sends a message, the bot conversation is highlighted in bold or dotted in Teams Chat.
 
    :::column-end:::
 
@@ -81,7 +81,7 @@ When you create your apps, you must consider to enable notifications for your ap
 
 :::image type="content" source="~/assets/images/app-notification.png" alt-text="Screenshot shows you the flow diagram of notification framework for your app.":::
 
-Here are some example scenario's and recommended notification types:
+Here is some example scenario's and recommended notification types:
 
 |Notification scenario|Notification type |Recommended notification|
 |----|----|----|
@@ -93,12 +93,12 @@ Here are some example scenario's and recommended notification types:
 
 ## Next step
 
-If you want a proactive notifications for your app, go to:
+If you want a proactive notification for your app, go to:
 
 > [!div class="nextstepaction"]
 > [Send activity feed notifications to users in Teams](../../tabs/send-activity-feed-notification.md)
 
-If you want an interactive notifications for your app, go to:
+If you want an interactive notification for your app, go to:
 
 > [!div class="nextstepaction"]
 > [Notification bot in Teams](../../bots/how-to/conversations/notification-bot-in-teams.md)
