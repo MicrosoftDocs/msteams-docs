@@ -55,6 +55,165 @@ Following are the different type of conversation events:
 * [Members events](#members-event)
 * [Team events](#team-events)
 
+## Installation events
+
+### Installation update event
+
+The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
+
+> [!NOTE]
+> When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
+
+### Install update event
+
+Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
+
+Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
+
+In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
+
+![Create a selected channel](~/assets/videos/addteam.gif)
+
+> [!NOTE]
+> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
+
+# [C#](#tab/dotnet14)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.oninstallationupdateactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-activityhandler-oninstallationupdateactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinstallationupdateactivity))-system-threading-cancellationtoken)&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L73)
+
+```csharp
+      protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+      {
+        var activity = turnContext.Activity;
+        if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
+        {
+            // TO:DO Installation workflow.
+        }
+        else
+        {
+            // TO:DO Uninstallation workflow.
+        }
+        return;
+      }
+```
+
+You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
+
+```csharp
+     protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+     {
+        // TO:DO Installation workflow return;
+     }
+```
+
+# [TypeScript](#tab/typescript14)
+
+[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L72-L78)
+
+```typescript
+     async onInstallationUpdateActivity(context: TurnContext) {
+            var activity = context.activity.action;
+            if(activity == "Add") {
+                // Sends an activity to the sender of the incoming activity to add.
+                await context.sendActivity(MessageFactory.text("Added"));
+            }
+            else {
+                // Sends an activity to the sender of the incoming activity to uninstalled.
+                await context.sendActivity(MessageFactory.text("Uninstalled"));
+            }
+        }
+```
+
+# [JSON](#tab/json14)
+
+```json
+           {
+            "type": "installationUpdate",
+            "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
+            "timestamp": "2021-11-09T04:47:30.91Z",
+            "serviceUrl": "https://smba.trafficmanager.net/amer/",
+            "channelId": "msteams",
+            "from": {
+                "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+                "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
+            },
+            "recipient": {
+                "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+                "name": "Test Bot"
+            },
+            "locale": "en-US",
+            "entities": [
+                {
+                    "type": "clientInfo",
+                    "locale": "en-US"
+                }
+            ],
+            "conversation": {
+                "isGroup": true,
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+                "name": "2021 Test Channel",
+                "conversationType": "channel",
+                "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+            },
+            "channelData": {
+                "settings": {
+                    "selectedChannel": {
+                        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+                    }
+                },
+                "channel": {
+                    "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+                },
+                "team": {
+                    "aadGroupId": "da849743-4259-475f-ae7a-4f4b0fb49943",
+                    "name": "TestTeam2022",
+                    "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
+                },
+                "tenant": {
+                    "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+                },
+                "source": {
+                    "name": "message"
+                }
+            },
+            "action": "add"
+            }
+```
+
+# [Python](#tab/python14)
+
+[SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-installation-update&preserve-view=true)
+
+```python
+     # Override this in a derived class to provide logic specific to InstallationUpdate  activities.
+     async def on_installation_update(self, turn_context: TurnContext):
+     if turn_context.activity.action == "add": 
+            # Sends an activity to the sender of the incoming activity to add.
+        await turn_context.send_activity(MessageFactory.text("Added"))
+     else:
+            # Sends an activity to the sender of the incoming activity to uninstalled.
+        await turn_context.send_activity(MessageFactory.text("Uninstalled"))
+```
+
+---
+
+### Uninstall behavior for personal app with bot
+
+When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
+
+:::image type="content" source="~/assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="~/assets/images/bots/uninstallbot.png":::
+
+### Event handling for install and uninstall events
+
+When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
+
+* You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
+
+* You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
+
+  It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
+
 
 ## Channel events
 
@@ -1416,165 +1575,6 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 ---
 
-## Installation events
-
-### Installation update event
-
-The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
-
-> [!NOTE]
-> When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
-
-### Install update event
-
-Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
-
-Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
-
-In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
-
-![Create a selected channel](~/assets/videos/addteam.gif)
-
-> [!NOTE]
-> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
-
-# [C#](#tab/dotnet14)
-
-* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.oninstallationupdateactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-activityhandler-oninstallationupdateactivityasync(microsoft-bot-builder-iturncontext((microsoft-bot-schema-iinstallationupdateactivity))-system-threading-cancellationtoken)&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L73)
-
-```csharp
-      protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
-      {
-        var activity = turnContext.Activity;
-        if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
-        {
-            // TO:DO Installation workflow.
-        }
-        else
-        {
-            // TO:DO Uninstallation workflow.
-        }
-        return;
-      }
-```
-
-You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
-
-```csharp
-     protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
-     {
-        // TO:DO Installation workflow return;
-     }
-```
-
-# [TypeScript](#tab/typescript14)
-
-[Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L72-L78)
-
-```typescript
-     async onInstallationUpdateActivity(context: TurnContext) {
-            var activity = context.activity.action;
-            if(activity == "Add") {
-                // Sends an activity to the sender of the incoming activity to add.
-                await context.sendActivity(MessageFactory.text("Added"));
-            }
-            else {
-                // Sends an activity to the sender of the incoming activity to uninstalled.
-                await context.sendActivity(MessageFactory.text("Uninstalled"));
-            }
-        }
-```
-
-# [JSON](#tab/json14)
-
-```json
-           {
-            "type": "installationUpdate",
-            "id": "f:816eb23d-bfa1-afa3-dfeb-d2aa338e9541",
-            "timestamp": "2021-11-09T04:47:30.91Z",
-            "serviceUrl": "https://smba.trafficmanager.net/amer/",
-            "channelId": "msteams",
-            "from": {
-                "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
-                "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
-            },
-            "recipient": {
-                "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
-                "name": "Test Bot"
-            },
-            "locale": "en-US",
-            "entities": [
-                {
-                    "type": "clientInfo",
-                    "locale": "en-US"
-                }
-            ],
-            "conversation": {
-                "isGroup": true,
-                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
-                "name": "2021 Test Channel",
-                "conversationType": "channel",
-                "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
-            },
-            "channelData": {
-                "settings": {
-                    "selectedChannel": {
-                        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
-                    }
-                },
-                "channel": {
-                    "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
-                },
-                "team": {
-                    "aadGroupId": "da849743-4259-475f-ae7a-4f4b0fb49943",
-                    "name": "TestTeam2022",
-                    "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
-                },
-                "tenant": {
-                    "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
-                },
-                "source": {
-                    "name": "message"
-                }
-            },
-            "action": "add"
-            }
-```
-
-# [Python](#tab/python14)
-
-[SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-installation-update&preserve-view=true)
-
-```python
-     # Override this in a derived class to provide logic specific to InstallationUpdate  activities.
-     async def on_installation_update(self, turn_context: TurnContext):
-     if turn_context.activity.action == "add": 
-            # Sends an activity to the sender of the incoming activity to add.
-        await turn_context.send_activity(MessageFactory.text("Added"))
-     else:
-            # Sends an activity to the sender of the incoming activity to uninstalled.
-        await turn_context.send_activity(MessageFactory.text("Uninstalled"))
-```
-
----
-
-### Uninstall behavior for personal app with bot
-
-When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
-
-:::image type="content" source="~/assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="~/assets/images/bots/uninstallbot.png":::
-
-### Event handling for install and uninstall events
-
-When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
-
-* You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
-
-* You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
-
-  It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
-   
 ## Handling errors in events
 
 When a bot encounters an error while handling different events or activities, don't send messages that have no meaningful context to the conversation as shown in the following screenshot:
