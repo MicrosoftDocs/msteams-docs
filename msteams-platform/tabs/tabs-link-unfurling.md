@@ -57,14 +57,16 @@ The following table provides details on the default and defined responses for ea
 | Invoke from | Default response | Defined response |
 | ---| ---| --- |
 | Adaptive Card | Opens in Collaborative Stageview | Opens in Stageview modal, if Collaborative Stageview or Stageview Multi-window isn't supported. |
-| StageView API | Opens in Collaborative Stageview | Define `openMode` to open in the Stageview defined. |
-| Deep link| Opens in Collaborative Stageview | Define `openMode` to open in the Stageview defined. |
+| StageView API | Opens in Collaborative Stageview | Define `openMode` to open in the respective Stageview defined. |
+| Deep link| Opens in Collaborative Stageview | Define `openMode` to open in the respective Stageview defined. |
 
 `openMode` property defined in a [StageView API](#invoke-from-stageview-api) and [deep link](#invoke-from-deep-link) determines the type of Stageview response. The three `openMode` properties are:
 
 * `popoutWithChat`
 * `popout`
 * `modal`
+
+The 'openMode' parameter defined decides if the content should be opened in Stageview Multi-window (popout) or Stageview modal (modal).
 
 The following table provides the Stageview responses of the `openMode`properties:
 
@@ -120,14 +122,14 @@ The following code sample is an example to create a Collaborative Stageview butt
 * Ensure that the content URL is within the list of `validDomains` in your app manifest.
 * The invoke request type must be a `composeExtensions/queryLink`.
 * The `invoke` workflow is similar to the `appLinking` workflow.
-* To maintain consistency, we recommended to name `Action.Submit` as `Open`.
+* To maintain consistency, we recommended naming `Action.Submit` as `Open`.
 * If you don't have an optimized mobile experience for Teams mobile client, the Stageview for apps distributed through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
 
 ### Invoke from StageView API
 
 The StageView API from the Teams JS Client SDK allows you to open one of the Stageview experience based on the `openMode` defined. `openMode` property in StageView API determines the type of Stageview response.
 
-The side panel conversation is the same thread from where the Collaborative Stageview was invoked, that is, chat or group chat. Optionally, you can specify a threadId that allows you to define the conversation that gets loaded in the side panel.
+The side panel conversation is the same thread from where the Collaborative Stageview was invoked, that is, chat or group chat. A threadId allows you to define the conversation that’s brought into the side panel. Optionally, you can specify a threadId to define the conversation that gets loaded in the side panel.
 
 > [!NOTE]
 > The Stageview API supports an optional threadId parameter that allows you to bring a specific conversation into the Collaborative Stageview sidepanel. Mapping contentUrl to threadId allows you to persist a conversation alongside content.
@@ -193,7 +195,7 @@ For more information, see [stageView module](/javascript/api/@microsoft/teams-js
 
 #### StageView API parameters
 
-| Property name | Type | Character Limit | Description |
+| Property name | Type | Character limit | Description |
 | --- | --- | --- | --- |
 | entityId | String | 64 | [Required] This property is a unique identifier for the entity that the tab displays. |
 | name | String | 128 | [Optional] This property is the display name of the tab in the channel interface. If no value is provided, the app name is shown. |
@@ -211,7 +213,12 @@ For more information, see [stageView module](/javascript/api/@microsoft/teams-js
 
 The default behavior of Stageview deep link is to open in Collaborative Stageview with an associated side panel conversation. To invoke Stageview through deep link from your tab or personal app, you must wrap the deep link URL in the [app.openLink(url) API](/javascript/api/%40microsoft/teams-js/app#@microsoft-teams-js-app-openlink). The `openMode` parameter defined in the API determines the way the chat content opens.
 
-Unless a threadId is specified, the side panel conversation brings the groupchat or channel thread from which the deep link is invoked.
+Unless a threadId is specified, the side panel conversation brings the group chat or channel thread from which the deep link is invoked.
+
+> [!NOTE]
+>
+> * Deep link without any `openMode` specified defaults to Collaborative Stageview.
+> * All deep links must be encoded before pasting the URL. Unencoded URLs aren't supported.
 
 #### Syntax
 
@@ -230,18 +237,13 @@ Following is the deep link examples to invoke Stageview:
 
 Encoded URL:
 
-`https://teams.microsoft.com/l/stage/2c19df50-1c3c-11ea-9327-cd28e4b6f7ba/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-test-tab.azurewebsites.net%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-test-tab.azurewebsites.net%22%7D`
+`https://teams.microsoft.com/l/stage/{appId}/0?context=%7B%22contentUrl%22%3A%22contentUrl%22%2C%22websiteUrl%22%3A%22websiteUrl%22%2C%22name%22%3A%22Contoso%22%2C%22openMode%22%3A%22popOutWithChat%22%7D`
 
 </details>
 
-> [!NOTE]
->
-> * Deep link without any `openMode` specified defaults to Collaborative Stageview.
-> * All deep links must be encoded before pasting the URL. Unencoded URLs aren't supported.
-
 #### Query parameters
 
-| Property name | Type | Character Limit | Description |
+| Property name | Type | Character limit | Description |
 | --- | --- | --- | --- |
 | entityId | String | 64 | This property is a unique identifier for the entity that the tab displays and it's a required field. |
 | name | String | 128 | This property is the display name of the tab in the channel interface and it's an optional field. If no value is provided, the app name is shown. |
@@ -280,7 +282,7 @@ Stageview modal is useful to display rich content to the users, such as a page, 
 
 <summary>I'm able to open Collaborative Stageview, but content is loading into the main canvas.</summary>
 
-Ensure that your contentUrl domain is accurately reflected in the manifest `validDomains` property. For more information, see [App manifest schema](../resources/schema/manifest-schema.md).
+Ensure that your contentUrl domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](../resources/schema/manifest-schema.md).
 
 </br>
 
@@ -290,7 +292,7 @@ Ensure that your contentUrl domain is accurately reflected in the manifest `vali
 
 <summary>My contentUrl matches my `validDomains`, but I'm still unable to view any content showing up.</summary>
 
-Call app.notifySuccess() in all iframe-based contents to notify Teams that your app has successfully loaded. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out, and displays an error screen with a retry option. For app updates, this step is applicable for already configured tabs. If you don't perform this step, an error screen is displayed for the existing users. [*Mandatory*]
+Call app.notifySuccess() in all iframe-based contents notifies Teams that your app loaded successfully. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out, and displays an error screen with a retry option. For app updates, this step is applicable for already configured tabs. If you don't perform this step, an error screen is displayed for the existing users.
 
 </br>
 
@@ -310,7 +312,7 @@ Deep links are currently not supported in contentUrls.
 
 <summary>How do I keep a specific thread shown alongside my content?</summary>
 
-Collaborative Stageview from a deep link or API comes with the additional threadId parameter. You can explicitly define which chat thread is shown in the side panel for your specific contentUrl. For more information about retrieving a threadId, see [Get conversation thread](/graph/api/group-get-thread).
+Collaborative Stageview from a deep link or API comes with the additional threadId parameter. You can explicitly define the chat thread to be displayed in the side panel for your specific contentUrl. For more information about retrieving a threadId, see [get conversation thread](/graph/api/group-get-thread).
 
 </br>
 
