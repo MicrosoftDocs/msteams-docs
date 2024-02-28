@@ -1,29 +1,26 @@
 - name: Microsoft Teams developer documentation
   href: index.yml
+
 - name: What's new?
   href: whats-new.md
   displayName: Teams platform features, latest updates, RSS feed, deprecated, announcement, preview 
+
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions, welcome, new word, meaning
+
 - name: Get started
   expanded: false
   items:
   - name: The Teams platform
     href: get-started/get-started-overview.md
-    items:
-      - name: Teams app capabilities
-        href: concepts/design/overview-analytics.md
-      - name: Teams app manifest
-        href: concepts/design/strategize-measure.md
-      - name: Package a Teams app
-        href: concepts/design/plan-code-instrumentation.md
   - name: Next-generation developer tools
     href: get-started/build-basic-tab-app.md
   - name: Set up your development environment
     href: get-started/build-notification-bot.md
   - name: Build your first Teams app
     href: get-started/build-message-extension.md
+
 - name: Plan your app
   expanded: false
   items:
@@ -40,63 +37,151 @@
     displayName: HTTPs, localhost, host your Teams app
   - name: User scenario for a Hero card
     href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
-- name: Plan analytics for your Teams app
+
+- name: Build tabs
+  expanded: false
   items:
-  - name: Overview
+  - name: Build a tab app
     href: concepts/design/overview-analytics.md
-  - name: Strategize and decide what to measure
+  - name: Debug a tab app
     href: concepts/design/strategize-measure.md
-  - name: Plan code instrumentation using analytics service
-    href: concepts/design/plan-code-instrumentation.md
-  - name: Plan to monetize your app
+  - name: Build a Teams tab with SharePoint Framework
     href: concepts/design/plan-to-monetize.md
-    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
-- name: Design your app
+    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee
+  - name: Extend a Teams tab across Microsoft 365 and Outlook
+    href: concepts/design/plan-to-monetize.md
+    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee   
+
+- name: Build bots
+  expanded: false
   items:
-  - name: Overview
+  - name: Activity handlers
     href: concepts/design/design-teams-app-overview.md
     displayName: Design principles, Figma, UI Kit, UI library, Fluent UI 
-  - name: Understand design process
+  - name: Messaging and conversations
     href: concepts/design/design-teams-app-process.md
-  - name: Design system
+  - name: Build a bot app
+    href: concepts/design/design-teams-app-fundamentals.md
+    displayName: icons, Font, Color 
+  - name: Debug a bot app
+    href: concepts/design/design-teams-app-layout-scaling.md
+    displayName: layout, scaling 
+  - name: Teams AI library
+    href: concepts/design/design-teams-app-icon-store-appbar.md
+    displayName: icons, Font, Color 
+  
+- name: Build message extensions
+  expanded: false
+  items:
+  - name: Build a message extension app
+    href: concepts/design/design-teams-app-type.md
+    displayName: type 
+  - name: Debug a message extension app
+    href: concepts/design/design-teams-app-color.md
+    displayName: Color 
+  - name: Extend a Teams message extension across Microsoft 365 and Outlook
+    href: concepts/design/design-teams-app-shape-elevation.md
+    displayName: shape, elevation
+  - name: Extend a Teams message extension to Copilot plugins
+    href: concepts/design/app-structure.md
+    displayName: best practices
+
+- name: Build meeting extensions
+  expanded: false
+  items:
+  - name: Overview
+    href: tabs/design/tabs.md
+
+- name: Build webhooks and connectors
+  expanded: false
+  items:
+  - name: Overview
+    href: tabs/design/tabs.md
+
+- name: Adaptive Cards and dialogs
+  expanded: false
+  items:
+  - name: Overview
+    href: tabs/design/tabs.md
+
+- name: App manifest
+  expanded: false
+  items:
+    - name: App manifest schema
+      href: resources/schema/manifest-schema.md
+      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
+    - name: Public developer preview
+      items:
+        - name: Overview
+          href: resources/dev-preview/developer-preview-intro.md          
+        - name: Public developer preview app manifest schema
+          href: resources/schema/manifest-schema-dev-preview.md
+          displayName: properties
+
+- name:	Advanced Teams app development tutorial
+  expanded: false
+  items:
+  - name: Utilize Teams data with Microsoft Graph
+    expanded: false
     items:
     - name: Overview
-      href: concepts/design/design-teams-app-fundamentals.md
-      displayName: icons, Font, Color 
-    - name: Layout and scaling
-      href: concepts/design/design-teams-app-layout-scaling.md
-      displayName: layout, scaling 
-    - name: App icons for Teams Store and app bar
-      href: concepts/design/design-teams-app-icon-store-appbar.md
-      displayName: icons, Font, Color 
-    - name: App artwork for Teams Store
-      href: concepts/design/design-teams-app-artwork-store.md
-      displayName: app artwork 
-    - name: Type
-      href: concepts/design/design-teams-app-type.md
-      displayName: type 
-    - name: Color
-      href: concepts/design/design-teams-app-color.md
-      displayName: Color 
-    - name: Shape and elevation
-      href: concepts/design/design-teams-app-shape-elevation.md
-      displayName: shape, elevation
-  - name: App capabilities
+      href: /graph/teams-concept-overview
+      displayName: Permissions, communication, channels, delegated, reports, extensions
+    - name: Microsoft Graph Toolkit
+      href: /graph/toolkit/overview
+      displayName: Access, routing
+    - name: Get started
+      href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
+      displayName: Access, report, MSAL2
+    - name: Teams app permissions
+      href: graph-api/App-permissions/Teams-app-permissions.md
+    - name: Resource-specific consent
+      items:
+      - name: Overview
+        href: graph-api/rsc/resource-specific-consent.md
+      - name: Grant RSC permission to your app
+        href: graph-api/rsc/grant-resource-specific-consent.md
+        displayName: Permissions, delegated, user, team, chat, application
+    - name: Proactive installation of apps using Graph API to send messages
+      href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    - name: Import third-party messages
+      href: graph-api/import-messages/import-external-messages-to-teams.md
+    - name: Code samples
+      href: https://github.com/OfficeDev/microsoft-teams-samples#graph-apis
+  - name: Enable SSO with Teams identity
+    expanded: false
     items:
-    - name: Understand app structure
-      href: concepts/design/app-structure.md
-      displayName: best practices
-    - name: Personal apps
-      href: concepts/design/personal-apps.md
-      displayName: logo
-    - name: Tabs
-      href: tabs/design/tabs.md
-    - name: Bots
-      href: bots/design/bots.md
-    - name: Message extensions
-      href: messaging-extensions/design/messaging-extension-design.md  
-    - name: Meeting extensions
-      href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
+    - name: Overview
+      href: concepts/authentication/authentication.md
+      displayName: Single sign-on, OAuth provider
+  - name: Use third-party authentication
+    expanded: false
+    items:
+    - name: Overview
+      href: concepts/authentication/authentication.md
+      displayName: Single sign-on, OAuth provider
+  - name: Integrate an existing app with Teams
+    expanded: false
+    items:
+    - name: Overview
+      href: concepts/authentication/authentication.md
+      displayName: Single sign-on, OAuth provider
+  - name: How to add a tab to your bot app
+    expanded: false
+    items:
+    - name: Overview
+      href: concepts/authentication/authentication.md
+      displayName: Single sign-on, OAuth provider
+    
+- name: Distribute your Teams app
+  expanded: false
+  items:
+  - name: Create a Teams app Package
+    href: bots/design/bots.md
+  - name: Upload an app to Teams for personal 
+    href: messaging-extensions/design/messaging-extension-design.md  
+  - name: Meeting extensions
+    href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
   - name: UI templates
     href: concepts/design/design-teams-app-ui-templates.md
   - name: UI components
