@@ -15,7 +15,7 @@ Teams offers the following notification frameworks for your app:
 :::row:::
    :::column span="":::
 
-### Activity feed notification
+### Activity notification
 
 Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates.It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use.
 <br>
@@ -42,12 +42,26 @@ Teams main pane has larger surface than Adaptive Card to load more assets in a t
 
 ## Notification Types
 
-Evaluate whether your notifications are proactive or interactive.  
+Evaluate whether your notifications are proactive or interactive.
 
-* **Proactive notifications** inform users about news, events, requests, and reminders that require users’ immediate attention and/or specific actions. **Activity notifications** are good for proactive notifications, attention-grabbing alert, announcements, reminders, and action-needed requests.
-* **Interactive notifications** encourage users to respond to the sender with the information required for continuous communication. **Notification bot** is good for interactive notifications that require quick response in a light weighted and highly customizable cards.
+:::row:::
+   :::column span="":::
 
-Some notifications are both proactive and interactive, in that case either type of notifications work for the scenario.
+### Proactive notifications
+
+Inform users about news, events, requests, and reminders that require users’ immediate attention and/or specific actions. **Activity notifications** are good for proactive notifications, attention-grabbing alert, announcements, reminders, and action-needed requests.
+
+   :::column-end:::
+
+   :::column span="":::
+
+### Interactive notifications
+
+Encourage users to respond to the sender with the information required for continuous communication. **Notification bot** is good for interactive notifications that require quick response in a light weighted and highly customizable cards.
+
+   :::column-end:::
+
+:::row-end:::
 
 You can also consider the following before you choose the notification for your app:
 
@@ -55,7 +69,7 @@ You can also consider the following before you choose the notification for your 
 
 * **Batch send**: Activity notifications enable batch sending to up to 100 users in a single request, which is suitable for **announcement** type of notifications. You can also send a notification to all participants in a chat or channel. When you send a large number of notifications, activity notifications are faster than notification bot due to the higher throttling threshold in Graph APIs.
 
-## Choose the right notification framework for your app
+### Choose the right notification framework for your app
 
 When you create your apps, you must consider to enable notifications for your app to effectively engage and retain users in Teams. Ask yourself the following questions:
 
@@ -65,6 +79,16 @@ When you create your apps, you must consider to enable notifications for your ap
 * Do you require localization support or batch send faster?
 
 :::image type="content" source="../../assets/images/app-notification.png" alt-text="Screenshot shows you the flow diagram of notification framework for your app.":::
+
+Here are some example scenario's and recommended notification types:
+
+|Notification scenario|Notification type |Recommended notification|
+|----|----|----|
+|If a vice president makes an announcement to be broadcasted to the entire organization.|Proactive|Activity notification|
+|Colleague mentions a team mate and requests to collaborate in a shared document.|Proactive|Activity notification|
+|Proactive reminder to finish required a training course immediately.|Proactive|Activity notification|
+|Quick poll on a preferred place for team lunch.|Interactive|Notification bot|
+|Interactive reminder to take a break and choose a music to play.|Interactive|Notification bot|
 
 ## Next step
 
