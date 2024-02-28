@@ -8,7 +8,7 @@ ms.date: 02/23/2024
 ---
 # Plan your app notifications
 
-Notification is one of the most effective ways to engage and retain users. Within Microsoft Teams, platform apps can send notifications to the activity feed using the Graph API, send Adaptive Cards through bots, or post messages to Teams channels through incoming webhooks. In this guide, learn effective notification design principles and how to select the most suitable framework for your app.
+Notification is one of the most effective ways to engage and retain users. Within Microsoft Teams, platform apps can send notifications to the activity feed using the Graph API, send Adaptive Cards through bots, or post messages to Teams channels through incoming webhooks. Here you can learn the effective notification design principles and how to select the most suitable framework for your app.
 
 Teams offers the following notification frameworks for your app:
 
@@ -17,7 +17,7 @@ Teams offers the following notification frameworks for your app:
 
 ### Activity feed notification
 
-The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use. For more information, see [Send activity feed notifications to users in Microsoft Teams](../../tabs/send-activity-feed-notification.md).
+Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates. Use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use. For more information, see [Send activity feed notifications to users in Microsoft Teams](../../tabs/send-activity-feed-notification.md).
 
    :::column-end:::
 
@@ -36,6 +36,16 @@ The Microsoft Teams activity feed enables users to triage items that require att
    :::column-end:::
 
 :::row-end:::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed on mobile.":::
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed."  lightbox="../../assets/images/activity-feed/desktop-overview.png":::
+
+---
 
 :::row:::
    :::column span="":::
@@ -60,6 +70,8 @@ Microsoft Teams Toolkit allows you to build apps that capture events and send th
    :::column-end:::
 
 :::row-end:::
+
+:::image type="content" border="false" source="../assets/images/get-started/get-started-bot.png" alt-text="Screenshot shows you the conceptual notification bot in Teams client":::
 
 The key difference between these two notification frameworks is where users read notifications:
 
