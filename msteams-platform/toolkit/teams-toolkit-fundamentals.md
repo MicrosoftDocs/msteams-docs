@@ -9,14 +9,7 @@ ms.date: 05/24/2022
 ---
 # Teams Toolkit Overview
 
-> [!IMPORTANT]
->
-> * The latest version of Teams Toolkit comes with many new app development features and recommend to use Teams Toolkit v5 for building your Teams app.
-> * Teams Toolkit isn't supported in Government Community Cloud (GCC) and GCC-High environments.
-
-Microsoft Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio Code.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+Microsoft Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio Code.
 
 * Start with a project template for common custom app built for your org (LOB app) scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
@@ -38,19 +31,9 @@ Teams Toolkit is available for free for Visual Studio Code. For more information
 | Installation | Available in the VS Code Marketplace |
 | Build with | JavaScript, TypeScript, React, SPFx |
 
-## Version Mapping
-
-The following table list out the version support for the Teams Toolkit extension for each release cycle:
-
-| &nbsp; | Teams Toolkit for Visual Studio Code|Teams Toolkit for Visual Studio| Teams Toolkit CLI | TeamsFx SDK |Teams SDK|Manifest|
-|----|----|----|----|----|----|----|
-|Public Preview|v3.8.x|v17.2|v0.14.x|v0.7.x|v1.11.x, v1.12.x|v1.11|
-|GA|v4.0.0|v17.3|v1.0.0|v1.0.0|v1.12.x|v1.11|
-|Latest*|v5.x.x|v17.6|-|v2.x.x|v2.x.x|v1.16|
-|Beta**|Prerelease|v17.7 Preview|v2.x.x-beta|v2.x.x-beta|v2.x.x-beta|Dev preview|
-
-*Latest is aligned on the major version.<br>
-**Beta indicates developer preview.
+> [!IMPORTANT]
+>
+> Teams Toolkit isn't supported in Government Community Cloud (GCC) and GCC-High environments.
 
 ## Features
 
@@ -80,6 +63,18 @@ You can create different groupings of cloud resources to run and test your app. 
 You can access Teams Developer Portal where you can configure, distribute, and manage your app. For more information, see [manage your Teams apps using Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md).
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/build-environment-dev-portal.png" alt-text="Screenshot shows the Developer Portal option.":::
+
+### Debug tunneling for bots
+
+Run and debug your bot projects using VS Code and the included Dev Tunnels features.
+
+### App test tool
+
+Run and debug your bot projects in the test tool debug configuration to launch in a simulator-like experience for Teams without the need for an account or custom app permissions.
+
+### Infrastructure templates
+
+Optionally use any of our smart defaults for hosting your app project in Azure using Bicep templates included with every project template. 
 
 ## See also
 

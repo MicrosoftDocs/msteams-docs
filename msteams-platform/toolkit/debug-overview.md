@@ -10,9 +10,7 @@ ms.date: 03/21/2022
 
 # Debug your Teams app
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
-Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
+Microsoft Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
 ## Debug your Teams app for Visual Studio Code
 

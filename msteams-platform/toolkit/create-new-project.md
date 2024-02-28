@@ -10,15 +10,11 @@ ms.date: 03/14/2022
 
 # Create a new Teams app
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
-In this section, you can learn how to create a new Teams project using Microsoft Visual Studio Code.
-
-::: zone pivot="visual-studio-code-v5"
+In this section, you can learn how to create a new Microsoft Teams project using Microsoft Visual Studio Code.
 
 ## Create a new Teams project using Visual Studio Code
 
-You can build a new Teams project by selecting **Create a New App** in Teams Toolkit. You can start from built-in Teams app templates or start from official Teams app samples in Teams Toolkit. What's more, Teams Toolkit v5 supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
+You can build a new Teams project by selecting **Create a New App** in Microsoft Teams Toolkit. You can start from built-in Teams app templates or start from official Teams app samples in Teams Toolkit. What's more, Teams Toolkit v5 supports to start with Outlook Add-in templates to build your own Outlook Add-ins.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp_1.png" alt-text="Screenshot shows the App Capability options.":::
 

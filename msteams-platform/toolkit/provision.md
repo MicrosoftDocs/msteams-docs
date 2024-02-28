@@ -10,11 +10,9 @@ ms.date: 11/29/2021
 
 # Provision cloud resources
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
 TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
 
-## Provision using Teams Toolkit in Microsoft Visual Studio Code
+## Provision using Microsoft Teams Toolkit in Microsoft Visual Studio Code
 
 You can trigger the provision command in Teams Toolkit or TeamsFx CLI to create or update resources for your application. The steps of the provision command are defined in the `teamsapp.yml` file, under `provision` property. You can view the file to understand what resources are created.
 

@@ -10,9 +10,7 @@ ms.date: 05/13/2022
 
 # Customize app manifest
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
-App manifest (previously called Teams app manifest) describes how your app integrates into Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
+App manifest (previously called Teams app manifest) describes how your app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains some environment variables with format of `${{XX_XX}}`, and the actual values are resolved using Microsoft Teams Toolkit with env files like `env/.env.dev` and `env/.env.local`.
 
 To preview app manifest with actual content, Teams Toolkit generates the preview app manifest files under `appPackage/build` folder:
 

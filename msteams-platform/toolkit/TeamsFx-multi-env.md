@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.date: 11/29/2021
 ---
 
-# Environments in Teams Toolkit
+# Environments in Microsoft Teams Toolkit
 
 Teams Toolkit provides a way to run and test your app in different targets for deployment like dev, staging, production, or locally on your machine. To do this, Teams Toolkit includes an optional set of features that orchestrate the configuration of these different targets using information in environment files. The environment files represent a collection of all the resources of a deployment target. Teams Toolkit project templates include two default environment groupings: one for running the app on your machine named 'local' and another for hosting somewhere else named 'dev'. You can rename the 'dev' environment and add additional environments using the Environments window or manually with a new `.env.{environment-name}` file. You can't rename the local environment.
 
@@ -27,7 +27,7 @@ By default, Teams Toolkit doesn't load any env variables, and just proceed with 
 
 ## Local environments
 
-To build a Teams app, few resources such as app registrations and Teams client are hosted in the cloud while other resources such as the application logic can be hosted locally to make testing changes easier during app development. All the Teams Toolkit project templates and samples are configured with a `local` environment. The local environment has `./env/.env.local` and `./env/.env.local.user` files and helps you to run your app with a locally hosted web server. When using Visual Studio Code (VS code) and Visual Studio (VS), the project templates and samples are set up to support debugging with breakpoints.
+To build a Microsoft Teams app, few resources such as app registrations and Teams client are hosted in the cloud while other resources such as the application logic can be hosted locally to make testing changes easier during app development. All the Teams Toolkit project templates and samples are configured with a `local` environment. The local environment has `./env/.env.local` and `./env/.env.local.user` files and helps you to run your app with a locally hosted web server. When using Visual Studio Code (VS code) and Visual Studio (VS), the project templates and samples are set up to support debugging with breakpoints.
 
 To differentiate between a local environment and all other environments, you can create a separate project file called `teamsapp.local.yml` in the same directory as `teamsapp.yml`.
 

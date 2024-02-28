@@ -9,17 +9,13 @@ ms.date: 07/29/2022
 ---
 # Install Teams Toolkit
 
-> [!IMPORTANT]
->
-> The latest version of Teams Toolkit comes with many new app development features and recommend to use Teams Toolkit v5 for building your Teams app.
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
-This section helps you to know about the prerequisites, install Teams Toolkit for Visual Studio Code, and install a different version of Teams Toolkit.
+This section helps you to know about the prerequisites, install Microsoft Teams Toolkit for Microsoft Visual Studio Code, and install a different version of Teams Toolkit.
 
 ## Prerequisites
 
-Download and install [Visual Studio Code](https://code.visualstudio.com/Download) before you set up Teams Toolkit for Visual Studio Code.
+* Download and install [Visual Studio Code](https://code.visualstudio.com/Download) before you set up Teams Toolkit for Visual Studio Code.
+* [NodeJS](https://nodejs.org) version 16 or later.
+* NPM 8 or later.
 
 ## Install Teams Toolkit for Visual Studio Code
 

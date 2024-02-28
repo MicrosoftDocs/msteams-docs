@@ -9,7 +9,7 @@ ms.date: 03/14/2022
 ---
 # Prerequisites for creating your Teams app
 
-Before you create your Teams app project, ensure that the prerequisites are in place. You must:
+Before you create your Microsoft Teams app project, ensure that the prerequisites are in place. You must:
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
@@ -22,7 +22,7 @@ Ensure the following requirements are met before you start building your Teams a
 | &nbsp; | Requirements | For using| For environment type|
    | --- | --- | --- |
    | **Required** | &nbsp; | &nbsp; | &nbsp; |
-   | &nbsp; | Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SharePoint Framework (SPFx)|
+   | &nbsp; | Microsoft Teams Toolkit| A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. | JavaScript and SharePoint Framework (SPFx)|
    | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| JavaScript and SPFx|
    | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).| JavaScript and SPFx|
    | &nbsp; |[Node Package Manager (NPM)](https://www.npmjs.com/package/@microsoft/teamsfx) | Install and manage packages for use in both Node.js and ASP.NET Core applications.| JavaScript and SPFx|
