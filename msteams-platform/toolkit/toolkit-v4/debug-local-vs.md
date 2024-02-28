@@ -148,7 +148,6 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
-* [Add capabilities to your Teams apps](add-capability-v4.md)
 * [Deploy to the cloud](deploy-vs.md)
 
 :::zone-end
