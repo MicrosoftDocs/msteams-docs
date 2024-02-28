@@ -535,11 +535,11 @@ To design a responsive Adaptive Card, use the `targetWidth` property on any elem
 |Standard or narrow     | :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the card is designed without using targetWidth property.":::         | :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to standard or narrow.":::         |
 |very narrow     | :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the card is designed without using targetWidth property.":::        | :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to veryNarrow.":::        |
 
-    :::row:::
-        :::column:::
-         The following is a code sample for  Adaptive Card designed without using `targetWidth`:
+:::row:::
+    :::column:::
+      The following is a code sample for  Adaptive Card designed without using `targetWidth`:
 
-       ```json
+     ```json
          {
         "type": "AdaptiveCard",
         "body": [
@@ -593,9 +593,9 @@ To design a responsive Adaptive Card, use the `targetWidth` property on any elem
             "version": "1.5"
             }
          ```
-        :::column-end:::
-        :::column:::
-         The following is a Code sample for  Adaptive Card designed using `targetWidth`:
+    :::column-end:::
+    :::column:::
+      The following is a Code sample for  Adaptive Card designed using `targetWidth`:
      
          ``` json
           {
@@ -660,8 +660,8 @@ To design a responsive Adaptive Card, use the `targetWidth` property on any elem
          "version": "1.5"
          }
          ``` 
-        :::column-end:::
-    :::row-end:::
+    :::column-end:::
+:::row-end:::
 
 For more information on how to design an Adaptive Card, [designing Adaptive Cards for your Microsoft Teams app](design-effective-cards.md).
 
