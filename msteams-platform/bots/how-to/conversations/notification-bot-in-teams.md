@@ -7,9 +7,11 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Notification bot in Teams
+# Interactive notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
+There are several ways to engage users with notifications in Teams including activity Feeds, through bots, or webhooks. For guidance on which method is best for your app, see design app notifications.
+
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as interactive notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
 The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, a travel agency builds an app in Teams for their users to keep them up-to-date with the weather forecast. In the following flowchart, a Teams app notifies about the weather forecast to the users using an Adaptive Card:
 
@@ -162,7 +164,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a personal chat:
 
-  # [TypeScript](#tab/ts2)
+# [TypeScript](#tab/ts2)
 
     ```TypeScript
     // list all installation targets
@@ -175,7 +177,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-  # [C#](#tab/csharp2)
+# [C#](#tab/csharp2)
 
     ```C#
     // list all installation targets
@@ -193,7 +195,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a group chat:
 
-  # [TypeScript](#tab/ts3)
+# [TypeScript](#tab/ts3)
 
     ```TypeScript
     // list all installation targets
@@ -213,7 +215,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-  # [C#](#tab/csharp3)
+# [C#](#tab/csharp3)
 
     ```C#
     // list all installation targets
@@ -236,7 +238,7 @@ You can customize sending the notification to the following targets:
 
 * Notifications to a channel:
 
-  # [TypeScript](#tab/ts4)
+# [TypeScript](#tab/ts4)
 
     ```TypeScript
     // list all installation targets
@@ -261,7 +263,7 @@ You can customize sending the notification to the following targets:
     }
     ```
 
-  # [C#](#tab/csharp4)
+# [C#](#tab/csharp4)
 
     ```C#
     // list all installation targets
