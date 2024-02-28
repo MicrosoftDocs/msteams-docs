@@ -79,7 +79,7 @@ When you create your apps, you must consider to enable notifications for your ap
 * Are the notifications proactive or interactive?
 * Do you require localization support or batch send faster?
 
-:::image type="content" source="../../assets/images/app-notification.png" alt-text="Screenshot shows you the flow diagram of notification framework for your app.":::
+:::image type="content" source="~/assets/images/app-notification.png" alt-text="Screenshot shows you the flow diagram of notification framework for your app.":::
 
 Here are some example scenario's and recommended notification types:
 
@@ -96,7 +96,7 @@ Here are some example scenario's and recommended notification types:
 If you want a proactive notifications for your app, go to:
 
 > [!div class="nextstepaction"]
-> [Send activity feed notifications to users in Microsoft Teams](../../tabs/send-activity-feed-notification.md)
+> [Send activity feed notifications to users in Teams](../../tabs/send-activity-feed-notification.md)
 
 If you want an interactive notifications for your app, go to:
 
