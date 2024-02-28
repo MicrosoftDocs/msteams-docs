@@ -28,7 +28,7 @@
   - name: Build a tab app
     href: get-started/build-basic-tab-app.md
   - name: Build a notification bot app
-    href: get-started/build-notification-bot.md
+    href: get-started/build-interactive-notification-bot.md
   - name: Build a message extension app
     href: get-started/build-message-extension.md
   - name: Teams app tutorials and code samples
@@ -442,7 +442,7 @@
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Notification bot in Teams
-      href: bots/how-to/conversations/notification-bot-in-teams.md
+      href: bots/how-to/conversations/interactive-notification-bot-in-teams.md
       displayName: Adapter
     - name: Command bot in Teams
       href: bots/how-to/conversations/command-bot-in-teams.md
