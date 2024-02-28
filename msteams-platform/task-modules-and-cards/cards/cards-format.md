@@ -529,156 +529,139 @@ You can set the `targetWidth` property to make an element visible for a range of
 
 The following JSON samples show an example of Adaptive Card designed without using `targetWidth` and using `targetWidth`:
 
-##### Card designed without using `targetWidth`
+| Card width |Card designed without using `targetWidth`  | Card designed using `targetWidth` |
+|---------|---------|---------|
+|Wide     | :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the card is designed without using targetWidth property.":::        | :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to wide.":::       |
+|Standard or narrow     | :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the card is designed without using targetWidth property.":::         | :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to standard or narrow.":::         |
+|very narrow     | :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the card is designed without using targetWidth property.":::        | :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to veryNarrow.":::        |
 
-The following code is an example of Adaptive Card designed without using `targetWidth`:
+:::row:::
+    :::column:::
+     The following is a code sample for  Adaptive Card designed without using `targetWidth`:
 
-```json
-{ 
-"type": "AdaptiveCard", 
-"body": [ 
-    { 
-        "type": "ColumnSet", 
-        "columns": [ 
-            { 
-                "type": "Column", 
-                "items": [ 
-                    { 
-                        "type": "Image", 
-                        "style": "Person", 
-                        "url": "https://aka.ms/AAp9xo4", 
-                        "size": "Small" 
-                    } 
-                ], 
-                "width": "auto" 
-            }, 
-            { 
-                "type": "Column", 
-                "spacing": "medium", 
-                "verticalContentAlignment": "center", 
-                "items": [ 
-                    { 
-                        "type": "TextBlock", 
-                        "weight": "Bolder", 
-                        "text": "David Claux", 
-                        "wrap": true 
-                    } 
-                ], 
-              "width": "auto" 
-            }, 
-            { 
-                "type": "Column", 
-               "spacing": "medium", 
-                "items": [ 
-                    { 
-                        "type": "TextBlock", 
-                        "text": "Platform Architect", 
-                        "isSubtle": true, 
-                        "wrap": true 
-                    } 
-                ], 
-                "width": "stretch", 
-                "verticalContentAlignment": "center" 
-            } 
-        ] 
-    } 
-], 
-"$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
-"version": "1.5" 
-} 
-```
-
-* When the card's width is wide, Adaptive Card renders as follows:
-
-  :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the card is designed without using targetWidth property.":::
-
-* When the card's width is either standard or narrow, Adaptive Card renders as follows:
-
-  :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the card is designed without using targetWidth property.":::
-
-* When the card's width is very narrow, Adaptive Card renders as follows:
-
-  :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the card is designed without using targetWidth property.":::
-
-##### Card designed using `targetWidth`
-
-The following example illustrates how using `targetWidth` can make the layout of your card scale perfectly across card widths:
-
-``` json
-{
-  "type": "AdaptiveCard",
-  "body": [
-    {
-      "type": "ColumnSet",
-      "columns": [
+   ```json
+     {
+    "type": "AdaptiveCard",
+    "body": [
         {
-          "type": "Column",
-          "items": [
-            {
-              "type": "Image", 
-              "style": "Person", 
-              "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg", 
-              "size": "Small"
-            } 
-          ], 
-          "width": "auto" 
-        },
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "items": [
+                        {
+                            "type": "Image",
+                            "style": "Person",
+                            "url": "https://aka.ms/AAp9xo4",
+                            "size": "Small"
+                        }
+                    ],
+                    "width": "auto"
+                },
+                {
+                    "type": "Column",
+                    "spacing": "medium",
+                    "verticalContentAlignment": "center",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
+                            "text": "David Claux",
+                            "wrap": true
+                        }
+                    ],
+                  "width": "auto"
+                },
+                {
+                    "type": "Column",
+                   "spacing": "medium",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Platform Architect",
+                            "isSubtle": true,
+                            "wrap": true
+                        }
+                    ],
+                    "width": "stretch",
+                    "verticalContentAlignment": "center"
+                }
+            ]
+        }
+        ],
+        "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.5"
+        }
+     ```
+    :::column-end:::
+    :::column:::
+     The following is a Code sample for  Adaptive Card designed using `targetWidth`:
+ 
+     ``` json
+      {
+      "type": "AdaptiveCard",
+      "body": [
         {
-          "type": "Column",
-          "spacing": "medium",
-          "items": [
+          "type": "ColumnSet",
+          "columns": [
             {
-              "type": "TextBlock", 
-              "weight": "Bolder", 
-              "text": "Matt Hidinger", 
-              "wrap": true
+              "type": "Column",
+              "items": [
+                {
+                  "type": "Image",
+                  "style": "Person",
+                  "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
+                  "size": "Small"
+                }
+              ],
+              "width": "auto"
             },
             {
-              "type": "TextBlock", 
-              "targetWidth": "narrow", 
-              "spacing": "None", 
-               "text": "Principal Program Manager", 
-              "isSubtle": true, 
-              "wrap": true 
-            } 
-          ], 
-          "width": "auto", 
-          "verticalContentAlignment": "center" 
-        }, 
-        { 
-          "type": "Column", 
-          "targetWidth": "atLeast:standard", 
-          "spacing": "medium", 
-          "items": [ 
-            { 
-              "type": "TextBlock", 
-              "text": "Principal Program Manager", 
-              "isSubtle": true, 
-              "wrap": true 
-            } 
-          ], 
-          "width": "stretch", 
-          "verticalContentAlignment": "center" 
-        } 
-      ] 
-    } 
-  ], 
-  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
- "version": "1.5" 
-} 
-```
-
-* When the card's width is wide, Adaptive Card renders as follows:
-
-  :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to wide.":::
-  
-* When the card's width is either standard or narrow, Adaptive Card renders as follows:
-
-   :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to standard or narrow.":::
-
-* When the card's width is very narrow, Adaptive Card renders as follows:
-
-  :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to veryNarrow.":::
+              "type": "Column",
+              "spacing": "medium",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "Matt Hidinger",
+                  "wrap": true
+                },
+                {
+                  "type": "TextBlock",
+                  "targetWidth": "narrow",
+                  "spacing": "None",
+                   "text": "Principal Program Manager",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ],
+              "width": "auto",
+              "verticalContentAlignment": "center"
+            },
+            {
+              "type": "Column",
+              "targetWidth": "atLeast:standard",
+              "spacing": "medium",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Principal Program Manager",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ],
+              "width": "stretch",
+              "verticalContentAlignment": "center"
+            }
+          ]
+        }
+      ],
+      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+     "version": "1.5"
+     }
+     ``` 
+    :::column-end:::
+:::row-end:::
 
 For more information on how to design an Adaptive Card, [designing Adaptive Cards for your Microsoft Teams app](design-effective-cards.md).
 
