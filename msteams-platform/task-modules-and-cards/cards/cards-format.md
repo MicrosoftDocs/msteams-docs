@@ -494,7 +494,7 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Adaptive Card responsive layout
 
-Adaptive Cards automatically adapt their look and feel to the host application's style, and have a fixed layout that remains consistent across Teams mobile and desktop clients. It's important that you design your Adaptive Cards in such a way that it look great on any device and ensures the best possible end-user experience.
+Adaptive Cards automatically adapt their look and feel to the host application's style, and have a fixed layout that remains consistent across Teams mobile and desktop clients. You must design your Adaptive Cards to look great on any device and provide an enhanced user experience.
 
 Adaptive Card responsive layout helps you to design cards with different layouts that target different card widths. When you design Adaptive Card for your app, ensure that you provide different layouts for enhanced user experience across chat, channels, and meeting chat in Teams desktop and mobile clients.
 
