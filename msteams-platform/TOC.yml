@@ -421,7 +421,7 @@
       href: bots/how-to/conversations/bot-invoke-activity.md
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
+      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete, message format
     - name: Receive all conversation messages
       href: bots/how-to/conversations/channel-messages-with-rsc.md
       displayName: mention
