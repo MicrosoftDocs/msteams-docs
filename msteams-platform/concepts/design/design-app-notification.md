@@ -33,18 +33,12 @@ Microsoft Teams Toolkit allows you to build apps that capture events and send th
 <br>
 The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request. For more information, see [notification bot in Teams](../../bots/how-to/conversations/notification-bot-in-teams.md).
 <br>
-
+Users read a bot notification in an Adaptive Card. When a notification bot send a message, the bot conversation is highlighted in bold or dotted in Teams Chat.
 
    :::column-end:::
 
 :::row-end:::
 
-
-The key difference between these two notification frameworks is where users read notifications:
-
-| Activity notifications | Notification bot |
-|-----|-----|
-|Users read activity notifications in a preview within Teams Activity. If the preview captures the user’s interest, they can select the notification to view the content in the Teams main pane.|  Bot notifications are presented as Adaptive Cards. When a notification bot sends a message, the bot conversation is highlighted in bold or dotted in Teams Chat.|
 
 Teams main pane has larger surface than Adaptive Card to load more assets in a tab app or a Personal app. If your app already has tab or personal app, we don't recommend building a bot just for sending notifications.
 
@@ -59,9 +53,9 @@ Some notifications are both proactive and interactive, in that case either type 
 
 You can also consider the following before you choose the notification for your app:
 
-**Localization**: Activity notifications support with app manifest string localization. Templated text in your notification automatically translates into users’ preferred locale.  
+* **Localization**: Activity notifications support with app manifest string localization. Templated text in your notification automatically translates into users’ preferred locale.  
 
-**Batch send**: Activity notifications enable batch sending to up to 100 users in a single request, which is suitable for **announcement** type of notifications. You can also send a notification to all participants in a chat or channel. When you send a large number of notifications, activity notifications are faster than notification bot due to the higher throttling threshold in Graph APIs.
+* **Batch send**: Activity notifications enable batch sending to up to 100 users in a single request, which is suitable for **announcement** type of notifications. You can also send a notification to all participants in a chat or channel. When you send a large number of notifications, activity notifications are faster than notification bot due to the higher throttling threshold in Graph APIs.
 
 ## Choose the right notification framework for your app
 
