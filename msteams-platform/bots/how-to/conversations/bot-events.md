@@ -216,19 +216,12 @@ When you use these install and uninstall events, there are some instances where 
 
 ## Channel events
 
-Chennel events are triggered for the following event:
+Chennel events are triggered for the following events:
 
-:::row::: 
-:::column::: * Channel created :::column-end:::
-:::column span="2"::: 
-:::column::: * Channel renamed :::column-end:::
-:::row-end:::
-
-:::row::: 
-:::column::: * Channel deleted :::column-end:::
-:::column span="2"::: 
-:::column::: * Channel restored :::column-end:::
-:::row-end:::
+* Channel created
+* Channel renamed
+* Channel deleted
+* Channel restored
 
 **Channel created**: The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed in the `Team` scope.
 
@@ -412,7 +405,7 @@ MessageFactory.text(f"The new channel name is {channel_info.name}")
 
 ---
 
-**Channel deleted**: The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed in the `Team` scope.</br>
+**Channel deleted**: The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed in the `Team` scope.
 
 # [C#](#tab/dotnet3)
 
@@ -580,7 +573,7 @@ await next();
 
 # [Python](#tab/python4)
 
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-restored&preserve-view=true)
+[SDK reference](/python/api/botbuilder-core/botbuilder.core.teams.teamsactivityhandler?view=botbuilder-py-latest#botbuilder-core-teams-teamsactivityhandler-on-teams-channel-restored&preserve-view=true)
 
 ```python
 async def on_teams_channel_restored(
@@ -598,20 +591,19 @@ MessageFactory.text(
 
 ## Members event
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Members added**   | membersAdded   | OnTeamsMembersAddedAsync   | The `membersAdded` event is sent to your bot whenever a new user or bot is added to a conversation. | All |
+Members events are triggered for the following events:
+
+* Members added
+* Members removed
+
+**Members added**: The `membersAdded` event is sent to your bot whenever a new user or bot is added to a conversation.
 
 A member added event is sent to your bot in the following scenarios:
 
-1. When the bot, itself, is installed and added to a conversation.
-   In team context, the activity's conversation.id is set to the `id` of the channel selected by the user during app installation or the channel where the bot was installed.
-1. When a user is added to a conversation where the bot is installed.
-   User ids received in the event payload are unique to the bot and can be cached for future use, such as directly messaging a user.
+* When the bot is installed and added to a conversation.
+* When a user is added to a conversation where the bot is installed.
 
-The member added activity `eventType` is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersAdded` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's `id` is formatted as `28:<MicrosoftAppId>`.
-
-You can use the [`InstallationUpdate`](#installation-update-event) event to determine when your bot is added or removed from a conversation.
+The `membersAdded` event activity type is set to `teamMemberAdded` when the event is sent from a team context. To determine if the new member added is a bot or a user, check the `Activity` object of the `turnContext` for `MembersAdded`. If the `MembersAdded` list contains an object where `id` is the same as the `Recipient.id`, then the member added is the bot, else it's a user. The bot `id` is formatted as `28:<MicrosoftAppId>`.
 
 # [C#](#tab/dotnet5)
 
@@ -643,7 +635,7 @@ else
 
 # [TypeScript](#tab/typescript5)
 
-* [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersaddedevent&preserve-view=true)
+[SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsmembersaddedevent&preserve-view=true)
 
 ```typescript
 export class MyBot extends TeamsActivityHandler {
@@ -669,93 +661,93 @@ await next();
 
 # [JSON](#tab/json5)
 
-The message your bot receives when the bot is added to a team.
+* Following is a code snippet for, when the bot is added to a team:
 
-> [!NOTE]
-> In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` will be the id of the channel that the user selected during app installation or where installation was triggered from.
+  > [!NOTE]
+  > In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` will be the ID of the channel that the user selected during app installation or where installation was triggered from.
 
-```json
-{
-"type": "conversationUpdate",
-"membersAdded": [
-{
-    "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
-}
-],
-        "timestamp": "2021-12-07T22:34:56.534Z",
-         "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
-         "channelId": "msteams",
-         "serviceUrl": "https://smba.trafficmanager.net/amer/",
-         "from": {
-            "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
-            "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
-         },
-         "conversation": {
-            "isGroup": true,
-            "conversationType": "channel",
-            "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
-            "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
-            "name": "2021 Test Channel"
-         },
-         "recipient": {
-            "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
-            "name": "Test Bot"
+  ```json
+    {
+    "type": "conversationUpdate",
+    "membersAdded": [
+    {
+        "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b"
+    }
+    ],
+            "timestamp": "2021-12-07T22:34:56.534Z",
+             "id": "f:0b9079f4-d4d3-3d8e-b883-798298053c7e",
+             "channelId": "msteams",
+             "serviceUrl": "https://smba.trafficmanager.net/amer/",
+             "from": {
+                "id": "29:1ljv6N86roXr5pjPrCJVIz6xHh5QxjI....",
+                "aadObjectId": "eddfa9d4-346e-4cce-a18f-fa6261ad776b"
+             },
+             "conversation": {
+                "isGroup": true,
+                "conversationType": "channel",
+                "tenantId": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f",
+                "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2",
+                "name": "2021 Test Channel"
+             },
+             "recipient": {
+                "id": "28:608cacfd-1cea-40c9-b678-4b93e69bb72b",
+                "name": "Test Bot"
+             },
+             "channelData": {
+                "settings": {
+                    "selectedChannel": {
+                        "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
+                    }
+                },
+                "team": {
+                    "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
+                    "name": "TestTeam2022",
+                    "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
+                },
+                "eventType": "teamMemberAdded",
+                "tenant": {
+                    "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+                }
+             }
+    }
+  ```
+
+* Following is a code snippet for, when the bot is added to a one-to-one chat.
+
+  ```json
+    {
+    "membersAdded": [{
+    "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
+    },
+    {
+    "id": "29:<userID>",
+    "aadObjectId": "***"
+    }
+    ],
+    "type": "conversationUpdate",
+    "timestamp": "2019-04-23T10:17:44.349Z",
+    "id": "f:5f85c2ad",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+    "from": {
+        "id": "29:<USERID>",
+        "aadObjectId": "***"
+    },
+    "conversation": {
+    "conversationType": "personal",
+    "id": "***"
+    },
+    "recipient": {
+            "id": "28:<BOT ID>",
+            "name": "<BOT NAME>"
          },
          "channelData": {
-            "settings": {
-                "selectedChannel": {
-                    "id": "19:0b7f32667e064dd9b25d7969801541f4@thread.tacv2"
-                }
-            },
-            "team": {
-                "aadGroupId": "f3ec8cd2-e704-4344-8c47-9a3a21d683c0",
-                "name": "TestTeam2022",
-                "id": "19:zFLSDFWsesfzcmKArqKJ-65aOXJz@sgf462H2wz41@thread.tacv2"
-            },
-            "eventType": "teamMemberAdded",
             "tenant": {
-                "id": "b28fdbfd-2b78-4f93-b0f8-8881793f0f8f"
+            "id": "<TENANT ID>"
             }
          }
-}
-```
-
-The message your bot receives when the bot is added to a one-to-one chat.
-
-```json
-{
-"membersAdded": [{
-"id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0"
-},
-{
-"id": "29:<userID>",
-"aadObjectId": "***"
-}
-],
-"type": "conversationUpdate",
-"timestamp": "2019-04-23T10:17:44.349Z",
-"id": "f:5f85c2ad",
-"channelId": "msteams",
-"serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
-"from": {
-    "id": "29:<USERID>",
-    "aadObjectId": "***"
-},
-"conversation": {
-"conversationType": "personal",
-"id": "***"
-},
-"recipient": {
-        "id": "28:<BOT ID>",
-        "name": "<BOT NAME>"
-     },
-     "channelData": {
-        "tenant": {
-        "id": "<TENANT ID>"
-        }
-     }
-     }
-```
+         }
+  ```
 
 # [Python](#tab/python6)
 
@@ -775,16 +767,14 @@ The message your bot receives when the bot is added to a one-to-one chat.
 
 ---
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Members removed** | membersRemoved | OnTeamsMembersRemovedAsync | The `membersRemoved` event is sent to your bot whenever a user or bot is removed to a conversation. | All |
+**Members removed**: The `membersRemoved` event is sent to your bot whenever a user or bot is removed from a conversation.
 
 A member removed event is sent to your bot in the following scenarios:
 
 1. When the bot, itself, is uninstalled and removed from a conversation.
 1. When a user is removed from a conversation where the bot is installed.
 
-The member removed activity `eventType` is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed was the bot itself or a user, check the `Activity` object of the `turnContext`. If the `MembersRemoved` list contains an object where `id` is the same as the `id` field of the `Recipient` object, then the member added is the bot, else it's a user. The bot's id is formatted as `28:<MicrosoftAppId>`.
+The `MembersRemoved` event activity type is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed is the bot or a user, check the `Activity` object of the `turnContext` for `MembersRemoved`. If the `MembersRemoved` list contains an object where `id` is the same as the `Recipient.id` then the member added is the bot, else it's a user. The bot ID is formatted as `28:<MicrosoftAppId>`.
 
 > [!NOTE]
 > When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
@@ -900,6 +890,8 @@ The `channelData` object in the following payload example is based on adding a m
 ```
 
 ---
+
+You can also use the [`InstallationUpdate`](#installation-update-event) event to determine when your bot is added or removed from a conversation.
 
 ## Team events
 

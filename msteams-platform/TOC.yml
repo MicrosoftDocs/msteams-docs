@@ -415,6 +415,10 @@
     - name: Overview
       href: bots/how-to/conversations/conversation-basics.md
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
+    - name: Event-driven conversations with activity handlers
+      href: bots/how-to/conversations/bot-events.md
+    - name: Invoke activities
+      href: bots/how-to/conversations/bot-invoke-activity.md
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
       displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
