@@ -52,7 +52,7 @@ Learn more about the differences between a notification bot and Incoming Webhook
 | Send Adaptive Card | No | Yes |
 | Send a welcome message | Yes | No |
 | Trigger supported | All triggers are supported. | All triggers are supported. |
-| Building Tools | [Quick start - Microsoft Graph](/graph/quick-start) | No tools are required. |
+| Building Tools | [Quick start - Microsoft Graph](https://developer.microsoft.com/graph/quick-start) | No tools are required. |
 | Cloud resource required | Microsoft Entra app  | No resources are required. |
 | Tutorial | [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications) <br> [Send activity feed notification](../sbs-graphactivity-feedbroadcast.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
