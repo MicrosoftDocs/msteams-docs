@@ -17,9 +17,8 @@ Teams offers the following notification frameworks for your app:
 
 ### Activity feed notification
 
-Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates. Use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps.
+Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates.It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use.
 <br>
-It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use. For more information, see [Send activity feed notifications to users in Microsoft Teams](../../tabs/send-activity-feed-notification.md).
 <br>
 Users can read the activity notifications in a preview within Teams Activity. If the preview captures the user’s interest, they can select the notification to view the content in the Teams main pane.
 
@@ -29,9 +28,8 @@ Users can read the activity notifications in a preview within Teams Activity. If
 
 ### Notification bot
 
-Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal, group chat, or a channel in Teams. These notifications can be sent as plain text or Adaptive Cards. 
+Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal, group chat, or a channel in Teams. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request.
 <br>
-The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request. For more information, see [notification bot in Teams](../../bots/how-to/conversations/notification-bot-in-teams.md).
 <br>
 Users read a bot notification in an Adaptive Card. When a notification bot send a message, the bot conversation is highlighted in bold or dotted in Teams Chat.
 
@@ -39,7 +37,7 @@ Users read a bot notification in an Adaptive Card. When a notification bot send 
 
 :::row-end:::
 
-
+<br>
 Teams main pane has larger surface than Adaptive Card to load more assets in a tab app or a Personal app. If your app already has tab or personal app, we don't recommend building a bot just for sending notifications.
 
 ## Notification Types
