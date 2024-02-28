@@ -384,7 +384,7 @@ The object is an array with all elements of the type `object`. This block is req
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. <br>Default value: `true`|
 |`scopes`|Array of enum|2|✔️|Currently, configurable tabs support only the `team` and `groupChat` scopes. |
-|`context` |Array of enum|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). <br>Default values: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`, `callingSidePanel`|
+|`context` |Array of enum|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). <br>Default values: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`.|
 |`sharePointPreviewImage`|String|2048 characters||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|Array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage`, `sharePointWebPart`|
 |`meetingSurfaces`|Array of enum|2||The set of `meetingSurfaceItem` scopes to which a tab belongs. <br>Default values: `sidePanel`, `stage`|
