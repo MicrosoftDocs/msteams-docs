@@ -6,7 +6,7 @@ ms.author: v-sdhakshina
 ms.topic: reference
 ms.date: 02/23/2024
 ---
-# Design app notifications
+# Plan your app notifications
 
 Notification is one of the most effective ways to engage and retain users. Within Microsoft Teams, platform apps can send notifications to the activity feed using the Graph API, send Adaptive Cards through bots, or post messages to Teams channels through incoming webhooks. In this guide, learn effective notification design principles and how to select the most suitable framework for your app.
 
