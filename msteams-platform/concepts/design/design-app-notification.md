@@ -10,6 +10,8 @@ ms.date: 02/23/2024
 
 Notification is one of the most effective ways to engage and retain users. Within Microsoft Teams, platform apps can send notifications to the activity feed using the Graph API, send Adaptive Cards through bots, or post messages to Teams channels through incoming webhooks. In this guide, learn effective notification design principles and how to select the most suitable framework for your app.
 
+Teams offers the following notification frameworks for your app:
+
 :::row:::
    :::column span="":::
 
@@ -24,12 +26,12 @@ The Microsoft Teams activity feed enables users to triage items that require att
 ##### Key feature
 
 * Proactively notify users with highly customized personal notifications.
-* Need immediate attention and action, include rich experience in main pane.  
-* Double badge on activity icon and Teams app icon.
-* Broadcast messages and details for all the members of the chat or channel.
-* Broadcast messages and details quickly to a large batch of users.
-* Prompt users with operating system notifications that include a pop-out banner and sound.
-* Handle localization automatically through app manifest.
+* Grab immediate attention and prompt action, include rich experience within the main pane.  
+* Users receive a double badge on both the activity icon and the Teams app icon.
+* Allow you to broadcast messages and details to all members of a chat or channel.
+* Quickly reach a large batch of users with relevant information.
+* Users are prompted with operating system notifications that include a pop-out banner and sound, ensuring they don’t miss critical updates.
+* Handle localization automatically through the app manifest.
 
    :::column-end:::
 
@@ -49,22 +51,21 @@ Microsoft Teams Toolkit allows you to build apps that capture events and send th
 ##### Key feature
 
 * Notify everyone in a channel or chat about the same or related content.
-* Highly customizable UI in a Card.
-* Quick response includes media content or action buttons.
-* Send scheduled notifications.
-* Light up double badges on both Activity and Chat, Channel or app.
+* Create highly customizable UI using Adaptive Cards.
+* Enable quick responses that include media content or action buttons.
+* Schedule notifications to be sent at specific times.
+* Light up double badges on both Activity and Chat, Channel, or app.
 * Handle localization manually.
 
    :::column-end:::
 
 :::row-end:::
 
-## End-user experience
+The key difference between these two notification frameworks is where users read notifications:
 
-The key difference between the two notification frameworks is where users read notifications:
-
-1. Users read activity notification in a preview. Teams Activity is a place to triage most important notifications. If the notification preview attracts the user, they can select the notification and open the content in the Teams main pane.
-1. Users read a bot notification in an Adaptive Card. When a notification bot sends a message, the bot conversation is highlighted in bold or dotted in Teams Chat.
+| Activity notifications | Notification bot |
+|-----|-----|
+|Users read activity notifications in a preview within Teams Activity. If the preview captures the user’s interest, they can select the notification to view the content in the Teams main pane.|  Bot notifications are presented as Adaptive Cards. When a notification bot sends a message, the bot conversation is highlighted in bold or dotted in Teams Chat.|
 
 Teams main pane has larger surface than Adaptive Card to load more assets in a tab app or a Personal app. If your app already has tab or personal app, we don't recommend building a bot just for sending notifications.
 
