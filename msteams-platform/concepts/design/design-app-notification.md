@@ -71,7 +71,7 @@ Microsoft Teams Toolkit allows you to build apps that capture events and send th
 
 :::row-end:::
 
-:::image type="content" border="false" source="../assets/images/get-started/get-started-bot.png" alt-text="Screenshot shows you the conceptual notification bot in Teams client":::
+:::image type="content" border="false" source="~/assets/images/get-started/get-started-bot.png" alt-text="Screenshot shows you the conceptual notification bot in Teams client":::
 
 The key difference between these two notification frameworks is where users read notifications:
 
@@ -85,12 +85,8 @@ Teams main pane has larger surface than Adaptive Card to load more assets in a t
 
 Evaluate whether your notifications are proactive or interactive.  
 
-* **Proactive notifications** inform users about news, events, requests, and reminders that require users’ immediate attention and/or specific actions.
-* **Interactive notifications** encourage users to respond to the sender with the information required for continuous communication.
-
-**Activity notifications** are good for proactive notifications, attention-grabbing alert, announcements, reminders, and action-needed requests.
-
-**Notification bot** is good for interactive notifications that require quick response in a light weighted and highly customizable cards.
+* **Proactive notifications** inform users about news, events, requests, and reminders that require users’ immediate attention and/or specific actions. **Activity notifications** are good for proactive notifications, attention-grabbing alert, announcements, reminders, and action-needed requests.
+* **Interactive notifications** encourage users to respond to the sender with the information required for continuous communication. **Notification bot** is good for interactive notifications that require quick response in a light weighted and highly customizable cards.
 
 Some notifications are both proactive and interactive, in that case either type of notifications work for the scenario.
 
