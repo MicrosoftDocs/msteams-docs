@@ -10,25 +10,26 @@ ms.date: 01/22/2023
 
 # Event-driven conversations with activity handlers
 
-Events and handlers are two related concepts in a bot workflow. An event in bot workflow depicts an activity that triggers the bot to perform a certain action or task, which are invoke activities.
+Events and handlers are two related concepts in a bot workflow. An event in bot workflow depicts an activity that triggers the bot to perform a certain action or task.
 
-Activity handlers are functions or methods that contain the bot logic for how the bot should handle different types of events. For example, when a user reacts to the bot message, that is an event. The bot has a handler for message events, which defines what the bot should do or say in response to the user’s action.
+Activity handlers are functions or methods that contain the bot logic for how the bot should handle different types of events. For example, in an event when a user reacts to the bot message, the bot has a handler for event, which defines what the bot should do or say in response to the user’s action.
 
 :::image type="content" source="~/assets/images/bots/bot-event-activity-flowchart.png" alt-text="Diagram that shows the flow of the event flow from activity handlers to bot logic." lightbox="~/assets/images/bots/bot-event-activity-flowchart.png":::
 
-To create a event-driven conversations, you need to define the handlers that the bot will use when the event is occured. You can also add invoke activity to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
+To create event-driven conversations, you must define the associated handlers that the bot will use with the event. You can also add [invoke activity](~/bots/how-to/conversations/bot-invoke-activity.md) to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
+
+For example, when an event occurs, activity handlers can identify the activity and forward it to the bot logic for processing. By incorporating an invoke activity into the handler logic, your bot can process the event and respond to the user based on the payload of the invoke activity.
 
 ## Events with activity handlers
 
-Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the received activity type.
+Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the activity type. For example, when the bot receives a message activity, the turn handler identifies the activity and forwards it to the `onMessageActivity` handler. You can use the `onMessageActivity` handler to place your logic for managing and responding to messages.
 
-For example, when the bot receives a message activity, the turn handler identifies this incoming activity and forwards it to the `onMessageActivity` handler. As a developer, you place your logic for managing and responding to messages in this `onMessageActivity` handler.
-   
-```javascript
-    this.onMessageActivity(async (context, next) => {
-    // Your logic here
-    await next();
-    });
+```csharp
+protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+{
+  // Sends an activity to the sender of the incoming activity.
+  await turnContext.SendActivityAsync(MessageFactory.Text($"Echo: {turnContext.Activity.Text}"), cancellationToken);
+}
 ```
 
 Following are the two primary Teams activity handlers:
@@ -38,17 +39,15 @@ Following are the two primary Teams activity handlers:
 
 ## Conversation update events
 
-You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them. You must design your bot to receive unexpected events. If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them. You must design your bot to receive unexpected events. If you are using the Bot Framework SDK without specifying any activity handlers in your bot code, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
-* When bot has been added to a conversation.
-* Other members are added to or removed from a conversation.
-* Conversation metadata has changed.
+* When bot is added to a conversation.
+* Other members are added or removed in a conversation or channel.
+* Conversation metadata is changed.
 
-The `conversationUpdate` event is sent to your bot when it receives information on membership updates for teams where it has been added. It also receives an update when it has been added for the first time for personal conversations.
-
-Following are the different type of conversation events:
+Following are the different type of events:
 
 * [Installation events](#installation-events)
 * [Channel events](#channel-events)
@@ -216,6 +215,20 @@ When you use these install and uninstall events, there are some instances where 
 
 
 ## Channel events
+
+Chennel events are triggered for the following event:
+
+:::row::: 
+:::column::: * Channel created :::column-end:::
+:::column span="2"::: 
+:::column::: * Channel renamed :::column-end:::
+:::row-end:::
+
+:::row::: 
+:::column::: * Channel deleted :::column-end:::
+:::column span="2"::: 
+:::column::: * Channel restored :::column-end:::
+:::row-end:::
 
 **Channel created**: The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed in the `Team` scope.
 
