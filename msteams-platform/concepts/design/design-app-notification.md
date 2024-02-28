@@ -17,15 +17,11 @@ Teams offers the following notification frameworks for your app:
 
 ### Activity feed notification
 
-Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates. Use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use. For more information, see [Send activity feed notifications to users in Microsoft Teams](../../tabs/send-activity-feed-notification.md).
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/activity-feed/mobile-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed on mobile.":::
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/activity-feed/desktop-overview.png" alt-text="Example shows an app notification displaying in the Teams activity feed."  lightbox="../../assets/images/activity-feed/desktop-overview.png":::
+Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates. Use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps.
+<br>
+It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use. For more information, see [Send activity feed notifications to users in Microsoft Teams](../../tabs/send-activity-feed-notification.md).
+<br>
+Users can read the activity notifications in a preview within Teams Activity. If the preview captures the user’s interest, they can select the notification to view the content in the Teams main pane.
 
    :::column-end:::
 
@@ -33,9 +29,11 @@ Teams activity feed enables users to efficiently manage items that require atten
 
 ### Notification bot
 
-Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal, group chat, or a channel in Teams. These notifications can be sent as plain text or Adaptive Cards. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request. For more information, see [notification bot in Teams](../../bots/how-to/conversations/notification-bot-in-teams.md).
+Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal, group chat, or a channel in Teams. These notifications can be sent as plain text or Adaptive Cards. 
+<br>
+The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request. For more information, see [notification bot in Teams](../../bots/how-to/conversations/notification-bot-in-teams.md).
+<br>
 
-:::image type="content" border="false" source="~/assets/images/get-started/get-started-bot.png" alt-text="Screenshot shows you the conceptual notification bot in Teams client":::
 
    :::column-end:::
 
@@ -76,7 +74,14 @@ When you create your apps, you must consider to enable notifications for your ap
 
 :::image type="content" source="../../assets/images/app-notification.png" alt-text="Screenshot shows you the flow diagram of notification framework for your app.":::
 
-## See also
+## Next step
 
-* [Send activity feed notifications to users in Microsoft Teams](../../tabs/send-activity-feed-notification.md)
-* [Notification bot in Teams](../../bots/how-to/conversations/notification-bot-in-teams.md)
+If you want a proactive notifications for your app, go to:
+
+> [!div class="nextstepaction"]
+> [Send activity feed notifications to users in Microsoft Teams](../../tabs/send-activity-feed-notification.md)
+
+If you want an interactive notifications for your app, go to:
+
+> [!div class="nextstepaction"]
+> [Notification bot in Teams](../../bots/how-to/conversations/notification-bot-in-teams.md)
