@@ -19,6 +19,7 @@ body:
       options:
         - Typo
         - Code doesn't work
+        - Feature doesn't work (bug)
         - Missing information
         - Outdated article
         - Other (describe below)
