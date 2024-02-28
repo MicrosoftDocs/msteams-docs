@@ -72,4 +72,3 @@ The application-hosted media bots require the following scalability and performa
 
 * [Graph Calling SDK Documentation](https://microsoftgraph.github.io/microsoft-graph-comms-samples/docs/)
 * [Sample applications](https://github.com/microsoftgraph/microsoft-graph-comms-samples/tree/master/Samples/V1.0Samples/LocalMediaSamples)
-* [General purpose virtual machine sizes](/azure/virtual-machines/windows/sizes-general)
