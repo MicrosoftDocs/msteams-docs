@@ -8,13 +8,13 @@ ms.author: v-npaladugu
 ms.date: 01/22/2023
 ---
 
-# Invoke activity
+# Invoke activity for bot events
 
 An invoke activity is a type of activity that is sent to a bot when a user performs an action, such as clicking a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses. Invoke activities are typically used to send back confirmations, item selections, and to provide feedback or input to the bot.
 
 :::image type="content" source="~/assets/images/bots/bot-invoke-activity.png" alt-text="Diagram that shows the flow of the invoke activity." lightbox="~/assets/images/bots/bot-invoke-activity.png.png":::
 
-# [C#](#tab/dotnet15)
+# [C#](#tab/dotnet)
 
 The list of Teams activity handlers called from the `OnInvokeActivityAsync` Teams activity handler includes the following invoke types:
 
@@ -85,7 +85,7 @@ protected override async Task<TaskModuleResponse> OnTeamsTaskModuleSubmitAsync(I
 }
 ```
 
-# [JavaScript](#tab/javascript15)
+# [JavaScript](#tab/javascript)
 
 The following table provides the list of Teams activity handlers called from the `onInvokeActivity` Teams activity handler:
 
@@ -157,7 +157,7 @@ async handleTeamsTaskModuleSubmit(context, taskModuleRequest) {
 }
 ```
 
-# [Python](#tab/python15)
+# [Python](#tab/python)
 
 The list of Teams activity handlers called from the `on_invoke_activity` Teams activity handler includes the following invoke types:
 
