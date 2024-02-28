@@ -517,11 +517,11 @@ To design a responsive Adaptive Card, use the `targetWidth` property on any elem
   | `wide` | Adaptive Card shows the element  when the card's width is wide such as on a tablet in landscape mode, in a channel on desktop, or in a chat on desktop when you set your card to be [full width](#full-width-adaptive-card). |
 
   You can also set the `targetWidth` property to make an element visible for a range of card width using the `atLeast` and
-  `atMost` prefixes. For example, you can make the element visible only when the card width is "standard or above" or "narrow or below". The following table shows the examples  for the `atLeast` and `atMost` modifier prefixes:
+  `atMost` prefixes. For example, you can make the element visible only when the card width is _standard or above_ or _narrow or below_. The following table shows the examples  for the `atLeast` and `atMost` modifier prefixes:
 
   | Example | Description  |
   |---------|---------|
-  | `targetWidth: atLeast:standard` | Adaptive Card shows the element only when the card's width is "at least standard, which is standard or wide. |
+  | `targetWidth: atLeast:standard` | Adaptive Card shows the element only when the card's width is at least standard, which is standard or wide. |
   | `targetWidth: atMost:narrow` | Adaptive Card shows the element only when the card's width is at most narrow, which is very narrow or narrow. |
 
   > [!NOTE]
