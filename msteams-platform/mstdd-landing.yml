@@ -49,6 +49,8 @@ landingContent:
       links:
       - text: Adaptive Card responsive layout
         url: task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout
+      - text: Extend a Teams meeting app to Outlook
+        url: m365-apps/extend-m365-meeting-app.md
       - text: Share to Teams from personal app or tab for Teams mobile clients
         url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
       - text: Build API-based message extension using Developer Portal for Teams
@@ -65,8 +67,7 @@ landingContent:
         url: messaging-extensions/how-to/micro-capabilities-for-website-links.md
       - text: Actions in Microsoft 365
         url: m365-apps/actions-in-m365.md    
-      - text: Use / to invoke message extensions from command box in the new Teams client
-        url: messaging-extensions/build-bot-based-message-extension.md
+
 
     - linkListType: reference
       links:

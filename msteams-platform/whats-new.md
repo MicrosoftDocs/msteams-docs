@@ -27,6 +27,8 @@ Teams platform features that are available to all app developers.
 **2024 February**
 
 * ***February 23, 2024***: [Adaptive Card responsive layout.](task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout)
+* ***February 28, 2024*** : [Extend a Teams meeting app to work with Outlook.](m365-apps/extend-m365-meeting-app.md)
+* ***February 28, 2024***: [Design Teams app lightbox view to emphasize important information.](concepts/design/design-teams-app-light-box-view.md)
 * ***February 15, 2024***: [Share to Teams from personal app or tab for mobile clients.](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
 * ***February 01, 2024***: [Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365.](m365-apps/cards-loop-component.md)
 * ***February 01, 2024***: [Use application RSC permissions for chat scope.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting)
