@@ -62,9 +62,6 @@
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee
-  - name: Plan for your app notifications
-    href: concepts/design/design-app-notification.md
-    displayName: notification, notify
 - name: Design your app
   items:
   - name: Overview
