@@ -218,6 +218,6 @@ An invoke activity is a type of activity that is sent to a bot when a user perfo
         // Write your logic here
      ```
 
-     The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+     The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](~/messaging-extensions/what-are-messaging-extensions.md).
 
 ---
