@@ -1,7 +1,7 @@
 ---
 title: Extend a Teams meeting app to Outlook
 description: Here's how to ensure your Teams meeting app experience works seamlessly when extended to Outlook
-ms.date: 1/18/2024
+ms.date: 2/28/2024
 ms.author: mosdevdocs
 author: erikadoyle
 ms.topic: tutorial
@@ -30,7 +30,7 @@ If your meeting app supports stage view, other in-meeting effects, or contains c
 
 ## Prerequisites
 
-To preview your Teams meeting app in Outlook, ensure the following::
+To preview your Teams meeting app in Outlook, ensure the following:
 
 * A [Microsoft 365 developer sandbox](./prerequisites.md#prepare-a-developer-tenant-for-testing) tenant with uploading enabled.
 * A test environment with Outlook for Windows desktop installed from the [Microsoft 365 Apps *Current Channel*](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment).
@@ -110,8 +110,8 @@ Your package.json file references `@microsoft/teams-js@2.x.x` and your `*.js/.ts
 
 * Import statements for `teams-js@2.x.x`.
 * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx) for `teams-js@2.x.x`.
-* New "`TODO`" comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface) interface changes.
-* New "`TODO`" comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-library.md#callbacks-converted-to-promises).
+* New `"TODO"` comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface) interface changes.
+* New `"TODO"` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-library.md#callbacks-converted-to-promises).
 
 > [!NOTE]
 >
@@ -147,7 +147,7 @@ To test your app in Microsoft 365 and Outlook, upload your [app package](../conc
 
 1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
-1. From [Microsoft Teams admin center](https://admin.teams.microsoft.com), go to **Teams apps** > **Manage apps**.
+1. Go to [Teams admin center](https://admin.teams.microsoft.com) and select **Teams apps** > **Manage apps**.
 
 1. Select **Upload new app**, and select your app package.
 
