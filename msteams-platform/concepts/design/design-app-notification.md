@@ -10,6 +10,31 @@ ms.date: 02/23/2024
 
 Notification is one of the most effective ways to engage and retain users. Within Microsoft Teams, platform apps can send notifications to the activity feed using the Graph API, send Adaptive Cards through bots, or post messages to Teams channels through incoming webhooks. In this guide, learn effective notification design principles and how to select the most suitable framework for your app.
 
+:::row:::
+   :::column span="":::
+
+#### Activity feed notification
+
+The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use. For more information, see [Send activity feed notifications to users in Microsoft Teams](../../tabs/send-activity-feed-notification.md).
+
+   :::column-end:::
+
+   :::column span="":::
+
+#### Key feature
+
+* Proactively notify users with highly customized personal notifications.
+* Need immediate attention and action, include rich experience in main pane.  
+* Double badge on activity icon and Teams app icon.
+* Broadcast messages and details for all the members of the chat or channel.
+* Broadcast messages and details quickly to a large batch of users.
+* Prompt users with operating system notifications that include a pop-out banner and sound.
+* Handle localization automatically through app manifest.
+
+   :::column-end:::
+
+:::row-end:::
+
 | Notifications | Description | Key features |
 |--------|-----|---------------------------------------------------------------------|
 | **Activity feed notification** | The Microsoft Teams activity feed enables users to triage items that require attention by notifying them of changes. You can use the activity feed notification APIs in Microsoft Graph to extend this functionality to your apps. It also allows your apps to provide richer experiences and better user engagement by keeping them up to date with changes in the tools and workflows they use. For more information, see [Send activity feed notifications to users in Microsoft Teams](../../tabs/send-activity-feed-notification.md). | • Proactively notify users with highly customized personal notifications. <br>  • Need immediate attention and action, include rich experience in main pane. <br> • Double badge on activity icon and Teams app icon. <br> • Broadcast messages and details for all the members of the chat or channel. <br> • Broadcast messages and details quickly to a large batch of users. <br> • Prompt users with operating system notifications that include a pop-out banner and sound. <br> • Handle localization automatically through app manifest. |
