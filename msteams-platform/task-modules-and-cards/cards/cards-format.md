@@ -494,9 +494,9 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Adaptive Card responsive layout
 
-Adaptive Cards automatically adapt their look and feel to the host application's style, and have a fixed layout defined by you that remains consistent across Teams mobile and desktop clients. It's important that you design your Adaptive Cards in such a way that it look great on any device and ensures the best possible end-user experience.
+Adaptive Cards automatically adapt their look and feel to the host application's style, and have a fixed layout that remains consistent across Teams mobile and desktop clients. It's important that you design your Adaptive Cards in such a way that it look great on any device and ensures the best possible end-user experience.
 
-Adaptive Card responsive layout helps you to design cards with different layouts that target different card widths. When you design Adaptive Card for your app, ensure that you provide different layouts for an optimal user experience across chat, channels, and meeting chat in Teams desktop and mobile clients.
+Adaptive Card responsive layout helps you to design cards with different layouts that target different card widths. When you design Adaptive Card for your app, ensure that you provide different layouts for enhanced user experience across chat, channels, and meeting chat in Teams desktop and mobile clients.
 
 [Add image for responsive Adaptive card in mobile and desktop.]
 
@@ -505,181 +505,175 @@ Adaptive Card responsive layout helps you to design cards with different layouts
 To design a responsive Adaptive Card, use the `targetWidth` property on any element:
 
 * Set the `targetWidth` property that allows you to show or hide any element based on the card's width.
-* Setting the different target widths on different elements allows you to essentially create different layouts.
+* Setting the different target widths on different elements allows you to create different layouts.
 
-The following table provides the available values of the `targetWidth` property for different layouts:
+The following table lists the available `targetWidth` values for different layouts:
 
 |Value  |Description  |
 |---------|---------|
-| `veryNarrow` | The element is visible when the card is very narrow, which typically is the case in a meeting chat. |
-| `narrow` | The element is visible when the card is narrow, which is typically the case on a mobile phone in portrait mode. |
-| `standard` | The element is visible when the card's width is standard, which is typically the case on a mobile phone in landscape mode, on a tablet in portrait mode, or in a chat on desktop. The default value is `standard`.|
-| `wide` | The element is visible when the card is wide, which is typically the case on a tablet in landscape mode, in a channel on desktop, or in a chat on desktop when you set your card to be [full width](#full-width-adaptive-card). |
+| `veryNarrow` | The element is visible when the card's width is very narrow such as in a meeting chat. |
+| `narrow` | The element is visible when the card's width is narrow such as on a mobile phone in portrait mode. |
+| `standard` | The element is visible when the card's width is standard such as on a mobile phone in landscape mode, on a tablet in portrait mode, or in a chat on desktop. The default value is `standard`.|
+| `wide` | The element is visible when the card's width is wide such as on a tablet in landscape mode, in a channel on desktop, or in a chat on desktop when you set your card to be [full width](#full-width-adaptive-card). |
 
-Sometimes, you might need an element to target a range of card widths, not a specific card width. For example, you might want an element to be visible when the card's width is standard or above, or when the card's width is narrow or below. To achieve this, you can use the `atLeast` and `atMost` modifier prefixes:
+You can set the `targetWidth` property to make an element visible for a range of card width using the `atLeast` and
+`atMost` prefixes. For example, you can make the element visible only when the card width is "standard or above" or "narrow or below". The following table shows the examples  for the `atLeast` and `atMost` modifier prefixes:
 
 | Example | Description  |
 |---------|---------|
-| `targetWidth: atLeast:standard` | Causes the element to be visible when the card's width is "at least standard, which is standard or wide. |
-| `targetWidth: atMost:narrow` | Causes the element to be visible when the card's width is "at most narrow, which is very narrow or narrow. |
+| `targetWidth: atLeast:standard` | Adaptive Card shows the element only when the card's width is "at least standard, which is standard or wide. |
+| `targetWidth: atMost:narrow` | Adaptive Card shows the element only when the card's width is at most narrow, which is very narrow or narrow. |
 
 > [!NOTE]
-> You don't have to set the `targetWidth` on all elements. When you do not set it on an element, that element will always be visible regardless of the card's width, which can render perfectly.
+> You don't have to set the `targetWidth` on all elements. If you don't set a `targetWidth` for an element, the element is always visible in an Adaptive Card irrespective of the card's width.
 
 The following JSON samples show an example of Adaptive Card designed without using `targetWidth` and using `targetWidth`:
 
-* **Card designed without using `targetWidth`**
+##### Card designed without using `targetWidth`
 
-  The following code is an example of Adaptive Card designed without using `targetWidth`:
+The following code is an example of Adaptive Card designed without using `targetWidth`:
 
-    ```json
+```json
+{ 
+"type": "AdaptiveCard", 
+"body": [ 
     { 
-    "type": "AdaptiveCard", 
-    "body": [ 
-        { 
-            "type": "ColumnSet", 
-            "columns": [ 
-                { 
-                    "type": "Column", 
-                    "items": [ 
-                        { 
-                            "type": "Image", 
-                            "style": "Person", 
-                            "url": "https://aka.ms/AAp9xo4", 
-                            "size": "Small" 
-                        } 
-                    ], 
-                    "width": "auto" 
-                }, 
-                { 
-                    "type": "Column", 
-                    "spacing": "medium", 
-                    "verticalContentAlignment": "center", 
-                    "items": [ 
-                        { 
-                            "type": "TextBlock", 
-                            "weight": "Bolder", 
-                            "text": "David Claux", 
-                            "wrap": true 
-                        } 
-                    ], 
-                  "width": "auto" 
-
-                }, 
-                { 
-                    "type": "Column", 
-                   "spacing": "medium", 
-
-                    "items": [ 
-                        { 
-                            "type": "TextBlock", 
-                            "text": "Platform Architect", 
-                            "isSubtle": true, 
-                            "wrap": true 
-                        } 
-                    ], 
-                    "width": "stretch", 
-                    "verticalContentAlignment": "center" 
-                } 
-            ] 
-        } 
-    ], 
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
-    "version": "1.5" 
-    } 
-    ```
-
-  As rendered when the card is wide, it looks good:
-
-  :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the card is designed without using targetWidth property.":::
-
-  But when the card's width is either standard or narrow, name and role are squished badly:
-
-  :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the card is designed without using targetWidth property.":::
-
-  The card renders even worse when the card is very narrow:
-
-  :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the card is designed without using targetWidth property.":::
-
-  Let's fix it.
-
-* **The same card, but designed using `targetWidth`**.
-
-  The following code is an example of Adaptive Card designed using `targetWidth`:
-
-  ``` json
-    {
-      "type": "AdaptiveCard",
-      "body": [
-        {
-          "type": "ColumnSet",
-          "columns": [
-            {
-              "type": "Column",
-              "items": [
-                {
-                  "type": "Image", 
-                  "style": "Person", 
-                  "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg", 
-                  "size": "Small"
-                } 
-              ], 
-              "width": "auto" 
-            },
-            {
-              "type": "Column",
-              "spacing": "medium",
-              "items": [
-                {
-                  "type": "TextBlock", 
-                  "weight": "Bolder", 
-                  "text": "Matt Hidinger", 
-                  "wrap": true
-                },
-                {
-                  "type": "TextBlock", 
-                  "targetWidth": "narrow", 
-                  "spacing": "None", 
-                  "text": "Principal Program Manager", 
-                  "isSubtle": true, 
-                  "wrap": true 
-                } 
-              ], 
-              "width": "auto", 
-              "verticalContentAlignment": "center" 
+        "type": "ColumnSet", 
+        "columns": [ 
+            { 
+                "type": "Column", 
+                "items": [ 
+                    { 
+                        "type": "Image", 
+                        "style": "Person", 
+                        "url": "https://aka.ms/AAp9xo4", 
+                        "size": "Small" 
+                    } 
+                ], 
+                "width": "auto" 
             }, 
             { 
-              "type": "Column", 
-              "targetWidth": "atLeast:standard", 
-              "spacing": "medium", 
-              "items": [ 
-                { 
-                  "type": "TextBlock", 
-                  "text": "Principal Program Manager", 
-                  "isSubtle": true, 
-                  "wrap": true 
-                } 
-              ], 
-              "width": "stretch", 
-              "verticalContentAlignment": "center" 
+                "type": "Column", 
+                "spacing": "medium", 
+                "verticalContentAlignment": "center", 
+                "items": [ 
+                    { 
+                        "type": "TextBlock", 
+                        "weight": "Bolder", 
+                        "text": "David Claux", 
+                        "wrap": true 
+                    } 
+                ], 
+              "width": "auto" 
+            }, 
+            { 
+                "type": "Column", 
+               "spacing": "medium", 
+                "items": [ 
+                    { 
+                        "type": "TextBlock", 
+                        "text": "Platform Architect", 
+                        "isSubtle": true, 
+                        "wrap": true 
+                    } 
+                ], 
+                "width": "stretch", 
+                "verticalContentAlignment": "center" 
             } 
-          ] 
-        } 
-      ], 
-      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
-      "version": "1.5" 
+        ] 
     } 
-  ```
-  
-  As rendered when the card is wide, it still looks good:
+], 
+"$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
+"version": "1.5" 
+} 
+```
+
+* The Adaptive Card renders when the card's width is wide:
+  :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the card is designed without using targetWidth property.":::
+
+* The Adaptive Card renders when the card's width is either standard or narrow:
+  :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the card is designed without using targetWidth property.":::
+
+* The Adaptive Card renders when the card's width is very narrow:
+  :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the card is designed without using targetWidth property.":::
+
+##### Card designed using `targetWidth`
+
+The following example illustrates how using `targetWidth` can make the layout of your card scale perfectly across card widths:
+
+``` json
+{
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "items": [
+            {
+              "type": "Image", 
+              "style": "Person", 
+              "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg", 
+              "size": "Small"
+            } 
+          ], 
+          "width": "auto" 
+        },
+        {
+          "type": "Column",
+          "spacing": "medium",
+          "items": [
+            {
+              "type": "TextBlock", 
+              "weight": "Bolder", 
+              "text": "Matt Hidinger", 
+              "wrap": true
+            },
+            {
+              "type": "TextBlock", 
+              "targetWidth": "narrow", 
+              "spacing": "None", 
+               "text": "Principal Program Manager", 
+              "isSubtle": true, 
+              "wrap": true 
+            } 
+          ], 
+          "width": "auto", 
+          "verticalContentAlignment": "center" 
+        }, 
+        { 
+          "type": "Column", 
+          "targetWidth": "atLeast:standard", 
+          "spacing": "medium", 
+          "items": [ 
+            { 
+              "type": "TextBlock", 
+              "text": "Principal Program Manager", 
+              "isSubtle": true, 
+              "wrap": true 
+            } 
+          ], 
+          "width": "stretch", 
+          "verticalContentAlignment": "center" 
+        } 
+      ] 
+    } 
+  ], 
+  "$schema": "https://adaptivecards.io/schemas/adaptive-card.json", 
+ "version": "1.5" 
+} 
+```
+
+* The Adaptive Card designed using `targetWidth`renders when the card's width is either standard or narrow:
 
   :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to wide.":::
   
-  The card looks good when the card's width is either standard or narrow. The role is now horizontally placed under the name:
+* The Adaptive Card designed using `targetWidth`renders when the card's width is either standard or narrow:
 
    :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to standard or narrow.":::
 
-  When there's even less space when the card is very narrow, we can hide the image and only keep the most meaningful information such as name and role:
+* The Adaptive Card designed using `targetWidth`renders when the card's width is very narrow:
 
   :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to veryNarrow.":::
 
