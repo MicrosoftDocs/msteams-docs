@@ -43,7 +43,7 @@ To preview your Teams meeting app in Outlook, you can either build a new meeting
 
 # [Build Teams meeting app for Outlook](#tab/ttk)
 
-You can build a Teams meeting app for Outlook through Teams Toolkit extension for Visual Studio Code. To build a Teams meeting app to preview in Outlook:
+You can build a Teams meeting app for Outlook through the Teams Toolkit extension for Visual Studio Code. To build a Teams meeting app to preview in Outlook:
 
 1. Go to Teams and sign in using your sandbox tenant account.
 
@@ -100,7 +100,7 @@ Use TeamsJS client library version 2.5.0 or later to extend your Teams meeting a
 
 If you need to upgrade your TeamsJS npm package from v1.x.x to the latest v2.x.x TeamsJS, you can use Teams Toolkit to help identify and automate the required code changes. For more information, see [TeamsJS library](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx).
 
-Following are the steps to update your TeamsJS to the latest version using Teams toolkit:
+Follow these steps to update your TeamsJS to the latest version using Teams Toolkit:
 
 1. Open your app in Visual Studio Code and select **Teams Toolkit** extension.
 1. Under **View**, select **Command Palette...** or **Ctrl+Shift+P**.
@@ -110,8 +110,8 @@ Your package.json file references `@microsoft/teams-js@2.x.x` and your `*.js/.ts
 
 * Import statements for `teams-js@2.x.x`.
 * [Function, Enum, and Interface calls](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx) for `teams-js@2.x.x`.
-* `TODO` comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface) interface changes.
-* `TODO` comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-library.md#callbacks-converted-to-promises).
+* New "`TODO`" comment reminders flagging areas that might be impacted by [Context](../tabs/how-to/using-teams-client-library.md#updates-to-the-context-interface) interface changes.
+* New "`TODO`" comment reminders to [convert callback functions to promises](../tabs/how-to/using-teams-client-library.md#callbacks-converted-to-promises).
 
 > [!NOTE]
 >
@@ -145,7 +145,7 @@ You can [upload your custom app in Teams admin center](#upload-your-custom-app-i
 
 To test your app in Microsoft 365 and Outlook, upload your [app package](../concepts/build-and-test/apps-package.md) to Teams admin center.
 
-1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Teams toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
+1. Package your Teams [app manifest](../resources/schema/manifest-schema.md) and [app icons](/microsoftteams/platform/resources/schema/manifest-schema#icons) in a zip file. To create an app package through Teams Toolkit, see [build app package.](~/toolkit/publish.md#build-app-package)
 
 1. From [Microsoft Teams admin center](https://admin.teams.microsoft.com), go to **Teams apps** > **Manage apps**.
 
