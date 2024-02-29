@@ -413,24 +413,3 @@
           displayName: Loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
-
-  - name: UI components
-    items:
-    - name: Basic UI components
-      href: concepts/design/design-teams-app-basic-ui-components.md
-      displayName: dropdown
-    - name: Advanced UI components
-      href: concepts/design/design-teams-app-advanced-ui-components.md
-    - name: Adaptive Cards
-      href: task-modules-and-cards/cards/design-effective-cards.md
-      displayName: column, ColumnSet 
-    - name: Dialogs
-      href: task-modules-and-cards/task-modules/design-teams-task-modules.md
-      displayname: Forms
-    - name: Lightbox view
-      href: concepts/design/design-teams-app-light-box-view.md
-      displayName: hide page layout  
-    - name: Activity feed notifications
-      href: concepts/design/activity-feed-notifications.md
-      displayName: notify, notification
-
