@@ -9,7 +9,7 @@ ms.date: 02/23/2024
 
 # Choose your app notifications
 
-Notification is one of the most effective ways to engage and retain users. Within Microsoft Teams, platform apps can send notifications to the activity feed using the Graph API, send Adaptive Cards through bots, or post messages to Teams channels through incoming webhooks. Here you can learn the effective notification design principles and how to select the most suitable framework for your app.
+Notification is one of the most effective ways to engage and retain users. Within Microsoft Teams, platform apps can send notifications to the activity feed using the Graph API or send Adaptive Cards through bots. Here you can learn the effective notification design principles and how to select the most suitable framework for your app.
 
 Teams offers the following notification frameworks for your app:
 
@@ -72,14 +72,15 @@ You can also consider the following before you choose the notification for your 
 
 ### Choose the right notification framework for your app
 
-When you create your apps, you must consider to enable notifications for your app to effectively engage and retain users in Teams. Ask yourself the following questions:
+When you create your apps, you must consider to enable notifications for your app to effectively engage and retain users in Teams.
 
-* When or in what events do you want to notify users?
 * What is the targeted user experience in Teams?
-* Are the notifications proactive or interactive?
-* Do you require localization support or batch send faster?
+   Use Activity notifications when you want users to consume notifications in Activity & Main Pane. <br>
+   Use Bot notifications when you want users to interact with Adaptive Card.
 
-:::image type="content" source="~/assets/images/app-notification.png" alt-text="Screenshot shows you the flow diagram of notification framework for your app.":::
+* How do you expect users to interact with the notification? 
+   Bot notifications should encourage conversations with the bot. <br>
+   If no further conversation is expected between the user and bot, use Activity notifications instead.  
 
 Here is some example scenario's and recommended notification types:
 
