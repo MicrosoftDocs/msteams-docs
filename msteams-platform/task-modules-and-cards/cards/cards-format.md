@@ -494,7 +494,7 @@ The following image shows the default view of the Adaptive Card when you have no
 
 ### Adaptive Card responsive layout
 
-Adaptive Cards automatically adapt their look and feel to the host application's style, and have a fixed layout that remains consistent across Teams mobile and desktop clients. You must design your Adaptive Cards to look great on any device and provide an enhanced user experience.
+Adaptive Cards automatically adapt their look and feel to the host application's style but, have a fixed layout that remains the same across Teams mobile and desktop clients. You must design your Adaptive Cards to look great on any device and provide an enhanced user experience. In this article, you'll learn aboout designing responsive Adaptive Cards.
 
 Adaptive Card responsive layout helps you to design cards with different layouts that target different card widths. When you design Adaptive Card for your app, ensure that you provide different layouts for enhanced user experience across chat, channels, and meeting chat in Teams desktop and mobile clients.
 
@@ -502,38 +502,36 @@ Adaptive Card responsive layout helps you to design cards with different layouts
 
 #### Design responsive Adaptive Cards
 
-To design a responsive Adaptive Card, use the `targetWidth` property on any element:
+Use the `targetWidth` property on any element to:
 
-* Show or hide the elements: Use the `targetWidth` property to show or hide any element based on the card's width.
-* Create different layouts: Set different target widths on different elements that allows you to create different layouts.
+* Show or hide any element based on the card's width.
+* Set different target widths on different elements that allows you to create different layouts.
 
-  The following table lists the available `targetWidth` values for different layouts:
+  The following table lists the available `targetWidth` values:
 
   |Value  |Description  |
   |---------|---------|
-  | `veryNarrow` | Adaptive Card shows the element when the card's width is very narrow such as in a meeting chat. |
-  | `narrow` | Adaptive Card shows the element  when the card's width is narrow such as on a mobile phone in portrait mode. |
-  | `standard` | Adaptive Card shows the element  when the card's width is standard such as on a mobile phone in landscape mode, on a tablet in portrait mode, or in a chat on desktop. The default value is `standard`.|
-  | `wide` | Adaptive Card shows the element  when the card's width is wide such as on a tablet in landscape mode, in a channel on desktop, or in a chat on desktop when you set your card to be [full width](#full-width-adaptive-card). |
+  | `veryNarrow` | The element is visible when the Adaptive Card's width is very narrow such as in a meeting chat. |
+  | `narrow` | The element is visible when the Adaptive Card' width is narrow such as on a mobile phone in portrait mode. |
+  | `standard` | The element is visible when the Adaptive Card' width is standard such as on a mobile phone in landscape mode, on a tablet in portrait mode, or in a chat on desktop. |
+  | `wide` | The element is visible when the Adaptive Card' width is wide such as on a tablet in landscape mode, in a channel on desktop, or in a chat on desktop when you set your card to be [full width](#full-width-adaptive-card). |
 
-  You can also set the `targetWidth` property to make an element visible for a range of card width using the `atLeast` and
-  `atMost` prefixes. For example, you can make the element visible only when the card width is _standard or above_ or _narrow or below_. The following table shows the examples  for the `atLeast` and `atMost` modifier prefixes:
+  You can also set the `targetWidth` property to make an element visible for a range of card widths using the `atLeast` and
+  `atMost` prefixes. For example, you can make an element visible only when the card width is 'standard or above' or when the card width is 'narrow or below'. The following table shows the examples  for the `atLeast` and `atMost` modifier prefixes:
 
   | Example | Description  |
   |---------|---------|
-  | `targetWidth: atLeast:standard` | Adaptive Card shows the element only when the card's width is at least standard, which is standard or wide. |
-  | `targetWidth: atMost:narrow` | Adaptive Card shows the element only when the card's width is at most narrow, which is very narrow or narrow. |
+  | `targetWidth: atLeast:standard` | The element is visible only when the Adaptive Card' width is at least standard, which is standard or wide. |
+  | `targetWidth: atMost:narrow` |The element is visible only when the Adaptive Card' width is at most narrow, which is very narrow or narrow. |
 
   > [!NOTE]
-  > You don't have to set the `targetWidth` on all elements. If you don't set a `targetWidth` for an element, the element is always visible in an Adaptive Card irrespective of the card's width.
+  > You don't have to set the `targetWidth` on all elements. If you don't set a `targetWidth` for an element, the element is always visible  irrespective of the card's width.
 
-The following are JSON samples for Adaptive Card designed without using `targetWidth` and using `targetWidth`:
+The following are JSON samples for Adaptive Card designed without using `targetWidth` and with using `targetWidth`:
 
-:::row:::
-    :::column:::
-      The following is a code sample for Adaptive Card designed without using `targetWidth`:
+* Adaptive Card designed without using `targetWidth`:
 
-     ```json
+    ```json
          {
         "type": "AdaptiveCard",
         "body": [
@@ -586,12 +584,11 @@ The following are JSON samples for Adaptive Card designed without using `targetW
             "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
             "version": "1.5"
             }
-         ```
-    :::column-end:::
-    :::column:::
-      The following is a Code sample for  Adaptive Card designed using `targetWidth`:
-     
-         ``` json
+    ```
+
+* Adaptive Card designed using `targetWidth`:
+
+   ``` json
           {
           "type": "AdaptiveCard",
           "body": [
@@ -653,9 +650,7 @@ The following are JSON samples for Adaptive Card designed without using `targetW
           "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
          "version": "1.5"
          }
-         ``` 
-    :::column-end:::
-:::row-end:::
+    ```
 
 The following table compares the rendering of Adaptive Cards designed with and without using the `targetWidth` property for different card widths:
 
