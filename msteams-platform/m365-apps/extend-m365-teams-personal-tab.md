@@ -47,28 +47,27 @@ Alternately, you can use a basic single sign-on (SSO) **hello world** app that's
 
 ### Quickstart
 
-To start with a personal tab that's already enabled to run in Teams, Outlook, and Microsoft 365 app, you can use Teams Toolkit extension for Visual Studio Code.
+Use the Teams Toolkit extension for Visual Studio Code to start with a personal tab that's enabled to run in Teams, Outlook, and Microsoft 365.
 
 1. Open **Visual Studio Code**.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Select **Teams: Create a New App**.
-1. Select the **Tab** option.
-1. Select **Basic tab**.
+2. Select the Teams Toolkit :::image type="icon" source="../assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the activity bar.
+3. Select **Create a New App**.
+4. Select **Tab**.
+5. Select **Basic Tab**.
 
     :::image type="content" source="images/toolkit-tab-sample.png" alt-text="Screenshot shows the Basic Tab option highlighted to create a new app feature using a tab.":::
 
-1. Select a preferred programming language.
-1. Select a location on your local machine for the workspace folder and enter your application name.
-1. Once your app has been created, within the Teams Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options can be found within the **ACCOUNTS** section of the extension.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Enter **Teams: Provision** to create the Teams app resources such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account. Alternatively, you can select **Provision** under **LIFECYCLE** section of the extension.
-1. Select a subscription and a resource group. If you choose to create a new resource group, you need to specify the location.
-1. Select **Provision**.
-1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
-1. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under the **LIFECYCLE** section of the extension.
-1. Select **Deploy**.
+6. Select a preferred programming language.
+7. Select a location on your local machine for the workspace folder and enter your application name.
+8. Once your app is created, within the Teams Toolkit extension, make sure you're signed in to the appropriate Microsoft 365 Developer Program sandbox tenant and Azure account. These options are available in the **ACCOUNTS** section of the extension.
+9. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+10. Enter **Teams: Provision** to create the Teams app resources such as Azure App Service, App Service plan, Azure Bot, and Managed Identity in your Azure account. Alternatively, you can select **Provision** under **LIFECYCLE** section of the extension.
+11. Select a subscription and a resource group. If you choose to create a new resource group, you need to specify the location.
+12. Select **Provision**.
+13. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
+14. Enter **Teams: Deploy** to deploy the sample code to the provisioned resources in Azure and start the app. Alternatively, you can select **Deploy** under the **LIFECYCLE** section of the extension.
 
-From here, you can skip ahead to [upload your custom app in Teams](#upload-your-custom-app-in-teams) and preview your app in Outlook and the Microsoft 365 app. The app manifest and TeamsJS API calls have already been updated for Microsoft 365 app.
+From here, you can skip ahead to [upload your custom app in Teams](#upload-your-custom-app-in-teams) and preview your app in Outlook and the Microsoft 365 app. The app manifest and TeamsJS API calls are already updated for Microsoft 365 app.
 
 ### SharePoint Framework (SPFx) apps
 
@@ -103,7 +102,7 @@ Open your app manifest and update the `$schema` and `manifestVersion` manually w
 ```json
 {
     "$schema" : "https://developer.microsoft.com/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
-    "manifestVersion" : "1.14"
+    "manifestVersion" : "1.16"
 }
 ```
 
@@ -113,10 +112,7 @@ If you used Teams Toolkit to create your personal app, you can also use it to va
 
 ## Update TeamsJS references
 
-Your app must refer to the npm package `@microsoft/teams-js@2.5.0` (or later) to run in Outlook and Microsoft 365. Previous versions of TeamsJS are still functional in Outlook and Microsoft 365 apps, but deprecation warnings are logged. Support for the previous versions eventually discontinue in both Outlook and Microsoft 365. To determine the latest version of TeamsJS, see [TeamsJS GitHub repository](https://github.com/OfficeDev/microsoft-teams-library-js).
-
-> [!NOTE]
-> If you want to use an earlier version of TeamsJS than v2.5.0, ensure that you add `www.microsoft365.com` to the `validMessageOrigins` (optional) array of the `app.initialize` call.
+Your app must refer to the npm package `@microsoft/teams-js@2.19.0` (or later) to run in Outlook and Microsoft 365. Previous versions of TeamsJS are still functional in Outlook and Microsoft 365 apps, but deprecation warnings are logged. Support for the previous versions eventually gets discontinued in both Outlook and Microsoft 365. To determine the latest version of TeamsJS, see [TeamsJS GitHub repository](https://github.com/OfficeDev/microsoft-teams-library-js).
 
 You can use Teams Toolkit to help identify and automate the required code changes to upgrade from 1.x TeamsJS versions to TeamsJS 2.x.x versions. Alternately, you can perform the same steps manually; refer to [TeamsJS library](../tabs/how-to/using-teams-client-library.md#whats-new-in-teamsjs-version-2xx) for details.
 
@@ -150,11 +146,11 @@ If your app makes use of [Content Security Policy](https://developer.mozilla.org
 [Microsoft Entra Single-sign on (SSO)](../tabs/how-to/authentication/tab-sso-overview.md) for personal tabs works the same way in Microsoft 365 app and Outlook as it does in Teams. However, you need to add several client application identifiers to the Microsoft Entra app registration of your tab app in your tenant's *App registrations* portal.
 
 1. Sign in to [Microsoft Azure portal](https://portal.azure.com) with your sandbox tenant account.
-1. Open the **App registrations** blade.
+1. Open **App registrations**.
 1. Select the name of your personal tab application to open its app registration.
 1. Select  **Expose an API** (under *Manage*).
 
-    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Screenshot shows the Authorized client Ids from the App registrations blade on Azure portal.":::
+    :::image type="content" source="images/azure-app-registration-clients.png" alt-text="Screenshot shows the authorized client IDs from the app registrations on Azure portal.":::
 
 1. In the **Authorized client applications** section, ensure all of the following `Client Id` values are added:
 
@@ -287,17 +283,17 @@ Only a subset of Teams application types and capabilities are supported in Outlo
 
 For an overall summary of Microsoft 365 host and platform support for Teams apps, see [Extend Teams apps across Microsoft 365](overview.md).
 
-You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience).
+You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace), and adjusting app behavior as appropriate. This action allows your app to light up UI and functionality in hosts that support it and provide a graceful fallback experience in hosts that don't. For more information, see [Differentiate your app experience](../tabs/how-to/using-teams-client-library.md#differentiate-your-app-experience).
 
 Use the [Microsoft Teams developer community channels](/microsoftteams/platform/feedback) to report issues and provide feedback.
 
 ### Debugging
 
-From Visual Studio code with Teams Toolkit, you can Debug (**F5**) your tab application running in Teams, Microsoft 365 app, and Outlook.
+You can debug your tab application running in Teams, Microsoft 365 app, and Outlook with Teams Toolkit in Visual Studio Code.
 
-:::image type="content" source="images/toolkit-debug-targets.png" alt-text="Screenshot shows the dropdown menu of Debug in Teams in Teams Toolkit.":::
+:::image type="content" source="images/toolkit-debug-targets.png" alt-text="Screenshot shows the debug dropdown menu in Teams Toolkit.":::
 
-Select the desired target and then launch the debug experience. Upon first run of local debug, you're prompted to sign in to your Microsoft 365 tenant account.
+Choose the desired debug method and select the **F5** key. Upon the first run of the local debug, Teams Toolkit prompts you to sign in to your Microsoft 365 tenant account.
 
 Provide feedback and report any issues with the Teams Toolkit debugging experience at [Microsoft Teams Framework (TeamsFx)](https://github.com/OfficeDev/TeamsFx/issues).
 
@@ -317,23 +313,23 @@ To debug your app in Outlook for Android:
 
 ##### Debugging Microsoft 365 for Android
 
-Teams Toolkit (`F5`) debugging isn't yet supported with Microsoft 365 for Android app. Here's how to remotely debug your app running in Microsoft 365 for Android app:
+Teams Toolkit (`F5`) doesn't support debugging Android apps in Microsoft 365. Here's how to remotely debug your app running in Microsoft 365 for Android app:
 
 1. If you debug using a physical Android device, connect it to your dev machine and enable the option for [USB debugging](https://developer.android.com/studio/debug/dev-options). This option is enabled by default with the Android emulator.
-1. Launch the Microsoft 365 app From your Android device.
-1. Open your profile **Me > Settings > Allow debugging**, and toggle on the option for **Enable remote debugging**.
+2. Launch the Microsoft 365 app From your Android device.
+3. Open your profile **Me > Settings > Allow debugging**, and toggle on the option for **Enable remote debugging**.
 
     :::image type="content" source="images/office-android-enable-remote-debugging.png" alt-text="Screenshot shows the Enable remote debugging toggle option.":::
 
-1. Leave **Settings**.
-1. Leave your profile screen.
-1. Select **Apps** and launch your uploaded custom app to run within the Microsoft 365 app.
-1. Ensure your Android device is connected to your dev machine. From your dev machine, open your browser to its DevTools inspection page. For example, go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews.
-1. Find the `Microsoft Teams Tab` with your tab URL and select **inspect** to start debugging your app with DevTools.
+4. Leave **Settings**.
+5. Leave your profile screen.
+6. Select **Apps** and launch your uploaded custom app to run within the Microsoft 365 app.
+7. Ensure your Android device is connected to your dev machine. From your dev machine, open your browser to its DevTools inspection page. For example, go to `edge://inspect/#devices` in Microsoft Edge to display a list of debug-enabled Android WebViews.
+8. Find the `Microsoft Teams Tab` with your tab URL and select **inspect** to start debugging your app with DevTools.
 
     :::image type="content" source="images/office-android-debug.png" alt-text="Screenshot shows the list of webviews in DevTools." lightbox="images/office-android-debug.png":::
 
-1. Debug your tab app within the Android WebView in the same way that you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
+9. Debug your tab app within the Android WebView in the same way that you [remotely debug](/microsoft-edge/devtools-guide-chromium/remote-debugging) a regular website on an Android device.
 
 ## Code sample
 

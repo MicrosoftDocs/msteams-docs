@@ -21,7 +21,7 @@ items:
     > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in M365 Chat in Microsoft Teams.
     
     Start Microsoft Teams app development with your first Teams app. 
-    You can create a bot-based message extension plugin with Teams using Javascript.  
+    You can create a bot-based message extension plugin with Teams using JavaScript.  
     
     In this tutorial, you'll learn:
 
@@ -32,7 +32,7 @@ items:
 
     This step-by-step guide helps you to build  bot-based message extension plugin with Teams Toolkit. You'll see the following output after you've completed this guide:
 
-     :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-invoke.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
+     :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -96,9 +96,9 @@ items:
    1. In the Teams client, select the **Apps** icon.
    1. Select **Manage your apps**.
    1. Select **Upload an app**.
-   1. Look for the option to **Upload a customised app**. If the option is visible, you've enabled custom app upload. 
+   1. Look for the option to **Upload a custom app**. If the option is visible, you've enabled custom app upload. 
     
-      :::image type="content" source="assets/images/Copilot/teams-upload-customised-app.png" alt-text="Screenshot shows the selection of Upload a customised app option in Teams.":::
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/prerequisites/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
         > [!NOTE]
         > Contact your Teams administrator, if you don't find the option to upload a custom app.
@@ -114,7 +114,7 @@ items:
 
       :::image type="content" source="assets/images/include-files/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
-   1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a customised app** option in Teams.
+   1. Sign in to Teams using the administrator account you just set up. Verify that you've the **Upload a custom app** option in Teams.
 
    ## Get a free Azure account
 
@@ -130,7 +130,7 @@ items:
 
     Message extension capability lets you interact with a web service. Use the compose area, command box, or a messaging in Teams client to search and initiate actions in an external system.
 
-      :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. message extension is highlighted.":::
+      :::image type="content" source="~/assets/images/teams-toolkit-v2/first-msgext/your-helloworld-app-msgext.png" alt-text="Diagram showing this app has three features. Message extension is highlighted.":::
 
     There are two types of Teams **message extensions**:
 
@@ -226,7 +226,7 @@ items:
 
     | Folder / File | Contents |
     | --- | --- |
-    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+    | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stage. |
     | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
     | `.vscode/` | VSCode files for local debug. |
     | `src/`        | The source code for the search application.   |
@@ -311,9 +311,9 @@ items:
     
         :::image type="content" source="assets/images/Copilot/bot-based-plugin-sbs-add-app-local.png" alt-text="Screenshot shows message to add the app." lightbox="assets/images/Copilot/bot-based-plugin-sbs-add-app-local.png":::
         
-        As message extensions rely on bots for enabling communication between the user and the web service,, your app loads in to a chat feature of a bot.
+        As message extensions rely on bots for enabling communication between the user and the web service, your app loads in to a chat feature of a bot.
 
-        - If you've created a bot app before you created the message extension app, you can see that it is loaded in the same bot app you created. Previous chat messages are visible.
+        - If you've created a bot app before you created the message extension app, you can see that it's loaded in the same bot app you created. Previous chat messages are visible.
         - If you created a message extension first, your app is loaded in any chat that is open on Teams.
 
         > [!NOTE]
@@ -362,7 +362,7 @@ items:
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-    1. From the compose message area, send a message to M365 Chat to find Contoso information. For example, find Contoso product in Contoso-local.
+    1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
 
@@ -388,7 +388,7 @@ items:
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
-        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you are using in other extensions.
+        > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
 
         Your default web browser opens to let you sign in to the account.
     1. Close the browser when prompted and return to Visual Studio Code.
@@ -429,7 +429,7 @@ items:
 
        The provisioning process creates resources in the Azure cloud. It may take some time. You can monitor the progress by watching the dialogs in the bottom-right corner. After a few minutes, you see the following notice:
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice which displays 'hellomsg' successfully provisioned in the cloud.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/deploy-azure/deploy-provision-successmsgext.png" alt-text="Screenshot showing a notice, which displays 'hellomsg' successfully provisioned in the cloud.":::
 
        If you want, you can view the provisioned resources. For this tutorial, you don't need to view resources.
 
