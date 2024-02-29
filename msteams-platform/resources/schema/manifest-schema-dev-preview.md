@@ -208,6 +208,21 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "id": "AAD App ID",
         "resource": "Resource URL for acquiring auth token for SSO"
     },
+    "graphConnector": {
+        "notificationUrl": "The URL where Graph-connector notifications for the application must be sent"
+    },
+
+    "showLoadingIndicator": {
+        "default": "A true or flase value indicating whether or not show loading indicator when app/tab is loading"
+    },
+    "isFullScreen": {
+        "default": "A true o false value indicating whether a personal app is rendered without a tab header-bar"
+    },
+
+    "scopeConstraints": {
+        "teams": "A list of team thread ids to which your app is restricted to",
+        "groupChats": "A list of chat thread ids to which your app is restricted to"
+    },    
     "authorization": {
         "permissions": {
             "resourceSpecific": [
@@ -233,6 +248,10 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "privacyUrl",
         "termsOfUseUrl"
     ],
+    "supportedChannelTypes": {
+        "sharedChannels",
+        "privateChannels"
+    },
     "defaultInstallScope": "meetings",
     "defaultGroupCapability": {
         "meetings": "tab",
