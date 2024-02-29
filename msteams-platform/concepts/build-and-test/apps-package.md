@@ -64,7 +64,7 @@ Ensure the icon is 32x32 pixels. It should be either white with a transparent ba
 > [!NOTE]
 > The following guidance applies only to the developer preview manifest.
 
-Although the outline icon is used when your app is pinned in Teams, when your app is pinned in Outlook or the Microsoft 365 app, the scaled down color icon is used instead. This could result in inconsistent appearances across experiences. To ensure your full color app icon looks good when pinned in Outlook and Microsoft 365 app, you can specify an [optional 32x32 color icon](resources/schema/manifest-schema-dev-preview.md#icons) with a transparent background.
+Although the outline icon is used when your app is pinned in Teams, when your app is pinned in Outlook or the Microsoft 365 app, the scaled down color icon is used instead. This could result in inconsistent appearances across experiences. To ensure your full color app icon looks good when pinned in Outlook and Microsoft 365 app, you can specify an [optional 32x32 color icon](../resources/schema/manifest-schema-dev-preview.md#icons) with a transparent background.
 
 :::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Teams outline icon design guidance.":::
 
