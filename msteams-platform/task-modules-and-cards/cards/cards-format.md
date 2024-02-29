@@ -517,140 +517,142 @@ Use the `targetWidth` property on any element to:
   | `wide` | The element is visible when the Adaptive Card' width is wide such as on a tablet in landscape mode, in a channel on desktop, or in a chat on desktop when you set your card to be [full width](#full-width-adaptive-card). |
 
   You can also set the `targetWidth` property to make an element visible for a range of card widths using the `atLeast` and
-  `atMost` prefixes. For example, you can make an element visible only when the card width is 'standard or above' or when the card width is 'narrow or below'. The following table shows the examples  for the `atLeast` and `atMost` modifier prefixes:
+  `atMost` prefixes. For example, you can make an element visible only when the card width is 'standard or above' or only when the card width is 'narrow or below'. The following table provides guidance on how to make an element visible for a range of card widths:
 
   | Example | Description  |
   |---------|---------|
-  | `targetWidth: atLeast:standard` | The element is visible only when the Adaptive Card' width is at least standard, which is standard or wide. |
-  | `targetWidth: atMost:narrow` |The element is visible only when the Adaptive Card' width is at most narrow, which is very narrow or narrow. |
+  | `"targetWidth": "atLeast:standard"` | The element is visible only when the Adaptive Card's width is at least standard, which means standard or wide. |
+  | `"targetWidth": "atMost:narrow"` |The element is visible only when the Adaptive Card's width is at most narrow, which means very narrow or narrow. |
 
   > [!NOTE]
-  > You don't have to set the `targetWidth` on all elements. If you don't set a `targetWidth` for an element, the element is always visible  irrespective of the card's width.
+  > You don't have to set `targetWidth` on all elements. If you don't set `targetWidth` for an element, the element is always visible irrespective of the card's width.
 
-The following are JSON samples for Adaptive Card designed without using `targetWidth` and with using `targetWidth`:
+The following are JSON samples for an Adaptive Card designed without using `targetWidth` and modified to use`targetWidth`:
 
 * Adaptive Card designed without using `targetWidth`:
 
     ```json
-         {
-        "type": "AdaptiveCard",
-        "body": [
+    {
+      "type": "AdaptiveCard",
+      "body": [
+        {
+          "type": "ColumnSet",
+          "columns": [
             {
-                "type": "ColumnSet",
-                "columns": [
-                    {
-                        "type": "Column",
-                        "items": [
-                            {
-                                "type": "Image",
-                                "style": "Person",
-                                "url": "https://aka.ms/AAp9xo4",
-                                "size": "Small"
-                            }
-                        ],
-                        "width": "auto"
-                    },
-                    {
-                        "type": "Column",
-                        "spacing": "medium",
-                        "verticalContentAlignment": "center",
-                        "items": [
-                            {
-                                "type": "TextBlock",
-                                "weight": "Bolder",
-                                "text": "David Claux",
-                                "wrap": true
-                            }
-                        ],
-                      "width": "auto"
-                    },
-                    {
-                        "type": "Column",
-                       "spacing": "medium",
-                        "items": [
-                            {
-                                "type": "TextBlock",
-                                "text": "Platform Architect",
-                                "isSubtle": true,
-                                "wrap": true
-                            }
-                        ],
-                        "width": "stretch",
-                        "verticalContentAlignment": "center"
-                    }
-                ]
+              "type": "Column",
+              "items": [
+                {
+                  "type": "Image",
+                  "style": "Person",
+                  "url": "https://aka.ms/AAp9xo4",
+                  "size": "Small"
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "spacing": "medium",
+              "verticalContentAlignment": "center",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "David Claux",
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "spacing": "medium",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Platform Architect",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ],
+              "width": "stretch",
+              "verticalContentAlignment": "center"
             }
-            ],
-            "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-            "version": "1.5"
-            }
+          ]
+        }
+      ],
+      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+      "version": "1.5"
+    }
+
     ```
 
-* Adaptive Card designed using `targetWidth`:
+* Adaptive Card updated to be responsive using `targetWidth`:
 
    ``` json
-          {
-          "type": "AdaptiveCard",
-          "body": [
+    {
+      "type": "AdaptiveCard",
+      "body": [
+        {
+          "type": "ColumnSet",
+          "columns": [
             {
-              "type": "ColumnSet",
-              "columns": [
+              "type": "Column",
+              "targetWidth": "atLeast:narrow",
+              "items": [
                 {
-                  "type": "Column",
-                  "items": [
-                    {
-                      "type": "Image",
-                      "style": "Person",
-                      "url": "https://pbs.twimg.com/profile_images/3647943215/d7f12830b3c17a5a9e4afcc370e3a37e_400x400.jpeg",
-                      "size": "Small"
-                    }
-                  ],
-                  "width": "auto"
-                },
-                {
-                  "type": "Column",
-                  "spacing": "medium",
-                  "items": [
-                    {
-                      "type": "TextBlock",
-                      "weight": "Bolder",
-                      "text": "Matt Hidinger",
-                      "wrap": true
-                    },
-                    {
-                      "type": "TextBlock",
-                      "targetWidth": "narrow",
-                      "spacing": "None",
-                       "text": "Principal Program Manager",
-                      "isSubtle": true,
-                      "wrap": true
-                    }
-                  ],
-                  "width": "auto",
-                  "verticalContentAlignment": "center"
-                },
-                {
-                  "type": "Column",
-                  "targetWidth": "atLeast:standard",
-                  "spacing": "medium",
-                  "items": [
-                    {
-                      "type": "TextBlock",
-                      "text": "Principal Program Manager",
-                      "isSubtle": true,
-                      "wrap": true
-                    }
-                  ],
-                  "width": "stretch",
-                  "verticalContentAlignment": "center"
+                  "type": "Image",
+                  "style": "Person",
+                  "url": "https://aka.ms/AAp9xo4",
+                  "size": "Small"
                 }
-              ]
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "spacing": "medium",
+              "verticalContentAlignment": "center",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "David Claux",
+                  "wrap": true
+                },
+                {
+                  "type": "TextBlock",
+                  "targetWidth": "atMost:narrow",
+                  "spacing": "None",
+                  "text": "Platform Architect",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "targetWidth": "atLeast:standard",
+              "spacing": "medium",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Platform Architect",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ],
+              "width": "stretch",
+              "verticalContentAlignment": "center"
             }
-          ],
-          "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-         "version": "1.5"
-         }
-    ```
+          ]
+        }
+      ],
+      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+      "version": "1.5"
+    }
+   ```
 
 The following table compares the rendering of Adaptive Cards designed with and without using the `targetWidth` property for different card widths:
 
