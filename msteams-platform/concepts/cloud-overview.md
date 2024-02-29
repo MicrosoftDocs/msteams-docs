@@ -27,11 +27,11 @@ The following table includes Teams apps supported for GCC, GCCH, and DoD:
 | &nbsp; | GCC | GCCH | DoD |
 |-------------|---------|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
-| Microsoft apps | ✔️ Microsoft apps compliant with GCC. | ✔️ Microsoft apps compliant with GCCH. | ✔️ Microsoft apps compliant with DoD. |
-| 3P or third-party apps built by external developers. | ✔️ | ❌ | ❌ |
-|Line-of-business apps are built, distributed, and used for specific tenant. | ✔️ | ✔️ | ✔️ |
-|Sideloading apps | ✔️ | ❌ | ❌ |
-|Personal apps | ✔️ | ✔️ | ✔️ |
+
+| 1P apps built by Teams Engineering | ✔️ | ✔️ | ✔️ |
+| 2P apps built by internal Teams developers. | ✔️ | ✔️ | ✔️ |
+| 3P apps built by external developers. | ✔️ | ❌ | ❌ |
+|Line-of-business apps built, distributed, and used in specific tenant. | ✔️ | ✔️ | ✔️ |
 
 The following table includes Teams capabilities and their availability for GCC, GCC-High, and DOD:
 
@@ -40,19 +40,21 @@ The following table includes Teams capabilities and their availability for GCC, 
 | **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ |
 | Bots and Message extensions | ✔️ | ✔️ | ✔️ |
-| Message actions | ✔️ | Partially available | Partially available |
-| Cards: Adaptive, Hero, Thumbnail, O365 connector, Receipt, Sign in, and OAuth cards. | ✔️ | Partially available | Partially available |
-| Task modules | ✔️ | ❌ | ❌ |
-| Link unfurling | ❌ | ❌ | ❌ |
-| Meetings extensibility | ✔️ | ❌ | ❌ |
-| Connectors and webhooks | ✔️ | Coming soon | ❌ |
+| Message actions | ✔️ | ✔️ | ✔️ |
+| Cards: Adaptive, Hero, Thumbnail, O365 connector, Receipt, Sign in, and OAuth cards. | ✔️ | ✔️ | ✔️ |
+| Task modules | ✔️ | ✔️ | ✔️ |
+| Link unfurling | ✔️ | ✔️ | ✔️ |
+| Meetings extensibility | ✔️ | ✔️ | ✔️ |
+| Connectors and webhooks | ✔️ | ❌ | ❌ |
 | Workflows| ✔️ | ❌ | ❌ |
-| Teams store | ✔️ | ✔️ | ✔️ |
-| In-context stores or flyouts | ❌ | ❌ | ❌ |
-| Manage your apps page | ✔️ | ❌ | ❌ |
-| Teams Admin Center | ✔️ | ❌ | ❌ |
-| Graph | ✔️ | ✔️ | ✔️ |
-| Teams Developer Portal | Partially available | ❌ | ❌ |
+| MetaOS tab| ❌ | ❌ | ❌ |
+| App Store 1.0 | ❌ | ❌ | ❌ |
+| App Store 2.0 | ✔️ | ✔️ | ✔️ |
+| In-context ap  stores or app flyouts | ✔️ | ✔️ | ✔️ |
+| Manage apps in Teams | ✔️ | ✔️ | ✔️ |
+| Teams Admin Center | ✔️ | ✔️ | ✔️ |
+| Graph APIs | ✔️ | ✔️ | ✔️ |
+| Teams Developer Portal | ✔️ | ❌ | ❌ |
 
 The following list provides references about availability of GCC, GCC-High, and DOD for the features:
 
