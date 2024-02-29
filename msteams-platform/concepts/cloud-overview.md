@@ -22,12 +22,13 @@ Government Community Cloud (GCC), GCC High (GCCH), and Department of Defense (Do
 
 Understanding the Teams apps and capabilities supported by each cloud is crucial for effective utilization of Teams within government clouds. Here's a brief overview of the Teams apps and capabilities for GCC, GCCH, and DoD:
 
+Government Community Cloud (GCC) is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
+
 The following table includes Teams apps supported for GCC, GCCH, and DoD:
 
 | &nbsp; | GCC | GCCH | DoD |
 |-------------|---------|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
-
 | 1P apps built by Teams Engineering | ✔️ | ✔️ | ✔️ |
 | 2P apps built by internal Teams developers. | ✔️ | ✔️ | ✔️ |
 | 3P apps built by external developers. | ✔️ | ❌ | ❌ |
@@ -59,7 +60,7 @@ The following table includes Teams capabilities and their availability for GCC, 
 The following list provides references about availability of GCC, GCC-High, and DOD for the features:
 
 | App/Capability | Reference | Description |
-|---------|---|
+|---------|---|---|
 | Third-party apps | [Web apps](../samples/integrating-web-apps.md) <br> [Meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md) | Third-party apps are turned off by default for GCC and not available for GCC-High and DoD. <br> Third-party and LOB apps for meetings and calls are available only in GCC. |
 | Sideloading apps | [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md) <br> [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md) | Sideloading apps are available only in GCC. |
 | Tab app in shared channel | [Apps for shared channels](build-and-test/shared-channels.md) | Available in all three government clouds. |
