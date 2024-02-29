@@ -10,11 +10,11 @@ ms.date: 07/29/2022
 
 # Install Teams Toolkit in Visual Studio
 
-You can learn how to install Teams Toolkit and enjoy enhanced experience for app development.
+You can learn how to install Microsoft Teams Toolkit and enjoy enhanced experience for app development.
 
 ## Install Teams Toolkit for Visual Studio
 
-1. Download and open [Visual Studio installer](https://aka.ms/VSDownload).
+1. Download and open [Microsoft Visual Studio installer](https://aka.ms/VSDownload).
 1. Select **Install**. If you've already installed Visual Studio, select **Modify**.
 
    Visual Studio installer shows all workloads.

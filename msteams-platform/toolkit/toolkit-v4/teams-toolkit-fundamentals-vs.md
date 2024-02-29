@@ -10,7 +10,7 @@ ms.date: 05/24/2022
 
 # Teams Toolkit Visual Studio Overview
 
-Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Visual Studio.
+Microsoft Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio.
 
 * Start with a project template for common custom app built for your org (LOB app) scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
