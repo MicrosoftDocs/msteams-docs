@@ -6,25 +6,21 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 09/29/2023
 ---
-# Government clouds in Teams
+# Government clouds
 
 Microsoft Teams plays a pivotal role in facilitating secure and efficient communication within government sectors and agencies. To meet the stringent security and compliance requirements of these entities, Microsoft offers three specialized government cloud services:
 
 :::image type="content" source="../assets/images/app-fundamentals/cloud-type.png" alt-text="Illustration shows the types of government clouds.":::
 
-Government Community Cloud (GCC), GCC High (GCCH), and Department of Defense (DoD) are limited for use within Unites States. To use Microsoft Government clouds services, you can purchase Microsoft 365 [Government plans](https://products.office.com/government/compare-office-365-government-plans).
+GCC, GCC High (GCCH), and DoD are limited for use within Unites States. To use Microsoft Government clouds services, you can purchase Microsoft 365 [Government plans](https://products.office.com/government/compare-office-365-government-plans).
 
 ## Government clouds for Teams
 
- Microsoft Teams is compatible with all Microsoft 365 Government plans, but the capabilities and features vary depending on the cloud type. Certain Teams features available in a commercial tenant may not be accessible in a government tenant. Due to security and compliance considerations, some are restricted while other may take time to roll out in government cloud.
+ Microsoft Teams is compatible with all Microsoft 365 Government plans, but the capabilities and features vary for each cloud type. Certain Teams features that are available in a commercial tenant may not be accessible in a government tenant. Due to security and compliance considerations, some are restricted while other may take time to roll out in government cloud.
 
-## Teams capabilities for Government clouds
+### Teams capabilities for Government clouds
 
-Understanding the Teams apps and capabilities supported by each cloud is crucial for effective utilization of Teams within government clouds. Here's a brief overview of the Teams apps and capabilities for GCC, GCCH, and DoD:
-
-Government Community Cloud (GCC) is a government focused copy of the commercial environment. Department of Defense (DOD) and Federal contractors must meet the stringent cybersecurity and compliance requirements. For this purpose, GCC-High was created to meet the needs of DOD and Federal contractors. GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. The DOD cloud is built for the Department of Defense only.
-
-The following table includes Teams apps supported for GCC, GCCH, and DoD:
+Understanding the Teams apps and capabilities supported by each cloud is crucial for effective utilization of Teams within government clouds. The following table includes Teams apps supported for GCC, GCCH, and DoD:
 
 | &nbsp; | GCC | GCCH | DoD |
 |-------------|---------|---|---|
@@ -32,9 +28,9 @@ The following table includes Teams apps supported for GCC, GCCH, and DoD:
 | 1P apps built by Teams Engineering | ✔️ | ✔️ | ✔️ |
 | 2P apps built by internal Teams developers. | ✔️ | ✔️ | ✔️ |
 | 3P apps built by external developers. | ✔️ | ❌ | ❌ |
-|Line-of-business apps built, distributed, and used in specific tenant. | ✔️ | ✔️ | ✔️ |
+| Custom app built for your org (LOB app) distributed and used in specific tenant. | ✔️ | ✔️ | ✔️ |
 
-The following table includes Teams capabilities and their availability for GCC, GCC-High, and DOD:
+The following table includes Teams capabilities and their availability for GCC, GCCH, and DoD:
 
 | &nbsp; | GCC | GCCH | DoD |
 |-------------|---------|---|---|
@@ -57,27 +53,20 @@ The following table includes Teams capabilities and their availability for GCC, 
 | Graph APIs | ✔️ | ✔️ | ✔️ |
 | Teams Developer Portal | ✔️ | ❌ | ❌ |
 
-The following list provides references about availability of GCC, GCC-High, and DOD for the features:
+Third-party apps are turned off by default for GCC and not available for GCCH and DoD.
 
-| App/Capability | Reference | Description |
-|---------|---|---|
-| Third-party apps | [Web apps](../samples/integrating-web-apps.md) <br> [Meeting app extensibility](../apps-in-teams-meetings/teams-apps-in-meetings.md) | Third-party apps are turned off by default for GCC and not available for GCC-High and DoD. <br> Third-party and LOB apps for meetings and calls are available only in GCC. |
-| Sideloading apps | [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md) <br> [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md) | Sideloading apps are available only in GCC. |
-| Tab app in shared channel | [Apps for shared channels](build-and-test/shared-channels.md) | Available in all three government clouds. |
-| Bots | [Designing your Teams bot](../bots/design/bots.md) <br> [Add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md) <br> [Bots in Teams](../bots/what-are-bots.md) | Bots are available in all three government clouds. |
-
-## Plan to deploy Government clouds in Teams
+### Plan to deploy Government clouds in Teams
 
 To deploy Teams in a government cloud, you need to purchase a suitable Microsoft 365 subscription. US federal, state, local or tribal government entity, or other entities handling data subject to government regulations can opt for a cloud service license.
 
 Here are the steps to plan for a government cloud service:
 
-* Determine the need of Government cloud for your organization..
+* Determine the need of Government cloud for your organization.
 * Review the admin and security settings for the respective cloud tenant.
 * Understand the capabilities available in the respective cloud tenant.
 * Apply for the appropriate government cloud.
 * Plan for governance in Teams.
-  * Group and team creation naming, guest access, expiration, retention, and archiving.
+  * Group and team creation naming, guest access, expiration, retention, and archiving
   * Group and team membership management
   * Teams feature management
   * Security and compliance
@@ -86,7 +75,7 @@ Here are the steps to plan for a government cloud service:
 
 To purchase required Microsoft 365 for US Government licenses:
 
-* Submit a form for GCC or GCC-High to validate your organization’s eligibility. To know more about the eligibility, see buy Microsoft 365 Government plans.
+* Submit a form for GCC or GCCH to validate your organization’s eligibility. To know more about the eligibility, see buy [Microsoft 365 Government plans](https://www.microsoft.com/en-in/microsoft-365/enterprise/government-plans-and-pricing?rtc=1#heading-oc2835).
 * You must place an order only through the Microsoft account team or a qualified partner.
 
 Considerations for [deploying Teams in Government cloud](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
