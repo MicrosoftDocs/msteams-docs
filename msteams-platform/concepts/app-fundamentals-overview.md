@@ -67,7 +67,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 ### Government Community Cloud
 
-To extend  your app in Government cloud platforms, see [Government clouds for Teams](cloud-overview.md).
+If you're planning to extend Teams app in Government cloud platform, you must first understand the capabilities that each government and plan on the steps for deployment. To extend your app in Government cloud platforms, see [Government clouds for Teams](cloud-overview.md).
 
 </details>
 

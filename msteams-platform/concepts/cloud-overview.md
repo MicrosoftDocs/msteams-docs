@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 09/29/2023
 ---
-# Government clouds
+# Government clouds in Teams
 
 Microsoft Teams plays a pivotal role in facilitating secure and efficient communication within government sectors and agencies. To meet the stringent security and compliance requirements of these entities, Microsoft offers three specialized government cloud services:
 
