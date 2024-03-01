@@ -94,7 +94,7 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/Olderversions of VS Code.png" alt-text="Screenshot shows versions other than the latest version of Visual Studio Code.":::
 
-   Teams Toolkit installs the version you’ve selected.
+   Teams Toolkit installs the selected version.
 
 ## Install a pre-release version
 

@@ -27,7 +27,7 @@ You can preview the app manifest file in local and remove environments.
 
 ## Preview the app manifest file in local environment
 
-To preview the app manifest file in local environment, you can press F5 to run local debug. After you generate the environment variables in `env/.env.local`, the app package and the preview app manifest is built under `appPackage/build` folder.
+To preview the app manifest file in local environment, you can press F5 to run local debug. After you generate the environment variables in `env/.env.local`, the app package and the preview app manifest are built under `appPackage/build` folder.
 
 You can also trigger `Zip Teams App Package` from tree view or `Teams: Zip Teams app Package` from command palette to generate the previewed app manifest and app package.
 
@@ -141,7 +141,7 @@ If the app manifest file is outdated due to configuration file change or templat
 
 In `appPackage/manifest.json`, you can go to CodeLens to preview the values for `local` and `dev` environment.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/codelens-v5.png" alt-text="Screenshot showing the codelens v5.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/codelens-v5.png" alt-text="Screenshot shows the CodeLens v5.":::
 
 > [!NOTE]
 > Provision the environment or execute local debug to generate environment variables.

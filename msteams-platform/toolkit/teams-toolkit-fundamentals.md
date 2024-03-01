@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit Overview
 author: zyxiaoyuer
-description: Learn about Teams Toolkit, it's installation, navigation, and user journey. Teams Toolkit is available for Visual Studio code.
+description: Learn about Teams Toolkit, its installation, navigation, and user journey. Teams Toolkit is available for Visual Studio Code.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -28,7 +28,7 @@ Teams Toolkit is available for free for Visual Studio Code. For more information
 
 | Teams Toolkit | Visual Studio Code |
 | - | ------------------ |
-| Installation | Available in the VS Code Marketplace |
+| Installation | Available in the Visual Studio Code Marketplace |
 | Build with | JavaScript, TypeScript, React, SPFx |
 
 > [!IMPORTANT]
@@ -48,7 +48,7 @@ The following list provides the key features of Teams Toolkit:
 
 You can start directly with the capability-focused templates such as tabs, bots, and message extensions or by following the existing samples if you're already familiar with Teams app development. Teams Toolkit reduces the complexity of getting started with the help of templates for common custom app built for your org (LOB app) scenarios and smart defaults to accelerate your time to production.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app_2.png" alt-text="Screenshot shows the create new Teams app menu in Visual Studio Code.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/create-new-app_2.png" alt-text="Screenshot shows the list of new Teams app menu to create in Visual Studio Code.":::
 
 ### Automatic registration and configuration
 
@@ -56,7 +56,7 @@ You can save time and let the toolkit automatically register the app in Teams De
 
 ### Multiple environments
 
-You can create different groupings of cloud resources to run and test your app. Use the **dev** environment with your Azure subscription or create a new app with a different subscription for staging, test, and production.s
+You can create different groupings of cloud resources to run and test your app. Use the **dev** environment with your Azure subscription or create a new app with a different subscription for staging, test, and production.
 
 ### Quick access to Teams Developer Portal
 
@@ -66,15 +66,11 @@ You can access Teams Developer Portal where you can configure, distribute, and m
 
 ### Debug tunneling for bots
 
-Run and debug your bot projects using VS Code and the included Dev Tunnels features.
+Run and debug your bot projects using Visual Studio Code and the included Dev Tunnels features.
 
-### App test tool
+### Teams App Test Tool
 
-Run and debug your bot projects in the test tool debug configuration to launch in a simulator-like experience for Teams without the need for an account or custom app permissions.
-
-### Infrastructure templates
-
-Optionally use any of our smart defaults for hosting your app project in Azure using Bicep templates included with every project template. 
+Teams App Test Tool (Test Tool) makes debugging bot-based apps effortless. You can chat with your bot and see its messages and Adaptive Cards as they appear in Teams. You don’t need a Microsoft 365 developer account, tunneling, or Teams app and bot registration to use Test Tool. For more information, see [Test Tool](debug-your-Teams-app-test-tool.md).
 
 ## See also
 

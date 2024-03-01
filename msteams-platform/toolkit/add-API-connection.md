@@ -22,7 +22,7 @@ Add a connection to an existing third-party API using the following steps:
 
     :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
 
-1. From the dropdown list that appears, select **Connect to an API**. You'll be redirected to the respective How-to Guide.
+1. From the dropdown list that appears, select **Connect to an API**. You're redirected to the respective How-to Guide.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/add-API/api-select-features_1.png" alt-text="Screenshot shows the selection of Connect to an API option in the View How-to Guides list.":::
 
