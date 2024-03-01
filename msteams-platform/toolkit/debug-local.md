@@ -11,6 +11,8 @@ zone_pivot_groups: teams-toolkit-platform
 
 # Debug your Teams app locally
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+
 Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and uploads Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ::: zone pivot="visual-studio-code-v5"
@@ -28,7 +30,7 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 # [Windows](#tab/Windows)
 
-1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser option.":::
 
@@ -58,7 +60,7 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 # [macOS](#tab/macOS)
 
-1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug in Teams (Edge)** or **Debug in Teams (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/debug-run.png" alt-text="Screenshot shows the Browser lists.":::
 
@@ -86,6 +88,56 @@ Toolkit launches a new Microsoft Edge or Chrome browser instance based on your s
 
 Teams Toolkit launches your browser instance and opens a webpage to load Teams client.
 
+# [Command line](#tab/cli)
+
+1. Install [dev tunnel.](/azure/developer/dev-tunnels/get-started?tabs=windows)
+
+1. Run the following command to login to dev tunnel:
+
+    ```cmd
+    devtunnel user login
+    ```
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/devtunnel-user-login.png" alt-text="Screenshot shows the devtunnel login.":::
+
+1. Run the following command to start your local tunnel service:
+
+    ```cmd
+    devtunnel host -p 3978 --protocol http --allow-anonymous
+    ```
+
+1. In a separate terminal, run the following command to update the `BOT_DOMAIN` and `BOT_ENDPOINT` values in the `env/.env.local` file:
+
+    ```cmd
+    BOT_DOMAIN=sample-id-3978.devtunnels.ms
+    BOT_ENDPOINT=https://sample-id-3978.devtunnels.ms/
+    ```
+    :::image type="content" source="../assets/images/teams-toolkit-v2/debug/bot-domain.png" alt-text="Screenshot shows the bot domain and endpoint.":::
+
+1. Run the following command to provision the app to Teams:
+
+    ```cmd
+    teamsapp provision --env local
+    ```
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/provision-env-local.png" alt-text="Screenshot shows provision the app to Teams.":::
+
+1. Run the following command to deploy the app to Teams:
+
+    ```cmd
+    teamsapp deploy --env local
+    ```
+   :::image type="content" source="../assets/images/teams-toolkit-v2/debug/deploy-env-local.png" alt-text="Screenshot shows deploy the app to Teams.":::
+
+1. Run the following command to preview your application locally:
+
+    ```cmd
+    teamsapp preview --env local
+    ```
+
+If you want to preview a notification bot hosted on Azure Functions, run the following command in your project directory:
+
+```cmd
+npm run prepare-storage:teamsapp
+```
 ---
 
 ## Debug your app
@@ -226,12 +278,6 @@ The configuration **Attach to Frontend** or **Launch App** launches Microsoft Ed
 
 ::: zone pivot="visual-studio-code-v4"
 
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](/microsoftteams/platform/toolkit/teams-toolkit-fundamentals?pivots=visual-studio-code-v5) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
-
 Teams Toolkit helps you to debug and preview your Microsoft Teams app locally. During the debug process, Teams Toolkit automatically starts app services, launches debuggers, and side-loads the Teams app. You can preview your Teams app in Teams web client locally after debugging.
 
 ## Debug your Teams app locally for Visual Studio Code
@@ -245,9 +291,9 @@ Teams Toolkit in Microsoft Visual Studio Code gives you the features to automate
 
 The following steps help you set up your Teams Toolkit before you initiate the debug process:
 
-# [Windows](#tab/Windows)
+# [Windows](#tab/Windows1)
 
-1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug (Edge)** or **Debug (Chrome)** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="toolkit-v4/images/debug-run-v4.png" alt-text="Browser option":::
 
@@ -275,9 +321,9 @@ The following steps help you set up your Teams Toolkit before you initiate the d
 
 Toolkit launches a new Microsoft Edge or Chrome browser instance based on your selection and opens a web page to load Teams client.  
 
-# [macOS](#tab/macOS)
+# [macOS](#tab/macOS1)
 
-1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** drop down.
+1. Select **Debug Edge** or **Debug Chrome** from the **RUN AND DEBUG ▷** dropdown.
 
    :::image type="content" source="toolkit-v4/images/debug-run-v4.png" alt-text="Browser lists":::
 
