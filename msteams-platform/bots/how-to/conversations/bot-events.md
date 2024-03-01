@@ -18,9 +18,9 @@ Activity handlers are functions or methods that contain the bot logic for how th
 
 |Comunication flow| Use|
 |---|---|
-| User **->** Bot | Activity handler |
-| Bot **->** User| Invoke activities |
-| User **<->** Bot| Activity handler + Invoke activities|
+| User **to** Bot | Activity handler |
+| Bot **to** User| Invoke activities |
+| User **to** Bot| Activity handler + Invoke activities|
 
 To create event-driven conversations, you must define the associated handlers that the bot will use with the event. You can also add [invoke activity](~/bots/how-to/conversations/bot-invoke-activity.md) to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
 
@@ -59,7 +59,7 @@ Following are the different type of events:
 |----| ------|----|
 | [Installation events](#installation-events)| A bot is installed or uninstalled.| All |
 | [Channel events](#channel-events)| A channel is created, renamed, deleted, or restored.| Team |
-| [Members events](#member-event)| A member is added or removed.| All |
+| [Members events](#member-events)| A member is added or removed.| All |
 | [Team events](#team-events)| A team is renamed, deleted, archived, unarchived, or restored.| Team |
 
 ## Installation events
