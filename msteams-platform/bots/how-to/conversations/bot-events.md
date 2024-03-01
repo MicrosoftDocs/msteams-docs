@@ -59,7 +59,7 @@ Following are the different type of events:
 |----| ------|----|
 | [Installation events](#installation-events)| A bot is installed or uninstalled.| All |
 | [Channel events](#channel-events)| A channel is created, renamed, deleted, or restored.| Team |
-| [Members events](#members-event)| A member is added or removed.| All |
+| [Members events](#member-event)| A member is added or removed.| All |
 | [Team events](#team-events)| A team is renamed, deleted, archived, unarchived, or restored.| Team |
 
 ## Installation events
@@ -894,7 +894,7 @@ The `channelData` object in the following payload example is based on adding a m
 
 ---
 
-You can also use the [`InstallationUpdate`](#installation-update-event) event to determine when your bot is added or removed from a conversation.
+You can also use the [`InstallationUpdate`](#installation-events) event to determine when your bot is added or removed from a conversation.
 
 ## Team events
 
@@ -1588,7 +1588,7 @@ In the development phase, it's always helpful to send meaningful messages in con
 
 Bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
 
-# [C#](#tab/csharp)
+# [C#](#tab/csharp15)
 
 >[!NOTE]
 >
@@ -1613,7 +1613,7 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 | Non-token-response event activity received | `OnEventAsync` | This method can be overridden to handle other types of events. |
 | Other activity type received | `OnUnrecognizedActivityTypeAsync` | This method can be overridden to handle any activity type otherwise unhandled. |
 
-# [JavaScript](#tab/javascript)
+# [JavaScript](#tab/javascript15)
 
 #### Core Bot Framework handlers
 
@@ -1640,7 +1640,7 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 | message undelete | `onTeamsMessageUndeleteEvent` | You can override this method to handle when a deleted message in a conversation is undeleted. For example, when the user decides to undo a deleted message. |
 | message soft delete | `onTeamsMessageSoftDeleteEvent` | You can override this method to handle when a message in a conversation is soft deleted. |
 
-# [Python](#tab/python)
+# [Python](#tab/python15)
 
 >[!NOTE]
 > Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
@@ -1661,6 +1661,110 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 | Non-token-response event activity received | `on_event` | This method can be overridden to handle other types of events. |
 | Other activity types received | `on_unrecognized_activity_type` | This method can be overridden to handle any type of activity that isn't handled. |
 
+Following is implementation example with Bot Framework's activity handler:
+
+# [C#](#tab/pcsharp16)
+
+```csharp
+public class EchoBot : ActivityHandler
+{
+    protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
+    {
+        var replyText = $"Echo: {turnContext.Activity.Text}";
+        await turnContext.SendActivityAsync(MessageFactory.Text(replyText, replyText), cancellationToken);
+    }
+
+    protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+    {
+        var welcomeText = "Hello and welcome!";
+        foreach (var member in membersAdded)
+        {
+            if (member.Id != turnContext.Activity.Recipient.Id)
+            {
+                await turnContext.SendActivityAsync(MessageFactory.Text(welcomeText, welcomeText), cancellationToken);
+            }
+        }
+    }
+}
+```
+
+# [JavaScript](#tab/javascript16)
+
+```javascript
+class EchoBot extends ActivityHandler {
+    constructor() {
+        super();
+        // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
+        this.onMessage(async (context, next) => {
+            const replyText = `Echo: ${ context.activity.text }`;
+            await context.sendActivity(MessageFactory.text(replyText, replyText));
+            // By calling next() you ensure that the next BotHandler is run.
+            await next();
+        });
+
+        this.onMembersAdded(async (context, next) => {
+            const membersAdded = context.activity.membersAdded;
+            const welcomeText = 'Hello and welcome!';
+            for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
+                if (membersAdded[cnt].id !== context.activity.recipient.id) {
+                    await context.sendActivity(MessageFactory.text(welcomeText, welcomeText));
+                }
+            }
+            // By calling next() you ensure that the next BotHandler is run.
+            await next();
+        });
+    }
+}
+```
+# [Java](#tab/java15)
+
+```java
+public class EchoBot extends ActivityHandler {
+
+    @Override
+    protected CompletableFuture<Void> onMessageActivity(TurnContext turnContext) {
+        return turnContext.sendActivity(
+            MessageFactory.text("Echo: " + turnContext.getActivity().getText())
+        ).thenApply(sendResult -> null);
+    }
+
+    @Override
+    protected CompletableFuture<Void> onMembersAdded(
+        List<ChannelAccount> membersAdded,
+        TurnContext turnContext
+    ) {
+        String welcomeText = "Hello and welcome!";
+        return membersAdded.stream()
+            .filter(
+                member -> !StringUtils
+                    .equals(member.getId(), turnContext.getActivity().getRecipient().getId())
+            ).map(channel -> turnContext.sendActivity(MessageFactory.text(welcomeText, welcomeText, null)))
+            .collect(CompletableFutures.toFutureList()).thenApply(resourceResponses -> null);
+    }
+}
+```
+
+# [Python](#tab/python16)
+
+```python
+class EchoBot(ActivityHandler):
+    async def on_members_added_activity(
+        self, members_added: [ChannelAccount], turn_context: TurnContext
+    ):
+        for member in members_added:
+            if member.id != turn_context.activity.recipient.id:
+                await turn_context.send_activity("Hello and welcome!")
+
+    async def on_message_activity(self, turn_context: TurnContext):
+        return await turn_context.send_activity(
+            MessageFactory.text(f"Echo: {turn_context.activity.text}")
+        )
+```
+
+---
+
+For more information, see [Bot Framework handlers.](/azure/bot-service/bot-activity-handler-concept)
+
 ## Next step
 
 > [!div class="nextstepaction"]
@@ -1668,10 +1772,10 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 
 ## See also
 
-* [Build bots for Teams](what-are-bots.md)
-* [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md)
-* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [Build bots for Teams](~/what-are-bots.md)
+* [Teams JavaScript client SDK](~/tabs/how-to/using-teams-client-sdk.md)
+* [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
-* [Get Teams specific context for your bot](how-to/get-teams-context.md)
-* [Messages in bot conversations](how-to/conversations/conversation-messages.md)
+* [Get Teams specific context for your bot](~/how-to/get-teams-context.md)
+* [Messages in bot conversations](~/how-to/conversations/conversation-messages.md)
 * [Component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs)
