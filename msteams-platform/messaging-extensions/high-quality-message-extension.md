@@ -388,7 +388,7 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 > [!NOTE]
 > Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in M365 Chat.
 
-For M365 Chat, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle two or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
+For M365 Chat, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
 
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
