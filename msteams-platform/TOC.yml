@@ -31,6 +31,8 @@
     href: get-started/build-notification-bot.md
   - name: Build a message extension app
     href: get-started/build-message-extension.md
+  - name: Build a business-to-consumer (B2C) app
+    href: get-started/b2c-apps.md
   - name: Teams app tutorials and code samples
     href: get-started/teams-toolkit-tutorial.md
   - name: Choose what suits you
