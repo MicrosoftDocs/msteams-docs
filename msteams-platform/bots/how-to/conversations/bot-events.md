@@ -895,9 +895,15 @@ You can also use the [`InstallationUpdate`](#installation-update-event) event to
 
 ## Team events
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Team renamed**        | teamRenamed       | OnTeamsTeamRenamedAsync    | Your bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object. | Team |
+Team events are triggered for the following events:
+
+* Team renamed
+* Team deleted
+* Team archived
+* Team unarchived
+* Team restored
+
+**Team renamed**: The bot is notified when the team is renamed. It receives a `conversationUpdate` event with `eventType.teamRenamed` in the `channelData` object in the `Team` scope.
 
 # [C#](#tab/dotnet8)
 
@@ -905,12 +911,12 @@ You can also use the [`InstallationUpdate`](#installation-update-event) event to
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L370)
 
 ```csharp
-      protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-     {
-        var heroCard = new HeroCard(text: $"{teamInfo.Name} is the new Team name");
-        // Sends an activity to the sender of the incoming activity.
-        await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
-     }
+protected override async Task OnTeamsTeamRenamedAsync(TeamInfo teamInfo, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+     var heroCard = new HeroCard(text: $"{teamInfo.Name} is the new Team name");
+    // Sends an activity to the sender of the incoming activity.
+    await turnContext.SendActivityAsync(MessageFactory.Attachment(heroCard.ToAttachment()), cancellationToken);
+}
 ```
 
 # [TypeScript](#tab/typescript8)
@@ -918,20 +924,19 @@ You can also use the [`InstallationUpdate`](#installation-update-event) event to
 [SDK reference](/javascript/api/botbuilder/teamsactivityhandler?view=botbuilder-ts-latest#botbuilder-teamsactivityhandler-onteamsteamrenamedevent&preserve-view=true)
 
 ```typescript
-       export class MyBot extends TeamsActivityHandler {
-        constructor() {
-            super();
-            // Bot is notified when the team is renamed.
-            this.onTeamsTeamRenamedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
-                const card = CardFactory.heroCard('Team Renamed', `${teamInfo.name} is the new Team name`);
-                const message = MessageFactory.attachment(card);
-
-                // Sends an activity to the sender of the incoming activity.
-                await turnContext.sendActivity(message);
-                await next();
-            });
-        }
-      }
+export class MyBot extends TeamsActivityHandler {
+constructor() {
+    super();
+    // Bot is notified when the team is renamed.
+    this.onTeamsTeamRenamedEvent(async (teamInfo: TeamInfo, turnContext: TurnContext, next: () => Promise<void>): Promise<void> => {
+        const card = CardFactory.heroCard('Team Renamed', `${teamInfo.name} is the new Team name`);
+        const message = MessageFactory.attachment(card);
+        // Sends an activity to the sender of the incoming activity.
+        await turnContext.sendActivity(message);
+        await next();
+    });
+}
+}
 ```
 
 # [JSON](#tab/json8)
@@ -986,9 +991,7 @@ You can also use the [`InstallationUpdate`](#installation-update-event) event to
 
 ---
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Team deleted**        | teamDeleted       | OnTeamsTeamDeletedAsync    | The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object.       | Team |
+**Team deleted**: The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object the `Team` scope..
 
 # [C#](#tab/dotnet9)
 
@@ -1065,9 +1068,7 @@ You can also use the [`InstallationUpdate`](#installation-update-event) event to
 ```
 ---
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Team restored**        | teamRestored      | OnTeamsTeamRestoredAsync    | The bot receives a notification when a team is restored after being deleted. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object.       | Team |
+* **Team restored**: The bot receives a notification when a team is restored after being deleted. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object in the `Team` scope.
 
 # [C#](#tab/dotnet10)
 
@@ -1154,9 +1155,7 @@ You can also use the [`InstallationUpdate`](#installation-update-event) event to
 
 ---
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| **Team archived**        | teamArchived       | OnTeamsTeamArchivedAsync    | The bot receives a notification when the team is installed and archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object.       | Team |
+* **Team archived**: The bot receives a notification when the team is installed and archived. It receives a `conversationUpdate` event with `eventType.teamarchived` in the `channelData` object in the `Team` scope.
 
 # [C#](#tab/dotnet11)
 
@@ -1243,9 +1242,7 @@ You can also use the [`InstallationUpdate`](#installation-update-event) event to
 
 ---
 
-| Action taken        | EventType         | Method called              | Description                | Scope |
-| ------------------- | ----------------- | -------------------------- | -------------------------- | ----- |
-| Team unarchived        | teamUnarchived       | OnTeamsTeamUnarchivedAsync    | The bot receives a notification when the team is installed and unarchived. It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object.       | Team |
+* **Team unarchived**: The bot receives a notification when the team is installed and unarchived. It receives a `conversationUpdate` event with `eventType.teamUnarchived` in the `channelData` object in the `Team` scope.
 
 # [C#](#tab/dotnet11)
 
@@ -1334,11 +1331,9 @@ You can also use the [`InstallationUpdate`](#installation-update-event) event to
 
 ### Message reaction events
 
-The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. The following table provides more information about the event type and payload objects:
+The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. Following are the event type and payload objects:
 
-| EventType       | Payload object   | Description                                                             | Scope |
-| --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| **messageReaction** | reactionsAdded   |`{WIP}`| All   |
+* **Message reaction added**: The bot is notified when a user adds a reaction to a message.
 
 # [C#](#tab/dotnet12)
 
@@ -1458,9 +1453,7 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 
 ---
 
-| EventType       | Payload object   | Description                                                             | Scope |
-| --------------- | ---------------- | ----------------------------------------------------------------------- | ----- |
-| **messageReaction** | reactionsRemoved | `{WIP}` | All |
+* **Message reaction removed**: The bot is notified when a user removes a reaction from the reacted message.
 
 # [C#](#tab/dotnet13)
 
