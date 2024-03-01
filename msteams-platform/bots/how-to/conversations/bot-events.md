@@ -16,6 +16,12 @@ Activity handlers are functions or methods that contain the bot logic for how th
 
 :::image type="content" source="~/assets/images/bots/bot-event-activity-flowchart.png" alt-text="Diagram that shows the flow of the event flow from activity handlers to bot logic." lightbox="~/assets/images/bots/bot-event-activity-flowchart.png":::
 
+|Comunication flow| Use|
+|---|---|
+| User **->** Bot | Activity handler |
+| Bot **->** User| Invoke activities |
+| User **<->** Bot| Activity handler + Invoke activities|
+
 To create event-driven conversations, you must define the associated handlers that the bot will use with the event. You can also add [invoke activity](~/bots/how-to/conversations/bot-invoke-activity.md) to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
 
 For example, when an event occurs, activity handlers can identify the activity and forward it to the bot logic for processing. By incorporating an invoke activity into the handler logic, your bot can process the event and respond to the user based on the payload of the invoke activity.
@@ -32,7 +38,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-Following are the two primary Teams activity handlers:
+Teams activity handlers is derived from [Bot Framework's activity handler](). Following are the two primary Teams activity handlers:
 
 * `OnConversationUpdateActivityAsync`: Routes all the conversation update activities.
 * `OnInvokeActivityAsync`: Routes all Teams [invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md).
@@ -49,32 +55,30 @@ A bot receives a `conversationUpdate` event in either of the following cases:
 
 Following are the different type of events:
 
-* [Installation events](#installation-events)
-* [Channel events](#channel-events)
-* [Members events](#members-event)
-* [Team events](#team-events)
+| Events| Description| Scope |
+|----| ------|----|
+| [Installation events](#installation-events)| A bot is installed or uninstalled.| All |
+| [Channel events](#channel-events)| A channel is created, renamed, deleted, or restored.| Team |
+| [Members events](#members-event)| A member is added or removed.| All |
+| [Team events](#team-events)| A team is renamed, deleted, archived, unarchived, or restored.| Team |
 
 ## Installation events
 
-### Installation update event
-
-The bot receives an `installationUpdate` event when you install a bot to a conversation thread. Uninstallation of the bot from the thread also triggers the event. On installing a bot, the **action** field in the event is set to *add*, and when the bot is uninstalled the **action** field is set to *remove*.
+The bot receives an `installationUpdate` event when you install or unistall a bot in a conversation. On installing a bot, the `action` field in the event is set to `add`, and when the bot is uninstalled the `action` field is set to `remove`.
 
 > [!NOTE]
-> When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to *add-upgrade* if you add a bot or *remove-upgrade* if you remove a bot.
+> When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to `add-upgrade` if you add a bot or `remove-upgrade` if you remove a bot.
 
-### Install update event
+The bot receives an `installationUpdate` event when the bot is installed. You can send an introductory message from your bot. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
 
-Use the `installationUpdate` event to send an introductory message from your bot on installation. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
+Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.ID of the `installationUpdate` event is set to the ID of the channel selected by a user during app installation or the channel where the installation is occurred and must be used by the bot when sending a welcome message. For scenarios where the ID of the default channel is explicitly required, you can get it from `team.id` in `channelData`.
 
-Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.id of the `installationUpdate` event is set to the id of the channel selected by a user during app installation or the channel where the installation occurred. The id represents the channel where the user intends for the bot to operate and must be used by the bot when sending a welcome message. For scenarios where the ID of the General channel is explicitly required, you can get it from `team.id` in `channelData`.
-
-In this example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
+In the following example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
 
 ![Create a selected channel](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> The selected channel id is only set on `installationUpdate` *add* events that are sent when an app is installed into a team.
+> The selected channel ID is only set on `installationUpdate add` events that are sent when an app is installed into a team.
 
 # [C#](#tab/dotnet14)
 
@@ -87,22 +91,22 @@ In this example, the `conversation.id` of the `conversationUpdate` and `installa
         var activity = turnContext.Activity;
         if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
         {
-            // TO:DO Installation workflow.
+            //Installation workflow.
         }
         else
         {
-            // TO:DO Uninstallation workflow.
+            // Uninstallation workflow.
         }
         return;
       }
 ```
 
-You can also use a dedicated handler for *add* or *remove* scenarios as an alternative method to capture an event.
+You can also use a dedicated handler for `add` or `remove` scenarios as an alternative method to capture an event.
 
 ```csharp
      protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
      {
-        // TO:DO Installation workflow return;
+        // Installation workflow return;
      }
 ```
 
@@ -199,7 +203,7 @@ You can also use a dedicated handler for *add* or *remove* scenarios as an alter
 
 ### Uninstall behavior for personal app with bot
 
-When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app, they receive a 403 response code. Your bot receives a 403 response code for new messages posted by your bot. The post uninstall behavior for bots in the personal scope with the Teams and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
+When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app after the bot is uninstalled, they receive a `403` response code. The post uninstall behavior for bots in the personal, Team, and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
 
 :::image type="content" source="~/assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="~/assets/images/bots/uninstallbot.png":::
 
@@ -211,8 +215,7 @@ When you use these install and uninstall events, there are some instances where 
 
 * You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
 
-  It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events. If you're using the Bot Framework SDK, your bot automatically responds with a 200 – OK to any events you don't choose to handle.
-
+  It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events.
 
 ## Channel events
 
@@ -589,9 +592,9 @@ MessageFactory.text(
 
 ---
 
-## Members event
+## Member events
 
-Members events are triggered for the following events:
+Member events are triggered for the following events:
 
 * Members added
 * Members removed
@@ -1550,25 +1553,25 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-removed&preserve-view=true)
 
 ```python
-       # Override this in a derived class to provide logic specific to removed activities.
-       async def on_reactions_removed(
-       self, message_reactions: List[MessageReaction], turn_context: TurnContext
-       ):
-       for reaction in message_reactions:
-       activity = await self._log.find(turn_context.activity.reply_to_id)
-       if not activity:
-        # Sends an activity to the sender of the incoming activity.
-       await self._send_message_and_log_activity_id(
-        turn_context,
-        f"Activity {turn_context.activity.reply_to_id} not found in log",
-       )
-       else:
-        # Sends an activity to the sender of the incoming activity.
-       await self._send_message_and_log_activity_id(
-        turn_context,
-        f"You removed '{reaction.type}' regarding '{activity.text}'",
-      )
-       return
+# Override this in a derived class to provide logic specific to removed activities.
+async def on_reactions_removed(
+self, message_reactions: List[MessageReaction], turn_context: TurnContext
+):
+for reaction in message_reactions:
+activity = await self._log.find(turn_context.activity.reply_to_id)
+if not activity:
+# Sends an activity to the sender of the incoming activity.
+await self._send_message_and_log_activity_id(
+turn_context,
+f"Activity {turn_context.activity.reply_to_id} not found in log",
+)
+else:
+# Sends an activity to the sender of the incoming activity.
+await self._send_message_and_log_activity_id(
+turn_context,
+f"You removed '{reaction.type}' regarding '{activity.text}'",
+)
+return
 ```
 
 ---
@@ -1581,3 +1584,94 @@ When a bot encounters an error while handling different events or activities, do
 
 In the development phase, it's always helpful to send meaningful messages in conversations, which provide additional details about a specific error for better debugging. However, in the production environment, you must log the errors or events to Azure Application Insights. For more information, see [add telemetry to your bot](https://aka.ms/bottelemetry).
 
+### Bot Framework's activity handler
+
+Bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
+
+# [C#](#tab/csharp)
+
+>[!NOTE]
+>
+>* Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
+>* `onInstallationUpdateActivityAsync()` method is used to get Teams Locale while adding the bot to Teams.
+
+Activity handlers are different in context of a team, where a new member is added to the team instead of a message thread.
+
+The list of handlers defined in `ActivityHandler` includes the following events:
+
+| Event | Handler | Description |
+| :-- | :-- | :-- |
+| Any activity type received | `OnTurnAsync` | This method calls one of the other handlers, based on the type of activity received. |
+| Message activity received | `OnMessageActivityAsync` | You can override this method to handle a `Message` activity. |
+| Message update activity received | `OnMessageUpdateActivityAsync` | You can override this method to handle a message update activity. |
+| Message delete activity received | `OnMessageDeleteActivityAsync` | You can override this method to handle a message delete activity. |
+| Conversation update activity received | `OnConversationUpdateActivityAsync` | This method calls a handler if members other than the bot joined or left the conversation, on a `ConversationUpdate` activity. |
+| Non-bot members joined the conversation | `OnMembersAddedAsync` | This method can be overridden to handle members joining a conversation. |
+| Non-bot members left the conversation | `OnMembersRemovedAsync` | This method can be overridden to handle members leaving a conversation. |
+| Event activity received | `OnEventActivityAsync` | This method calls a handler specific to the event type, on an `Event` activity. |
+| Token-response event activity received | `OnTokenResponseEventAsync` | This method can be overridden to handle token response events. |
+| Non-token-response event activity received | `OnEventAsync` | This method can be overridden to handle other types of events. |
+| Other activity type received | `OnUnrecognizedActivityTypeAsync` | This method can be overridden to handle any activity type otherwise unhandled. |
+
+# [JavaScript](#tab/javascript)
+
+#### Core Bot Framework handlers
+
+>[!NOTE]
+> Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
+
+Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
+
+The list of handlers defined in `ActivityHandler` includes the following events:
+
+| Event | Handler | Description |
+| :-- | :-- | :-- |
+| Any activity type received | `onTurn` | This method calls one of the other handlers, based on the type of activity received. |
+| Message activity received | `onMessage` | This method helps to handle a `Message` activity. |
+| Message update activity received  | `onMessageUpdate` | This method calls a handler if a message is updated. |
+| Message delete activity received | `onMessageDelete` | This method calls a handler if a message is deleted. |
+| Conversation update activity received | `onConversationUpdate` | This method calls a handler if members other than the bot joined or left the conversation, on a `ConversationUpdate` activity. |
+| Non-bot members joined the conversation | `onMembersAdded` | This method helps to handle members joining a conversation. |
+| Non-bot members left the conversation | `onMembersRemoved` | This method helps to handle members leaving a conversation. |
+| Event activity received | `onEvent` | This method calls a handler specific to the event type, on an `Event` activity. |
+| Token-response event activity received | `onTokenResponseEvent` | This method helps to handle token response events. |
+| Other activity type received | `onUnrecognizedActivityType` | This method helps to handle any activity type otherwise unhandled. |
+| message edit | `onTeamsMessageEditEvent` | You can override this method to handle when a message in a conversation is edited. |
+| message undelete | `onTeamsMessageUndeleteEvent` | You can override this method to handle when a deleted message in a conversation is undeleted. For example, when the user decides to undo a deleted message. |
+| message soft delete | `onTeamsMessageSoftDeleteEvent` | You can override this method to handle when a message in a conversation is soft deleted. |
+
+# [Python](#tab/python)
+
+>[!NOTE]
+> Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
+
+Activity handlers are different in context of a team, where the new member is added to the team instead of a message thread.
+
+The list of handlers defined in `ActivityHandler` includes the following events:
+
+| Event | Handler | Description |
+| :-- | :-- | :-- |
+| Any activity type received | `on_turn` | This method calls one of the other handlers, based on the type of activity received. |
+| Message activity received | `on_message_activity` | This method can be overridden to handle a `Message` activity. |
+| Conversation update activity received | `on_conversation_update_activity` | This method calls a handler if members other than the bot join or leave the conversation. |
+| Non-bot members joined the conversation | `on_members_added_activity` | This method can be overridden to handle members joining a conversation. |
+| Non-bot members left the conversation | `on_members_removed_activity` | This method can be overridden to handle members leaving a conversation. |
+| Event activity received | `on_event_activity` | This method calls a handler specific to the type of event. |
+| Token-response event activity received | `on_token_response_event` | This method can be overridden to handle token response events. |
+| Non-token-response event activity received | `on_event` | This method can be overridden to handle other types of events. |
+| Other activity types received | `on_unrecognized_activity_type` | This method can be overridden to handle any type of activity that isn't handled. |
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Conversation basics](~/bots/how-to/conversations/conversation-basics.md)
+
+## See also
+
+* [Build bots for Teams](what-are-bots.md)
+* [Teams JavaScript client SDK](../tabs/how-to/using-teams-client-sdk.md)
+* [App manifest schema for Teams](../resources/schema/manifest-schema.md)
+* [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
+* [Get Teams specific context for your bot](how-to/get-teams-context.md)
+* [Messages in bot conversations](how-to/conversations/conversation-messages.md)
+* [Component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs)

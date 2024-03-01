@@ -10,9 +10,20 @@ ms.date: 01/22/2023
 
 # Invoke activity for bot events
 
-An invoke activity is a type of activity that is sent to a bot when a user performs an action, such as clicking a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses. Invoke activities are typically used to send back confirmations, item selections, and to provide feedback or input to the bot.
+An invoke activity is a type of activity that is sent to a user from the bot when a user performs an action, such as selecting a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses, such as following:
+* Ssend back confirmations
+* Item selections
+* Provide feedback or input to the bot.
 
 :::image type="content" source="~/assets/images/bots/bot-invoke-activity.png" alt-text="Diagram that shows the flow of the invoke activity." lightbox="~/assets/images/bots/bot-invoke-activity.png":::
+
+|Comunication flow| Use|
+|---|---|
+| User **->** Bot | Activity handler |
+| Bot **->** User| Invoke activities |
+| User **<->** Bot| Activity handler + Invoke activities|
+
+The invoke activities listed in this article are applicable for conversational bots in Teams. 
 
 # [C#](#tab/dotnet)
 
@@ -224,4 +235,4 @@ self, turn_context: TurnContext, task_module_request: TaskModuleRequest
 
 ---
 
-The invoke activities listed in this section are for conversational bots in Teams. The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](~/messaging-extensions/what-are-messaging-extensions.md).
+The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](~/messaging-extensions/what-are-messaging-extensions.md).
