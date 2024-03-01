@@ -8,9 +8,9 @@ ms.topic: overview
 ms.date: 03/21/2022
 ---
 
-# Debug your Teams app locally using Visual Studio
+# Debug your Microsoft Teams app locally using Microsoft Visual Studio
 
-Visual Studio allows you to debug tabs, bots, and message extensions. You can debug your app locally in Visual Studio using Teams Toolkit by performing:
+Visual Studio allows you to debug tabs, bots, and message extensions. You can debug your app locally in Visual Studio using Microsoft Teams Toolkit by performing:
 
 ## Set up dev tunnel (Only for bot and message extension)
 

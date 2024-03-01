@@ -45,7 +45,7 @@ You can preview the app manifest file either **For Local** or **For Azure**. To 
 
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/zip-app-package.png" alt-text="Screenshot shows the zip app package for local or Azure.":::
 
-    1. From **Solution Explorer**, right-click on **MyTeamsApp2** (in this scenario the project name is MyTeamsApp2). Go to **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**.
+    1. From **Solution Explorer**, right-click on **MyTeamsApp14** (in this scenario the project name is MyTeamsApp14). Go to **Teams Toolkit** > **Zip App Package** and then select either **For Local** or **For Azure**.
 
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/solution-zip.png" alt-text="Screenshot shows the solution zip app package for local or Azure.":::
 
@@ -73,7 +73,7 @@ After you've previewed the app manifest file in Visual Studio, you can sync the 
 
 You can also sync the local changes to Developer Portal from **Solution Explorer**:
 
-1. Right-click on **MyTeamsApp2**.
+1. Right-click on **MyTeamsApp14**.
 1. Select **Teams Toolkit**.
 1. Select **Update Manifest in Teams Developer Portal**
 

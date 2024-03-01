@@ -8,9 +8,9 @@ ms.topic: overview
 ms.date: 03/21/2022
 ---
 
-# Debug your Teams app using Visual Studio
+# Debug your Microsoft Teams app using Microsoft Visual Studio
 
-Teams Toolkit automates app startup services, initiates debugging, and uploads Teams app. After debugging, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tabs, bots, and message extensions.
+Microsoft Teams Toolkit automates app startup services, initiates debugging, and uploads Teams app. After debugging, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tabs, bots, and message extensions.
 
 ## Prerequisites
 

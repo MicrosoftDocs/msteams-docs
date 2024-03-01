@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Provision cloud resources in Visual Studio
+# Provision cloud resources in Microsoft Visual Studio
 
 TeamsFx integrates with Azure and the Microsoft 365 cloud, which allows to place your app in Azure with a single command. TeamsFx integrates with Azure Resource Manager (ARM), which enables to provision Azure resources that your application needs for code approach.
 
@@ -52,7 +52,7 @@ After you open your project in Visual Studio, to provision cloud resources follo
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/teams-toolkit-vs-provision-warning.png" alt-text="Screenshot shows the provision warning.":::
 
-   The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the Teams Toolkit output window.
+   The provisioning process creates resources in the Azure cloud. You can monitor the progress by observing the Microsoft Teams Toolkit output window.
 
 1. In the pop-up window that appears, to view all the resources that are provisioned, select **View provisioned resources**.
 
