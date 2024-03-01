@@ -1772,10 +1772,10 @@ For more information, see [Bot Framework handlers.](/azure/bot-service/bot-activ
 
 ## See also
 
-* [Build bots for Teams](~/what-are-bots.md)
+* [Build bots for Teams](~/bots/what-are-bots.md)
 * [Teams JavaScript client SDK](~/tabs/how-to/using-teams-client-sdk.md)
 * [App manifest schema for Teams](~/resources/schema/manifest-schema.md)
 * [API reference for the Bot Framework Connector service](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference)
-* [Get Teams specific context for your bot](~/how-to/get-teams-context.md)
-* [Messages in bot conversations](~/how-to/conversations/conversation-messages.md)
+* [Get Teams specific context for your bot](~/bots/how-to/get-teams-context.md)
+* [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)
 * [Component and waterfall dialogs](/azure/bot-service/bot-builder-concept-waterfall-dialogs)
