@@ -14,7 +14,7 @@ Microsoft Teams provides single sign-on (SSO) function for an app to obtain sign
 
 ## Enable Single Sign-on in Teams Toolkit for Visual Studio
 
-Teams provides SSO function for an app using the Teams Toolkit for Microsoft Visual Studio.
+Teams provides SSO function for an app using the Microsoft Teams Toolkit for Microsoft Visual Studio.
 
 1. Open **Visual Studio**.
 

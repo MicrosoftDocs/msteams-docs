@@ -8,9 +8,9 @@ ms.topic: overview
 ms.date: 05/13/2022
 ---
 
-# Customize app manifest for Visual Studio
+# Customize app manifest for Microsoft Visual Studio
 
-The app manifest (previously called Teams app manifest) describes how your app integrates into Teams and is shared between local and remote environments. The default app manifest file is available at the `appPackage/manifest.json` file and the environment variables available from the `env/.env.{env}` file.
+The app manifest (previously called Teams app manifest) describes how your app integrates into Microsoft Teams and is shared between local and remote environments. The default app manifest file is available at the `appPackage/manifest.json` file and the environment variables available from the `env/.env.{env}` file.
 
 The app manifest file contains some environment variables with the `${{XX_XX}}` format. You can define your own environment variables and add placeholders in the `manifest.json` file. The following are the .env and .json file examples:
 
