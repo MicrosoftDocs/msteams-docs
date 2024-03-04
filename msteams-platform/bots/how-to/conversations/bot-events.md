@@ -18,9 +18,9 @@ Activity handlers are functions or methods that contain the bot logic for how th
 
 |Comunication flow| Use|
 |---|---|
-| User **to** Bot | Activity handler |
-| Bot **to** User| Invoke activities |
-| User **to** Bot| Activity handler + Invoke activities|
+| User <b>**->**</b> Bot| Activity handler |
+| Bot <b>**->**</b> User| Invoke activities |
+| User <b>**<->**</b> Bot| Activity handler + Invoke activities|
 
 To create event-driven conversations, you must define the associated handlers that the bot will use with the event. You can also add [invoke activity](~/bots/how-to/conversations/bot-invoke-activity.md) to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
 
@@ -1584,9 +1584,9 @@ When a bot encounters an error while handling different events or activities, do
 
 In the development phase, it's always helpful to send meaningful messages in conversations, which provide additional details about a specific error for better debugging. However, in the production environment, you must log the errors or events to Azure Application Insights. For more information, see [add telemetry to your bot](https://aka.ms/bottelemetry).
 
-### Bot Framework's activity handler
+### Bot Framework activity handler
 
-Bots derived from the Teams activity handler class, which first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
+Bots derived from the Teams activity handler class, first checks for Teams activities. After checking for Teams activities, it passes all other activities to the Bot Framework's activity handler.
 
 # [C#](#tab/csharp15)
 
@@ -1768,7 +1768,7 @@ For more information, see [Bot Framework handlers.](/azure/bot-service/bot-activ
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Conversation basics](~/bots/how-to/conversations/conversation-basics.md)
+> [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)
 
 ## See also
 
