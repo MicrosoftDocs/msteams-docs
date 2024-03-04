@@ -15,15 +15,16 @@ We recommend familiarizing yourself with the concept of activity handlers before
 An invoke activity is a type of activity that is sent to a user from the bot when a user performs an action, such as selecting a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses, such as following:
 * Ssend back confirmations
 * Item selections
-* Provide feedback or input to the bot.
+* Provide feedback or input to the bot
 
 :::image type="content" source="~/assets/images/bots/bot-invoke-activity.png" alt-text="Diagram that shows the flow of the invoke activity." lightbox="~/assets/images/bots/bot-invoke-activity.png":::
 
-|Comunication flow| Use|
-|---|---|
-| User <b>-></b> Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) |
-| Bot <b>-></b> User| [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md) |
-| User <b><-></b> Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)|
+Following is a table that provides information on which communication concept to use in different scenarios:
+
+|Comunication flow| Use| Scenario |
+|---|---| --- |
+| Bot <b>-></b> User| [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md) | Invoke activities are used when you want your bot to send responses back to the user based on a received event.|
+| User <b><-></b> Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Receive the event and share a response back to the user based on the event.|
 
 The invoke activities listed in this article are applicable for conversational bots in Teams. 
 

@@ -14,17 +14,18 @@ Events and handlers are two related concepts in a bot workflow. An event in bot 
 
 Activity handlers are functions or methods that contain the bot logic for how the bot should handle different types of events. For example, in an event when a user reacts to the bot message, the bot has a handler for event, which defines what the bot should do or say in response to the user’s action.
 
-:::image type="content" source="~/assets/images/bots/bot-event-activity-flowchart.png" alt-text="Diagram that shows the flow of the event flow from activity handlers to bot logic." lightbox="~/assets/images/bots/bot-event-activity-flowchart.png":::
-
-|Comunication flow| Use|
-|---|---|
-| User <b>-></b> Bot| [Activity handler](#events-with-activity-handlers) |
-| Bot <b>-></b> User| [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md) |
-| User <b><-></b> Bot| [Activity handler](#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)|
-
 To create event-driven conversations, you must define the associated handlers that the bot will use with the event. You can also add [invoke activity](~/bots/how-to/conversations/bot-invoke-activity.md) to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
 
 For example, when an event occurs, activity handlers can identify the activity and forward it to the bot logic for processing. By incorporating an invoke activity into the handler logic, your bot can process the event and respond to the user based on the payload of the invoke activity.
+
+:::image type="content" source="~/assets/images/bots/bot-event-activity-flowchart.png" alt-text="Diagram that shows the flow of the event flow from activity handlers to bot logic." lightbox="~/assets/images/bots/bot-event-activity-flowchart.png":::
+
+Following is a table that provides information on which communication concept to use in different scenarios:
+
+|Comunication flow| Use| Scenario |
+|---|---| --- |
+| User <b>-></b> Bot| [Activity handler](#events-with-activity-handlers) |  Invoke activities are used when you want your bot to send responses back to the user based on a received event.|
+| User <b><-></b> Bot| [Activity handler](#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Invoke activities are used when you want your bot to send responses back to the user based on a received event.|
 
 ## Events with activity handlers
 
