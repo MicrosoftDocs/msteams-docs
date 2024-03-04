@@ -139,7 +139,7 @@ From the task pane, you can see the following sections:
    :::column-end:::
    :::column span="":::
 
-        To access more information and giving us your feedback on Teams Toolkit, you need the following documentation and resources:
+        To access more information and provide us, your feedback on Teams Toolkit, select any one of the following:
         
         * **Documentation**: Select to access the Microsoft Teams Developer documentation.
 

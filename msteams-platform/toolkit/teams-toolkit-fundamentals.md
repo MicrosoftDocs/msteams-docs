@@ -7,9 +7,13 @@ ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 05/24/2022
 ---
-# Teams Toolkit Overview
+# Microsoft Teams Toolkit Overview
 
-Microsoft Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio Code.
+> [!IMPORTANT]
+>
+> Teams Toolkit isn't supported in Government Community Cloud (GCC) and GCC-High environments.
+
+Teams Toolkit makes it simple to get started with app development for Microsoft Teams using Microsoft Visual Studio Code.
 
 * Start with a project template for common custom app built for your org (LOB app) scenarios or from a sample.
 * Save setup time with automated app registration and configuration.
@@ -30,10 +34,6 @@ Teams Toolkit is available for free for Visual Studio Code. For more information
 | - | ------------------ |
 | Installation | Available in the Visual Studio Code Marketplace |
 | Build with | JavaScript, TypeScript, React, SPFx |
-
-> [!IMPORTANT]
->
-> Teams Toolkit isn't supported in Government Community Cloud (GCC) and GCC-High environments.
 
 ## Features
 
