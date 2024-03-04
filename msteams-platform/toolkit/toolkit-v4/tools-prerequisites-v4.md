@@ -175,7 +175,7 @@ If you have admin rights, you can enable custom app upload:
 
      :::image type="content" source="images/select-manage-policies_1-v4.png" alt-text="Select Manage Policies":::
 
-  1. Turn on the **Upload custom apps**.
+  1. Turn on the **Upload custom apps** toggle.
 
      :::image type="content" source="images/Upload-custom-apps_1-v4.png" alt-text="Upload Custom Apps":::
 
