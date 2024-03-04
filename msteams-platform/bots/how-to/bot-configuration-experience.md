@@ -58,13 +58,11 @@ For more information, see [public developer preview app manifest schema](../../r
 
 ### Configure your bot
 
-You can enable the configuration settings for your bot using the following methods:
+You can enable the configuration settings for your bot as follows:
 
 * For JS:
-
-  * `onInvokeActivity`
-
-  * `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`
+  
+`handleTeamsConfigFetch` and `handleTeamsConfigSubmit`
 
 * For C#:
 
@@ -76,75 +74,90 @@ You can enable the configuration settings for your bot using the following metho
 
 #### Javascript code snippets
 
-The following code snippets shows an example of `onInvokeActivity` and `handleTeamsConfigFetch`, `handleTeamsConfigSubmit`:
+The following code snippets shows an example of `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`:
 
-# [JS1](#tab/teams-bot-sdk-js)
-
-The code block provided evaluates incoming activities based on their name property. If the activity name is `config/fetch`, it generates an Adaptive Card for dynamic search, constructs a response object with a status code of 200, and encapsulates the card details within the response body, indicating a continuation of the dialog. Alternatively, if the activity name is `config/submit`, the code determines the appropriate action based on the selected choice. If the choice corresponds to `static_option_2`, it creates an Adaptive Card for static search, prepares a response object with a status code of 200, and embeds the card details for further dialog continuation. If the choice differs or encounters an exception, it returns a message indicating the end of the dialog.
+The `handleTeamsConfigFetch` method generates an Adaptive Card labeled `Bot Config Fetch` and offers two response alternatives an `auth` response, which suggests an action to launch a URL for authentication, and a `continue` response, which presents an Adaptive Card. The `handleTeamsConfigSubmit` method deals with the user's selection from the Adaptive Card and responds appropriately.
 
 ```javascript
-if (context._activity.name == "config/fetch") {
-    const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForDynamicSearch());
-    try {
-        return {
-            status: 200,
-            body: {
-                config: {
-                    type: 'continue',
-                    value: {
-                        card: adaptiveCard,
-                        height: 400,
-                        title: 'Dialog fetch response',
-                        width: 300
-                    }
-                }
-            }
-        }
-    } catch (e) {
-        console.log(e);
-    }
-} else if (context._activity.name == "config/submit") {
-    const choice = context._activity.value.data.choiceselect.split(" ")[0];
-    chosenFlow = choice;
+async handleTeamsConfigFetch(_context, _configData) {
+    let response = {};
+    const cardJson = {
+        type: 'AdaptiveCard',
+        version: '1.4',
+        body: [
+            {
+                type: 'TextBlock',
+                text: 'Bot Config Fetch',
+            },
+        ],
+    };
+    const card = CardFactory.adaptiveCard(cardJson);
+    /*
+    Option 1: You can add a "config/auth" response as below code
+    Note: The URL in value must be linked to a valid auth URL which can be opened in a browser. This code is only representative and not a working example.
+    */
+    /*response = {
+        config: {
+            type: "auth",
+            suggestedActions: {
+                actions: [
+                    {
+                        type: "openUrl",
+                        value: "https://example.com/auth",
+                        title: "Sign in to this app"
+                    }]
+            },
+        },
+    };*/
 
-    if (choice === "static_option_2") {
-        const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForStaticSearch());
+    /*
+      Option 2: You can add a "config/continue" response as below code
+      */
+    const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
+    response = {
+        config: {
+            value: {
+                card: adaptiveCard,
+                height: 200,
+                width: 200,
+                title: 'test card',
+            },
+            type: 'continue',
+        },
+    };
+    return response;
+}
 
-        return {
-            status: 200,
-            body: {
-                config: {
-                    type: 'continue',
-                    value: {
-                        card: adaptiveCard,
-                        height: 400,
-                        title: 'Dialog submit response',
-                        width: 300
-                    }
+async handleTeamsConfigSubmit(context, _configData) {
+    let response = {};
+    const choice = context._activity.value.data.choiceselect;
+    if (choice === "continue") {
+        const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForSubmit());
+        response = {
+            config: {
+                type: 'continue',
+                value: {
+                    card: adaptiveCard,
+                    height: 200,
+                    width: 200,
+                    title: 'Task module submit response',
                 }
-            }
-        }
+            },
+        };
+        return response;
     } else {
-        try {
-            return {
-                status: 200,
-                body: {
-                    config: {
-                        type: 'message',
-                        value: "end"
-                    }
-                }
-            }
-        } catch (e) {
-            console.log(e);
-        }
+        response = {
+            config: {
+                type: 'message',
+                value: 'You have chosen to finish setting up bot',
+            },
+        };
+        return response;
     }
 }
 ```
 
-# [JS2](#tab/bot-framework-js)
-
-The `handleTeamsConfigFetch` and `handleTeamsConfigSubmit` methods are extended to manage configuration fetch and submit operations in Teams. The `handleTeamsConfigFetch` method inspects the command type in the `configData` parameter and formulates a response. If the command is card, an Adaptive Card with bot configuration details is generated. If it's message, a simple message response is created. In a similar manner, the `handleTeamsConfigSubmit` method evaluates the command type in `configData` and generates either an Adaptive Card or a message response, depending on the command type.
+The code snippet illustrates the `handleTeamsConfigFetch` method, which utilizes Adaptive Cards to gather configuration data. An Adaptive Card, featuring elements such as text blocks and input choice sets, is generated to prompt the user to select from various setup options. The bot's response is contingent on the user's selection, either presenting another Adaptive Card for additional configuration Adaptive Card for continue, or transmitting a simple message to signify the setup process's completion Adaptive Card for submit. These Adaptive Cards, embedded within the class, offer a structured and user-friendly method for users to engage with the bot's configuration flow. In essence, Adaptive Cards augment user engagement and simplify interaction in chat-based interfaces by providing a uniform format for information display and user input collection. They enable developers to craft rich and interactive experiences that integrate smoothly with messaging platforms, thereby enhancing the functionality of conversational interfaces.
 
 ```javascript
 // extending both handlers
@@ -252,8 +265,6 @@ async handleTeamsConfigSubmit(_context, configData) {
 }
 
 ```
-
----
 
 #### C# code snippets
 
