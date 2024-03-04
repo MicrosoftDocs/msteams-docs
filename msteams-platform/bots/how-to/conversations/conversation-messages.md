@@ -8,6 +8,17 @@ ms.localizationpriority: medium
 
 # Messages in bot conversations
 
+Messages in bot conversations play a crucial role in facilitating communication between users and conversational bots. A conversation is a series of messages sent between your bot and one or more users. There are three kinds of conversations (also called scopes) in Teams:
+
+* `teams` Also called channel conversations, visible to all members of the channel.
+* `personal` Conversations between bots and a single user.
+* `groupChat` Chat between a bot and two or more users.
+
+A bot behaviour depends on what kind of conversation it's involved in:
+
+* [Bots in channel and group chat conversations](~/bots/how-to/conversations/conversation-messages.md) require the user to @mention the bot to invoke it in a channel or group chat.
+* Bots in single user conversations don't require an @mention. User can just type the message and share it in the chat.
+
 Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Microsoft Teams posts the message activity to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly.
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
@@ -28,6 +39,60 @@ The following table lists the activity that your bot can receive and take action
 | [Receive edit message activity](#get-edit-message-activity) | Message edit activity | All |
 | [Receive undelete message activity](#get-undelete-message-activity) | Message undelete activity | All |
 | [Receive soft delete message activity](#get-soft-delete-message-activity) | Message soft delete activity | All |
+
+## Message content
+
+Messages received from or sent to your bot can include different types of message content.
+
+| Format    | From user to bot | From bot to user | Notes                                                                                   |
+|-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
+| Rich text | ✔️                | ✔️                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
+| Pictures  | ✔️                | ✔️                | Maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Doesn't support the animated GIF. |
+| Cards     | ❌                | ✔️                | See [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
+| Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
+
+### Picture messages
+
+To enhance your message, you can include pictures as attachments to that message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
+
+Pictures can be at most 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
+
+Specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
+
+* Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
+* Don't use: `![Duck on a rock](http://aka.ms/Fo983c)`.
+
+A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
+
+### Adaptive Cards
+
+Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
+
+The following code shows an example of sending a simple Adaptive Card:
+
+```json
+{
+    "type": "AdaptiveCard",
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.5",
+    "body": [
+    {
+        "items": [
+        {
+            "size": "large",
+            "text": " Simple Adaptivecard Example with a Textbox",
+            "type": "TextBlock",
+            "weight": "bolder",
+            "wrap": true
+        },
+        ],
+        "spacing": "extraLarge",
+        "type": "Container",
+        "verticalContentAlignment": "center"
+    }
+    ]
+}
+```
 
 ## Receive a message activity
 
@@ -749,60 +814,6 @@ The following code shows an example of channelData object (channelCreated event)
     "team": {
         "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype"
     }
-}
-```
-
-## Message content
-
-Messages received from or sent to your bot can include different types of message content.
-
-| Format    | From user to bot | From bot to user | Notes                                                                                   |
-|-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich text | ✔️                | ✔️                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
-| Pictures  | ✔️                | ✔️                | Maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Doesn't support the animated GIF. |
-| Cards     | ❌                | ✔️                | See [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
-
-### Picture messages
-
-To enhance your message, you can include pictures as attachments to that message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
-
-Pictures can be at most 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
-
-Specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
-
-* Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
-* Don't use: `![Duck on a rock](http://aka.ms/Fo983c)`.
-
-A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
-
-### Adaptive Cards
-
-Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
-
-The following code shows an example of sending a simple Adaptive Card:
-
-```json
-{
-    "type": "AdaptiveCard",
-    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
-    {
-        "items": [
-        {
-            "size": "large",
-            "text": " Simple Adaptivecard Example with a Textbox",
-            "type": "TextBlock",
-            "weight": "bolder",
-            "wrap": true
-        },
-        ],
-        "spacing": "extraLarge",
-        "type": "Container",
-        "verticalContentAlignment": "center"
-    }
-    ]
 }
 ```
 
