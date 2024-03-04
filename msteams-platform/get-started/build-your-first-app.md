@@ -1,12 +1,16 @@
 ---
-title: Build message extension
-description: In this module, learn how to build your first message extension for your Teams app.
-ms.localizationpriority: medium
-ms.date: 06/07/2023
+title: Build your first app
+description: Build your first Teams message extension, tab, or bot app with Github Codespaces or following the step-by-step guides.
+ms.localizationpriority: high
+ms.date: 03/25/2024
 ms.topic: reference
 ---
 
-# Build message extension
+# Build your first Teams app
+
+Build your first Teams message extension, tab, or bot app with Github Codespaces or following the step-by-step guides.
+
+# [Message Extension](#tab/msgext)
 
 A message extension allows the users to interact with your web service through buttons and forms in Teams. They can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to Teams in the form of a richly formatted card.
 
@@ -16,7 +20,7 @@ In this tutorial, you'll learn to build a search-based message extension app, an
 
 Create a search based message extension app in one of the following ways:
 
-# [GitHub Codespaces](#tab/teamstoolkitcodespaces)
+# [GitHub Codespaces](#tab/codespaces1)
 
 Before you create your codespace, ensure that you have the following prerequisites:
 
@@ -69,7 +73,7 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
    :::image type="content" source="../assets/images/get-started/codespace/me-teams-chat.png" alt-text="Screenshot shows your message extension loaded in the Teams client.":::
 
-# [Step-by-step guide](#tab/step-by-step-guide)
+# [Step-by-step guide](#tab/sbsguide1)
 
 If you want to learn how to start a project with Teams Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building your message extension app.
 
@@ -80,21 +84,4 @@ If you want to learn how to start a project with Teams Toolkit from the beginnin
 
 For more information on message extensions, see [message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
-If a bot is what you are interested in, select the following:
-
-> [!div class="nextstepaction"]
-> [Start building a bot](build-notification-bot.md)
-
-If you want to build basic tab app, select the following:
-
-> [!div class="nextstepaction"]
-> [Build your basic tab app](build-basic-tab-app.md)
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Choose what suits you](choose-what-suits-you.md)
-
-## See also
-
-[npm directory](https://www.npmjs.com/)
+---

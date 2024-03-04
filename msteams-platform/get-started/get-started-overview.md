@@ -12,7 +12,6 @@ Get started with building apps for Microsoft Teams and beyond!
 
 Here's what you'll learn in this module:
 
-* Get started quickly with the Microsoft Teams Toolkit.
 * Build a message extension, tab, and bot app with GitHub Codespaces or using the step-by-step guide.
 * Learn about tutorials and code samples available for building your Teams app.
 * Learn about various tools and SDKs available for building your Teams app.
@@ -24,12 +23,12 @@ Here's what you'll learn in this module:
     1. If you want to build a message extension app:
 
     > [!div class="nextstepaction"]
-    > [Build message extension](build-message-extension.md)
+    > [Build message extension](build-message-extension.md)<br>
 
     2. If you want to build a tab app:
 
     > [!div class="nextstepaction"]
-    > [Build your basic tab app](build-basic-tab-app.md)
+    > [Build your basic tab app](build-basic-tab-app.md)<br>
 
     3. If a bot is what you're interested in:
 
@@ -38,8 +37,8 @@ Here's what you'll learn in this module:
 
 1. Choose your path to build your selected app.
 
-   * **GitHub Codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any extra setup.
-   * **Step-by-step guide**: Allows you to create a Teams app from the ground up including setting up your development environment.
+   * **GitHub Codespaces**: Run, test, and debug your app in a development environment without the need for any extra setup.
+   * **Step-by-step guide**: Create a Teams app from the ground up including setting up your development environment.
 
    :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
 
