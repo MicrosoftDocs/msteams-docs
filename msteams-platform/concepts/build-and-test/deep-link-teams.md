@@ -10,7 +10,7 @@ ms.date: 01/31/2023
 
 # Deep link to Teams chat
 
-You can create a deep link to a Teams chat, such as to start a new chat, browse to a channel conversation, and to a file in a channel.
+You can create a deep link to a Teams chat, such as to start a new chat, go to a channel conversation, and access a file within a channel.
 
 In this article, you’ll learn to create a deep link:
 
@@ -24,7 +24,7 @@ In this article, you’ll learn to create a deep link:
 
 You can navigate to or create private chats between users with the Microsoft Teams JavaScript client library (TeamsJS) by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat.
 
-When a user creates a new chat using a deep link, Teams creates the new chat in the draft state until the user sends the first message. You can also provide the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. You can think of this as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
+When a user creates a new chat using a deep link, Teams creates the new chat in the draft state until the user sends the first message. You can also provide the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. Consider this a shortcut for the user taking the manual action of navigating to or creating the chat and then compose the message.
 
 As a use-case example, if you’re retrieving a Microsoft 365 user profile information from your bot as a card, this deep link can allow the app user to easily chat with that person.
 
@@ -101,7 +101,7 @@ Example: `https://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f02
 
 The query parameters are:
 
-* `chatId`: Chat ID of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.</br>
+* `chatId`: Chat ID of the conversation. The supported format for `chatId` is 19: xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.</br>
    Apps can read a chat ID through app context in Teams, incoming payload to bot, or through [Microsoft Graph APIs](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
    > [!NOTE]
    > For one-on-one chats with bot, the incoming payload to bot contains the conversation ID in a:xxx format.
