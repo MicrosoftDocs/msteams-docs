@@ -169,13 +169,13 @@ If you have admin rights, you can enable custom app upload:
   1. Sign in to Microsoft Teams admin center with your admin credentials.
   1. Select the :::image type="icon" source="images/showall icon-v4.png" border="false"::: icon > **Teams apps** > **Setup policies**.
 
-     ::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/m365-admin-setup-policies.png" alt-text="Screenshot shows the option to select setup policies.":::
+     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/m365-admin-setup-policies.png" alt-text="Screenshot shows the option to select setup policies.":::
 
   1. Select **Global (Org-wide default)**.
 
      :::image type="content" source="images/select-manage-policies_1-v4.png" alt-text="Select Manage Policies":::
 
-  1. Set toggle **Upload custom apps** to **On** position.
+  1. Turn on the **Upload custom apps**.
 
      :::image type="content" source="images/Upload-custom-apps_1-v4.png" alt-text="Upload Custom Apps":::
 

@@ -100,4 +100,4 @@ When you create a Teams command bot using Visual Studio, two app IDs are registe
 * [Manage multiple environments](TeamsFx-multi-env-v4.md)
 * [Public developer preview for Microsoft Teams](~/resources/dev-preview/developer-preview-intro.md)
 * [Provision cloud resources using Visual Studio](provision-vs.md)
-* [Deploy Teams app to the cloud using Visual Studio](deploy-vs.md#deploy-teams-app-to-the-cloud-using-visual-studio)
+* [Deploy Teams app to the cloud using Visual Studio][Deploy Microsoft Teams app to the cloud using Microsoft Visual Studio](deploy-vs.md)

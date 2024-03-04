@@ -198,4 +198,4 @@ This action uploads and deploys the project to Azure Storage.
 * [Create new Teams app in Visual Studio](~/toolkit/toolkit-v4/create-new-project-vs.md)
 * [Provision cloud resources using Visual Studio](provision-vs.md)
 * [Edit Teams app manifest using Visual Studio](TeamsFx-preview-and-customize-app-manifest-vs.md)
-* [Debug your Teams app locally using Visual Studio](debug-local-vs.md#debug-your-teams-app-locally-using-visual-studio)
+* [Debug your Teams app locally using Visual Studio][Deploy Microsoft Teams app to the cloud using Microsoft Visual Studio](deploy-vs.md)

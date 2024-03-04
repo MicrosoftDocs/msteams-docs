@@ -55,7 +55,7 @@ After you've created your Teams app project, you can use the following options t
 |**Deploy to the Cloud**     | Helps you to copy your code to the cloud resources that you provisioned in Microsoft Entra ID. For more information, see [how to deploy Teams app to the cloud using Visual Studio](deploy-vs.md).        |
 |**Preview in**     | Launches the Teams web client, Outlook and the Microsoft 365 app lets you preview the Teams app in your browser.         |
 |**Zip App Package**     | Generates a Teams app package in the **Build** folder under the project. You can upload the app package to the Teams client and run the Teams app.         |
-|**Teams Toolkit Documentation**     | Launches a web page and view Teams Toolkit documentation.         |
+|**Teams Toolkit Documentation**     | Launches a web page to view Teams Toolkit documentation.         |
 
 ## See also
 
