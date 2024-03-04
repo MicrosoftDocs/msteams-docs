@@ -18,9 +18,9 @@ Activity handlers are functions or methods that contain the bot logic for how th
 
 |Comunication flow| Use|
 |---|---|
-| User <b>**->**</b> Bot| Activity handler |
-| Bot <b>**->**</b> User| Invoke activities |
-| User <b>**<->**</b> Bot| Activity handler + Invoke activities|
+| User <b>-></b> Bot| [Activity handler](#events-with-activity-handlers) |
+| Bot <b>-></b> User| [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md) |
+| User <b><-></b> Bot| [Activity handler](#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)|
 
 To create event-driven conversations, you must define the associated handlers that the bot will use with the event. You can also add [invoke activity](~/bots/how-to/conversations/bot-invoke-activity.md) to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
 
