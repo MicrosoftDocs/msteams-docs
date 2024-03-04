@@ -92,7 +92,7 @@ The latest version of Teams Toolkit incorporates numerous preview features desig
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-tools-option.png" alt-text="Screenshot shows the selection of Options under Tools menu.":::
 
-A pop-up window appears.
+    A pop-up window appears.
 
 1. Enter **Copilot**, select **Preview Features**.
 
@@ -104,7 +104,7 @@ A pop-up window appears.
 
 Enhance the capabilities of Microsoft Copilot by converting your app into a plugin that helps user productivity in daily tasks and workflows. Activate these plugins for Copilot using the Teams Toolkit. Teams Toolkit Copilot plugins support specific capabilities, as follows: 
 - Custom Search Results 
-- AI Assistant Bot [Preview]
+- [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/)
 
 #### TeamsFx .NET SDK reference
 
