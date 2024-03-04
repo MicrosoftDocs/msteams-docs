@@ -31,15 +31,6 @@ Your bot receives messages from Teams using the `Text` property and it sends sin
 
 For more information, see [user attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1#user-attribution-for-bots-messages).
 
-The following table lists the activity that your bot can receive and take action on:
-
-| Type | Payload object | Scope |
-| ---- | ---------| ------ |
-| [Receive a message activity](#receive-a-message-activity) | Message activity | All |
-| [Receive edit message activity](#get-edit-message-activity) | Message edit activity | All |
-| [Receive undelete message activity](#get-undelete-message-activity) | Message undelete activity | All |
-| [Receive soft delete message activity](#get-soft-delete-message-activity) | Message soft delete activity | All |
-
 ## Message content
 
 Messages received from or sent to your bot can include different types of message content.
@@ -93,6 +84,17 @@ The following code shows an example of sending a simple Adaptive Card:
     ]
 }
 ```
+
+## Message events
+
+The following table lists the message events that your bot can receive and take action on:
+
+| Type | Payload object | Scope |
+| ---- | ---------| ------ |
+| [Receive a message activity](#receive-a-message-activity) | Message activity | All |
+| [Receive edit message activity](#get-edit-message-activity) | Message edit activity | All |
+| [Receive undelete message activity](#get-undelete-message-activity) | Message undelete activity | All |
+| [Receive soft delete message activity](#get-soft-delete-message-activity) | Message soft delete activity | All |
 
 ## Receive a message activity
 
