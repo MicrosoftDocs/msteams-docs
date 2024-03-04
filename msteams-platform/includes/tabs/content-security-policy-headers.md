@@ -3,9 +3,7 @@
 >
 > 1. Update TeamsJS SDK to v.2.19.0 or later. For more information about the latest release of TeamsJS SDK, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
 >
-> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the **_*.cloud.microsoft_** domain.
->
-> Retain the domains that your app's CSP headers refer to. The **_*.cloud.microsoft_** domain is additive and isn't going to replace the existing domains.
+> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) (CSP) headers in your Teams app to allow your app to access the **_*.cloud.microsoft_** domains. To maintain backward compatibility during the migration, retain the existing `frame-ancestors` values in your CSP headers while also adding the **_*.cloud.microsoft_** domains.
 
 | **Microsoft 365 app host** | **frame-ancestor permission**                                                                                                                 |
 | -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
