@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2024 February**
 
+* ***February 28, 2024*** : [Extend a Teams meeting app to work with Outlook.](m365-apps/extend-m365-meeting-app.md)
+* ***February 28, 2024***: [Design Teams app lightbox view to emphasize important information.](concepts/design/design-teams-app-light-box-view.md)
 * ***February 15, 2024***: [Share to Teams from personal app or tab for mobile clients.](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
 * ***February 13, 2024***: [Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-vs.md)
 * ***February 13, 2024***: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)
