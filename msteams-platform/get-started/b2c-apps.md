@@ -44,7 +44,7 @@ For more information and quickstarts, check out:
 
 ## Contact center
 
-Contact center applications are focused on unscheduled communication between consumers and agents. The unscheduled nature of the interaction is a key attribute of contact center applications. The term "contact center" captures a large family of applications diverse across scale, channels, and organizational approach:
+Contact center applications focus on unscheduled communication between consumers and agents. The unscheduled nature of the interaction is a key attribute of contact center applications. The term "contact center" captures a large family of applications diverse across scale, channels, and organizational approach:
 
 - **Scale.** Small businesses may have a few employees operating as agents in a limited role, for example a restaurant offering a phone number for reservations. While an airline may have thousands of employees and vendors providing a 24/7 contact center.
 - **Channel.** Organizations can reach consumers through the phone system, apps, SMS, or consumer communication platforms such as WhatsApp.
