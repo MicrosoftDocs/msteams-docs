@@ -35,6 +35,8 @@ The list of Teams activity handlers called from the `OnInvokeActivityAsync` Team
 | Invoke type| Handler| Description|
 | :--------------------  | :--------------------- | :-------------------- |
 | CardAction.Invoke | `OnTeamsCardActionInvokeAsync` | When the connector receives a card action invoke activity, this method is invoked. |
+```csharp
+```
 
 | Invoke type| Handler| Description|
 | ---|--- |---|
@@ -48,6 +50,8 @@ async handleTeamsFileConsentAccept(context, fileConsentCardResponse) {
 | Invoke type| Handler| Description|
 | ---|--- |---|
 | fileConsent/invoke  | `OnTeamsFileConsentAsync` | When the connector receives a file consent card activity, this method is invoked. |
+```csharp
+```
 
 | Invoke type| Handler| Description|
 | ---|--- |---|
@@ -106,6 +110,8 @@ The following table provides the list of Teams activity handlers called from the
 | Invoke type                    | Handler                              | Description                                                  |
 | :-----------------------------  | :----------------------------------- | :----------------------------------------------------------- |
 | CardAction.Invoke               | `handleTeamsCardActionInvoke`       | This method is invoked when a card action invoke activity is received from the connector. |
+```javascript
+```
 
 | Invoke type| Handler| Description|
 | ---|--- |---|
@@ -120,6 +126,8 @@ async handleTeamsFileConsentAccept(context, fileConsentCardResponse)
 | Invoke type| Handler| Description|
 | ---|--- |---|
 | fileConsent/invoke              | `handleTeamsFileConsent`            | This method is invoked when a file consent card activity is received from the connector. |
+```javascript
+```
 
 | Invoke type| Handler| Description|
 | ---|--- |---|
@@ -178,6 +186,8 @@ The list of Teams activity handlers called from the `on_invoke_activity` Teams a
 | Invoke type| Handler | Description |
 | ------| -----------| ------------ |
 | CardAction.Invoke               | `on_teams_card_action_invoke`       | This method is invoked when a card action invoke activity is received from the connector. |
+```python
+```
 
 | Invoke type| Handler| Description|
 | ---|--- |---|
@@ -195,6 +205,8 @@ file_consent_card_response: FileConsentCardResponse
 | Invoke type| Handler| Description|
 | ---|--- |---|
 | fileConsent/invoke              | `on_teams_file_consent`            | This method is invoked when a file consent card activity is received from the connector. |
+```python
+```
 
 | Invoke type| Handler| Description|
 | ---|--- |---|
@@ -211,10 +223,14 @@ file_consent_card_response: FileConsentCardResponse
 | Invoke type| Handler| Description|
 | ---|--- |---|
 | actionableMessage/executeAction | `on_teams_o365_connector_card_action` | This method is invoked when a connector card for Microsoft 365 Groups action activity is received from the connector. |
+```python
+```
 
 | Invoke type| Handler| Description|
 | ---|--- |---|
 | signin/verifyState              | `on_teams_signin_verify_state`      | This method is invoked when a `signIn` verify state activity is received from the connector. |
+```python
+```
 
 | Invoke type| Handler| Description|
 | ---|--- |---|
