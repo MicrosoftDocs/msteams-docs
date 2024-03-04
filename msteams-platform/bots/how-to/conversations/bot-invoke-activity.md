@@ -21,9 +21,9 @@ An invoke activity is a type of activity that is sent to a user from the bot whe
 
 |Comunication flow| Use|
 |---|---|
-| User <b>-></b> Bot| [Activity handler](#events-with-activity-handlers) |
+| User <b>-></b> Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) |
 | Bot <b>-></b> User| [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md) |
-| User <b><-></b> Bot| [Activity handler](#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)|
+| User <b><-></b> Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)|
 
 The invoke activities listed in this article are applicable for conversational bots in Teams. 
 

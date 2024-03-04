@@ -34,9 +34,9 @@ Teams sends notifications to your bot for [conversation events](~/bots/how-to/co
 
 |Comunication flow| Use|
 |---|---|
-| User <b>-></b> Bot| [Activity handler](#events-with-activity-handlers) |
+| User <b>-></b> Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) |
 | Bot <b>-></b> User| [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md) |
-| User <b><-></b> Bot| [Activity handler](#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)|
+| User <b><-></b> Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)|
 
 A bot can also send proactive messages to users. A proactive message is any message sent by a bot that isn't in response to a request from a user. You can format your bot messages to include rich cards that include interactive elements, such as buttons, text, images, audio, video, and so on. Bot can dynamically update messages after sending them, instead of having your messages as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.The outgoing request to the bot shows conversation ID and tenant ID in the headers.
 
