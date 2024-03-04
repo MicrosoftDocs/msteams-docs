@@ -14,7 +14,7 @@ Content page is the base level webpage that is rendered within Microsoft Teams c
 * A channel or group custom tab: The content page is displayed after the user pins and configures the tab in the appropriate context.
 * A [dialog](~/task-modules-and-cards/what-are-task-modules.md): You can create a content page and embed it as a webview inside a dialog (referred as task module in TeamsJS v1.x). The page is rendered inside the modal pop-up.
 
-You must present an HTML content page in your tab, if you need to add your tab within a channel or group, or personal scope. For static tabs, the content URL is set directly in your  [app manifest](../../../resources/schema/manifest-schema.md#statictabs).
+If you need to add your tab within a channel or group, or personal scope, present an HTML content page in your tab. For static tabs, the content URL is set directly in your [app manifest](../../../resources/schema/manifest-schema.md#statictabs).
 
 This article is specific to using content pages as tabs; however, most of the guidance here applies regardless of how the content page is presented to the user.
 
@@ -28,12 +28,12 @@ You need to focus on making your tab design clean, navigation intuitive, and con
 
 ## Integrate your code with Teams
 
-To display your page in Teams, you'll need to include the [Microsoft Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) in your code and call `app.initialize()` after your page loads.
+To display your page in Teams, you'll need to include the [Microsoft Teams JavaScript client library (TeamsJS)](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) in your code and call `app.initialize()` after your page loads.
 
 > [!NOTE]
 > It takes close to 24-48 hours for any content or UI changes to reflect in the tab app due to cache.
 
-The following code gives an example of how your page and the Teams client communicate:
+The following code is an example of how your page and the Teams client communicate:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -105,13 +105,13 @@ The following images show the configuration of an HTML content page and the outp
 
 You can access additional content by using TeamsJS to interact with Teams, creating deep links, using dialogs, and verifying if URL domains are included in the `validDomains` array.
 
-* **Use TeamsJS to interact with Teams**: The [Teams client JavaScript library](~/tabs/how-to/using-teams-client-library.md) provides many more functions that you can find useful while developing your content page.
+* **Use TeamsJS to interact with Teams**: The [Microsoft Teams JavaScript client library](~/tabs/how-to/using-teams-client-library.md) provides many more functions that you can find useful while developing your content page.
 
 * **Deep links**: You can create deep links to entities in Teams. They're used to create links that navigate to content and information within your tab. For more information, see [create deep links to content and features in Teams](~/concepts/build-and-test/deep-links.md).
 
 * **Dialogs**: A dialog is a modal pop-up experience that you can trigger from your tab. Use dialogs in a content page to present forms for gathering additional information, displaying the details of an item in a list, or presenting the user with additional information. The dialogs themselves can be additional content pages or created completely using Adaptive Cards. For more information, see [using dialogs in tabs](~/task-modules-and-cards/task-modules/task-modules-tabs.md).
 
-* **Valid domains**: Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [app manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains) in the app manifest schema reference.
+* **Valid domains**: Ensure that all URL domains used in your tabs are included in the `validDomains` array in your [app manifest](~/concepts/build-and-test/apps-package.md). For more information, see [validDomains](~/resources/schema/manifest-schema.md#validdomains).
 
 > [!NOTE]
 > The core functionality of your tab exists within Teams and not outside of Teams.
