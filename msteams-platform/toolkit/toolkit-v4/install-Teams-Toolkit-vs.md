@@ -24,7 +24,7 @@ You can learn how to install Microsoft Teams Toolkit and enjoy enhanced experien
 1. From the installation screen, perform the following steps:
    1. Select **Workloads** > **ASP.NET and web development**.
    1. On the right pane, go to **Installation details** > **Optional** and then select **Microsoft Teams development tools**.
-   1. Select **Install**. Visual Studio is installed and a pop-up apears.
+   1. Select **Install**. Visual Studio is installed and a pop-up appears.
 
 1. Select **Launch**.
 

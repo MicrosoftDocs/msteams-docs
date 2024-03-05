@@ -18,9 +18,9 @@ In the debug dropdown menu:
 
 1. Select **Dev Tunnels**.
 
-1. If you have already have an existing dev tunnel, select the existing tunnel from the list. For example, in the following image **PublicDevTunnel** is an existing dev tunnel.
+1. If you have already an existing dev tunnel, select the existing tunnel from the list. For example, in the following image **PublicDevTunnel** is an existing dev tunnel.
 
-1. If you haven't already created a tunnel, select **Create a Tunnel...**. A new window appears.
+1. If you haven't created a tunnel, select **Create a Tunnel...**. A new window appears.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-devtunnel.PNG" alt-text="Screenshot shows the dev tunnel for debug option.":::
 
@@ -56,7 +56,7 @@ To debug your app after you create a project, perform the following steps:
 
 1. Select **Add** to install your app in Teams.
 
-   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-add-loadapp.png" alt-text="Screenshot shows to add app.":::
+   :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/vs-localdebug-add-loadapp.png" alt-text="Screenshot shows the option to add app.":::
 
    You can also use the hot reload function of Visual Studio during debug. For more information, see [.NET hot reload](https://devblogs.microsoft.com/dotnet/introducing-net-hot-reload/).
 
