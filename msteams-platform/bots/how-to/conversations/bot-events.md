@@ -1781,6 +1781,13 @@ class EchoBot(ActivityHandler):
 
 For more information, see the [Bot Framework handlers.](/azure/bot-service/bot-activity-handler-concept)
 
+## Code sample
+
+|Sample name | Description | .NET | Node.js | Python|
+|----------------|-----------------|--------------|----------------|-------|
+| Teams conversation bot | This sample app shows how to use different bot conversation events available in Bot Framework. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|
+| Bot samples | Set of Bot Framework samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
+
 ## Next step
 
 > [!div class="nextstepaction"]

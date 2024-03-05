@@ -255,3 +255,10 @@ self, turn_context: TurnContext, task_module_request: TaskModuleRequest
 ---
 
 The Bot Framework SDK also supports invoke activities specific to message extensions. For more information, see [what are message extensions](~/messaging-extensions/what-are-messaging-extensions.md).
+
+## Code sample
+
+|Sample name | Description | .NET | Node.js | Python|
+|----------------|-----------------|--------------|----------------|-------|
+| Teams conversation bot | This sample app shows how to use different bot conversation events available in Bot Framework. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/python)|
+| Bot samples | Set of Bot Framework samples. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples#bots-samples-using-the-v4-sdk)|
