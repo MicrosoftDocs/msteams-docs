@@ -24,7 +24,7 @@ Teams provides SSO function for an app using the Microsoft Teams Toolkit for Mic
 
 Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** folder, including the app manifest (previously called Teams app manifest) template file for Microsoft Entra application and authentication redirect pages. Link the files to your Teams application by updating authentication configurations to ensure the SSO works for your application.
 
-* In the Microsoft Entra app manifest file, specify the URIs such as, the URI to identify the Microsoft Entra authentication app and the redirect URI for returning token.
+* In the Microsoft Entra app manifest file, specify the URIs (Uniform Resource Identifier) such as, the URI to identify the Microsoft Entra authentication app and the redirect URI for returning token.
 * In the app manifest file, add the SSO application to link it with Teams application.
 * Add SSO application information in Teams Toolkit configuration files in order to make sure the authentication app can be registered on backend service and start Teams Toolkit when you're debugging or previewing Teams application.
 
@@ -33,7 +33,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 1. Update Microsoft Entra app manifest:
 `TeamsFx-Auth/aad.manifest.template.json` file is a Microsoft Entra app manifest template. You can copy and paste this file to any folder of your project, and rename as `aad.manifest.json` and take note of the path to this file. The following updates in the template to create/update a Microsoft Entra app for SSO:
 
-    * `identifierUris`: It's used to uniquely identify and access the resource. Set the correct redirect Uris into `identifierUris` to successfully identify this app. For more information, see [identifierUris attribute](/azure/active-directory/develop/reference-app-manifest#identifieruris-attribute).
+    * `identifierUris`: It's used to uniquely identify and access the resource. Set the correct redirect URIs into `identifierUris` to successfully identify this app. For more information, see [identifierUris attribute](/azure/active-directory/develop/reference-app-manifest#identifieruris-attribute).
 
         ```json
             "identifierUris":[
@@ -41,7 +41,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
             ]
         ```
 
-    * `replyUrlsWithType`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. Set necessary redirect Uris into `replyUrlsWithType` to successfully return token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute).
+    * `replyUrlsWithType`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. Set necessary redirect URIs into `replyUrlsWithType` to successfully return token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute).
 
         ```json
             "replyUrlsWithType":[
@@ -352,7 +352,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 1. Update Microsoft Entra app manifest in the `TeamsFx-Auth/aad.manifest.template.json` file.
 1. You can copy the file to any folder of your project, and rename as the `aad.manifest.json` file and note the path to this file for later reference. Make the following updates in the template to create or update a Microsoft Entra app for SSO.
 
-   * `identifierUris`: Used to uniquely identify and access the resource. You need to set correct Redirect Uris into "identifierUris" for successfully identify this app. For more information, see [identifierUris attribute](/azure/active-directory/develop/reference-app-manifest#identifieruris-attribute).
+   * `identifierUris`: Used to uniquely identify and access the resource. You need to set correct Redirect URIs into "identifierUris" for successfully identify this app. For more information, see [identifierUris attribute](/azure/active-directory/develop/reference-app-manifest#identifieruris-attribute).
 
     Example for TeamsFx Bot Template:
 
@@ -365,7 +365,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     > [!NOTE]
     > You can use `${{ENV_NAME}}` to reference variables in the `env/.env.{TEAMSFX_ENV}` file.
 
-   * `replyUrlsWithType`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. You need to set necessary Redirect Uris into "replyUrlsWithType" for successfully returning token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute).
+   * `replyUrlsWithType`: It lists registered redirect_uri values that Microsoft Entra ID accepts as destinations when returning tokens. You need to set necessary Redirect URIs into "replyUrlsWithType" for successfully returning token. For more information, see [replyUrlsWithType attribute](/azure/active-directory/develop/reference-app-manifest#replyurlswithtype-attribute).
 
     Example:
 
@@ -522,7 +522,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     1. TeamsFx__Authentication__ClientSecret: Microsoft Entra app client secret.
     1. TeamsFx__Authentication__OAuthAuthority: Microsoft Entra app oauth authority.
     1. TeamsFx__Authentication__Bot__InitiateLoginEndpoint: Auth start page for Bot.
-    1. TeamsFx__Authentication__ApplicationIdUri: Microsoft Entra app identify uris.
+    1. TeamsFx__Authentication__ApplicationIdUri: Microsoft Entra app identifies URIs.
 
    Example for TeamsFx Bot template:
 
