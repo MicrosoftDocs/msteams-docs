@@ -10,13 +10,9 @@ zone_pivot_groups: teams-toolkit-platform
 ---
 # Install Teams Toolkit
 
-> [!IMPORTANT]
->
-> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
-
 ::: zone pivot="visual-studio-code-v5"
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 This section helps you to know about the prerequisites, install Teams Toolkit for Visual Studio Code, and install a different version of Teams Toolkit.
 
@@ -95,7 +91,7 @@ By default, Visual Studio Code automatically keeps Teams Toolkit up-to-date. If 
 
 1. Select **Install Another Version...** from the dropdown list.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/InstallAnotherVersion.jpg" alt-text="Screenshot shows the option to select other version of Visual Studio Code.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/InstallAnotherVersion.png" alt-text="Screenshot shows the option to select other version of Visual Studio Code.":::
 
 1. Select the required version to install.
 
@@ -122,7 +118,9 @@ The Teams Toolkit for Visual Studio Code extension is available in a pre-release
 
 ::: zone pivot="visual-studio-code-v4"
 
-The Microsoft Azure Active Directory (Azure AD) manifest contain definitions of all the attributes of an Azure AD application object in the Microsoft identity platform.
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+
+The Microsoft Entra manifest contain definitions of all the attributes of a Microsoft Entra application object in the Microsoft identity platform.
 
 ## Prerequisites
 

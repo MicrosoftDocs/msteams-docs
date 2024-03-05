@@ -1,6 +1,6 @@
 ---
 title: Text formatting in cards
-description: In this module, learn what is card text formatting in Microsoft Teams and format cards with markdown.
+description: In this module, learn what is card text formatting in Microsoft Teams and format cards with Markdown.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
@@ -176,20 +176,22 @@ The following code shows an example of Adaptive Card with a mention:
 }
 ```
 
-### Microsoft Azure Active Directory (Azure AD) Object ID and UPN in user mention
+<a name='microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention'></a>
 
-Teams platform allows to mention users with their Azure AD Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
+### Microsoft Entra Object ID and UPN in user mention
+
+Teams platform allows to mention users with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
 
 The following table describes the newly supported user mention IDs:
 
 |IDs  | Supporting capabilities | Description | Example |
 |----------|--------|---------------|---------|
-| Azure AD Object ID | Bot, Connector |  Azure AD user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
-| UPN | Bot, Connector | Azure AD user’s UPN | `john.smith@microsoft.com` |
+| Microsoft Entra Object ID | Bot, Connector |  Microsoft Entra user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
+| UPN | Bot, Connector | Microsoft Entra user’s UPN | `john.smith@microsoft.com` |
 
 #### User mention in bots with Adaptive Cards
 
-Bots support user mention with the Azure AD Object ID and UPN, in addition to the existing IDs. The support for two new IDs is available in bots for text messages, Adaptive Cards body, and message extension response. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification when being @mentioned with the IDs.
+Bots support user mention with the Microsoft Entra Object ID and UPN, in addition to the existing IDs. The support for two new IDs is available in bots for text messages, Adaptive Cards body, and message extension response. Bots support the mention IDs in conversation and `invoke` scenarios. The user gets activity feed notification when being @mentioned with the IDs.
 
 > [!NOTE]
 > Schema update and UI/UX changes aren't required for user mentions with Adaptive Cards in Bot.
@@ -206,7 +208,7 @@ Example for user mention in bots with Adaptive Cards as follows:
   "body": [
     {
       "type": "TextBlock",
-      "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
+      "text": "Hi <at>Adele UPN</at>, <at>Adele Microsoft Entra ID</at>"
     }
   ],
   "msteams": {
@@ -221,7 +223,7 @@ Example for user mention in bots with Adaptive Cards as follows:
       },
       {
         "type": "mention",
-        "text": "<at>Adele Azure AD</at>",
+        "text": "<at>Adele Microsoft Entra ID</at>",
         "mentioned": {
           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
           "name": "Adele Vance"
@@ -238,12 +240,12 @@ Following image illustrates the user mention with Adaptive Card in Bot:
 
 #### User mention in Incoming Webhook with Adaptive Cards
 
-Incoming webhooks start to support user mention in Adaptive Cards with the Azure AD Object ID and UPN.
+Incoming webhooks start to support user mention in Adaptive Cards with the Microsoft Entra Object ID and UPN.
 
 > [!NOTE]
 >
-> * Enable user mention in the schema for Incoming webhooks to support Azure AD Object ID and UPN.
-> * UI/UX changes aren't required for user mentions with Azure AD Object ID and UPN.
+> * Enable user mention in the schema for Incoming webhooks to support Microsoft Entra Object ID and UPN.
+> * UI/UX changes aren't required for user mentions with Microsoft Entra Object ID and UPN.
 
 ##### Example
 
@@ -266,7 +268,7 @@ Example for user mention in Incoming Webhook as follows:
                 },
                 {
                     "type": "TextBlock",
-                    "text": "Hi <at>Adele UPN</at>, <at>Adele Azure AD</at>"
+                    "text": "Hi <at>Adele UPN</at>, <at>Adele Microsoft Entra ID</at>"
                 }
             ],
             "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
@@ -283,7 +285,7 @@ Example for user mention in Incoming Webhook as follows:
                       },
                       {
                         "type": "mention",
-                        "text": "<at>Adele Azure AD</at>",
+                        "text": "<at>Adele Microsoft Entra ID</at>",
                         "mentioned": {
                           "id": "87d349ed-44d7-43e1-9a83-5f2406dee5bd",
                           "name": "Adele Vance"
@@ -392,11 +394,11 @@ The following table lists the query parameters:
 |`properties`|Passed to the component template|
 |`id`     | User's MRI  |
 |`displayName`     |   Name of the user     |
-|`userPrincipalName`|The user's principal name of the account in Azure AD|
+|`userPrincipalName`|The user's principal name of the account in Microsoft Entra ID|
 
 Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute.  The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
 
-Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Azure Active Directory (Azure AD) information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
+Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
 The following is an example of the people icon in an Adaptive Card on Teams desktop and mobile clients:
 
@@ -548,7 +550,6 @@ In the Stage View, users can zoom in and zoom out of the image. You can select t
 >
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
 > * For Teams mobile apps, Stage View functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stage View by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
-> * Stage View for images in Adaptive Cards doesn't support Base64 encoded images.
 
 # [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 
@@ -900,9 +901,9 @@ You can test formatting in your own cards by modifying this code.
 
 ## See also
 
-* [Cards and task modules](../cards-and-task-modules.md)
+* [Cards and dialogs](../cards-and-task-modules.md)
 * [Format your bot messages](~/bots/how-to/format-your-bot-messages.md)
-* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Use dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Schema explorer for Adaptive Cards](https://adaptivecards.io/explorer/TextBlock.html)
 * [Create connectors for Microsoft 365 Groups](../../webhooks-and-connectors/how-to/connectors-creating.md)
 * [Create Incoming Webhooks](../../webhooks-and-connectors/how-to/add-incoming-webhook.md)

@@ -10,11 +10,7 @@ ms.date: 05/20/2022
 
 # Integrate existing third-party APIs using Teams Toolkit v4
 
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+:::image type="content" source="~/assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 Teams Toolkit allows you to access and use existing APIs for building Teams apps. Your organization or a third-party might have developed these APIs. When you use Teams Toolkit to connect to an existing API, Teams Toolkit performs the following functions:
 
@@ -84,9 +80,9 @@ Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
 Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
-# [Azure Active Directory (Azure AD)](#tab/AAD)
+# [Microsoft Entra ID](#tab/AAD)
 
-* Select **Azure Active Directory (Azure AD)** to authenticate requests using Azure AD access tokens.
+* Select **Microsoft Entra ID** to authenticate requests using Microsoft Entra access tokens.
 
 Teams Toolkit generates the sample code to call your API at bot\myAPI.js.
 
@@ -119,7 +115,7 @@ The base command of this feature is `teamsfx add api-connection [authentication 
    |-----------------------|------------------|
    |**Basic**|teamsfx add api-connection basic--endpoint <https://example.com> --component bot--alias example--user-name example user--interactive false|
    |**API Key**|teamsfx add api-connection apikey--endpoint <https://example.com> --component bot--alias example--key-location header--key-name example-key-name--interactive false|
-   |**Azure AD**|teamsfx add api-connection aad--endpoint <https://example.com> --component bot--alias example--app-type custom--tenant-id your_tenant_id--app-id your_app_id--interactive false|
+   |**Microsoft Entra ID**|teamsfx add api-connection aad--endpoint <https://example.com> --component bot--alias example--app-type custom--tenant-id your_tenant_id--app-id your_app_id--interactive false|
    |**Certificate**|teamsfx add api-connection cert--endpoint <https://example.com> --component bot--alias example--interactive false|
    |**Custom**|teamsfx add api-connection custom--endpoint <https://example.com> --component bot--alias example--interactive false|
 

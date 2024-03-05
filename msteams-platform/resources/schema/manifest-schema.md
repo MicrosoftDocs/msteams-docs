@@ -9,7 +9,7 @@ ms.date: 02/09/2023
 # App manifest schema
 
 The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. Your app manifest must conform to the schema hosted at [`https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json`](https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json). Previous versions 1.0, 1.1,...,1.15, and the current version is 1.16 are each supported (using "v1.x" in the URL).
-For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases).
+For more information on the changes made in each version, see [app manifest change log](https://github.com/OfficeDev/microsoft-teams-app-schema/releases) and for previous versions, see [app manifest versions](https://github.com/microsoft/json-schemas/tree/main/teams).
 
 The following table lists TeamsJS version and app manifest versions as per different app scenarios:
 
@@ -460,7 +460,7 @@ Used when your app experience has a team channel tab experience that requires ex
 |`scopes`|Array of enums|2|✔️|Currently, configurable tabs support only the `team` and `groupChat` scopes. |
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. Default: **true**.|
 |`meetingSurfaces`|Array of enums|2||The set of `meetingSurfaceItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Default: **[sidepanel, stage]**. |
-|`context` |Array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Accepted value: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingSidePanel, meetingStage, callingSidepanel]**.|
+|`context` |Array of enums|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). Accepted value: **[personalTab, channelTab, privateChatTab, meetingChatTab, meetingDetailsTab, meetingSidePanel, meetingStage]**.|
 |`sharePointPreviewImage`|String|2048||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|Array of enums|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage` and `sharePointWebPart`. |
 
@@ -549,7 +549,7 @@ Defines a message extension for the app.
 
 The item is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
-|Name| Type | Maximum Size | Required | Description|
+|Name| Type | Maximum Size | Required | Description &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
 |---|---|---|---|---|
 |`botId`|String||✔️|The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall App ID.|
 |`commands`|Array of objects|10|✔️|Array of commands the message extension supports.|
@@ -557,7 +557,7 @@ The item is an array (maximum of one element) with all elements of type `object`
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
 |`messageHandlers.value.domains`|Array of strings|2048 characters||Array of domains that the link message handler can register for.|
-|`messageHandlers.value.supportsAnonymizedPayloads`|Boolean||| A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Default is false.|
+|`messageHandlers.value.supportsAnonymizedPayloads`|Boolean||| A boolean value that indicates whether the app's link message handler supports anonymous invoke flow. Default is false.
 
 ### composeExtensions.commands
 
@@ -573,18 +573,18 @@ Each command item is an object with the following structure:
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
 |`context`|Array of strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
-|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the task module dynamically. Default is **false**.|
-|`taskInfo`|Object|||Specify the task module to pre-load when using a message extension command.|
+|`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog (referred as task module in TeamsJS v1.x) dynamically. Default is **false**.|
+|`taskInfo`|Object|||Specify the dialog to pre-load when using a message extension command.|
 |`taskInfo.title`|String|64 characters||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.url`|String|||Initial webview URL.|
-|`parameters`|Array of object|5 items|✔️|The list of parameters the command takes. Minimum: 1; maximum: 5.|
+|`parameters`|Array of object|5 items||The list of parameters the command takes. Minimum: 1; maximum: 5.|
 |`parameters.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameters.value`|String|512 characters||Initial value for the parameter. Currently the value isn't supported|
-|`parameters.inputType`|String|||Defines the type of control displayed on a task module for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameters.inputType`|String|||Defines the type of control displayed on a dialog for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameters.choices`|Array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
 |`parameters.choices.title`|String|128 characters|✔️|Title of the choice.|
 |`parameters.choices.value`|String|512 characters|✔️|Value of the choice.|
@@ -626,7 +626,7 @@ Do **not** include the domains of identity providers you want to support in your
 Teams apps that require their own SharePoint URLs to function well, includes "{teamsitedomain}" in their valid domain list.
 
 > [!IMPORTANT]
-> Don't add domains that are outside your control, either directly or through wildcards (*). For example, ***.yoursite.com** is valid, but ***.onmicrosoft.com** isn't valid as it isn't under your control.
+> Don't add domains that are outside your control, either directly or through wildcards (*). For example,***.yoursite.com** is valid, but ***.onmicrosoft.com** isn't valid as it isn't under your control.
 >
 > When using wildcards, the following rules apply:
 >
@@ -641,11 +641,11 @@ The object is an array with all elements of the type `string`. The maximum item 
 
 **Optional** &ndash; Object
 
-Provide your Azure Active Directory App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Microsoft Azure Active Directory (Azure AD), you must provide the App ID. Administrators can easily review permissions and grant consent in Teams admin center.
+Provide your Microsoft Entra App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Microsoft Entra ID, you must provide the App ID. Administrators can easily review permissions and grant consent in Teams admin center.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`|String||✔️|Azure AD application ID of the app. This ID must be a GUID.|
+|`id`|String||✔️|Microsoft Entra application ID of the app. This ID must be a GUID.|
 |`resource`|String|2048 characters||Resource URL of app for acquiring auth token for SSO. </br> **NOTE:** If you aren't using SSO, ensure that you enter a dummy string value in this field to your app manifest, for example, `https://example` to avoid an error response. |
 
 ## graphConnector
@@ -665,7 +665,7 @@ Specify the app's Graph connector configuration. If this is present, then [webAp
 Indicates if or not to show the loading indicator when an app or tab is loading. Default is **false**.
 >[!NOTE]
 >
-> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and task modules as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
+> * If you select `showLoadingIndicator` as true in your app manifest, to load the page correctly, modify the content pages of your tabs and dialogs as described in [Show a native loading indicator](../../tabs/how-to/create-tab-pages/content-page.md#show-a-native-loading-indicator) document.
 > * If you don't modify the content pages of your tab, the tab app doesn't load and shows the error `There was a problem reaching this app`.
 
 ## isFullScreen
@@ -676,9 +676,9 @@ Indicates if a personal app is rendered without a tab header bar (signifying ful
 
 > [!NOTE]
 >
-> * `isFullScreen` only works for apps published to your organization. Sideloaded and published third-party apps cannot use this property (it is ignored).
+> * `isFullScreen` only works for apps published to your organization. Uploaded and published third-party apps can't use this property (it's ignored).
 >
-> * `isFullScreen=true` removes the Teams-provided header bar and title from personal apps and task module dialogs.
+> * The `isFullScreen=true` parameter eliminates the header bar and title provided by Teams from personal apps and dialogs. However, it's recommended not to use the `isFullScreen=true` parameter with chat bot apps.
 
 ## activities
 
@@ -775,7 +775,7 @@ When a group install scope is selected, it defines the default capability when t
 
 **Optional** &ndash; Array
 
-The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom or LOB apps.
+The `configurableProperties` block defines the app properties that Teams admins can customize. For more information, see [enable app customization](~/concepts/design/enable-app-customization.md). The app customization feature isn't supported in custom apps or custom apps built for your org (LOB apps).
 
 > [!NOTE]
 > A minimum of one property must be defined. You can define a maximum of nine properties in this block.
@@ -838,6 +838,9 @@ Specify meeting extension definition. For more information, see [custom Together
 |`scenes`|array of objects| 5 items||Meeting supported scenes.|
 |`supportsStreaming`|Boolean|||A value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. The default value is **false**.|
 |`supportsAnonymousGuestUsers`|Boolean|||A value that indicates whether an app supports access for anonymous users. The default value is **false**.|
+
+> [!NOTE]
+> The `supportsAnonymousGuestUsers` property in the app manifest schema v1.16 is supported only in [new Teams client](/microsoftteams/platform/resources/teams-updates).
 
 ### meetingExtensionDefinition.scenes
 
@@ -943,7 +946,7 @@ To create an app manifest file:
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json", 
  "manifestVersion": "1.12", 
  "version": "1.0.0", 
- "id": "{new GUID for this Teams app - not the Azure AD App ID}", 
+ "id": "{new GUID for this Teams app - not the Microsoft Entra App ID}", 
  "developer": { 
  "name": "Microsoft", 
  "websiteUrl": "https://www.microsoft.com", 
@@ -991,8 +994,8 @@ To create an app manifest file:
    "{subdomain or ngrok url}" 
   ], 
   "webApplicationInfo": { 
-    "id": "{Azure AD AppId}", 
-    "resource": "api://subdomain.example.com/{Azure AD AppId}" 
+    "id": "{Microsoft Entra AppId}", 
+    "resource": "api://subdomain.example.com/{Microsoft Entra AppId}" 
   }
 } 
 ```

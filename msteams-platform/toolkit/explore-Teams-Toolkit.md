@@ -10,13 +10,9 @@ zone_pivot_groups: teams-toolkit-platform
 ---
 # Explore Teams Toolkit
 
-> [!IMPORTANT]
->
-> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
-
 ::: zone pivot="visual-studio-code-v5"
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 You can explore the look and feel of Teams Toolkit within the Visual Studio Code.
 
@@ -114,7 +110,7 @@ From the task pane, you can see the following sections:
 
         To provision, deploy, and publish your Teams app, you need the following features:
         
-        * **Provision**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager, and it registers your app with Azure AD automatically.
+        * **Provision**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager, and it registers your app with Microsoft Entra ID automatically.
         
         * **Deploy**: Deploy the source code to Azure.
        
@@ -183,6 +179,8 @@ From the task pane, you can see the following sections:
 ::: zone-end
 
 ::: zone pivot="visual-studio-code-v4"
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 You can explore the Teams Toolkit v4 look and feel within the Visual Studio Code.
 
@@ -286,7 +284,7 @@ From the task pane, you can see the following sections:
 
         To provision, deploy, and publish your Teams app, you need the following features:
         
-        * **Provision in the cloud**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager, and it registers your app with Azure AD automatically.
+        * **Provision in the cloud**: Allocate Azure resources for your application. Teams Toolkit is integrated with Azure Resource Manager, and it registers your app with Microsoft Entra ID automatically.
 
         * **Zip Teams metadata package**: Create the app package that can be uploaded to Teams or Developer Portal. It contains the app manifest and app icons.
         

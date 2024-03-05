@@ -10,11 +10,7 @@ ms.date: 11/29/2021
 
 # FAQ for Teams Toolkit
 
-> [!IMPORTANT]
->
-> We've introduced the Teams Toolkit v5 extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> [Teams Toolkit vs](toolkit-v4/teams-toolkit-fundamentals-vs.md) extension will soon be deprecated.
+:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 Following are the FAQs for [Provision cloud resources using Teams Toolkit](provision.md):
 
@@ -66,12 +62,12 @@ You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-
 </details>
 
 <details>
-<summary>How can I deploy the code in Azure AD using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
+<summary>How can I deploy the code in Microsoft Entra ID using Teams Toolkit, and use Graph API to get the app user's profile photo?</summary>
 
 Shared references to deploy the code using toolkit:
 
 * [Create a new Teams app using Teams Toolkit](create-new-project.md)
-* [TeamsFx Command Line Interface](TeamsFx-CLI.md)
+* [Teams Toolkit CLI](Teams-Toolkit-CLI.md)
 
 You can call Graph API to get the app user's profile photo.
 

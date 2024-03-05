@@ -1,20 +1,16 @@
 ---
-title: Sideload and test app in Teams environment v4
+title: Upload and test app in Teams environment v4
 author: zyxiaoyuer
-description: In this module, learn how to sideload and test app in different environment using Teams toolkit v4.
+description: In this module, learn how to upload and test the custom apps in different environment using Teams toolkit v4.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/03/2022
 ---
 
-# Sideload and test app in Teams environment v4
+# Upload and test the custom apps in Teams environment v4
 
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+:::image type="content" source="~/assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 After adding API connection, you can test API connection in the Teams Toolkit local environment and deploy your application to the cloud. In CI/CD pipeline, after set-up with different platform, you need to create Azure service principal to provision and deploy resources.
 
@@ -63,9 +59,9 @@ To provision and deploy resources targeting Azure inside CI/CD, you must create 
 
 Perform the following steps to create Azure service principals:
 
-1. Register an Microsoft Azure Active Directory (Azure AD) application in single tenant.
-2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
-3. Create a new Azure AD application secret.
+1. Register a Microsoft Entra application in single tenant.
+2. Assign a role to your Microsoft Entra application to access your Azure subscription. The `Contributor` role is recommended.
+3. Create a new Microsoft Entra application secret.
 
 > [!TIP]
 > Save your tenant id, application id (AZURE_SERVICE_PRINCIPAL_NAME), and the secret (AZURE_SERVICE_PRINCIPAL_PASSWORD) for future use.

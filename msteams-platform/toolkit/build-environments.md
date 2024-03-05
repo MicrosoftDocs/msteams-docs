@@ -29,6 +29,7 @@ The apps built with JavaScript or TypeScript have the following advantages:
 * Provides quick upgrades to the existing apps.
 * Distributes apps on multiple platforms, such as Android and iOS.
 * Compatible for creating an app with the existing APIs.
+* An app created in Teams Toolkit also supports React.
 
 Teams Toolkit in Visual Studio Code supports building the following apps using JavaScript or TypeScript:
 
@@ -44,7 +45,7 @@ Teams Toolkit in Visual Studio Code supports building the following apps using J
 Teams Toolkit in Visual Studio Code allows you to create tab apps using SPFx. These apps have the following advantages:
 
 * Provides easy integration with data residing in SPFx to your Teams.
-* Integrates your SPFx solution with your business APIs secured with Microsoft Azure Active Directory (Azure AD).
+* Integrates your SPFx solution with your business APIs secured with Microsoft Entra ID.
 * Gives access to various open-source tools.
 * Creates powerful applications that can deliver a great UX.
 * Integrates with other Microsoft 365 workloads easily.

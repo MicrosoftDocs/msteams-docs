@@ -8,6 +8,9 @@ ms.topic: reference
 ---
 # Introducing the new Microsoft Teams client
 
+> [!IMPORTANT]
+> The Classic Teams client is expected to be deprecated by March 31, 2024.
+
 [The new Microsoft Teams client](https://www.microsoft.com/en-us/microsoft-365/blog/2023/03/27/welcome-to-the-new-era-of-microsoft-teams/) is reimagined from the ground up with performance in mind. It's faster, simpler, smarter, and flexible to provide better experience for your apps and users. The new Teams client supports all the existing Teams app capabilities except Adaptive Card tabs. If you have an app that runs inside the Classic Teams, the app will most likely run in the new Teams client without any issues.
 
 The following are the advantages of the new Teams client:
@@ -30,7 +33,7 @@ The Classic Teams client is represented using the `teams` field and the new Team
 
 To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
 
-* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues aren't currently supported and will be available soon in the new Teams client.
+* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [known issues](#known-issues) are now available. Platform features under known issues aren't currently supported in the new Teams client.
 
 ## Known issues
 
@@ -38,27 +41,19 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 >
 > * The new Teams client is supported in Windows and Mac clients and Government Community Cloud (GCC) and GCC-High environments.
 > * We recommend you to test the functionality of  apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC-High environments after switching from the Classic Teams client to the new Teams client.
-> * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
+> * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
 
-The following Teams features aren't currently supported (will be available soon) in the new Teams client:
-
-* [External authentication](../tabs/how-to/authentication/auth-oauth-provider.md) isn't supported in the new Teams client. We recommend you use the [authentication using third-party OAuth provider](../tabs/how-to/authentication/auth-flow-tab.md) or use the app in the Classic Teams client.
-
-* [Message Extensions](../get-started/build-message-extension.md) can't be invoked from the Teams search bar in the new Teams client.
-
-* [Static tabs for group chat, channels, and meetings](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) aren't supported in the new Teams client.
-
-* Personal static tabs aren't supported in one-on-one conversations with bots in the new Teams client. However, users can open their app from the app bar in Teams and view the personal static tabs.
+The following Teams features aren't currently supported in the new Teams client:
 
 * [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation, and Media.
-
-* [GetMruTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-latest#@microsoft-teams-js-pages-tabs-getmrutabinstances&preserve-view=true) and [GetTabInstances](/javascript/api/@microsoft/teams-js/pages.tabs?view=msteams-client-js-#@microsoft-teams-js-pages-tabs-gettabinstances&preserve-view=true) APIs aren't supported in the new Teams client. We recommend to use the [chat](/graph/api/chat-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) and [channel tabs](/graph/api/channel-list-tabs?view=graph-rest-1.0&tabs=http&preserve-view=true) Graph APIs.
-
-* [Pinning and unpinning apps](https://support.microsoft.com/office/pin-an-app-for-easy-access-in-microsoft-teams-3045fd44-6604-4ba7-8ecc-1c0d525e89ec) from the left side of Teams isn't supported in the new Teams client.
 
 * [DevTools](/microsoft-edge/devtools-guide-chromium/overview) isn't supported in the new Teams client.
   
 * [App caching](~/tabs/how-to/app-caching.md) isn't supported in the new Teams client.
+
+* [Static tabs for group chat, channels, and meetings](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) aren't supported in the new Teams client.
+
+* The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 

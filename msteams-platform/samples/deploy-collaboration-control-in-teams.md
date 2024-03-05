@@ -10,10 +10,9 @@ ms.date: 10/04/2022
 
 # Deploy Collaboration controls to Microsoft Teams
 
-Collaboration controls currently work best within Microsoft Teams. You can create a new app that can be embedded inside Teams app as both, a personal app and a tab app.
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+Collaboration controls currently work best within Microsoft Teams. You can create a new app that can be embedded inside Teams app as both, a personal app and a tab app. Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 ## Configure the app for Teams
 
@@ -34,7 +33,7 @@ To do so, we'll use Power Apps **new app** settings.
 
 1. Search and select **Hide the navbar** from the list of settings definitions. This hides the left pane in your application.
 
-     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Screenshot shows how to select hide the nav bar.":::
+     :::image type="content" source="../assets/images/collaboration-control/hide-the-nav-bar.png" alt-text="Screenshot shows the Hide the navbar option.":::
 
 1. On the lower right  of your application in the edit pane, there's a section titled **Setting app values**. If you created your app using the modern app designer, your app appears on the list. Select **New app value** under your app.
 
@@ -52,13 +51,13 @@ To do so, we'll use Power Apps **new app** settings.
 
      :::image type="content" source="../assets/images/collaboration-control/default-solution.png" alt-text="The screenshot shows default solution.":::
 
-1. Select **Publish all customizations** to publish all the work you've completed.
+1. Select **Publish all customizations**.
 
      :::image type="content" source="../assets/images/collaboration-control/publish-cusomization.png" alt-text="Publish all customizations.":::
 
 ## Add the app to Microsoft Teams app catalog
 
-As the settings are defined, you can now add the app to Microsoft Teams. To start with, browse to the **Apps** page in the Power Apps maker portal and find the app that you've created and select ellipse **…**.
+As the settings are defined, you can now add the app to Microsoft Teams. To start with, browse to the **Apps** page in the Power Apps maker portal and find the app that you created and select ellipse **…**.
 
 To add the app to Teams, select **Add to Teams**.
 
@@ -94,18 +93,18 @@ Following are required to enable users to run the deployed Collaboration Manager
      1. **Description:** Enter a description of the team.
      1. **Business unit:** Select a business unit from the dropdown list.
      1. **Administrator:** Search for the user within your organization that you want to assign as the administrator by entering characters.
-     1. **Team type:** Select the team type. The following steps assume that you've selected Owner from the dropdown list. The other team types (Microsoft 365 team and Microsoft Azure Active Directory team) auto populates team members from Azure Active Directory.
+     1. **Team type:** Select the team type. The following steps assume that you've selected Owner from the dropdown list. The other team types (Microsoft 365 team and Microsoft Entra team) auto populates team members from Microsoft Entra ID.
 
          :::image type="content" source="../assets/images/collaboration-control/new-team.png" alt-text="Screenshot to select new team type.":::
 
-     1. Ensure that you note the team name. You'll need this later to assign this team as the owner of a record.
+     1. Ensure that you note the team name. You'll need it later to assign this team as the owner of a record.
 
      1. Select **Next.**
 
 ### Add members to the team
 
 > [!NOTE]
-> Adding members to the team isn't necessary if your team type is Azure Active Directory or Microsoft 365.
+> Adding members to the team isn't necessary if your team type is Microsoft Entra ID or Microsoft 365.
 
 1. Select a team, and then select **Manage team members**.
 

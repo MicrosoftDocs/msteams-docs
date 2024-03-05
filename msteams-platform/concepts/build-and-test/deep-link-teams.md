@@ -10,10 +10,12 @@ ms.date: 01/31/2023
 
 # Deep link to Teams chat
 
-You can create a deep link to a Teams chat, such as to start a new chat, browse to a channel conversation, and to a file in a channel.
+You can create a deep link to a Teams chat, such as to start a new chat, go to a channel conversation, and access a file within a channel.
 
 In this article, you’ll learn to create a deep link:
+
 * [To start a new chat](#deep-link-to-start-a-new-chat)
+* [To navigate to a chat](#deep-link-to-navigate-to-a-chat)
 * [To navigate to channel conversation](#deep-links-to-navigate-to-channel-conversation)
 * [To navigate to chat messages](#deep-links-to-navigate-to-chat-messages)
 * [To file in a channel](#generate-deep-links-to-file-in-a-channel)
@@ -22,7 +24,7 @@ In this article, you’ll learn to create a deep link:
 
 You can navigate to or create private chats between users with the Microsoft Teams JavaScript client library (TeamsJS) by specifying the set of participants. If a chat doesn’t exist with the specified participants, the user is navigated to an empty new chat.
 
-When a user creates a new chat using a deep link, Teams creates the new chat in the draft state until the user sends the first message. You can also provide the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. You can think of this as a shortcut for the user taking the manual action of navigating to or creating the chat, and then typing out the message.
+When a user creates a new chat using a deep link, Teams creates the new chat in the draft state until the user sends the first message. You can also provide the name of the chat if it doesn’t already exist, along with text that should be inserted into the user's compose box. Consider this a shortcut for the user taking the manual action of navigating to or creating the chat and then compose the message.
 
 As a use-case example, if you’re retrieving a Microsoft 365 user profile information from your bot as a card, this deep link can allow the app user to easily chat with that person.
 
@@ -39,12 +41,11 @@ While use of the typed APIs is recommended, you can alternatively use the follow
 
 The query parameters are:
 
-* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID parameter supports the Microsoft Azure Active Directory (Azure AD) `UserPrincipalName`, such as an email address only.
+* `users`: A comma-separated list of user IDs representing the participants of the chat. The user that performs the action is always included as a participant. Currently, the User ID parameter supports the Microsoft Entra `UserPrincipalName`, such as an email address only.
 * `topicName`: An optional parameter for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current app user's compose box while the chat is in the draft state.
 
 Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
-
 
 #### Configure deep link to start a chat using TeamsJS library
 
@@ -59,6 +60,16 @@ if(chat.isSupported()) {
 }
 else { /* handle case where capability isn't supported */ }
 ```
+
+## Deep link to navigate to a chat
+
+To navigate to a specific chat conversation in Teams, use the following deep link format:
+
+`https://teams.microsoft.com/l/chat/<chatId>/conversations`
+
+The query parameter is `chatId`, which represents chat ID of the conversation. The supported format for `chatId` is 19:xxx.
+
+Example: `https://teams.microsoft.com/l/chat/19:c6d70e392a384916c3262b15406d763e@thread.v2/conversations`
 
 ## Deep links to navigate to channel conversation
 
@@ -90,7 +101,7 @@ Example: `https://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f02
 
 The query parameters are:
 
-* `chatId`: ChatID of the conversation. The supported format for `chatId` is 19:xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.
+* `chatId`: Chat ID of the conversation. The supported format for `chatId` is 19: xxx. For example, `19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces`.</br>
    Apps can read a chat ID through app context in Teams, incoming payload to bot, or through [Microsoft Graph APIs](/graph/api/chat-get?view=graph-rest-1.0&tabs=http&preserve-view=true).
    > [!NOTE]
    > For one-on-one chats with bot, the incoming payload to bot contains the conversation ID in a:xxx format.
@@ -113,7 +124,7 @@ The query parameters are:
 * `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
 * `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`.
 * `serviceName`: Name of the service, app ID. For example, `teams`.
-* `threadId`: The threadID is the team ID of the team where the file is stored. It's optional and can't be set for files stored in a user's OneDrive folder. threadId - 19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype.
+* `threadId`: The threadID is the team ID of the team where the file is stored. It's optional and can't be set for files stored in a user's OneDrive folder. threadId - 19:<f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype>.
 * `groupId`: Group ID of the file. For example, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]

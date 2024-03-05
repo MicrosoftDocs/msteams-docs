@@ -10,11 +10,7 @@ ms.date: 04/20/2022
 
 # Set up CI/CD pipelines v4
 
-> [!IMPORTANT]
->
-> We've introduced the [Teams Toolkit v5](../teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
->
-> Teams Toolkit v4 extension will soon be deprecated.
+:::image type="content" source="~/assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
 
 TeamsFx helps to automate your development workflow while building Teams application. The following are the tools and templates you can use to set up CI/CD pipelines, create workflow templates, and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision and deploy resources, you can create Azure service principals and publish the Teams app using Teams Developer Portal. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
@@ -220,9 +216,9 @@ To provision and deploy resources targeting Azure inside CI/CD, you must create 
 
 Perform the following steps to create Azure service principals:
 
-1. Register an Microsoft Azure Active Directory (Azure AD) application in single tenant.
-2. Assign a role to your Azure AD application to access your Azure subscription. The `Contributor` role is recommended.
-3. Create a new Azure AD application secret.
+1. Register a Microsoft Entra application in single tenant.
+2. Assign a role to your Microsoft Entra application to access your Azure subscription. The `Contributor` role is recommended.
+3. Create a new Microsoft Entra application secret.
 
 > [!TIP]
 > Save your tenant id, application id (AZURE_SERVICE_PRINCIPAL_NAME), and the secret (AZURE_SERVICE_PRINCIPAL_PASSWORD) for future use.

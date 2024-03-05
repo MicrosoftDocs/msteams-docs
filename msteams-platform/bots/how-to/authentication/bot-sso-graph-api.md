@@ -10,11 +10,13 @@ You can extend your bot and message extension apps by using Microsoft Graph. The
 
 Graph scopes, such as `User.Read` or `Mail.Read`, lets you specify how your app accesses a Teams user's account. You need to specify your scopes in the authorization request.
 
-In this section, you'll learn to [Configure API permissions in Azure AD](#configure-api-permissions-in-azure-ad).
+In this section, you'll learn to [Configure API permissions in Microsoft Entra ID](#configure-api-permissions-in-azure-ad).
 
-## Configure API permissions in Azure AD
+<a name='configure-api-permissions-in-azure-ad'></a>
 
-You can configure Graph scopes in Azure AD as required for your app. Delegated permissions are used by apps that require signed-in access. An app user or administrator who is signed-in must consent to them. Your app can consent on behalf of the signed-in user when it calls Microsoft Graph.
+## Configure API permissions in Microsoft Entra ID
+
+You can configure Graph scopes in Microsoft Entra ID as required for your app. Delegated permissions are used by apps that require signed-in access. An app user or administrator who is signed-in must consent to them. Your app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
 ### To configure API permissions
 
@@ -58,6 +60,6 @@ You can configure Graph scopes in Azure AD as required for your app. Delegated p
 
     You've configured your app with Microsoft Graph permissions.
 
-After you've completed the configuration in Azure AD, you must update the code to acquire access token for Microsoft Graph. For more information, see [Bot framework SDK](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/SimpleGraphClient.cs).
+After you've completed the configuration in Microsoft Entra ID, you must update the code to acquire access token for Microsoft Graph. For more information, see [Bot framework SDK](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/SimpleGraphClient.cs).
 
 The app user is prompted to consent for Graph permissions on the first time they use it. After the app user gives consent, the Graph permissions are granted. For more information on Graph API permissions, see [permissions and consent](/azure/active-directory/develop/permissions-consent-overview).

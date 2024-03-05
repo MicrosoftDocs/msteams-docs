@@ -13,7 +13,7 @@ zone_pivot_groups: teams-toolkit-platform-vs
 
 :::zone  pivot="visual-studio-v17-7"
 
-Teams Toolkit automates app startup services, initiates debugging, and side loads Teams app. After debugging, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tabs, bots, and message extensions.
+Teams Toolkit automates app startup services, initiates debugging, and uploads Teams app. After debugging, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tabs, bots, and message extensions.
 
 ## Prerequisites
 
@@ -102,7 +102,7 @@ You can launch Teams app as a web app instead of running the app in Teams client
 
 Teams Toolkit helps you to debug and preview your Microsoft Teams app. Debug is the process of checking, detecting, and correcting issues or bugs to ensure the program runs successfully in Teams.
 
-Teams Toolkit automates app startup services, initiates debug, and side loads Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tab, bot, and message extension. During the debug process, Teams Toolkit supports the following debug features:
+Teams Toolkit automates app startup services, initiates debug, and uploads Teams app. After debug, you can preview the Teams app in Teams web client. You can also customize debug settings to use your bot endpoints, or environment variables to load your configured app. Visual Studio allows you to debug tab, bot, and message extension. During the debug process, Teams Toolkit supports the following debug features:
 
 * Prepare Teams app dependencies
 * Start debugging
@@ -149,7 +149,7 @@ Select **Hot Reload** to apply your changes in your Teams app when you want to u
 
 :::image type="content" source="images/vs-localdebug-hot-reload-v4.png" alt-text="Select hot reload icon":::
 
-Select the option **Hot Reload on File Save** from the drop-down to enable auto hot reload.
+Select the option **Hot Reload on File Save** from the dropdown to enable auto hot reload.
 
 :::image type="content" source="images/vs-localdebug-hot-reload-filesave-v4.png" alt-text="Select hot reload on file save":::
   
