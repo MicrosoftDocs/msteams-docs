@@ -21,10 +21,10 @@ You can host your Teams tabs in SharePoint with SPFx. Tabs hosted in SharePoint 
 
 ### Benefits
 
-* Reach SharePoint users with your existing Teams tab.
-* Upload your app manifest directly to your SharePoint App Catalog. SharePoint supports [Teams application packages](~/concepts/build-and-test/apps-package.md).
-* Users can configure the tab on a page just like any other SharePoint web part.
-* Your tab can access its [context](~/tabs/how-to/access-teams-context.md) same as it can when running in Teams.
+- Reach SharePoint users with your existing Teams tab.
+- Upload your app manifest directly to your SharePoint App Catalog. SharePoint supports [Teams application packages](~/concepts/build-and-test/apps-package.md).
+- Users can configure the tab on a page just like any other SharePoint web part.
+- Your tab can access its [context](~/tabs/how-to/access-teams-context.md) same as it can when running in Teams.
 
 ## SharePoint web parts in Teams
 
@@ -34,7 +34,9 @@ SharePoint hosts SPFx web parts without the need for external services like Azur
 
 ## Test the sample app
 
-1. Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip). It's a talent management app that manages the hiring process of candidates for open positions in a team.
+1. Download the [sample app manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-HR-talent/csharp/src/demo-manifest).
+
+  It's a talent management app that manages the hiring process of candidates for open positions in a team.
 
 2. In Teams, select **Apps** > **Manage your apps** > **Upload an app**.
 
@@ -75,7 +77,7 @@ SharePoint hosts SPFx web parts without the need for external services like Azur
 
 1. Set up your page and give an appropriate name such as **My Teams Tab**.
 
-2. Open the web part toolbox by selecting the `+` button and select **Contoso Talent** from the list. This action creates a web part in the canvas that contains your Teams tab. 
+2. Open the web part toolbox by selecting the `+` button and select **Contoso Talent** from the list. This action creates a web part in the canvas that contains your Teams tab.
 
     :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/image071.png" alt-text="Screenshot shows the tab view." lightbox="../../assets/images/tabs/tabs-in-sharepoint/image071.png":::
 
@@ -99,7 +101,7 @@ After you publish your page, explore [Single Part App Pages in SharePoint](/shar
 
 ## See also
 
-* [Integrate web apps](../../samples/integrate-web-apps-overview.md)
-* [Build Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
-* [Use single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
-* [Developer-provided Microsoft Teams app manifest and package](/sharepoint/dev/spfx/deployment-spfx-teams-solutions#developer-provided-microsoft-teams-app-manifest--package)
+- [Integrate web apps](../../samples/integrate-web-apps-overview.md)
+- [Build Microsoft Teams tab using SharePoint Framework - Tutorial](/sharepoint/dev/spfx/web-parts/get-started/using-web-part-as-ms-teams-tab)
+- [Use single part app pages in SharePoint Online](/sharepoint/dev/spfx/web-parts/single-part-app-pages)
+- [Developer-provided Microsoft Teams app manifest and package](/sharepoint/dev/spfx/deployment-spfx-teams-solutions#developer-provided-microsoft-teams-app-manifest--package)
