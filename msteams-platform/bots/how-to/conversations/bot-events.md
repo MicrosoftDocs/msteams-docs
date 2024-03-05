@@ -10,17 +10,21 @@ ms.date: 03/04/2024
 
 # Event-driven conversations with activity handlers
 
-Events and handlers are two related concepts in a bot workflow. An event in bot workflow depicts an activity that triggers the bot to perform a certain action or task.
+Events and handlers are two related concepts in a bot workflow. 
 
-Activity handlers are functions or methods that contain the bot logic for how the bot handles different types of events. For example, in an event when a user reacts to the bot message, the bot has a handler for event, which defines what the bot must do or say in response to the user’s action.
+* **Event**: Event in bot workflow depicts an activity that triggers the bot to perform a certain action or task.
 
-When an event occurs, activity handlers can identify the activity and forward it to the bot logic for processing. By incorporating an invoke activity into the handler logic, your bot can process the event and respond to the user based on the payload of the invoke activity.
+* **Activity handlers**: Activity handlers are functions or methods that contain the bot logic for how the bot handles different types of events. For example, in an event when a user reacts to the bot message, the bot has a handler for event, which defines what the bot must do or say in response to the user’s action.
+
+When an event occurs, activity handlers can identify the activity and forward it to the bot logic for processing, which is a one-way communication to the bot.
 
 :::image type="content" source="~/assets/images/bots/bot-event-activity-flowchart.png" alt-text="Diagram that shows the flow of the event flow from activity handlers to bot logic." lightbox="~/assets/images/bots/bot-event-activity-flowchart.png":::
 
 `{Image is a place holder will share it for development as per design standards post SME approval}`
 
 To create event-driven conversations, you must define the associated handlers that the bot will use with the event. You can also add [invoke activity](~/bots/how-to/conversations/bot-invoke-activity.md) to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to customize its logic and reuse existing activities for different events.
+
+By incorporating an invoke activity into the handler logic, your bot can process the event and respond to the user based on the payload of the invoke activity.
 
 The following table lists information on which communication concept to use in different scenarios:
 
