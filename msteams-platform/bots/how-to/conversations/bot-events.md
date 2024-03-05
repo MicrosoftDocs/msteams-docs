@@ -50,7 +50,7 @@ Teams activity handler is derived from [Bot Framework's activity handler](#bot-f
 
 You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them. You must design your bot to receive unexpected events. If you are using the Bot Framework SDK without specifying any activity handlers in your bot code, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
-A bot receives a `conversationUpdate` event in any of the following cases:
+A bot receives a `conversationUpdate` event in any of the following scenarios:
 
 * When bot is added to a conversation.
 * Other members are added or removed in a conversation or channel.
@@ -71,18 +71,21 @@ The following are different type of events associated with `conversationUpdate`:
 The bot receives an `installationUpdate` event when you install or unistall a bot in a conversation. On installing a bot, the `action` field in the event is set to `add`, and when the bot is uninstalled the `action` field is set to `remove`.
 
 > [!NOTE]
-> When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other cases, the `installationUpdate` event isn't triggered. The **action** field is set to `add-upgrade` if you add a bot or `remove-upgrade` if you remove a bot.
+> When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other scenarios, the `installationUpdate` event isn't triggered. The **action** field is set to `add-upgrade` if you add a bot or `remove-upgrade` if you remove a bot.
 
-The bot receives an `installationUpdate` event when the bot is installed. You can send an introductory message from your bot. This event helps you to meet your privacy and data retention requirements. You can also clean up and delete user or thread data when the bot is uninstalled.
+When the bot receives an `installationUpdate` event, you can send an introductory message from your bot. This event helps you to meet your privacy and data retention requirements.
 
-Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation.ID of the `installationUpdate` event is set to the ID of the channel selected by a user during app installation or the channel where the installation is occurred and must be used by the bot when sending a welcome message. For scenarios where the ID of the default channel is explicitly required, you can get it from `team.id` in `channelData`.
+Similar to the `conversationUpdate` event that's sent when bot is added to a team, the conversation ID of the `installationUpdate` event is set to the ID of the channel selected by a user during app installation or the channel where the bot is installed. The conversation ID must be used by the bot when sending a welcome message. For scenarios where the ID of the default channel is explicitly required, you can get it from `team.id` in the `channelData` object.
 
-In the following example, the `conversation.id` of the `conversationUpdate` and `installationUpdate` activities will be set to the ID of the Response channel in the Daves Demo team.
+In the following example, bot app is added to the **Response** channel in the **Daves Demo** team.
+When the bot is added to the channel, `conversation.id` of the `conversationUpdate` and the `installationUpdate` activities are set to the ID of the **Response** channel in the **Daves Demo** team.
 
 ![Create a selected channel](~/assets/videos/addteam.gif)
 
+`{WIP place holder}`
+
 > [!NOTE]
-> The selected channel ID is only set on `installationUpdate.add` events that are sent when an app is installed into a team.
+> The selected channel ID is only set on `installationUpdate.add` events that are sent when an app is installed in a team.
 
 # [C#](#tab/dotnet14)
 
@@ -205,21 +208,21 @@ protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstall
 
 ---
 
-### Uninstall behavior for personal app with bot
+### Uninstall behavior for bot app
 
-When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app after the bot is uninstalled, they receive a `403` response code. The post uninstall behavior for bots in the personal, Team, and groupChat scopes are now aligned. You can't send or receive messages after an app has been uninstalled.
+When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app after the bot is uninstalled, the bot receives a `403` response code. You can also clean up and delete user or thread data when the bot is uninstalled. You can't send or receive messages after an app is uninstalled.
 
 :::image type="content" source="~/assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="~/assets/images/bots/uninstallbot.png":::
+{WIP place holder}
 
-### Event handling for install and uninstall events
+When you use the install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following scenarios:
 
-When you use these install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following cases:
+* If you build your bot without the Microsoft Bot Framework SDK, the bot gives an exception on receiving an unexpected event.
 
-* You build your bot without the Microsoft Bot Framework SDK, and as a result the bot gives an exception on receiving an unexpected event.
+* You build your bot with the Microsoft Bot Framework SDK, and you alter the default event behavior by overriding the base event handler.
 
-* You build your bot with the Microsoft Bot Framework SDK, and you select to alter the default event behavior by overriding the base event handle.
+It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design your bot for the possibility of receiving unexpected events.
 
-  It's important to know that new events can be added anytime in the future and your bot begins to receive them. So you must design for the possibility of receiving unexpected events.
 
 ## Channel events
 
@@ -230,7 +233,7 @@ Channel events are triggered for the following events:
 * Channel deleted
 * Channel restored
 
-**Channel created**: The `channelCreated` event is sent to your bot whenever a new channel is created in a team where your bot is installed in the `Team` scope.
+**Channel created**: The `channelCreated` event is sent to your bot whenever a new channel is created.
 
 # [C#](#tab/dotnet1)
 
@@ -324,7 +327,7 @@ MessageFactory.text(
 ```
 ---
 
-**Channel renamed**: The `channelRenamed` event is sent to your bot whenever a channel is renamed in a team where your bot is installed in the `Team` scope.
+**Channel renamed**: The `channelRenamed` event is sent to your bot whenever a channel is renamed.
 
 # [C#](#tab/dotnet2)
 
@@ -412,7 +415,7 @@ MessageFactory.text(f"The new channel name is {channel_info.name}")
 
 ---
 
-**Channel deleted**: The `channelDeleted` event is sent to your bot, whenever a channel is deleted in a team where your bot is installed in the `Team` scope.
+**Channel deleted**: The `channelDeleted` event is sent to your bot, whenever a channel is deleted.
 
 # [C#](#tab/dotnet3)
 
@@ -504,7 +507,7 @@ MessageFactory.text(f"The deleted channel is {channel_info.name}")
 
 ---
 
-**Channel restored**: The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored in a team where your bot is already installed in the `Team` scope.</br>
+**Channel restored**: The `channelRestored` event is sent to your bot, whenever a channel that was previously deleted is restored.
 
 # [C#](#tab/dotnet4)
 
@@ -668,10 +671,10 @@ await next();
 
 # [JSON](#tab/json5)
 
-* The following is a code snippet for, when the bot is added to a team:
+* When a bot is added to a team, the bot code is updated as follows:
 
   > [!NOTE]
-  > In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` will be the ID of the channel that the user selected during app installation or where installation was triggered from.
+  > In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` is the ID of the channel that the user selected during app installation or the team from where the installation triggered.
 
   ```json
     {
@@ -719,7 +722,7 @@ await next();
     }
   ```
 
-* The following is a code snippet for, when the bot is added to a one-to-one chat.
+* When a bot is added to a one-to-one chat, the bot code is updated as follows:
 
   ```json
     {
@@ -778,13 +781,13 @@ await next();
 
 A member removed event is sent to your bot in the following scenarios:
 
-1. When the bot, itself, is uninstalled and removed from a conversation.
+1. When the bot is uninstalled and removed from a conversation.
 1. When a user is removed from a conversation where the bot is installed.
 
 The `MembersRemoved` event activity type is set to `teamMemberRemoved` when the event is sent from a team context. To determine if the new member removed is the bot or a user, check the `Activity` object of the `turnContext` for `MembersRemoved`. If the `MembersRemoved` list contains an object where `id` is the same as the `Recipient.id` then the member added is the bot, else it's a user. The bot ID is formatted as `28:<MicrosoftAppId>`.
 
 > [!NOTE]
-> When a user is permanently deleted from a tenant, `membersRemoved conversationUpdate` event is triggered.
+> When a user is permanently removed from a tenant, `membersRemoved conversationUpdate` event is triggered.
 
 # [C#](#tab/dotnet7)
 
@@ -998,7 +1001,7 @@ constructor() {
 
 ---
 
-**Team deleted**: The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object the `Team` scope..
+**Team deleted**: The bot receives a notification when the team is deleted. It receives a `conversationUpdate` event with `eventType.teamDeleted` in the `channelData` object the `Team` scope.
 
 # [C#](#tab/dotnet9)
 
@@ -1075,7 +1078,7 @@ constructor() {
 ```
 ---
 
-**Team restored**: The bot receives a notification when a team is restored after being deleted. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object in the `Team` scope.
+**Team restored**: The bot receives a notification when a team is restored. It receives a `conversationUpdate` event with `eventType.teamrestored` in the `channelData` object in the `Team` scope.
 
 # [C#](#tab/dotnet10)
 
