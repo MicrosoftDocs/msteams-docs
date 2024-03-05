@@ -36,7 +36,7 @@ SharePoint hosts SPFx web parts without the need for external services like Azur
 
 1. Download the [sample app manifest](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-HR-talent/csharp/src/demo-manifest).
 
-  It's a talent management app that manages the hiring process of candidates for open positions in a team.
+   It's a talent management app that manages the hiring process of candidates for open positions in a team.
 
 2. In Teams, select **Apps** > **Manage your apps** > **Upload an app**.
 
