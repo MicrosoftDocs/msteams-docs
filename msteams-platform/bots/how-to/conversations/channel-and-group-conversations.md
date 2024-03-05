@@ -400,6 +400,45 @@ Don't send a message in the following cases:
 * A group or channel is renamed.
 * A team member is added to a group or channel.
 
+## Teams channel data
+
+The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it accessible. However, you can always access the original data from the `turnContext` object.
+
+The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
+
+A typical `channelData` object in an activity sent to your bot contains the following information:
+
+* `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
+* `team`: Passed only in channel contexts, not in personal chat.
+  * `id`: GUID for the channel.
+  * `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
+* `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot is added.
+  * `id`: GUID for the channel.
+  * `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
+* `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
+* `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
+
+### Example channelData object
+
+The following code shows an example of channelData object (channelCreated event):
+
+```json
+"channelData": {
+    "eventType": "channelCreated",
+    "tenant": {
+        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    },
+    "channel": {
+        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype",
+        "name": "My New Channel"
+    },
+    "team": {
+        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype"
+    }
+}
+```
+
 [!INCLUDE [sample](~/includes/bots/teams-bot-samples.md)]
 
 ## Step-by-step guide

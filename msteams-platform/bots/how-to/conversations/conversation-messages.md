@@ -16,10 +16,10 @@ Messages in bot conversations play a crucial role in facilitating communication 
 
 A bot behaviour depends on what kind of conversation it's involved in:
 
-* [Bots in channel and group chat conversations](~/bots/how-to/conversations/conversation-messages.md) require the user to @mention the bot to invoke it in a channel or group chat.
+* [Bots in channel and group chat conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) require the user to @mention the bot to invoke it in a channel or group chat.
 * Bots in single user conversations don't require an @mention. User can just type the message and share it in the chat.
 
-Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Microsoft Teams posts the message activity to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly.
+Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message activity to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly.
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
 
