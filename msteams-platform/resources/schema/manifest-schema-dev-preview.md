@@ -916,6 +916,8 @@ The `extensions.runtimes` property configures the sets of runtimes and actions t
 |`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
 |`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br>Default value: `false`|
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
+|`actions.multiselect`| Boolean | | | Specifies the ability for the action to have multiple selections.|
+|`actions.supportsNoItemContex`| Boolean | | | Allows task pane add-ins to activate without the Reading Pane enabled or a message selected. |
 
 To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
 
@@ -925,7 +927,19 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`contexts`| Array | 4 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
+|`contexts`| Array | 4 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee` , `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `default`|
+|`customMobile`| Array | 10 | | Defines mobile group items. |
+|`customMobile.id`| String | |✔️| Specify the Id of the group. Used for mobileMessageRead ext point.|
+|`customMobile.label`| String | |✔️| Short label of the control. Maximum length is 32 characters.|
+|`customMobile.controls`| Array | |✔️| Defines mobileControl group items. |
+|`customMobile.controls.id`| String | |✔️| Specify the Id of the button like msgReadFunctionButton. |
+|`customMobile.controls.type`| String | |✔️| mobileButton |
+|`customMobile.controls.label`| String | |✔️| Short label of the control. Maximum length is 32 characters. |
+|`customMobile.controls.icons`| Array | |✔️| Custom mobile icon. |
+|`customMobile.controls.icons.size`| Number | |✔️| Size in pixels of the icon. Three image sizes are required (25, 32, and 48 pixels). |
+|`customMobile.controls.icons.url`| Number | |✔️| Url to mobile icon|
+|`customMobile.controls.icons.scale`| Number | |✔️| How to scale - 1,2,3 for each image. This attribute specifies the UIScreen.scale property for iOS devices. |
+|`customMobile.controls.actionId`| String | |✔️| The ID of an action defined in runtimes. Maximum length is 64 characters. |
 |`tabs`| Array | |✔️| Configures the custom tabs on the Microsoft 365 application ribbon. |
 |`tabs.id`| String | 64 characters | | Specifies the ID for the tab within the app.|
 |`tabs.label`| String | 64 characters | | Specifies the text displayed for the tab.|
@@ -942,7 +956,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.id`| String | 64 characters| ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
 |`tabs.groups.controls.items`| Array | | | Configures the items for a menu control. |
 |`tabs.groups.controls.items.id`| String | | ✔️ | Specifies the ID for the items within the app. |
-|`tabs.groups.controls.items.type`| String enum | | ✔️ | Defines the control items type. <br>Supported value: `menuItem`|
+|`tabs.groups.controls.items.type`| String enum | | ✔️ | Defines the control items type. <br>Supported value: `menuItem` or `button`|
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the items. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the custom item.|
 |`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image size: `16`, `32`, `80`. |
@@ -996,6 +1010,9 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
+|`alternateIcons`| Object | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
+|`alternateIcons.icon`| | | ✔️ | Size in pixels of the icon. Three image sizes are required (16, 32, and 80 pixels).|
+|`alternateIcons.highResolutionIcon`| | | ✔️ | Size in pixels of the high resolution icon. Three image sizes are required (16, 32, and 80 pixels).|
 
 ## actions
 
