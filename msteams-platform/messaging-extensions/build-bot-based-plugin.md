@@ -36,9 +36,16 @@ A plugin allows Copilot for Microsoft 365 to interact directly with third-party 
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
 * Perform actions on behalf of the user, such as creating a Contoso ticket.
 
-All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
+Descriptions enhance the usability and effectiveness of a message extension plugin. The follwoing description offer a clear and concise summary of the app’s features:
 
-You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as a plugin in Copilot for Microsoft 365.
+* **App description**: App description helps improve your app discoverability in the Teams Store.
+* **Command description**: Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords.
+* **Parameter description**: Parameter description explains the requirements of the system in a natural language with output format.
+* **Semantic description**: Semantic description helps Copilot for Micrososft 365 generate content by providing a conceptual understanding of the plugin's capabilities and scenarios where it can help achieve user goals and match user’s intent with the plugin's capabilities.
+
+For more information, see [define descriptions](high-quality-message-extension.md#define-descriptions).
+
+All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as a plugin in Copilot for Microsoft 365.
 
 ## Prerequisites
 
