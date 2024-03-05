@@ -48,7 +48,7 @@ Contact center applications focus on unscheduled communication between consumers
 
 - **Scale.** Small businesses may have a few employees operating as agents in a limited role, for example a restaurant offering a phone number for reservations. While an airline may have thousands of employees and vendors providing a 24/7 contact center.
 - **Channel.** Organizations can reach consumers through the phone system, apps, SMS, or consumer communication platforms such as WhatsApp.
-- **Organizational approach.** Most businesses have employees operate as agents using Teams or a licensed contact center as a service software (CCaaS). Other businesses may out-source the agent role or use specialized service providers who fully operate contact centers as a service.
+- **Organizational approach.** Most businesses have employees operate as agents using Teams or a licensed contact center as a service software (CCaaS). Other businesses may outsource the agent role or use specialized service providers who fully operate contact centers as a service.
 
 The key technical steps for building a virtual appointments application:
 
