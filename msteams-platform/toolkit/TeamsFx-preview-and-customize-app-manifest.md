@@ -112,7 +112,7 @@ CLI command:
 teamsfx validate --app-package-file-path YOUR-PATH-TO-APP-PACKAGE
 ```
 
-It has additional validation rules than the app manifest schema. For example, if static tab section has entityId "conversations" and name, the following error appears:
+It has another validation rules than the app manifest schema. For example, if static tab section has entityId "conversations" and name, the following error appears:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validation-output.png" alt-text="Screenshot showing the validation output.":::
 
