@@ -251,7 +251,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
     }
    ```
 
-1. Update `appsettings.json` and `appsettings.Development.json` files for Microsoft Entra related configs needs to be configure to your .Net project settings:
+1. Update `appsettings.json` and `appsettings.Development.json` files for Microsoft Entra related configs needs to be configured to your .NET project settings:
 
     ```json
     TeamsFx: {
@@ -350,7 +350,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
 ## Teams bot application
 
 1. Update Microsoft Entra app manifest in the `TeamsFx-Auth/aad.manifest.template.json` file.
-1. You can copy the file to any folder of your project, and rename as the `aad.manifest.json` file and note the path to this file for later reference. Make the following updates in the template to create/update a Microsoft Entra app for SSO.
+1. You can copy the file to any folder of your project, and rename as the `aad.manifest.json` file and note the path to this file for later reference. Make the following updates in the template to create or update a Microsoft Entra app for SSO.
 
    * `identifierUris`: Used to uniquely identify and access the resource. You need to set correct Redirect Uris into "identifierUris" for successfully identify this app. For more information, see [identifierUris attribute](/azure/active-directory/develop/reference-app-manifest#identifieruris-attribute).
 
@@ -581,7 +581,7 @@ Teams Toolkit helps you generate the authentication files in **TeamsFx-Auth** fo
    > [!NOTE]
    > If you want add additional configs to your Azure Webapp, add the configs in the webAppSettings.
 
-1. Update the `appsettings.json` file and the `appsettings.Development.json` file for Microsoft Entra related configs that needs to be configured to your .Net project settings:
+1. Update the `appsettings.json` file and the `appsettings.Development.json` file for Microsoft Entra related configs that needs to be configured to your .NET project settings:
 
     ```
     TeamsFx: {
