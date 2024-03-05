@@ -70,15 +70,15 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-teams-application-vs.png" alt-text="Screenshot shows the selection of Teams application to create a new project."::: 
 
-    A Get Started window appears.
+    A GettingStarted window appears.
 
-    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio."::: 
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png" alt-text="Screenshot shows the get started page of the application in Visual Studio." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/project-get-started-vs.png":::
 
-1. The `appsettings.TestTool.json` file helps to configure the Test Tool by updating few parameters. To Update `appsettings.TestTool.json` file, follow either OpenAI or Azure OpenAI steps:
+1. The `appsettings.TestTool.json` file helps to configure the Test Tool by updating few parameters. To update `appsettings.TestTool.json` file, follow either OpenAI or Azure OpenAI steps:
 
     # [OpenAI](#tab/openai)
     
-    1. Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
+    * Update OpenAI `ApiKey` in the `appsettings.TestTool.json` file.
     
         :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-seetings-test-tool.png" alt-text="Screenshot displays the updated OpenAI key.":::
     
@@ -97,7 +97,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/app-test-tool.png" alt-text="Screenshot shows the option to select the Teams app test tool from the dropdown list.":::
 
-1. Test Tool opens the bot in a webpage.
+   Test Tool opens the bot in a webpage.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/test-tool.png" alt-text="Screenshot shows the bot opens the test tool in web page." lightbox="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/debug-test-tool-vs.png"::: 
 
@@ -122,13 +122,11 @@ Test Tool provides predefined activity triggers to test the functionalities of y
 > [!NOTE]
 > All types of activities aren't available in all scopes. For example, you can't add or remove a channel in a personal chat or a group chat.
 
-Predefined activity triggers are available in the **Mock an Activity** menu in Test Tool.
-
-In this scenario, we're using **Add user** activity trigger as an example. To mock an **Add user** activity, follow these steps:
+Predefined activity triggers are available in the **Mock an Activity** menu in Test Tool. In this scenario, we're using **Add user** activity trigger as an example. To mock an **Add user** activity, follow these steps:
 
 1. In Visual Studio Code, go to **Solution Explorer**.
 1. Select the **Program.cs** file.
-1. In the **Program.cs** file under `builder.Services.AddTransient<IBot>(sp =>`, add the following code:
+1. In the **Program.cs** file, under `builder.Services.AddTransient<IBot>(sp =>` add the following code:
 
     
     ```csharp 
@@ -146,7 +144,7 @@ In this scenario, we're using **Add user** activity trigger as an example. To mo
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/add-user-vs.png" alt-text="Screenshot shows the add user option under mock an activity.":::
 
-   A pop-up window appears to preview the activity handler.
+   A pop-up dialog appears to preview the activity handler.
 
 1. Select **Send activity**.
 
@@ -158,11 +156,11 @@ In this scenario, we're using **Add user** activity trigger as an example. To mo
 
 ### Custom activity triggers
 
-You can use **Custom activity** to customize activity trigger `reactionsAdded`, to fit the requirements of your bot app. Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties such as, `MembersAdded`, `membersremoved`, `reactionsremoved`, and so-on. 
+You can use **Custom activity** to customize activity trigger `reactionsAdded`, to fit the requirements of your bot app. Test Tool automatically populates the required properties of the activity. You can also modify the activity type and add more properties such as, `MembersAdded`, `membersremoved`, and `reactionsremoved`. 
 
 1. In Visual Studio Code, go to **Solution Explorer**.
 1. Select the **Program.cs** file.
-1. In the **Program.cs** file under `builder.Services.AddTransient<IBot>(sp =>`, add the following code:
+1. In the **Program.cs** file, under `builder.Services.AddTransient<IBot>(sp =>` add the following code:
 
     ```csharp
     app.OnMessageReactionsAdded(async (context, state, cancellationToken) =>
@@ -175,9 +173,7 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
  
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-code-vs.png" alt-text="Screenshot shows the code added to program.cs file for customization on mock activity.":::
 
-1. Go back to the Test Tool webpage.
-
-1. Select the latest response from Log Panel and copy `replyToId`.
+1. Go to the Test Tool webpage and select the latest response from Log Panel to copy `replyToId`.
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/custom-activity-reply-to-do.png" alt-text="Screenshot shows the selection of replyToID to copy for customization on mock activity.":::
 
@@ -185,7 +181,7 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/debug-VS/mock-activity-vs.png" alt-text="Screenshot shows the list of option under mock an activity.":::
 
-1. To customize the activity, add `messageReaction` under the `type` property and then invoke the custom activity.
+1. To customize the activity, add `messageReaction` under the `type` property.
 1. Replace with the latest `replyToId`.
 
     ```json
@@ -210,7 +206,7 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
 
 ## Limitations
 
-* Bot features enabled through app manifest aren't available as Test Tool doesn't process it.
+* Bot features enabled through app manifest aren't available, as Test Tool doesn't process it.
 
 * Test Tool doesn't support all types of cards except Adaptive Cards.
 
