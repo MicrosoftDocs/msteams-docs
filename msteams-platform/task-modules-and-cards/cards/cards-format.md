@@ -654,14 +654,34 @@ The following are JSON samples for an Adaptive Card designed without using `targ
     }
    ```
 
-The following table compares the rendering of Adaptive Cards designed with and without using the `targetWidth` property for different card widths:
+The follwing images show the rendering of Adaptive Cards designed without using the `targetWidth` property for different card widths:
 
-| Card width |Card designed without using `targetWidth`  | Card designed using `targetWidth` |
-|---------|---------|---------|
-|Wide     | :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the card is designed without using targetWidth property."::: <br> **The Card looks good.**       | :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to wide."::: <br> **The Card looks good.**      |
-|Standard or narrow     | :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the card is designed without using targetWidth property."::: </br>  **The name and role are squeezed**       | :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to standard or narrow."::: <br> **The role is moved under the name as there is no horizontal space to show them side-by-side**        |
-|Very narrow     | :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the card is designed without using targetWidth property."::: <br> **The name and role are cluttered**      | :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to veryNarrow."::: <br> **We can hide the image and only keep the most meaningful information**       |
+* When the card width is set to **Wide**. The Card looks good.
 
+  :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the card is designed without using targetWidth property.":::
+
+* When the card width is set to **Standard** or **narrow**. The name and role are squeezed.
+
+  :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the card is designed without using targetWidth property.":::
+
+* When the card width is set to **Very narrow**. The name and role are cluttered.
+
+  :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the card is designed without using targetWidth property.":::
+
+Let's see the difference in the rendering of Adaptive Cards designed using the `targetWidth` property for different card widths:
+
+* When the card width is set to **Wide**. The Card looks good.
+
+  :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to wide.":::
+
+* When the card width is set to **Standard** or **narrow**. The role is moved under the name as there is no horizontal space to show them side-by-side.
+
+  :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to standard or narrow.":::
+
+* When the card width is set to **Very narrow**. We can hide the image and only keep the most meaningful information.
+
+  :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is set to veryNarrow.":::
+  
 For more information on how to design an Adaptive Card, [designing Adaptive Cards for your Microsoft Teams app](design-effective-cards.md).
 
 ### Typeahead support
