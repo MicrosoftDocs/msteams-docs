@@ -28,7 +28,7 @@ ms.date: 04/06/2023
    :::column-end:::
 :::row-end:::
 
-Software as a Service (SaaS) offers allow you to license software solutions to customers through subscriptions. To sell your SaaS apps in Microsoft Teams Store, you must create an offer in Microsoft Partner Center. For any offer created, you must add suitable plans that provide various subscription options. The users can select a suitable subscription that best suits their requirements.
+Software as a Service (SaaS) offers allow you to license software solutions to customers through subscriptions. To sell your SaaS apps in Microsoft Teams Store, you must create an offer in Microsoft Partner Center. For any SaaS offer, you must add suitable plans that provide various subscription options. The users can select a suitable subscription that best suits their requirements.
 
 > [!NOTE]
 > You must have a [commercial marketplace account in Partner Center](/partner-center/create-account) to create offers.
@@ -205,8 +205,8 @@ Copy the service ID of the plan to [integrate with usageRights Graph API](prereq
 
 After you create the plan and configure the required information:
 
-1. The offer goes through a series of automated validation checks and preview offers are created.
-1. When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under **Go live**, to test the offer.
+* The offer goes through a series of automated validation checks and preview offers are created.
+* When the offer reaches the **Publisher signoff** phase, preview links for the respective platforms are given under **Go live**, to test the offer.
 
 We recommended to test the offer with the given preview links before you publish the offer in the marketplace.
 

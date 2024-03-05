@@ -51,7 +51,7 @@ Here are some features you can integrate with the SaaS offer:
 
 ### Private plans
 
-You can create a private plan for your SaaS offer to provide customized solutions for targeted customers based on their organizational requirements. You can create a private plan for both new and existing offers. For more information, see [private plans in commercial marketplace](/partner-center/marketplace/private-plans).
+You can create a private plan for your SaaS offer to provide customized solutions for targeted customers based on their organizational requirements. You can either use an existing offer or a new offer to create a private plan. For more information, see [private plans in commercial marketplace](/partner-center/marketplace/private-plans).
 
 Now that we know about the monetizing options and a SaaS offer, let's learn in detail on planning and publishing the SaaS offer for your app.
 
