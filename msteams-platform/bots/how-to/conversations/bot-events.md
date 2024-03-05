@@ -90,28 +90,28 @@ In the following example, the `conversation.id` of the `conversationUpdate` and 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L73)
 
 ```csharp
-      protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
-      {
-        var activity = turnContext.Activity;
-        if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
-        {
-            //Installation workflow.
-        }
-        else
-        {
-            // Uninstallation workflow.
-        }
-        return;
-      }
+protected override async Task OnInstallationUpdateActivityAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+var activity = turnContext.Activity;
+if (string.Equals(activity.Action, "Add", StringComparison.InvariantCultureIgnoreCase))
+{
+    //Installation workflow.
+}
+else
+{
+    // Uninstallation workflow.
+}
+return;
+}
 ```
 
 You can also use a dedicated handler for `add` or `remove` scenarios as an alternative method to capture an event.
 
 ```csharp
-     protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
-     {
-        // Installation workflow return;
-     }
+protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstallationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+    // Installation workflow return;
+}
 ```
 
 # [TypeScript](#tab/typescript14)
@@ -799,7 +799,7 @@ The `MembersRemoved` event activity type is set to `teamMemberRemoved` when the 
             if (member.Id == turnContext.Activity.Recipient.Id)
             {
                 // The bot was removed.
-                // You should clear any cached data you have for this team.
+                // You must clear any cached data you have for this team.
             }
             else
             {
