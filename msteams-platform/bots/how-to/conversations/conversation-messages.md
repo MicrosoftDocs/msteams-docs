@@ -89,14 +89,15 @@ The following code shows an example of sending a simple Adaptive Card:
 
 The following table lists the message events that your bot can receive and take action on:
 
-| Type | Payload object | Scope |
+| Event| Description | Scope |
 | ---- | ---------| ------ |
-| [Receive a message activity](#receive-a-message-activity) | Message activity | All |
-| [Receive edit message activity](#get-edit-message-activity) | Message edit activity | All |
-| [Receive undelete message activity](#get-undelete-message-activity) | Message undelete activity | All |
-| [Receive soft delete message activity](#get-soft-delete-message-activity) | Message soft delete activity | All |
+| [Receive a message](#receive-a-message) | Message is received by the bot. | All |
+| [Message edit](#edit-message) | Message received by the bot is edited. | All |
+| [Restore message](#undelete-message) | Message deleted in the bot conversation is restored.| All |
+| [Delete message](#soft-delete-message) | Message sent to the bot is deleted. | All |
+| [Message reaction](#message-reaction-events)| Messages sent by the bot have reactions either added or removed.| All |
 
-## Receive a message activity
+### Receive a message
 
 To receive a text message, use the `Text` property of an `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
 
@@ -204,122 +205,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-## Receive a read receipt
-
-The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../../../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
-
-* You can configure your bot to send a follow-up message if your app user hasn't read the message in the personal chat.
-
-* You can create a feedback loop using read receipts to tune your bot’s experience.
-
-> [!NOTE]
->
-> * Read receipts are supported only in user to bot chat scenarios.
-> * Read receipts for bots doesn’t support team, channel, and group chat scopes.
-> * If a tenant admin or user disables the **Read receipts** setting, the bot doesn't receive the read receipt event.
-
-To receive read receipts events for your bot, ensure the following:
-
-* Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows:
-
-# [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
-
-```json
-    
-"webApplicationInfo": {
-    
-     "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
-     "resource": ""
-},
-"authorization": {
-    "permissions": {
-    "orgwide": [],
-     "resourceSpecific": [
-        {
-        "name": "ChatMessageReadReceipt.Read.Chat",
-        "type": "Application"
-        }
-        ]
-     }
- }
-    
-```
-
-# [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
-
-```json
-    
- “webApplicationInfo”: {
-
-     "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
-     "resource": "https: //AnyString",
-     "applicationPermissions": [
-     "ChatMessageReadReceipt.Read.Chat"
-     ]
- }
-    
-```
-
----
-
-You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
-
-* Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.
-
-  The `IsMessageRead` helper method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnTeamsReadReceiptAsync` method to receive read receipts with [`IsMessageRead`](/dotnet/api/microsoft.bot.schema.teams.readreceiptinfo.ismessageread#microsoft-bot-schema-teams-readreceiptinfo-ismessageread(system-string)) helper method:
-
-    ```csharp
-    
-    protected override async Task OnTeamsReadReceiptAsync(ReadReceiptInfo readReceiptInfo, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken) 
-    {
-        var lastReadMessageId = readReceiptInfo.LastReadMessageId;
-       if (IsMessageRead("{id of the message that you care}", LastReadMessageId))
-       {
-            await turnContext.SendActivityAsync(MessageFactory.Text("User read the bot's message"), cancellationToken);    
-        }
-    }
-    ```
-
-    Following is an example of read receipts event request that a bot receives:
-
-    ```json
-    {
-        "name": "application/vnd.microsoft.readReceipt",
-        "type": "event",
-        "timestamp": "2023-08-16T17:23:11.1366686Z",
-        "id": "f:b4783e72-9d7b-2ed9-ccef-ab446c873007",
-        "channelId": "msteams",
-        "serviceUrl": "https://smba.trafficmanager.net/amer/",
-        "from": {
-            "id": "29:1-8Iuh70W9pRqV8tQK8o2nVjxz33RRGDKLf4Bh7gKnrzN8s7e4vCyrFwjkPbTCX_Co8c4aXwWvq3RBLr-WkkVMw",
-            "aadObjectId": "5b649834-7412-4cce-9e69-176e95a394f5"
-        },
-        "conversation": {
-            "conversationType": "personal",
-            "tenantId": "6babcaad-604b-40ac-a9d7-9fd97c0b779f",
-            "id": "a:1xlimp68NSUxEqK0ap2rXuwC9ITauHgV2M4RaDPkeRhV8qMaFn-RyilMZ62YiVdqs8pp43yQaRKvv_U2S2gOS5nM-y_pOxVe4BW1qMGPtqD0Bv3pw-nJXF0zhDlZHMZ1Z"
-        },
-        "recipient": {
-            "id": "28:9901a8b6-4fef-428b-80b1-ddb59361adeb",
-            "name": "Test Bot"
-        },
-        "channelData": {
-            "tenant": {
-                "id": "6babcaad-604b-40ac-a9d7-9fd97c0b779f"
-            }
-        },
-        "value": {
-            "lastReadMessageId": "1692206589131"
-        }
-    }
-    
-    ```
-
-* Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the bot to receive the read receipt events. The tenant admin or the user must enable or disable the read receipt setting.
-
-After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
-
-## Send a message
+### Send a message
 
 To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses.
 
@@ -437,9 +323,9 @@ HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activi
 >* Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
 >* Messages sent can be localized to provide personalization. For more information, see [localize your app](../../../concepts/build-and-test/apps-localization.md).
 
-Messages sent between users and bots include internal channel data within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure.
+Messages sent between users and bots include internal [channel data](~/bots/how-to/conversations/channel-and-group-conversations.md#teams-channel-data) within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure. You can also configure your bot to receive [read receipts](#receive-a-read-receipt) for the sent messages.
 
-## Get edit message activity
+### Edit message
 
 When you edit a message, the bot gets a notification of the edit message activity.
 
@@ -544,11 +430,9 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-## Get undelete message activity
+### Undelete message
 
-When you undelete a message, the bot gets a notification of the undelete message activity.
-
-To get an undelete message activity notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
+When you undelete a message, the bot gets a notification of the undelete message activity. To get an undelete message activity notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
 
 The following is an example of an undelete message activity notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
 
@@ -651,11 +535,9 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ---
 
-## Get soft delete message activity
+### Soft delete message
 
-When you soft delete a message, the bot gets a notification of the soft delete message activity.
-
-To get a soft delete message activity notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
+When you soft delete a message, the bot gets a notification of the soft delete message activity. To get a soft delete message activity notification in a bot, you can override `OnTeamsMessageSoftDeleteAsync` handler.
 
 Following is an example of a soft delete message activity notification using `OnTeamsMessageSoftDeleteAsync` when a message is soft deleted:
 
@@ -743,6 +625,354 @@ async onTeamsMessageSoftDelete(context) {
 
 ---
 
+### Message reaction events
+
+The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. Following are the event type and payload objects:
+
+**Message reaction added**: The bot is notified when a user adds a reaction to a message.
+
+# [C#](#tab/dotnet12)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsaddedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L26)
+
+```csharp
+       protected override async Task OnReactionsAddedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
+       {
+        foreach (var reaction in messageReactions)
+        {
+        var newReaction = $"You reacted with '{reaction.Type}' to the following message: '{turnContext.Activity.ReplyToId}'";
+        var replyActivity = MessageFactory.Text(newReaction);
+        // Sends an activity to the sender of the incoming activity.
+        var resourceResponse = await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+        }
+      }
+```
+
+# [TypeScript](#tab/typescript12)
+
+* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onreactionsadded&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L55)
+
+```typescript
+       export class MyBot extends TeamsActivityHandler {
+        constructor() {
+            super();
+            // Override this in a derived class to provide logic for when reactions to a previous activity.
+            this.onReactionsAdded(async (context, next) => {
+            const reactionsAdded = context.activity.reactionsAdded;
+                if (reactionsAdded && reactionsAdded.length > 0) {
+                    for (let i = 0; i < reactionsAdded.length; i++) {
+                        const reaction = reactionsAdded[i];
+                        const newReaction = `You reacted with '${reaction.type}' to the following message: '${context.activity.replyToId}'`;
+                        // Sends an activity to the sender of the incoming activity.
+                        const resourceResponse = context.sendActivity(newReaction);
+                        // Save information about the sent message and its ID (resourceResponse.id).
+                    }
+                }
+            });
+        }
+      }
+```
+
+# [JSON](#tab/json12)
+
+```json
+      {
+         "reactionsAdded": [
+            {
+                "type": "like"
+            }
+         ],
+         "type": "messageReaction",
+         "timestamp": "2017-10-16T18:45:41.943Z",
+         "id": "f:9f78d1f3",
+         "channelId": "msteams",
+         "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+         "from": {
+            "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA",
+            "aadObjectId": "c33aafc4-646d-4543-9d4c-abd28e4d2110"
+         },
+         "conversation": {
+            "isGroup": true,
+            "conversationType": "channel",
+            "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
+         },
+         "recipient": {
+            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+            "name": "SongsuggesterLocal"
+         },
+         "channelData": {
+            "channel": {
+                "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
+            },
+            "team": {
+                "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            },
+            "tenant": {
+                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            }
+         },
+         "replyToId": "1575667808184",
+         "legacy": {
+         "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
+         }
+     }
+```
+# [Python](#tab/python12)
+
+[SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-added&preserve-view=true)
+```python
+      # Override this in a derived class to provide logic for when reactions to a previous activity are added to the conversation.
+      async def on_reactions_added(
+      self, message_reactions: List[MessageReaction], turn_context: TurnContext
+      ):
+      for reaction in message_reactions:
+      activity = await self._log.find(turn_context.activity.reply_to_id)
+      if not activity:
+        # Sends an activity to the sender of the incoming activity.
+      await self._send_message_and_log_activity_id(
+        turn_context,
+        f"Activity {turn_context.activity.reply_to_id} not found in log",
+      )
+      else:
+        # Sends an activity to the sender of the incoming activity.
+      await self._send_message_and_log_activity_id(
+        turn_context,
+        f"You added '{reaction.type}' regarding '{activity.text}'",
+      )
+      return
+```
+---
+
+**Message reaction removed**: The bot is notified when a user removes a reaction from the reacted message.
+
+# [C#](#tab/dotnet13)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onreactionsremovedasync?view=botbuilder-dotnet-stable#definition&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-message-reaction/csharp/Bots/MessageReactionBot.cs#L44)
+```csharp
+      protected override async Task OnReactionsRemovedAsync(IList<MessageReaction> messageReactions, ITurnContext<IMessageReactionActivity> turnContext, CancellationToken cancellationToken)
+     {
+        foreach (var reaction in messageReactions)
+        {
+        var newReaction = $"You removed the reaction '{reaction.Type}' from the following message: '{turnContext.Activity.ReplyToId}'";
+        var replyActivity = MessageFactory.Text(newReaction);
+        // Sends an activity to the sender of the incoming activity.
+        var resourceResponse = await turnContext.SendActivityAsync(replyActivity, cancellationToken);
+        }
+     }
+```
+
+# [TypeScript](#tab/typescript13)
+* [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onreactionsremoved&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
+```typescript
+      export class MyBot extends TeamsActivityHandler {
+        constructor() {
+            super();
+            // Override this in a derived class to provide logic for when reactions to a previous activity.
+            this.onReactionsRemoved(async(context,next)=>{
+                const reactionsRemoved = context.activity.reactionsRemoved;
+                if (reactionsRemoved && reactionsRemoved.length > 0) {
+                    for (let i = 0; i < reactionsRemoved.length; i++) {
+                        const reaction = reactionsRemoved[i];
+                        const newReaction = `You removed the reaction '${reaction.type}' from the message: '${context.activity.replyToId}'`;
+                        // Sends an activity to the sender of the incoming activity.
+                        const resourceResponse = context.sendActivity(newReaction);
+                        // Save information about the sent message and its ID (resourceResponse.id).
+                    }
+                }
+            });
+        }
+      }
+```
+
+# [JSON](#tab/json13)
+```json
+       {
+        "reactionsRemoved": [
+            {
+                "type": "like"
+            }
+        ],
+        "type": "messageReaction",
+        "timestamp": "2017-10-16T18:45:41.943Z",
+        "id": "f:9f78d1f3",
+        "channelId": "msteams",
+        "serviceUrl": "https://smba.trafficmanager.net/amer-client-ss.msg/",
+        "from": {
+            "id": "29:1I9Is_Sx0O-Iy2rQ7Xz1lcaPKlO9eqmBRTBuW6XzkFtcjqxTjPaCMij8BVMdBcL9L_RwWNJyAHFQb0TRzXgyQvA",
+            "aadObjectId": "c33aafc4-646d-4543-9d4c-abd28e4d2110"
+        },
+        "conversation": {
+            "isGroup": true,
+            "conversationType": "channel",
+            "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
+        },
+        "recipient": {
+            "id": "28:f5d48856-5b42-41a0-8c3a-c5f944b679b0",
+            "name": "SongsuggesterLocal"
+        },
+        "channelData": {
+            "channel": {
+                "id": "19:3629591d4b774aa08cb0887902eee7c1@thread.skype"
+            },
+            "team": {
+                "id": "19:efa9296d959346209fea44151c742e73@thread.skype"
+            },
+            "tenant": {
+                "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+            }
+        },
+        "replyToId": "1575667808184",
+        "legacy": {
+        "replyToId": "1:19uJ8TZA1cZcms7-2HLOW3pWRF4nSWEoVnRqc0DPa_kY"
+        }
+      }
+```
+
+# [Python](#tab/python13)
+[SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-removed&preserve-view=true)
+```python
+# Override this in a derived class to provide logic specific to removed activities.
+async def on_reactions_removed(
+self, message_reactions: List[MessageReaction], turn_context: TurnContext
+):
+for reaction in message_reactions:
+activity = await self._log.find(turn_context.activity.reply_to_id)
+if not activity:
+# Sends an activity to the sender of the incoming activity.
+await self._send_message_and_log_activity_id(
+turn_context,
+f"Activity {turn_context.activity.reply_to_id} not found in log",
+)
+else:
+# Sends an activity to the sender of the incoming activity.
+await self._send_message_and_log_activity_id(
+turn_context,
+f"You removed '{reaction.type}' regarding '{activity.text}'",
+)
+return
+```
+---
+
+
+## Receive a read receipt
+
+The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../../../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
+
+* You can configure your bot to send a follow-up message if your app user hasn't read the message in the personal chat.
+
+* You can create a feedback loop using read receipts to tune your bot’s experience.
+
+> [!NOTE]
+>
+> * Read receipts are supported only in user to bot chat scenarios.
+> * Read receipts for bots doesn’t support team, channel, and group chat scopes.
+> * If a tenant admin or user disables the **Read receipts** setting, the bot doesn't receive the read receipt event.
+
+To receive read receipts events for your bot, ensure the following:
+
+* Add the [RSC](~/graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting) `ChatMessageReadReceipt.Read.Chat` permission in the [app manifest](~/resources/schema/manifest-schema.md), as follows:
+
+# [App manifest v1.12 or later](#tab/app-manifest-v112-or-later)
+
+```json
+    
+"webApplicationInfo": {
+    
+     "id": "38f0ca43-1c38-4c39-8097e-47f62c686500",
+     "resource": ""
+},
+"authorization": {
+    "permissions": {
+    "orgwide": [],
+     "resourceSpecific": [
+        {
+        "name": "ChatMessageReadReceipt.Read.Chat",
+        "type": "Application"
+        }
+        ]
+     }
+ }
+    
+```
+
+# [App manifest v1.11 or earlier](#tab/app-manifest-v111-or-earlier)
+
+```json
+    
+ “webApplicationInfo”: {
+
+     "id": "123456c8-67d2-4f54-b74e-408b195c4cbc",
+     "resource": "https: //AnyString",
+     "applicationPermissions": [
+     "ChatMessageReadReceipt.Read.Chat"
+     ]
+ }
+    
+```
+
+---
+
+You can also add RSC permissions through Graph API. For more information, see [`consentedPermissionSet`](/graph/api/userteamwork-teamsappinstallation-upgrade#http-request).
+
+* Override the method `OnTeamsReadReceiptAsync` with `IsMessageRead` handler.
+
+  The `IsMessageRead` helper method is useful to determine if the message is read by the recipients. If the `compareMessageId` is less than or equal to the `LastReadMessageId`, then the message has been read. Override the `OnTeamsReadReceiptAsync` method to receive read receipts with [`IsMessageRead`](/dotnet/api/microsoft.bot.schema.teams.readreceiptinfo.ismessageread#microsoft-bot-schema-teams-readreceiptinfo-ismessageread(system-string)) helper method:
+
+    ```csharp
+    
+    protected override async Task OnTeamsReadReceiptAsync(ReadReceiptInfo readReceiptInfo, ITurnContext<IEventActivity> turnContext, CancellationToken cancellationToken) 
+    {
+        var lastReadMessageId = readReceiptInfo.LastReadMessageId;
+       if (IsMessageRead("{id of the message that you care}", LastReadMessageId))
+       {
+            await turnContext.SendActivityAsync(MessageFactory.Text("User read the bot's message"), cancellationToken);    
+        }
+    }
+    ```
+
+    Following is an example of read receipts event request that a bot receives:
+
+    ```json
+    {
+        "name": "application/vnd.microsoft.readReceipt",
+        "type": "event",
+        "timestamp": "2023-08-16T17:23:11.1366686Z",
+        "id": "f:b4783e72-9d7b-2ed9-ccef-ab446c873007",
+        "channelId": "msteams",
+        "serviceUrl": "https://smba.trafficmanager.net/amer/",
+        "from": {
+            "id": "29:1-8Iuh70W9pRqV8tQK8o2nVjxz33RRGDKLf4Bh7gKnrzN8s7e4vCyrFwjkPbTCX_Co8c4aXwWvq3RBLr-WkkVMw",
+            "aadObjectId": "5b649834-7412-4cce-9e69-176e95a394f5"
+        },
+        "conversation": {
+            "conversationType": "personal",
+            "tenantId": "6babcaad-604b-40ac-a9d7-9fd97c0b779f",
+            "id": "a:1xlimp68NSUxEqK0ap2rXuwC9ITauHgV2M4RaDPkeRhV8qMaFn-RyilMZ62YiVdqs8pp43yQaRKvv_U2S2gOS5nM-y_pOxVe4BW1qMGPtqD0Bv3pw-nJXF0zhDlZHMZ1Z"
+        },
+        "recipient": {
+            "id": "28:9901a8b6-4fef-428b-80b1-ddb59361adeb",
+            "name": "Test Bot"
+        },
+        "channelData": {
+            "tenant": {
+                "id": "6babcaad-604b-40ac-a9d7-9fd97c0b779f"
+            }
+        },
+        "value": {
+            "lastReadMessageId": "1692206589131"
+        }
+    }
+    
+    ```
+
+* Read receipt [admin setting](/microsoftteams/messaging-policies-in-teams#messaging-policy-settings) or [user setting](https://support.microsoft.com/office/use-read-receipts-for-messages-in-microsoft-teams-533f2334-32ef-424b-8d56-ed30e019f856) is turned on for the tenant for the bot to receive the read receipt events. The tenant admin or the user must enable or disable the read receipt setting.
+
+After the bot is enabled in a user to bot chat scenario, the bot promptly receives a read receipt event when the user reads the bot's message. You can track the user engagement by counting the number of events and you can also send a context aware message.
+
 ## Send suggested actions
 
 The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
@@ -779,45 +1009,6 @@ The following illustrates an example of suggested actions:
 > * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
 > * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 > * `imBack` is the only supported action type and Teams display up to three suggested actions.
-
-## Teams channel data
-
-The `channelData` object contains Teams-specific information and is a definitive source for team and channel IDs. Optionally, you can cache and use these IDs as keys for local storage. The `TeamsActivityHandler` in the SDK pulls out important information from the `channelData` object to make it accessible. However, you can always access the original data from the `turnContext` object.
-
-The `channelData` object isn't included in messages in personal conversations, as these take place outside of a channel.
-
-A typical `channelData` object in an activity sent to your bot contains the following information:
-
-* `eventType`: Teams event type passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `tenant.id`: Microsoft Entra tenant ID passed in all contexts.
-* `team`: Passed only in channel contexts, not in personal chat.
-  * `id`: GUID for the channel.
-  * `name`: Name of the team passed only in cases of [team rename events](subscribe-to-conversation-events.md#team-renamed).
-* `channel`: Passed only in channel contexts, when the bot is mentioned or for events in channels in teams, where the bot is added.
-  * `id`: GUID for the channel.
-  * `name`: Channel name passed only in cases of [channel modification events](~/bots/how-to/conversations/subscribe-to-conversation-events.md).
-* `channelData.teamsTeamId`: Deprecated. This property is only included for backward compatibility.
-* `channelData.teamsChannelId`: Deprecated. This property is only included for backward compatibility.
-
-### Example channelData object
-
-The following code shows an example of channelData object (channelCreated event):
-
-```json
-"channelData": {
-    "eventType": "channelCreated",
-    "tenant": {
-        "id": "72f988bf-86f1-41af-91ab-2d7cd011db47"
-    },
-    "channel": {
-        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype",
-        "name": "My New Channel"
-    },
-    "team": {
-        "id": "19:693ecdb923ac4458a5c23661b505fc84@thread.skype"
-    }
-}
-```
 
 ## Add notifications to your message
 
