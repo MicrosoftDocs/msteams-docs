@@ -213,7 +213,8 @@ protected override async Task OnInstallationUpdateAddAsync(ITurnContext<IInstall
 When you uninstall an app, the bot is also uninstalled. When a user sends a message to your app after the bot is uninstalled, the bot receives a `403` response code. You can also clean up and delete user or thread data when the bot is uninstalled. You can't send or receive messages after an app is uninstalled.
 
 :::image type="content" source="~/assets/images/bots/uninstallbot.png" alt-text="Uninstall response code"lightbox="~/assets/images/bots/uninstallbot.png":::
-{WIP place holder}
+
+`{WIP place holder}`
 
 When you use the install and uninstall events, there are some instances where bots give exceptions on receiving unexpected events from Teams, which occurs in the following scenarios:
 
@@ -1377,8 +1378,6 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 | Other activity type received | `OnUnrecognizedActivityTypeAsync` | This method can be overridden to handle any activity type otherwise unhandled. |
 
 # [JavaScript](#tab/javascript15)
-
-#### Core Bot Framework handlers
 
 >[!NOTE]
 > Except for the **added** and **removed** members' activities, all the activity handlers described in this section continue to work as they do with a non-Teams bot.
