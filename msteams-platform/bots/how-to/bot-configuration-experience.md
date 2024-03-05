@@ -272,8 +272,10 @@ The following code snippets shows an example of:
 
 | **Sample name** | **Method** |
 |-----------------|-----------------|
-
-|C# 1|`OnInvokeActivityAsync`: For `config/fetch`, use `config/auth`; for `config/submit`, use `config/continue`.|C# 2|`OnInvokeActivityAsync`: For `config/fetch`, use `config/continue`; for `config/submit`, use `config/message`.|C# 3|`OnTeamsConfigFetchAsync`|C# 4|`OnTeamsConfigSubmitAsync`|
+|C# 1|`OnInvokeActivityAsync`: For `config/fetch`, use `config/auth`; for `config/submit`, use `config/continue`.|
+|C# 2|`OnInvokeActivityAsync`: For `config/fetch`, use `config/continue`; for `config/submit`, use `config/message`.|
+|C# 3|`OnTeamsConfigFetchAsync`|
+|C# 4|`OnTeamsConfigSubmitAsync`|
 
 # [C# 1](#tab/teams-bot-sdk1)
 
