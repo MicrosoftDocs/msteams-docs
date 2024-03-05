@@ -30,13 +30,13 @@ For the bot to work in a particular conversation or scope, add support to that s
 
 Each message in a bot conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot and the bot handles the message. In addition, to define core commands that your bot responds to, you can add a command menu with a dropdown list of commands for your bot. Bots in a group or channel only receive messages when they're mentioned @botname.
 
-Teams sends notifications to your bot for [conversation events](~/bots/how-to/conversations/bot-events.md) that happen in scopes where your bot is active. You can capture these events in your code and take action on them through [invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md). Following is a table that provides information on which communication concept to use in different scenarios:
+Teams sends notifications to your bot for [conversation events](~/bots/how-to/conversations/bot-events.md) that happen in scopes where your bot is active. You can capture these events in your code and take action on them through [invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md). The following table lists information on which communication concept to use in different scenarios:
 
 |Comunication flow| Use|Scenario |
 |---|---|---|
-| User <b>-></b> Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) | Activity handlers are used when you want your bot to be notified when a user performs an event |
-| Bot <b>-></b> User| [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md) | Invoke activities are used when you want your bot to send responses back to the user based on a received event.|
-| User <b><-></b> Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Receive the event and share a response back to the user based on the event.|
+| User **->** Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) | Activity handlers are used when you want your bot to be notified when a user performs an event. |
+| Bot **->** User| [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md) | Invoke activities are used when you want your bot to send responses back to the user based on a received event.|
+| User **<->** Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Receive the event and share a response back to the user based on the event.|
 
 A bot can also send proactive messages to users. A proactive message is any message sent by a bot that isn't in response to a request from a user. You can format your bot messages to include rich cards that include interactive elements, such as buttons, text, images, audio, video, and so on. Bot can dynamically update messages after sending them, instead of having your messages as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.The outgoing request to the bot shows conversation ID and tenant ID in the headers.
 

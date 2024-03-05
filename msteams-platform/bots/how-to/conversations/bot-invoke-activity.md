@@ -19,12 +19,14 @@ An invoke activity is a type of activity that is sent to a user from the bot whe
 
 :::image type="content" source="~/assets/images/bots/bot-invoke-activity.png" alt-text="Diagram that shows the flow of the invoke activity." lightbox="~/assets/images/bots/bot-invoke-activity.png":::
 
-Following is a table that provides information on which communication concept to use in different scenarios:
+`{Image is a place holder will share it for development as per design standards post SME approval}`
+
+The following table lists information on which communication concept to use in different scenarios:
 
 |Comunication flow| Use| Scenario |
 |---|---| --- |
-| Bot <b>-></b> User| [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md) | Invoke activities are used when you want your bot to send responses back to the user based on a received event.|
-| User <b><-></b> Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Receive the event and share a response back to the user based on the event.|
+| Bot **->** User| [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md) | Invoke activities are used when you want your bot to send responses back to the user based on a received event.|
+| User **<->** Bot| [Activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Receive the event and share a response back to the user based on the event.|
 
 The invoke activities listed in this article are applicable for conversational bots in Teams. 
 

@@ -12,24 +12,26 @@ ms.date: 03/04/2024
 
 Events and handlers are two related concepts in a bot workflow. An event in bot workflow depicts an activity that triggers the bot to perform a certain action or task.
 
-Activity handlers are functions or methods that contain the bot logic for how the bot should handle different types of events. For example, in an event when a user reacts to the bot message, the bot has a handler for event, which defines what the bot should do or say in response to the user’s action.
+Activity handlers are functions or methods that contain the bot logic for how the bot handles different types of events. For example, in an event when a user reacts to the bot message, the bot has a handler for event, which defines what the bot must do or say in response to the user’s action.
 
 When an event occurs, activity handlers can identify the activity and forward it to the bot logic for processing. By incorporating an invoke activity into the handler logic, your bot can process the event and respond to the user based on the payload of the invoke activity.
 
 :::image type="content" source="~/assets/images/bots/bot-event-activity-flowchart.png" alt-text="Diagram that shows the flow of the event flow from activity handlers to bot logic." lightbox="~/assets/images/bots/bot-event-activity-flowchart.png":::
 
-To create event-driven conversations, you must define the associated handlers that the bot will use with the event. You can also add [invoke activity](~/bots/how-to/conversations/bot-invoke-activity.md) to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to modularize its logic and reuse existing activities for different events.
+`{Image is a place holder will share it for development as per design standards post SME approval}`
 
-Following is a table that provides information on, which communication concept to use in different scenarios:
+To create event-driven conversations, you must define the associated handlers that the bot will use with the event. You can also add [invoke activity](~/bots/how-to/conversations/bot-invoke-activity.md) to the handler logic. An invoke activity is a way of updating the bot to run another activity as part of the current conversation. This can help the bot to customize its logic and reuse existing activities for different events.
+
+The following table lists information on which communication concept to use in different scenarios:
 
 |Comunication flow| Use| Scenario |
 |---|---| --- |
-| User <b>-></b> Bot| [Activity handler](#events-with-activity-handlers) |  Invoke activities are used when you want your bot to send responses back to the user based on a received event.|
-| User <b><-></b> Bot| [Activity handler](#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Receive the event and share a response back to the user based on the event.|
+| User **->** Bot| [Activity handler](#events-with-activity-handlers) |Activity handlers are used when you want your bot to be notified when a user performs an event.|
+| User **<->** Bot| [Activity handler](#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Receive the event and share a response back to the user based on the event.|
 
 ## Events with activity handlers
 
-Each activity type, or subtype, signifies a unique conversational event. Internally, the bot's turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the activity type. For example, when the bot receives a message activity, the turn handler identifies the activity and forwards it to the `onMessageActivity` handler. You can use the `onMessageActivity` handler to place your logic for managing and responding to messages.
+Each activity type, or subtype, signifies a unique conversational event. The bots turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the activity type. For example, when the bot receives a message activity, the turn handler identifies the activity and forwards it to the `onMessageActivity` handler. You can use the `onMessageActivity` handler to place your logic for managing and responding to messages.
 
 ```csharp
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
@@ -39,7 +41,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-Teams activity handlers is derived from [Bot Framework's activity handler](). Following are the two primary Teams activity handlers:
+Teams activity handler is derived from [Bot Framework's activity handler](#bot-framework-activity-handler). The two primary Teams activity handlers are as follows:
 
 * `OnConversationUpdateActivityAsync`: Routes all the conversation update activities.
 * `OnInvokeActivityAsync`: Routes all Teams [invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md).
@@ -48,13 +50,13 @@ Teams activity handlers is derived from [Bot Framework's activity handler](). Fo
 
 You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them. You must design your bot to receive unexpected events. If you are using the Bot Framework SDK without specifying any activity handlers in your bot code, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
-A bot receives a `conversationUpdate` event in either of the following cases:
+A bot receives a `conversationUpdate` event in any of the following cases:
 
 * When bot is added to a conversation.
 * Other members are added or removed in a conversation or channel.
 * Conversation metadata is changed.
 
-Following are the different type of events:
+The following are different type of events associated with `conversationUpdate`:
 
 | Events| Description| Scope |
 |----| ------|----|
@@ -80,7 +82,7 @@ In the following example, the `conversation.id` of the `conversationUpdate` and 
 ![Create a selected channel](~/assets/videos/addteam.gif)
 
 > [!NOTE]
-> The selected channel ID is only set on `installationUpdate add` events that are sent when an app is installed into a team.
+> The selected channel ID is only set on `installationUpdate.add` events that are sent when an app is installed into a team.
 
 # [C#](#tab/dotnet14)
 
@@ -666,7 +668,7 @@ await next();
 
 # [JSON](#tab/json5)
 
-* Following is a code snippet for, when the bot is added to a team:
+* The following is a code snippet for, when the bot is added to a team:
 
   > [!NOTE]
   > In this payload, `conversation.id` and `channelData.settings.selectedChannel.id` will be the ID of the channel that the user selected during app installation or where installation was triggered from.
@@ -717,7 +719,7 @@ await next();
     }
   ```
 
-* Following is a code snippet for, when the bot is added to a one-to-one chat.
+* The following is a code snippet for, when the bot is added to a one-to-one chat.
 
   ```json
     {
@@ -1421,7 +1423,7 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 
 ---
 
-Following is an implementation example with the Bot Framework's activity handler:
+The following is an implementation example with the Bot Framework's activity handler:
 
 # [C#](#tab/pcsharp16)
 
