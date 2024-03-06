@@ -175,7 +175,6 @@ async function example() {
           }
 ```
 
-
 ---
 
 > [!TIP]
@@ -297,6 +296,9 @@ The `pages` namespace includes functionality for running and navigating webpages
 
 ##### *dialog* namespace
 
+> [!NOTE]
+> The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client.
+
 The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are renamed:
 
 | Original namespace `tasks` | New namespace `dialog`  |
@@ -394,6 +396,7 @@ To run in Outlook and Microsoft 365 app, your app needs to depend on the [npm pa
 After completion, the utility will have updated your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
+>
 > * `package.json` references to TeamsJS version 2.x.x
 > * Import statements for TeamsJS version 2.x.x
 > * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS version 2.x.x
@@ -422,7 +425,6 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
     "manifestVersion" : "1.13"
 }
 ```
-
 
 ---
 
