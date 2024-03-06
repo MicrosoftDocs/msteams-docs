@@ -558,7 +558,7 @@ The following are JSON samples for an Adaptive Card designed without using `targ
                 {
                   "type": "TextBlock",
                   "weight": "Bolder",
-                  "text": "Ray Tanaka",
+                  "text": "David Claux",
                   "wrap": true
                 }
               ],
@@ -631,7 +631,7 @@ The following are JSON samples for an Adaptive Card designed without using `targ
                 {
                   "type": "TextBlock",
                   "weight": "Bolder",
-                  "text": "Ray Tanaka",
+                  "text": "David Claux",
                   "wrap": true
                 },
                 {
