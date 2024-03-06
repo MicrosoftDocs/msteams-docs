@@ -585,7 +585,7 @@ The following are JSON samples for an Adaptive Card designed without using `targ
 
     ```
 
-  The follwing images show the rendering of the Adaptive Card for different card widths:
+  The following images show the rendering of the Adaptive Card for different card widths:
 
   * When the card's width is **wide**, the card looks good.
 
