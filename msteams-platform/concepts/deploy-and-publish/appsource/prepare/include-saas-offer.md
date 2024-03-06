@@ -51,7 +51,7 @@ You can select from one of the four listing options to publish a SaaS offer:
 
 **Sell through Microsoft**
 
-You can opt to sell your SaaS apps through Microsoft where Microsoft hosts all your transactions for the licenses purchased. Offers sold are transactable SaaS offers where you can sell subscription plans directly from the Teams Store. You can further allow Microsoft to manage licenses on your behalf.
+You can opt to sell your SaaS apps through Microsoft where Microsoft hosts all your transactions for the licenses purchased. These are transactable SaaS offers where you can sell subscription plans either from commercial marketplace or directly from Teams Store. You can further allow Microsoft to manage licenses on your behalf.
 
     :::column-end:::
 :::row-end:::
@@ -95,9 +95,7 @@ Customers can share their contact details and request that you contact them abou
     :::column-end:::
 :::row-end:::
 
-You can further allow Microsoft to manage licenses on your behalf. If you select Microsoft to manage licenses, you must [integrate the offer with Microsoft Graph APIs](prerequisites.md#integrate-with-usagerights-graph-api) to verify customer eligibility.
-
-Based on the listing option, you must fulfill the technical requirements. For more information, see [prerequisites to create a SaaS offer](prerequisites.md).
+You can further allow Microsoft to manage licenses on your behalf. If you select Microsoft to manage licenses, you must [integrate the offer with Microsoft Graph APIs](prerequisites.md#integrate-with-usagerights-graph-api) to verify customer eligibility. Based on the listing option, you must fulfill the [technical requirements](prerequisites.md).
 
 ## Offer details
 
@@ -108,7 +106,7 @@ Offer details are the basic information available on the offer's landing page. T
 | Offer categories and industries | Identify the primary and secondary categories for your offer. These categories determine the marketplace where your offer is published and help the users to identify your app. |
 | Offer details | Design a distinctive logo, select relevant keywords, and write a compelling description to enhance your offer's discoverability. |
 | Preview audience | Identify the audience and collate their email address to allow them to use and verify the preview offer. |
-| Technical configuration | The [technical information](prerequisites.md#technical-information) that the commercial marketplace uses to communicate to your SaaS app. |
+| Technical configuration | The [technical information](prerequisites.md#technical-information) that the commercial marketplace uses to communicate with your SaaS app. |
 | Legal terms and conditions | Provide clear and comprehensive information about the terms of use for the users to understand their rights and responsibilities. |
 | Customer Relationship Management (CRM) | Provide contact information to receive customer leads and to address queries. |
 
@@ -144,7 +142,7 @@ The [billing terms](/partner-center/marketplace/plan-saas-offer?branch=main) def
 
 ## Other SaaS offer features
 
-In addition to the basic and essential planning, you can provide more features to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers.
+In addition to the basic planning, you can provide more features to promote user engagement. These features provide users with a firsthand experience of your app before they decide to purchase offers.
 
 | Category |Description|
 |---|---|

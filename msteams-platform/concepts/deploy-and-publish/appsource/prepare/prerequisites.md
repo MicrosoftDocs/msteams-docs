@@ -44,11 +44,11 @@ When you create the SaaS offer, you must provide the following technical informa
 
 * **Landing page URL**: The SaaS site URL where the user gets redirected to after purchasing the subscription, which also triggers the configuration process. The URL receives a token that you can use to invoke the fulfillment APIs and provides the required provisioning details for your interactive registration page.
 
-* **Connection webhook URL**: You must provide a [connection webhook URL](/partner-center/marketplace/create-new-saas-offer-technical) for Microsoft to notify you of all asynchronous events (for example, when a SaaS subscription gets canceled).
+* **Connection webhook URL**: You must provide a [connection webhook URL](/partner-center/marketplace/create-new-saas-offer-technical) for Microsoft to notify you of all asynchronous events, for example, when a SaaS subscription gets canceled.
 
 * **Microsoft Entra tenant ID**: Register an application within the Azure portal to obtain the tenant ID. You can then add the tenant ID to the access control list (ACL) of the API, ensuring you have the authorization to call it.
 
-* **Microsoft Entra application ID**: The application ID corresponds to your publisher ID in your Partner Center account. Ensure that you use the same application ID for all offers within that account.
+* **Microsoft Entra application ID**: The application ID corresponds to your publisher ID in your Microsoft Partner Center account. Ensure that you use the same application ID for all offers within that account.
 
 For more information, see [technical information to create an offer](/partner-center/marketplace/plan-saas-offer).
 
@@ -83,7 +83,7 @@ Consider the following approaches when building a landing page:
 * Enable users to sign in from offer landing page only using the same Microsoft Entra credentials they used for purchase subscription.
 * Provide an introduction on how to use your app.
 * Add support options, such as FAQs, knowledge base, or contact email.
-* Provide a link that lets the subscriber return to the landing page with ease.
+* Provide a link that helps the user return to the landing page with ease.
 
 You can view the landing page experience in [end-user purchase experience](end-user-purchase-experience.md).
 
@@ -120,7 +120,7 @@ To call [usageRights Graph API](/partner-center/marketplace/isv-app-license-saas
 To determine if the tenant for the Microsoft Entra app is part of the Partner Center setup, follow these steps:
 
   1. Sign in to [Microsoft Partner Center](https://partner.microsoft.com/dashboard/home) with the publisher account that is used to publish the SaaS offer.
-  1. In the upper-right corner, select the **Settings** (gear) icon.
+  1. In the upper-right corner, select the **Settings** icon.
   1. Select **Account Settings**.
   1. In the left pane, select **Tenants**.
 

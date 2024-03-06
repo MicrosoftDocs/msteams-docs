@@ -99,15 +99,15 @@ For more information, see [Upload your app in Teams](../../apps-upload.md).
 
 1. If `offerId` is specified in the app manifest but the user isn't part of the **Preview audience** defined in the Partner Center, the **Buy a subscription** button isn't enabled and the app shows the following warning message to the user:
 
-  No plans found with **-preview**. Make sure you are in the preview audience.
+    No plans found with **-preview**. Make sure you are in the preview audience.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="Screenshot shows the No plans found with preview warning." :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-audience.png" alt-text="Screenshot shows the No plans found with preview warning." :::
 
 1. If `offerId` is specified in the app manifest isn't a preview offer, the app shows the following warning message to the user and custom app upload is disabled:
   
-  This isn't a preview offer. Be sure to append the **-preview** to the offer ID.
+    This isn't a preview offer. Be sure to append the **-preview** to the offer ID.
 
-  :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="Screenshot shows the not a preview offer warning." :::
+    :::image type="content" source="../../../../assets/images/apps-in-meetings/test-preview-no-preview-offer-id.png" alt-text="Screenshot shows the not a preview offer warning." :::
 
 Upon successful testing, you can push the offer to Go live where app validations are done before publishing.
 

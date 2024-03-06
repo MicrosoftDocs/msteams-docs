@@ -10,9 +10,9 @@ ms.date: 11/23/2022
 
 # Monetize your Teams app
 
-Monetizing your app is a crucial step in the app development process and Microsoft Teams Store provides a platform to monetize your app. You can create offers for your applications in Microsoft Partner Center and reach customers with the best solutions through Teams Store.
+Monetizing your app is a crucial step in the app development process and Microsoft Teams Store provides a platform to monetize your app. You can create offers for your applications in Microsoft Partner Center and reach customers with the best solutions.
 
-Microsoft commercial marketplace facilitates publishing offers through Azure Marketplace and Microsoft AppSource. The published offers are available for purchase through Teams Store.
+Microsoft commercial marketplace facilitates publishing offers through Azure Marketplace and Microsoft AppSource. The published offers are available for purchase from commercial marketplace. If the offers are linked to Teams app, it can be purchased from Teams Store.
 
 There are four ways by which you can drive app monetization:
 
