@@ -19,8 +19,7 @@ Embedding Teams interoperability in your own customer-facing website or native a
 Custom websites and native apps can interoperate with two kinds of Teams B2C experience: virtual appointments and contact center.
 
 The image shows an example of the Teams interoperable meeting and calling experience you can embed into your website or native app:
-![Alt text](https://azure.github.io/communication-ui-library/images/call-with-chat-composite-hero.png "Screenshot of the meeting and calling experiences you can embed in your own app or website")
-
+![Alt text](../assets/images/call-with-chat-composite-hero.png "Screenshot of the meeting and calling experiences you can embed in your own app or website")
 
 ## Virtual Appointments
 
@@ -32,7 +31,7 @@ The key technical steps for building a virtual appointments application:
 2. Embed Azure Communication Services Calling and Chat into your website or native app.
 3. Program the communication management service to share the Teams meeting meta-data with the client application.
 
-[Azure Communication Services client libraries](../../../azure/communication-services/concepts/sdk-options) are available for various platforms and languages, including Web browsers (JavaScript), iOS (Swift), Android (Java), Windows (.NET). The client libraries support both mobile and desktop web browsers. An open-source [UI library](../../../azure/communication-services/concepts/ui-library/ui-library-overview) can accelerate development for Web, iOS, and Android apps. Azure Communication Services is identity-agnostic, and you control how end users are identified and authenticated.
+[Azure Communication Services client libraries](../../../azure/articles/communication-services/concepts/sdk-options) are available for various platforms and languages, including Web browsers (JavaScript), iOS (Swift), Android (Java), Windows (.NET). The client libraries support both mobile and desktop web browsers. An open-source [UI library](../../../azure/communication-services/concepts/ui-library/ui-library-overview) can accelerate development for Web, iOS, and Android apps. Azure Communication Services is identity-agnostic, and you control how end users are identified and authenticated.
 
 For more information and quickstarts, check out:
 
