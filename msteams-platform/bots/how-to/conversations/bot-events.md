@@ -10,7 +10,7 @@ ms.date: 03/04/2024
 
 # Event-driven conversations with activity handlers
 
-Events and handlers are two related concepts in a bot workflow. The bot receives event notifications from handlers, allowing users to communicate with the bot through the activity handler.
+Events and handlers are two related concepts in a bot workflow. A bot receives event notifications from handlers, allowing users to communicate with the bot through the activity handler.
 
 * **Event**: Event in bot workflow depicts an activity that triggers the bot to perform a certain action or task.
 
