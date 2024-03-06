@@ -61,8 +61,10 @@ For more information, see [public developer preview app manifest schema](../../r
 You can enable the configuration settings for your bot as follows:
 
 * For JS:
+
+  * `onInvokeActivity`
   
-`handleTeamsConfigFetch` and `handleTeamsConfigSubmit`
+  * `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`
 
 * For C#:
 
@@ -157,112 +159,98 @@ async handleTeamsConfigSubmit(context, _configData) {
 }
 ```
 
-The code snippet illustrates the `handleTeamsConfigFetch` method, which utilizes Adaptive Cards to gather configuration data. An Adaptive Card, featuring elements such as text blocks and input choice sets, is generated to prompt the user to select from various setup options. The bot's response is contingent on the user's selection, either presenting another Adaptive Card for additional configuration Adaptive Card for continue, or transmitting a simple message to signify the setup process's completion Adaptive Card for submit. These Adaptive Cards, embedded within the class, offer a structured and user-friendly method for users to engage with the bot's configuration flow. In essence, Adaptive Cards augment user engagement and simplify interaction in chat-based interfaces by providing a uniform format for information display and user input collection. They enable developers to craft rich and interactive experiences that integrate smoothly with messaging platforms, thereby enhancing the functionality of conversational interfaces.
+The code snippets provided define two adaptive cards for bot setup options in Microsoft Teams.
+The first function, adaptiveCardForContinue, creates an adaptive card that prompts the user to select a bot setup option. The options available are "Continue with more options" and "Finish setting up bot". The user can search for an option using the placeholder "Search for an option". The card also includes a "Submit" action.
+
+The `adaptiveCardForContinue` function generates an adaptive card, prompting the user to select a bot setup option. The options include "Continue with more options" and "Finish setting up bot". Users can locate an option using the "Search for an option" placeholder. The card also features a "Submit" action.
+
+The `adaptiveCardForSubmit` function creates an adaptive card that prompts the user to submit to proceed with the bot setup. This card also includes a "Submit" action.
 
 ```javascript
-// extending both handlers
 
-async handleTeamsConfigFetch(_context, configData) {
-    let response = {};
-    switch (configData.command) {
-        case 'card':
+adaptiveCardForContinue = () => ({
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "text": "Please choose bot set up option",
+      "wrap": true,
+      "type": "TextBlock"
+    },
+    {
+      "columns": [
+        {
+          "width": "auto",
+          "items": [
             {
-                response.config = {
-                    suggestedActions: {
-                        actions: [
-                            {
-                                type: 'bot config auth',
-                                title: 'bot config title',
-                                image: 'https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40',
-                                value: 'bot config auth value',
-                            },
-                        ],
-                    },
-                    type: 'auth',
-                };
+              "text": "Option: ",
+              "wrap": true,
+              "height": "stretch",
+              "type": "TextBlock"
             }
-            break;
-        case 'message':
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "columns": [
+        {
+          "width": "stretch",
+          "items": [
             {
-                const cardJson = {
-                    type: 'AdaptiveCard',
-                    version: '1.4',
-                    body: [
-                        {
-                            type: 'TextBlock',
-                            text: 'Bot Config Fetch',
-                        },
-                    ],
-                };
-                const card = CardFactory.adaptiveCard(cardJson);
-
-                response = {
-                    config: {
-                        value: {
-                            height: 200,
-                            width: 200,
-                            title: 'test card fetch',
-                            card,
-                        },
-                        type: 'continue',
-                    },
-                };
+              "choices": [
+                {
+                  "title": "Continue with more options",
+                  "value": "continue"
+                },
+                {
+                  "title": "Finish setting up bot",
+                  "value": "finish"
+                }
+              ],
+              "style": "filtered",
+              "placeholder": "Search for an option",
+              "id": "choiceselect",
+              "type": "Input.ChoiceSet"
             }
-            break;
-        default:
-            console.log('no default');
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
     }
-
-    return response;
-}
-
-async handleTeamsConfigSubmit(_context, configData) {
-    let response = {};
-    switch (configData.command) {
-        case 'card':
-            {
-                const cardJson = {
-                    type: 'AdaptiveCard',
-                    version: '1.4',
-                    body: [
-                        {
-                            type: 'TextBlock',
-                            text: 'Bot Config Submit',
-                        },
-                    ],
-                };
-                const card = CardFactory.adaptiveCard(cardJson);
-
-                response = {
-                    config: {
-                        value: {
-                            height: 200,
-                            width: 200,
-                            title: 'test card submit',
-                            card,
-                        },
-                        type: 'continue',
-                    },
-                };
-            }
-            break;
-        case 'message':
-            {
-                response = {
-                    config: {
-                        value: 'config submit text',
-                        type: 'message',
-                    },
-                };
-            }
-            break;
-        default:
-            console.log('no default');
-            break;
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "id": "submit",
+      "title": "Submit"
     }
+  ]
+});
 
-    return response;
-}
+adaptiveCardForSubmit = () => ({
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "text": "Please hit submit to continue setting up bot",
+      "wrap": true,
+      "type": "TextBlock"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "id": "submitdynamic",
+      "title": "Submit"
+    }
+  ]
+});
 
 ```
 
@@ -296,10 +284,9 @@ protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext
                     {
                         new CardAction
                         {
-                            Type = "bot config type",
-                            Title = "bot config title",
-                            Image = "https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40",
-                             Value = "bot config value"
+                            type: "openUrl",
+                            value: "https://example.com/auth",
+                            title: "Sign in to this app"
                         }
                     }
                 },
@@ -443,10 +430,9 @@ protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext
                 {
                     new CardAction
                     {
-                        Type = "bot config type",
-                        Title = "bot config title",
-                        Image = "https://static-asm.secure.skypeassets.com/pes/v1/emoticons/win10/views/default_40",
-                        Value = "bot config value"
+                        type: "openUrl",
+                        value: "https://example.com/auth",
+                        title: "Sign in to this app"
                     }
                 }
             },
