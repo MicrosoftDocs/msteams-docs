@@ -672,11 +672,11 @@ The following are JSON samples for an Adaptive Card designed without using `targ
 
     :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is wide.":::
 
-  * When the card width's is **standard** or **narrow**, the role is moved under the name as there's no horizontal space to show them side-by-side.
+  * When the card's width is **standard** or **narrow**, the role is moved under the name as there's no horizontal space to show them side-by-side.
 
     :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is standard or narrow.":::
 
-  * When the card width's is **very narrow**, we can hide the image and only keep the most meaningful information.
+  * When the card's width is **very narrow**, we can hide the image and only keep the most meaningful information.
 
     :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is veryNarrow.":::
   
