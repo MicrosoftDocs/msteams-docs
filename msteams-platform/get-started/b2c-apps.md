@@ -37,7 +37,7 @@ The key technical steps for building a virtual appointments application:
 For more information and quickstarts, check out:
 
 - [Concept: Virtual visit apps with Azure Communication Services](../../../azure/communication-services/tutorials/virtual-visits.md)
-- [Concept: Azure & Teams interoperability](https://learn.microsoft.com/azure/communication-services/concepts/interop/guest/overview)
+- [Concept: Azure & Teams interoperability](/azure/communication-services/concepts/interop/guest/overview.md)
 - [Azure Architecture Guide for joining a Teams meeting](https://learn.microsoft.com/azure/architecture/guide/mobile/azure-communication-services-architecture#microsoft-365-and-teams)
 - [Azure Sample Builder for joining a Teams meeting](https://aka.ms/acs-sample-builder)
 - [Quickstart: Join a Teams meeting as an external user](https://learn.microsoft.com/azure/communication-services/quickstarts/voice-video-calling/get-started-teams-interop?pivots=platform-android)
