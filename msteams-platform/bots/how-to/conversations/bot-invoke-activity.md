@@ -23,7 +23,7 @@ When an event occurs, activity handlers can identify the activity and forward it
 
 `{Image is a place holder will share it for development as per design standards post SME approval}`
 
-The following table lists information on which communication concept to use in different scenarios:
+The following table outlines which communication concept to use in different scenarios:
 
 |Comunication flow| Use| Scenario |
 |---|---| --- |
