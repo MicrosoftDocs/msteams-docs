@@ -1031,9 +1031,9 @@ You've completed the tutorial to build a tab app with Blazor.
 > * Migrating your configurable tab to static tab is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 > * To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
 
-Static tab capability is extended to support group chat and meetings. You can update your existing configurable tab to static tab and add different scopes to the static tab.
+Static tabs support group chat, channels, and meetings. They behave more like apps, being [pinnable, instant, and unified, with optional configuration](~/tabs/what-are-tabs?tabs=desktop%2Cdesktop1%2Cpersonal#:~:text=Following%20are%20a,pinned%20in%20Teams.). If you have both configurable tab and static tab defined in your app manifest for a specific scope, Teams pins the static tab by default. Static tabs allows you to build a single tab that works across different scopes, providing a consistent and focused experience.
 
-To change your configurable tab to static tab:
+You can update your existing configurable tab to static tab and add different scopes to the static tab. To change your configurable tab to static tab:
 
 1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space.
 1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
