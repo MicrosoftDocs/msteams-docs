@@ -840,7 +840,7 @@ Specify meeting extension definition. For more information, see [custom Together
 |`supportsAnonymousGuestUsers`|Boolean|||A value that indicates whether an app supports access for anonymous users. The default value is **false**.|
 
 > [!NOTE]
-> The `supportsAnonymousGuestUsers` property in the app manifest schema v1.16 is supported only in [new Teams client](~/resources/teams-updates).
+> The `supportsAnonymousGuestUsers` property in the app manifest schema v1.16 is supported only in [new Teams client](~/resources/teams-updates.md).
 
 ### meetingExtensionDefinition.scenes
 
