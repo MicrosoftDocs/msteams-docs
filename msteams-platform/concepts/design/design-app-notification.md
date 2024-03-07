@@ -75,14 +75,14 @@ You can also consider the following before you choose the notification for your 
 When you create your apps, you must consider to enable notifications for your app to effectively engage and retain users in Teams.
 
 * What is the targeted user experience in Teams?
-   Use Activity notifications when you want users to consume notifications in Activity & Main Pane. <br>
-   Use Bot notifications when you want users to interact with Adaptive Card.
+   * Use Activity notifications when you want users to consume notifications in Activity & Main Pane. <br>
+   * Use Bot notifications when you want users to interact with Adaptive Card.
 
 * How do you expect users to interact with the notification? 
-   Bot notifications should encourage conversations with the bot. <br>
-   If no further conversation is expected between the user and bot, use Activity notifications instead.  
+   * Bot notifications should encourage conversations with the bot. <br>
+   * If no further conversation is expected between the user and bot, use Activity notifications instead.  
 
-Here is some example scenario's and recommended notification types:
+Here's some example scenario's and recommended notification types:
 
 |Notification scenario|Notification type |Recommended notification|
 |----|----|----|
