@@ -42,6 +42,10 @@ Messages received from or sent to your bot can include different types of messag
 | Cards     | ❌                | ✔️                | See [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
 | Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
 
+# [Rich text](#tab/richtext)
+
+# [Pictures](#tab/pictures)
+
 ### Picture messages
 
 To enhance your message, you can include pictures as attachments to that message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
@@ -54,6 +58,8 @@ Specify the height and width of each image by using XML. In Markdown, the image 
 * Don't use: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
 A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
+
+# [Cards](#tab/cards)
 
 ### Adaptive Cards
 
@@ -84,6 +90,12 @@ The following code shows an example of sending a simple Adaptive Card:
     ]
 }
 ```
+
+# [Emojis](#tab/Emojis)
+
+---
+
+
 
 ## Message events
 
@@ -719,9 +731,11 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
          }
      }
 ```
+
 # [Python](#tab/python12)
 
 [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-added&preserve-view=true)
+
 ```python
       # Override this in a derived class to provide logic for when reactions to a previous activity are added to the conversation.
       async def on_reactions_added(
@@ -765,8 +779,10 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 ```
 
 # [TypeScript](#tab/typescript13)
+
 * [SDK reference](/javascript/api/botbuilder-core/activityhandler?view=botbuilder-ts-latest#botbuilder-core-activityhandler-onreactionsremoved&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L63)
+
 ```typescript
       export class MyBot extends TeamsActivityHandler {
         constructor() {
@@ -789,6 +805,7 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 ```
 
 # [JSON](#tab/json13)
+
 ```json
        {
         "reactionsRemoved": [
@@ -833,7 +850,9 @@ The `messageReaction` event is sent when a user adds or removes reactions to a m
 ```
 
 # [Python](#tab/python13)
+
 [SDK reference](/python/api/botbuilder-core/botbuilder.core.activityhandler?view=botbuilder-py-latest#botbuilder-core-activityhandler-on-reactions-removed&preserve-view=true)
+
 ```python
 # Override this in a derived class to provide logic specific to removed activities.
 async def on_reactions_removed(
