@@ -1019,17 +1019,17 @@ Following is an example of app manifest where a static tab is defined that works
      "entityId": "homeTab", 
      "scopes": [ 
        "personal", 
-       "groupChat",
+       "groupChat", 
        "team"
       ], 
      "context": [ 
-       "personalTab",  
+       "personalTab",
+       "channelTab", 
        "privateChatTab", 
        "meetingChatTab", 
        "meetingDetailsTab", 
        "meetingSidePanel", 
-       "meetingStage",
-       "channelTab"
+       "meetingStage" 
       ], 
       "name": "Contoso", 
       "contentUrl": "https://contoso.com/content (displayed in Teams canvas)", 
