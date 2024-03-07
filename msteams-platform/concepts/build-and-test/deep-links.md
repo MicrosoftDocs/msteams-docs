@@ -16,7 +16,7 @@ You can use deep links in Teams in the following ways:
 * Deep link to a chat.
 * Deep link to a workflow.
 
-:::image type="content" source="~/assets/images/deep-links.png" alt-text="Diagram shows different scenarios for deep links.":::
+:::image type="content" source="~/assets/images/deep-links.png" alt-text="Diagram shows various scenarios for deep links.":::
 
 * **Deep link to an app**: Use a deep link to browse through the contents within a tab and open an app install dialog. For example, your app can have a bot that sends messages notifying the user of an important activity. When the user selects the notification, the deep link navigates to the tab where the user can view more details about the activity.
 
@@ -49,7 +49,13 @@ Teams deep links support two types of protocol handlers:
 
     :::image type="content" source="../../assets/images/deep-link-open.png" alt-text="Screenshot shows a deep link opened in a browser.":::
 
-1. **MSTEAMS**: The `msteams://` protocol handler skips the client selection screen in the browser and opens the deep link directly in the Teams desktop client.
+> [!NOTE]
+> A deep link should start with `https://teams.microsoft.com/` followed by an `l/` to avoid errors, especially in classic Teams deep links, where Angular routes are used.
+
+1. **MSTEAMS**: The `msteams://` protocol handler skips the client selection screen in the browser and opens the deep link directly in the Teams desktop client. Users who don't have the Teams desktop client might not be able to access deep links with `msteams://`. Always use `https://` in deep links unless you are certain that your app's users have the desktop client on their device.
+
+> [!CAUTION]
+> Don't append `msteams:` to a `https://` deep link such as `msteams:https://teams.microsoft.com/l/call/0/0` as Teams can't parse this deep link as a valid URL object.
 
 <!--- TBD: Edit this article.
 * Admonitions/alerts seem to be overused. 
