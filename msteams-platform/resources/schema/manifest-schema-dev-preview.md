@@ -925,14 +925,15 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`contexts`| Array | 4 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`|
+|`contexts`| Array | 4 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`, `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `default`|
 |`tabs`| Array | |✔️| Configures the custom tabs on the Microsoft 365 application ribbon. |
 |`tabs.id`| String | 64 characters | | Specifies the ID for the tab within the app.|
+|`tabs.builtinTabId`| String enum | | | Specifies the ID of a built-in Office ribbon tab. The possible values vary by Office host application. Currently, only Outlook add-ins are supported and the only allowed value for Outlook is "DefaultTab". The default tab depends on where the Outlook add-in is surfaced, as determined in the "extensions.ribbons.contexts" property. In the main Outlook window, it is the **Home** tab, in a message window, it is the **Message** tab, and in a meeting window, it is the **Meeting** tab. |
 |`tabs.label`| String | 64 characters | | Specifies the text displayed for the tab.|
 |`tabs.position`| Object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
-|`tabs.position.builtinTabId`| String | 64 characters | | Specifies the ID of the built-in tab. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
-|`tabs.position.align`| String enum | | | Defines the alignment of custom tab relative to the specified built-in tab. <br>Supported values: `after`, `before`|
-|`tabs.groups`| String |64 characters | | Defines the tab groups.|
+|`tabs.position.builtinTabId`| String | 64 characters | ✔️ | Specifies the ID of the built-in tab that the custom tab should be positioned next to. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
+|`tabs.position.align`| String enum | | ✔️ | Defines the alignment of custom tab relative to the specified built-in tab. <br>Supported values: `after`, `before`|
+|`tabs.groups`| String |64 characters | | Defines groups of controls on a ribbon tab on a non-mobile device. For mobile devices, see `tabs.customMobileGroup` below.|
 |`tabs.groups.id`| String |64 characters | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. |
 |`tabs.groups.icons`| Array | | | Specifies the icons displayed for the group. |
@@ -954,7 +955,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
 |`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`, `menu`|
-|`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of the existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
+|`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control.|
 |`tabs.groups.controls.icons`| Array | | | Defines the icon(s) for the control. |
 |`tabs.groups.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Required image size: `16`, `32`, `80`|
@@ -962,10 +963,22 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. |
 |`tabs.groups.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
 |`tabs.groups.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
-|`tabs.groups.controls.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match with `runtime.actions.id`.|
+|`tabs.groups.controls.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
 |`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
-|`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
+|`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.builtinGroupId`| String | 64 characters | | Specifies the ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
+|`tabs.customMobileGroup` | Object | | | Defines a group of controls in the default tab of the ribbon on a mobile device. This object can only be present on tab objects that have a `builtinTabId` property that is set to "DefaultTab". |
+|`tabs.customMobileGroup.id` | String | 250 characters | ✔️ | Specifies the ID of the group. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
+|`tabs.customMobileGroup.label` | String | 32 characters | ✔️ | Specifies the label on the group. |
+|`tabs.customMobileGroup.controls` | Array |  | ✔️ | Controls in the group. Only mobile buttons are supported.| 
+|`tabs.customMobileGroup.controls.id` | String | 250 characters | ✔️ | Specifies the ID of the control.| 
+|`tabs.customMobileGroup.controls.type` | String enum |  | ✔️ | Specifies the type of control. Currently only "MobileButton" is supported.|
+|`tabs.customMobileGroup.controls.label` | String | 32 characters | ✔️ | Specifies the label on the control.|
+|`tabs.customMobileGroup.controls.actionId` | String | 64 characters | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
+|`tabs.customMobileGroup.controls.icons` | Array | | ✔️ | Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
+|`tabs.customMobileGroup.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The possible sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icons's `scale` property. |
+|`tabs.customMobileGroup.controls.icons.url` | String | | ✔️ | The full, absolute URL of the icon's image file. |
+|`tabs.customMobileGroup.controls.icons.scale` | Number enum | | ✔️ | Specifies the UIScreen.scale property for iOS devices. The possible values are 1, 2, and 3. There must be exactly one of each value for each possible value of the icons's `size` property. |
 
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
