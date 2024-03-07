@@ -86,7 +86,7 @@ Here's some example scenario's and recommended notification types:
 |Quick poll on a preferred place for team lunch.|Interactive|Notification bot|
 |Interactive reminder to take a break and choose a music to play.|Interactive|Notification bot|
 
-:::image type="content" source="../../assets/images/app-notifications.png" alt-text="Screenshot shows you to choose your right notification framework for your app.":::
+:::image type="content" source="../../assets/images/app-notifications.png" alt-text="Screenshot shows you to choose your right notification framework for your app." lightbox="../../assets/images/app-notifications.png":::
 
 ## Next step
 
