@@ -64,23 +64,17 @@ Encourage users to respond to the sender with the information required for conti
 
 :::row-end:::
 
-You can also consider the following before you choose the notification for your app:
-
-* **Localization**: Activity notifications support with app manifest string localization. Templated text in your notification automatically translates into users’ preferred locale.  
-
-* **Batch send**: Activity notifications enable batch sending to up to 100 users in a single request, which is suitable for **announcement** type of notifications. You can also send a notification to all participants in a chat or channel. When you send a large number of notifications, activity notifications are faster than notification bot due to the higher throttling threshold in Graph APIs.
-
 ### Choose the right notification framework for your app
 
 When you create your apps, you must consider to enable notifications for your app to effectively engage and retain users in Teams.
 
 * What is the targeted user experience in Teams?
-   * Use Activity notifications when you want users to consume notifications in Activity & Main Pane. <br>
-   * Use Bot notifications when you want users to interact with Adaptive Card.
+  * Use Activity notifications when you want users to consume notifications in Activity & Main Pane. <br>
+  * Use Bot notifications when you want users to interact with Adaptive Card.
 
-* How do you expect users to interact with the notification? 
-   * Bot notifications should encourage conversations with the bot. <br>
-   * If no further conversation is expected between the user and bot, use Activity notifications instead.  
+* How do you expect users to interact with the notification?
+  * Bot notifications should encourage conversations with the bot. <br>
+  * If no further conversation is expected between the user and bot, use Activity notifications instead.  
 
 Here's some example scenario's and recommended notification types:
 
@@ -91,6 +85,8 @@ Here's some example scenario's and recommended notification types:
 |Proactive reminder to finish required a training course immediately.|Proactive|Activity notification|
 |Quick poll on a preferred place for team lunch.|Interactive|Notification bot|
 |Interactive reminder to take a break and choose a music to play.|Interactive|Notification bot|
+
+:::image type="content" source="../../assets/images/app-notifications.png" alt-text="Screenshot shows you to choose your right notification framework for your app.":::
 
 ## Next step
 
