@@ -1013,10 +1013,10 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
 |`alternateIcons`| Object | | | Specifies the main icons that are used to represent the in-market add-in in the insertion UX, AppSource, and the vertical task pane tab bar. |
 |`alternateIcons.icon`| Object |  | ✔️ | Specifies the size and URL of the image file that is used to represent the add-in. |
-|`alternateIcons.icon.size`| Number enum | | ✔️ | Specifies the size in pixels of the image. Possible values: `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. |
+|`alternateIcons.icon.size`| Number enum | | ✔️ | Specifies the size in pixels of the image. Possible values: `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. We recommend using `16`.|
 |`alternateIcons.icon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in. |
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies the size and URL of the image file that is used to represent the add-in on high DPI screens. |
-|`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size in pixels of the image. Possible values: `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. |
+|`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size in pixels of the image. Possible values: `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. We recommend using `64`.||
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. |
 
 ## actions
