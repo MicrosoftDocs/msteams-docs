@@ -76,6 +76,8 @@ When you create your apps, you must consider to enable notifications for your ap
   * Bot notifications should encourage conversations with the bot. <br>
   * If no further conversation is expected between the user and bot, use Activity notifications instead.  
 
+:::image type="content" source="../../assets/images/app-notifications.png" alt-text="Screenshot shows you to choose your right notification framework for your app." lightbox="../../assets/images/app-notifications.png":::
+
 Here's some example scenario's and recommended notification types:
 
 |Notification scenario|Notification type |Recommended notification|
@@ -85,8 +87,6 @@ Here's some example scenario's and recommended notification types:
 |Proactive reminder to finish required a training course immediately.|Proactive|Activity notification|
 |Quick poll on a preferred place for team lunch.|Interactive|Notification bot|
 |Interactive reminder to take a break and choose a music to play.|Interactive|Notification bot|
-
-:::image type="content" source="../../assets/images/app-notifications.png" alt-text="Screenshot shows you to choose your right notification framework for your app." lightbox="../../assets/images/app-notifications.png":::
 
 ## Next step
 
