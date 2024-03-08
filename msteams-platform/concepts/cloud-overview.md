@@ -1,7 +1,7 @@
 ---
-title: Government Clouds overview
+title: Government clouds overview
 author: v-preethah
-description: Understand Teams features and availability for GCC, GCC-High, and DOD tenants.
+description: Understand Teams features and capabilities available for GCC, GCC-High, and DOD tenants. Get an overview on how to deploy Teams in Government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 09/29/2023
@@ -62,7 +62,7 @@ To deploy Teams in a government cloud, you need to purchase a suitable Microsoft
 
 The following pointers helps you understand the basic outline to plan for a government cloud service and deploy Teams.
 
-* Determine the need of Government cloud for your organization and if it meets the eligibility requirements.
+* Determine the need of government cloud for your organization and if it meets the eligibility requirements.
 * Understand the capabilities available and disabled in the respective cloud tenant.
 * Review the admin and security settings for the respective cloud tenant.
 * Apply for the appropriate government cloud.
