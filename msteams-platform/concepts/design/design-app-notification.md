@@ -69,12 +69,12 @@ Encourage users to respond to the sender with the information required for conti
 When you create your apps, you must consider to enable notifications for your app to effectively engage and retain users in Teams.
 
 * What is the targeted user experience in Teams?
-  * Use Activity notifications when you want users to consume notifications in Activity & Main Pane. <br>
-  * Use Bot notifications when you want users to interact with Adaptive Card.
+  * Use Activity notifications when you want users to consume notifications in Activity and main pane. <br>
+  * Use notification bot when you want users to interact with Adaptive Card.
 
 * How do you expect users to interact with the notification?
-  * Bot notifications should encourage conversations with the bot. <br>
-  * If no further conversation is expected between the user and bot, use Activity notifications instead.  
+  * Notification bot must encourage conversations with the bot. <br>
+  * If no further conversation is expected between the user and bot, use activity notifications instead.  
 
 :::image type="content" source="../../assets/images/app-notifications.png" alt-text="Screenshot shows you to choose your right notification framework for your app." lightbox="../../assets/images/app-notifications.png":::
 
@@ -82,8 +82,8 @@ Here's some example scenario's and recommended notification types:
 
 |Notification scenario|Notification type |Recommended notification|
 |----|----|----|
-|If a vice president makes an announcement to be broadcasted to the entire organization.|Proactive|Activity notification|
-|Colleague mentions a team mate and requests to collaborate in a shared document.|Proactive|Activity notification|
+|If a vice president makes an announcement to be broadcasted to the entire organization.|Proactive|Activity notification |
+|Colleague mentions a team mate and requests to collaborate in a shared document.|Proactive|Activity notification |
 |Proactive reminder to finish required a training course immediately.|Proactive|Activity notification|
 |Quick poll on a preferred place for team lunch.|Interactive|Notification bot|
 |Interactive reminder to take a break and choose a music to play.|Interactive|Notification bot|
