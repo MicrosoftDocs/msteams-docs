@@ -1016,7 +1016,7 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.icon.size`| Number enum | | ✔️ | Specifies the size in pixels of the image. Possible values: `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. We recommend using `16`.|
 |`alternateIcons.icon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in. |
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies the size and URL of the image file that is used to represent the add-in on high DPI screens. |
-|`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size in pixels of the image. Possible values: `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. We recommend using `64`.||
+|`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | Specifies the size in pixels of the image. Possible values: `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. We recommend using `64`.|
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. |
 
 ## actions
