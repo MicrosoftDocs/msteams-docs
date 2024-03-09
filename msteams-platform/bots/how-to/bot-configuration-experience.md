@@ -76,9 +76,158 @@ You can enable the configuration settings for your bot as follows:
 
 #### Javascript code snippets
 
-The following code snippets shows an example of `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`:
+The following code snippets shows an example of `onInvokeActivity`, `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`:
 
-The `handleTeamsConfigFetch` method generates an Adaptive Card labeled `Bot Config Fetch` and offers two response alternatives an `auth` response, which suggests an action to launch a URL for authentication, and a `continue` response, which presents an Adaptive Card. The `handleTeamsConfigSubmit` method deals with the user's selection from the Adaptive Card and responds appropriately.
+`onInvokeActivity`: This function is used to handle the `config/fetch` and `config/submit` activities. When the `config/fetch` activity is invoked, an adaptive card is created using the `adaptiveCardForContinue()` function. The function then returns a response with a status of 200 and a body containing the adaptive card. If an error occurs, it is logged to the console. When the `config/submit` activity is invoked, the function checks the value of the choice variable. If the value is `continue`, an adaptive card is created using the `adaptiveCardForSubmit()` function and a response is returned with a status of 200 and a body containing the adaptive card. Otherwise, the function returns a response with a status of 200 and a body containing a message indicating the end of the process. If an error occurs, it is logged to the console.
+
+```javascript
+async onInvokeActivity(context) {
+  if (context._activity.name == "config/fetch"){
+    const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
+    try {  
+      return {
+        status: 200,
+        body:{
+          config: {
+            type: 'continue',
+            value: {
+              card: adaptiveCard,
+              height: 400,
+              title: 'Config continue response',
+              width: 300
+            }
+          }
+        }
+      }     
+    }
+    catch (e) {
+      console.log(e);
+    }    
+  }
+
+  if (context._activity.name == "config/submit"){
+    const choice = context._activity.value.data.choiceselect;
+    if(choice==="continue"){
+      const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForSubmit());              
+      return {
+        status: 200,
+        body:{
+          config: {
+            type: 'continue',
+            value: {
+              card: adaptiveCard,
+              height: 400,
+              title: 'Task module submit response',
+              width: 300
+            }
+          }
+        }
+      }
+    } else {
+      try {         
+        return {
+          status: 200,
+          body:{
+            config: {
+              type: 'message',
+              value: "end"
+            }
+          }
+        }
+      } catch (e) {
+        console.log(e);
+      }
+    }
+    return await super.onInvokeActivity(context);
+  }
+}
+
+adaptiveCardForContinue = () => ({
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "text": "Please choose bot set up option",
+      "wrap": true,
+      "type": "TextBlock"
+    },
+    {
+      "columns": [
+        {
+          "width": "auto",
+          "items": [
+            {
+              "text": "Option: ",
+              "wrap": true,
+              "height": "stretch",
+              "type": "TextBlock"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    },
+    {
+      "columns": [
+        {
+          "width": "stretch",
+          "items": [
+            {
+              "choices": [
+                {
+                  "title": "Continue with more options",
+                  "value": "continue"
+                },
+                {
+                  "title": "Finish setting up bot",
+                  "value": "finish"
+                }
+              ],
+              "style": "filtered",
+              "placeholder": "Search for an option",
+              "id": "choiceselect",
+              "type": "Input.ChoiceSet"
+            }
+          ],
+          "type": "Column"
+        }
+      ],
+      "type": "ColumnSet"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "id": "submit",
+      "title": "Submit"
+    }
+  ]
+});
+
+adaptiveCardForSubmit= () => ({
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.2",
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "text": "Please hit submit to continue setting up bot",
+      "wrap": true,
+      "type": "TextBlock"
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Submit",
+      "id": "submitdynamic",
+      "title": "Submit"
+    }
+  ]
+});
+```
+
+`handleTeamsConfigFetch` and `handleTeamsConfigSubmit`: The `handleTeamsConfigFetch` method generates an Adaptive Card labeled `Bot Config Fetch` and offers two response alternatives an `auth` response, which suggests an action to launch a URL for authentication, and a `continue` response, which presents an Adaptive Card. The `handleTeamsConfigSubmit` method deals with the user's selection from the Adaptive Card and responds appropriately.
 
 ```javascript
 async handleTeamsConfigFetch(_context, _configData) {
