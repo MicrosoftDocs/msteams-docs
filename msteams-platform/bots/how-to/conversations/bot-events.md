@@ -22,14 +22,12 @@ When an event occurs, activity handlers can identify the activity and forward it
 
 `{Image is a place holder will share it for development as per design standards post SME approval}`
 
-By receiving the event, bot can either save the event or respond and communicate back with the user through [invoke activity](~/bots/how-to/conversations/bot-invoke-activity.md). Adding invoke activity to the handler logic helps the bot to customize its logic and reuse existing activities for different events.
-
 The following table outlines which communication concept to use in different scenarios:
 
-|Comunication flow| Use| Scenario |
+|Comunication flow| Concept| Description |
 |---|---| --- |
-| User **->** Bot| [Activity handler](#events-with-activity-handlers) |Activity handlers are used when you want your bot to be notified when a user performs an event.|
-| User **<->** Bot| [Activity handler](#events-with-activity-handlers) + [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Receive the event and share a response back to the user based on the event.|
+| User **->** Bot| [Event activity handler](#events-with-activity-handlers) |Activity handlers are used when you want your bot to be notified when a user performs an event.|
+| User **<->** Bot| [Invoke activity handler + Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Invoke activity handlers are used when you want your bot to be notified when a user performs an event and respond back to the user based on the event through invoke activities.|
 
 To create event-driven conversations, you must define the associated handlers that the bot will use with the event.
 
