@@ -16,21 +16,21 @@ Teams offers the following notification frameworks for your app:
 :::row:::
    :::column span="":::
 
-### Activity notification
+### Activity feed notification
 
 Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates. It allows your apps to provide rich and better user experiences with the latest updates on the tools and workflows.
 <br><br>
-Users can read the activity notifications in the preview within Teams activity pane. If the preview captures the user’s interest, they can select the notification to view the content in the Teams main pane.
+Users can read the activity feed notifications in the preview within Teams activity pane. If the preview captures the user’s interest, they can select the notification to view the content in the Teams main pane.
 
    :::column-end:::
 
    :::column span="":::
 
-### Notification bot
+### Interactive notification bot
 
-Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal chat, a group chat, or a channel. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request.
+Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal chat, a group chat, or a channel. An interactive notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request.
 <br><br>
-Users can read the bot notification in an Adaptive Card. When a notification bot sends a message, the bot conversation is highlighted in bold or dotted in the Teams chat.
+Users can read the bot notification in an Adaptive Card. When an interactive notification bot sends a message, the bot conversation is highlighted in bold or dotted in the Teams chat.
 
    :::column-end:::
 
@@ -41,7 +41,7 @@ Teams main pane has larger surface than Adaptive Card to load more assets in a t
 
 ## Notification Types
 
-Based on your requirements between activity notification and notification bot, you must evaluate and understand whether your notifications must be proactive or interactive.
+Based on your requirements between activity feed notification and interactive notification bot, you must evaluate and understand whether your notifications must be proactive or interactive.
 
 :::row:::
    :::column span="":::
@@ -56,7 +56,7 @@ Informs users about news, events, requests, and reminders that require users’ 
 
 ### Interactive notifications
 
-Encourage users to respond to the sender with the information required for continuous communication. <br> If you need to send notifications that are interactive and require quick response in a light weighted and highly customizable cards, **Notification bot** is the recommended framework.
+Encourage users to respond to the sender with the information required for continuous communication. <br> If you need to send notifications that are interactive and require quick response in a light weighted and highly customizable cards, **Interactive Notification bot** is the recommended framework.
 
    :::column-end:::
 
@@ -68,13 +68,13 @@ When you create your apps, enable notifications for your app to engage and retai
 
 What is the targeted user experience in Teams?
 
-* Use activity notifications when you want users to consume notifications in activity and main pane.<br>
-* Use notification bot when you want users to interact with Adaptive Card.
+* Use activity feed notifications when you want users to consume notifications in activity and main pane.<br>
+* Use interactive notification bot when you want users to interact with Adaptive Card.
 
 How do you expect users to interact with the notification?
 
-* Use activity notifications, when there's no further conversation is expected between the user and bot.
-* Use notification bot to encourage conversations with the bot.
+* Use activity feed notifications, when there's no further conversation is expected between the user and bot.
+* Use interactive notification bot to encourage conversations with the bot.
 
 :::image type="content" source="../../assets/images/app-notifications.png" alt-text="Screenshot shows you to choose your right notification framework for your app." lightbox="../../assets/images/app-notifications.png":::
 
@@ -98,4 +98,4 @@ If you want a proactive notification for your app, go to:
 If you want an interactive notification for your app, go to:
 
 > [!div class="nextstepaction"]
-> [Notification bot in Teams](../../bots/how-to/conversations/notification-bot-in-teams.md)
+> [Interactive notification bot in Teams](../../bots/how-to/conversations/interactive-notification-bot-in-teams.md)
