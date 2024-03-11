@@ -934,7 +934,7 @@
       },
       {
         "source_path": "msteams-platform/bots/how-to/conversations/notification-bot-in-teams.md",
-        "redirect_url": "msteams-platform/bots/how-to/conversations/interactive-notification-bot-in-teams"
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/interactive-notification-bot-in-teams"
       }      
     ]
 }
