@@ -63,7 +63,7 @@ Understanding the user and their concern is the first indicator of how a Teams a
 * Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
 * Use Developer Portal to configure, manage, and deploy your app.
 
-### Government clouds
+### Government Community Cloud
 
 Apart from the commercial cloud that Teams resides on, there are three types of government clouds:
 
