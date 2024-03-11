@@ -23,13 +23,13 @@ Here's what you'll learn in this module:
     1. If you want to build a message extension app:
 
     > [!div class="nextstepaction"]
-    > [Build message extension](build-message-extension.md)<br>
-
+    > [Build message extension](build-message-extension.md)
+<br>
     2. If you want to build a tab app:
 
     > [!div class="nextstepaction"]
-    > [Build your basic tab app](build-basic-tab-app.md)<br>
-
+    > [Build your basic tab app](build-basic-tab-app.md)
+<br>
     3. If a bot is what you're interested in:
 
     > [!div class="nextstepaction"]
