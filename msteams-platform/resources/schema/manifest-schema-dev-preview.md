@@ -524,7 +524,9 @@ Each command item is an object with the following structure:
 |`parameter.choices`|Array of objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
 |`parameter.choices.title`|String|128 characters||Title of the choice.|
 |`parameter.choices.value`|String|512 characters||Value of the choice.|
-|`apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response.  |
+|`samplePrompts`|`samplePrompt[]`|5 Objects|No|Property used to provide sample prompts supoorted by the plugin.|
+|`samplePrompts.text`|string|128 characters|Yes|Content of the sample prompt.|
+|`apiResponseRenderingTemplateFile`|String|2048 characters|| Relative path to the [response rendering template](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json) used to format the JSON response from developer’s API to Adaptive Card response. |
 
 ## scopeConstraints
 
