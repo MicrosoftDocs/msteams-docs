@@ -1,5 +1,5 @@
 ---
-title: Create a channel tab or group tab
+title: Create a configurable tab
 description: Create custom channel, group tab with Node.js, ASP.NET Core, ASP.NET Core MVC. Generate app, create package, build and run app, secret tunnel, upload to Teams and build your first app using Blazor
 ms.localizationpriority: high
 ms.topic: quickstart
@@ -7,9 +7,51 @@ zone_pivot_groups: teams-app-environment-blazor
 ms.date: 02/27/2023
 ---
 
-# Create a channel tab or group tab
+# Create a configurable tab
 
-Channel or group tabs deliver content to channels and group chats, which help to create collaborative spaces around dedicated web-based content.
+Configurable tab deliver content to channels and group chats, which help to create collaborative spaces around dedicated web-based content.
+
+## Migrate your configurable tab to static tab
+
+> [!NOTE]
+>
+> * Migrating your configurable tab to static tab is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+> * To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
+
+Static tabs behave more like apps as they are pinnable and unified with optional configuration. Static tabs also support group chat, channels, and meetings. By migrating your configurable tab to static tab, you can build a single tab that works across different scopes, providing a consistent and focused experience. If you have both configurable tab and static tab defined in your app manifest for a specific scope, Teams pins the static tab by default. For more information, see [tabs](~/tabs/what-are-tabs.md).
+
+You can update your existing configurable tab to static tab and add different scopes to the static tab. To change your configurable tab to static tab:
+
+1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space.
+1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
+
+   ```json
+   "staticTabs": [ 
+     { 
+     "entityId": "homeTab", 
+     "scopes": [ 
+       "personal",  
+       "groupChat",
+       "team"
+      ], 
+     "context": [ 
+       "personalTab", 
+       "privateChatTab", 
+       "meetingChatTab", 
+       "meetingDetailsTab", 
+       "meetingSidePanel", 
+       "meetingStage" 
+      ], 
+      "name": "Contoso", 
+      "contentUrl": "https://contoso.com/content (displayed in Teams canvas)", 
+      "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
+     }
+   ],
+   ```
+
+    For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab.](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-and-meetings)
+
+If your app supports [configurable tab,](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) then you must continue to keep the `configurableTab` property in your app manifest to ensure the backward compatibility of previously pinned tabs. As you can only pin static tabs from now, it's important that previous configurable tabs continue to be supported.
 
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your channel or group tab.
 
@@ -1023,48 +1065,6 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
-
-## Migrate your configurable tab to static tab
-
-> [!NOTE]
->
-> * Migrating your configurable tab to static tab is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-> * To migrate your configurable tab to static tab, use the app manifest v1.16 or later.
-
-Static tabs behave more like apps as they are pinnable and unified with optional configuration. Static tabs also support group chat, channels, and meetings. By migrating your configurable tab to static tab, you can build a single tab that works across different scopes, providing a consistent and focused experience. If you have both configurable tab and static tab defined in your app manifest for a specific scope, Teams pins the static tab by default. For more information, see [tabs](~/tabs/what-are-tabs.md).
-
-You can update your existing configurable tab to static tab and add different scopes to the static tab. To change your configurable tab to static tab:
-
-1. Move your configuration logic out of your `configurationUrl` code space to your `contentUrl` code space.
-1. Add the `staticTabs` property to your [app manifest](~/resources/schema/manifest-schema.md#statictabs) with `scopes` and `context` parameters. Following is an example of app manifest where a static tab is defined that works in all scopes and contexts in Teams:
-
-   ```json
-   "staticTabs": [ 
-     { 
-     "entityId": "homeTab", 
-     "scopes": [ 
-       "personal",  
-       "groupChat",
-       "team"
-      ], 
-     "context": [ 
-       "personalTab", 
-       "privateChatTab", 
-       "meetingChatTab", 
-       "meetingDetailsTab", 
-       "meetingSidePanel", 
-       "meetingStage" 
-      ], 
-      "name": "Contoso", 
-      "contentUrl": "https://contoso.com/content (displayed in Teams canvas)", 
-      "websiteUrl": "https://contoso.com/content (displayed in web browser)" 
-     }
-   ],
-   ```
-
-    For more information, see [configuration page](~/tabs/how-to/create-tab-pages/configuration-page.md) and [static tab.](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-and-meetings)
-
-If your app supports [configurable tab,](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) then you must continue to keep the `configurableTab` property in your app manifest to ensure the backward compatibility of previously pinned tabs. As you can only pin static tabs from now, it's important that previous configurable tabs continue to be supported.
 
 ## Next step
 
