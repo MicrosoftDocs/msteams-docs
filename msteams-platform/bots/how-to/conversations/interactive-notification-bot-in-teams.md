@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Interactive notification bot in Teams
 
-There are several ways to engage users with notifications in Teams including activity Feeds, through bots, or webhooks. For guidance on which method is best for your app, see notification for your app.
+There are several ways to engage users with notifications in Teams including activity feeds, through bots, or webhooks. For guidance on which method is best for your app, see [build notification for your app](../../../concepts/design/design-app-notifications.md)
 
 Microsoft Teams Toolkit enables you to build applications that capture events and send them as interactive notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
