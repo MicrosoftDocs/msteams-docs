@@ -81,9 +81,9 @@ For more information to map the paid functionality to your offer and publish, se
 
 After linking the offer to your app, you can submit your monetized app through Partner Center to validate and publish. Perform the following prevalidation checks before submission:
 
-* Ensure your app adheres to the [store validation guidelines](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines).
-* [Prepare for store submission](/microsoftteams/platform/concepts/deploy-and-publish/appsource/prepare/submission-checklist).
-* [Perform the required prechecks](/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish) before submission.
+* Ensure your app adheres to the [store validation guidelines](teams-store-validation-guidelines.md).
+* [Prepare for store submission](submission-checklist.md).
+* [Perform the required prechecks](../publish.md).
 * [Submit app for validation](/office/dev/store/add-in-submission-guide).
 
 > [!IMPORTANT]
