@@ -10,17 +10,17 @@ ms.date: 12/09/2022
 
 # Understand your use cases
 
-In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges the gap in achieving effective collaboration is a great fit.
+In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges the gap in achieving effective collaboration.
 
 The app user and their app's requirements are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
 
-If you're going to meet user requirements with your app, you first need to understand them.
+If you're going to meet user requirements with your app, you first need to understand your users.
 
 * **Understand your user**:
   * Recognize user issues and identify the solutions to some common problems the users face.
   * Build your Teams app by finding the right combination of Teams features to meet your user's needs.
   * Understand use cases to know how an end-user interacts with your app.
-  * It's recommended to go through the learn module [how to publish your app to Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/) to help with your app to pass the Teams Store submission process.
+  * Go through the learn module [how to publish your app to Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/) to ensure your app passes the Teams Store submission process.
 
 * **Understand the problem**: Work out the core problem your app must solve.
 
@@ -161,7 +161,7 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 > [!NOTE]
 > Teams Store has evolved:
 >
-> Previously, the custom apps built for your org (LOB apps) were updated by selecting the ellipses on the tile. With the updated Teams Store experience, you can now update the custom apps built for your org (LOB apps)  by logging in to the [Teams Admin Centre](https://admin.teams.microsoft.com).
+> Previously, custom apps built for your org (LOB apps) were updated by selecting the ellipses on the tile. With the updated Teams Store experience, you can now update the custom apps built for your org (LOB apps) by signing in to the [Teams Admin Center](https://admin.teams.microsoft.com).
 
 ### App scope
 

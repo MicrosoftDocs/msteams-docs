@@ -939,6 +939,18 @@
       {
         "source_path": "msteams-platform/overview-story.md",
         "redirect_url": "msteams-platform/overview.md"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-basic-tab-app.md",
+        "redirect_url": "msteams-platform/get-started/build-your-first-app.md"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-notification-bot.md",
+        "redirect_url": "msteams-platform/get-started/build-your-first-app.md"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-message-extension.md",
+        "redirect_url": "msteams-platform/get-started/build-your-first-app.md"
       }
     ]
 }

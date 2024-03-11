@@ -49,7 +49,7 @@ To create a search-based message extension app with GitHub Codespaces, follow th
 
 3. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/get-started/codespace/me-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/me-sign-in.png":::
+   :::image type="content" source="../assets/images/get-started/codespace/me-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/codespace/me-sign-in.png":::
 
     > [!NOTE]
     >
