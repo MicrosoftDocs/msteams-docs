@@ -25,7 +25,7 @@ The following table outlines which communication concept to use:
 
 |Comunication flow| Concept| Description |
 |---|---| --- |
-| User **->** Bot| [Event activity handler](#events-with-activity-handlers) |Activity handlers are used when you want your bot to be notified when a user performs an event.|
+| User **->** Bot| [Event activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) |Activity handlers are used when you want your bot to be notified when a user performs an event.|
 | User **<->** Bot| [Invoke activity handler + Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Invoke activity handlers are used when you want your bot to be notified when a user performs an event and respond back to the user based on the event through invoke activities.|
 
 Teams activity handler is derived from [Bot Framework's activity handler](~/bots/how-to/conversations/bot-events.md#bot-framework-activity-handler). The two primary Teams activity handlers are as follows:
