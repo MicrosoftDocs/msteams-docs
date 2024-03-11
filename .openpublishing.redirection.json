@@ -931,6 +931,10 @@
       {
         "source_path": "msteams-platform/toolkit/teamsfx-cli.md",
         "redirect_url": "msteams-platform/toolkit/Teams-Toolkit-CLI"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/notification-bot-in-teams.md",
+        "redirect_url": "msteams-platform/bots/how-to/conversations/interactive-notification-bot-in-teams"
       }      
     ]
 }

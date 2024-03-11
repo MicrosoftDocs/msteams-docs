@@ -501,8 +501,8 @@
   - name: Send activity feed notifications
     href: tabs/send-activity-feed-notification.md
     displayName: activity feed, notification, customize notification
-  - name: Notification bot in Teams
-    href: bots/how-to/conversations/notification-bot-in-teams.md
+  - name: Interactive notification bot in Teams
+    href: bots/how-to/conversations/interactive-notification-bot-in-teams.md
     displayName: Adapter, notification, bot
 - name: Build message extensions
   items:
