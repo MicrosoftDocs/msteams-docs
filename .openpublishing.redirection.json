@@ -934,11 +934,11 @@
       },
       {
         "source_path": "msteams-platform/get-started/build-notification-bot.md",
-        "redirect_url": "msteams-platform/get-started/build-interactive-notification-bot"
+        "redirect_url": "/microsoftteams/platform/get-started/build-interactive-notification-bot"
       },
       {
         "source_path": "msteams-platform/bots/how-to/conversations/notification-bot-in-teams.md",
-        "redirect_url": "msteams-platform/bots/how-to/conversations/interactive-notification-bot-in-teams"
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/interactive-notification-bot-in-teams"
       }
     ]
 }

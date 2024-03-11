@@ -144,7 +144,7 @@ Suggestion: Options that help determine the best distribution model.
 <details>
 <summary>Plan for app notifications</summary>
 
-You can send notifications to Microsoft Teams users in multiple ways. Notification is a simple way to engage users regularly. For more information, see design app notifications.
+You can send notifications to Teams users in multiple ways. Notification is a simple way to engage users regularly. For more information, see design app notifications (link to be added).
 
 </details>
 
