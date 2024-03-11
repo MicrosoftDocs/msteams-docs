@@ -18,10 +18,9 @@ Teams offers the following notification frameworks for your app:
 
 ### Activity notification
 
-* Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates. <br>
-* It allows your apps to provide rich and better user experiences with the latest updates on the tools and workflows.
-<br>
-* Users can read the activity notifications in the preview within Teams activity pane. If the preview captures the user’s interest, they can select the notification to view the content in the Teams main pane.
+Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates. It allows your apps to provide rich and better user experiences with the latest updates on the tools and workflows.
+<br><br>
+Users can read the activity notifications in the preview within Teams activity pane. If the preview captures the user’s interest, they can select the notification to view the content in the Teams main pane.
 
    :::column-end:::
 
@@ -29,10 +28,9 @@ Teams offers the following notification frameworks for your app:
 
 ### Notification bot
 
-* Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal chat, a group chat, or a channel. <br>
-* The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request.
-<br>
-* Users can read the bot notification in an Adaptive Card. When a notification bot sends a message, the bot conversation is highlighted in bold or dotted in the Teams chat.
+Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal chat, a group chat, or a channel. The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request.
+<br><br>
+Users can read the bot notification in an Adaptive Card. When a notification bot sends a message, the bot conversation is highlighted in bold or dotted in the Teams chat.
 
    :::column-end:::
 
@@ -68,37 +66,15 @@ Encourage users to respond to the sender with the information required for conti
 
 When you create your apps, enable notifications for your app to engage and retain users within Teams. Consider the following questions to determine the right notification framework for your app:
 
-* What is the targeted user experience in Teams?
-:::row:::
-   :::column span="":::
+What is the targeted user experience in Teams?
 
-    Use activity notifications when you want users to consume notifications in activity and main pane.
+* Use activity notifications when you want users to consume notifications in activity and main pane.<br>
+* Use notification bot when you want users to interact with Adaptive Card.
 
-   :::column-end:::
+How do you expect users to interact with the notification?
 
-   :::column span="":::
-
-    Use notification bot when you want users to interact with Adaptive Card.
-
-   :::column-end:::
-
-:::row-end:::
-
-* How do you expect users to interact with the notification?
-:::row:::
-   :::column span="":::
-
-    Use activity notifications, when there's no further conversation is expected between the user and bot.
-
-   :::column-end:::
-
-   :::column span="":::
-
-    Use notification bot to encourage conversations with the bot.
-
-   :::column-end:::
-
-:::row-end:::
+* Use activity notifications, when there's no further conversation is expected between the user and bot.
+* Use notification bot to encourage conversations with the bot.
 
 :::image type="content" source="../../assets/images/app-notifications.png" alt-text="Screenshot shows you to choose your right notification framework for your app." lightbox="../../assets/images/app-notifications.png":::
 
