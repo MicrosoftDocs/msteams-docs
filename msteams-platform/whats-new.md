@@ -24,13 +24,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 February**
+**2024 March**
 
-* ***February 28, 2024*** : [Extend a Teams meeting app to work with Outlook.](m365-apps/extend-m365-meeting-app.md)
-* ***February 28, 2024***: [Design Teams app lightbox view to emphasize important information.](concepts/design/design-teams-app-light-box-view.md)
-* ***February 15, 2024***: [Share to Teams from personal app or tab for mobile clients.](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)
-* ***February 01, 2024***: [Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365.](m365-apps/cards-loop-component.md)
-* ***February 01, 2024***: [Use application RSC permissions for chat scope.](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting)
+* ***March 07, 2024***: [Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-vs.md)
+* ***March 07, 2024***: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)
 
 :::column-end:::
 :::row-end:::
@@ -44,6 +41,11 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|28/02/2024|Extend a Teams meeting app to work with Outlook.|Extend your app across Microsoft 365 > [Extend a Teams meeting app to Outlook](m365-apps/extend-m365-meeting-app.md)|
+|28/02/2024|Design Teams app lightbox view to emphasize important information.|Design your app > UI components > [Lightbox view](concepts/design/design-teams-app-light-box-view.md)|
+|15/02/2024|Share to Teams from personal app or tab for mobile clients.|Integrate with Teams > Share to Teams > [Share to Teams from personal app or tab](concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md)|
+|01/02/2024|Use Adaptive Card-based Loop components to build collaborative experiences within Teams message extensions that work across Microsoft 365.|Extend your app across Microsoft 365 > [Adaptive Card-based Loop components](m365-apps/cards-loop-component.md)|
+|01/02/2024|Use application RSC permissions for chat scope.|Utilize Teams data with Microsoft Graph > Resource-specific consent > [RSC permissions for a chat or meeting](graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting)|
 |25/01/2024|Use Micro-capability templates to show rich unfurl previews of your links without installing your app in Microsoft Teams.|Build message extension > Build message extensions using Bot Framework > [Micro-capabilities for website links](messaging-extensions/how-to/micro-capabilities-for-website-links.md)|
 |24/01/2024|Introduced advanced step-by-step guide to learn how to debug your AI chat bot using Teams App Test Tool.|[Debug your AI chat bot using Teams App Test Tool](sbs-teams-app-test-tool.yml)|
 |19/01/2024|Use / to invoke message extensions from command box in the new Teams client.|Build message extension > [Build message extensions using Bot Framework](messaging-extensions/build-bot-based-message-extension.md)|
@@ -404,6 +406,17 @@ Developer preview is a public program that provides early access to unreleased T
 </br>
 
 <details>
+<summary><b>2024</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+|25/01/2024| Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content. | Extend your app across Microsoft 365 > [Actions in Microsoft 365](m365-apps/actions-in-m365.md)|
+|12/01/2024| Introduced Teams Toolkit command line interface v3. | [Teams Toolkit command line interface](toolkit/Teams-Toolkit-CLI.md)|
+
+</details>
+</br>
+
+<details>
 <summary><b>2023</b></summary>
 
 | **Date** | **Update** | **Find here** |
@@ -439,7 +452,7 @@ Developer preview is a public program that provides early access to unreleased T
 |05/12/2022| Use share in meeting to share any document or third-party app to the meeting stage.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
 |10/11/2022| Enable bots to receive all conversation messages without being @mentioned in relevant contexts.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
 | 09/23/2022 | Use apps in Teams meetings scheduled through public channels. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
-| 08/23/2022 | Share apps to the Teams meeting stage in mobile. | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
+| 08/23/2022 | Share apps to the Teams meeting stage in mobile. | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
 | 08/03/2022 | Use toggle incoming audio API to toggle the incoming audio state setting for the user in Teams meeting stage from mute to unmute or vice-versa. | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Use Collaboration controls to build custom collaborative experiences and integrate with Microsoft 365 services. | Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
 |05/24/2022| Use Live Share to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
