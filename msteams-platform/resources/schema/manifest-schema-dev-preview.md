@@ -218,7 +218,12 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
     "isFullScreen": {
         "default": "A true or false value indicating whether a personal app is rendered without a tab header-bar"
     },
-
+    "defaultBlockUntilAdminAction": {
+        "default": "A true or false value indicating whether an app is blocked by default until admin allows it"
+    },
+    "publisherDocsUrl": {
+        "url": "The url to the page that provides additional app information for the admins"
+    },
     "scopeConstraints": {
         "teams": "A list of team thread ids to which your app is restricted to",
         "groupChats": "A list of chat thread ids to which your app is restricted to"
@@ -236,6 +241,24 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
                 }
             ]
         }
+    },
+    "extensions": [
+        "requirements",
+        "runtimes",
+        "ribbons",
+        "autoRunEvents",
+        "alternates",
+        "audienceClaimUrl"
+    ],
+    "actions": {
+        "description": "Actions node contains an array of actions object.",
+            [
+                "id": "A unique identifier string in the default locale that is used to catalog actions.",
+                "intent": "An enum string that describes the intent of the action.",
+                "displayName": "A display name for the action.",
+                "description": "A display string in the default locale to represent the action.",
+                "handlers": "Defining how actions can be handled"
+            ]
     },
     "configurableProperties": [
         "name",
