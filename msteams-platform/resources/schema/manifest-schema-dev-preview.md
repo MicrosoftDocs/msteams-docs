@@ -216,7 +216,7 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "default": "A true or flase value indicating whether or not show loading indicator when app/tab is loading"
     },
     "isFullScreen": {
-        "default": "A true o false value indicating whether a personal app is rendered without a tab header-bar"
+        "default": "A true or false value indicating whether a personal app is rendered without a tab header-bar"
     },
 
     "scopeConstraints": {
