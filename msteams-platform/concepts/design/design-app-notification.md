@@ -39,7 +39,7 @@ Users can read the bot notification in an Adaptive Card. When an interactive not
 <br>
 Teams main pane has larger surface than Adaptive Card to load more assets in a tab app or a Personal app. If your app already has tab or personal app, we don't recommend building a bot only for sending notifications.
 
-## Notification Types
+## Notification types
 
 Based on your requirements between activity feed notification and interactive notification bot, you must evaluate and understand whether your notifications must be proactive or interactive.
 
@@ -48,7 +48,7 @@ Based on your requirements between activity feed notification and interactive no
 
 ### Proactive notifications
 
-Informs users about news, events, requests, and reminders that require users’ immediate attention or specific actions. <br> If you need to send notifications that are proactive, attention-grabbing alert, announcements, reminders, and action-needed requests, **Activity notifications** is the recommended framework.
+Informs users about news, events, requests, and reminders that require users’ immediate attention or specific actions. <br><br> If you need to send notifications that are proactive, attention-grabbing alert, announcements, reminders, and action-needed requests, **Activity notifications** is the recommended framework.
 
    :::column-end:::
 
@@ -56,7 +56,7 @@ Informs users about news, events, requests, and reminders that require users’ 
 
 ### Interactive notifications
 
-Encourage users to respond to the sender with the information required for continuous communication. <br> If you need to send notifications that are interactive and require quick response in a light weighted and highly customizable cards, **Interactive Notification bot** is the recommended framework.
+Encourage users to respond to the sender with the information required for continuous communication. <br><br> If you need to send notifications that are interactive and require quick response in a light weighted and highly customizable cards, **Interactive notification bot** is the recommended framework.
 
    :::column-end:::
 
