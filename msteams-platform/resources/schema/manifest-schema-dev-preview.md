@@ -1060,7 +1060,7 @@ Defines a single dashboard card and its properties.
 |`id`| String | | ✔️ |  A unique identifier for this dashboard card. The ID must be a GUID. |
 |`displayName`| String | 255 characters | ✔️ | Display name of the card.|
 |`description`| String | 255 characters | ✔️ | Description of the card.|
-|`pickerGroupId`| String | | ✔️ | ID of the group in the card picker. ID must be a GUID.|
+|`pickerGroupId`| String | | ✔️ | ID of the group in the card picker. The ID must be a GUID. |
 |`icon`| Object | | | Specifies icon for the card. |
 |`contentSource`| Object | | ✔️ | Specifies the source of the card's content |
 |`defaultSize`| String | | ✔️ | Rendering size for the dashboard card. Options: `medium` or `large`. |
