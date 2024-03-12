@@ -57,7 +57,7 @@ For example, in your app manifest if you set your tab *configurationUrl* attribu
 * They're a member of the Microsoft 365 group with ID **00209384-etc**.
 * The user has set their Teams theme to **dark**.
 
-Teams will call the following URL when configuring the tab:
+Teams call the following URL when configuring the tab:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -307,6 +307,7 @@ The following fields are changed when your content page is in a private channel:
 * `sharepointSite.url`: Set to the URL of a distinct, unique SharePoint site for the private channel
 * `sharepointSite.path`: Set to the path of a distinct, unique SharePoint site for the private channel
 * `sharepointSite.domain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
+* `channel.ownerGroupId`: The value of a private channel is the groupId of the team that hosts it.
 
 If your page makes use of any of these values, the value of `channel.membershipType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
 
@@ -369,7 +370,7 @@ The following image shows the dark theme option in the Teams:
 
 ## Code sample
 
-| Sample name           | Description | Javascript|
+| Sample name           | Description | JavaScript|
 :---------------------|:--------------|:---------|
 |Tab channel context|This sample shows how to use the contents of tab context object in a private and shared channel. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-channel-context/nodejs)
 
