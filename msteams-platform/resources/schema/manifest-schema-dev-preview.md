@@ -1047,9 +1047,9 @@ Required if the handler type is `openPage`. Object containing metadata of the pa
 
 **Optional** &ndash; Array
 
-Defines a list of cards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information. To learn more about creating cards for Viva Connections Dashboard, see [Overview of Bot Powered Adaptive Card Extensions](/sharepoint/dev/spfx/viva/bot-powered/overview-bot-powered-aces).
+Defines a list of cards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information. For more information on creating cards for Viva Connections Dashboard, see [overview of Bot Powered Adaptive Card Extensions](/sharepoint/dev/spfx/viva/bot-powered/overview-bot-powered-aces).
 
-This item is an array of `dashboardCard` elements of type `object`.
+The `dashboardCards` property is an array of elements of the type `object`.
 
 ### dashboardCards.dashboardCard
 
