@@ -412,6 +412,12 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
   "composeExtensions": [
     {
       "composeExtensionType": "apiBased",
+      "authorization": {
+        "authType": "microsoftEntra",
+        "microsoftEntraConfiguration": {
+            "supportsSingleSignOn": true,          
+        }
+      },
       "apiSpecificationFile": "aitools-openapi.yml",
       "commands": [
         {
