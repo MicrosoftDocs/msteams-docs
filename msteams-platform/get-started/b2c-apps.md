@@ -10,8 +10,8 @@ ms.topic: reference
 
 Microsoft Teams delivers business-to-consumer (B2C) communication out-of-the-box. For example, mortgage officers at a bank can use Teams meetings to host virtual appointments with their customers. Customers can join those meetings in three ways:
 
-- Microsoft Teams native apps or desktop website
-- Dialing into the meeting's telephone number
+- Microsoft Teams native apps or desktop website (out-of-the-box)
+- Dialing into the meeting's telephone number (out-of-the-box)
 - Custom applications that interoperate with Teams calling and meetings
 
 Embedding Teams interoperability in your own customer-facing website or native app enables tailored customer experiences. You can build websites that work on both mobile and desktop browsers. Or native iOS, Android, and Windows apps. All while preserving the benefits of using Teams for employee experiences: employee familiarity, Teams co-pilot, extensibility through Teams apps and bots, and Microsoft 365 security and compliance.
