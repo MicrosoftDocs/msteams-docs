@@ -1057,7 +1057,7 @@ Defines a single dashboard card and its properties.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`| String | | ✔️ |  A unique identifier for this dashboard card. ID must be a GUID. |
+|`id`| String | | ✔️ |  A unique identifier for this dashboard card. The ID must be a GUID. |
 |`displayName`| String | 255 characters | ✔️ | Display name of the card.|
 |`description`| String | 255 characters | ✔️ | Description of the card.|
 |`pickerGroupId`| String | | ✔️ | ID of the group in the card picker. ID must be a GUID.|
