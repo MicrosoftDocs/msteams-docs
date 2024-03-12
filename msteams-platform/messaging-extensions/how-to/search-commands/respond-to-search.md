@@ -91,6 +91,87 @@ Your service must respond with the results matching the user query. The response
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
+### Configuration response
+
+Following code is an example for Message extension configuration:
+
+```json
+{
+    "name": "composeExtension/submitAction",
+    "type": "invoke",
+    "timestamp": "2024-03-08T14:10:47.575Z",
+    "localTimestamp": "2024-03-08T19:40:47.575+05:30",
+    "id": "f:7dfe18de-94e3-9f38-5d44-adeb31cd8243",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "from": {
+        "id": "29:1PBlnIsEROUYzpFjULDVodMHrnpujmfhBdQAf0pcO1EkaDkhI0_Pj_ql-jZUYOGdSc3_KcqaIIjzbleraVJ2Z3g",
+        "name": "MOD Administrator",
+        "aadObjectId": "ce9def33-d7fc-444c-8728-be1f95e6b6f2"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "groupChat",
+        "tenantId": "4ad59956-0f88-4b88-a9d0-570b6eb4e66b",
+        "id": "19:1dd50ba7-e5bd-46ea-b34e-80a415148de7_ce9def33-d7fc-444c-8728-be1f95e6b6f2@unq.gbl.spaces"
+    },
+    "recipient": {
+        "id": "28:9a2b01fc-88c1-40e1-bf87-5079c8e35626",
+        "name": "PSDAzureBot"
+    },
+    "entities": [
+        {
+            "locale": "en-GB",
+            "country": "GB",
+            "platform": "Web",
+            "timezone": "Asia/Calcutta",
+            "type": "clientInfo"
+        }
+    ],
+    "channelData": {
+        "tenant": {
+            "id": "4ad59956-0f88-4b88-a9d0-570b6eb4e66b"
+        },
+        "source": {
+            "name": "compose"
+        }
+    },
+    "value": {
+        "commandId": "razorView",
+        "commandContext": "compose",
+        "data": {
+            "Title": "Welcome to RazorView!",
+            "DisplayData": " Today&#x27;s date is 8-3-2024, Friday"
+        },
+        "context": {
+            "theme": "default"
+        }
+    },
+    "locale": "en-GB",
+    "localTimezone": "Asia/Calcutta"
+}
+```
+
+The response configuration appears as follows:
+
+```json
+{
+    "composeExtension": {
+        "type": "config",
+        "suggestedActions": {
+            "actions": [
+                {
+                    "type": "openUrl",
+                    "value": "https://7a03-2405-201-a00c-7191-b472-ff64-112d-f806.ngrok-free.app"
+                }
+            ]
+        }
+    }
+}
+```
+
+:::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension.":::
+
 ### Response card types and previews
 
 Teams supports the following card types:
