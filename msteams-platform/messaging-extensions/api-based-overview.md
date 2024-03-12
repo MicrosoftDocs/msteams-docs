@@ -21,6 +21,8 @@ Message extensions built using API (API-based) use a web service to manage user 
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
 * Perform actions on behalf of the user, for example, create a Contoso ticket.
 
+You can implement Microsoft Entra ID Single Sign-On and API key-based authentication in API-based search message extensions to provide secure and seamless access to applications. Secure authentication methods are critical for creating robust and user-friendly applications. To enable these authentication methods, you can update your app manifest with the `none`, `oauth`, `apiSecretServiceAuth`, `microsoftEntra`, or `userAuth` authentication methods.
+
 You can create an API-based message extension using an [OpenAPI Description (OAD)](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Description document, use the OpenAPI Description document to generate and integrate the client code in your app's project. Create or generate a response rendering template to manage the responses from the API.
 
 See the video to learn more about building an API-based message extension using Teams Toolkit:
