@@ -26,7 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2024 March**
 
-***March 22, 2024*** : [Configure your bot during installation or after installation from the team or group chat where the bot is installed.](bots/how-to/bot-configuration-experience.md)
+* ***March 22, 2024*** : [Configure your bot during installation or after installation from the team or group chat where the bot is installed.](bots/how-to/bot-configuration-experience.md)
+* ***March 07, 2024***: [Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-vs.md)
+* ***March 07, 2024***: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)
 
 :::column-end:::
 :::row-end:::
@@ -405,6 +407,17 @@ Developer preview is a public program that provides early access to unreleased T
 </br>
 
 <details>
+<summary><b>2024</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+|25/01/2024| Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content. | Extend your app across Microsoft 365 > [Actions in Microsoft 365](m365-apps/actions-in-m365.md)|
+|12/01/2024| Introduced Teams Toolkit command line interface v3. | [Teams Toolkit command line interface](toolkit/Teams-Toolkit-CLI.md)|
+
+</details>
+</br>
+
+<details>
 <summary><b>2023</b></summary>
 
 | **Date** | **Update** | **Find here** |
@@ -440,7 +453,7 @@ Developer preview is a public program that provides early access to unreleased T
 |05/12/2022| Use share in meeting to share any document or third-party app to the meeting stage.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
 |10/11/2022| Enable bots to receive all conversation messages without being @mentioned in relevant contexts.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
 | 09/23/2022 | Use apps in Teams meetings scheduled through public channels. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
-| 08/23/2022 | Share apps to the Teams meeting stage in mobile. | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](/microsoftteams/platform/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings) |
+| 08/23/2022 | Share apps to the Teams meeting stage in mobile. | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
 | 08/03/2022 | Use toggle incoming audio API to toggle the incoming audio state setting for the user in Teams meeting stage from mute to unmute or vice-versa. | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Use Collaboration controls to build custom collaborative experiences and integrate with Microsoft 365 services. | Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
 |05/24/2022| Use Live Share to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
@@ -469,8 +482,6 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 :::column span="2":::
 
 Teams platform features that aren't available.
-
-* ***February 16,2024***:  The feedback option, **This page**, located in the **Submit and view feedback** section of the article, will be deprecated by May 31, 2024. You can select :::image type="icon" source="assets/icons/feedback-icon.png" border="false"::: **Feedback** in the upper-right corner of the article to submit feedback.
 
 * ***February 07, 2024***: Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
