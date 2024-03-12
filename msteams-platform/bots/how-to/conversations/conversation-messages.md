@@ -1043,7 +1043,7 @@ You can use dynamic message updates for scenarios, such as poll updates, modifyi
 
 It is not necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet7)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
@@ -1063,7 +1063,7 @@ newActivity.Id = activityId;
 await turnContext.UpdateActivityAsync(newActivity, cancellationToken);
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript7)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-updateactivity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
@@ -1083,7 +1083,7 @@ newActivity.id = activityId;
 await turnContext.updateActivity(newActivity);
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python7)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext#botbuilder-core-turncontext-update-activity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
@@ -1103,7 +1103,7 @@ new_activity.id = activity_id
 update_result = await context.update_activity(new_activity)
 ```
 
-# [REST API](#tab/rest)
+# [REST API](#tab/rest7)
 
 > [!NOTE]
 > You can develop Teams apps in any web-programming technology and directly call the [Bot Connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do so, you need to implement [Authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
@@ -1127,7 +1127,7 @@ Now that you have updated messages, update the existing card on button selection
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet8)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.updateactivityasync#microsoft-bot-builder-turncontext-updateactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken))
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L266)
@@ -1143,7 +1143,7 @@ activity.Id = turnContext.Activity.ReplyToId;
 await turnContext.UpdateActivityAsync(activity, cancellationToken);
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript8)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-updateactivity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L162)
@@ -1159,7 +1159,7 @@ message.id = context.activity.replyToId;
 await context.updateActivity(message);
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python8)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-update-activity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
@@ -1175,7 +1175,7 @@ updated_activity.id = turn_context.activity.reply_to_id
 await turn_context.update_activity(updated_activity)
 ```
 
-# [REST API](#tab/rest)
+# [REST API](#tab/rest8)
 
 > [!NOTE]
 > You can develop Teams apps in any web programming technology and directly call the [bot connector service REST APIs](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference?view=azure-bot-service-4.0&preserve-view=true). To do this, you must implement [authentication](/azure/bot-service/rest-api/bot-framework-rest-connector-authentication?view=azure-bot-service-4.0&preserve-view=true) security procedures with your API requests.
@@ -1198,7 +1198,7 @@ Now that you have updated cards, you can delete messages using the Bot Framework
 
 In the Bot Framework, every message has its unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
-# [C#](#tab/dotnet1)
+# [C#](#tab/dotnet9)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.botadapter.deleteactivityasync#microsoft-bot-builder-botadapter-deleteactivityasync(microsoft-bot-builder-iturncontext-microsoft-bot-schema-conversationreference-system-threading-cancellationtoken)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs#L165)
@@ -1213,7 +1213,7 @@ foreach (var activityId in _list)
 }
 ```
 
-# [TypeScript](#tab/typescript1)
+# [TypeScript](#tab/typescript9)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext#botbuilder-core-turncontext-deleteactivity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L255)
@@ -1227,7 +1227,7 @@ for (let i = 0; i < activityIds.length; i++) {
 }
 ```
 
-# [Python](#tab/python1)
+# [Python](#tab/python9)
 
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext#botbuilder-core-turncontext-delete-activity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L227)
@@ -1240,7 +1240,7 @@ for each activity_id in _list:
     await TurnContext.delete_activity(activity_id)
 ```
 
-# [REST API](#tab/rest1)
+# [REST API](#tab/rest9)
 
 To delete an existing activity within a conversation, include the `conversationId` and `activityId` in the request endpoint.
 
@@ -1270,7 +1270,7 @@ If you want to generate an arbitrary notification without sending a message to t
 
 The following code shows an example of adding notifications to your message:
 
-# [C#](#tab/dotnet)
+# [C#](#tab/dotnet10)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
@@ -1288,7 +1288,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 
 ```
 
-# [TypeScript](#tab/typescript)
+# [TypeScript](#tab/typescript10)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
 
@@ -1308,7 +1308,7 @@ this.onMessage(async (turnContext, next) => {
 
 ```
 
-# [Python](#tab/python)
+# [Python](#tab/python10)
 
 [SDK reference](/python/api/botbuilder-core/botbuilder.core.teams?view=botbuilder-py-latest#botbuilder-core-teams-teams-notify-user&preserve-view=true)
 
@@ -1322,7 +1322,7 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json10)
 
 ```json
 {
