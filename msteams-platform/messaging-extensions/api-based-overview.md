@@ -241,6 +241,73 @@ The following code is an example of a Response rendering template: <br/>
 |`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an Adaptive Card from a result entry.      |   Yes      |
 |`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is displayed in the message extension flyout menu.        |  Yes       |
 
+##### Multi parameters
+
+Multi parameters allow API-based message extensions to have more than one input type for query commands. For example, you can search for animes by genre, rating, status, and date. The developer can specify the input types, titles, descriptions, and required fields for the parameters in the manifest.
+
+* The `isRequired` property in the parameter field indicates if a parameter is mandatory for the query command.
+* The `inputType`, `title`, and `description` properties in  `parameters` must match the values in the OpenAPI Description document.
+
+**Example**
+
+```json
+{
+      "type": "AdaptiveCard",
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "version": "1.6",
+      "body": [
+          {
+              "type": "Input.Text",
+              "placeholder": "Query to search for authors",
+              "label": "Search query",
+             "id": "query"
+         },
+         {
+             "type": "Input.ChoiceSet",
+             "choices": [
+                 {
+                     "title": "English",
+                     "value": "en"
+                 },
+                 {
+                     "title": "Tamil",
+                     "value": "ta"
+                 },
+                 {
+                     "title": "Spanish",
+                     "value": "es"
+                 }
+             ],
+             "placeholder": "The languages to scope the quotes to",
+             "id": "language",
+             "label": "Language"
+         },
+         {
+             "type": "Input.Toggle",
+             "title": "Show additional details",
+             "label": "Show additional details",
+             "id": "detailed"
+         },
+         {
+             "type": "Input.Number",
+             "placeholder": "Response is paged. This parameter controls where response starts the listing at",
+             "id": "start",
+             "label": "start",
+             "value": 0,
+             "isVisible": false
+         },
+         {
+             "type": "Input.Number",
+             "placeholder": "Response is paged. This parameter controls how many is returned in the result. The maximum depends on the subscription level.",
+             "id": "limit",
+             "label": "limit",
+             "value": 30,
+             "isVisible": false
+         }
+     ]
+ }  
+```
+
 #### Schema mapping
 
 The properties in OpenAPI Description document are mapped to the Adaptive Card template as follows:
