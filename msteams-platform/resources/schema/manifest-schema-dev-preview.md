@@ -1087,7 +1087,7 @@ Defines the content source of a given dashboard card.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. ID must be a GUID.
+|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID must be a GUID. |
 
 ## See also
 
