@@ -877,7 +877,6 @@ return
 ```
 ---
 
-
 ## Receive a read receipt
 
 The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../../../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
@@ -1034,9 +1033,11 @@ The following illustrates an example of suggested actions:
 
 ::: zone pivot="bot-user"
 
+## Message events
+
 Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
 
-## Update messages
+### Update messages
 
 You can use dynamic message updates for scenarios, such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
@@ -1122,7 +1123,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 Now that you have updated messages, update the existing card on button selection for incoming activities.
 
-## Update cards
+### Update cards
 
 To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
@@ -1193,7 +1194,7 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 Now that you have updated cards, you can delete messages using the Bot Framework.
 
-## Delete messages
+### Delete messages
 
 In the Bot Framework, every message has its unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
@@ -1252,7 +1253,6 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 | N/A | An HTTP status code indicating the outcome of the operation. Nothing is specified in the body of the response. |
 
 ---
-
 
 ## Add notifications to your message
 
