@@ -49,6 +49,10 @@ landingContent:
       links:
       - text: Share code snippets as Adaptive Cards with the CodeBlock property
         url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
+      - text: Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.
+        url: concepts/build-and-test/adaptive-card-previewer-vs.md
+      - text: Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.
+        url: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
       - text: Extend a Teams meeting app to Outlook
         url: m365-apps/extend-m365-meeting-app.md
       - text: Share to Teams from personal app or tab for Teams mobile clients
