@@ -1081,7 +1081,7 @@ Defines the content source of a given dashboard card.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`sourceType`| String | | | Represents the source of a card's content. Options: `bot`.
-|`botConfiguration`| Object | | | The configuration for the bot source. Required if the *sourceType* is set to `bot`.
+|`botConfiguration`| Object | | | The configuration for the bot source. Required if the `sourceType` is set to `bot`. |
 
 #### dashboardCards.dashboardCard.contentSource.botConfiguration
 
