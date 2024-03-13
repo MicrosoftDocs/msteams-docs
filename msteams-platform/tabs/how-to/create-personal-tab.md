@@ -1,7 +1,7 @@
 ---
 title: Create a personal tab
 author: laujan
-description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or ASP.NET Core MVC environment. Generate app, add content, create package, build and run app.
+description: Learn to build a personal tab. Select the Node.js, ASP.NET Core, or ASP.NET Core MVC environment. Generate app, add content, create package, build, and run app.
 ms.localizationpriority: high
 ms.topic: quickstart
 zone_pivot_groups: teams-app-environment
@@ -77,7 +77,7 @@ Following are the steps to create a personal tab:
 
     * **Your (company) name? (max 32 characters)**
 
-      Your company name will be used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+      Your company name is used in the app manifest. Enter a company name or select **Enter** to accept the default name.
 
     * **Which manifest version would you like to use?**
 

@@ -101,19 +101,19 @@ The tab features are as follows:
 * Awareness of Microsoft Entra ID of the current user.
 * Locale awareness for the user to indicate language that is `en-us`.
 * Single sign-on (SSO) capability, if supported.
-* Ability to use bots or app notifications to deep link to the tab or to a sub-entity within the service, for example an individual work item.
+* Ability to use bots or app notifications to deep link to the tab or to a subentity within the service, for example an individual work item.
 * The ability to open a modal dialog from links within a tab.
 * Reuse of SharePoint web parts within the tab.
 
 ## Tabs user scenarios
 
-**Scenario:** Bring an existing web-based resource inside Teams. \
+**Scenario:** Bring an existing web-based resource inside Teams.
 **Example:** You create a static tab in your Teams app that presents an informational corporate website to users.
 
-**Scenario:** Add support pages to a Teams bot or messaging extension. \
+**Scenario:** Add support pages to a Teams bot or messaging extension.
 **Example:** You create static tabs that provide **about** and **help** webpage content to users.
 
-**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration. \
+**Scenario:** Provide access to items that your users interact with regularly for cooperative dialogue and collaboration.
 **Example:** You create a channel or group tab with deep linking to individual items.
 
 ## Understand how tabs work
