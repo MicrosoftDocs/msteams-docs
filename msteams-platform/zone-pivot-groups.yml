@@ -94,11 +94,3 @@ groups:
     title: JavaScript
   - id: qs-csharp
     title: C#
-- id: bot-handler-activities
-  title: Bot conversation events and invoke activities
-  prompt: Select the action of the event to add to your bot.
-  pivots:
-  - id: conversation-event
-    title: Receive events
-  - id: invoke-activity
-    title: Invoke activities
