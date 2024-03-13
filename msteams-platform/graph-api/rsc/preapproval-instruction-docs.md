@@ -43,7 +43,7 @@ To enable preapproval for RSC permissions, change your RSC settings with the `Se
 |`DisabledForAllApps`| No RSC permissions can be consented to by users. In this state, preapproval of RSC permissions have no effect on users ability to consent to RSC enabled apps.|
 
    > [!WARNING]
-   > If you change your chat RSC or team RSC configuration to `DisabledForAllApps`, it disables preapproval in your tenant and users run into errors when they attempt to install RSC enabled apps.
+   > If you change your chat or team RSC configuration to `DisabledForAllApps`, it disables preapproval in your tenant and users run into errors when they install RSC enabled apps.
 
 ### Enable preapproval for chat RSC permissions
 
@@ -61,21 +61,21 @@ You can use the following cmdlets to check and modify the current state of your 
 
 ## Create a preapproval of RSC permissions
 
-You can create a preapproval to preapprove RSC permissions against certain sensitivity labels in your tenant. You can dictate what data RSC-enabled apps have access to. In this section, we'll create a preapproval without a sensitivity label for use with any sensitivity group, and with a sensitivity label for use against certain data. To create a preapproval, ensure that you have the following information:
+You can create a preapproval to preapprove RSC permissions against certain sensitivity labels in your tenant. You can dictate what data RSC-enabled apps have access to. In this section, you can create a preapproval without a sensitivity label to use with any sensitivity group, and with a sensitivity label to use only with specific data. To create a preapproval, ensure that you have the following information:
 
-You can create a preapproval to allow specific RSC permissions for certain sensitivity labels in your tenant. This gives you control over the data that RSC-enabled apps can access. In this section, we’ll show you how to create a preapproval both with and without a sensitivity label. This will allow you to use it with any sensitivity group or only with specific data. Before creating a preapproval, make sure you have the following information:
-
-1. The Teams App ID of the app you wish to preapprove.
+1. Teams App ID of the app you want to preapprove.
 2. The RSC permissions associated with the app you want to preapprove.
 3. The sensitivity label ID associated with the sensitivity label you’d like to associate with the preapproval policy, if preapproving team RSC permissions (you don’t need this if you want the policy to apply to all sensitivity labels or are preapproving only chat RSC permissions).
 4. Global administrator privilege in your tenant.
 
-You can create preapproval with PowerShell cmdlets. To create a cmdlet, you must collate the information provided earlier with a `New-MgBetaTeamAppPreApproval` command and distinguish what type of RSC permissions you're preapproving in the cmdlet you create. There are two options when preapproving an app:
+You can create preapproval with PowerShell cmdlets. To create a cmdlet, you must collate the information provided earlier with a `New-MgBetaTeamAppPreApproval` command and specify the type of RSC permissions you want to preapprove in the cmdlet you create. 
+
+There are two options when preapproving an app:
 
 |Configuration| Description|
 |---|---|
-|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this option when creating a preapproval for RSC permissions for a team. A listing of these permissions can be found here
-|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this option when creating a preapproval for RSC permissions for a team. A listing of these permissions can be found here
+|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this option when creating a preapproval of RSC permissions for a chat. A list of these permissions can be found here.|
+|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this option when creating a preapproval of RSC permissions for a team. A list of these permissions can be found here.|
 
 ### Create a preapproval without a sensitivity label
 
