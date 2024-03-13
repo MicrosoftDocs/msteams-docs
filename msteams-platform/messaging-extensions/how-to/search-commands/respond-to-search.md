@@ -93,7 +93,7 @@ Your service must respond with the results matching the user query. The response
 
 ### Configuration response
 
-Following code is an example for message extension configuration:
+Configuration response is the data returned by the server or application to configure and enable the message extension within the messaging platform. The following code is an example for message extension configuration:
 
 ```json
 {
@@ -152,7 +152,7 @@ Following code is an example for message extension configuration:
 }
 ```
 
-The response configuration appears as follows:
+The following response is the configuration response appears when the user interact with the compose extension:
 
 ```json
 {
