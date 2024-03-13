@@ -249,6 +249,9 @@
           items: 
           - name: Overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
+          - name: Debug bot using Teams App Test Tool
+            href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
+            displayName: Mock activity, custom activity, predefined activity
           - name: Debug your Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
           - name: Debug background process
@@ -284,6 +287,9 @@
       - name: Install Adaptive Card Previewer
         href: concepts/build-and-test/install-adaptive-card-previewer.md
         displayName: install, Adaptive Card Previewer, ACP
+    - name: Adaptive Card Previewer for Visual Studio
+      href: concepts/build-and-test/adaptive-card-previewer-vs.md
+      displayName: ACP 
     - name: Yeoman generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams 
   - name: SDKs
