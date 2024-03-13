@@ -36,7 +36,7 @@ In this section, learn how to build a Teams app with different capabilities, suc
    * **GitHub Codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any extra setup.
    * **Step-by-step guide**: Allows you to create a Teams app from the ground up including setting up your development environment.
 
-   :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with Codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
+   :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
 
 ## Next step
 
