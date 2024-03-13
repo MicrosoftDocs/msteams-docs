@@ -1035,7 +1035,13 @@ The following illustrates an example of suggested actions:
 
 ## Message events
 
-Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.
+Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. The following table lists the bot message events:
+
+|Event|Description|Scope|
+|---|---|---|
+|[Update messages](#update-messages)| Message sent by the bot is updated.|All|
+|[Update cards](#update-cards)| Card sent by the bot is updated.|All|
+|[Delete messages](#delete-messages)| Message sent by the bot is deleted.|All|
 
 ### Update messages
 
