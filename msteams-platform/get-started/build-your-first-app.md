@@ -2,7 +2,7 @@
 title: Build your first app
 description: Build your first Teams message extension, tab, or bot app with Github Codespaces or following the step-by-step guides.
 ms.localizationpriority: high
-ms.date: 03/25/2024
+ms.date: 03/13/2024
 ms.topic: reference
 ---
 
