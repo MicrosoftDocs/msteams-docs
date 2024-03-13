@@ -193,8 +193,6 @@ This action uploads and deploys the project to Azure Storage.
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Create and deploy an Azure cloud service](/azure/cloud-services/cloud-services-how-to-create-deploy-portal)
-* [Create multi-capability Teams apps](add-capability-v4.md)
-* [Add cloud resources to Microsoft Teams app](add-resource-v4.md)
 * [Create new Teams app in Visual Studio](~/toolkit/toolkit-v4/create-new-project-vs.md)
 * [Provision cloud resources using Visual Studio](provision-vs.md)
 * [Edit Teams app manifest using Visual Studio](TeamsFx-preview-and-customize-app-manifest-vs.md)
