@@ -1,7 +1,7 @@
 ---
 title: Add single sign-on to your Teams app
 author: surbhigupta
-description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, update your application to use SSO
+description: In this module, learn how to add single sign-on (SSO) of Teams Toolkit, enable SSO support, update your application to use SSO.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -1056,4 +1056,5 @@ For more information about how to use an existing Microsoft Entra app in your Te
 * [Enable SSO for tab app](~/tabs/how-to/authentication/tab-sso-overview.md)
 * [Enable SSO for your bot and message extension](~/bots/how-to/authentication/bot-sso-overview.md)
 * [Prepare Accounts to build your Teams app](tools-prerequisites-v4.md#accounts-to-build-your-teams-app)
+
 :::zone-end
