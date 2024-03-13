@@ -6,11 +6,12 @@ ms.topic: overview
 ms.localizationpriority: high
 ms.date: 11/02/2021
 ---
+
 # Explore Teams platform features
 
 With Teams, you can build your app in a feature-rich environment. Using Teams as a platform for building apps, you can extend the Teams capabilities for your desktop and mobile apps.
 
-:::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Screenshot shows you the conceptual representation of Teams as a platform."lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
+:::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Screenshot shows you the conceptual representation of Teams as a platform." lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
 
 ## Teams app features
 
@@ -30,7 +31,7 @@ Teams platform provides the following features to build your app:
 
 To understand how to use Teams apps to provide solutions for your users, consider the following scenario:
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Screenshot shows a scenario of a notification bot that sends weather forecast to customers before they travel."lightbox="../msteams-platform/assets/images/overview/developer-scenario.png":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Screenshot shows a scenario of a notification bot that sends weather forecast to customers before they travel." lightbox="../msteams-platform/assets/images/overview/developer-scenario.png":::
 
 You can pick the following features to build an app:
 
@@ -41,13 +42,11 @@ You can pick the following features to build an app:
 
 ### Extend your Teams app across Microsoft 365
 
-If you've already built a Teams app, you can extend your app across Microsoft 365 and configure it to be accessible over Outlook and Microsoft 365.
+You can extend your Teams app across the Microsoft 365 ecosystem by configuring it to be accessible over Outlook and Microsoft 365.
 
-:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows you the configuration of properties in the Teams app manifest."lightbox="assets/images/overview/app-manifest.png":::
+:::image type="content" border="false" source="assets/images/overview/app-manifest.png" alt-text="Screenshot shows you the configuration of properties in the Teams app manifest." lightbox="assets/images/overview/app-manifest.png":::
 
 ## Next step
-
-You've had a short tour through some of Teams platform features. You're ready to build your first Teams app.
 
 > [!div class="nextstepaction"]
 > [Get started](get-started/get-started-overview.md)

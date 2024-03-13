@@ -20,17 +20,17 @@ In this module, you'll learn how to:
 
 1. Select the type of Teams app that you want to build:
 
-    1. [Message extension](build-your-first-app.md#message-extensiontabmsgext)
+    1. Message extension
 
-    1. [Tab](build-your-first-app.md#tabtabtab)
+    1. Tab
 
-    1. [Bot](build-your-first-app.md#bottabbot)
+    2. Bot
 
-1. Choose your path to build your selected app:
+2. Choose your path to build your selected app:
 
-    1. **GitHub Codespaces**: Run, test, and debug your app in a development environment without the need for any extra setup.
+    1. [GitHub Codespaces](build-your-first-app.md#github-codespaces): Run, test, and debug your app in a development environment without the need for any extra setup.
 
-    1. **Step-by-step guide**: Create a Teams app from the ground up including setting up your development environment.
+    2. [Step-by-step guide](build-your-first-app.md#step-by-step-guide): Create a Teams app from the ground up including setting up your development environment.
 
    :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with GitHub Codespaces or step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
 
