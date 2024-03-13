@@ -384,7 +384,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 March**
 
-***March 07, 2023***: [Extend static tabs to channels with a customizable experience.](tabs/what-are-tabs.md)
+***March 13, 2023***: [Extend static tabs to channels with a customizable experience.](tabs/what-are-tabs.md)
 
 :::column-end:::
 :::row-end:::
