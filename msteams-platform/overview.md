@@ -8,13 +8,13 @@ ms.date: 05/24/2021
 ---
 # Teams app that fits
 
-Microsoft Teams is a collaborative platform that prvoides a workspace for organizations to collaborate through apps for communication, meetings, and file sharing. Teams offers proprietary Microsoft and third-party apps. Teams apps can be tabs, bots, message extensions, or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 to enhance their collaborative experience.
+Microsoft Teams is a collaborative platform that prvoides a workspace for organizations to collaborate through apps for communication, meetings, and file sharing. Teams offers proprietary Microsoft and third-party apps. Teams apps can be message extensions, tabs, bots, or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 to enhance their collaborative experience.
 
 Apps can be personal or shared. A personal app enables one-on-one communication and a shared app lets multiple users share app space to collaborate.
 
 ## Drive organizational goals
 
-Organizations use apps as a collaborative platform to connect with their customers, provide services, and share information. A well-placed app helps build a cohesive environment for external and internal business needs.
+Organizations use apps as a collaborative platform to connect with their customers, provide services, and exchange information. A well-placed app helps build a cohesive environment for external and internal business needs.
 
 You can build apps with Teams platform to increase user engagement, automate repetitive tasks, or simplify repetitive tasks with bots. You can create something brand new for Teams or integrate an existing app. Take a look at these example developer personas and app scenarios:
 

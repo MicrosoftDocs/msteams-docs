@@ -12,29 +12,27 @@ With Teams, you can build your app in a feature-rich environment. Using Teams as
 
 :::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Screenshot shows you the conceptual representation of Teams as a platform."lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
 
-## The user story
+## Teams app features
+
+Teams platform provides the following features to build your app:
+
+| Feature | Description | Useful for |
+| --- | --- | --- |
+| Message extension | Interact with your web service from Teams. Message extensions search or start actions in an external system. You can send the result of the interaction in Teams as a richly formatted card. Message extensions can be enhanced with AI capabilities with Copilot for Teams. | - Search for a work item, and share it with the group as an Adaptive Card.<br> - Create a bug in your tracking system based on a Teams message, assign that bug to a user, and send a card to the conversation thread with the bug's details. |
+| Tab | Teams-aware webpage embedded in Microsoft Teams. You can add tabs as part of a channel inside a team, group chat, or personal app for an individual user. | Personal tab, channel or group tab, Stage View, and link unfurling. |
+| Bot | Also referred to as a chatbot or conversational bot, bots automates simple and repetitive tasks. A bot interaction can be a quick question and answer, or it can be a complex conversation that provides access to services. | Customer service, information about the weather, make dinner reservations, or provide travel information. |
+| Meeting extension | Apps that make meetings more productive. | Ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting. |
+| Workflow | Communicate with external apps, and send or receive notifications and messages from other apps. | Subscribe to receive notifications and messages from your web services. |
+| Card | Organize information into groups and give users the opportunity to interact with specific parts of the information. | Sharing using text and images; gathering information using input forms. |
+| Dialog (referred as task modules in TeamsJS v1.x) | Create modal pop-up experiences in your Teams app. | - Run your own custom HTML or JavaScript code<br> - Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
+
+### The user story
 
 To understand how to use Teams apps to provide solutions for your users, consider the following scenario:
 
 :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Screenshot shows a scenario of a notification bot that sends weather forecast to customers before they travel."lightbox="../msteams-platform/assets/images/overview/developer-scenario.png":::
 
-Before we delve into the solution, let us first learn about the features that Teams offers to build an app.
-
-## Teams app features
-
-| Feature | Description | Useful for |
-| --- | --- | --- |
-| Message extension | Message extensions let the users interact with your web service from Teams client. They search or start actions in an external system. You can send the result of the interaction in Teams as a richly formatted card. Message extensions can be enhanced with AI capabilities with Copilot for Teams. | - Reserve a resource and allow the channel to know the reserved time slot.<br> - Search for a work item, and share it with the group as an Adaptive Card.<br> - Create a bug in your tracking system based on a Teams message, assign that bug to a user, and send a card to the conversation thread with the bug's details. |
-| Tabs | Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add them as part of a channel inside a team, group chat, or personal app for an individual user. | Personal tab, channel or group tab, Stage View, and link unfurling. |
-| Bots | A bot is also referred to as a chatbot or conversational bot. It's an app that runs simple and repetitive automated tasks done by the users. A bot interaction can be a quick question and answer, or it can be a complex conversation that provides access to services. | Customer service, information about the weather, make dinner reservations, or provide travel information. |
-| Meeting extensions | You can create apps to make meetings more productive. | Ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting. |
-| Personal app | A personal app is a dedicated space (tab) or bot to help users focus on their own tasks or view activities important to them. | OneNote is a personal app that gives you a private workspace within Teams. Planner offers a bird's eye view of all your tasks, across boards that you or your team have added as channel tabs. |
-| Webhooks and connectors | Communicate with external apps, and send or receive notifications and messages from other apps. | Subscribe to receive notifications and messages from your web services. |
-| Microsoft Graph | Microsoft Graph is the gateway to data and intelligence in Microsoft 365 and can be incorporated in any kind of Teams app. | Create, manage, find, and archive large number of teams and populate them with users and channels. |
-| Adaptive Card | Cards help you organize information into groups and give users the opportunity to interact with specific parts of the information. | Sharing using text and images; gathering information using input forms. |
-| Dialogs (referred as task modules in TeamsJS v1.x) | Dialogs permit you to create modal pop-up experiences in your Teams application. | Run your own custom HTML or JavaScript code. Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
-
-Back to the travel agency scenario, you can pick the following features to build an app:
+You can pick the following features to build an app:
 
 | Feature | Description |
 | --- | --- |

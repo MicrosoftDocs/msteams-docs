@@ -10,35 +10,27 @@ ms.topic: reference
 
 Get started with building apps for Microsoft Teams and beyond!
 
-This module deals with:
+In this module, you'll learn how to:
 
 * Build a message extension, tab, and bot app with GitHub Codespaces or using the step-by-step guide.
-* Learn about tutorials and code samples available for building your Teams app.
-* Learn about various tools and SDKs available for building your Teams app.
+* Use tutorials and code samples for building your Teams app.
+* Use various tools and SDKs available for building your Teams app.
 
 ## Build your first Teams app
 
 1. Select the type of Teams app that you want to build:
 
-    1. If you want to build a message extension app:
+    1. [Message extension](build-your-first-app.md#message-extensiontabmsgext)
 
-    > [!div class="nextstepaction"]
-    > [Build message extension](build-message-extension.md)
-<br>
-    2. If you want to build a tab app:
+    1. [Tab](build-your-first-app.md#tabtabtab)
 
-    > [!div class="nextstepaction"]
-    > [Build your basic tab app](build-basic-tab-app.md)
-<br>
-    3. If a bot is what you're interested in:
+    1. [Bot](build-your-first-app.md#bottabbot)
 
-    > [!div class="nextstepaction"]
-    > [Start building a bot](build-notification-bot.md)
+1. Choose your path to build your selected app:
 
-1. Choose your path to build your selected app.
+    1. **GitHub Codespaces**: Run, test, and debug your app in a development environment without the need for any extra setup.
 
-   * **GitHub Codespaces**: Run, test, and debug your app in a development environment without the need for any extra setup.
-   * **Step-by-step guide**: Create a Teams app from the ground up including setting up your development environment.
+    1. **Step-by-step guide**: Create a Teams app from the ground up including setting up your development environment.
 
    :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with GitHub Codespaces or step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
 
