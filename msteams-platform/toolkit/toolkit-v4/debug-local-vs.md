@@ -78,9 +78,7 @@ To debug your app after you create a project, perform the following steps:
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Use Teams Toolkit to provision cloud resources](provision-vs.md)
-* [Add capabilities to your Teams apps](add-capability-v4.md)
 * [Deploy to the cloud](deploy-vs.md)
-* [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env-v4.md)
 
 :::zone-end
 
@@ -150,9 +148,6 @@ Perform the following steps using the Teams Toolkit to debug your app after you 
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals-vs.md)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
-* [Use Teams Toolkit to provision cloud resources](provision-vs.md)
-* [Add capabilities to your Teams apps](add-capability-v4.md)
 * [Deploy to the cloud](deploy-vs.md)
-* [Manage multiple environments in Teams Toolkit](TeamsFx-multi-env-v4.md)
 
 :::zone-end
