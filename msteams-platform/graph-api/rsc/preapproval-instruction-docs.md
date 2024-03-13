@@ -9,9 +9,9 @@ ms.date: 08/29/2023
 
 # Preapproval of RSC permissions
 
-Preapproval of resource-specific consent (RSC) permissions allows admins to approve RSC on an app-by-app basis in Microsoft Teams. Previously, admins had the ability to toggle RSC on or off in their tenant. Admins had to approve or block all RSC enabled apps with no granularity to declare which apps they wanted to allow.
+Preapproval of resource-specific consent (RSC) permissions allows admins to approve RSC based on individual app in Microsoft Teams. Initially, admins had the ability to turn on or turn off the RSC permission in the Teams Admin Center to either approve or block all RSC enabled apps.
 
-Through preapproved RSC, admins can select which RSC enabled apps they allow their tenant users to install in Teams without having to allow or block all apps that utilize RSC permissions.
+With preapproved RSC, admins can choose which RSC-enabled apps to allow their tenant users to install in Teams, without having to allow or block all apps that use RSC permissions.
 
 > [!NOTE]
 > Preapproval of RSC permissions is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
@@ -26,7 +26,7 @@ Before you create and manage preapprovals, connect PowerShell to your tenant usi
 * `Policy.ReadWrite.Authorization`
 * `AppCatalog.Read.All`
 
-The following snippet is an example of the PowerShell setup to manage preapproval of RSC permissions:
+The following is an example of the PowerShell setup to manage preapproval of RSC permissions:
 
 ```powershell
 connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite.Authorization', 'AppCatalog.Read.All','InformationProtectionPolicy.Read', 'ServicePrincipalEndpoint.ReadWrite.All', 'Policy.ReadWrite.PermissionGrant', 'Policy.ReadWrite.ApplicationConfiguration', 'Application.ReadWrite.All')
@@ -38,8 +38,8 @@ To enable preapproval for RSC permissions, change your RSC settings with the `Se
 
 |Configuration| Description|
 |---|---|
-|`ApprovedForAllApps`|Any RSC enabled app can be consented to by users in your tenant. When you enable the settings, preapproval of RSC permissions isn't needed as all RSC enabled apps are approved for use.|
-|`ApprovedForPreApprovedAppsOnly`|RSC enabled apps can be consented on an app-by-app basis. Admins can select which apps are approved for which RSC permissions.|
+|`ApprovedForAllApps`|Any RSC enabled app can be allowed to users in your tenant. When you enable the settings, preapproval of RSC permissions isn't needed as all RSC enabled apps are approved for use.|
+|`ApprovedForPreApprovedAppsOnly`|RSC enabled apps can be allowed app-by-app basis. Admins can select which apps are approved for which RSC permissions.|
 |`DisabledForAllApps`| No RSC permissions can be consented to by users. In this state, preapproval of RSC permissions have no effect on users ability to consent to RSC enabled apps.|
 
    > [!WARNING]
