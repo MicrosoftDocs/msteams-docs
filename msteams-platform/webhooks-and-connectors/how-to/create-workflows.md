@@ -1,10 +1,10 @@
 ---
 title: Create workflows
 author: v-preethah
-description: Create workflows 
+description: Create and manage workflows. Add workflows to channel scope.
 ms.topic: how-to
 ms.localizationpriority: high
-ms.date: 12/09/2022
+ms.date: 03/01/2024
 ---
 
 # Create workflows
@@ -13,10 +13,18 @@ Workflows let you automate repetitive tasks or processes that connect one or mor
 
 The easiest way to get started is to browse our selection of pre-built workflows.
 
-1. Select Apps icon from the left of Teams.
+1. Select Apps icon :::image type="icon" source="../../assets/images/workflows/app icon.png" border="false"::: from the left of Teams.
+
 1. Scroll and select Workflow logo Workflows from the navigation on the left.
+
+    :::image type="content" source="../../assets/images/workflows/workflows-sidepanel.png" alt-text="Screenshot shows the Workflows in the side panel.":::
+
 1. Select a workflow that interests you.
-1. Follow the prompts given. When done, you’ll get a confirmation saying, "Workflow added successfully!" The confirmation will also include instructions for running your workflow.
+
+    :::image type="content" source="../../assets/images/workflows/select-workflow.png" alt-text="Screenshot shows the Workflows in the main window.":::
+
+1. Follow the prompts to Sign in.
+1. When done, you’ll get a confirmation saying, "Workflow added successfully!" The confirmation also includes instructions for running your workflow.
 1. Select **Add**.
 
 ## Select the channel
