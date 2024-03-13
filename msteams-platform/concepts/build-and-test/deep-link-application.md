@@ -29,7 +29,7 @@ Deep links allow users to know more about an app and install it in different sco
 Deep links allow app users to open an application install dialog to know more information about the app or install it in different contexts. You can create a deep link to application in the following ways:
 
 * [Configure deep link manually using your app ID](#configure-deep-link-manually-using-your-app-id)
-* [Configure deep link using TeamsJS library](#configure-deep-link-using-teamsjs-library)
+* [Configure deep link to a tab using TeamsJS](#configure-deep-link-to-a-tab-using-teamsjs)
 
 ### Configure deep link manually using your app ID
 
