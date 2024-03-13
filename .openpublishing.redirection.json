@@ -931,6 +931,11 @@
       {
         "source_path": "msteams-platform/toolkit/teamsfx-cli.md",
         "redirect_url": "msteams-platform/toolkit/Teams-Toolkit-CLI"
-      }      
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/map-use-cases.md",
+        "redirect_url": "msteams-platform/concepts/design/understand-use-cases.md"
+      }
+
     ]
 }

@@ -8,11 +8,9 @@ ms.author: anclear
 ms.date: 12/09/2022
 ---
 
-# Understand your use cases
+# Understand and map your use cases
 
-In the collaborative social framework of Teams, there's a wide variety of user needs that you can solve with a Teams app. For example, an app that bridges the gap in achieving effective collaboration.
-
-The app user and their app's requirements are the basic guidelines that determine all app choices you'll make. Building app design, selecting capabilities, determining build and test environment, and app distribution follow the user's requirement from the app.
+The user's requirements are the basic guidelines that determine all app choices you'll make, such as building app design, selecting capabilities, determining build and test environment, and app distribution.
 
 If you're going to meet user requirements with your app, you first need to understand your users.
 
@@ -25,6 +23,14 @@ If you're going to meet user requirements with your app, you first need to under
 * **Understand the problem**: Work out the core problem your app must solve.
 
 * **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
+
+A well-defined use case helps you to chart out the framework of features you want in the Teams app. After you determine the user requirements, define the scope and Teams capabilities best suited for your app.
+
+You can map your use case based on:
+
+* Sharing and collaborating on items in an external system.
+* Starting workflows and sending notifications to users.
+* Using social platforms, conversational bots, and combining multiple features.
 
 ## Microsoft Teams app features
 
@@ -161,6 +167,103 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
 > [!NOTE]
 > Previously, custom apps built for your org (LOB apps) were updated  in the Teams Store by selecting the ellipses on the tile. With the updated Teams Store experience, you can now update the custom apps built for your org (LOB apps) by signing in to the [Teams Admin Center](https://admin.teams.microsoft.com).
 
+## Common use cases mapped to Teams capabilities
+
+The next step is to match use cases with app capabilities.
+
+Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but helps you think through some of the possibilities available to you.
+</br>
+</br>
+<details>
+<summary>Create, share, and collaborate on items in an external system.</summary>
+
+Apps to interact with your data
+
+| **If you want to...** | **Try ...** |
+| --- | --- |
+| Search external systems and share the results as an interactive card. | Message extensions with search commands |
+| Collect information to insert into a data store or run advanced searches. | Message extensions with action commands |
+| Create embedded web experiences to view, work with and share data. | Tabs |
+| Push data and send data out of the Teams client. | Workflows|
+| Interactive modal forms from wherever you need them to collect or display information. | Dialogs (referred as task modules in TeamsJS v1.x) |
+
+</details>
+</br>
+<details>
+<summary>Initiate workflows and processes.</summary>
+
+A quick way to start a process or workflow in an external system.
+
+| **If you want to...** | **Try ...** |
+| --- | --- |
+| Trigger messages, allowing your users to quickly send the contents of a message to your web services. | Message extensions with action commands |
+| Open messages from a tab, a bot, or a message extension to collect information before initiating a workflow. | Dialogs (referred as task modules in TeamsJS v1.x) |
+| Interact with your users through text and rich cards. | Conversational bots |
+| A simple back-and-forth interaction when you don't need to build a conversational bot. | Outgoing webhooks |
+
+</details>
+</br>
+<details>
+<summary>Send notifications and alerts.</summary>
+
+Send asynchronous notifications and alerts to your users in Teams.
+
+| **If you want to...** | **Try ...** |
+| --- | --- |
+| Send proactive messages to groups, channels, or individual users. | Conversational bots |
+| Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page. | Workflows |
+
+</details>
+</br>
+<details>
+<summary>Ask questions and get answers.</summary>
+
+Connect with your users and resolve their queries.
+
+| **If you want to...** | **Try ...** |
+| --- | --- |
+| Use a bot powered by AI, natural language processing, or machine learning to connect your users to the answers they need. | Conversational bots |
+| Embed your existing web portal in Teams or create a Teams-specific version for added functionality. | Tabs |
+
+</details>
+
+## App capabilities mapped to features
+
+The Microsoft Teams platform offers a large variety of features. Each feature is a way of interacting with your users that makes the Teams app capability relevant to the user need.
+
+Let's look at how Teams capabilities enable different features for your Teams app.
+
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-tab.png" alt-text="Diagram shows Microsoft Teams app capabilities for tab." link="~/tabs/what-are-tabs.md" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-bot.png" alt-text="Diagram shows Microsoft Teams app capabilities for bot." link="~/bots/what-are-bots.md" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-message-extension.png" alt-text="Diagram shows Microsoft Teams app capabilities for message extension." link="~/messaging-extensions/what-are-messaging-extensions.md" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-adaptive-card.png" alt-text="Diagram shows Microsoft Teams app capabilities for adaptive cards." link="~/task-modules-and-cards/cards/cards-reference.md#adaptive-card" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-apps-for-meetings.png" alt-text="Diagram shows Microsoft Teams app capabilities for meetings." link="~/apps-in-teams-meetings/teams-apps-in-meetings.md" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-webhook-and-connectors.png" alt-text="Diagram shows Microsoft Teams app capabilities for webhooks and connectors." link="~/webhooks-and-connectors/what-are-webhooks-and-connectors.md" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-graph-conversational-interface.png" alt-text="Diagram shows Microsoft Teams app capabilities for graph conversational interface." link="/graph/overview" border="false":::
+:::row-end:::
+
+> [!NOTE]
+> You can also explore the capability to add meeting app extensibility to your Teams app. For more information, see [apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md).
+
 ### App scope
 
 Your app can have one of the following scopes:
@@ -172,8 +275,6 @@ An app can exist across different scopes. For example:
 
 * Your app can display data in a central shared location, that is, a tab.
 * It can also present that same information through a personal conversational interface, that is, a bot.
-
-A user can interact with an app on a canvas tab to do an activity or might choose to do the same using a conversational bot.
 
 ## Next step
 
