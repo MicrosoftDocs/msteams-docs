@@ -10,12 +10,12 @@ ms.date: 12/09/2022
 
 # Understand and map your use cases
 
-The user's requirements are the basic guidelines that determine all app choices you'll make, such as building app design, selecting capabilities, determining build and test environment, and app distribution.
+The user's requirements determine all app choices you'll make, such as building app design, selecting capabilities, determining build and test environment, and app distribution.
 
-If you're going to meet user requirements with your app, you first need to understand your users.
+To identify your app's use case:
 
 * **Understand your user**: Recognize user issues and identify the solutions to some common problems the users face.
-* **Understand the problem**: Work out the core problem your app must solve. Understand use cases to know how an end-user interacts with your app.
+* **Understand the problem**: Work out the core problem your app must solve. Understand use case scenarios to know how a user interacts with your app to solve their problems.
 * **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
 * **Publish to reach user**: Go through [how to publish your app to Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/) to ensure your app passes the Teams Store submission process.
 
@@ -29,122 +29,18 @@ You can map your use case based on:
 
 ## Microsoft Teams app features
 
-There are multiple ways to extend Teams so every app is unique. Teams app features offer:
+There are multiple capabilities that Teams offers so that every app built on the platform is unique. Teams app features offer:
 
 * [App capabilities](#app-capabilities)
 * [App scope](#app-scope)
 
 ### App capabilities
 
-Capabilities are the core functionalities that you can build in your app. They're also called entry or extension points because they enable integration and interaction.
+Capabilities are the core functionalities that you can build in your app. They also act as entry or extension points to enable integration and interaction. For more information, see [Explore Teams platform features](../../overview-explore.md).
 
-Your Teams apps have one or all of the following core capabilities:
+#### App capabilities mapped to features
 
-:::row:::
-   :::column span="":::
-
-#### Tabs
-
-Display your web-based content in a [tab](../../tabs/what-are-tabs.md) where people can discuss and work on it together.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Conceptual representation of what tabs look like in the Teams client.":::
-
-   :::column-end:::
-
-:::row-end:::
-
-:::row:::
-   :::column span="":::
-
-#### Bots
-
-Conversations often result in the need to do something (generate an order, review code, check ticket status, and so on). A [bot](../../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Conceptual representation of what bots look like in the Teams client.":::
-
-   :::column-end:::
-
-:::row-end:::
-
-:::row:::
-
-   :::column span="":::
-
-#### Message extensions
-
-With [message extensions](../../messaging-extensions/what-are-messaging-extensions.md), you can search and share external information. You also can act on a message, such as creating a help ticket based on the content of a channel post.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Conceptual representation of what message extensions look like in the Teams client.":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-
-   :::column span="":::
-
-#### Meeting extensions
-
-There are a few options for [incorporating your app into the Teams calling experience](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Conceptual representation of what meeting extensions look like in the Teams client.":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-
-   :::column span="":::
-
-#### Workflows
-
-[Incoming Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [Outgoing Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Conceptual representation of what connectors look like in the Teams client.":::
-
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-
-   :::column span="":::
-
-#### Microsoft Graph for Teams
-
-The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides access to information about teams, channels, users, and messages that help you to create or enhance features for your app.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../../assets/images/overview-graph.png" alt-text="Conceptual representation of the Microsoft Graph API for Teams.":::
-
-   :::column-end:::
-:::row-end:::
-
-### App capabilities mapped to features
-
-The Microsoft Teams platform offers a large variety of features. Each feature is a way of interacting with your users that makes the Teams app capability relevant to the user need.
+Each feature that Teams offers is a unique way of interacting with your users that makes the Teams app capability relevant to the user's need.
 
 Let's look at how Teams capabilities enable different features for your Teams app.
 
