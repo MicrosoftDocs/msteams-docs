@@ -14,15 +14,10 @@ The user's requirements are the basic guidelines that determine all app choices 
 
 If you're going to meet user requirements with your app, you first need to understand your users.
 
-* **Understand your user**:
-  * Recognize user issues and identify the solutions to some common problems the users face.
-  * Build your Teams app by finding the right combination of Teams features to meet your user's needs.
-  * Understand use cases to know how an end-user interacts with your app.
-  * Go through the learn module [how to publish your app to Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/) to ensure your app passes the Teams Store submission process.
-
-* **Understand the problem**: Work out the core problem your app must solve.
-
+* **Understand your user**: Recognize user issues and identify the solutions to some common problems the users face.
+* **Understand the problem**: Work out the core problem your app must solve. Understand use cases to know how an end-user interacts with your app.
 * **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
+* **Publish to reach user**: Go through [how to publish your app to Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/) to ensure your app passes the Teams Store submission process.
 
 A well-defined use case helps you to chart out the framework of features you want in the Teams app. After you determine the user requirements, define the scope and Teams capabilities best suited for your app.
 
@@ -44,23 +39,6 @@ There are multiple ways to extend Teams so every app is unique. Teams app featur
 Capabilities are the core functionalities that you can build in your app. They're also called entry or extension points because they enable integration and interaction.
 
 Your Teams apps have one or all of the following core capabilities:
-
-:::row:::
-   :::column span="":::
-
-#### Personal apps
-
-A [personal app](../../concepts/design/personal-apps.md) is a dedicated space or bot to help users focus on their own tasks or view relevant activities.
-
-   :::column-end:::
-
-   :::column span="":::
-
-:::image type="content" source="../../assets/images/overview-personal-apps-2021.png" alt-text="Conceptual representation of what personal apps look like in the Teams client.":::
-
-   :::column-end:::
-
-:::row-end:::
 
 :::row:::
    :::column span="":::
@@ -164,10 +142,44 @@ The [Microsoft Graph API for Teams](/graph/teams-concept-overview) provides acce
    :::column-end:::
 :::row-end:::
 
-> [!NOTE]
-> Previously, custom apps built for your org (LOB apps) were updated  in the Teams Store by selecting the ellipses on the tile. With the updated Teams Store experience, you can now update the custom apps built for your org (LOB apps) by signing in to the [Teams Admin Center](https://admin.teams.microsoft.com).
+### App capabilities mapped to features
 
-## Common use cases mapped to Teams capabilities
+The Microsoft Teams platform offers a large variety of features. Each feature is a way of interacting with your users that makes the Teams app capability relevant to the user need.
+
+Let's look at how Teams capabilities enable different features for your Teams app.
+
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-tab.png" alt-text="Diagram shows Microsoft Teams app capabilities for tab." link="~/tabs/what-are-tabs.md" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-bot.png" alt-text="Diagram shows Microsoft Teams app capabilities for bot." link="~/bots/what-are-bots.md" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-message-extension.png" alt-text="Diagram shows Microsoft Teams app capabilities for message extension." link="~/messaging-extensions/what-are-messaging-extensions.md" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-adaptive-card.png" alt-text="Diagram shows Microsoft Teams app capabilities for adaptive cards." link="~/task-modules-and-cards/cards/cards-reference.md#adaptive-card" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-apps-for-meetings.png" alt-text="Diagram shows Microsoft Teams app capabilities for meetings." link="~/apps-in-teams-meetings/teams-apps-in-meetings.md" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-webhook-and-connectors.png" alt-text="Diagram shows Microsoft Teams app capabilities for webhooks and connectors." link="~/webhooks-and-connectors/what-are-webhooks-and-connectors.md" border="false":::
+:::row-end:::
+ 
+:::row:::
+      :::image type="content" source="~/assets/images/overview/flowchart-graph-conversational-interface.png" alt-text="Diagram shows Microsoft Teams app capabilities for graph conversational interface." link="/graph/overview" border="false":::
+:::row-end:::
+
+> [!NOTE]
+> You can also explore the capability to add meeting app extensibility to your Teams app. For more information, see [apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md).
+
+### Common use cases mapped to Teams capabilities
 
 The next step is to match use cases with app capabilities.
 
@@ -227,42 +239,8 @@ Connect with your users and resolve their queries.
 
 </details>
 
-## App capabilities mapped to features
-
-The Microsoft Teams platform offers a large variety of features. Each feature is a way of interacting with your users that makes the Teams app capability relevant to the user need.
-
-Let's look at how Teams capabilities enable different features for your Teams app.
-
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-tab.png" alt-text="Diagram shows Microsoft Teams app capabilities for tab." link="~/tabs/what-are-tabs.md" border="false":::
-:::row-end:::
- 
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-bot.png" alt-text="Diagram shows Microsoft Teams app capabilities for bot." link="~/bots/what-are-bots.md" border="false":::
-:::row-end:::
- 
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-message-extension.png" alt-text="Diagram shows Microsoft Teams app capabilities for message extension." link="~/messaging-extensions/what-are-messaging-extensions.md" border="false":::
-:::row-end:::
- 
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-adaptive-card.png" alt-text="Diagram shows Microsoft Teams app capabilities for adaptive cards." link="~/task-modules-and-cards/cards/cards-reference.md#adaptive-card" border="false":::
-:::row-end:::
- 
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-apps-for-meetings.png" alt-text="Diagram shows Microsoft Teams app capabilities for meetings." link="~/apps-in-teams-meetings/teams-apps-in-meetings.md" border="false":::
-:::row-end:::
- 
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-webhook-and-connectors.png" alt-text="Diagram shows Microsoft Teams app capabilities for webhooks and connectors." link="~/webhooks-and-connectors/what-are-webhooks-and-connectors.md" border="false":::
-:::row-end:::
- 
-:::row:::
-      :::image type="content" source="~/assets/images/overview/flowchart-graph-conversational-interface.png" alt-text="Diagram shows Microsoft Teams app capabilities for graph conversational interface." link="/graph/overview" border="false":::
-:::row-end:::
-
 > [!NOTE]
-> You can also explore the capability to add meeting app extensibility to your Teams app. For more information, see [apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md).
+> Previously, custom apps built for your org (LOB apps) were updated  in the Teams Store by selecting the ellipses on the tile. With the updated Teams Store experience, you can now update the custom apps built for your org (LOB apps) by signing in to the [Teams Admin Center](https://admin.teams.microsoft.com).
 
 ### App scope
 
@@ -275,11 +253,6 @@ An app can exist across different scopes. For example:
 
 * Your app can display data in a central shared location, that is, a tab.
 * It can also present that same information through a personal conversational interface, that is, a bot.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Map your use cases](../../concepts/design/map-use-cases.md)
 
 ## See also
 
