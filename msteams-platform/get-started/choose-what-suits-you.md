@@ -1,6 +1,6 @@
 ---
 title: Choose what suits you
-description: In this module, learn more about the tools and SDKs available for you to build a Microsoft Teams app
+description: In this module, learn more about the tools and software development kits (SDKs) available for you to build a Microsoft Teams app.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.topic: reference
 
 # Choose what suits you
 
-You've built your first tab app, notification bot, and message extension. You can build a Teams app based on your business needs, development environment, and domain knowledge. Teams offers you the flexibility to select the tools, framework, languages, and environment to build your app.
+You built your first tab app, notification bot, and message extension. You can build a Teams app based on your business needs, development environment, and domain knowledge. Teams offers you the flexibility to select the tools, framework, languages, and environment to build your app.
 
 ## Tools and SDKs
 
