@@ -74,7 +74,7 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
   :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
 
 * Define the schema reference URL in the `$schema` property.
-* A `jsonPath` is recommended for arrays or when the data for the Adaptive Card is not the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
+* A `jsonPath` is recommended for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
 * Define `jsonPath` as the path to the relevant data/array in API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and return as separate results. *[Optional]*
 * The supported values for `responseLayout` are `list` and `grid`.
 
@@ -117,8 +117,7 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 * If there's no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
 * A command can't have more than one parameter.
 * A response rendering template must be defined per command, which is used to convert responses from an API. The command section of the manifest must point to this template file under `composeExtensions.commands.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
-
-* You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, whcih includes the app manifest and teh OpenAPI description document.
+* You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, which includes the app manifest and the OpenAPI description document.
 
 </details>
 
@@ -220,7 +219,7 @@ An API-based message extension is created.
 
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
-* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You are redirected to Teams, where you can add the app to Teams to preview the app.
 
 * **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
@@ -339,7 +338,7 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
    ```teamsfx provision --env dev```
    Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
-1. Sign in to your Microsoft account. Teams Toolkit CLI will execute validation and provisions your app on Azure.
+1. Sign in to your Microsoft account. Teams Toolkit CLI executes validation and provisions your app on Azure.
 
    :::image type="content" source="../assets/images/Copilot/api-based-CLI-provision-me.png" alt-text="Screenshot shows the sign in request and the provision stages in the command prompt window.":::
 
