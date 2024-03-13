@@ -45,8 +45,10 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 
 <details><summary>2. App manifest</summary>
 
+* Set the app manifest version to `devPreview`.
 * Set `composeExtensions.composeExtensionType` to `apiBased`.
 * Define `composeExtensions.apiSpecificationFile` as the relative path to the OpenAPI Description file within the folder.
+* Define `apiSpecificationFile` as the relative path to the OpenAPI description document.
 * Define `apiResponseRenderingTemplateFile` as the relative path to the response rendering template.
 * Each command must have a link to the response rendering template.
 * Full description must not exceed 128 characters.
@@ -62,13 +64,46 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 
 <details><summary>3. Response rendering template</summary>
 
+> [!NOTE]
+> Teams supports Adaptive Cards up to version 1.5, and  the Adaptive Cards Designer supports up to version 1.6.
+
+* Use tools such as Fiddler or Postman to call the API and ensure that the requests and the response is valid.
+* Get a sample response for validating the response rendering template.
+* You can use [Adaptive Card Designer](https://adaptivecards.io/designer/) to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
+
+  :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
+
 * Define the schema reference URL in the `$schema` property.
-* Define `jsonPath` as the path to the relevant data/array in API response. if the path points to an array, then each entry in the array will be a separate result and if the path points to an object, there will only be a single result. *[Optional]*
+* A `jsonPath` is recommended for arrays or when the data for the Adaptive Card is not the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
+* Define `jsonPath` as the path to the relevant data/array in API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and return as separate results. *[Optional]*
 * The supported values for `responseLayout` are `list` and `grid`.
 
-The `JsonPath` property in response rendering template is $ to indicate the root object of the response data is used to render the Adaptive Card, and you can update the `jsonPath` property to point another property in response data.
+If the root object of the OpenAPI schema contains well-known array property name, then Teams Toolkit uses the array property as root element to generate an Adaptive Card, and the array property name is used as `JsonPath` property for response rendering template. For example, if the property name contains `result`, `data`, `items`, `root`, `matches`, `queries`, `list`, or `output` and the type is `array`, then it's used as root element.
 
-If the root object of the OpenAPI schema contains well-known array property name, then Teams Toolkit uses the array property as root element to generate an Adaptive Card, and the array property name is used as `JsonPath` property for response rendering template. For example, if the property name contains `result`, `data`, `items`, `root`, `matches`, `queries`, `list`, `output` and the type is `array`, then it's used as root element.
+The following is a JSON example for a list of products to create a card result for each entry:
+
+```json
+{
+   "version": "1.0",
+   "title": "All Products",
+   "warehouse": {
+      "products": [
+        {
+          "id": "1",
+          "name": "Product 1",
+          "price": "$10"
+        },
+        {
+          "id": "2",
+          "name": "Product 2",
+          "price": "$20"
+        }
+      ]
+   }
+}
+```
+
+The array of results is under `products`, nested under `warehouse`, so the JSON path is `warehouse.products`.
 
 </details>
 </br>
@@ -77,11 +112,13 @@ If the root object of the OpenAPI schema contains well-known array property name
 
 API-based message extensions are a potent tool that enhances your Teams app's functionality by integrating with external APIs. This enhances the capabilities of your app and provides a richer user experience. To implement message extension from an API, you need to follow these guidelines:
 
-* The `Commands.id` property in app manifest must match the corresponding `operationId` in the OpenAPI Description.
-* If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description.
+* The `Commands.id` property in app manifest must match the corresponding `operationId` in the OpenAPI Description. For example, if the operation ID is `getProduct`, the command ID must be `getProduct`.
+* If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description document.
 * If there's no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
 * A command can't have more than one parameter.
 * A response rendering template must be defined per command, which is used to convert responses from an API. The command section of the manifest must point to this template file under `composeExtensions.commands.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
+
+* You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, whcih includes the app manifest and teh OpenAPI description document.
 
 </details>
 
