@@ -9,7 +9,9 @@ ms.date: 12/09/2022
 ---
 # Plan responsive tabs for Teams mobile
 
-Your app users can prefer either desktop or mobile, or both. Hence, Teams platform offers the opportunity to build apps on desktop and mobile. Capabilities such as bots, message extensions, and connectors work seamlessly on desktop and mobile clients. However, building tabs and dialogs (referred as task modules in TeamsJS v1.x) require planning for hosting your web experience on Teams mobile.
+Teams platform offers the opportunity to build apps on mobile and desktop. Your app users can prefer either desktop or mobile, or both. The users can prepare data on desktop but consume and share more data using mobile. The key to build any app is to understand and meet the user's needs.
+
+Capabilities such as bots, message extensions, and connectors work seamlessly on desktop and mobile clients. However, building tabs and dialogs (referred as task modules in TeamsJS v1.x) require planning for hosting your web experience on Teams mobile.
 
 Consider the following before you implement responsive tabs for your app in Teams mobile:
 
@@ -19,17 +21,19 @@ Consider the following before you implement responsive tabs for your app in Team
 
 * **User roles:** Ensure to target appropriate user role on Teams mobile.
 
-    For example, if you're building an app that provides data visualization tools to users such as data analysts and senior managers, both can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app. We recommend you to start with a user role that has larger base and possible early adopters for smaller screen experience.
+    For example, if you're building an app that provides data visualization tools to end users such as data analysts and senior managers, both can use your app on Teams mobile. You can decide to cater to all the roles that you have on your desktop app. We recommend you to start with a user role that has larger base and possible early adopters for smaller screen experience.
 
-## Three stages to plan mobile apps
+    In this case, the data analysts are the appropriate user role to target first. You can gradually add functionalities to support other user roles on your Teams mobile.
 
-After you identify the functionalities and user roles, it's time to understand the following three stages to plan any app on Teams mobile and enhance user experience:
+## Understand different stages to build apps
+
+After you've identified the functionalities and user roles, it's time to understand the following three stages to plan any app on Teams mobile and enhance user experience:
 
 | Stages | Description |
 | ----------- | ------------- |
-| **Consumption**| The first value that you want to deliver for your mobile users must be the right viewing experience on Teams mobile. To build an app on mobile, you can start with the consumption experience for your users. Since scrolling for content is a common practice, you can show relevant information in a single page with infinite scrolling. Additionally, you can use engagement mechanisms, such as notifications, to provide updates. |
+| **Consumption**| The first value that you want to deliver for your mobile users must be the right viewing experience on Teams mobile. To build an app on mobile, you can start with the consumption experience for your users. Since the mobile world has made scrolling for content a common practice, you can show relevant information. Additionally, you can use engagement mechanisms, such as notifications to inform updates. |
 | **Quick actions** | The next value that your users might want is the basic editing and querying experience on mobile. After your users start consuming the content on mobile, you can scale your app to the next step by migrating some actions from desktop app. You can also optimize and build new actions for mobile. |
-| **Enablement** | The final value that you can deliver to your users is the parity between desktop and mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide good experience for your users, make all use-cases, actions, and UI or UX elements responsive on mobile. For more information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).|
+| **Enablement** | The final value that you can deliver to your users is the parity between desktop and mobile. As your users engage with your app, provide full immersive experience on mobile, either at par or better than desktop experience. To provide good experience for your users, make all use-cases, actions, and UI or UX elements responsive on mobile. </br> For more information on the design guidelines, see [design process for Teams apps](design-teams-app-process.md).|
 
 ## Use cases
 
@@ -45,7 +49,7 @@ You can understand how to plan responsive tabs for dashboarding and data visuali
 
 **Consumption:**
 
-In the first stage, you can implement the most basic consumption experience, to view data. The purpose of any app in the domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or a list of authorized charts for the users. After you create dashboards on desktop, users can access the information using mobile. You can show a detailed view of any chart selected by user as an expanded view in your tabs or by using dialogs.
+In the first stage, you can implement the most basic consumption experience, to view data. The purpose of any app in the domain is to show data in the form of visualizations. In your app, you can show recently viewed visualizations on desktop, or list of all authorized charts for the users. After creating dashboards on desktop, users can access the information using mobile. You can show a detailed view of any chart selected by user as an expanded view in your tabs or by using dialogs.
 
 You can show the following information:
 
@@ -128,11 +132,11 @@ In the third stage, you can enable users with the following features:
 
 <summary><b>Co-authoring and whiteboarding apps</b></summary>
 
-You can understand how to plan responsive tabs for coauthoring and whiteboarding apps on Teams mobile platform.
+You can understand how to plan responsive tabs for co-authoring and whiteboarding apps on Teams mobile platform.
 
 **Consumption:**
 
-In the first stage, you can consider desktop experience to show the content and assets in your app. You can show the following functions:
+In the first stage, you can consider desktop experience to show the content and assets in your app.  You can show the following functions:
 
 * Comments or feedback.
 * Zoom in or out.
