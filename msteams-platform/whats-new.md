@@ -381,12 +381,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 February**
+**2024 March**
 
-* ***February 30, 2024***: [Introducing preapproval of RSC permissions](graph-api/rsc/preapproval-instruction-docs.md).
-* ***February 12, 2024***: [Build API-based message extension using Developer Portal for Teams.](messaging-extensions/build-api-based-message-extension.md)
-
-* ***February 06, 2024***: [Introduced systemDefault reserved activity type for send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis).
+* ***March 15, 2024***: [Introducing preapproval of RSC permissions](graph-api/rsc/preapproval-instruction-docs.md).
 
 :::column-end:::
 :::row-end:::
@@ -399,6 +396,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+|12/02/2024| Build API-based message extension using Developer Portal for Teams. | Build message extension > Build message extension using API > [Build API-based message extension](messaging-extensions/build-api-based-message-extension.md)|
+|06/02/2024| Introduced systemDefault reserved activity type for send activity feed notifications. | Build tabs > [Send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis)|
 |25/01/2024| Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content. | Extend your app across Microsoft 365 > [Actions in Microsoft 365](m365-apps/actions-in-m365.md)|
 |12/01/2024| Introduced Teams Toolkit command line interface v3. | Tools and SDKs > Tools > [Teams Toolkit command line interface](toolkit/Teams-Toolkit-CLI.md)|
 
