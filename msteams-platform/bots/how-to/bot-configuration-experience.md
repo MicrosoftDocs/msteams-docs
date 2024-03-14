@@ -670,7 +670,7 @@ adaptiveCardForSubmit = () => ({
           return response;
       }
       ```
-      ---
+     ---
 
 ---
 
