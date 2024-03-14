@@ -24,7 +24,7 @@ Here are some common failures you might encounter when debugging plugin executio
 
 #### No debug card
 
-If the orchestrator doesn't require your Microsoft 365 data or skills to respond to a prompt, no debug info card is returned.
+If the orchestrator doesn't require the user's Microsoft 365 data or skills to respond to a prompt, no debug info card is returned.
 
 Debug cards are also not returned in cases of capacity throttling, where you'll typically see an error message to try again later.
 
@@ -38,7 +38,7 @@ If relevant plugins are enabled, yet no matched functions were returned for the 
 
 #### Card with empty Selected functions for execution
 
-If no enabled plugin matched the search intent of the prompt, the debug info card reports *No functions selected for execution*. This is likely because the command description in the manifest isn't semantically related to the  search intent of the given prompt.
+If no enabled plugin matched the search intent of the prompt, the debug info card reports *No functions selected for execution*. This is likely because the command description in the manifest isn't semantically related to the search intent of the given prompt or that the data needed to fill in the parameters was not available in the conversation.
 
 If Copilot was previously matching and executing your plugin functions successfully, this could be an indication of throttling.
 
@@ -46,7 +46,7 @@ If Copilot was previously matching and executing your plugin functions successfu
 
 For nonmessage extension plugins, if the function execution details or request status is empty or failed, it indicates a failure during Copilot's attempt to assign parameters to the selected function of your plugin. If the failure is consistent, it's most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your OpenAPI definition.
 
-For message extension plugins, best practice is to optimize for responses under nine seconds. For more information, review the [technical requirements](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#technical-requirements) for message extension plugins.
+For message extension plugins, best practice is to optimize for responses under two seconds. For more information, review the [technical requirements](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#technical-requirements) for message extension plugins.
 
 #### Card with function execution response status of `0`
 
