@@ -28,10 +28,11 @@ You can use conversation update events to provide better notifications and effec
 > * You can add new events any time and your bot begins to receive them.
 > * You must design your bot to receive unexpected events.
 > * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+> * When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
-* When bot has been added to a conversation.
+* When the bot is added to a conversation.
 * Other members are added to or removed from a conversation.
 * Conversation metadata has changed.
 
@@ -348,7 +349,7 @@ The following code shows an example of channel restored event:
 
 # [C#](#tab/dotnet)
 
-* [SDK refernce](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
 ```csharp
