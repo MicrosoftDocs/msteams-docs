@@ -32,7 +32,7 @@ The following is an example of the PowerShell set up to manage preapproval of RS
 connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite.Authorization', 'AppCatalog.Read.All','InformationProtectionPolicy.Read', 'ServicePrincipalEndpoint.ReadWrite.All', 'Policy.ReadWrite.PermissionGrant', 'Policy.ReadWrite.ApplicationConfiguration', 'Application.ReadWrite.All')
 ```
 
-## Enable preapproval for RSC permissions
+## Enable preapproval of RSC permissions
 
 To enable preapproval for RSC permissions, change your RSC settings with the `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets to allow preapproved apps. The following table list the available configurations for RSC settings:
 
@@ -177,7 +177,7 @@ New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 </details>
 <br>
 
-## Modify a preapproval
+## Modify a preapproval of RSC permissions
 
 After you create a preapproval policy, you can modify the policy to change the permissions and the sensitivity label of the policy. When apps are released with additional permissions, you must update the preapproval for that app to add the new permissions, ensuring the app remains installable in your tenant. You need the same information to manage an existing preapproval and create a new preapproval.
 
@@ -222,7 +222,7 @@ New-MgBetaTeamAppPreApproval  -TeamsAppId d46d75f9-d445-457e-b555-24bd2f54c15a -
 > [!NOTE]
 > You must include all relevant permissions in your `Update-MgBetaTeamAppPreApproval` cmdlet, even if you’ve already declared them in the existing preapproval.
 
-## Delete a preapproval
+## Delete a preapproval of RSC permissions
 
 If you want to stop preapproving an app’s RSC permission, you can delete the preapproval policy for that app. To delete a preapproval policy, ensure that you have the App ID.
 
