@@ -3,7 +3,7 @@
 >
 > 1. Update TeamsJS SDK to v.2.19.0 or higher. For more information about the latest release of TeamsJS SDK, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
 >
-> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the ***.cloud.microsoft*** domain. This will ensure your app continues to work across existing and future Microsoft 365 host applications, and minimize changes required of your application in the future.
+> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the ****.cloud.microsoft*** domain. This will ensure your app continues to work across existing and future Microsoft 365 host applications, and minimize changes required of your application in the future.
 
 | **Microsoft 365 app host** | **frame-ancestor permission** |
 |--|--|
