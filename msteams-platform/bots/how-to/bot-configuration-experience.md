@@ -83,7 +83,7 @@ You can enable the configuration settings for your bot as follows:
 
 The following code snippets shows an example of `onInvokeActivity`, `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`:
 
-`onInvokeActivity`: This function is used to handle the `config/fetch` and `config/submit` activities. When the `config/fetch` activity is invoked, an adaptive card is created using the `adaptiveCardForContinue()` function. The function then returns a response with a status of 200 and a body containing the adaptive card. If an error occurs, it is logged to the console. When the `config/submit` activity is invoked, the function checks the value of the choice variable. If the value is `continue`, an adaptive card is created using the `adaptiveCardForSubmit()` function and a response is returned with a status of 200 and a body containing the adaptive card. Otherwise, the function returns a response with a status of 200 and a body containing a message indicating the end of the process. If an error occurs, it is logged to the console.
+`onInvokeActivity`: On invoking the `config/fetch` activity, it generates an Adaptive Card through the `adaptiveCardForContinue()` function. Subsequently, it returns a response with a 200 status and a body that includes the Adaptive Card. Any occurring error gets logged in the console. Upon invoking the `config/submit` activity, the function verifies the choice variable's value. If the value equals `continue`, it generates an Adaptive Card using the `adaptiveCardForSubmit()` function and returns a response with a 200 status and a body that includes the Adaptive Card. If not, the function returns a response with a 200 status and a body that carries a message signifying the process's conclusion. Any error that occurs during this process is logged in the console.
 
 ```javascript
 async onInvokeActivity(context) {
@@ -313,12 +313,12 @@ async handleTeamsConfigSubmit(context, _configData) {
 }
 ```
 
-The code snippets provided define two adaptive cards for bot setup options in Microsoft Teams.
-The first function, adaptiveCardForContinue, creates an adaptive card that prompts the user to select a bot setup option. The options available are "Continue with more options" and "Finish setting up bot". The user can search for an option using the placeholder "Search for an option". The card also includes a "Submit" action.
+The code snippets provided define two Adaptive Cards for bot setup options in Microsoft Teams.
+The first function, `adaptiveCardForContinue`, creates an adaptive card that prompts the user to select a bot setup option. The options available are `Continue with more options` and `Finish setting up bot`. The user can search for an option using the placeholder `Search for an option`. The card also includes a `Submit` action.
 
-The `adaptiveCardForContinue` function generates an adaptive card, prompting the user to select a bot setup option. The options include "Continue with more options" and "Finish setting up bot". Users can locate an option using the "Search for an option" placeholder. The card also features a "Submit" action.
+The `adaptiveCardForContinue` function generates an Adaptive Card, prompting the user to select a bot setup option. The options include `Continue with more options` and `Finish setting up bot`. Users can locate an option using the `Search for an option` placeholder. The card also features a `Submit` action.
 
-The `adaptiveCardForSubmit` function creates an adaptive card that prompts the user to submit to proceed with the bot setup. This card also includes a "Submit" action.
+The `adaptiveCardForSubmit` function creates an Adaptive Card that prompts the user to submit to proceed with the bot setup. This card also includes a `Submit` action.
 
 ```javascript
 
