@@ -217,28 +217,6 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "teams": "A list of team thread ids to which your app is restricted to",
         "groupChats": "A list of chat thread ids to which your app is restricted to"
     },    
-"scopeConstraints": {
-            "type": "object",
-            "properties": {
-                "teams": {
-                    "type": "array",
-                    "description": "A list of team thread ids to which your app is restricted to",
-                    "maxItems": 128,
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "id": {
-                                "description": "Team's thread Id",
-                                "type": "string",
-                                "maxLength": 64
-                            }
-                        },
-                        "required": [
-                            "id"
-                        ],
-                        "additionalProperties": false
-                    }
-                },
     "authorization": {
         "permissions": {
             "resourceSpecific": [
