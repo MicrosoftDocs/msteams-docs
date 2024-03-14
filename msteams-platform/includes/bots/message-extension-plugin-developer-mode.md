@@ -20,34 +20,20 @@ To enable developer mode in M365 chat in Teams, follow these steps:
 
 ### Troubleshooting execution failures
 
-Here are some common failures you might encounter when debugging plugin execution, and possible causes.
+Here are some common failures you might encounter when debugging plugin execution, and possible causes:
 
-#### No debug card
+* **No debug card**: If the orchestrator doesn't require the user's Microsoft 365 data or skills to respond to a prompt, no debug info card is returned. Any system failure results in an *I'm sorry* response from debug cards.
 
-If the orchestrator doesn't require the user's Microsoft 365 data or skills to respond to a prompt, no debug info card is returned.
+* **Empty debug card**: If no plugins are enabled or when the 3S the skill discovery service isn't triggered, debug info card returns empty.
 
-Debug cards are also not returned in cases of capacity throttling, where you'll typically see an error message to try again later.
+* **Card with empty Matched functions**: If relevant plugins are enabled, yet no matched functions were returned for the given prompt, this likely indicates the prompt didn't explicitly mention the plugin name.
 
-#### Empty debug card
+* **Card with empty Selected functions for execution**: If no enabled plugin matched the search intent of the prompt, the debug info card reports **No functions selected for execution**. This is likely because the command description in the manifest isn't semantically related to the search intent of the given prompt or that the data needed to fill in the parameters was not available in the conversation.
 
-If no plugins were enabled, the debug info card returns empty.
+  If Copilot was previously matching and executing your plugin functions successfully, this could be an indication of throttling. In case of LLM throttling, the rate limit will be reset after one hour.
 
-#### Card with empty Matched functions
+* **Card with empty or failed Function execution details**: For nonmessage extension plugins, if the function execution details or request status is empty or failed, it can be due to an error in defining URLs, or the API failed to return an error. If the failure is consistent, it's most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your OpenAPI description.
 
-If relevant plugins are enabled, yet no matched functions were returned for the given prompt, this likely indicates the prompt didn't explicitly mention the plugin name.
+  For message extension plugins, best practice is to optimize for responses under two seconds. For more information, review the [technical requirements](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#technical-requirements) for message extension plugins.
 
-#### Card with empty Selected functions for execution
-
-If no enabled plugin matched the search intent of the prompt, the debug info card reports *No functions selected for execution*. This is likely because the command description in the manifest isn't semantically related to the search intent of the given prompt or that the data needed to fill in the parameters was not available in the conversation.
-
-If Copilot was previously matching and executing your plugin functions successfully, this could be an indication of throttling.
-
-#### Card with empty or failed Function execution details
-
-For nonmessage extension plugins, if the function execution details or request status is empty or failed, it indicates a failure during Copilot's attempt to assign parameters to the selected function of your plugin. If the failure is consistent, it's most likely due to unclear plugin or parameter descriptions, invalid host urls, or other problems with your OpenAPI definition.
-
-For message extension plugins, best practice is to optimize for responses under two seconds. For more information, review the [technical requirements](/microsoftteams/platform/messaging-extensions/high-quality-message-extension?context=/microsoft-365-copilot/extensibility/context#technical-requirements) for message extension plugins.
-
-#### Card with function execution response status of `0`
-
-If the **Function execution details** filed is reporting a *Response Status* of `0`, but *Request status* of `Success`, this might be an indication of timeout. Currently the timeout limit for Copilot execution of a plugin API is set at 10 seconds.
+* **Third-party API returns Response or Timeout Error**: If the **Function execution details** filed is reporting a *Response Status* of `0`, but *Request status* of `Success`, it might be an indication of timeout. Currently the timeout limit for Copilot execution of a plugin API is set at 10 seconds.
