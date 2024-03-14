@@ -13,7 +13,6 @@ Get started with building apps for Microsoft Teams and beyond!
 In this module, you'll learn how to:
 
 * Build a message extension, tab, and bot app with GitHub Codespaces or using the step-by-step guide.
-* Use tutorials and code samples for building your Teams app.
 * Use various tools and SDKs available for building your Teams app.
 
 ## Build your first Teams app

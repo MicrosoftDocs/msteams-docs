@@ -1039,6 +1039,10 @@
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/use-CICD-template-v4.md",
         "redirect_url": "/microsoftteams/platform/toolkit/use-CICD-template"
+      },
+      {
+        "source_path": "msteams-platform/get-started/teams-toolkit-tutorial.md",
+        "redirect_url": "/microsoftteams/get-started/build-your-first-app"
       }      
     ]
 }

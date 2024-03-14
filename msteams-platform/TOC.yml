@@ -23,8 +23,6 @@
     displayName: First Teams app, Python, .NET, Java, Node.js, get started
   - name: Build your first Teams app
     href: get-started/build-your-first-app.md
-  - name: Teams app tutorials and code samples
-    href: get-started/teams-toolkit-tutorial.md
   - name: Choose what suits you
     href: get-started/choose-what-suits-you.md
  
@@ -54,6 +52,7 @@
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
+
 - name: Design your app
   items:
   - name: Overview

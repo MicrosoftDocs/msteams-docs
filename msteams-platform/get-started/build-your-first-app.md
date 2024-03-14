@@ -172,33 +172,12 @@ Follow these steps to create a notification bot that proactively sends messages 
 
 ## Step-by-step guide
 
-If you want to learn how to build an app from the beginning with Teams Toolkit, follow the step-by-step guides.
+To start building your Teams app from scratch, use the following step-by-step guides:
 
-# [Message Extension](#tab/msgext2)
-
-Select the following button to start building your message extension app.
-
-> [!div class="nextstepaction"]
-> [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml)
-
-For more information on message extensions, see [message extensions](../messaging-extensions/what-are-messaging-extensions.md).
-
-# [Tab](#tab/tab2)
-
- Select the following button to start building your basic tab app.
-
-> [!div class="nextstepaction"]
-> [Start building a basic tab app](../sbs-gs-javascript.yml)
-
-
-# [Bot](#tab/bot2)
-
- Select the following button to start building your notification bot.
-
-> [!div class="nextstepaction"]
-> [Start building a notification bot](../sbs-gs-notificationbot.yml)
-
----
+| &nbsp; |  **Message extension** | **Bot** | **Tab** |
+| --- | --- | --- | --- |
+| **Basic app** | [Build your first message extension app using JavaScript](../sbs-gs-msgext.yml) | [Build your first bot app using JavaScript](../sbs-gs-bot.yml) | • [Build your first tab app using JavaScript](../sbs-gs-javascript.yml) <br> •  [Build your first tab app using C#](../sbs-gs-csharp.yml) <br> • [Build your first tab app with SPFx](../sbs-gs-spfx.yml) |
+| **Scenario-based app** | NA | • [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) <br> • [Build command bot with JavaScript](../sbs-gs-commandbot.yml) <br> • [Create Teams workflow bot](../sbs-gs-workflow-bot.yml) | NA |
 
 ## Code samples
 
@@ -210,6 +189,7 @@ Alternatively, you can also use code samples to build apps. Code samples are des
 > [Choose what suits you](choose-what-suits-you.md)
 
 ## See also
+
 * [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md)
 * [Build tabs for Teams](../tabs/what-are-tabs.md)
 * [Build bots for Teams](../bots/what-are-bots.md)

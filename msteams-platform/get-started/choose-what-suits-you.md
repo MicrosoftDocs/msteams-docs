@@ -16,17 +16,17 @@ You can build your Microsoft Teams app with the help of the following tools and 
 
 :::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Flow chart shows you the SDKs and tools you need to build your Teams app."lightbox="../assets/images/overview/choose-what-you-need.png":::
 
-1. **App capabilities**: You can choose a single or a combination of capabilities based on your app requirements and business needs.
-2. **SDKs you need**: For example, if you're building an AI chat bot app, you select Teams AI library.
-3. **UI Components**: Choose the UI components to design your app based on your app capability.
-4. **Languages**: Choose the language in which you want to build your app.
-5. **Recommended Tools**: Choose the tools based on the language that you've selected. Use the Teams Developer Portal to manage and publish your app. The Teams Toolkit allows you to build your app with JavaScript and TypeScript in Visual Studio Code or with C# in Visual Studio.
+* **App capabilities**: You can choose a single or a combination of capabilities based on your app requirements and business needs.
+* **SDKs you need**: For example, if you're building an AI chat bot app, you select Teams AI library.
+* **UI Components**: Choose the UI components to design your app based on your app capability.
+* **Languages**: Choose the language in which you want to build your app.
+* **Recommended Tools**: Choose the tools based on the language that you've selected. The Teams Toolkit allows you to build your app with JavaScript and TypeScript in Visual Studio Code or with C# in Visual Studio.
 
 | App capabilities | User interactions | Recommended tools | SDKs | Languages |
 |---|---|---|---|---|
+| **Message extensions** | Shortcuts for inserting external content into a conversation or taking action on messages. | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI | TeamsFx SDK, Bot Framework SDK, Teams AI library, and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
 | **Tabs** | A full-screen embedded web experience. | Visual Studio Code or Visual Studio with Teams Toolkit extension, or [TeamsFx CLI](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/cli/user-manual.md) | [Teams JavaScript client library](/javascript/api/overview/msteams-client?view=msteams-client-js-latest&preserve-view=true) for UI functionalities, SharePoint Framework (SPFx), and Microsoft Graph SDK | C#, TypeScript, and JavaScript (including React) |
 | **Bots** | A chat bot that converses with users. |Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI | [TeamsFx SDK](/javascript/api/@microsoft/teamsfx/?view=msteams-client-js-latest&preserve-view=true), [Bot Framework SDK](https://dev.botframework.com/), Teams AI library, and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
-| **Message extensions** | Shortcuts for inserting external content into a conversation or taking action on messages. | Visual Studio Code or Visual Studio with Teams Toolkit extension, or TeamsFx CLI | TeamsFx SDK, Bot Framework SDK, Teams AI library, and Microsoft Graph SDK | C#, TypeScript, and JavaScript |
 
 > [!NOTE]
 >
