@@ -62,7 +62,7 @@ This section provides information for using existing Microsoft Entra app or manu
    * Select **Add scope**.
 
 1. On the same page, select **Add a client application** under **Authorized client applications**.
-   * **Client ID**: Fill in **1fec8e78-bce4-4aaf-ab1b-5451cc387264** which is Client ID for Teams on mobile and client.
+   * **Client ID**: Fill in **1fec8e78-bce4-4aaf-ab1b-5451cc387264** which is Client ID for Microsoft Teams on mobile and client.
    * **Authorized scopes**: Choose the existing **access_as_user** scope.
    * Select **Add application**.
 
