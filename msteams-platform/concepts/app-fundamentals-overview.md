@@ -65,7 +65,7 @@ Understanding the user and their concern is the first indicator of how a Teams a
 
 ### Government Community Cloud
 
-Apart from the commercial cloud that your apps in Teams resides on, there are three types of government clouds:
+Apart from the commercial cloud that your Teams app resides on, there are three types of government clouds:
 
 * **Government Community Cloud (GCC)**: The GCC cloud is a U.S. government focused copy of the commercial Teams cloud.
 * **Department of Defense (DOD)**: The DOD cloud is built for the U.S. Department of Defense only.

@@ -26,7 +26,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 | # | Consider... |
 | --- | --- |
 | 1 | Are the users primarily frontline workers on mobile clients? |
-| 2 | Do you expect many external users to need access to your app? |
+| 2 | Do you expect many guests to need access to your app? |
 | 3 | Do they use teams and channels or primarily group chats? |
 | 4 | How technically advanced are your primary users? |
 | 5 | Do you need a thorough onboarding experience or a few pointers might do? |
@@ -66,7 +66,7 @@ Use an authentication method suitable for your app to validate app users and sec
 | 1 | Do the users access different views of data based on their roles? |
 | 2 | Is customer data involved? |
 | 3 | Are the interactions also based on the user roles? |
-| 4 | Are external users accessing the app? |
+| 4 | Are guests accessing the app? |
 
 </details>
 <br>
@@ -90,7 +90,7 @@ To provide your users with a seamless onboarding experience, create a step-by-st
 | # | Consider... |
 | --- | --- |
 | 1 | Are one-on-one interactions with the app required for privacy or other reasons? For example, checking leave balance or other private information. |
-| 2 | Is there going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization-wide events. |
+| 2 | Are users going to collaborate from different teams in an organization? For example, finding upcoming organization-wide events. |
 | 3 | Are there any personalized notifications or messages that need to be sent to a user throughout the Teams app experience? |
 
 </details>
@@ -116,7 +116,7 @@ With Teams, you can choose the build environment that best suits your app requir
 <details>
 <summary>Plan analytics for your app</summary>
 
-It's important to measure how your app is performing in the real-world once published. You need to monitor who's interested in your app, which users and organizations are using your app, how users are engaging with your app, their bounce rate and more. Once you know these metrics, you can analyze the data against your business goals, take corrective action by fixing issues, and intervene in the user journey or plan further enhancements to your app.
+It's important to measure how your app is performing in the real-world once published. You need to monitor your app's users and organizations, how users engage with your app, bounce rates, potential customers, and more. Once you know these metrics, you can analyze the data against your business goals, take corrective action by fixing issues, and intervene in the user journey or plan further enhancements to your app.
 
 For more information, see [planning analytics](overview-analytics.md).
 </details>

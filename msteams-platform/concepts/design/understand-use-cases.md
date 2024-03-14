@@ -10,7 +10,7 @@ ms.date: 12/09/2022
 
 # Understand and map your use cases
 
-The user's requirements determine all app choices you'll make, such as building app design, selecting capabilities, determining build and test environment, and app distribution.
+The user's requirements determine all app choices you make, such as building app design, selecting capabilities, determining build and test environment, and app distribution.
 
 To identify your app's use case:
 
