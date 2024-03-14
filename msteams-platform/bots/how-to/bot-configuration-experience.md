@@ -13,13 +13,13 @@ ms.localizationpriority: high
 >
 > Bot configuration experience is supported in channel or group chat scopes only.
 
-The improved bot configuration settings, enables users to configure their bot experience both during the bot installation and also from the channel or group chat scope after the bot is installed.
+The bot configuration settings, enables users to configure their bot experience both during the bot installation and also from the channel or group chat scope after the bot is installed.
 
 There are two ways to initiate bot configuration settings:
 
 1. @mention the bot in the message compose area.
 
-   :::image type="content" source="../../assets/images/bots/bot-configuration-in-message-area.png" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
+   :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
 1. When the user hovers over the bot, an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration settings.
 
