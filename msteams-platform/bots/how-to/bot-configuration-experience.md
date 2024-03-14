@@ -558,7 +558,7 @@ adaptiveCardForSubmit = () => ({
 
 ```
 
-# [C#](#tab/C#4)
+# [C#](#tab/JS3)
 
 #### C# code snippets
 
