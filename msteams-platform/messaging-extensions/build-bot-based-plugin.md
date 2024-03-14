@@ -347,7 +347,7 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 ---
 
-[!INCLUDE [message-extension-plugin-developer-mode](../includes/bots/message-extension-plugin-developer-mode.md)]
+[!INCLUDE [Developer mode](../includes/bots/message-extension-plugin-developer-mode.md)]
 
 ## Step-by-step guide
 
