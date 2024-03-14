@@ -13,7 +13,7 @@ ms.localizationpriority: high
 >
 > Bot configuration experience is supported in channel or group chat scopes only.
 
-The bot configuration settings, enables users to configure their bot experience both during the bot installation and also from the channel or group chat scope after the bot is installed.
+You can create a bot to enable the bot configuration settings for the user during the bot installation and also from the channel or group chat scope after the bot is installed.
 
 There are two ways to initiate bot configuration settings:
 
@@ -63,10 +63,12 @@ For more information, see [app manifest schema](../../resources/schema/manifest-
 
 ### Configure your bot
 
-There are two ways to enable the configuration settings:
+When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `config/fetch` or `config/submit`. The bot responds with an Adaptive Card, when the user provides relevant information in the Adaptive Card and selects Submit, `config/submit` or `config/continue` is returned to the bot and the bot configuration is complete.
 
-1. `onInvokeActivity` method
-1. SDK method
+You can use the following methods to enable configuration settings for a bot:
+
+1. `onInvokeActivity`
+1. `OnInvokeActivityAsync`
 
 #### `onInvokeActivity` method
 
@@ -74,7 +76,7 @@ The following code snippets shows an example of `onInvokeActivity` for JS and C#
 
 # [Javascript](#tab/JS1)
 
-`onInvokeActivity`: On invoking the `config/fetch` activity, it generates an Adaptive Card through the `adaptiveCardForContinue()` function. Subsequently, it returns a response with a 200 status and a body that includes the Adaptive Card. Any occurring error gets logged in the console. Upon invoking the `config/submit` activity, the function verifies the choice variable's value. If the value equals `continue`, it generates an Adaptive Card using the `adaptiveCardForSubmit()` function and returns a response with a 200 status and a body that includes the Adaptive Card. If not, the function returns a response with a 200 status and a body that carries a message signifying the process's conclusion. Any error that occurs during this process is logged in the console.
+The `onInvokeActivity` function simplifies the handling of invoke activities. For `config/fetch`, it uses `adaptiveCardForContinue()` to create an Adaptive Card and returns a 200 status response with the card included. For `config/submit`, it checks the choice variable; if it’s `continue`, it calls `adaptiveCardForSubmit()` for an Adaptive Card and returns a 200 status response with the card. Else, it returns a 200 status response with a completion message.
 
 ```javascript
 async onInvokeActivity(context) {
@@ -225,12 +227,15 @@ adaptiveCardForSubmit= () => ({
 
 # [C#](#tab/teams-bot-sdk1)
 
-1. `OnInvokeActivityAsync`: For `config/fetch`, use `config/auth`; for `config/submit`, use `config/continue`.
-1. `OnInvokeActivityAsync`: For `config/fetch`, use `config/continue`; for `config/submit`, use `config/message`.
+The `onInvokeActivityAsync` method is designed to handle different types of invoke activities. Such as:
+
+1. For activities related to configuration or fetching information, the method utilizes `config/auth`; whereas for submission-related activities, it employs `config/continue`.
+
+1. For activities related to configuration or fetching information, the method utilizes `config/continue`; whereas for submission-related activities, it employs `config/message`.
 
    # [C# 1](#tab/teams-bot-sdk2)
 
-      The `OnInvokeActivityAsync` method manages incoming invoke activities for a bot application. It accepts a `turnContext` object, which represents the activity, and a `cancellationToken` for asynchronous operations. The method determines the requested operation type by examining the activity’s name. If the name is `config/fetch`, the bot forms a `ConfigResponse<BotConfigAuth>` object that includes bot configuration details and returns it as an `InvokeResponse` with a 200 status code. If the name is `config/submit`, the bot generates a `ConfigResponse<TaskModuleResponseBase>` that encapsulates the necessary configuration details in an Adaptive Card and also returns it with a 200 status code.
+      The `OnInvokeActivityAsync` method simplifies handling of invoke activities in a bot. It uses a `turnContext` object to represent the activity and a `cancellationToken` for async tasks. For `config/fetch`, it creates a `ConfigResponse<BotConfigAuth>` with bot details and returns a 200 status `InvokeResponse`. For `config/submit`, it forms a `ConfigResponse<TaskModuleResponseBase>` with configuration details in an Adaptive Card and returns a 200 status code.
 
       ```csharp
       protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -307,7 +312,7 @@ adaptiveCardForSubmit= () => ({
 
    # [C# 2](#tab/teams-bot-sdk3)
 
-      The `OnInvokeActivityAsync` method, which is tasked with managing incoming invoke activities in a bot application. It begins by inspecting the name of the incoming activity using `turnContext.Activity.Name`. If the activity name is `config/submit`, it formulates a `ConfigResponse<TaskModuleResponseBase>` that includes a simple message response and returns it as an `InvokeResponse` with a status code of 200. Alternatively, if the activity name is `config/fetch`, it constructs an AdaptiveCard to symbolize configuration data and encapsulates it within a `ConfigResponse<TaskModuleResponseBase>`. This response comprises details such as card content, dimensions, and title, and is returned with a status code of 200. If the incoming activity’s name doesn’t match either `config/submit` or `config/fetch`, the method returns null, indicating that the activity does not necessitate a specific action.
+      The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an AdaptiveCard for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
 
       ```csharp
       protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
