@@ -9,13 +9,7 @@ zone_pivot_groups: bot-messages
 
 # Messages in bot conversations
 
-Messages in bot conversations play a crucial role in facilitating communication between users and conversational bots. A conversation is a series of messages sent between your bot and one or more users. There are three kinds of conversations (also called scopes) in Teams:
-
-* `teams` Also called channel conversations, visible to all members of the channel.
-* `personal` Conversations between bots and a single user.
-* `groupChat` Chat between a bot and two or more users.
-
-A bot behaviour depends on what kind of conversation it's involved in:
+Messages in bot conversations play a crucial role in facilitating communication between users and conversational bots. A conversation is a series of messages sent between your bot and one or more users. A bot behaviour depends on what kind of conversation it's involved in:
 
 * [Bots in channel and group chat conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) require the user to @mention the bot to invoke it in a channel or group chat.
 * Bots in single user conversations don't require an @mention. User can just type the message and share it in the chat.
