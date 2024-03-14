@@ -40,8 +40,6 @@ Capabilities are the core functionalities that you can build in your app. They a
 
 #### App capabilities mapped to features
 
-Each feature that Teams offers is a unique way of interacting with your users that makes the Teams app capability relevant to the user's need.
-
 Let's look at how Teams capabilities enable different features for your Teams app.
 
 :::row:::
@@ -77,15 +75,13 @@ Let's look at how Teams capabilities enable different features for your Teams ap
 
 ### Common use cases mapped to Teams capabilities
 
-The next step is to match use cases with app capabilities.
-
 Here's a list of common user scenarios mapped to Teams capabilities. It isn't an exhaustive list, but helps you think through some of the possibilities available to you.
 </br>
 </br>
 <details>
 <summary>Create, share, and collaborate on items in an external system.</summary>
 
-Apps to interact with your data
+Apps to interact with your data.
 
 | **If you want to...** | **Try ...** |
 | --- | --- |
@@ -142,8 +138,8 @@ Connect with your users and resolve their queries.
 
 Your app can have one of the following scopes:
 
-* **Personal app experience**: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
-* **Shared app experience**: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
+* **Personal app**: A personal app is a dedicated space or bot to help users focus on their own tasks or view activities important to them.
+* **Shared app**: Team, channel, and chat are collaboration spaces. Apps in these contexts are available to everyone in that space. Collaboration spaces typically focus on workflows for your app's interactions or unlocking new social interactions.
 
 An app can exist across different scopes. For example:
 
@@ -159,4 +155,3 @@ An app can exist across different scopes. For example:
 * [Webhooks and connectors](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md)
 * [Apps for Teams meetings and calls](../../apps-in-teams-meetings/teams-apps-in-meetings.md)
 * [Build Adaptive Cards](../../task-modules-and-cards/cards/cards-reference.md#adaptive-card)
-* [Teams app planning checklist](planning-checklist.md)

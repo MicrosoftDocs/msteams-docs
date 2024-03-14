@@ -21,7 +21,7 @@ Here's a checklist of questions to consider when you plan your app. Use the chec
 <details>
 <summary>Understand your user.</summary>
 
-Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and draw a solution. For more information, see [understand your use cases](understand-use-cases.md).
+Understanding the user and their concern are the first indicators of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and develop a solution. For more information, see [understand your use cases](understand-use-cases.md).
 
 | # | Consider... |
 | --- | --- |
@@ -40,7 +40,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 |--- | --- |
 | 1 | What are the pros and cons of the current state system used by your users? |
 | 2 | What are the issues faced by your users that you want to address? |
-| 3 | What features or capabilities your users like and love in their current way of doing the process? |
+| 3 | Which features or capabilities do your users like in their current way of performing the process? |
 
 </details>
 <br>
@@ -49,8 +49,8 @@ Understanding the user and their concern are the first indicators of how a Teams
 
 | # | Consider... |
 | --- | --- |
-| 1 | What are the challenges with back end integration of the current app? |
-| 2 | Who owns the back end data - In-house or third-party? |
+| 1 | What are the challenges with backend integration of the current app? |
+| 2 | Who owns the backend data? User or third-party? |
 | 3 | Are there firewalls that affect the functioning of the app? |
 | 4 | Are there APIs to access the data you need for functioning of your app? |
 
@@ -59,7 +59,7 @@ Understanding the user and their concern are the first indicators of how a Teams
 <details>
 <summary>Provide authentication</summary>
 
-Authentication is all about validating app users and securing the app and app users against unwarranted access. You can use an authentication method suitable for your app to validate app users who want to use the Teams app. For more information, see [authenticate users in Microsoft Teams](../authentication/authentication.md).
+Use an authentication method suitable for your app to validate app users and secure the app and app users against unwarranted access. For more information, see [authenticate users in Microsoft Teams](../authentication/authentication.md).
 
 | # | Consider...|
 |--- | --- |
@@ -73,7 +73,7 @@ Authentication is all about validating app users and securing the app and app us
 <details>
 <summary>Plan onboarding experience</summary>
 
-To provide your users with a seamless onboarding experience, you can create a step-by-step guide explaining how and what to do with your app. For example, see [create Teams conversation bot](../../sbs-teams-conversation-bot.yml).
+To provide your users with a seamless onboarding experience, create a step-by-step guide explaining how and what to do with your app. For example, see [create Teams conversation bot](../../sbs-teams-conversation-bot.yml).
 
 | # | Consider... |
 | --- | --- |
@@ -89,8 +89,8 @@ To provide your users with a seamless onboarding experience, you can create a st
 
 | # | Consider... |
 | --- | --- |
-| 1 | Are there one-on-one interactions with the app required for privacy or other reasons? For example, checking leave balance or other private information. |
-| 2 | Are they're going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization-wide events. |
+| 1 | Are one-on-one interactions with the app required for privacy or other reasons? For example, checking leave balance or other private information. |
+| 2 | Is there going to be collaboration among users who might not have any common Teams? For example, finding upcoming organization-wide events. |
 | 3 | Are there any personalized notifications or messages that need to be sent to a user throughout the Teams app experience? |
 
 </details>
@@ -116,7 +116,7 @@ With Teams, you can choose the build environment that best suits your app requir
 <details>
 <summary>Plan analytics for your app</summary>
 
-It's important to measure how your app is performing in the real-world once published. You need to monitor who's interested in your app, which users and organizations are using your app, how users are engaging with your app, their bounce rate and more. Once you know these metrics, you can analyze the data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
+It's important to measure how your app is performing in the real-world once published. You need to monitor who's interested in your app, which users and organizations are using your app, how users are engaging with your app, their bounce rate and more. Once you know these metrics, you can analyze the data against your business goals, take corrective action by fixing issues, and intervene in the user journey or plan further enhancements to your app.
 
 For more information, see [planning analytics](overview-analytics.md).
 </details>
@@ -143,7 +143,7 @@ Teams doesn't host your app. When a user installs your app in Teams, they instal
 
 ## Plan to monetize your app
 
-Microsoft Teams Store provides features that let you monetize your apps and gain new customers and global visibility. Factors such as type of app, nature of service, and target customers influence your choice for the best monetization option. Establishing a monetizing option beforehand helps guide the app design, build, and distribution decisions.
+Microsoft Teams Store provides features that let you monetize your apps, gain new customers, and global visibility. Factors such as type of app, nature of service, and target customers influence your choice for the best monetization option. Establishing a monetizing option beforehand helps guide the app design, build, and distribution decisions.
 
 :::row:::
     :::column span="":::
