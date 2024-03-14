@@ -75,8 +75,8 @@ You can create a preapproval, which preapproves RSC permissions for certain sens
 
 In this section, you learn to:
 
-* [Create a preapproval without a sensitivity label](#create-a-preapproval-without-a-sensitivity-label) for use with any sensitivity group.
-* [Create a preapproval with a sensitivity label](#create-a-preapproval-with-a-sensitivity-label) for use with specific data.
+* [Create a preapproval without a sensitivity label](#create-the-preapproval-without-a-sensitivity-label) for use with any sensitivity group.
+* [Create a preapproval with a sensitivity label](#create-the-preapproval-with-a-sensitivity-label) for use with specific data.
 
 To create a preapproval, ensure that you have the following information:
 
