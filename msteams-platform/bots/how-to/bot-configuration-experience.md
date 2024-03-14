@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 In the dynamic domain of conversational AI and bot development, comprehensive configuration options are key to seamless user interactions. It's important to arm developers with the tools they need to effectively manage and personalize their bots in environments such as Microsoft Teams. 
 
-This article explores how to implement bot configuration functionalities using the Microsoft Bot Framework SDK. We examine two types of methods: universally applicable ones and those specific to Microsoft Teams. Understanding these methods allows developers to tailor bot configurations to meet unique needs while ensuring cross-platform compatibility. By leveraging these methods, developers can create complex bot configurations that enhance user engagement and efficiency, whether across multiple platforms or specifically within the Microsoft Teams framework. 
+This article explains how to implement bot configuration functionalities using the Microsoft Bot Framework SDK. We examine two types of methods: universally applicable ones and those specific to Microsoft Teams. Understanding these methods allows developers to tailor bot configurations to meet unique needs while ensuring cross-platform compatibility. By leveraging these methods, developers can create complex bot configurations that enhance user engagement and efficiency, whether across multiple platforms or specifically within the Microsoft Teams framework. 
 
 Build a bot that provides bot configuration settings for users during the bot's installation process and within the channel or group chat scope after the bot's deployment.
 
@@ -73,15 +73,15 @@ You can use the following methods to enable configuration settings for a bot:
 
 1. Non-Teams Methods:
 
-   1. `OnInvokeActivity`: The `OnInvokeActivity` method is a fundamental component of the Bot Framework SDK. It enables developers to handle incoming activities that are not recognized by any other method in the bot's logic. This method provides flexibility for handling a wide range of activities, including user interactions, within the bot's conversation flow.
+   1. `OnInvokeActivity`: The `OnInvokeActivity` method is a fundamental component of the Bot Framework SDK. It enables users to handle incoming activities that are not recognized by any other method in the bot's logic. This method provides flexibility for handling a wide range of activities, including user interactions, within the bot's conversation flow.
 
-   1. `OnInvokeActivityAsync`: `OnInvokeActivityAsync` serves as an asynchronous counterpart to `OnInvokeActivity`. It allows developers to handle incoming activities asynchronously, making it suitable for long-running or asynchronous tasks. This method enhances responsiveness and scalability in bot applications by offloading processing tasks to asynchronous operations.
+   1. `OnInvokeActivityAsync`: `OnInvokeActivityAsync` serves as an asynchronous counterpart to `OnInvokeActivity`. It allows users to handle incoming activities asynchronously, making it suitable for long-running or asynchronous tasks. This method enhances responsiveness and scalability in bot applications by offloading processing tasks to asynchronous operations.
 
 1. Teams-Specific Methods:
 
-   1. `HandleTeamsConfig`: This method offers granular control over configuration-related activities within the bot's logic. Developers can use `HandleTeamsConfig` to implement custom logic or additional processing when handling configuration events in Microsoft Teams. This fine-tuned approach ensures bots adapt seamlessly to dynamic configuration changes within the Teams environment.
+   1. `HandleTeamsConfig`: This method offers granular control over configuration-related activities within the bot's logic. You can use `HandleTeamsConfig` to implement custom logic or additional processing when handling configuration events in Teams. This fine-tuned approach ensures bots adapt seamlessly to dynamic configuration changes within the Teams environment.
 
-   1. `OnTeamsConfig:`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for Microsoft Teams bot development. Specifically designed for Microsoft Teams bot development, the `OnTeamsConfig` method facilitates the handling of configuration-related activities within the bot. It is part of the TeamsActivityHandler class provided by the Bot Framework SDK for Teams. This method empowers developers to respond to configuration events, such as user-initiated bot configurations or updates to bot settings within the Teams platform.
+   1. `OnTeamsConfig:`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for bot development. The `OnTeamsConfig` method facilitates the handling of configuration related activities within the bot. It is part of the `TeamsActivityHandler` class provided by the Bot Framework SDK for Teams. This method enables users to respond to configuration events, including user initiated bot configurations or updates to bot settings within the Teams.
 
 #### Non-Teams method
 
@@ -325,7 +325,7 @@ The `onInvokeActivityAsync` method is designed to handle different types of invo
 
    # [C# 2](#tab/teams-bot-sdk3)
 
-      The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an AdaptiveCard for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
+      The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an Adaptive Card for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
 
       ```csharp
       protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
@@ -481,7 +481,7 @@ async handleTeamsConfigSubmit(context, _configData) {
 }
 ```
 
-The provided code snippets create two Adaptive Cards for setting up a bot in Teams. The `adaptiveCardForContinue` function makes a card that lets the user choose a setup option, either to `Continue with more options` or `Finish setting up bot`. Users can search for options with `Search for an option`. The card has a `Submit` button.
+The code snippets create two Adaptive Cards for setting up a bot in Teams. The `adaptiveCardForContinue` function makes a card that lets the user choose a setup option, either to `Continue with more options` or `Finish setting up bot`. Users can search for options with `Search for an option`. The card has a `Submit` button.
 
 The `adaptiveCardForSubmit` function also makes an Adaptive Card. This one asks the user to submit to move forward with setting up the bot. It includes a `Submit` button.
 
