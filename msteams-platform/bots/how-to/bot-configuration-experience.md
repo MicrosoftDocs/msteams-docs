@@ -13,6 +13,22 @@ ms.localizationpriority: high
 >
 > Bot configuration experience is supported in channel or group chat scopes only.
 
+In the landscape of conversational AI and bot development, enabling seamless user experiences often relies on robust configuration capabilities. Empowering developers with tools to efficiently manage and customize their bots within platforms like Microsoft Teams is essential. In this article, we explore methods for implementing bot configuration features using the Microsoft Bot Framework SDK. We examine two sets of methods: those applicable across various platforms and those specific to Microsoft Teams. By understanding these methods, developers can tailor bot configurations to meet specific needs while ensuring compatibility across platforms.
+
+1. Non-Teams Methods:
+
+   1. `OnInvokeActivity`: The `OnInvokeActivity` method is a fundamental component of the Bot Framework SDK. It enables developers to handle incoming activities that are not recognized by any other method in the bot's logic. This method provides flexibility for handling a wide range of activities, including user interactions, within the bot's conversation flow.
+
+   1. `OnInvokeActivityAsync`: `OnInvokeActivityAsync` serves as an asynchronous counterpart to `OnInvokeActivity`. It allows developers to handle incoming activities asynchronously, making it suitable for long-running or asynchronous tasks. This method enhances responsiveness and scalability in bot applications by offloading processing tasks to asynchronous operations.
+
+1. Teams-Specific Methods:
+
+   1. `OnTeamsConfig:`: Specifically designed for Microsoft Teams bot development, the `OnTeamsConfig` method facilitates the handling of configuration-related activities within the bot. It is part of the TeamsActivityHandler class provided by the Bot Framework SDK for Teams. This method empowers developers to respond to configuration events, such as user-initiated bot configurations or updates to bot settings within the Teams platform.
+
+   1. `HandleTeamsConfig`: Similar to `OnTeamsConfig`, `HandleTeamsConfig` is tailored for Microsoft Teams bot development. This method offers granular control over configuration-related activities within the bot's logic. Developers can use `HandleTeamsConfig` to implement custom logic or additional processing when handling configuration events in Microsoft Teams. This fine-tuned approach ensures bots adapt seamlessly to dynamic configuration changes within the Teams environment.
+
+By leveraging these methods, developers can craft sophisticated bot configurations that enhance user engagement and productivity, whether across multiple platforms or within the Microsoft Teams ecosystem.
+
 You can create a bot to enable the bot configuration settings for the user during the bot installation and also from the channel or group chat scope after the bot is installed.
 
 There are two ways to initiate bot configuration settings:
