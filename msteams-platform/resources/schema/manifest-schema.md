@@ -361,6 +361,9 @@ If the app requests for permissions change, the users are prompted to upgrade an
 
 This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATCH).
 
+> [!NOTE]
+> If your app includes an Office Add-in, each segment of the version string is limited to a maximum of five digits. The semver standard's pre-release and metadata version string extensions aren't supported.
+
 ## ID
 
 **Required** &ndash; Microsoft app ID
