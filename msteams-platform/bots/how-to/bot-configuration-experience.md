@@ -319,13 +319,13 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
         }
         ```
 
-     # [C# 2](#tab/teams-bot-sdk3)
+      # [C# 2](#tab/teams-bot-sdk3)
 
-        The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an Adaptive Card for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
+         The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an Adaptive Card for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
 
-        ```csharp
-        protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-        {
+         ```csharp
+         protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+         {
             if (turnContext.Activity.Name == "config/submit")
             {
                 var response = new ConfigResponse<TaskModuleResponseBase>
@@ -384,9 +384,9 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
             }
 
             return null;
-        }
-        ```
-       ---
+         }
+         ```
+         ---
 
    ---
 
