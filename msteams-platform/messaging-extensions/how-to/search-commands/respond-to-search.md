@@ -91,7 +91,78 @@ Your service must respond with the results matching the user query. The response
 |`composeExtension.suggestedActions`|Suggested actions. Used for responses of type `auth` or `config`. |
 |`composeExtension.text`|Message to display. Used for responses of type `message`. |
 
-### Response card types and previews
+### `config` response type
+
+`config` response is used when a user configures the message extension for the first time. 
+It triggers a prompt for the user to set up the message extension and provide any necessary configuration.
+
+If message extension uses a configuration page, the [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration.
+
+The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler also manages the response from the configuration page. `onQuerySettingsUrl` handler provides the URL for the configuration page. After closing the configuration page, the `onSettingsUpdate` method is called to accept and save the returned state. The [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler then retrieves the updated settings and uses them to update the behavior of the message extension.
+
+The following code handles a user request for the configuration page of a message extension. It fetches the user's existing configuration settings, escapes them, and builds a response. This response includes the configuration page's URL with the escaped settings added as a query parameter.
+
+```csharp
+
+protected override async Task<MessagingExtensionResponse> OnTeamsMessagingExtensionConfigurationQuerySettingUrlAsync(ITurnContext<IInvokeActivity> turnContext, MessagingExtensionQuery query, CancellationToken cancellationToken)
+{
+    // The user has requested the Messaging Extension Configuration page.
+    var escapedSettings = string.Empty;
+    var userConfigSettings = await _userConfigProperty.GetAsync(turnContext, () => string.Empty);
+    if (!string.IsNullOrEmpty(userConfigSettings))
+    {
+        escapedSettings = Uri.EscapeDataString(userConfigSettings);
+    }
+    return new MessagingExtensionResponse
+    {
+        ComposeExtension = new MessagingExtensionResult
+            {
+                Type = "config",
+                SuggestedActions = new MessagingExtensionSuggestedAction
+                    {
+                        Actions = new List<CardAction>
+                            {
+                                new CardAction
+                                {
+                                    Type = ActionTypes.OpenUrl,
+                                    Value = $"{_siteUrl}/searchSettings.html?settings={escapedSettings}",
+                                },
+                            },
+                    },
+            },
+    };
+}
+
+```
+
+The following image shows the `config` command workflow:
+
+:::image type="content" source="../../../assets/images/messaging-extension/respond-to-search.png" alt-text="Screenshot shows the `config` command workflow and how it works.":::
+
+### `auth` response type
+
+If your service requires user authentication, the users must sign in before they use the message extension. For more information, see [authentication](~/messaging-extensions/how-to/add-authentication.md#authentication).
+
+### `message` response type
+
+`message` is used when your extension needs to display a plain text message. The `message` response type doesn't support formatting.
+
+```csharp
+
+return new MessagingExtensionResponse
+    {
+        ComposeExtension = new MessagingExtensionResult
+            {
+                Type = "message",
+                Text = "Here is the message you want to show!"
+            }
+    };
+
+```
+
+:::image type="content" source="../../../assets/images/messaging-extension/message-response-type.png" alt-text="Screenshot shows the `message` response type.":::
+
+### `result` Response type
 
 Teams supports the following card types:
 
@@ -389,7 +460,7 @@ async handleTeamsMessagingExtensionSelectItem(context, obj) {
 
 ## Default query
 
-If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the message extension. Your service can respond to this query with a set of pre-populated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that isn't dependent on user input.
+If you set `initialRun` to `true` in the manifest, Microsoft Teams issues a **default** query when the user first opens the message extension. Your service can respond to this query with a set of prepopulated results. This is useful when your search command requires authentication or configuration, displaying recently viewed items, favorites, or any other information that isn't dependent on user input.
 
 The default query has the same structure as any regular user query, with the `name` field set to `initialRun` and `value` set to `true` as shown in the following object:
 
@@ -418,7 +489,7 @@ The default query has the same structure as any regular user query, with the `na
 
 | Sample name           | Description | .NET    | Node.js   | Manifest|
 |:---------------------|:--------------|:---------|:--------|:--------|
-|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based messaging extension.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
+|Teams message extension search   |  This sample shows how to build a Search-based Message Extension. It searches nudget packages and displays the results in search based message extension.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search/csharp/demo-manifest/msgext-search.zip)
 |Teams Message extension auth and config | This sample shows a message extension that has a configuration page, accepts search requests, and returns results after the user has signed in. It also showcases zero app install link unfurling along with normal link unfurling |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-auth-config/csharp/demo-manifest/msgext-search-auth-config.zip)
 
 ## Next step
