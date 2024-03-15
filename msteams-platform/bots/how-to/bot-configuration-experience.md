@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 When you're creating a bot for Teams, it’s important to make sure users have a smooth experience and provision control to personalize their bots in places like Microsoft Teams. The ability to configure bots post-installation within Teams allows developers to fine-tune bot functionality according to user requirements even after deployment. You can use methods from the Microsoft Bot Framework SDK to implement bot configuration features that enhance user engagement and productivity. 
  
-In this article, we explore methods for configuring bots post-installation, both for cross-platform compatibility and specific to Teams. You can create complex bot configurations that enhance user engagement and efficiency.
+In this article, we'll explore methods for configuring bots post-installation, both for cross-platform compatibility and specific to Teams. You can create complex bot configurations that enhance user engagement and efficiency.
 
 There are two ways to initiate bot configuration settings post-installation:
 
@@ -71,9 +71,9 @@ When a user installs the bot in a team or group chat scope, the `fetchTask` prop
 
 You can use the following methods to enable configuration settings for a bot:
 
-1. Non-Teams method.
+1.[Non-Teams method](#non-teams-method).
 
-1. Teams-specific method.
+1.[Teams-specific method](#teams-specific-method).
 
 #### Non-Teams method
 
