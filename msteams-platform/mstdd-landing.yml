@@ -47,7 +47,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Configure your bot during installation or after installation from the team or group chat where the bot is installed.
+      - text: Bot configuration experience
         url: bots/how-to/bot-configuration-experience.md
       - text: Extend static tabs to channels with a customizable experience.
         url: tabs/what-are-tabs.md
