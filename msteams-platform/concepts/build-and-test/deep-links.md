@@ -16,6 +16,8 @@ You can use deep links in Teams in the following ways:
 
 * Deep link to a chat.
 
+* Deep link to teams and channels.
+
 * Deep link to a workflow.
 
 :::image type="content" source="~/assets/images/deep-links.png" alt-text="Diagram that shows different scenarios for deep links.":::
