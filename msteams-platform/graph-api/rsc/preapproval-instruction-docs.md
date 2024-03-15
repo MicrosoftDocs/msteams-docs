@@ -11,7 +11,7 @@ ms.date: 08/29/2023
 
 Preapproval of resource-specific consent (RSC) permissions allows admins to approve RSC based on individual app in Microsoft Teams. Initially, admins had the ability to turn on or turn off RSC permission in the Teams Admin Center to either approve or block all RSC enabled apps.
 
-With preapproved RSC permissions, admins can choose which RSC-enabled apps to allow their tenant users to install in Teams, without having to allow or block all apps that use RSC permissions.
+Admins can use preapproved RSC permissions to select specific apps for their users to install in Teams, without needing to approve or deny every app that requires these permissions.
 
 > [!NOTE]
 > Preapproval of RSC permissions is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
