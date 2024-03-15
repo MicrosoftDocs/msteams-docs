@@ -62,6 +62,8 @@ The following image shows the Share to Teams option:
 
 :::image type="content" source="../../assets/images/share-to-teams/share-button.PNG" alt-text="share-to-teams-button":::
 
+The Share to Teams button can be hosted or embedded in an app running inside Teams. You can also add Share to Teams button to the app created by using [Teams JavaScript client library](../../tabs/how-to/using-teams-client-library.md).
+
 ## Response codes
 
 The following table provides the response codes:
@@ -82,12 +84,6 @@ The following table provides the response codes:
 | **8000** | User aborted the operation. |
 | **9000** | Platform code is old and doesn't implement this API. |
 | **10000** | The return value is too large and has exceeded our size boundaries. |
-
-## Limitations
-
-* The Share to Teams is available for the Teams desktop and mobile clients, but it isn't supported on Teams web client.
-* The Share to Teams button can be hosted or embedded in an app running inside Teams.
-* You can add Share to Teams button to the app created by using [Teams JavaScript client library](../../tabs/how-to/using-teams-client-library.md).
 
 ## End user Share to Teams experience
 
