@@ -25,13 +25,13 @@ Stageview in Microsoft Teams is a user interface (UI) component that provides va
 
 ### Collaborative Stageview
 
-Collaborative Stageview enables multitasking scenarios where a user can open and view your app content in a new Teams window, accompanied by a side panel conversation. It allows for meaningful content engagement and collaboration within the same window that leads to higher user engagement. We recommend Collaborative Stageview when the user opens content from a chat, a channel, or a channel tab.
+Collaborative Stageview enables multitasking scenarios where a user can open and view your app content in a new Teams window, accompanied by a side panel conversation. It allows for meaningful content engagement and collaboration within the same window that leads to higher user engagement. We recommend Collaborative Stageview when the user opens content from a conversation such as chat, a channel, or a channel tab.
 
 :::image type="content" source="~/assets/images/tab-images/collab-view.png" alt-text="The illustration shows the Collaborative Stageview.":::
 
 ### Stageview Multi-window
 
-Stageview Multi-window is useful for scenarios where a user can multitask in Teams without the need for collaboration. This view opens the app content in a new Teams window without a side panel conversation, allowing the user to focus on tasks. We recommend Stageview Multi-window when the user opens content from a nonconversational surface such as a personal app.
+Stageview Multi-window is useful for scenarios where a user can multitask in Teams without the need for collaboration. This view opens the app content in a new Teams window without a side panel conversation, allowing the user to focus on tasks. We recommend to use Stageview Multi-window in scenarios where the user opens content from a nonconversational surface for example, a personal app.
 
 :::image type="content" source="~/assets/images/tab-images/multi-view.png" alt-text="The illustration shows the Stageview Multi-window.":::
 
@@ -40,7 +40,7 @@ Stageview Multi-window is useful for scenarios where a user can multitask in Tea
 Stageview modal is a full-screen UI component that can be used to render your app content inside the main Teams window. The view provides users with a focused experience to engage with the app content. Stageview modal is useful for displaying rich content that doesn't require a user to multitask. It’s the default view when Collaborative Stageview and Stageview Multi-window aren't supported.
 
 > [!NOTE]
-> Teams web client supports only the Stageview modal.
+> Teams web client supports only Stageview modal.
 
 :::image type="content" source="~/assets/images/tab-images/modal-view1.png" alt-text="The illustration shows the Stageview modal.":::
 
@@ -77,7 +77,7 @@ The following table provides the Stageview responses of the `openMode` property:
 
 > [!NOTE]
 >
-> * In scenarios were pop-out experience isn't supported, for example, Teams in browser, the experience falls back to Stageview modal even if the `openMode` property is defined.
+> * In scenarios were pop-out experience isn't supported, for example, Teams web client, the experience falls back to Stageview modal even if the `openMode` property is defined.
 > * The fallback hierarchy is `popoutWithChat` > `popout` > `modal`.
 
 ### Invoke Collaborative Stageview from Adaptive Card
@@ -92,7 +92,7 @@ To invoke Collaborative Stageview, perform the following steps:
 
 :::image type="content" source="../assets/images/tab-images/collab-view.gif" alt-text="The graphical representation shows how Collaborative Stageview response from Adaptive Card.":::
 
-The following code sample is an example to create a Collaborative Stageview button in an Adaptive Card:
+The following code is an example to create a Collaborative Stageview button in an Adaptive Card:
 
 ```json
 {
@@ -130,7 +130,7 @@ The StageView API from the TeamsJS SDK allows you to open the Teams window in a 
 The side panel conversation is the same thread from where the Collaborative Stageview was invoked, that is, chat or group chat.
 
 > [!NOTE]
-> The Stageview API supports an optional threadId parameter that allows you to bring a specific conversation into the Collaborative Stageview side panel. Mapping contentUrl to threadId allows you to persist a conversation alongside content.
+> The Stageview API supports an optional `threadId` parameter that allows you to bring a specific conversation into the Collaborative Stageview side panel. Mapping `contentUrl` to `threadId` allows you to persist a conversation alongside content.
 
 The following code snippets provide the samples of `openMode` property:
 
@@ -283,7 +283,7 @@ Stageview modal is useful to display rich content to the users, such as a page, 
 
 <summary>I'm able to open Collaborative Stageview, but content is loading into the main canvas.</summary>
 
-Ensure that your contentUrl domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](../resources/schema/manifest-schema.md).
+Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](../resources/schema/manifest-schema.md).
 
 </br>
 
@@ -291,7 +291,7 @@ Ensure that your contentUrl domain is accurately reflected in the manifest `vali
 
 <details>
 
-<summary>My contentUrl matches my `validDomains`, but I'm still unable to view any content showing up.</summary>
+<summary>My `contentUrl` matches my `validDomains`, but I'm still unable to view any content showing up.</summary>
 
 Call `app.notifySuccess()` in all iframe-based contents notifies Teams that your app loaded successfully. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out, and displays an error screen with a retry option. For app updates, this step is applicable for already configured tabs. If you don't perform this step, an error screen is displayed for the existing users.
 
@@ -313,7 +313,7 @@ No, deep links aren't supported in `contentUrl`.
 
 <summary>How do I keep a specific thread shown alongside my content?</summary>
 
-Collaborative Stageview from a deep link or API comes with the additional threadId parameter. You can explicitly define the chat thread to be displayed in the side panel for your specific contentUrl. For more information about retrieving a threadId, see [get conversation thread](/graph/api/group-get-thread).
+Collaborative Stageview from a deep link or API comes with the additional threadId parameter. You can explicitly define the chat thread to be displayed in the side panel for your specific `contentUrl`. For more information about retrieving a threadId, see [get conversation thread](/graph/api/group-get-thread).
 
 </br>
 
