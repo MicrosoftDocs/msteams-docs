@@ -13,7 +13,7 @@ ms.localizationpriority: high
 >
 > Bot configuration experience is supported in channel or group chat scopes only.
 
-When you are creating a bot for Teams, it’s important to make sure users have a smooth experience and provision control to personalize their bots in places like Microsoft Teams. The ability to configure bots post-installation within Teams allows developers to fine-tune bot functionality according to user requirements even after deployment. You can use methods from the Microsoft Bot Framework SDK to implement bot configuration features that enhance user engagement and productivity. 
+When you're creating a bot for Teams, it’s important to make sure users have a smooth experience and provision control to personalize their bots in places like Microsoft Teams. The ability to configure bots post-installation within Teams allows developers to fine-tune bot functionality according to user requirements even after deployment. You can use methods from the Microsoft Bot Framework SDK to implement bot configuration features that enhance user engagement and productivity. 
  
 In this article, we explore methods for configuring bots post-installation, both for cross-platform compatibility and specific to Teams. You can create complex bot configurations that enhance user engagement and efficiency.
 
@@ -77,13 +77,13 @@ You can use the following methods to enable configuration settings for a bot:
 
 #### Non-Teams method
 
-The Non-Teams method simplifies task exceution using `OnInvokeActivity` and `OnInvokeActivityAsync`, removing the need for Teams integration:
+The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnInvokeActivityAsync`, removing the need for Teams integration:
 
-1. `OnInvokeActivity`: The `OnInvokeActivity` method is a fundamental component of the Bot Framework SDK. It enables users to handle incoming activities that are not recognized by any other method in the bot's logic. This method provides flexibility for handling a wide range of activities, including user interactions, within the bot's conversation flow.
+1. `OnInvokeActivity`: The `OnInvokeActivity` method is a fundamental component of the Bot Framework SDK. It enables users to handle incoming activities that aren't recognized by any other method in the bot's logic. This method provides flexibility for handling a wide range of activities, including user interactions, within the bot's conversation flow.
 
-   # [Javascript](#tab/JS1)
+   # [JavaScript](#tab/JS1)
 
-    The `onInvokeActivity` function simplifies the handling of invoke activities. For `config/fetch`, it uses `adaptiveCardForContinue()` to create an Adaptive Card and returns a 200 status response with the card included. For `config/submit`, it checks the choice variable; if it’s `continue`, it calls `adaptiveCardForSubmit()` for an Adaptive Card and returns a 200 status response with the card. Else, it returns a 200 status response with a completion message.
+    The `onInvokeActivity` function simplifies the handling of invoke activities. For `config/fetch`, it uses `adaptiveCardForContinue()` to create an Adaptive Card and returns a 200 status response with the card included. For `config/submit`, it checks the choice variable; if its `continue`, it calls `adaptiveCardForSubmit()` for an Adaptive Card and returns a 200 status response with the card. Else, it returns a 200 status response with a completion message.
 
     ```javascript
     async onInvokeActivity(context) {
@@ -392,193 +392,185 @@ The Non-Teams method simplifies task exceution using `OnInvokeActivity` and `OnI
 
 #### Teams-specific method
 
-   1. `HandleTeamsConfig`: This method offers granular control over configuration-related activities within the bot's logic. You can use `HandleTeamsConfig` to implement custom logic or additional processing when handling configuration events in Teams.
+1. `HandleTeamsConfig`: This method offers granular control over configuration-related activities within the bot's logic. You can use `HandleTeamsConfig` to implement custom logic or additional processing when handling configuration events in Teams.
 
-   1. `OnTeamsConfig:`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for bot development. The `OnTeamsConfig` method facilitates the handling of configuration related activities within the bot. It is part of the `TeamsActivityHandler` class provided by the Bot Framework SDK for Teams. This method enables users to respond to configuration events, including user initiated bot configurations or updates to bot settings within the Teams.
+    # [JavaScript](#tab/JS2)
 
+    `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`: The `handleTeamsConfigFetch` method generates an Adaptive Card labeled `Bot Config Fetch` and offers two response alternatives an `auth` response, which suggests an action to launch a URL for authentication, and a `continue` response, which presents an Adaptive Card. The `handleTeamsConfigSubmit` method deals with the user's selection from the Adaptive Card and responds appropriately.
 
-# [Javascript](#tab/JS2)
-
-`handleTeamsConfigFetch` and `handleTeamsConfigSubmit`: The `handleTeamsConfigFetch` method generates an Adaptive Card labeled `Bot Config Fetch` and offers two response alternatives an `auth` response, which suggests an action to launch a URL for authentication, and a `continue` response, which presents an Adaptive Card. The `handleTeamsConfigSubmit` method deals with the user's selection from the Adaptive Card and responds appropriately.
-
-```javascript
-async handleTeamsConfigFetch(_context, _configData) {
-    let response = {};
-    const cardJson = {
-        type: 'AdaptiveCard',
-        version: '1.4',
-        body: [
-            {
-                type: 'TextBlock',
-                text: 'Bot Config Fetch',
+    ```javascript
+    async handleTeamsConfigFetch(_context, _configData) {
+        let response = {};
+        const cardJson = {
+            type: 'AdaptiveCard',
+            version: '1.4',
+            body: [
+                {
+                    type: 'TextBlock',
+                    text: 'Bot Config Fetch',
+                },
+            ],
+        };
+        const card = CardFactory.adaptiveCard(cardJson);
+        /*
+        Option 1: You can add a "config/auth" response as below code
+        Note: The URL in value must be linked to a valid auth URL which can be opened in a browser. This code is only representative and not a working example.
+        */
+        /*response = {
+            config: {
+                type: "auth",
+                suggestedActions: {
+                    actions: [
+                        {
+                            type: "openUrl",
+                            value: "https://example.com/auth",
+                            title: "Sign in to this app"
+                        }]
+                },
             },
-        ],
-    };
-    const card = CardFactory.adaptiveCard(cardJson);
-    /*
-    Option 1: You can add a "config/auth" response as below code
-    Note: The URL in value must be linked to a valid auth URL which can be opened in a browser. This code is only representative and not a working example.
-    */
-    /*response = {
-        config: {
-            type: "auth",
-            suggestedActions: {
-                actions: [
-                    {
-                        type: "openUrl",
-                        value: "https://example.com/auth",
-                        title: "Sign in to this app"
-                    }]
-            },
-        },
-    };*/
+        };*/
 
-    /*
-      Option 2: You can add a "config/continue" response as below code
-      */
-    const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
-    response = {
-        config: {
-            value: {
-                card: adaptiveCard,
-                height: 200,
-                width: 200,
-                title: 'test card',
-            },
-            type: 'continue',
-        },
-    };
-    return response;
-}
-
-async handleTeamsConfigSubmit(context, _configData) {
-    let response = {};
-    const choice = context._activity.value.data.choiceselect;
-    if (choice === "continue") {
-        const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForSubmit());
+        /*
+          Option 2: You can add a "config/continue" response as below code
+          */
+        const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
         response = {
             config: {
-                type: 'continue',
                 value: {
                     card: adaptiveCard,
                     height: 200,
                     width: 200,
-                    title: 'Task module submit response',
-                }
-            },
-        };
-        return response;
-    } else {
-        response = {
-            config: {
-                type: 'message',
-                value: 'You have chosen to finish setting up bot',
+                    title: 'test card',
+                },
+                type: 'continue',
             },
         };
         return response;
     }
-}
-```
 
-The code snippets create two Adaptive Cards for setting up a bot in Teams. The `adaptiveCardForContinue` function makes a card that lets the user choose a setup option, either to `Continue with more options` or `Finish setting up bot`. Users can search for options with `Search for an option`. The card has a `Submit` button.
-
-The `adaptiveCardForSubmit` function also makes an Adaptive Card. This one asks the user to submit to move forward with setting up the bot. It includes a `Submit` button.
-
-
-```javascript
-
-adaptiveCardForContinue = () => ({
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.2",
-  "type": "AdaptiveCard",
-  "body": [
-    {
-      "text": "Please choose bot set up option",
-      "wrap": true,
-      "type": "TextBlock"
-    },
-    {
-      "columns": [
-        {
-          "width": "auto",
-          "items": [
-            {
-              "text": "Option: ",
-              "wrap": true,
-              "height": "stretch",
-              "type": "TextBlock"
-            }
-          ],
-          "type": "Column"
-        }
-      ],
-      "type": "ColumnSet"
-    },
-    {
-      "columns": [
-        {
-          "width": "stretch",
-          "items": [
-            {
-              "choices": [
-                {
-                  "title": "Continue with more options",
-                  "value": "continue"
+    async handleTeamsConfigSubmit(context, _configData) {
+        let response = {};
+        const choice = context._activity.value.data.choiceselect;
+        if (choice === "continue") {
+            const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForSubmit());
+            response = {
+                config: {
+                    type: 'continue',
+                    value: {
+                        card: adaptiveCard,
+                        height: 200,
+                        width: 200,
+                        title: 'Task module submit response',
+                    }
                 },
+            };
+            return response;
+        } else {
+            response = {
+                config: {
+                    type: 'message',
+                    value: 'You have chosen to finish setting up bot',
+                },
+            };
+            return response;
+        }
+    }
+    ```
+
+    The code snippets create two Adaptive Cards for setting up a bot in Teams. The `adaptiveCardForContinue` function makes a card that lets the user select a setup option, either to `Continue with more options` or `Finish setting up bot`. Users can search for options with `Search for an option`. The card has a `Submit` button.
+
+    The `adaptiveCardForSubmit` function also makes an Adaptive Card, which asks the user to submit to move forward with setting up the bot. It includes a `Submit` button.
+
+
+    ```javascript
+
+    adaptiveCardForContinue = () => ({
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "version": "1.2",
+      "type": "AdaptiveCard",
+      "body": [
+        {
+          "text": "Please choose bot set up option",
+          "wrap": true,
+          "type": "TextBlock"
+        },
+        {
+          "columns": [
+            {
+              "width": "auto",
+              "items": [
                 {
-                  "title": "Finish setting up bot",
-                  "value": "finish"
+                  "text": "Option: ",
+                  "wrap": true,
+                  "height": "stretch",
+                  "type": "TextBlock"
                 }
               ],
-              "style": "filtered",
-              "placeholder": "Search for an option",
-              "id": "choiceselect",
-              "type": "Input.ChoiceSet"
+              "type": "Column"
             }
           ],
-          "type": "Column"
+          "type": "ColumnSet"
+        },
+        {
+          "columns": [
+            {
+              "width": "stretch",
+              "items": [
+                {
+                  "choices": [
+                    {
+                      "title": "Continue with more options",
+                      "value": "continue"
+                    },
+                    {
+                      "title": "Finish setting up bot",
+                      "value": "finish"
+                    }
+                  ],
+                  "style": "filtered",
+                  "placeholder": "Search for an option",
+                  "id": "choiceselect",
+                  "type": "Input.ChoiceSet"
+                }
+              ],
+              "type": "Column"
+            }
+          ],
+          "type": "ColumnSet"
         }
       ],
-      "type": "ColumnSet"
-    }
-  ],
-  "actions": [
-    {
-      "type": "Action.Submit",
-      "id": "submit",
-      "title": "Submit"
-    }
-  ]
-});
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "id": "submit",
+          "title": "Submit"
+        }
+      ]
+    });
 
-adaptiveCardForSubmit = () => ({
-  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-  "version": "1.2",
-  "type": "AdaptiveCard",
-  "body": [
-    {
-      "text": "Please hit submit to continue setting up bot",
-      "wrap": true,
-      "type": "TextBlock"
-    }
-  ],
-  "actions": [
-    {
-      "type": "Action.Submit",
-      "id": "submitdynamic",
-      "title": "Submit"
-    }
-  ]
-});
+    adaptiveCardForSubmit = () => ({
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "version": "1.2",
+      "type": "AdaptiveCard",
+      "body": [
+        {
+          "text": "Please hit submit to continue setting up bot",
+          "wrap": true,
+          "type": "TextBlock"
+        }
+      ],
+      "actions": [
+        {
+          "type": "Action.Submit",
+          "id": "submitdynamic",
+          "title": "Submit"
+        }
+      ]
+    });
 
-```
+    ```
 
-# [C#](#tab/JS3)
-
-#### C# code snippets
-
-1. `OnTeamsConfigFetchAsync`
-1. `OnTeamsConfigSubmitAsync`
+1. `OnTeamsConfig:`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for bot development. The `OnTeamsConfig` method facilitates the handling of configuration related activities within the bot. It's part of the `TeamsActivityHandler` class provided by the Bot Framework SDK for Teams. This method enables users to respond to configuration events, including user initiated bot configurations or updates to bot settings within Teams.
 
    # [C# 1](#tab/teams-bot-sdk4)
 
@@ -691,7 +683,7 @@ adaptiveCardForSubmit = () => ({
 
 ## Bot configuration experience in Teams
 
-After you've created a bot to enable the bot configuration settings from a team or group chat scope, the user can configure and reconfigure the bot in Teams.
+After you've created and published the bot in Teams store, the user can configure and reconfigure the bot in Teams.
 
 To configure the bot, follow these steps:
 
@@ -699,7 +691,7 @@ To configure the bot, follow these steps:
 
 1. Select **Apps**.
 
-1. From the Teams store, select a bot app you want to install.
+1. From Teams store, select a bot app you want to install.
 
 1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat**.
 
@@ -733,7 +725,7 @@ To reconfigure the bot, follow these steps:
 
    :::image type="content" source="../../assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon to reconfigure.":::
 
-   The bot sends a response message.
+   The bot sends a response message and now the bot is configured.
 
 ## Code sample
 
