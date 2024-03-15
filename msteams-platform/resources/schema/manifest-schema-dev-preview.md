@@ -921,7 +921,7 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 
-For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
+For more information and a sample of the `extensions` property in a manifest, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
 ### extensions.requirements
 
@@ -935,102 +935,6 @@ The `extensions.requirements` property specifies the [requirement sets](/javascr
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement sets. |
 |`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
 |`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
-
-```json
-"extensions": [
-      "requirements": {
-        "scopes": [ "mail" ],
-        "capabilities": [
-          {
-            "name": "Mailbox", "minVersion": "1.1"
-          }
-        ]
-      },
-]
-```
-### extensions.runtimes
-
-The `extensions.runtimes` property configures the sets of runtimes and actions that each extension point can use.
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`id`| String | 64 characters | ✔️ | Specifies the ID for runtime. |
-|`type`| String enum | | ✔️ | Specifies the type of runtime. The supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime) is `general`. |
-|`code`| Object | | ✔️ | Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain. |
-|`code.page`| URL | | ✔️ | Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
-|`code.script`| URL | | ✔️ | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
-|`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes).|
-|`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
-|`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
-|`actions.type`| String | | ✔️ | Specifies the type of action. The `executeFunction` type runs a JavaScript function without waiting for it to finish and the `openPage` type opens a page in a given view. |
-|`actions.displayName`| String | 64 characters | | Specifies the display name of the action and it isn't the label of a button or a menu item that invokes the action (which is configured with `tabs.groups.controls.label`).|
-|`actions.pinnable`| Boolean | | | Specifies that a task pane supports pinning, which keeps the task pane open when the user changes the selection. <br>Default value: `false`|
-|`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
-
-To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
-
-```json
-"extensions": [
-      "runtimes": [
-        {
-          "requirements": {
-            "capabilities": [
-              {
-                "name": "MailBox", "minVersion": "1.10"
-              }
-            ]
-          },
-          "id": "eventsRuntime",
-          "type": "general",
-          "code": {
-            "page": "https://contoso.com/events.html",
-            "script": "https://contoso.com/events.js"
-          },
-          "lifetime": "short",
-          "actions": [
-            {
-              "id": "onMessageSending",
-              "type": "executeFunction"
-            },
-            {
-              "id": "onNewMessageComposeCreated",
-              "type": "executeFunction"
-            }
-          ]
-        },
-        {
-          "requirements": {
-            "capabilities": [
-              {
-                "name": "MailBox", "minVersion": "1.1"
-              }
-            ]
-          },
-          "id": "commandsRuntime",
-          "type": "general",
-          "code": {
-            "page": "https://contoso.com/commands.html",
-            "script": "https://contoso.com/commands.js"
-          },
-          "lifetime": "short",
-          "actions": [
-            {
-              "id": "action1",
-              "type": "executeFunction"
-            },
-            {
-              "id": "action2",
-              "type": "executeFunction"
-            },
-            {
-              "id": "action3",
-              "type": "executeFunction"
-            }
-          ]
-        }
-      ],
-]
-```
 
 ### extensions.ribbons
 
@@ -1082,153 +986,6 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
 
-```json
-"extensions": [
-      "ribbons": [
-        {
-          "contexts": [
-            "mailCompose"
-          ],
-          "tabs": [
-            {
-              "builtInTabId": "TabDefault",
-              "groups": [
-                {
-                  "id": "dashboard",
-                  "label": "Controls",
-                  "controls": [
-                    {
-                      "id": "control1",
-                      "type": "button",
-                      "label": "Action 1",
-                      "icons": [
-                        {
-                          "size": 16,
-                          "url": "test_16.png"
-                        },
-                        {
-                          "size": 32,
-                          "url": "test_32.png"
-                        },
-                        {
-                          "size": 80,
-                          "url": "test_80.png"
-                        }
-                      ],
-                      "supertip": {
-                        "title": "Action 1 Title",
-                        "description": "Action 1 Description"
-                      },
-                      "actionId": "action1"
-                    },
-                    {
-                      "id": "menu1",
-                      "type": "menu",
-                      "label": "My Menu",
-                      "icons": [
-                        {
-                          "size": 16,
-                          "url": "test_16.png"
-                        },
-                        {
-                          "size": 32,
-                          "url": "test_32.png"
-                        },
-                        {
-                          "size": 80,
-                          "url": "test_80.png"
-                        }
-                      ],
-                      "supertip": {
-                        "title": "My Menu",
-                        "description": "Menu with 2 actions"
-                      },
-                      "items": [
-                        {
-                          "id": "menuItem1",
-                          "type": "menuItem",
-                          "label": "Action 2",
-                          "supertip": {
-                            "title": "Action 2 Title",
-                            "description": "Action 2 Description"
-                          },
-                          "actionId": "action2"
-                        },
-                        {
-                          "id": "menuItem2",
-                          "type": "menuItem",
-                          "label": "Action 3",
-                          "icons": [
-                            {
-                              "size": 16,
-                              "url": "test_16.png"
-                            },
-                            {
-                              "size": 32,
-                              "url": "test_32.png"
-                            },
-                            {
-                              "size": 80,
-                              "url": "test_80.png"
-                            }
-                          ],
-                          "supertip": {
-                            "title": "Action 3 Title",
-                            "description": "Action 3 Description"
-                          },
-                          "actionId": "action3"
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "contexts": [ "mailRead" ],
-          "tabs": [
-            {
-              "builtInTabId": "TabDefault",
-              "groups": [
-                {
-                  "id": "dashboard",
-                  "label": "Controls",
-                  "controls": [
-                    {
-                      "id": "control1",
-                      "type": "button",
-                      "label": "Action 1",
-                      "icons": [
-                        {
-                          "size": 16,
-                          "url": "test_16.png"
-                        },
-                        {
-                          "size": 32,
-                          "url": "test_32.png"
-                        },
-                        {
-                          "size": 80,
-                          "url": "test_80.png"
-                        }
-                      ],
-                      "supertip": {
-                        "title": "Action 1 Title",
-                        "description": "Action 1 Description"
-                      },
-                      "actionId": "action1"
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      ],
-]
-```
 ### extensions.autoRunEvents
 
 The `extensions.autoRunEvents` property defines event-based activation extension points.
@@ -1241,34 +998,6 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 |`events.options`| Object | | | Configures how Outlook responds to the event.|
 |`events.options.sendMode`| String | | ✔️ | Specifies the actions to take during a mail send action. <br>Supported values: `promptUser`, `softBlock`, `block`. For more information, see [available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
 
-```json
-"extensions": [
-      "autoRunEvents": [
-        {
-          "requirements": {
-            "capabilities": [
-              {
-                "name": "MailBox", "minVersion": "1.10"
-              }
-            ]
-          },
-          "events": [
-            {
-              "type": "newMessageComposeCreated",
-              "actionId": "onNewMessageComposeCreated"
-            },
-            {
-              "type": "messageSending",
-              "actionId": "onMessageSending",
-              "options": {
-                "sendMode": "promptUser"
-              }
-            }
-          ]
-        }
-      ],
-]
-```
 ### extensions.alternates
 
 The `extensions.alternates` property is used to hide or prioritize specific in-market add-ins when you've published multiple add-ins with overlapping functionality.
@@ -1284,31 +1013,6 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
-
-```json
-  "extensions": [
-    {
-      "alternates": [
-        {
-          "requirements": {
-            "scopes": [ "mail" ]
-          },
-          "prefer": {
-            "comAddin": {
-              "progId": "ContosoExtension"
-            }
-          },
-          "hide": {
-            "storeOfficeAddin": {
-              "officeAddinId": "00000000-0000-0000-0000-000000000000",
-              "assetId": "WA000000000"
-            }
-          }
-        }
-      ]
-    }
-  ]
-```
 
 ## actions
 
