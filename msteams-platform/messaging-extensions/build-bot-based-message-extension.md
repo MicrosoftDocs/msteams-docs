@@ -192,23 +192,6 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 ---
 
 
-### Message extension as plugin for Copilot for Teams meetings
-
-Message extension plugins are supported in Copilot for Teams meetings. You can send static and dynamic or real-time prompts based on live transcription in an ongoing meeting.
-
-To enable message extension- as a plugin for  Copilot for Teams meetings, follow these steps:
-
-1. Go to a Teams meeeting.
-1. Join the meeting.
-1. In the meeting window, select Copilot.
-1. Select **Start transcripton**.
-1. Select the Spoken language and select **Confirm**. Copilot for Teams pane opens on the right.
-1. In the Copilot for Teams pane, at the bottom-right corner, select the **Copilot Plugin Button**.
-1. Search for your plugin and turn on the toggle for your plugin.
-1. From the compose area, select **More prompts** to send a static prompt or you can type your own prompt and select **Send**.
-
-
-
 ## See also
 
 * [Universal Actions for search based message extensions](how-to/search-commands/universal-actions-for-search-based-message-extensions.md)

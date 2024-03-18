@@ -349,6 +349,38 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 ---
 
+### Message extension as plugin for Copilot for Teams meetings
+
+Message extension plugins are supported in Copilot for Teams meetings. You can send static and dynamic or real-time prompts based on live transcription in an ongoing meeting. Plugins are available for users to enable in both M365 chat and meeting copilot. Users can ask natural language questions to meeting copilot and get responses from your plugin that are relevant to the meeting context.
+
+**Pre-requisites**
+
+Ensure that you've created a bot-based message extension and extended it as a plugin for Copilot for Microsoft 365.
+
+To enable message extension as a plugin for Copilot for Teams meetings, follow these steps:
+
+1. Go to a **Teams meeeting**.
+1. Select **Join**.
+1. In the meeting window, select **Copilot**.
+
+1. Select **Start transcripton**.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-start-transcription.png" alt-text="Screenshot shows the Copilot option and start transcription button in a Teams meeting.":::
+
+1. Select the Spoken language and select **Confirm**. Copilot for Teams pane opens on the right.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-select-language.png" alt-text="Screenshot shows the dropdown to slelect a spoken language and a confirm button in Teams meeting.":::
+
+1. In the Copilot for Teams pane, at the bottom-right corner, select the **Copilot Plugin Button**.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-trigger-plugin.png" alt-text="Screenshot shows the plugin icon in the copilot pane in a Teams meeting.":::
+
+1. Search for your plugin and turn on the toggle for your plugin.
+
+1. From the compose area, select **More prompts** to send a static prompt or you can type your own prompt and select **Send**.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-static-prompts.png" alt-text="Screenshot shows the list of static prompts available in the copilot pane in a Teams meeting.":::
+
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.yml) to build a bot-based search message extension plugin for M365 Chat.
