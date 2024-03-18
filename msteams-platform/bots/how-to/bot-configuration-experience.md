@@ -73,9 +73,9 @@ When a user installs the bot in a team or group chat scope, the `fetchTask` prop
 
 You can use the following methods to enable configuration settings for a bot:
 
-1.[Non-Teams method](#non-teams-method).
+1. [Non-Teams method](#non-teams-method).
 
-1.[Teams-specific method](#teams-specific-method).
+1. [Teams-specific method](#teams-specific-method).
 
 #### Non-Teams method
 
