@@ -85,6 +85,7 @@ The following table provides the response codes:
 
 ## Limitations
 
+* Share to Teams isn't supported inside a [modal dialog](~/task-modules-and-cards/what-are-task-modules.md) (referred as task modules in TeamsJS v1.x) or [Stage View](~/tabs/tabs-link-unfurling#stage-view) in Teams web client. You can't open a modal on top of another modal.
 * The Share to Teams button can be hosted or embedded in an app running inside Teams.
 * You can add Share to Teams button to the app created by using [Teams JavaScript client library](../../tabs/how-to/using-teams-client-library.md).
 
