@@ -37,6 +37,7 @@ To enable the bot configuration settings follow these steps:
 
 1. [Configure your bot](#configure-your-bot)
 
+
 ### Update app manifest
 
 You must configure the `fetchTask` property under `bots.configuration` object in the app manifest (previously called Teams app manifest) file as follows:
@@ -727,6 +728,8 @@ To reconfigure the bot, follow these steps:
    :::image type="content" source="../../assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon to reconfigure.":::
 
    The bot sends a response message and now the bot is configured.
+
+   :::image type="content" source="../../assets/images/bots/setting-up-bot.png" alt-text="Screenshot shows the bot configuration set up is complete.":::   
 
 ## Code sample
 
