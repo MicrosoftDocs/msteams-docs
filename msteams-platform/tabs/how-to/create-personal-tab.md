@@ -12,262 +12,318 @@ ms.date: 02/27/2023
 
 Personal tabs, along with personally scoped bots, are part of personal apps and are scoped to a single user. They can be pinned to the left pane for easy access.
 
-> [!IMPORTANT]
->
-> * To learn how to create a tab with Teams Toolkit, see [build your first tab app using JavaScript](../../sbs-gs-javascript.yml).
-> * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
-
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your personal tab.
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
+::: zone pivot="java-script"
 
-::: zone pivot="node-java-script"
+> [!IMPORTANT]
+>
+> * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
+> * The Visual Studio Code UI shown is from Mac. Teams Toolkit version and environment might differ based on your operating system.
 
-## Create a personal tab with Node.js
+## Create your tab project workspace
 
-1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the Node.js:
+# [Visual Studio Code](#tab/vsc)
 
-    ```cmd
-    npm install yo gulp-cli --global
-    ```
+1. Open Visual Studio Code.
+1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code **Activity Bar**.
 
-1. At the command prompt, install Microsoft Teams app generator by entering the following command:
+1. Select **Create a New App**.
 
-    ```cmd
-    npm install generator-teams --global
-    ```
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-project.png" alt-text="Screenshots shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-Following are the steps to create a personal tab:
+1. Select **Tab** to create a new tab project.
 
-1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab)
-1. [Add a content page to the personal tab](#add-a-content-page-to-the-personal-tab)
-1. [Create your app package](#create-your-app-package)
-1. [Build and run your application](#build-and-run-your-application)
-1. [Establish a secure tunnel to your personal tab](#establish-a-secure-tunnel-to-your-tab)
-1. [Upload your application to Teams](#upload-your-application-to-teams)
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/create-new-app1.png" alt-text="Screenshots shows the wizard to create a new project.":::
 
-### Generate your application with a personal tab
+1. Ensure that **Basic Tab** is selected as the app feature that you want to build in your app.
 
-1. At the command prompt, create a new directory for your personal tab.
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-capabilities-tabapp.png" alt-text="Screenshot shows to add app feature to add to your new app.":::
 
-1. Enter the following command in your new directory to start the Microsoft Teams app generator:
+1. Select **JavaScript** as the programming language.
 
-    ```cmd
-    yo teams
-    ```
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-language-tab.png" alt-text="Screenshot shows how to select the programming language.":::
 
-1. Provide your values to a series of questions prompted by Microsoft Teams app generator to update your `manifest.json` file.
+1. Select **Default folder** to store your project root folder in default location.
 
-    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator":::
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-default-location.png" alt-text="Screenshot shows how to select default location.":::
 
-    <details>
-    <summary><b>Series of questions to update your manifest.json file</b></summary>
+   Follow the steps to change the default location:
 
-    * **What is your solution name?**
+   1. Select **Browse**.
 
-      The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/select-browse.png" alt-text="Screenshot shows to select browse for storage.":::
 
-    * **Where do you want to place the files?**
+   1. Select the location for project workspace.
 
-      You're currently in your project directory. Select **Enter**.
+   1. Select the **Select folder**.
 
-    * **Title of your Microsoft Teams app project?**
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/select-folder.png" alt-text="Screenshot shows how to select-folder.":::
 
-      The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
+   1. Enter a suitable name for your app and then select **Enter**.
 
-    * **Your (company) name? (max 32 characters)**
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/enter-name-tab1.png" alt-text="Screenshot shows where to enter the app name.":::
 
-      Your company name is used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+      The Teams tab app is created in few seconds.
 
-    * **Which manifest version would you like to use?**
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tap-app-created1.png" alt-text="Screenshot shows the app created.":::
 
-      Select the default schema.
+      After your app is created, Teams Toolkit displays the following message:
 
-    * **Quick scaffolding? (Y/n)**
+      :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/preview-project-tab.png" alt-text="Screenshot shows to preview project.":::
+        
+      You can select **Local debug** to preview your project. 
+      </br>
+      <details>
+      <summary>A quick recap of creating a Teams app.</summary>
+      Watch this short recap for creating a Teams app.
 
-      The default is yes; enter **n** to enter your Microsoft Partner ID.
+      ![Create a Teams app](~/assets/videos/javascript-tab-app1.gif)
+      </details>
 
-    * **Enter your Microsoft Partner Id, if you've one? (Leave blank to skip)**
+# [Command line](#tab/cli)
 
-      This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+Use the `teamsfx` CLI to create your first project. Start from the folder where you want to create the project folder.
 
-    * **What do you want to add to your project?**
-
-      Select **( &ast; ) A Tab**.
-
-    * **The URL where you will host this solution?**
-
-      By default, the generator suggests an Azure website URL. You're only testing your app locally, so a valid URL isn't necessary.
-
-    * **Would you like show a loading indicator when your app/tab loads?**
-
-      Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
-
-    * **Would you like personal apps to be rendered without a tab header-bar?**
-
-      Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
-
-    * **Would you like to include Test framework and initial tests? (y/N)**
-
-      Choose **not** to include a test framework for this project. The default is no, enter **n**.
-
-    * **Would you like to include ESLint support? (y/N)**
-
-      Choose not to include ESLint support. The default is no, enter **n**.
-
-    * **Would you like to use Azure Applications Insights for telemetry? (y/N)**
-
-      Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
-
-    * **Default Tab Name (max 16 characters)?**
-
-      Name your tab. This tab name is used throughout your project as a file or URL path component.
-
-    * **What kind of Tab would you like to create?**
-
-      Use the arrow keys to select **Personal (static)**.
-
-    * **Do you require Microsoft Entra Single-Sign-On support for the tab?**
-
-      Choose **not** to include Microsoft Entra Single-Sign-On support for the tab. The default is yes, enter **n**.
-    > [!NOTE]
-    > In a tab, the tab home page appears only when the user selects the back button (or moves out of the tab) and comes back to the home page. The tab doesn't maintain or retain the previous state by design.
-    </details>
-
-### Add a content page to the personal tab
-
-Create a content page and update the existing files of the personal tab application:
-
-1. Create a new **personal.html** file in your Visual Studio Code with the following markup:
-
-    ```html
-    <!DOCTYPE html>
-    <html>
-        <head>
-            <meta charset="UTF-8">
-            <title>
-                <!-- Todo: add your a title here -->
-            </title>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <!-- inject:css -->
-            <!-- endinject -->
-        </head>
-            <body>
-                <h1>Personal Tab</h1>
-                <p><img src="/assets/icon.png"></p>
-                <p>This is your personal tab!</p>
-            </body>
-    </html>
-    ```
-
-1. Save **personal.html** in your application's **public** folder in the following location:
-
-    ```
-    ./src/public/<yourDefaultTabNameTab>/personal.html
-    ```
-
-1. Open `manifest.json` from the following location in your Visual Studio Code:
-
-    ```
-     ./src/manifest/manifest.json
-    ```
-
-1. Add the following to the empty `staticTabs` array (`staticTabs":[]`) and add the following JSON object:
-
-    ```json
-    {
-        "entityId": "personalTab",
-        "name": "Personal Tab ",
-        "contentUrl": "https://{{PUBLIC_HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
-        "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
-        "scopes": ["personal"]
-    }
-    ```
-
-    > [!IMPORTANT]
-    > The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
-    >
-    > For example: DefaultTabName is **MyTab** then **/MyTabTab/**
-
-1. Update the **contentURL** path component **yourDefaultTabNameTab** with your actual tab name.
-
-1. Save the updated `manifest.json` file.
-
-1. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an iFrame:
-
-    ```bash
-    ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
-    ```
-
-1. Add the following to the list of iFrame decorators:
-
-    ```typescript
-     @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
-    ```
-
-1. Save the updated file. Your tab code is complete.
-
-### Create your app package
-
-You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the `manifest.json` file and generates the zip folder in the `./package` directory. At the command prompt, use the command `gulp manifest`.
-
-### Build and run your application
-
-#### Build your application
-
-Enter the following command at the command prompt to transpile your solution into the **./dist** folder:
-
-```cmd
-gulp build
+``` bash
+teamsfx new
 ```
+You can use the CLI to create a new Teams app. The CLI leads you through a series of questions. Every question includes an instruction on answering it.
 
-#### Run your application
+For example, use arrow keys to select an option and then, select **Enter** to confirm.
 
-1. At the command prompt, enter the following command to start a local web server:
+1. Select **Create a new Teams app**.
+1. Select the **Tab** capability.
+1. Select **Azure** frontend hosting.
+1. Don't select any cloud resources.
+1. Select **JavaScript** as the programming language.
+1. Press **Enter** to select the default workspace folder.
+1. Enter `helloworld` as the name for your app. The name of the app must have only alphanumeric characters.
 
-    ```cmd
-    gulp serve
-    ```
+After you've answered all the questions, your project is created.
 
-1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page.
+---
 
-    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
+## Take a tour of the tab app source code
 
-1. Browse `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`, to view your personal tab.
+Teams Toolkit provides all components for building an app. After creating the project, you can view the project folders and files in the **Explorer** in the Visual Studio Code.
 
-    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab":::
+:::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/folder-structure-tab-app.png" alt-text="Screen shot shows the structure tab.":::
 
-### Establish a secure tunnel to your tab
+Although you're free to choose any UI framework (or not to use any), this sample template code provides a scaffolding with React components.
 
-At the command prompt exit the localhost and enter the following command to establish a secure tunnel to your tab:
+Among other items in this directory structure, the Toolkit maintains:
 
-```cmd
-gulp ngrok-serve
-```
+| Folder name | Contents |
+| --- | --- |
+| `.vscode` | VSCode files for debugging. |
+| `appPackage` | Templates for the Teams application manifest. |
+| `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
+| `infra` | Templates for provisioning Azure resources. |
+| `src/`| The source code for the notification Teams application. |
+| `src/app.js` | Application entry point and `restify` handlers for website. |
+| `src/views/hello.html`| A HTML template that is bind to the tab endpoint. |
+| `src/static` | The static assets like CSS and JavaScript files that can be served by the web server. |
+| `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+| `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
 
-After your tab is uploaded to Microsoft Teams through **ngrok** and successfully saved, you can view it in Teams until your tunnel session ends.
+## Build and run your first tab app
 
-### Upload your application to Teams
+After you set up your project workspace with Teams Toolkit, build your tab project. You need to sign in to your Microsoft 365 account.
 
-1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Microsoft Teams Store":::.
-1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
-1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
+### Sign in to your Microsoft 365 account
 
-    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab":::
+Use your Microsoft 365 account to sign in to Teams. If you're using a Microsoft 365 developer program tenant, the admin account you set up while registering is your Microsoft 365 account.
 
-1. Select **Add** in the dialog. Your tab is uploaded to Teams.
+# [Visual Studio Code](#tab/viscode)
 
-    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded":::
+1. Open Visual Studio Code.
+1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+1. Select **Sign in to M365** using your credentials.
 
-1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
+   Your default web browser opens to let you sign in to the account.
 
-   Your personal tab is successfully created and added in Teams.You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
+1. Close the browser when prompted and return to Visual Studio Code.
+1. Return to Teams Toolkit within Visual Studio Code.
+
+   The **ACCOUNTS** section of the sidebar shows your Microsoft 365 account name. If custom app upload is enabled for your Microsoft 365 account, Teams Toolkit displays **Sideloading enabled**.
+
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/m365-sideloading-enabled.png" alt-text="Screenshot showing where to sign in to Microsoft 365 and Azure.":::
+
+   Now you're ready to build the app and run it in the local environment!
+
+# [Command line](#tab/cline)
+
+1. Sign in to Microsoft 365 with the TeamsFx CLI:
+
+   ``` bash
+   teamsfx account login m365
+   ```
+
+   Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+2. Sign in to Azure with the TeamsFx CLI:
+
+   ``` bash
+   teamsfx account login azure
+   ```
+
+   Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+   The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+
+   Now that the development environment is configured, you. can create, build, and deploy your first Teams app.
+
+---
+
+### Build and run your app locally in Visual Studio Code
+
+To build and run your app locally:
+
+1. From Visual Studio Code, select **F5** to run the application in debug mode.
+
+   <details>
+   <summary>Learn what happens when you run your app locally in the debugger.</summary>
+
+   In case you're wondering, when you press the **F5** key, Teams Toolkit:
+
+   1. Checks for the following prerequisites:
+      * You're logged in with a Microsoft 365 account.
+      * Custom app upload is enabled for your Microsoft 365 account.
+      * Supported Node.js version is installed.
+      * Development certificate for localhost is installed.
+      * Port is available for the tab app.
+      > [!NOTE]
+      > If Teams Toolkit is unable to check a particular prerequisite, it prompts you to check.
+
+   2. Install NPM packages.
+   3. Registers the app with Microsoft Entra ID and configures the app.
+   4. Registers the app in Teams Developer Portal and configures the app.
+   5. Starts the tab app.
+   6. Starts Teams in a web browser and uploads the tab app.
+
+   </details>
+
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png" alt-text="Screenshot showing when F5 key is pressed." lightbox="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/f5-build-and-run.png":::
+
+   > [!NOTE]
+   > When you run the app for the first time, all dependencies are downloaded, and the app is built. A browser window opens when the build is complete. This process can take 3-5 minutes to complete.
+
+   The toolkit prompts you to install a local certificate, if necessary. This certificate allows Teams to load your application from `https://localhost`.
+
+1. Select **Yes** if the following dialog appears:
+
+   :::image type="content" source="~/assets/images/teams-toolkit-v2/first-tab/hw-warning.png" alt-text="Screenshot shows the microsoft warning.":::
+
+   Or select **Continue**, depending on your operating system:
+
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/ssl-prompt-mac.png" alt-text="Screenshot showing the prompt to install an SSL certificate to enable Teams to load your application from localhost on Mac.":::
+
+   Teams web client opens in a browser window.
+
+   > [!NOTE]
+   > If the toolkit doesn't prompt you to install a certificate, you must install the certificate manually. For more information, see [Add manual certificate](/skype-sdk/sdn/articles/installing-the-trusted-root-certificate#adding-certificate-snap-ins).
+
+1. Sign in with your Microsoft 365 account, if prompted.
+
+1. Select **Add** when prompted to upload the custom app onto Teams on your local machine.
+
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/add-tab-app-local-debug.png" alt-text="Screenshot shows to add the app to Teams.":::
+
+1. Congratulations, your first app is running on Teams!
+
+   :::image type="content" source="../msteams-platform/assets/images/teams-toolkit-v2/first-tab/tab-app-localdebug.png" alt-text="Screenshot shows the completed app" lightbox="../msteams-platform\assets\images\teams-toolkit-v2\first-tab\tab-app-localdebug-1.png":::
+
+   > [!NOTE]
+   > If you want to extend your app to Outlook and Microsoft 365, you can choose to debug your app with Outlook and Microsoft 365 from RUN AND DEBUG dropdown in Visual Studio Code.
+
+   You can add SSO feature to retrieve the user details. You can do normal debugging activities, such as setting breakpoints, as if it were any other web application. The app supports hot reloading. If you change any file within the project, the page will be reloaded.
+
+   <details>
+   <summary>Learn how to troubleshoot if your app doesn't run locally.</summary>
+
+   To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
+
+   </details>
+
+## Deploy your first Teams tab app
+
+You've learned to create, build, and run Teams app with Tab app. The final step is to deploy your app on Azure. Let's deploy the first app with Tab capability on Azure using Teams Toolkit.
+
+### Sign in to your Azure account
+
+Use this account to access the Microsoft Azure portal and to provision new cloud resources to support your app.
+
+# [Visual Studio Code](#tab/viscode)
+
+1. Open Visual Studio Code.
+1. Open the project folder in which you created the tab app.
+1. Select the Teams Toolkit  :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+1. Select **Sign in to Azure** using your credentials.
+
+   > [!TIP]
+   > If you have the AZURE ACCOUNT extension installed and are using the same account, you can skip this step. Use the same account as you're using in other extensions.
+
+   Your default web browser opens to let you sign in to the account.
+
+1. Close the browser when prompted and return to Visual Studio Code.
+
+   The **ACCOUNTS** section of the sidebar shows the two accounts separately. It also lists the number of usable Azure subscriptions available to you. Ensure you have at least one usable Azure subscription available. If not, sign out and use a different account.
+
+   Congratulations, you've created a Teams app! 
+        Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
+
+# [Command line](#tab/cline)
+
+1. Sign in to Microsoft 365 with the TeamsFx CLI:
+
+   ``` bash
+   teamsfx account login m365
+   ```
+
+   Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+2. Sign in to Azure with the TeamsFx CLI:
+
+   ``` bash
+   teamsfx account login azure
+   ```
+
+   Your default web browser opens to let you sign in to the account. Sign in to your Azure account using your credentials. Close the browser when you're prompted.
+
+   The account logins are shared between Visual Studio Code and the TeamsFx CLI.
+
+   Congratulations, you've created a Teams app! 
+   Now let's go ahead and learn how to deploy one of the apps to Azure using the Teams Toolkit.
+
+---
+
+[!INCLUDE [Provision and Deploy your app on Azure](~/includes/get-started/azure-provisioning-instructions-tab.md)]
+
+<details>
+<summary>Learn what happens when you deployed your app to Azure</summary>
+
+Before deployment, the application has been running locally:
+
+* The backend runs using **Azure Functions Core Tools**.
+* The application HTTP endpoint, where Microsoft Teams loads the application, runs locally.
+
+Deployment is a two-step process. You provision the resources on an active Azure subscription, and then deploy or upload the backend and frontend code for the application to Azure.
+
+* The backend, if configured, uses various Azure services, including Azure App Service and Azure Storage.
+ * The frontend application is deployed to an Azure Storage account configured for static web hosting.
+
+ </details>
+
+Your personal tab app is successfully created and added in Teams.You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
 
 ::: zone-end
 
 ::: zone pivot="razor-csharp"
 
 ## Create a personal tab with ASP.NET Core
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -422,6 +478,8 @@ ngrok http 3978 --host-header=localhost
 ::: zone pivot="mvc-csharp"
 
 ## Create a personal tab with ASP.NET Core MVC
+
+[!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -589,6 +647,10 @@ ngrok http 3978 --host-header=localhost
 ::: zone-end
 
 ::: zone pivot="blazor-app"
+
+> [!IMPORTANT]
+>
+> * We've introduced the [Teams Toolkit Overview](../../toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code. This version comes to you with many new app development features. We recommend that you use Teams Toolkit v5 for building your Teams app.
 
 Blazor lets you build interactive web UIs using C#, instead of JavaScript. You can create a tab app and a bot app  with Blazor and the latest version of Visual Studio.
 
@@ -970,6 +1032,251 @@ You've learned to create, build, and run Teams app with tab capability. The foll
 You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
+
+::: zone pivot="node-java-script"
+
+## Create a personal tab with Node.js
+
+1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the Node.js:
+
+    ```cmd
+    npm install yo gulp-cli --global
+    ```
+
+1. At the command prompt, install Microsoft Teams app generator by entering the following command:
+
+    ```cmd
+    npm install generator-teams --global
+    ```
+
+Following are the steps to create a personal tab:
+
+1. [Generate your application with a personal tab](#generate-your-application-with-a-personal-tab)
+1. [Add a content page to the personal tab](#add-a-content-page-to-the-personal-tab)
+1. [Create your app package](#create-your-app-package)
+1. [Build and run your application](#build-and-run-your-application)
+1. [Establish a secure tunnel to your personal tab](#establish-a-secure-tunnel-to-your-tab)
+1. [Upload your application to Teams](#upload-your-application-to-teams)
+
+### Generate your application with a personal tab
+
+1. At the command prompt, create a new directory for your personal tab.
+
+1. Enter the following command in your new directory to start the Microsoft Teams app generator:
+
+    ```cmd
+    yo teams
+    ```
+
+1. Provide your values to a series of questions prompted by Microsoft Teams app generator to update your `manifest.json` file.
+
+    :::image type="content" source="~/assets/images/tab-images/teamsTabScreenshot.PNG" alt-text="Teams generator":::
+
+    <details>
+    <summary><b>Series of questions to update your manifest.json file</b></summary>
+
+    * **What is your solution name?**
+
+      The solution name is your project name. You can accept the suggested name by selecting **Enter**.
+
+    * **Where do you want to place the files?**
+
+      You're currently in your project directory. Select **Enter**.
+
+    * **Title of your Microsoft Teams app project?**
+
+      The title is your app package name and is used in the app manifest and description. Enter a title or select **Enter** to accept the default name.
+
+    * **Your (company) name? (max 32 characters)**
+
+      Your company name is used in the app manifest. Enter a company name or select **Enter** to accept the default name.
+
+    * **Which manifest version would you like to use?**
+
+      Select the default schema.
+
+    * **Quick scaffolding? (Y/n)**
+
+      The default is yes; enter **n** to enter your Microsoft Partner ID.
+
+    * **Enter your Microsoft Partner Id, if you've one? (Leave blank to skip)**
+
+      This field isn't required and must be used only if you're already part of the [Microsoft Partner Network](https://partner.microsoft.com).
+
+    * **What do you want to add to your project?**
+
+      Select **( &ast; ) A Tab**.
+
+    * **The URL where you will host this solution?**
+
+      By default, the generator suggests an Azure website URL. You're only testing your app locally, so a valid URL isn't necessary.
+
+    * **Would you like show a loading indicator when your app/tab loads?**
+
+      Choose **not** to include a loading indicator when your app or tab loads. The default is no, enter **n**.
+
+    * **Would you like personal apps to be rendered without a tab header-bar?**
+
+      Choose **not** to include personal apps to be rendered without a tab header-bar. Default is no, enter **n**.
+
+    * **Would you like to include Test framework and initial tests? (y/N)**
+
+      Choose **not** to include a test framework for this project. The default is no, enter **n**.
+
+    * **Would you like to include ESLint support? (y/N)**
+
+      Choose not to include ESLint support. The default is no, enter **n**.
+
+    * **Would you like to use Azure Applications Insights for telemetry? (y/N)**
+
+      Choose **not** to include [Azure Application Insights](/azure/azure-monitor/app/app-insights-overview). The default is no; enter **n**.
+
+    * **Default Tab Name (max 16 characters)?**
+
+      Name your tab. This tab name is used throughout your project as a file or URL path component.
+
+    * **What kind of Tab would you like to create?**
+
+      Use the arrow keys to select **Personal (static)**.
+
+    * **Do you require Microsoft Entra Single-Sign-On support for the tab?**
+
+      Choose **not** to include Microsoft Entra Single-Sign-On support for the tab. The default is yes, enter **n**.
+    > [!NOTE]
+    > In a tab, the tab home page appears only when the user selects the back button (or moves out of the tab) and comes back to the home page. The tab doesn't maintain or retain the previous state by design.
+    </details>
+
+### Add a content page to the personal tab
+
+Create a content page and update the existing files of the personal tab application:
+
+1. Create a new **personal.html** file in your Visual Studio Code with the following markup:
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>
+                <!-- Todo: add your a title here -->
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- inject:css -->
+            <!-- endinject -->
+        </head>
+            <body>
+                <h1>Personal Tab</h1>
+                <p><img src="/assets/icon.png"></p>
+                <p>This is your personal tab!</p>
+            </body>
+    </html>
+    ```
+
+1. Save **personal.html** in your application's **public** folder in the following location:
+
+    ```
+    ./src/public/<yourDefaultTabNameTab>/personal.html
+    ```
+
+1. Open `manifest.json` from the following location in your Visual Studio Code:
+
+    ```
+     ./src/manifest/manifest.json
+    ```
+
+1. Add the following to the empty `staticTabs` array (`staticTabs":[]`) and add the following JSON object:
+
+    ```json
+    {
+        "entityId": "personalTab",
+        "name": "Personal Tab ",
+        "contentUrl": "https://{{PUBLIC_HOSTNAME}}/<yourDefaultTabNameTab>/personal.html",
+        "websiteUrl": "https://{{PUBLIC_HOSTNAME}}",
+        "scopes": ["personal"]
+    }
+    ```
+
+    > [!IMPORTANT]
+    > The path component **yourDefaultTabNameTab** is the value that you entered in the generator for **Default Tab Name** plus the word **Tab**.
+    >
+    > For example: DefaultTabName is **MyTab** then **/MyTabTab/**
+
+1. Update the **contentURL** path component **yourDefaultTabNameTab** with your actual tab name.
+
+1. Save the updated `manifest.json` file.
+
+1. Open **Tab.ts** in your Visual Studio Code from the following path to provide your content page in an iFrame:
+
+    ```bash
+    ./src/server/<yourDefaultTabNameTab>/<yourDefaultTabNameTab>.ts
+    ```
+
+1. Add the following to the list of iFrame decorators:
+
+    ```typescript
+     @PreventIframe("/<yourDefaultTabName Tab>/personal.html")
+    ```
+
+1. Save the updated file. Your tab code is complete.
+
+### Create your app package
+
+You must have an app package to build and run your application in Teams. The app package is created through a gulp task that validates the `manifest.json` file and generates the zip folder in the `./package` directory. At the command prompt, use the command `gulp manifest`.
+
+### Build and run your application
+
+#### Build your application
+
+Enter the following command at the command prompt to transpile your solution into the **./dist** folder:
+
+```cmd
+gulp build
+```
+
+#### Run your application
+
+1. At the command prompt, enter the following command to start a local web server:
+
+    ```cmd
+    gulp serve
+    ```
+
+1. Enter `http://localhost:3007/<yourDefaultAppNameTab>/` in your browser to view your application's home page.
+
+    :::image type="content" source="~/assets/images/tab-images/homePage.png" alt-text="Default Tab":::
+
+1. Browse `http://localhost:3007/<yourDefaultAppNameTab>/personal.html`, to view your personal tab.
+
+    :::image type="content" source="~/assets/images/tab-images/personalTab.PNG" alt-text="Default html Tab":::
+
+### Establish a secure tunnel to your tab
+
+At the command prompt exit the localhost and enter the following command to establish a secure tunnel to your tab:
+
+```cmd
+gulp ngrok-serve
+```
+
+After your tab is uploaded to Microsoft Teams through **ngrok** and successfully saved, you can view it in Teams until your tunnel session ends.
+
+### Upload your application to Teams
+
+1. Go to Teams and select **Apps**&nbsp;:::image type="content" source="~/assets/images/tab-images/store.png" alt-text="Microsoft Teams Store":::.
+1. Select **Manage your apps** > **Upload an app** > **Upload a custom app**.
+1. Go to your project directory, browse to the **./package** folder, select the zip folder, and choose **Open**.
+
+    :::image type="content" source="~/assets/images/tab-images/addingpersonaltab.png" alt-text="Adding your personal tab":::
+
+1. Select **Add** in the dialog. Your tab is uploaded to Teams.
+
+    :::image type="content" source="~/assets/images/tab-images/personaltabuploaded.png" alt-text="Personal tab uploaded":::
+
+1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your personal tab.
+
+   Your personal tab is successfully created and added in Teams.You can also [reorder](#reorder-static-personal-tabs) your personal tab in Teams.
+
+::: zone-end
+
 
 ## Reorder static personal tabs
 
