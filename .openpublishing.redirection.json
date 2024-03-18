@@ -1043,6 +1043,10 @@
       {
         "source_path": "msteams-platform/get-started/teams-toolkit-tutorial.md",
         "redirect_url": "/microsoftteams/get-started/build-your-first-app"
-      }      
+      },
+      {
+        "source_path": "msteams-platform/get-started/get-started-overview.md",
+        "redirect_url": "/microsoftteams/get-started/build-your-first-app"
+      }
     ]
 }

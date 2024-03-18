@@ -8,10 +8,23 @@ ms.topic: reference
 
 # Build your first Teams app
 
-Build your first Teams message extension, tab, or bot app in one of the following ways:
+Get started with building apps for Microsoft Teams and beyond!
 
-* [Use GitHub Codespaces](#github-codespaces)
-* [Follow the step-by-step guide](#step-by-step-guide)
+1. Choose your path to build your first app:
+
+    1. [GitHub Codespaces](#github-codespaces): Run, test, and debug your app in a development environment without the need for any extra setup.
+
+    2. [Step-by-step guide](#step-by-step-guide): Create a Teams app from the ground up including setting up your development environment.
+
+   :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Diagram shows your choices to build a Teams app." lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
+
+1. Select the type of Teams app that you want to build in your chosen path:
+
+    1. [Message extension](#message-extensiontabmsgext1)
+
+    2. [Tab](#tabtabtab1)
+
+    3. [Bot](#bottabbot1)
 
 ## GitHub Codespaces
 
@@ -108,9 +121,21 @@ To create a basic Teams tab app, follow these steps:
 
       :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows the Teams Toolkit window in browser with your tab app."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
 
-   GitHub Codespaces builds your tab app and opens it in a new browser tab.
+6. Select **Preview (Codespaces)**.
 
-   :::image type="content" source="../assets/images/get-started/tab-app-in-teams.png" alt-text="Screenshot shows your tab app loaded in the Teams client."lightbox="../assets/images/get-started/tab-app-in-teams.png":::
+      :::image type="content" source="../assets/images/get-started/codespace/codespace-debug.png" alt-text="Screenshot shows the option to debug your tab app in Codespaces.":::
+
+7. A message appears when GitHub Codespaces finishes building your tab app. Select **Open in Browser**.
+
+      :::image type="content" source="../assets/images/get-started/codespace/codespace-open-in-browser.png" alt-text="Screenshot shows the option to open your Codespaces tab app in browser.":::
+
+8. A new browser tab opens with a warning. Select **Continue**.
+
+      :::image type="content" source="../assets/images/get-started/codespace/codespace-confirmation-tab.png" alt-text="Screenshot shows the warning that appears in Codespaces.":::
+
+   GitHub Codespaces opens your tab app in a new browser tab.
+
+   :::image type="content" source="../assets/images/get-started/tab-app-in-teams.png" alt-text="Screenshot shows a preview of your tab app in a new browser."lightbox="../assets/images/get-started/tab-app-in-teams.png":::
 
 # [Bot](#tab/bot1)
 

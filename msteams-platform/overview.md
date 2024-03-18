@@ -8,9 +8,7 @@ ms.date: 05/24/2021
 ---
 # Teams app that fits
 
-Microsoft Teams is a collaborative platform that prvoides a workspace for organizations to collaborate through apps for communication, meetings, and file sharing. Teams offers proprietary Microsoft and third-party apps. Teams apps can be message extensions, tabs, bots, or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 to enhance their collaborative experience.
-
-Apps can be personal or shared. A personal app enables one-on-one communication and a shared app lets multiple users share app space to collaborate.
+Microsoft Teams is a collaborative platform that prvoides a workspace for organizations to collaborate through apps for communication, meetings, and file sharing. Teams offers proprietary Microsoft and third-party apps. Teams apps can be message extensions, tabs, bots, or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 to enhance their collaborative experience. Apps can be personal or shared. A personal app enables one-on-one communication and a shared app lets multiple users share app space to collaborate.
 
 ## Drive organizational goals
 
@@ -22,7 +20,7 @@ You can build apps with Teams platform to increase user engagement, automate rep
 
 ## Why build apps with Teams
 
-Teams apps help your workspace become more productive by bringing key information, common tools, and trusted processes to where people increasingly gather, learn, and work.
+Teams apps help your workspace become more productive by bringing key information, common tools, and trusted processes to where people gather to learn, and work.
 
 Here's why Teams is best suited for your app needs:
 
@@ -58,7 +56,7 @@ Here's why Teams is best suited for your app needs:
 
 * **Build once, run everywhere**
 
-    Extending your Teams app across Microsoft 365 provides a streamlined way to deliver cross-platform apps to an expanded user audience. Create app experiences tailored for Teams, Outlook, and Microsoft 365 app environments from a single codebase. End users don't have to leave the context of their work to use your app, and administrators benefit from a consolidated management and deployment workflow.
+    Create cross-platform app experiences tailored for Teams, Outlook, and Microsoft 365 app environments from a single codebase. Users don't have to leave the context of their work to use your app and administrators benefit from a consolidated management and deployment workflow.
 
 ## Next step
 
