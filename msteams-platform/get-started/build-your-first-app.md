@@ -10,21 +10,13 @@ ms.topic: reference
 
 Get started with building apps for Microsoft Teams and beyond!
 
-1. Choose your path to build your first app:
+1. Choose your path to build your first message extension, tab, or bot app:
 
     1. [GitHub Codespaces](#github-codespaces): Run, test, and debug your app in a development environment without the need for any extra setup.
 
     2. [Step-by-step guide](#step-by-step-guide): Create a Teams app from the ground up including setting up your development environment.
 
    :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Diagram shows your choices to build a Teams app." lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
-
-1. Select the type of Teams app that you want to build in your chosen path:
-
-    1. [Message extension](#message-extensiontabmsgext1)
-
-    2. [Tab](#tabtabtab1)
-
-    3. [Bot](#bottabbot1)
 
 ## GitHub Codespaces
 

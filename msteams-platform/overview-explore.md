@@ -25,9 +25,10 @@ Search and share external information in Teams. You also can act on a message, s
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-messaging-extensions-2021.png" alt-text="Diagram shows a message extension in Teams.":::
+:::image type="content" source="assets/images/overview-messaging-extensions-2021.png" alt-text="Diagram shows a message extension in Teams.":::
 
    :::column-end:::
+
 :::row-end:::
 
 :::row:::
@@ -36,13 +37,13 @@ Search and share external information in Teams. You also can act on a message, s
 
 ### Tabs
 
-Display your web-based content in a [tab](../../tabs/what-are-tabs.md) where people can discuss and work on it together.
+Display your web-based content in a tab where people can discuss and work on it together.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-channel-chat-apps-2021.png" alt-text="Diagram shows a tab in Teams.":::
+:::image type="content" source="assets/images/overview-channel-chat-apps-2021.png" alt-text="Diagram shows a tab app in Teams.":::
 
    :::column-end:::
 
@@ -53,13 +54,13 @@ Display your web-based content in a [tab](../../tabs/what-are-tabs.md) where peo
 
 ### Bots
 
-Conversations often result in the need to do something (generate an order, review code, check ticket status, and so on). A [bot](../../bots/what-are-bots.md) can kick off these kinds of workflows right inside Teams.
+Conversations often result in the need to do something (generate an order, review code, check ticket status, and so on). A bot can kick off these kinds of workflows right inside Teams.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-bots-2021.png" alt-text="Diagram shows a bot in Teams.":::
+:::image type="content" source="assets/images/overview-bots-2021.png" alt-text="Diagram shows a bot app in Teams.":::
 
    :::column-end:::
 
@@ -71,13 +72,13 @@ Conversations often result in the need to do something (generate an order, revie
 
 ### Meeting extensions
 
-There are a few options for [incorporating your app into the Teams calling experience](../../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+There are a few options for incorporating your app into the Teams calling experience(../../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-meeting-extensions-2021.png" alt-text="Diagram shows a meeting extension in Teams.":::
+:::image type="content" source="assets/images/overview-meeting-extensions-2021.png" alt-text="Diagram shows a meeting extension in Teams.":::
 
    :::column-end:::
 :::row-end:::
@@ -88,13 +89,13 @@ There are a few options for [incorporating your app into the Teams calling exper
 
 ### Webhooks and connectors
 
-[Incoming Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#incoming-webhooks) are a simple way to automatically send notifications from another app to a Teams channel. With [Outgoing Webhooks](../../webhooks-and-connectors/what-are-webhooks-and-connectors.md#outgoing-webhooks), you can message your web service with an @mention.
+Incoming webhooks are a simple way to automatically send notifications from another app to a Teams channel. With outgoing webhooks, you can message your web service with an @mention.
 
    :::column-end:::
 
    :::column span="":::
 
-:::image type="content" source="../../assets/images/overview-connectors.png" alt-text="Diagram shows a webhook in Teams.":::
+:::image type="content" source="assets/images/overview-connectors.png" alt-text="Diagram shows a webhook in Teams.":::
 
    :::column-end:::
 :::row-end:::
