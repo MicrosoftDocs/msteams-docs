@@ -21,7 +21,7 @@ There are two ways to initiate bot configuration settings post-installation:
 
 1. @mention the bot in the message compose area.
 
-   :::image type="content" source="../../assets/images/bots/mention-bot-in-compose-area.png" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
+   :::image type="content" source="../../assets/images/bots/mention-bot-in-compose-area.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
 1. When the user hovers over the bot, an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration settings.
 
