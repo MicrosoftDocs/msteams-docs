@@ -34,6 +34,7 @@ Let's build a bot that provides bot configuration settings for users during the 
 To enable the bot configuration settings follow these steps:
 
 1. [Update app manifest](#update-app-manifest)
+
 1. [Configure your bot](#configure-your-bot)
 
 ### Update app manifest
@@ -570,7 +571,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
     ```
 
-1. `OnTeamsConfig:`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for bot development. The `OnTeamsConfig` method facilitates the handling of configuration related activities within the bot. It's part of the `TeamsActivityHandler` class provided by the Bot Framework SDK for Teams. This method enables users to respond to configuration events, including user initiated bot configurations or updates to bot settings within Teams.
+1. `OnTeamsConfig`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for bot development. The `OnTeamsConfig` method facilitates the handling of configuration related activities within the bot. It's part of the `TeamsActivityHandler` class provided by the Bot Framework SDK for Teams. This method enables users to respond to configuration events, including user initiated bot configurations or updates to bot settings within Teams.
 
    # [C# 1](#tab/teams-bot-sdk4)
 
