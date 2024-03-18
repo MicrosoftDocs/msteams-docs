@@ -238,6 +238,8 @@ To add authentication to your messag extesion, follow these steps:
 
 1. Select **+ Add Secret**.
 
+1. Select **Save**.
+
 1. Under App features, select to the message extension that you've created.
 1. Under Authentication, select **API Key** and add the API Key you've copied earlier.
 1. Select **Save**.
