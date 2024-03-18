@@ -217,6 +217,31 @@ An API-based message extension is created.
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
 
+**Add Authentication**
+
+To add authentication to your messag extesion, follow these steps:
+
+1. Go to **Tools** > **API Key Registration**.
+
+1. In the **Register an API key** page, update the following:
+
+   1. **Description**:
+   1. **Add Domain**:
+
+1. Under **Set a target tenant**, select the following:
+   1. If you want only the apps that are created within that tenant to use the API key to call the APIs, select **Home tenant**.
+   1. If you want only the apps that can within that tenant to use the API key to call the APIs, select **Any tenant**.
+
+1. Under **Set a Teams app**, select the following:
+   1. If you want the app that matches the given teams App ID to use the API key, select **Existing Teams app**.
+   1. If you want the app that matches the any teams App ID to use the API key, select **Any Teams app**.
+
+1. Select **+ Add Secret**.
+
+1. Under App features, select to the message extension that you've created.
+1. Under Authentication, select **API Key** and add the API Key you've copied earlier.
+1. Select **Save**.
+
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
 * **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You are redirected to Teams, where you can add the app to Teams to preview the app.

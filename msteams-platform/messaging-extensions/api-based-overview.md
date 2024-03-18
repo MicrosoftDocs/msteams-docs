@@ -415,9 +415,9 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
     {
       "composeExtensionType": "apiBased",
       "authorization": {
-        "authType": "microsoftEntra",
-        "microsoftEntraConfiguration": {
-            "supportsSingleSignOn": true,          
+        "authType": "apiSecretServiceAuth ",
+        "apiSecretServiceAuthConfiguration": {
+            "apiSecretRegistrationId": ""sCVBX2udSXEtxo97behM1ReO8pJc4MdA"
         }
       },
       "apiSpecificationFile": "aitools-openapi.yml",
@@ -450,6 +450,10 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 |Name  |Description  |
 |---------|---------|
 |`composeExtensions.composeExtensionType`     |  Compose extension type. Update the value to `apiBased`. |
+|`composeExtensions.authorization`|Array of objects|2||Authorization related information for the API-based message extension|
+|`composeExtensions.authorization.authType`|String|||Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
+|`composeExtensions.authorization.apiSecretServiceAuthConfiguration`|Object|||Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`.|
+|`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`|String|128 characters||Registration id returned when developer submits the API key through Developer Portal.|
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
 |`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationId` available in the OpenAPI Description.       |
 |`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
