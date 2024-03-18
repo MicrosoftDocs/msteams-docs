@@ -53,6 +53,7 @@ A limited set of RSC permissions have been reviewed by Microsoft privacy and sec
 | Permission name | Action | Type: Delegated | Type: Application |
 | ----- | ----- | :-----: | :-----: |
 |`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
+|`TeamsActivity.Send.User`|Send activity feed notifications to the user. | NA | Supported |
 
 ### RSC-based data access APIs
 
@@ -91,11 +92,8 @@ The following table provides RSC application permissions for a team and their ap
 |`ChannelMeetingTranscript.Read.Group`|Read the transcripts of all channel meetings associated with this team.| NA | Supported |
 |`ChannelMeetingNotification.Send.Group`|Send notifications in all the channel meetings associated with this team.| NA | Supported |
 |`ChannelMessage.Read.Group`|Read this team's channel messages. | NA | Supported |
-|`ChannelMessage.Send.Group`|Send messages to this team's channels.| NA | Supported |
 |`ChannelSettings.Read.Group`| Read the names, descriptions, and settings of this team's channels​.| NA | Supported |
 |`ChannelSettings.ReadWrite.Group`|Update the names, descriptions, and settings of this team's channels.​| NA | Supported |
-|`Member.Read.Group`|Read this group's members.| NA | Supported |
-|`Owner.Read.Group`|Read this group's owners.| NA | Supported |
 |`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
 |`TeamsAppInstallation.Read.Group`|Read the apps that are installed in this team.| NA | Supported |
 |`TeamMember.Read.Group`|Read this team's members. | NA | Supported |
@@ -128,7 +126,6 @@ The following table provides RSC permissions for a chat or meeting and their app
 | `ChatSettings.Read.Chat`| Read this chat's settings.|NA |Supported |
 | `ChatSettings.ReadWrite.Chat`| Read and write this chat's settings. |NA |Supported |
 | `ChatMessage.Read.Chat` | Read this chat's messages.|NA |Supported |
-| `ChatMessage.Send.Chat` | Send messages to this chat. |NA |Supported |
 | `ChatMessageReadReceipt.Read.Chat` | Read the ID of the last seen message in this chat. |NA |Supported |
 | `ChatMember.Read.Chat` | Read this chat's members. |NA |Supported |
 | `Chat.Manage.Chat` | Manage this chat. |NA |Supported |
