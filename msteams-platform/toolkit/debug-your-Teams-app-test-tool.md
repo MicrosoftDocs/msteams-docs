@@ -367,7 +367,7 @@ If your bot code uses Bot Framework APIs, you can modify the configuration file 
 
 To comprehensively test this bot in Test Tool, it's crucial to update the configuration file to use the correct email addresses of the owners of the inactive bugs.
 
-1. Go to the `teamsapptesttool.yml` file in the project's root folder.
+1. Go to the `.teamsapptesttool.yml` file in the project's root folder.
 
 1. Go to the `users` section and update the `name`, `userPrincipleName`, and `email` of the required user.
 
