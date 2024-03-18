@@ -1,7 +1,7 @@
 ---
 title: Build message extensions using Bot Framework
 author: v-ypalikila
-description: Learn how to build a bot message extension using Bot Framework with Teams Toolkit.
+description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -20,7 +20,7 @@ There are two types of message extension commands, action command and search com
 
 # [Search commands](#tab/search-commands)
 
-Message extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to select  search command invoke locations, and add the search command to your app manifest.
+Message extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to select search command invoke locations, and add the search command to your app manifest.
 
 > [!NOTE]
 > The result card size limit is 28 KB. The card isn't sent if its size exceeds 28 KB.
