@@ -116,9 +116,7 @@ The following are the limitations for app caching:
   * `readyToUnload`
   * `getConfig/getSettings`
 
-## Known issues
-
-* App caching is not supported in the new Teams client [Introducing the new Microsoft Teams client](https://learn.microsoft.com/microsoftteams/platform/resources/teams-updates#known-issues)
+* App caching is not supported in the [new Teams client](https://learn.microsoft.com/microsoftteams/platform/resources/teams-updates#known-issues)
 
 ## Troubleshooting
 
