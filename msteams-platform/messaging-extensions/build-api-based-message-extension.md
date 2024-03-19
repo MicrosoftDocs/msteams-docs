@@ -34,7 +34,7 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 * Only one required parameter without a default value is allowed.
 * Only POST and GET HTTP methods are supported.
 * OpenAPI Description document must have an `operationId`.
-* The operation must not have required Header or Cookie parameters without default values.
+* The operation must not have a required Header or Cookie parameters without default values.
 * A command must have exactly one parameter.
 * Ensure that there are no remote references in the OpenAPI Description document.
 * A required parameter with a default value is considered optional.
@@ -55,7 +55,7 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 * A command must have exactly one parameter.
 * Add a new optional property `authorization` under the `composeExtensions` node. This property should be null for bot-based ME and specified only for API ME.
 * Define the type of authentication your application uses by setting the `authType` property under the `authorization` node. The possible values for this property are `none`, `oauth`, `apiSecretServiceAuth`, `microsoftEntra`, and `userAuth`.
-* Depending on the type of authentication your application uses, you may need to add a corresponding configuration object under the `authorization` node. For example, if your application uses AAD SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`.
+* Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses AAD SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`.
 * If your application uses API key based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
 
 </details>
@@ -67,7 +67,7 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 > [!NOTE]
 > Teams supports Adaptive Cards up to version 1.5, and  the Adaptive Cards Designer supports up to version 1.6.
 
-* Use tools such as Fiddler or Postman to call the API and ensure that the requests and the response is valid.
+* Use tools such as Fiddler or Postman to call the API and ensure that the request and the response is valid.
 * Get a sample response for validating the response rendering template.
 * You can use [Adaptive Card Designer](https://adaptivecards.io/designer/) to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
 
@@ -219,7 +219,7 @@ An API-based message extension is created.
 
 **Add Authentication**
 
-To add authentication to your messag extesion, follow these steps:
+To add authentication to your message extesion, follow these steps:
 
 1. Go to **Tools** > **API Key Registration**.
 
@@ -230,23 +230,23 @@ To add authentication to your messag extesion, follow these steps:
 
 1. Under **Set a target tenant**, select the following:
    1. If you want only the apps that are created within that tenant to use the API key to call the APIs, select **Home tenant**.
-   1. If you want only the apps that can within that tenant to use the API key to call the APIs, select **Any tenant**.
+   1. If you want any app to use the API key to call the APIs, select **Any tenant**.
 
 1. Under **Set a Teams app**, select the following:
    1. If you want the app that matches the given teams App ID to use the API key, select **Existing Teams app**.
-   1. If you want the app that matches the any teams App ID to use the API key, select **Any Teams app**.
+   1. If you want the app that matches any teams App ID to use the API key, select **Any Teams app**.
 
 1. Select **+ Add Secret**.
 
 1. Select **Save**.
 
 1. Under App features, select to the message extension that you've created.
-1. Under Authentication, select **API Key** and add the API Key you've copied earlier.
+1. Under **Authentication**, select **API Key** and add the API Key you've copied earlier.
 1. Select **Save**.
 
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
-* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You are redirected to Teams, where you can add the app to Teams to preview the app.
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You're redirected to Teams, where you can add the app to Teams to preview the app.
 
 * **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
