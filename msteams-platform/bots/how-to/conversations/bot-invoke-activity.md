@@ -1,14 +1,14 @@
 ---
-title: Invoke for bot event-driven conversations
+title: Invoke activity handlers for bot event-driven conversations
 author: surbhigupta
-description: Learn about Microsoft Teams invoke activities for bot messages and actions using Microsoft Bot Framework SDK.
+description: Learn about Microsoft Teams invoke activity handlers and invoke activities for bot messages and actions using Microsoft Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-npaladugu
 ms.date: 01/22/2023
 ---
 
-# Invoke for bot events
+# Invoke activity handler for bot events
 
 An invoke event is sent to a user from the bot when a user performs an action, such as selecting a button or tapping a card. Invoke activities are used to send a pre-defined payload back to the bot, which can then be used to trigger specific actions or responses, such as following:
 * Send back confirmations
@@ -25,7 +25,7 @@ The following table outlines which communication concept to use:
 
 |Comunication flow| Concept| Description |
 |---|---| --- |
-| User **->** Bot| [Event activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) |Activity handlers are used when you want your bot to be notified when a user performs an event.|
+| User **->** Bot| [Event activity handler](~/bots/how-to/conversations/bot-events.md#events-with-activity-handlers) |Event activity handlers are used when you want your bot to be notified when a user performs an event.|
 | User **<->** Bot| [Invoke activity handler + Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Invoke activity handlers are used when you want your bot to be notified when a user performs an event and respond back to the user based on the event through invoke activities.|
 
 Teams activity handler is derived from [Bot Framework's activity handler](~/bots/how-to/conversations/bot-events.md#bot-framework-activity-handler). The two primary Teams activity handlers are as follows:

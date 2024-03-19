@@ -26,12 +26,12 @@ The following table outlines which communication concept to use in different sce
 
 |Comunication flow| Concept| Description |
 |---|---| --- |
-| User **->** Bot| [Event activity handler](#events-with-activity-handlers) |Activity handlers are used when you want your bot to be notified when a user performs an event.|
+| User **->** Bot| [Event activity handler](#events-with-activity-handlers) |Event activity handlers are used when you want your bot to be notified when a user performs an event.|
 | User **<->** Bot| [Invoke activity handler + Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Invoke activity handlers are used when you want your bot to be notified when a user performs an event and respond back to the user based on the event through invoke activities.|
 
 To create event-driven conversations, you must define the associated handlers that the bot will use with the event.
 
-## Events with activity handlers
+## Event activity handlers
 
 Each activity type, or subtype, signifies a unique conversational event. The bots turn handler, which is responsible for managing the flow of conversation, triggers the specific activity handler based on the activity type. For example, when the bot receives a message activity, the turn handler identifies the activity and forwards it to the `onMessageActivity` handler. You can use the `onMessageActivity` handler to place your logic for managing and responding to messages.
 
@@ -57,6 +57,9 @@ A bot receives a `conversationUpdate` event in any of the following scenarios:
 * When bot is added to a conversation.
 * Other members are added or removed in a conversation or channel.
 * Conversation metadata is changed.
+
+> [!NOTE]
+> When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
 
 The following are different type of events associated with `conversationUpdate`:
 
@@ -514,7 +517,7 @@ MessageFactory.text(f"The deleted channel is {channel_info.name}")
 
 # [C#](#tab/dotnet4)
 
-* [SDK refernce](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
 ```csharp
@@ -1542,7 +1545,7 @@ For more information, see the [Bot Framework handlers.](/azure/bot-service/bot-a
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)
+> [Invoke activity handler](~/bots/how-to/conversations/bot-invoke-activity.md)
 
 ## See also
 
