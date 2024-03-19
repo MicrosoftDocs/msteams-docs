@@ -349,6 +349,10 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 ---
 
+## Authentication and configuration
+
+Authentication for message extension plugins in Copilot works the same way as [authentication for message extensions](../bots/how-to/authentication/bot-sso-overview.md) running in Teams and Outlook. You can optionally provide your user with a [configuration dialog](../tabs/how-to/create-tab-pages/configuration-page.md) after signing in to your plugin. For sample code, see [Message extension SSO config bot](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-search-sso-config/nodejs).
+
 ## Step-by-step guide
 
 Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.yml) to build a bot-based search message extension plugin for M365 Chat.
