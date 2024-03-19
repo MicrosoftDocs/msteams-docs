@@ -16,7 +16,7 @@ Messages in bot conversations play a crucial role in facilitating communication 
 
 Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message activity to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly.
 
-Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Builder SDK provides the following features:
+Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Framework SDK provides the following features:
 
 * Easy access to the Bot Framework connector.
 * Functionality to manage conversation flow and state.
