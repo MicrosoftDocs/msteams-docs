@@ -9,7 +9,7 @@ ms.date: 02/21/2024
 ---
 # Prerequisites for creating your Teams app using Visual Studio
 
-Before you create your Teams app project, ensure that the prerequisites are in place. You must:
+Before you create your Microsoft Teams app project, ensure that the prerequisites are in place. You must:
 
 * [Install required tools to build your Teams app](#install-required-tools-to-build-your-teams-app)
 * [Prepare Accounts to build your Teams app](#accounts-to-build-your-teams-app)
@@ -100,7 +100,7 @@ To create a free Microsoft 365 developer account:
 
 ### Azure account
 
-An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Teams Toolkit in Visual Studio Code. You must have an Azure subscription in the following scenarios:
+An Azure account allows you to host a Teams app or the back-end resources for your Teams app to Azure. You can do this using Teams Toolkit in Visual Studio. You must have an Azure subscription in the following scenarios:
 
 * If you already have an existing app on a different cloud provider other than Azure, and you want to integrate the app on Teams platform.
 * If you want to host the back-end resources for your app using another cloud provider, or on your own servers if they're available in the public domain.
@@ -112,42 +112,18 @@ An Azure account allows you to host a Teams app or the back-end resources for yo
 
 After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
-You can verify if the custom app upload permission is enabled using either Visual Studio Code or Teams client.
+You can verify if the custom app upload permission is enabled using Teams client.
 
-<br>
-<details>
-<summary><b>Verify custom app upload permission using Visual Studio Code</b></summary>
-
-You can use this method to verify custom app upload permission only after you have created an app project using Teams Toolkit. If you haven't created an app project, you can verify custom app upload permission using Teams client.
-
-1. Open **Visual Studio Code**.
-1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
-
-   > [!NOTE]
-   > If you're unable to see the option, see [install Teams Toolkit](../install-Teams-Toolkit.md) to install Teams Toolkit extension in Visual Studio Code.
-
-1. Create a new Teams Toolkit app project or open an existing app project.
-
-1. Select **Sign in to Microsoft 365** under **ACCOUNTS**.
-
-    :::image type="content" source="images/accounts1-v4.png" alt-text="accounts details":::
-
-1. Verify if you can see the option **Sideloading enabled** as shown in the following image:
-
-    :::image type="content" source="images/sideloading_1-v4.png" alt-text="Screenshot shows you the custom app upload in Teams.":::
-
-</details>
-<br>
 <details>
 <summary><b>Verify custom app upload permission using Teams client</b></summary>
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-    :::image type="content" source="images/upload-app_1-v4.png" alt-text="Screenshot showing the selection of upload an app highlighted in red.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/upload-app.png" alt-text="Screenshot shows the option to select upload an app in Teams manage your apps.":::
 
 1. Check if you can see the option **Upload a custom app** as you can see in the following image:
 
-    :::image type="content" source="images/upload-custom-app-v4.png" alt-text="Screenshot shows the option to upload a custom app.":::
+    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/upload-custom-app.png" alt-text="Screenshot shows the option to select upload a custom apps.":::
 
 </details>
 
@@ -166,7 +142,7 @@ If you have admin rights, you can enable custom app upload:
 
   1. Select the :::image type="icon" source="images/showall icon-v4.png" border="false":::icon > **Teams**.
 
-       :::image type="content" source="images/m365-admin-center_1-v4.png" alt-text="Microsoft 365 Admin center":::
+       :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/m365-admin-center.png" alt-text="Screenshot shows the option to select Teams under Admin centers.":::
 
      > [!Note]
      > It can take up to 24 hours for the Teams option to appear. You can [upload your custom app to a Teams environment](/microsoftteams/upload-custom-apps) for testing and validation.
@@ -174,13 +150,13 @@ If you have admin rights, you can enable custom app upload:
   1. Sign in to Microsoft Teams admin center with your admin credentials.
   1. Select the :::image type="icon" source="images/showall icon-v4.png" border="false"::: icon > **Teams apps** > **Setup policies**.
 
-     :::image type="content" source="images/m365-admin-center1_1-v4.png" alt-text="Microsoft 365 Admin center1":::
+     :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/m365-admin-setup-policies.png" alt-text="Screenshot shows the option to select setup policies.":::
 
   1. Select **Global (Org-wide default)**.
 
      :::image type="content" source="images/select-manage-policies_1-v4.png" alt-text="Select Manage Policies":::
 
-  1. Set toggle **Upload custom apps** to **On** position.
+  1. Turn on the **Upload custom apps** toggle.
 
      :::image type="content" source="images/Upload-custom-apps_1-v4.png" alt-text="Upload Custom Apps":::
 
