@@ -140,6 +140,35 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 * **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The app definition refers to the configuration and settings associated with the application. The Icon tab shows the icon used for your app.
 
+* **App validation**: The app validation tool evaluates your app package based on the test cases that Microsoft uses to review your app. The app validation tool identifies any errors or warnings in your app package and provides guidelines for resolution.
+
+    If your app failed any test cases, you can review the guidelines and make necessary updates to your app package based on the Microsoft test case results. You can also download your app package and validation report.
+
+    <br>
+    <details>
+    <summary><b>Validate your app package</b></summary><br>
+    To ensure that your app functions as expected on Teams, use the app validation tool to check your app package against Microsoft's test cases:
+
+    1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
+    1. Go to **Publish** > **App validation** > **Get started**.
+
+        :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the app validation in Teams developer portal.":::
+
+    1. Select the validation acknowledgments checkbox and select the **Start validation**.
+
+        :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgment of your app package.":::
+
+        Teams Developer Portal now starts to validate your app package:
+
+        :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the app validation in progress.":::
+
+    1. After validation, it shows the list of test cases your app has passed or failed.
+
+        :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
+
+    You've successfully validated your app package in the Teams Developer Portal.
+    </details>
+
 ## Test your app directly in Teams
 
 The Developer Portal provides options for testing and debugging your app:
@@ -154,7 +183,7 @@ The Developer Portal also includes tools to help you build key features of Teams
 * **Scene studio**: Design [custom Together Mode scenes in Teams](../../apps-in-teams-meetings/teams-together-mode.md) for Teams meetings.
 * **Adaptive Cards editor (Preview)**: Create and preview Adaptive Cards to include with your apps.
 * **Identity platform management (Preview)**: Register your apps with Microsoft Entra ID to help users sign in and provide access to APIs.
-* **Teams store app validation**: Check your app package against the test cases that Microsoft uses to review your app.
+* **Teams Store app validation**: Check your app package against the test cases that Microsoft uses to review your app. We recommend you to use latest app validation tool in your app under [**Publish**](#publish) section.
 * **Bot management**: Add conversational bots to your app that communicate with users, respond to their questions, and proactively notify them about changes and other events.
 
 To add a bot:
