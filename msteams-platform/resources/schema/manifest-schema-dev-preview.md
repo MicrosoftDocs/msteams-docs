@@ -962,7 +962,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`, `menu`|
 |`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control.|
-|`tabs.groups.controls.icons`| Array | | | Defines the icons for the control. There must be at least three child objects; one each with `size` properties of `16`, `32`, and `80` pixels. |
+|`tabs.groups.controls.icons`| Array | | ✔️ | Defines the icons for the control. There must be at least three child objects; one each with `size` properties of `16`, `32`, and `80` pixels. |
 |`tabs.groups.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Required image size: `16`, `32`, `80`|
 |`tabs.groups.controls.icons.url`| URL| | | Specifies the absolute URL to the icon.|
 |`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. |
@@ -979,7 +979,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.customMobileRibbonGroups.controls.id` | String | 250 characters | ✔️ | Specifies the ID of the control such as "msgReadFunctionButton".| 
 |`tabs.customMobileRibbonGroups.controls.type` | String enum |  | ✔️ | Specifies the type of control. Currently only "MobileButton" is supported.|
 |`tabs.customMobileRibbonGroups.controls.label` | String | 32 characters | ✔️ | Specifies the label on the control.|
-|`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
+|`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters |✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
 |`tabs.customMobileRibbonGroups.controls.icons` | Array | 9 | ✔️ | Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
 |`tabs.customMobileRibbonGroups.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The possible sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icons's `scale` property. |
 |`tabs.customMobileRibbonGroups.controls.icons.url` | String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. |
