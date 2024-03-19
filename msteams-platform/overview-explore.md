@@ -23,7 +23,7 @@ Teams platform provides the following capabilities to build your app:
 
 ### Message extensions
 
-Interact with your web service from Teams through message extensions. Search or start actions in an external system and send the result of the interaction in Teams as a richly formatted card. Message extensions can be enhanced with AI capabilities with Copilot for Teams. For example, create a bug in your tracking system based on a Teams message, assign that bug to a user, and send a card to the conversation thread with the bug's details.
+Message extensions help search or start actions in an external web service and send the result of the interaction in Teams as a richly formatted card. Message extensions can be enhanced with AI capabilities with Copilot for Teams. For example, create and assign a bug in your tracking system based on a Teams message and send a card to the conversation thread with the bug's details.
 
    :::column-end:::
 
@@ -41,7 +41,7 @@ Interact with your web service from Teams through message extensions. Search or 
 
 ### Tabs
 
-Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add tabs as part of a channel inside a team, group chat, or personal app for an individual user. Tabs can be used in personal chats, channels, or groups, and for Stage View and unfurling links.
+Tabs are Teams-aware webpages embedded in Microsoft Teams. Add tabs as part of a channel, group chat, or a personal app. Tabs can also unfurl links and be used to share Stage View.
 
    :::column-end:::
 
@@ -58,7 +58,7 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add tabs as p
 
 ### Bots
 
-Also referred to as a chatbot or conversational bot, bots automate simple and repetitive tasks. A bot interaction can be a quick question and answer, or it can be a complex conversation that provides access to services. Use bots in apps for customer service, make dinner reservations, or provide travel information.
+Bots automate simple and repetitive tasks like answering questions or provide access to services through conversations. Use bots in apps for customer service, make dinner reservations, or provide travel information.
 
    :::column-end:::
 
