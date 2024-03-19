@@ -20,7 +20,7 @@ Teams offers the following notification frameworks for your app:
 
 Teams activity feed enables users to efficiently manage items that require attention by notifying them of any updates. It allows your apps to provide rich and better user experiences with the latest updates on the tools and workflows.
 <br><br>
-Users can read the activity feed notifications in the preview within Teams activity pane. If the preview captures the user’s interest, they can select the notification to view the content in the Teams main pane.
+Users can read the activity feed notifications in the preview within Teams activity pane. If the preview captures the user’s interest, they can select the notification to view the content in the Teams window.
 
    :::column-end:::
 
@@ -37,7 +37,7 @@ Users can read the bot notification in an Adaptive Card. When an interactive not
 :::row-end:::
 
 <br>
-Teams main pane has larger surface than Adaptive Card to load more assets in a tab app or a Personal app. If your app already has tab or personal app, we don't recommend building a bot only for sending notifications.
+Teams window has larger surface than Adaptive Card to load more assets in a tab app or a Personal app. If your app already has tab or personal app, we don't recommend building a bot only for sending notifications.
 
 ## Notification types
 
@@ -68,7 +68,7 @@ When you create your apps, enable notifications for your app to engage and retai
 
 What is the targeted user experience in Teams?
 
-* Use activity feed notifications when you want users to consume notifications in activity and main pane.<br>
+* Use activity feed notifications when you want users to consume notifications in activity and Teams window.<br>
 * Use interactive notification bot when you want users to interact with Adaptive Card.
 
 How do you expect users to interact with the notification?
