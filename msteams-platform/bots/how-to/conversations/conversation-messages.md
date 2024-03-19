@@ -9,12 +9,12 @@ zone_pivot_groups: bot-messages
 
 # Messages in bot conversations
 
-Messages in bot conversations play a crucial role in facilitating communication between users and conversational bots. A conversation is a series of messages sent between your bot and one or more users. A bot behaviour depends on what kind of conversation it's involved in:
+Messages in bot conversations play a crucial role in facilitating communication between users and conversational bots. A conversation is a series of messages sent between your bot and one or more users. A bot behavior depends on what kind of conversation it's involved in:
 
 * [Bots in channel and group chat conversations](~/bots/how-to/conversations/channel-and-group-conversations.md) require the user to @mention the bot to invoke it in a channel or group chat.
 * Bots in single user conversations don't require an @mention. User can just type the message and share it in the chat.
 
-Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message activity to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly.
+Each message in a conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Microsoft Teams posts the message activity to your bot. Teams sends a JSON object to your bot's messaging endpoint and Teams allows only one endpoint for messaging. Your bot examines the message to determine its type and responds accordingly.
 
 Basic conversations are handled through the Bot Framework connector, a single REST API. This API enables your bot to communicate with Teams and other channels. The Bot Framework SDK provides the following features:
 
@@ -28,14 +28,18 @@ Your bot receives messages from Teams using the `Text` property and it sends sin
 
 Messages received from or sent to your bot can include different types of message content.
 
-| Format    | From user to bot | From bot to user | Notes                                                                                   |
-|-----------|------------------|------------------|-----------------------------------------------------------------------------------------|
-| Rich text | ✔️                | ✔️                | Your bot can send rich text, pictures, and cards. Users can send rich text and pictures to your bot.                                                                                        |
-| Pictures  | ✔️                | ✔️                | Maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Doesn't support the animated GIF. |
-| Cards     | ❌                | ✔️                | See [Teams card reference](~/task-modules-and-cards/cards/cards-reference.md) for supported cards. |
-| Emojis    | ✔️                | ✔️                | Teams currently supports emojis through UTF-16, such as U+1F600 for grinning face. |
+| Format    | From user to bot | From bot to user |
+|-----------|------------------|------------------|
+| Rich text | ✔️                | ✔️                |
+| Pictures  | ✔️                | ✔️                |
+| Cards     | ❌                | ✔️                |
+| Emojis    | ✔️                | ✔️                |
 
 # [Rich text](#tab/richtext)
+
+Your bot message consists of rich text. Users can send rich text and pictures to your bot.
+
+`{WIP Image needs to be updated}`
 
 # [Pictures](#tab/pictures)
 
@@ -43,18 +47,20 @@ Messages received from or sent to your bot can include different types of messag
 
 To enhance your message, you can include pictures as attachments to that message. For more information on attachments, see [add media attachments to messages](/azure/bot-service/dotnet/bot-builder-dotnet-add-media-attachments).
 
-Pictures can be at most 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
+Pictures can be of maximum 1024 × 1024 pixels and 1 MB in PNG, JPEG, or GIF format. Animated GIF isn't supported.
 
 Specify the height and width of each image by using XML. In Markdown, the image size defaults to 256×256. For example:
 
 * Use: `<img src="http://aka.ms/Fo983c" alt="Duck on a rock" height="150" width="223"></img>`.
 * Don't use: `![Duck on a rock](http://aka.ms/Fo983c)`.
 
-A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
+`{WIP Image needs to be updated}`
 
 # [Cards](#tab/cards)
 
 ### Adaptive Cards
+
+A conversational bot can include Adaptive Cards that simplify business workflows. Adaptive Cards offer rich customizable text, speech, images, buttons, and input fields.
 
 Adaptive Cards can be authored in a bot and shown in multiple apps such as Teams, your website, and so on. For more information, see [Adaptive Cards](~/task-modules-and-cards/cards/cards-reference.md#adaptive-card).
 
@@ -84,7 +90,13 @@ The following code shows an example of sending a simple Adaptive Card:
 }
 ```
 
+`{WIP Image needs to be updated}`
+
 # [Emojis](#tab/Emojis)
+
+Teams supports emojis through UTF-16, such as U+1F600 for grinning face.
+
+`{WIP Image needs to be updated}`
 
 ---
 
@@ -104,7 +116,7 @@ The following table lists the message events that your bot can receive and take 
 
 ### Receive a message
 
-To receive a text message, use the `Text` property of an `Activity` object. In the bot's activity handler, use the turn context object's `Activity` to read a single message request.
+To receive a text message, use the `Text` property of an `Activity` object. In the bot's activity handler, use the `Activity` object of the turn context to read a single message request.
 
 The following code shows an example of receiving a message activity:
 
@@ -210,131 +222,11 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
-### Send a message
-
-To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the turn context object's `SendActivityAsync` method to send a single message response. Use the object's `SendActivitiesAsync` method to send multiple responses.
-
-The following code shows an example of sending a message when a user is added to a conversation:
-
-# [C#](#tab/dotnet2)
-
-* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.sendactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-turncontext-sendactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken)&preserve-view=true)
-
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
-
-```csharp
-
-protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
-{
-  // Sends an activity to the sender of the incoming activity.
-  await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
-}
-
-```
-
-# [TypeScript](#tab/typescript2)
-
-* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
-
-```typescript
-
-    this.onMembersAddedActivity(async (context, next) => {
-        await Promise.all((context.activity.membersAdded || []).map(async (member) => {
-            if (member.id !== context.activity.recipient.id) {
-              
-                // Sends an activity to the sender of the incoming activity.
-                await context.sendActivity(
-                    `Welcome to the team ${member.givenName} ${member.surname}`
-                );
-            }
-        }));
-
-        await next();
-    });
-
-```
-
-# [Python](#tab/python2)
-
-* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
-* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
-
-```python
-
-async def on_members_added_activity(
-    self, members_added: [ChannelAccount], turn_context: TurnContext
-):
-    for member in teams_members_added:
-        // Sends a message activity to the sender of the incoming activity.
-        await turn_context.send_activity(f"Welcome your new team member {member.id}")
-    return
-
-```
-
-# [JSON](#tab/json2)
-
-```json
-
-{
-    "type": "message",
-    "from": {
-        "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
-        "name": "Teams TestBot"
-    },
-    "conversation": {
-        "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
-        "name": "Convo1"
-   },
-   "recipient": {
-        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
-        "name": "Megan Bowen"
-    },
-    "text": "My bot's reply",
-    "replyToId": "1632474074231"
-}
-
-```
-
-# [HTTP](#tab/http)
-
-```http
-HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activities
-```
-
-```json
-{
-    "type": "message",
-    "from": {
-        "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
-        "name": "Teams TestBot"
-    },
-    "conversation": {
-        "id":"a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
-        "name": "Convo1"
-    },
-    "recipient": {
-        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
-        "name": "Megan Bowen"
-    },
-    "text": "My bot's reply"
-}
-```
-
----
-
-> [!NOTE]
->
->* Message splitting occurs when a text message and an attachment are sent in the same activity payload. Teams splits this activity into two separate activities, one with a text message and the other with an attachment. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. It is recommended to send separate activities instead of depending on message splitting.
->* Messages sent can be localized to provide personalization. For more information, see [localize your app](../../../concepts/build-and-test/apps-localization.md).
-
-Messages sent between users and bots include internal [channel data](~/bots/how-to/conversations/channel-and-group-conversations.md#teams-channel-data) within the message. This data allows the bot to communicate properly on that channel. The Bot Builder SDK allows you to modify the message structure. You can also configure your bot to receive [read receipts](#receive-a-read-receipt) for the sent messages.
-
 ### Edit message
 
 When you edit a message, the bot gets a notification of the edit message activity.
 
-To get an edit message activity notification in a bot, you can override `OnTeamsMessageEditAsync` handler.
+To get an edit message activity notification in a bot use `OnTeamsMessageEditAsync` handler.
 
 Following is an example of an edit message activity notification using `OnTeamsMessageEditAsync` when a sent message is edited:
 
@@ -437,9 +329,9 @@ PUT {Service URL of your bot}/v3/conversations/{conversationId}/activities/{acti
 
 ### Undelete message
 
-When you undelete a message, the bot gets a notification of the undelete message activity. To get an undelete message activity notification in a bot, you can override `OnTeamsMessageUndeleteAsync` handler.
+When users select **Undo** on the deleted message in Teams the bot gets a notification of the undelete message activity. To get an undelete message activity notification in a bot, you can use `OnTeamsMessageUndeleteAsync` handler.
 
-The following is an example of an undelete message activity notification using `OnTeamsMessageUndeleteAsync` when a deleted message is restored:
+The following is an example of an undelete message activity notification using `OnTeamsMessageUndeleteAsync`:
 
 # [C#](#tab/dotnet4)
 
@@ -632,7 +524,7 @@ async onTeamsMessageSoftDelete(context) {
 
 ### Message reaction events
 
-The `messageReaction` event is sent when a user adds or removes reactions to a message, which was sent by your bot. The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. Following are the event type and payload objects:
+The `messageReaction` event is sent when a user adds or removes reactions to a bot message. The types of reactions include angry, heart, laugh, like, sad, and surprised. This event doesn't contain the contents of the original message. If processing reactions to your messages is important for your bot, you must store the messages when you send them. Following are the event type and payload objects:
 
 **Message reaction added**: The bot is notified when a user adds a reaction to a message.
 
@@ -869,6 +761,8 @@ return
 ```
 ---
 
+The `replyToId` contains the ID of the message, and the `Type` is the type of reaction in text format.
+
 ## Receive a read receipt
 
 The **Read receipts** setting in Teams allow the sender of a chat message to be notified when their message was read by the recipient in one-on-one and group chats. After the recipient reads the message, the **Seen** :::image type="icon" source="../../../assets/icons/read_receipt_seen.png" border="false"::: appears next to the message. You also have the option to configure your bot to receive read receipt events through the **Read receipts** setting. The read receipt event helps you enhance user experience in the following ways:
@@ -990,22 +884,143 @@ After the bot is enabled in a user to bot chat scenario, the bot promptly receiv
 
 ## Message events
 
-Your bot can dynamically update messages after sending them instead of having them as static snapshots of data. Bot can also send messages on behalf of a user. For more information, see [user attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1#user-attribution-for-bots-messages).
+Your bot can dynamically update sent messages instead of having them as static snapshots of data. Bot can also send messages on behalf of a user. For more information, see [user attribution for bot messages](/microsoftteams/platform/messaging-extensions/how-to/action-commands/respond-to-task-module-submit?tabs=dotnet%2Cdotnet-1#user-attribution-for-bots-messages).
 
 
 The following table lists the bot message events:
 
 |Event|Description|Scope|
 |---|---|---|
-|[Update messages](#update-messages)| Message sent by the bot is updated.|All|
-|[Update cards](#update-cards)| Card sent by the bot is updated.|All|
-|[Delete messages](#delete-messages)| Message sent by the bot is deleted.|All|
+|[Send message](#send-message)| Bot sends a message.|All|
+|[Update message](#update-message)| Message sent by the bot is updated.|All|
+|[Update card](#update-card)| Card sent by the bot is updated.|All|
+|[Delete message](#delete-message)| Message sent by the bot is deleted.|All|
 
-### Update messages
+### Send message
+
+To send a text message, specify the string you want to send as an activity. In the bot's activity handler, use the `SendActivityAsync` method of turn context object to send a single message response and `SendActivitiesAsync` method to send multiple responses.
+
+The following code shows an example of sending a message when a user is added to a conversation:
+
+# [C#](#tab/dotnet2)
+
+* [SDK reference](/dotnet/api/microsoft.bot.builder.turncontext.sendactivityasync?view=botbuilder-dotnet-stable#microsoft-bot-builder-turncontext-sendactivityasync(microsoft-bot-schema-iactivity-system-threading-cancellationtoken)&preserve-view=true)
+
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/csharp/Bots/TeamsBot.cs#L29)
+
+```csharp
+
+protected override async Task OnMembersAddedAsync(IList<ChannelAccount> membersAdded, ITurnContext<IConversationUpdateActivity> turnContext, CancellationToken cancellationToken)
+{
+  // Sends an activity to the sender of the incoming activity.
+  await turnContext.SendActivityAsync(MessageFactory.Text($"Hello and welcome!"), cancellationToken);
+}
+
+```
+
+# [TypeScript](#tab/typescript2)
+
+* [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L46)
+
+```typescript
+
+    this.onMembersAddedActivity(async (context, next) => {
+        await Promise.all((context.activity.membersAdded || []).map(async (member) => {
+            if (member.id !== context.activity.recipient.id) {
+              
+                // Sends an activity to the sender of the incoming activity.
+                await context.sendActivity(
+                    `Welcome to the team ${member.givenName} ${member.surname}`
+                );
+            }
+        }));
+
+        await next();
+    });
+
+```
+
+# [Python](#tab/python2)
+
+* [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest#botbuilder-core-turncontext-send-activity&preserve-view=true)
+* [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-teams-authentication/python/bots/auth_bot.py#L33)
+
+```python
+
+async def on_members_added_activity(
+    self, members_added: [ChannelAccount], turn_context: TurnContext
+):
+    for member in teams_members_added:
+        // Sends a message activity to the sender of the incoming activity.
+        await turn_context.send_activity(f"Welcome your new team member {member.id}")
+    return
+
+```
+
+# [JSON](#tab/json2)
+
+```json
+
+{
+    "type": "message",
+    "from": {
+        "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+        "name": "Teams TestBot"
+    },
+    "conversation": {
+        "id": "a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
+        "name": "Convo1"
+   },
+   "recipient": {
+        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+        "name": "Megan Bowen"
+    },
+    "text": "My bot's reply",
+    "replyToId": "1632474074231"
+}
+
+```
+
+# [HTTP](#tab/http)
+
+```http
+HTTP Request: {Service URL of your bot}/v3/conversations/{conversationId}/activities
+```
+
+```json
+{
+    "type": "message",
+    "from": {
+        "id": "28:c9e8c047-2a34-40a1-b28a-b162d5f5327c",
+        "name": "Teams TestBot"
+    },
+    "conversation": {
+        "id":"a:17I0kl8EkpE1O9PH5TWrzrLNwnWWcfrU7QZjKR0WSfOpzbfcAg2IaydGElSo10tVr4C7Fc6GtieTJX663WuJCc1uA83n4CSrHSgGBj5XNYLcVlJAs2ZX8DbYBPck201w-",
+        "name": "Convo1"
+    },
+    "recipient": {
+        "id": "29:1XJKJMvc5GBtc2JwZq0oj8tHZmzrQgFmB25ATiQWA85gQtHieVkKilBZ9XHoq9j7Zaqt7CZ-NJWi7me2kHTL3Bw",
+        "name": "Megan Bowen"
+    },
+    "text": "My bot's reply"
+}
+```
+
+---
+
+> [!NOTE]
+>
+>* When a text message and an attachment are sent in the same activity payload Teams splits this activity into two separate activities. As the activity is split, you do not receive the message ID in response, which is used to [update or delete](~/bots/how-to/update-and-delete-bot-messages.md) the message proactively. We recommended to send separate activities instead of depending on message splitting.
+>* Messages sent can be localized to provide personalization. For more information, see [localize your app](../../../concepts/build-and-test/apps-localization.md).
+
+Messages sent between users and bots include internal [channel data](~/bots/how-to/conversations/channel-and-group-conversations.md#teams-channel-data) within the message. This data allows the bot to communicate properly on that channel. The Bot Framework SDK allows you to modify the message structure. You can also configure your bot to receive [read receipts](#receive-a-read-receipt) for the sent messages.
+
+### Update message
 
 You can use dynamic message updates for scenarios, such as poll updates, modifying available actions after a button press, or any other asynchronous state change.
 
-It is not necessary for the new message to match the original in type. For example, if the original message contains an attachment, the new message can be a simple text message.
+It isn't necessary for the new message to match the original type. For example, if the original message contains an attachment, the new message can be a text message.
 
 # [C#](#tab/dotnet7)
 
@@ -1085,11 +1100,9 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 ---
 ---
 
-Now that you have updated messages, update the existing card on button selection for incoming activities.
+### Update card
 
-### Update cards
-
-To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
+Updated cards can enhance the user experience by providing the latest data or options available, which can be useful in scenarios where bots are used for tasks like scheduling, task management, or providing real-time information. To update the existing card on button selection, you can use `ReplyToId` of incoming activity.
 
 # [C#](#tab/dotnet8)
 
@@ -1128,7 +1141,7 @@ await context.updateActivity(message);
 * [SDK reference](/python/api/botbuilder-core/botbuilder.core.turncontext?view=botbuilder-py-latest&preserve-view=true#botbuilder-core-turncontext-update-activity)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L156)
 
-To update existing card on a button click, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class.
+To update existing card on a button, pass a new `Activity` object with updated card and `reply_to_id` as activity ID to the `update_activity` method of the `TurnContext` class.
 
 ```python
 # MessageFactory.attachment(): Returns a message activity that contains an attachment.
@@ -1158,9 +1171,9 @@ PUT /v3/conversations/{conversationId}/activities/{activityId}
 
 Now that you have updated cards, you can delete messages using the Bot Framework.
 
-### Delete messages
+### Delete message
 
-In the Bot Framework, every message has its unique activity identifier. Messages can be deleted using the Bot Framework's `DeleteActivity` method.
+Messages can be deleted using the Bot Framework's `DeleteActivity` method.
 
 # [C#](#tab/dotnet9)
 
@@ -1218,19 +1231,16 @@ DELETE /v3/conversations/{conversationId}/activities/{activityId}
 
 ---
 
-## Add notifications to your message
+## Message notifications
 
-There are two ways to send a notification from your application:
+You can notify about bot message in two ways:
 
 * By setting the `Notification.Alert` property on bot message.
 * By sending an activity feed notification using the Graph API.
 
-You can add notifications to your message using the `Notification.Alert` property. Notifications alert users to an event in your application such as new tasks, mentions, or comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. If a notification is raised depends on the individual user's Teams settings, and you can't override these settings.
+**`Notification.Alert`:** You can add notifications to your message using the `Notification.Alert` property. Notifications alert users to an event in your application such as new tasks, mentions, or comments. These alerts are related to what users are working on or what they must look at by inserting a notice into their activity feed. For notifications to trigger from your bot message, set the `TeamsChannelData` objects `Notification.Alert` property to *true*. If a notification is raised depends on the individual user's Teams settings, and you can't override these settings.
 
-If you want to generate an arbitrary notification without sending a message to the user, then you can use the Graph API. For more information, see [how to send activity feed notifications using Graph API](/graph/teams-send-activityfeednotifications) along with the [best practices](/graph/teams-activity-feed-notifications-best-practices).
-
-> [!NOTE]
-> The **Summary** field displays any text from the user as a notification message in the feed.
+**Activity feed notification**: If you want to generate an arbitrary notification without sending a message to the user, then you can use the Graph API. For more information, see [how to send activity feed notifications using Graph API](/graph/teams-send-activityfeednotifications) along with the [best practices](/graph/teams-activity-feed-notifications-best-practices).
 
 The following code shows an example of adding notifications to your message:
 
@@ -1319,12 +1329,15 @@ async def on_message_activity(self, turn_context: TurnContext):
 
 ---
 
+> [!NOTE]
+> The **Summary** field displays any text from the user as a notification message in the feed.
+
 ::: zone-end
 
 ## Send suggested actions
 
-The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
-When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
+Suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
+When the user selects a button, suggested actions buttons aren't visible and accessible. This prevents the user from selection of stale buttons within a conversation.
 
 To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
 
@@ -1351,10 +1364,11 @@ The following is an example for implementation and experience of suggested actio
 The following illustrates an example of suggested actions:
 
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
+`{WIP}`
 
 > [!NOTE]
 >
-> * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
+> * `SuggestedActions` are only supported for one-on-one conversation bots with both text based messages and Adaptive Cards.
 > * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 > * `imBack` is the only supported action type and Teams display up to three suggested actions.
 
