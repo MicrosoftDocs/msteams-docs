@@ -50,7 +50,7 @@ Teams activity handler is derived from [Bot Framework's activity handler](#bot-f
 
 ## Conversation update events
 
-You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them. You must design your bot to receive unexpected events. If you are using the Bot Framework SDK without specifying any activity handlers in your bot code, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+You can use conversation update events to provide better notifications and effective bot actions. You can add new events any time and your bot begins to receive them. You must design your bot to receive unexpected events. If you're using the Bot Framework SDK without specifying any activity handlers in your bot code, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
 
 A bot receives a `conversationUpdate` event in any of the following scenarios:
 
@@ -73,7 +73,7 @@ The following are different type of events associated with `conversationUpdate`:
 
 ## Installation events
 
-The bot receives an `installationUpdate` event when you install or unistall a bot in a conversation. On installing a bot, the `action` field in the event is set to `add`, and when the bot is uninstalled the `action` field is set to `remove`.
+The bot receives an `installationUpdate` event when you install or uninstall a bot in a conversation. On installing a bot, the `action` field in the event is set to `add`, and when the bot is uninstalled the `action` field is set to `remove`.
 
 > [!NOTE]
 > When you upgrade an application, the bot receives the `installationUpdate` event only to add or remove a bot from the manifest. For all other scenarios, the `installationUpdate` event isn't triggered. The **action** field is set to `add-upgrade` if you add a bot or `remove-upgrade` if you remove a bot.
@@ -1404,8 +1404,8 @@ The list of handlers defined in `ActivityHandler` includes the following events:
 | Token-response event activity received | `onTokenResponseEvent` | This method helps to handle token response events. |
 | Other activity type received | `onUnrecognizedActivityType` | This method helps to handle any activity type otherwise unhandled. |
 | message edit | `onTeamsMessageEditEvent` | You can override this method to handle when a message in a conversation is edited. |
-| message undelete | `onTeamsMessageUndeleteEvent` | You can override this method to handle when a deleted message in a conversation is undeleted. For example, when the user decides to undo a deleted message. |
-| message soft delete | `onTeamsMessageSoftDeleteEvent` | You can override this method to handle when a message in a conversation is soft deleted. |
+| Message undelete | `onTeamsMessageUndeleteEvent` | You can override this method to handle when a deleted message in a conversation is undeleted. For example, when the user decides to undo a deleted message. |
+| Message soft delete | `onTeamsMessageSoftDeleteEvent` | You can override this method to handle when a message in a conversation is soft deleted. |
 
 # [Python](#tab/python15)
 
