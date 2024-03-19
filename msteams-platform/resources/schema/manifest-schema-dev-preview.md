@@ -1047,9 +1047,9 @@ Required if the handler type is `openPage`. Object containing metadata of the pa
 
 **Optional** &ndash; Array
 
-Defines a list of cards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information. To learn more about creating cards for Viva Connections Dashboard, see [Overview of Bot Powered Adaptive Card Extensions](/sharepoint/dev/spfx/viva/bot-powered/overview-bot-powered-aces).
+Defines a list of cards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information. For more information on creating cards for Viva Connections Dashboard, see [overview of Bot Powered Adaptive Card Extensions](/sharepoint/dev/spfx/viva/bot-powered/overview-bot-powered-aces).
 
-This item is an array of `dashboardCard` elements of type `object`.
+The `dashboardCards` property is an array of elements of the type `object`.
 
 ### dashboardCards.dashboardCard
 
@@ -1057,11 +1057,11 @@ Defines a single dashboard card and its properties.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`id`| String | | ✔️ |  A unique identifier for this dashboard card. ID must be a GUID. |
+|`id`| String | | ✔️ |  A unique identifier for this dashboard card. The ID must be a GUID. |
 |`displayName`| String | 255 characters | ✔️ | Display name of the card.|
 |`description`| String | 255 characters | ✔️ | Description of the card.|
-|`pickerGroupId`| String | | ✔️ | ID of the group in the card picker. ID must be a GUID.|
-|`icon`| Object | | | Specifies icon for the card. |
+|`pickerGroupId`| String | | ✔️ | ID of the group in the card picker. The ID must be a GUID. |
+|`icon`| Object | | | Specifies the icon for the card. |
 |`contentSource`| Object | | ✔️ | Specifies the source of the card's content |
 |`defaultSize`| String | | ✔️ | Rendering size for the dashboard card. Options: `medium` or `large`. |
 
@@ -1081,13 +1081,13 @@ Defines the content source of a given dashboard card.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`sourceType`| String | | | Represents the source of a card's content. Options: `bot`.
-|`botConfiguration`| Object | | | The configuration for the bot source. Required if the *sourceType* is set to `bot`.
+|`botConfiguration`| Object | | | The configuration for the bot source. Required if the `sourceType` is set to `bot`. |
 
 #### dashboardCards.dashboardCard.contentSource.botConfiguration
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. ID must be a GUID.
+|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. The ID must be a GUID. |
 
 ## See also
 
