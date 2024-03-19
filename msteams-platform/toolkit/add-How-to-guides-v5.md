@@ -10,10 +10,7 @@ ms.date: 11/29/2021
 
 # Add How-to guides to Microsoft Teams app
 
-> [!NOTE]
-> This article is applicable only to Teams Toolkit version 5. For more information on how to add capabilities to your app using Teams Toolkit version 4, see [Add capability](toolkit-v4/add-capability-v4.md).
-
-Teams Toolkit project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Teams Toolkit.
+Microsoft Teams Toolkit project templates focus on getting started with an app that implements a single [app capability](~/concepts/design/app-structure.md). However, apps can have multiple capabilities. We've created a set of How-to guides with the steps needed to add different capabilities to a project created with Teams Toolkit.
 
 ## How-to guides for adding capabilities
 
@@ -31,11 +28,11 @@ Teams Toolkit project templates focus on getting started with an app that implem
 
 ### Use Teams Toolkit pane
 
-   1. Open your app project in **Visual Studio Code**.
+   1. Open your app project in **Microsoft Visual Studio Code**.
    1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows View How-to Guides under Development highlighted.":::
+       :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
 
    1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the respective How-to Guide.
 
