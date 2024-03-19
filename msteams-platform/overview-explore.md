@@ -23,7 +23,7 @@ Teams platform provides the following capabilities to build your app:
 
 ### Message extensions
 
-Message extensions help search or start actions in an external web service and send the result of the interaction in Teams as a richly formatted card. Message extensions can be enhanced with AI capabilities with Copilot for Teams.
+Message extensions help search or start actions in an external system and send the result of the interaction in Teams. Message extensions can be enhanced with AI capabilities with Microsoft Copilot.
 
    :::column-end:::
 
@@ -58,7 +58,7 @@ Tabs are Teams-aware webpages embedded in Microsoft Teams. Add tabs as part of a
 
 ### Bots
 
-Bots automate simple and repetitive tasks like answering questions or provide access to services through conversations. Use bots in apps for customer service, make dinner reservations, or provide travel information.
+Bots automate simple and repetitive tasks like answering questions or provide access to services through conversations. Use bots in apps for customer service or to provide information.
 
    :::column-end:::
 
@@ -76,7 +76,7 @@ Bots automate simple and repetitive tasks like answering questions or provide ac
 
 ### Meeting extensions
 
-Meeting extensions make meetings more productive. These apps can be used to ask people to take a poll during a meeting or send a reminder that doesn’t interrupt the flow of the meeting.
+Meeting extensions make meetings more productive. Use these apps to take a poll during a call or send a reminder without breaking the flow of the call.
 
    :::column-end:::
 
@@ -110,7 +110,7 @@ Webhooks and connectors help send or receive notifications and messages from oth
 
 ### Cards
 
-Organize information into richly formatted cards and give users the opportunity to interact with specific parts of the card. For example, apps that gather information using input forms.
+Organize information into richly formatted cards and let users interact with specific parts of the card. For example, apps that gather information using input forms.
 
    :::column-end:::
 
@@ -127,7 +127,7 @@ Organize information into richly formatted cards and give users the opportunity 
 
 ### Dialogs
 
-Create modal pop-up experiences in your Teams app with dialogs. Dialogs help run your own custom HTML or JavaScript code or show an `iframe`-based widget such as a Microsoft Stream video.
+Create modal pop-up experiences in your app with dialogs. They help run your own custom HTML or JavaScript code or show an `iframe`-based widget such as a Microsoft Stream video.
 
    :::column-end:::
 
