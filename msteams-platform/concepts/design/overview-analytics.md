@@ -81,7 +81,7 @@ This instrumentation is required to be done additionally in your SaaS app becaus
 
 <!--Tracking Teams app specific analytics-->
 
-This section includes guidelines and pointers regarding what to look for, which events to capture, how to use instrumentation markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, Stage Views, and so on or any combination of these [capabilities and UI constructs](../../overview-explore.md#teams-app-features) across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
+This section includes guidelines and pointers regarding what to look for, which events to capture, how to use instrumentation markers, and where to fetch Teams-relevant information that will help you plan and implement analytics for your app. Your Teams apps can be tabs, bots, message extensions, cards, Stage Views, and so on or any combination of these capabilities across personal or shared scopes. It's best to understand, plan, and implement your instrumentation around each of these capabilities.
 
 You can classify Teams platform features into broadly two constructs:
 
