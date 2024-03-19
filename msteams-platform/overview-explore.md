@@ -1,25 +1,29 @@
 ---
 title: Exploring Teams as a platform for building apps
 author: heath-hamilton
-description: Microsoft Teams platform features for your app on desktop and mobile. Tabs, bots, message extension, webhook, connectors, Microsoft Graph, or Adaptive Cards.
+description: Teams platform provides capabilities to apps such as tabs, bots, message extensions, webhooks, connectors, cards, and dialogs.
 ms.topic: overview
 ms.localizationpriority: high
 ms.date: 11/02/2021
 ---
 
-# Explore Teams platform features
+# Explore Teams app capabilities
 
-With Teams, you can build your app in a feature-rich environment. Using Teams as a platform for building apps, you can extend the Teams capabilities for your desktop and mobile apps.
+With Teams, you can build your app in a feature-rich environment. Using Teams as a platform for building apps, you can extend the Teams features as capabilities for your desktop and mobile apps.
 
 :::image type="content" source="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png" alt-text="Screenshot shows the capabilities of Teams as a platform." lightbox="../msteams-platform/assets/images/overview/what-is-m365-dev-plat.png":::
 
-## Teams app features
+## Teams app capabilities
 
-Teams platform provides the following features to build your app:
+Teams platform provides the following capabilities to build your app:
+
+:::row:::
+
+   :::column span="":::
 
 ### Message extensions
 
-Search and share external information in Teams. You also can act on a message, such as creating a help ticket based on the content of a channel post.
+Interact with your web service from Teams through message extensions. Search or start actions in an external system and send the result of the interaction in Teams as a richly formatted card. Message extensions can be enhanced with AI capabilities with Copilot for Teams. For example, create a bug in your tracking system based on a Teams message, assign that bug to a user, and send a card to the conversation thread with the bug's details.
 
    :::column-end:::
 
@@ -37,7 +41,7 @@ Search and share external information in Teams. You also can act on a message, s
 
 ### Tabs
 
-Display your web-based content in a tab where people can discuss and work on it together.
+Tabs are Teams-aware webpages embedded in Microsoft Teams. You can add tabs as part of a channel inside a team, group chat, or personal app for an individual user. Tabs can be used in personal chats, channels, or groups, and for Stage View and unfurling links.
 
    :::column-end:::
 
@@ -54,7 +58,7 @@ Display your web-based content in a tab where people can discuss and work on it 
 
 ### Bots
 
-Conversations often result in the need to do something (generate an order, review code, check ticket status, and so on). A bot can kick off these kinds of workflows right inside Teams.
+Also referred to as a chatbot or conversational bot, bots automate simple and repetitive tasks. A bot interaction can be a quick question and answer, or it can be a complex conversation that provides access to services. Use bots in apps for customer service, make dinner reservations, or provide travel information.
 
    :::column-end:::
 
@@ -72,7 +76,7 @@ Conversations often result in the need to do something (generate an order, revie
 
 ### Meeting extensions
 
-There are a few options for incorporating your app into the Teams calling experience(../../apps-in-teams-meetings/design/designing-apps-in-meetings.md).
+Meeting extensions make meetings more productive. These apps can be used to ask people to take a poll during a meeting or send a reminder that doesn’t interrupt the flow of the meeting.
 
    :::column-end:::
 
@@ -89,7 +93,7 @@ There are a few options for incorporating your app into the Teams calling experi
 
 ### Webhooks and connectors
 
-Incoming webhooks are a simple way to automatically send notifications from another app to a Teams channel. With outgoing webhooks, you can message your web service with an @mention.
+Webhooks and connectors help send or receive notifications and messages from other apps. For example, apps that send notifications and messages from your web services to users in Teams.
 
    :::column-end:::
 
@@ -104,15 +108,39 @@ Incoming webhooks are a simple way to automatically send notifications from anot
 
    :::column span="":::
 
-| Feature | Description | Useful for |
-| --- | --- | --- |
-| Message extension | Interact with your web service from Teams. Message extensions search or start actions in an external system. You can send the result of the interaction in Teams as a richly formatted card. Message extensions can be enhanced with AI capabilities with Copilot for Teams. | - Search for a work item, and share it with the group as an Adaptive Card.<br> - Create a bug in your tracking system based on a Teams message, assign that bug to a user, and send a card to the conversation thread with the bug's details. |
-| Tab | Teams-aware webpage embedded in Microsoft Teams. You can add tabs as part of a channel inside a team, group chat, or personal app for an individual user. | Personal tab, channel or group tab, Stage View, and link unfurling. |
-| Bot | Also referred to as a chatbot or conversational bot, bots automates simple and repetitive tasks. A bot interaction can be a quick question and answer, or it can be a complex conversation that provides access to services. | Customer service, information about the weather, make dinner reservations, or provide travel information. |
-| Meeting extension | Apps that make meetings more productive. | Ask people to complete a survey during a call or send a quick reminder that doesn’t interrupt the flow of the meeting. |
-| Webhook and connector | Communicate with external apps, and send or receive notifications and messages from other apps. | Subscribe to receive notifications and messages from your web services. |
-| Card | Organize information into groups and give users the opportunity to interact with specific parts of the information. | Sharing using text and images; gathering information using input forms. |
-| Dialog (referred as task modules in TeamsJS v1.x) | Create modal pop-up experiences in your Teams app. | - Run your own custom HTML or JavaScript code<br> - Show an <`iframe`>-based widget such as a YouTube or Microsoft Stream video. |
+### Cards
+
+Organize information into richly formatted cards and give users the opportunity to interact with specific parts of the card. For example, apps that gather information using input forms.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="assets/images/overview-adaptive-cards-2021.png" alt-text="Diagram shows an Adaptive Card in Teams.":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
+
+### Dialogs
+
+Create modal pop-up experiences in your Teams app with dialogs. Dialogs help run your own custom HTML or JavaScript code or show an `iframe`-based widget such as a Microsoft Stream video.
+
+   :::column-end:::
+
+   :::column span="":::
+
+:::image type="content" source="assets/images/overview-personal-apps-2021.png" alt-text="Diagram shows a dialog in Teams.":::
+
+   :::column-end:::
+:::row-end:::
+
+:::row:::
+
+   :::column span="":::
 
 ### The user story
 
@@ -136,4 +164,4 @@ You can extend your Teams app across the Microsoft 365 ecosystem by configuring 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get started](get-started/get-started-overview.md)
+> [Build your first Teams app](get-started/build-your-first-app.md)
