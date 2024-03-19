@@ -26,7 +26,7 @@ The following table outlines which communication concept to use in different sce
 
 |Comunication flow| Concept| Description |
 |---|---| --- |
-| User **->** Bot| [Event activity handler](#events-with-activity-handlers) |Event activity handlers are used when you want your bot to be notified when a user performs an event.|
+| User **->** Bot| [Event activity handler](#event-activity-handlers) |Event activity handlers are used when you want your bot to be notified when a user performs an event.|
 | User **<->** Bot| [Invoke activity handler + Invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md)| Invoke activity handlers are used when you want your bot to be notified when a user performs an event and respond back to the user based on the event through invoke activities.|
 
 To create event-driven conversations, you must define the associated handlers that the bot will use with the event.
