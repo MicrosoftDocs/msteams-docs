@@ -13,7 +13,7 @@ ms.date: 11/14/2023
 > [!IMPORTANT]
 >
 > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
-> Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
+> * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 
@@ -22,7 +22,7 @@ Microsoft 365 plugins provide integration with various  Microsoft 365 products, 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
 
-We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. Message extensions should support one or more search commands, as these are recognized by Copilot for Microsoft 365 as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. Message extensions should support one or more search commands, as Copilot for Microsoft 365 recognizes them as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365 (M365 Chat).":::
 
@@ -40,7 +40,7 @@ The requirements for building message extension plugins for Copilot for Microsof
 
 A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365 (M365 Chat).
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of sample prompt for message extension usage as a plugin in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in M365 Chat.":::
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in M365 Chat.":::
 
@@ -50,13 +50,13 @@ Ensure that you adhere to the description guidelines listed in the following tab
 | --- | --- |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Anti-Compete: Avoid using the name of any other plugin in both short and long descriptions. |
 | :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Responsible AI: Avoid using inappropriate or offensive keywords. |
-| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the text doesn't lead to prompt injections. Additionally, the description mustn't contain symbols or text that indicate that it can be used as code for prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
+| :::image type="icon" source="../assets/images/publish-app/dont-icon.png" border="false"::: | Prompt injections: Ensure that the descriptions don't guide Copilot to take actions that bypass the normal functioning of the application. Additionally, the description mustn't contain symbols or text that indicate that it can be used as code for prompt injection. Avoid using phrases, functions, and code that call an app recurrently. |
 
 ### App description
 
-Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, app description must be modified to suit the following plugin requirements:
+Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, modify the app description to suit the following plugin requirements:
 
-* Long description must clearly explain how users can use a message extension plugin in Copilot for Microsoft 365 and what functionality they can expect. For example, Use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
+* Long description must clearly explain the functionality and usage of the message extension plugin in Copilot for Microsoft 365. For example, Use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following table lists the short description examples for each category:
@@ -152,7 +152,7 @@ The following table lists the short description examples for each category:
 
 ### Search command description
 
-Command description is used to map user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords. Search command descriptions must:
+Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords. Search command descriptions must:
 
 * Focus on what and how the command searches (detailed list) in natural language.
 * Include verbs and synonyms, if applicable.
@@ -228,7 +228,7 @@ The following table lists the command description examples for each category:
 
 # [General](#tab/general)
 
-**Description**: Find number of stocks or listed equities using keyworks, key ratios, index, and so on.
+**Description**: Find number of stocks or listed equities using keywords, key ratios, index, and so on.
 
 **Command description example:**
 
@@ -238,7 +238,7 @@ The following table lists the command description examples for each category:
           "id": "Search",
           "type": "query",
           "title": "General",
-          "description": "Find number of stocks or listed equities using keyworks, key ratios, index, and so on.",
+          "description": "Find number of stocks or listed equities using keywords, key ratios, and index.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -252,7 +252,7 @@ The following table lists the command description examples for each category:
 
 ### Parameter description
 
-Each parameter supports five attributes, and one attribute must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+Each message extension command supports up to five parameters and first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
 A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for each category:
 
@@ -386,9 +386,103 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 ## Compound utterances
 
 > [!NOTE]
-> Search through task module isn't supported in M365 Chat.
+> Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in M365 Chat.
 
-For M365 Chat, a search-based message extension must support compound utterances to perform deep retrieval of accurate information. To enable compound utterances, we recommend that you expand the scope of search to handle two or more search parameters simultaneously by enabling multi-parameter support in app manifest (previously called Teams app manifest).
+For M365 Chat, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
+
+* Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
+* Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
+
+<br>
+<details><summary>The following JSON code is an example of multiple parameters defined in app manifest:</summary>
+
+```json
+"commands": [
+                {
+                    "id": "inventorySearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search products by name, category, inventory status, supplier location, stock level",
+                    "title": "Product inventory",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "productName",
+                            "title": "Product name",
+                            "description": "Enter a product name here",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "categoryName",
+                            "title": "Category name",
+                            "description": "Enter the category of the product",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "inventoryStatus",
+                            "title": "Inventory status",
+                            "description": "Enter what status of the product inventory. Possible values are 'in stock', 'low stock', 'on order', or 'out of stock'",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "supplierCity",
+                            "title": "Supplier city",
+                            "description": "Enter the supplier city of product",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "stockQuery",
+                            "title": "Stock level",
+                            "description": "Enter a range of integers such as 0-42 or 100- (for >100 items). Only use if you need an exact numeric range.",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "discountSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search for discounted products by category",
+                    "title": "Discounts",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "categoryName",
+                            "title": "Category name",
+                            "description": "Enter the category to find discounted products",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "revenueSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Find products based on their revenue/period",
+                    "title": "Revenue",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "revenueRange",
+                            "title": "Revenue range",
+                            "description": "Enter 'high' or 'low' or enter a range of integers such as 0-10000 or 5000- using this exact format",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+```
+
+</details>
+<br>
+
+:::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
@@ -398,92 +492,102 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing M365 Chat app response contains Preview and Content in the same response. ":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing M365 Chat app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
 
-  <details><summary>Adaptive Card response example</summary>
+  <br/>
+  <details><summary>Adaptive Card response template example</summary>
 
   ```json
    {
-        "version": "1.0",
-        "responseLayout": "grid",
-        "responseCardTemplate": {
-            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-            "type": "AdaptiveCard",
-            "version": "1.4",
-            "body": [
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "type": "AdaptiveCard",
+      "version": "1.5",
+      "body": [
+        {
+          "type": "Container",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${companyName}",
+              "size": "Medium",
+              "wrap": true,
+              "style": "heading"
+            },
+            {
+              "type": "TextBlock",
+              "text": "${stockExchange} ${stockSymbol}",
+              "isSubtle": true,
+              "spacing": "None",
+              "wrap": true
+            },
+            {
+              "type": "TextBlock",
+              "text": "${formattedDate} ${formattedTime}",
+              "wrap": true
+            }
+          ]
+        },
+        {
+          "type": "Container",
+          "spacing": "None",
+          "items": [
+            {
+              "type": "ColumnSet",
+              "columns": [
                 {
-                    "type": "Container",
-                    "items": [
+                  "type": "Column",
+                  "width": "stretch",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "${currentPrice} ",
+                      "size": "ExtraLarge",
+                      "wrap": true
+                    },
+                    {
+                      "type": "TextBlock",
+                      "text": "${priceChange} ${percentChange}",
+                      "color": "${changeColor}",
+                      "spacing": "None",
+                      "wrap": true
+                    }
+                  ]
+                },
+                {
+                  "type": "Column",
+                  "width": "auto",
+                  "items": [
+                    {
+                      "type": "FactSet",
+                      "facts": [
                         {
-                            "type": "ColumnSet",
-                            "columns": [
-                                {
-                                    "type": "Column",
-                                     "width": "stretch",
-                                    "items": [
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Title: ${if(title, title, 'N/A')}",
-                                            "wrap": true
-                                        },
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Description: ${if(description, description, 'N/A')}",
-                                            "wrap": true
-                                        },
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
-                                            "wrap": true
-                                        },
-                                        {
-                                            "type": "Image",
-                                            "url": "${image}",
-                                            "size": "Medium",
-                                            "$when": "${image != null}"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Column",
-                                    "width": "auto",
-                                    "items": [
-                                        {
-                                            "type": "Image",
-                                            "url": "${if(image, image, '')}",
-                                            "size": "Medium"
-                                        }
-                                    ]
-                                }
-                            ]
+                          "title": "Open",
+                          "value": "${openPrice} "
                         },
                         {
-                            "type": "FactSet",
-                            "facts": [
-                                {
-                                    "title": "Repair ID:",
-                                    "value": "${if(id, id, 'N/A')}"
-                                },
-                                {
-                                    "title": "Date:",
-                                    "value": "${if(date, date, 'N/A')}"
-                                }
-                            ]
+                          "title": "High",
+                          "value": "${highPrice} "
+                        },
+                        {
+                          "title": "Low",
+                          "value": "${lowPrice} "
                         }
-                    ]
+                      ]
+                    }
+                  ]
                 }
-            ]
-        },
-        "previewCardTemplate": {
-            "title": "Title: ${if(title, title, 'N/A')}",
-            "subtitle": "Description: ${if(description, description, 'N/A')}",
-            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
-            "image": {
-            "url": "${image}",
-            "$when": "${image != null}"
-              }
+              ]
             }
+          ]
         }
+      ],
+      "previewCard": {
+        "contentType": "application/vnd.microsoft.card.hero",
+        "content": {
+          "title": "${companyName}",
+          "text": "${stockSymbol}"
+        }
+      }
     }
   ```
 
@@ -493,7 +597,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
-* Adaptive Card must be presentable in Win32, web, and mobile (iOS and Android). [*Mandatory*]
+* Adaptive Card must be presentable in desktop, web, and mobile (iOS and Android). [*Mandatory*]
 
 * An Adaptive Card must contain at least one action button, but not more than four action buttons. [*Mandatory*]
 
@@ -505,12 +609,12 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   * `Action.OpenUrl`: Opens a specified URL from the Card.
   * `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
   * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
-  * `Action.Submit`: Opens a Task module or Stage view using type invoke in data object.
+  * `Action.Submit`: Opens a dialog or Stage view using type invoke in data object.
 
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in M365 Chat.":::
 
-* If a user can change any information on the card through task module, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
-* Adaptive Cards must include a URL as part of the metadata, which allows cards to be easily copied from one hub to another. [*Recommended*]
+* If a user can change any information on the card through dialog, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
+* Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
 ## Technical requirements
@@ -520,12 +624,21 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 | Criteria | Fulfillment |
 |---|---|
 | Manifest version | App manifest version must be 1.13 or later. [*Mandatory*] |
-|Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app).[*Mandatory*]|
+|Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Mandatory*]|
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if M365 Chat calls a plugin 1000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
-| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to ISV apps and not apps built for your organization. [*Mandatory*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
+| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Mandatory*] |
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
+
+> [!IMPORTANT]
+> If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
+
+## Code samples
+
+|Sample name | Description |TypeScript |
+|----------------|-----------------|--------------|
+| Northwind inventory message extension| This sample demonstrates how to use a Teams message extension as a plugin in Microsoft Copilot for Microsoft 365. | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts) |
 
 ## See also
 

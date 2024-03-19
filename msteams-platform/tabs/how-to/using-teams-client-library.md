@@ -15,7 +15,7 @@ ms.date: 05/05/2023
 The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
-* [Task modules (Dialogs)](../../task-modules-and-cards/what-are-task-modules.md)
+* [Dialogs (referred as task modules in TeamsJS v1.x)](../../task-modules-and-cards/what-are-task-modules.md)
 
 Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) is refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
@@ -48,7 +48,7 @@ An API translation layer (mapping v.1 to v.2 TeamsJS API calls) is provided to e
 
 #### Teams-only apps
 
-Even if you intend your app to only run in Teams (and not Microsoft 365 app and Outlook), best practice is to start referencing the latest TeamsJS (*v.2.0* or later) as soon as convenient, in order to benefit from the latest improvements, new features, and support (even for Teams-only apps). We recommend you to use TeamsJS v.1.13.1 as it's supported, but no new features or improvements are added.
+Even if you intend your app to only run in Teams (and not Microsoft 365 app and Outlook), best practice is to start referencing the latest TeamsJS (*v.2.0* or later) as soon as convenient, in order to benefit from the latest improvements, new features, and support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported.
 
 Once you're able, the next step is to [update existing application code](#2-update-teamsjs-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
 
@@ -293,7 +293,7 @@ The `pages` namespace includes functionality for running and navigating webpages
 | `registerAppButtonClickHandler` | `pages.appButton.onClick` (renamed)
 | `registerAppButtonHoverEnterHandler` | `pages.appButton.onHoverEnter` (renamed)
 | `registerAppButtonHoverLeaveEnter` | `pages.appButton.onHoverLeave` (renamed)
-| `FrameContext` interface | `pages.appButton.FrameInfo` (renamed)) |
+| `FrameContext` interface | `pages.appButton.FrameInfo` (renamed) |
 
 ##### *dialog* namespace
 
@@ -301,13 +301,13 @@ The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are
 
 | Original namespace `tasks` | New namespace `dialog`  |
 | - | - |
-| `tasks.startTask` | `dialog.open` (renamed) |
-| `tasks.submitTasks` | `dialog.submit` (renamed) |
-| `tasks.updateTasks` | `dialog.update.resize` (renamed) |
+| `tasks.startTask` | `dialog.url.open`, `dialog.url.bot.open`, `dialog.adaptiveCard.open`, `dialog.adaptiveCard.bot.open` |
+| `tasks.submitTask` | `dialog.url.submit` (renamed) |
+| `tasks.updateTask` | `dialog.update` (renamed) |
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability is split into a main capability (`dialog`) for supporting HTML-based dialogs, and a subcapability for bot-based dialogs, `dialog.bot`.
+Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 

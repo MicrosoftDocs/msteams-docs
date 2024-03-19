@@ -1,7 +1,7 @@
 ---
 title: Build API-based message extension
 author: v-ypalikila
-description: Learn how to build an API message extension using Teams Visual Studio Code and Teams Toolkit.
+description: Learn how to build an API message extension using Teams Visual Studio, Visual Studio Code, and Teams Toolkit.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -21,7 +21,7 @@ Before you get started, ensure that you meet the following requirements:
 </br>
 <details><summary>1. OpenAPI Description (OAD)</summary>
 
-Developers must not require users to enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
+Users must not enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
 
 * The `auth` property must not be specified.
 * JSON and YAML are the supported formats.
@@ -81,40 +81,57 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 </details>
 
-You can create an API-based message extension using Visual Studio Code and Teams Toolkit CLI.
+You can create an API-based message extension using Developer Portal for Teams, Visual Studio Code, Teams Toolkit command line interface (CLI), or Visual Studio.
 
-<!--# [Developer Portal for Teams](#tab/developer-portal-for-teams)
+# [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
 To create an API-based message extension using Developer Portal for Teams, follow these steps:
 
 1. Go to **[Teams Developer Portal](https://dev.teams.microsoft.com/home)**.
 1. Go to **Apps**.
 1. Select **+ New apps**.
-1. Enter a name of the app and select **Add**.
-1. In the left pane, under **Configure**, select **App features**.
+1. Enter a name of the app and select the **Manifest version** as **Latest prerelease (devPreview)**.
+
+1. Select **Add**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-manifest-version.png" alt-text="Screenshot shows the app name and the manifest version selected as Latest prerelease (devPreview) in Developer Portal.":::
+
+1. In the left pane, under **Configure**, update the following **Basic information**:
+
+   1. Full name
+   1. Short description
+   1. Long description
+   1. Developer or company name
+   1. Website (must be a valid HTTPS URL)
+   1. Privacy policy
+   1. Terms of use
+
+1. Select **Save**.
+
+1. Select **App features**.
 1. Select **Messaging extension**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
-1. Under **Message extension type**, select **API-based**.
+1. Under **Message extension type**, select **API**.
 
-1. If you get a disclaimer which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**, select **Yes, change**.
+   1. If you get a disclaimer, which reads **Bot message extension is already in use by users. Would you like to change message extension type to API?**. Select **Yes, change**.
 
-1. Under **Open API spec**, select **Upload now**.
+1. Under **OpenAPI spec**, select **Upload now**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-upload.png" alt-text="Screenshot shows the Upload now option in Teams Developer Portal.":::
 
-1. Select the Open OpenAPI Description document in JSON or YAML and select **Open**.
+1. Select the OpenAPI Description document in the JSON or YAML format and select **Open**.
 
 1. Select **Save**. A pop-up appears with the message **API spec saved successfully**.
 1. Select **Got it**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-api-saved.png" alt-text="Screenshot shows an example of the the API spec saved successfully message and Got it button.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-api-saved.png" alt-text="Screenshot shows an example of the API spec saved successfully message and Got it button.":::
 
 **Add commands**
 
 > [!NOTE]
-> Message extensions built from an API only support single parameter.
+> Message extensions built from an API only support a single parameter.
 
 You can add commands and parameters to your message extension, to add commands:
 
@@ -122,20 +139,20 @@ You can add commands and parameters to your message extension, to add commands:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-add-commands.png" alt-text="Screenshot shows the add option to add commands in Teams Developer Portal.":::
 
-   A **Add a command** pop-up appears with a list of all the available APIs from the Open API Description document.
+   An **Add command** pop-up appears with a list of all the available APIs from the OpenAPI Description document.
 
 1. Select an API from the list and select **Next**.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-commands-api-list.png" alt-text="Screenshot shows the list of APIs from the OpenAPI Description Document in the Add a command pop-up window.":::
 
-   A **Add a command** page appears.
+   A **Command details** appears.
 
-1. In the **Add command** page, go to **Adaptive card template** and select **Upload now**.
+1. Under **Command details**, go to **Adaptive card template** and select **Upload now**.
 
-    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command."::: 
+    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
 
    > [!NOTE]
-   > If you have more than one API, ensure that you upload the **Adaptive card template** for all the APIs.
+   > If you have more than one API, ensure that you upload the **Adaptive card template** for each API.
 
 1. Select the Adaptive Card template file in JSON format and select **Open**.
 
@@ -150,22 +167,28 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Details**, update the **Command description**.
 
-1. If you want to launch a command using a trigger in Microsoft 365 chat, Turn on the **Automatically run the command when a user opens the extension** toggle.
+   1. If you want to launch a command using a trigger in Microsoft 365 chat, turn on the **Automatically run the command when a user opens the extension** toggle.
 
 1. Select **Add**. The command is added successfully.
 
 1. Select **Save**.
 
-    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
+An API-based message extension is created.
 
-An API message extension is created. -->
+:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
+
+To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
+
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
+
+* **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
 # [Visual Studio Code](#tab/visual-studio-code)
 
 > [!NOTE]
-> Teams Toolkit support for API-based message extension is available only in Teams Toolkit pre-release version. Before you get started, ensure that you've installed a [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version-1).
+> Teams Toolkit support for API-based message extension is available only in Teams Toolkit pre-release version. Before you get started, ensure that you've installed a [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version)
 
-To build am API-based message extension using Visual Studio Code, follow these steps:
+To build am API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
@@ -225,7 +248,7 @@ To build am API-based message extension using Visual Studio Code, follow these s
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
 
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
-1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)` . Teams Toolkit launches Teams web client in a browser window.
+1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
 1. Select your message extension from the list and enter a search command in the search box.
 1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
@@ -237,6 +260,8 @@ To build am API-based message extension using Visual Studio Code, follow these s
 :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-sbs-result.png" alt-text="Screenshot shows the Adaptive Card with the search results in the chat message in Teams.":::
 
 # [Teams Toolkit CLI](#tab/teams-toolkit-cli)
+
+To create an API-based message extension using Teams Toolkit CLI, follow these steps:
 
 1. Go to **Command Prompt**.
 
@@ -283,59 +308,96 @@ To build am API-based message extension using Visual Studio Code, follow these s
 
  A new browser window with Teams web client opens. You can add your app to Teams.
 
-<!--# [Visual Studio](#tab/visual-studio)
+# [Visual Studio](#tab/visual-studio)
 
-Before you get started, ensure that you install the Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0, and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
+Before you get started, ensure that you install Visual Studio Enterprise 2022 Preview version 17.9.0 Preview 1.0 and install the **Microsoft Teams development tools** under **ASP.NET and web development** workload.
 
 To create an API-based message extension using Teams Toolkit for Visual Studio, follow these steps:
 
-1. Open Visual Studio.
+1. Open **Visual Studio**.
 1. Go to **File** > **New** > **Project...** or **New Project**.
 
 1. Search for **Teams** and select **Microsoft Teams App**.
 
+   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-teams.png" alt-text="Screenshot shows the Microsoft Teams app option in Visual Studio.":::
+
+1. Enter the **Project name** and **Location**.
+1. Select **Create**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-new-app.png" alt-text="Screenshot shows the project name, Location, and Create option in Visual Studio.":::
+
 1. Select **Search Results from API**.
 
 1. Select any of the following options:
-   * Start with a new API
-   * Start with an OpenAPI Description
+   * If you want to start without an API, select **Start with a new API**.
+   * If you have an existing OpenAPI Description document, select **Start with an OpenAPI Description**.
 
 1. Select **Next**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-create-project.png" alt-text="Screenshot shows the Search results from API, New API,  OpenAPI Description Document, and Create options in Visual Studio to create a new Project.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-create-project.png" alt-text="Screenshot shows the Search results from API, New API, OpenAPI Description Document, and Create options in Visual Studio to create a new Project.":::
 
-1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
-1. Under **Select Operations Copilot Can Interact with**, select dropdown and select APIs from the list.
-1. Select **Create**. The project is scaffolded and you can find API spec, manifest and response template files in the **appPackage** folder.
+1. Based on the options selected in **step 7**, select the following:
 
-   1. In the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel**.
+   # [New API](#tab/new-api2)
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
+   1. To get started, you must update the source code in the following files:
 
-   1. Select the Account to use to create the tunnel. Azure, Microsoft Account (MSA), and GitHub are the account types that are supported.
-   1. Name: Enter a name for the tunnel.
-   1. Tunnel Type: Select Persistent or Temporary.
-   1. Access: Select Public.
-   1. Select **OK**. Visual Studio displays a confirmation message that a tunnel is created.
+      |File  |Contents |
+      |---------|---------|
+      |`repair.cs` | The main file of a function in Azure Functions. Defines an Azure Function that retrieves and filters repair records based on a query parameter from an HTTP GET request, and returns the results as a JSON response.|
+      |`RepairData.cs`|The data source for the repair API. Contains a method that returns a hardcoded list of car repair tasks. |
+      |`Models/RepairModel.cs`|Defines a data model that represents a repair task with properties such as ID, Title, Description, AssignedTo, Date, and Image.|
+      |`appPackage/apiSpecificationFiles/repair.yml` |  A file that describes the structure and behavior of the repair API.|
+      |`appPackage/responseTemplates/repair.json` |  A generated Adaptive Card that used to render API response.|
 
-    The tunnel you've created is listed under **Dev Tunnels > (name of the tunnel)**.
+   1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
 
-1. Go to **Solution Explorer** and select your project.
-1. Right-click the menu and select **Teams Toolkit** > **Provision in the Cloud**.
+      :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
 
-   :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Teams Toolkit in Visual Studio.":::
+   1. Select the account to create the tunnel. The supported account types are Azure, Microsoft Account (MSA), and GitHub.
+      1. **Name**: Enter a name for the tunnel.
+      1. **Tunnel Type**: Select **Persistent** or **Temporary**.
+      1. **Access**: Select **Public**.
+      1. Select **OK**. Visual Studio displays a confirmation message that a tunnel is created.
 
-   If prompted, sign in with a Microsoft 365 account.
+       The tunnel you've created is listed under **Dev Tunnels**.
 
-1. Right-click your project and select **Teams Toolkit** > **Preview in** > **Teams**. 
-1. Select the **manifest.json** file and select Open. Visual Studio launches Teams web client.
-1. Select **Add**. The message extension is added to Teams.
+   1. Go to **Solution Explorer** and select your project.
+   1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+
+      If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
+
+   1. Select the **F5** key or select **Debug** > **Start Debugging**. Visual Studio launches a Teams web client.
+
+   # [OpenAPI Description](#tab/openapi-specification2)
+
+   1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
+   1. Select the dropdown and select the APIs from the list.
+   1. Select **Create**. The project is scaffolded and you can find API specification, manifest, and response template files in the **appPackage** folder.
+   1. Go to **Solution Explorer** and select your project.
+   1. Right-click the menu and select **Teams Toolkit** > **Provision in the Cloud**.
+
+      :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Teams Toolkit in Visual Studio.":::
+
+      If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
+
+   1. Right-click your project and select **Teams Toolkit** > **Preview in** > **Teams**.
+   1. Select the **manifest.json** file and select **Open**. Visual Studio launches a Teams web client.
+
+    ---
+
 1. Go to a chat and select **Actions and apps**.
-1. From the message extension fly-out menu, enter the name of your message extension in the search box.
-1. Select your message extension and enter your search query.
 
-1. To provision, select **Project** > **Teams Toolkit** > **Provision in the cloud...**.
-1. To preview your app in Teams, Select **Project** > **Teams Toolkit** > **Preview in** > **Teams**. -->
+1. From the message extension fly-out menu, enter the name of your message extension in the search box.
+1. Select the message extension and enter your search query.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-invoke-app.png" alt-text="Screenshot shows an example of message extension flyout menu invoked from the Plus icon and MyTeamsApp entered in the search filed. The app is displayed in the search results.":::
+
+1. Select an item from the list. The item unfurls into an Adaptive Card in the message compose area.
+
+1. Select **Send**. Teams sends the search result as an Adaptive Card in the chat message.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-vs-adaptive-card-chat.png" alt-text="Screenshot shows an example of Adaptive Card sent to the user's chat in Microsoft Teams.":::
 
 ---
 

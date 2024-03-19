@@ -30,7 +30,7 @@ To extend your Teams message extension to Outlook, ensure the following:
 > [!div class="checklist"]
 >
 > * Check for message extensions support within Outlook for Windows desktop, web, and mobile, see the support table in [extend Teams apps across Microsoft 365](~/m365-apps/overview.md).
-> * [A Microsoft 365 Developer Program sandbox tenant.](~/m365-apps/prerequisites.md#prepare-a-developer-tenant-for-testing)
+> * [A Microsoft 365 Developer Program sandbox tenant.](~/m365-apps/prerequisites.md#prepare-a-developer-tenant-for-testing) For action based message extension, enroll your developer tenant for Microsoft 365 [Targeted Releases](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional).
 > * [A test environment with Microsoft 365 apps installed from the Microsoft 365 Apps **Current Channel**.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 > * [(Optional) Microsoft Visual Studio Code with the Teams Toolkit extension.](~/m365-apps/prerequisites.md#enroll-your-developer-tenant-for-microsoft-365-targeted-releases-optional)
 
@@ -119,6 +119,9 @@ Microsoft Entra single sign-on (SSO) for message extensions works the same way i
    |--|--|
    |Teams desktop and mobile |1fec8e78-bce4-4aaf-ab1b-5451cc387264 |
    |Teams web |5e3ce6c0-2b1f-4285-8d4b-75ee78787346 |
+   |Microsoft 365 web | 4765445b-32c6-49b0-83e6-1d93765276ca |
+   |Microsoft 365 desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c |
+   |Microsoft 365 mobile | d3590ed6-52b3-4102-aeff-aad2292ab01c |
    |Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
    |Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
    |Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |

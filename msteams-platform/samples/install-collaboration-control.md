@@ -9,15 +9,14 @@ ms.topic: conceptual
 
 # Install Collaboration controls
 
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
 
 In this article, you'll learn how to install Collaboration Controls. The following are required to build and deploy Collaboration Manager applications using the Collaboration controls:
 
 * **Power apps**: To build and run Model Driven Applications using the Collaboration controls.
 * **M365 E3 or higher**: To deploy custom applications to Microsoft Teams and store tasks in Planner, files in SharePoint, and meetings in Outlook.
 
-To install the components into a Power Platform environment the following roles are required:
+Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). To install the components into a Power Platform environment, the following roles are required:
 
 * System customizer
 * Environment maker
@@ -26,7 +25,7 @@ For more information on role privileges, see [Configure user security in an envi
 
 ## Install the Collaboration controls solutions
 
-You'll install the Collaboration controls into your dataverse environment via [Microsoft AppSource.](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)
+You install the Collaboration controls into your dataverse environment through [Microsoft AppSource.](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)
 
 You'll be able to configure and use the components within your own model-driven app only after browsing to [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1)  and installing Collaboration controls into your dataverse environment.
 
@@ -35,7 +34,7 @@ Collaboration Controls include the following solutions:
 |**Settings' solutions** | **Purpose** |
 |---|---|
 | Collaboration controls Settings | Hold the settings infrastructure that powers Collaboration controls |
-| Collaboration controls Settings Objects | Provides pre-defined settings values that are used by the Collaboration controls.|
+| Collaboration controls Settings Objects | Provides predefined settings values that are used by the Collaboration controls.|
 
 |**Collaboration solutions** | **Purpose** |
 |---|---|
@@ -50,7 +49,7 @@ Collaboration Controls include the following solutions:
 > [!NOTE]
 > If you have an existing version of the controls installed in your environment, you might need to create a fresh environment and complete a new install to successfully upgrade to the latest version.
 
-Before installation, you must be in a Power Platform environment or admin tenant. You'll need a dataverse environment with a database. If you don't have one, you'll need to [create a new one](/power-platform/admin/create-environment) to continue with the installation.
+Before installation, you must be in a Power Platform environment or admin tenant. You need a dataverse environment with a database. If you don't have one, you need to [create a new one](/power-platform/admin/create-environment) to continue with the installation.
 
 To install the solutions, browse to [Microsoft AppSource](https://appsource.microsoft.com/en-us/product/dynamics-365/mscm.collaboration-toolkit-preview?flightCodes=collaborationcontrols&signInModalType=2&ctaType=1) and complete the following steps:
 
@@ -64,7 +63,7 @@ To install the solutions, browse to [Microsoft AppSource](https://appsource.micr
 
    :::image type="content" source="../assets/images/collaboration-control/collaboration-controls-preview.png" alt-text="Screenshot of install Collaboration control preview." border="true":::
 
-1. You'll be directed to Power Platform Admin Center. Select an environment from the dropdown menu and agree to the terms and policy statements.
+1. You're directed to Power Platform Admin Center. Select an environment from the dropdown menu and agree to the terms and policy statements.
 
    > [!TIP]
    > If you see a permissions error when you select the environment, try selecting outside the environment dropdown menu to see if that resolves the issue.
@@ -75,9 +74,9 @@ To install the solutions, browse to [Microsoft AppSource](https://appsource.micr
 
 1. Go to [https://make.powerapps.com/](https://make.powerapps.com/), [https://make.preview.powerapps.com/](https://make.preview.powerapps.com/) is also supported if you're signed up to Power Apps preview.
 
-1. Ensure that you're in the environment the controls are installed into as you can view the environment and change it if necessary on the top right of the Power Apps portal.
+1. Ensure that you're in the environment where the controls are installed. You can view the environment and  can change the environment on the upper-right corner of the Power Apps portal if necessary.
 
-1. Select the **Solutions** tab to view all the solutions that you've installed in the right environment.
+1. Select the **Solutions** tab to view all the solutions that you installed in the right environment.
 
    :::image type="content" source="../assets/images/collaboration-control/solutions.png" alt-text="Screenshot shows solutions tab to view all solutions collaboration control." border= "true":::
 

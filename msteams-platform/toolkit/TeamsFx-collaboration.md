@@ -8,7 +8,7 @@ ms.topic: overview
 ms.date: 11/29/2021
 ---
 
-# Collaborate on Teams project using Microsoft Teams Toolkit
+# Collaborate on Microsoft Teams project using Microsoft Teams Toolkit
 
 Multiple developers can work together to debug, provision, and deploy the same Teams Toolkit project, but it requires manually setting the right permissions of Teams App and Microsoft Entra ID. Teams Toolkit's collaboration feature simplifies this process between developers and project owners.
 

@@ -50,6 +50,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
   # [Channel meeting](#tab/channel-meeting)
 
   The following is a JSON payload response for a channel meeting for in-tenant users:
+
   ```json
   {
       "app": {
@@ -194,9 +195,9 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
            "mySitePath": "/personal/admin_m365x94626565_onmicrosoft_com",
            "mySiteDomain": "m365x94626565-my.sharepoint.com"
           }
-         }
-    
-       ```
+  }
+
+  ```
 
   # [Instant meeting](#tab/instant-meeting)
 
@@ -251,9 +252,8 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
             "mySitePath": "/personal/admin_m365x654992_onmicrosoft_com",
             "mySiteDomain": "m365x654992-my.sharepoint.com"
           }
-        }
+  }
   ```
----
 
 * User type
 
@@ -262,7 +262,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
   The following is a JSON payload response in a scheduled private meeting for a guest user:
 
   ```json
-   {
+    {
           "app": {
            "locale": "en-us",
            "sessionId": "268beeb4-a52d-4ba8-b1c8-8b9f0b9b3492",
@@ -325,8 +325,9 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
            "mySitePath": "/personal/v-prkamble_microsoft_com",
            "mySiteDomain": "microsoft-my.sharepoint.com"
           }
-         }
-       ```
+    }
+
+  ```
 
   # [Anonymous user](#tab/anonymous-user)
 
@@ -366,7 +367,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
                 "id": "MCMxOTptZWV0aW5nX05UWm1OVEkzT0RndE9XWmtPUzAwTmpnekxXSmhOVE10TURobE5qRTVaakF3WVdZeEB0aHJlYWQudjIjMA=="
             }
         }
-        
+
    ```
 
   # [External user](#tab/external-user)
@@ -433,7 +434,6 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
 
   ```
----
 
 * Call type
 
@@ -508,11 +508,11 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
     
   ```
-    
+
   # [Group call](#tab/group-call)
-    
+
   The following is a JSON payload response for a group chat call for an in-tenant user:
-    
+
   ```json
         {
          "app": {
@@ -578,10 +578,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
           "mySiteDomain": undefined
          }
         }
-        
   ```
-
----
 
 ## Get participant API
 
@@ -727,7 +724,7 @@ You can also send targeted in-meeting notification to a specific participant in 
 > [!NOTE]
 >
 > * When an in-meeting notification is invoked, the content is presented as a chat message.
-> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-task-module) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
+> * You must invoke the [submitTask()](../task-modules-and-cards/task-modules/task-modules-bots.md#submit-the-result-of-a-dialog) function to dismiss automatically after a user takes an action in the web view. This is a requirement for app submission. For more information, see [Teams SDK task module](/javascript/api/@microsoft/teams-js/microsoftteams.tasks?view=msteams-client-js-latest#submittask-string---object--string---string---&preserve-view=true).
 > * If you want your app to support anonymous users, initial invoke request payload must rely on `from.id` request metadata in `from` object, not `from.aadObjectId` request metadata. `from.id` is the user ID and `from.aadObjectId` is the Microsoft Entra ID of the user. For more information, see [using task modules in tabs](../task-modules-and-cards/task-modules/task-modules-tabs.md) and [create and send the task module](../messaging-extensions/how-to/action-commands/create-task-module.md?tabs=dotnet#the-initial-invoke-request).
 
 ### Query parameter
@@ -885,7 +882,7 @@ You must configure your [app manifest](../resources/schema/manifest-schema.md) w
 
 > [!NOTE]
 >
-> * The API payload only permits a task module with a URL.
+> * The API payload only permits a dialog with a URL.
 > * The user ID formats **aadObjectid** and **UPN** aren't supported.
 
 Get supported user ID format for targeted in-meeting notification and app icon badging:
@@ -1552,7 +1549,7 @@ To subscribe to participant events, follow these steps:
 
 The following examples show how to capture the participant join and leave events:
 
-# [Participant join event](#tab/participant-join-event) 
+# [Participant join event](#tab/participant-join-event)
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L35)
 
@@ -1565,7 +1562,7 @@ protected override async Task OnTeamsMeetingParticipantsJoinAsync(MeetingPartici
 }
 ```
 
-# [Participant leave event](#tab/participant-leave-event) 
+# [Participant leave event](#tab/participant-leave-event)
 
 [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-events/csharp/MeetingEvents/Bots/ActivityBot.cs#L48)
 
@@ -1582,7 +1579,7 @@ protected override async Task OnTeamsMeetingParticipantsLeaveAsync(MeetingPartic
 
 Following are the examples of the participant join and leave event payloads:
 
-# [Participant join event](#tab/participant-join-event1) 
+# [Participant join event](#tab/participant-join-event1)
 
 The following is an example of the participant join event payload:
 
@@ -1632,7 +1629,7 @@ The following is an example of the participant join event payload:
 } 
 ```
 
-# [Participant leave event](#tab/participant-leave-event1) 
+# [Participant leave event](#tab/participant-leave-event1)
 
 The following is an example of the participant leave event payload:
 
@@ -1690,6 +1687,7 @@ The `getIncomingClientAudioState` API allows an app to get the incoming audio st
 > [!NOTE]
 >
 > * The `getIncomingClientAudioState` API for mobile is available in [Public Developer Preview](../resources/dev-preview/developer-preview-intro.md).
+> * The `toggleIncomingClientAudio` API is available in the new Teams client.
 > * Resource specific consent is available for manifest version 1.12 and later versions, hence this API doesn't work for manifest version 1.11 and earlier versions.
 
 ### Manifest
