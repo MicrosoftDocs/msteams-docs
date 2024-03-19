@@ -146,8 +146,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
     <br>
     <details>
-    <summary><b>Validate your app package<b></summary><br>
-
+    <summary><b>Validate your app package</b></summary><br>
     To ensure that your app functions as expected on Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
 
     1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
