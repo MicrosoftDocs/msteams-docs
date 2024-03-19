@@ -23,7 +23,7 @@ Teams platform provides the following capabilities to build your app:
 
 ### Message extensions
 
-Message extensions help search or start actions in an external web service and send the result of the interaction in Teams as a richly formatted card. Message extensions can be enhanced with AI capabilities with Copilot for Teams. For example, create and assign a bug in your tracking system based on a Teams message and send a card to the conversation thread with the bug's details.
+Message extensions help search or start actions in an external web service and send the result of the interaction in Teams as a richly formatted card. Message extensions can be enhanced with AI capabilities with Copilot for Teams.
 
    :::column-end:::
 
