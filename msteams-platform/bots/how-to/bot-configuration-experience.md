@@ -85,11 +85,41 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
    # [JavaScript](#tab/JS1)
 
-    The `onInvokeActivity` function simplifies the handling of invoke activities. For `config/fetch`, it uses `adaptiveCardForContinue()` to create an Adaptive Card and returns a 200 status response with the card included. For `config/submit`, it checks the choice variable; if its `continue`, it calls `adaptiveCardForSubmit()` for an Adaptive Card and returns a 200 status response with the card. Else, it returns a 200 status response with a completion message.
+    The `onInvokeActivity` function simplifies the handling of invoke activities. For `config/fetch` activities, it allows continuation of the configuration with an Adaptive Card or signals completion with a message. For `config/submit` activities, it either proceeds with further configuration through another Adaptive Card or ends the process with a completion message. The Adaptive Cards, `adaptiveCardForContinue` and `adaptiveCardForSubmit` are designed with specific layouts and interactive elements.
 
     ```javascript
     async onInvokeActivity(context) {
-      if (context._activity.name == "config/fetch"){
+ 
+    if (context._activity.name == "config/fetch"){
+      
+      /*
+      Option 1: You can add a "config/auth" response as below code
+      Note: The URL in value must be linked to a valid auth URL which can be opened in a browser. This code is only representative and not a working example.
+      */
+      //   try {  
+      //         return {
+      //           status: 200,
+      //           body:{
+      //             config: {
+      //             "type": 'auth',
+      //             "suggestedActions": {
+      //                   actions: [
+      //                     {
+      //                       "type": "openUrl",
+      //                       "value": "https://example.com/auth",
+      //                         "title": "Dummy external login"
+      //                   }]
+      //               },                     
+      //           }
+      //         }}     
+      //       }
+      //     catch (e) {
+      //         console.log(e);        
+      //  }
+  
+        /*
+        Option 2: You can add a "config/continue" response as below code
+        */
         const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
         try {  
           return {
@@ -102,136 +132,144 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
                   height: 400,
                   title: 'Config continue response',
                   width: 300
-                }
-              }
-            }
-          }     
+                }}
+          }}     
         }
         catch (e) {
-          console.log(e);
-        }    
+        console.log(e);
+      }    
       }
-
+  
       if (context._activity.name == "config/submit"){
+        
         const choice = context._activity.value.data.choiceselect;
+        
         if(choice==="continue"){
-          const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForSubmit());              
-          return {
-            status: 200,
-            body:{
-              config: {
-                type: 'continue',
-                value: {
-                  card: adaptiveCard,
-                  height: 400,
-                  title: 'Task module submit response',
-                  width: 300
-                }
-              }
-            }
-          }
-        } else {
+          const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForSubmit());
+                  
+            return {
+              status: 200,
+              body:{
+                config: {
+                  type: 'continue',
+                  value: {
+                    card: adaptiveCard,
+                    height: 400,
+                    title: 'Task module submit response',
+                    width: 300
+                  }}
+            }}
+            
+        
+        }
+        else {
+          
           try {         
             return {
               status: 200,
               body:{
                 config: {
                   type: 'message',
-                  value: "end"
-                }
+                  value: "end"}
+            }}
+            }
+        catch (e) {
+          console.log(e);
+          
+        }
+        }
+            return await super.onInvokeActivity(context);
+     }
+  
+     }
+ 
+     adaptiveCardForContinue = () => ({
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.2",
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "text": "Please choose bot set up option",
+            "wrap": true,
+            "type": "TextBlock"
+          },
+          {
+            "columns": [
+              {
+                "width": "auto",
+                "items": [
+                  {
+                    "text": "Option: ",
+                    "wrap": true,
+                    "height": "stretch",
+                    "type": "TextBlock"
+                  }
+                ],
+                "type": "Column"
               }
-            }
-          } catch (e) {
-            console.log(e);
+            ],
+            "type": "ColumnSet"
+          },
+          {
+            "columns": [
+              {
+                "width": "stretch",
+                "items": [
+                  {
+                    "choices": [
+                      {
+                        "title": "Continue with more options",
+                        "value": "continue"
+                      },
+                      {
+                        "title": "Finish setting up bot",
+                        "value": "finish"
+                      }
+                    ],
+                    "style": "filtered",
+                    "placeholder": "Search for an option",
+                    "id": "choiceselect",
+                    "type": "Input.ChoiceSet"
+                  }
+                ],
+                "type": "Column"
+              }
+            ],
+            "type": "ColumnSet"
           }
-        }
-        return await super.onInvokeActivity(context);
-      }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "id": "submit",
+            "title": "Submit"
+          }
+        ]
+       });
+    
+      adaptiveCardForSubmit= () => ({
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "version": "1.2",
+        "type": "AdaptiveCard",
+        "body": [
+          {
+            "text": "Please hit submit to continue setting up bot",
+            "wrap": true,
+            "type": "TextBlock"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.Submit",
+            "id": "submitdynamic",
+            "title": "Submit"
+          }
+        ]
+      });
     }
-
-    adaptiveCardForContinue = () => ({
-      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-      "version": "1.2",
-      "type": "AdaptiveCard",
-      "body": [
-        {
-          "text": "Please choose bot set up option",
-          "wrap": true,
-          "type": "TextBlock"
-        },
-        {
-          "columns": [
-            {
-              "width": "auto",
-              "items": [
-                {
-                  "text": "Option: ",
-                  "wrap": true,
-                  "height": "stretch",
-                  "type": "TextBlock"
-                }
-              ],
-              "type": "Column"
-            }
-          ],
-          "type": "ColumnSet"
-        },
-        {
-          "columns": [
-            {
-              "width": "stretch",
-              "items": [
-                {
-                  "choices": [
-                    {
-                      "title": "Continue with more options",
-                      "value": "continue"
-                    },
-                    {
-                      "title": "Finish setting up bot",
-                      "value": "finish"
-                    }
-                  ],
-                  "style": "filtered",
-                  "placeholder": "Search for an option",
-                  "id": "choiceselect",
-                  "type": "Input.ChoiceSet"
-                }
-              ],
-              "type": "Column"
-            }
-          ],
-          "type": "ColumnSet"
-        }
-      ],
-      "actions": [
-        {
-          "type": "Action.Submit",
-          "id": "submit",
-          "title": "Submit"
-        }
-      ]
-    });
-
-    adaptiveCardForSubmit= () => ({
-      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-      "version": "1.2",
-      "type": "AdaptiveCard",
-      "body": [
-        {
-          "text": "Please hit submit to continue setting up bot",
-          "wrap": true,
-          "type": "TextBlock"
-        }
-      ],
-      "actions": [
-        {
-          "type": "Action.Submit",
-          "id": "submitdynamic",
-          "title": "Submit"
-        }
-      ]
-    });
+      
+    module.exports.TeamsBot = TeamsBot;
+    
     ```
 
 1. `OnInvokeActivityAsync`: `OnInvokeActivityAsync` is the asynchronous version of `OnInvokeActivity`. It allows users to handle incoming activities asynchronously, making it suitable for long-running or asynchronous tasks. This method enhances responsiveness and scalability in bot applications by offloading processing tasks to asynchronous operations.
@@ -240,9 +278,9 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
    The `onInvokeActivityAsync` method is designed to handle different types of invoke activities. Such as:
 
-   1. For activities related to configuration or fetching information, the method utilizes `config/auth`; whereas for submission-related activities, it employs `config/continue`.
+   1. C#1: For activities related to configuration or fetching information, the method utilizes `config/auth`; whereas for submission-related activities, it employs `config/continue`.
 
-   1. For activities related to configuration or fetching information, the method utilizes `config/continue`; whereas for submission-related activities, it employs `config/message`.
+   1. C#2: For activities related to configuration or fetching information, the method utilizes `config/continue`; whereas for submission-related activities, it employs `config/message`.
 
       # [C# 1](#tab/teams-bot-sdk2)
 
