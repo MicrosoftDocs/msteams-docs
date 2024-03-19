@@ -394,7 +394,7 @@
     displayName: Slow load times, iFrame constraints, invoke activities, dialog, task fetch, task submit, authentication
   - name: Tabs link unfurling and Stageview
     href: tabs/tabs-link-unfurling.md
-    displayName: Tab in Stageview, Collaborative Stageview 
+    displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview modal
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
