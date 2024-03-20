@@ -1,56 +1,58 @@
 ---
-title: Government clouds overview
+title: Teams for Government clouds
 author: v-preethah
 description: Understand Teams features and capabilities available for GCC, GCC High, and DOD tenants. Get an overview on how to deploy Teams in Government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 09/29/2023
 ---
+
 # Government clouds
 
-Microsoft Teams plays a key role to facilitate secure and efficient communication within government sectors and agencies. To meet the stringent security and compliance requirements of these entities, Microsoft offers three specialized government cloud services:
+Microsoft Teams plays a key role to facilitate secure and efficient communication within government sectors and agencies. To meet the stringent security and compliance requirements of these entities, Microsoft offers three specialized government cloud services.
 
 :::image type="content" source="../assets/images/app-fundamentals/cloud-type.png" alt-text="Illustration shows the types of government clouds." border="false":::
 
 GCC, GCC High, and DOD are limited for use within Unites States. To use Microsoft Government clouds services, you can purchase Microsoft 365 [Government plans](https://products.office.com/government/compare-office-365-government-plans).
 
+The document provides a comprehensive overview of Teams' compatibility within government cloud services, detailing the varying capabilities and features for each cloud type. It also outlines how government entities can effectively deploy and use Microsoft Teams within their organizations.
+
 ## Teams for Government clouds
 
- Teams is compatible with all Microsoft 365 Government plans, but the capabilities and features vary for each cloud type. Certain Teams features that are available in a commercial tenant might not be accessible in a government tenant. Due to security and compliance considerations, some capabilities and features are restricted while others take time to roll out in government cloud.
+ Teams is compatible with all Microsoft 365 Government plans, but the capabilities and features vary for each cloud type. Certain Teams features that are available in a commercial tenant might not be accessible in a government tenant. Due to security and compliance, some capabilities and features are restricted while others take time to roll out in government cloud.
 
 ### Teams apps and capabilities for Government clouds
 
-Understanding the Teams apps and capabilities supported by each cloud is crucial for effective utilization of Teams within government clouds. The following table includes Teams apps supported for GCC, GCCH, and DOD:
+Understanding the Teams apps and capabilities supported by each cloud is crucial for effective utilization of Teams within government clouds. The following table includes the Teams apps support for GCC, GCCH, and DOD:
 
 | &nbsp; | GCC | GCCH | DOD |
 |-------------|---------|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
-| 1P apps built by Teams Engineering | ✔️ | ✔️ | ✔️ |
+| 1P apps built by Teams Engineering. | ✔️ | ✔️ | ✔️ |
 | Apps built by internal Teams developers. | ✔️ | ✔️ | ✔️ |
-| 3P apps built by external developers. | ✔️ | ❌ | ❌ |
+| Third-party apps built by external developers. | ✔️ | ❌ | ❌ |
 | Custom apps built for your org (LOB apps) distributed and used in specific tenant. | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
-> Third-party apps are turned off by default for GCC and not available for GCCH and DOD.
+> Third-party apps are turned off by default for GCC and aren't available for GCC High and DOD.
 
-The following table includes Teams app capabilities and their availability for GCC, GCCH, and DOD:
+The following table includes Teams app capabilities and their availability for GCC, GCC High, and DOD:
 
-| &nbsp; | GCC | GCCH | DOD |
+| &nbsp; | GCC | GCC High | DOD |
 |-------------|---------|---|---|
 | **Capabilities** | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ |
-| Bots and Message extensions | ✔️ | ✔️ | ✔️ |
+| Bots and message extensions | ✔️ | ✔️ | ✔️ |
 | Message actions | ✔️ | ✔️ | ✔️ |
-| Cards: Adaptive, Hero, Thumbnail, Office 365 connector, Receipt, Sign in, and OAuth cards. | ✔️ | ✔️ | ✔️ |
-| Task modules | ✔️ | ✔️ | ✔️ |
+| Cards: Adaptive, Hero, Thumbnail, Microsoft 365 connector, Receipt, Sign in, and OAuth cards | ✔️ | ✔️ | ✔️ |
+| Dialogs | ✔️ | ✔️ | ✔️ |
 | Link unfurling | ✔️ | ✔️ | ✔️ |
 | Meetings extensibility | ✔️ | ✔️ | ✔️ |
 | Connectors and webhooks | ✔️ | ❌ | ❌ |
 | Workflows| ✔️ | ❌ | ❌ |
 | MetaOS tab| ❌ | ❌ | ❌ |
-| Teams Store 1.0 | ❌ | ❌ | ❌ |
 | Teams Store 2.0 | ✔️ | ✔️ | ✔️ |
-| In-context ap  stores or app flyouts | ✔️ | ✔️ | ✔️ |
+| In-context Teams Store or App flyouts | ✔️ | ✔️ | ✔️ |
 | Manage apps in Teams | ✔️ | ✔️ | ✔️ |
 | Teams Admin Center | ✔️ | ✔️ | ✔️ |
 | Graph APIs | ✔️ | ✔️ | ✔️ |
