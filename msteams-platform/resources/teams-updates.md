@@ -40,8 +40,9 @@ To ensure a smooth transition, a phased rollout of the new platform is planned a
 > [!NOTE]
 >
 > * The new Teams client is supported in Windows and Mac clients and Government Community Cloud (GCC) and GCC-High environments.
-> * We recommend you to test the functionality of  apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC-High environments after switching from the Classic Teams client to the new Teams client.
+> * We recommend you to test the functionality of apps, tabs, messaging extensions, bots, and link unfurling on Windows and Mac clients and GCC and GCC-High environments after switching from the Classic Teams client to the new Teams client.
 > * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
+> * The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
 The following Teams features aren't currently supported in the new Teams client:
 
@@ -52,8 +53,6 @@ The following Teams features aren't currently supported in the new Teams client:
 * [App caching](~/tabs/how-to/app-caching.md) isn't supported in the new Teams client.
 
 * [Static tabs for group chat, channels, and meetings](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) aren't supported in the new Teams client.
-
-* The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
