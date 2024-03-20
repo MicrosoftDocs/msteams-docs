@@ -90,7 +90,7 @@ For more information regarding the authentication parameter, see [use external O
 
 #### Teams apps running across Microsoft 365
 
-Enable an existing Teams app to run in Outlook and Microsoft 365 are as follows:
+Enable an existing Teams app to run in Outlook and Microsoft 365:
 
 1. Dependency on TeamsJS version 2.x.x ( `@microsoft/teams-js@2.0.0`) or later.
 
