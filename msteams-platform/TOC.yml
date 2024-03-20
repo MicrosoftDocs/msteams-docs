@@ -496,17 +496,6 @@
         href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
       - name: Teams AI library FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
-- name: Build notification for your app
-  items:
-  - name: Overview
-    href: concepts/design/design-app-notification.md
-    displayName: notification, choose your notification
-  - name: Send activity feed notifications
-    href: tabs/send-activity-feed-notification.md
-    displayName: activity feed, notification, customize notification
-  - name: Interactive notification bot in Teams
-    href: bots/how-to/conversations/interactive-notification-bot-in-teams.md
-    displayName: Adapter, notification, bot
 - name: Build message extensions
   items:
   - name: Overview
@@ -707,6 +696,17 @@
       displayName: payload
     - name: Use dialogs from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
+- name: Build notification for your app
+  items:
+  - name: Overview
+    href: concepts/design/design-app-notification.md
+    displayName: notification, choose your notification
+  - name: Send activity feed notifications
+    href: tabs/send-activity-feed-notification.md
+    displayName: activity feed, notification, customize notification
+  - name: Interactive notification bot in Teams
+    href: bots/how-to/conversations/interactive-notification-bot-in-teams.md
+    displayName: Adapter, notification, bot
 - name: Add authentication
   items:
   - name: Overview
