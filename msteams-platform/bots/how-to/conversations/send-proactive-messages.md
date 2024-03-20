@@ -59,9 +59,7 @@ Regardless of how you get the information, store the `tenantId` and then store e
 Create the conversation, after you have the user or channel information.
 
 > [!NOTE]
->
-> * Sending proactive messages using `aadObjectId` is supported only in personal scope.
-> * Connector ID is unique for each bot within a specific channel, even in a multi-tenant environment. This unique ID ensures that the bot's messages are directed to the appropriate channel and don't interfere with other bots or channels within the same or different organizations.
+> Sending proactive messages using `aadObjectId` is supported only in personal scope.
 
 ## Create the conversation
 
@@ -79,6 +77,8 @@ For `serviceUrl`, use the value from an incoming activity triggering the flow or
 For a code sample, see the call `CreateConversationAsync` in the [**sample**](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/csharp/Bots/TeamsConversationBot.cs).
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
+
+Conversation ID is unique for each bot within a specific channel, even in a multi-tenant environment. This unique ID ensures that the bot's messages are directed to the appropriate channel and don't interfere with other bots or channels within the same organization or across different organizations.
 
 If you don't have the `conversationId`, you can [proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
 
