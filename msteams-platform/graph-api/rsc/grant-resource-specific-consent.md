@@ -352,16 +352,19 @@ The tenant-level controls of application RSC permissions vary based on the resou
 For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
 >[!WARNING]
-> From March 2024, the way you manage settings for team and chat RSC permissions will change. The following instructions include the dates when new settings will be available for admins to modify. These settings will not change for government clouds and we will communicate when the settings change for government clouds.
+> From March 2024, the way you manage settings for team and chat RSC permissions will change. The new settings in PowerShell are available during the transition period. These settings will not change for government clouds and we will communicate when the settings change for government clouds.
 
-<b> Before March 14th, 2024 </b>
+>[!IMPORTANT]
+>The Team RSC managed via PowerShell and Group Owner Consent transition period is anticipated to complete in April 2024.
+
+<b> During the Group Owner Consent & Team RSC transition period </b>
 <br>
 <details>
 
-<summary><b>Configure group owner consent settings for RSC in a team using the Microsoft Entra admin center [Will be deprecated in March 2024]</b></summary>
+<summary><b>Configure group owner consent settings for RSC in a team using the Microsoft Entra admin center [Will be deprecated in April 2024]</b></summary>
 
 >[!IMPORTANT]
->After March 14th, 2024, this setting will be deprecated and no longer available for adjustments. After it is deprecated, use the PowerShell cmdlets listed in **Configure team RSC via PowerShell cmdlets** to adjust your team RSC settings.
+>After the transition period, this setting will be deprecated and no longer available for adjustments. After it is deprecated, use the PowerShell cmdlets listed in **Configure team RSC via PowerShell cmdlets** to adjust your team RSC settings.
 
 You can enable or disable group owner consent directly within the Microsoft Entra admin center:
 
@@ -381,7 +384,7 @@ In addition, you can enable or disable group owner consent using PowerShell. Fol
 <summary><b>Configure chat owner consent settings for RSC in a chat using Graph APIs [Will be deprecated in May 2024]</b></summary>
 
 >[!IMPORTANT]
->After March 14, you must use the PowerShell cmdlets listed in **Configure chat RSC via PowerShell cmdlets** to manage your chat RSC settings.
+>After the transition period, you must use the PowerShell cmdlets listed in **Configure chat RSC via PowerShell cmdlets** to manage your chat RSC settings.
 
 You can enable or disable RSC for chats using Graph API. The property `isChatResourceSpecificConsentEnabled` in [teamsAppSettings](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
 
@@ -419,11 +422,7 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 
 <br>
 
->[!IMPORTANT]
->The pre-selection period for the transition from Group Owner Consent to PowerShell-based team RSC has started and remains active until March 4, 2024. After that, the transition to team RSC policies is managed by PowerShell.
-<br>
-
-<b> After March 14th, 2024 </b>
+<b> After the transition period </b>
 
 Before you manage your team and chat RSC settings with PowerShell, you need to connect PowerShell to your tenant using Microsoft Graph. For more information on managing Microsoft Graph settings with PowerShell, see [get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
 You can use the `Connect-MgGraph` cmdlet and connect with the following permissions:
