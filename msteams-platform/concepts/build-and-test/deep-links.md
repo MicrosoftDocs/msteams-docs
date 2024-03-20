@@ -49,10 +49,10 @@ Teams deep links support two types of protocol handlers:
 
     :::image type="content" source="../../assets/images/deep-link-open.png" alt-text="Screenshot shows a deep link opened in a browser.":::
 
-> [!NOTE]
-> A deep link must start with `https://teams.microsoft.com/` followed by an `l/` to avoid errors, especially in classic Teams deep links where Angular routes are used.
+    > [!NOTE]
+    > A deep link must start with `https://teams.microsoft.com/l/` to ensure that it's handled correctly by Teams. Classic Teams deep links copied from the browser's address bar don't work in the new Teams clients.
 
-1. **MSTEAMS**: The `msteams://` protocol handler skips the client selection screen in the browser and opens the deep link directly in the Teams desktop client. Users who don't have the Teams desktop client might not be able to access deep links with `msteams://`. Always use `https://` in deep links unless you are certain that your app's users have the desktop client on their device.
+2. **MSTEAMS**: The `msteams://` protocol handler skips the client selection screen in the browser and opens the deep link directly in the Teams desktop client. Users who don't have the Teams desktop client might not be able to access deep links with `msteams://`. Always use `https://` in deep links unless you are certain that your app's users have the desktop client on their device.
 
 > [!CAUTION]
 > Don't append `msteams:` to a `https://` deep link such as `msteams:https://teams.microsoft.com/l/call/0/0` as Teams can't parse this deep link as a valid URL object.
