@@ -26,6 +26,10 @@ Teams platform features that are available to all app developers.
 
 **2024 March**
 
+* ***March 20, 2024***: [Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem.](resources/schema/manifest-schema.md#rsc-delegated-permissions)
+
+* ***March 20, 2024***: [Create Dashboardcards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information.](resources/schema/manifest-schema.md#rsc-delegated-permissions)
+
 * ***March 07, 2024***: [Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-vs.md)
 * ***March 07, 2024***: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)
 
