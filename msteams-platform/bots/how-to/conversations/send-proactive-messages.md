@@ -59,7 +59,9 @@ Regardless of how you get the information, store the `tenantId` and then store e
 Create the conversation, after you have the user or channel information.
 
 > [!NOTE]
-> Sending proactive messages using `aadObjectId` is supported only in personal scope.
+>
+> * Sending proactive messages using `aadObjectId` is supported only in personal scope.
+> * Connector ID is unique for each bot within a specific channel, even in a multi-tenant environment. This unique ID ensures that the bot's messages are directed to the appropriate channel and don't interfere with other bots or channels within the same or different organizations.
 
 ## Create the conversation
 
