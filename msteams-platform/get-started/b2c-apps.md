@@ -1,12 +1,12 @@
 ---
 title: Build business-to-consumer (B2C) app
-description: Build an external business-to-consumer (B2C) app that interoperates with Teams.
+description: Embed Teams calls & meetings in an external business-to-consumer (B2C) app
 ms.localizationpriority: high
 ms.date: 03/01/2024
 ms.topic: reference
 ---
 
-# Build your business-to-consumer (B2C) app
+# Embed Teams calls & meetings in an external business-to-consumer (B2C) app
 
 Microsoft Teams delivers business-to-consumer (B2C) communication out-of-the-box. For example, mortgage officers at a bank can use Teams meetings to host virtual appointments with their customers. Customers can join those meetings in three ways:
 
