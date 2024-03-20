@@ -63,11 +63,13 @@ You can add single sign-on authentication to your conversation bot using the fol
 
 Bot configuration experience helps the users to interact with the bot in Teams. Users can interact with the bot either by sending a message or selecting a command from the command list. After the bot is installed in a channel or team, all the members from the channel or team can provide inputs to the bot at the same time, the bot only considers the last input provided by the user. For more information, see [bot configuration experience](how-to/bot-configuration-experience.md).
 
-You can change the bot name displayed in the chat window, but it needs to be updated in different locations. For example:
+You can change the bot name displayed in the chat window and you need to update it in the following:
 
-1. Your bot name displayed at the top in a chat window is part of your app manifest. You can update the bot name in the app manifest, where you inform Teams about the name of your "App" inside Teams.
+* Bot name displayed as a title in a chat window is managed in your app manifest and you can update the bot name in the app manifest.
 
-2. The item in the list of open chats and the label next to each message in the conversation  are managed within the Azure portal. You can update your chat bot name specifically in your Bot registration, in settings page.
+* Bot name in your Teams chat list and the bot name appears with each message in the chat pane are managed within the Azure portal. You can update bot name in the Azure portal in your Bot registration in the **settings** page.
+
+:::image type="content" source="~\assets\images\bot_name.png" alt-text="The screenshot shows the bot name displayed in a Teams window":::
 
 ## Code samples
 
