@@ -39,7 +39,7 @@ Following are the most common reasons for your app to get rejected:
 
 :::row:::
    :::column:::
-      :::image type="icon" source="../../../assets/app-functionality-icon.png" link="#broken-app-functionality":::
+      :::image type="icon" source="../../../assets/icons/app-functionality-icon.png" link="#broken-app-functionality":::
    :::column-end:::
    :::column span="":::
       :::image type="icon" source="../../../assets/icons/mobile-icon.png" link="#suboptimal-mobile-experience":::
@@ -69,9 +69,9 @@ A great description makes your app stand out in the Teams Store and encourage cu
 
   Microsoft’s brand assets including logos, icons, designs, trade dress, fonts, product names, services, sounds, emojis, and any other brand features and elements, whether registered or unregistered are proprietary assets owned by Microsoft and its group of companies. When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks).
 
-       :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-MS-app-description.png" alt-text="Screenshot of failed image of Microsoft or MS in app description.":::
+    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-MS-app-description.png" alt-text="Screenshot of failed image of Microsoft or MS in app description.":::
 
-       :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-first-reference-teams.png" alt-text="Screenshot of image to show the failed reference instance of Microsoft Teams.":::
+    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-first-reference-teams.png" alt-text="Screenshot of image to show the failed reference instance of Microsoft Teams.":::
 
 * No highlight of the app’s value proposition and key features in the short and full descriptions in the app manifest.
 
