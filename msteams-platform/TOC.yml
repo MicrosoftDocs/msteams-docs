@@ -402,7 +402,7 @@
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
   - name: Send activity feed notifications
-    href: graph/change-notifications-supported-resources-expanded
+    href: /graph/teams-send-activityfeednotifications
     displayName: activity feed, notification, customize notification
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
