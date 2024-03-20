@@ -15,7 +15,7 @@ The following are the most common reasons for your app to get rejected:
 
 :::row:::
    :::column:::
-     :::image type="icon" source="../../../assets/icons/app-description-icon.png" link="#app-description":::
+     :::image type="icon" source="../../../assets/icons/app-description-icon.png" link="#error-in-the-app-description":::
    :::column-end:::
    :::column span="":::
      :::image type="icon" source="../../../assets/icons/screenshot-icon.png" link="#improper-screenshots":::
@@ -49,55 +49,37 @@ The following are the most common reasons for your app to get rejected:
    :::column-end:::
 :::row-end:::
 
-## App description
+## Error in the app description
 
 A great description makes your app stand out in the Teams Store and encourage customers to download it. Avoid the following mistakes in your app description:
 
 * No links for new users through call-to-action buttons such as **Sign Up**, **Get Started**, **Help**, or **Contact Us** in the app manifest (previously called Teams app manifest) and AppSource full description.
 
-# [Pass](#tab/pass1)
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
-:::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
-
-# [Fail](#tab/fail1)
-
-:::image type="content" source="../../../assets/images/submission/validation-common-reason-sign-up-app-description.png" alt-text="Screenshot of failed scenario of sign-up, contact details in app description must be hyperlinked.":::
-
----
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-sign-up-app-description.png" alt-text="Screenshot of failed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
 * Not call out the limitations or account dependency on external accounts or services to complete sign-in, sign-out, and sign-up experiences in the app manifest and long description.
 
-# [Pass](#tab/pass2)
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-passed-limitation-called-out.png" alt-text="Screenshot of passed image to show the called out limitations.":::
 
-:::image type="content" source="../../../assets/images/submission/validation-common-reason-passed-limitation-called-out.png" alt-text="Screenshot of passed image to show the called out limitations.":::
-
-# [Fail](#tab/fail2)
-
-:::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-limitation-called-out.png" alt-text="Screenshot of failed image to show the called out limitations.":::
-
----
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-limitation-called-out.png" alt-text="Screenshot of failed image to show the called out limitations.":::
 
 * Contains abbreviated, shortened, or deprecated forms of standard Microsoft product names. For example, abbreviating **Microsoft** as **MS** or **MSFT** in the offer listing, referencing the first instance of Microsoft Teams in the offer listing as **Teams** instead of **Microsoft Teams**, or using **O365** instead of **Microsoft 365**.
 
   Microsoft’s brand assets including logos, icons, designs, trade dress, fonts, product names, services, sounds, emojis, and any other brand features and elements, whether registered or unregistered are proprietary assets owned by Microsoft and its group of companies. When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks).
 
-    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-MS-app-description.png" alt-text="Screenshot of failed image of Microsoft or MS in app description.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-MS-app-description.png" alt-text="Screenshot of failed image of Microsoft or MS in app description.":::
 
-    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-first-reference-teams.png" alt-text="Screenshot of image to show the failed reference instance of Microsoft Teams.":::
+   :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-first-reference-teams.png" alt-text="Screenshot of image to show the failed reference instance of Microsoft Teams.":::
 
 * No highlight of the app’s value proposition and key features in the short and full descriptions in the app manifest.
 
 * Contains typographical errors, grammatical errors including unnecessary capitalization, code, or duplicate content.
 
-# [Pass](#tab/pass3)
-
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-grammatical-error.png" alt-text="Screenshot of passed image for long description, grammatical errors and capitalization":::
 
-# [Fail](#tab/fail3)
-
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-grammatical-error.png" alt-text="Screenshot of failed image for long description, grammatical errors and capitalization":::
-
----
 
 * No reference to products the app supports like Microsoft Teams, Outlook, and Microsoft 365.
 
