@@ -972,11 +972,11 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
 |`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.builtinGroupId`| String | 64 characters | | Specifies the ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
-|`tabs.customMobileRibbonGroups`| Array | 10 | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtinTabId` property that is set to "DefaultTab". For non-mobile devices, see `tabs.groups` above.| 
+|`tabs.customMobileRibbonGroups`| Array | 10 | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtinTabId` property that is set to "DefaultTab". For non-mobile devices, see `tabs.groups` above.|
 |`tabs.customMobileRibbonGroups.id` | String | 250 characters | ✔️ | Specifies the ID of the group. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.customMobileRibbonGroups.label` | String | 32 characters | ✔️ | Specifies the label on the group. |
-|`tabs.customMobileRibbonGroups.controls` | Array | 20 | ✔️ | Defines the controls in the group. Only mobile buttons are supported.| 
-|`tabs.customMobileRibbonGroups.controls.id` | String | 250 characters | ✔️ | Specifies the ID of the control such as "msgReadFunctionButton".| 
+|`tabs.customMobileRibbonGroups.controls` | Array | 20 | ✔️ | Defines the controls in the group. Only mobile buttons are supported.|
+|`tabs.customMobileRibbonGroups.controls.id` | String | 250 characters | ✔️ | Specifies the ID of the control such as "msgReadFunctionButton".|
 |`tabs.customMobileRibbonGroups.controls.type` | String enum |  | ✔️ | Specifies the type of control. Currently only "MobileButton" is supported.|
 |`tabs.customMobileRibbonGroups.controls.label` | String | 32 characters | ✔️ | Specifies the label on the control.|
 |`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters |✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|

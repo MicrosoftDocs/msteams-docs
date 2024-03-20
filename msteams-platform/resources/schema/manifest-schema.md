@@ -967,7 +967,7 @@ The `extensions.runtimes` property configures the sets of runtimes and actions t
 |`type`| String enum | | ✔️ | Specifies the type of runtime. The supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime) is `general`. |
 |`code`| Object | | ✔️ | Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain. |
 |`code.page`| URL | | ✔️ | Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
-|`code.script`| URL | | ✔️ | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
+|`code.script`| URL | |  | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
 |`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes).|
 |`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
@@ -999,7 +999,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. |
 |`tabs.groups.icons`| Array | | | Specifies the icons displayed for the group. |
 |`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image size: `16`, `32`, `80`. |
-|`tabs.groups.icons.url`| URL| | | Specifies the absolute URL of the icon.|
+|`tabs.groups.icons.url`| URL| | ✔️| Specifies the absolute URL of the icon.|
 |`tabs.groups.controls`| Array | | | Configures the buttons and menus in the group. |
 |`tabs.groups.controls.id`| String | 64 characters| ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
 |`tabs.groups.controls.items`| Array | | | Configures the items for a menu control. |
@@ -1008,7 +1008,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the items. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the custom item.|
 |`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image size: `16`, `32`, `80`. |
-|`tabs.groups.controls.items.icons.url`| URL| | | Specifies the absolute URL of the icon.|
+|`tabs.groups.controls.items.icons.url`| URL| | ✔️ | Specifies the absolute URL of the icon.|
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the custom item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
 |`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
@@ -1018,7 +1018,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`, `menu`|
 |`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of an existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control.|
-|`tabs.groups.controls.icons`| Array | | | Defines the icons for the control. There must be at least three child objects; one each with `size` properties of `16`, `32`, and `80` pixels. |
+|`tabs.groups.controls.icons`| Array | | ✔️ | Defines the icons for the control. There must be at least three child objects; one each with `size` properties of `16`, `32`, and `80` pixels. |
 |`tabs.groups.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Required image size: `16`, `32`, `80`|
 |`tabs.groups.controls.icons.url`| URL| | | Specifies the absolute URL to the icon.|
 |`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. |
@@ -1028,14 +1028,14 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
 |`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.builtinGroupId`| String | 64 characters | | Specifies the ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
-|`tabs.customMobileRibbonGroups`| Array | 10 | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtinTabId` property that is set to "DefaultTab". For non-mobile devices, see `tabs.groups` above.| 
+|`tabs.customMobileRibbonGroups`| Array | 10 | | Defines groups of controls on the default tab of the ribbon on a mobile device. This array property can only be present on tab objects that have a `tabs.builtinTabId` property that is set to "DefaultTab". For non-mobile devices, see `tabs.groups` above.|
 |`tabs.customMobileRibbonGroups.id` | String | 250 characters | ✔️ | Specifies the ID of the group. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.customMobileRibbonGroups.label` | String | 32 characters | ✔️ | Specifies the label on the group. |
-|`tabs.customMobileRibbonGroups.controls` | Array | 20 | ✔️ | Defines the controls in the group. Only mobile buttons are supported.| 
-|`tabs.customMobileRibbonGroups.controls.id` | String | 250 characters | ✔️ | Specifies the ID of the control such as "msgReadFunctionButton".| 
+|`tabs.customMobileRibbonGroups.controls` | Array | 20 | ✔️ | Defines the controls in the group. Only mobile buttons are supported.|
+|`tabs.customMobileRibbonGroups.controls.id` | String | 250 characters | ✔️ | Specifies the ID of the control such as "msgReadFunctionButton".|
 |`tabs.customMobileRibbonGroups.controls.type` | String enum |  | ✔️ | Specifies the type of control. Currently only "MobileButton" is supported.|
 |`tabs.customMobileRibbonGroups.controls.label` | String | 32 characters | ✔️ | Specifies the label on the control.|
-|`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
+|`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters |✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
 |`tabs.customMobileRibbonGroups.controls.icons` | Array | 9 | ✔️ | Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
 |`tabs.customMobileRibbonGroups.controls.icons.size` | Number enum | | ✔️ | Size in pixels of the icon. The possible sizes are 25, 32, and 48. There must be exactly one of each size for each possible value of the icons's `scale` property. |
 |`tabs.customMobileRibbonGroups.controls.icons.url` | String | 2048 characters | ✔️ | The full, absolute URL of the icon's image file. |
@@ -1049,7 +1049,7 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`events`| Array | | ✔️ | Configures the event that cause actions in an Outlook Add-in to run automatically. For example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook Add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
+|`events`| Array |20 | ✔️ | Configures the event that cause actions in an Outlook Add-in to run automatically. For example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook Add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
 |`events.type`| String | 64 characters | | Specifies the type of event. For supported types, see [supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
 |`events.actionId`| String | 64 characters | | Identifies the action that is taken when the event fires. The `actionId` must match with `runtime.actions.id`. |
 |`events.options`| Object | | | Configures how Outlook responds to the event.|
@@ -1068,7 +1068,7 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`hide.storeOfficeAddin`| Object | | | Specifies a Microsoft 365 Add-in available in Microsoft AppSource. |
 |`hide.storeOfficeAddin.officeAddinId`| String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
-|`hide.customOfficeAddin`| | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
+|`hide.customOfficeAddin`|object | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
 |`alternateIcons`| Object | | | Specifies the main icons that are used to represent the add-in on older versions of Office. This property is **required** if the Office add-in is to be installable in Office on Mac, perpetual Office licenses, and Microsoft 365 subscription versions of Office on Windows earlier than 2304 (Build 16320.00000).|
 |`alternateIcons.icon`| Object | | ✔️ | Specifies the size and URL of the image file that is used to represent the add-in. The image must be in one of the following file formats: GIF, JPG, PNG, EXIF, BMP, or TIFF. |
@@ -1076,7 +1076,7 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.icon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in. |
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies the size and URL of the image file that is used to represent the add-in on high DPI screens. The image must be in one of the following file formats: GIF, JPG, PNG, EXIF, BMP, or TIFF. |
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | This property is not currently used. The icon that the "highResolutionIcon.url" property points to must be 128 x 128 pixels.|
-|`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. |    
+|`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. |
 
 ## Create an app manifest file
 
