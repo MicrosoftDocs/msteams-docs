@@ -53,13 +53,13 @@ The following are the most common reasons for your app to get rejected:
 
 A great description makes your app stand out in the Teams Store and encourage customers to download it. Avoid the following mistakes in your app description:
 
-* No links for new users through call-to-action buttons such as **Sign Up**, **Get Started**, **Help**, or **Contact Us** in the app manifest (previously called Teams app manifest) and AppSource full description.
+* No hyperlinks for call-to-action buttons such as **Sign Up**, **Get Started**, **Help**, or **Contact Us** in the app manifest (previously called Teams app manifest) and AppSource full description.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-sign-up-app-description.png" alt-text="Screenshot of failed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
-* Not call out the limitations or account dependency on external accounts or services to complete sign-in, sign-out, and sign-up experiences in the app manifest and long description.
+* No call out to the limitations or dependencies on external accounts or services to complete sign-in, sign-out, and sign-up experiences in the app manifest and long description.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-passed-limitation-called-out.png" alt-text="Screenshot of passed image to show the called out limitations.":::
 
@@ -75,7 +75,7 @@ A great description makes your app stand out in the Teams Store and encourage cu
 
 * No highlight of the app’s value proposition and key features in the short and full descriptions in the app manifest.
 
-* Contains typographical errors, grammatical errors including unnecessary capitalization, code, or duplicate content.
+* Contains typographical errors, grammatical errors, unnecessary capitalization, code, or duplicate content.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-grammatical-error.png" alt-text="Screenshot of passed image for long description, grammatical errors and capitalization":::
 
@@ -83,11 +83,11 @@ A great description makes your app stand out in the Teams Store and encourage cu
 
 * No reference to products the app supports like Microsoft Teams, Outlook, and Microsoft 365.
 
-* Contains comparative marketing content in the app description or other metadata referring to competing offers.
+* Contains comparative marketing content or competing offers in the app description or other metadata.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-comparsion-app-description.png" alt-text="Screenshot of failed image of comparative app description":::
 
-* Contains superlative claims about the app such as *#1*, *amazing*, or *the best*.
+* Contains superlative claims about the app such as #1, amazing, or the best.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
@@ -95,7 +95,7 @@ A great description makes your app stand out in the Teams Store and encourage cu
 
 Screenshots provide a visually compelling way to portray your app's purpose and capabilities to potential customers. Avoid the following mistakes in your app before you submit for review:
 
-* Contains fewer than three screenshots depicting the app's functionality in Teams.
+* Contains fewer than three screenshots depicting the app's functionalities.
 
 * No screenshots of the app's functionality in the Teams web, desktop, and mobile clients, if supported.
 
@@ -125,7 +125,7 @@ If the following fields in the Partner Center and app manifest don't match, your
 
 ## Valid domains guidelines violation
 
-Your app submission must adhere to the [external domains](/legal/marketplace/certification-policies) guidelines under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the domains listed under the `validDomains` and `messageHandlers` arrays in the app manifest are under your organization's direct control and doesn't include test or non-production domains.
+Your app submission must adhere to the [external domains](/legal/marketplace/certification-policies) guidelines under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the domains listed under the `validDomains` and `messageHandlers` arrays in the app manifest are under your organization's direct control and don't include test or non-production domains.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
@@ -207,7 +207,7 @@ Your app's experience must be consistent across the web, desktop, and mobile cli
 
 ## Apps using AI-generated content with no safeguards
 
-If your app uses AI-generated content, ensure that it meets the requirements for [Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Apps using facial recognition capabilities](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) as per Microsoft commercial marketplace policy. Avoid the following mistakes in your app to ensure it passes the submission process:
+If your app uses AI-generated content, ensure that it meets the requirements for [Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Apps using facial recognition capabilities](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) as per Microsoft commercial marketplace certification policies. Avoid the following mistakes in your app to ensure it passes the submission process:
 
 * No in-context indication that the app's content is AI-generated.
 
