@@ -796,6 +796,8 @@
     items:
     - name: Overview
       href: graph-api/rsc/resource-specific-consent.md
+    - name: Preapproval of RSC permissions
+      href: graph-api/rsc/preapproval-instruction-docs.md
     - name: Grant RSC permission to your app
       href: graph-api/rsc/grant-resource-specific-consent.md
     displayName: Permissions, delegated, user, team, chat, application
