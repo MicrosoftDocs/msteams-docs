@@ -1,5 +1,5 @@
 ---
-title: Build notification for your app
+title: Plan notification for your app
 author: v-sdhakshina
 description: Learn how to design effective app notifications and choose the right framework for your app.
 ms.author: v-sdhakshina
@@ -7,7 +7,7 @@ ms.topic: reference
 ms.date: 02/23/2024
 ---
 
-# Build notification for your app
+# Plan notification for your app
 
 Notifications are one of the most effective ways to engage and retain users within Microsoft Teams. The platform apps can either send notifications to the activity feed using the Graph API or send Adaptive Cards through bots. Let's learn the effective notification types and select the most suitable notification framework for your app.
 
@@ -98,4 +98,4 @@ If you want a proactive notification for your app, go to:
 If you want an interactive notification for your app, go to:
 
 > [!div class="nextstepaction"]
-> [Interactive notification bot in Teams](../../bots/how-to/conversations/interactive-notification-bot-in-teams.md)
+> [Interactive notification bot in Teams](../../bots/how-to/conversations/notification-bot-in-teams.md)
