@@ -31,15 +31,15 @@ The key technical steps for building a virtual appointments application:
 2. Embed Azure Communication Services Calling and Chat into your website or native app.
 3. Program the communication management service to share the Teams meeting meta-data with the client application.
 
-[Azure Communication Services client libraries](../../azure/communication-services/concepts/sdk-options.md) are available for various platforms and languages, including Web browsers (JavaScript), iOS (Swift), Android (Java), Windows (.NET). The client libraries support both mobile and desktop web browsers. An open-source [UI library](../../../../azure/communication-services/concepts/ui-library/ui-library-overview.md) can accelerate development for Web, iOS, and Android apps. Azure Communication Services is identity-agnostic, and you control how end users are identified and authenticated.
+[Azure Communication Services client libraries](/azure/communication-services/concepts/sdk-options) are available for various platforms and languages, including Web browsers (JavaScript), iOS (Swift), Android (Java), Windows (.NET). The client libraries support both mobile and desktop web browsers. An open-source [UI library](/azure/communication-services/concepts/ui-library/ui-library-overview) can accelerate development for Web, iOS, and Android apps. Azure Communication Services is identity-agnostic, and you control how end users are identified and authenticated.
 
 For more information and quickstarts, check out:
 
-- [Concept: Virtual visit apps with Azure Communication Services](../../../azure/communication-services/tutorials/virtual-visits.md)
-- [Concept: Azure & Teams interoperability](../../../azure/communication-services/concepts/interop/guest/overview.md)
-- [Azure Architecture Guide for joining a Teams meeting](../../../azure/architecture/guide/mobile/azure-communication-services-architecture#microsoft-365-and-teams)
+- [Concept: Virtual visit apps with Azure Communication Services](/azure/communication-services/tutorials/virtual-visits)
+- [Concept: Azure & Teams interoperability](/azure/communication-services/concepts/interop/guest/overview)
+- [Azure Architecture Guide for joining a Teams meeting](/azure/architecture/guide/mobile/azure-communication-services-architecture#microsoft-365-and-teams)
 - [Azure Sample Builder for joining a Teams meeting](https://aka.ms/acs-sample-builder)
-- [Quickstart: Join a Teams meeting as an external user](../../../azure/communication-services/quickstarts/voice-video-calling/get-started-teams-interop?pivots=platform-android)
+- [Quickstart: Join a Teams meeting as an external user](/azure/communication-services/quickstarts/voice-video-calling/get-started-teams-interop?pivots=platform-android)
 
 ## Contact center
 
@@ -56,10 +56,10 @@ The key technical steps for building a virtual appointments application:
 3. Embed Azure Communication Services Calling and Chat into your website or native app.
 4. Program the communication management service to share the Teams auto-attendant or call queue meta-data with the client application.
 
-The Azure Communication Services [UI library](../../../azure/communication-services/concepts/ui-library/ui-library-overview) includes [a Call composite](https://azure.github.io/communication-ui-library/?path=/docs/composites-call-basicexample--basic-example) that allows for fast, straight-forward embedding of these unscheduled calling experiences in mobile and desktop websites.
+The Azure Communication Services [UI library](/azure/communication-services/concepts/ui-library/ui-library-overview) includes [a Call composite](https://azure.github.io/communication-ui-library/?path=/docs/composites-call-basicexample--basic-example) that allows for fast, straight-forward embedding of these unscheduled calling experiences in mobile and desktop websites.
 
 For more information and quickstarts, check out:
 
-- [Concept: Contact Center apps with Azure Communication Services](../../../azure/communication-services/tutorials/contact-center)
-- [Quickstart: Join your calling app to a Teams call queue](../../../azure/communication-services/quickstarts/voice-video-calling/get-started-teams-call-queue)
-- [Quickstart: Teams auto attendant on Azure Communication Services](../../../azure/communication-services/quickstarts/voice-video-calling/get-started-teams-auto-attendant)
+- [Concept: Contact Center apps with Azure Communication Services](/azure/communication-services/tutorials/contact-center)
+- [Quickstart: Join your calling app to a Teams call queue](/azure/communication-services/quickstarts/voice-video-calling/get-started-teams-call-queue)
+- [Quickstart: Teams auto attendant on Azure Communication Services](/azure/communication-services/quickstarts/voice-video-calling/get-started-teams-auto-attendant)
