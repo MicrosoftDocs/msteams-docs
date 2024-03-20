@@ -6,7 +6,7 @@ ms.date: 03/01/2024
 ms.topic: reference
 ---
 
-# Embed Teams calls & meetings in an external business-to-consumer (B2C) app
+# Embed Teams calls & meetings in an external app
 
 Microsoft Teams delivers business-to-consumer (B2C) communication out-of-the-box. For example, mortgage officers at a bank can use Teams meetings to host virtual appointments with their customers. Customers can join those meetings in three ways:
 
@@ -14,7 +14,7 @@ Microsoft Teams delivers business-to-consumer (B2C) communication out-of-the-box
 - Dialing into the meeting's telephone number (out-of-the-box)
 - Custom applications that interoperate with Teams calling and meetings
 
-Embedding Teams interoperability in your own customer-facing website or native app enables tailored customer experiences. You can build websites that work on both mobile and desktop browsers. Or native iOS, Android, and Windows apps. All while preserving the benefits of using Teams for employee experiences: employee familiarity, Teams co-pilot, extensibility through Teams apps and bots, and Microsoft 365 security and compliance.
+**Embedding Teams interoperability in your own customer-facing website or native app enables tailored customer experiences.** You can build websites that work on both mobile and desktop browsers. Or native iOS, Android, and Windows apps. All while preserving the benefits of using Teams for employee experiences: employee familiarity, Teams co-pilot, extensibility through Teams apps and bots, and Microsoft 365 security and compliance.
 
 Custom websites and native apps can interoperate with two kinds of Teams B2C experience: virtual appointments and contact center.
 
