@@ -1019,6 +1019,14 @@
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/use-CICD-template-v4.md",
         "redirect_url": "/microsoftteams/platform/toolkit/use-CICD-template"
-      }      
+      },
+      {
+        "source_path": "msteams-platform/overview-story.md",
+        "redirect_url": "/microsoftteams/platform/overview"
+      },
+      {
+        "source_path": "msteams-platform/overview-solution.md",
+        "redirect_url": "/microsoftteams/platform/overview-explore"
+      }
     ]
 }

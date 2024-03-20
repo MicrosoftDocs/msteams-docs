@@ -12,13 +12,8 @@
   - name: Teams app that fits
     href: overview.md
     displayName: Why build apps with Microsoft Teams platform
-  - name: From ideas to Teams app
-    href: overview-story.md
-    displayName: Teams app user experience
   - name: Explore Teams platform features
     href: overview-explore.md
-  - name: The Teams solution
-    href: overview-solution.md
 - name: Get started
   expanded: false
   items:
