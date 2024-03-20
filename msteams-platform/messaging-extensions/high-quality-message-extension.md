@@ -34,6 +34,7 @@ The requirements for building message extension plugins for Copilot for Microsof
 >
 > * [Define app, command, and parameter descriptions](#define-descriptions)
 > * [Enhance message extension to retrieve information through compound utterances](#compound-utterances)
+> * [Adaptive Cards](#adaptive-cards)
 > * [Create rich Adaptive Card responses](#adaptive-card-response)
 
 ## Define descriptions
@@ -485,6 +486,24 @@ For M365 Chat, a search-based message extension must support more than three uni
 :::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
+
+## Adaptive Cards
+
+Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width.
+
+* **ColumnSets**
+
+  * Avoid defining ColumnSets with more than three columns.
+  * Don’t use explicit pixel width on more than one column in the set.
+  * When using an explicit width, don’t specify a value that would make the column use more than 1/4 of the narrowest possible card width (for example, the width of a card in the meeting chat pane or in Copilot).
+  * In general, 48 pixels is about the maximum explicit width you’d want to use, although there may be exceptions depending on the scenario.
+
+* **Sizing images**
+  * When using an image inside a ColumnSet with more than one Column, prefer specifying the size of the column that contains the image rather than the image itself (set the image’s size to “auto” or “stretch”).
+  * If your image isn’t in a ColumnSet, it’s generally advisable to set its size to “auto” or “stretch”.
+  * If using an explicit width in pixels, make sure it doesn’t exceed 3/4 of the narrowest card width.
+  * When using explicit sizing in pixels, either set the width or the height, but not both. Setting only one will ensure your image has the proper aspect ratio.
+  * In general, only set the width of the image, not the height, although there may be exceptions depending on the scenario.
 
 ## Adaptive Card response
 
