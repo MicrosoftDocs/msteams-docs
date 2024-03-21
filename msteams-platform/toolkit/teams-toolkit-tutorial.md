@@ -5,9 +5,7 @@ ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 05/16/2023
 ---
-# Teams app tutorials and related code samples
-
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
+# Microsoft Teams app tutorials and related code samples
 
 You can build your own Teams app with different capabilities using the step-by-step guide or tutorial and code samples.
 
