@@ -1027,6 +1027,22 @@
       {
         "source_path": "msteams-platform/overview-solution.md",
         "redirect_url": "/microsoftteams/platform/overview-explore"
-      }
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-basic-tab-app.md",
+        "redirect_url": "/microsoftteams/get-started/get-started-overview"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-message-extension.md",
+        "redirect_url": "/microsoftteams/get-started/get-started-overview"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-notification-bot.md",
+        "redirect_url": "/microsoftteams/get-started/get-started-overview"
+      },
+      {
+        "source_path": "msteams-platform/get-started/teams-toolkit-tutorial.md",
+        "redirect_url": "/microsoftteams/get-started/get-started-overview"
+      },
     ]
 }
