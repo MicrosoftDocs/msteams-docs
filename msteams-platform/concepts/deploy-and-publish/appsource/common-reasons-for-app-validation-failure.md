@@ -53,13 +53,13 @@ The following are the most common reasons for your app to get rejected:
 
 A great description makes your app stand out in the Teams Store and encourage customers to download it. Avoid the following mistakes in your app description:
 
-* Hyperlinks for call-to-action buttons such as **Sign Up**, **Get Started**, **Help**, or **Contact Us** in the app manifest (previously called Teams app manifest) and AppSource full description are not present.
+* Hyperlinks for call-to-action buttons such as **Sign Up**, **Get Started**, **Help**, or **Contact Us** in the app manifest (previously called Teams app manifest) and AppSource full description aren't present.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-sign-up-app-description.png" alt-text="Screenshot of failed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
-* Call out to the limitations or dependencies on external accounts or services to complete sign-in, sign-out, and sign-up experiences in the app manifest and long description is not present.
+* Call out to the limitations or dependencies on external accounts or services to complete sign-in, sign-out, and sign-up experiences in the app manifest and long description isn't present.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-passed-limitation-called-out.png" alt-text="Screenshot of passed image to show the called out limitations.":::
 
@@ -73,7 +73,7 @@ A great description makes your app stand out in the Teams Store and encourage cu
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-first-reference-teams.png" alt-text="Screenshot of image to show the failed reference instance of Microsoft Teams.":::
 
-* Highlight of the app’s value proposition and key features in the short and full descriptions in the app manifest is not present.
+* Highlight of the app’s value proposition and key features in the short and full descriptions in the app manifest isn't present.
 
 * Contains typographical errors, grammatical errors, unnecessary capitalization, code, or duplicate content.
 
@@ -81,7 +81,7 @@ A great description makes your app stand out in the Teams Store and encourage cu
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-grammatical-error.png" alt-text="Screenshot of failed image for long description, grammatical errors and capitalization":::
 
-* Reference to products that the app supports like Microsoft Teams, Outlook, and Microsoft 365 is not present.
+* Reference to products that the app supports like Microsoft Teams, Outlook, and Microsoft 365 isn't present.
 
 * Contains comparative marketing content or competing offers in the app description or other metadata.
 
@@ -97,11 +97,11 @@ Screenshots provide a visually compelling way to portray your app's purpose and 
 
 * Contains fewer than three screenshots depicting the app's functionalities.
 
-* Screenshots of the app's functionality in the Teams web, desktop, and mobile clients, if supported, are not present.
+* Screenshots of the app's functionality in the Teams web, desktop, and mobile clients, if supported, aren't present.
 
-* Captions to help users clearly understand the app's features are not present.
+* Captions to help users clearly understand the app's features aren't present.
 
-* Screenshots to showcase the app in the context of a Teams tab, if the app supports tabs, are not present.
+* Screenshots to showcase the app in the context of a Teams tab, if the app supports tabs, aren't present.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
@@ -139,7 +139,7 @@ Your app submission must adhere to the [external domains](/legal/marketplace/cer
 
 * Test accounts provided don't support custom app upload.
 
-* Multiple test accounts are not included when the app supports collaborative scopes like teams, group chats, or meetings.
+* Multiple test accounts aren't included when the app supports collaborative scopes like teams, group chats, or meetings.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
@@ -195,7 +195,7 @@ Test your app to verify your app’s correctness, functionality, and usage. Ensu
 
 Your app's experience must be consistent across the web, desktop, and mobile clients. Avoid the following mistakes while designing the user experience for your app's mobile version before you submit for review:
 
-* Consumable and unbroken experience on the app's mobile version is not present.
+* Consumable and unbroken experience on the app's mobile version isn't present.
 
 * Graceful failure if the app isn't supporting a particular workflow is missing. Hide such workflows by identifying the platform and the relevant issue.
 
@@ -209,11 +209,11 @@ Your app's experience must be consistent across the web, desktop, and mobile cli
 
 If your app uses AI-generated content, ensure that it meets the requirements for [Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Apps using facial recognition capabilities](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) as per Microsoft commercial marketplace certification policies. Avoid the following mistakes in your app to ensure it passes the submission process:
 
-* In-context indication that the app's content is AI-generated is not present.
+* In-context indication that the app's content is AI-generated isn't present.
 
 * Users are unable to report objectionable content generated by the AI in the app.
 
-* Moderation of the AI-generated content to provide a safe workplace environment for users is not present.
+* Moderation of the AI-generated content to provide a safe workplace environment for users isn't present.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
