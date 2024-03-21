@@ -63,7 +63,7 @@ See the following video to learn how to embed Share to Teams button:
     </div>
     ```
 
-  Users are able to share the link without the preview.
+   Users are able to share the link without the preview.
 
 1. To display a message of your choice in compose box, you can define your text in `data-msg-text` attribute.
 
@@ -80,6 +80,7 @@ See the following video to learn how to embed Share to Teams button:
 
 1. Open your webpage in the desktop version of Microsoft Edge or Google Chrome.
 1. Select the Share to Teams button.
+
    The following image displays the pop-up window for Share to Teams preview experience:
 
    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
