@@ -10,20 +10,10 @@ ms.date: 07/22/2022
 
 The Share to Teams button allows users to seamlessly share content from web apps. Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select Share to Teams button, it launches the Share to Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context.
 
-The following image displays the pop-up window for Share to Teams preview experience:
-
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
-
 > [!NOTE]
 >
 > * Only the desktop versions of Microsoft&nbsp;Edge and Google Chrome are supported.
 > * Use of Freemium or guest accounts is not supported.
-
-You can also add link unfurling for the links shared through Share to Teams button hosted in web app, personal app, or tab. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
-
-The following image displays the link unfurling experience through Share to Teams button:
-
-:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Share-to-Teams link unfurling":::
 
 This article guides you on how to create and embed a Share to Teams button for your website, craft your website preview, and extend Share to Teams for Education.
 
@@ -87,6 +77,21 @@ See the following video to learn how to embed Share to Teams button:
      ```
 
 1. If your page dynamically renders content, you can use the `shareToMicrosoftTeams.renderButtons()` method to force **Share** to render at the appropriate place in the pipeline.
+
+1. Open your webpage in the desktop version of Microsoft Edge or Google Chrome.
+1. Select the Share to Teams button.
+   The following image displays the pop-up window for Share to Teams preview experience:
+
+   :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
+
+   You can also add link unfurling for the links shared through Share to Teams button hosted in web app, personal app, or tab. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
+
+   The following image displays the link unfurling experience through Share to Teams button:
+
+   :::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Share-to-Teams link unfurling":::
+
+1. Select **Share**.
+   The link is shared to the user in Teams.
 
 ## Craft your website preview
 
