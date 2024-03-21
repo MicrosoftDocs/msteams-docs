@@ -7,15 +7,16 @@ ms.author: v-ypalikila
 ms.localizationpriority: high
 ms.date: 12/15/2022
 ---
+
 # Common reasons for app validation failure
 
-Most apps don't pass Microsoft Teams Store submission process due to issues during app development. The most common issues or reasons are addressed in this article to help you prepare your app better before [submitting for review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). Avoid the common failures scenarios and follow the [Microsoft Teams Store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies) to increase the likelihood of your app to pass the Teams Store submission process.
+Most apps don't pass Microsoft Teams Store submission process due to issues during app development. The most common issues or reasons are addressed in this article to help you prepare your app better before [submitting for review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). To increase the likelihood of your app to pass the Teams Store submission process, avoid the common failures scenarios and follow the [Microsoft Teams Store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies).
 
 The following are the most common reasons for your app to get rejected:
 
 :::row:::
    :::column:::
-     :::image type="icon" source="../../../assets/icons/app-description-icon.png" link="#error-in-the-app-description":::
+     :::image type="icon" source="../../../assets/icons/app-description-icon.png" link="#inadequate-app-description":::
    :::column-end:::
    :::column span="":::
      :::image type="icon" source="../../../assets/icons/screenshot-icon.png" link="#improper-screenshots":::
@@ -113,7 +114,7 @@ For more information, see [Teams Store validation guidelines for app package and
 
 ## Non-functional or partially functional bots
 
-Follow the guidelines laid down by [design your Teams bot](../../../bots/design/bots.md) while developing your bot app and enable the bot to inform new users of its value adds and prerequisites to use the app, if applicable.
+Follow the guidelines laid down by [design your Teams bot](../../../bots/design/bots.md) while developing your bot app. Enable the bot to inform new users of your app's value adds and prerequisites to use the app.
 
 | # | Avoid the following |
 | --- | --- |
@@ -155,7 +156,8 @@ For more information, see [Teams Store validation guidelines for mobile experien
 
 ## Apps using AI-generated content with no safeguards
 
-If your app uses AI-generated content, ensure that it meets the requirements for [Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Apps using facial recognition capabilities](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) as per Microsoft commercial marketplace certification policies. Avoid the following mistakes in your app to ensure it passes the submission process:
+If your app uses AI-generated content, ensure that it meets the requirements for [Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Apps using facial recognition capabilities](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) as per Microsoft commercial marketplace certification policies.
+
 | # | Avoid the following |
 | --- | --- |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| In-context indication that the app's content is AI-generated isn't present. |
