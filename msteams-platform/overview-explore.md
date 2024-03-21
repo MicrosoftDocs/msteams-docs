@@ -78,7 +78,7 @@ Let's go through Teams Developer Documentation based on your requirements for bu
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get started](get-started/get-started-overview.md)
+> [Build your first Teams app](get-started/get-started-overview.md)
 
 ## See also
 
