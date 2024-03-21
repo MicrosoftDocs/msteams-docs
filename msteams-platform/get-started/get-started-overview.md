@@ -1,12 +1,12 @@
 ---
-title: Get started - Overview
+title: Build your first Teams app
 description: In this module, learn how to build your first Microsoft Teams app based on language and developement environment, understand app capabilities, SDKs.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference
 ---
 
-# Get started
+# Build your first Teams app
 
 Get started with building apps for Microsoft Teams and beyond!
 
@@ -19,7 +19,7 @@ Here's an idea of what you'll learn:
 * Learn about tutorials and code samples available for building your Teams app.
 * Learn about various tools and SDKs available for building your Teams app.
 
-## Build your first Teams app
+## Choose your path
 
 In this section, learn how to build a Teams app with different capabilities, such as tab, scenario-based bot app, and message extension.
 
@@ -37,26 +37,6 @@ In this section, learn how to build a Teams app with different capabilities, suc
    * **Step-by-step guide**: Allows you to create a Teams app from the ground up including setting up your development environment.
 
    :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
-
----
-title: Build your first app
-description: Build your first Teams message extension, tab, or bot app with GitHub Codespaces or following the step-by-step guides.
-ms.localizationpriority: high
-ms.date: 03/13/2024
-ms.topic: reference
----
-
-# Build your first Teams app
-
-Get started with building apps for Microsoft Teams and beyond!
-
-1. Choose your path to build your first message extension, tab, or bot app:
-
-    1. [GitHub Codespaces](#github-codespaces): Run, test, and debug your app in a development environment without the need for any extra setup.
-
-    2. [Step-by-step guide](#step-by-step-guide): Create a Teams app from the ground up including setting up your development environment.
-
-   :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Diagram shows your choices to build a Teams app." lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
 
 ## GitHub Codespaces
 
