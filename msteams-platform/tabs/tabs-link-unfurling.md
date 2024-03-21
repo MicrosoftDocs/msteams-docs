@@ -10,7 +10,7 @@ ms.date: 06/05/2023
 
 # Teams tab Stageview
 
-Stageview in Microsoft Teams is a user interface (UI) component that provides various methods to open your app content in an immersive canvas experience. Stageview allows users to multitask inside Teams, collaborate with others in a Teams multi-window, or focus on tasks in a modal experience.
+Stageview in Microsoft Teams is a user interface (UI) component that provides various methods to open your app content in an immersive canvas experience. Stageview allows users to multitask inside Teams, collaborate with others in a Teams multiwindow, or focus on tasks in a modal experience.
 
 > [!NOTE]
 > The article is based on Teams JavaScript client library (TeamsJS) version 2.0.x. If you're using an earlier version, see [TeamsJS](how-to/using-teams-client-library.md) for guidance between the latest and earlier versions.
@@ -31,13 +31,13 @@ Collaborative Stageview enables multitasking scenarios where a user can open and
 
 ### Stageview Multi-window
 
-Stageview Multi-window is useful for scenarios where a user can multitask in Teams without the need for collaboration. This view opens the app content in a new Teams window without a side panel conversation, that allows a user to focus on the tasks. We recommend Stageview Multi-window in scenarios where the user opens content from a nonconversational surface, for example, a personal app.
+Stageview Multi-window is useful for scenarios where a user can multitask in Teams without the need for collaboration. This view opens the app content in a new Teams window without a side panel conversation, that allows a user to focus on the tasks. We recommend Stageview Multi-window in scenarios where the user opens content from a nonconversational surface such as a personal app.
 
 :::image type="content" source="~/assets/images/tab-images/multi-view.png" alt-text="The illustration shows the Stageview Multi-window in Teams.":::
 
 ### Stageview modal
 
-Stageview modal is a full-screen UI component that's used to render your app content inside the main Teams window. This view provides users with a focused experience to engage with the app content. Stageview modal is useful for displaying rich content that doesn't require a user to multitask. It’s the default view when Collaborative Stageview and Stageview Multi-window aren't supported.
+Stageview modal is a full-screen UI component used to render your app content inside the main Teams window. This view provides users with a focused experience to engage with the app content. Stageview modal is useful for displaying rich content that doesn't require a user to multitask. It’s the default view when Collaborative Stageview and Stageview Multi-window aren't supported.
 
 > [!NOTE]
 > Teams web client supports only Stageview modal.
@@ -60,7 +60,7 @@ The following table provides the default and defined response behavior for each 
 | StageView API | Opens in Collaborative Stageview | Opens in the respective Stageview based on the `openMode` defined. |
 | Deep link| Opens in Collaborative Stageview | Opens in the respective Stageview based on the `openMode` defined. |
 
-`openMode` is a property in [StageViewParams interface](/javascript/api/@microsoft/teams-js/stageview.stageviewparams?view=msteams-client-js-latest). The `openMode` property can be defined in a [stageView API](#invoke-from-stageview-api) or a [deep link](#invoke-from-deep-link) to determine the type of Stage View response. The three `openMode` properties are:
+`openMode` is a property in [StageViewParams interface](/javascript/api/@microsoft/teams-js/stageview.stageviewparams). The `openMode` property can be defined in a [stageView API](#invoke-from-stageview-api) or a [deep link](#invoke-from-deep-link) to determine the type of Stageview response. The three `openMode` properties are:
 
 * `popoutWithChat`
 * `popout`
@@ -70,10 +70,10 @@ The following table provides the Stageview responses of the `openMode` property:
 
 | Input | Response |
 | ---| ---|
-| openMode not defined | Opens by default in Collaborative Stageview with an associated side panel conversation. |
-| openMode defined as `popoutWithChat` | Opens in Collaborative Stageview with an associated side panel conversation. |
-| openMode defined as `popout`| Opens in Stageview Multi-window without a side panel conversation. |
-| openMode defined as `modal` | Opens in Stageview modal. |
+| `openMode` not defined | Opens by default in Collaborative Stageview with an associated side panel conversation. |
+| `openMode` defined as `popoutWithChat` | Opens in Collaborative Stageview with an associated side panel conversation. |
+| `openMode` defined as `popout`| Opens in Stageview Multi-window without a side panel conversation. |
+| `openMode` defined as `modal` | Opens in Stageview modal. |
 
 > [!NOTE]
 >
@@ -125,7 +125,7 @@ The following code is an example to create a Collaborative Stageview button in a
 
 ### Invoke from stageView API
 
-The stageView API from the TeamsJS SDK allows you to open the Teams window in a Stageview experience based on the `openMode` defined. If the `openMode` property isn't defined, the default response is a Collaborative Stageview with an associated side panel conversation. The side panel conversation is the same thread from where the Collaborative Stageview was invoked, that is, chat or group chat.
+The stageView API from the TeamsJS SDK allows you to open the Teams window in a Stageview experience based on the `openMode` defined. If the `openMode` property isn't defined, the default response is a Collaborative Stageview with an associated side panel conversation. The side panel conversation is the same thread from where the Collaborative Stageview was invoked, that is, a chat or a group chat.
 
 > [!NOTE]
 > The stageview API supports an optional `threadId` parameter that allows you to bring a specific conversation into the Collaborative Stageview side panel. Mapping `contentUrl` to `threadId` allows you to persist a conversation alongside content.
@@ -134,7 +134,7 @@ The following code snippets provide the samples of `openMode` property:
 
 # [No openMode](#tab/noopenmode)
 
-[StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) where `openMode` is not defined. The default response is `popoutWithChat` (Collaborative Stageview).
+[StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) where `openMode` isn't defined. The default response is `popoutWithChat` (Collaborative Stageview).
 
   ```json
     {
@@ -173,7 +173,7 @@ The following code snippets provide the samples of `openMode` property:
     }
   ```
 
-# [Modal](#tab/modal)
+# [modal](#tab/modal)
 
 [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) for Stageview modal, where `openMode` is defined as `modal`.
 
@@ -191,7 +191,7 @@ The following code snippets provide the samples of `openMode` property:
 
 For more information, see [stageView module](/javascript/api/@microsoft/teams-js/stageview).
 
-#### StageView API parameters
+#### stageView API parameters
 
 | Property name | Type | Character limit | Required | Description |
 | --- | --- | --- | --- | --- |
@@ -222,7 +222,7 @@ The following link is the deep link syntax for Collaborative Stageview:
 
 `https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso","openMode":"popOutWithChat"}`
 
-##### Examples
+##### Example
 
 The following link is the encoded deep link URL to invoke Stageview:
 
@@ -245,7 +245,7 @@ Encoded URL:
 | name | String | 128 | Optional | The display name of the tab in the channel interface. If no value is provided, the app name is shown. |
 | contentUrl | String | 2048 | Yes | The https:// URL that points to the entity UI to be displayed in Teams. |
 | websiteUrl | String | 2048 | Yes | The https:// URL to point at, if a user selects to view in a browser. |
-| threadId | String | 2048 | Optional | The ID defines the conversation shown in the Collaborative Stageview side panel. It can contain a chat threadId (channel threadId isn't supported). If no is value passed, threadId is inherited from the context where Collaborative Stageview is opened. |
+| threadId | String | 2048 | Optional | The ID defines the conversation shown in the Collaborative Stageview side panel. It can contain a chat `threadId` (channel `threadId` isn't supported). If no is value passed, `threadId` is inherited from the context where Collaborative Stageview is opened. |
 | openMode | String | 2048 | Optional | The property defines the open behavior for stage content in the Desktop client. |
 
 Whether you want to facilitate multitasking, enhance collaboration, or provide a focused user experience, Stageview has a mode to suit your requirements. Remember to consider the context in which your app is being used and ensure that your app works in that context.
@@ -266,7 +266,7 @@ Collaborative Stageview allows the users to open content along with a side panel
 
 <details>
 
-<summary>What's the difference between Stageview modal and Dialogs?</summary>
+<summary>What's the difference between Stageview modal and dialogs?</summary>
 
 Stageview modal is useful to display rich content to the users, such as a page, a dashboard, or a file. <br> Dialogs are useful to display messages that need users' attention or collect information required to move to the next step.
 
