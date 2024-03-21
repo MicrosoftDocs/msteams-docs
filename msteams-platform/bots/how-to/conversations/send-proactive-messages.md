@@ -104,13 +104,13 @@ See the following video to learn how to send proactive message from bots:
 
 ### Understand who blocked, muted, or uninstalled a bot
 
-As a developer, you can create a report to understand which users in your organization have blocked, muted, or uninstalled a bot. This information may help your organization's admins to broadcast org-wide messages or drive app usage.
+As a developer, you can create a report to understand which users in your organization have blocked, muted, or uninstalled a bot. This information might help your organization's admins to broadcast org-wide messages or drive app usage.
 
 Using Teams, you can send a proactive message to the bot to verify if a user has blocked or uninstalled a bot. If the bot is blocked or uninstalled, Teams returns a `403` response code with a `subCode: MessageWritesBlocked`. This response indicates that the message sent by the bot isn't delivered to the user.
 
 The response code is sent on a per-user basis and includes the identity of the user. You can compile the response codes for each user alongside their identity to create a report of all users who have blocked the bot.
 
-An example of a 403 response code is below.
+The following sample is an example of a 403 response code:
 
 ```http
 
@@ -139,13 +139,13 @@ Cache-Control: no-store, must-revalidate, no-cache
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it is the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 ### Welcome messages
 
 When proactive messaging is used to send a welcome message to a user, there's no context for why the user receives the message. Also, this is the first interaction of the user with your app. It's an opportunity to create a good first impression. A good user experience ensures better adoption of the app. Poor welcome messages can lead the users to block your app. Write a clear welcome message and iterate on the welcome message if it isn't having the desired effect.
 
-A good welcome message can include the following:
+A good welcome message can include the following information:
 
 * Reason for the message - It must be clear to the user why they're receiving the message. If your bot was installed in a channel and you sent a welcome message to all users, then let them know what channel it was installed in and who installed it.
 
