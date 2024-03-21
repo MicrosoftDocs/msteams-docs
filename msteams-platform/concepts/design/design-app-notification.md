@@ -88,14 +88,23 @@ Here's some example scenario's and recommended notification types:
 |Quick poll on a preferred place for team lunch.|Interactive|Notification bot|
 |Interactive reminder to take a break and choose a music to play.|Interactive|Notification bot|
 
-## Next step
+:::row:::
+   :::column span="":::
 
 If you want a proactive notification for your app, go to:
 
 > [!div class="nextstepaction"]
 > [Send activity feed notifications to users in Teams](/graph/teams-send-activityfeednotifications)
 
+   :::column-end:::
+
+   :::column span="":::
+
 If you want an interactive notification for your app, go to:
 
 > [!div class="nextstepaction"]
-> [Interactive notification bot in Teams](../../bots/how-to/conversations/notification-bot-in-teams.md)
+> [Interactive notification bot in Teams](../../bots/how-to/conversations/interactive-notification-bot-in-teams.md)
+
+   :::column-end:::
+
+:::row-end:::
