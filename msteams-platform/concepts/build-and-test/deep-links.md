@@ -50,23 +50,12 @@ Teams deep links support two types of protocol handlers:
     :::image type="content" source="../../assets/images/deep-link-open.png" alt-text="Screenshot shows a deep link opened in a browser.":::
 
     > [!NOTE]
-    > A deep link must start with `https://teams.microsoft.com/l/` to ensure that it's handled correctly by Teams. Classic Teams deep links copied from the browser's address bar don't work in the new Teams clients.
+    > A deep link must start with `https://teams.microsoft.com/l/` to ensure that it's handled correctly by Teams. Classic Teams URLs copied from the browser's address bar don't work in the new Teams clients.
 
 2. **MSTEAMS**: The `msteams://` protocol handler skips the client selection screen in the browser and opens the deep link directly in the Teams desktop client. Users who don't have the Teams desktop client might not be able to access deep links with `msteams://`. Always use `https://` in deep links unless you are certain that your app's users have the desktop client on their device.
 
-> [!CAUTION]
-> Don't append `msteams:` to a `https://` deep link such as `msteams:https://teams.microsoft.com/l/call/0/0` as Teams can't parse this deep link as a valid URL object.
-
-<!--- TBD: Edit this article.
-* Admonitions/alerts seem to be overused. 
-* An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
-* List items in the table are not formatted well in output.
-* Some headings use -ing verbs.
-* Example values and some URLs should be in backticks and not emphasized.
-* Codeblock are missing language.
-* Check for markdownlint errors.
-* Table with just a row isn't really needed. Provide the content without tabulating it.
---->
+    > [!CAUTION]
+    > Don't append `msteams:` to a `https://` deep link such as `msteams:https://teams.microsoft.com/l/call/0/0` as Teams can't parse this deep link as a valid URL object.
 
 ## See also
 
