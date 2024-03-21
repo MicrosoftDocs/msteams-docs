@@ -53,27 +53,27 @@ The following are the most common reasons for your app to get rejected:
 
 A great description makes your app stand out in the Teams Store and encourage customers to download it. Avoid the following mistakes in your app description:
 
-* No hyperlinks for call-to-action buttons such as **Sign Up**, **Get Started**, **Help**, or **Contact Us** in the app manifest (previously called Teams app manifest) and AppSource full description.
+* Hyperlinks for call-to-action buttons such as **Sign Up**, **Get Started**, **Help**, or **Contact Us** in the app manifest (previously called Teams app manifest) and AppSource full description are not present.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-pass-sign-up-app-description.png" alt-text="Screenshot of passed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-sign-up-app-description.png" alt-text="Screenshot of failed scenario of sign-up, contact details in app description must be hyperlinked.":::
 
-* No call out to the limitations or dependencies on external accounts or services to complete sign-in, sign-out, and sign-up experiences in the app manifest and long description.
+* Call out to the limitations or dependencies on external accounts or services to complete sign-in, sign-out, and sign-up experiences in the app manifest and long description is not present.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-passed-limitation-called-out.png" alt-text="Screenshot of passed image to show the called out limitations.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-limitation-called-out.png" alt-text="Screenshot of failed image to show the called out limitations.":::
 
-* Contains abbreviated, shortened, or deprecated forms of standard Microsoft product names. For example, abbreviating **Microsoft** as **MS** or **MSFT** in the offer listing, referencing the first instance of Microsoft Teams in the offer listing as **Teams** instead of **Microsoft Teams**, or using **O365** instead of **Microsoft 365**.
+* Contains abbreviated, shortened, or deprecated forms of standard Microsoft product names. For example, abbreviating **Microsoft** as **MS** or **MSFT**, referencing the first instance of Microsoft Teams as **Teams** instead of **Microsoft Teams**, or using **O365** instead of **Microsoft 365**.
 
-  Microsoft’s brand assets including logos, icons, designs, trade dress, fonts, product names, services, sounds, emojis, and any other brand features and elements, whether registered or unregistered are proprietary assets owned by Microsoft and its group of companies. When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks).
+  Microsoft’s brand assets including logos, icons, designs, trade dress, fonts, product names, services, sounds, emojis, and any other brand features and elements—whether registered or unregistered—are proprietary assets owned by Microsoft and its group of companies. When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks).
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-MS-app-description.png" alt-text="Screenshot of failed image of Microsoft or MS in app description.":::
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-first-reference-teams.png" alt-text="Screenshot of image to show the failed reference instance of Microsoft Teams.":::
 
-* No highlight of the app’s value proposition and key features in the short and full descriptions in the app manifest.
+* Highlight of the app’s value proposition and key features in the short and full descriptions in the app manifest is not present.
 
 * Contains typographical errors, grammatical errors, unnecessary capitalization, code, or duplicate content.
 
@@ -81,13 +81,13 @@ A great description makes your app stand out in the Teams Store and encourage cu
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-fail-grammatical-error.png" alt-text="Screenshot of failed image for long description, grammatical errors and capitalization":::
 
-* No reference to products the app supports like Microsoft Teams, Outlook, and Microsoft 365.
+* Reference to products that the app supports like Microsoft Teams, Outlook, and Microsoft 365 is not present.
 
 * Contains comparative marketing content or competing offers in the app description or other metadata.
 
    :::image type="content" source="../../../assets/images/submission/validation-common-reason-failed-comparsion-app-description.png" alt-text="Screenshot of failed image of comparative app description":::
 
-* Contains superlative claims about the app such as #1, amazing, or the best.
+* Contains superlative claims about the app such as **#1**, **amazing**, or the **best**.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
@@ -97,11 +97,11 @@ Screenshots provide a visually compelling way to portray your app's purpose and 
 
 * Contains fewer than three screenshots depicting the app's functionalities.
 
-* No screenshots of the app's functionality in the Teams web, desktop, and mobile clients, if supported.
+* Screenshots of the app's functionality in the Teams web, desktop, and mobile clients, if supported, are not present.
 
-* No captions to help users clearly understand the app's features.
+* Captions to help users clearly understand the app's features are not present.
 
-* No screenshots to showcase the app in the context of a Teams tab, if the app supports tabs.
+* Screenshots to showcase the app in the context of a Teams tab, if the app supports tabs, are not present.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
@@ -133,13 +133,13 @@ Your app submission must adhere to the [external domains](/legal/marketplace/cer
 
 [Detailed test instructions](prepare/teams-store-validation-guidelines.md#app-package-and-teams-store-listing) and credentials help you with a successful review of your app. Avoid the following issues to ensure your app isn't rejected during review:
 
-* No description of the functionalities of the current version of the app and the necessary configuration steps for testers to follow and test the app.
+* Description of the functionalities of the current version of the app and the necessary configuration steps for testers to follow and test the app is missing.
 
-* Provide test accounts that testers can't access. For example, test accounts that require multifactor authentication to sign in.
+* Test accounts provided are inaccessible to testers. For example, test accounts that require multifactor authentication to sign in.
 
-* Provide test accounts that don't support custom app upload.
+* Test accounts provided don't support custom app upload.
 
-* Not include multiple test accounts if the app supports collaborative scopes like teams, group chats, or meetings.
+* Multiple test accounts are not included when the app supports collaborative scopes like teams, group chats, or meetings.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
@@ -163,7 +163,7 @@ Avoid the following mistakes in your bot app before you submit for review:
 
 Test your app to verify your app’s correctness, functionality, and usage. Ensure that you test your app thoroughly and fix all the bugs. Check all the end-to-end workflows that your app supports and test the app compatibility on the operating systems and browsers as per the [Commercial Marketplace Certification policy](/legal/marketplace/certification-policies). You must avoid the following mistakes in your app before you submit for review:
 
-* Provide a broken experience to users in any of the workflows that the app supports, including:
+* App provides a broken experience to users in any of the workflows that it supports, including:
 
   * Broken links in the app.
 
@@ -185,7 +185,7 @@ Test your app to verify your app’s correctness, functionality, and usage. Ensu
 
 * Have workflows where the user hits a dead end and can't navigate further in the app. Provide the necessary way forward messages to users like **Sign-up** or **Sign-in**.
 
-* Teams app extended to Outlook and Microsoft 365 and doesn't provide value to the user in Outlook or Microsoft 365.
+* Teams app extended to Outlook and Microsoft 365 doesn't provide value to the user in Outlook or Microsoft 365.
 
 * App redirects users away from Teams and doesn't provide necessary disclaimers about navigation outside Teams through links and buttons.
 
@@ -195,9 +195,9 @@ Test your app to verify your app’s correctness, functionality, and usage. Ensu
 
 Your app's experience must be consistent across the web, desktop, and mobile clients. Avoid the following mistakes while designing the user experience for your app's mobile version before you submit for review:
 
-* No consumable and unbroken experience on the app's mobile version.
+* Consumable and unbroken experience on the app's mobile version is not present.
 
-* No graceful failure if the app isn't supporting a particular workflow. Hide such workflows by identifying the platform and the relevant issue.
+* Graceful failure if the app isn't supporting a particular workflow is missing. Hide such workflows by identifying the platform and the relevant issue.
 
 * Data truncation or overlapping within the app.
 
@@ -209,11 +209,11 @@ Your app's experience must be consistent across the web, desktop, and mobile cli
 
 If your app uses AI-generated content, ensure that it meets the requirements for [Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Apps using facial recognition capabilities](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) as per Microsoft commercial marketplace certification policies. Avoid the following mistakes in your app to ensure it passes the submission process:
 
-* No in-context indication that the app's content is AI-generated.
+* In-context indication that the app's content is AI-generated is not present.
 
-* No way for users to report objectionable content.
+* Users are unable to report objectionable content generated by the AI in the app.
 
-* No moderation of the AI-generated content to provide a safe workplace environment for users.
+* Moderation of the AI-generated content to provide a safe workplace environment for users is not present.
 
 [Back to top](#common-reasons-for-app-validation-failure)
 
