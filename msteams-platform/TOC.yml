@@ -6,7 +6,7 @@
 - name: Glossary
   href: get-started/glossary.md
   displayName: App tray, terminologies, definitions, welcome, new word, meaning
-- name: Overview
+- name: Get started
   expanded: false 
   items:
   - name: Teams app that fits
@@ -14,20 +14,9 @@
     displayName: Why build apps with Microsoft Teams platform
   - name: Explore Teams platform features
     href: overview-explore.md
-- name: Get started
-  expanded: false
-  items:
-  - name: Overview
+  - name: Build your first Teams app
     href: get-started/get-started-overview.md
     displayName: First Teams app, Python, .NET, Java, Node.js, get started
-  - name: Build a tab app
-    href: get-started/build-basic-tab-app.md
-  - name: Build a notification bot app
-    href: get-started/build-notification-bot.md
-  - name: Build a message extension app
-    href: get-started/build-message-extension.md
-  - name: Teams app tutorials and code samples
-    href: get-started/teams-toolkit-tutorial.md
   - name: Choose what suits you
     href: get-started/choose-what-suits-you.md
  
