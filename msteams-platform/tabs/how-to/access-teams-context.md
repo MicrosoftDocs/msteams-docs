@@ -57,7 +57,7 @@ For example, in your app manifest if you set your tab *configurationUrl* attribu
 * They're a member of the Microsoft 365 group with ID **00209384-etc**.
 * The user has set their Teams theme to **dark**.
 
-Teams call the following URL when configuring the tab:
+Teams calls the following URL when configuring the tab:
 
 `https://www.contoso.com/config?name=user@example.com&tenant=e2653c-etc&group=00209384-etc&theme=dark`
 
@@ -307,7 +307,7 @@ The following fields are changed when your content page is in a private channel:
 * `sharepointSite.url`: Set to the URL of a distinct, unique SharePoint site for the private channel
 * `sharepointSite.path`: Set to the path of a distinct, unique SharePoint site for the private channel
 * `sharepointSite.domain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
-* `channel.ownerGroupId`: The host team groupId is the value for the private channel
+* `channel.ownerGroupId`: set to the host team groupId of the private channel
 
 If your page makes use of any of these values, the value of `channel.membershipType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
 
