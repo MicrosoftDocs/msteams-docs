@@ -1,6 +1,6 @@
 ---
 title: Text formatting in cards
-description: In this module, learn what is card text formatting in Microsoft Teams and format cards with Markdown.
+description: In this module, learn what is card text formatting in Microsoft Teams, format cards with Markdown, and design responsive Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
@@ -1085,9 +1085,9 @@ You can test formatting in your own cards by modifying this code.
 
 ## Code samples
 
-|S.No.| Description|.NET|Node.js|Manifest
+|S.No.| Description|.NET|Node.js|Manifest|
 |:--|:--|:--------------------------------------------------------|-----|-----|
-|1|This sample app shows different card formatting supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip)
+|1|This sample app shows different card formatting supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip)|
 
 ## See also
 
