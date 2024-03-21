@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 March**
 
+* ***March 27, 2024*** : [Plan for Government clouds in New Teams client](concepts/cloud-overview.md)
 * ***March 07, 2024***: [Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-vs.md)
 * ***March 07, 2024***: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)
 

@@ -35,8 +35,6 @@
     href: get-started/teams-toolkit-tutorial.md
   - name: Choose what suits you
     href: get-started/choose-what-suits-you.md
-  - name: Teams for Government clouds
-    href: get-started/concepts/cloud-overview.md
  
 - name: Plan your app
   items:
@@ -64,6 +62,9 @@
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
+  - name: Plan for Government clouds
+    href: concepts/cloud-overview.md
+    displayName: GCC, GCC High, DOD, government cloud, government tenant, Teams in government
 - name: Design your app
   items:
   - name: Overview

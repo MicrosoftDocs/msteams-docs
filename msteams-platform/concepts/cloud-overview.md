@@ -1,5 +1,5 @@
 ---
-title: Teams for Government clouds
+title: Plan for Government clouds
 author: v-preethah
 description: Understand Teams features and capabilities available for Government Community Cloud (GCC), GCC High, and DOD tenants. Get an overview on how to deploy Teams in Government clouds.
 ms.topic: conceptual
@@ -7,7 +7,7 @@ ms.localizationpriority: high
 ms.date: 09/29/2023
 ---
 
-# Teams for Government clouds
+# Plan for Government clouds
 
 Microsoft Teams plays a key role to facilitate secure and efficient communication within government sectors and agencies. To meet the stringent security and compliance requirements of these entities, Microsoft offers the following specialized government cloud services:
 
