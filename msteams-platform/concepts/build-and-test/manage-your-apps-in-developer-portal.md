@@ -56,7 +56,7 @@ In the **Configure** section, you can see the following components to manage and
   * Meeting extension
   * Activity feed notification
   > [!NOTE]
-  > Connector are available in Government Community Cloud (GCC) but aren't available in  GCC-High and Department of Defense (DOD) tenants.
+  > Connector are available in Government Community Cloud (GCC) but aren't available in  GCC High and Department of Defense (DOD) tenants.
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting permissions**, and **User Permissions** for your app.
   > [!NOTE]
   > The maximum limit for RSC permissions is 16.
