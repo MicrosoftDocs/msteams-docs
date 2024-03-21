@@ -15,11 +15,11 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
 
 GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans).
 
-The document provides a comprehensive overview of Teams' compatibility within government cloud services, detailing the various capabilities for each cloud type. It also outlines how government entities can effectively deploy and use Microsoft Teams within their organizations.
+The document provides a comprehensive overview of Teams' compatibility within government cloud services, detailing the various capabilities for each government tenant. It also outlines how government entities can effectively deploy and use Microsoft Teams within their organizations.
 
 ## Teams for Government clouds
 
- Teams is compatible with all Microsoft 365 Government environment, but the capabilities and features vary for each cloud type. Certain Teams features that are available in a commercial tenant might not be accessible in a government tenant. Due to security and compliance, some capabilities and features are restricted while others take time to roll out in a government tenant.
+ Teams is compatible with all Microsoft 365 Government environment, but the capabilities and features vary for each government tenant. Certain Teams features that are available in a commercial tenant might not be accessible in a government tenant. Due to security and compliance, some capabilities and features are restricted while others take time to roll out in a government tenant.
 
 ### Teams apps and capabilities for Government clouds
 
@@ -28,10 +28,11 @@ Understanding the Teams apps and capabilities supported by each government tenan
 | &nbsp; | GCC | GCC High | DOD |
 |-------------|---------|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; |
-| Apps built by Teams Engineering. | ✔️ | ✔️ | ✔️ |
+| Apps built by Microsoft. | ✔️ | ✔️ | ✔️ |
 | Apps built by internal Teams developers. | ✔️ | ✔️ | ✔️ |
 | Third-party apps built by external developers. | ✔️ | ❌ | ❌ |
 | Custom apps built for your org (LOB apps) distributed and used in specific tenant. | ✔️ | ✔️ | ✔️ |
+| Personal apps | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
 > Third-party apps are turned off by default for GCC and aren't available for GCC High and DOD.
@@ -50,6 +51,12 @@ The following table includes Teams app capabilities and their availability for G
 | Meeting extensions | ✔️ | ✔️ | ✔️ |
 | Connectors and webhooks | ✔️ | ❌ | ❌ |
 | Workflows| ✔️ | ❌ | ❌ |
+
+The following table includes the availability of other Teams app capabilities in GCC, GCC High, and DOD:
+
+| &nbsp; | GCC | GCC High | DOD |
+|-------------|---------|---|---|
+| **Other Capabilities** | &nbsp; | &nbsp; | &nbsp; |
 | Teams Store 2.0 | ✔️ | ✔️ | ✔️ |
 | In-context Teams Store or App flyouts | ✔️ | ✔️ | ✔️ |
 | Manage apps in Teams | ✔️ | ✔️ | ✔️ |

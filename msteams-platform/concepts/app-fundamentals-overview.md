@@ -65,9 +65,9 @@ Understanding the user and their concern are the first indicators of how a Teams
 * Integrate your app with Teams and other apps, such as Microsoft 365, Microsoft Graph, and more.
 * Use Developer Portal to configure, manage, and deploy your app.
 
-### Government Community Cloud
+### Plan for Government clouds
 
-If you're planning to extend Teams app in Government cloud platform, you must first understand the capabilities of each government tenant and plan on the steps for deployment. To extend your Teams app in Government cloud platforms, see [Plan for Government clouds](cloud-overview.md).
+If you're planning to extend Teams app in a Government cloud platform, you must first understand the capabilities of each government tenant and plan for purchase and deployment. To extend your Teams app in Government cloud platforms, see [Plan for Government clouds](cloud-overview.md).
 
 </details>
 
