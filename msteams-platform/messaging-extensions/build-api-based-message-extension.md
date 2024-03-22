@@ -173,7 +173,7 @@ Before you start, ensure you have the following:
 
 ### Implementation Steps
 
-1. **Configure App with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. This is used to configure scopes and authorize trusted client applications for generating access tokens. You can follow the steps outlined in the [Azure AD app creation guide](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
+1. **Configure App with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. This is used to configure scopes and authorize trusted client applications for generating access tokens. You can follow the steps outlined in the [Azure AD app creation guide](/azure/active-directory/develop/quickstart-register-app).
 
 1. **Add Code to Handle Access Tokens**: Add the code to handle access tokens. This token should be sent to your app's server code in the Authorization header. Ensure to validate the access token when it's received. Here's an example of how to handle access tokens:
 
@@ -204,10 +204,12 @@ Before you start, ensure you have the following:
 
 1. **Add SSO Support to the Plugin**: Add the following auth section to the plugin part of the manifest. This indicates that the plugin supports SSO.
    ```json
-   {
-   "authType": "oauth",
-   "oauthConfiguration": { "supportsSingleSignOn": true }
-   }
+   "authorization": { 
+     "authType": "microsoftEntra",
+     "microsoftEntraConfiguration": {
+         "supportsSingleSignOn": true,
+        } 
+    },
    ```
 
 1. **Validate the Token**: Before the token is sent to the plugin, validate that the resource URI and the domain the request is sent to are the same. Also, confirm the user ID in the token is the same as the one used for SMBA auth.
