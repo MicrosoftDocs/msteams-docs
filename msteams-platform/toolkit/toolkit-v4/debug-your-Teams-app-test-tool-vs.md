@@ -213,7 +213,7 @@ You can use **Custom activity** to customize activity trigger `reactionsAdded`, 
 
   * [Typeahead](../../task-modules-and-cards/cards/dynamic-search.md)
   * [User mention](../../task-modules-and-cards/cards/cards-format.md#microsoft-entra-object-id-and-upn-in-user-mention)
-  * [Stageview](../../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+  * [Stageview](../../task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards)
   * [Full width Adaptive Card](../../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 * Test Tool doesn't support the following experiences:

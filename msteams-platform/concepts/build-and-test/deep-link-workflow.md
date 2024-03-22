@@ -199,7 +199,7 @@ Teams app can read the URL for joining a meeting URL through Graph APIs. This de
 
 ## Invoke Stageview through deep link
 
-To invoke the Stageview through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. For more information see, [Stageview](~/tabs/tabs-link-unfurling.md#invoke-stage-view-through-deep-link).
+To invoke the Stageview through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. For more information see, [Stageview](~/tabs/tabs-link-unfurling.md#invoke-stageview-through-deep-link).
 
 ## Code Sample
 
