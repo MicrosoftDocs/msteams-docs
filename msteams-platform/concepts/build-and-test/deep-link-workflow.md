@@ -20,7 +20,7 @@ In this article, you’ll learn to create a deep link:
 * [To share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * [To meeting side panel](#deep-link-to-meeting-side-panel)
 * [To join a meeting](#deep-link-to-join-a-meeting)
-* [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
+* [Invoke Stageview through deep link](#invoke-stage-view-through-deep-link)
 
 ## Deep link to start a new chat
 
@@ -197,9 +197,9 @@ Deep link doesn't open in the meeting side panel in the following scenarios:
 
 Teams app can read the URL for joining a meeting URL through Graph APIs. This deep link brings up the UI for the user to join the meeting. For more information see, [Get `onlineMeeting`](/graph/api/onlinemeeting-get#response-1) and [Get meeting details](~/apps-in-teams-meetings/meeting-apps-apis.md#get-meeting-details-api)
 
-## Invoke Stage View through deep link
+## Invoke Stageview through deep link
 
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. For more information see, [Stage View](~/tabs/tabs-link-unfurling.md#invoke-stage-view-through-deep-link).
+To invoke the Stageview through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. For more information see, [Stageview](~/tabs/tabs-link-unfurling.md#invoke-stage-view-through-deep-link).
 
 ## Code Sample
 
