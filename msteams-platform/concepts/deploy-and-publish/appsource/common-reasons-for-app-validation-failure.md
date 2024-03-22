@@ -95,7 +95,7 @@ For more information, see [Teams Store validation guidelines for app manifest](p
 
 ## Valid domains guidelines violation
 
-Your app submission must adhere to the guidelines for external domains under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the domains listed under the `validDomains` and `messageHandlers` arrays in the app manifest are under your organization's direct control and don't include test or non-production domains.
+Your app submission must adhere to the guidelines for [external domains](/legal/marketplace/certification-policies#114033-external-domains) under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the domains listed under the `validDomains` and `messageHandlers` arrays in the app manifest are under your organization's direct control and don't include test or non-production domains.
 
 For more information, see [Teams Store validation guidelines for external domains](prepare/teams-store-validation-guidelines.md#external-domains).
 
