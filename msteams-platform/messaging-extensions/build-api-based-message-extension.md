@@ -262,6 +262,31 @@ sequenceDiagram
 ```
 This sequence diagram represents the flow of creating an Azure AD app, handling the access token, updating the Teams app manifest, and making additional changes to support SSO in Teams. It also includes the high-level flow of invoking a payload containing the token.
 
+
+# [Oauth2.0](#tab/oauth2)
+
+For OAuth 2.0 authentication, you need to provide the following information in the manifest:
+
+```json
+
+"auth": {
+  "type": "oauth",
+  "client_url": "https://example.com/authorize",
+  "scope": "",
+  "authorization_url": "https://example.com/auth/",
+  "authorization_content_type": "application/json",
+  "verification_tokens": {
+    "openai": "Replace_this_string_with_the_verification_token_generated_in_the_ChatGPT_UI"
+  }
+},
+```
+
+OAuth 2.0 authentication requires a client ID and secret.
+
+#### Limitations
+
+Ensure that you correctly define the type of authentication in the manifest and inform the user about the type of authentication and potential risks. It's also crucial to securely handle sensitive information such as tokens and client secrets.
+
 ---
 
 ## Create an API-based message extension
