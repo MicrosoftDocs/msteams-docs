@@ -488,7 +488,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 |---|---|---|---|---|
 |`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`composeExtensionType`|String|||Type of the compose extension. Enum values are `botBased` and `apiBased`.|
-|`authorization`|Array of objects|2||Authorization related information for the API-based message extension|
+|`authorization`|Object|2||Authorization related information for the API-based message extension|
 |`authorization.authType`|String|||Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
 |`authorization.microsoftEntraConfiguration`|Object|||Object capturing details needed to do microsoftEntra auth flow. Applicable only when auth type is `microsoftEntra`.|
 |`authorization.microsoftEntraConfiguration.supportsSingleSignOn`|boolean|||A value indicating whether Single sign-on is configured for the app.|

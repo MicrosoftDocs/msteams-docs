@@ -67,7 +67,7 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 > [!NOTE]
 > Teams supports Adaptive Cards up to version 1.5, and  the Adaptive Cards Designer supports up to version 1.6.
 
-* Use tools such as Fiddler or Postman to call the API and ensure that the request and the response is valid.
+* Use tools such as Fiddler or Postman to call the API and ensure that the request and the response are valid.
 * Get a sample response for validating the response rendering template.
 * You can use [Adaptive Card Designer](https://adaptivecards.io/designer/) to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
 
@@ -120,6 +120,151 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 * You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, which includes the app manifest and the OpenAPI description document.
 
 </details>
+
+
+## Authentication
+
+You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `oAuth2.0`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods.
+
+# [API service auth](#tab/api-service-auth)
+
+### Register an API Key
+
+API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  The user can then paste the API key ID in the simplified messaging extension UI to enable the authentication.
+
+To register an API Key, follow these steps:
+
+1. Go to **Tools** > **API Key Registration**.
+
+1. Select **New API Key**.
+
+1. In the **Register an API key** page, update the following:
+
+   1. **Description**: Descrption of the API Key
+   1. **Add Domain**: The domain where you host the API.
+
+1. Under **Set a target tenant**, select the following:
+   1. If you want to use the API key to call the APIs for a specific tenant, select **Home tenant**.
+   1. If you want to use the API key to call the APIs for any tenant, select **Any tenant**.
+
+1. Under **Set a Teams app**, select the following:
+   1. If you want the app that matches the given teams App ID to use the API key, select **Existing Teams app**.
+   1. If you want the app that matches any teams App ID to use the API key, select **Any Teams app**.
+
+1. Select **+ Add Secret** and enter the OpenAI API secret key.
+
+1. Select **Save**. An **API key registration ID** is generated.
+
+
+# [Microsoft Entra ID](#tab/microsoft-entra-id)
+
+
+## Add Single Sign-On (SSO) in Microsoft Teams Apps using Microsoft Entra ID
+
+SSO is a crucial feature that enhances user experience and security by allowing users to authenticate once and gain access to multiple software systems. By implementing SSO in your Teams app, you can provide a seamless user experience, reduce the risk of password theft, and streamline user access across multiple systems.
+
+Implementing SSO in your Teams app can significantly improve the user experience by eliminating the need for users to sign in multiple times. For instance, a user can sign in once in the morning and access all the necessary apps throughout the day without needing to reauthenticate. This not only saves time but also reduces the frustration of remembering and entering passwords multiple times. Additionally, SSO enhances security by reducing the risk of password theft, as users are less likely to write down or reuse passwords.
+
+### Prerequisites
+Before you start, ensure you have the following:
+- An Azure account with an active subscription.
+- A Teams app project.
+- Basic familiarity with Azure AD and Teams app development.
+
+### Implementation Steps
+
+1. **Configure App with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. This is used to configure scopes and authorize trusted client applications for generating access tokens. You can follow the steps outlined in the [Azure AD app creation guide](https://docs.microsoft.com/en-us/azure/active-directory/develop/quickstart-register-app).
+
+1. **Add Code to Handle Access Tokens**: Add the code to handle access tokens. This token should be sent to your app's server code in the Authorization header. Ensure to validate the access token when it's received. Here's an example of how to handle access tokens:
+
+   ```javascript
+   // Handle access token
+   app.use((req, res, next) => {
+   const authHeader = req.headers.authorization;
+   const token = authHeader && authHeader.split(' ')[1];
+   
+   if (token == null) return res.sendStatus(401);
+   
+   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+      if (err) return res.sendStatus(403);
+      req.user = user;
+      next();
+   });
+   });
+   ```
+
+1. **Update app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated on Azure AD. This allows Teams to request access tokens on behalf of your app. The "webApplicationInfo" section in the manifest file is where you specify this information.
+   ```json
+   "webApplicationInfo": 
+   { 
+   "id": "{Azure AD AppId}", 
+   "resource": "api://subdomain.example.com/botId-{guid}" 
+   }
+   ```
+
+1. **Add SSO Support to the Plugin**: Add the following auth section to the plugin part of the manifest. This indicates that the plugin supports SSO.
+   ```json
+   {
+   "authType": "oauth",
+   "oauthConfiguration": { "supportsSingleSignOn": true }
+   }
+   ```
+
+1. **Validate the Token**: Before the token is sent to the plugin, validate that the resource URI and the domain the request is sent to are the same. Also, confirm the user ID in the token is the same as the one used for SMBA auth.
+
+1. **Send Invoke Request with Access Token**: The client sends an invoke request with the access token. An invoke request is a type of HTTP request that is used to trigger actions on the server. Here's an example payload that contains the access token.
+
+   ```json
+   {  
+   "name": "composeExtension/query",  
+   "value": {  
+      "commandId": "insertWiki",  
+      "parameters": [{  
+         "name": "searchKeyword",  
+         "value": "lakers"  
+      }],  
+      "authentication": {    
+         "token": "…",    
+      },    
+      "queryOptions": {  
+         "skip": 0,  
+         "count": 25  
+      }  
+   }
+   }
+   ```
+
+### Limitations
+
+This flow is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as User.Read or Mail.Read. If you need to access other Graph scopes, you'll need to implement additional consent flows.
+
+```mermaid
+sequenceDiagram
+    participant TeamsApp as Teams App
+    participant AzureAD as Azure AD
+    participant AppServer as App Server
+    participant TeamsManifest as Teams Manifest
+    TeamsApp->>AzureAD: Create Azure AD app
+    AzureAD-->>TeamsApp: Return app ID and application ID URI
+    TeamsApp->>AppServer: Add code to handle access token
+    TeamsApp->>TeamsManifest: Update Teams app manifest with app ID and application ID URI
+    TeamsManifest-->>TeamsApp: Confirm update
+    Note over TeamsApp: Additional Changes
+    TeamsApp->>TeamsManifest: Add auth section to the manifest
+    TeamsManifest-->>TeamsApp: Confirm update
+    TeamsApp->>AppServer: Add field to auth config indicating SSO support
+    AppServer-->>TeamsApp: Confirm update
+    Note over TeamsApp: High-level Flow
+    TeamsApp->>AzureAD: Invoke Payload Containing the Token
+    AzureAD-->>TeamsApp: Return access token
+    TeamsApp->>AppServer: Send invoke request with access token
+    AppServer-->>TeamsApp: Validate token and confirm user id
+```
+This sequence diagram represents the flow of creating an Azure AD app, handling the access token, updating the Teams app manifest, and making additional changes to support SSO in Teams. It also includes the high-level flow of invoking a payload containing the token.
+
+---
+
+## Create an API-based message extension
 
 You can create an API-based message extension using Developer Portal for Teams, Visual Studio Code, Teams Toolkit command line interface (CLI), or Visual Studio.
 
@@ -217,31 +362,12 @@ An API-based message extension is created.
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
 
-**Add Authentication**
+**Add the API key to your message extension**
 
-To add authentication to your message extesion, follow these steps:
+1. Under App features, select the message extension that you've created.
 
-1. Go to **Tools** > **API Key Registration**.
+1. Under **Authentication**, select **API Key** and add the **API key registration ID** you've created earlier.
 
-1. In the **Register an API key** page, update the following:
-
-   1. **Description**:
-   1. **Add Domain**:
-
-1. Under **Set a target tenant**, select the following:
-   1. If you want only the apps that are created within that tenant to use the API key to call the APIs, select **Home tenant**.
-   1. If you want any app to use the API key to call the APIs, select **Any tenant**.
-
-1. Under **Set a Teams app**, select the following:
-   1. If you want the app that matches the given teams App ID to use the API key, select **Existing Teams app**.
-   1. If you want the app that matches any teams App ID to use the API key, select **Any Teams app**.
-
-1. Select **+ Add Secret**.
-
-1. Select **Save**.
-
-1. Under App features, select to the message extension that you've created.
-1. Under **Authentication**, select **API Key** and add the API Key you've copied earlier.
 1. Select **Save**.
 
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:

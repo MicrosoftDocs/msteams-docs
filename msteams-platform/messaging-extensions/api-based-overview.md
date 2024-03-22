@@ -21,8 +21,6 @@ Message extensions built using API (API-based) use a web service to manage user 
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
 * Perform actions on behalf of the user, for example, create a Contoso ticket.
 
-You can implement Microsoft Entra ID Single Sign-On and API key-based authentication in API-based search message extensions to provide secure and seamless access to applications. Secure authentication methods are critical for creating robust and user-friendly applications. To enable these authentication methods, you can update your app manifest with the `none`, `oauth`, `apiSecretServiceAuth`, `microsoftEntra`, or `userAuth` authentication methods.
-
 You can create an API-based message extension using an [OpenAPI Description (OAD)](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Description document, use the OpenAPI Description document to generate and integrate the client code in your app's project. Create or generate a response rendering template to manage the responses from the API.
 
 See the video to learn more about building an API-based message extension using Teams Toolkit:
@@ -417,7 +415,7 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
       "authorization": {
         "authType": "apiSecretServiceAuth ",
         "apiSecretServiceAuthConfiguration": {
-            "apiSecretRegistrationId": ""sCVBX2udSXEtxo97behM1ReO8pJc4MdA"
+            "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
         }
       },
       "apiSpecificationFile": "aitools-openapi.yml",
@@ -451,7 +449,7 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 |---------|---------|
 |`composeExtensions.composeExtensionType`     |  Compose extension type. Update the value to `apiBased`. |
 |`composeExtensions.authorization`|Array of objects|2||Authorization related information for the API-based message extension|
-|`composeExtensions.authorization.authType`|String|||Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
+|`composeExtensions.authorization.authType`|String|||Enum of possible authorization types. Supported values are `none`, `oAuth2.0`, `apiSecretServiceAuth`, and `microsoftEntra`.|
 |`composeExtensions.authorization.apiSecretServiceAuthConfiguration`|Object|||Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`.|
 |`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`|String|128 characters||Registration id returned when developer submits the API key through Developer Portal.|
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
