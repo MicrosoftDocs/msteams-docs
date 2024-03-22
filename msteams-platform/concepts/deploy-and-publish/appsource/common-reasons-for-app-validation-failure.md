@@ -95,13 +95,13 @@ For more information, see [Teams Store validation guidelines for app manifest](p
 
 ## Valid domains guidelines violation
 
-Your app submission must adhere to the [external domains](/legal/marketplace/certification-policies) guidelines under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the domains listed under the `validDomains` and `messageHandlers` arrays in the app manifest are under your organization's direct control and don't include test or non-production domains.
+Your app submission must adhere to the guidelines for external domains under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the domains listed under the `validDomains` and `messageHandlers` arrays in the app manifest are under your organization's direct control and don't include test or non-production domains.
 
 For more information, see [Teams Store validation guidelines for external domains](prepare/teams-store-validation-guidelines.md#external-domains).
 
 ## Missing or incomplete test instructions
 
-[Detailed test instructions](prepare/teams-store-validation-guidelines.md#app-package-and-teams-store-listing) and credentials help you with a successful review of your app.
+Detailed test instructions and credentials help you with a successful review of your app.
 
 | # | Avoid the following |
 | --- | --- |
@@ -127,7 +127,7 @@ For more information, see [Teams Store validation guidelines for bots](prepare/t
 
 ## Broken app functionality
 
-Test your app to verify your app’s correctness, functionality, and usage. Ensure that you test your app thoroughly and fix all the bugs. Check all the end-to-end workflows that your app supports and test the app compatibility on the operating systems and browsers as per the [Commercial Marketplace Certification policy](/legal/marketplace/certification-policies).
+Test your app to verify your app’s correctness, functionality, and usage. Ensure that you test your app thoroughly and fix all the bugs. Check all the end-to-end workflows that your app supports and test the app compatibility on the operating systems and browsers as per the Commercial Marketplace Certification policy.
 
 | # | Avoid the following |
 | --- | --- |
@@ -156,7 +156,7 @@ For more information, see [Teams Store validation guidelines for mobile experien
 
 ## Apps using AI-generated content with no safeguards
 
-If your app uses AI-generated content, ensure that it meets the requirements for [Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) and [Apps using facial recognition capabilities](/legal/marketplace/certification-policies#2-apps-using-facial-recognition-capabilities-are-subject-to-the-following-policies) as per Microsoft commercial marketplace certification policies.
+If your app uses AI-generated content, ensure that it meets the requirements for [Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) as per Microsoft commercial marketplace certification policies.
 
 | # | Avoid the following |
 | --- | --- |
