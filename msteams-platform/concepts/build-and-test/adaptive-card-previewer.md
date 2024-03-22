@@ -90,13 +90,6 @@ No. There are several [limitations](adaptive-card-previewer.md#limitations) that
 <br>
 &nbsp;
 </details>
-<details>
-<summary>Will Visual Studio be integrated into Adaptive Card Previewer?</summary>
-
-No, Adaptive Card Previewer is available in Visual Studio Code only.
-<br>
-&nbsp;
-</details>
 
 ## See also
 
