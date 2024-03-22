@@ -128,6 +128,22 @@ You can implement authentication in API-based search message extensions to provi
 
 # [API service auth](#tab/api-service-auth)
 
+API secret service authentication is a secure method for verifying API requests. It helps teams keep sensitive data safe. With a shared secret, the requester only needs to know the signature to make the request.
+
+If your application uses API key-based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property which contains the reference ID returned when you submitted the API key through the Developer portal.
+
+```json
+"composeExtensions": [
+    {
+      "composeExtensionType": "apiBased",
+      "authorization": {
+        "authType": "apiSecretServiceAuth ",
+        "apiSecretServiceAuthConfiguration": {
+            "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
+        }
+      },
+```
+
 ### Register an API Key
 
 API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  The user can then paste the API key ID in the simplified messaging extension UI to enable the authentication.
