@@ -20,7 +20,7 @@ In this article, you’ll learn to create a deep link:
 * [To share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)
 * [To meeting side panel](#deep-link-to-meeting-side-panel)
 * [To join a meeting](#deep-link-to-join-a-meeting)
-* [Invoke Stageview through deep link](#invoke-stage-view-through-deep-link)
+* [Invoke Stageview through deep link](#invoke-stageview-through-deep-link)
 
 ## Deep link to start a new chat
 

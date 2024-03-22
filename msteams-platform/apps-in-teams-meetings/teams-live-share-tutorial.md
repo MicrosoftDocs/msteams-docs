@@ -4,7 +4,7 @@ author: surbhigupta
 description: In this module, learn how to get started with Live Share SDK and how to build Dice Roller sample using Live Share SDK
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: stevenic
+ms.author: v-vanv
 ms.date: 04/07/2022
 ---
 
@@ -14,8 +14,8 @@ In the Dice Roller sample app, users are shown a dice with a button to roll it. 
 
 1. [Set up the application](#set-up-the-application)
 2. [Join a Fluid container](#join-a-fluid-container)
-3. [Write the meeting Stageview](#write-the-stage-view)
-4. [Connect meeting Stageview to Live Share](#connect-meeting-stage-view-to-live-share)
+3. [Write the meeting Stageview](#write-the-stageview)
+4. [Connect meeting Stageview to Live Share](#connect-meeting-stageview-to-live-share)
 5. [Write the side panel view](#write-the-side-panel-view)
 6. [Write the settings view](#write-the-settings-view)
 

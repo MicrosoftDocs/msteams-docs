@@ -23,7 +23,7 @@ Stageview is a user interface (UI) component that allows you to render content i
 
 Stageview is a full screen UI component that can be used to render your app content, providing users with a focused experience to engage with your app. Stageview can be invoked from either an Adaptive Card or a deep link, in both chats and channels.
 
-* When users invoke Stageview from Adaptive Cards, Stageview opens in a new Teams window along with the originating chat or channel thread in the side panel. This new app canvas is called the [Collaborative Stageview](#collaborative-stage-view). The Collaborative Stageview allows users to multi-task and collaborate with each other.
+* When users invoke Stageview from Adaptive Cards, Stageview opens in a new Teams window along with the originating chat or channel thread in the side panel. This new app canvas is called the [Collaborative Stageview](#collaborative-stageview). The Collaborative Stageview allows users to multi-task and collaborate with each other.
 
 * The Collaborative Stageview surfaces the originating chat or thread from where it was invoked and helps the users to engage with content and conversation side-by-side.
 
