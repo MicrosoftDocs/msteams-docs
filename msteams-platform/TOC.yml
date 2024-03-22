@@ -659,7 +659,7 @@
       displayName: People picker, type-ahead, people icon
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
-      displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
+      displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card, Adaptive Card, command bot
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
       displayName: Information masking, background, extension, notification, HTML, rich text
@@ -674,7 +674,7 @@
       displayName: Static and dynamic typeahead search  
     - name: Media elements in Adaptive Cards
       href: task-modules-and-cards/cards/media-elements-in-adaptive-cards.md
-      displayName: media elements, media files        
+      displayName: media elements, media files, Adaptive Card, command bot        
     - name: Universal Actions for Adaptive Cards
       items:
       - name: Overview
