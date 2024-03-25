@@ -251,17 +251,6 @@ Users can screen share content to the meeting stage in the following scenarios:
 * A sharing button is available on all meeting side panels for users with organizer or presenter roles.
 * Users can initiate sharing through a deep link or the Share in Meeting button.
 
-## Feature compatibility by user types
-
-The following table provides the user types and lists the features that each user can access in meetings:
-
-| User type | Scheduled meeting or Instant calendar meeting | One-on-one call | Group call | Scheduled channel meeting |
-| :-- | :-- | :-- | :-- | :-- |
-| In-tenant | Presenter or  organizer can start, view, and interact with the app in the meeting stage.<br><br> Attendee can only view and interact. | Presenter or organizer can start, view, and interact with the app on meeting stage. <br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. |
-| Guest | Presenter or  organizer can start, view, and interact with the app in the meeting stage.<br><br> Attendee can only view and interact. | Presenter or organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. |  Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. | Presenter or  organizer can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. |
-| Federated or External | Presenter can start, view, and interact with the app in the meeting stage.<br><br> Attendee can only view and interact. | Not available | Not available | Presenter can start, view, and interact with app on meeting stage.<br><br> Attendee can only view and interact. |
-| Anonymous |Presenter can start, view, and interact with the app on meeting stage.<br><br> Attendee can only view and interact. | Not available | Not available | Not available |
-
 ## Code sample
 
 |Sample name | Description | .NET| Node.js | Manifest |

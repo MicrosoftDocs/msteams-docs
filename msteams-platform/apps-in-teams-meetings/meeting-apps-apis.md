@@ -27,7 +27,7 @@ The following table provides a list of APIs available across the Microsoft Teams
 |[**Send in-meeting notification**](#send-an-in-meeting-notification)| Provides meeting signals using the existing conversation notification API for user-bot chat and allows the bot to notify user action that shows an in-meeting notification. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Get meeting details**](#get-meeting-details-api)| Get a meeting's static metadata. | [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetinginfoasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 |[**Send real-time captions**](#send-real-time-captions-api)| Send real-time captions to an ongoing meeting. | [TeamsJS library](/azure/cognitive-services/speech-service/speech-sdk?tabs=nodejs%2Cubuntu%2Cios-xcode%2Cmac-xcode%2Candroid-studio#get-the-speech-sdk&preserve-view=true) |
-|[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
+|[**Share app content to stage**](build-apps-for-teams-meeting-stage.md#share-to-stage)| Share specific parts of the app to meeting stage from the app side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
 |[**Receive real-time Teams meeting events**](#receive-real-time-teams-meeting-events)|Receive real-time meeting events, such as meeting start and end or participant join and leave.| [Microsoft Bot Framework SDK](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamsmeetingstartasync?view=botbuilder-dotnet-stable&preserve-view=true) |
 | [**Get incoming audio state**](#get-incoming-audio-state) | Allows an app to get the incoming audio state setting for the meeting user.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
 | [**Toggle incoming audio**](#toggle-incoming-audio) | Allows an app to toggle the incoming audio state setting for the meeting user from mute to unmute or vice-versa.| [TeamsJS library](/javascript/api/@microsoft/teams-js/microsoftteams.meeting?view=msteams-client-js-latest&preserve-view=true) |
@@ -47,7 +47,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * Meeting type
 
-  # [Channel meeting](#tab/channel-meeting)
+# [Channel meeting](#tab/channel-meeting)
 
   The following is a JSON payload response for a channel meeting for in-tenant users:
 
@@ -134,7 +134,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
   ```
 
-  # [Scheduled meeting](#tab/scheduled-meeting)
+# [Scheduled meeting](#tab/scheduled-meeting)
 
   The following is a JSON payload response for a scheduled meeting for in-tenant users:
 
@@ -199,7 +199,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
   ```
 
-  # [Instant meeting](#tab/instant-meeting)
+# [Instant meeting](#tab/instant-meeting)
 
   The following is a JSON payload response for an Instant meeting (Meet now) for in-tenant users:
 
@@ -257,7 +257,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * User type
 
-  # [Guest user](#tab/guest-user)
+# [Guest user](#tab/guest-user)
 
   The following is a JSON payload response in a scheduled private meeting for a guest user:
 
@@ -329,7 +329,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
   ```
 
-  # [Anonymous user](#tab/anonymous-user)
+# [Anonymous user](#tab/anonymous-user)
 
   The following is a JSON payload response in a scheduled private meeting for an anonymous user:
 
@@ -370,7 +370,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
    ```
 
-  # [External user](#tab/external-user)
+# [External user](#tab/external-user)
 
   The following is a JSON payload response in a scheduled private meeting for an external user:
 
@@ -437,7 +437,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * Call type
 
-  # [One-on-One call](#tab/one-on-one-call)
+# [One-on-One call](#tab/one-on-one-call)
 
   The following is a JSON payload response for a one-on-one call for an in-tenant user:
 
@@ -509,7 +509,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
     
   ```
 
-  # [Group call](#tab/group-call)
+# [Group call](#tab/group-call)
 
   The following is a JSON payload response for a group chat call for an in-tenant user:
 
