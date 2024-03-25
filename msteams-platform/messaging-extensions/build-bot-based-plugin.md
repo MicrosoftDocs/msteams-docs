@@ -343,11 +343,68 @@ A bot-based search message extension is created.
 
 To test your bot-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
-* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You are redirected to Teams, where you can add the app to Teams to preview the app.
 
 * **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
 ---
+
+## Message extension as plugin for Copilot for Teams meetings
+
+Message extension plugins are supported in Copilot for Teams meetings. Extending bot-based message extension plugins to meetings allows developers to enhance the Copilot for Teams meetings. Copilot can utilize various app capabilities during meetings, such as task modules, app sharing, and more, to improve user engagement and productivity. For example, a plugin can be used in Copilot for Teams meetings to perform actions like creating polls, adding CRM entries, or even complex operations that require data fetching and rationalization from multiple sources.
+
+Meetings Copilot is interactive and efficient, it can assist with summarizing discussions, suggesting action items, and providing prompt-less assistance in real-time. You can send static and dynamic or real-time prompts based on live transcription in an ongoing meeting. Users can ask natural language questions to meeting copilot and get responses from your plugin that are relevant to the meeting context. Plugins are available for users to enable in both M365 chat and meeting copilot.
+
+**Benefits**
+
+* **User Empowerment:** Extending Meeting Copilot empowers users with various actions to enhance their meeting experience:
+* **UI Commands:** Users can easily access features like opening a task module or sharing an app to the stage.
+* **Search Commands:** Efficient data retrieval from app databases is made possible, streamlining the search process.
+* **Action Commands:** Users can facilitate tasks such as creating polls or adding entries into CRM applications.
+* **Complex Commands:** These commands involve data fetching and rationalizing from multiple sources, enabling users to make informed decisions based on comprehensive data analysis.
+
+
+**Scenarios**
+
+1. **Reactive Commands:** Users can directly command Copilot to perform specific actions or provide information. This includes:
+   * **Natural Language Prompts:** Users can instruct Copilot to carry out search or action commands. For example, requesting the latest sales report prompts Copilot to retrieve it from the app database.
+   * **Prompt Suggestions:** Apps can offer static or enriched prompts for Copilot to execute, such as creating a new task, which Copilot would then facilitate by opening the relevant module.
+
+2. **Proactive Assistance:** Copilot proactively listens to meeting signals and assists users by:
+   * **Suggesting prompts from apps:** These suggestions are contextually relevant, like opening a project management app during a discussion on project planning.
+   * **Providing assistance without explicit prompts:** Copilot can automatically suggest actions like creating a poll or recommending app content based on the meeting's discussion topics.
+
+### Enable message extension as a plugin for Copilot for meetings
+
+**Pre-requisites**
+
+Ensure that you've created a bot-based message extension and extended it as a plugin for Copilot for Microsoft 365.
+
+To enable message extension as a plugin for Copilot for Teams meetings, follow these steps:
+
+1. Go to a **Teams meeting**.
+1. Select **Join**.
+1. In the meeting window, select **Copilot**.
+
+1. Select **Start transcription**.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-start-transcription.png" alt-text="Screenshot shows the Copilot option and start transcription button in a Teams meeting.":::
+
+1. Select the Spoken language and select **Confirm**. The Copilot for Teams pane appears.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-select-language.png" alt-text="Screenshot shows the dropdown to select a spoken language and a confirm button in Teams meeting.":::
+
+1. In the Copilot for Teams pane, at the bottom-right corner, select the **Copilot Plugin Button**.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-trigger-plugin.png" alt-text="Screenshot shows the plugin icon in the copilot pane in a Teams meeting.":::
+
+1. Search for your plugin and turn on the toggle for your plugin.
+
+1. From the compose area, select **More prompts** to send a static prompt or you can type your own prompt and select **Send**.
+
+   :::image type="content" source="../assets/images/Copilot/meeting-copilot-static-prompts.png" alt-text="Screenshot shows the list of static prompts available in the copilot pane in a Teams meeting.":::
+
+Meeting Copilot helps your meetings to be better and more productive. You can meetings more interactive, which helps users by giving them a smoother and more interesting experience.
 
 ## Step-by-step guide
 
