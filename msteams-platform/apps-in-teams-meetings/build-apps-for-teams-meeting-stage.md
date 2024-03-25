@@ -91,8 +91,8 @@ The following table includes the query parameters:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |`callback`| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The *result* can contain either a true value if there's a successful share or null when the share fails. |
-|`appContentURL`| String | Yes | The URL that will be shared on to the stage. |
-| `sharingProtocol` | String | No | “collaborative” (default) or “screenShare” |
+|`appContentURL`| String | Yes | The URL that is shared on to the stage. |
+| `sharingProtocol` | String | No | *collaborative* (default) or *screenShare* |
 
 ### Example
 
@@ -129,7 +129,7 @@ The following table includes the query parameter:
 
 |Value|Type|Required|Description|
 |---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* in case of an error or null when share is successful. The *result* can contain either an `IAppContentStageSharingState` object when share is successful or null in case of an error.|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* if there is an error or null when share is successful. The *result* can contain either an `IAppContentStageSharingState` object when share is successful or null if there is an error.|
 
 ### Example
 
@@ -167,7 +167,7 @@ The app sharing capabilities depend on the tenant user type and participant role
 
 * **User type**: In-tenant, guest, and external user type participants can share the app to stage and also see and interact with the app being shared on stage. Anonymous user can't see, share, or interact with the app that is being shared on the stage. For more information, see [user types in a meeting.](~/apps-in-teams-meetings/teams-apps-in-meetings.md#user-types-in-teams)
 
-* **User roles**: Participants with presenter and organizer user roles in a meeting can share the app to stage. Attendee won't have the share to stage button enabled and ability to share the app to stage. For more information, see [user roles in Teams meeting.](~/apps-in-teams-meetings/teams-apps-in-meetings.md#user-roles-in-teams-meeting)
+* **User roles**: Participants with presenter and organizer user roles in a meeting can share the app to stage. The share to stage button and ability to share the app to stage isn't enabled for the Attendee. For more information, see [user roles in Teams meeting.](~/apps-in-teams-meetings/teams-apps-in-meetings.md#user-roles-in-teams-meeting)
 
 ### Query parameter
 
@@ -236,6 +236,15 @@ Users can screen share content to the meeting Stage in Teams using the screen sh
 
 :::image type="content" source="../assets/images/meeting-stage/screen-share-meeting-stage.png" alt-text="Screenshot shows an example of the meeting stage view for the presenter in the left and for the audience in the right." lightbox="../assets/images/meeting-stage/screen-share-meeting-stage.png":::
 
+Screen share content to the meeting Stage simplifies app content sharing during meetings and provides a seamless multi-player viewing experience. Let's explore the use cases of the feature:
+
+|For Developers |For Users  |
+|---------|---------|
+|**Coordinated Content Presentation**: You can now showcase coordinated content to multiple participants on a larger stage, moving beyond the fixed-width Side Panel. This expanded visibility attracts more attention and integrates closely with the meeting lifecycle.     | **Contextual Tool Usage**: Users can seamlessly use their favorite tools within the ongoing communication context. This minimizes context switching and enhances meeting outcomes.        |
+|**Out-of-the-Box App Sharing**: Basic sharing of the entire app is available out-of-the-box, requiring no additional investment from you. This streamlined approach simplifies the content sharing process.     | **Inline Content Display**: Content appears inline within the meeting window, ensuring easy access for all participants. No need to navigate away from the conversation.        |
+|**Enhanced APIs for Specific Content Sharing**: Existing Share to Stage APIs have been enhanced to enable sharing of specific content via the Screen Sharing protocol. You can now tailor content sharing to meet specific use cases.     |**Sharing Button on Meeting Side Panels**: Users with these roles can initiate content sharing directly from the meeting side panels. This empowers presenters to engage with the audience effectively.          |
+|**Deep Link and "Share in Meeting" Button Support**: Use the Screen Sharing protocol to share content via deep links or by using the "Share in Meeting" button. This flexibility ensures a seamless experience for users.     |  Participants can start sharing content via a deeplink or by using the "Share in Meeting" button. Both options are exposed by you, allowing for a seamless experience.       |
+
 Users can screen share content to the meeting stage in the following scenarios:
 
 * **Share entire app**: When you share a tab to the Meeting Stage in a Teams meeting, the `contentUrl` associated with the tab is first embedded onto the presenter’s Meeting Stage and is screen shared with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it's being presented on a large surface, allowing the app to update its content appropriately.
@@ -252,11 +261,11 @@ Users can screen share content to the meeting stage in the following scenarios:
     > [!NOTE]
     > If the value for the sharingProtocol property is set as `screenShare`, you don't need to declare any Resource-Specific Consent (RSC) permissions in the app manifest and don't need to set `MeetingStage` in the `getContext` object of the manifest.
 
-### User scenarios
+### Scenarios
 
 |Scenario|Example|
 |-------------|--------------|
-|Sales enablement app| Rocky, a sales rep for Contoso, pins the Sales enablement app to his upcoming meeting with Rani, the VP of HR at NorthWest. During the meeting, Rocky opens the Sales enablement app side panel and sees a list of pre-curated content that he can share in the meeting to aid his sales pitch. Rani can consume the content on her Teams meeting window and ask questions based on the content shown.|
+|Sales enablement app| Rocky, a sales rep for Contoso, pins the Sales enablement app to his upcoming meeting with Rani, the VP of HR at NorthWest. During the meeting, Rocky opens the Sales enablement app side panel and sees a list of precurated content that he can share in the meeting to aid his sales pitch. Rani can consume the content on her Teams meeting window and ask questions based on the content shown.|
 |Contoso Cloud Board| Robert, a technical program manager at Contoso, helps run the daily scrum meetings of various teams in the organization. For each scrum, he pins the pod-relevant board as a tab to the standup meeting. During the meeting, he opens the side panel of the Contoso app and selects the Share button provided within the side panel. This allows the board to take over the meeting stage for all participants such that everyone views the same board. As each member shares their updates, Rocky makes appropriate changes in the sprint board, which is then reflected for all other attendees.|
 
 ### Advantages
