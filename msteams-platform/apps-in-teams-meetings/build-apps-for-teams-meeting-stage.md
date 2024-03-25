@@ -230,7 +230,7 @@ The following participant roles may be involved during the meeting:
 > [!NOTE]
 >
 > * Only In-tenant or guest and external users with presenter or organizer role can initiate a sharing session.
-> * Share to stage using screen share isn't supported on Mac, classic Teams, or mobile.
+> * Share to stage using screen share isn't supported on Mac, classic Teams, mobile, web and VDI.
 
 Users can screen share content to the meeting Stage in Teams using the screen sharing architecture. When a user shares an app to the meeting stage, the app is rendered only on the presenter’s device and then the screen is shared or mirrored to all other attendees in a new window. After the app content is shared in a meeting, the content can be viewed by all participants, but only the presenter has the ability to interact with the content, which provides a multi-player viewing experience.
 
@@ -247,7 +247,7 @@ Screen share content to the meeting Stage simplifies app content sharing during 
 
 Users can screen share content to the meeting stage in the following scenarios:
 
-* **Share entire app**: When you share a tab to the Meeting Stage in a Teams meeting, the `contentUrl` associated with the tab is first embedded onto the presenter’s Meeting Stage and is screen shared with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it's being presented on a large surface, allowing the app to update its content appropriately.
+* **Share entire app**: When you share a tab to the Meeting Stage in a Teams meeting, the `contentUrl` associated with the tab is poped-out a new window for the app and screen shares that window with all other meeting participants. The `page.frameContext` property in the `getContext` object is set to `meetingStage` to signal the app that it's being presented on a large surface, allowing the app to update its content appropriately.
 
   > [!NOTE]
   > Apps that specify `MeetingStage` in the `page.frameContext` property of the `getContext` object in the manifest and declare `MeetingStage.Write.Chat` permissions support collaborative Share to Stage infrastructure. The share button initiates the existing collaborative protocol instead of the screen sharing protocol.
