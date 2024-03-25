@@ -1,13 +1,12 @@
 ---
 title: The Teams JavaScript client library support across Microsoft 365
-date: 06/26/2023
 author: erikadoyle
 ms.author: mosdevdocs
 description: Understand the level of support for different TeamsJS library capabilities running in different hosts for Teams apps, including Microsoft Teams, Outlook, and Microsoft 365 app.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.custom: m365apps
-ms.date: 11/05/2023
+ms.date: 03/24/2024
 keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 ---
 
@@ -152,7 +151,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td>&#x2713;</td>
         </tr>
-                <tr>
+        <tr>
             <th><a href="#call">call</a></th>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
@@ -190,20 +189,21 @@ The following table lists host application support for TeamsJS capabilities that
         </tr>
         <tr>
             <th><a href="#clipboard">clipboard</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
-            <td></td>
-            <td>&#x2713;*</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#dialog">dialog</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
@@ -215,7 +215,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -226,11 +226,11 @@ The following table lists host application support for TeamsJS capabilities that
         <tr>
             <th><a href="#geolocation">geoLocation</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
-            <td>&#x2713;*</td>
+            <td></td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
+            <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
@@ -254,7 +254,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -282,7 +282,7 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -298,14 +298,14 @@ The following table lists host application support for TeamsJS capabilities that
         <tr>
             <th><a href="#search">search</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td>&#x2713; </td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -325,11 +325,11 @@ The following table lists host application support for TeamsJS capabilities that
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
     </tbody>
 </table>
@@ -416,7 +416,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -475,10 +475,10 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -529,10 +529,10 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1100,13 +1100,13 @@ Preview. This capability enables users to copy and paste to the system clipboard
     <thead>
         <tr>
             <th></th>
-            <th colspan=3>Web</th>
+            <th colspan=4>Web</th>
             <th colspan=5>Desktop</th>
             <th colspan=6>Mobile</th>
         </tr>
         <tr>
             <th></th>
-            <th colspan=3></th>
+            <th colspan=4></th>
             <th colspan=5>Windows</th>
             <th colspan=3>Android</th>
             <th colspan=3>iOS</th>
@@ -1114,6 +1114,7 @@ Preview. This capability enables users to copy and paste to the system clipboard
         <tr>
             <td></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
+            <td><img alt="Teams (Preview)" src="./images/teams-preview-icon.png"/></td>
             <td><img alt="Microsoft 365 app" src="./images/microsoft-365-icon.png"/></td>
             <td><img alt="Outlook" src="./images/outlook-icon.png"/></td>
             <td><img alt="Teams" src="./images/teams-icon.png"/></td>
@@ -1132,20 +1133,21 @@ Preview. This capability enables users to copy and paste to the system clipboard
     <tbody>
         <tr>
             <th>clipboard<img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
+            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;*</td>
             <td></td>
             <td></td>
             <td>&#x2713;*</td>
+            <td>&#x2713;</td>
         </tr>
     </tbody>
 </table>
@@ -1205,7 +1207,7 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
             <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
@@ -1216,27 +1218,25 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
         <tr>
             <th><a href="#dialogadaptivecard">dialog.adaptiveCard</a> <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
-            <td>&#x2713;</td>
-            <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <th><a href="#dialogadaptivecardbot">dialog.adaptiveCard.bot</a> <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1245,9 +1245,11 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
             <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td>&#x2713;</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
             <th><a href="#dialogupdate">dialog.update</a><img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
@@ -1260,10 +1262,10 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -1290,7 +1292,7 @@ Preview. This group of capabilities enables apps to show modal dialogs (referred
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
@@ -1395,11 +1397,11 @@ When an API doesn't support or generates an error, add logic to fail or provide 
         <tr>
             <th>geoLocation <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td></td>
-            <td>&#x2713;*</td>
+            <td></td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td>&#x2713;*</td>
+            <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
@@ -1555,7 +1557,7 @@ Namespace providing email-related functionality.
             <td>&#x2713;*</td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
@@ -1745,7 +1747,7 @@ Namespace to interact with the menu-related part of the library. This module is 
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -1864,11 +1866,11 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#pagescurrentapp">pages.currentApp</a></th>
@@ -1883,7 +1885,7 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td>&#x2713;*</td>
             <td></td>
             <td>&#x2713;</td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
             <td>&#x2713;</td>
@@ -1897,14 +1899,14 @@ Prior to TeamsJS version 2.0, all deep linking scenarios were handled using `sha
             <td>&#x2713;</td>
             <td>&#x2713;*</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
         </tr>
         <tr>
             <th><a href="#pagestabs">pages.tabs</a></th>
@@ -2077,7 +2079,7 @@ Preview. Namespace providing for profile-related functionality.
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td></td>
@@ -2141,14 +2143,14 @@ Preview. Allows your application to interact with the host Microsoft 365 applica
         <tr>
             <th>search <img src="./images/preview-badge.png" alt="Badge indicating this capability is in preview" /></th>
             <td>&#x2713;</td>
-            <td></td>
-            <td></td>
-            <td>&#x2713;*</td>
             <td>&#x2713;</td>
             <td></td>
             <td></td>
             <td>&#x2713;</td>
-            <td>&#x2713;*</td>
+            <td>&#x2713;</td>
+            <td></td>
+            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
@@ -2213,11 +2215,11 @@ Preview. Namespace supporting in-app browser experiences of the host app. For ex
             <td></td>
             <td></td>
             <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td>&#x2713;</td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
+            <td>&#x2713;</td>
         </tr>
     </tbody>
 </table>
@@ -2338,10 +2340,10 @@ Namespace to open a share dialog for web content. For more information, see [Sha
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
@@ -2533,10 +2535,10 @@ Namespace containing the set of APIs that support Teams-specific functionalities
             <td></td>
             <td></td>
             <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
-            <td></td>
-            <td></td>
+            <td>&#x2713;</td>
             <td></td>
             <td></td>
         </tr>
