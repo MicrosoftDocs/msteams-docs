@@ -111,16 +111,6 @@ The following table includes the query parameters:
 |`appContentURL`| String | Yes | The URL that is shared on to the stage. |
 | `sharingProtocol` | String | No | *collaborative* (default) or *screenShare* |
 
-## Response codes
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API isn't supported in the current context.|
-| **1000** | App doesn't have proper permissions to allow share to stage.|
-
 # [Get app content stage sharing state](#tab/get-app-content)
 
 The `getAppContentStageSharingState` API enables you to fetch information about apps sharing on the meeting stage.
@@ -150,16 +140,6 @@ The following table includes the query parameter:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* if there is an error or null when share is successful. The *result* can contain either an `IAppContentStageSharingState` object when share is successful or null if there is an error.|
-
-## Response codes
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API isn't supported in the current context.|
-| **1000** | App doesn't have proper permissions to allow share to stage.|
 
 # [Get app content stage sharing capabilities](#tab/get-app-content-capabilities)
 
@@ -196,16 +176,6 @@ The following table includes the query parameter:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The result can contain either an `IAppContentStageSharingCapabilities` object, when share is successful or null in case of an error.|
-
-## Response codes
-
-The following table provides the response codes:
-
-|Response code|Description|
-|---|---|
-| **500** | Internal error. |
-| **501** | API isn't supported in the current context.|
-| **1000** | App doesn't have permissions to allow share to stage.|
 
 ---
 
