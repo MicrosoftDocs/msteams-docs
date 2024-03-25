@@ -10,11 +10,15 @@ ms.date: 04/07/2022
 
 # Build apps for Teams meeting stage
 
+Enhance your Teams meetings with interactive features that create a more engaging and productive meeting environment. Share to Stage allows for dynamic app sharing, the In-Meeting Document Signing App streamlines real-time document approval, and Screen Share Content to Meetings offers a controlled, multi-player viewing experience.
+
+## Share to stage
+
 Share to stage allows users to share an app to the meeting stage from the meeting side panel in an ongoing meeting. This sharing is interactive and collaborative in comparison to passive screen sharing.
 
 To invoke share to stage, users can select the **Share to Stage** icon on the upper-right side of the meeting side panel. **Share to Stage** icon is native to Teams client and selecting it shares the entire app to the meeting stage.
 
-## App manifest settings for apps in meeting stage
+### App manifest
 
 To share an app to the meeting stage, you must configure the context and RSC permissions in the [app manifest](../resources/schema/manifest-schema.md):
 
@@ -42,7 +46,7 @@ To share an app to the meeting stage, you must configure the context and RSC per
     }
     ```
 
-## Advanced share to stage APIs
+### Advanced share to stage APIs
 
 There are many scenarios where sharing the entire app to the meeting stage isn't as useful as sharing specific parts of the app:  
 
@@ -70,31 +74,19 @@ The following image shows the share to stage option in the Teams mobile client:
 
 Use the following APIs to share specific part of the app:
 
-|Method| Description| Source|
-|---|---|----|
-|[**Share app content to stage**](#share-app-content-to-stage-api)| Share specific parts of the app to meeting stage from the meeting side panel in a meeting. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting) |
-|[**Get app content stage sharing state**](#get-app-content-stage-sharing-state-api)| Fetch information about app's sharing state on the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate) |
-|[**Get app content stage sharing capabilities**](#get-app-content-stage-sharing-capabilities-api)| Fetch the app's capabilities for sharing to the meeting stage. | [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities) |
+* **Share app content to stage**: Share specific parts of the app to meeting stage from the meeting side panel in a meeting. [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting)
 
-## Share app content to stage API
+* **Get app content stage sharing state**: Fetch information about app's sharing state on the meeting stage. [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingstate)
+
+* **Get app content stage sharing capabilities**: Fetch the app's capabilities for sharing to the meeting stage. [TeamsJS library](/javascript/api/@microsoft/teams-js/meeting.iappcontentstagesharingcapabilities)
+
+# [Share app content to stage](#tab/app-content)
 
 The `shareAppContentToStage` API enables you to share specific parts of your app to the meeting stage. The API is available through the TeamsJS library.
 
-### Prerequisite
+The `appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
 
-`appContentUrl` must be allowed by `validDomains` array inside manifest.json, else the API returns a 501 error.
-
-### Query parameter
-
-The following table includes the query parameters:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|`callback`| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The *result* can contain either a true value if there's a successful share or null when the share fails. |
-|`appContentURL`| String | Yes | The URL that is shared on to the stage. |
-| `sharingProtocol` | String | No | *collaborative* (default) or *screenShare* |
-
-### Example
+The followinf code is an example of `shareAppContentToStage` API:
 
 ```javascript
 const appContentUrl = "https://www.bing.com/";
@@ -109,7 +101,17 @@ microsoftTeams.meeting.shareAppContentToStage((err, result) => {
 }, appContentUrl);
 ```
 
-### Response codes
+**Query parameter**
+
+The following table includes the query parameters:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|`callback`| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The *result* can contain either a true value if there's a successful share or null when the share fails. |
+|`appContentURL`| String | Yes | The URL that is shared on to the stage. |
+| `sharingProtocol` | String | No | *collaborative* (default) or *screenShare* |
+
+## Response codes
 
 The following table provides the response codes:
 
@@ -119,19 +121,11 @@ The following table provides the response codes:
 | **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have proper permissions to allow share to stage.|
 
-## Get app content stage sharing state API
+# [Get app content stage sharing state](#tab/get-app-content)
 
 The `getAppContentStageSharingState` API enables you to fetch information about apps sharing on the meeting stage.
 
-### Query parameter
-
-The following table includes the query parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* if there is an error or null when share is successful. The *result* can contain either an `IAppContentStageSharingState` object when share is successful or null if there is an error.|
-
-### Example
+The following table is an example of `getAppContentStageSharingState` API:
 
 ```javascript
 microsoftTeams.meeting.getAppContentStageSharingState((err, result) => {
@@ -149,7 +143,15 @@ The JSON response body for the `getAppContentStageSharingState` API is:
 }
 ```
 
-### Response codes
+**Query parameter**
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* if there is an error or null when share is successful. The *result* can contain either an `IAppContentStageSharingState` object when share is successful or null if there is an error.|
+
+## Response codes
 
 The following table provides the response codes:
 
@@ -159,7 +161,7 @@ The following table provides the response codes:
 | **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have proper permissions to allow share to stage.|
 
-## Get app content stage sharing capabilities API
+# [Get app content stage sharing capabilities](#tab/get-app-content-capabilities)
 
 The `getAppContentStageSharingCapabilities` API enables you to fetch the app's capabilities for sharing the app content to meeting stage. Apps need to call the `getAppContentStageSharingCapabilities` API to either enable or disable the custom share to stage button for a meeting participant in the meeting side panel. The share to stage button must be disabled or hidden if a meeting participant doesn't have permission to share the app content to meeting stage.
 
@@ -169,15 +171,7 @@ The app sharing capabilities depend on the tenant user type and participant role
 
 * **User roles**: Participants with presenter and organizer user roles in a meeting can share the app to stage. The share to stage button and ability to share the app to stage isn't enabled for the Attendee. For more information, see [user roles in Teams meeting.](~/apps-in-teams-meetings/teams-apps-in-meetings.md#user-roles-in-teams-meeting)
 
-### Query parameter
-
-The following table includes the query parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The result can contain either an `IAppContentStageSharingCapabilities` object, when share is successful or null in case of an error.|
-
-### Example
+The following code is an example of `getAppContentStageSharingCapabilities` API:
 
 ```javascript
 microsoftTeams.meeting.getAppContentStageSharingCapabilities((err, result) => {
@@ -195,7 +189,15 @@ The JSON response body for `getAppContentStageSharingCapabilities` API is:
 } 
 ```
 
-### Response codes
+**Query parameter**
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+|**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The result can contain either an `IAppContentStageSharingCapabilities` object, when share is successful or null in case of an error.|
+
+## Response codes
 
 The following table provides the response codes:
 
@@ -204,6 +206,8 @@ The following table provides the response codes:
 | **500** | Internal error. |
 | **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have permissions to allow share to stage.|
+
+---
 
 ## Build an in-meeting document signing app
 
