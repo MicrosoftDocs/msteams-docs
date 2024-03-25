@@ -41,34 +41,33 @@ landingContent:
 #        url: ~/concepts/device-capabilities/browser-device-permissions.md
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
-#      - text: Adaptive Cards overflow menu
-#        url: ~/task-modules-and-cards/cards/cards-format.md
+
 
 - title: What's new
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Incoming Webhooks are available in GCC-High
-        url: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-      - text: Introduced RSC permissions for users to access different resources
-        url:  graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-user-access
-      - text: App caching in chat, channel, and meeting tab scopes is available for iOS
-        url:  tabs/how-to/app-caching.md
-      - text: Bots can mention tags in Teams channels
-        url: bots/how-to/conversations/channel-and-group-conversations.md#tag-mention
-      - text: Teams AI library
-        url:  bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
-      - text: Extend an action-based Teams message extension across Microsoft 365
-        url:  m365-apps/extend-m365-teams-message-extension.md
-      - text: Use captureImage API to capture an image or select media from the gallery for mobile clients
-        url: concepts/device-capabilities/media-capabilities.md
-      - text: Teams App Test Tool streamlines the debug process of bot apps
-        url: toolkit/debug-your-Teams-app-test-tool.md
-      - text: Build bot-based message extension plugin
-        url: messaging-extensions/build-bot-based-plugin.md
-      - text: Guidelines to extend bot-based message extension as plugin 
-        url: messaging-extensions/high-quality-message-extension.md
-
+      - text: Extend static tabs to channels with a customizable experience.
+        url: tabs/what-are-tabs.md
+      - text: Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.
+        url: concepts/build-and-test/adaptive-card-previewer-vs.md
+      - text: Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.
+        url: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
+      - text: Extend a Teams meeting app to Outlook
+        url: m365-apps/extend-m365-meeting-app.md
+      - text: Share to Teams from personal app or tab for Teams mobile clients
+        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
+      - text: Build API-based message extension using Developer Portal for Teams
+        url: messaging-extensions/build-api-based-message-extension.md
+      - text: Introduced systemDefault reserved activity type for send activity feed notifications (Developer preview)
+        url: tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis
+      - text: Teams, Outlook, and Microsoft 365 web domains are migrating to cloud.microsoft domain
+        url: m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers
+      - text: Build Adaptive Card-based Loop components
+        url: m365-apps/cards-loop-component.md
+      - text: Application RSC permissions for chat scope are now generally available
+        url: graph-api/rsc/resource-specific-consent.md#rsc-permissions-for-a-chat-or-meeting
+ 
     - linkListType: reference
       links:
       - text: Community chat room for Microsoft Teams app developers
@@ -166,6 +165,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Debug your AI chat bot using Teams App Test Tool
+          url: ~/sbs-teams-app-test-tool.yml
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
@@ -182,13 +183,11 @@ landingContent:
           url: ~/sbs-bots-with-sso.yml
         - text: Generate meeting token
           url: ~/sbs-meeting-token-generator.yml
-        - text: Generate meeting side panel
-          url: ~/sbs-meetings-sidepanel.yml
-
-
 
     - linkListType: tutorial
       links:
+        - text: Generate meeting side panel
+          url: ~/sbs-meetings-sidepanel.yml
         - text: Build an in-meeting document signing app
           url:  ~/sbs-inmeeting-document-signing.yml
         - text: Build command bot with JavaScript
@@ -207,12 +206,12 @@ landingContent:
           url: ~/sbs-meetingextension-action.yml
         - text: Build Outgoing Webhooks
           url: ~/sbs-outgoing-webhooks.yml
-        - text: Unfurl links in Teams using bot
-          url: ~/sbs-botbuilder-linkunfurling.yml
 
 
     - linkListType: tutorial
       links:
+        - text: Unfurl links in Teams using bot
+          url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
         - text: Send activity feed notification 

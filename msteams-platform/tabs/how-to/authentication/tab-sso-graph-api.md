@@ -18,7 +18,7 @@ Graph scopes, such as `User.Read` or `Mail.Read`, indicate what your app can acc
 
 You can configure additional Graph scopes in Microsoft Entra ID for your app. These are delegated permissions, which are used by apps that require signed-in access. A signed-in app user or administrator must initially consent to them. Thereafter, your tab app can consent on behalf of the signed-in user when it calls Microsoft Graph.
 
-If your application doesn't require a signed-in user, consider utilizing application permissions, also recognized as the app-only access scenario. Only administrators have the authority to grant consent for application permissions. For more information, see [application permissions](/graph/permissions-overview#application-permissions).
+We recommend using delegated permissions for the signed-in user. If your application doesn't need a signed-in user, consider using application permissions, also known as the app-only access scenario. Only administrators can grant consent for application permissions. For more information, see [application permissions](/graph/permissions-overview#application-permissions).
 
 ### To configure API permissions
 
@@ -64,12 +64,12 @@ If your application doesn't require a signed-in user, consider utilizing applica
 
 ## Configure authentication for different platforms
 
-Depending on the platform or device where you want to target your app, additional configuration may be required, such as redirect URIs, specific authentication settings, or details specific to the platform.
+Depending on the platform or device where you want to target your app, additional configuration might require, such as redirect URIs, specific authentication settings, or details specific to the platform.
 
 > [!NOTE]
 >
 > - If your tab app hasn't been granted IT admin consent, app users need to provide consent the first time they use your app on a different platform.
-> - Implicit grant isn't required if SSO is enabled on a tab app.
+> - Implicit grant isn't required if single sign-on (SSO) is enabled on a tab app.
 
 You can configure authentication for multiple platforms as long as the URL is unique.
 
@@ -204,7 +204,7 @@ If you need to access Microsoft Graph data, configure your server-side code to:
 > [!IMPORTANT]
 >
 > - As a best practice for security, always use [server-side code to make Microsoft Graph calls](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow#middle-tier-access-token-request) or other calls that require passing an access token. This helps protect the token from being intercepted or leaked. DO NOT return the OBO token to the client because it would then enable the client to make direct calls to Microsoft Graph.
->
+> - Two separate apps registered in Microsoft Entra ID will require individual tokens for each app. Use the [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to enable communication between the apps.
 > - Don’t use `notifySuccess` result to return the token information to the parent page. Use `localStorage` to save the token and pass the item key via `notifySuccess`.
 
 ## Obtain consent
@@ -219,18 +219,19 @@ Your app can obtain consent for Graph permissions globally from the tenant admin
 
 When asking for additional user consent using the Microsoft Teams JavaScript client library (TeamsJS) [authentication](/javascript/api/@microsoft/teams-js/authentication) capability, keep in mind the following considerations:
 
-> [!TIP]
-> [Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101) sample provides code demonstrating following steps.
+To implement SSO authentication in a personal tab, follow these steps:
 
-1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Microsoft Entra [OBO flow](/azure/active-directory/develop/v2-oauth2-on-behalf-of-flow) to get access to those other Graph APIs. Ensure that you use the Azure AD v2 endpoint for this exchange.
-1. When you try to execute the token exchange for a user for the first time, if Microsoft Entra refuses to exchange tokens it might be because the user hasn't consented to give your app permission to the user's data. In these cases, your exchange fails with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multi-factor authentication or corporate device enrollment is required.
+1. The token retrieved using `getAuthToken()` must be exchanged on the server-side using Microsoft Entra OBO flow to get access to those other Graph APIs. Ensure that you use the Microsoft Entra v2 endpoint for this exchange.
+1. When you try to execute the token exchange for a user for the first time, if Microsoft Entra refuses to exchange tokens it might be because the user hasn't consented to give your app permission to the user's data. In these cases, your exchange fails with either the `invalid_grant` or `interaction_required` error.  Examples of *invalid_grant* errors include when consent is required or *auth_code*, assertion, or the refresh token is expired, revoked, malformed, or absent. Examples of *interaction_required* include when multifactor authentication or corporate device enrollment is required.
 1. If the exchange fails because of the `invalid_grant` or `interaction_required` errors, you must prompt the user for consent. Since user interaction can only happen from the client, your server needs to return an indication to your client app that consent is required. You can then use the user interface (UI) to ask the app user to grant other consent. The UI must include a button that triggers an [Microsoft Entra consent dialog](../../../tabs/how-to/authentication/tab-sso-code.md#consent-dialog-for-getting-access-token).
 1. To ask the user for consent for your app to access their data, you must include the `prompt=consent` property in your [query-string-parameter](/azure/active-directory/develop/v2-oauth2-implicit-grant-flow#send-the-sign-in-request) to Microsoft Entra ID.
     - Instead of `?scope={scopes}`, use `?prompt=consent&scope={scopes}`
     - Ensure that the `{scopes}` property includes all the scopes you're prompting the user for. For example, `Mail.Read` or `User.Read`.
 
     To handle incremental consent for tab app, see [incremental and dynamic user consent](/azure/active-directory/develop/v2-permissions-and-consent).
-1. After the app user has granted more permissions, retry the OBO flow to get access to additional Graph APIs.
+1. After the app user has granted more permissions, retry the OBO flow to get access to additional Graph APIs. For more information, see
+[Teams Personal Tab SSO Authentication](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-personal-sso-quickstart/js/src/components/Tab.js#L64-L101)
+sample code.
 
 ## Race condition when making an OBO call after invalid grant exception
 
@@ -242,7 +243,7 @@ If your application is unaware of this behavior, it might ask the user for conse
 
 The wait-and-retry mechanism must keep track if a user has consented to the required scopes. If an API call that includes an OBO request fails with the above errors, but the user has already consented, avoid showing the consent prompt to the user. Instead, wait for some time before retrying the API call. Usually, Microsoft Entra ID sends the consent within three to five seconds. In one of our [sample applications](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/8f266c33608d6d7b4cf89c81779ccf49e7664c1e/samples/bot-tab-conversations/csharp/Source/ConversationalTabs.Web/ClientApp/src/utils/UtilsFunctions.ts#LL8C1-L8C1), we retry up to three times with double the wait time between each retry, starting at a one-second wait.
 
-If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes, and you may have to prompt them to consent again.
+If after three to five attempts the OBO flow still fails, the user might not have consented to all the required scopes, and you might have to prompt them to consent again.
 
 This approach helps reduce the possibility of user being prompted for consent more than once.
 

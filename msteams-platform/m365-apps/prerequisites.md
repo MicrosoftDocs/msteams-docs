@@ -85,7 +85,7 @@ To install Microsoft 365 applications in your test environment:
     |Teams personal tabs in Outlook | `Current`|
     |Teams search-based message extensions in Outlook | `Current`|
     |Outlook Add-ins | `BetaChannel` |
-    |Meeting apps in Outlook | `BetaChannel` |
+    |Meeting apps in Outlook | `Current` |
 
 1. Open Command Prompt and go to the local folder path.
 1. Run `setup.exe /configure configuration-Office365-x86.xml` (or use the **x64.xml* file, depending on your setup).
