@@ -15,7 +15,7 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
 
 GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans).
 
-The document provides a comprehensive overview of Teams' compatibility within government cloud services, detailing the various capabilities for each government tenant. It also outlines how government entities can effectively deploy and use Microsoft Teams within their organizations.
+The document provides a comprehensive overview of Teams' compatibility within government cloud services, detailing the various capabilities of Teams for each government tenant. It also outlines how government entities can effectively deploy and use Teams within their organizations.
 
 ## Teams for Government clouds
 

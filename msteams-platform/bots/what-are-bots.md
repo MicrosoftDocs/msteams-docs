@@ -15,9 +15,9 @@ It's recommended to start with [build your first bot app using JavaScript](../sb
 
 > [!IMPORTANT]
 >
-> * Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments. Bot applications within Microsoft Teams for GCC-High and DOD are available through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
+> * Bots are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](../concepts/cloud-overview.md#teams-apps-and-capabilities-for-government-clouds) environments. Bot applications within Microsoft Teams for GCC High and DOD are available through [Azure bot Service](/azure/bot-service/how-to-deploy-gov-cloud-high) and bot channel registration must be done in Azure Government portal.
 >
-> * Image URLs in Adaptive Cards aren't supported in GCC-High and DOD environments. You can replace an image URL with Base64 encoded DataUri.
+> * Image URLs in Adaptive Cards aren't supported in GCC High and DOD environments. You can replace an image URL with Base64 encoded DataUri.
 >
 > * When a user changes the Teams theme in a bot, the theme doesn’t apply to the content shared using an Adaptive Card.
 

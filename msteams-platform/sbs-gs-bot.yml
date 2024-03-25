@@ -78,7 +78,7 @@ items:
     1. [About the directory structure of your app project.](#take-a-tour-of-the-bot-app-source-code)
 
     > [!IMPORTANT]
-    > Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
+    > Bots are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](../concepts/cloud-overview.md#teams-apps-and-capabilities-for-government-clouds) environments.
 
     ## Create your bot project workspace
 
@@ -305,7 +305,7 @@ items:
       To successfully run your app in Teams, ensure that you've enabled custom app upload in your Teams account. You can learn more about custom app upload in the prerequisites section.
 
       > [!IMPORTANT]
-      > Custom app upload is available in Government Community Cloud (GCC), GCC-High, and DOD.
+      > Custom app upload is available in Government Community Cloud (GCC), GCC High, and DOD.
 
       > [!TIP]
       > Check for issues before you upload a custom app, using the [app validation tool](https://dev.teams.microsoft.com/appvalidation.html). This tool is included in the toolkit. Fix the errors to upload the app.
