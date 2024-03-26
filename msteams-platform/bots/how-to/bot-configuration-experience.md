@@ -295,151 +295,151 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
    1. C#2: For activities related to configuration or fetching information, the method utilizes `config/continue`; whereas for submission-related activities, it employs `config/message`.
 
-   # [C# 1](#tab/teams-bot-sdk2)
+      # [C# 1](#tab/teams-bot-sdk2)
 
-   The `OnInvokeActivityAsync` method simplifies handling of invoke activities in a bot. It uses a `turnContext` object to represent the activity and a `cancellationToken` for async tasks. For `config/fetch`, it creates a `ConfigResponse<BotConfigAuth>` with bot details and returns a 200 status `InvokeResponse`. For `config/submit`, it forms a `ConfigResponse<TaskModuleResponseBase>` with configuration details in an Adaptive Card and returns a 200 status code.
+      The `OnInvokeActivityAsync` method simplifies handling of invoke activities in a bot. It uses a `turnContext` object to represent the activity and a `cancellationToken` for async tasks. For `config/fetch`, it creates a `ConfigResponse<BotConfigAuth>` with bot details and returns a 200 status `InvokeResponse`. For `config/submit`, it forms a `ConfigResponse<TaskModuleResponseBase>` with configuration details in an Adaptive Card and returns a 200 status code.
 
-   ```csharp
-   protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-      {
-            if (turnContext.Activity.Name == "config/fetch")
-            {
-                var response = new ConfigResponse<BotConfigAuth>
-                {
-                    Config = new BotConfigAuth
-                    {
-                        SuggestedActions = new SuggestedActions
-                        {
-                            Actions = new List<CardAction>
-                            {
-                                new CardAction
-                                {
-                                  type: "openUrl",
-                                  value: "https://example.com/auth",
-                                  title: "Sign in to this app"
-                              }
-                          }
-                      },
-                      Type = "auth"
-                  }
-              };
-              
-              return new InvokeResponse { Status = 200, Body = response };
-          }
-          else if (turnContext.Activity.Name == "config/submit")
+      ```csharp
+      protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
           {
-              AdaptiveCard card = new AdaptiveCard("1.2")
-              {
-                  Body = new List<AdaptiveElement>()
-              };
-              
-              card.Body.Add(new AdaptiveContainer
-              {
-                  Items = new List<AdaptiveElement>
-                  {
-                      new AdaptiveTextBlock
-                      {
-                          Size = AdaptiveTextSize.Large,
-                          Text = "bot config test",
-                          Type = "TextBlock"
+                if (turnContext.Activity.Name == "config/fetch")
+                {
+                    var response = new ConfigResponse<BotConfigAuth>
+                    {
+                        Config = new BotConfigAuth
+                        {
+                            SuggestedActions = new SuggestedActions
+                            {
+                                Actions = new List<CardAction>
+                                {
+                                    new CardAction
+                                    {
+                                      type: "openUrl",
+                                      value: "https://example.com/auth",
+                                      title: "Sign in to this app"
+                                  }
+                              }
+                          },
+                          Type = "auth"
                       }
-                  }
-              });
-
-              var response = new ConfigResponse<TaskModuleResponseBase>
+                  };
+                  
+                  return new InvokeResponse { Status = 200, Body = response };
+              }
+              else if (turnContext.Activity.Name == "config/submit")
               {
-                  Config = new TaskModuleContinueResponse
+                  AdaptiveCard card = new AdaptiveCard("1.2")
                   {
-                      Value = new TaskModuleTaskInfo
+                      Body = new List<AdaptiveElement>()
+                  };
+                  
+                  card.Body.Add(new AdaptiveContainer
+                  {
+                      Items = new List<AdaptiveElement>
                       {
-                          Height = 123,
-                          Width = 456,
-                          Title = "test title",
-                          Card = new Attachment
+                          new AdaptiveTextBlock
                           {
-                              ContentType = AdaptiveCard.ContentType,
-                              Content = card
+                              Size = AdaptiveTextSize.Large,
+                              Text = "bot config test",
+                              Type = "TextBlock"
                           }
-                      },
-                      Type = "continue"
-                  }
-              };
+                      }
+                  });
 
-              return new InvokeResponse { Status = 200, Body = response };
+                  var response = new ConfigResponse<TaskModuleResponseBase>
+                  {
+                      Config = new TaskModuleContinueResponse
+                      {
+                          Value = new TaskModuleTaskInfo
+                          {
+                              Height = 123,
+                              Width = 456,
+                              Title = "test title",
+                              Card = new Attachment
+                              {
+                                  ContentType = AdaptiveCard.ContentType,
+                                  Content = card
+                              }
+                          },
+                          Type = "continue"
+                      }
+                  };
+
+                  return new InvokeResponse { Status = 200, Body = response };
+              }
+
+              return null;
           }
+          ```
 
-          return null;
-      }
-      ```
+      # [C# 2](#tab/teams-bot-sdk3)
 
-   # [C# 2](#tab/teams-bot-sdk3)
+      The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an Adaptive Card for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
 
-   The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an Adaptive Card for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
-
-   ```csharp
-   protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-      {
-        if (turnContext.Activity.Name == "config/submit")
-        {
-            var response = new ConfigResponse<TaskModuleResponseBase>
+      ```csharp
+      protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+          {
+            if (turnContext.Activity.Name == "config/submit")
             {
-                Config = new TaskModuleMessageResponse
+                var response = new ConfigResponse<TaskModuleResponseBase>
                 {
-                    Value = "this is a message"
-                }
-            };
-            return new InvokeResponse { Status = 200, Body = response };
-
-        }
-        else if (turnContext.Activity.Name == "config/fetch")
-        {
-            AdaptiveCard card = new AdaptiveCard("1.2")
-            {
-                Body = new List<AdaptiveElement>()
-            };
-            
-            card.Body.Add(
-                new AdaptiveContainer
-                {
-                    Items = new List<AdaptiveElement>
+                    Config = new TaskModuleMessageResponse
                     {
-                        new AdaptiveTextBlock
-                        {
-                            Size = AdaptiveTextSize.Large,
-                            Text = "bot config test",
-                            Type = "TextBlock"
-                        }
+                        Value = "this is a message"
                     }
-                });
-            
-            // Construct a task module response with the task module URL and any data to be passed to the task module
+                };
+                return new InvokeResponse { Status = 200, Body = response };
 
-            var response = new ConfigResponse<TaskModuleResponseBase>
+            }
+            else if (turnContext.Activity.Name == "config/fetch")
             {
-                Config = new TaskModuleContinueResponse
+                AdaptiveCard card = new AdaptiveCard("1.2")
                 {
-                    Value = new TaskModuleTaskInfo
+                    Body = new List<AdaptiveElement>()
+                };
+                
+                card.Body.Add(
+                    new AdaptiveContainer
                     {
-                        Height = 123,
-                        Width = 456,
-                        Title = "test title",
-                        Card = new Attachment
+                        Items = new List<AdaptiveElement>
                         {
-                            ContentType = AdaptiveCard.ContentType,
-                            Content = card
+                            new AdaptiveTextBlock
+                            {
+                                Size = AdaptiveTextSize.Large,
+                                Text = "bot config test",
+                                Type = "TextBlock"
+                            }
                         }
-                    },
-                    Type = "continue"
-                }
-            };
+                    });
+                
+                // Construct a task module response with the task module URL and any data to be passed to the task module
 
-            return new InvokeResponse { Status = 200, Body = response };
-        }
+                var response = new ConfigResponse<TaskModuleResponseBase>
+                {
+                    Config = new TaskModuleContinueResponse
+                    {
+                        Value = new TaskModuleTaskInfo
+                        {
+                            Height = 123,
+                            Width = 456,
+                            Title = "test title",
+                            Card = new Attachment
+                            {
+                                ContentType = AdaptiveCard.ContentType,
+                                Content = card
+                            }
+                        },
+                        Type = "continue"
+                    }
+                };
 
-        return null;
-      }
-   ```
-   ---
+                return new InvokeResponse { Status = 200, Body = response };
+            }
+
+            return null;
+          }
+      ```
+     ---
 
 ---
 
