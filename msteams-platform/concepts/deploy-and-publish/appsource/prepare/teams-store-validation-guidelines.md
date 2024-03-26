@@ -389,6 +389,9 @@ Apps mustn't take users out of Teams for core user scenarios. App content and in
   * Add a note in Adaptive Card that states that when users select **Get Help using this app**, it takes the user outside Teams.
   * Add interstitials dialogs.
 
+> [!NOTE]
+> If you want to redirect users from your Teams app to its native experience through a protocol deep link such as `tel:`, `mailto:`, or `webex:`, ensure that you launch the protocol deep link in a new window by calling the `window.open` method or using an anchor tag with `target="_blank"`.
+
 </details>
 
 ### Compatibility
