@@ -78,7 +78,7 @@ For a code sample, see the call `CreateConversationAsync` in the [**sample**](ht
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
-The conversation ID is unique for each bot within a specific channel, even in a multitenant environment. This ID ensures that the bot's messages are directed to the appropriate channel and doesn't interrupt with other bots or channels within the same or across different organization.
+The conversation ID is unique for each bot within a specific channel, even in a multitenant environment. This ID ensures that the bot's messages are directed to the appropriate channel and doesn't interrupt with other bots or channels within the same or across different organizations.
 
 If you don't have the `conversationId`, you can [proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
 
