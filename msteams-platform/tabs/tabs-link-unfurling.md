@@ -1,19 +1,17 @@
 ---
-title: Teams tab Stageview
+title: Open Content in Stageview
 author: Rajeshwari-v
-description: Learn about the types of Stageview, a full screen UI component invoked to surface your app content. Link unfurling is used to turn URLs into a tab using Adaptive Cards.
+description: Learn about the types of Stageview, a full screen UI component invoked to surface your app content. Open content in multi-window experiences using deeplinks, adaptive cards or the Teams JS SDK.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 06/05/2023
 ---
 
-# Teams tab Stageview
+# Open Content in Stageview
 
-Stageview in Microsoft Teams is a user interface (UI) component that provides various methods to open your app content in an immersive canvas experience. Stageview allows users to multitask inside Teams, collaborate with others in a Teams multiwindow, or focus on tasks in a modal experience.
+Microsoft Teams provides multiple methods for opening your app content in immersive canvas experiences. These Stageview canvases allow your users to embrace muli-tasking workflows inside Teams, collaborate with others directly in a Teams multi-window or complete focused work in large modal experiences
 
-> [!NOTE]
-> The article is based on Teams JavaScript client library (TeamsJS) version 2.0.x. If you're using an earlier version, see [TeamsJS](how-to/using-teams-client-library.md) for guidance between the latest and earlier versions.
 
 ## Types of Stageview
 
@@ -21,17 +19,17 @@ Stageview in Microsoft Teams is a user interface (UI) component that provides va
 
 * [Collaborative Stageview](#collaborative-stageview)
 * [Stageview Multi-window](#stageview-multi-window)
-* [Stageview modal](#stageview-modal)
+* [Stageview Modal](#stageview-modal)
 
 ### Collaborative Stageview
 
-Collaborative Stageview enables multitasking scenarios where a user can open and view your app content in a new Teams window with a side panel conversation. It enables significant content engagement and collaboration within the same window that leads to higher user engagement. We recommend Collaborative Stageview when the user opens content from a conversation such as a chat, a channel, or a channel tab.
+Collaborative Stageview enables multi-tasking scenarios for your app content in Teams. Users can open and view your app content inside a new Teams window while accompanied by a side panel conversation. This allows for meaningful content engagement and collaboration from within the same window. We recommend Collaborative Stageview when the user opens content from a conversation such as a chat, a channel, or a channel tab.
 
 :::image type="content" source="~/assets/images/tab-images/collab-view.png" alt-text="The illustration shows the Collaborative Stageview in Teams.":::
 
 ### Stageview Multi-window
 
-Stageview Multi-window is useful for scenarios where a user can multitask in Teams without the need for collaboration. This view opens the app content in a new Teams window without a side panel conversation, that allows a user to focus on the tasks. We recommend Stageview Multi-window in scenarios where the user opens content from a nonconversational surface such as a personal app.
+Stageview Multi-window is useful for scenarios that requires a user to multitask in Teams without the need for collaboration. This view opens the app content in a new Teams window without a side panel conversation, allowing users to focus on their task. We recommend Stageview Multi-window in scenarios where the user opens content from a nonconversational surface such as a personal app.
 
 :::image type="content" source="~/assets/images/tab-images/multi-view.png" alt-text="The illustration shows the Stageview Multi-window in Teams.":::
 
@@ -220,7 +218,7 @@ Unless a `threadId` is specified, the side panel conversation brings the group c
 
 The following link is the deep link syntax for Collaborative Stageview:
 
-`https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso","openMode":"popOutWithChat"}`
+`https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso","openMode":"popoutWithChat"}`
 
 ##### Example
 
@@ -233,7 +231,7 @@ The following link is the encoded deep link URL to invoke Stageview:
 
 Encoded URL:
 
-`https://teams.microsoft.com/l/stage/{appId}/0?context=%7B%22contentUrl%22%3A%22contentUrl%22%2C%22websiteUrl%22%3A%22websiteUrl%22%2C%22name%22%3A%22Contoso%22%2C%22openMode%22%3A%22popOutWithChat%22%7D`
+`https://teams.microsoft.com/l/stage/{appId}/0?context=%7B%22contentUrl%22%3A%22contentUrl%22%2C%22websiteUrl%22%3A%22websiteUrl%22%2C%22name%22%3A%22Contoso%22%2C%22openMode%22%3A%22popoutWithChat%22%7D`
 
 </details>
 
@@ -249,6 +247,9 @@ Encoded URL:
 | openMode | String | 2048 | Optional | The property defines the open behavior for stage content in the Desktop client. |
 
 Whether you want to facilitate multitasking, enhance collaboration, or provide a focused user experience, Stageview has a mode to suit your requirements. Remember to consider the context in which your app is being used and ensure that your app works in that context.
+
+> [!NOTE]
+> The article is based on Teams JavaScript client library (TeamsJS) version 2.0.x. If you're using an earlier version, see [TeamsJS](how-to/using-teams-client-library.md) for guidance between the latest and earlier versions.
 
 ## FAQs
 
