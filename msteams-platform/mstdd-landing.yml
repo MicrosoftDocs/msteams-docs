@@ -49,6 +49,8 @@ landingContent:
       links:
       - text: Bot configuration experience
         url: bots/how-to/bot-configuration-experience.md
+      - text: Adaptive Card responsive layout
+        url: task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout
       - text: Extend static tabs to channels with a customizable experience.
         url: tabs/what-are-tabs.md
       - text: Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.
@@ -65,8 +67,7 @@ landingContent:
         url: tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis
       - text: Teams, Outlook, and Microsoft 365 web domains are migrating to cloud.microsoft domain
         url: m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers
-      - text: Build Adaptive Card-based Loop components
-        url: m365-apps/cards-loop-component.md
+
  
     - linkListType: reference
       links:
