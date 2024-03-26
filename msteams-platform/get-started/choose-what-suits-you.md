@@ -1,6 +1,6 @@
 ---
 title: Choose what suits you
-description: In this module, learn more about the tools and SDKs available for you to build a Microsoft Teams app
+description: In this module, learn more about the tools and SDKs available for you to build a Microsoft Teams app.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference
@@ -14,8 +14,12 @@ A Teams app offers you the flexibility of choosing your build environment. It in
 
 This section takes you through the various options for building your Teams app.
 
-* [Teams collaborative platform](#teams-collaborative-platform)
-* [Tools and SDKs](#tools-and-sdks)
+- [Choose what suits you](#choose-what-suits-you)
+  - [Teams collaborative platform](#teams-collaborative-platform)
+  - [Tools and SDKs](#tools-and-sdks)
+    - [Explore SDKs](#explore-sdks)
+    - [Explore Tools](#explore-tools)
+  - [See also](#see-also)
 
 ## Teams collaborative platform
 
@@ -35,7 +39,7 @@ You can use various tools and services to build your app. Following is an exampl
 
 You can build your Microsoft Teams app with the help of the following tools and SDKs.
 
-:::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Flow chart shows you the SDKs and tools you need to build your Teams app."lightbox="../assets/images/overview/choose-what-you-need.png":::
+:::image type="content" source="../assets/images/overview/choose-what-you-need.png" alt-text="Flow chart shows you the SDKs and tools you need to build your Teams app." lightbox="../assets/images/overview/choose-what-you-need.png":::
 
 To start building your Teams app, you can select the tools and SDKs based on your app requirements.
 
@@ -43,7 +47,7 @@ To start building your Teams app, you can select the tools and SDKs based on you
 1. **SDKs you need**: For example, if you're building AI capability for your bot app, you select Teams AI library.
 1. **UI  Components**: Choose the UI components to design your app based on your app capability.
 1. **Languages**: Choose the language in which you want to build your app.
-1. **Recommended Tools**: Choose the tools based on the language that you've selected. You can also use the Teams Developer Portal to manage and publish your app. The Teams Toolkit and Yo Teams allows you to build your app with JavaScript and TypeScript or with C# in Visual Studio Code (VS Code) or Visual Studio.
+1. **Recommended Tools**: Choose the tools based on the language that you've selected. You can also use the Teams Developer Portal to manage and publish your app. The Teams Toolkit and Yo Teams allow you to build your app with JavaScript and TypeScript or with C# in Visual Studio Code (VS Code) or Visual Studio.
 
 | App capabilities | User interactions | Recommended tools | SDKs | Languages |
 |--------|-------------|--------|--------|--------|
@@ -58,13 +62,13 @@ To start building your Teams app, you can select the tools and SDKs based on you
 
 **Example scenario**: If you want to build a social media dashboard app that sends notifications using TypeScript, consider the following scenario:
 
-:::image type="content" source="../assets/images/overview/sdks-scenario.png" alt-text="Diagram shows you the scenario where you build Teams app with TypeScript."lightbox="../assets/images/overview/sdks-scenario.png":::
+:::image type="content" source="../assets/images/overview/sdks-scenario.png" alt-text="Diagram shows the scenario where you build Teams app with TypeScript." lightbox="../assets/images/overview/sdks-scenario.png":::
 
 ### Explore SDKs
 
 You can also create and build your Teams app with various SDKs. Teams supports all the SDKs shown in the following image and you can choose SDKs based on your requirements:
 
-:::image type="content" source="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Diagram shows you the list of tools and SDKs for you to build your Teams app."lightbox="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
+:::image type="content" source="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png" alt-text="Diagram shows the list of tools and SDKs for you to build your Teams app." lightbox="../assets/images/Tools-and-SDK-revamp/tools-and-sdk.png":::
 
 ### Explore Tools
 

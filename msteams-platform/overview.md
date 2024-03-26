@@ -32,7 +32,7 @@ You can build apps with Teams platform by extending app capabilities to fit your
 
 Take a look at these example developer personas and app scenarios:
 
-:::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows you the developer persona and user stories."lightbox="assets/images/overview/dev-persona.png":::
+:::image type="content" border="false" source="assets/images/overview/dev-persona.png" alt-text="Screenshot shows the developer persona and user stories." lightbox="assets/images/overview/dev-persona.png":::
 
 You can meet all of these scenarios with Teams apps and enhance collaboration within your Teams across Microsoft 365.
 
@@ -70,7 +70,7 @@ Here's why Teams is best suited for your app needs:
 
 * **Surface existing app**
 
-    If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it may make sense to enable some or all of it in Teams. Extending existing apps and porting interactive functionalities to Teams helps to grow user base and user engagement for your app.
+    If you've got an existing web app, SharePoint site (or SPFx extension), PowerApp, or other web-based application, it makes sense to enable some or all of it in Teams. Extending existing apps and porting interactive functionalities to Teams helps to grow user base and user engagement for your app.
 
     :::image type="content" border="false" source="../msteams-platform/assets/images/overview/scenario-dashboard.png" alt-text="Screenshot shows you the SharePoint site ported as a Teams tab.":::
 
@@ -90,7 +90,7 @@ Learn how apps let you help your users in the Teams environment.
 
 Take a look at this scenario:
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Screenshot shows you to builds an app that sends weather forecast to customers so that they can plan ahead their traveling dates."lightbox="../msteams-platform/assets/images/overview/developer-scenario.png":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Screenshot shows how to build an app that sends weather forecast to customers so that they can plan ahead their traveling dates." lightbox="../msteams-platform/assets/images/overview/developer-scenario.png":::
 
 As a developer, you want a way to share important and relevant information to help your users. It's a typical user story. Relatable? But how does Teams fit in to this scenario?
 
