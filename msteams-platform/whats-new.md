@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 March**
 
-* ***March 21, 2024***: [Adaptive Cards resposive layout helps you to design cards to look great on any device in order to provide an enhanced user experience across chat, channels, and meeting chat.](task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout)
+* ***March 26, 2024***: [Adaptive Cards resposive layout helps you to design cards to look great on any device in order to provide an enhanced user experience across chat, channels, and meeting chat.](task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout)
 * ***March 07, 2024***: [Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-vs.md)
 * ***March 07, 2024***: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)
 
