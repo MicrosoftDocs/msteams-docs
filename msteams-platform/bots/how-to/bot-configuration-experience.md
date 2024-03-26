@@ -284,17 +284,16 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
      module.exports.TeamsBot = TeamsBot;
     
    ```
-   ---
 
 1. `OnInvokeActivityAsync`: `OnInvokeActivityAsync` is the asynchronous version of `OnInvokeActivity`. It allows users to handle incoming activities asynchronously, making it suitable for long-running or asynchronous tasks. This method enhances responsiveness and scalability in bot applications by offloading processing tasks to asynchronous operations.
 
-# [C#](#tab/teams-bot-sdk1)
+   # [C#](#tab/teams-bot-sdk1)
 
-The `onInvokeActivityAsync` method is designed to handle different types of invoke activities. Such as:
+   The `onInvokeActivityAsync` method is designed to handle different types of invoke activities. Such as:
 
-1. C#1: For activities related to configuration or fetching information, the method utilizes `config/auth`; whereas for submission-related activities, it employs `config/continue`.
+   1. C#1: For activities related to configuration or fetching information, the method utilizes `config/auth`; whereas for submission-related activities, it employs `config/continue`.
 
-1. C#2: For activities related to configuration or fetching information, the method utilizes `config/continue`; whereas for submission-related activities, it employs `config/message`.
+   1. C#2: For activities related to configuration or fetching information, the method utilizes `config/continue`; whereas for submission-related activities, it employs `config/message`.
 
    # [C# 1](#tab/teams-bot-sdk2)
 
@@ -621,8 +620,6 @@ The `onInvokeActivityAsync` method is designed to handle different types of invo
     });
 
    ```
-
-   ---
 
 1. `OnTeamsConfig`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for bot development. The `OnTeamsConfig` method facilitates the handling of configuration related activities within the bot. It's part of the `TeamsActivityHandler` class provided by the Bot Framework SDK for Teams. This method enables users to respond to configuration events, including user initiated bot configurations or updates to bot settings within Teams.
 
