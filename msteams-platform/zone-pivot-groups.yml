@@ -94,3 +94,11 @@ groups:
     title: JavaScript
   - id: qs-csharp
     title: C#
+- id: bot-messages
+  title: Messages in bot conversations
+  prompt: Select the flow of the message.
+  pivots:
+  - id: user-bot
+    title: User to bot
+  - id: bot-user
+    title: Bot to user
