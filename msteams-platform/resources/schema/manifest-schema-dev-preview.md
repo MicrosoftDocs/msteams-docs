@@ -213,9 +213,13 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
     "isFullScreen": false,
     "defaultBlockUntilAdminAction": false,
     "publisherDocsUrl": "https://contoso.com/teamtabapp/admin-doc",
-    "scopeConstraints": {
-        "teams": "A list of team thread ids to which your app is restricted to",
-        "groupChats": "A list of chat thread ids to which your app is restricted to"
+    "scopeConstraints": { 
+        "teams": [ 
+            { "id": "%TEAMS-THREAD-ID" } 
+        ], 
+        "groupChats": [ 
+          { "id": "%GROUP-CHATS-THREAD-ID" } 
+        ] 
     },    
     "authorization": {
         "permissions": {
