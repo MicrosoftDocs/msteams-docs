@@ -67,7 +67,7 @@ You can change the bot name displayed in Teams environment and you need to updat
 
 * The bot name displayed as a title in the chat window managed within your app manifest. You can update this bot name directly in the app manifest.
 
-* The bot name displayed in your Teams chat list and the bot name appears with each message in the chat pane are managed within the Azure portal. You can update bot name in the **Bot profile** page in the Azure portal.
+* The bot name displayed in your Teams chat list and the bot name appears with each message in the chat pane are managed within the Azure portal. You can update bot name in the **Bot profile** page in the Azure portal for sideloaded application.
 
   :::image type="content" source="~\assets\images\bot_name.png" alt-text="The screenshot shows the bot name displayed in a Teams window":::
 
