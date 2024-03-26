@@ -283,25 +283,25 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
       
      module.exports.TeamsBot = TeamsBot;
     
-     ```
+   ```
 
 1. `OnInvokeActivityAsync`: `OnInvokeActivityAsync` is the asynchronous version of `OnInvokeActivity`. It allows users to handle incoming activities asynchronously, making it suitable for long-running or asynchronous tasks. This method enhances responsiveness and scalability in bot applications by offloading processing tasks to asynchronous operations.
 
 # [C#](#tab/teams-bot-sdk1)
 
-   The `onInvokeActivityAsync` method is designed to handle different types of invoke activities. Such as:
+The `onInvokeActivityAsync` method is designed to handle different types of invoke activities. Such as:
 
-   1. C#1: For activities related to configuration or fetching information, the method utilizes `config/auth`; whereas for submission-related activities, it employs `config/continue`.
+1. C#1: For activities related to configuration or fetching information, the method utilizes `config/auth`; whereas for submission-related activities, it employs `config/continue`.
 
-   1. C#2: For activities related to configuration or fetching information, the method utilizes `config/continue`; whereas for submission-related activities, it employs `config/message`.
+1. C#2: For activities related to configuration or fetching information, the method utilizes `config/continue`; whereas for submission-related activities, it employs `config/message`.
 
    # [C# 1](#tab/teams-bot-sdk2)
 
    The `OnInvokeActivityAsync` method simplifies handling of invoke activities in a bot. It uses a `turnContext` object to represent the activity and a `cancellationToken` for async tasks. For `config/fetch`, it creates a `ConfigResponse<BotConfigAuth>` with bot details and returns a 200 status `InvokeResponse`. For `config/submit`, it forms a `ConfigResponse<TaskModuleResponseBase>` with configuration details in an Adaptive Card and returns a 200 status code.
 
    ```csharp
-      protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-        {
+   protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+      {
             if (turnContext.Activity.Name == "config/fetch")
             {
                 var response = new ConfigResponse<BotConfigAuth>
@@ -370,14 +370,14 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
           return null;
       }
-   ```
+      ```
 
    # [C# 2](#tab/teams-bot-sdk3)
 
    The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an Adaptive Card for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
 
    ```csharp
-      protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+   protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
       {
         if (turnContext.Activity.Name == "config/submit")
         {
@@ -438,8 +438,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
         return null;
       }
-     ```
-
+   ```
    ---
 
 ---
@@ -536,8 +535,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
    The `adaptiveCardForSubmit` function also makes an Adaptive Card, which asks the user to submit to move forward with setting up the bot. It includes a `Submit` button.
 
    ```javascript
-
-    adaptiveCardForContinue = () => ({
+   adaptiveCardForContinue = () => ({
       "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
       "version": "1.2",
       "type": "AdaptiveCard",
