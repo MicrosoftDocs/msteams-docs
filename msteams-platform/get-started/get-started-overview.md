@@ -201,7 +201,7 @@ Follow these steps to create a notification bot that proactively sends messages 
 
    The notification bot app sends a notification as an Adaptive Card to your Teams client:
 
-   :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows the notification bot loaded in the Teams client.":::
+   :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows the notification bot sending a notification in the Teams client.":::
 
    You successfully created the notification bot and loaded it in the Teams client.
 
