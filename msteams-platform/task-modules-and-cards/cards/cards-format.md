@@ -542,7 +542,7 @@ When users hover over the image, an expand icon appears at the upper-right corne
 
 The image appears in Stageview when the user selects the expand icon as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Image expanded to Stageview":::
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Screesnhots shows the image expanded to Stageview.":::
 
 In the Stageview, users can zoom in and zoom out of the image. You can select the images in your Adaptive Card that must have this capability.
 

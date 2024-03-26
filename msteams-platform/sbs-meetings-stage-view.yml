@@ -23,7 +23,7 @@ items:
     
     This step-by-step guide helps you to share meeting stage in Teams to add status details for collaboration. You'll see the following output:
 
-      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stageview.png" alt-text="meetings stageview":::
+      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stageview.png" alt-text="Screenshot shows the meetings Stageview.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -164,7 +164,7 @@ items:
     
        In the app selection page, the app is displayed as **App In Meeting**.
   
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="app in meetings stageview":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="Screenshot shows the app in meetings Stageview.":::
     
     1. Select the **App In Meeting**.
     
@@ -194,7 +194,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stageview.png" alt-text="stageview output":::
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stageview.png" alt-text="Screenshot shows the Stageview output.":::
 
 - content: |
     You've completed the tutorial to get started with share meeting stage in Teams.

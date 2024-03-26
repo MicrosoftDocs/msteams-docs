@@ -58,13 +58,13 @@ To help users in such scenarios, we released APIs within the Microsoft Teams Jav
 
 The following image shows the share to stage option in the Teams desktop client:
 
-   :::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="The screenshot shows the share to meeting Stageview.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/shared-meeting-stage-edit-review-component.png" alt-text="Screenshot shows the share to meeting Stageview.":::
 
 # [Mobile](#tab/mobile)
 
 The following image shows the share to stage option in the Teams mobile client:
 
-   :::image type="content" source="../assets/images/meeting-stage/meeting-share-to-stage-mobile.png" alt-text="This screenshot shows meeting Stageview of the app you shared to meeting in Teams mobile.":::
+   :::image type="content" source="../assets/images/meeting-stage/meeting-share-to-stage-mobile.png" alt-text="Screenshot shows meeting Stageview of the app you shared to meeting in Teams mobile.":::
 
 ---
 
