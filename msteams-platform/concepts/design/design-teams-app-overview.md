@@ -124,7 +124,7 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 
 ## UI templates
 
-Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
+Create complex and high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md). The app playbooks and UI templates are also available to help you get started for the [apps extended across Microsoft 365](../../m365-apps/overview.md#app-planning-and-design).
 
 ## Basic UI components
 
