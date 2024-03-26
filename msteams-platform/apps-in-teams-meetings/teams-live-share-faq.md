@@ -126,7 +126,7 @@ While there aren't any enforced limits, you must be mindful of how many messages
 <details>
 <summary><b>Is Live Share supported for Government Community Cloud (GCC), GCC High, and Department of Defense (DOD) tenants?</b></summary>
 
-Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+Live Share isn't supported for GCC, GCC High, and DOD tenants.
 
 <br>
 

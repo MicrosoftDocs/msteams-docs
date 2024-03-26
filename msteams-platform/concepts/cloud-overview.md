@@ -9,7 +9,7 @@ ms.date: 09/29/2023
 
 # Plan for Government clouds
 
-Microsoft Teams plays a key role to facilitate secure and efficient communication within government sectors and agencies. To meet the stringent security and compliance requirements of these entities, Microsoft offers the following specialized government cloud services:
+Microsoft Teams plays a key role to facilitate secure and efficient communication across various government sectors and agencies. These entities handle sensitive and confidential data and there's a crucial need for cloud platforms that are secure and compliant. To meet these stringent security requirements, Microsoft offers the following specialized government cloud services:
 
 :::image type="content" source="../assets/images/app-fundamentals/cloud-type.png" alt-text="Illustration shows the types of government clouds." border="false":::
 
@@ -37,7 +37,7 @@ Understanding the Teams apps and capabilities supported by each government tenan
 > [!NOTE]
 > Third-party apps are turned off by default for GCC and aren't available for GCC High and DOD.
 
-The following table includes Teams app capabilities and their availability for GCC, GCC High, and DOD:
+The following table includes Teams app capabilities and their availability in GCC, GCC High, and DOD:
 
 | &nbsp; | GCC | GCC High | DOD |
 |-------------|---------|---|---|
@@ -52,7 +52,7 @@ The following table includes Teams app capabilities and their availability for G
 | Connectors and webhooks | ✔️ | ❌ | ❌ |
 | Workflows| ✔️ | ❌ | ❌ |
 
-The following table includes the availability of other Teams app capabilities in GCC, GCC High, and DOD:
+The following table includes other Teams app capabilities and their availability in GCC, GCC High, and DOD:
 
 | &nbsp; | GCC | GCC High | DOD |
 |-------------|---------|---|---|
@@ -68,7 +68,7 @@ The following table includes the availability of other Teams app capabilities in
 
 To deploy Teams in a government cloud, you need to purchase a suitable Microsoft 365 Government subscription. US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license.
 
-The following pointers help you understand the basic outline to plan for government cloud service and deploy Teams for collaboration:
+The following pointers provide the basic outline to plan for government cloud service and deploy Teams for collaboration:
 
 * Determine the need of government cloud for your organization and if the eligibility requirements are met.
 * Understand the capabilities available and disabled in the respective cloud tenant.
@@ -80,7 +80,7 @@ The following pointers help you understand the basic outline to plan for governm
   * Teams feature management
   * Security and compliance
 * After successful purchase, strategize and deploy Teams for collaboration.
-* Based on the cloud tenant, plan to deploy Teams for meetings and voice. For more information, see [deploy Teams in Government cloud](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
+* Based on the cloud tenant, plan to deploy Teams for meetings and voice. For more information, see [deploy Teams in government cloud](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
 
 For more information on planning and deployment in each cloud environment, see:
 
