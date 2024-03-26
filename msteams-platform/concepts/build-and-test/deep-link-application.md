@@ -310,9 +310,6 @@ Deep link doesn't open in the meeting side panel in the following scenarios:
 * If deep link is selected outside of the meeting window or component.
 * If deep link doesn't match the current meeting for example, deep link is created from another meeting.
 
-> [!NOTE]
-> If you want to redirect users from your Teams app to its native experience through a protocol deep link such as `tel:`, `mailto:`, or `webex:`, ensure that you launch the protocol deep link in a new window by calling the `window.open` method or using an anchor tag with `target="_blank"`.
-
 ## Code Sample
 
 | Sample name | Description | .NET |Node.js|

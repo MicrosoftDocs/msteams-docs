@@ -40,13 +40,5 @@ You can use deep links in Teams in the following ways:
 
 You can use the Microsoft Teams JavaScript client library (TeamsJS) to navigate within your tab. For scenarios such as navigating to content and information or launching a chat dialog. The TeamsJS typed APIs provide an improved experience and are recommended for Teams apps that might run in Outlook or Microsoft 365 apps. They also provide a way to check that the capability used is supported by the host.
 
-<!--- TBD: Edit this article.
-* Admonitions/alerts seem to be overused. 
-* An important alert at the end of this table does not make sense. Also, it has a code snippet inside it.
-* List items in the table are not formatted well in output.
-* Some headings use -ing verbs.
-* Example values and some URLs should be in backticks and not emphasized.
-* Codeblock are missing language.
-* Check for markdownlint errors.
-* Table with just a row isn't really needed. Provide the content without tabulating it.
---->
+> [!NOTE]
+> To redirect users from your Teams app to its native experience through a deep link with a protocol such as `tel:`, `mailto:`, or `webex:`, launch the deep link in a new window by calling the `window.open` method or using an anchor tag with `target="_blank"`.
