@@ -295,111 +295,45 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
    1. C#2: For activities related to configuration or fetching information, the method utilizes `config/continue`; whereas for submission-related activities, it employs `config/message`.
 
-# [C# 1](#tab/teams-bot-sdk2)
+   # [C# 1](#tab/teams-bot-sdk2)
 
    The `OnInvokeActivityAsync` method simplifies handling of invoke activities in a bot. It uses a `turnContext` object to represent the activity and a `cancellationToken` for async tasks. For `config/fetch`, it creates a `ConfigResponse<BotConfigAuth>` with bot details and returns a 200 status `InvokeResponse`. For `config/submit`, it forms a `ConfigResponse<TaskModuleResponseBase>` with configuration details in an Adaptive Card and returns a 200 status code.
 
    ```csharp
-   protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-    {
-        if (turnContext.Activity.Name == "config/fetch")
+      protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
         {
-            var response = new ConfigResponse<BotConfigAuth>
+            if (turnContext.Activity.Name == "config/fetch")
             {
-                Config = new BotConfigAuth
+                var response = new ConfigResponse<BotConfigAuth>
                 {
-                    SuggestedActions = new SuggestedActions
+                    Config = new BotConfigAuth
                     {
-                        Actions = new List<CardAction>
+                        SuggestedActions = new SuggestedActions
                         {
-                            new CardAction
+                            Actions = new List<CardAction>
                             {
-                              type: "openUrl",
-                              value: "https://example.com/auth",
-                              title: "Sign in to this app"
+                                new CardAction
+                                {
+                                  type: "openUrl",
+                                  value: "https://example.com/auth",
+                                  title: "Sign in to this app"
+                              }
                           }
-                      }
-                  },
-                  Type = "auth"
-              }
-          };
-          
-          return new InvokeResponse { Status = 200, Body = response };
-      }
-      else if (turnContext.Activity.Name == "config/submit")
-      {
-          AdaptiveCard card = new AdaptiveCard("1.2")
-          {
-              Body = new List<AdaptiveElement>()
-          };
-          
-          card.Body.Add(new AdaptiveContainer
-          {
-              Items = new List<AdaptiveElement>
-              {
-                  new AdaptiveTextBlock
-                  {
-                      Size = AdaptiveTextSize.Large,
-                      Text = "bot config test",
-                      Type = "TextBlock"
+                      },
+                      Type = "auth"
                   }
-              }
-          });
-
-          var response = new ConfigResponse<TaskModuleResponseBase>
+              };
+              
+              return new InvokeResponse { Status = 200, Body = response };
+          }
+          else if (turnContext.Activity.Name == "config/submit")
           {
-              Config = new TaskModuleContinueResponse
+              AdaptiveCard card = new AdaptiveCard("1.2")
               {
-                  Value = new TaskModuleTaskInfo
-                  {
-                      Height = 123,
-                      Width = 456,
-                      Title = "test title",
-                      Card = new Attachment
-                      {
-                          ContentType = AdaptiveCard.ContentType,
-                          Content = card
-                      }
-                  },
-                  Type = "continue"
-              }
-          };
-
-          return new InvokeResponse { Status = 200, Body = response };
-      }
-
-      return null;
-   }
-   ```
-
-# [C# 2](#tab/teams-bot-sdk3)
-
-   The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an Adaptive Card for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
-
-   ```csharp
-    protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
-    {
-      if (turnContext.Activity.Name == "config/submit")
-      {
-          var response = new ConfigResponse<TaskModuleResponseBase>
-          {
-              Config = new TaskModuleMessageResponse
-              {
-                  Value = "this is a message"
-              }
-          };
-          return new InvokeResponse { Status = 200, Body = response };
-
-      }
-      else if (turnContext.Activity.Name == "config/fetch")
-      {
-          AdaptiveCard card = new AdaptiveCard("1.2")
-          {
-              Body = new List<AdaptiveElement>()
-          };
-          
-          card.Body.Add(
-              new AdaptiveContainer
+                  Body = new List<AdaptiveElement>()
+              };
+              
+              card.Body.Add(new AdaptiveContainer
               {
                   Items = new List<AdaptiveElement>
                   {
@@ -411,34 +345,100 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
                       }
                   }
               });
-          
-          // Construct a task module response with the task module URL and any data to be passed to the task module
 
-          var response = new ConfigResponse<TaskModuleResponseBase>
-          {
-              Config = new TaskModuleContinueResponse
+              var response = new ConfigResponse<TaskModuleResponseBase>
               {
-                  Value = new TaskModuleTaskInfo
+                  Config = new TaskModuleContinueResponse
                   {
-                      Height = 123,
-                      Width = 456,
-                      Title = "test title",
-                      Card = new Attachment
+                      Value = new TaskModuleTaskInfo
                       {
-                          ContentType = AdaptiveCard.ContentType,
-                          Content = card
-                      }
-                  },
-                  Type = "continue"
-              }
-          };
+                          Height = 123,
+                          Width = 456,
+                          Title = "test title",
+                          Card = new Attachment
+                          {
+                              ContentType = AdaptiveCard.ContentType,
+                              Content = card
+                          }
+                      },
+                      Type = "continue"
+                  }
+              };
 
-          return new InvokeResponse { Status = 200, Body = response };
+              return new InvokeResponse { Status = 200, Body = response };
+          }
+
+          return null;
       }
-
-      return null;
-    }
    ```
+
+   # [C# 2](#tab/teams-bot-sdk3)
+
+   The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an Adaptive Card for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
+
+   ```csharp
+      protected override async Task<InvokeResponse> OnInvokeActivityAsync(ITurnContext<IInvokeActivity> turnContext, CancellationToken cancellationToken)
+      {
+        if (turnContext.Activity.Name == "config/submit")
+        {
+            var response = new ConfigResponse<TaskModuleResponseBase>
+            {
+                Config = new TaskModuleMessageResponse
+                {
+                    Value = "this is a message"
+                }
+            };
+            return new InvokeResponse { Status = 200, Body = response };
+
+        }
+        else if (turnContext.Activity.Name == "config/fetch")
+        {
+            AdaptiveCard card = new AdaptiveCard("1.2")
+            {
+                Body = new List<AdaptiveElement>()
+            };
+            
+            card.Body.Add(
+                new AdaptiveContainer
+                {
+                    Items = new List<AdaptiveElement>
+                    {
+                        new AdaptiveTextBlock
+                        {
+                            Size = AdaptiveTextSize.Large,
+                            Text = "bot config test",
+                            Type = "TextBlock"
+                        }
+                    }
+                });
+            
+            // Construct a task module response with the task module URL and any data to be passed to the task module
+
+            var response = new ConfigResponse<TaskModuleResponseBase>
+            {
+                Config = new TaskModuleContinueResponse
+                {
+                    Value = new TaskModuleTaskInfo
+                    {
+                        Height = 123,
+                        Width = 456,
+                        Title = "test title",
+                        Card = new Attachment
+                        {
+                            ContentType = AdaptiveCard.ContentType,
+                            Content = card
+                        }
+                    },
+                    Type = "continue"
+                }
+            };
+
+            return new InvokeResponse { Status = 200, Body = response };
+        }
+
+        return null;
+      }
+     ```
 
    ---
 
@@ -625,7 +625,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
 1. `OnTeamsConfig`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for bot development. The `OnTeamsConfig` method facilitates the handling of configuration related activities within the bot. It's part of the `TeamsActivityHandler` class provided by the Bot Framework SDK for Teams. This method enables users to respond to configuration events, including user initiated bot configurations or updates to bot settings within Teams.
 
-# [C# 1](#tab/teams-bot-sdk4)
+   # [C# 1](#tab/teams-bot-sdk4)
 
    `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` are designed to handle specific types of invoke activities for bot configurations in Teams. `OnTeamsConfigFetchAsync` responds to configuration fetch requests with a `BotConfigAuth` object that includes suggested actions. `OnTeamsConfigSubmitAsync` responds to configuration submit requests with a `TaskModuleMessageResponse` that contains a test message. Both methods help manage bot configurations by responding to different requests.
 
@@ -670,7 +670,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
     }
    ```
 
-# [C# 2](#tab/teams-bot-sdk5)
+   # [C# 2](#tab/teams-bot-sdk5)
 
    `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` methods are made for specific tasks in Teams related to bot configurations. They both use the `createConfigContinueResponse` function to make a `TaskModuleContinueResponse`. This response includes an Adaptive Card with a text block saying `bot config test`. This `TaskModuleContinueResponse` is then given back as the answer for both fetching and submitting configurations.
 
