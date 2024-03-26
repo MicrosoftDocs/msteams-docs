@@ -133,7 +133,7 @@ Bots and message extensions can include mentions within the card content in [Tex
 
 > [!NOTE]
 >
-> * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
+> * [Media elements](https://adaptivecards.io/explorer/Media.html) aren't supported in Adaptive Cards on Teams platform.
 > * Channel and team mentions aren't supported in bot messages.
 > * You can @mention multiple users in a single Adaptive Card message, however, ensure that the message size limit doesn't exceed 28 KB for [Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) and 40 KB for a [bot message](~/bots/how-to/format-your-bot-messages.md).
 
@@ -180,11 +180,11 @@ The following code shows an example of Adaptive Card with a mention:
 
 ### Microsoft Entra Object ID and UPN in user mention
 
-Teams platform allows to mention users with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
+Users can be mentioned with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
 
 The following table describes the newly supported user mention IDs:
 
-|IDs  | Supporting capabilities | Description | Example |
+|IDs | Supporting capabilities | Description | Example |
 |----------|--------|---------------|---------|
 | Microsoft Entra Object ID | Bot, Connector |  Microsoft Entra user’s Object ID | 49c4641c-ab91-4248-aebb-6a7de286397b |
 | UPN | Bot, Connector | Microsoft Entra user’s UPN | `john.smith@microsoft.com` |
@@ -310,7 +310,7 @@ There are two types of people icons that are supported in an Adaptive Card:
 
 * Persona: If you want to show a single user in an Adaptive Card, the Adaptive Card displays the people icon and the name of the user.
 
-    The following is a JSON example of a Persona card:
+    The following JSON code is an example of a Persona card:
 
     ```json
     {
@@ -339,7 +339,7 @@ There are two types of people icons that are supported in an Adaptive Card:
 
 * Persona Set: If you want to show multiple users in an Adaptive Card, the Adaptive Card displays only the people icon of the users.
 
-    The following is a JSON example of a Persona Set:
+    The following JSON code is an example of a Persona Set:
 
     ```json
     {
@@ -386,21 +386,21 @@ The following image is an example of the people icon in an Adaptive Card:
 
 The following table lists the query parameters:
 
-|Property name  |description  |
+| Property Name | Description |
 |---------|---------|
-|`type`     |    `component`     |
-|`name`     |   `graph.microsoft.com/users`. Search all members across the organization.      |
-|`view`     |   `compact`      |
-|`properties`|Passed to the component template|
-|`id`     | User's MRI  |
-|`displayName`     |   Name of the user     |
-|`userPrincipalName`|The user's principal name of the account in Microsoft Entra ID|
+| `type` | `component` |
+| `name` | `graph.microsoft.com/users`. Search all members across the organization. |
+| `view` | `compact` |
+| `properties` | Passed to the component template |
+| `id` | User's MRI |
+| `displayName` | Name of the user |
+| `userPrincipalName` | The user's principal name of the account in Microsoft Entra ID |
 
-Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute.  The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
+Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` property. The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other properties under `properties` is ignored by `component` type in the Adaptive Card schema.
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
-The following is an example of the people icon in an Adaptive Card on Teams desktop and mobile clients:
+The following images show the people icon in an Adaptive Card on Teams desktop and mobile clients:
 
 **Desktop client**:
 
@@ -450,10 +450,10 @@ The following image is an example of masking information in Adaptive Cards:
 
 ### Full width Adaptive Card
 
-You can use the `msteams` property to expand the width of an Adaptive Card and make use of additional canvas space. The next section provides information on how to use the property.
+You can use the `msteams` property to expand the width of an Adaptive Card and make use of available canvas space. The next section provides information on how to use the property.
 
 > [!NOTE]
-> Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
+> Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content isn't truncated.
 
 #### Construct full width cards
 
@@ -488,7 +488,7 @@ The following image shows a full width Adaptive Card:
 
 :::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Full width Adaptive Card view":::
 
-The following image shows the default view of the Adaptive Card when you have not set the `width` property to **Full**:
+The following image shows the default view of the Adaptive Card when you haven't set the `width` property to **Full**:
 
 :::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Small width Adaptive Card view":::
 
@@ -517,7 +517,7 @@ The following code shows an example of Adaptive Card with typeahead support:
 
 ### Stage View for images in Adaptive Cards
 
-In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stage View selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following is an example of the `msteams` property:
+In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stage View selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following code is an example of the `msteams` property:
 
 ``` json
 {
@@ -640,6 +640,92 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ---
 
+### CodeBlock in Adaptive Cards
+
+You can share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. Additionally, you can add action buttons to view the code at its source or edit the code in integrated development environments (IDEs) such as Visual Studio or Visual Studio Code.
+
+The following screenshot shows an Adaptive Card displaying a code snippet:
+
+  :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
+
+The `CodeBlock` element supports the following languages only:
+
+| Language | Supported | Language | Supported |
+|:---|:---:|:---|:---:|
+| Bash | ✔️ | JSON | ✔️ |
+| C | ✔️ | Perl | ✔️ |
+| C++ | ✔️ | PHP | ✔️ |
+| C# | ✔️ | PowerShell | ✔️ |
+| CSS | ✔️ | Python | ✔️ |
+| DOS | ✔️ | SQL | ✔️ |
+| Go | ✔️ | TypeScript | ✔️ |
+| GraphQL | ✔️ | Visual Basic | ✔️ |
+| HTML | ✔️ | Verilog | ✔️ |
+| Java | ✔️ | VHDL | ✔️ |
+| JavaScript | ✔️ | XML | ✔️ |
+
+> [!NOTE]
+>
+> `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
+
+The following code shows an example of an Adaptive Card displaying a code snippet.
+
+``` json
+{
+    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+    "type": "AdaptiveCard",
+    "version": "1.5",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "editor.js",
+            "style": "heading"
+        },
+        {
+            "type": "TextBlock",
+            "text": "Lines 61 - 76"
+        },
+        {
+            "type": "CodeBlock",
+            "codeSnippet": "/**\n* @author John Smith <john.smith@example.com>\n*/\npackage l2f.gameserver.model;\n\npublic abstract strictfp class L2Char extends L2Object {\n  public static final Short ERROR = 0x0001;\n\n  public void moveTo(int x, int y, int z) {\n    _ai = null;\n    log(\"Shouldn't be called\");\n    if (1 > 5) { // what!?\n      return;\n    }\n  }\n}",
+            "language": "java",
+            "startLineNumber": 61
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "View in Azure Repos",
+            "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/teams-modular-packages/pullrequest/176883?_a=files"
+        },
+        {
+            "type": "Action.OpenUrl",
+            "title": "Edit in vscode.dev",
+            "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/teams-modular-packages/pullrequest/176883?_a=files"
+        }
+    ]
+}
+```
+
+The `CodeBlock` element supports the following properties:
+
+| Property | Type | Required | Description |
+|---|---|---|---|
+| `codeSnippet` | String | Yes | The code snippet to be displayed in the Adaptive Card. |
+| `language` | Enum | Yes | The language of the code snippet to be displayed in the Adaptive Card. |
+| `startLineNumber` | Number | No | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
+
+> [!TIP]
+>
+> * Special characters have specific functions in the `codeSnippet` property. For example, the newline character `\n` triggers a line break.
+> * To display the newline character `\n` as part of the code snippet in the Adaptive Card, ensure that it's escaped as `\\n` in the `codeSnippet` property. Else, Teams renders the code after the `\n` in the next line of the card.
+
+### Limitations
+
+* Adaptive Card with `CodeBlock` is only available in web and desktop Teams clients.
+* The code snippet generated in the Adaptive Card is read-only and not editable.
+* The Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user has to select **Expand** to see the rest of the code snippet.
+
 ## Adaptive Cards overflow menu
 
 Adaptive Card in Teams supports overflow menu. You can populate an overflow menu for all the secondary actions in an Adaptive Card. An overflow menu in an Adaptive Card can be added to the following:
@@ -659,9 +745,9 @@ To enable overflow menu, configure the `mode` property with the value as `primar
 
 |Property|Type|Required|Description|
 |---|---|---|---|
-|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action. Secondary actions will be collapsed into an overflow menu.|
+|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action<br>Secondary actions are collapsed into an overflow menu|
 
-The following is an example of the `mode` property in the `actions` type and the `ActionSet` element:
+The following example shows the `mode` property in the `actions` type and the `ActionSet` element:
 
 **Actions**
 
@@ -691,7 +777,7 @@ In the following example, there are two primary actions and one secondary action
 
 > [!NOTE]
 >
-> * The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior is not applicable to the `ActionSet` in an Adaptive Card.
+> * The overflow menu behaves differently on a bot sent card and a message extension card for the root level `actions` in an Adaptive Card. The overflow menu on a bot sent card appears as a pop-up context menu and on the message extension card it appears at the upper-right corner under the More options (**...**) icon. The behavior isn't applicable to the `ActionSet` in an Adaptive Card.
 
 The following image is an example of overflow menu in a bot sent card and a message extension card:
 
@@ -727,7 +813,7 @@ In the following example, all the actions are marked as secondary, therefore, a 
 }
 ```
 
-The following is an example of the overflow menu experience in Teams desktop and mobile:
+The following example shows the overflow menu experience in Teams desktop and mobile clients:
 
 # [Desktop](#tab/desktop)
 
@@ -895,9 +981,9 @@ You can test formatting in your own cards by modifying this code.
 
 ## Code samples
 
-|S.No.| Description|.NET|Node.js|Manifest
-|:--|:--|:--------------------------------------------------------|-----|-----|
-|1|This sample app shows different card formatting supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip)
+| S.No. | Description |.NET | Node.js | Manifest |
+|:--|:--|:--|---|---|
+| 1 | This sample app shows the various card formats supported in Teams. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip) |
 
 ## See also
 
