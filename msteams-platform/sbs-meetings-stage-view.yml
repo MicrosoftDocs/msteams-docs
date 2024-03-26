@@ -98,7 +98,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app-manifest1.png" alt-text="folder path":::
 
-    1. Open a new **Command Prompt** window, change the current directory to the copied **nodejs** path.
+    1. Open a new **Command Prompt** window and change the current directory to the copied **nodejs** path.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs-path.png" alt-text="path for nodejs":::
 
