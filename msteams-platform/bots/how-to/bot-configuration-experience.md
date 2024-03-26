@@ -98,7 +98,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
 # [JavaScript](#tab/JS1)
 
-    The `onInvokeActivity` function simplifies the handling of invoke activities. For `config/fetch` activities, it allows continuation of the configuration with an Adaptive Card or signals completion with a message. For `config/submit` activities, it either proceeds with further configuration through another Adaptive Card or ends the process with a completion message. The Adaptive Cards, `adaptiveCardForContinue` and `adaptiveCardForSubmit` are designed with specific layouts and interactive elements.
+   The `onInvokeActivity` function simplifies the handling of invoke activities. For `config/fetch` activities, it allows continuation of the configuration with an Adaptive Card or signals completion with a message. For `config/submit` activities, it either proceeds with further configuration through another Adaptive Card or ends the process with a completion message. The Adaptive Cards, `adaptiveCardForContinue` and `adaptiveCardForSubmit` are designed with specific layouts and interactive elements.
 
     ```javascript
     async onInvokeActivity(context) {
