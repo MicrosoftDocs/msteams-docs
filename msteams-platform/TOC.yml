@@ -414,30 +414,28 @@
   - name: Bots and SDKs
     href: bots/bot-features.md
     displayName: Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework
-  - name: Bot activity handlers
-    href: bots/bot-basics.md
-    displayName: OnMessageActivityAsync, Bot logic, core Bot Framework handlers
   - name: Bot conversations
     items:
     - name: Overview
       href: bots/how-to/conversations/conversation-basics.md
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
+    - name: Event-driven conversations with activity handlers
+      href: bots/how-to/conversations/bot-events.md
+      displayName: Core Bot Framework handlers, activity, Message reaction events, event handling for install and uninstall events
+    - name: Invoke activity for bot events
+      href: bots/how-to/conversations/bot-invoke-activity.md
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
-      items:
-      - name: Receive all conversation messages
-        href: bots/how-to/conversations/channel-messages-with-rsc.md
-        displayName: mention
+      displayName: OnMessageActivityAsync, picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete, message format
+    - name: Receive all conversation messages
+      href: bots/how-to/conversations/channel-messages-with-rsc.md
+      displayName: mention
     - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
       displayName: compose
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention
-    - name: Conversation events in your Teams bot
-      href: bots/how-to/conversations/subscribe-to-conversation-events.md 
-      displayName: activity, Message reaction events, event handling for install and uninstall events
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
       displayName: conversationId 

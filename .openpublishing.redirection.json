@@ -1019,6 +1019,14 @@
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/use-CICD-template-v4.md",
         "redirect_url": "/microsoftteams/platform/toolkit/use-CICD-template"
-      }      
+      },
+      {
+        "source_path": "msteams-platform/bots/bot-basics.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/bot-events"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/subscribe-to-conversation-events.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/bot-events"
+      }
     ]
 }

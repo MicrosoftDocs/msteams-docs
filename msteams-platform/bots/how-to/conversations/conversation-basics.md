@@ -28,7 +28,9 @@ Bots can receive all channel and chat messages in a team without being @mentione
 
 For the bot to work in a particular conversation or scope, add support to that scope in the [app manifest](~/resources/schema/manifest-schema.md).
 
-Each message in a bot conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot and the bot handles the message. In addition, to define core commands that your bot responds to, you can add a command menu with a dropdown list of commands for your bot. Bots in a group or channel only receive messages when they're mentioned @botname. Teams sends notifications to your bot for conversation events that happen in scopes where your bot is active. You can capture these events in your code and take action on them.
+Each message in a bot conversation is an `Activity` object of type `messageType: message`. When a user sends a message, Teams posts the message to your bot and the bot handles the message. In addition, to define core commands that your bot responds to, you can add a command menu with a dropdown list of commands for your bot. Bots in a group or channel only receive messages when they're mentioned @botname.
+
+Teams sends notifications to your bot for [conversation events](~/bots/how-to/conversations/bot-events.md) that happen in scopes where your bot is active. You can capture these events in your code and take action on them through [invoke activities](~/bots/how-to/conversations/bot-invoke-activity.md).
 
 A bot can also send proactive messages to users. A proactive message is any message sent by a bot that isn't in response to a request from a user. You can format your bot messages to include rich cards that include interactive elements, such as buttons, text, images, audio, video, and so on. Bot can dynamically update messages after sending them, instead of having your messages as static snapshots of data. Messages can also be deleted using the Bot Framework's `DeleteActivity` method.The outgoing request to the bot shows conversation ID and tenant ID in the headers.
 
