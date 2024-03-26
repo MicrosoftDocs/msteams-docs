@@ -13,8 +13,22 @@ ms.localizationpriority: high
 >
 > Bot configuration experience is supported in channel or group chat scopes only.
 
-When you're creating a bot for Teams, it’s important to make sure users have a smooth experience and provision control to personalize their bots in places like Microsoft Teams. The ability to configure bots post-installation within Teams allows developers to fine-tune bot functionality according to user requirements even after deployment. You can use methods from the Microsoft Bot Framework SDK to implement bot configuration features that enhance user engagement and productivity. 
- 
+Bot configuration allows developers to enhance user engagement and personalize bot experiences within platforms like Microsoft Teams. By enabling users to configure bot settings post-installation, developers can ensure a smoother onboarding process and tailor bot functionality to meet specific user needs.
+
+## Why Bot Configuration?
+
+Imagine a scenario where a user installs a bot in their Teams but finds the default settings inadequate for their workflow. Without bot configuration, users might feel limited by the bot's predefined behavior, leading to disengagement and decreased usage. However, by implementing bot configuration, developers empower users to tailor bot settings according to their preferences and requirements.
+
+## Key features
+
+* Personalized user experience: Bot configuration allows users to customize bot behavior. This ensures that the interactions align with their workflow and preferences.
+
+* Increased engagement: Personalized experiences lead to higher user engagement. Configured bots are more likely to meet user expectations, encouraging frequent interactions and driving up engagement metrics such as monthly active users (MAU) rates.
+
+* Adaptability: User needs change over time, bots must adapt to meet these evolving requirements. Bot configuration allows users to reconfigure settings as their requirements change, ensuring the bot continues to provide value and relevance in the long term.
+
+When you're creating a bot for Teams, it’s important to make sure users have a smooth experience and provision control to personalize their bots in places like Microsoft Teams. The ability to configure bots post-installation within Teams allows developers to fine-tune bot functionality according to user requirements even after deployment. You can use methods from the Microsoft Bot Framework SDK to implement bot configuration features that enhance user engagement and productivity.
+
 In this article, we'll explore methods for configuring bots post-installation, both for cross-platform compatibility and specific to Teams. You can create complex bot configurations that enhance user engagement and efficiency.
 
 There are two ways to initiate bot configuration settings post-installation:
@@ -36,7 +50,6 @@ To enable the bot configuration settings follow these steps:
 1. [Update app manifest](#update-app-manifest)
 
 1. [Configure your bot](#configure-your-bot)
-
 
 ### Update app manifest
 
@@ -83,7 +96,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
 1. `OnInvokeActivity`: The `OnInvokeActivity` method is a fundamental component of the Bot Framework SDK. It enables users to handle incoming activities that aren't recognized by any other method in the bot's logic. This method provides flexibility for handling a wide range of activities, including user interactions, within the bot's conversation flow.
 
-   # [JavaScript](#tab/JS1)
+# [JavaScript](#tab/JS1)
 
     The `onInvokeActivity` function simplifies the handling of invoke activities. For `config/fetch` activities, it allows continuation of the configuration with an Adaptive Card or signals completion with a message. For `config/submit` activities, it either proceeds with further configuration through another Adaptive Card or ends the process with a completion message. The Adaptive Cards, `adaptiveCardForContinue` and `adaptiveCardForSubmit` are designed with specific layouts and interactive elements.
 
@@ -274,7 +287,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
 1. `OnInvokeActivityAsync`: `OnInvokeActivityAsync` is the asynchronous version of `OnInvokeActivity`. It allows users to handle incoming activities asynchronously, making it suitable for long-running or asynchronous tasks. This method enhances responsiveness and scalability in bot applications by offloading processing tasks to asynchronous operations.
 
-   # [C#](#tab/teams-bot-sdk1)
+# [C#](#tab/teams-bot-sdk1)
 
    The `onInvokeActivityAsync` method is designed to handle different types of invoke activities. Such as:
 
@@ -282,7 +295,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
    1. C#2: For activities related to configuration or fetching information, the method utilizes `config/continue`; whereas for submission-related activities, it employs `config/message`.
 
-      # [C# 1](#tab/teams-bot-sdk2)
+# [C# 1](#tab/teams-bot-sdk2)
 
          The `OnInvokeActivityAsync` method simplifies handling of invoke activities in a bot. It uses a `turnContext` object to represent the activity and a `cancellationToken` for async tasks. For `config/fetch`, it creates a `ConfigResponse<BotConfigAuth>` with bot details and returns a 200 status `InvokeResponse`. For `config/submit`, it forms a `ConfigResponse<TaskModuleResponseBase>` with configuration details in an Adaptive Card and returns a 200 status code.
 
@@ -359,7 +372,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
         }
         ```
 
-      # [C# 2](#tab/teams-bot-sdk3)
+# [C# 2](#tab/teams-bot-sdk3)
 
          The `OnInvokeActivityAsync` method efficiently manages invoke activities in a bot application. It checks the activity’s name using `turnContext.Activity.Name`. For `config/submit`, it creates a `ConfigResponse<TaskModuleResponseBase>` with a message response and returns a 200 status `InvokeResponse`. For `config/fetch`, it builds an Adaptive Card for configuration data, wrapped in a `ConfigResponse<TaskModuleResponseBase>` with card details, and returns a 200 status. If the activity name isn't either `config/submit` or `config/fetch`, it returns null.
 
@@ -426,6 +439,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
             return null;
          }
          ```
+
          ---
 
    ---
@@ -434,7 +448,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
 1. `HandleTeamsConfig`: This method offers granular control over configuration-related activities within the bot's logic. You can use `HandleTeamsConfig` to implement custom logic or additional processing when handling configuration events in Teams.
 
-    # [JavaScript](#tab/JS2)
+# [JavaScript](#tab/JS2)
 
     `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`: The `handleTeamsConfigFetch` method generates an Adaptive Card labeled `Bot Config Fetch` and offers two response alternatives an `auth` response, which suggests an action to launch a URL for authentication, and a `continue` response, which presents an Adaptive Card. The `handleTeamsConfigSubmit` method deals with the user's selection from the Adaptive Card and responds appropriately.
 
@@ -520,7 +534,6 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
     The code snippets create two Adaptive Cards for setting up a bot in Teams. The `adaptiveCardForContinue` function makes a card that lets the user select a setup option, either to `Continue with more options` or `Finish setting up bot`. Users can search for options with `Search for an option`. The card has a `Submit` button.
 
     The `adaptiveCardForSubmit` function also makes an Adaptive Card, which asks the user to submit to move forward with setting up the bot. It includes a `Submit` button.
-
 
     ```javascript
 
@@ -612,7 +625,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
 1. `OnTeamsConfig`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for bot development. The `OnTeamsConfig` method facilitates the handling of configuration related activities within the bot. It's part of the `TeamsActivityHandler` class provided by the Bot Framework SDK for Teams. This method enables users to respond to configuration events, including user initiated bot configurations or updates to bot settings within Teams.
 
-   # [C# 1](#tab/teams-bot-sdk4)
+# [C# 1](#tab/teams-bot-sdk4)
 
       `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` are designed to handle specific types of invoke activities for bot configurations in Teams. `OnTeamsConfigFetchAsync` responds to configuration fetch requests with a `BotConfigAuth` object that includes suggested actions. `OnTeamsConfigSubmitAsync` responds to configuration submit requests with a `TaskModuleMessageResponse` that contains a test message. Both methods help manage bot configurations by responding to different requests.
 
@@ -657,7 +670,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
       }
       ```
 
-   # [C# 2](#tab/teams-bot-sdk5)
+# [C# 2](#tab/teams-bot-sdk5)
 
       `OnTeamsConfigFetchAsync` and `OnTeamsConfigSubmitAsync` methods are made for specific tasks in Teams related to bot configurations. They both use the `createConfigContinueResponse` function to make a `TaskModuleContinueResponse`. This response includes an Adaptive Card with a text block saying `bot config test`. This `TaskModuleContinueResponse` is then given back as the answer for both fetching and submitting configurations.
 
@@ -717,6 +730,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
           return response;
       }
       ```
+
      ---
 
 ---
@@ -767,7 +781,7 @@ To reconfigure the bot, follow these steps:
 
    The bot sends a response message and now the bot is configured.
 
-   :::image type="content" source="../../assets/images/bots/setting-up-bot.png" alt-text="Screenshot shows the bot configuration set up is complete.":::   
+   :::image type="content" source="../../assets/images/bots/setting-up-bot.png" alt-text="Screenshot shows the bot configuration set up is complete.":::
 
 ## Code sample
 
