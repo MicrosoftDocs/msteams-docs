@@ -25,7 +25,7 @@ Get answers to common questions about API-based message extensions.
 
 <details><summary> Q. What are the best practices for troubleshooting issues with an OpenAPI spec?</summary>
 
-Make sure that the OpenAPI spec adheres to the limitations defined in [build API-based message extension](build-api-based-message-extension.md#openapi-description).
+Make sure that the OpenAPI spec adheres to the limitations defined in [build API-based message extension](build-api-based-message-extension.md#OAD).
 
 </details>
 <br>

@@ -20,11 +20,9 @@ API-based message extensions are a type of Teams app that integrates your chat f
 Before you get started, ensure that you meet the following requirements:
 </br>
 <details>
-<summary >1. OpenAPI Description (OAD)</summary>
+<summary id="OAD" >1. OpenAPI Description (OAD)</summary>
 
 Users must not enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
-
-[Open API Description](#openapi-description)
 
 * The `auth` property must not be specified.
 * JSON and YAML are the supported formats.
