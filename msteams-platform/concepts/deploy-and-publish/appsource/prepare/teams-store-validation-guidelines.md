@@ -1785,7 +1785,7 @@ Use the following guidelines to name an app:
 1. Display name:
 
     1. Must incorporate the app name instead of only using a generic verb.
-    1. Must incorporate the term that describes the action, typically represented by a verb, when using custom intend. For example, View related suppliers instead of Related suppliers.
+    1. Must incorporate the term that describes the action, typically represented by a verb, when using custom intend. For example, **View related suppliers** instead of **Related suppliers**.
     1. For proper case usage, only the first letter of the intent and/or brand name must be capitalized.
 
 1. Functionality:
