@@ -17,7 +17,7 @@ The Microsoft Teams JavaScript client library (TeamsJS) can help you create host
 * [Tabs](../../tabs/what-are-tabs.md)
 * [Dialogs (referred as task modules in TeamsJS v1.x)](../../task-modules-and-cards/what-are-task-modules.md)
 
-Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) is refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
+With version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) is refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
 Here's the current versioning guidance for various app scenarios:
 
@@ -48,7 +48,8 @@ An API translation layer (mapping v.1 to v.2 TeamsJS API calls) is provided to e
 
 #### Teams-only apps
 
-Even if you intend your app to only run in Teams (and not Microsoft 365 app and Outlook), best practice is to start referencing the latest TeamsJS (*v.2.0* or later) as soon as convenient, in order to benefit from the latest improvements, new features, and support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported.
+Even when your app is designed only for Teams, not for Microsoft 365 app or Outlook, recommended to start using the latest TeamsJS (*v.2.0* or later) as soon as convenient. This allows you to use the latest improvements, new features, and support, even for Teams-exclusive apps. Support for TeamsJS version 1.12 will persist.
+
 
 Once you're able, the next step is to [update existing application code](#2-update-teamsjs-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
 
@@ -89,11 +90,11 @@ For more information regarding the authentication parameter, see [use external O
 
 #### Teams apps running across Microsoft 365
 
-Enabling an existing Teams app to run in Outlook and Microsoft 365 requires all of the following:
+Enable an existing Teams app to run in Outlook and Microsoft 365:
 
-1. Dependency on TeamsJS version 2.x.x ( `@microsoft/teams-js@2.0.0`) or later,
+1. Dependency on TeamsJS version 2.x.x ( `@microsoft/teams-js@2.0.0`) or later.
 
-2. [Modifying existing application code](#2-update-teamsjs-references) according to the required changes described in this article, and
+2. [Modifying existing application code](#2-update-teamsjs-references) according to the required changes described in this article.
 
 3. [Updating your app manifest](#3-update-the-app-manifest-optional) (previously called Teams app manifest) to version 1.13 or later.
 
@@ -174,7 +175,6 @@ async function example() {
             /*...*/
           }
 ```
-
 
 ---
 
@@ -297,6 +297,9 @@ The `pages` namespace includes functionality for running and navigating webpages
 
 ##### *dialog* namespace
 
+> [!NOTE]
+> The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client.
+
 The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are renamed:
 
 | Original namespace `tasks` | New namespace `dialog`  |
@@ -307,11 +310,11 @@ The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
+Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further subnamespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 
-To generalize the TeamsJS library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) has been moved to a *teamsCore* namespace:
+To generalize the TeamsJS library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the global namespace) is moved to a *teamsCore* namespace:
 
 | Original namespace `global (window)` | New namespace `teamsCore`  |
 | - | - |
@@ -394,6 +397,7 @@ To run in Outlook and Microsoft 365 app, your app needs to depend on the [npm pa
 After completion, the utility will have updated your `package.json` file with the TeamsJS version 2.x.x (`@microsoft/teams-js@2.0.0` or later) dependency, and your `*.js/.ts` and `*.jsx/.tsx` files will be updated with:
 
 > [!div class="checklist"]
+>
 > * `package.json` references to TeamsJS version 2.x.x
 > * Import statements for TeamsJS version 2.x.x
 > * [Function, Enum, and Interface calls](#apis-organized-into-capabilities) to TeamsJS version 2.x.x
@@ -422,7 +426,6 @@ Open your app manifest and update the `$schema` and `manifestVersion` with the f
     "manifestVersion" : "1.13"
 }
 ```
-
 
 ---
 
