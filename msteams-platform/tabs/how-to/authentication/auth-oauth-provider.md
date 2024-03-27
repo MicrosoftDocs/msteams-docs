@@ -49,7 +49,7 @@ The following image provides the flow to add authentication to external browsers
 
     ```JavaScript
        authentication.authenticate({
-          url: `${window.location.origin}/auth-start?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}&hostRedirectUrl=${url}&googleId=${googleId}`,
+          url: `${window.location.origin}/auth-start?oauthRedirectMethod={oauthRedirectMethod}&authId={authId}&hostRedirectUrl={hostRedirectUrl}&googleId=${googleId}`,
           isExternal: true
         }).then((result) => {
           this.getGoogleServerSideToken(result);
@@ -90,9 +90,9 @@ The following image provides the flow to add authentication to external browsers
 1. The third-party app server handles the response and checks `oauthRedirectMethod`, which is returned from external OAuth provider in the state object to determine whether the response needs to be returned through the auth-callback deep link or through web page that calls `notifySuccess()`.
 
       ```JavaScript
-      const state = JSON.parse(req.query.state)
       if (state.oauthRedirectMethod === 'deeplink') {
-         return res.redirect('msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}')
+      const clientRedirectUrl = state.hostRedirectUrl.replace('{result}', req.query.code)
+      return res.redirect(clientRedirectUrl)
       }
       else {
       // continue redirecting to a web-page that will call notifySuccess() – usually this method is used in Teams-Web
