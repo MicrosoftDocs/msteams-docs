@@ -488,6 +488,9 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 ## Adaptive Card response
 
+> [!IMPORTANT]
+> If your message extension plugins has a single Adaptive Card response and if you encounter a **Something went wrong** error in the Adaptive Card, we recommend you to disable the auto refresh in the Adaptive Card.
+
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
