@@ -152,7 +152,7 @@ Configuration response is the data returned by the server or application to conf
 }
 ```
 
-The following response is the configuration response appears when the user interact with the compose extension:
+The following response is the configuration response that appears when the user interacts with the compose extension:
 
 ```json
 {
