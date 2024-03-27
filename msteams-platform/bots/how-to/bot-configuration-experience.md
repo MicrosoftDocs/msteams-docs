@@ -437,6 +437,9 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
 1. `HandleTeamsConfig`: This method offers granular control over configuration-related activities within the bot's logic. You can use `HandleTeamsConfig` to implement custom logic or additional processing when handling configuration events in Teams.
 
+1. `OnTeamsConfig`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for bot development. The `OnTeamsConfig` method facilitates the handling of configuration related activities within the bot. It's part of the `TeamsActivityHandler` class provided by the Bot Framework SDK for Teams. This method enables users to respond to configuration events, including user initiated bot configurations or updates to bot settings within Teams.
+
+
    # [JavaScript](#tab/JS2)
 
    `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`: The `handleTeamsConfigFetch` method generates an Adaptive Card labeled `Bot Config Fetch` and offers two response alternatives an `auth` response, which suggests an action to launch a URL for authentication, and a `continue` response, which presents an Adaptive Card. The `handleTeamsConfigSubmit` method deals with the user's selection from the Adaptive Card and responds appropriately.
@@ -610,8 +613,6 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
     });
 
    ```
-
-1. `OnTeamsConfig`: Similar to `HandleTeamsConfig`, `OnTeamsConfig` is tailored for bot development. The `OnTeamsConfig` method facilitates the handling of configuration related activities within the bot. It's part of the `TeamsActivityHandler` class provided by the Bot Framework SDK for Teams. This method enables users to respond to configuration events, including user initiated bot configurations or updates to bot settings within Teams.
 
     # [C# 1](#tab/teams-bot-sdk4)
 
