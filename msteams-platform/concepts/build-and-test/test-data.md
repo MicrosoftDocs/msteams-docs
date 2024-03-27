@@ -144,7 +144,7 @@ By default, only global admins or Teams service admins can upload the custom app
     </Teams>
     ```
 
-2. Save the following snippet as a PowerShell script (.ps1) and note where you've saved it. This script executes the steps to create the team and channel, and add members to them:
+2. Save the following snippet as a PowerShell script (.ps1) and note where you saved it. This script executes the steps to create the team and channel, and add members to them:
 
     ```powershell
     Param(
