@@ -307,7 +307,7 @@ The following fields are changed when your content page is in a private channel:
 * `sharepointSite.url`: Set to the URL of a distinct, unique SharePoint site for the private channel
 * `sharepointSite.path`: Set to the path of a distinct, unique SharePoint site for the private channel
 * `sharepointSite.domain`: Set to the domain of a distinct, unique SharePoint site domain for the private channel
-* `channel.ownerGroupId`: set to the host team groupId of the private channel
+* `channel.ownerGroupId`: Set to the host team groupId of the private channel
 
 If your page makes use of any of these values, the value of `channel.membershipType` field must be `Private` to determine if your page is loaded in a private channel and can respond appropriately.
 
