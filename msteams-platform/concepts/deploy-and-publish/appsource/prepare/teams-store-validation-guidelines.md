@@ -1779,6 +1779,24 @@ Teams apps extensible across Microsoft 365 clients must be fully responsive and 
 * Microsoft Teams on desktop and web.
 * Microsoft Teams on Android and iOS.
 
+### Actions in Microsoft 365
+
+Use the following guidelines to name an app:
+
+1. Display name:
+
+  1. Must incorporate the app name instead of only using a generic verb.
+  1. Must incorporate the term that describes the action, typically represented by a verb, when using custom intend. For example, View related suppliers instead of Related suppliers.
+  1. For proper case usage, only the first letter of the intent and/or brand name must be capitalized.
+
+1. Functionality:
+
+  1. Seamless experience for user without need to reupload the content file to complete the action.
+  1. Actions must function on the objects defined in the manifest.
+  1. The intent and functionality must be accurate as described.
+  1. Tabs opened through actions must show contextual information for the action taken (a tab is mandatory).
+  1. There must be well-handled, graceful messaging for any failures.
+
 ### Mobile experience
 
 Users must be able to launch the app from the actions flyout menu within the Microsoft 365 client on mobile. The app name must be displayed correctly in the action bar. [*Mandatory Fix*]
