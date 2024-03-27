@@ -276,6 +276,17 @@
       - name: Analyze your apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
         displayName: dashboard
+    - name: Microsoft Entra ID for Teams apps
+      items:
+      - name: Overview
+        href: toolkit/use-microsoft-entra-id-for-teams.md
+        displayName: Azure services, app registration, tenant
+      - name: Register Teams app in Microsoft Entra ID
+        href: toolkit/register-teams-app-microsoft-entra-id.md
+        displayName: Azure portal, app registration, dev tunnel
+      - name: Create bot resource in Microsoft Entra ID
+        href: toolkit/create-resource-bot-microsoft-entra-id.md
+        displayName: bot resource, client secret, add bot to Teams
     - name: Adaptive Card Previewer for Visual Studio Code
       items:
       - name: Overview
