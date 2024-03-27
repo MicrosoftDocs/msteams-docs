@@ -6,7 +6,6 @@ ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.date: 07/28/2022
-ms.topic: conceptual
 ---
 
 # Teams app planning checklist
