@@ -72,7 +72,7 @@ For more information, see [app manifest schema](../../resources/schema/manifest-
 
 ### Configure your bot
 
-When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `config/fetch` or `config/submit`. The bot responds with an Adaptive Card, when the user provides relevant information in the Adaptive Card and selects Submit, `config/submit` or `config/continue` is returned to the bot and the bot configuration is complete.
+When a user installs the bot in a team or group chat scope, the `fetchTask: true` property in the app manifest file initiates `config/fetch` or `config/submit`. The bot responds with an Adaptive Card, when the user provides relevant information in the Adaptive Card and selects Submit, `config/submit` or `config/continue` is returned to the bot and the bot configuration is complete.
 
 You can use the following methods to enable configuration settings for a bot:
 
@@ -86,7 +86,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
 1. `OnInvokeActivity`: The `OnInvokeActivity` method is a fundamental component of the Bot Framework SDK. It enables users to handle incoming activities that aren't recognized by any other method in the bot's logic. This method provides flexibility for handling a wide range of activities, including user interactions, within the bot's conversation flow.
 
-# [JavaScript](#tab/JS1)
+   # [JavaScript](#tab/JS1)
 
    The `onInvokeActivity` function simplifies the handling of invoke activities. For `config/fetch` activities, it allows continuation of the configuration with an Adaptive Card or signals completion with a message. For `config/submit` activities, it either proceeds with further configuration through another Adaptive Card or ends the process with a completion message. The Adaptive Cards, `adaptiveCardForContinue` and `adaptiveCardForSubmit` are designed with specific layouts and interactive elements.
 
@@ -437,7 +437,7 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 
 1. `HandleTeamsConfig`: This method offers granular control over configuration-related activities within the bot's logic. You can use `HandleTeamsConfig` to implement custom logic or additional processing when handling configuration events in Teams.
 
-# [JavaScript](#tab/JS2)
+   # [JavaScript](#tab/JS2)
 
    `handleTeamsConfigFetch` and `handleTeamsConfigSubmit`: The `handleTeamsConfigFetch` method generates an Adaptive Card labeled `Bot Config Fetch` and offers two response alternatives an `auth` response, which suggests an action to launch a URL for authentication, and a `continue` response, which presents an Adaptive Card. The `handleTeamsConfigSubmit` method deals with the user's selection from the Adaptive Card and responds appropriately.
 
