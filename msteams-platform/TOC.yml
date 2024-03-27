@@ -1078,7 +1078,7 @@
     items:
     - name: Overview
       href: concepts/build-and-test/deep-links.md
-      displayName: Navigate within your app, executeDeepLink
+      displayName: Navigate within your app, executeDeepLink, protocol handlers
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
     - name: Deep link to Teams chat
