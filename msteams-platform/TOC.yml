@@ -61,7 +61,7 @@
         href: concepts/design/plan-code-instrumentation.md
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
-    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
+    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee
 - name: Design your app
   items:
   - name: Overview
@@ -398,9 +398,6 @@
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
-  - name: Send activity feed notifications
-    href: tabs/send-activity-feed-notification.md
-    displayName: activity feed, notification, customize notification
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
     displayName: margins align, extra padding effect, size of the tab margins, changing margins
@@ -448,9 +445,6 @@
       href: bots/how-to/update-and-delete-bot-messages.md      
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
-    - name: Notification bot in Teams
-      href: bots/how-to/conversations/notification-bot-in-teams.md
-      displayName: Adapter
     - name: Command bot in Teams
       href: bots/how-to/conversations/command-bot-in-teams.md
     - name: Workflow bot in Teams
@@ -702,6 +696,17 @@
       displayName: payload
     - name: Use dialogs from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
+- name: Build notification for your app
+  items:
+  - name: Overview
+    href: concepts/design/design-app-notification.md
+    displayName: notification, choose your notification
+  - name: Send activity feed notifications
+    href: tabs/send-activity-feed-notification.md
+    displayName: activity feed, notification, customize notification
+  - name: Interactive notification bot in Teams
+    href: bots/how-to/conversations/interactive-notification-bot-in-teams.md
+    displayName: Adapter, notification, bot
 - name: Add authentication
   items:
   - name: Overview

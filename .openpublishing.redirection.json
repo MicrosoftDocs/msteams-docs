@@ -933,6 +933,10 @@
         "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-cli"
       },
       {
+        "source_path": "msteams-platform/bots/how-to/conversations/notification-bot-in-teams.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/interactive-notification-bot-in-teams"
+      },
+      {
         "source_path": "msteams-platform/toolkit/toolkit-v4/add-capability-v4.md",
         "redirect_url": "/microsoftteams/platform/toolkit/add-How-to-guides-v5"
       },
