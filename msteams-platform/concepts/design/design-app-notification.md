@@ -94,7 +94,7 @@ Here's some example scenario's and recommended notification types:
 If you want a proactive notification for your app, go to:
 
 > [!div class="nextstepaction"]
-> [Send activity feed notifications to users in Teams](/graph/teams-send-activityfeednotifications)
+> [Activity feed notifications to users in Teams](/graph/teams-send-activityfeednotifications)
 
    :::column-end:::
 
