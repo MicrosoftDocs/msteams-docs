@@ -69,6 +69,19 @@ app.activity(ActivityTypes.Message, async (context: TurnContext, state: Applicat
     return app;
 ```
 
+# [Python](#tab/python6)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/01.messaging.a.echoBot/src/bot.py#L25)
+
+```python
+@app.activity("message")
+async def on_message(context: TurnContext, _state: TurnState):
+    await context.send_activity(f"you said: {context.activity.text}")
+    return True
+```
+
 ---
 
 ## Message extensions
@@ -181,6 +194,21 @@ app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, 
 
 ```
 
+# [Python](#tab/python5)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.b.messageExtensions.AI-ME)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.b.messageExtensions.AI-ME/src/bot.py#L75)
+
+```python
+# Implement Message Extension logic
+@app.message_extensions.fetch_task("CreatePost")
+async def create_post(context: TurnContext, _state: AppTurnState) -> TaskModuleTaskInfo:
+    # Return card as a TaskInfo object
+    card = create_initial_view()
+    return create_task_info(card)
+```
+
 ---
 
 ## Adaptive Cards capabilities
@@ -242,6 +270,21 @@ app.adaptiveCards.actionSubmit('StaticSubmit', async (context, _state, data: Sub
     app.OnActivity(ActivityTypes.Message, activityHandlers.MessageHandler);
 
     return app;
+```
+
+# [Python](#tab/python4)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/packages/ai/teams/adaptive_cards/adaptive_cards.py#L129C1-L136C67)
+
+```python
+# Use this method as a decorator
+@app.adaptive_cards.action_submit("submit")
+async def execute_submit(context: TurnContext, state: TurnState, data: Any):
+    print(f"Execute with data: {data}")
+    return True
+
+# Pass a function to this method
+app.adaptive_cards.action_submit("submit")(execute_submit)
 ```
 
 ---
@@ -452,6 +495,31 @@ builder.Services.AddTransient<IBot>(sp =>
 
 ```
 
+# [Python](#tab/python3)
+
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.c.actionMapping.lightBot)
+
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.c.actionMapping.lightBot/src/bot.py#L35)
+
+```python
+# Create AI components
+model: OpenAIModel
+
+if config.OPENAI_KEY:
+    model = OpenAIModel(
+        OpenAIModelOptions(api_key=config.OPENAI_KEY, default_model="gpt-3.5-turbo")
+    )
+elif config.AZURE_OPENAI_KEY and config.AZURE_OPENAI_ENDPOINT:
+    model = OpenAIModel(
+        AzureOpenAIModelOptions(
+            api_key=config.AZURE_OPENAI_KEY,
+            default_model="gpt-35-turbo",
+            api_version="2023-03-15-preview",
+            endpoint=config.AZURE_OPENAI_ENDPOINT,
+        )
+    )
+```
+
 ---
 
 ### Message extension query
@@ -554,6 +622,20 @@ app.messageExtensions.selectItem(async (context, state, item) => {
                 AttachmentLayout = "list",
                 Attachments = attachments
             };
+```
+
+# [Python](#tab/python2)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/packages/ai/teams/message_extensions/message_extensions.py#L68C1-L75C55)
+
+```python
+# Use this method as a decorator
+@app.message_extensions.query("test")
+async def on_query(context: TurnContext, state: TurnState, url: str):
+    return MessagingExtensionResult()
+
+# Pass a function to this method
+app.message_extensions.query("test")(on_query)
 ```
 
 ---

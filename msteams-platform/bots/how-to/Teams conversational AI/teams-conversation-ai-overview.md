@@ -134,9 +134,9 @@ The following table lists the updates to the Teams AI library:
 
 ## Code samples
 
-|Sample name | Description |.NET | Node.js |
-|----------------|-----------------|--------------|--------------|
-|Echo bot| This sample shows how to incorporate a basic conversational flow into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot) |
+|Sample name | Description |.NET | Node.js | Python
+|----------------|-----------------|--------------|--------------|--------------|
+|Echo bot| This sample shows how to incorporate a basic conversational flow into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot)|
 | Search command message extension| This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand) |
 | Typeahead bot| This sample shows how to incorporate the typeahead search functionality in Adaptive Cards into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.adaptiveCards.a.typeAheadBot) |
 |Conversational bot with AI: Teams chef|This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.a.teamsChefBot)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.a.teamsChefBot) |

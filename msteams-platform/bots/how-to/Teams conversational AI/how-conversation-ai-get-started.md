@@ -88,6 +88,29 @@ builder.Services.AddSingleton<IBotFrameworkHttpAdapter>(sp => sp.GetService<Clou
 builder.Services.AddSingleton<BotAdapter>(sp => sp.GetService<CloudAdapter>());
 ```
 
+# [Python](#tab/python4)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/01.messaging.a.echoBot/src/bot.py#L8C1-L23C2)
+
+```python
+import sys
+import traceback
+
+from botbuilder.core import TurnContext
+from teams import Application, ApplicationOptions, TeamsAdapter
+from teams.state import TurnState
+
+from config import Config
+
+config = Config()
+app = Application[TurnState](
+    ApplicationOptions(
+        bot_app_id=config.APP_ID,
+        adapter=TeamsAdapter(config),
+    )
+)
+```
+
 ---
 
 ### Import Teams AI library
@@ -212,6 +235,29 @@ const planner = new ActionPlanner({
 
 ```
 
+# [Python](#tab/python1)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.c.actionMapping.lightBot/src/bot.py#L35)
+
+```python
+# Create AI components
+model: OpenAIModel
+
+if config.OPENAI_KEY:
+    model = OpenAIModel(
+        OpenAIModelOptions(api_key=config.OPENAI_KEY, default_model="gpt-3.5-turbo")
+    )
+elif config.AZURE_OPENAI_KEY and config.AZURE_OPENAI_ENDPOINT:
+    model = OpenAIModel(
+        AzureOpenAIModelOptions(
+            api_key=config.AZURE_OPENAI_KEY,
+            default_model="gpt-35-turbo",
+            api_version="2023-03-15-preview",
+            endpoint=config.AZURE_OPENAI_ENDPOINT,
+        )
+    )
+```
+
 ---
 
 ## Define storage and application
@@ -258,6 +304,24 @@ The `MemoryStorage()` function stores all the state for your bot. The `Applicati
 ```
 
 `TurnStateFactory` allows you to create a custom state class for your application. You can use it to store additional information or logic that you need for your bot. You can also override some of the default properties of the turn state, such as the user input, the bot output, or the conversation history. To use `TurnStateFactory`, you need to create a class that extends the default turn state and pass a function that creates an instance of your class to the application constructor.
+
+# [Python](#tab/python3)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.c.actionMapping.lightBot/src/bot.py#L52C1-L62C2)
+
+```python
+storage = MemoryStorage()
+app = Application[AppTurnState](
+    ApplicationOptions(
+        bot_app_id=config.APP_ID,
+        storage=storage,
+        adapter=TeamsAdapter(config),
+        ai=AIOptions(planner=ActionPlanner(
+            ActionPlannerOptions(model=model, prompts=prompts, default_prompt="sequence")
+        )),
+    )
+)
+```
 
 ---
 
@@ -635,6 +699,42 @@ public class LightBotActions
     }
 }
 
+```
+
+# [Python](#tab/python2)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.c.actionMapping.lightBot/src/bot.py#L85C1-L113C26)
+
+```python
+@app.ai.action("LightsOn")
+async def on_lights_on(
+    context: ActionTurnContext[Dict[str, Any]],
+    state: AppTurnState,
+):
+    state.conversation.lights_on = True
+    await context.send_activity("[lights on]")
+    return "the lights are now on"
+
+
+@app.ai.action("LightsOff")
+async def on_lights_off(
+    context: ActionTurnContext[Dict[str, Any]],
+    state: AppTurnState,
+):
+    state.conversation.lights_on = False
+    await context.send_activity("[lights off]")
+    return "the lights are now off"
+
+
+@app.ai.action("Pause")
+async def on_pause(
+    context: ActionTurnContext[Dict[str, Any]],
+    _state: AppTurnState,
+):
+    time_ms = int(context.data["time"]) if context.data["time"] else 1000
+    await context.send_activity(f"[pausing for {time_ms / 1000} seconds]")
+    time.sleep(time_ms / 1000)
+    return "done pausing"
 ```
 
 ---
