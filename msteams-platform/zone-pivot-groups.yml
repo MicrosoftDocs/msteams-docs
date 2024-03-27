@@ -23,7 +23,7 @@ groups:
   - id: blazor-app
     title: Blazor
   - id: node-java-script
-    title: JavaScript Yeoman
+    title: Yeoman
 - id: teams-app-environment-blazor
   title: Teams app environment
   prompt: Before you begin, select the environment in which you want to build
