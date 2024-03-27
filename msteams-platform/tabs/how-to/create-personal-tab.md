@@ -986,7 +986,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 ::: zone-end
 
 
-## Reorder static static tabs
+## Reorder static tabs
 
 Starting with manifest version 1.7, developers can rearrange all tabs in their static tab app. You can move the **bot chat** tab, which always defaults to the first position, anywhere in the Teams app tab header. Two reserved tab `entityId` keywords are declared, **conversations** and **about**.
 
