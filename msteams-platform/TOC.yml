@@ -939,7 +939,7 @@
       displayName: Microsoft Publisher Agreement, app update or new release, user engagement data 
     -  name: Common reasons for app validation failure
        href: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
-       displayName: Font, Broken links, functional bugs, app crashes, unexpected errors, app description, Microsoft trademark and brand guidelines, testability, app icon guidelines, app name mismatch, developer name mismatch      
+       displayName: App description, broken links, functional bugs, app crashes, unexpected errors, Microsoft trademark and brand guidelines, external domains, testability, bot functionality, AI-generated content
   - name: Drive customer adoption of your app
     href: promote-app-adoption.md
     displayName: app promotion, awareness, adoption, rollout, admin approval, change management

@@ -1,6 +1,6 @@
 ---
 title: Common reasons for app validation failure
-description: Learn the most common reasons for app validation failure such as broken links, unexpected errors, crashes, valid domain guidelines violation, functional bugs.
+description: Learn the common reasons for app validation failure that prevents your app to pass the Microsoft Teams Store submission process.
 ms.topic: overview
 author: v-ypalikila
 ms.author: v-ypalikila
