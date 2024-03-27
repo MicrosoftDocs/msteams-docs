@@ -37,24 +37,22 @@ Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webho
 
 #### Notification bot or Incoming Webhook
 
-Before you start to learn how to build Incoming Webhooks, you may also want to know that you can build a notification bot using Teams Toolkit or send activity feed notifications using Microsoft Graph API. Notification bots and activity feed notifications can enable more customizable experience to meet different business scenarios. For more information, see desigan app notifications (link to be added).
+Before you start to learn how to build Incoming Webhooks, you may also want to know that you can build a notification bot using Teams Toolkit or send activity feed notifications using Microsoft Graph API. Notification bots and activity feed notifications can enable more customizable experience to meet different business scenarios. For more information, see design app notifications (link to be added).
 
-Learn more about the differences between a notification bot and Incoming Webhook so that you can choose the right solutions for your scenarios:
-
-| &nbsp; | Notification bot |  Incoming Webhook |
-| --- | --- | --- |
-| What is it? | A RESTful web API  | A Teams feature |
-| Installation required | Yes | No |
-| Suitable scenarios | • Notify users about urgent information or critical information. <br>  • Display rich content that requires user action in the main pane of Teams. <br> • Receive operating system notification with sound. <br> • Localized preview text in Activity. | Communicate with external apps and receive notifications and messages from other apps. |
-| Scope configuration | • A single user <br> • A list of users <br> • Users in a chat • Users in a team | Teams channel |
-| Message process | A Teams app makes a REST API call to trigger a notification in Activity in Teams. The API call passes the deep link to load content in main pane. | Webhook is a Teams feature rather than a Teams application, so it only receives and shows data without processing. |
-| Retrieve Teams context | App can use Graph APIs to work with Microsoft 365 data.  | No |
-| Send Adaptive Card | No | Yes |
-| Send a welcome message | Yes | No |
-| Trigger supported | All triggers are supported. | All triggers are supported. |
-| Building Tools | [Quick start - Microsoft Graph](https://developer.microsoft.com/graph/quick-start) | No tools are required. |
-| Cloud resource required | Microsoft Entra app  | No resources are required. |
-| Tutorial | [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications) <br> [Send activity feed notification](../sbs-graphactivity-feedbroadcast.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
+| &nbsp; | Notification API | Notification bot |  Incoming Webhook |
+| --- | --- | --- | --- |
+| What is it? | A RESTful web API  | A RESTful web API  | A Teams feature |
+| Installation required | Yes | Yes | No |
+| Suitable scenarios | • Notify users about urgent information or critical information. <br>  • Display rich content that requires user action in the main pane of Teams. <br> • Receive operating system notification with sound. <br> • Localized preview text in Activity. | • Notify users about urgent information or critical information. <br>  • Display rich content that requires user action in the main pane of Teams. <br> • Receive operating system notification with sound. <br> • Localized preview text in Activity. | Communicate with external apps and receive notifications and messages from other apps. |
+| Scope configuration | • A single user <br> • A list of users <br> • Users in a chat • Users in a team | • A single user <br> • A list of users <br> • Users in a chat • Users in a team | Teams channel |
+| Message process |A Teams app makes a REST API call to trigger a notification in Activity in Teams. The API call passes the deep link to load content in main pane. | A Teams app makes a REST API call to trigger a notification in Activity in Teams. The API call passes the deep link to load content in main pane. | Webhook is a Teams feature rather than a Teams application, so it only receives and shows data without processing. |
+| Retrieve Teams context |App can use Graph APIs to work with Microsoft 365 data.  | App can use Graph APIs to work with Microsoft 365 data.  | No |
+| Send Adaptive Card | No | No | Yes |
+| Send a welcome message | Yes | Yes | No |
+| Trigger supported |All triggers are supported. | All triggers are supported. | All triggers are supported. |
+| Building Tools |[Quick start - Microsoft Graph](https://developer.microsoft.com/graph/quick-start) | [Quick start - Microsoft Graph](https://developer.microsoft.com/graph/quick-start) | No tools are required. |
+| Cloud resource required | Microsoft Entra app  | Microsoft Entra app  | No resources are required. |
+| Tutorial | [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications) <br> [Send activity feed notification](../sbs-graphactivity-feedbroadcast.yml) |[Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications) <br> [Send activity feed notification](../sbs-graphactivity-feedbroadcast.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
 ### Connectors for Microsoft 365 Groups
 
