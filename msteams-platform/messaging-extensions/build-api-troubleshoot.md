@@ -71,3 +71,23 @@ Use [Teams app validator](https://dev.teams.microsoft.com/validation) to validat
 
 </details>
 <br>
+
+<details><summary> Q. How can I dentify API request issues?</summary>
+
+Analyzing network traces and standardized errors can be instrumental in identifying and resolving API request issues.
+
+* **Network Trace Analysis**: By filtering the network trace for “invoke” actions, you can examine the standardizedError returned in the response. This error provides detailed information about what went wrong with the API request.
+
+* **Error Codes and Messages**: The standardizedError object includes an errorCode, errorSubCode, and an errorDescription. For example, a 412 error code with a description of “Missing required parameter term” indicates that a required parameter was not included in the request.
+
+* **Common HTTP Error Responses**:
+  * A 400 Bad Request error may occur if a request parameter is missing or incorrectly formatted.
+  * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
+  * A 500 Internal Server Error indicates that the service does not know how to respond, possibly due to a server-side issue.
+
+* **Headers and Parameters**: Ensure that all necessary headers are defined in the request and that all required parameters are included.
+
+* **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the API spec and use tools like Fiddler or Postman to test the request, including the authorization header for the API key if necessary.
+
+</details>
+<br>
