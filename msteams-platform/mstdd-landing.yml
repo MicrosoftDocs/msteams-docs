@@ -47,7 +47,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Configure Teams deep links using the `msteams://` and `https://` protocol handlers
+      - text: Configure Teams deep links using the msteams:// and https:// protocol handlers
         url: concepts/build-and-test/deep-links.md#protocol-handlers-in-deep-links
       - text: Adaptive Card responsive layout
         url: task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout
