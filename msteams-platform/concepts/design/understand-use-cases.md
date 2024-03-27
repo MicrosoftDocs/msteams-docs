@@ -1,7 +1,7 @@
 ---
 title: Understanding your app's use cases and Teams features
 author: heath-hamilton
-description: Learn about Microsoft Teams app capabilities such as, tabs, bots, meeting extensions, message extensions, webhook connectors, personal app experience, and shared app experience.
+description: Learn how to understand and map Microsoft Teams app capabilities such as message extensions, tabs, bots, and more to build your app.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
@@ -17,7 +17,7 @@ To identify your app's use case:
 * **Understand your user**: Recognize user issues and identify the solutions to some common problems the users face.
 * **Understand the problem**: Work out the core problem your app must solve. Understand use case scenarios to know how a user interacts with your app to solve their problems.
 * **Consider integration**: Identify the apps and services your app requires, such as authentication, Microsoft Graph, or web apps.
-* **Publish to reach user**: Go through [how to publish your app to Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/) to ensure your app passes the Teams Store submission process.
+* **Publish for reach**: Go through [how to publish your app to Microsoft Teams Store](/training/modules/microsoft-teams-publish-app-to-store/) to ensure your app passes the Teams Store submission process.
 
 A well-defined use case helps you to chart out the framework of features you want in the Teams app. After you determine the user requirements, define the scope and Teams capabilities best suited for your app.
 
@@ -29,14 +29,14 @@ You can map your use case based on:
 
 ## Microsoft Teams app features
 
-There are multiple capabilities that Teams offers so that every app built on the platform is unique. Teams app features offer:
+Every Teams app built on the platform have the following features:
 
 * [App capabilities](#app-capabilities)
 * [App scope](#app-scope)
 
 ### App capabilities
 
-Capabilities are the core functionalities that you can build in your app. They also act as entry or extension points to enable integration and interaction. For more information, see [Explore Teams platform features](../../overview-explore.md).
+App capabilities are the core functionalities that you can build in your app. They also act as entry or extension points to enable integration and interaction. For more information, see [Explore Teams platform features](../../overview-explore.md).
 
 #### App capabilities mapped to features
 

@@ -9,19 +9,11 @@ ms.date: 03/20/2023
 
 # Plan your app with Teams features
 
-Building an awesome Teams app is all about finding the right combination of features to meet your user's needs. The design, features, and capabilities of an app stem from this purpose.
-
-Teams is a social platform and is natively cross-platform that sits at the heart of Microsoft 365 and offers a personal canvas for you to create apps.
-
-In this section, learn how to:
-
-* Identify and map use cases to Teams features.
-* Use planning checklist.
-* Plan beyond app deployment.
+ Teams is a natively cross-platform social platform that sits at the heart of Microsoft 365 and offers a personal canvas for you to create apps. The design, features, and capabilities of a Teams app stem from identifying the right combination of features to meet your user's needs.
 
 ## Plan with Teams
 
-Teams as a platform offers you toolkits, libraries, and apps at every stage of app development. Consider the following app building lifecycle:
+Teams offers you tool kits, libraries, and apps at every stage of app development. Consider the following app building lifecycle:
 
 :::image type="content" source="../assets/images/app-fundamentals/plan-app.png" alt-text="Diagram shows the steps in the app planning lifecycle.":::
 
@@ -32,15 +24,15 @@ Teams as a platform offers you toolkits, libraries, and apps at every stage of a
 
 ### Before you build
 
-Understanding the user and their concern is the first indicator of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and develop a solution.
+Understanding the user and their concerns is the first indicator of how a Teams app can help. Build your use case around the problem, determine how an app can solve it, and develop a solution.
 
 * **Understand your use case**: Understand your user's requirement and you can identify the right features.
 
 * **Map your use case**: Map common use cases to Teams feature based on requirements, such as share, collaborate, workflows, relevant social platforms, and more.
 
-* **Plan analytics for your app**: Plan to analyze the analysis and instrumentation data against your business goals, take corrective action by fixing issues, and intervening in the user journey or plan further enhancements to your app.
+* **Plan analytics for your app**: Plan to analyze the analysis and instrumentation data against your business goals, take corrective action by fixing issues, intervene in the user journey, and plan further enhancements to your app.
 
-* **Plan your app for Teams mobile**: It covers common scenarios and helps with planning apps for Teams mobile.
+* **Plan your app for Teams mobile**: Plan for common use case scenarios and extend your desktop and web app for Teams mobile.
 
 ### During build
 
@@ -48,11 +40,11 @@ Understanding the user and their concern is the first indicator of how a Teams a
 
 * **Design your app UI**: Use Teams UI Toolkit and UI Library to design your app's layout.
 
-* **Use Teams as a platform**: Teams platform helps you build a single or a multi-capability app. Various integrated products and services support your Teams app to strengthen the app experience.
+* **Use Teams capabilities**: Teams platform helps you build a single or a multi-capability app. Various integrated products and services support your Teams app to strengthen the app experience.
 
     :::image type="content" source="../assets/images/overview/teams-solution.png" alt-text="Diagram shows the conceptual representation of the Teams solution.":::
 
-    Your apps appear on Teams as message extensions, tabs, bots, connectors and webhooks, or as multi-capability apps. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power apps that help automate tasks and processes.
+    Your apps appear on Teams as message extensions, tabs, bots, connectors and webhooks, or as multi-capability apps. These capabilities are powered at the backend by Azure, Microsoft Graph, SharePoint, and Power Apps that help automate tasks and processes.
 
 * **Integrate device capabilities**: You can integrate the native device capabilities in your app, such as camera, QR or barcode scanner, photo gallery, microphone, and location.
 
@@ -69,9 +61,9 @@ Apart from the commercial cloud that your Teams app resides on, there are three 
 
 * **Government Community Cloud (GCC)**: The GCC cloud is a U.S. government focused copy of the commercial Teams cloud.
 * **Department of Defense (DOD)**: The DOD cloud is built for the U.S. Department of Defense only.
-* **Government Community Cloud - High (GCC-High)**: GCC-High is a copy of the DOD cloud but exists in its own sovereign environment. Federal contractors who develop apps for the GCC-High cloud must meet the stringent cybersecurity and compliance requirements of NIST 800-171, FedRAMP High, and ITAR.
+* **Government Community Cloud - High (GCC-High)**: GCC-High is a copy of the DOD cloud that exists in its own sovereign environment.
 
-The following table includes Teams features and availability for GCC, GCC-High, and DOD:
+The following table includes Teams features' availability for GCC, GCC-High, and DOD:
 
 | &nbsp; | GCC | GCC-High | DOD |
 |-------------|---------|---|---|
@@ -94,11 +86,6 @@ The following list helps to identify the availability of GCC, GCC-High, and DOD 
 * For bots, see [build your first conversational bot for Teams](../sbs-teams-conversation-bot.yml), [designing your Teams bot](../bots/design/bots.md), [add bots to Microsoft Teams apps](../resources/bot-v3/bots-overview.md), and [bots in Teams](../bots/what-are-bots.md).
 * For custom app upload, see [enable your Teams app to be customized](../concepts/design/enable-app-customization.md), [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md), and [Upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 * For custom connectors, see [create connectors for Microsoft 365 Groups for Teams](../webhooks-and-connectors/how-to/connectors-creating.md).
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Use cases and Teams features](design/understand-use-cases.md)
 
 ## See also
 
