@@ -31,16 +31,6 @@ When you're creating a bot for Teams, it’s important to make sure users have a
 
 In this article, we'll explore methods for configuring bots post-installation, both for cross-platform compatibility and specific to Teams. You can create complex bot configurations that enhance user engagement and efficiency.
 
-There are two ways to initiate bot configuration settings post-installation:
-
-1. @mention the bot in the message compose area.
-
-   :::image type="content" source="../../assets/images/bots/mention-bot-in-compose-area.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
-
-1. When the user hovers over the bot, an Adaptive Card appears. The user can select the settings icon in the Adaptive Card to update or change the bot's configuration settings.
-
-   :::image type="content" source="../../assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
-
 ## Enable bot configuration experience
 
 Let's build a bot that provides bot configuration settings for users during the bot's installation process and within the channel or group chat scope post-installation.
@@ -735,6 +725,16 @@ The Non-Teams method simplifies task execution using `OnInvokeActivity` and `OnI
 ## Bot configuration experience in Teams
 
 After you've created and published the bot in Teams store, the user can configure and reconfigure the bot in Teams.
+
+There are two ways to initiate bot configuration settings post-installation:
+
+1. @mention the bot in the message compose area.
+
+   :::image type="content" source="../../assets/images/bots/mention-bot-in-compose-area.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
+
+1. When the user hovers over the bot, the bot profile card appears. The user can select the settings icon in the bot profile card to update or change the bot's configuration settings.
+
+   :::image type="content" source="../../assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
 To configure the bot, follow these steps:
 
