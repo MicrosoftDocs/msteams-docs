@@ -10,12 +10,11 @@ ms.topic: reference
 
 Get started with building apps for Microsoft Teams and beyond!
 
-Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This module introduces you to common tools, fundamental concepts, and more advanced functionalities.
+Use GitHub Codespaces or walk through the step-by-step guide to build a basic, real-world Teams app. This article introduces you to fundamental concepts, common tools, and more advanced functionalities.
 
 Here's an idea of what you'll learn:
 
-* Get started quickly with the Microsoft Teams Toolkit.
-* Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
+* Build tab, scenario-based bot, and message extension with GitHub Codespaces or step-by-step guide.
 * Learn about tutorials and code samples available for building your Teams app.
 * Learn about various tools and SDKs available for building your Teams app.
 
@@ -26,9 +25,7 @@ In this section, learn how to build a Teams app with different capabilities, suc
 1. Select the type of Teams app that you want to build:
 
    * **Build a basic Teams tab app**: Get started with building a Teams app with a basic tab app.
-
    * **Build a scenario-based Teams bot app**: Build a Teams app that is suitable for a particular scenario or use-case. For example, a notification bot is suitable for sending notifications but not to chat.
-
    * **Build message extension Teams app**: Build a search-based message extension Teams app.
 
 2. Choose your path to build your selected app.
@@ -42,16 +39,16 @@ In this section, learn how to build a Teams app with different capabilities, suc
 
 Before you create your codespace to build an app, ensure that you have the following prerequisites:
 
-* A [GitHub account](https://github.com/) to create your codespace instance
-* A [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with custom app upload permission
-* A [Microsoft 365 developer tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
+* [GitHub account](https://github.com/) to create your codespace instance
+* [Microsoft 365 account](https://developer.microsoft.com/microsoft-365/dev-program) with custom app upload enabled
+* [Microsoft 365 developer tenant](../concepts/build-and-test/prepare-your-o365-tenant.md)
 
 > [!TIP]
 > [GitHub Codespaces](https://github.com/features/codespaces) offers a free plan with a fixed amount of usage per month. If you reach the maximum number of allowed codespaces, go to [github.com/codespaces](https://github.com/codespaces) and delete codespaces that you don't need.
 
 # [Message Extension](#tab/msgext1)
 
-:::image type="content" border="false" source="../assets/images/get-started/get-started-me.png" alt-text="Screenshot shows the conceptual message extension in Teams client.":::
+:::image type="content" border="false" source="../assets/images/get-started/get-started-me.png" alt-text="Diagram shows a conceptual message extension in Teams.":::
 
 Follow these steps to build a search-based message extension app that allows users to search Node Package Manager (npm) packages from the npm directory:
 
