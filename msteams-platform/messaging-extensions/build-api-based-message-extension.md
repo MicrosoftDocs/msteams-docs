@@ -19,7 +19,8 @@ API-based message extensions are a type of Teams app that integrates your chat f
 
 Before you get started, ensure that you meet the following requirements:
 </br>
-<details><summary>1. OpenAPI Description (OAD)</summary>
+<details>
+<summary >1. [OpenAPI Description (OAD)](#openapi-description)</summary>
 
 Users must not enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
 
@@ -121,7 +122,6 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 </details>
 
-
 ## Authentication
 
 You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `oAuth2.0`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods.
@@ -171,9 +171,7 @@ To register an API Key, follow these steps:
 
 1. Select **Save**. An **API key registration ID** is generated.
 
-
 # [Microsoft Entra ID](#tab/microsoft-entra-id)
-
 
 ## Add Single Sign-On (SSO) in Microsoft Teams Apps using Microsoft Entra ID
 
@@ -182,10 +180,11 @@ SSO is a crucial feature that enhances user experience and security by allowing 
 Implementing SSO in your Teams app can significantly improve the user experience by eliminating the need for users to sign in multiple times. For instance, a user can sign in once in the morning and access all the necessary apps throughout the day without needing to reauthenticate. This not only saves time but also reduces the frustration of remembering and entering passwords multiple times. Additionally, SSO enhances security by reducing the risk of password theft, as users are less likely to write down or reuse passwords.
 
 ### Prerequisites
+
 Before you start, ensure you have the following:
-- An Azure account with an active subscription.
-- A Teams app project.
-- Basic familiarity with Azure AD and Teams app development.
+* An Azure account with an active subscription.
+* A Teams app project.
+* Basic familiarity with Azure AD and Teams app development.
 
 ### Implementation Steps
 
@@ -210,6 +209,7 @@ Before you start, ensure you have the following:
    ```
 
 1. **Update app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated on Azure AD. This allows Teams to request access tokens on behalf of your app. The "webApplicationInfo" section in the manifest file is where you specify this information.
+
    ```json
    "webApplicationInfo": 
    { 
@@ -219,13 +219,16 @@ Before you start, ensure you have the following:
    ```
 
 1. **Add SSO Support to the Plugin**: Add the following auth section to the plugin part of the manifest. This indicates that the plugin supports SSO.
+
    ```json
    "authorization": { 
      "authType": "microsoftEntra",
      "microsoftEntraConfiguration": {
          "supportsSingleSignOn": true,
-        } 
+
+        }
     },
+
    ```
 
 1. **Validate the Token**: Before the token is sent to the plugin, validate that the resource URI and the domain the request is sent to are the same. Also, confirm the user ID in the token is the same as the one used for SMBA auth.
@@ -278,8 +281,8 @@ sequenceDiagram
     TeamsApp->>AppServer: Send invoke request with access token
     AppServer-->>TeamsApp: Validate token and confirm user id
 ```
-This sequence diagram represents the flow of creating an Azure AD app, handling the access token, updating the Teams app manifest, and making additional changes to support SSO in Teams. It also includes the high-level flow of invoking a payload containing the token.
 
+This sequence diagram represents the flow of creating an Azure AD app, handling the access token, updating the Teams app manifest, and making additional changes to support SSO in Teams. It also includes the high-level flow of invoking a payload containing the token.
 
 # [Oauth2.0](#tab/oauth2)
 
@@ -443,7 +446,7 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
 
 1. Based on the options selected in **step 6**, select the following:
 
-   # [New API](#tab/new-api)
+# [New API](#tab/new-api)
 
    1. Select a programming language.
 
@@ -462,7 +465,7 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
         |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
         |`repairsData.json`    |  The data source for the repair API.       |
 
-   # [OpenAPI Description](#tab/openapi-specification)
+# [OpenAPI Description](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI Description document location.
 
@@ -574,7 +577,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 1. Based on the options selected in **step 7**, select the following:
 
-   # [New API](#tab/new-api2)
+# [New API](#tab/new-api2)
 
    1. To get started, you must update the source code in the following files:
 
@@ -605,7 +608,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
    1. Select the **F5** key or select **Debug** > **Start Debugging**. Visual Studio launches a Teams web client.
 
-   # [OpenAPI Description](#tab/openapi-specification2)
+# [OpenAPI Description](#tab/openapi-specification2)
 
    1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
    1. Select the dropdown and select the APIs from the list.
