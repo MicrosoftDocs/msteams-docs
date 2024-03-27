@@ -36,7 +36,7 @@ The query parameters are:
 * `topicName`: An optional field for chat's display name if a chat has three or more users. If this field isn't specified, the chat's display name is based on the names of the participants.
 * `message`: An optional field for the message text that you want to insert into the current user's compose box while the chat is in a draft state.
 
-To use this deep link with your bot, specify the deep link as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams JavaScript (TeamsJS) v.2.0 library to create this without having to manually prepare the deep link. Following is an example using Microsoft TeamsJS client library:
+To use this deep link with your bot, specify the deep link as the URL target in your card's button or tap action through the `openUrl` action type. Apps can also use Teams JavaScript client library (TeamsJS) v.2.0 or later to create this without having to manually prepare the deep link. The following example uses TeamsJS to check if chat capability is supported:
 
 ```javascript
 if(chat.isSupported()) {
@@ -86,7 +86,7 @@ Example: `https://teams.microsoft.com/l/meeting/new?subject=test%20subject&atten
 
 #### Configure deep link using TeamsJS library to open a meeting scheduling dialog
 
-You can also use TeamsJS library 2.0 in your Teams app to open the meeting scheduling dialog without having to manually prepare the link. In order to open the scheduling dialog in Teams, you must continue using the original deep-link URL based method, as Teams doesn't support the calendar capability yet:
+You can also use TeamsJS v.2.0 or later in your Teams app to open the meeting scheduling dialog without having to manually prepare the link. In order to open the scheduling dialog in Teams, you must continue using the original deep-link URL based method, as Teams doesn't support the calendar capability yet:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -133,7 +133,7 @@ You can configure deep links in one of the following two ways:
 
 #### Configure deep link manually to start audio-video call with users
 
-While we recommend the use of the typed APIs of TeamsJS library, you can also use a manually configured deep link to start a call. Refer to the following formats:
+While we recommend the use of the typed APIs of TeamsJS v.2.0 or later, you can also use a manually configured deep link to start a call. Refer to the following formats:
 
 | Deep link | Format | Example |
 | --- | --- | --- |
@@ -149,8 +149,8 @@ Following are the query parameters:
 
 #### Configure deep link using TeamsJS library to start audio-video call with users
 
-Applications can also use TeamsJS library 2.0 to start calls without having to manually prepare these deep links.
-The following code demonstrates using the TeamsJS library to start a call:
+Applications can also use TeamsJS v.2.0 or later to start calls without having to manually prepare these deep links.
+The following code demonstrates using TeamsJS to start a call:
 
 ```javascript
 if(call.isSupported()) {
