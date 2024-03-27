@@ -105,7 +105,8 @@
     - name: Bots
       href: bots/design/bots.md
     - name: Message extensions
-      href: messaging-extensions/design/messaging-extension-design.md  
+      href: messaging-extensions/design/messaging-extension-design.md
+      displayName: commands      
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
   - name: UI templates
@@ -123,6 +124,9 @@
     - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
       displayname: Forms
+    - name: Lightbox view
+      href: concepts/design/design-teams-app-light-box-view.md
+      displayName: hide page layout  
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
@@ -155,9 +159,6 @@
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
-          - name: Create multi capability app
-            href: toolkit/toolkit-v4/add-capability-v4.md
-            displayName: Multiple capabilities app 
           - name: Create How-to Guides
             href: toolkit/add-How-to-guides-v5.md
             displayName: Multiple capabilities app 
@@ -245,6 +246,9 @@
           items: 
           - name: Overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
+          - name: Debug bot using Teams App Test Tool
+            href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
+            displayName: Mock activity, custom activity, predefined activity
           - name: Debug your Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
           - name: Debug background process
@@ -280,6 +284,9 @@
       - name: Install Adaptive Card Previewer
         href: concepts/build-and-test/install-adaptive-card-previewer.md
         displayName: install, Adaptive Card Previewer, ACP
+    - name: Adaptive Card Previewer for Visual Studio
+      href: concepts/build-and-test/adaptive-card-previewer-vs.md
+      displayName: ACP 
     - name: Yeoman generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams 
   - name: SDKs
@@ -349,7 +356,7 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl 
+    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
     displayName: clickjacking
@@ -499,7 +506,7 @@
   items:
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
-    displayName: handleTeamsMessagingExtensionFetchTask
+    displayName: handleTeamsMessagingExtensionFetchTask, commands
   - name: Build message extensions using API
     items:
     - name: Overview
@@ -655,7 +662,7 @@
       displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
-      displayName: Information masking, background, extension, notification, HTML, rich text
+      displayName: Information masking, background, extension, notification, HTML, rich text, responsive Adaptive Cards, targetwidth
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
@@ -763,6 +770,7 @@
     href: concepts/device-capabilities/native-device-permissions.md
   - name: Device permissions for the browser
     href: concepts/device-capabilities/browser-device-permissions.md
+    displayName: web apps 
   - name: Integrate media capabilities
     href: concepts/device-capabilities/media-capabilities.md
     displayName: camera
@@ -811,6 +819,9 @@
       displayName: Microsoft 365, Office 365
     - name: TeamsJS capability support across Microsoft 365
       href: m365-apps/teamsjs-support-m365.md
+  - name: Teams meeting apps in Outlook
+    href: m365-apps/extend-m365-meeting-app.md
+    displayName: Microsoft 365, Office 365, meeting app
   - name: Teams message extensions in Outlook
     items:
       - name: Enable a Teams message extension for Outlook
