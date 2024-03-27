@@ -101,7 +101,7 @@ The following image provides the flow to add authentication to external browsers
       …
       ```
 
-   In example, for Teams mobile client the modified `hostRedirectUrl` would result into in the following
+   In example, for Teams mobile client the modified `hostRedirectUrl` would result into the following
 
    ```JavaScript
    return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
