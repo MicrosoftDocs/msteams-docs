@@ -19,7 +19,8 @@ API-based message extensions are a type of Teams app that integrates your chat f
 
 Before you get started, ensure that you meet the following requirements:
 </br>
-<details><summary>1. OpenAPI Description (OAD)</summary>
+<details>
+<summary id="OAD" >1. OpenAPI Description (OAD)</summary>
 
 Users must not enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
 
@@ -34,7 +35,7 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 * Only one required parameter without a default value is allowed.
 * Only POST and GET HTTP methods are supported.
 * OpenAPI Description document must have an `operationId`.
-* The operation must not have required Header or Cookie parameters without default values.
+* The operation must not have a required Header or Cookie parameters without default values.
 * A command must have exactly one parameter.
 * Ensure that there are no remote references in the OpenAPI Description document.
 * A required parameter with a default value is considered optional.
@@ -45,12 +46,18 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 
 <details><summary>2. App manifest</summary>
 
+* Set the app manifest version to `devPreview`.
 * Set `composeExtensions.composeExtensionType` to `apiBased`.
 * Define `composeExtensions.apiSpecificationFile` as the relative path to the OpenAPI Description file within the folder.
+* Define `apiSpecificationFile` as the relative path to the OpenAPI description document.
 * Define `apiResponseRenderingTemplateFile` as the relative path to the response rendering template.
 * Each command must have a link to the response rendering template.
 * Full description must not exceed 128 characters.
 * A command must have exactly one parameter.
+* Add a new optional property `authorization` under the `composeExtensions` node. This property should be null for bot-based ME and specified only for API ME.
+* Define the type of authentication your application uses by setting the `authType` property under the `authorization` node. The possible values for this property are `none`, `oauth`, `apiSecretServiceAuth`, `microsoftEntra`, and `userAuth`.
+* Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses AAD SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`.
+* If your application uses API key based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
 
 </details>
 
@@ -58,13 +65,46 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 
 <details><summary>3. Response rendering template</summary>
 
+> [!NOTE]
+> Teams supports Adaptive Cards up to version 1.5, and  the Adaptive Cards Designer supports up to version 1.6.
+
+* Use tools such as Fiddler or Postman to call the API and ensure that the request and the response are valid.
+* Get a sample response for validating the response rendering template.
+* You can use [Adaptive Card Designer](https://adaptivecards.io/designer/) to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
+
+  :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
+
 * Define the schema reference URL in the `$schema` property.
-* Define `jsonPath` as the path to the relevant data/array in API response. if the path points to an array, then each entry in the array will be a separate result and if the path points to an object, there will only be a single result. *[Optional]*
+* A `jsonPath` is recommended for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
+* Define `jsonPath` as the path to the relevant data/array in API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and return as separate results. *[Optional]*
 * The supported values for `responseLayout` are `list` and `grid`.
 
-The `JsonPath` property in response rendering template is $ to indicate the root object of the response data is used to render the Adaptive Card, and you can update the `jsonPath` property to point another property in response data.
+If the root object of the OpenAPI schema contains well-known array property name, then Teams Toolkit uses the array property as root element to generate an Adaptive Card, and the array property name is used as `JsonPath` property for response rendering template. For example, if the property name contains `result`, `data`, `items`, `root`, `matches`, `queries`, `list`, or `output` and the type is `array`, then it's used as root element.
 
-If the root object of the OpenAPI schema contains well-known array property name, then Teams Toolkit uses the array property as root element to generate an Adaptive Card, and the array property name is used as `JsonPath` property for response rendering template. For example, if the property name contains `result`, `data`, `items`, `root`, `matches`, `queries`, `list`, `output` and the type is `array`, then it's used as root element.
+The following is a JSON example for a list of products to create a card result for each entry:
+
+```json
+{
+   "version": "1.0",
+   "title": "All Products",
+   "warehouse": {
+      "products": [
+        {
+          "id": "1",
+          "name": "Product 1",
+          "price": "$10"
+        },
+        {
+          "id": "2",
+          "name": "Product 2",
+          "price": "$20"
+        }
+      ]
+   }
+}
+```
+
+The array of results is under `products`, nested under `warehouse`, so the JSON path is `warehouse.products`.
 
 </details>
 </br>
@@ -73,13 +113,205 @@ If the root object of the OpenAPI schema contains well-known array property name
 
 API-based message extensions are a potent tool that enhances your Teams app's functionality by integrating with external APIs. This enhances the capabilities of your app and provides a richer user experience. To implement message extension from an API, you need to follow these guidelines:
 
-* The `Commands.id` property in app manifest must match the corresponding `operationId` in the OpenAPI Description.
-* If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description.
+* The `Commands.id` property in app manifest must match the corresponding `operationId` in the OpenAPI Description. For example, if the operation ID is `getProduct`, the command ID must be `getProduct`.
+* If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description document.
 * If there's no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
 * A command can't have more than one parameter.
 * A response rendering template must be defined per command, which is used to convert responses from an API. The command section of the manifest must point to this template file under `composeExtensions.commands.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
+* You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, which includes the app manifest and the OpenAPI description document.
 
 </details>
+
+## Authentication
+
+You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `oAuth2.0`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods.
+
+# [API service auth](#tab/api-service-auth)
+
+API secret service authentication is a secure method for verifying API requests. It helps teams keep sensitive data safe. With a shared secret, the requester only needs to know the signature to make the request.
+
+If your application uses API key-based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property which contains the reference ID returned when you submitted the API key through the Developer portal.
+
+```json
+"composeExtensions": [
+    {
+      "composeExtensionType": "apiBased",
+      "authorization": {
+        "authType": "apiSecretServiceAuth ",
+        "apiSecretServiceAuthConfiguration": {
+            "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
+        }
+      },
+```
+
+### Register an API Key
+
+API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  The user can then paste the API key ID in the simplified messaging extension UI to enable the authentication.
+
+To register an API Key, follow these steps:
+
+1. Go to **Tools** > **API Key Registration**.
+
+1. Select **New API Key**.
+
+1. In the **Register an API key** page, update the following:
+
+   1. **Description**: Descrption of the API Key
+   1. **Add Domain**: The domain where you host the API.
+
+1. Under **Set a target tenant**, select the following:
+   1. If you want to use the API key to call the APIs for a specific tenant, select **Home tenant**.
+   1. If you want to use the API key to call the APIs for any tenant, select **Any tenant**.
+
+1. Under **Set a Teams app**, select the following:
+   1. If you want the app that matches the given teams App ID to use the API key, select **Existing Teams app**.
+   1. If you want the app that matches any teams App ID to use the API key, select **Any Teams app**.
+
+1. Select **+ Add Secret** and enter the OpenAI API secret key.
+
+1. Select **Save**. An **API key registration ID** is generated.
+
+# [Microsoft Entra ID](#tab/microsoft-entra-id)
+
+## Add Single Sign-On (SSO) in Microsoft Teams Apps using Microsoft Entra ID
+
+SSO is a crucial feature that enhances user experience and security by allowing users to authenticate once and gain access to multiple software systems. By implementing SSO in your Teams app, you can provide a seamless user experience, reduce the risk of password theft, and streamline user access across multiple systems.
+
+Implementing SSO in your Teams app can significantly improve the user experience by eliminating the need for users to sign in multiple times. For instance, a user can sign in once in the morning and access all the necessary apps throughout the day without needing to reauthenticate. This not only saves time but also reduces the frustration of remembering and entering passwords multiple times. Additionally, SSO enhances security by reducing the risk of password theft, as users are less likely to write down or reuse passwords.
+
+### Prerequisites
+
+Before you start, ensure you have the following:
+
+* An Azure account with an active subscription.
+* A Teams app project.
+* Basic familiarity with Azure AD and Teams app development.
+
+### Implementation Steps
+
+1. **Configure App with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. This is used to configure scopes and authorize trusted client applications for generating access tokens. You can follow the steps outlined in the [Azure AD app creation guide](/azure/active-directory/develop/quickstart-register-app).
+
+1. **Add Code to Handle Access Tokens**: Add the code to handle access tokens. This token should be sent to your app's server code in the Authorization header. Ensure to validate the access token when it's received. Here's an example of how to handle access tokens:
+
+   ```javascript
+   // Handle access token
+   app.use((req, res, next) => {
+   const authHeader = req.headers.authorization;
+   const token = authHeader && authHeader.split(' ')[1];
+   
+   if (token == null) return res.sendStatus(401);
+   
+   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
+      if (err) return res.sendStatus(403);
+      req.user = user;
+      next();
+   });
+   });
+   ```
+
+1. **Update app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated on Azure AD. This allows Teams to request access tokens on behalf of your app. The "webApplicationInfo" section in the manifest file is where you specify this information.
+
+   ```json
+   "webApplicationInfo": 
+   { 
+   "id": "{Azure AD AppId}", 
+   "resource": "api://subdomain.example.com/botId-{guid}" 
+   }
+   ```
+
+1. **Add SSO Support to the Plugin**: Add the following auth section to the plugin part of the manifest. This indicates that the plugin supports SSO.
+
+   ```json
+   "authorization": { 
+     "authType": "microsoftEntra",
+     "microsoftEntraConfiguration": {
+         "supportsSingleSignOn": true,
+
+        }
+    },
+
+   ```
+
+1. **Validate the Token**: Before the token is sent to the plugin, validate that the resource URI and the domain the request is sent to are the same. Also, confirm the user ID in the token is the same as the one used for SMBA auth.
+
+1. **Send Invoke Request with Access Token**: The client sends an invoke request with the access token. An invoke request is a type of HTTP request that is used to trigger actions on the server. Here's an example payload that contains the access token.
+
+   ```json
+   {  
+   "name": "composeExtension/query",  
+   "value": {  
+      "commandId": "insertWiki",  
+      "parameters": [{  
+         "name": "searchKeyword",  
+         "value": "lakers"  
+      }],  
+      "authentication": {    
+         "token": "…",    
+      },    
+      "queryOptions": {  
+         "skip": 0,  
+         "count": 25  
+      }  
+   }
+   }
+   ```
+
+### Limitations
+
+This flow is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as User.Read or Mail.Read. If you need to access other Graph scopes, you'll need to implement additional consent flows.
+
+```mermaid
+sequenceDiagram
+    participant TeamsApp as Teams App
+    participant AzureAD as Azure AD
+    participant AppServer as App Server
+    participant TeamsManifest as Teams Manifest
+    TeamsApp->>AzureAD: Create Azure AD app
+    AzureAD-->>TeamsApp: Return app ID and application ID URI
+    TeamsApp->>AppServer: Add code to handle access token
+    TeamsApp->>TeamsManifest: Update Teams app manifest with app ID and application ID URI
+    TeamsManifest-->>TeamsApp: Confirm update
+    Note over TeamsApp: Additional Changes
+    TeamsApp->>TeamsManifest: Add auth section to the manifest
+    TeamsManifest-->>TeamsApp: Confirm update
+    TeamsApp->>AppServer: Add field to auth config indicating SSO support
+    AppServer-->>TeamsApp: Confirm update
+    Note over TeamsApp: High-level Flow
+    TeamsApp->>AzureAD: Invoke Payload Containing the Token
+    AzureAD-->>TeamsApp: Return access token
+    TeamsApp->>AppServer: Send invoke request with access token
+    AppServer-->>TeamsApp: Validate token and confirm user id
+```
+
+This sequence diagram represents the flow of creating an Azure AD app, handling the access token, updating the Teams app manifest, and making additional changes to support SSO in Teams. It also includes the high-level flow of invoking a payload containing the token.
+
+# [Oauth2.0](#tab/oauth2)
+
+For OAuth 2.0 authentication, you need to provide the following information in the manifest:
+
+```json
+
+"auth": {
+  "type": "oauth",
+  "client_url": "https://example.com/authorize",
+  "scope": "",
+  "authorization_url": "https://example.com/auth/",
+  "authorization_content_type": "application/json",
+  "verification_tokens": {
+    "openai": "Replace_this_string_with_the_verification_token_generated_in_the_ChatGPT_UI"
+  }
+},
+```
+
+OAuth 2.0 authentication requires a client ID and secret.
+
+#### Limitations
+
+Ensure that you correctly define the type of authentication in the manifest and inform the user about the type of authentication and potential risks. It's also crucial to securely handle sensitive information such as tokens and client secrets.
+
+---
+
+## Create an API-based message extension
 
 You can create an API-based message extension using Developer Portal for Teams, Visual Studio Code, Teams Toolkit command line interface (CLI), or Visual Studio.
 
@@ -177,9 +409,17 @@ An API-based message extension is created.
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
 
+**Add the API key to your message extension**
+
+1. Under App features, select the message extension that you've created.
+
+1. Under **Authentication**, select **API Key** and add the **API key registration ID** you've created earlier.
+
+1. Select **Save**.
+
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
-* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You're redirected to Teams, where you can add the app to Teams to preview the app.
 
 * **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
@@ -298,7 +538,7 @@ To create an API-based message extension using Teams Toolkit CLI, follow these s
    ```teamsfx provision --env dev```
    Teams Toolkit CLI opens a browser window and requests you to sign in to your Microsoft Account.
 
-1. Sign in to your Microsoft account. Teams Toolkit CLI will execute validation and provisions your app on Azure.
+1. Sign in to your Microsoft account. Teams Toolkit CLI executes validation and provisions your app on Azure.
 
    :::image type="content" source="../assets/images/Copilot/api-based-CLI-provision-me.png" alt-text="Screenshot shows the sign in request and the provision stages in the command prompt window.":::
 

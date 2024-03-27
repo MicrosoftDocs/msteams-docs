@@ -515,6 +515,8 @@
     - name: Build API-based message extension
       href: messaging-extensions/build-api-based-message-extension.md
       display name: Response rendering template, OpenAPI Description, Search, single parameter
+    - name: API-based message extension FAQ
+      href: messaging-extensions/build-api-troubleshoot.md  
   - name: Build message extensions using Bot Framework  
     items:
     - name: Overview
