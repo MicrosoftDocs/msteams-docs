@@ -46,41 +46,6 @@ Once you start referencing `@microsoft/teams-js@2.0.0` (or later) from an existi
 
 An API translation layer (mapping v.1 to v.2 TeamsJS API calls) is provided to enable existing Teams apps to continue working in Teams until they're able to update application code to use the TeamsJS v.2 API patterns.
 
-#### Teams-only apps
-
-Even if you intend your app to only run in Teams (and not Microsoft 365 app and Outlook), best practice is to start referencing the latest TeamsJS (*v.2.0* or later) as soon as convenient, in order to benefit from the latest improvements, new features, and support (even for Teams-only apps). TeamsJS v.1.12 will continue to be supported.
-
-Once you're able, the next step is to [update existing application code](#2-update-teamsjs-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
-
-To implement logic that runs your app in Teams, use the following code snippet:
-
-```js
-
-// Ensure that you initialize the TeamsJS once, regardless of how often this is called.
-let teamsInitPromise;
-export function ensureTeamsJSInitialized(){
-    if (!teamsInitPromise) {
-        teamsInitPromise = microsoftTeams.app.initialize();
-    }
-    return teamsInitPromise;
-}
-
-// Function returns a promise which resolves to true if we're running in Teams
-export async function inTeams(){
-  try {
-    await ensureTeamsJSInitialized();
-    const context = await microsoftTeams.app.getContext();
-    return (context.app.host.name === microsoftTeams.HostName.teams);
-  }
-  catch (e) {
-    console.log(`${e} from Teams SDK, may be running outside of Teams`);
-    return false;
-  }
-}                                                                                                                                
-```
-
-You must wait for the [app initialization](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-isinitialized) to complete before proceeding with the function call in order for the app to function correctly. Any program logic designed only for Teams might not function correctly on other Microsoft 365 applications. To ensure the smooth operation of your app across Microsoft 365, make provisions for the logic handling of other Microsoft 365 applications.
-
 #### Authentication
 
 In `TeamsJS` version 2.11.0 or later, apps must provide a third url parameter, `hostRedirectUrl`, in the [authenticate API](/javascript/api/@microsoft/teams-js/authentication#@microsoft-teams-js-authentication-authenticate), to redirect users to the correct client after the completion of authentication. The `hostRedirectUrl` authentication parameter is necessary to enable your client to be supported across Microsoft 365 host applications. Apps implemented on older versions of `TeamsJS` only support Teams following this update, as the `oauthRedirectmethod` and `authId` query parameters are passed to the third-party app server.
@@ -194,7 +159,7 @@ Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript names
 
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It returns `true` if it's supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run for hosts that don't.
 
-The host name where your app operates is revealed as a *hostName* property on the Context interface (`app.Context.app.host.name`). You can query this at runtime by invoking `getContext`. For the previous Teams client, this value might return as *unknown* or *undefined*. In such cases, map these values to old Teams.
+The host name where your app operates is displayed as a [HostName](/javascript/api/%40microsoft/teams-js/hostname) enum value of the `Context` interface (`app.Context.app.host.name`). You can query this at runtime by invoking `getContext`. For the Classic Teams client, this value might return as *unknown* or *undefined*. In this case, map these values to Classic Teams.
 
 The `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-by-inserting-url-placeholder-values) is also available. However, we recommend using the *hostName* mechanism with discretion.
 
