@@ -158,6 +158,24 @@ Command description maps user intent and utterance to search command inside a pl
 * Include verbs and synonyms, if applicable.
 * Focus on keywords that are likely to be used in the search function of your native apps.
 
+**Sample Prompts**: Sample prompts guide users on how to use the various plugins within Copilot. You can have a maximum of five sample prompts for each command, each with a character limit of 128. The prompts should be adaptable to different locales (localizable) and clear (unambiguous) across different commands. Sample prompts are available in the following areas within Copilot:
+
+* First Run Experience (FRE) - This is when a user first installs or enables a plugin.
+* Prompt library or Copilot Lab - This is when a user seeks help with prompts.
+* Plugin suggestions - This is to guide users towards better utterances.
+
+Important points to note:
+
+* If a developer doesn't specify this field, the prompts won't be displayed.
+* To ensure this field is filled, we include it as a step check in the app submission and validation process.
+* If a developer defines multiple commands, we display a maximum of three prompts (one from each of the top three commands) to the user. This display rotates to provide the user with a diverse set of prompts across different commands.
+
+During app ingestion, we require the following validations for this field:
+
+* A maximum of five prompts per command is allowed.
+* Each prompt shouldn't exceed 128 characters.
+* Two commands within the same plugin shouldn't have identical prompts.
+
 The following table lists the command description examples for each category:
 
 # [Tasks](#tab/tasks)
