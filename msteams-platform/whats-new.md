@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 March**
 
+* ***April 10, 2024***: Tentative placeholder. Move to April later. [Stageview API now comes with the `openmode` property that allows to open content in the respective Stageview defined.](tabs/tabs-link-unfurling.md)
 * ***March 27, 2024***: [Configure Teams deep links using the msteams:// and https:// protocol handlers.](concepts/build-and-test/deep-links.md#protocol-handlers-in-deep-links)
 * ***March 26, 2024***: [Adaptive Cards resposive layout helps you to design cards to look great on any device in order to provide an enhanced user experience across chat, channels, and meeting chat.](task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout)
 * ***March 07, 2024***: [Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-vs.md)
