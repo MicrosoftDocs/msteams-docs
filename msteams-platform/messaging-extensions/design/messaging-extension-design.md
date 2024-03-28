@@ -14,7 +14,7 @@ To guide your app design, the following information describes and illustrates ho
 
 ## Microsoft Teams UI Kit
 
-You can find comprehensive message extension design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
+You can find comprehensive message extension design guidelines, including elements that you can grab and modify as needed, in Teams UI Kit.
 
 > [!div class="nextstepaction"]
 > [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
@@ -76,7 +76,7 @@ You have some options for displaying message extension search results, including
 
 Action commands allow people to trigger actions and process requests in external services within Teams. For example, if your app tracks orders, a user could create a new order using the contents of a colleague’s message from right inside their chat.
 
-Action-based message extensions frequently require users to complete a form or some other kind of configuration within a modal. You can create these experiences with [dialogs ](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)(referred as task modules in TeamsJS v1.x).
+Action-based message extensions frequently require users to complete a form or some other kind of configuration within a modal. You can create these experiences with [dialogs](../../task-modules-and-cards/task-modules/design-teams-task-modules.md)(referred as task modules in TeamsJS v1.x).
 
 ## Open a message extension
 
@@ -144,7 +144,7 @@ The following scenarios show the primary ways people use message extensions.
 
 ### Preview links
 
-Message extensions also allow you to insert rich links from a recognized URL into a message (this capability is called [link unfurling](../../messaging-extensions/how-to/link-unfurling.md).)
+Message extensions also allow you to insert rich links from a recognized URL into a message (this capability is called [link unfurling](../../messaging-extensions/how-to/link-unfurling.md)).
 
 **1. Paste a recognized link** in the compose box.
 
