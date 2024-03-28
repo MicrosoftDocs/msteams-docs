@@ -1,7 +1,7 @@
 ---
 title: Strategize and decide what to measure
 author: heath-hamilton
-description: Learn about deciding what to measure using instrumentation data for your Teams app analytics
+description: Learn about deciding what to measure using instrumentation data for your Teams app analytics.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: surbhigupta
@@ -17,7 +17,7 @@ After an app is distributed in an organization or in Microsoft Teams Store, it's
 It's important to plan for the kind of data, metrics, and events you want to monitor as you develop your Teams app. Your product’s North Star metric would guide you in establishing the right set of metrics, core user action, and key events relevant for your business.
 :::row:::
     :::column span="":::
-    To have long-term sustainability in the ecosystem an app must have good growth of new users. The second attribute is engagement and retention. Users must come back to the app and continue to find value in it and use it. Lastly, the third quality is revenue. The app must provide sufficient value to users, such that there is willingness to pay. Apps must possess all three of these qualities to be successful long-term on the platform. If any of these three qualities are missing in an app, it has a low probability of success on the platform.
+    To have long-term sustainability in the ecosystem, an app must have good growth of new users. The second attribute is engagement and retention. Users must come back to the app and continue to find value in it and use it. Lastly, the third quality is revenue. The app must provide sufficient value to users, such that there's willingness to pay. Apps must possess all three of these qualities to be successful long-term on the platform. If any of these three qualities are missing in an app, it has a low probability of success on the platform.
     :::column-end:::
     :::column span="":::
     :::image type="content" source="../../assets/images/app-fundamentals/engagement-retention.png" alt-text="Engagement and retention for long-term sustainability" border="false":::
@@ -28,16 +28,16 @@ Your instrumentation strategy should ensure measuring of your product across the
 
 ### Monitor events for your app
 
-For the purposes of this article, let’s use the HEART framework to indicate a representative set of metrics and events you should consider monitoring for your solution. Note that the following list isn't exhaustive, and you're encouraged to add additional instrumentation relevant to your business and product.
+For the purposes of this article, let’s use the HEART framework to indicate a representative set of metrics and events you should consider monitoring for your solution. The following list isn't exhaustive, and you're encouraged to add more instrumentation relevant to your business and product.
 
 :::image type="content" source="../../assets/images/app-fundamentals/monitor-telemetry.png" alt-text="Monitor events for your app" border="false":::
 
 #### Adoption
 
-**Goal**: Acquire new users who can start exploring the app thereby maintaining a healthy top of the funnel. Discovery and adoption of new apps happen in one of the following ways:
+**Goal**: Acquire new users who can start exploring the app. This helps maintain a healthy top of the funnel. Discovery and adoption of new apps happen in one of the following ways:
 
 - User searches and installs the app on their own.
-- User stumbles upon the app when it’s shared in a chat, meeting, or channel by another user, (tab or Adaptive Card).
+- User stumbles upon the app when another user shares it in a chat, meeting, channel, tab, or Adaptive Card.
 - Admin installs the app for users and the app sends a welcome message.
 
 Instrumentation designed to improve adoption should aim at improving discoverability of the app and its features as well. The likelihood of discovering an app among new users increases when existing users start using the app in collaborative scope. For example, adding a channel or meeting tab, adding a bot to channel, or sharing messaging extension card in a group chat.
@@ -54,16 +54,16 @@ Instrumentation designed to improve adoption should aim at improving discoverabi
 | • Extensibility point of first discovery. <br> • Scope of first discovery. | • Use the data to measure which extensibility point and scope are most used to discover your app by your end users. |
 | • % of link unfurls leading to app installation. | • Users interested in installing app, post-discovery. |
 | • Average time taken to add app in collaborative scope - in channel, group chat, and meeting. | • Usage penetration within the app. |
-| • % of users adding app in collaborative scope. | • Helps in determining the potential for virality, that is, organic discovery and use by new users. |
+| • % of users adding app in collaborative scope. | • Helps in determining the potential for organic discovery and use by new users. |
 | • % of users configuring the app after adding it in channel or group chat. | • If app isn't configured on the day of install, there's 5% chance of user configuring it in the following week. |
 
 #### Engagement and task success
 
 **Goal**: Grow number of engaged quality users who complete core actions within the app.
 
-Core action is defined as that user action, which is central to the business and directly contributes towards the North Star. For example, if you're an IT Ticketing solution provider, your core user action could be ‘Creating a ticket’ with the steps of searching an issue, escalations being key business events in the user journey funnel that propel the users towards the core action.
+Core action is defined as that user action, which is central to the business and directly contributes towards the North Star. For example, if you're an IT Ticketing solution provider, your core user action could be creating a ticket with the steps of searching an issue, escalations being key business events in the user journey funnel that propel the users towards the core action.
 
-Engagement intends to measure the intensity and depth of interaction between the user and your app. Intensity of engagement measures how much a user is using the app (for example, the number of core actions done in the app). Depth of interaction measures the number of various platform capabilities, scopes, and app features with which a user has interacted.
+Engagement intends to measure the intensity and depth of interaction between the user and your app. Intensity of engagement measures how much a user is using the app (for example, the number of core actions done in the app). Depth of interaction measures the number of various platform capabilities, scopes, and app features with which a user interacts.
 
 > [!TIP]
 >
@@ -80,7 +80,7 @@ Engagement intends to measure the intensity and depth of interaction between the
 | **Task success** |  |
 | • % of users completing core action. | • Ease of performing core task. <br> • Report at a week level. |
 | • User journey in a Teams app – Funnel view with user drop offs. | • Friction points in user journey. <br> • Drill down at a tenant level. |
-| • Lostness Score for core action: <br> :::image type="content" source="../../assets/images/app-fundamentals/lostness-score-core-action.png" alt-text="Lostness score for core action" border="false"::: <br> where, <br> **L** = Lostness <br> **N** = The number of different and unique steps performed while performing core action. <br> **S** = The total number of steps performed while performing core action including repeat steps. <br> **R** = The minimum number of steps required to complete core action. | • Ease of use with regional drill provides insights on need for locale. <br> • Drill down at region and tenant level. <br> • If lostness is above 0.4 then app should improve the user experience to make completing core action easier for users. |
+| • Lostness Score for core action: <br> :::image type="content" source="../../assets/images/app-fundamentals/lostness-score-core-action.png" alt-text="Lostness score for core action" border="false"::: <br> where, <br> **L** = Lostness <br> **N** = The number of different and unique steps performed while performing core action. <br> **S** = The total number of steps performed while performing core action including repeat steps. <br> **R** = The minimum number of steps required to complete core action. | • Ease of use with regional drill provides insights on need for locale. <br> • Drill down at region and tenant level. <br> • If lostness is above 0.4, then app should improve the user experience to make completing core action easier for users. |
 | • Mean time taken to perform core action. | • Ease of use. <br> • Report alongside meantime taken performing core action outside the Teams app. |
 | • Average number of times core action was performed in a month. <br> • Average number of times key business events were performed in a month. | • Level and intensity of engagement. <br> • View month over month trend. <br> • Drill down by tenant. |
 
@@ -88,21 +88,21 @@ Engagement intends to measure the intensity and depth of interaction between the
 
 **Goal**: Improve product stickiness by way of accruing benefits the more a user engages with the app.
 
-User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. Users will repeatedly use your product if they get more benefits. The more they use a product, the cost of switching apps is high. For example, when a user starts adding task or action items they track as part of your app, it may help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
+User retention measures how frequent users come back to use the product. It essentially measures frequency of engagement. A user repeatedly uses your product if they get more benefits. The more they use a product, the cost of switching apps is high. For example, when a user starts adding task or action items they track as part of your app, it might help in better coordination across projects and gradually it becomes costlier to abandon your task management system.
 
 > [!TIP]
 >
 > - Users using multiple Teams platform capabilities are 20 – 35pp better retained than single capability users.
 > - Converting new users to engaged platform users in their first week improves retention.
 > - Users who perform creation events in your app have higher retention compared to users who passively consume information via notifications. Creation events depend on your business. For example, creating a ticket, creating a new post, a project board, and so on.
-> - Apps used multiple times (>5 times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.
+> - Apps used multiple times (>five times) in a month have a better retention month over month. Recurring use cases with more frequency of usage improve retention.
 
 | Measure | Insight |
 | --- | --- |
 | • New user retention cohort analysis (week over week, month over month). | • Retention breakdown by client – Teams desktop, web, and mobile app, non-Teams web app. <br> • Drill down to a tenant level. |
 | • User churn in 14 days, 28 days, 56 days, 72 days. | • User churn. <br> • Drill down to a tenant level. <br> • Platform capability and feature drill-down. <br> • Churn breakdown by client: Teams desktop, web, and mobile app, non-Teams web app. |
 | • #, % users using app in more than one scope. | • Depth of engagement. Goal would be to encourage use of app across different scopes. |
-| • #, % users using more than 1 capability of the app. | • Depth of engagement. <br> • Goal would be to encourage users to use different platform capabilities supported by app. |
+| • #, % users using more than one capability of the app. | • Depth of engagement. <br> • Goal would be to encourage users to use different platform capabilities supported by app. |
 | • Mean time between [Core Action 1,2..] per user. | • Intensity of engagement. <br> • Report at tenant level. <br> • Goal would be to reduce this time to promote recurring usage. |
 | • % of users performing creation events. <br> • % of users performing consumption events. Track: <br> &nbsp;&nbsp;- Read receipts for bot messages. <br> &nbsp;&nbsp;- Notification clicks. | • Intensity of engagement. App retention is higher when more users perform creation events compared to pure consumption. |
 | • App capability or scope with high recurring usage. | • Highly retentive capabilities or features of the app. |

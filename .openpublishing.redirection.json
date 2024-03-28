@@ -930,7 +930,11 @@
       },
       {
         "source_path": "msteams-platform/toolkit/teamsfx-cli.md",
-        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-cli"
+        "redirect_url": "msteams-platform/toolkit/Teams-Toolkit-CLI"
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/map-use-cases.md",
+        "redirect_url": "msteams-platform/concepts/design/understand-use-cases.md"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/add-capability-v4.md",
@@ -1019,6 +1023,10 @@
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/use-CICD-template-v4.md",
         "redirect_url": "/microsoftteams/platform/toolkit/use-CICD-template"
+      },
+      {
+        "source_path": "msteams-platform/concepts/design/plan-to-monetize.md",
+        "redirect_url": "/microsoftteams/concepts/design/planning-checklist"
       }      
     ]
 }

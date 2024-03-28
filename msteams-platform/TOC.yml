@@ -41,16 +41,12 @@
   - name: Overview
     href: concepts/app-fundamentals-overview.md
     displayName: Teams app features, Government Community Cloud (GCC), Department of Defense (DOD), GCC-High (GCCH)
-  - name: Understand use case
-    href: concepts/design/understand-use-cases.md
-    displayName: App scope, Teams app features, capabilities
-  - name: Map use case to Teams features
-    href: concepts/design/map-use-cases.md
   - name: Teams app planning checklist
     href: concepts/design/planning-checklist.md
     displayName: HTTPs, localhost, host your Teams app
-  - name: Plan responsive tabs for Teams mobile
-    href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+  - name: Understand and map use case
+    href: concepts/design/understand-use-cases.md
+    displayName: App scope, Teams app features, capabilities
   - name: Plan analytics for your Teams app
     items:
       - name: Overview
@@ -59,9 +55,9 @@
         href: concepts/design/strategize-measure.md
       - name: Plan code instrumentation using analytics service
         href: concepts/design/plan-code-instrumentation.md
-  - name: Plan to monetize your app
-    href: concepts/design/plan-to-monetize.md
-    displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
+  - name: Plan apps for Teams mobile
+    href: concepts/design/plan-responsive-tabs-for-teams-mobile.md
+
 - name: Design your app
   items:
   - name: Overview
