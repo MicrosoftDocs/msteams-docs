@@ -245,7 +245,7 @@ To build and run your app locally:
 
    </details>
 
-Your static tab app is successfully created and added in Teams.You can also [reorder](#reorder-static-personal-tabs) your static tab in Teams.
+Your static tab app is successfully created and added in Teams.You can also [reorder](#reorder-static-tabs) your static tab in Teams.
 
 ::: zone-end
 
@@ -400,7 +400,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetuploaded.png" alt-text="Default Tab":::
 
-   Your static tab is successfully created and added in Teams. You can also [reorder](#reorder-static-static-tabs) your static tab in Teams.
+   Your static tab is successfully created and added in Teams. You can also [reorder](#reorder-static-tabs) your static tab in Teams.
 
 
 ::: zone-end
@@ -572,7 +572,7 @@ ngrok http 3978 --host-header=localhost
 
     :::image type="content" source="~/assets/images/tab-images/personaltabaspnetmvccoreuploaded.png" alt-text="Personal tab":::
   
-    Your static tab is successfully created and added in Teams.You can also [reorder](#reorder-static-static-tabs) your static tab in Teams.
+    Your static tab is successfully created and added in Teams.You can also [reorder](#reorder-static-tabs) your static tab in Teams.
 
 ::: zone-end
 
@@ -981,7 +981,7 @@ After your tab is uploaded to Microsoft Teams through **ngrok** and successfully
 
 1. In the left pane of Teams, select ellipses &#x25CF;&#x25CF;&#x25CF; and then choose your uploaded app to view your static tab.
 
-   Your static tab is successfully created and added in Teams.You can also [reorder](#reorder-static-static-tabs) your static tab in Teams.
+   Your static tab is successfully created and added in Teams.You can also [reorder](#reorder-static-tabs) your static tab in Teams.
 
 ::: zone-end
 
