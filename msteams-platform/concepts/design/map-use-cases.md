@@ -60,7 +60,7 @@ Send asynchronous notifications and alerts to your users in Teams.
 
 | **If you want to...** | **Try ...** |
 | --- | --- |
-| Send proactive notifications to inform users about news, events, requests, and reminders that require users’ immediate attention and/or specific actions in the activity feed. | Microsoft Graph API (`sendActivityNotification`) |
+| Send proactive notifications to inform users about news, events, requests, and reminders that require users’ immediate attention or specific actions in the activity feed. | Microsoft Graph API (`sendActivityNotification`) |
 | Send interactive messages to groups, channels, or individual users. | Conversational bots |
 | Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page. | Connectors and incoming webhooks |
 
