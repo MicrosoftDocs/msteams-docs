@@ -151,6 +151,16 @@ The following example shows how users can manage licenses for third-party apps f
 
     :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the unassign option highlighted in red to unassign the selected users.":::
 
+## Promote your app
+
+You can promote third-party app by one of the following methods:
+
+* Experimentation
+* Banner promotion
+* Solving blockers
+* Adoption change management
+* GTM
+
 ## Admin purchasing experience
 
 Admins can manage the app subscriptions and licenses in the Teams admin center. For more information, see [Purchase third-party Teams apps and manage subscriptions](/microsoftteams/purchase-third-party-apps).
