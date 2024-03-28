@@ -310,21 +310,19 @@ Specifies information about your company. For apps submitted to Microsoft AppSou
 |`websiteUrl`|2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
 |`privacyUrl`|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|2048 characters|✔️|The https:// URL to the developer's terms of use.|
-|`contactInfo`||✔️|App developer contact information.|
 |`mpnId`|10 characters||**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
 
 ### developer.contactInfo
 
-|Name| Maximum size | Required | Description|
-|---|---|---|---|
-|`contactInfo.defaultsupport`||✔️|Support configuration.|
+**Required** &ndash; Object
 
-#### contactInfo.defaultsupport
+App developer contact information.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`contactInfo.defaultsupport.userEmailsForChatSupport`|10|✔️|User email for chat support contacts.|
-|`contactInfo.defaultsupport.emailsForEmailSupport`|1|✔️|Email address for email support.|
+|`defaultsupport`||✔️|Support configuration.|
+|`defaultsupport.userEmailsForChatSupport`|10|✔️|Email address for user support through chat. Minimum:1; Maximum:10. The object is an array with all elements of the type string. The maximum length is 80 characters.|
+|`defaultsupport.emailsForEmailSupport`|1|✔️|Contact email for support inquiry. Minimum:1; Maximum:1. The object is an array with all elements of the type string. The maximum length is 80 characters.|
 
 ## localizationInfo
 
