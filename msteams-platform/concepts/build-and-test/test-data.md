@@ -1,9 +1,9 @@
 ---
 title: Add test data to your Microsoft 365 test tenant
-description: Learn to set up your Microsoft 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets
+description: Learn to set up your Microsoft 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets.
 ms.topic: how-to
 ms.localizationpriority: medium    
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.date: 11/01/2019
 ---
 
@@ -27,6 +27,8 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 By default, only global admins or Teams service admins can upload the custom apps in a tenant. You can also allow users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## Create teams and channels for testing
+
+[!INCLUDE [Azure AD PowerShell deprecation note](~/../msteams-platform/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
 
 1. Save the following snippet as a **.xml** file and note the file path. This XML defines the structure of the team and channel that is created along with its members:
 
@@ -142,7 +144,7 @@ By default, only global admins or Teams service admins can upload the custom app
     </Teams>
     ```
 
-2. Save the following snippet as a PowerShell script (.ps1) and note where you've saved it. This script executes the steps to create the team and channel, and add members to them:
+2. Save the following snippet as a PowerShell script (.ps1) and note where you saved it. This script executes the steps to create the team and channel, and add members to them:
 
     ```powershell
     Param(
@@ -239,7 +241,7 @@ By default, only global admins or Teams service admins can upload the custom app
     > [!Note]
     > Do not close your PowerShell session as the script takes several minutes to execute. If you have modified the users in your subscription from what is created in the default content pack, some users may not be added to Teams. As the script executes it displays successful or failed actions.
 
-5. After the script has finished execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.
+5. After the script finishes execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.
 
 ## See also
 
