@@ -26,7 +26,7 @@ The following table provides the features and description of an Incoming Webhook
 | Features | Description |
 | -------- | ----------- |
 |Adaptive Cards using an Incoming Webhook | Adaptive Cards can be sent through Incoming Webhooks. For more information, see [Send Adaptive Cards using Incoming Webhooks](../../webhooks-and-connectors/how-to/connectors-using.md#send-adaptive-cards-using-an-incoming-webhook).|
-|Actionable messaging support | Actionable message cards are supported in all Microsoft 365 groups including Teams. If you send messages through cards, you must use the actionable message card format. For more information, see [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://messagecardplayground.azurewebsites.net).|
+|Actionable messaging support | Actionable message cards are supported in all Microsoft 365 groups including Teams. If you send messages through cards, you must use the actionable message card format. For more information, see [Legacy actionable message card reference](/outlook/actionable-messages/message-card-reference) and [message card playground](https://amdesigner.azurewebsites.net/).|
 |Independent HTTPS messaging support|Cards provide information clearly and consistently. Any tool or framework that can send HTTPS POST requests can send messages to Teams through an Incoming Webhook.|
 |Markdown support|All text fields in actionable messaging cards support basic Markdown. Don't use HTML markup in your cards. HTML is ignored and treated as plain text.|
 |Scoped configuration|An Incoming Webhook is scoped and configured at the channel level.|
