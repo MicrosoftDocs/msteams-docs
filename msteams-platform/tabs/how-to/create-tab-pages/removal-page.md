@@ -53,7 +53,7 @@ You can use `getContext()` to get the current context in which the frame is runn
 
 Authentication is required before allowing a user to delete the tab content. Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md). Make sure that all domains used in your tab pages are listed in the `validDomains` array of your app manifest.
 
-A sample tab removal code block as follows:
+The following sample is an example of tab removal code block::
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
@@ -110,7 +110,7 @@ After the remove handler is executed, `removeEvent.notifySuccess()` or `removeEv
 >[!NOTE]
 >
 > * To ensure that an authorized user's control over a tab isn't inhibited, Teams removes the tab in both success and failure cases.
-> * After you invoke the `registerOnRemoveHandler` event handler, you'll have 15 seconds to respond to the method. The app must call `setValidityState(true)` in order to enable the **Remove** button and for the remove handler to get invoked.
+> * After you invoke the `registerOnRemoveHandler` event handler, respond to the method within 15 seconds. The app must call `setValidityState(true)` in order to enable the **Remove** button and for the remove handler to get invoked.
 > * When the user selects **Remove**, Teams removes the tab after 30 seconds regardless of whether the actions have been completed or not.
 
 ## Next step
