@@ -174,7 +174,7 @@ While your updated message extension continues to run in Teams, you must be awar
 
 * [Card actions](/microsoftteams/platform/task-modules-and-cards/cards/cards-actions?tabs=json) of type `messageBack`, `imBack`, `invoke`, and `signin` aren't supported. `openURL` is the only supported card action.
 
-* Adaptive Card actions are supported. For `Action.Submit` only [stageview](../tabs/tabs-link-unfurling.md#invoke-collaborative-stage-view-from-adaptive-card) and [taskmodule](../task-modules-and-cards/task-modules/task-modules-bots.md#bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions) launching is supported.
+* Adaptive Card actions are supported. For `Action.Submit` only [stageview](../tabs/tabs-link-unfurling.md#invoke-collaborative-stageview-from-adaptive-card) and [taskmodule](../task-modules-and-cards/task-modules/task-modules-bots.md#bot-framework-card-actions-vs-adaptive-card-actionsubmit-actions) launching is supported.
 
 > [!NOTE]
 > When you test an app with link unfurling, ensure that you remove the app manually after testing. If multiple apps are monitoring the same domain, the app installed most recently might not be invoked to unfurl the link in Outlook, as it would in Teams.

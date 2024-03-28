@@ -1,143 +1,95 @@
 ---
-title: Tabs link unfurling and Stage View
+title: Open Content in Stageview
 author: Rajeshwari-v
-description: Learn about Stage View and Collaborative Stage View, a full screen UI component invoked to surface your web content. Link unfurling is used to turn URLs into a tab using Adaptive Cards.
+description: Learn about the types of Stageview, a full screen UI component invoked to surface your app content. Open content in multiwindow experiences using deep links, Adaptive Cards, or Teams JavaScript client library (TeamsJS) SDK.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 06/05/2023
 ---
 
-# Tabs link unfurling and Stage View
+# Open Content in Stageview
 
-Stage View is a user interface (UI) component that allows you to render content in a full screen within Teams or as a new window.
+Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. These Stageview canvases allow the users to adopt mulitasking workflows inside Teams, collaborate with others directly in a Teams multiwindow, or complete focused work in large modal experience.
+
+## Types of Stageview
+
+ Based on the UI and functionality, Stageview provides three ways to open your app content:
+
+* [Collaborative Stageview](#collaborative-stageview)
+* [Stageview Multi-window](#stageview-multi-window)
+* [Stageview Modal](#stageview-modal)
+
+### Collaborative Stageview
+
+Collaborative Stageview enables multitasking scenarios for your app content in Teams. Users can open and view your app content inside a new Teams window while accompanied by a side panel conversation. This view enables meaningful content engagement and collaboration from within the same window. We recommend Collaborative Stageview when the user opens content from a conversation such as a chat, a channel, or a channel tab.
+
+:::image type="content" source="~/assets/images/tab-images/collab-view.png" alt-text="The illustration shows the Collaborative Stageview in Teams.":::
+
+### Stageview Multi-window
+
+Stageview Multi-window is useful for scenarios that requires a user to multitask in Teams without the need for collaboration. This view opens the app content in a new Teams window without a side panel conversation, that allows users to focus on their task. We recommend Stageview Multi-window in scenarios where the user opens content from a nonconversational surface such as a personal app.
+
+:::image type="content" source="~/assets/images/tab-images/multi-view.png" alt-text="The illustration shows the Stageview Multi-window in Teams.":::
+
+### Stageview Modal
+
+Stageview Modal is a full-screen UI component used to render your app content inside the Teams main window. This view provides users with a focused experience to engage with the app content. Stageview Modal is useful for displaying rich content that doesn't require a user to multitask. It’s the default view when Collaborative Stageview and Stageview Multi-window aren't supported.
 
 > [!NOTE]
-> This article is based on  Microsoft Teams JavaScript client library version 2.0.x. If you are using an earlier version, see [TeamsJS](how-to/using-teams-client-library.md) for guidance on the differences between the latest TeamsJS and earlier versions.
+> Teams web client supports only Stageview Modal.
 
-<!--It allows users to maintain their context within their new window experience while continuing  group chat conversation. <br> Developers have to enable Tab link Unfurling for their app to get Stage View update for free. Users are still able to pin the app content as a tab. It's a new entry point to pinning app content but it will not change the existing functionality of tabs or pinning. 
+:::image type="content" source="~/assets/images/tab-images/modal-view1.png" alt-text="The illustration shows the Stageview Modal in Teams.":::
 
-[!INCLUDE [sdk-include](~/includes/sdk-include.md)]-->
+## Invoke Stageview
 
-## Stage View
+You can invoke Stageview in Teams through one of the following methods and also configure the expected Stageview response:
 
-Stage View is a full screen UI component that can be used to render your app content, providing users with a focused experience to engage with your app. Stage View can be invoked from either an Adaptive Card or a deep link, in both chats and channels.
+* [Invoke from Adaptive Card](#invoke-collaborative-stageview-from-adaptive-card)
+* [Invoke from stageView API](#invoke-from-stageview-api)
+* [Invoke from deep link](#invoke-from-deep-link)
 
-* When users invoke Stage View from Adaptive Cards, Stage View opens in a new Teams window along with the originating chat or channel thread in the side panel. This new app canvas is called the [Collaborative Stage View](#collaborative-stage-view). The Collaborative Stage View allows users to multi-task and collaborate with each other.
+The following table provides the default and defined response behavior for each Stageview invoke type:
 
-* The Collaborative Stage View surfaces the originating chat or thread from where it was invoked and helps the users to engage with content and conversation side-by-side.
+| Invoke type | Default response | Defined response |
+| ---| ---| --- |
+| Adaptive Card | Opens in Collaborative Stageview | Opens in Stageview Modal, if Collaborative Stageview or Stageview Multi-window isn't supported. |
+| stageView API | Opens in Collaborative Stageview | Opens in the respective Stageview based on the `openMode` defined. |
+| Deep link| Opens in Collaborative Stageview | Opens in the respective Stageview based on the `openMode` defined. |
 
-The following image is an example of the Collaborative Stage View:
+`openMode` is a property in [StageViewParams interface](/javascript/api/@microsoft/teams-js/stageview.stageviewparams). The `openMode` property can be defined in a [stageView API](#invoke-from-stageview-api) or a [deep link](#invoke-from-deep-link) to determine the type of Stageview response. The three `openMode` properties are:
 
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Teams.":::
+* `popoutWithChat`
+* `popout`
+* `modal`
 
-### Stage View vs. Dialog
+The following table provides the Stageview responses of the `openMode` property:
 
-| Stage View | Dialog (referred as task module in TeamsJS v1.x)|
-|:-----------|:-----------|
-| Stage View is useful to display rich content to the users, such as a page, a dashboard, or a file. It provides rich features that help to render your content in the new pop-up window and the full-screen canvas. <br><br> After your app content opens in Stage View, users can choose to pin the content as a tab. <br><br> For more collaborative capabilities, opening your content in Collaborative Stage View (through an Adaptive Card) allows users to engage with content and conversation side-by-side, while enabling multi-window scenarios.| [Dialog](../task-modules-and-cards/task-modules/task-modules-tabs.md) is especially useful to display messages that need users' attention, or collect information required to move to the next step.|
-
-> [!WARNING]
-> Microsoft's cloud services, including web versions of Teams (*teams.microsoft.com*), Outlook (*outlook.com*), and Microsoft 365 (*microsoft365.com*) domains are migrating to the *cloud.microsoft* domain. Perform the following steps before June 2024 to ensure your app continues to render on the Teams web client:
->
-> 1. Update TeamsJS SDK to v.2.19.0 or higher. For more information about the latest release of TeamsJS SDK, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
->
-> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the ***teams.cloud.microsoft*** domain. If your Teams app extends across Outlook and Microsoft 365, ensure you allow your app to access ***teams.cloud.microsoft***, ***outlook.cloud.microsoft***, and ***m365.cloud.microsoft*** domains.
-
-### Invoke Stage View through deep link
-
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. Stage View from a deep link always defaults to the modal experience (and not a Teams window). While the Stage View deep link can be passed through an `OpenURL` action in the card, the Stage View deep link is intended for the tab canvas. For Stage View from Adaptive Cards, it's recommended to follow the JSON [Adaptive Card example](#example).
-
-The following image is an example of Stage view when it's invoked from a deep link:
-
-:::image type="content" source="../assets/images/tab-images/open-stage-from-adaptive-card2.png" alt-text="Screenshot shows the open stage from card."lightbox="~/assets/images/tab-images/open-stage-from-adaptive-card2.png":::
-
-#### Syntax
-
-Following is the deep link syntax for Stage View:
-
-`https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso"}`
-
-#### Examples
-
-Following are the deep link examples to invoke Stage View:
-
-<br>
-
-<details>
-<summary><b>Example 1</b></summary>
-URL with threadId
-
-Unencoded URL:
-
-`https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous","threadId":"19:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2"}`
-
-Encoded URL:
-
-`https://teams.microsoft.com/l/stage/be411542-2bd5-46fb-8deb-a3d5f85156f6/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%2C%22threadId%22%3A%2219:9UryYW9rjwnq-vwmBcexGjN1zQSNX0Y4oEAgtUC7WI81@thread.tacv2%22%7D`
-
-</details>
-
-<br>
-
-<details>
-<summary><b>Example 2</b></summary>
-URL without threadId
-
-Unencoded URL:
-
-`https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context={"contentUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191","websiteUrl":"https://teams-alb.wakelet.com/teams/collection/e4173826-5dae-4de0-b77d-bfabafd6f191?standalone=true","title":"Quotes: Miscellaneous"}`
-
-Encoded URL:
-
-`https://teams.microsoft.com/l/stage/43f56af0-8615-49e6-9635-7bea3b5802c2/0?context=%7B%22contentUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%22%2C%22websiteUrl%22%3A%22https%3A%2F%2Fteams-alb.wakelet.com%2Fteams%2Fcollection%2Fe4173826-5dae-4de0-b77d-bfabafd6f191%3Fstandalone%3Dtrue%22%2C%22title%22%3A%22Quotes%3A%20Miscellaneous%22%7D`
-
-</details>
-
-<br>
+| Input | Response |
+| ---| ---|
+| `openMode` not defined | Opens by default in Collaborative Stageview with an associated side panel conversation. |
+| `openMode` defined as `popoutWithChat` | Opens in Collaborative Stageview with an associated side panel conversation. |
+| `openMode` defined as `popout`| Opens in Stageview Multi-window without a side panel conversation. |
+| `openMode` defined as `modal` | Opens in Stageview Modal. |
 
 > [!NOTE]
 >
-> * All deep links must be encoded before pasting the URL.The unencoded URLs aren't supported.
-> * The `name` property is optional in a deep link. If not included, the app name replaces it.
-> * The deep link can also be passed through an `OpenURL` action.
-> * When you launch a Stage View from a certain context, ensure that your app works in that context. For example, if the Stage View is launched from a personal app, you must ensure your app has a personal scope.
+> * In scenarios were pop-out experience isn't supported, for example, Teams web client, the open mode is a Stageview Modal even if the `openMode` property is defined.
+> * The fallback hierarchy is `popoutWithChat` > `popout` > `modal`.
 
-## Collaborative Stage View
+### Invoke Collaborative Stageview from Adaptive Card
 
-> [!NOTE]
-> Collaborative Stage View isn't supported in Teams web and mobile clients.
+Collaborative Stageview from an Adaptive Card allows users to engage with your content while continuing the conversation flow. When a user enters a URL for an app content in a chat, the bot is invoked and returns an Adaptive Card with an option to open the URL. If the URL is opened from an Adaptive Card in Teams web client, it opens in a Stageview Modal.
 
-Collaborative Stage View is an enhancement to Stage View that allows users to engage with your app content in a new Teams window. When a user opens Collaborative Stage View from an Adaptive Card, the app content pops-out in a new Teams window instead of the default Stage View modal.
+To invoke Collaborative Stageview, perform the following steps:
 
-In the new Teams window, the Collaborative Stage View also opens a chat in the side panel. The chat brings the conversation from the group chat or channel thread where the users' Adaptive Card is originally shared. Users can continue to collaborate directly within the new window.
+1. When the user shares a URL in a Teams chat, the bot receives a `composeExtensions/queryLink` invoke request. The bot returns an Adaptive Card with the type `tab/tabInfoAction`.
 
-The following image is an example of Collaborative Stage View:
+1. After the user selects the action button on the Adaptive Card, Collaborative Stageview opens based on the content in the Adaptive Card.
 
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Teams.":::
+:::image type="content" source="../assets/images/tab-images/collab-view.gif" alt-text="The graphical representation shows how Collaborative Stageview response from Adaptive Card.":::
 
-### Advantages of Collaborative Stage View
-
-Collaborative Stage View helps unlock multi-tasking scenarios with your app content in Teams. Users can open and view your app content inside a new Teams window, while having meaningful conversation and collaboration from the same window. The ability to engage with content while also having a conversation on the content leads to higher user engagement for your app.
-
-|Feature |Notes |Desktop |Web |Mobile|
-|---      |:-----  |:--------   |:----  |:----- |
-|Collaborative Stage View| Invoke from Adaptive Card action. |Chat or Channel: Opens Teams pop-out window with chat pane.| Opens Stage View modal. |Opens Stage View modal.|
-|Stage View |Invoke from Deep link. Only recommended when calling from your tab app, and not an Adaptive Card. |Opens Stage View modal.| Opens Stage View modal.| Opens Stage View modal.|
-
-### Invoke Collaborative Stage View from Adaptive Card
-
-When the user enters an app content URL in a chat, the bot is invoked and returns an Adaptive Card with the option to open the URL. Depending on the context and the users’ client, the URL opens in the appropriate Stage View UI. When the Collaborative Stage View is invoked from an Adaptive Card in a chat or channel (and not from a deep link), a new window opens.
-
-The following image is an example of a Collaborative Stage View from an Adaptive Card:
-
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view-adaptive-card.png" alt-text="Screenshot shows the process of invoking Collaborative Stage View from an Adaptive Card.":::
-
-:::image type="content" source="../assets/images/tab-images/collaborative-stage-view.png" alt-text="Screenshot shows the Collaborative Stage View in Adaptive Card.":::
-
-#### Example
-
-The following is a JSON code example to create a Collaborative Stage View button in an Adaptive Card:
+The following code is an example to create a Collaborative Stageview button in an Adaptive Card:
 
 ```json
 {
@@ -158,39 +110,209 @@ The following is a JSON code example to create a Collaborative Stage View button
     }
   }
 }
-
 ```
 
-The following steps show how to invoke Collaborative Stage View:
+#### Best practices
 
-* When the user shares a URL in a Teams chat, the bot receives an `composeExtensions/queryLink` invoke request. The bot returns an Adaptive Card with the type `tab/tabInfoAction`.
-* When the user selects the action button on the Adaptive Card, Collaborative Stage View opens based on the content in the Adaptive Card.
+* Ensure that the content URL is within the list of `validDomains` in your app manifest.
+* The invoke request type must be a `composeExtensions/queryLink`.
+* The `invoke` workflow is similar to the `appLinking` workflow.
+* To maintain consistency, we recommended naming `Action.Submit` as `Open`.
+* If you don't have an optimized mobile experience for Teams mobile client, Stageview for apps distributed through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+
+### Invoke from stageView API
+
+The stageView API from the Teams JavaScript client library (TeamsJS) SDK allows you to open the Teams window in a Stageview experience based on the `openMode` defined. If the `openMode` property isn't defined, the default response is a Collaborative Stageview with an associated side panel conversation. The side panel conversation is the same thread from where the Collaborative Stageview was invoked, that is, a chat or a group chat.
+
+> [!NOTE]
+> The stageView API supports an optional `threadId` parameter that allows you to bring a specific conversation into the Collaborative Stageview side panel. Mapping `contentUrl` to `threadId` allows you to persist a conversation alongside content.
+
+The following code snippets provide the samples of the `openMode` property:
+
+# [No openMode](#tab/noopenmode)
+
+When `openMode` isn't defined in [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams), the default response is Collaborative Stageview.
+
+  ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net"
+    }
+  ```
+
+# [popoutWithChat](#tab/withchat)
+
+The `openMode` property defined as `popoutWithChat` in [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) to open in Collaborative Stageview.
+
+  ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+      "openMode": "popoutWithChat"
+    }
+  ```
+
+# [popout](#tab/popout)
+
+The `openMode` property defined as `popout` in [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) to open in Stageview Multi-window.
+
+  ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+      "openMode": "popout"
+    }
+  ```
+
+# [modal](#tab/modal)
+
+The `openMode` property defined as `modal` in [StageViewParams](/javascript/api/@microsoft/teams-js/stageview.stageviewparams) to open in Stageview Modal.
+
+  ```json
+    {
+      "appId": "2c19df50-1c3c-11ea-9327-cd28e4b6f7ba",
+      "contentUrl": "https://teams-test-tab.azurewebsites.net",
+      "title": "Test tab ordering",
+      "websiteUrl": "https://teams-test-tab.azurewebsites.net",
+      "openMode": "modal"
+    }
+  ```
+
+---
+
+For more information, see [stageView module](/javascript/api/@microsoft/teams-js/stageview).
+
+#### stageView API parameters
+
+| Property name | Type | Character limit | Required | Description |
+| --- | --- | --- | --- | --- |
+| entityId | String | 64 | Yes | A unique identifier for the entity that the tab displays. |
+| name | String | 128 | Optional | The display name of the tab in the channel interface. If no value is provided, the app name is displayed. |
+| contentUrl | String | 2048 | Yes | The https:// URL that points to the entity UI to be displayed in Teams. |
+| websiteUrl | String | 2048 | Yes | The https:// URL to point at, if a user selects to view in a browser. |
+| threadId | String | 2048 | Optional | The ID defines the conversation shown in the Collaborative Stageview side panel. It can contain a chat `threadId` (channel `threadId` isn't supported). If no is value passed, `threadId` is inherited from the context where Collaborative Stageview is opened. |
+| openMode | String | 2048 | Optional | The property defines the open behavior for stage content in the desktop client. |
 
 > [!NOTE]
 >
-> * Passing a Stage View deep link into an Adaptive Card doesn't open the Collaborative Stage View. A Stage View deep link always opens the Stage View Modal.
-> * Ensure that the URL of the content is within the list of `validDomains` in your app manifest.
-> * The invoke request type must be a `composeExtensions/queryLink`.
-> * `invoke` workflow is similar to the `appLinking` workflow.
-> * To maintain consistency, it is recommended to name `Action.Submit` as `Open`.
-> * `websiteUrl` is a required property to be passed in the `TabInfo` object.
-> * If you don't have an optimized mobile experience for Teams mobile client, the Stage View for apps distributed through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+> * The optional `threadId` parameter only supports chat threads. If a channel `threadId` is used, the side panel isn't displayed.
+> * When you launch Stageview from a certain context, ensure that your app works in that context. For example, if the Stageview is launched from a personal app, you must ensure that your app has a personal scope.
+
+### Invoke from deep link
+
+Stageview response from a deep link defaults to Collaborative Stageview with an associated side panel conversation when the `openMode` property isn't specified. To invoke Stageview through deep link from your tab or personal app, wrap the deep link URL in the [app.openLink(url) API](/javascript/api/%40microsoft/teams-js/app#@microsoft-teams-js-app-openlink) and define the `openMode` property. The `openMode` property defined in the API determines how the chat content opens.
+
+Unless a `threadId` is specified, the side panel conversation brings the group chat or channel thread from which the deep link is invoked.
+
+> [!NOTE]
+> All deep links must be encoded before pasting the URL. Unencoded URLs aren't supported.
+
+#### Syntax
+
+The following link is the deep link syntax for Collaborative Stageview:
+
+`https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso","openMode":"popoutWithChat"}`
+
+##### Example
+
+The following link is the encoded deep link URL to invoke Stageview:
+
+<br>
+
+<details>
+<summary><b>Example</b></summary>
+
+Encoded URL:
+
+`https://teams.microsoft.com/l/stage/{appId}/0?context=%7B%22contentUrl%22%3A%22contentUrl%22%2C%22websiteUrl%22%3A%22websiteUrl%22%2C%22name%22%3A%22Contoso%22%2C%22openMode%22%3A%22popoutWithChat%22%7D`
+
+</details>
 
 #### Query parameters
 
-| Property name | Type | Number of characters | Description |
-|:-----------|:---------|:------------|:-----------------------|
-| `entityId` | String | 64 | This property is a  unique identifier for the entity that the tab displays and it's a required field.|
-| `name` | String | 128 | This property is the display name of the tab in the channel interface and it's an optional field.|
-| `contentUrl` | String | 2048 | This property is the `https://` URL that points to the entity UI to be displayed in the Teams canvas and it's a required field.|
-| `websiteUrl?` | String | 2048 | This property is the `https://` URL to point at, if a user selects to view in a browser and it's a required field.|
-| `removeUrl?` | String | 2048 | This property is the `https://` URL that points to the UI to be displayed when the user deletes the tab and it's an optional field.|
+| Property name | Type | Character limit | Required | Description |
+| --- | --- | --- | --- | --- |
+| entityId | String | 64 | Yes | The unique identifier for the entity that the tab displays. |
+| name | String | 128 | Optional | The display name of the tab in the channel interface. If no value is provided, the app name is displayed. |
+| contentUrl | String | 2048 | Yes | The https:// URL that points to the entity UI to be displayed in Teams. |
+| websiteUrl | String | 2048 | Yes | The https:// URL to point at, if a user selects to view in a browser. |
+| threadId | String | 2048 | Optional | The ID defines the conversation shown in the Collaborative Stageview side panel. It can contain a chat `threadId` (channel `threadId` isn't supported). If no is value passed, `threadId` is inherited from the context where Collaborative Stageview is opened. |
+| openMode | String | 2048 | Optional | The property defines the open behavior for stage content in the desktop client. |
 
-## Code sample
+Whether you want to facilitate multitasking, enhance collaboration, or provide a focused user experience, Stageview has a mode to suit your requirements. Remember to consider the context in which your app is being used and ensure that your app works in that context.
 
-| Sample name | Description | .NET |Node.js| Manifest|
-|-------------|-------------|------|----|----|
-|Tab in Stage View |Microsoft Teams tab sample app for demonstrating tab in Stage View.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-stage-view/csharp/demo-manifest/tab-stage-view.zip)|
+> [!NOTE]
+> The article is based on TeamsJS version 2.0.x. If you're using an earlier version, see [TeamsJS](how-to/using-teams-client-library.md) for guidance between the latest and earlier versions.
+
+## FAQs
+
+</br>
+
+<details>
+
+<summary>Which Stageview should I use?</summary>
+
+Collaborative Stageview allows the users to open content along with a side panel conversation in a Teams window. We recommend this view for most of the collaboration scenarios.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>What's the difference between Stageview Modal and dialogs?</summary>
+
+Stageview Modal is useful to display rich content to the users, such as a page, a dashboard, or a file. <br> Dialogs are useful to display messages that need users' attention or collect information required to move to the next step.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>The content opens in Collaborative Stageview, but it's loading into the main canvas. How to open in a new Teams window?</summary>
+
+Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](../resources/schema/manifest-schema.md).
+
+</br>
+
+</details>
+
+<details>
+
+<summary>The `contentUrl` matches `validDomains`, but why any content isn't still displayed in a new Teams window?</summary>
+
+Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app is loaded successfully. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out, and displays an error screen with a retry option. For app updates, this step is applicable for tabs that are already configured. If you don't perform this step, an error screen is displayed for the existing users.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>Can I include a deep link in my `contentUrl`?</summary>
+
+No, deep links aren't supported in `contentUrl`.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>How do I keep a specific thread shown alongside my content?</summary>
+
+Collaborative Stageview from a deep link or stageView API comes with the additional `threadId` parameter. You can explicitly define the chat thread to be displayed in the side panel for your specific `contentUrl`. For more information about retrieving a `threadId`, see [get conversation thread](/graph/api/group-get-thread).
+
+</br>
+
+</details>
 
 ## Next step
 
@@ -203,5 +325,4 @@ The following steps show how to invoke Collaborative Stage View:
 * [Add link unfurling](../messaging-extensions/how-to/link-unfurling.md)
 * [Build tabs with Adaptive Cards](how-to/build-adaptive-card-tabs.md)
 * [Create deep links](../concepts/build-and-test/deep-links.md)
-* [Cards](../task-modules-and-cards/what-are-cards.md)
 * [App manifest schema for Teams](../resources/schema/manifest-schema.md)
