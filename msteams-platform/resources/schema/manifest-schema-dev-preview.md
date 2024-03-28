@@ -208,6 +208,19 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "id": "AAD App ID",
         "resource": "Resource URL for acquiring auth token for SSO"
     },
+    "graphConnector": "https://contoso.com/connector/notification",
+    "showLoadingIndicator": false,
+    "isFullScreen": false,
+    "defaultBlockUntilAdminAction": false,
+    "publisherDocsUrl": "https://contoso.com/teamtabapp/admin-doc",
+    "scopeConstraints": { 
+        "teams": [ 
+            { "id": "%TEAMS-THREAD-ID" } 
+        ], 
+        "groupChats": [ 
+          { "id": "%GROUP-CHATS-THREAD-ID" } 
+        ] 
+    },    
     "authorization": {
         "permissions": {
             "resourceSpecific": [
@@ -222,6 +235,31 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
             ]
         }
     },
+"actions": [
+    {
+      "id": "addTodoTask",
+      "displayName": "Add ToDo task",
+      "intent": "addTo",
+      "description": "Add this file with a short note to my to do list",
+      "handlers": [
+        {
+          "type": "openPage",
+          "supportedObjects": {
+            "file": {
+              "extensions": [
+                "doc",
+                "pdf"
+              ]
+            }
+          },
+          "pageInfo": {
+            "pageId": "newTaskPage",
+            "subPageId": ""
+          }
+        }
+      ]
+    },
+  ],
     "configurableProperties": [
         "name",
         "shortDescription",
@@ -232,6 +270,10 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "developerUrl",
         "privacyUrl",
         "termsOfUseUrl"
+    ],
+    "supportedChannelTypes": [
+        "sharedChannels",
+        "privateChannels"
     ],
     "defaultInstallScope": "meetings",
     "defaultGroupCapability": {
@@ -886,7 +928,7 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 
-For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
+For more information and a sample of the `extensions` property in a manifest, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
 ### extensions.requirements
 
