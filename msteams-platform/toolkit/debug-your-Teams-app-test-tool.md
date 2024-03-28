@@ -204,7 +204,7 @@ Test Tool offers a faster debug experience for bot applications when compared to
             teamsapptester.exe start
          ```
 
-      If the Test Tool for C# doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.   
+      If the Test Tool for C# doesn't initiate because of a port conflict, alter the Test Tool's port number in the `TEAMSAPPTESTER_PORT` environment variable where you run `teamsapptester.exe start`.
      ---
 1. Test Tool opens the bot in a webpage.
 
@@ -403,7 +403,7 @@ It's vital to recognize that updating the configuration file has three major imp
 
   * [Typeahead search](../task-modules-and-cards/cards/dynamic-search.md)
   * [User mention](../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
-  * [Stage View](../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+  * [Stageview](../task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards)
   * [Full width](../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 * Test Tool doesn't support the following experiences:
