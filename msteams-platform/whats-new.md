@@ -26,7 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2024 March**
 
-* ***March 27, 2024*** : [Plan for Government clouds in New Teams client](concepts/cloud-overview.md)
+* ***April 4, 2024*** : Placeholer for April. [Plan for Government clouds in New Teams client.](concepts/cloud-overview.md)
+* ***March 27, 2024***: [Configure Teams deep links using the msteams:// and https:// protocol handlers.](concepts/build-and-test/deep-links.md#protocol-handlers-in-deep-links)
+* ***March 26, 2024***: [Adaptive Cards resposive layout helps you to design cards to look great on any device in order to provide an enhanced user experience across chat, channels, and meeting chat.](task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout)
 * ***March 07, 2024***: [Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-vs.md)
 * ***March 07, 2024***: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)
 
@@ -452,7 +454,7 @@ Developer preview is a public program that provides early access to unreleased T
 |05/12/2022| Use share in meeting to share any document or third-party app to the meeting stage.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
 |10/11/2022| Enable bots to receive all conversation messages without being @mentioned in relevant contexts.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
 | 09/23/2022 | Use apps in Teams meetings scheduled through public channels. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
-| 08/23/2022 | Share apps to the Teams meeting stage in mobile. | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
+| 08/23/2022 | Share apps to the Teams meeting stage in mobile. | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Use toggle incoming audio API to toggle the incoming audio state setting for the user in Teams meeting stage from mute to unmute or vice-versa. | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Use Collaboration controls to build custom collaborative experiences and integrate with Microsoft 365 services. | Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
 |05/24/2022| Use Live Share to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
