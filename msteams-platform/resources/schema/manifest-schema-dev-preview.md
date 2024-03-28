@@ -321,8 +321,8 @@ App developer contact information.
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`defaultsupport`||✔️|Support configuration.|
-|`defaultsupport.userEmailsForChatSupport`|10|✔️|Email address for user support through chat. Minimum:1; Maximum:10. The object is an array with all elements of the type string. The maximum length is 80 characters.|
-|`defaultsupport.emailsForEmailSupport`|1|✔️|Contact email for support inquiry. Minimum:1; Maximum:1. The object is an array with all elements of the type string. The maximum length is 80 characters.|
+|`defaultsupport.userEmailsForChatSupport`|10|✔️|Email address for user support through chat. Minimum: 1; maximum: 10. The object is an array with all elements of the type string. The maximum length is 80 characters.|
+|`defaultsupport.emailsForEmailSupport`|1|✔️|Contact email for support inquiry. Minimum: 1; maximum: 1. The object is an array with all elements of the type string. The maximum length is 80 characters.|
 
 ## localizationInfo
 
@@ -546,7 +546,7 @@ Each command item is an object with the following structure:
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`samplePrompts.text`|String|128 characters|✔️|This string will hold the sample prompt.|
+|`samplePrompts.text`|String|128 characters|✔️|This string holds the sample prompt.|
 
 ## scopeConstraints
 
@@ -576,7 +576,7 @@ Changing these permissions when updating your app causes your users to repeat th
 
 **Optional** &ndash; Array of Strings
 
-Specifies the native features on a user's device that your app may request access to. Options are:
+Specifies the native features on a user's device that your app might request access to. Options are:
 
 * `geolocation`
 * `media`
@@ -974,7 +974,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
 |`tabs.groups.controls.items.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control or menu item. The `actionId` must match with `runtime.actions.id`. |
 |`tabs.groups.controls.items.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
-|`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
+|`tabs.groups.controls.items.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations, which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`, `menu`|
 |`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of the existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control.|
@@ -986,7 +986,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
 |`tabs.groups.controls.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match with `runtime.actions.id`.|
 |`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
-|`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
+|`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item hidden on application and platform combinations, which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.builtinGroupId`| String | 64 characters | | Specifies the ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 
 To use `extensions.ribbons`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the UI for the task pane command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-task-pane-command), and [configure the UI for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-ui-for-the-function-command).
@@ -1039,7 +1039,7 @@ The object is an array of action objects. This block is required only for soluti
 
 ### actions.handlers
 
-Defines the handlers of the Action. The handlers is an array of handler objects. Each Action must have at least one handler.
+Defines the handlers of the Action. The handlers are an array of handler objects. Each Action must have at least one handler.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -1054,7 +1054,7 @@ The supported object types that can trigger this Action.
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`file`| Object | |  | Supported file types. |
-|`file.extensions`| Array of strings | |  | Array of strings. File extensions of the file types the Action can trigger. For example, pdf and docx.|
+|`file.extensions`| Array of strings | |  | Array of strings. File extensions of the file type the Action can trigger. For example, pdf and docx.|
 
 ### actions.handlers.pageInfo
 
