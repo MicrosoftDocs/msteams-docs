@@ -894,10 +894,10 @@ The `extensions.requirements` property specifies the [requirement sets](/javascr
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
-|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement sets. |
-|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement sets. |
-|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement sets. |
+|`requirements.capabilities`| Array | | | Identifies the requirement set. <br>Options: `name` (required), `minVersion`, `maxVersion`|
+|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
 |`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
 |`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
@@ -921,6 +921,12 @@ The `extensions.runtimes` property configures the sets of runtimes and actions t
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
 |`actions.multiselect`| Boolean | | | Specifies whether the end user can select multiple items, such as multiple email messages, and apply the action to all of them.|
 |`actions.supportsNoItemContext`| Boolean | | | Allows task pane add-ins to activate without the Reading Pane enabled or a message selected. |
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
+|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
+|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 To use `extensions.runtimes`, see [create add-in commands](/office/dev/add-ins/develop/create-addin-commands-unified-manifest), [configure the runtime for a task pane](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-task-pane-command), and [configure the runtime for the function command](/office/dev/add-ins/develop/create-addin-commands-unified-manifest#configure-the-runtime-for-the-function-command).
 
@@ -931,9 +937,15 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`contexts`| Array | 7 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`, `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `default`|
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
+|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
+|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 |`tabs`| Array | |✔️| Configures the custom tabs on the Microsoft 365 application ribbon. |
 |`tabs.id`| String | 64 characters | | Specifies the ID for the tab within the app.|
-|`tabs.builtinTabId`| String | 64 characters | | Specifies the ID of a built-in Office ribbon tab. The possible values vary by Office host application. Currently, only Outlook add-ins are supported and the only allowed value for Outlook is "DefaultTab". The default tab depends on where the Outlook add-in is surfaced, as determined in the "extensions.ribbons.contexts" property. In the main Outlook window, it is the **Home** tab, in a message window, it is the **Message** tab, and in a meeting window, it is the **Meeting** tab. |
+|`tabs.builtinTabId`| String | 64 characters | | Specifies the ID of a built-in Office ribbon tab. The possible values vary by Office host application. Currently, only Outlook add-ins are supported and the only allowed value for Outlook is "TabDefault". The default tab depends on where the Outlook add-in is surfaced, as determined in the "extensions.ribbons.contexts" property. In the main Outlook window, it is the **Home** tab, in a message window, it is the **Message** tab, and in a meeting window, it is the **Meeting** tab. |
 |`tabs.label`| String | 64 characters | | Specifies the text displayed for the tab.|
 |`tabs.position`| Object | | | Configures the position of the custom tab relative to other tabs on the ribbon.|
 |`tabs.position.builtinTabId`| String | 64 characters | ✔️ | Specifies the ID of the built-in tab that the custom tab should be positioned next to. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
@@ -942,7 +954,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.id`| String |64 characters | | Specifies the ID for the tab group within the app. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. |
 |`tabs.groups.icons`| Array | | | Specifies the icons displayed for the group. |
-|`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image size: `16`, `32`, `80`. |
+|`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`tabs.groups.icons.url`| URL| | | Specifies the absolute URL of the icon.|
 |`tabs.groups.controls`| Array | | | Configures the buttons and menus in the group. |
 |`tabs.groups.controls.id`| String | 64 characters| ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
@@ -951,7 +963,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.type`| String enum | | ✔️ | Defines the control items type. <br>Supported values: `menu`, `button`|
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the items. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the custom item.|
-|`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image size: `16`, `32`, `80`. |
+|`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
 |`tabs.groups.controls.items.icons.url`| URL| | | Specifies the absolute URL of the icon.|
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the custom item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
@@ -968,7 +980,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. |
 |`tabs.groups.controls.supertip.title`| String | 64 characters | ✔️ |Specifies the title text of the supertip.|
 |`tabs.groups.controls.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
-|`tabs.groups.controls.actionId`| String | 64 characters | ✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
+|`tabs.groups.controls.actionId`| String | 64 characters | | Required if the control type is `button`. Do not use if the control type is `menu`. Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
 |`tabs.groups.controls.enabled`| Boolean | | | Indicates whether the control is initially enabled. <br>Default value: `true`|
 |`tabs.groups.controls.overriddenByRibbonApi`| Boolean | | | Specifies whether a group, button, menu, or menu item is hidden on application and platform combinations which support the API ([Office.ribbon.requestCreateControls](/javascript/api/office/office.ribbon#office-office-ribbon-requestcreatecontrols-member(1))) that installs custom contextual tabs on the ribbon. <br>Default value: `false`|
 |`tabs.groups.builtinGroupId`| String | 64 characters | | Specifies the ID of a built-in group. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
@@ -998,6 +1010,12 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 |`events.actionId`| String | 64 characters | | Identifies the action that is taken when the event fires. The `actionId` must match with `runtime.actions.id`. |
 |`events.options`| Object | | | Configures how Outlook responds to the event.|
 |`events.options.sendMode`| String | | ✔️ | Specifies the actions to take during a mail send action. <br>Supported values: `promptUser`, `softBlock`, `block`. For more information, see [available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
+|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
+|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 
 ### extensions.alternates
 
@@ -1014,6 +1032,12 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
 |`hide.customOfficeAddin`| | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
+|`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
+|`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
+|`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
+|`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
+|`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 |`alternateIcons`| Object | | | Specifies the main icons that are used to represent the add-in on older versions of Office. This property is **required** if the Office add-in is to be installable in Office on Mac, perpetual Office licenses, and Microsoft 365 subscription versions of Office on Windows earlier than 2304 (Build 16320.00000).|
 |`alternateIcons.icon`| Object | | ✔️ | Specifies the size and URL of the image file that is used to represent the add-in. The image must be in one of the following file formats: GIF, JPG, PNG, EXIF, BMP, or TIFF. |
 |`alternateIcons.icon.size`| Number enum | | ✔️ | This property is not currently used. The icon that the "icon.url" property points to must be 64 x 64 pixels.|
