@@ -64,7 +64,7 @@
     displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
   - name: Plan for Government clouds
     href: concepts/cloud-overview.md
-    displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DOD), government cloud, government tenant, Teams in government
+    displayName: Government Community Cloud (GCC), GCC High (GCCH), Department of Defense (DOD), government cloud, government tenant, Teams in government, Gallatin
 - name: Design your app
   items:
   - name: Overview

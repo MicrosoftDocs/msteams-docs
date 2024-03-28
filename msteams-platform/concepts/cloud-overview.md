@@ -15,7 +15,7 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
 
 GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans).
 
-[Gallatin](/officeupdates/teams-app-versioning) sovereign cloud service managed by 21Vianet is specific to China and you can purchase the suitable [Microsoft 365 plan for Gallatin](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365) to utilize the services offered within China.
+[Gallatin](/officeupdates/teams-app-versioning) cloud service managed by 21Vianet is specific to China and you can purchase the suitable [Microsoft 365 plan for Gallatin](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365) to utilize the services offered within China.
 
 The document provides a comprehensive overview of Teams' compatibility within different government cloud services, detailing the various capabilities of Teams for each government tenant. It also outlines how government entities can effectively deploy and use Teams within their organizations.
 
@@ -96,7 +96,7 @@ To purchase required Microsoft 365 Government licenses:
 * Submit a form for GCC or GCC High to validate your organization’s eligibility. For more information on the eligibility, see [Microsoft 365 Government plans](https://www.microsoft.com/en-in/microsoft-365/enterprise/government-plans-and-pricing?rtc=1#heading-oc2835).
 * You must place an order only through the Microsoft account team or a qualified partner.
 
-### Compliance UI
+### Compliance with third-party services
 
 Here are few pointers to consider while connecting with third-party services from Government clouds:
 
