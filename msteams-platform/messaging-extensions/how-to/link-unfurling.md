@@ -438,6 +438,7 @@ To get your app ready for zero install link unfurling, follow these steps:
     * The bot can't send back an [Adaptive Cards with Universal Actions](../../task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Overview.md) in response to the `composeExtensions/anonymousQueryLink` invoke request, either as a result or as a pre-auth card in auth.
 
     * If the bot selects to send back the `"type": "auth"` property with a pre-auth card, Teams strips away any action buttons from the card, and adds a sign in action button to get users to authenticate into your app.
+
 ---
 
 ## How to test zero install link unfurling
@@ -502,5 +503,5 @@ Follow the [step-by-step guide](../../sbs-botbuilder-linkunfurling.yml) to unfur
 
 * [Message extensions](../what-are-messaging-extensions.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
-* [Tabs link unfurling and Stage View](../../tabs/tabs-link-unfurling.md)
+* [Tabs link unfurling and Stageview](../../tabs/tabs-link-unfurling.md)
 * [Bot activity handlers](../../bots/bot-basics.md)
