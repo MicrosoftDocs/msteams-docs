@@ -53,13 +53,13 @@ You can update your existing configurable tab to static tab and add different sc
 
 If your app supports [configurable tab,](~/tabs/how-to/create-tab-pages/configuration-page.md#configuration-page-for-tabs) then you must continue to keep the `configurableTab` property in your app manifest to ensure the backward compatibility of previously pinned tabs. As you can only pin static tabs from now, it's important that previous configurable tabs continue to be supported.
 
-Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your channel or group tab.
+Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your configurable tab.
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
 ::: zone pivot="node-java-script"
 
-## Create a custom channel or group tab with Node.js
+## Create a custom configurable tab with Node.js
 
 1. At the command prompt, install the [Yeoman](https://yeoman.io/) and [gulp-cli](https://www.npmjs.com/package/gulp-cli) packages by entering the following command after installing the **Node.js**:
 
@@ -73,9 +73,9 @@ Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to
     npm install generator-teams --global
     ```
 
-## Generate your application with a channel or group tab
+## Generate your application with a configurable tab
 
-1. At the command prompt, create a new directory for your channel or group tab.
+1. At the command prompt, create a new directory for your configurable tab.
 
 1. Enter the following command in your new directory to start the Microsoft Teams app generator:
 
@@ -241,18 +241,18 @@ gulp ngrok-serve
    "composeExtensions": [],
    ```
 
-1. Follow the directions for adding a tab. There's a custom configuration dialog for your channel or group tab.
+1. Follow the directions for adding a tab. There's a custom configuration dialog for your configurable tab.
 1. Select **Save** and your tab is added to the channel's tab bar.
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-uploaded.png" alt-text="Screenshot shows the uploaded channel tab in Teams.":::
 
-    Your channel or group tab is successfully created and added in Teams.
+    Your configurable tab is successfully created and added in Teams.
 
 ::: zone-end
 
 ::: zone pivot="razor-csharp"
 
-## Create a custom channel or group tab with ASP.NET Core
+## Create a custom configurable tab with ASP.NET Core
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -262,7 +262,7 @@ gulp ngrok-serve
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-## Generate your application with a channel or group tab
+## Generate your application with a configurable tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
@@ -462,13 +462,13 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-aspnet-uploaded.png" alt-text="Screenshot shows that the channel tab is uploaded.":::
 
-    Your channel or group tab is successfully created and added in Teams.
+    Your configurable tab is successfully created and added in Teams.
 
 ::: zone-end
 
 ::: zone pivot="mvc-csharp"
 
-## Create a custom channel or group tab with ASP.NET Core MVC
+## Create a custom configurable tab with ASP.NET Core MVC
 
 1. At the command prompt, create a new directory for your tab project.
 
@@ -478,7 +478,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
     git clone https://github.com/OfficeDev/Microsoft-Teams-Samples.git
     ```
 
-## Generate your application with a channel or group tab
+## Generate your application with a configurable tab
 
 1. Open Visual Studio and select **Open a project or solution**.
 
@@ -677,7 +677,7 @@ Ensure that you keep the command prompt with ngrok running and make a note of th
 
     :::image type="content" source="~/assets/images/tab-images/channel-tab-aspnet-uploaded.png" alt-text="Screenshot shows that the channel tab is uploaded in Teams.":::
 
-    Your channel or group tab is successfully created and added in Teams.
+    Your configurable tab is successfully created and added in Teams.
 
 ::: zone-end
 
