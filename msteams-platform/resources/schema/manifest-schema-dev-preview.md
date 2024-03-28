@@ -310,7 +310,21 @@ Specifies information about your company. For apps submitted to Microsoft AppSou
 |`websiteUrl`|2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
 |`privacyUrl`|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
 |`termsOfUseUrl`|2048 characters|✔️|The https:// URL to the developer's terms of use.|
+|`contactInfo`||✔️|App developer contact information.|
 |`mpnId`|10 characters||**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+
+### developer.contactInfo
+
+|Name| Maximum size | Required | Description|
+|---|---|---|---|
+|`contactInfo.defaultsupport`||✔️|Support configuration.|
+
+#### contactInfo.defaultsupport
+
+|Name| Maximum size | Required | Description|
+|---|---|---|---|
+|`contactInfo.defaultsupport.userEmailsForChatSupport`|10|✔️|User email for chat support contacts.|
+|`contactInfo.defaultsupport.emailsForEmailSupport`|1|✔️|Email address for email support.|
 
 ## localizationInfo
 
@@ -507,6 +521,7 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
 |`type`|String|64 characters||Type of the command. One of `query` or `action`. Default: `query`|
+|`samplePrompts`|Array of objects|5|
 |`apiResponseRenderingTemplateFile`|String|2048 characters||A relative file path for api response rendering template file.|
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
@@ -528,6 +543,12 @@ Each command item is an object with the following structure:
 |`parameter.choices.title`|String|128 characters||Title of the choice.|
 |`parameter.choices.value`|String|512 characters||Value of the choice.|
 |`apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response.  |
+
+### commands.samplePrompts
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`samplePrompts.text`|String|128 characters|✔️|This string will hold the sample prompt.|
 
 ## scopeConstraints
 
