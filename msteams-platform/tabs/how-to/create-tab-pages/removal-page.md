@@ -53,7 +53,7 @@ You can use `getContext()` to get the current context in which the frame is runn
 
 Authentication is required before allowing a user to delete the tab content. Context information can be used to help construct authentication requests and authorization page URLs. See [Microsoft Teams authentication flow for tabs](~/tabs/how-to/authentication/auth-flow-tab.md). Make sure that all domains used in your tab pages are listed in the `validDomains` array of your app manifest.
 
-The following sample is an example of tab removal code block::
+The following sample is an example of tab removal code block:
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
