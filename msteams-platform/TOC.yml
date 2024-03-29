@@ -388,9 +388,9 @@
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
     displayName: Slow load times, iFrame constraints, invoke activities, dialog, task fetch, task submit, authentication
-  - name: Tabs link unfurling and Stage View
+  - name: Tabs link unfurling and Stageview
     href: tabs/tabs-link-unfurling.md
-    displayName: Tab in Stage View, Collaborative Stage View 
+    displayName: Tab in Stageview, Collaborative Stageview 
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
@@ -1090,7 +1090,7 @@
     items:
     - name: Overview
       href: concepts/build-and-test/deep-links.md
-      displayName: Navigate within your app, executeDeepLink
+      displayName: Navigate within your app, executeDeepLink, protocol handlers
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
     - name: Deep link to Teams chat
