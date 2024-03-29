@@ -7,9 +7,9 @@ ms.localizationpriority: high
 ms.topic: overview
 ms.date: 03/14/2022
 ---
-# Create a new Microsoft Teams project using Microsoft Teams Toolkit
+# Create a new Teams project using Teams Toolkit
 
-You can create Teams apps in Visual Studio using the app templates. You can search and select any of the following Teams template to create a new app.
+You can create Microsoft Teams apps in Microsoft Visual Studio using the app templates. You can search and select any of the following Teams template to create a new app.
 
 * Bot
 * Tab
@@ -20,8 +20,8 @@ You can create Teams apps in Visual Studio using the app templates. You can sear
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
 | &nbsp; | Visual Studio latest version | Install the latest enterprise edition of Visual Studio, and select the **ASP.NET and web development** workload and **Microsoft Teams Development Tools** for installation. |
-| &nbsp; | Teams Toolkit | A Visual Studio workload that creates a project scaffolding for your app. Use the latest version. |
-| &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to upload your Teams app into local Teams environment for testing app behavior. |
+| &nbsp; | Microsoft Teams Toolkit | A Visual Studio workload that creates a project scaffolding for your app. Use the latest version. |
+| &nbsp; | [Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to upload your Teams app into local Teams environment for testing app behavior. |
  | &nbsp; | [Prepare your Microsoft 365 tenant](~/concepts/build-and-test/prepare-your-o365-tenant.md) | Access to Microsoft 365 account with the appropriate permissions to install an app. |
 
 ## Create a new Teams app
