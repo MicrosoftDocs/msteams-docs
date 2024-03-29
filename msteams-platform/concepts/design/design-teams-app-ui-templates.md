@@ -17,10 +17,10 @@ The following resources can help you design and develop your app using UI templa
 
 ### Microsoft Teams UI Kit
 
-Grab UI templates for your app design from the Microsoft Teams UI Kit, which also includes extensive information about usage, anatomy, accessibility, and best practices.
+Grab UI templates for your app design from the Teams UI Kit, which also includes extensive information about usage, anatomy, accessibility, and best practices.
 
 > [!div class="nextstepaction"]
-> [Get the UI kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Get Teams UI kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 The app playbooks and UI templates are also available to help you get started for the [apps extended across Microsoft 365](../../m365-apps/overview.md#app-planning-and-design).
 
