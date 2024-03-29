@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.topic: reference
 ms.date: 06/28/2022
 ---
-# Designing activity feed notifications for your Microsoft Teams app
+# Designing activity feed notifications for your Teams app
 
 The activity feed is a surface for users to access their notifications in Microsoft Teams. The feed retains notifications from the past four weeks.
 
