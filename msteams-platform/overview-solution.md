@@ -8,13 +8,13 @@ ms.date: 11/02/2021
 ---
 # The Teams solution
 
-Microsoft Teams Platform is a powerful, flexible platform for creating apps for Teams. It provides a vast suite of development environments and tools to support app development.
+Microsoft Teams is a powerful, flexible platform for creating apps for Teams. It provides a vast suite of development environments and tools to support app development.
 
 ## The user story
 
 You've had a view of Teams offerings. You can now map them to user needs. Let’s revisit the scenario.
 
-The developer from Tours and Travel agency wants to build an app for their users, the travelers. The app must:
+The developer from a tours and travel agency wants to build an app for their users, the travelers. The app must:
 
 - Check and send the forecast to travelers registered with the travel agency.
 - Notify the users a day before the departure date so they can plan.
@@ -30,7 +30,7 @@ Collate and map requirements to Teams functionalities:
 
 **Teams app solution**: A Teams *notification bot* app that checks and *sends forecast notification* to *registered users* before their travel date.
 
-:::image type="content" border="false" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Screenshot shows you to builds a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates."lightbox="../msteams-platform/assets/images/overview/developer-scenario-solution.png":::
+:::image type="content" border="false" source="../msteams-platform/assets/images/overview/developer-scenario-solution.png" alt-text="Diagram shows how to build a bot for Teams that sends weather forecast to customers so that they can plan ahead their traveling dates." lightbox="../msteams-platform/assets/images/overview/developer-scenario-solution.png":::
 
 Teams offers these and many more capabilities to bring your users a feature-rich app solution. To develop this app:
 
@@ -41,7 +41,7 @@ Teams offers these and many more capabilities to bring your users a feature-rich
 
 ## Dive deeper
 
-Choose to customize your app with functionalities, such as user authentication and tools, such as Microsoft Graph and Developer Portal.
+Choose to customize your app with functionalities, such as user authentication and tools, such as Microsoft Graph and Microsoft Teams Developer Portal.
 
 Let's go through Teams Developer Documentation based on your requirements for building a Teams app:
 

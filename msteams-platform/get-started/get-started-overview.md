@@ -1,6 +1,6 @@
 ---
 title: Get started - Overview
-description: In this module, learn how to build your first Microsoft Teams app based on language and developement environment, understand app capabilities, SDKs.
+description: Learn how to build your first Microsoft Teams app either using GitHub Codespaces or step-by-step guide.
 ms.localizationpriority: high
 ms.date: 06/07/2023
 ms.topic: reference
@@ -14,8 +14,7 @@ Use GitHub Codespaces or walk through the step-by-step guide to build a basic, r
 
 Here's an idea of what you'll learn:
 
-* Get started quickly with the Microsoft Teams Toolkit.
-* Build tab, scenario-based apps, and message extension with GitHub Codespaces or step-by-step guide.
+* Build tab, scenario-based bot, and message extension with GitHub Codespaces or step-by-step guide.
 * Learn about tutorials and code samples available for building your Teams app.
 * Learn about various tools and SDKs available for building your Teams app.
 
@@ -36,7 +35,7 @@ In this section, learn how to build a Teams app with different capabilities, suc
    * **GitHub Codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any extra setup.
    * **Step-by-step guide**: Allows you to create a Teams app from the ground up including setting up your development environment.
 
-   :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Your choices to build a Teams app with codespaces and step-by-step guide."lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
+   :::image type="content" border="false" source="../assets/images/get-started/codescpaces-vs-manual.png" alt-text="Diagram shows your choices to build a Teams app with GitHub Codespaces or step-by-step guide." lightbox="../assets/images/get-started/codescpaces-vs-manual.png":::
 
 ## Next step
 

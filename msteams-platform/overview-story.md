@@ -1,18 +1,19 @@
 ---
 title: Overview - User story for Microsoft Teams platform
 author: heath-hamilton
-description: Learn how Microsoft Teams apps helps your users in the Teams environment. Understand your user, problem, app requirements, benefits, and user centric solution.
+description: Learn how to understand your user, problem, app requirements, benefits, and build user centric solution with Teams platform.
 ms.topic: overview
 ms.localizationpriority: high
 ms.date: 11/02/2021
 ---
+
 # From ideas to Teams app
 
-Learn how apps let you help your users in the Teams environment.
+Learn how apps let you help your users in the Microsoft Teams environment.
 
 Take a look at this scenario:
 
-:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Screenshot shows you to builds an app that sends weather forecast to customers so that they can plan ahead their traveling dates."lightbox="../msteams-platform/assets/images/overview/developer-scenario.png":::
+:::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario.png" alt-text="Diagram shows how to build an app that sends weather forecast to customers so that they can plan their travel." lightbox="../msteams-platform/assets/images/overview/developer-scenario.png":::
 
 As a developer, you want a way to share important and relevant information to help your users. It's a typical user story. Relatable? But how does Teams fit in to this scenario?
 
@@ -22,7 +23,7 @@ Let’s dig deeper into this story and find out.
 
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="Screenshot shows you the user story as a developer at a travel agency, build apps for travelers.":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-01.png" alt-text="Diagram shows the user story as a developer at a travel agency to build apps for travelers.":::
    :::column-end:::
    :::column span="":::
       #### Understand your user
@@ -45,12 +46,12 @@ Let’s dig deeper into this story and find out.
         - What issues do you want to address?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="Screenshot shows you how to develop an app that sends weather forecast of the destination to customers.":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-02.png" alt-text="Diagram shows how to develop an app that sends weather forecast of the destination to customers.":::
    :::column-end:::
 :::row-end:::
 :::row:::
    :::column span="":::
-      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="Screenshot shows you that customers can know weather conditions and plan ahead.":::
+      :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-03.png" alt-text="Diagram shows that customers can know weather conditions and plan ahead.":::
    :::column-end:::
    :::column span="":::
       #### List app requirements and benefits
@@ -73,7 +74,7 @@ Let’s dig deeper into this story and find out.
         - What features would be most convenient for user experience?
    :::column-end:::
    :::column span="":::
-       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="Screenshot shows you the customers are well-prepared for traveling!":::
+       :::image type="content" source="../msteams-platform/assets/images/overview/developer-scenario-04.png" alt-text="Diagram shows that the customers are well-prepared for traveling.":::
    :::column-end:::
 :::row-end:::
 
