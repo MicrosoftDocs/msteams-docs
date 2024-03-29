@@ -1,7 +1,7 @@
 ---
 title: Prerequisites for creating your Teams app
 author: zyxiaoyuer
-description: In this module, learn the prerequisites required for Tools and SDK, and Teams Toolkit.
+description: In this module, learn the required tools to build your Teams app.
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.topic: overview
@@ -22,7 +22,7 @@ Ensure that the following tools are installed on the device where you’ll creat
 | &nbsp; | Tools | Purpose | For environment type |
 | --- | --- | --- | --- |
 | **Required** | &nbsp; | &nbsp; | &nbsp; |
-| &nbsp; | Teams Toolkit| A Microsoft Visual Studio extension that creates a project scaffolding for your app. Use the latest version. | C# and Blazor |
+| &nbsp; | Microsoft Teams Toolkit| A Microsoft Visual Studio extension that creates a project scaffolding for your app. Use the latest version. | C# and Blazor |
 | &nbsp; | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Collaborate with everyone you work with through apps for chat, meetings, and call - all in one place.| C# and Blazor |
 | &nbsp; | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. | C# and Blazor |
 | **Optional** | &nbsp; | &nbsp; | &nbsp; |
