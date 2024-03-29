@@ -145,7 +145,6 @@ Link unfurling only apps don't provide significant value within Teams. Consider 
 </details>
 <br>
 
-
 [Back to top](#teams-store-validation-guidelines)
 
 ### App Name
@@ -974,7 +973,7 @@ The following are the navigation guidelines:
 * Horizontal scroll mustn't be present in an in-meeting tab. [*Mandatory Fix*]
 
 * In-meeting dialogs used in your app mustn't allow horizontal scrolling. Use in-meeting dialogs sparingly and for scenarios that are light and task oriented. You can specify the width of the in-meeting dialog’s I-frame within the supported size range to account for different scenarios. [*Mandatory Fix*]
-* Dialogs used in your app mustn't allow horizontal scrolling. Dialogs allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If necessary, you can use a Stage View (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
+* Dialogs used in your app mustn't allow horizontal scrolling. Dialogs allow you to select different sizes to make the content responsive without the need of Horizontal scroll. If necessary, you can use a Stageview (a full screen UI component to surface your web content) to complete the workflow without Horizontal scroll. [*Mandatory Fix*]
 
 * Horizontal scroll present in the tab in a personal chat, channel, and in-meeting details tab in any scope isn't allowed if the entire tab canvas is scrollable, unless your tab uses an infinite canvas with fixed UI elements. [*Mandatory Fix*]
 
