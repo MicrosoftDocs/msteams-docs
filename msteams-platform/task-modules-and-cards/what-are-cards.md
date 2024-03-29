@@ -85,6 +85,9 @@ Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible ca
 ### CodeBlock in Adaptive Cards
 
 You can share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. You can add action buttons to view the code in its source or edit the code in integrated development environments (IDEs) such as Visual Studio or Visual Studio Code. For more information, see [CodeBlock in Adaptive Cards](cards/cards-format.md#codeblock-in-adaptive-cards)
+### Adaptive Card responsive layout
+
+You must design your Adaptive Cards to look great on any device to provide an enhanced user experience across chat, channels, and meeting chat. Adaptive Card responsive layout helps you to design cards with different layouts that target different card widths. For more information, see [Adaptive Card responsive layout](cards/cards-format.md#adaptive-card-responsive-layout).
 
 ## Overflow menu on Adaptive Cards
 
