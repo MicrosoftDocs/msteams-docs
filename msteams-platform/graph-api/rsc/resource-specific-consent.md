@@ -115,6 +115,9 @@ For more information, see [team resource-specific consent permissions](/graph/pe
 
 ### RSC permissions for a chat or meeting
 
+> [!NOTE]
+> The `ChatMessageReadReceipt.Read.Chat` RSC permission is only granted in personal scope.
+
 If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 
 The following table provides RSC permissions for a chat or meeting and their applicable data access mode:
