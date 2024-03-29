@@ -9,7 +9,7 @@ ms.date: 12/09/2022
 
 # Create and send messages
 
-You can create actionable messages and send it through Incoming Webhook or connector for Microsoft 365 Groups.
+You can send actionable messages using Incoming Webhook or connector for Microsoft 365. In Microsoft Teams, Incoming Webhook can create actionable messages. But actions are only available for users with Exchange online license. If users don't have it, actionable messages won't function.
 
 ## Create actionable messages
 
