@@ -40,7 +40,7 @@ You can use the Microsoft Teams JavaScript client library (TeamsJS) to navigate 
 
 > [!NOTE]
 > To redirect users from your Teams app to its native experience through a deep link with a protocol such as `tel:`, `mailto:`, or `webex:`, launch the deep link in a new window by calling the `window.open` method or using an anchor tag with `target="_blank"`.
->
+
 ## Protocol handlers in deep links
 
 Teams deep links support two types of protocol handlers:
