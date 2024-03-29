@@ -1,6 +1,6 @@
 ---
 title: Build notification bot
-description: Sends messages in Teams channel or group chat or personal chat.
+description: Learn how to build your first scenario-based notification Teams bot app using GitHub Codespaces or step-by-step guide.
 ms.localizationpriority: medium
 ms.date: 06/07/2023
 ms.topic: reference
@@ -8,13 +8,13 @@ ms.topic: reference
 
 # Build notification bot
 
-The notification bot proactively sends messages in a Teams channel, group chat, or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts.
+The notification bot proactively sends messages in a Microsoft Teams channel, group chat, or personal chat. You can trigger the notification bot with an HTTP request, such as cards or texts.
 
-:::image type="content" border="false" source="../assets/images/get-started/get-started-bot.png" alt-text="Screenshot shows you the conceptual notification bot in Teams client":::
+:::image type="content" border="false" source="../assets/images/get-started/get-started-bot.png" alt-text="Diagram shows the conceptual notification bot in Teams client":::
 
 In this tutorial, you'll learn about a notification bot app in one of the following ways.
 
-* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Visual Studio Code (VS Code) where the Teams Toolkit extension, the app source code, and all the dependencies are pre-packaged for you.
+* **GitHub Codespaces**: The codespace instance allows you to experience a Teams app instantaneously. It opens Microsoft Visual Studio Code where the Microsoft Teams Toolkit extension, the app source code, and all the dependencies are prepackaged for you.
 * **Step-by-step guide**: Allows you to set up your development environment and build a Teams app from the start.
 
 # [GitHub Codespaces](#tab/teamstoolkitcodespaces)
@@ -39,17 +39,17 @@ To create a Teams notification bot with GitHub Codespaces, follow these steps:
 
 1. Select **Create new codespace**.
 
-   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows you the GitHub page to create a codespace for bot.":::
+   :::image type="content" source="../assets/images/get-started/codespace.png" alt-text="Screenshot shows the GitHub page to create a codespace for bot.":::
 
    The **Setting up your codespace** page appears.
 
-   :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows you the codespace building your notification bot.":::
+   :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows the codespace building your notification bot.":::
 
-   Teams Toolkit prepares the notification bot project for you and opens it in VS Code in the browser. The Teams Toolkit icon appears in the activity bar of VS Code.
+   Teams Toolkit prepares the notification bot project for you and opens it in Visual Studio Code in the browser. The Teams Toolkit icon appears in the activity bar of Visual Studio Code.
 
 1. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows you the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/add-tab-in-teams.png":::
+   :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in." lightbox="../assets/images/get-started/add-tab-in-teams.png":::
 
     > [!NOTE]
     >
@@ -57,7 +57,7 @@ To create a Teams notification bot with GitHub Codespaces, follow these steps:
 
 1. Select **Preview your Teams App (F5)** to build your notification bot.
 
-      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows you the Teams Toolkit window in browser with your notification bot."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
+      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows the Teams Toolkit window in browser with your notification bot." lightbox="../assets/images/get-started/toolkit-in-browser.png":::
 
    GitHub Codespaces builds your notification bot app, loads it to Teams client, and opens it in a separate browser tab.
 
@@ -77,25 +77,23 @@ To create a Teams notification bot with GitHub Codespaces, follow these steps:
 
    The notification bot app sends a notification as an Adaptive Card to your Teams client:
 
-   :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows your notification bot loaded in the Teams client.":::
-
-   You've now successfully created the notification bot and loaded it in the Teams client.
+   :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows your notification bot sending an Adaptive Card in the Teams chat.":::
 
 # [Step-by-step guide](#tab/step-by-step-guide)
 
-If you want to learn how to start a project with Teams Toolkit from the beginning, you'll need to set up your development environment. Select the following button to start building you notification bot.
+If you want to learn how to start a project with Teams Toolkit from the beginning, you need to set up your development environment. Select the following button to start building you notification bot.
 
 > [!div class="nextstepaction"]
 > [Start building a notification bot](../sbs-gs-notificationbot.yml)
 
 ---
 
-If you want to build a message extension, select the following:
+If you want to build a message extension:
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)
 
-If you want to build basic tab app, select the following:
+If you want to build basic tab app:
 
 > [!div class="nextstepaction"]
 > [Build your basic tab app](build-basic-tab-app.md)

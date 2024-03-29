@@ -30,7 +30,7 @@ In this section, learn how to build a Teams app with different capabilities, suc
 
    * **Build message extension Teams app**: Build a search-based message extension Teams app.
 
-2. Choose your path to build your selected app.
+2. Choose your path to build your selected app:
 
    * **GitHub Codespaces**: Allows you to run, test, and debug your app in a development environment without the need for any extra setup.
    * **Step-by-step guide**: Allows you to create a Teams app from the ground up including setting up your development environment.
@@ -39,17 +39,17 @@ In this section, learn how to build a Teams app with different capabilities, suc
 
 ## Next step
 
-If you want to build a basic tab app, select the following:
+If you want to build a basic tab app:
 
 > [!div class="nextstepaction"]
 > [Build your basic tab app](build-basic-tab-app.md)
 
-If a bot is what you're interested in, select the following:
+If a bot is what you're interested in:
 
 > [!div class="nextstepaction"]
 > [Start building a bot](build-notification-bot.md)
 
-If you want to build a message extension app, select the following:
+If you want to build a message extension app:
 
 > [!div class="nextstepaction"]
 > [Build message extension](build-message-extension.md)

@@ -29,13 +29,13 @@
     displayName: build first Teams app, get started with Teams app, GitHub Codespaces, Teams app step-by-step guide
   - name: Build a tab app
     href: get-started/build-basic-tab-app.md
-    displayName: tab app, build first Teams tab, Teams tab app, GitHub Codespaces, Teams tab app step-by-step guide
+    displayName: tab, tab app, build first Teams tab, Teams tab app, GitHub Codespaces, Teams tab app step-by-step guide
   - name: Build a notification bot app
     href: get-started/build-notification-bot.md
-    displayName:
+    displayName: bot, notification bot, bot app, build first Teams bot, Teams notification bot app, GitHub Codespaces, Teams bot app step-by-step guide
   - name: Build a message extension app
     href: get-started/build-message-extension.md
-    displayName:
+    displayName: message extension, message extension app, build first Teams message extension, Teams message extension app, GitHub Codespaces, Teams message extension app step-by-step guide
   - name: Teams app tutorials and code samples
     href: get-started/teams-toolkit-tutorial.md
     displayName:
