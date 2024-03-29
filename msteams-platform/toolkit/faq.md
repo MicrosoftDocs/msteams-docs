@@ -10,9 +10,7 @@ ms.date: 11/29/2021
 
 # FAQ for Teams Toolkit
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
-Following are the FAQs for [Provision cloud resources using Teams Toolkit](provision.md):
+Following are the FAQs for [Provision cloud resources using Microsoft Teams Toolkit](provision.md):
 
 </br>
 
@@ -20,7 +18,7 @@ Following are the FAQs for [Provision cloud resources using Teams Toolkit](provi
 
 <summary>How to troubleshoot?</summary>
 
-If you get errors with Teams Toolkit in Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
+If you get errors with Teams Toolkit in Microsoft Visual Studio Code, you can select **Get Help** on the error notification to go to the related document. If you're using TeamsFx CLI, there'll be a hyperlink at the end of error message that points to the help doc. You can also view [provision help doc](https://aka.ms/teamsfx-arm-help) directly.
 
 </br>
 
@@ -55,7 +53,7 @@ Before provision, the tool asks you if you want to create a new resource group o
 You can follow [provision SharePoint-based app](/microsoftteams/platform/sbs-gs-spfx?tabs=vscode%2Cviscode&tutorial-step=4).
 
 > [!NOTE]
-> Currently, the building Teams app with SharePoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx-based apps.
+> Currently, the building Microsoft Teams app with SharePoint framework with Teams Toolkit doesn't have direct integration with Azure, the contents in the doc doesn't apply to SPFx-based apps.
 
 </br>
 
