@@ -5,9 +5,9 @@ ms.localizationpriority: medium
 ms.topic: reference
 ms.date: 05/16/2023
 ---
-# Microsoft Teams app tutorials and related code samples
+# Teams app tutorials and related code samples
 
-You can build your own Teams app with different capabilities using the step-by-step guide or tutorial and code samples.
+You can build your own Microsoft Teams app with different capabilities using the step-by-step guide or tutorial and code samples.
 
 ## Teams app tutorials
 
@@ -20,4 +20,4 @@ Now, let's build your first Teams app. You can use the following language (or fr
 
 ## Code samples
 
-Code samples are designed to help understand and build your own Microsoft Teams app with different capabilities and scenarios. To learn more about list of code samples, see [Microsoft Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).
+Code samples are designed to help understand and build your own Teams app with different capabilities and scenarios. To learn more about list of code samples, see [Teams samples](https://github.com/OfficeDev/Microsoft-Teams-Samples).

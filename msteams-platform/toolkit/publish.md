@@ -90,10 +90,10 @@ Now the app is available on the Manage apps of Microsoft Teams admin center, whe
 
 ### Approve on admin center
 
-Teams toolkit for VS Code built on top of the Teams App Submission API and it allows you to automate the submission-to-approval process for custom apps on Teams.
+Teams toolkit for Visual Studio Code built on top of the Teams App Submission API and it allows you to automate the submission-to-approval process for custom apps on Teams.
 
   > [!NOTE]
-  > Ensure that you have Teams app project in VS code. As an admin, **Manage apps** in the [Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps) is where you can view and manage all Teams apps for your organization. You can do the following activities in the admin center:
+  > Ensure that you have Teams app project in Visual Studio Code. As an admin, **Manage apps** in the [Teams admin center](https://admin.teams.microsoft.com/policies/manage-apps) is where you can view and manage all Teams apps for your organization. You can do the following activities in the admin center:
   >
   > * See the org level status and properties of apps.
   > * Approve or upload new custom apps to your organization's app store.
