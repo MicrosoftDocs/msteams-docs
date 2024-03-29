@@ -1,5 +1,5 @@
 ---
-title: Plan notification for your app
+title: Plan your app notification
 author: v-sdhakshina
 description: Learn how to design effective app notifications and choose the right framework for your app.
 ms.author: v-sdhakshina
@@ -7,7 +7,7 @@ ms.topic: reference
 ms.date: 02/23/2024
 ---
 
-# Plan notification for your app
+# Plan your app notification
 
 Notifications are one of the most effective ways to engage and retain users within Microsoft Teams. The platform apps can either send notifications to the activity feed using the Graph API or send Adaptive Cards through bots. Let's learn the effective notification types and select the most suitable notification framework for your app.
 
