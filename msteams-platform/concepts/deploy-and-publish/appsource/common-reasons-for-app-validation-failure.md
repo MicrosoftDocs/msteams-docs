@@ -52,7 +52,7 @@ The following are the most common reasons for your app to get rejected:
 
 ## Inadequate app description
 
-A great description makes your app stand out in the Teams Store and encourage customers to download it.
+A great description makes your app stand out in the Teams Store and encourages customers to download it.
 
 | # | Avoid the following |
 | --- | --- |
