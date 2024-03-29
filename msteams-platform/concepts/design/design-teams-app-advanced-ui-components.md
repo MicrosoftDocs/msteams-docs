@@ -13,10 +13,10 @@ The following components are a combination of [basic UI components](~/concepts/d
 
 ## Microsoft Teams UI Kit
 
-Based on [Fluent UI](https://react.fluentui.dev/?path=/docs/), the Microsoft Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In the UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
+Based on [Fluent UI](https://react.fluentui.dev/?path=/docs/), the Teams UI Kit includes components and patterns that are designed specifically for building Teams apps. In Teams UI kit, you can grab and insert the components listed here directly into your design and see more examples of how to use each component.
 
 > [!div class="nextstepaction"]
-> [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Get Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## Breadcrumb
 
