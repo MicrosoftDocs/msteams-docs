@@ -17,7 +17,7 @@ To guide your app design, the following information describes and illustrates ho
 You can find comprehensive message extension design guidelines, including elements that you can grab and modify as needed, in Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Get Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## Add a message extension
 
