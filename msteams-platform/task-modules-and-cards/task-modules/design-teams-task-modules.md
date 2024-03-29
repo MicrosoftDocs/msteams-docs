@@ -14,10 +14,10 @@ You can create modal pop-up experiences in your Teams app with dialogs (referred
 
 ## Microsoft Teams UI Kit
 
-You can find more comprehensive dialog design guidelines, including elements that you can grab and modify as needed, in the Microsoft Teams UI Kit.
+You can find more comprehensive dialog design guidelines, including elements that you can grab and modify as needed, in Teams UI Kit.
 
 > [!div class="nextstepaction"]
-> [Get the Microsoft Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
+> [Get Teams UI Kit (Figma)](https://www.figma.com/community/file/916836509871353159)
 
 ## Open a dialog
 
