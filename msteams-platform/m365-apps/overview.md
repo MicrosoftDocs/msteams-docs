@@ -74,11 +74,11 @@ Users can discover and use your meeting app right in the flow of their work when
 
 With an aim toward simplifying and streamlining the Microsoft 365 developer ecosystem, we're continuing to expand the app manifest into other areas of Microsoft 365 with the following.
 
-### Outlook Add-ins 
+### Outlook Add-ins
 
 You can now define and deploy Outlook Add-ins in [version 1.17 and later](../resources/schema/manifest-schema.md) of the app manifest.
 
-For more information, see the [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
+For more information, see [app manifest for Office Add-ins](/office/dev/add-ins/develop/unified-manifest-overview).
 
 ## App planning and design
 
