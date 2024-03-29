@@ -1,7 +1,7 @@
 ---
 title: Explore Teams Toolkit in Visual Studio
 author: zyxiaoyuer
-description: Learn about Teams Toolkit UI elements and task pane in Visual Studio.
+description: In this module, learn about Teams Toolkit UI elements and its features in Visual Studio.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
