@@ -432,7 +432,7 @@ Follow the [step-by-step](../../sbs-tab-with-adaptive-cards.yml) guide to build 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+> [Tabs link unfurling and Stageview](~/tabs/tabs-link-unfurling.md)
 
 ## See also
 
