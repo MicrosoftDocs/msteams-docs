@@ -13,11 +13,14 @@ ms.localizationpriority: high
 >
 > Bot configuration experience is supported in channel or group chat scopes only.
 
-Bot configuration allows developers to enhance user engagement and personalize bot experiences within platforms like Microsoft Teams. By enabling users to configure bot settings post-installation, developers can ensure a smoother onboarding process and tailor bot functionality to meet specific user needs.
+Bot configuration in Microsoft Teams empowers developers to elevate user engagement and customize bot experiences. This feature enables users to adjust bot settings after installation, streamlining the onboarding process and allowing for the tailoring of bot functionality to meet individual user needs.
 
-## Why Bot Configuration?
+Imagine a scenario where a user installs a bot but finds the default settings do not suit their workflow. Without the ability to configure the bot, users may feel constrained by its predefined behavior, leading to disengagement and a decline in usage. However, with bot configuration, developers give users the autonomy to personalize bot settings to their preferences and requirements, enhancing user satisfaction and interaction with the bot.
 
-Imagine a scenario where a user installs a bot in their Teams but finds the default settings inadequate for their workflow. Without bot configuration, users might feel limited by the bot's predefined behavior, leading to disengagement and decreased usage. However, by implementing bot configuration, developers empower users to tailor bot settings according to their preferences and requirements.
+The following grpahic explains a streamlined process for integrating a bot into a Teams channel. Users can select their channel from a picker at any entry point and are prompted to configure the bot’s settings. A task module initiates communication with the developer’s endpoint to finalize the required settings. Once set up, the app sends a welcome message to the channel, allowing any member to configure it further. The last saved settings are prioritized in case of any conflicts, and users can easily access the settings through a task module, ensuring a user-friendly and adaptable bot experience.
+
+Placeholder for scenario based example.
+
 
 ## Key features
 
