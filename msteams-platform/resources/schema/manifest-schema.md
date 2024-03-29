@@ -571,6 +571,7 @@ Each command item is an object with the following structure:
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`type`|String|||Type of the command. One of `query` or `action`. Default: **query**.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
+|`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by the large language model.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
 |`context`|Array of strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog (referred as task module in TeamsJS v1.x) dynamically. Default is **false**.|
@@ -580,14 +581,15 @@ Each command item is an object with the following structure:
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.url`|String|||Initial webview URL.|
 |`parameters`|Array of object|5 items||The list of parameters the command takes. Minimum: 1; maximum: 5.|
-|`parameters.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
-|`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
-|`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameters.value`|String|512 characters||Initial value for the parameter. Currently the value isn't supported|
-|`parameters.inputType`|String|||Defines the type of control displayed on a dialog for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
-|`parameters.choices`|Array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
-|`parameters.choices.title`|String|128 characters|✔️|Title of the choice.|
-|`parameters.choices.value`|String|512 characters|✔️|Value of the choice.|
+|`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
+|`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
+|`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
+|`parameter.semanticDescription`|String|2000 characters||Semantic description of the parameter for consumption by the large language model.|
+|`parameter.value`|String|512 characters||Initial value for the parameter. Currently the value isn't supported|
+|`parameter.inputType`|String|||Defines the type of control displayed on a dialog for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameter.choices`|Array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
+|`parameter.choices.title`|String|128 characters|✔️|Title of the choice.|
+|`parameter.choices.value`|String|512 characters|✔️|Value of the choice.|
 
 ## permissions
 
