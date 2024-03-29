@@ -203,10 +203,13 @@ items:
        
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-app-in-teams.png" alt-text="meeting app":::
 
-    1. To update the sprint status task, add:
+    1. Select **+** from the **Sprint Status**. A **Status Details** dialog appears.
+    
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/sprint-status.png" alt-text="panel view":::
 
-       * **Assigned To**
-       * **Description**
+    1. Enter **Assigned To** and **Description**.
+
+    1. Select **Add**.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/add-status.png" alt-text="add status in meeting":::
        
