@@ -10,11 +10,11 @@ ms.date: 07/29/2022
 
 # Integrate with Developer Portal
 
-You can configure and manage your app in Developer Portal within Microsoft Teams Toolkit.
+You can configure and manage your app in Developer Portal for Teams within Microsoft Teams Toolkit.
 
 ## To publish app using Developer Portal
 
-You can publish your app, which is created in Visual Studio Code using Developer Portal:
+You can publish your app, which is created in Microsoft Visual Studio Code using Developer Portal:
 
 The following steps help to publish your app in Developer Portal:
 
@@ -26,7 +26,7 @@ The following steps help to publish your app in Developer Portal:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/select-your-teams-app-package.png" alt-text="Screenshot showing the selection of zip Teams app package.":::
 
-1. Sign in to [Developer Portal for Teams](https://dev.teams.microsoft.com/home) using the corresponding account.
+1. Sign in to [Developer Portal](https://dev.teams.microsoft.com/home) using the corresponding account.
 1. Teams Toolkit will open your selected Teams app's page and navigate to the **Publish** > **Publish to store** page.
 1. Select **Publish** > **Publish to your org**.
 
@@ -34,9 +34,9 @@ The following steps help to publish your app in Developer Portal:
 
 ## To update Manifest file and app package
 
-If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you can use [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+If there are any changes related to the app manifest (previously called Teams app manifest) file, you can update the app manifest file and publish the Teams app again. To publish Teams app manually, you can use [Developer Portal](https://dev.teams.microsoft.com/home).
 
-1. Sign in to [Developer Portal for Teams](https://dev.teams.microsoft.com) using the corresponding account.
+1. Sign in to [Developer Portal](https://dev.teams.microsoft.com) using the corresponding account.
 1. Select **Apps** > **Import app** to import your app package in zip format.<br>
    You need to replace the app, that you previously uploaded to the Developer Portal.
 
@@ -50,7 +50,7 @@ You can do the following configuration for your app in the Developer Portal:
   * Connector
   * Scene
   * Group and channel app
-  * Messaging extension
+  * message extension
   * Meeting extension
   * Activity feed notification
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting Permissions**, and **User Permissions** for your app.
@@ -61,6 +61,6 @@ You can do the following configuration for your app in the Developer Portal:
 ## See also
 
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
-* [Developer Portal for Teams](../concepts/build-and-test/teams-developer-portal.md)
+* [Developer Portal](../concepts/build-and-test/teams-developer-portal.md)
 * [Manage your apps in Developer Portal](../concepts/build-and-test/manage-your-apps-in-developer-portal.md)
 * [Develop your apps with Teams Toolkit](../concepts/build-and-test/develop-your-apps-with-teams-toolkit.md)
