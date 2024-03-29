@@ -56,10 +56,10 @@ A great description makes your app stand out in the Teams Store and encourages c
 
 | # | Avoid the following |
 | --- | --- |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Hyperlinks for call-to-action buttons such as **Sign Up**, **Get Started**, **Help**, or **Contact Us** in the app manifest (previously called Teams app manifest) and AppSource full description aren't present. |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Call out to the limitations or dependencies on external accounts or services to complete sign-in, sign-out, and sign-up experiences in the app manifest and long description isn't present. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Hyperlinks for call-to-action buttons such as **Sign Up**, **Get Started**, **Help**, or **Contact Us** in app manifest (previously called Teams app manifest) and AppSource full description aren't present. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Call out to the limitations or dependencies on external accounts or services to complete sign-in, sign-out, and sign-up experiences in app manifest and long description isn't present. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Contains abbreviated, shortened, or deprecated forms of standard Microsoft product names. For example, abbreviating **Microsoft** as **MS** or **MSFT**, referencing the first instance of Microsoft Teams as **Teams** instead of **Microsoft Teams**, or using **O365** instead of **Microsoft 365**.<br><br>Microsoft’s brand assets including logos, icons, designs, trade dress, fonts, product names, services, sounds, emojis, and any other brand features and elements—whether registered or unregistered—are proprietary assets owned by Microsoft and its group of companies. When referring to Microsoft trademarks, products names, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Highlight of the app’s value proposition and key features in the short and full descriptions in the app manifest isn't present. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Highlight of the app’s value proposition and key features in the short and full descriptions in app manifest isn't present. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Contains typographical errors, grammatical errors, unnecessary capitalization, code, or duplicate content. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Reference to products that the app supports like Microsoft Teams, Outlook, and Microsoft 365 isn't present. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Contains comparative marketing content or competing offers in the app description or other metadata. |
@@ -89,13 +89,13 @@ If the following fields in the Partner Center and app manifest don't match, your
 * Terms of Use
 * Privacy Policy URLs
 * App icons (color.png and outline.png)
-* The app's name
+* App name
 
 For more information, see [Teams Store validation guidelines for app manifest](prepare/teams-store-validation-guidelines.md#app-manifest).
 
 ## Valid domains guidelines violation
 
-Your app submission must adhere to the guidelines for [external domains](/legal/marketplace/certification-policies#114033-external-domains) under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the domains listed under the `validDomains` and `messageHandlers` arrays in the app manifest are under your organization's direct control and don't include test or non-production domains.
+Your app submission must adhere to the guidelines for [external domains](/legal/marketplace/certification-policies#114033-external-domains) under Microsoft’s Commercial Marketplace Certification Policy. For your app to pass review, ensure that the domains listed under the `validDomains` and `messageHandlers` arrays in app manifest are under your organization's direct control and don't include test or non-production domains.
 
 For more information, see [Teams Store validation guidelines for external domains](prepare/teams-store-validation-guidelines.md#external-domains).
 
@@ -114,20 +114,20 @@ For more information, see [Teams Store validation guidelines for app package and
 
 ## Non-functional or partially functional bots
 
-Follow the guidelines laid down by [design your Teams bot](../../../bots/design/bots.md) while developing your bot app. Enable the bot to inform new users of your app's value adds and prerequisites to use the app.
+Follow the guidelines laid down by [design your Teams bot](../../../bots/design/bots.md) while developing your bot app. Enable the bot to inform new users of your app's value adds and prerequisites to use the app. Plan and develop your bot to avoid dead ends even when the input from the user is irrelevant.
 
 | # | Avoid the following |
 | --- | --- |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Bot doesn't provide valid responses to the supported commands. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Commands that your bot supports don't work correctly, including generic commands such as **Hi**, **Hello**, and **Help**. |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Bot doesn't consistently offer a valid response to users. Plan and develop your bot to avoid dead ends even when the input from the user is irrelevant. |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Bot doesn't send a proactive welcome message as soon as the user installs the app. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Bot doesn't consistently offer a valid response to users. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Bot doesn't send a proactive welcome message as soon as the user installs the app and runs it for the first time. |
 
 For more information, see [Teams Store validation guidelines for bots](prepare/teams-store-validation-guidelines.md#bots-1).
 
 ## Broken app functionality
 
-Test your app to verify your app’s correctness, functionality, and usage. Ensure that you test your app thoroughly and fix all the bugs. Check all the end-to-end workflows that your app supports and test the app compatibility on the operating systems and browsers as per the Commercial Marketplace Certification policy.
+Test your app to verify your app’s correctness, functionality, and usage. Ensure that you test your app thoroughly and fix all the bugs. Check all the end-to-end workflows that your app supports and test the app compatibility on the operating systems and browsers as per the Commercial Marketplace Certification policies.
 
 | # | Avoid the following |
 | --- | --- |
@@ -143,12 +143,12 @@ For more information, see [Teams Store validation guidelines for general functio
 
 ## Suboptimal mobile experience
 
-Your app's experience must be consistent across the web, desktop, and mobile clients.
+Your app's experience must be consistent across the web, desktop, and mobile clients. Hide workflows that your app doesn't support by identifying the platform and the relevant issue.
 
 | # | Avoid the following |
 | --- | --- |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Consumable and unbroken experience on the app's mobile version isn't present. |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Graceful failure if the app isn't supporting a particular workflow is missing. Hide such workflows by identifying the platform and the relevant issue. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Graceful failure if the app isn't supporting a particular workflow is missing. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Data truncation or overlapping within the app. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Contains less than optimal user experience features like horizontal scroll. |
 
@@ -165,8 +165,6 @@ If your app uses AI-generated content, ensure that it meets the requirements for
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Moderation of the AI-generated content to provide a safe workplace environment for users isn't present. |
 
 For more information, see [Teams Store validation guidelines for apps with AI-generated content](prepare/teams-store-validation-guidelines.md#apps-with-ai-generated-content).
-
-[Back to top](#common-reasons-for-app-validation-failure)
 
 ## See also
 
