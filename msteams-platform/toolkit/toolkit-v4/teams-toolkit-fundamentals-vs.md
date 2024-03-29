@@ -1,7 +1,7 @@
 ---
 title: Teams Toolkit Visual Studio Overview
 author: zyxiaoyuer
-description: Learn about Teams Toolkit, it's installation, navigation, and user journey. Teams Toolkit is available for Visual Studio.
+description: In this module, learn about Teams Toolkit for Visual Studio 2022, installation. Navigation, and user journey.
 ms.author: zhany
 ms.localizationpriority: medium
 ms.topic: overview
@@ -40,7 +40,7 @@ The following are the key features of Teams Toolkit:
 * [Copilot plugin](#copilot-plugin)
 
 > [!NOTE]
-> CodeLens to trigger Teams Toolkit lifecyscle, Teams Toolkit documentation and Copilot plugin is available in public developer preview.
+> CodeLens to trigger Teams Toolkit lifecycle, Teams Toolkit documentation and Copilot plugin is available in public developer preview.
 
 ### Project templates
 
@@ -96,7 +96,7 @@ The latest version of Teams Toolkit incorporates numerous preview features desig
 
    :::image type="content" source="../../assets/images/teams-toolkit-v2/teams-toolkit-vs/preview-copilot-plugin.png" alt-text="Screenshot shows the selection of Copilot plugin from preview feature.":::
 
-Enhance the capabilities of Microsoft Copilot by converting your app into a plugin that helps user productivity in daily tasks and workflows. Activate these plugins for Copilot using the Teams Toolkit. Teams Toolkit Copilot plugin supports specific capabilities, such as Custom Search Results and [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/).
+Enhance the capabilities of Copilot by converting your app into a plugin that helps user productivity in daily tasks and workflows. Activate these plugins for Copilot using the Teams Toolkit. Teams Toolkit Copilot plugin supports specific capabilities, such as Custom Search Results and [AI Assistant Bot [Preview]](/microsoft-365-copilot/extensibility/).
 
 #### TeamsFx .NET SDK reference
 
