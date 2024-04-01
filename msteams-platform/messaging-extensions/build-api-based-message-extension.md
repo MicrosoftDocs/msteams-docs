@@ -144,9 +144,7 @@ You can implement authentication in API-based search message extensions to provi
 
 # [API service auth](#tab/api-service-auth)
 
-API secret service authentication is a secure method for your app to authenticate with API.
-
-If your application uses API key-based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property which contains the reference ID returned when you submitted the API key through the Developer portal.
+API secret service authentication is a secure method for your app to authenticate with API. You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call by the bot. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID returned when you submitted the API key through the Developer portal for Teams.
 
 ```json
 "composeExtensions": [
@@ -162,7 +160,7 @@ If your application uses API key-based authentication, you would add an `apiSecr
 
 ### Register an API Key
 
-API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  The user can then paste the API key ID in the simplified messaging extension UI to enable the authentication.
+API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  You can then paste the API key ID in the simplified messaging extension UI to enable the authentication.
 
 To register an API Key, follow these steps:
 
@@ -172,7 +170,7 @@ To register an API Key, follow these steps:
 
 1. In the **Register an API key** page, update the following:
 
-   1. **Description**: Descrption of the API Key
+   1. **Description**: Description of the API Key.
    1. **Add Domain**: The domain where you host the API.
 
 1. Under **Set a target tenant**, select the following:
@@ -191,7 +189,7 @@ To register an API Key, follow these steps:
 
 You can use the `microsoftEntra` authentication method to authenticate once and gain access to multiple systems without being prompted to log in again.
 
-## Add Single Sign-On (SSO) in Microsoft Teams Apps using Microsoft Entra ID
+## Add single sign-on (SSO) in Microsoft Teams Apps using Microsoft Entra ID
 
 ### Prerequisites
 
@@ -244,7 +242,7 @@ Before you start, ensure you have the following:
     },
    ```
 
-1. **Validate the Token**: Before the token is sent to the plugin, validate that the resource URI and the domain the request is sent to are the same. Also, confirm the user ID in the token is the same as the one used for SMBA auth.
+1. **Validate the Token**: Before the token is sent to the plugin, validate that the resource URI and the domain the request is sent to be the same. Also, confirm the user ID in the token is the same as the one used for SMBA auth.
 
 1. **Send Invoke Request with Access Token**: The client sends an invoke request with the access token. An invoke request is a type of HTTP request that is used to trigger actions on the server. Here's an example payload that contains the access token.
 
@@ -272,7 +270,7 @@ Before you start, ensure you have the following:
 
 ### Limitations
 
-This flow is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as User.Read or Mail.Read. If you need to access other Graph scopes, you'll need to implement additional consent flows.
+This flow is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as User.Read or Mail.Read. If you need to access other Graph scopes, you need to implement additional consent flows.
 
 ```mermaid
 sequenceDiagram
