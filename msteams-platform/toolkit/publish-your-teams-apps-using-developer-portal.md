@@ -50,7 +50,7 @@ You can do the following configuration for your app in the Developer Portal:
   * Connector
   * Scene
   * Group and channel app
-  * Messaging extension
+  * Message extension
   * Meeting extension
   * Activity feed notification
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting Permissions**, and **User Permissions** for your app.
