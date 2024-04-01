@@ -187,19 +187,16 @@ To register an API Key, follow these steps:
 
 # [Microsoft Entra ID](#tab/microsoft-entra-id)
 
-You can use the `microsoftEntra` authentication method to authenticate once and gain access to multiple systems without being prompted to log in again.
-
-## Add single sign-on (SSO) in Microsoft Teams Apps using Microsoft Entra ID
+`microsoftEntra` authentication method uses an app user's Teams identity to provide them access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
 
 ### Prerequisites
 
 Before you start, ensure you have the following:
 
 * An Azure account with an active subscription.
-* A Teams app project.
 * Basic familiarity with Azure AD and Teams app development.
 
-### Implementation Steps
+To enable `microsoftEntra` authentication method for API-based message extension, follow these steps:
 
 1. **Configure App with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. This is used to configure scopes and authorize trusted client applications for generating access tokens. You can follow the steps outlined in the [Azure AD app creation guide](/azure/active-directory/develop/quickstart-register-app).
 
