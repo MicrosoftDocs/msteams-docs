@@ -11,6 +11,8 @@ ms.date: 09/29/2023
 
 Microsoft Teams plays a key role to facilitate secure and efficient communication across various government sectors and agencies. Government entities handle sensitive and confidential data and there's a crucial need for cloud platforms that are secure and compliant. To meet the stringent security requirements, Microsoft offers the following specialized government cloud services:
 
+The article provides an overview of Teams' compatibility across government cloud services, detailing its capabilities for each tenant and providing guidance on effective deployment.
+
 | Government Community Cloud (GCC) | GCC High | Department of Defense (DOD) |
 |---|---|---|
 | - Built to meet the compliance requirements of cloud services for FedRAMP High, Defense Federal Acquisition Regulations Supplement (DFARS), and requirements for criminal justice and federal tax information systems (CJI and FTI data types). | - Built to meet the compliance requirements of cloud services for Department of Defense Security Requirements Guidelines, DFARS, and International Traffic in Arms Regulations (ITAR). | - Same compliance requirements as GCC-High but only DoD entities certified with DoD SRG L5 can purchase. |
@@ -20,11 +22,9 @@ GCC, GCC High, and DOD are limited for use within Unites States and to access Mi
 
 [Gallatin](/officeupdates/teams-app-versioning) cloud service managed by 21Vianet is specific to China and you can purchase the suitable [Microsoft 365 plan for Gallatin](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365) to utilize the services offered within China.
 
-The document provides a comprehensive overview of Teams' compatibility within different government cloud services, detailing the various capabilities of Teams for each government tenant. It also outlines how government entities can effectively deploy and use Teams within their organizations.
-
 ## Teams for Government clouds
 
- Teams is compatible with all Microsoft 365 Government environment, but the capabilities and features vary by tenant. Some features available in commercial tenants may not be accessible in government ones due to security and compliance restrictions, while others features take time to roll out. Understanding supported Teams apps and capabilities is crucial for effective utilization within government tenants.
+ Teams is compatible with all Microsoft 365 Government environment, but the capabilities and features vary by tenant. Some features available in commercial tenants may not be accessible in government tenant due to security and compliance restrictions, while others features take time to roll out. Understanding supported Teams apps and capabilities is crucial for effective utilization within government tenants.
 
 The following table details the Teams apps and capabilities for GCC, GCC High, DOD, and Gallatin:
 
@@ -74,7 +74,6 @@ The following pointers provide the basic outline to plan for government cloud se
 | ✔️ | Plan for governance in Teams. |
 | ✔️ | Strategize and deploy Teams for collaboration, after the purchase. |
 | ✔️ | Plan to deploy Teams for meetings and voice, based on the cloud tenant. |
-| Purchase Microsoft 365 Government licenses | &nbsp; |
 | ✔️ | You must submit a form either for GCC or GCC High to validate your organization’s eligibility. For more information on the eligibility, see [Microsoft 365 Government plans](https://www.microsoft.com/en-in/microsoft-365/enterprise/government-plans-and-pricing?rtc=1#heading-oc2835). |
 | ✔️ | You must place an order only through the Microsoft account team or a qualified partner. |
 
