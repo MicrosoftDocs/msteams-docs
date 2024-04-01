@@ -10,7 +10,7 @@ ms.date: 12/15/2022
 
 # Common reasons for app validation failure
 
-Most apps don't pass Microsoft Teams Store submission process due to issues during app development. The most common issues or reasons are addressed in this article to help you prepare your app better before [submitting for review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). To increase the likelihood of your app to pass the Teams Store submission process, avoid the common failures scenarios and follow the [Microsoft Teams Store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies).
+Most apps don't pass Microsoft Teams Store submission process due to issues during app development. The most common issues or reasons are addressed in this article to help you prepare your app better before [submitting for review](/office/dev/store/add-in-submission-guide?toc=/microsoftteams/platform/toc.json&bc=/microsoftteams/platform/breadcrumb/toc.json). To increase the likelihood of your app passing the Teams Store submission process, avoid the common failure scenarios and follow the [Microsoft Teams Store validation guidelines](prepare/teams-store-validation-guidelines.md) and [Commercial Marketplace Certification policies](/legal/marketplace/certification-policies).
 
 The following are the most common reasons for your app to get rejected:
 
@@ -55,18 +55,18 @@ The following are the most common reasons for your app to get rejected:
 
 ## Inadequate app description
 
-A great app description highlights your app's benefits and encourages customers to download it. The following table contains common mistakes in app description that prevent apps from passing the Teams Store submission process:
+A great app description highlights your app's benefits and encourages customers to download it. The following table contains common mistakes in app descriptions that prevent apps from passing the Teams Store submission process:
 
 | &nbsp; | Avoid the following |
 | --- | --- |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| App manifest (previously called Teams app manifest) and AppSource full description don't contain hyperlinks for call-to-action buttons, such as **Sign Up**, **Get Started**, **Help**, or **Contact Us**. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| App manifest and long description don't mention the limitations or dependencies on external accounts or services to complete sign-in, sign-out, and sign-up experiences. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Contains abbreviated, shortened, or deprecated forms of standard Microsoft product names. For example, abbreviating **Microsoft** as **MS** or **MSFT**, referencing the first instance of Microsoft Teams as **Teams** instead of **Microsoft Teams**, or using **O365** instead of **Microsoft 365**.<br><br> When referring to Microsoft trademarks, products, and services, you must follow [Microsoft Trademark and Brand Guidelines](https://www.microsoft.com/legal/intellectualproperty/trademarks). |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Highlight of the app’s value proposition and key features in the short and full descriptions in app manifest isn't present. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Highlight of the app’s value proposition and key features in the short and full descriptions in app manifest is absent. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Contains typographical errors, grammatical errors, unnecessary capitalization, code, or duplicate content. |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Reference to products that the app supports like Teams, Outlook, and Microsoft 365 isn't present. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Reference to products that the app supports like Teams, Outlook, and Microsoft 365 is absent. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Contains comparative marketing content or competing offers in the app description or other metadata. |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Contains superlative claims about the app such as **#1**, **amazing**, or the **best**. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Contains exaggerated claims about the app such as **#1**, **amazing**, or the **best**. |
 
 For more information, see [Teams Store validation guidelines for app description](prepare/teams-store-validation-guidelines.md#app-descriptions).
 
@@ -117,7 +117,7 @@ For more information, see [Teams Store validation guidelines for app package and
 
 ## Non-functional or partially functional bots
 
-Follow the guidelines described in [design your Teams bot](../../../bots/design/bots.md) while developing your bot app. Enable the bot to inform new users of your app's value adds and prerequisites to use the app. Plan and develop your bot to avoid dead ends even when the input from the user is irrelevant. The following table contains common mistakes with bots that prevent apps from passing the Teams Store submission process:
+Follow the guidelines described in [Designing your Microsoft Teams bot](../../../bots/design/bots.md) while developing your bot app. Enable the bot to inform new users of your app's value adds and prerequisites to use the app. Plan and develop your bot to avoid dead ends even when the input from the user is irrelevant. The following table contains common mistakes with bots that prevent apps from passing the Teams Store submission process:
 
 | &nbsp; | Avoid the following |
 | --- | --- |
@@ -150,7 +150,7 @@ Your app's experience must be consistent across the web, desktop, and mobile cli
 
 | &nbsp; | Avoid the following |
 | --- | --- |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Consumable and unbroken experience on the app's mobile version isn't present. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Consumable and unbroken experience on the app's mobile version is absent. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Graceful failure if the app isn't supporting a particular workflow is missing. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Data truncation or overlapping within the app. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Contains less than optimal user experience features like horizontal scroll. |
@@ -159,13 +159,13 @@ For more information, see [Teams Store validation guidelines for mobile experien
 
 ## Apps using AI-generated content with no safeguards
 
-If your app uses AI-generated content, ensure that it meets the requirements for [Apps with AI generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) as per Microsoft commercial marketplace certification policies. The following table contains common mistakes with AI-generated content that prevent apps from passing the Teams Store submission process:
+If your app uses AI-generated content, ensure that it meets the requirements for [Apps with AI-generated content](/legal/marketplace/certification-policies#1-apps-with-artificial-intelligenceai-generated-content-must-meet-below-requirements) as per Microsoft commercial marketplace certification policies. The following table contains common mistakes with AI-generated content that prevent apps from passing the Teams Store submission process:
 
 | &nbsp; | Avoid the following |
 | --- | --- |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| An in-context indication that the app’s content is AI-generated isn’t present. |
 |:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Users are unable to report objectionable content generated by the AI in the app. |
-|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Moderation of the AI-generated content to provide a safe workplace environment for users isn't present. |
+|:::image type="icon" source="../../../assets/icons/caution-red.png" border="false":::| Moderation of the AI-generated content to provide a safe workplace environment for users is absent. |
 
 For more information, see [Teams Store validation guidelines for apps with AI-generated content](prepare/teams-store-validation-guidelines.md#apps-with-ai-generated-content).
 
