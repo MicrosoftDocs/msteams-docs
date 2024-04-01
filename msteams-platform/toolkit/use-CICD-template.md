@@ -10,19 +10,109 @@ ms.date: 04/20/2022
 
 # Set up CI/CD pipelines
 
-TeamsFx helps to automate your development workflow while building Microsoft Teams application. The tools and templates to set up CI/CD pipelines are create workflow templates and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision resources, you can create Azure service principals and use the Provision pipeline or do it manually by using bicep files. To publish Teams app, you can use the Publish pipeline or do it manually by leveraging [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeline for Microsoft Teams apps created with the Teams Toolkit. A Teams app CI/CD pipeline typically consists of three parts:
 
-## Tools and Templates
+1. Building the project.
+1. Deploying the project to cloud resources.
+1. Generating the Teams app package.
 
-|Tools and Templates | Description |
-|---|---|
-|[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub action that integrates with TeamsFx CLI.|
-|[Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Microsoft Visual Studio Code extension that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins. |
-|[Microsoft Teams Toolkit for CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins.|
-|[github/ci.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/ci.yml) <br> [github/cd.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/cd.azure.yml) <br> [github/cd.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/cd.spfx.yml) <br> [github/provision.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/provision.azure.yml) <br> [github/provision.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/provision.spfx.yml) <br> [github/publish.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/publish.yml) | Templates for automation on GitHub.|
-|[azdo/ci.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/ci.yml) <br> [azdo/cd.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/cd.azure.yml) <br> [azdo/cd.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/cd.spfx.yml) <br> [azdo/provision.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/provision.azure.yml) <br> [azdo/provision.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/provision.spfx.yml) <br> [azdo/publish.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/publish.yml)| Templates for automation on Azure DevOps.|
-|[jenkins/Jenkinsfile.ci](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.ci) <br> [jenkins/Jenkinsfile.azure.cd](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.azure.cd) <br> [jenkins/Jenkinsfile.spfx.cd](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.spfx.cd) <br> [jenkins/Jenkinsfile.azure.provision](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.azure.provision) <br> [jenkins/Jenkinsfile.spfx.provision](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.spfx.provision) <br> [jenkins/Jenkinsfile.publish](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.publish) | Templates for automation on Jenkins.|
-|[others/ci.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/ci.sh) <br> [others/cd.azure.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/cd.azure.sh) <br> [others/cd.spfx.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/cd.spfx.sh) <br> [others/provision.azure.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/provision.azure.sh) <br> [others/provision.spfx.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/provision.spfx.sh) <br> [others/publish.sh](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/others/publish.sh) | Script templates for automation outside of GitHub, Azure DevOps, or Jenkins. |
+> [!NOTE]
+> Before creating a pipeline for a Teams app, it is essential to prepare the necessary cloud resources, such as Azure Web App, Azure Functions, or Azure Static Web App, and configure the app settings.
+
+Building the project involves compiling the source code and creating the necessary artifacts for deployment. For the deployment process, it is recommended to use the Teams Toolkit CLI. For more information, please refer to Set up CI/CD pipelines with Teams Toolkit CLI. If you prefer not to use the Teams Toolkit CLI for deployment or would like to customize your pipeline, you can refer to Set up CI/CD pipelines using your own workflow. The final step, generating the Teams app package, helps you test your Teams app after deployment by distributing your app.
+
+## Set up CI/CD pipelines with Teams Toolkit CLI
+
+You can use Teams Toolkit CLI to automate the following procedures:
+
+1. Building and deploying code to Azure.
+1. Generating a Teams app's appPackage, which can be used for app distribution.
+
+> [!NOTE]
+> For creating project, we recommend using Teams Toolkit version 5.6.0 or later.
+
+## Prerequisites
+
+1. Prepare Teams app needed resources.
+
+You can manually prepare the resources (teams app id, bot id, etc) by looking into manifest file under appPackage/ folder, or you can run Teams Toolkit’s “provision” command to create them automatically.
+
+1. Prepare and config Azure resources.
+
+You can manually prepare these resources by looking into biceps files under infra/ folder, , or you can run Teams Toolkit’s “provision” command to prepare these Azure resources automatically.
+
+1. Prepare service principal.
+
+You should have a service principal and configure its access policies on resources. Below are some docs that you can refer to:
+
+Create service principal using Azure portal.
+Create service principal using Azure CLI.
+
+Teamsapp cli currently supports login to Azure using service principal secret. Create a secret and save service principal’s client id, client secret, tenant id for following steps.
+
+1. Prepare a GitHub/Azure repository.
+
+After you meet the above prerequisites, you can follow the steps below to setup the pipeline. This section provides tutorial for GitHub and Azure DevOps, if you wish to use other platforms, you can also refer to this section for guidance.
+
+## Set up pipeline with GitHub
+
+1. Create a CD yml in your project
+
+Create a cd.yml file under .github/workflows/ folder. Write the following content into this yml file.
+
+> [!NOTE]
+> The default pipeline will be triggered when push events happen on main branch, you can modify it to meet your own needs.
+
+2. Set variables/secrets in the repository.
+
+The following variables and secrets are needed for the pipeline:
+
+* AZURE_SERVICE_PRINCIPAL_CLIENT_ID, AZURE_TENANT_ID, AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET.
+
+* Go to teamsapp.yml file, in deploy stage, the placeholders wrapped in ${{}} are the needed variables' keys. If you used Teams Toolkit's "provision" command, you can find the values in /env files.
+
+Below is an example of teamsapp.yml, the "BOT_AZURE_APP_SERVICE_RESOURCE_ID" needs to be set in the repo variable.
+
+* Go to appPackage/manifest.json file, the placeholders wrapped in ${{}} are the needed variables' keys. If you used Teams Toolkit's "provision" command, you can find the values in /env files.
+
+Below is an example of manifest.json snippet, the "TEAMS_APP_ID" needs to be set in the repo variable.
+
+Therefore for the above example, you need to set the following variables in the repo.
+
+key name
+AZURE_SERVICE_PRINCIPAL_CLIENT_ID
+AZURE_TENANT_ID
+AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET
+BOT_AZURE_APP_SERVICE_RESOURCE_ID
+TEAMS_APP_ID
+
+You can set variables/secrets in repo's "Settings"->"Secrets and variables"->"Actions".
+
+
+> [!NOTE]
+> The AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET should be set as secret.
+> You can leverage GitHub environment if you want to use different sets of variables.
+
+You need to add variables set in repository explicitly into your yml file except these 3: AZURE_SERVICE_PRINCIPAL_CLIENT_ID, AZURE_TENANT_ID, AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET.
+
+Taking above as an example, you need to modify your pipeline's yml file as:
+
+4. Run the pipeline
+
+Push code to the repo to trigger pipeline.
+
+> [!NOTE]
+> You don't need to commit env files under env/ folder into the repo. The env needed for running CI/CD pipeline are already set in the repo variables.
+
+After the pipeline runs successfully you should see from the log that code has been deployed to Azure and the appPackage has been generated in artifacts.
+
+## Set up pipeline with Azure DevOps
+
+1. Create a CD yml in your project
+Create a yml file under your project. Write the following content into this yml file.
+
+
+
 
 ## Set up pipelines
 
