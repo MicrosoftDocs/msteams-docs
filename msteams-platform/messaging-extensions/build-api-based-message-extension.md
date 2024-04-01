@@ -122,7 +122,11 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 ## Authentication
 
-You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods. For more information, see [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
+You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods. For more information, see [composeExtensions](../resources/schema/manifest-schema.md#composeextensions).
+
+# [None](#tab/none)
+
+
 
 # [API service auth](#tab/api-service-auth)
 
@@ -246,9 +250,6 @@ To enable `microsoftEntra` authentication method for API-based message extension
       }
     }
    ```
-
-
-# [None](#tab/none)
 
 ---
 
