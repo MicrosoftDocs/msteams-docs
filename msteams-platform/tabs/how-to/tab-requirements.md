@@ -18,6 +18,9 @@ Ensure that you adhere to the following prerequisites while building your Teams 
 
 [!INCLUDE [CSP headers for multi-hub apps](~/includes/tabs/content-security-policy-headers.md)]
 
+> [!NOTE]
+> To host the other Teams or MetaOS apps within your app, your app would need to first become a MetaOS hub. If you have control over the app running in the nested frame, you can update its code to initialize the SDK by specifying your domain. This allows your nested frame to act as a proxy to Teams.
+
 * For Internet Explorer 11 compatibility, set `X-Content-Security-Policy`. Alternately, set header `X-Frame-Options: ALLOW-FROM https://teams.microsoft.com/`. This header is deprecated but most browsers still accept it.
 
 * Sign-in pages don't render in iFrames as a safeguard against clickjacking. Your authentication logic needs to use a method other than redirect. For example, use token-based or cookie-based authentication.
