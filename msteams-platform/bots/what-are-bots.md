@@ -23,9 +23,9 @@ It's recommended to start with [build your first bot app using JavaScript](../sb
 
 Conversational bots allow users to interact with your web service using text, interactive cards, and dialogs (referred as task modules in TeamsJS v1.x).
 
-:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="The screenshot is an example that shows a web service using text."lightbox="../assets/images/invokebotwithtext.png":::
+:::image type="content" source="../assets/images/invokebotwithtext.png" alt-text="The screenshot is an example that shows a web service using text." lightbox="../assets/images/invokebotwithtext.png":::
 
-:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="The screenshot is an example that shows a web service using interactive cards."lightbox="../assets/images/invokebotwithcard.png"border="true":::
+:::image type="content" source="../assets/images/invokebotwithcard.png" alt-text="The screenshot is an example that shows a web service using interactive cards." lightbox="../assets/images/invokebotwithcard.png"border="true":::
 
 :::image type="content" source="../assets/images/task-module-example.png" alt-text="The screenshot is an example that shows a web service using dialog." lightbox="../assets/images/task-module-example-expanded.png":::
 
