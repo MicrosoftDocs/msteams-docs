@@ -58,7 +58,7 @@ Enable an existing Teams app to run in Outlook and Microsoft 365:
 
 1. Dependency on TeamsJS version 2.x.x ( `@microsoft/teams-js@2.0.0`) or later.
 
-2. [Modifying existing application code](#2-update-teamsjs-references) according to the required changes described in this article.
+2. [Modify existing application code](#2-update-teamsjs-references) according to the required changes described in this article.
 
 3. [Updating your app manifest](#3-update-the-app-manifest-optional) (previously called Teams app manifest) to version 1.13 or later.
 
