@@ -238,7 +238,7 @@ contentType: "application/vnd.microsoft.card.thumbnail",
 
 The most common way to share content in Microsoft Teams is through links. For any link, Teams unfurls a preview of the link into an Adaptive Card with the information such as image, title, and a description.
 
-You can show rich unfurl previews of your links without installing your app in Microsoft Teams. Add the [schema.org metadata](https://schema.org/docs/gs.html) to your website in the [JASON-LD format](https://json-ld.org/) and use the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> that match your product. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
+You can show rich unfurl previews of your links without installing your app in Microsoft Teams. Add the [schema.org metadata](https://schema.org/docs/gs.html) to your website in the [JSON-LD format](https://json-ld.org/) and use the micro-capability templates <!--- link to GitHub templates to be added after the PM shares the public link --> that match your product. Teams uses these templates to unfurl rich previews for your links in Microsoft Teams.
 
 ### Enable Rich unfurl previews of links
 
@@ -248,7 +248,7 @@ If you've already added [schema.org](<https://schema.org/>) to your website, you
 
 If you've not added [schema.org](<https://schema.org/>) to your website, you can manually check the rich unfurl preview experience by following these steps:
 
-1. Add the [schema.org](https://schema.org/) metadata with the [JASON-LD format](https://json-ld.org/) to your website.
+1. Add the [schema.org](https://schema.org/) metadata with the [JSON-LD format](https://json-ld.org/) to your website.
 1. In your website, check for the supported `@type` attribute and copy the metadata under the script tag `application/ld+json`.
 1. Open [Adaptive Card designer](https://www.adaptivecards.io/designer/) and create a new file.
 1. In the **SAMPLE DATA EDITOR**, paste the json metadata from your website.
