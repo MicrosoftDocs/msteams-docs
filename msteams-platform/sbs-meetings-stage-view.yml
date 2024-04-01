@@ -2,7 +2,7 @@
 title: Share meeting stage in Teams 
 metadata:
   title: Share meeting stage in Team
-  description: With this learning module, learn how to set up a Meeting Stage View for Teams to add status details for collaboration.
+  description: With this learning module, learn how to set up a Meeting Stageview for Teams to add status details for collaboration.
   audience: Developer
   level: Beginner
   ms.date: 12/06/2021
@@ -21,9 +21,9 @@ items:
     * Add status details in the side panel.
     * Add details for collaboration.
     
-    This step-by-step guide helps you to share meeting stage in Teams to add status details for collaboration. You'll see the following output:
+    This step-by-step guide helps you to share meeting stage in Teams to add status details for collaboration. You can see the following output:
 
-      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="meetings stage view":::
+      :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stageview.png" alt-text="Screenshot shows the meetings Stageview.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -98,7 +98,7 @@ items:
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app-manifest1.png" alt-text="folder path":::
 
-    1. Open a new **Command Prompt** window, change the current directory to the copied **nodejs** path.
+    1. Open a new **Command Prompt** window and change the current directory to the copied **nodejs** path.
 
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/nodejs-path.png" alt-text="path for nodejs":::
 
@@ -164,7 +164,7 @@ items:
     
        In the app selection page, the app is displayed as **App In Meeting**.
   
-       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="app in meetings stage view":::
+       :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/app in meeting.png" alt-text="Screenshot shows the app in meetings Stageview.":::
     
     1. Select the **App In Meeting**.
     
@@ -194,7 +194,7 @@ items:
   content: |
     Did you come up with something like this?
 
-    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stage view.png" alt-text="stage view output":::
+    :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/stageview.png" alt-text="Screenshot shows the Stageview output.":::
 
 - content: |
     You've completed the tutorial to get started with share meeting stage in Teams.
