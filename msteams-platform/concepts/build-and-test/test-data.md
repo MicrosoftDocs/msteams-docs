@@ -145,7 +145,7 @@ By default, only global admins or Teams service admins can upload the custom app
     </Teams>
     ```
 
-2. Save the following snippet as a PowerShell script (.ps1) and note where you saved it. This script executes the steps to create the team and channel, and add members to them:
+2. Save the following snippet as a PowerShell script (.ps1) and note where you've saved it. This script executes the steps to create the team and channel, and add members to them:
 
     ```powershell
     Param(
@@ -242,7 +242,7 @@ By default, only global admins or Teams service admins can upload the custom app
     > [!Note]
     > Do not close your PowerShell session as the script takes several minutes to execute. If you have modified the users in your subscription from what is created in the default content pack, some users may not be added to Teams. As the script executes it displays successful or failed actions.
 
-5. After the script finishes execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.
+5. After the script has finished execution, you can sign in to the Teams client with one of the user accounts and view the newly created teams.
 
 ## See also
 
