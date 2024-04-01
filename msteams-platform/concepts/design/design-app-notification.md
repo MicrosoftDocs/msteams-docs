@@ -73,17 +73,17 @@ What is the targeted user experience in Teams?
 
 How do you expect users to interact with the notification?
 
-* Use activity feed notifications, when there's no further conversation is expected between the user and bot.
+* Use activity feed notifications when there's no further conversation is expected between the user and bot.
 * Use interactive notification bot to encourage conversations with the bot.
 
 :::image type="content" source="../../assets/images/app-notifications.png" alt-text="Screenshot shows you to choose your right notification framework for your app." lightbox="../../assets/images/app-notifications.png":::
 
-Here's some example scenario's and recommended notification types:
+Here's some example scenarios and recommended notification types:
 
 |Notification scenario|Notification type |Recommended notification|
 |----|----|----|
 |If a vice president makes an announcement to be broadcasted to the entire organization.|Proactive|Activity notification |
-|Colleague mentions a team mate and requests to collaborate in a shared document.|Proactive|Activity notification |
+|Colleague mentions a teammate and requests to collaborate in a shared document.|Proactive|Activity notification |
 |Proactive reminder to finish required a training course immediately.|Proactive|Activity notification|
 |Quick poll on a preferred place for team lunch.|Interactive|Notification bot|
 |Interactive reminder to take a break and choose a music to play.|Interactive|Notification bot|
