@@ -13,11 +13,13 @@ ms.localizationpriority: high
 >
 > Bot configuration experience is supported in channel or group chat scopes only.
 
-Bot configuration in Microsoft Teams empowers developers to elevate user engagement and customize bot experiences. This feature enables users to adjust bot settings after installation, streamlining the onboarding process and allowing for the tailoring of bot functionality to meet individual user needs.
+Bot configuration in Microsoft Teams empowers you to elevate user engagement and customize bot experiences. This feature enables users to adjust bot settings after installation, streamlining the onboarding process and allowing for the tailoring of bot functionality to meet individual user needs.
 
-Imagine a scenario where a user installs a bot but finds the default settings do not suit their workflow. Without the ability to configure the bot, users may feel constrained by its predefined behavior, leading to disengagement and a decline in usage. However, with bot configuration, developers give users the autonomy to personalize bot settings to their preferences and requirements, enhancing user satisfaction and interaction with the bot.
+Consider a situation where a user installs a bot, only to discover that the default settings don't align with their workflow. If the bot lacks configuration capabilities, users might feel limited by its preset behavior, resulting in decreased engagement and usage. However, by incorporating bot configuration, developers empower users to tailor bot settings according to their preferences and needs, thereby enhancing user satisfaction and interaction with the bot.
 
-The following grpahic explains a streamlined process for integrating a bot into a Teams channel. Users can select their channel from a picker at any entry point and are prompted to configure the bot’s settings. A task module initiates communication with the developer’s endpoint to finalize the required settings. Once set up, the app sends a welcome message to the channel, allowing any member to configure it further. The last saved settings are prioritized in case of any conflicts, and users can easily access the settings through a task module, ensuring a user-friendly and adaptable bot experience.
+The following grpahic explains a streamlined process for integrating a bot into a Teams channel.
+
+Users can select their channel from a picker at any entry point and are prompted to configure the bot’s settings. A task module initiates communication with the developer’s endpoint to finalize the required settings. Once set up, the app sends a welcome message to the channel, allowing any member to configure it further. The last saved settings are prioritized in case of any conflicts, and users can easily access the settings through a task module, ensuring a user-friendly and adaptable bot experience.
 
 Placeholder for scenario based example.
 
