@@ -9,7 +9,7 @@ ms.date: 09/29/2023
 
 # Plan for Government clouds
 
-Microsoft Teams plays a key role to facilitate secure and efficient communication across various government sectors and agencies. These entities handle sensitive and confidential data and there's a crucial need for cloud platforms that are secure and compliant. To meet these stringent security requirements, Microsoft offers the following specialized government cloud services:
+Microsoft Teams plays a key role to facilitate secure and efficient communication across various government sectors and agencies. Government entities handle sensitive and confidential data and there's a crucial need for cloud platforms that are secure and compliant. To meet the stringent security requirements, Microsoft offers the following specialized government cloud services:
 
 :::image type="content" source="../assets/images/app-fundamentals/cloud-type.png" alt-text="Illustration shows the types of government clouds." border="false":::
 
@@ -34,10 +34,10 @@ Understanding the Teams apps and capabilities supported by each government tenan
 | Apps built by internal Teams developers. | ✔️ | ✔️ | ✔️ | ✔️ |
 | Third-party apps built by external developers. | ✔️ | ❌ | ❌ | ❌ |
 | Custom apps built for your org (LOB apps) distributed and used in specific tenant. | ✔️ | ✔️ | ✔️ | ❌ |
-| Personal apps | ✔️ | ✔️ | ✔️ | |
+| Personal apps | ✔️ | ✔️ | ✔️ | ✔️ |
 
 > [!NOTE]
-> Third-party apps are turned off by default for GCC and aren't available for GCC High and DOD.
+> Third-party apps are turned off by default for GCC and aren't available for GCC High, DOD, and Gallatin.
 
 The following table includes Teams app capabilities and their availability in GCC, GCC High, DOD, and Gallatin:
 
@@ -73,7 +73,7 @@ To deploy Teams in a government cloud, you need to purchase a suitable Microsoft
 
 The following pointers provide the basic outline to plan for government cloud service and deploy Teams for collaboration:
 
-* Determine the need of government cloud for your organization and if the eligibility requirements are met.
+* Determine the need of government cloud for your organization and check if the eligibility requirements are met.
 * Understand the capabilities available and disabled in the respective cloud tenant.
 * Review the admin and security settings for the respective cloud tenant.
 * Apply for the appropriate government cloud.
@@ -82,8 +82,8 @@ The following pointers provide the basic outline to plan for government cloud se
   * Group and team membership management
   * Teams feature management
   * Security and compliance
-* After successful purchase, strategize and deploy Teams for collaboration.
-* Based on the cloud tenant, plan to deploy Teams for meetings and voice. For more information, see [deploy Teams in government cloud](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
+* Strategize and deploy Teams for collaboration, after the purchase.
+* Plan to deploy Teams for meetings and voice, based on the cloud tenant. For more information, see [deploy Teams in government cloud](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
 
 For more information on planning and deployment in each cloud environment, see:
 
@@ -93,16 +93,16 @@ For more information on planning and deployment in each cloud environment, see:
 
 To purchase required Microsoft 365 Government licenses:
 
-* Submit a form for GCC or GCC High to validate your organization’s eligibility. For more information on the eligibility, see [Microsoft 365 Government plans](https://www.microsoft.com/en-in/microsoft-365/enterprise/government-plans-and-pricing?rtc=1#heading-oc2835).
+* You must submit a form either for GCC or GCC High to validate your organization’s eligibility. For more information on the eligibility, see [Microsoft 365 Government plans](https://www.microsoft.com/en-in/microsoft-365/enterprise/government-plans-and-pricing?rtc=1#heading-oc2835).
 * You must place an order only through the Microsoft account team or a qualified partner.
 
 ### Compliance with third-party services
 
 Here are few pointers to consider while connecting with third-party services from Government clouds:
 
-* The customers must understand that by enabling third-party communication, the communication is being processed through the third party and not Microsoft.
-* The customer is solely responsible for mitigating risks associated with connecting to third-party bots in their services.
-* Enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. It's your responsibility to ensure that the bot meets your compliance requirements including FedRAMP, DFARS, and ITAR.
+* The users must understand that by enabling third-party communication, the communication is being processed through the third party and not Microsoft.
+* The user is solely responsible for mitigating risks associated with connecting to third-party bots in their services.
+* Enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. It's your responsibility to ensure that the bot meets the compliance requirements including FedRAMP, DFARS, and ITAR.
 * It's your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to.
 * Microsoft doesn't endorse and make no warranties concerning the security of third parties that the customer allows to connect with their service.
 
