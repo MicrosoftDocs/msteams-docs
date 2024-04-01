@@ -28,7 +28,8 @@ By default, only global admins or Teams service admins can upload the custom app
 
 ## Create teams and channels for testing
 
-[!INCLUDE [Azure AD PowerShell deprecation note](~/../msteams-platform/reusable-content/msgraph-powershell/includes/aad-powershell-deprecation-note.md)]
+> [!NOTE]
+> Azure AD PowerShell is deprecated on March 30, 2024. For more information, see [deprecation update](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270). We recommend migrating to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) to interact with Microsoft Entra ID. Microsoft Graph PowerShell allows access to all Microsoft Graph APIs and is available on PowerShell 7. For answers to the common migration queries, see [migration FAQ](/powershell/azure/active-directory/migration-faq).
 
 1. Save the following snippet as a **.xml** file and note the file path. This XML defines the structure of the team and channel that is created along with its members:
 
