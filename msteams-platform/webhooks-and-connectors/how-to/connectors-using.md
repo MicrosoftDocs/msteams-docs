@@ -9,7 +9,7 @@ ms.date: 12/09/2022
 
 # Create and send messages
 
-You can create and send actionable messages using Incoming Webhook or connector for Microsoft 365. However, the actions are only available for users with Exchange online license. If users don't have it, actionable messages won't function.
+To create and send actionable messages, use either an Incoming Webhook or a Microsoft 365 connector. However, the actions are accessible only to users with an Exchange Online license.
 
 ## Create actionable messages
 
