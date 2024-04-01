@@ -53,7 +53,7 @@ The bot icon is cached until the user signs out and signs back in Teams. You can
 
 * [Azure portal](/azure/bot-service/bot-service-manage-overview#settings): You can update your bot icon or other bot information for custom apps built for your org (LOB apps) and apps built for Teams Store through Azure portal. 
 
-   when you update the bot icon in the Azure portal, the bot icon in conversations and in the compose area in Teams where your bot is installed is updated. However, this doesn't refresh the bot profile or app image. If you want to update the bot profile or app image, you must update these from a new version of app manifest (previously called Teams app manifest) and publish the app.
+   When you update the bot icon in the Azure portal, the bot icon in conversations and in the compose area in Teams is updated. However, this doesn't refresh the bot profile or app image. If you want to update the bot profile or app image, you must update these from a new version of app manifest (previously called Teams app manifest) and publish the app.
 
 * [Teams admin center](/microsoftteams/customize-apps#customize-an-app): You can update your bot icon or other bot information for custom apps built for your org (LOB apps) through Teams admin center.
 
