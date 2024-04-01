@@ -14,7 +14,7 @@ metadata:
 items:
 - durationInMinutes: 1
   content: |
-    Share meeting stage in Teams helps to enable and configure your apps for Teams meetings. It helps users to share meeting stage, allows meeting participants to add status details of past, present, and future tasks, enhancing Teams meeting experience.
+    Share meeting stage in Teams helps to enable and configure your apps for Teams meetings. It helps users to share meeting stage, enabling participants to add status details of past, present, and future tasks, thereby enhancing the Teams meeting experience.
 
     **Key features of share meeting stage in Teams**
 
@@ -156,9 +156,9 @@ items:
    
     1. After the meeting is created, join the meeting.
     
-    1. Go to the meeting details page, and select the **Apps** icon to add an app.
+    1. Go to the meeting details page and select the **Apps** icon to add an app.
  
-    1. In the pop-up window, select **Manage apps**.
+    1. In the pop-up dialog, select **Manage apps**.
 
         :::image type="content" source="~/assets/images/sbs-meetings-stage-view/manage-apps.png" alt-text="Screenshot shows the option to add an app in manage app section."::: 
    
@@ -166,7 +166,7 @@ items:
 
     1. Go to **samples> meetings-stage-view> nodejs> appManifest**.
     
-    1. Select **Open** to upload the .zip file that you created in the **AppManifest** folder.
+    1. Select **Open** to upload the .zip file that you created in the **appManifest** folder.
 
         :::image type="content" source="~/assets/images/sbs-meetings-stage-view/select-zip.png" alt-text="Screenshot of the cloned repository with Side Manifest zip file and Open option highlighted in red."::: 
 
@@ -199,7 +199,7 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-meetings-stage-view/welcome-app-in-meeting.png" alt-text="Screenshot shows the option to select save to add app in a meeting."::: 
     
-       The icon is visible in the meeting control bar.
+       The icon is visible in the meeting window.
        
        :::image type="content" source="../msteams-platform/assets/images/sbs-meetings-stage-view/meeting-app-in-teams.png" alt-text="Screenshot shoes the app in meeting icon added to the meeting tab.":::
 
