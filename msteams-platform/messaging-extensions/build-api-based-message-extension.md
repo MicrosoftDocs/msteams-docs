@@ -124,24 +124,6 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods. For more information, see [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
 
-```plantuml
-@startuml
-    User->>TeamsApp: 1. Selects Message Extension (ME)
-    alt auth type is AAD SSO
-        TeamsApp->>AADService: 2. Requests AAD token
-        AADService-->>TeamsApp: 3. Returns token or prompts for consent
-        TeamsApp->>Bot: 4. Sends token in invoke
-        Bot->>API: 5. Validates token and passes it to API
-    else auth type is API key
-        TeamsApp->>Bot: 6. Sends invoke without API key
-        Bot->>API: 7. Retrieves API key from secure location and adds it to API call
-    else auth type is none
-        TeamsApp->>Bot: 8. Sends invoke
-        Bot->>API: 9. Sends API call without authorization
-    end
-@enduml
-```
-
 # [API service auth](#tab/api-service-auth)
 
 API secret service authentication is a secure method for your app to authenticate with API. You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call by the bot. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID returned when you submitted the API key through the Developer portal for Teams.
@@ -265,34 +247,6 @@ To enable `microsoftEntra` authentication method for API-based message extension
     }
    ```
 
-### Limitations
-
-This flow is valid only for consenting to a limited set of user-level APIs, such as email, profile, offline_access, and OpenId. It isn't used for other Graph scopes such as User.Read or Mail.Read. If you need to access other Graph scopes, you need to implement additional consent flows.
-
-```mermaid
-sequenceDiagram
-    participant TeamsApp as Teams App
-    participant AzureAD as Azure AD
-    participant AppServer as App Server
-    participant TeamsManifest as Teams Manifest
-    TeamsApp->>AzureAD: Create Azure AD app
-    AzureAD-->>TeamsApp: Return app ID and application ID URI
-    TeamsApp->>AppServer: Add code to handle access token
-    TeamsApp->>TeamsManifest: Update Teams app manifest with app ID and application ID URI
-    TeamsManifest-->>TeamsApp: Confirm update
-    Note over TeamsApp: Additional Changes
-    TeamsApp->>TeamsManifest: Add auth section to the manifest
-    TeamsManifest-->>TeamsApp: Confirm update
-    TeamsApp->>AppServer: Add field to auth config indicating SSO support
-    AppServer-->>TeamsApp: Confirm update
-    Note over TeamsApp: High-level Flow
-    TeamsApp->>AzureAD: Invoke Payload Containing the Token
-    AzureAD-->>TeamsApp: Return access token
-    TeamsApp->>AppServer: Send invoke request with access token
-    AppServer-->>TeamsApp: Validate token and confirm user id
-```
-
-This sequence diagram represents the flow of creating an Azure AD app, handling the access token, updating the Teams app manifest, and making additional changes to support SSO in Teams. It also includes the high-level flow of invoking a payload containing the token.
 
 # [None](#tab/none)
 
