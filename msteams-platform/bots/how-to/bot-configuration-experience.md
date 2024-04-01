@@ -19,9 +19,16 @@ Consider a situation where a user installs a bot, only to discover that the defa
 
 The following grpahic explains a streamlined process for integrating a bot into a Teams channel.
 
-Users can select their channel from a picker at any entry point and are prompted to configure the bot’s settings. A task module initiates communication with the developer’s endpoint to finalize the required settings. Once set up, the app sends a welcome message to the channel, allowing any member to configure it further. The last saved settings are prioritized in case of any conflicts, and users can easily access the settings through a task module, ensuring a user-friendly and adaptable bot experience.
+   :::image type="content" source="../../assets/images/bots/scenario.gif" alt-text="Graphic shows the process for integrating a bot into a Teams channel.":::
 
-Placeholder for scenario based example.
+| Steps | Description |
+| --- | --- |
+| 1 | The user selects **Add to a channel** from the dropdown menu.|
+| 2 | Enter the name of a channel in the search field.|
+| 3 | Select the channel.|
+| 4| To configure the bot app, you need to set up the task module to initiate a notification or communication to the developer endpoint. This endpoint is defined in the manifest. Follow these steps to provide the necessary settings.|
+| 5| After the setup phase, the app sends a welcome Adaptive Card to the channel. This message is visible to all users, enabling any user in the channel to configure the app without restrictions. If a conflict arises, the system considers the most recently saved settings.|
+| 6| Select Settings to launch a task module.|
 
 
 ## Key features
