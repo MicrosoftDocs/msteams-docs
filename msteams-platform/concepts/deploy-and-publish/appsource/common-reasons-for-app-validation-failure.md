@@ -22,28 +22,23 @@ The following are the most common reasons for your app to get rejected:
      :::image type="icon" source="../../../assets/icons/screenshot-icon.png" link="#improper-screenshots":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/mismatch-pc-app-manifest-icon.png" link="#mismatch-between-partner-center-and-app-manifest":::
+     :::image type="icon" source="../../../assets/icons/mismatch-pc-app-manifest-icon.png" link="#mismatch-between-partner-center-and-app-manifest":::
+     :::image type="icon" source="../../../assets/icons/domain-icon.png" link="#valid-domains-guidelines-violation":::
+   :::column-end:::
+   :::column span="":::
+     :::image type="icon" source="../../../assets/icons/testability-icon.png" link="#missing-or-incomplete-test-instructions":::
+   :::column-end:::
    :::column-end:::
 :::row-end:::
 
 :::row:::
    :::column:::
-      :::image type="icon" source="../../../assets/icons/domain-icon.png" link="#valid-domains-guidelines-violation":::
+   :::column span="":::
+     :::image type="icon" source="../../../assets/icons/non-functional-bot-icon.png" link="#non-functional-or-partially-functional-bots":::
+     :::image type="icon" source="../../../assets/icons/app-functionality-icon.png" link="#broken-app-functionality":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../assets/icons/testability-icon.png" link="#missing-or-incomplete-test-instructions":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../../../assets/icons/non-functional-bot-icon.png" link="#non-functional-or-partially-functional-bots":::
-   :::column-end:::
-:::row-end:::
-
-:::row:::
-   :::column:::
-      :::image type="icon" source="../../../assets/icons/app-functionality-icon.png" link="#broken-app-functionality":::
-   :::column-end:::
-   :::column span="":::
-      :::image type="icon" source="../../../assets/icons/mobile-icon.png" link="#suboptimal-mobile-experience":::
+     :::image type="icon" source="../../../assets/icons/mobile-icon.png" link="#suboptimal-mobile-experience":::
    :::column-end:::
    :::column span="":::
      :::image type="icon" source="../../../assets/icons/ai-generated-content-icon.png" link="#apps-using-ai-generated-content-with-no-safeguards":::
