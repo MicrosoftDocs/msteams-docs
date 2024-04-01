@@ -11,9 +11,7 @@ ms.date: 10/19/2023
 # Build message extensions using API
 
 > [!NOTE]
->
-> * API-based message extensions only support search commands.
-> * API-based message extensions are available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> API-based message extensions only support search commands.
 
 Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Developer Portal for Teams, Visual Studio Code, Teams Toolkit command line interface (CLI), or Visual Studio. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
 
@@ -386,7 +384,7 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 ```json
 {
   "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-  "manifestVersion": "devPreview",
++  "manifestVersion": "devPreview",
   "version": "1.0.0",
   "id": "04805b4b-xxxx-xxxx-xxxx-4dbc1cac8f89",
   "packageName": "com.microsoft.teams.extension",
@@ -411,14 +409,14 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
   "accentColor": "#FFFFFF",
   "composeExtensions": [
     {
-      "composeExtensionType": "apiBased",
-      "authorization": {
-        "authType": "apiSecretServiceAuth ",
-        "apiSecretServiceAuthConfiguration": {
-            "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
-        }
-      },
-      "apiSpecificationFile": "aitools-openapi.yml",
++      "composeExtensionType": "apiBased",
++      "authorization": {
++        "authType": "apiSecretServiceAuth ",
++        "apiSecretServiceAuthConfiguration": {
++            "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
++        }
++      },
++      "apiSpecificationFile": "aitools-openapi.yml",
       "commands": [
         {
           "id": "searchTools",
@@ -436,7 +434,7 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
               "description": "e.g. search='tool to create music'"
             }
           ],
-          "apiResponseRenderingTemplateFile": "response-template.json"
++          "apiResponseRenderingTemplateFile": "response-template.json"
         }
       ]
     }
@@ -449,7 +447,7 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 |:---------|               ---------------------------------------------------------|
 |`composeExtensions.composeExtensionType`     |  Compose extension type. Update the value to `apiBased`. |
 |`composeExtensions.authorization`|Authorization related information for the API-based message extension|
-|`composeExtensions.authorization.authType`|Enum of possible authorization types. Supported values are `none`, `oAuth2.0`, `apiSecretServiceAuth`, and `microsoftEntra`.|
+|`composeExtensions.authorization.authType`|Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
 |`composeExtensions.authorization.apiSecretServiceAuthConfiguration`|Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`.|
 |`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`| Registration id returned when developer submits the API key through Developer Portal.|
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |

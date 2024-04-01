@@ -11,9 +11,7 @@ ms.date: 10/19/2023
 # Build API-based message extension
 
 > [!NOTE]
->
-> * API-based message extensions only support search commands.
-> * API-based message extensions are available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
+> API-based message extensions only support search commands.
 
 API-based message extensions are a type of Teams app that integrates your chat functionality directly into Teams, enhancing your app's usability and offering a seamless user experience.
 
@@ -55,7 +53,7 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 * Full description must not exceed 128 characters.
 * A command must have exactly one parameter.
 * Add a new optional property `authorization` under the `composeExtensions` node. This property should be null for bot-based ME and specified only for API ME.
-* Define the type of authentication your application uses by setting the `authType` property under the `authorization` node. The possible values for this property are `none`, `oauth`, `apiSecretServiceAuth`, `microsoftEntra`, and `userAuth`.
+* Define the type of authentication your application uses by setting the `authType` property under the `authorization` node. The possible values for this property are `none`, `apiSecretServiceAuth`, `microsoftEntra`, and `userAuth`.
 * Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses AAD SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`.
 * If your application uses API key based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
 
@@ -124,11 +122,29 @@ API-based message extensions are a potent tool that enhances your Teams app's fu
 
 ## Authentication
 
-You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `oAuth2.0`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods.
+You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods. For more information, see [composeExtensions](../resources/schema/manifest-schema.md#composeextensions)
+
+```plantuml
+@startuml
+    User->>TeamsApp: 1. Selects Message Extension (ME)
+    alt auth type is AAD SSO
+        TeamsApp->>AADService: 2. Requests AAD token
+        AADService-->>TeamsApp: 3. Returns token or prompts for consent
+        TeamsApp->>Bot: 4. Sends token in invoke
+        Bot->>API: 5. Validates token and passes it to API
+    else auth type is API key
+        TeamsApp->>Bot: 6. Sends invoke without API key
+        Bot->>API: 7. Retrieves API key from secure location and adds it to API call
+    else auth type is none
+        TeamsApp->>Bot: 8. Sends invoke
+        Bot->>API: 9. Sends API call without authorization
+    end
+@enduml
+```
 
 # [API service auth](#tab/api-service-auth)
 
-API secret service authentication is a secure method for verifying API requests. It helps teams keep sensitive data safe. With a shared secret, the requester only needs to know the signature to make the request.
+API secret service authentication is a secure method for your app to authenticate with API.
 
 If your application uses API key-based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property which contains the reference ID returned when you submitted the API key through the Developer portal.
 
@@ -173,11 +189,9 @@ To register an API Key, follow these steps:
 
 # [Microsoft Entra ID](#tab/microsoft-entra-id)
 
+You can use the `microsoftEntra` authentication method to authenticate once and gain access to multiple systems without being prompted to log in again.
+
 ## Add Single Sign-On (SSO) in Microsoft Teams Apps using Microsoft Entra ID
-
-SSO is a crucial feature that enhances user experience and security by allowing users to authenticate once and gain access to multiple software systems. By implementing SSO in your Teams app, you can provide a seamless user experience, reduce the risk of password theft, and streamline user access across multiple systems.
-
-Implementing SSO in your Teams app can significantly improve the user experience by eliminating the need for users to sign in multiple times. For instance, a user can sign in once in the morning and access all the necessary apps throughout the day without needing to reauthenticate. This not only saves time but also reduces the frustration of remembering and entering passwords multiple times. Additionally, SSO enhances security by reducing the risk of password theft, as users are less likely to write down or reuse passwords.
 
 ### Prerequisites
 
@@ -212,24 +226,22 @@ Before you start, ensure you have the following:
 1. **Update app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated on Azure AD. This allows Teams to request access tokens on behalf of your app. The "webApplicationInfo" section in the manifest file is where you specify this information.
 
    ```json
-   "webApplicationInfo": 
-   { 
-   "id": "{Azure AD AppId}", 
-   "resource": "api://subdomain.example.com/botId-{guid}" 
-   }
+    "webApplicationInfo": {
+      "id": "{Azure AD AppId}",
+      "resource": "api://subdomain.example.com/botId-{guid}"
+    }
    ```
 
 1. **Add SSO Support to the Plugin**: Add the following auth section to the plugin part of the manifest. This indicates that the plugin supports SSO.
 
    ```json
-   "authorization": { 
-     "authType": "microsoftEntra",
-     "microsoftEntraConfiguration": {
-         "supportsSingleSignOn": true,
-
-        }
+    "authorization": {
+      "authType": "microsoftEntra",
+      "microsoftEntraConfiguration": {
+        "supportsSingleSignOn": true,
+    
+      }
     },
-
    ```
 
 1. **Validate the Token**: Before the token is sent to the plugin, validate that the resource URI and the domain the request is sent to are the same. Also, confirm the user ID in the token is the same as the one used for SMBA auth.
@@ -237,23 +249,25 @@ Before you start, ensure you have the following:
 1. **Send Invoke Request with Access Token**: The client sends an invoke request with the access token. An invoke request is a type of HTTP request that is used to trigger actions on the server. Here's an example payload that contains the access token.
 
    ```json
-   {  
-   "name": "composeExtension/query",  
-   "value": {  
-      "commandId": "insertWiki",  
-      "parameters": [{  
-         "name": "searchKeyword",  
-         "value": "lakers"  
-      }],  
-      "authentication": {    
-         "token": "…",    
-      },    
-      "queryOptions": {  
-         "skip": 0,  
-         "count": 25  
-      }  
-   }
-   }
+    {
+      "name": "composeExtension/query",
+      "value": {
+        "commandId": "insertWiki",
+        "parameters": [
+          {
+            "name": "searchKeyword",
+            "value": "lakers"
+          }
+        ],
+        "authentication": {
+          "token": "…"
+        },
+        "queryOptions": {
+          "skip": 0,
+          "count": 25
+        }
+      }
+    }
    ```
 
 ### Limitations
@@ -285,29 +299,7 @@ sequenceDiagram
 
 This sequence diagram represents the flow of creating an Azure AD app, handling the access token, updating the Teams app manifest, and making additional changes to support SSO in Teams. It also includes the high-level flow of invoking a payload containing the token.
 
-# [Oauth2.0](#tab/oauth2)
-
-For OAuth 2.0 authentication, you need to provide the following information in the manifest:
-
-```json
-
-"auth": {
-  "type": "oauth",
-  "client_url": "https://example.com/authorize",
-  "scope": "",
-  "authorization_url": "https://example.com/auth/",
-  "authorization_content_type": "application/json",
-  "verification_tokens": {
-    "openai": "Replace_this_string_with_the_verification_token_generated_in_the_ChatGPT_UI"
-  }
-},
-```
-
-OAuth 2.0 authentication requires a client ID and secret.
-
-#### Limitations
-
-Ensure that you correctly define the type of authentication in the manifest and inform the user about the type of authentication and potential risks. It's also crucial to securely handle sensitive information such as tokens and client secrets.
+# [None](#tab/none)
 
 ---
 
