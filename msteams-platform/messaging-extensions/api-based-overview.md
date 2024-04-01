@@ -1,7 +1,7 @@
 ---
 title: Build message extensions using API
 author: v-ypalikila
-description: Learn how to build a message extension using an OpenAPI description document (API).
+description: Learn how to build a message extension from an OpenAPI description document (OAD) using using Developer Portal for Teams, Visual Studio Code, Teams Toolkit CLI, or Visual Studio.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -15,16 +15,19 @@ ms.date: 10/19/2023
 > * API-based message extensions only support search commands.
 > * API-based message extensions are available only in [public developer preview](../resources/dev-preview/developer-preview-intro.md).
 
-Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Teams Toolkit. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
+Message extensions built using API (API-based) use a web service to manage user requests and responses and don't require a bot registration or a Bot Framework. You can configure and deploy API-based message extensions using Developer Portal for Teams, Visual Studio Code, Teams Toolkit command line interface (CLI), or Visual Studio. API-based message extensions help your apps to interact directly with third-party data, apps, and services, enhancing its capabilities. With APIs for message extension, you can:
 
 * Retrieve real-time information, such as latest news coverage on a product launch.
 * Retrieve knowledge-based information, for example, my team’s design files in Figma.
 * Perform actions on behalf of the user, for example, create a Contoso ticket.
 
-You can create an API-based message extension using an [OpenAPI Description (OAD)](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Description document, upload the OpenAPI Description document to Teams Toolkit to generate and integrate the client code in your app's project. Create or generate a response rendering template to manage the responses from the API.
+You can create an API-based message extension using an [OpenAPI Description (OAD)](https://learn.openapis.org/specification/) document. After you've created an OpenAPI Description document, use the OpenAPI Description document to generate and integrate the client code in your app's project. Create or generate a response rendering template to manage the responses from the API.
 
->[!IMPORTANT]
-> You can build an API-based message extension now and starting early next year, the extensions will function as plugins within Copilot and enhance Copilot experience for your extensions.
+See the video to learn more about building an API-based message extension using Teams Toolkit:
+</br>
+</br>
+
+> [!VIDEO https://www.youtube.com/embed/jSYNHz6hz4Y?si=htmfWtlY9bYH_RT2]
 
 ## Prerequisites
 
@@ -37,7 +40,7 @@ Before you get started, ensure that you adhere to the following requirements:
 
 ### OpenAPI Description
 
-The OpenAPI Description (OAD) is the industry-standard specification that details the structure and outline of OpenAPI files. It's a language-agnostic, human-readable format for describing APIs. It's designed to be easily read and written by both humans and machines. The schema is machine-readable and can be represented in either YAML or JSON. An OpenAPI Description document is required before creating an API-driven message extension.
+The OpenAPI Description (OAD) is the industry-standard specification that details the structure and outline of OpenAPI files. It's a language-agnostic, human-readable format for describing APIs. Both humans and machines can easily read and write the openAPI Description. The schema is machine-readable and can be represented in either YAML or JSON. An OpenAPI Description document is required before creating an API-driven message extension.
 
 The following code is an example of an OpenAPI Description document: <br/>
 <br/>
@@ -131,11 +134,11 @@ Each search command must have a corresponding response rendering template, and e
 
 **Preview Card**
 
-:::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of how the compose extension looks like, displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the  'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
+:::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of compose extension displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the  'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
 
 **Expanded Adaptive Card**
 
-:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adaptive-card.png" alt-text="Example of how the Adaptive Card looks like expanded once a user selects a preview card. The Adaptive Card shows the 'Title', the full 'Description', 'AssignedTo', 'RepairId' and 'Date' values.":::
+:::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adaptive-card.png" alt-text="Example of how the Adaptive Card looks like expanded once a user selects a preview card. The Adaptive Card shows the Title, the full Description, AssignedTo, RepairId, and Date values.":::
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
@@ -233,7 +236,7 @@ The following code is an example of a Response rendering template: <br/>
 |Property  |Type  |Description  |Required  |
 |--------- |---------|---------|---------|
 |`version` |  `string` | The schema version of the current response rendering template.        |  Yes       |
-|`jsonPath`     | `string`        | The path  to the relevant section in the results to which the responseCardTemplate and previewCardTemplate should be applied. If not set, the root object is treated as the relevant section. If the relevant section is an array, each entry is mapped to the responseCardTemplate and the previewCardTemplate.        |   No      |
+|`jsonPath`     | `string`        | The path to the relevant section in the results to which the responseCardTemplate and previewCardTemplate should be applied. If not set, the root object is treated as the relevant section. If the relevant section is an array, each entry is mapped to the responseCardTemplate and the previewCardTemplate.        |   No      |
 |`responseLayout`    | `responseLayoutType`        |  Specifies the layout of the results in the message extension flyout. The Supported types are `list` and `grid`.       |    Yes     |
 |`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an Adaptive Card from a result entry.      |   Yes      |
 |`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is displayed in the message extension flyout menu.        |  Yes       |
@@ -349,7 +352,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 </details>
 
-* `image`: If a property is an image URL, then it's converted to an Image element in the Adaptive Card.
+* `image`: If a property is an image URL, then it converts to an Image element in the Adaptive Card.
 
   <details><summary>Example</summary>
 
@@ -438,7 +441,7 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 
 |Name  |Description  |
 |---------|---------|
-|`composeExtensions.composeExtensionType`     |  Compose extension type.  Update the value to `apiBased`. |
+|`composeExtensions.composeExtensionType`     |  Compose extension type. Update the value to `apiBased`. |
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
 |`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationId` available in the OpenAPI Description.       |
 |`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |

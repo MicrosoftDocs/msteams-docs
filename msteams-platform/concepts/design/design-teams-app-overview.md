@@ -124,7 +124,7 @@ Understand how people add, use, and manage Teams apps to make the most of each c
 
 ## UI templates
 
-Quickly create complex, high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md).
+Create complex and high-fidelity designs with [templates for common Teams use cases and workflows](design-teams-app-ui-templates.md). The app playbooks and UI templates are also available to help you get started for the [apps extended across Microsoft 365](../../m365-apps/overview.md#app-planning-and-design).
 
 ## Basic UI components
 
@@ -167,4 +167,4 @@ Design Adaptive Cards in our web-based tool.
 * [Enable and configure your apps for meeting stage](../../apps-in-teams-meetings/build-tabs-for-meeting.md)
 * [Designing your Microsoft Teams bot](~/bots/design/bots.md)
 * [Create Virtual Assistant](~/samples/virtual-assistant.md)
-* [Designing task modules for your Microsoft Teams app](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)
+* [Designing dialogs for your Microsoft Teams app](~/task-modules-and-cards/task-modules/design-teams-task-modules.md)

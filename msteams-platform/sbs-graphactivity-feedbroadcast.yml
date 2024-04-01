@@ -95,7 +95,7 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="creenshot shows how to clone a GitHub repository." border="true":::
+        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="Screenshot shows how to clone a GitHub repository." border="true":::
 
     1. Select **Clone**. 
 
@@ -269,7 +269,7 @@ items:
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/graphactivity-generator-certificate.png" alt-text="Screenshot shows an install certificate window." border="true":::
 
-          A webpage opens with a message. Your bot is ready!
+          A webpage opens with a message, **Your bot is ready!**
 
           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/app-is-ready.png" alt-text="Screenshot shows a webpage with a message that your bot is ready." border="true":::
 

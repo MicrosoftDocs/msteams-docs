@@ -10,15 +10,15 @@ ms.date: 04/20/2022
 
 # Set up CI/CD pipelines
 
-TeamsFx helps to automate your development workflow while building Teams application. The tools and templates to set up CI/CD pipelines are create workflow templates and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision resources, you can create Azure service principals and use the Provision pipeline or do it manually by leveraging bicep files. To publish Teams app, you can use the Publish pipeline or do it manually by leveraging [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+TeamsFx helps to automate your development workflow while building Microsoft Teams application. The tools and templates to set up CI/CD pipelines are create workflow templates and customize CI/CD workflow with GitHub, Azure DevOps, Jenkins, and other platforms. To provision resources, you can create Azure service principals and use the Provision pipeline or do it manually by using bicep files. To publish Teams app, you can use the Publish pipeline or do it manually by leveraging [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 ## Tools and Templates
 
 |Tools and Templates | Description |
 |---|---|
 |[TeamsFx-CLI-Action](https://github.com/OfficeDev/teamsfx-cli-action)|GitHub action that integrates with TeamsFx CLI.|
-|[Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Visual Studio Code extension that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins. |
-|[Teams Toolkit for CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins.|
+|[Microsoft Teams Toolkit for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension)| Microsoft Visual Studio Code extension that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins. |
+|[Microsoft Teams Toolkit for CLI](https://www.npmjs.com/package/@microsoft/teamsfx-cli) | Command Line tool that helps you to develop Teams app and automation workflows for GitHub, Azure DevOps, and Jenkins.|
 |[github/ci.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/ci.yml) <br> [github/cd.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/cd.azure.yml) <br> [github/cd.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/cd.spfx.yml) <br> [github/provision.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/provision.azure.yml) <br> [github/provision.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/provision.spfx.yml) <br> [github/publish.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/github/publish.yml) | Templates for automation on GitHub.|
 |[azdo/ci.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/ci.yml) <br> [azdo/cd.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/cd.azure.yml) <br> [azdo/cd.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/cd.spfx.yml) <br> [azdo/provision.azure.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/provision.azure.yml) <br> [azdo/provision.spfx.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/provision.spfx.yml) <br> [azdo/publish.yml](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/azdo/publish.yml)| Templates for automation on Azure DevOps.|
 |[jenkins/Jenkinsfile.ci](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.ci) <br> [jenkins/Jenkinsfile.azure.cd](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.azure.cd) <br> [jenkins/Jenkinsfile.spfx.cd](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.spfx.cd) <br> [jenkins/Jenkinsfile.azure.provision](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.azure.provision) <br> [jenkins/Jenkinsfile.spfx.provision](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.spfx.provision) <br> [jenkins/Jenkinsfile.publish](https://github.com/OfficeDev/TeamsFx/blob/main/docs/cicd/jenkins/Jenkinsfile.publish) | Templates for automation on Jenkins.|
@@ -60,12 +60,12 @@ Two categories of sign in credentials are involved in CI/CD workflows:
 |AZURE_TENANT_ID |To identify the tenant in which the subscription resides.|
 |M365_ACCOUNT_NAME |The Microsoft 365 account for creating and publishing the Teams App.|
 |M365_ACCOUNT_PASSWORD |The password of the Microsoft 365 account.|
-|M365_TENANT_ID |To identify the tenant in which the Teams App gets created or published. This value is optional unless you have a multi-tenant account and you want to use another tenant. Read more on how to find your Microsoft 365 tenant ID.|
+|M365_TENANT_ID |To identify the tenant in which the Teams App gets created or published. This value is optional unless you have a multitenant account and you want to use another tenant. Read more on how to find your Microsoft 365 tenant ID.|
 
 > [!NOTE]
 >
 > * Currently, a non-interactive authentication style for Microsoft 365 is used in CI/CD workflows, so ensure that your Microsoft 365 account has sufficient privileges in your tenant and doesn't have multi-factor authentication or other advanced security features enabled. Refer to the [Configure Microsoft 365 Credentials](https://github.com/OfficeDev/teamsfx-cli-action/blob/main/README.md#configure-m365azure-credentials-as-github-secret) to make sure you have disabled Multi-factor Authentication and Security Defaults for the credentials used in the workflow.
-> * Currently, service principal for Azure is used in CI/CD workflows, and to create Azure service principals for use, refer to [here](https://github.com/devdiv-azure-service-dmitryr/teamsfx-docs/blob/main/V5-doc-update/cicd.md#how-to-create-azure-service-principals-for-use).
+> * Currently, service principal for Azure is used in CI/CD workflows, and to create Azure service principals for use, refer to [here](#how-to-create-azure-service-principals-for-use).
 
 ## Host types
 
@@ -229,7 +229,7 @@ For more information, see [Azure service principals guidelines](/azure/active-di
 
 ## Publish Teams app using Teams Developer Portal
 
-If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may leverage [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
+If there are any changes related to Teams app's manifest file, you can update the manifest and publish the Teams app again. To publish Teams app manually, you may use [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
 Perform the following steps to publish your app:
 

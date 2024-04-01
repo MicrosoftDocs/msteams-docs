@@ -41,34 +41,33 @@ landingContent:
 #        url: ~/concepts/device-capabilities/browser-device-permissions.md
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
-#      - text: Adaptive Cards overflow menu
-#        url: ~/task-modules-and-cards/cards/cards-format.md
 
-- title: Whats new
+
+- title: What's new
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Use captureImage API to capture an image or select media from the gallery for mobile clients
-        url: concepts/device-capabilities/media-capabilities.md
-      - text: Teams App Test Tool streamlines the debug process of bot apps
-        url: toolkit/debug-your-Teams-app-test-tool.md
-      - text: Build bot-based message extension plugin
-        url: messaging-extensions/build-bot-based-plugin.md
-      - text: Guidelines to extend bot-based message extension as plugin 
-        url: messaging-extensions/high-quality-message-extension.md
-      - text: Use callRecording API to fetch meeting recording from all meetings
-        url: graph-api/meeting-transcripts/overview-transcripts.md
-      - text: Introduced systemDefault reserved activity type for send activity feed notifications
-        url: tabs/send-activity-feed-notification.md#reserved-activity-type-for-send-activity-feed-notifications
-      - text: Apps for Teams meetings are available in GCC-High
-        url: apps-in-teams-meetings/teams-apps-in-meetings.md
-      - text: Introduced Adaptive Card Previewer in public developer preview
-        url: concepts/build-and-test/adaptive-card-previewer.md
-      - text: Introduced the extensions property in public developer preview app manifest schema
-        url: resources/schema/manifest-schema-dev-preview.md#extensions
-      - text: Build message extensions using API
-        url: messaging-extensions/api-based-overview.md
-
+      - text: Configure Teams deep links using the msteams:// and https:// protocol handlers
+        url: concepts/build-and-test/deep-links.md#protocol-handlers-in-deep-links
+      - text: Adaptive Card responsive layout
+        url: task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout
+      - text: Extend static tabs to channels with a customizable experience.
+        url: tabs/what-are-tabs.md
+      - text: Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.
+        url: concepts/build-and-test/adaptive-card-previewer-vs.md
+      - text: Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.
+        url: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
+      - text: Extend a Teams meeting app to Outlook
+        url: m365-apps/extend-m365-meeting-app.md
+      - text: Share to Teams from personal app or tab for Teams mobile clients
+        url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
+      - text: Build API-based message extension using Developer Portal for Teams
+        url: messaging-extensions/build-api-based-message-extension.md
+      - text: Introduced systemDefault reserved activity type for send activity feed notifications (Developer preview)
+        url: tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis
+      - text: Teams, Outlook, and Microsoft 365 web domains are migrating to cloud.microsoft domain
+        url: m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers
+ 
     - linkListType: reference
       links:
       - text: Community chat room for Microsoft Teams app developers
@@ -155,7 +154,7 @@ landingContent:
       url: ~/apps-in-teams-meetings/teams-apps-in-meetings.md
     - text: Build webhooks and connectors
       url: ~/webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    - text: Build cards and task modules
+    - text: Build cards and dialogs
       url: ~/task-modules-and-cards/cards-and-task-modules.md
     - text: App manifest
       url: ../msteams-platform/resources/schema/manifest-schema.md
@@ -166,6 +165,8 @@ landingContent:
   linkLists:        
     - linkListType: tutorial
       links:
+        - text: Debug your AI chat bot using Teams App Test Tool
+          url: ~/sbs-teams-app-test-tool.yml
         - text: Bot configuration experience
           url: ~/qsg-bot-configuration-experience.yml
         - text: Create Teams conversation bot
@@ -182,13 +183,11 @@ landingContent:
           url: ~/sbs-bots-with-sso.yml
         - text: Generate meeting token
           url: ~/sbs-meeting-token-generator.yml
-        - text: Generate meeting side panel
-          url: ~/sbs-meetings-sidepanel.yml
-
-
 
     - linkListType: tutorial
       links:
+        - text: Generate meeting side panel
+          url: ~/sbs-meetings-sidepanel.yml
         - text: Build an in-meeting document signing app
           url:  ~/sbs-inmeeting-document-signing.yml
         - text: Build command bot with JavaScript
@@ -199,7 +198,7 @@ landingContent:
           url: ~/sbs-file-handling-in-bot.yml
         - text: Generate meeting content bubble
           url: ~/sbs-meeting-content-bubble.yml
-        - text: Invoke task modules from Microsoft Teams
+        - text: Invoke dialogs from Microsoft Teams
           url: ~/sbs-botbuilder-taskmodule.yml
         - text: Build search based message extension
           url: ~/sbs-messagingextension-searchcommand.yml
@@ -207,12 +206,12 @@ landingContent:
           url: ~/sbs-meetingextension-action.yml
         - text: Build Outgoing Webhooks
           url: ~/sbs-outgoing-webhooks.yml
-        - text: Unfurl links in Teams using bot
-          url: ~/sbs-botbuilder-linkunfurling.yml
 
 
     - linkListType: tutorial
       links:
+        - text: Unfurl links in Teams using bot
+          url: ~/sbs-botbuilder-linkunfurling.yml
         - text: Build Teams connectors
           url: ~/sbs-teams-connectors.yml
         - text: Send activity feed notification 

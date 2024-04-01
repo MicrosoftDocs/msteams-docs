@@ -10,7 +10,7 @@ ms.date: 05/20/2022
 
 # Edit Microsoft Entra manifest
 
-Teams Toolkit now manages Microsoft Entra application with the manifest file as the source of truth during your Teams application development lifecycle.
+Microsoft Teams Toolkit now manages Microsoft Entra application with the app manifest file as the source of truth during your Microsoft Teams application development lifecycle.
 
 <a name='customize-azure-ad-manifest-template'></a>
 
@@ -194,7 +194,7 @@ CodeLens shows the application name for the pre-authorized application ID for th
 
 1. Open [App Registrations page](https://ms.portal.azure.com/#blade/Microsoft_AAD_IAM/ActiveDirectoryMenuBlade/RegisteredApps) and search the Microsoft Entra application using client ID that you copied before.
   
-     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add view2.png" alt-text="Screenshot shows the client ID under All applications tab.":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/manual/add-view-app-registrations.png" alt-text="Screenshot shows the client ID under All applications tab.":::
 
 1. Select Microsoft Entra application from search result to view the detailed information.
   

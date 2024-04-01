@@ -15,7 +15,7 @@ ms.date: 05/05/2023
 The Microsoft Teams JavaScript client library (TeamsJS) can help you create hosted experiences in Teams, Microsoft 365 app, and Outlook, where your app content is hosted in an [iFrame](https://developer.mozilla.org/docs/Web/HTML/Element/iframe). The library is helpful for developing apps with the following Teams capabilities:
 
 * [Tabs](../../tabs/what-are-tabs.md)
-* [Task modules (Dialogs)](../../task-modules-and-cards/what-are-task-modules.md)
+* [Dialogs (referred as task modules in TeamsJS v1.x)](../../task-modules-and-cards/what-are-task-modules.md)
 
 Starting with version `2.0.0`, the existing TeamsJS library (`@microsoft/teams-js`, or simply `TeamsJS`) is refactored to enable [Teams apps to run in Outlook and Microsoft 365 app](/microsoftteams/platform/m365-apps/overview), in addition to Microsoft Teams. From a functional perspective, the latest version of TeamsJS supports all existing (v.1.x.x) Teams app functionality while adding the optional ability to host Teams apps in Outlook and Microsoft 365 app.
 
@@ -45,41 +45,6 @@ There are two significant changes between TeamsJS 1.x.x versions and v.2.0.0 and
 Once you start referencing `@microsoft/teams-js@2.0.0` (or later) from an existing Teams app, you see deprecation warnings for any code calling APIs that are changed.
 
 An API translation layer (mapping v.1 to v.2 TeamsJS API calls) is provided to enable existing Teams apps to continue working in Teams until they're able to update application code to use the TeamsJS v.2 API patterns.
-
-#### Teams-only apps
-
-Even if you intend your app to only run in Teams (and not Microsoft 365 app and Outlook), best practice is to start referencing the latest TeamsJS (*v.2.0* or later) as soon as convenient, in order to benefit from the latest improvements, new features, and support (even for Teams-only apps). We recommend you to use TeamsJS v.1.13.1 as it's supported, but no new features or improvements are added.
-
-Once you're able, the next step is to [update existing application code](#2-update-teamsjs-references) with the changes described in this article. In the meantime, the v.1 to v.2 API translation layer provides backwards compatibility, ensuring your existing Teams app continues to work in TeamsJS version 2.0.
-
-To implement logic that runs your app in Teams, use the following code snippet:
-
-```js
-
-// Ensure that you initialize the TeamsJS once, regardless of how often this is called.
-let teamsInitPromise;
-export function ensureTeamsJSInitialized(){
-    if (!teamsInitPromise) {
-        teamsInitPromise = microsoftTeams.app.initialize();
-    }
-    return teamsInitPromise;
-}
-
-// Function returns a promise which resolves to true if we're running in Teams
-export async function inTeams(){
-  try {
-    await ensureTeamsJSInitialized();
-    const context = await microsoftTeams.app.getContext();
-    return (context.app.host.name === microsoftTeams.HostName.teams);
-  }
-  catch (e) {
-    console.log(`${e} from Teams SDK, may be running outside of Teams`);
-    return false;
-  }
-}                                                                                                                                
-```
-
-You must wait for the [app initialization](/javascript/api/@microsoft/teams-js/app#@microsoft-teams-js-app-isinitialized) to complete before proceeding with the function call in order for the app to function correctly. Any program logic designed only for Teams might not function correctly on other Microsoft 365 applications. To ensure the smooth operation of your app across Microsoft 365, make provisions for the logic handling of other Microsoft 365 applications.
 
 #### Authentication
 
@@ -194,7 +159,7 @@ Starting with TeamsJS v.2.0, APIs are defined as functions in a JavaScript names
 
 You can check for host support of a given capability at runtime by calling the `isSupported()` function on that capability (namespace). It returns `true` if it's supported and `false` if not, and you can adjust app behavior as appropriate. This allows your app to light up UI and functionality in hosts that support it, while continuing to run for hosts that don't.
 
-The host name where your app operates is revealed as a *hostName* property on the Context interface (`app.Context.app.host.name`). You can query this at runtime by invoking `getContext`. For the previous Teams client, this value might return as *unknown* or *undefined*. In such cases, map these values to old Teams.
+The host name where your app operates is displayed as a [HostName](/javascript/api/%40microsoft/teams-js/hostname) enum value of the `Context` interface (`app.Context.app.host.name`). You can query this at runtime by invoking `getContext`. For the Classic Teams client, this value might return as *unknown* or *undefined*. In this case, map these values to Classic Teams.
 
 The `{hostName}` [URL placeholder value](./access-teams-context.md#get-context-by-inserting-url-placeholder-values) is also available. However, we recommend using the *hostName* mechanism with discretion.
 
@@ -293,7 +258,7 @@ The `pages` namespace includes functionality for running and navigating webpages
 | `registerAppButtonClickHandler` | `pages.appButton.onClick` (renamed)
 | `registerAppButtonHoverEnterHandler` | `pages.appButton.onHoverEnter` (renamed)
 | `registerAppButtonHoverLeaveEnter` | `pages.appButton.onHoverLeave` (renamed)
-| `FrameContext` interface | `pages.appButton.FrameInfo` (renamed)) |
+| `FrameContext` interface | `pages.appButton.FrameInfo` (renamed) |
 
 ##### *dialog* namespace
 
@@ -301,13 +266,13 @@ The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are
 
 | Original namespace `tasks` | New namespace `dialog`  |
 | - | - |
-| `tasks.startTask` | `dialog.open` (renamed) |
-| `tasks.submitTasks` | `dialog.submit` (renamed) |
-| `tasks.updateTasks` | `dialog.update.resize` (renamed) |
+| `tasks.startTask` | `dialog.url.open`, `dialog.url.bot.open`, `dialog.adaptiveCard.open`, `dialog.adaptiveCard.bot.open` |
+| `tasks.submitTask` | `dialog.url.submit` (renamed) |
+| `tasks.updateTask` | `dialog.update` (renamed) |
 | `tasks.TaskModuleDimension` enum | `dialog.DialogDimension` (renamed) |
 | `tasks.TaskInfo` interface | `dialog.DialogInfo` (renamed) |
 
-Additionally, this capability is split into a main capability (`dialog`) for supporting HTML-based dialogs, and a subcapability for bot-based dialogs, `dialog.bot`.
+Additionally, this capability is split into two main subcapabilities, `dialog.url` for HTML-based dialogs and `dialog.adaptiveCard` for Adaptive Card-based dialogs, with further sub-namespaces for bot-based dialogs.
 
 ##### *teamsCore* namespace
 

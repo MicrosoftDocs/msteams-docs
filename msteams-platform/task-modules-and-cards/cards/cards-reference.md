@@ -56,7 +56,7 @@ You can identify and use different types of cards based on your application requ
 
 ## Features that support different card types
 
-| Card type | Bots | Message extension previews | Message extension results | Task modules | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups|
+| Card type | Bots | Message extension previews | Message extension results | Dialogs (referred as task modules in TeamsJS v1.x) | Outgoing Webhooks | Incoming Webhooks | Connectors for Microsoft 365 Groups|
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Adaptive Card | ✔️ | ❌ | ✔️ | ✔️ | ✔️ | ✔️ | ❌ |
 | Connector card for Microsoft 365 Groups | ✔️ | ❌ | ✔️ | ❌ | ✔️ | ✔️ | ✔️ |
@@ -124,10 +124,11 @@ The following table provides the features that support Adaptive Cards:
 > [!NOTE]
 >
 > * Teams platform supports v1.5 or earlier of Adaptive Card features for bot sent cards and action based message extensions.
-> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and task modules.
+> * Teams platform supports v1.5 or earlier of Adaptive Card features for other capabilities, such as cards sent by user (search based message extensions and link unfurling), tabs, and dialogs.
 > * Positive or destructive action styling is not supported in Adaptive Cards on the Teams platform.
-> * Media elements are currently not supported in Adaptive Card on the Teams platform.
 > * Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content is not truncated.
+> * Adaptive Cards within Teams don't provide support for file or image uploads.
+> * The `isEnabled` property for `Action.Submit` type in an Adaptive Card isn't supported in Teams.
 
 ### Example of Adaptive Card
 
@@ -980,7 +981,7 @@ The following cards are implemented by the Bot Framework, but aren't supported b
 
 ## See also
 
-* [Cards and task modules](../cards-and-task-modules.md)
+* [Cards and dialogs](../cards-and-task-modules.md)
 * [Up to date cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/up-to-date-views.md)
 * [Work with Universal Actions for Adaptive Cards](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/work-with-universal-actions-for-adaptive-cards.md)
 * [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)

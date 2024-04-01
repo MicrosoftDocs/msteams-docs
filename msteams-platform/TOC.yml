@@ -105,7 +105,8 @@
     - name: Bots
       href: bots/design/bots.md
     - name: Message extensions
-      href: messaging-extensions/design/messaging-extension-design.md  
+      href: messaging-extensions/design/messaging-extension-design.md
+      displayName: commands      
     - name: Meeting extensions
       href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
   - name: UI templates
@@ -120,9 +121,12 @@
     - name: Adaptive Cards
       href: task-modules-and-cards/cards/design-effective-cards.md
       displayName: column, ColumnSet 
-    - name: Task modules
+    - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
       displayname: Forms
+    - name: Lightbox view
+      href: concepts/design/design-teams-app-light-box-view.md
+      displayName: hide page layout  
     - name: Activity feed notifications
       href: concepts/design/activity-feed-notifications.md
       displayName: notify, notification
@@ -155,9 +159,6 @@
           items: 
           - name: Add and manage environment
             href: toolkit/TeamsFx-multi-env.md
-          - name: Create multi capability app
-            href: toolkit/toolkit-v4/add-capability-v4.md
-            displayName: Multiple capabilities app 
           - name: Create How-to Guides
             href: toolkit/add-How-to-guides-v5.md
             displayName: Multiple capabilities app 
@@ -245,6 +246,9 @@
           items: 
           - name: Overview
             href: toolkit/toolkit-v4/debug-overview-vs.md
+          - name: Debug bot using Teams App Test Tool
+            href: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
+            displayName: Mock activity, custom activity, predefined activity
           - name: Debug your Teams app locally
             href: toolkit/toolkit-v4/debug-local-vs.md
           - name: Debug background process
@@ -257,7 +261,7 @@
           - name: Deploy to the cloud
             href: toolkit/toolkit-v4/deploy-vs.md            
     - name: Teams Toolkit CLI
-      href: toolkit/TeamsFx-CLI.md
+      href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
       items:
       - name: Overview
@@ -268,7 +272,7 @@
         displayName: AppID 
       - name: Develop your apps with Teams Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
-        displayName: visual studio code, visual studio, teams toolkit
+        displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app
       - name: Analyze your apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
         displayName: dashboard
@@ -280,6 +284,9 @@
       - name: Install Adaptive Card Previewer
         href: concepts/build-and-test/install-adaptive-card-previewer.md
         displayName: install, Adaptive Card Previewer, ACP
+    - name: Adaptive Card Previewer for Visual Studio
+      href: concepts/build-and-test/adaptive-card-previewer-vs.md
+      displayName: ACP 
     - name: Yeoman generator for Teams (GitHub)
       href: https://github.com/pnp/generator-teams 
   - name: SDKs
@@ -349,7 +356,7 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl 
+    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
     displayName: clickjacking
@@ -384,10 +391,10 @@
     displayName: Cross-tenant notifications, context for shared channel, apps and permissions in shared channels
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
-    displayName: Slow load times, iFrame constraints, invoke activities, task module, task fetch, task submit, authentication
-  - name: Tabs link unfurling and Stage View
+    displayName: Slow load times, iFrame constraints, invoke activities, dialog, task fetch, task submit, authentication
+  - name: Tabs link unfurling and Stageview
     href: tabs/tabs-link-unfurling.md
-    displayName: Tab in Stage View, Collaborative Stage View 
+    displayName: Tab in Stageview, Collaborative Stageview 
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
@@ -493,15 +500,13 @@
         href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
       - name: Quick start guide
         href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
-      - name: Build your first Teams AI app
-        href: sbs-botbuilder-conversation-AI.yml
       - name: Teams AI library FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
 - name: Build message extensions
   items:
   - name: Overview
     href: messaging-extensions/what-are-messaging-extensions.md
-    displayName: handleTeamsMessagingExtensionFetchTask
+    displayName: handleTeamsMessagingExtensionFetchTask, commands
   - name: Build message extensions using API
     items:
     - name: Overview
@@ -520,10 +525,10 @@
       - name: Define action commands
         href: messaging-extensions/how-to/action-commands/define-action-command.md
         displayName: Command invoke locations, static list of parameters, action command manually
-      - name: Create and send task modules
+      - name: Create and send dialogs
         href: messaging-extensions/how-to/action-commands/create-task-module.md
         displayName: Initial invoke request, respond to fetchTask, payload activity, handleTeamsMessagingExtensionFetchTask
-      - name: Respond to the task module submit action
+      - name: Respond to the dialog submit action
         href: messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md
         displayName: Compose, Respond to initial submit action, configure the poll, attribution for bot messages, submit action
     - name: Search commands
@@ -548,6 +553,9 @@
     - name: Add link unfurling
       href: messaging-extensions/how-to/link-unfurling.md
       displayName: Domain listings can include wildcards, cache
+    - name: Micro-capabilities for website links
+      href: messaging-extensions/how-to/micro-capabilities-for-website-links.md
+      displayName: App less link unfurling  
 - name: Build apps for Teams meetings and calls
   items:
   - name: Overview
@@ -628,19 +636,19 @@
   items:
   - name: Overview
     href: webhooks-and-connectors/what-are-webhooks-and-connectors.md
-    displayName: Webhooks, Connectors, endpoint
+    displayName: Webhooks, Connectors, endpoint, message in channel, Teams message
   - name: Create Outgoing Webhooks
     href: webhooks-and-connectors/how-to/add-outgoing-webhook.md
-    displayName: HMAC security token
+    displayName: HMAC security token, message in channel, Teams message
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    displayName: share content in Microsoft Teams channels, external applications
+    displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message
   - name: Create connectors for Microsoft 365 Groups
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
     href: webhooks-and-connectors/how-to/connectors-using.md
-    displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard
-- name: Build cards and task modules
+    displayName: MessageCard, Attachments, potentialAction, Send messages using cURL and PowerShell, Rate limiting for connectors, ActionCard, message in channel, Teams message
+- name: Build cards and dialogs
   items:
   - name: Overview
     href: task-modules-and-cards/cards-and-task-modules.md
@@ -654,7 +662,7 @@
       displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
     - name: Format cards in Microsoft Teams
       href: task-modules-and-cards/cards/cards-format.md
-      displayName: Information masking, background, extension, notification, HTML, rich text
+      displayName: Information masking, background, extension, notification, HTML, rich text, responsive Adaptive Cards, targetwidth
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
@@ -682,17 +690,17 @@
         displayName: Sequential Workflows
       - name: Up to date cards
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/Up-To-Date-Views.md
-  - name: Build task modules
+  - name: Build dialogs
     items:
     - name: Overview
       href: task-modules-and-cards/what-are-task-modules.md
-    - name: Invoke and dismiss task modules
+    - name: Invoke and dismiss dialogs
       href: task-modules-and-cards/task-modules/invoking-task-modules.md
-      displayName: JavaScript task modules, keyboard and accessibility guidelines, module sizing, css
-    - name: Use task modules in tabs
+      displayName: JavaScript dialogs (task modules), keyboard and accessibility guidelines, module sizing, css
+    - name: Use dialogs in tabs
       href: task-modules-and-cards/task-modules/task-modules-tabs.md
       displayName: payload
-    - name: Use task modules from bots
+    - name: Use dialogs from bots
       href: task-modules-and-cards/task-modules/task-modules-bots.md
 - name: Add authentication
   items:
@@ -762,6 +770,7 @@
     href: concepts/device-capabilities/native-device-permissions.md
   - name: Device permissions for the browser
     href: concepts/device-capabilities/browser-device-permissions.md
+    displayName: web apps 
   - name: Integrate media capabilities
     href: concepts/device-capabilities/media-capabilities.md
     displayName: camera
@@ -810,6 +819,9 @@
       displayName: Microsoft 365, Office 365
     - name: TeamsJS capability support across Microsoft 365
       href: m365-apps/teamsjs-support-m365.md
+  - name: Teams meeting apps in Outlook
+    href: m365-apps/extend-m365-meeting-app.md
+    displayName: Microsoft 365, Office 365, meeting app
   - name: Teams message extensions in Outlook
     items:
       - name: Enable a Teams message extension for Outlook
@@ -817,7 +829,7 @@
         displayName: mail, Microsoft 365, Office 365Microsoft 365 
       - name: Teams message extension vs. Outlook add-in
         href: m365-apps/me-or-outlook-add-in.md
-        displayName: mail, Microsoft 365, Office 365, Outlook add-in, message extension
+        displayName: mail, Microsoft 365, Office 365, Outlook add-in
   - name: Adaptive Card-based Loop components
     items:
       - name: Design your Loop component
@@ -826,6 +838,17 @@
       - name: Build Adaptive Card-based Loop component
         href: m365-apps/cards-loop-component.md
         displayName: loop component, weburl, metadata
+  - name: Actions in Microsoft 365
+    items:
+      - name: Overview
+        href: m365-apps/actions-in-m365.md
+        displayName: actions design
+      - name: Build Actions in Microsoft 365
+        href: m365-apps/build-actions-in-m365.md
+        displayName: build actions, retrieve action  
+      - name: Quick start guide
+        href: m365-apps/actions-in-m365-quick-start-guide.md
+        displayName: run in Azure
   - name: Publish Teams apps for Microsoft 365
     href: m365-apps/publish.md
 - name: Teams developer documentation FAQs
@@ -1071,7 +1094,7 @@
     items:
     - name: Overview
       href: concepts/build-and-test/deep-links.md
-      displayName: Navigate within your app, executeDeepLink
+      displayName: Navigate within your app, executeDeepLink, protocol handlers
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
     - name: Deep link to Teams chat
