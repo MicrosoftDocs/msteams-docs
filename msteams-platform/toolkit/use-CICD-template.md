@@ -17,38 +17,46 @@ You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeli
 1. Generating the Teams app package.
 
 > [!NOTE]
-> Before creating a pipeline for a Teams app, it is essential to prepare the necessary cloud resources, such as Azure Web App, Azure Functions, or Azure Static Web App, and configure the app settings.
+> To create a pipeline for a Teams app, it's required to prepare the necessary cloud resources, such as Azure Web App, Azure Functions, or Azure Static Web App, and configure the app settings.
 
 Building the project involves compiling the source code and creating the necessary artifacts for deployment. For the deployment process, it is recommended to use the Teams Toolkit CLI. For more information, please refer to Set up CI/CD pipelines with Teams Toolkit CLI. If you prefer not to use the Teams Toolkit CLI for deployment or would like to customize your pipeline, you can refer to Set up CI/CD pipelines using your own workflow. The final step, generating the Teams app package, helps you test your Teams app after deployment by distributing your app.
 
+Project construction involves source code compilation and the creation of necessary deployment artifacts:
+
+1. It's recommended to use the Teams Toolkit CLI for the deployment process. For more information, see [Set up CI/CD pipelines with Teams Toolkit CLI](#set-up-cicd-pipelines-with-teams-toolkit-cli).
+1. If you opt not to use the Teams Toolkit CLI for deployment or wish to customize your pipeline. For more information, see Set up CI/CD pipelines using your own workflow.
+1. Create the Teams app package enables you to evaluate your Teams app post-deployment through [Distribute your Microsoft Teams app.](../concepts/deploy-and-publish/apps-publish-overview.md)
+
 ## Set up CI/CD pipelines with Teams Toolkit CLI
 
-You can use Teams Toolkit CLI to automate the following procedures:
+You can use [Teams Toolkit command line interface](Teams-Toolkit-CLI.md) to automate the following procedures:
 
-1. Building and deploying code to Azure.
-1. Generating a Teams app's appPackage, which can be used for app distribution.
+1. Building and deploying code to Microsoft Entra.
+1. Generating a Teams app's appPackage, which is used for [Distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md).
 
 > [!NOTE]
-> For creating project, we recommend using Teams Toolkit version 5.6.0 or later.
+> To create a project, use Teams Toolkit version 5.6.0 or a later version.
 
 ## Prerequisites
 
-1. Prepare Teams app needed resources.
+1. Set up required resources for Teams app.
 
-You can manually prepare the resources (teams app id, bot id, etc) by looking into manifest file under appPackage/ folder, or you can run Teams Toolkit’s “provision” command to create them automatically.
+    You have two options to set up the necessary resources such as Teams app ID, bot ID, and others:
 
-1. Prepare and config Azure resources.
+    1. You can either manually locate these resources in the manifest file found in the appPackage folder.
+    1. You can execute the `Provision` command in the Teams Toolkit to generate them automatically.
 
-You can manually prepare these resources by looking into biceps files under infra/ folder, , or you can run Teams Toolkit’s “provision” command to prepare these Azure resources automatically.
+1. To configure Azure resources, you've two options:
 
-1. Prepare service principal.
+    1. You can manually prepare these resources by examining the Bicep files located in the infra folder.
+    1. You can run Teams Toolkit `Provision` command to prepare these Azure resources automatically.
 
-You should have a service principal and configure its access policies on resources. Below are some docs that you can refer to:
+1. Set up a service principal. Make sure you have a service principal and its access policies on resources are properly configured. For more information, see
 
-Create service principal using Azure portal.
-Create service principal using Azure CLI.
+    1. [Create service principal using Entra portal.](/entra/identity-platform/howto-create-service-principal-portal)
+    1. [Create service principal using Entra CLI.](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash)
 
-Teamsapp cli currently supports login to Azure using service principal secret. Create a secret and save service principal’s client id, client secret, tenant id for following steps.
+The Teamsapp command-line interface (CLI) supports Azure login using a service principal secret. To proceed, [create a secret](/entra/identity-platform/howto-create-service-principal-portal) and store the service principal's client ID, client secret, and tenant ID. You'll need these details for the following steps:
 
 1. Prepare a GitHub/Azure repository.
 
@@ -87,7 +95,6 @@ BOT_AZURE_APP_SERVICE_RESOURCE_ID
 TEAMS_APP_ID
 
 You can set variables/secrets in repo's "Settings"->"Secrets and variables"->"Actions".
-
 
 > [!NOTE]
 > The AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET should be set as secret.
@@ -131,8 +138,6 @@ Below is an example of teamsapp.yml, the "BOT_AZURE_APP_SERVICE_RESOURCE_ID" nee
 * Go to appPackage/manifest.json file, the placeholders wrapped in ${{}} are the needed variables' keys. If you used Teams Toolkit's "provision" command, you can find the values in /env files.
 
 Below is an example of manifest.json snippet, the "TEAMS_APP_ID" needs to be set in the repo variable.
-
-
 
 ## Set up pipelines
 
