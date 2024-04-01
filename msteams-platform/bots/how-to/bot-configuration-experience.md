@@ -15,9 +15,9 @@ ms.localizationpriority: high
 
 Bot configuration in Microsoft Teams empowers you to elevate user engagement and customize bot experiences. This feature enables users to adjust bot settings after installation, streamlining the onboarding process and allowing for the tailoring of bot functionality to meet individual user needs.
 
-Consider a situation where a user installs a bot, only to discover that the default settings don't align with their workflow. If the bot lacks configuration capabilities, users might feel limited by its preset behavior, resulting in decreased engagement and usage. However, by incorporating bot configuration, developers empower users to tailor bot settings according to their preferences and needs, thereby enhancing user satisfaction and interaction with the bot.
+Consider a situation where a user installs a bot, only to discover that the default settings don't align with their workflow. If the bot lacks configuration capabilities, users might feel limited by its preset behaviour, resulting in decreased engagement and usage. However, by incorporating bot configuration, developers empower users to tailor bot settings according to their preferences and needs, thereby enhancing user satisfaction and interaction with the bot.
 
-The following grpahic explains a streamlined process for integrating a bot into a Teams channel.
+The following graphic explains a streamlined process for integrating a bot into a Teams channel.
 
    :::image type="content" source="../../assets/images/bots/scenario.gif" alt-text="Graphic shows the process for integrating a bot into a Teams channel.":::
 
@@ -26,20 +26,20 @@ The following grpahic explains a streamlined process for integrating a bot into 
 | 1 | The user selects **Add to a channel** from the dropdown menu.|
 | 2 | Enter the name of a channel in the search field.|
 | 3 | Select the channel.|
-| 4| To configure the bot app, you need to set up the task module to initiate a notification or communication to the developer endpoint. This endpoint is defined in the manifest. Follow these steps to provide the necessary settings.|
+| 4| Configure the bot app, you need to set up the task module to initiate a notification or communication to the developer endpoint. This endpoint is defined in the manifest. Follow these steps to provide the necessary settings.|
 | 5| After the setup phase, the app sends a welcome Adaptive Card to the channel. This message is visible to all users, enabling any user in the channel to configure the app without restrictions. If a conflict arises, the system considers the most recently saved settings.|
 | 6| Select Settings to launch a task module.|
 
 
 ## Key features
 
-* Personalized user experience: Bot configuration allows users to customize bot behavior. This ensures that the interactions align with their workflow and preferences.
+* Personalized user experience: Bot configuration allows users to customize bot behaviour. This ensures that the interactions align with their workflow and preferences.
 
 * Increased engagement: Personalized experiences lead to higher user engagement. Configured bots are more likely to meet user expectations, encouraging frequent interactions and driving up engagement metrics such as monthly active users (MAU) rates.
 
 * Adaptability: User needs change over time, bots must adapt to meet these evolving requirements. Bot configuration allows users to reconfigure settings as their requirements change, ensuring the bot continues to provide value and relevance in the long term.
 
-When you're creating a bot for Teams, it’s important to make sure users have a smooth experience and provision control to personalize their bots in places like Microsoft Teams. The ability to configure bots post-installation within Teams allows developers to fine-tune bot functionality according to user requirements even after deployment. You can use methods from the Microsoft Bot Framework SDK to implement bot configuration features that enhance user engagement and productivity.
+When you're creating a bot for Teams, it’s important to make sure users have a smooth experience and provision control to personalize their bots in places like Teams. The ability to configure bots post-installation within Teams allows developers to fine-tune bot functionality according to user requirements even after deployment. You can use methods from the Microsoft Bot Framework SDK to implement bot configuration features that enhance user engagement and productivity.
 
 In this article, we'll explore methods for configuring bots post-installation, both for cross-platform compatibility and specific to Teams. You can create complex bot configurations that enhance user engagement and efficiency.
 
