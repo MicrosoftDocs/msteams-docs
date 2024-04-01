@@ -47,7 +47,7 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest.
+      - text: Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.
         url: m365-apps/overview.md#outlook-add-ins
       - text: Configure Teams deep links using the msteams:// and https:// protocol handlers
         url: concepts/build-and-test/deep-links.md#protocol-handlers-in-deep-links
