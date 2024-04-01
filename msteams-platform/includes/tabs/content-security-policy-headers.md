@@ -10,4 +10,4 @@
 >
 > 1. Update TeamsJS library to v.2.19.0 or higher. For more information about the latest release of TeamsJS, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
 >
-> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the ****.cloud.microsoft*** domain. This ensures your app continues to work across existing and future Microsoft 365 host applications and minimizes the need for subsequent changes.
+> 2. Update your Teams app's [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) header [*frame-ancestors*](https://developer.mozilla.org/docs/Web/HTTP/Headers/Content-Security-Policy/frame-ancestors) directive to allow your app to be hosted by the ****.cloud.microsoft*** domain. This ensures that your app continues to work across existing and future Microsoft 365 host applications and minimizes the need for subsequent changes.
