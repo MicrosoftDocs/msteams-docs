@@ -108,9 +108,29 @@ After the pipeline runs successfully you should see from the log that code has b
 
 ## Set up pipeline with Azure DevOps
 
-1. Create a CD yml in your project
+1. Create a CD yml in your project.
 Create a yml file under your project. Write the following content into this yml file.
 
+> [!NOTE]
+> The default pipeline will be triggered when push events happen on main branch, you can modify it to meet your own needs.
+
+1. Setup Azure pipeline.
+
+After pushing your code to repo. Go to Pipelines, and then select New pipeline. Select your repo and select your existing yml file to configure your pipeline.
+
+1. Set variables/secrets in the repository.
+
+The following variables and secrets are needed for the pipeline:
+
+AZURE_SERVICE_PRINCIPAL_CLIENT_ID, AZURE_TENANT_ID, AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET.
+
+* Go to teamsapp.yml file, in deploy stage, the placeholders wrapped in ${{}} are the needed variables' keys. If you used Teams Toolkit's "provision" command, you can find the values in /env files.
+
+Below is an example of teamsapp.yml, the "BOT_AZURE_APP_SERVICE_RESOURCE_ID" needs to be set in the repo variable.
+
+* Go to appPackage/manifest.json file, the placeholders wrapped in ${{}} are the needed variables' keys. If you used Teams Toolkit's "provision" command, you can find the values in /env files.
+
+Below is an example of manifest.json snippet, the "TEAMS_APP_ID" needs to be set in the repo variable.
 
 
 
