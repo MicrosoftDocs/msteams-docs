@@ -11,13 +11,13 @@ ms.date: 09/29/2023
 
 Microsoft Teams plays a key role to facilitate secure and efficient communication across various government sectors and agencies. Government entities handle sensitive and confidential data and there's a crucial need for cloud platforms that are secure and compliant. To meet the stringent security requirements, Microsoft offers the following specialized government cloud services:
 
-The article provides an overview of Teams' compatibility across government cloud services, detailing its capabilities for each tenant and providing guidance on effective deployment.
-
 :::image type="content" source="../assets/images/app-fundamentals/cloud-type.png" alt-text="Illustration shows the types of government clouds." border="false":::
 
-GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans).
+The article provides an overview of Teams' compatibility across government cloud services, detailing its capabilities for each tenant and providing guidance on deployment.
 
-[Gallatin](/officeupdates/teams-app-versioning) cloud service managed by 21Vianet is specific to China and you can purchase the suitable [Microsoft 365 plan for Gallatin](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365) to utilize the services offered within China.
+| Teams in Government | Teams in Gallatin |
+|---|---|
+| GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans). | [Gallatin](/officeupdates/teams-app-versioning) cloud service managed by 21Vianet is specific to China and you can purchase the suitable [Microsoft 365 plan for Gallatin](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365) to utilize the services offered within China. |
 
 ## Teams for Government clouds
 
@@ -29,10 +29,8 @@ The following table details the Teams apps and capabilities for GCC, GCC High, D
 |-------------|---------|---|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Apps built by Microsoft. | ✔️ | ✔️ | ✔️ | ✔️ |
-| Apps built by internal Teams developers. | ✔️ | ✔️ | ✔️ | ✔️ |
 | Third-party apps built by external developers. | ✔️ | ❌ | ❌ | ❌ |
 | Custom apps built for your org (LOB apps) distributed and used in specific tenant. | ✔️ | ✔️ | ✔️ | ❌ |
-| Personal apps | ✔️ | ✔️ | ✔️ | ✔️ |
 | **App capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ | ✔️ |
 | Bots and message extensions | ✔️ | ✔️ | ✔️ | ❌ |
@@ -43,7 +41,6 @@ The following table details the Teams apps and capabilities for GCC, GCC High, D
 | Meeting extensions | ✔️ | ✔️ | ✔️ | ❌ |
 | Connectors and webhooks | ✔️ | ❌ | ❌ | ❌ |
 | Workflows| ✔️ | ❌ | ❌ | ❌ |
-| MetaOS Hub | ❌ | ❌ | ❌ | ❌ |
 | **Others** | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Teams Store | ✔️ | ✔️ | ✔️ |  ❌ |
 | In-context Teams Store or app flyouts | ✔️ | ✔️ | ✔️ |  ❌ |
@@ -59,20 +56,10 @@ The following table details the Teams apps and capabilities for GCC, GCC High, D
 
 To deploy Teams in a government cloud, you need to purchase a suitable Microsoft 365 Government subscription. US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license.
 
-The following pointers provide the basic outline to plan for government cloud service and deploy Teams for collaboration:
+To purchase required Microsoft 365 Government licenses:
 
-| &nbsp; | Check the following |
-| --- | --- |
-| ✔️ | Determine the need of government cloud for your organization. |
-| ✔️ | Check if the eligibility requirements are met. |
-| ✔️ | Check the capabilities available and disabled in the respective cloud tenant. |
-| ✔️ | Review the admin and security settings for the respective cloud tenant. |
-| ✔️ | Apply for the appropriate government cloud. |
-| ✔️ | Plan for governance in Teams. |
-| ✔️ | Strategize and deploy Teams for collaboration, after the purchase. |
-| ✔️ | Plan to deploy Teams for meetings and voice, based on the cloud tenant. |
-| ✔️ | You must submit a form either for GCC or GCC High to validate your organization’s eligibility. For more information on the eligibility, see [Microsoft 365 Government plans](https://www.microsoft.com/en-in/microsoft-365/enterprise/government-plans-and-pricing?rtc=1#heading-oc2835). |
-| ✔️ | You must place an order only through the Microsoft account team or a qualified partner. |
+* You must submit a form either for GCC or GCC High to validate your organization’s eligibility. For more information on the eligibility, see [Microsoft 365 Government plans](https://www.microsoft.com/en-in/microsoft-365/enterprise/government-plans-and-pricing?rtc=1#heading-oc2835).
+* You must place an order only through the Microsoft account team or a qualified partner.
 
 For more information, see [Teams for Government](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
 
