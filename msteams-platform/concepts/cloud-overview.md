@@ -13,10 +13,7 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
 
 The article provides an overview of Teams' compatibility across government cloud services, detailing its capabilities for each tenant and providing guidance on effective deployment.
 
-| Government Community Cloud (GCC) | GCC High | Department of Defense (DOD) |
-|---|---|---|
-| - Built to meet the compliance requirements of cloud services for FedRAMP High, Defense Federal Acquisition Regulations Supplement (DFARS), and requirements for criminal justice and federal tax information systems (CJI and FTI data types). | - Built to meet the compliance requirements of cloud services for Department of Defense Security Requirements Guidelines, DFARS, and International Traffic in Arms Regulations (ITAR). | - Same compliance requirements as GCC-High but only DoD entities certified with DoD SRG L5 can purchase. |
-| - Trials are available only for US Government entities. | - Trials aren’t available for GCC High. | - Trials aren’t available for DoD. |
+:::image type="content" source="../assets/images/app-fundamentals/cloud-type.png" alt-text="Illustration shows the types of government clouds." border="false":::
 
 GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans).
 
