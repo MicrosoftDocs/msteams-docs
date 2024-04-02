@@ -6,7 +6,7 @@ ms.date: 03/01/2024
 ms.topic: reference
 ---
 
-# Embed Teams calls & meetings in an external app
+# Integrate Teams meetings and calls in an external app
 
 Microsoft Teams delivers business-to-consumer (B2C) communication out-of-the-box. For example, mortgage officers at a bank can use Teams meetings to host virtual appointments with their customers. Customers can join those meetings in three ways:
 
