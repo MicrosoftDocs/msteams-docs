@@ -57,7 +57,7 @@ The key technical steps for building a virtual appointments application:
 3. Embed Azure Communication Services Calling and Chat into your website or native app.
 1. Configure the communication management service to share the Teams Auto attendant or Call queue metadata to the client app.
 
-The Azure Communication Services [UI library](/azure/communication-services/concepts/ui-library/ui-library-overview) includes [a Call composite](https://azure.github.io/communication-ui-library/?path=/docs/composites-call-basicexample--basic-example) that allows for fast, straight-forward embedding of these unscheduled calling experiences in mobile and desktop websites.
+The Azure Communication Services [UI library](/azure/communication-services/concepts/ui-library/ui-library-overview) includes [a Call composite](https://azure.github.io/communication-ui-library/?path=/docs/composites-call-basicexample--basic-example) that allows rapid and straightforward integration of these unscheduled calling experiences into mobile and desktop web clients.
 
 For more information and quickstarts, check out:
 
