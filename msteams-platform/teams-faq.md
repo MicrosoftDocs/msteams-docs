@@ -846,6 +846,68 @@ For more information about Node js code sample, see [Bot SSO quick-start](https:
 &nbsp;
 </details>
 
+## Stageview
+
+<details>
+
+<summary>Which Stageview should I use?</summary>
+
+Collaborative Stageview allows the users to open content along with a side panel conversation in a Teams window. We recommend this view for most of the collaboration scenarios.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>What's the difference between Stageview Modal and dialogs?</summary>
+
+Stageview Modal is useful to display rich content to the users, such as page, dashboard, or file. <br> Dialogs (referred as task modules in TeamsJS v1.x) are useful to display messages that need users' attention or collect information required to move to the next step.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>When Stageview is invoked, the content opens in Collaborative Stageview but gets loaded in the main Teams window instead of a new window. How to open in a new Teams window?</summary>
+
+Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](../resources/schema/manifest-schema.md).
+
+</br>
+
+</details>
+
+<details>
+
+<summary>The `contentUrl` matches `validDomains` but why any content isn't still displayed in a new Teams window?</summary>
+
+Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app is loaded successfully. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out, and displays an error screen with a retry option. For app updates, this step is applicable for tabs that are already configured. If you don't perform this step, an error screen is displayed for the existing users.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>Can I include a deep link in my `contentUrl`?</summary>
+
+No, deep links aren't supported in `contentUrl`.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>How do I keep a specific thread shown alongside my content?</summary>
+
+Collaborative Stageview from a deep link or stageView API comes with the additional `threadId` parameter. You can explicitly define the chat thread to be displayed in the side panel for your specific `contentUrl`. For more information about retrieving a `threadId`, see [get conversation thread](/graph/api/group-get-thread).
+
+</br>
+
+</details>
+
 ## Tabs
 
 <details>
