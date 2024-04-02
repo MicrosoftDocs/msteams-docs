@@ -95,10 +95,6 @@ items:
 
    [!INCLUDE [Set up local environment](includes/get-started/clone-repository.md)]
 
-       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/clone-repository-sbs-graph1.png" alt-text="Screenshot shows how to clone a GitHub repository." border="true":::
-
-
-
 - title: Register your Teams Auth SSO with Microsoft Entra ID
   durationInMinutes: 1
   content: |
