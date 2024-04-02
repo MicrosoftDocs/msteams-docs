@@ -318,11 +318,11 @@ Specifies information about your company. For apps submitted to Microsoft AppSou
 
 App developer contact information.
 
-|Name| Maximum size | Required | Description|
-|---|---|---|---|
-|`defaultsupport`||✔️|Support configuration.|
-|`defaultsupport.userEmailsForChatSupport`|10|✔️|Email address for user support through chat. Minimum: 1; maximum: 10. The object is an array with all elements of the type string. The maximum length is 80 characters.|
-|`defaultsupport.emailsForEmailSupport`|1|✔️|Contact email for support inquiry. Minimum: 1; maximum: 1. The object is an array with all elements of the type string. The maximum length is 80 characters.|
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`defaultsupport`|Object||✔️|Support configuration.|
+|`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address for user support through chat. Minimum: 1; maximum: 10. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
+|`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for support inquiry. Minimum: 1; maximum: 1. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 
 ## localizationInfo
 
@@ -519,7 +519,7 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
 |`type`|String|64 characters||Type of the command. One of `query` or `action`. Default: `query`|
-|`samplePrompts`|Array of objects|5|
+|`samplePrompts`|Array|5|
 |`apiResponseRenderingTemplateFile`|String|2048 characters||A relative file path for api response rendering template file.|
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
