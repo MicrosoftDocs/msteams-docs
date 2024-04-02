@@ -10,7 +10,11 @@ ms.date: 06/05/2023
 
 # Open content in Stageview
 
-Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview canvas allows users to adopt mulitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. You can also collaborate with others directly in a Teams multiwindow or work in large modal experience.
+Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview canvas allows users to adopt mulitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
+
+* Facilitate multitasking within Teams.
+* Collaborate with others in a Teams multiwindow.
+* Focus on specific tasks in large modal experience.
 
 > [!NOTE]
 > The article is based on Teams JavaScript client library (TeamsJS) version 2.0.x. If you're using an earlier version, see [TeamsJS](how-to/using-teams-client-library.md) for guidance between the latest and earlier versions.
@@ -281,7 +285,7 @@ Ensure that your `contentUrl` domain is accurately reflected in the manifest `va
 
 <details>
 
-<summary>The `contentUrl` matches `validDomains` but why any content isn't still displayed in a new Teams window?</summary>
+<summary>Why the content isn't still displayed in a new Teams window even when `contentUrl` matches with `validDomains`?</summary>
 
 Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app is loaded successfully. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out, and displays an error screen with a retry option. For app updates, this step is applicable for tabs that are already configured. If you don't perform this step, an error screen is displayed for the existing users.
 
