@@ -59,7 +59,7 @@ The key technical steps for building a virtual appointments application:
 
 The Azure Communication Services [UI library](/azure/communication-services/concepts/ui-library/ui-library-overview) includes [a Call composite](https://azure.github.io/communication-ui-library/?path=/docs/composites-call-basicexample--basic-example) that allows rapid and straightforward integration of these unscheduled calling experiences into mobile and desktop web clients.
 
-For more information and quickstarts, check out:
+For more information and quickstarts, see:
 
 - [Concept: Contact Center apps with Azure Communication Services](/azure/communication-services/tutorials/contact-center)
 - [Quickstart: Join your calling app to a Teams call queue](/azure/communication-services/quickstarts/voice-video-calling/get-started-teams-call-queue)
