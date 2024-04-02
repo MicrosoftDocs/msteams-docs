@@ -453,8 +453,8 @@
       - name: Request headers of the bot
         href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Notification bot
-        href: bots/how-to/conversations/notification-bot-in-teams.md
-        displayName: Adapter
+      href: bots/how-to/conversations/notification-bot-in-teams.md
+      displayName: Adapter
     - name: Command bot 
       href: bots/how-to/conversations/command-bot-in-teams.md
     - name: Workflow bot
