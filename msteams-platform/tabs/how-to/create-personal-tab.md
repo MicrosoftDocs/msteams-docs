@@ -998,9 +998,7 @@ If you create a bot with a **personal** scope, it appears in the first tab posit
 ## Extend static tabs to group chat, channels, and meetings
 
 > [!NOTE]
-> * Extending static tab to group chat, channels, and meetings is available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md). 
-> * Extending static tab to group chat, channels, and meetings is available only in classic Teams client and isn't available in the [new Teams client](~/resources/teams-updates.md).
-> * To extend your static tab to group chat, channels, and meetings, use the app manifest v1.16 or later.
+> To extend your static tab to group chat, channels, and meetings, use the app manifest v1.16 or later.
 
 You can extend static tabs to group chat, channels, and meetings. Instead of pinned app content, you can build tabs that behave more like apps as you can pin only one tab per app, for example, pinning a single YouTube app tab.
 

@@ -51,8 +51,6 @@ The following Teams features aren't currently supported in the new Teams client:
   
 * [App caching](~/tabs/how-to/app-caching.md) isn't supported in the new Teams client.
 
-* [Static tabs for group chat, channels, and meetings](~/tabs/how-to/create-personal-tab.md#extend-static-tabs-to-group-chat-channels-and-meetings) aren't supported in the new Teams client.
-
 * The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
