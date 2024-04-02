@@ -317,7 +317,7 @@ Specifies information about your company. For apps submitted to Microsoft AppSou
 
 **Required** &ndash; Object
 
-App developer contact information. For more information, see [developer provided app information.](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation).
+App developer contact information. For more information, see [developer provided app information](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
