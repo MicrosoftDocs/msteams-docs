@@ -26,6 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2024 March**
 
+* ***March 27, 2024***: [Configure Teams deep links using the msteams:// and https:// protocol handlers.](concepts/build-and-test/deep-links.md#protocol-handlers-in-deep-links)
+* ***March 26, 2024***: [Adaptive Cards resposive layout helps you to design cards to look great on any device in order to provide an enhanced user experience across chat, channels, and meeting chat.](task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout)
 * ***March 07, 2024***: [Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.](concepts/build-and-test/adaptive-card-previewer-vs.md)
 * ***March 07, 2024***: [Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)
 
@@ -85,7 +87,7 @@ Teams platform features that are available to all app developers.
 | 28/08/2023 | Teams app manifest is now referred to as app manifest.|App manifest > [Overview](resources/schema/manifest-schema.md)|
 | 16/08/2023 | Use Teams Toolkit Visual Studio v17.7 extension with many new app development features to get started with app development for Teams.|Tools and SDKs > Tools > [Teams Toolkit for Visual Studio](toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md) |
 | 10/08/2023 | Send a proactive message using Microsoft Entra ID.|Build bots > Bot conversations > [Proactive messages](bots/how-to/conversations/send-proactive-messages.md)|
-| 25/07/2023 | Use Collaborative Stage View to engage with your app content in a new Teams window.|Build tabs > [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md#collaborative-stage-view).
+| 25/07/2023 | Use Collaborative Stageview to engage with your app content in a new Teams window.|Build tabs > [Tabs link unfurling and Stageview](tabs/tabs-link-unfurling.md#collaborative-stageview).
 | 25/07/2023 | Use people icon in an Adaptive Card to view the images of users.|Build cards and task modules > Build cards > Review Teams Store validation guidelines > [Build cards](task-modules-and-cards/cards/cards-format.md#people-icon-in-an-adaptive-card) |
 | 20/07/2023 | App caching for iOS personal tray | Build tabs > [App caching for iOS personal tray](tabs/how-to/app-caching.md) |
 | 06/07/2023 | Use app icon badging to identify any app activity during a meeting | Build apps for Teams meetings and calls > Build in-meeting notification and app icon badging > [Use app icon badging to identify any app activity during a meeting](apps-in-teams-meetings/app-icon-badging-for-your-app.md) |
@@ -160,7 +162,6 @@ Teams platform features that are available to all app developers.
 | 05/24/2022 | Additional tips for rapid approval to publish your app linked to a SaaS offer | Publish to the Teams Store > Overview > [Additional tips for rapid approval to publish your app linked to a SaaS offer](~/concepts/deploy-and-publish/appsource/publish.md#additional-tips-for-rapid-approval-to-publish-your-app-linked-to-a-saas-offer) |
 | 05/24/2022 | Submit your Outlook- and Office-enabled apps to the Teams Store | Extend your app across Microsoft 365 > [Overview](m365-apps/overview.md) |
 | 05/24/2022 | App guidance and what's new in TeamsJS version 2.0.0| Tools and SDKs > [Teams JavaScript client SDK](tabs/how-to/using-teams-client-library.md)  |
-| 05/24/2022 | Teams Toolkit version 4.0.0 for Visual Studio Code is now GA | Tools and SDKs > Teams Toolkit for Visual Studio Code > <br> • [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md) <br> • [Build command bot with JavaScript](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Build notification bot with JavaScript](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Preview and customize Teams app manifest](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Connect to existing APIs](toolkit/add-API-connection.md) <br> • [Add capabilities to your Teams apps](toolkit/toolkit-v4/add-capability-v4.md) <br> • [Add single sign-on experience](toolkit/add-single-sign-on.md) <br> • [Add cloud resources to Teams app](toolkit/add-resource.md) |
 | 05/24/2022 | Introduced app manifest version 1.13 | App manifest > [Manifest schema for Microsoft Teams](resources/schema/manifest-schema.md) |
 | 5/24/2022|Bots and Message extensions in GCC and GCCH| • Plan your app > [Overview](concepts/app-fundamentals-overview.md#government-community-cloud) </br> • Build bots > [Overview](bots/what-are-bots.md) </br> • Build message extensions > [Overview](messaging-extensions/what-are-messaging-extensions.md) |
 |04/26/2022|Uninstall behavior for personal app with bot | Build bots > Bot conversations > [Uninstall behavior updates in personal apps with bots](bots/how-to/conversations/subscribe-to-conversation-events.md#uninstall-behavior-for-personal-app-with-bot)|
@@ -213,7 +214,7 @@ Explore updates from the previous GA releases listed here.
 |12/21/2021 | Updated the Get started JavaScript, C#, and Node.js modules for Teams Toolkit 3.0.0 | • Get started > [Build your first app with JavaScript](sbs-gs-javascript.yml) <br> • Get started > [Build your first app with C# or .NET](sbs-gs-csharp.yml) <br> • Get started> [Build your first app with Node.js](sbs-gs-nodejs.yml) |
 |12/20/2021| Introduced step-by-step guide for tabs and message extensions with Single sign-on (SSO) | Add authentication > Tabs > Use SSO authentication > [Step-by-step guide with SSO for tabs and message extensions](sbs-tabs-and-messaging-extensions-with-SSO.yml)|
 |12/20/2021| Introduced step-by-step guide to create meeting content bubble | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting content bubble](sbs-meeting-content-bubble.yml) |
-|12/09/2021| Introduced step-by-step guide to meeting Stage View | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meetings Stage View](sbs-meetings-stage-view.yml)|
+|12/09/2021| Introduced step-by-step guide to meeting Stageview | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meetings Stageview](sbs-meetings-stage-view.yml)|
 |12/13/2021 | Introduced guidelines for app linked to SaaS offer | Distribute your app > Publish to the Teams Store > Review Teams Store validation guidelines > [Guidelines for apps linked to SaaS offer](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#apps-linked-to-saas-offer)|
 |12/09/2021| Introduced step-by-step guide to create meeting side panel | Build apps for Teams meetings > Enable and configure apps for meetings > [Step-by-step guide to create meeting side panel in Teams](sbs-meetings-sidepanel.yml)|
 |12/01/2021 | Introduced new Teams Store icon | • Design your app > App capabilities > [Designing your personal app for Microsoft Teams](concepts/design/personal-apps.md)</br> • Design your app > UI components > [Designing your Microsoft Teams app with advanced UI components](concepts/design/design-teams-app-advanced-ui-components.md) |
@@ -225,7 +226,7 @@ Explore updates from the previous GA releases listed here.
 |10/25/2021| Updated Get started module for Microsoft Teams Developer Documentation with new structure and procedures in a step-by-step guide | Get started > [Get started with your first Teams app](get-started/get-started-overview.md) |
 |10/20/2021| Meeting stage is now available in GA | Build apps for Teams meetings > [Enable and configure your apps for Teams meetings](apps-in-teams-meetings/build-tabs-for-meeting.md) |
 |10/20/2021| Meeting Details API and real-time Teams meeting events | Build apps for Teams meetings > [Get meeting details API](apps-in-teams-meetings/meeting-apps-apis.md) |
-|10/18/2021| Tabs link unfurling and Stage View | Build tabs > [Tabs link unfurling and Stage View](tabs/tabs-link-unfurling.md) |
+|10/18/2021| Tabs link unfurling and Stageview | Build tabs > [Tabs link unfurling and Stageview](tabs/tabs-link-unfurling.md) |
 |10/08/2021| New best practices for designing Adaptive Cards | Design your app > UI components > [Designing Adaptive Cards for your Teams app](task-modules-and-cards/cards/design-effective-cards.md) |
 |10/05/2021| Hide Teams app until Admin allows to un-hide the app | Design your app > [Block apps by default for users until an admin approves](concepts/deploy-and-publish/add-default-install-scope.md#block-apps-by-default-for-users-until-an-admin-approves) |
 |10/05/2021| Plan your apps for Teams mobile | App fundamentals > [Plan responsive tabs for Teams mobile](concepts/design/plan-responsive-tabs-for-teams-mobile.md) |
@@ -240,7 +241,7 @@ Explore updates from the previous GA releases listed here.
 |07/08/2021|Teams mobile adds support for apps in meetings | Build apps for Teams meetings > [Build apps for Teams meeting](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) |
 |06/28/2021|Integrate People Picker capability | Integrate with Teams > [Integrate People Picker capability](concepts/device-capabilities/people-picker-capability.md) |  
 |06/25/2021| Introduced step-by-step guide to send proactive messages | Build bots > Bot conversation > Proactive messages > [Step-by-step guide to send proactive messages](sbs-send-proactive.yml) |
-|06/09/2021| Stage View for images in Adaptive Cards with `allowExpand` attribute | Build cards and task modules > Build cards > [Stage View for images in Adaptive Cards](task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards) |
+|06/09/2021| Stageview for images in Adaptive Cards with `allowExpand` attribute | Build cards and task modules > Build cards > [Stageview for images in Adaptive Cards](task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards) |
 |05/31/2021| Conversational tabs | Build tabs > [Start and continue conversations about content in your tabs](~/tabs/how-to/conversational-tabs.md) |
 |05/24/2021| Updated Teams app design guidelines with mobile patterns | Design your app > [Designing your Teams app](~/concepts/design/design-teams-app-overview.md) |
 |05/13/2021| Added information on mConnect and Skooler | Integrate with Teams > Moodle LMS > [Moodle learning management system](resources/moodle-overview.md)|
@@ -382,11 +383,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 February**
+**2024 March**
 
-* ***February 12, 2024***: [Build API-based message extension using Developer Portal for Teams.](messaging-extensions/build-api-based-message-extension.md)
-
-* ***February 06, 2024***: [Introduced systemDefault reserved activity type for send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis).
+***March 15, 2023***: [Extend static tabs to channels with a customizable experience.](tabs/what-are-tabs.md)
 
 :::column-end:::
 :::row-end:::
@@ -399,6 +398,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 12/02/2024 | Build API-based message extension using Developer Portal for Teams. | Build message extension > [Build API-based message extension](messaging-extensions/build-api-based-message-extension.md) |
+| 06/02/2024 | Introduced `systemDefault` reserved activity type for send activity feed notifications| Build tabs > [Send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis)|
 |25/01/2024| Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content. | Extend your app across Microsoft 365 > [Actions in Microsoft 365](m365-apps/actions-in-m365.md)|
 |12/01/2024| Introduced Teams Toolkit command line interface v3. | Tools and SDKs > Tools > [Teams Toolkit command line interface](toolkit/Teams-Toolkit-CLI.md)|
 
@@ -452,7 +453,7 @@ Developer preview is a public program that provides early access to unreleased T
 |05/12/2022| Use share in meeting to share any document or third-party app to the meeting stage.|Build apps for Teams meetings and calls > Enable and configure apps for meetings > [Share in meeting](concepts/build-and-test/share-in-meeting.md) |
 |10/11/2022| Enable bots to receive all conversation messages without being @mentioned in relevant contexts.|Build bots > Bot conversations > Message in bot conversations > [Receive all conversation messages with RSC](bots/how-to/conversations/channel-messages-with-rsc.md) |
 | 09/23/2022 | Use apps in Teams meetings scheduled through public channels. | Build apps for Teams meetings and calls > [Apps for Teams meetings and calls](apps-in-teams-meetings/teams-apps-in-meetings.md) |
-| 08/23/2022 | Share apps to the Teams meeting stage in mobile. | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md) |
+| 08/23/2022 | Share apps to the Teams meeting stage in mobile. | Build apps for Teams meetings and calls > [Enable and configure apps for meetings](apps-in-teams-meetings/teams-apps-in-meetings.md) |
 | 08/03/2022 | Use toggle incoming audio API to toggle the incoming audio state setting for the user in Teams meeting stage from mute to unmute or vice-versa. | Build apps for Teams meetings and calls > [Meeting apps API references](/microsoftteams/platform/apps-in-teams-meetings/api-references?tabs=dotnet) |
 | 08/02/2022| Use Collaboration controls to build custom collaborative experiences and integrate with Microsoft 365 services. | Integrate with Teams > [Collaboration controls](samples/collaboration-control.md) |
 |05/24/2022| Use Live Share to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. | Build apps for Teams meetings > Enhanced collaboration with Live Share > [Overview](apps-in-teams-meetings/teams-live-share-overview.md) |
