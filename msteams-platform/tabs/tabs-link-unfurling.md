@@ -34,12 +34,12 @@ Stageview Multi-window is useful for scenarios that requires a user to multitask
 
 ### Stageview Modal
 
-Stageview Modal is a full-screen UI component used to render your app content inside the Teams main window. This view provides users with a focused experience to engage with the app content. Stageview Modal is useful for displaying rich content that doesn't require a user to multitask. It’s the default view when Collaborative Stageview and Stageview Multi-window aren't supported.
+Stageview Modal is a full-screen UI component used to render your app content inside the Teams main window. This view provides users with a focused experience to engage with the app content. Stageview Modal is useful for displaying rich content that doesn't require a user to multitask. It’s the default view when Collaborative Stageview and Stageview Multi-window aren't supported
 
 > [!NOTE]
 > Teams web client supports only Stageview Modal.
 
-:::image type="content" source="~/assets/images/tab-images/modal-view1.png" alt-text="The illustration shows the Stageview Modal in Teams.":::
+:::image type="content" source="~/assets/images/tab-images/modal-view1.png" alt-text="The illustration shows the Stageview Modal in Teams."
 
 ## Invoke Stageview
 
@@ -89,7 +89,7 @@ To invoke Collaborative Stageview, perform the following steps:
 
 :::image type="content" source="../assets/images/tab-images/collab-view.gif" alt-text="The graphical representation shows how Collaborative Stageview response from Adaptive Card.":::
 
-The following code is an example to create a Collaborative Stageview button in an Adaptive Card:
+The following code is an example to create a Collaborative Stageview button in an Adaptive Card
 
 ```json
 {

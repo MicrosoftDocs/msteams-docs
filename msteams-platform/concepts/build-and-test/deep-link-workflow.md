@@ -14,12 +14,12 @@ You can create a deep link to perform a specific task in Teams, such as to creat
 
 In this article, you’ll learn to create a deep link:
 
-* [Deep link to start a new chat](#deep-link-to-start-a-new-chat)<br>
-* [Deep link to open a meeting scheduling dialog](#deep-link-to-open-a-meeting-scheduling-dialog)<br>
-* [Deep link to start an audio-video call with users](#deep-link-to-start-an-audio-video-call-with-users)<br>
-* [Generate a deep link to share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)<br>
-* [Deep link to meeting side panel](#deep-link-to-meeting-side-panel)<br>
-* [Deep link to join a meeting](#deep-link-to-join-a-meeting)<br>
+* [To start a new chat](#deep-link-to-start-a-new-chat)
+* [To open a meeting scheduling dialog](#deep-link-to-open-a-meeting-scheduling-dialog)
+* [To start an audio-video call](#deep-link-to-start-an-audio-video-call-with-users)
+* [To share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+* [To meeting side panel](#deep-link-to-meeting-side-panel)
+* [To join a meeting](#deep-link-to-join-a-meeting)
 
 ## Deep link to start a new chat
 
