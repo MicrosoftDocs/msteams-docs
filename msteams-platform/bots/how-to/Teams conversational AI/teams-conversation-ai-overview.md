@@ -124,13 +124,13 @@ Feedback loop allows the bot to validate and correct the output of the language 
 
 The following table lists the updates to the Teams AI library:
 
-|Type |Description  |JavaScript|C#|Python|
+|Type |Description  |.NET|JavaScript|Python|
 |---------|---------||||
 |OpenAIModel    |The OpenAIModel class lets you call both OAI and Azure OAI with one single component. New models can be defined for other model types like LLaMA2.              | ✔️ |✔️|✔️|
-|Embeddings    | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings.        | ✔️ |❌|✔️|
+|Embeddings    | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings.        | ❌ |✔️|✔️|
 |Prompts     | A new object-based prompt system enables better token management and reduces the likelihood of overflowing the model's context window.        | ✔️ |✔️|✔️|
 | Augmentation     | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only  `functions`, `sequence`, and `monologue` style augmentations are supported.        | ✔️ |✔️|✔️|
-|Data Sources     |  A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt.      | ✔️ |❌|✔️|
+|Data Sources     |  A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt.      | ❌ |✔️|✔️|
 
 ## Code samples
 
