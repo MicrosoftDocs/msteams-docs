@@ -89,7 +89,7 @@ When `openMode` isn't defined, the content opens by default in Collaborative Sta
 
 ### Invoke Collaborative Stageview from Adaptive Card
 
-Collaborative Stageview from an Adaptive Card allows users to engage with your content while continuing the conversation flow. When a user enters a URL for an app content in a chat, the bot is invoked and returns an Adaptive Card with an option to open the URL. If the URL is opened from an Adaptive Card in Teams web client, it opens in a Stageview Modal.
+Collaborative Stageview from an Adaptive Card allows users to engage with your content while continuing the conversation flow. When a user enters a URL for an app content in a chat, the bot is invoked and returns an Adaptive Card with an option to open the URL. If Collaborative Stageview is invoked from an Adaptive Card JSON in Teams web client, it opens in a Stageview Modal.
 
 The following steps help you to understand how Collaborative Stageview is invoked from an Adaptive Card:
 
@@ -99,7 +99,7 @@ The following steps help you to understand how Collaborative Stageview is invoke
 
 :::image type="content" source="../assets/images/tab-images/collab-view.gif" alt-text="The graphical representation shows how Collaborative Stageview response from Adaptive Card.":::
 
-The following code is an example to create an action button in an Adaptive Card:
+The following JSON code is an example to create an action button in an Adaptive Card:
 
 ```json
 {
