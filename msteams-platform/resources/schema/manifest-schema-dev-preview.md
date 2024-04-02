@@ -519,7 +519,6 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
 |`type`|String|64 characters||Type of the command. One of `query` or `action`. Default: `query`|
-|`samplePrompts`|Array|5|
 |`apiResponseRenderingTemplateFile`|String|2048 characters||A relative file path for api response rendering template file.|
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
@@ -541,12 +540,6 @@ Each command item is an object with the following structure:
 |`parameter.choices.title`|String|128 characters||Title of the choice.|
 |`parameter.choices.value`|String|512 characters||Value of the choice.|
 |`apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response.  |
-
-### commands.samplePrompts
-
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`samplePrompts.text`|String|128 characters|✔️|This string holds the sample prompt.|
 
 ## scopeConstraints
 
