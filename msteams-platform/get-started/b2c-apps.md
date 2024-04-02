@@ -53,7 +53,7 @@ Contact center applications focus on unscheduled communication between consumers
 The key technical steps for building a virtual appointments application:
 
 1. Plan and configure Teams auto attendants and call queues.
-2. Build a communication management service function using Graph APIs to retrieve meta-data for the auto attendants and call queues.
+1. Build a communication management service function using Graph APIs to retrieve metadata for Auto attendants and Call queues.
 3. Embed Azure Communication Services Calling and Chat into your website or native app.
 1. Configure the communication management service to share the Teams Auto attendant or Call queue metadata to the client app.
 
