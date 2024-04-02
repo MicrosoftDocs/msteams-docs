@@ -10,18 +10,18 @@ ms.date: 06/05/2023
 
 # Open content in Stageview
 
-Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview canvas allows users to adopt mulitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
+Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview canvas allows users to adopt multitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
 
 * Facilitate multitasking within Teams.
 * Collaborate with others in a Teams multiwindow.
-* Focus on specific tasks in large modal experience.
+* Focus on specific tasks in a modal experience.
 
 > [!NOTE]
 > The article is based on Teams JavaScript client library (TeamsJS) version 2.0.x. If you're using an earlier version, see [TeamsJS](how-to/using-teams-client-library.md) for guidance between the latest and earlier versions.
 
 ## Types of Stageview
 
- Based on the UI and functionality, Stageview provides three ways to open your app content:
+ Based on the UI and functionality, Stageview offers three ways to open your app content:
 
 * [Collaborative Stageview](#collaborative-stageview)
 * [Stageview Multi-window](#stageview-multi-window)
@@ -54,7 +54,7 @@ Stageview Modal is a full-screen UI component used to render your app content in
 
 ## Invoke Stageview
 
-You can invoke Stageview in Teams through one of the following methods and also configure the expected Stageview response. The following table provides the default and defined response behavior for each Stageview invoke type:
+You can invoke Stageview in Teams through one of the following methods and configure the expected Stageview response. The following table provides the default and defined response behavior for each Stageview invoke type:
 
 | Invoke method | Default response | Defined response |
 | ---| ---| --- |
@@ -80,10 +80,10 @@ The following table provides the Stageview responses of the `openMode` property:
 | `openMode` defined as `popout`| Opens in Stageview Multi-window without a side panel conversation. |
 | `openMode` defined as `modal` | Opens in Stageview Modal. |
 
-When `openMode` isn't defined, opens by default in Collaborative Stageview with an associated side panel conversation. The fallback hierarchy for a Stageview response is `popoutWithChat` > `popout` > `modal`.
+When `openMode` isn't defined, the content opens by default in Collaborative Stageview with an associated side panel conversation. The fallback hierarchy for a Stageview response is `popoutWithChat` > `popout` > `modal`.
 
 > [!NOTE]
-> In scenarios were pop-out experience isn't supported, for example, Teams web client, the content opens in a Stageview Modal even when the `openMode` property is defined.
+> In scenarios where pop-out experience isn't supported, for example, Teams web client, the content opens in a Stageview Modal even when the `openMode` property is defined.
 
 </details>
 
@@ -275,7 +275,7 @@ Stageview Modal is useful to display rich content to the users, such as page, da
 
 <details>
 
-<summary>When Stageview is invoked, the content opens in Collaborative Stageview but gets loaded in the main Teams window instead of a new window. How to open in a new window?</summary>
+<summary>When Stageview is invoked, the content opens in Collaborative Stageview but gets loaded in the main Teams window instead of a new window. How to open the content in a new window?</summary>
 
 Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](../resources/schema/manifest-schema.md).
 
@@ -285,7 +285,7 @@ Ensure that your `contentUrl` domain is accurately reflected in the manifest `va
 
 <details>
 
-<summary>Why the content isn't still displayed in a new Teams window even when `contentUrl` matches with `validDomains`?</summary>
+<summary>Why isn't any content displayed in a new Teams window even when `contentUrl` matches with `validDomains`?</summary>
 
 Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app is loaded successfully. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out, and displays an error screen with a retry option. For app updates, this step is applicable for tabs that are already configured. If you don't perform this step, an error screen is displayed for the existing users.
 
