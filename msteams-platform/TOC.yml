@@ -410,87 +410,77 @@
 - name: Build bots
   items:
   - name: Overview
-    href: bots/what-are-bots.md
-  - name: Bots and SDKs
+  - name: What are bots
     href: bots/bot-features.md
     displayName: Bot samples, advantages of bots, bot with Power Virtual Agents, Microsoft Bot Framework
-  - name: Bot activity handlers
+  - name: Choose the right bot
     href: bots/bot-basics.md
     displayName: OnMessageActivityAsync, Bot logic, core Bot Framework handlers
-  - name: Bot conversations
+  - name: Get started
+  - name: Create a bot
+  - name: Register a bot
+  - name: Bot capabilities
     items:
-    - name: Overview
-      href: bots/how-to/conversations/conversation-basics.md
-      displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
-    - name: Messages in bot conversations
-      href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
+    - name: Chat bot
       items:
+      - name: Overview
+        href: bots/how-to/conversations/conversation-basics.md
+        displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
+      - name: Messages in bot conversations
+        href: bots/how-to/conversations/conversation-messages.md
+        displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
+        items:
       - name: Receive all conversation messages
         href: bots/how-to/conversations/channel-messages-with-rsc.md
         displayName: mention
-    - name: Create a commands menu
-      href: bots/how-to/create-a-bot-commands-menu.md
-      displayName: compose
-    - name: Channel and group chat conversations with a bot
-      href: bots/how-to/conversations/channel-and-group-conversations.md
-      displayName: Teams conversational bots, mention, tag mention, user mention
-    - name: Conversation events in your Teams bot
-      href: bots/how-to/conversations/subscribe-to-conversation-events.md 
-      displayName: activity, Message reaction events, event handling for install and uninstall events
-    - name: Proactive messages
-      href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId 
-    - name: Format your bot messages
-      href: bots/how-to/format-your-bot-messages.md
-      displayName: Interactive elements, UTF-16, Base64, hyperlink
-    - name: Update and delete messages sent from bot
-      href: bots/how-to/update-and-delete-bot-messages.md      
-    - name: Request headers of the bot
-      href: bots/how-to/conversations/request-headers-of-the-bot.md
-    - name: Notification bot in Teams
-      href: bots/how-to/conversations/notification-bot-in-teams.md
-      displayName: Adapter
-    - name: Command bot in Teams
+      - name: Create a commands menu
+        href: bots/how-to/create-a-bot-commands-menu.md
+        displayName: compose
+      - name: Channel and group chat conversations with a bot
+        href: bots/how-to/conversations/channel-and-group-conversations.md
+        displayName: Teams conversational bots, mention, tag mention, user mention
+      - name: Conversation events in your Teams bot
+        href: bots/how-to/conversations/subscribe-to-conversation-events.md 
+        displayName: activity, Message reaction events, event handling for install and uninstall events
+      - name: Proactive messages
+        href: bots/how-to/conversations/send-proactive-messages.md
+        displayName: conversationId 
+      - name: Format your bot messages
+        href: bots/how-to/format-your-bot-messages.md
+        displayName: Interactive elements, UTF-16, Base64, hyperlink
+      - name: Update and delete messages sent from bot
+        href: bots/how-to/update-and-delete-bot-messages.md      
+      - name: Request headers of the bot
+        href: bots/how-to/conversations/request-headers-of-the-bot.md
+    - name: Notification bot
+        href: bots/how-to/conversations/notification-bot-in-teams.md
+        displayName: Adapter
+    - name: Command bot 
       href: bots/how-to/conversations/command-bot-in-teams.md
-    - name: Workflow bot in Teams
+    - name: Workflow bot
       href: bots/how-to/conversations/workflow-bot-in-teams.md
       displayname: Jira, jira
-  - name: Get Teams specific context for your bot
-    href: bots/how-to/get-teams-context.md
-    displayName: Fetch roster or user profile
-  - name: Send and receive files using bot
-    href: bots/how-to/bots-filesv4.md
-    displayName: send, File consent and upload files to Teams from a bot
-  - name: Optimize your bot with rate limiting in Teams
-    href: bots/how-to/rate-limit.md
-    displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
-  - name: Calls and meetings bots
-    items:
-    - name: Overview
-      href: bots/calls-and-meetings/calls-meetings-bots-overview.md
-    - name: Real-time media calls and meetings
-      href: bots/calls-and-meetings/real-time-media-concepts.md
-      displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
-    - name: Register calls and meetings bot
-      href: bots/calls-and-meetings/registering-calling-bot.md
-      displayName: How Bot can create call, join meeting and transfer call
-    - name: Incoming call notifications
-      href: bots/calls-and-meetings/call-notifications.md
-      displayName: Redirects for region affinity, GeoDNS resolution 
-    - name: Requirements and considerations for application-hosted media bots
-      href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
-      displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
-    - name: Supported media formats for bots
-      href: resources/media-formats.md
-      displayName: codec 
-  - name: Bot configuration experience
-    href: bots/how-to/bot-configuration-experience.md
-    displayName: configuration settings, fetchTask, config/fetch, config/submit
-  - name: Teams bot API changes to fetch team or chat members
-    href: resources/team-chat-member-api-changes.md
-  - name: Teams AI library
-    items:
+    - name: Calls and meetings bots
+      items:
+      - name: Overview
+        href: bots/calls-and-meetings/calls-meetings-bots-overview.md
+      - name: Real-time media calls and meetings
+        href: bots/calls-and-meetings/real-time-media-concepts.md
+        displayName: Active and dominant speakers, SILK and G.722 for audio and H.264 for video, codec 
+      - name: Register calls and meetings bot
+        href: bots/calls-and-meetings/registering-calling-bot.md
+        displayName: How Bot can create call, join meeting and transfer call
+      - name: Incoming call notifications
+        href: bots/calls-and-meetings/call-notifications.md
+        displayName: Redirects for region affinity, GeoDNS resolution 
+      - name: Requirements and considerations for application-hosted media bots
+        href: bots/calls-and-meetings/requirements-considerations-application-hosted-media-bots.md
+        displayName: Service Fabric with Virtual Machine Scale Sets, instance-level public 
+      - name: Supported media formats for bots
+        href: resources/media-formats.md
+        displayName: codec
+    - name: Teams AI bots
+      items:
       - name: Overview
         href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
         displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt 
@@ -502,6 +492,25 @@
         href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
       - name: Teams AI library FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
+    - name: Send and receive files using bot
+      href: bots/how-to/bots-filesv4.md
+      displayName: send, File consent and upload files to Teams from a bot
+    - name: Authentication for bots
+    - name: Bot configuration experience
+      href: bots/how-to/bot-configuration-experience.md
+      displayName: configuration settings, fetchTask, config/fetch, config/submit
+  - name: Bot context
+    list: 
+    - name: Get Teams specific context for your bot
+      href: bots/how-to/get-teams-context.md
+      displayName: Fetch roster or user profile
+    - name: Optimize your bot with rate limiting in Teams
+      href: bots/how-to/rate-limit.md
+      displayName: handle rate limit, detect transient exceptions, per thread limit, exponential backoff
+    - name: Teams bot API changes to fetch team or chat members
+      href: resources/team-chat-member-api-changes.md
+  - name: Bot SDKs and APIs
+
 - name: Build message extensions
   items:
   - name: Overview
