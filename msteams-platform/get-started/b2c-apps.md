@@ -13,7 +13,7 @@ Customers can join the meeting in the following ways:
 
 * Using Teams native apps or Teams web client.
 * Dailing into the meeting’s telephone number.
-- Custom applications that interoperate with Teams calling and meetings
+* Through custom apps that work with Teams calling and meetings.
 
 **Embedding Teams interoperability in your own customer-facing website or native app enables tailored customer experiences.** You can build websites that work on both mobile and desktop browsers. Or native iOS, Android, and Windows apps. All while preserving the benefits of using Teams for employee experiences: employee familiarity, Teams co-pilot, extensibility through Teams apps and bots, and Microsoft 365 security and compliance.
 
