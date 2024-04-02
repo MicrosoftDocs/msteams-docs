@@ -598,7 +598,7 @@
       href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
     - name: Get recordings
       href: /graph/api/resources/callrecording?view=graph-rest-1.0&preserve-view=true
-  - name: Embed Teams calls & meetings 
+  - name: Integrate Teams meetings and calls in an external app
     href: get-started/b2c-apps.md
   - name: Enhanced collaboration with Live Share
     items:
