@@ -304,23 +304,24 @@ The unique Microsoft-generated identifier for this app. The format of the ID is 
 
 Specifies information about your company. For apps submitted to Microsoft AppSource (formerly Office Store), these values must match the information in your AppSource entry.
 
-|Name| Maximum size | Required | Description|
-|---|---|---|---|
-|`name`|32 characters|✔️|The display name for the developer.|
-|`websiteUrl`|2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
-|`privacyUrl`|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
-|`termsOfUseUrl`|2048 characters|✔️|The https:// URL to the developer's terms of use.|
-|`mpnId`|10 characters||**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`name`||32 characters|✔️|The display name for the developer.|
+|`websiteUrl`||2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
+|`privacyUrl`||2048 characters|✔️|The https:// URL to the developer's privacy policy.|
+|`termsOfUseUrl`||2048 characters|✔️|The https:// URL to the developer's terms of use.|
+|`mpnId`||10 characters||**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+|`contactInfo`|Object|||App developer contact information.|
 
 ### developer.contactInfo
 
 **Required** &ndash; Object
 
-App developer contact information.
+App developer contact information. For more information, see [developer provided app information.](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`defaultsupport`|Object||✔️|Support configuration.|
+|`defaultsupport`|Object||✔️| The default contact information for your app.|
 |`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address for user support through chat. Minimum: 1; maximum: 10. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 |`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for support inquiry. Minimum: 1; maximum: 1. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 
