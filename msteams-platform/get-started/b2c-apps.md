@@ -15,26 +15,30 @@ Customers can join the meeting in the following ways:
 * Dailing into the meeting’s telephone number.
 * Through custom apps that work with Teams calling and meetings.
 
-**Embedding Teams interoperability in your own customer-facing website or native app enables tailored customer experiences.** You can build websites that work on both mobile and desktop browsers. Or native iOS, Android, and Windows apps. All while preserving the benefits of using Teams for employee experiences: employee familiarity, Teams co-pilot, extensibility through Teams apps and bots, and Microsoft 365 security and compliance.
+Integrating Teams interoperability into your customer-facing web or native app allows for customized user experiences. You can build web app compatible with mobile and desktop, or create native apps for iOS, Android, and Windows. This integration maintains the advantages of using Teams for employee interactions, such as employee familiarity, Teams co-pilot features, expandability with Teams apps and bots, and adherence to Microsoft 365 security and compliance.
 
-Custom websites and native apps can interoperate with two kinds of Teams B2C experience: virtual appointments and contact center.
+Custom web and native apps can interact with two types of Teams B2C experiences: virtual appointments and contact center.
 
-The image shows an example of the Teams interoperable meeting and calling experience you can embed into your website or native app:
-![Alt text](../assets/images/call-with-chat-composite-hero.png "Screenshot of the meeting and calling experiences you can embed in your own app or website")
+The following image shows an example of how you can integrate the Teams interoperable meeting and calling experience into your web or native app:
+:::image type="content" source="../assets/images/call-with-chat-composite-hero.png" alt-text="Screenshot shows the meeting and calling experience that you can embed in to your app or web client.":::
 
-## Virtual Appointments
+## Virtual appointments
 
-Virtual appointments are a communication pattern where a consumer and a business assemble for a scheduled appointment. The organizational boundary between consumer and business, and scheduled nature of the interaction, are key attributes of most virtual appointments. Many industries operate virtual appointments: meetings with a healthcare provider, a loan officer, or a product support technician.
+Virtual appointments are organized meetings between a customer and a business at a set time. The distinct separation between the customer and the business, along with the scheduled aspect of the interaction, are fundamental characteristics of most virtual appointments. 
 
-The key technical steps for building a virtual appointments application:
+ For example, various industries utilize virtual appointments such as meetings with healthcare professionals, loan officers, or product support technicians.
 
-1. Build a communication management service function using Graph Online Meeting APIs. This service schedules the meeting and configures options such as the availability of recording.
-2. Embed Azure Communication Services Calling and Chat into your website or native app.
-3. Program the communication management service to share the Teams meeting meta-data with the client application.
+To build a virtual appointments app, follow these steps:
 
-[Azure Communication Services client libraries](/azure/communication-services/concepts/sdk-options) are available for various platforms and languages, including Web browsers (JavaScript), iOS (Swift), Android (Java), Windows (.NET). The client libraries support both mobile and desktop web browsers. An open-source [UI library](/azure/communication-services/concepts/ui-library/ui-library-overview) can accelerate development for Web, iOS, and Android apps. Azure Communication Services is identity-agnostic, and you control how end users are identified and authenticated.
+1. Build a communication management service function using Graph [onlineMeeting APIs](/graph/api/resources/onlinemeeting). This function is responsible for scheduling the meeting and setting options such as recording availability.
+1. Integrate Azure Communication Services Calling and Chat into your web or native app. For more information, see [telephony concepts](/azure/communication-services/concepts/telephony/telephony-concept) and [chat concepts](azure/communication-services/concepts/chat/concepts).
+1. Configure the communication management service to share the Teams meeting metadata to the client app.
 
-For more information and quickstarts, check out:
+[Azure Communication Services client libraries](/azure/communication-services/concepts/sdk-options) are available for various platforms and languages, such as web client (JavaScript), iOS (Swift), Android (Java), Windows (.NET). The client libraries support both mobile and desktop web clients. 
+
+You can use open-source [UI library](/azure/communication-services/concepts/ui-library/ui-library-overview) to develop web, iOS, and Android apps. Azure Communication Services is identity-agnostic and you can control how end users are identified and authenticated.
+
+For more information and quickstarts, see:
 
 - [Concept: Virtual visit apps with Azure Communication Services](/azure/communication-services/tutorials/virtual-visits)
 - [Concept: Azure & Teams interoperability](/azure/communication-services/concepts/interop/guest/overview)
@@ -44,17 +48,17 @@ For more information and quickstarts, check out:
 
 ## Contact center
 
-Contact center applications focus on unscheduled communication between consumers and agents. The unscheduled nature of the interaction is a key attribute of contact center applications. The term "contact center" captures a large family of applications diverse across scale, channels, and organizational approach:
+Contact center apps focus on unscheduled communication between consumers and agents. The unscheduled nature of the interaction is a key attribute of contact center apps. The contact center captures a large family of apps diverse across the following:
 
-- **Scale.** Small businesses may have a few employees operating as agents in a limited role, for example a restaurant offering a phone number for reservations. While an airline may have thousands of employees and vendors providing a 24/7 contact center.
-- **Channel.** Organizations can reach consumers through the phone system, apps, SMS, or consumer communication platforms such as WhatsApp.
-- **Organizational approach.** Most businesses have employees operate as agents using Teams or a licensed contact center as a service software (CCaaS). Other businesses may outsource the agent role or use specialized service providers who fully operate contact centers as a service.
+* **Scale:** Small businesses might have few employees operating as agents in a limited role, such as a restaurant providing a contact number for booking reservations. While an airline might employ thousands of staff and vendors providing a 24/7 contact center.
+* **Channel:** Organizations can engage with consumers through the telephone system, apps, short message service (SMS), or consumer communication platforms.
+* **Organizational approach:** Most businesses have employees operate as agents who utilize Teams or licensed Contact Center as a Service (CCaaS) software. Alternatively, other businesses might outsource the agent role or use specialized service providers who fully operate contact centers.
 
-The key technical steps for building a virtual appointments application:
+To build a contact center app, follow these steps:
 
-1. Plan and configure Teams auto attendants and call queues.
+1. [Plan and configure Teams Auto attendants and Call queues](/microsoftteams/plan-auto-attendant-call-queue).
 1. Build a communication management service function using Graph APIs to retrieve metadata for Auto attendants and Call queues.
-3. Embed Azure Communication Services Calling and Chat into your website or native app.
+1. Integrate Azure Communication Services Calling and Chat into your web or native app. For more information, see [telephony concepts](/azure/communication-services/concepts/telephony/telephony-concept) and [chat concepts](azure/communication-services/concepts/chat/concepts).
 1. Configure the communication management service to share the Teams Auto attendant or Call queue metadata to the client app.
 
 The Azure Communication Services [UI library](/azure/communication-services/concepts/ui-library/ui-library-overview) includes [a Call composite](https://azure.github.io/communication-ui-library/?path=/docs/composites-call-basicexample--basic-example) that allows rapid and straightforward integration of these unscheduled calling experiences into mobile and desktop web clients.
