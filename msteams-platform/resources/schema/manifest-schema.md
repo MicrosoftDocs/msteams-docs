@@ -946,7 +946,13 @@ For more information, see [Office Add-ins manifest for Microsoft 365](/office/de
 
 ### extensions.requirements
 
-The `extensions.requirements` property specifies the [requirement sets](/javascript/api/requirement-sets) for  Microsoft 365 Add-ins. If the Microsoft 365 version doesn't support the specified requirements, then the extension won’t be available. Requirements are supported at the object and child object level.
+The `extensions.requirements` property specifies the scopes, formFactors, and [requirement sets](/javascript/api/requirement-sets) for Microsoft 365 Add-ins. If the Microsoft 365 version doesn't support the specified requirements, then the extension won’t be available for installation. Some examples:
+
+- If the "requirements.capabilities.name" property is set to "Mailbox" and the "minVersion" to "1.10", then the add-in is not installable on versions of Office that don't support the **Mailbox** requirement set greater than version 1.9.
+- If the "requirements.scopes" is set to "mail", then the add-in is not installable on Excel, Word, and PowerPoint.
+- If the "requirements.formFactors" is set to only "desktop", then the add-in is not installable on Office running on a mobile device.
+
+Requirements are also supported on the "ribbon", "runtime", "alternates", and "autoRunEvents" child properties to selectively filter out some features of the add-in. 
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
