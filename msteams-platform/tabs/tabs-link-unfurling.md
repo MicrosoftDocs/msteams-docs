@@ -315,4 +315,4 @@ Collaborative Stageview from a deep link or stageView API comes with the additio
 
 ## See also
 
-* [Create deep links](../concepts/build-and-test/deep-links.md)
+[Create deep links](../concepts/build-and-test/deep-links.md)
