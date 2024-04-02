@@ -321,7 +321,7 @@ App developer contact information. For more information, see [developer provided
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`defaultsupport`|Object||✔️| The default contact information for your app.|
+|`defaultsupport`|Object||✔️| The default developer contact information for your app.|
 |`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address for user support through chat. Minimum: 1; maximum: 10. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 |`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for support inquiry. Minimum: 1; maximum: 1. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 
