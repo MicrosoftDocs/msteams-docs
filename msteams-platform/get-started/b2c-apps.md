@@ -1,5 +1,5 @@
 ---
-title: Build business-to-consumer (B2C) app
+title: Integrate Teams meetings and calls in an external app
 description: Embed Teams calls & meetings in an external business-to-consumer (B2C) app
 ms.localizationpriority: high
 ms.date: 03/01/2024
