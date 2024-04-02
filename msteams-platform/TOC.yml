@@ -392,7 +392,7 @@
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
     displayName: Slow load times, iFrame constraints, invoke activities, dialog, task fetch, task submit, authentication
-  - name: Tabs link unfurling and Stageview
+  - name: Open content in Stageview
     href: tabs/tabs-link-unfurling.md
     displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal
   - name: Create conversational tabs
