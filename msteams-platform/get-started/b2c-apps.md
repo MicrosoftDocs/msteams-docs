@@ -10,7 +10,7 @@ ms.topic: reference
 
 Microsoft Teams delivers business-to-consumer (B2C) communication out-of-the-box. For example, mortgage officers at a bank can use Teams meetings to host virtual appointments with their customers. Customers can join those meetings in three ways:
 
-- Microsoft Teams native apps or desktop website (out-of-the-box)
+* Using Teams native apps or Teams web client.
 - Dialing into the meeting's telephone number (out-of-the-box)
 - Custom applications that interoperate with Teams calling and meetings
 
