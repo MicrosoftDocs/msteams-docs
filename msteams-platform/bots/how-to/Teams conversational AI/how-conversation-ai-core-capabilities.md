@@ -27,7 +27,7 @@ In the following section, we've used  the samples from the [AI library](https://
 
 ## Send or receive message
 
-You can send and receive messages using the Bot Framework. The app listens for the user to send a message , and when it receives this message, it deletes the conversation state and sends a message back to the user. The app also keeps track of the number of messages received in a conversation and echoes back the user’s message with a count of messages received so far.
+You can send and receive messages using the Bot Framework. The app listens for the user to send a message, and when it receives this message, it deletes the conversation state and sends a message back to the user. The app also keeps track of the number of messages received in a conversation and echoes back the user’s message with a count of messages received so far.
 
 # [.NET](#tab/dotnet6)
 
@@ -644,7 +644,7 @@ app.message_extensions.query("test")(on_query)
 
 A simple interface for actions and predictions allows bots to react when they have high confidence for taking action. Ambient presence lets bots learn intent, use prompts based on business logic, and generate responses.
 
-Thanks to our AI library, the prompt needs only to outline the actions supported by the bot, and supply a few-shot examples of how to employ those actions. Conversation history helps with a natural dialogue between the user and bot, such as *add cereal to groceries list*, followed by *also add coffee*, which should indicate that coffee is to be added to the groceries list.
+Thanks to our AI library, the prompt needs only to outline the actions supported by the bot, and supply a few-shot example of how to employ those actions. Conversation history helps with a natural dialogue between the user and bot, such as *add cereal to groceries list*, followed by *also add coffee*, which should indicate that coffee is to be added to the groceries list.
 
 The following is a conversation with an AI assistant. The AI assistant is capable of managing lists and recognizes the following commands:
 
@@ -657,7 +657,7 @@ The following actions are supported:
 * `removeItem list="<list name>" item="<text>"`
 * `summarizeLists`
 
-All entities are required parameters to actions
+All entities are required parameters to actions.
 
 * Current list names:
 
