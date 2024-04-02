@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 06/05/2023
 ---
 
-# Open Content in Stageview
+# Open content in Stageview
 
 Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview canvases allow the users to adopt mulitasking inside Teams, for example, you can have a specific chat alongside a new Teams window. You can also collaborate with others directly in a Teams multiwindow or work in large modal experience.
 
