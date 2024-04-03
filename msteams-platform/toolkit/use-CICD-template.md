@@ -124,15 +124,15 @@ The following variables and secrets are needed for the pipeline:
 
 * AZURE_SERVICE_PRINCIPAL_CLIENT_ID, AZURE_TENANT_ID, AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET.
 
-* Go to the `teamsapp.yml` file. In the `deploy` stage, the keys for the required variables are enclosed in ${{}}. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files within the env folder.
+* Go to the `teamsapp.yml` file. In the `deploy` stage, the keys for the required variables are enclosed in ${{}}. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
 
-Below is an example of teamsapp.yml, the "BOT_AZURE_APP_SERVICE_RESOURCE_ID" needs to be set in the repo variable.
+    Below is an example of teamsapp.yml, the "BOT_AZURE_APP_SERVICE_RESOURCE_ID" needs to be set in the repo variable.
 
-* Go to appPackage/manifest.json file, the placeholders wrapped in ${{}} are the needed variables' keys. If you used Teams Toolkit's "provision" command, you can find the values in /env files.
+* Go to the appPackage/manifest.json file. The keys for the required variables are enclosed in ${{}} placeholders. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
 
-Below is an example of manifest.json snippet, the "TEAMS_APP_ID" needs to be set in the repo variable.
+    Below is an example of `manifest.json` snippet, the "TEAMS_APP_ID" needs to be set in the repo variable.
 
-Therefore for the above example, you need to set the following variables in the repo.
+You need to set the following variables in the repo.
 
 key name
 AZURE_SERVICE_PRINCIPAL_CLIENT_ID
@@ -141,10 +141,10 @@ AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET
 BOT_AZURE_APP_SERVICE_RESOURCE_ID
 TEAMS_APP_ID
 
-You can set variables/secrets in repo's "Settings"->"Secrets and variables"->"Actions".
+You can set variables or secrets in repo's "Settings"->"Secrets and variables"->"Actions".
 
 > [!NOTE]
-> The AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET should be set as secret.
+> The AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET to be set as secret.
 > You can leverage GitHub environment if you want to use different sets of variables.
 
 You need to add variables set in repository explicitly into your yml file except these 3: AZURE_SERVICE_PRINCIPAL_CLIENT_ID, AZURE_TENANT_ID, AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET.
@@ -162,8 +162,43 @@ After the pipeline runs successfully you should see from the log that code has b
 
 ## Set up pipeline with Azure DevOps
 
-1. Create a CD yml in your project.
-Create a yml file under your project. Write the following content into this yml file.
+1. Create a cd.yml under .github > workflows folder and add the following code to the file:
+
+    ```yml
+        trigger:
+      - main
+    
+    pool:
+      vmImage: ubuntu-latest
+    
+    variables:
+      TEAMSAPP_CLI_VERSION: 3.0.0
+    
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: "20"
+          checkLatest: true
+    
+      - script: |
+          npm install @microsoft/teamsapp-cli@$(TEAMSAPP_CLI_VERSION)
+        displayName: "Install CLI"
+    
+      - script: |
+          npx teamsapp account login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET) --interactive false
+        displayName: "Login Azure by service principal"
+    
+      - script: |
+          npx teamsapp deploy --ignore-env-file true --interactive false
+        displayName: "Deploy to Azure"
+    
+      - script: |
+          npx teamsapp package
+        displayName: "Package app"
+    
+      - publish: $(System.DefaultWorkingDirectory)/appPackage/build/appPackage.zip
+        artifact: artifact
+    ```
 
 > [!NOTE]
 > The default pipeline will be triggered when push events happen on main branch, you can modify it to meet your own needs.
