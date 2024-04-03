@@ -25,7 +25,7 @@ items:
     * Displays activity feed notification.
     * Broadcast details available for members.
 
-    This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You'll see the following output:
+    This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You can see the following output:
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Screenshot shows the output of feed broadcast." border="true":::
 
@@ -100,8 +100,8 @@ items:
   content: |
     The following steps help you to create and register Teams authentication SSO in Azure portal:
 
-    * Create and register a new application under App registrations
-    * Use ngrok to create a tunnel to your web server's endpoints
+    * Create and register a new application under App registrations.
+    * Use ngrok to create a tunnel to your web server's endpoints.
       
     [!INCLUDE [Azure app registration](includes/get-started/azure-app-registration.md)]
 
