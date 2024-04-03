@@ -67,8 +67,7 @@ landingContent:
         url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
       - text: Build API-based message extension using Developer Portal for Teams
         url: messaging-extensions/build-api-based-message-extension.md
-      - text: Introduced systemDefault reserved activity type for send activity feed notifications (Developer preview)
-        url: tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis
+
  
     - linkListType: reference
       links:
