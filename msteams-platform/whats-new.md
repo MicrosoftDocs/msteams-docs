@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
-* ***April 1, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
+* ***April 01, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
 
 * ***April 02, 2024***: [Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.](m365-apps/overview.md#outlook-add-ins)
 
