@@ -209,7 +209,7 @@ To display a specific chat in the side panel, you must specify a `threadId`. Oth
 
 > [!NOTE]
 >
-> * All deep links must be encoded before pasting the URL. Unencoded URLs aren't supported.
+> * All deep links must be encoded before you paste the URL. Unencoded URLs aren't supported.
 > * When you invoke Stageview from a certain context, ensure that your app works in that context.
 > * When adding a threadId, ensure your app works in the context of the threadId that's passed. If the context fails, the experience falls back to the personal context.
 
@@ -237,7 +237,7 @@ Encoded deep link URL to invoke Collaborative Stageview:
 
 [!INCLUDE [Deep link query parameters](../includes/stageview-deep-link-query.md)]
 
-Whether you want to facilitate multitasking, enhance collaboration, or provide a focused user experience, Stageview has a mode to suit your requirements.
+Whether you want to facilitate multitasking, enhance collaboration, or provide focused user experience, Stageview has a mode to suit your requirements.
 
 ## FAQs
 
