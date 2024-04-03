@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
-***April 3, 2024***: [Introduced python code sample for Teams AI library.](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+***April 3, 2024***: [Added support for python in Teams AI library.](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
 
 :::column-end:::
 :::row-end:::
