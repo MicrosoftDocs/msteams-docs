@@ -52,9 +52,11 @@ The following Teams features aren't currently supported in the new Teams client:
 
 The following Teams features aren't supported in the new Teams client:
 
-> * [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
-> * The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
-> * [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation and Media.
+* [Adaptive Card tabs](../tabs/how-to/build-adaptive-card-tabs.md) aren't supported in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you rebuild the tab as a web-based tab. For more information, see [build tabs for Teams](../tabs/what-are-tabs.md).
+
+* The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
+
+* [Location](../concepts/device-capabilities/location-capability.md#location-apis) and [Media](../concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation and Media.
 
 For more information on known issues and gaps in the new Teams client, see [new Microsoft Teams](/microsoftteams/new-teams-desktop-admin?tabs=teams-admin-center#known-issues).
 
