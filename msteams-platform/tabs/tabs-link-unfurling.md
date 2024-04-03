@@ -1,19 +1,19 @@
 ---
-title: Open content in multiwindow
+title: Open content in Stageview
 author: Rajeshwari-v
-description: Learn about the types of Stageview, a full screen UI component invoked to surface your app content. Open content in multiwindow experiences using deep links, Adaptive Cards, or Teams JavaScript client library (TeamsJS).
+description: Learn about the types of Stageview, a full screen UI component invoked to surface your app content. Open content in multi-window experiences using deep links, Adaptive Cards, or Teams JavaScript client library (TeamsJS).
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 06/05/2023
 ---
 
-# Open content in multiwindow
+# Open content in Stageview
 
-Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview or multiwindow allows users to adopt multitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
+Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview allows users to adopt multitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
 
 * Facilitate multitasking within Teams.
-* Support collaboration in a Teams multiwindow.
+* Support collaboration in a Teams multi-window.
 * Focus on specific tasks in a large modal experience.
 
 > [!NOTE]
@@ -215,11 +215,11 @@ To display a specific chat in the side panel, you must specify a `threadId`. Oth
 
 #### Syntax
 
-Deep link syntax for Collaborative Stageview:
+**Deep link syntax for Collaborative Stageview:**
 
 `https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso","openMode":"popoutWithChat","threadId":"threadId"}`
 
-Encoded deep link syntax for Collaborative Stageview:
+**Encoded deep link syntax for Collaborative Stageview:**
 
 `https://teams.microsoft.com/l/stage/%7BappId%7D/0?context=%7B%22contentUrl%22:%22contentUrl%22,%22websiteUrl%22:%22websiteUrl%22,%22name%22:%22Contoso%22,%22openMode%22:%22popoutWithChat%22,%22threadId%22:%22threadId%22%7D`
 
@@ -227,7 +227,7 @@ Encoded deep link syntax for Collaborative Stageview:
 <details>
 <summary><b>Example</b></summary>
 
-Encoded deep link URL to invoke Collaborative Stageview:
+**Encoded deep link URL to invoke Collaborative Stageview:**
 
 `https://teams.microsoft.com/l/stage/6d621545-9c65-493c-b069-2b978b37c117/0?context=%7B%22appId%22%3A%226d621545-9c65-493c-b069-2b978b37c117%22%2C%22contentUrl%22%3A%22https%3A%2F%2F3282-115-111-228-84.ngrok-free.app%22%2C%22websiteUrl%22%3A%22https%3A%2F%2F3282-115-111-228-84.ngrok-free.app%22%2C%22name%22%3A%22DemoStageView%22%2C%22openMode%22%3A%22popoutWithChat%22%2C%22threadId%22%3A%2219%3Abe817b823c204cde8aa174ae146251dd%40thread.v2%22%7D`
 
@@ -302,11 +302,6 @@ Collaborative Stageview from a deep link or a stageView API comes with the addit
 </br>
 
 </details>
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create conversational tabs](~/tabs/how-to/conversational-tabs.md)
 
 ## See also
 

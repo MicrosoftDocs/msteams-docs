@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
-***April 05, 2024***: [Stageview API with the `openmode` property allows you to define the Stageview response.](tabs/tabs-link-unfurling.md)
+***April 05, 2024***: [Stageview API with the openmode property allows you to open your app content in different Stageview experience.](tabs/tabs-link-unfurling.md)
 
 :::column-end:::
 :::row-end:::
