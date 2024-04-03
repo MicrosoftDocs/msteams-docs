@@ -13,30 +13,109 @@ ms.date: 10/19/2023
 > [!NOTE]
 > API-based message extensions only support search commands.
 
-API-based message extensions are a type of Teams app that integrates your chat functionality directly into Teams, enhancing your app's usability and offering a seamless user experience.
+API-based message extensions are a type of Teams app that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
 
 Before you get started, ensure that you meet the following requirements:
 </br>
 <details>
 <summary id="OAD" >1. OpenAPI Description (OAD)</summary>
 
-Users must not enter a parameter for a header or cookie. If you need to pass headers, a default value for the header can be set in the specification. This simplifies the user experience and reduces the risk of errors.
 
-* The `auth` property must not be specified.
-* JSON and YAML are the supported formats.
+ Ensure that you adhere to following guidelines for OpenAPI Description (OAD) document:
+
 * OpenAPI versions 2.0 and 3.0.x are supported.
-* Teams doesn't support the `oneOf`, `anyOf`, `allOf`, and `not` (swagger.io) constructs.
-* Constructing arrays for the request isn't supported, however, nested objects within a JSON request body are supported.
-* The request body, if present, must be application/Json to ensure compatibility with a wide range of APIs.
+* JSON and YAML are the supported formats.
+* The request body, if present, must be application/Json.
 * Define an HTTPS protocol server URL for the `servers.url` property.
-* Only single parameter search is supported.
-* Only one required parameter without a default value is allowed.
 * Only POST and GET HTTP methods are supported.
-* OpenAPI Description document must have an `operationId`.
-* The operation must not have a required Header or Cookie parameters without default values.
-* A command must have exactly one parameter.
-* Ensure that there are no remote references in the OpenAPI Description document.
+* The OpenAPI Description document must have an `operationId`.
+* Only one required parameter without a default value is allowed.
 * A required parameter with a default value is considered optional.
+* Users must not enter a parameter for a header or cookie.
+* The operation must not have a required Header or Cookie parameters without default values.
+* Ensure that there are no remote references in the OpenAPI Description document.
+* Constructing arrays for the request isn’t supported; however, nested objects within a JSON request body are supported.
+* Teams doesn't support the `oneOf`, `anyOf`, `allOf`, and `not` (swagger.io) constructs.
+
+The following code is an example of an OpenAPI Description document:
+
+      ```yml
+      openapi: 3.0.1
+      info:
+      title: OpenTools Plugin
+      description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+      version: 'v1'
+      servers:
+      - url: https://gptplugin.opentools.ai
+      paths:
+      /tools:
+         get:
+            operationId: searchTools
+            summary: Search for AI Tools
+            parameters:
+            - in: query
+               name: search
+               required: true
+               schema:
+                  type: string
+               description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+            responses:
+            "200":
+               description: OK
+               content:
+                  application/json:
+                  schema:
+                     $ref: '#/components/schemas/searchToolsResponse'
+            "400":
+               description: Search Error
+               content:
+                  application/json:
+                  schema:
+                     $ref: '#/components/schemas/searchToolsError'
+      components:
+      schemas:
+         searchToolsResponse:
+            required:
+            - search
+            type: object
+            properties:
+            tools:
+               type: array
+               items:
+                  type: object
+                  properties:
+                  name:
+                     type: string
+                     description: The name of the tool.
+                  opentools_url:
+                     type: string
+                     description: The URL to access the tool.
+                  main_summary:
+                     type: string
+                     description: A summary of what the tool is.
+                  pricing_summary:
+                     type: string
+                     description: A summary of the pricing of the tool.
+                  categories:
+                     type: array
+                     items:
+                        type: string
+                     description: The categories assigned to the tool.
+                  platforms:
+                     type: array
+                     items:
+                        type: string
+                     description: The platforms that this tool is available on.
+               description: The list of AI tools.
+         searchToolsError:
+            type: object
+            properties:
+            message:
+               type: string
+               description: Message of the error.
+      ```
+
+For more information, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
 
 </details>
 
@@ -44,18 +123,25 @@ Users must not enter a parameter for a header or cookie. If you need to pass hea
 
 <details><summary>2. App manifest</summary>
 
+Ensure that you adhere to following guidelines for app manifest:
+
 * Set the app manifest version to `devPreview`.
 * Set `composeExtensions.composeExtensionType` to `apiBased`.
-* Define `composeExtensions.apiSpecificationFile` as the relative path to the OpenAPI Description file within the folder.
-* Define `apiSpecificationFile` as the relative path to the OpenAPI description document.
-* Define `apiResponseRenderingTemplateFile` as the relative path to the response rendering template.
-* Each command must have a link to the response rendering template.
+* Define `composeExtensions.apiSpecificationFile` as the relative path to the OpenAPI Description file within the folder. This links the app manifest to the API specification.
+* Define `apiResponseRenderingTemplateFile` as the relative path to the response rendering template. This specifies the location of the template used for rendering API responses.
+* Each command must have a link to the response rendering template. This connects each command to its corresponding response format.
+* If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description document.
+* If there’s no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
+* The `Commands.id` property in the app manifest must match the corresponding `operationId` in the OpenAPI Description.
+* A response rendering template must be defined per command, which is used to convert responses from an API.
 * Full description must not exceed 128 characters.
-* A command must have exactly one parameter.
-* Add a new optional property `authorization` under the `composeExtensions` node. This property should be null for bot-based ME and specified only for API ME.
-* Define the type of authentication your application uses by setting the `authType` property under the `authorization` node. The possible values for this property are `none`, `apiSecretServiceAuth`, `microsoftEntra`, and `userAuth`.
+* Add `authorization` under the `composeExtensions`.
+* Define the type of authentication your application by setting the `authType` property under the `authorization`. The supported values are `none`, `apiSecretServiceAuth`, `microsoftEntra`, and `userAuth`.
 * Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses AAD SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`.
 * If your application uses API key based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
+* You can use the Teams Store app validation tool to validate the app package, including the app manifest and the OpenAPI description document. This ensures the app meets Teams Store standards.
+* You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, which includes the app manifest and the OpenAPI description document.
+
 
 </details>
 
@@ -103,20 +189,6 @@ The following is a JSON example for a list of products to create a card result f
 ```
 
 The array of results is under `products`, nested under `warehouse`, so the JSON path is `warehouse.products`.
-
-</details>
-</br>
-
-<details><summary>4. API message extension</summary>
-
-API-based message extensions are a potent tool that enhances your Teams app's functionality by integrating with external APIs. This enhances the capabilities of your app and provides a richer user experience. To implement message extension from an API, you need to follow these guidelines:
-
-* The `Commands.id` property in app manifest must match the corresponding `operationId` in the OpenAPI Description. For example, if the operation ID is `getProduct`, the command ID must be `getProduct`.
-* If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description document.
-* If there's no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
-* A command can't have more than one parameter.
-* A response rendering template must be defined per command, which is used to convert responses from an API. The command section of the manifest must point to this template file under `composeExtensions.commands.apiResponseRenderingTemplateFile` within the app manifest. Each command points to a different response rendering template file.
-* You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, which includes the app manifest and the OpenAPI description document.
 
 </details>
 
@@ -171,9 +243,9 @@ You can authorize incoming requests to your service by configuring a static API 
     {
       "composeExtensionType": "apiBased",
       "authorization": {
-        "authType": "apiSecretServiceAuth ",
+        "authType": "apiSecretServiceAuth",
         "apiSecretServiceAuthConfiguration": {
-            "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
+            "apiSecretRegistrationId": "9xxxxb0f-xxxx-40cc-xxxx-15xxxxxxxxx3"
         }
       },
 ```
