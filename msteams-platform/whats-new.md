@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
-***April 1, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
+***April 3, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
 
 :::column-end:::
 :::row-end:::
