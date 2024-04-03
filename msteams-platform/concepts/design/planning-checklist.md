@@ -5,7 +5,6 @@ description: Learn to plan your app using the checklist to ensure your plan cove
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.author: surbhigupta
-ms.topic: conceptual
 ms.date: 07/28/2022
 ---
 
