@@ -28,9 +28,9 @@ Users can read the activity feed notifications in the preview within Teams activ
 
 ### Interactive notification bot
 
-Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal chat, a group chat, or a channel. An interactive notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by an HTTP post request.
+Microsoft Teams Toolkit allows you to build apps that capture events and send them as bot notifications to a personal chat, a group chat, or a channel. An interactive notification bot template creates an app that sends a message to Teams with Adaptive Cards or with plain text triggered by an HTTP post request.
 <br><br>
-Users can read the bot notification in an Adaptive Card. When an interactive notification bot sends a message, the bot conversation is highlighted in bold or dotted in the Teams chat.
+When an interactive notification bot sends a message, the bot conversation is highlighted in bold or dotted in the Teams chat that draws the user’s attention from where they can read and respond to the message.
 
    :::column-end:::
 
