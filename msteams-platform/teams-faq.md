@@ -848,11 +848,13 @@ For more information about Node js code sample, see [Bot SSO quick-start](https:
 
 ## Stageview
 
+</br>
+
 <details>
 
 <summary>Which Stageview should I use?</summary>
 
-Collaborative Stageview allows the users to open content along with a side panel conversation in a Teams window. We recommend this view for most of the collaboration scenarios.
+Collaborative Stageview allows the users to open content along with a side panel conversation in a Teams window. This view is best suited for most of the collaboration scenarios.
 
 </br>
 
@@ -870,9 +872,9 @@ Stageview Modal is useful to display rich content to the users, such as page, da
 
 <details>
 
-<summary>When Stageview is invoked, the content opens in Collaborative Stageview but gets loaded in the main Teams window instead of a new window. How to open in a new Teams window?</summary>
+<summary>When Stageview is invoked, the content opens in Collaborative Stageview but gets loaded in the main Teams window instead of a new window. How to open the content in a new window?</summary>
 
-Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](resources/schema/manifest-schema.md).
+Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](../resources/schema/manifest-schema.md).
 
 </br>
 
@@ -880,9 +882,9 @@ Ensure that your `contentUrl` domain is accurately reflected in the manifest `va
 
 <details>
 
-<summary>The `contentUrl` matches `validDomains` but why any content isn't still displayed in a new Teams window?</summary>
+<summary>Why isn't any content displayed in a new Teams window even when `contentUrl` matches with `validDomains`?</summary>
 
-Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app is loaded successfully. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out, and displays an error screen with a retry option. For app updates, this step is applicable for tabs that are already configured. If you don't perform this step, an error screen is displayed for the existing users.
+Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app is loaded successfully. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out and displays an error screen with a retry option. For app updates, this step is applicable for tabs that are already configured. If you don't perform this step, an error screen is displayed for the existing users.
 
 </br>
 
@@ -902,7 +904,7 @@ No, deep links aren't supported in `contentUrl`.
 
 <summary>How do I keep a specific thread shown alongside my content?</summary>
 
-Collaborative Stageview from a deep link or stageView API comes with the additional `threadId` parameter. You can explicitly define the chat thread to be displayed in the side panel for your specific `contentUrl`. For more information about retrieving a `threadId`, see [get conversation thread](/graph/api/group-get-thread).
+Collaborative Stageview from a deep link or a stageView API comes with the additional `threadId` parameter. You can explicitly define the chat thread to be displayed in the side panel for your specific `contentUrl`. For more information about retrieving a `threadId`, see [get conversation thread](/graph/api/group-get-thread).
 
 </br>
 
