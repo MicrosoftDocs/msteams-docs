@@ -50,7 +50,7 @@ Stageview Modal is a full-screen UI component used to render your app content in
 > [!NOTE]
 > Teams web client supports Stageview Modal only.
 
-:::image type="content" source="~/assets/images/tab-images/modal-view1.png" alt-text="The illustration shows the Stageview Modal in Teams."
+:::image type="content" source="~/assets/images/tab-images/modal-view1.png" alt-text="The screenshot shows the Stageview Modal in Teams."
 
 ## Invoke Stageview
 
