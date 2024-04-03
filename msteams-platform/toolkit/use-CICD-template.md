@@ -51,33 +51,80 @@ You can use [Teams Toolkit command line interface](Teams-Toolkit-CLI.md) to auto
     1. You can manually prepare these resources by examining the Bicep files located in the infra folder.
     1. You can run Teams Toolkit `Provision` command to prepare these Azure resources automatically.
 
-1. Set up a service principal. Make sure you have a service principal and its access policies on resources are properly configured. For more information, see
+1. Set up a service principal. Make sure you have a service principal and its access policies on resources are properly configured. For more information, see [create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal) and [create service principal using Entra CLI.](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash)
 
-    1. [Create service principal using Entra portal.](/entra/identity-platform/howto-create-service-principal-portal)
-    1. [Create service principal using Entra CLI.](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash)
+The Teamsapp command-line interface (CLI) supports Azure login using a service principal secret. To proceed, [create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the service principal's client ID, client secret, and tenant ID. You'll need these details for the following steps:
 
-The Teamsapp command-line interface (CLI) supports Azure login using a service principal secret. To proceed, [create a secret](/entra/identity-platform/howto-create-service-principal-portal) and store the service principal's client ID, client secret, and tenant ID. You'll need these details for the following steps:
+1. Prepare a GitHub or Azure repository.
 
-1. Prepare a GitHub/Azure repository.
+    1. [Set up pipeline with GitHub](#set-up-pipeline-with-github).
+    1. [Set up pipeline with Azure DevOps](#set-up-pipeline-with-azure-devops).
 
-After you meet the above prerequisites, you can follow the steps below to setup the pipeline. This section provides tutorial for GitHub and Azure DevOps, if you wish to use other platforms, you can also refer to this section for guidance.
+If you wish to use other platforms, you can also refer to this section for guidance.
 
 ## Set up pipeline with GitHub
 
-1. Create a CD yml in your project
+1. Create a cd.yml under .github > workflows folder and add the following code to the file:
 
-Create a cd.yml file under .github/workflows/ folder. Write the following content into this yml file.
+    ```yaml
+    on:
+      push:
+        branches:
+          - main
+    jobs:
+      build:
+        runs-on: ubuntu-latest
+        env:
+          TEAMSAPP_CLI_VERSION: "3.0.0"
+          # Add extra environment variables here so that teamsapp cli can use them.
+    
+        steps:
+          - name: "Checkout Github Action"
+            uses: actions/checkout@master
+    
+          - name: Setup Node 20.x
+            uses: actions/setup-node@v1
+            with:
+              node-version: "20.x"
+    
+          - name: install cli
+            run: |
+              npm install @microsoft/teamsapp-cli@${{env.TEAMSAPP_CLI_VERSION}}
+    
+          - name: Login Azure by service principal
+            run: |
+              npx teamsapp account login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
+              --service-principal true \
+              --tenant ${{vars.AZURE_TENANT_ID}} \
+              --password ${{secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET }} \
+              --interactive false
+    
+          - name: Deploy to hosting environment
+            run: |
+              npx teamsapp deploy --ignore-env-file true \
+              --interactive false
+    
+          - name: Package app
+            run: |
+              npx teamsapp package
+    
+          - name: upload appPackage
+            uses: actions/upload-artifact@v4
+            with:
+              name: artifact
+              path: appPackage/build/appPackage.zip
+    ```
 
 > [!NOTE]
-> The default pipeline will be triggered when push events happen on main branch, you can modify it to meet your own needs.
+> The default pipeline triggers when push events occur on the main branch. You've the option to modify it to suit your specific requirements.
 
-2. Set variables/secrets in the repository.
+2. Set variables or secrets in the repository.
 
 The following variables and secrets are needed for the pipeline:
 
 * AZURE_SERVICE_PRINCIPAL_CLIENT_ID, AZURE_TENANT_ID, AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET.
 
-* Go to teamsapp.yml file, in deploy stage, the placeholders wrapped in ${{}} are the needed variables' keys. If you used Teams Toolkit's "provision" command, you can find the values in /env files.
+* Go to the `teamsapp.yml` file. In the `deploy` stage, the keys for the required variables are enclosed in ${{}}. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files within the env folder.
 
 Below is an example of teamsapp.yml, the "BOT_AZURE_APP_SERVICE_RESOURCE_ID" needs to be set in the repo variable.
 
