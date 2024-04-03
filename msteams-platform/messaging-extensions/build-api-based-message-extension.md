@@ -126,11 +126,45 @@ You can implement authentication in API-based search message extensions to provi
 
 # [None](#tab/none)
 
-
-
 # [API service auth](#tab/api-service-auth)
 
-API secret service authentication is a secure method for your app to authenticate with API. You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call by the bot. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID returned when you submitted the API key through the Developer portal for Teams.
+API secret service authentication is a secure method for your app to authenticate with API.
+
+### Register an API key
+
+API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  You can then paste the API key ID in the simplified messaging extension and the API key ID enables the authentication for the API calls that are behind an auth.
+
+To register an API Key, follow these steps:
+
+1. Go to **Tools** > **API Key Registration**.
+
+1. Select **+ New API key**.
+
+1. In the **API key registration** page, under **Register an API key**, update the following:
+
+   1. **Description**: Description of the API Key.
+   1. **Add domain**: Update the base path for API endpoints. The path must be a secure HTTPS URL, include a fully qualified domain name, and can optionally include a specific path. For example, `https://api.yelp.com`.
+
+1. Under **Set a target tenant**, select the following:
+   |Option   |When to use  | description|
+   |---------|---------|----------------|
+   |**Home tenant**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        |  The API key is only usable within the tenant where the the API is registered. |
+   |**Any tenant**     | After you've completed testing the app and want to enable the app across different tenants. Ensure that you update your target tenant to **Any tenant** before submitting your app package to the Partner Center.        | The API key can be used in other tenants after the app is available in the Teams Store. |
+
+1. Under **Set a Teams app**, select the following:
+
+   |Option   |When to use  | description|
+   |---------|---------|----------------|
+   |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key is can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
+   |**Existing Teams app**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
+
+1. Select **+ Add Secret** and enter the OpenAI API secret key.
+
+   You can maintain up to two secrets for each API key registration. If one key is compromised, it can be promptly removed and allows Teams to switch to the second key. Also, if the first key results in a 401 error, Teams automatically attempts to use the second key. It helps with uninterrupted service for users and eliminates any potential downtime during the creation of a new secret.
+
+1. Select **Save**. An **API key registration ID** is generated.
+
+You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you [submit the API key](#api-service-authtabapi-service-auth) through the Developer portal for Teams.
 
 ```json
 "composeExtensions": [
@@ -144,36 +178,9 @@ API secret service authentication is a secure method for your app to authenticat
       },
 ```
 
-### Register an API Key
-
-API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  You can then paste the API key ID in the simplified messaging extension UI to enable the authentication.
-
-To register an API Key, follow these steps:
-
-1. Go to **Tools** > **API Key Registration**.
-
-1. Select **New API Key**.
-
-1. In the **Register an API key** page, update the following:
-
-   1. **Description**: Description of the API Key.
-   1. **Add Domain**: The domain where you host the API.
-
-1. Under **Set a target tenant**, select the following:
-   1. If you want to use the API key to call the APIs for a specific tenant, select **Home tenant**.
-   1. If you want to use the API key to call the APIs for any tenant, select **Any tenant**.
-
-1. Under **Set a Teams app**, select the following:
-   1. If you want the app that matches the given teams App ID to use the API key, select **Existing Teams app**.
-   1. If you want the app that matches any teams App ID to use the API key, select **Any Teams app**.
-
-1. Select **+ Add Secret** and enter the OpenAI API secret key.
-
-1. Select **Save**. An **API key registration ID** is generated.
-
 # [Microsoft Entra ID](#tab/microsoft-entra-id)
 
-`microsoftEntra` authentication method uses an app user's Teams identity to provide them access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
+`microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
 
 ### Prerequisites
 
