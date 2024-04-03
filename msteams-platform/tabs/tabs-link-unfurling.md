@@ -1,5 +1,5 @@
 ---
-title: Open content in Stageview
+title: Open content in multiwindow
 author: Rajeshwari-v
 description: Learn about the types of Stageview, a full screen UI component invoked to surface your app content. Open content in multiwindow experiences using deep links, Adaptive Cards, or Teams JavaScript client library (TeamsJS).
 ms.topic: conceptual
@@ -8,9 +8,9 @@ ms.localizationpriority: high
 ms.date: 06/05/2023
 ---
 
-# Open content in Stageview
+# Open content in multiwindow
 
-Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview canvas allows users to adopt multitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
+Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview or multiwindow allows users to adopt multitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
 
 * Facilitate multitasking within Teams.
 * Collaborate with others in a Teams multiwindow.
@@ -129,7 +129,7 @@ The following JSON code is an example to create an action button in an Adaptive 
 * The `invoke` workflow must be similar to the `appLinking` workflow.
 * The `Action.Submit` must be configured as `Open` to maintain consistency.
 
-If your app isn't optimized to work in Teams mobile client, Stageview for apps distributed through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser. The browser opens the URL specified in the `websiteUrl` parameter of the `TabInfo` object.
+If your app isn't optimized to work in Teams mobile client, Stageview for apps distributed through the [Microsoft Teams Store](../concepts/deploy-and-publish/apps-publish-overview.md) opens in a default web browser.
 
 ### Invoke from stageView API
 
@@ -213,12 +213,13 @@ For more information on stageView API, see [stageView module](/javascript/api/@m
 
 To invoke Stageview through deep link from your tab or personal app, wrap the deep link URL in the [app.openLink(url) API](/javascript/api/%40microsoft/teams-js/app#@microsoft-teams-js-app-openlink) and define the `openMode` property for the chat content to open. When the openMode property isn't specified, Stageview response from a deep link defaults to Collaborative Stageview.
 
-You must also specify a `threadId` to display a specific chat else the side panel conversation brings the group chat or channel thread from which the deep link is invoked.
+To display a specific chat in the side panel, you must specify a `threadId`. Otherwise, the side panel conversation brings the group chat or channel thread from which the deep link is invoked.
 
 > [!NOTE]
 >
 > * All deep links must be encoded before pasting the URL. Unencoded URLs aren't supported.
-> * When you invoke Stageview from a certain context, ensure that your app works in that context. For example, to launch Stageview from a personal app, ensure that the app supports personal scope only.
+> * When you invoke Stageview from a certain context, ensure that your app works in that context.
+> * When including a threadId, ensure your app works in the context of the threadId that is passed. If the context fails, it falls back to the personal context.
 
 #### Syntax
 
@@ -231,9 +232,6 @@ Deep link syntax for Collaborative Stageview:
 Encoded deep link URL to invoke Stageview:
 
 `https://teams.microsoft.com/l/stage/{appId}/0?context=%7B%22contentUrl%22%3A%22contentUrl%22%2C%22websiteUrl%22%3A%22websiteUrl%22%2C%22name%22%3A%22Contoso%22%2C%22openMode%22%3A%22popoutWithChat%22%7D`
-
-> [!IMPORTANT]
-> Stageview through deep link is supported in Classic Teams client only.
 
 #### Deep link query parameters
 

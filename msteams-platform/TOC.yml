@@ -369,6 +369,9 @@
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
     displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
+  - name: Open content in multiwindow
+    href: tabs/tabs-link-unfurling.md
+    displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
   - name: Create a configuration page
     href: tabs/how-to/create-tab-pages/configuration-page.md
     displayName: configurationUrl
@@ -392,9 +395,6 @@
   - name: Build tabs with Adaptive Cards
     href: tabs/how-to/build-adaptive-card-tabs.md
     displayName: Slow load times, iFrame constraints, invoke activities, dialog, task fetch, task submit, authentication
-  - name: Open content in Stageview
-    href: tabs/tabs-link-unfurling.md
-    displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal
   - name: Create conversational tabs
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
