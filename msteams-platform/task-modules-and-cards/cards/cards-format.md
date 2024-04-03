@@ -833,11 +833,11 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ### CodeBlock in Adaptive Cards
 
-You can share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. Additionally, you can add action buttons to view the code at its source or edit the code in integrated development environments (IDEs) such as Visual Studio or Visual Studio Code.
+Share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. Additionally, you can add action buttons to view the code at its source or edit the code in integrated development environments (IDEs) such as Microsoft Visual Studio or Microsoft Visual Studio Code.
 
-The following screenshot shows an Adaptive Card displaying a code snippet:
+The following screenshot shows an Adaptive Card with a code snippet:
 
-  :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card displaying a code snippet.":::
+  :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card with a code snippet.":::
 
 The `CodeBlock` element supports the following languages only:
 
@@ -859,7 +859,7 @@ The `CodeBlock` element supports the following languages only:
 >
 > `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
 
-The following code shows an example of an Adaptive Card displaying a code snippet.
+The following code is an example of an Adaptive Card displaying a code snippet:
 
 ``` json
 {
@@ -887,12 +887,12 @@ The following code shows an example of an Adaptive Card displaying a code snippe
         {
             "type": "Action.OpenUrl",
             "title": "View in Azure Repos",
-            "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/teams-modular-packages/pullrequest/176883?_a=files"
+            "url": "https://azure.microsoft.com/en-us/products/devops/repos/"
         },
         {
             "type": "Action.OpenUrl",
             "title": "Edit in vscode.dev",
-            "url": "https://domoreexp.visualstudio.com/DefaultCollection/Teamspace/_git/teams-modular-packages/pullrequest/176883?_a=files"
+            "url": "https://vscode.dev/"
         }
     ]
 }
@@ -909,12 +909,12 @@ The `CodeBlock` element supports the following properties:
 > [!TIP]
 >
 > * Special characters have specific functions in the `codeSnippet` property. For example, the newline character `\n` triggers a line break.
-> * To display the newline character `\n` as part of the code snippet in the Adaptive Card, ensure that it's escaped as `\\n` in the `codeSnippet` property. Else, Teams renders the code after the `\n` in the next line of the card.
+> * To display the newline character `\n` as part of the code snippet in the Adaptive Card, ensure that you escape it as `\\n` in the `codeSnippet` property. Else, Teams renders the code after the `\n` in the next line of the card.
 
 ### Limitations
 
 * Adaptive Card with `CodeBlock` is only available in web and desktop Teams clients.
-* The code snippet generated in the Adaptive Card is read-only and not editable.
+* The code snippet in the Adaptive Card is read-only and not editable.
 * The Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user has to select **Expand** to see the rest of the code snippet.
 
 ## Adaptive Cards overflow menu
