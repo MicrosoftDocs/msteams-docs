@@ -136,8 +136,8 @@ Ensure that you adhere to following guidelines for app manifest:
 * A response rendering template must be defined per command, which is used to convert responses from an API.
 * Full description must not exceed 128 characters.
 * Add `authorization` under the `composeExtensions`.
-* Define the type of authentication your application by setting the `authType` property under the `authorization`. The supported values are `none`, `apiSecretServiceAuth`, `microsoftEntra`, and `userAuth`.
-* Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses AAD SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`.
+* Define the type of authentication your application by setting the `authType` property under the `authorization`. The supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.
+* Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses Microsoft Entra SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`.
 * If your application uses API key based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
 * You can use the Teams Store app validation tool to validate the app package, including the app manifest and the OpenAPI description document. This ensures the app meets Teams Store standards.
 * You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, which includes the app manifest and the OpenAPI description document.
@@ -150,6 +150,7 @@ Ensure that you adhere to following guidelines for app manifest:
 <details><summary>3. Response rendering template</summary>
 
 > [!NOTE]
+>
 > Teams supports Adaptive Cards up to version 1.5, and  the Adaptive Cards Designer supports up to version 1.6.
 
 * Use tools such as Fiddler or Postman to call the API and ensure that the request and the response are valid.
@@ -198,7 +199,9 @@ You can implement authentication in API-based search message extensions to provi
 
 # [None](#tab/none)
 
-# [API service auth](#tab/api-service-auth)
+You can update `none` as a value for `authorization` in an API-based message extension when the message extension does not require any authentication for the user to access the API. 
+
+# [API secret service auth](#tab/api-service-auth)
 
 API secret service authentication is a secure method for your app to authenticate with API.
 
@@ -259,11 +262,11 @@ You can authorize incoming requests to your service by configuring a static API 
 Before you start, ensure you have the following:
 
 * An Azure account with an active subscription.
-* Basic familiarity with Azure AD and Teams app development.
+* Basic familiarity with Microsoft Entra ID and Teams app development.
 
 To enable `microsoftEntra` authentication method for API-based message extension, follow these steps:
 
-1. **Configure App with Azure AD**: Create an Azure AD app to generate an app ID and application ID URI. This is used to configure scopes and authorize trusted client applications for generating access tokens. You can follow the steps outlined in the [Azure AD app creation guide](/azure/active-directory/develop/quickstart-register-app).
+1. **Configure App with Microsoft Entra ID**: Create an Microsoft Entra ID app to generate an app ID and application ID URI. This is used to configure scopes and authorize trusted client applications for generating access tokens. You can follow the steps outlined in the [Microsoft Entra ID app creation guide](/azure/active-directory/develop/quickstart-register-app).
 
 1. **Add Code to Handle Access Tokens**: Add the code to handle access tokens. This token should be sent to your app's server code in the Authorization header. Ensure to validate the access token when it's received. Here's an example of how to handle access tokens:
 
@@ -283,11 +286,11 @@ To enable `microsoftEntra` authentication method for API-based message extension
    });
    ```
 
-1. **Update app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated on Azure AD. This allows Teams to request access tokens on behalf of your app. The "webApplicationInfo" section in the manifest file is where you specify this information.
+1. **Update app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated on Microsoft Entra ID. This allows Teams to request access tokens on behalf of your app. The "webApplicationInfo" section in the manifest file is where you specify this information.
 
    ```json
     "webApplicationInfo": {
-      "id": "{Azure AD AppId}",
+      "id": "{Microsoft Entra ID AppId}",
       "resource": "api://subdomain.example.com/botId-{guid}"
     }
    ```
