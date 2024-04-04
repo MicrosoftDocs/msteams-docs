@@ -890,11 +890,11 @@ For more information, see [Office Add-ins manifest for Microsoft 365](/office/de
 
 ### extensions.requirements
 
-The `extensions.requirements` property specifies the [requirement sets](/javascript/api/requirement-sets) for  Microsoft 365 Add-ins. If the Microsoft 365 version doesn't support the specified requirements, then the extension won’t be available. Requirements are supported at the object and child object level.
+The `extensions.requirements` object specifies the scopes, form factors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the add-in to be installed. Requirements are also supported on the "ribbon", "runtime", "alternates", and "autoRunEvents" child properties to selectively filter out some features of the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`requirements.capabilities`| Array | | | Identifies the requirement set. <br>Options: `name` (required), `minVersion`, `maxVersion`|
+|`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
 |`requirements.capabilities.maxVersion`| String | | | Identifies the maximum version for the requirement set. |
@@ -903,7 +903,7 @@ The `extensions.requirements` property specifies the [requirement sets](/javascr
 
 ### extensions.runtimes
 
-The `extensions.runtimes` property configures the sets of runtimes and actions that each extension point can use.
+The `extensions.runtimes` array configures the sets of runtimes and actions that each extension point can use.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -911,7 +911,7 @@ The `extensions.runtimes` property configures the sets of runtimes and actions t
 |`type`| String enum | | ✔️ | Specifies the type of runtime. The supported enum value for [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime) is `general`. |
 |`code`| Object | | ✔️ | Specifies the location of code for the runtime. Based on `runtime.type`, add-ins can use either a JavaScript file or an HTML page with an embedded `script` tag that specifies the URL of a JavaScript file. Both URLs are necessary in situations where the `runtime.type` is uncertain. |
 |`code.page`| URL | | ✔️ | Specifies the URL of the web page that contains an embedded `script` tag, which specifies the URL of a JavaScript file (to be loaded in a [browser-based runtime](/office/dev/add-ins/testing/runtimes#browser-runtime)). |
-|`code.script`| URL | | ✔️ | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
+|`code.script`| URL | | | Specifies the URL of the JavaScript file to be loaded in [JavaScript-only runtime](/office/dev/add-ins/testing/runtimes#javascript-only-runtime). |
 |`lifetime`| String enum | | | Specifies the lifetime of the runtime. Runtimes with a `short` lifetime don’t preserve state across executions while runtimes with a `long` lifetime do. For more information, see [Runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes).|
 |`actions`| Array | | | Specifies the set of actions supported by the runtime. An action is either running a JavaScript function or opening a view such as a task pane.|
 |`actions.id`| String | 64 characters | ✔️ | Specifies the ID for the action, which is passed to the code file. |
@@ -921,6 +921,7 @@ The `extensions.runtimes` property configures the sets of runtimes and actions t
 |`actions.view`| String | 64 characters | | Specifies the view where the page must be opened. It's used only when `actions.type` is `openPage`. |
 |`actions.multiselect`| Boolean | | | Specifies whether the end user can select multiple items, such as multiple email messages, and apply the action to all of them.|
 |`actions.supportsNoItemContext`| Boolean | | | Allows task pane add-ins to activate without the Reading Pane enabled or a message selected. |
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the runtime to be included in the add-in. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
@@ -937,6 +938,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`contexts`| Array | 7 | | Specifies the Microsoft 365 application window in which the ribbon customization is available to the user. Each item in the array is a member of a string array. <br>Supported values: `mailRead`, `mailCompose`, `meetingDetailsOrganizer`, `meetingDetailsAttendee`, `onlineMeetingDetailsOrganizer`, `logEventMeetingDetailsAttendee`, `default`|
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the ribbon customization to appear. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
@@ -955,7 +957,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.label`| String | 64 characters | | Specifies the text displayed for the group. |
 |`tabs.groups.icons`| Array | | | Specifies the icons displayed for the group. |
 |`tabs.groups.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
-|`tabs.groups.icons.url`| URL| | | Specifies the absolute URL of the icon.|
+|`tabs.groups.icons.url`| URL| | ✔️| Specifies the absolute URL of the icon.|
 |`tabs.groups.controls`| Array | | | Configures the buttons and menus in the group. |
 |`tabs.groups.controls.id`| String | 64 characters| ✔️ | Specifies the ID for the control within the app. It must be different from any built-in control ID in the Microsoft 365 application and any other custom control. |
 |`tabs.groups.controls.items`| Array | | | Configures the items for a menu control. |
@@ -964,7 +966,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.items.label`| String | 64 characters| ✔️ | Specifies the text displayed for the items. |
 |`tabs.groups.controls.items.icons`| Array | | | Configures the icons for the custom item.|
 |`tabs.groups.controls.items.icons.size`| Number | |✔️| Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br>Required image sizes: `16`, `32`, `80`. |
-|`tabs.groups.controls.items.icons.url`| URL| | | Specifies the absolute URL of the icon.|
+|`tabs.groups.controls.items.icons.url`| URL| | ✔️ | Specifies the absolute URL of the icon.|
 |`tabs.groups.controls.items.supertip`| | |✔️| Configures a supertip for the custom item. A supertip is a UI feature that displays a brief box of help information about a control when the cursor hovers over it. The box may contain multiple lines of text. |
 |`tabs.groups.controls.items.supertip.title`| String | 64 characters | ✔️ | Specifies the title text of the supertip.|
 |`tabs.groups.controls.items.supertip.description`| String | 128 characters | ✔️ | Specifies the description of the supertip.|
@@ -1005,11 +1007,12 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`events`| Array | | ✔️ | Configures the event that cause actions in an Outlook Add-in to run automatically. For example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook Add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
+|`events`| Array |20 | ✔️ | Configures the event that cause actions in an Outlook Add-in to run automatically. For example, see [use smart alerts and the `OnMessageSend` and `OnAppointmentSend` events in your Outlook Add-ins](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest).|
 |`events.type`| String | 64 characters | | Specifies the type of event. For supported types, see [supported events](/office/dev/add-ins/outlook/autolaunch?tabs=xmlmanifest#supported-events).|
 |`events.actionId`| String | 64 characters | | Identifies the action that is taken when the event fires. The `actionId` must match with `runtime.actions.id`. |
 |`events.options`| Object | | | Configures how Outlook responds to the event.|
 |`events.options.sendMode`| String | | ✔️ | Specifies the actions to take during a mail send action. <br>Supported values: `promptUser`, `softBlock`, `block`. For more information, see [available send mode options](/office/dev/add-ins/outlook/smart-alerts-onmessagesend-walkthrough?tabs=jsonmanifest#available-send-mode-options).|
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the event handling code to run. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
@@ -1030,8 +1033,9 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`hide.storeOfficeAddin`| Object | | | Specifies a Microsoft 365 Add-in available in Microsoft AppSource. |
 |`hide.storeOfficeAddin.officeAddinId`| String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
-|`hide.customOfficeAddin`| | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
+|`hide.customOfficeAddin`| Object | | | Configures how to hide an in-market add-in that isn't distributed through AppSource.|
 |`hide.customOfficeAddin.officeAddinId`|String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
+|`requirements`| Object | | | Specifies the scopes, formFactors, and Office JavaScript Library requirement sets that must be supported on the Office client in order for the "hide", "prefer", or "alternateIcons" properties to take effect. For more information, see [Specify Office Add-in requirements in the unified manifest for Microsoft 365](/office/dev/add-ins/develop/requirements-property-unified-manifest).|
 |`requirements.capabilities`| Array | | | Identifies the requirement sets. <br>Options: `name` (required), `minVersion`, `maxVersion`|
 |`requirements.capabilities.name`| String | | ✔️ | Identifies the name of the requirement set. |
 |`requirements.capabilities.minVersion`| String | | | Identifies the minimum version for the requirement set. |
