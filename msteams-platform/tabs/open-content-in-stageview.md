@@ -37,7 +37,7 @@ Collaborative Stageview enables multitasking scenarios for your app content in T
 
 ### Stageview Multi-window
 
-Stageview Multi-window is useful for scenarios that requires a user to multitask in Teams without the need for collaboration. This view opens the app content in a new Teams window without a side panel conversation allowing users to focus on their task.
+Stageview Multi-window is useful for scenarios that require a user to multitask in Teams without the need for collaboration. This view opens the app content in a new Teams window without a side panel conversation allowing users to focus on their task.
 
 **Best usage**: When the content is opened from a nonconversational surface such as a personal app.
 
