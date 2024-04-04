@@ -1044,6 +1044,7 @@
         "source_path": "msteams-platform/get-started/teams-toolkit-tutorial.md",
         "redirect_url": "/microsoftteams/get-started/get-started-overview"
       },
+      {
         "source_path": "msteams-platform/tabs/tabs-link-unfurling.md",
         "redirect_url": "/microsoftteams/platform/tabs/open-content-in-stageview"
       }      
