@@ -23,7 +23,7 @@ Here's an illustration that shows the bot configuration experience:
    :::image type="content" source="../../assets/images/bots/scenario.gif" alt-text="Graphic shows the process for integrating a bot into a Teams channel.":::
 
 | Steps | Description |
-| --------------------------------- | --- |
+| --- | --- |
 ||Configure bot during installation|
 | 1 | Select **Add to a team** from the dropdown menu to add a bot to Teams.|
 | 2 | Enter the name of a channel in the search field.|
