@@ -17,11 +17,18 @@ If your bot's sole purpose is to deliver notification to users and isn't convers
 > [!NOTE]
 > The bot-only apps will surface in the personal app tray in both cases: `isNotificationOnly: true` or `isNotificationOnly: false`.
 
-The naming convention of the tab for your installed bot would be as follows:
+The tab naming convention for your installed bot depends on the `isNotificationOnly` manifest property setting:
 
 # [`isNotificationOnly: true`](#tab/true)
 
+When the `isNotificationOnly` manifest property is set to `true`, the tab for the installed bot app is named **Activity**.
+
+
 # [`isNotificationOnly: false`](#tab/false)
+
+When the `isNotificationOnly` manifest property is set to `false`, the tab for the installed bot app is named **Chat**.
+
+---
 
 ## App manifest
 
