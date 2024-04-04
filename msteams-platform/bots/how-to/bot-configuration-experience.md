@@ -89,15 +89,15 @@ For more information, see [app manifest schema](../../resources/schema/manifest-
 
 When a user installs the bot in a team or group chat scope:
 
-1. If the `fetchTask` parameter is set to **false** in the app manifest, the bot won't fetch a task module or an adaptive card. Instead, the bot user must provide a static task module or card that is used when the bot is invoked. For more information, see [task module.](../../task-modules-and-cards/what-are-task-modules.md)
+1. If the `fetchTask` parameter is set to **false** in the app manifest, the bot doesn't fetch a task module or an adaptive card. Instead, the bot user must provide a static task module or card that is used when the bot is invoked. For more information, see [task module.](../../task-modules-and-cards/what-are-task-modules.md)
 
 When a user installs the bot in a team or group chat scope, the `fetchTask: true` property in the app manifest file initiates `config/fetch` or `config/submit`.
 
-1. If the `fetchTask` parameter is set to **true** in the app manifest, the bot initiates `ConfigFetch` to fetch content. When invoking the bot, you've the option to return an Adaptive Card or a task module, depending on the context provided in channelData and userdata. For more information, see [create and send dialogs.](../../messaging-extensions/how-to/action-commands/create-task-module.md)
+1. If the `fetchTask` parameter is set to **true** in the app manifest, the bot initiates `ConfigFetch` to fetch content. When invoking the bot, you can return an Adaptive Card or a task module, depending on the context provided in channelData and userdata. For more information, see [create and send dialogs.](../../messaging-extensions/how-to/action-commands/create-task-module.md)
 
-   In response to the `ConfigFetch` request, you've two options:
+   You can respond to the `ConfigFetch` request in two ways:
 
-   1. `config/continue`: The bot’s capability to handle configuration fetch requests by presenting an Adaptive Card to the user that allows them to make a choice about the bot’s setup. If the user selects `Continue with more options`, the bot will present another adaptive card for further interaction. This creates an Adaptive Card using the `adaptiveCardForContinue` method and sets the response type to `continue`, which continues the interaction.
+   1. `config/continue`: The bot’s capability to handle configuration fetch requests by presenting an Adaptive Card to the user that allows them to make a choice about the bot’s setup. If the user selects `Continue with more options`, the bot presents another adaptive card for further interaction. This creates an Adaptive Card using the `adaptiveCardForContinue` method and sets the response type to `continue`, which continues the interaction.
 
       # [C#](#tab/teams-bot-sdk5)
 
@@ -151,7 +151,7 @@ When a user installs the bot in a team or group chat scope, the `fetchTask: true
         
         The `adaptiveCardForContinue` function creates an Adaptive Card that is shown when the user is expected to continue with a task or action. This card can contain information or options that the user needs to interact with to proceed further.
 
-        The `adaptiveCardForSubmit` function creates an Adaptive Card that is displayed when the user has completed a task or action and is ready to submit their input or decision. This card can provide a summary of the user’s selections or input and prompt them to confirm their submission.
+        The `adaptiveCardForSubmit` function creates an Adaptive Card that is displayed when the user completes a task or action and is ready to submit their input or decision. This card can provide a summary of the user’s selections or input and prompt them to confirm their submission.
 
         You can also send a message back to the user instead of an Adaptive Card. The `type: 'message'` property specifies that the response should be a message, and the value property contains the text of the message to be displayed.
 
@@ -245,11 +245,11 @@ When a user installs the bot in a team or group chat scope, the `fetchTask: true
          ```
       ---
 
-#### Sequence diagram for invokes
+#### Sequence diagram
 
 The following sequence diagram provides a clear perspective on message exchanges and task executions required to prepare the bot for use:
 
-   :::image type="content" source="../../assets/images/bots/sequence-diagram.png" alt-text="Screenshot shows the sequence diagram for invokes."lightbox="../../assets/images/bots/sequence-diagram.png":::
+   :::image type="content" source="../../assets/images/bots/sequence-diagram.png" alt-text="Screenshot shows the sequence diagram for invokes." lightbox="../../assets/images/bots/sequence-diagram.png":::
 
 ## Bot configuration experience in Teams
 
@@ -273,7 +273,7 @@ Configure the bot during installation, follow these steps:
 
 1. Select **Set up a bot**.
 
-   :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot in chat.":::
+   :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot option in a chat.":::
 
    The bot is installed in the chat.
 
@@ -285,7 +285,7 @@ You can reconfigure the bot post-installation in two ways:
 
    :::image type="content" source="../../assets/images/bots/mention-bot-in-compose-area.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
-1. Hover over the bot, the bot profile card appears. Select the settings icon in the bot profile card to update or change the bot's configuration settings.
+1. Hover over the bot, the bot profile card appears. To update or change the bot's configuration settings, select the settings icon in the bot profile card.
 
    :::image type="content" source="../../assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
