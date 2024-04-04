@@ -27,7 +27,7 @@ The following image shows an example of how you can integrate the Teams interope
 
 Virtual appointments are organized meetings between a customer and a business at a set time. The distinct separation between the customer and the business, along with the scheduled aspect of the interaction, are fundamental characteristics of most virtual appointments.
 
- For example, various industries use virtual appointments such as meetings with healthcare professionals, loan officers, or product support technicians.
+For example, various industries use virtual appointments such as meetings with healthcare professionals, loan officers, or product support technicians.
 
 To build a virtual appointments app, follow these steps:
 
