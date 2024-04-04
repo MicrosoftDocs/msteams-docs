@@ -26,7 +26,9 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
-***April 3, 2024***: [Share code snippets as Adaptive Cards with the CodeBlock property.](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)
+* ***April 05, 2024***: [Share code snippets as Adaptive Cards with the CodeBlock property.](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)
+* ***April 04, 2024***: [Stageview API with the openmode property allows you to open your app content in different Stageview experience.](tabs/open-content-in-stageview.md)
+* ***April 03, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
 
 :::column-end:::
 :::row-end:::
