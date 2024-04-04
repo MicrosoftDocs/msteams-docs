@@ -1019,6 +1019,10 @@
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/use-CICD-template-v4.md",
         "redirect_url": "/microsoftteams/platform/toolkit/use-CICD-template"
+      },
+      {
+        "source_path": "msteams-platform/tabs/tabs-link-unfurling.md",
+        "redirect_url": "/microsoftteams/platform/tabs/open-content-in-stageview"
       }      
     ]
 }
