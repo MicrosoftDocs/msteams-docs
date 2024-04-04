@@ -93,15 +93,15 @@ If you set the `fetchTask` property in the app manifest to:
 
    1. `config/continue`: `config/continue` is used to define a continuation of a task module or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
 
-   The `adaptiveCardForContinue` and `adaptiveCardForSubmit` are functions that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to generate Adaptive Cards for different scenarios based on the user’s interaction with the bot.
+      The `adaptiveCardForContinue` and `adaptiveCardForSubmit` are functions that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to generate Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
-   When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.   
+      When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.   
 
-       # [C#](#tab/teams-bot-sdk5)
+      # [C#](#tab/teams-bot-sdk5)
 
-       * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
+      * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
 
-       * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L168)
+      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L168)
 
          ```csharp
           ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
@@ -124,11 +124,11 @@ If you set the `fetchTask` property in the app manifest to:
             };
          ```
 
-       # [JavaScript](#tab/JS2)
+      # [JavaScript](#tab/JS2)
 
-       * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
+      * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
 
-       * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L83)
+      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L83)
 
          ```javascript
             const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
@@ -146,11 +146,11 @@ If you set the `fetchTask` property in the app manifest to:
             return response;
          ```
       
-        # [C#](#tab/teams-bot-sdk6)
+      # [C#](#tab/teams-bot-sdk6)
 
-        * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
+      * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
 
-        * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L131)
+      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L131)
 
             ```csharp
             ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
@@ -165,11 +165,11 @@ If you set the `fetchTask` property in the app manifest to:
                   return Task.FromResult(response);
             ```
 
-        # [JavaScript](#tab/JS5)
+      # [JavaScript](#tab/JS5)
 
-        * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
+      * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
 
-        * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L120)
+      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L120)
 
             ```javascript
                {
@@ -181,7 +181,6 @@ If you set the `fetchTask` property in the app manifest to:
                }
                return response;
             ```
-
       ---
 
    1. `config/auth`: You can also request the user to authenticate as a response to `config/continue` request.  The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
