@@ -237,12 +237,6 @@ If you set the `fetchTask` property in the app manifest to:
 
       ---
 
-#### Bot configuration experience workflow
-
-The following image provides a clear perspective on message exchanges and task executions required to prepare the bot:
-
-   :::image type="content" source="../../assets/images/bots/sequence-diagram.png" alt-text="Screenshot shows the sequence diagram for invokes." lightbox="../../assets/images/bots/sequence-diagram.png":::
-
 ## Bot configuration experience in Teams
 
 After you've created and published the bot in Microsoft Teams Store, the user can follow these steps: 
