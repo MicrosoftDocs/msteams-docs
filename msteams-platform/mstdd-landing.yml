@@ -47,6 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Added support for python in Teams AI library
+        url: bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md
       - text: Updated the common reasons for app validation failure to help your app pass the Teams Store submission process
         url: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
       - text: Configure Teams deep links using the msteams:// and https:// protocol handlers
@@ -65,8 +67,7 @@ landingContent:
         url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
       - text: Build API-based message extension using Developer Portal for Teams
         url: messaging-extensions/build-api-based-message-extension.md
-      - text: Introduced systemDefault reserved activity type for send activity feed notifications (Developer preview)
-        url: tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis
+
  
     - linkListType: reference
       links:
