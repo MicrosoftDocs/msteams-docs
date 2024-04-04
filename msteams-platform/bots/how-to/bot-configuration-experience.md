@@ -277,7 +277,7 @@ To configure the bot, follow these steps:
 
 ### Reconfigure the bot
 
-There are two ways to initiate bot configuration settings post-installation:
+To reconfigure the bot, follow these steps:
 
 1. @mention the bot in the message compose area.
 
@@ -286,26 +286,6 @@ There are two ways to initiate bot configuration settings post-installation:
 1. When the user hovers over the bot, the bot profile card appears. The user can select the settings icon in the bot profile card to update or change the bot's configuration settings.
 
    :::image type="content" source="../../assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
-
-To reconfigure the bot, follow these steps:
-
-1. Go to the chat and **@mention** the bot in the message compose area and select **Send**.
-
-   :::image type="content" source="../../assets/images/bots/mention-bot.png" alt-text="Screenshot shows the interaction of bot.":::
-
-1. When you hover over the bot from the conversation, an Adaptive Card appears. Select the **Settings** icon in the Adaptive Card.
-
-   :::image type="content" source="../../assets/images/bots/bot-adaptive-card-interaction.png" alt-text="Screenshot shows the Adaptive Card with settings icon.":::
-
-   A bot configuration Adaptive Card appears.
-
-1. Reconfigure the bot settings and select **Submit**.
-
-   :::image type="content" source="../../assets/images/bots/reconfigure-bot-settings.png" alt-text="Screenshot shows the Adaptive Card with settings icon to reconfigure.":::
-
-   The bot sends a response message and now the bot is configured.
-
-   :::image type="content" source="../../assets/images/bots/setting-up-bot.png" alt-text="Screenshot shows the bot configuration set up is complete.":::
 
 ## Code sample
 
