@@ -47,6 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Added support for python in Teams AI library
+        url: bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md
       - text: Stageview API with the openmode property allows you to open your app content in different Stageview experience
         url: tabs/open-content-in-stageview.md
       - text: Updated the common reasons for app validation failure to help your app pass the Teams Store submission process
@@ -65,8 +67,7 @@ landingContent:
         url: m365-apps/extend-m365-meeting-app.md
       - text: Share to Teams from personal app or tab for Teams mobile clients
         url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
-      - text: Build API-based message extension using Developer Portal for Teams
-        url: messaging-extensions/build-api-based-message-extension.md
+
  
     - linkListType: reference
       links:
