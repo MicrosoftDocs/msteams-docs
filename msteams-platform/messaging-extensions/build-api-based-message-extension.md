@@ -20,7 +20,6 @@ Before you get started, ensure that you meet the following requirements:
 <details>
 <summary id="OAD" >1. OpenAPI Description (OAD)</summary>
 
-
  Ensure that you adhere to following guidelines for OpenAPI Description (OAD) document:
 
 * OpenAPI versions 2.0 and 3.0.x are supported.
@@ -142,7 +141,6 @@ Ensure that you adhere to following guidelines for app manifest:
 * You can use the Teams Store app validation tool to validate the app package, including the app manifest and the OpenAPI description document. This ensures the app meets Teams Store standards.
 * You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, which includes the app manifest and the OpenAPI description document.
 
-
 </details>
 
 </br>
@@ -153,18 +151,252 @@ Ensure that you adhere to following guidelines for app manifest:
 >
 > Teams supports Adaptive Cards up to version 1.5, and  the Adaptive Cards Designer supports up to version 1.6.
 
-* Use tools such as Fiddler or Postman to call the API and ensure that the request and the response are valid.
-* Get a sample response for validating the response rendering template.
-* You can use [Adaptive Card Designer](https://adaptivecards.io/designer/) to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
+* **Define the schema reference URL** in the `$schema` property to establish the structure of your template.
+* **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented.
+* **A `jsonPath` is recommended** for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
+* **Define `jsonPath` as the path** to the relevant data/array in the API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and returns as separate results. *[Optional]*
+* **Get a sample response** for validating the response rendering template. This will serve as a test to ensure your template works as expected.
+* **Use tools such as Fiddler or Postman** to call the API and ensure that the request and the response are valid. This step is crucial for troubleshooting and confirming that your API is functioning correctly.
+* **You can use the Adaptive Card Designer** to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
 
-  :::image type="content" source="../assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data.":::
+The following code is an example of a Response rendering template: <br/>
+    <br/>
+    <details><summary>Response rendering template example</summary>
 
-* Define the schema reference URL in the `$schema` property.
-* A `jsonPath` is recommended for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
-* Define `jsonPath` as the path to the relevant data/array in API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and return as separate results. *[Optional]*
-* The supported values for `responseLayout` are `list` and `grid`.
+    ```json
+     {
+        "version": "1.0",
+        "responseLayout": "grid",
+        "responseCardTemplate": {
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "type": "AdaptiveCard",
+            "version": "1.4",
+            "body": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                     "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Title: ${if(title, title, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Description: ${if(description, description, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "url": "${image}",
+                                            "size": "Medium",
+                                            "$when": "${image != null}"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "url": "${if(image, image, '')}",
+                                            "size": "Medium"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "FactSet",
+                            "facts": [
+                                {
+                                    "title": "Repair ID:",
+                                    "value": "${if(id, id, 'N/A')}"
+                                },
+                                {
+                                    "title": "Date:",
+                                    "value": "${if(date, date, 'N/A')}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "previewCardTemplate": {
+            "title": "Title: ${if(title, title, 'N/A')}",
+            "subtitle": "Description: ${if(description, description, 'N/A')}",
+            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+            "image": {
+            "url": "${image}",
+            "$when": "${image != null}"
+              }
+            }
+        }
+     }
+    ```
 
-If the root object of the OpenAPI schema contains well-known array property name, then Teams Toolkit uses the array property as root element to generate an Adaptive Card, and the array property name is used as `JsonPath` property for response rendering template. For example, if the property name contains `result`, `data`, `items`, `root`, `matches`, `queries`, `list`, or `output` and the type is `array`, then it's used as root element.
+</details>
+
+#### Parameters
+
+|Property  |Type  |Description  |Required  |
+|--------- |---------|---------|---------|
+|`version` |  `string` | The schema version of the current response rendering template.        |  Yes       |
+|`jsonPath`     | `string`        | The path to the relevant section in the results to which the responseCardTemplate and previewCardTemplate should be applied. If not set, the root object is treated as the relevant section. If the relevant section is an array, each entry is mapped to the responseCardTemplate and the previewCardTemplate.        |   No      |
+|`responseLayout`    | `responseLayoutType`        |  Specifies the layout of the results in the message extension flyout. The Supported types are `list` and `grid`.       |    Yes     |
+|`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an Adaptive Card from a result entry.      |   Yes      |
+|`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is displayed in the message extension flyout menu.        |  Yes       |
+
+#### Schema mapping
+
+The properties in OpenAPI Description document are mapped to the Adaptive Card template as follows:
+
+* `string`, `number`, `integer`, `boolean` types are converted to a TextBlock.
+
+  <details><summary>Example</summary>
+  
+  * **Source Schema**: `string`, `number`, `integer`, and `boolean`
+
+       ```yml
+        name:
+          type: string
+          example: doggie
+
+  * **Target Schema**: `Textblock`
+
+      ```json
+      {
+      "type": "TextBlock",
+      "text": "name: ${if(name, name, 'N/A')}",
+      "wrap": true
+    }
+      ```
+
+</details>
+
+* `array`: An array is converted to a container inside Adaptive Card.
+
+  <details><summary>Example</summary>
+
+  * **Source schema**: `array`
+
+    ```yml
+        type: array
+                  items:
+                  required:
+                    - name
+                  type: object
+                    properties:
+                    id:
+                      type: integer
+                    category:
+                      type: object
+                      properties:
+                      name:
+                        type: string
+    ```
+
+  * **Target Schema**: `Container`
+
+    ```json
+        {
+                  "type": "Container",
+                  "$data": "${$root}",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "id: ${if(id, id, 'N/A')}",
+                      "wrap": true
+                    },
+                    {
+                      "type": "TextBlock",
+                      "text": "category.name: ${if(category.name, category.name, 'N/A')}",
+                      "wrap": true
+                    }
+                  ]
+                }
+                
+    ```
+
+</details>
+
+* `object`: An object is converted to a nested property in Adaptive Card.
+
+  <details><summary>Example</summary>
+
+  * **Source Schema**: `object`
+
+    ```yml
+    components:
+      schemas:
+        Pet:
+            category:
+              type: object
+            properties:
+              id:
+                type: integer
+              name:
+                type: string
+
+    ```
+
+  * **Target Schema**: Nested property in an Adaptive Card
+
+    ```json
+    {
+      "type": "TextBlock",
+      "text": "category.id: ${if(category.id, category.id, 'N/A')}",
+      "wrap": true
+    },
+    {
+      "type": "TextBlock",
+      "text": "category.name: ${if(category.name, category.name, 'N/A')}",
+      "wrap": true
+    }
+
+    ```
+
+</details>
+
+* `image`: If a property is an image URL, then it converts to an Image element in the Adaptive Card.
+
+  <details><summary>Example</summary>
+
+  * **Source schema**: `image`
+
+    ```yml
+        image:
+          type: string
+          format: uri
+          description: The URL of the image of the item to be repaired
+
+    ```
+
+  * **Target Schema**: `"Image"`
+
+    ```json
+    {
+          "type": "Image",
+          "url": "${image}",
+          "$when": "${image != null}"
+        }
+
+    ```
+
+</details>
 
 The following is a JSON example for a list of products to create a card result for each entry:
 
@@ -199,11 +431,11 @@ You can implement authentication in API-based search message extensions to provi
 
 # [None](#tab/none)
 
-You can update `none` as a value for `authorization` in an API-based message extension when the message extension does not require any authentication for the user to access the API. 
+You can update `none` as a value for `authorization` in an API-based message extension when the message extension does not require any authentication for the user to access the API.
 
 # [API secret service auth](#tab/api-service-auth)
 
-API secret service authentication is a secure method for your app to authenticate with API.
+API secret service authentication is a secure method for your app to authenticate with API. You can  [register an API key](#register-an-api-key) through the developer portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. When an API request is initiated, the system retrieves the API key from a secure storage location and includes it in the authorization header using the bearer token scheme. The API endpoint, upon receiving the request, verifies the validity of the API key. If the verification is successful, the endpoint processes the request and returns the desired response, ensuring that only authenticated requests receive access to the API’s resources.
 
 ### Register an API key
 
@@ -238,6 +470,8 @@ To register an API Key, follow these steps:
    You can maintain up to two secrets for each API key registration. If one key is compromised, it can be promptly removed and allows Teams to switch to the second key. Also, if the first key results in a 401 error, Teams automatically attempts to use the second key. It helps with uninterrupted service for users and eliminates any potential downtime during the creation of a new secret.
 
 1. Select **Save**. An **API key registration ID** is generated.
+
+### Update app manifest
 
 You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you [submit the API key](#api-service-authtabapi-service-auth) through the Developer portal for Teams.
 
