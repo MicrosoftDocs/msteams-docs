@@ -309,9 +309,9 @@ To reconfigure the bot, follow these steps:
 
 ## Code sample
 
-| **Sample name** | **Description** |**Node.js** |
+| **Sample name** | **Description** |**.NET** |**Node.js** |
 |-----------------|-----------------|----------------|
-| Bot configuration experience | This sample code describes the configuration and reconfiguration for bots in team and group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|
+| Bot configuration experience | This sample code describes the configuration and reconfiguration for bots in team and group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|
 
 ## Step-by-step guide
 
