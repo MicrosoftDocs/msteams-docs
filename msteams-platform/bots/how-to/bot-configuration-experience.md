@@ -15,7 +15,7 @@ ms.localizationpriority: high
 
 Bot configuration in Microsoft Teams, which allows you to create bots that can be configured at the time of installation in channel or group chat scopes. Bot configuration is intended to solve the problem of bots that require context or settings to operate properly, such as bots that integrate with external services such as JIRA, ADO, or Power BI. By using the bot configuration, you can provide a task module that prompts the user to enter the required information, such as a URL, an area path, or a dashboard link, before the bot can start working. This way, the bot can avoid sending multiple notifications or requests for configuration after the installation, which can be annoying or confusing for the users.
 
-The article explains how to use the Teams SDK method for implementing bot configuration, along with a scenario and best practices for its use.
+The article explains how to use the Teams SDK method for implementing bot configuration, along with a scenario and best practice for its use.
 
 Consider a situation where a user installs a bot, only to discover that the default settings don't align with their workflow. If the bot lacks configuration capabilities, users might feel limited by its preset behavior, resulting in decreased engagement and usage. However, by incorporating bot configuration, developers empower users to tailor bot settings according to their preferences and needs, thereby enhancing user satisfaction and interaction with the bot.
 
@@ -28,9 +28,9 @@ The following graphic explains a streamlined process for integrating a bot into 
 | 1 | The user selects **Add to a team** from the dropdown menu.|
 | 2 | Enter the name of a channel in the search field.|
 | 3 | Select **Add**.|
-| 4 | Bot has been added to the channel.|
+| 4 | Bot is added to the channel.|
 | 5 | After the setup phase, the app sends a welcome Adaptive Card to the channel. This message is visible to all users, enabling any user in the channel to configure the app without restrictions. If a conflict arises, the system considers the most recently saved settings.|
-| 6 | Bot configuration is done.|
+| 6 | Configuration of bot is done.|
 | 7 | Select **Settings** from the **Apps** section to reconfigure the bot.|
 | 8 | The other way to reconfigure the bot is go to the chat and **@mention** the bot in the message compose area and select **Send**.|
 
@@ -50,7 +50,7 @@ The article explains how to use the Teams SDK method to implement the bot config
 
 Let's build a bot that provides bot configuration settings for users during the bot's installation process and within the channel or group chat scope post-installation.
 
-To enable the bot configuration settings follow these steps:
+To enable the bot configuration settings, follow these steps:
 
 1. [Update app manifest](#update-app-manifest)
 
@@ -190,7 +190,7 @@ When a user installs the bot in a team or group chat scope:
          ``` 
       ---
 
-   1. `config/auth`: The config object is set to the type `auth`, which suggests an action for the user to open a URL for authentication purposes. The action provided is to `Sign in to this app`, with a placeholder URL that should be replaced with a valid authentication link. This setup is essential for scenarios where the bot requires the user to be authenticated before they can proceed with further interactions or access certain features. It makes sure that the user’s identity is verified, maintaining security and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
+   1. `config/auth`: The config object is set to the type `auth`, which suggests an action for the user to open a URL for authentication purposes. The action provided is to `Sign in to this app`, with a placeholder URL that can be replaced with a valid authentication link. This setup is essential for scenarios where the bot requires the user to be authenticated before they can proceed with further interactions or access certain features. It makes sure that the user’s identity is verified, maintaining security and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
       # [C#](#tab/teams-bot-sdk4)
 
@@ -286,6 +286,12 @@ To reconfigure the bot, follow these steps:
 1. When the user hovers over the bot, the bot profile card appears. The user can select the settings icon in the bot profile card to update or change the bot's configuration settings.
 
    :::image type="content" source="../../assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
+
+## Best practice
+
+* Provide a clear and user-friendly task module that prompts the user to enter the required information for the bot to operate properly, such as a URL, an area path, or a dashboard link.
+
+* Avoid sending multiple notifications or requests for configuration after the installation, as it might be confusing for the users.
 
 ## Code sample
 
