@@ -1,6 +1,6 @@
 ---
 title: Notification-only bots
-description: In this module, learn what notification-only bots are in Microsoft Teams, app manifest and its best practices and limitations
+description: In this module, learn what notification-only bots are in Microsoft Teams, app manifest and its best practices and limitations.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ms.date: 04/02/2023
