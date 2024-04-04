@@ -31,9 +31,9 @@ The Classic Teams client is represented using the `teams` field and the new Team
 
 ## Timelines and rollout
 
-To ensure a smooth transition, a phased rollout of the new platform is planned as follows:
+To ensure a smooth transition, a phased rollout of the new platform is planned.
 
-* **Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [limitations](#limitations) are now available. Platform features under known issues aren't currently supported in the new Teams client.
+**Availability of all platform features from Classic Teams**: All apps are available in the new Teams Client. All platform features except the features listed under [limitations](#limitations) are now available.
 
 ## Limitations
 
