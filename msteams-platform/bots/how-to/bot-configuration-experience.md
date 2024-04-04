@@ -152,7 +152,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L131)
 
-            ```csharp
+         ```csharp
             ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
                   {
                      Config = new TaskModuleMessageResponse
@@ -163,7 +163,7 @@ If you set the `fetchTask` property in the app manifest to:
                   };
 
                   return Task.FromResult(response);
-            ```
+          ```
 
       # [JavaScript](#tab/JS5)
 
@@ -171,16 +171,16 @@ If you set the `fetchTask` property in the app manifest to:
 
       * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L120)
 
-            ```javascript
-               {
-               response = {
-                  config: {
-                  type: 'message',
-                  value: 'You have chosen to finish setting up bot',
-                  },
-               }
-               return response;
-            ```
+         ```javascript
+              {
+              response = {
+                 config: {
+                 type: 'message',
+                 value: 'You have chosen to finish setting up bot',
+                 },
+              }
+              return response;
+         ```
       ---
 
    1. `config/auth`: You can also request the user to authenticate as a response to `config/continue` request.  The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
