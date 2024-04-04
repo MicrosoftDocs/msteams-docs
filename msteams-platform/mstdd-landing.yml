@@ -49,7 +49,7 @@ landingContent:
       links:
       - text: Bot configuration experience
         url: bots/how-to/bot-configuration-experience.md
-      - text: Stageview API with the openmode property allows you to open your app content in different Stageview experience
+      - text: The stageView API with the openmode property allows you to open your app content in different Stageview experience
         url: tabs/open-content-in-stageview.md
       - text: Updated the common reasons for app validation failure to help your app pass the Teams Store submission process
         url: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
