@@ -104,7 +104,7 @@ If you set the `fetchTask` property in the app manifest to:
       * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L168)
 
          ```csharp
-         ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
+          ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
             {
                Config = new TaskModuleContinueResponse
                {
