@@ -601,8 +601,9 @@
       href: /graph/api/resources/calltranscript?view=graph-rest-1.0&preserve-view=true
     - name: Get recordings
       href: /graph/api/resources/callrecording?view=graph-rest-1.0&preserve-view=true
-  - name: Integrate Teams meetings and calls in external apps
+  - name: Integrate Teams meetings and calls in an external apps
     href: get-started/b2c-apps.md
+    displayName: Teams meeting, Teams call, Teams meeting and call for external apps, external apps
   - name: Enhanced collaboration with Live Share
     items:
     - name: Overview
