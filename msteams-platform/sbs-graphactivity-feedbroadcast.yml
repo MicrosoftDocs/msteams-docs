@@ -299,8 +299,6 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/add-an-app.png" alt-text="Screenshot shows the add app screen." border="true":::
    
-          The app is visible in the meeting SidePanel.
-
 - title: Interact with the app in Teams
   durationInMinutes: 1
   content: |
