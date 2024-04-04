@@ -272,9 +272,9 @@ items:
 - title: Add activity feed broadcast app to Teams
   durationInMinutes: 1
   content: |      
-    1. In your cloned repository, go to  **graph-activity-feed-broadcast** > **csharp** > **ActivityFeedBroadcast** > **AppPackage**.
+    1. In your cloned repository, go to  **graph-activity-feed-broadcast** > **csharp** > **ActivityFeedBroadcast** > **AppManifest**.
 
-    1. Create a .zip file with the following files that are present in the **AppPackage** folder: 
+    1. Create a .zip file with the following files that are present in the **AppManifest** folder: 
        * manifest.json
        * outline.png
        * color.png
@@ -291,7 +291,7 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/submit-an-app-to-your-org.png" alt-text="Screenshot shows the upload an app screen.":::
        
-    1. Select **Open** to upload the .zip file that you created in the **AppPackage** folder.
+    1. Select **Open** to upload the .zip file that you created in the **AppManifest** folder.
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/open-a-custom-app.png" alt-text="Screenshot shows the opening of a custom app." border="true":::
 
@@ -309,7 +309,8 @@ items:
 
     1. The **BroadcastTab** displays **Message title** and **Message description**.
             
-    1. Enter the message title and description, and then select **Send message**. 
+    1. Enter the message title and description**.
+    1. Select **Send message**. 
 
        The Message broadcasted successfully appears.
 
