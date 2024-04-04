@@ -87,13 +87,13 @@ For more information, see [app manifest schema](../../resources/schema/manifest-
 
 If you set the `fetchTask` property in the app manifest to:
 
-* **false**: The bot doesn't fetch a task module or an adaptive card. Instead, the bot must provide a static task module or card that is used when the bot is invoked. For more information, see [task module.](../../task-modules-and-cards/what-are-task-modules.md)
+* **false**: The bot doesn't fetch a task module or an Adaptive Card. Instead, the bot must provide a static task module or card that is used when the bot is invoked. For more information, see [task module.](../../task-modules-and-cards/what-are-task-modules.md)
 
 * **true**: The bot initiates `ConfigFetch` to fetch content. When invoking the bot, you can return an Adaptive Card or a task module, depending on the context provided in channelData and userdata. For more information, see [create and send dialogs.](../../messaging-extensions/how-to/action-commands/create-task-module.md)
 
    You can respond to the `ConfigFetch` request in two ways:
 
-   1. `config/continue`: The bot’s capability to handle configuration fetch requests by presenting an Adaptive Card to the user that allows them to make a choice about the bot’s setup. If the user selects `Continue with more options`, the bot presents another adaptive card for further interaction. This creates an Adaptive Card using the `adaptiveCardForContinue` method and sets the response type to `continue`, which continues the interaction.
+   1. `config/continue`: The bot’s capability to handle configuration fetch requests by presenting an Adaptive Card to the user that allows them to make a choice about the bot’s setup. If the user selects `Continue with more options`, the bot presents another Adaptive Card for further interaction. This creates an Adaptive Card using the `adaptiveCardForContinue` method and sets the response type to `continue`, which continues the interaction.
 
       # [C#](#tab/teams-bot-sdk5)
 
