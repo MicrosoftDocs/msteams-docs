@@ -10,32 +10,32 @@ ms.date: 02/19/2024
 
 # Configure tab capability within your Teams app
 
-Tabs are webpages embedded in Microsoft Teams. It function as simple HTML `iframe` tags that point to domains declared in the app manifest (previously called Teams app manifest). Tabs can be added into a channel within a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Build tabs for Teams](../tabs/what-are-tabs.md).
+Tabs are webpages embedded in Microsoft Teams. It functions as simple HTML `iframe` tags that point to domains declared in app manifest (previously called Teams app manifest). Tabs can be added into a channel within a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Build tabs for Teams](../tabs/what-are-tabs.md).
 
 ## Prerequisites
 
-To configure a tab as additional capability, make sure:
+To configure a tab as an additional capability, ensure the following:
 
-* You have a Teams application and its manifest.
-* You have a Microsoft 365 account to test the application.
+* Your app manifest file.
+* A Microsoft 365 account to test the application.
 
-Before starting, we recommend you to create and go through a tab app with Teams Toolkit. To create a Tab app with Teams Toolkit, see [Tab app with Teams Toolkit](create-new-project.md).
+Before starting, we recommend you create a tab app with Teams Toolkit. To create a Tab app with Teams Toolkit, see [Tab app with Teams Toolkit](create-new-project.md).
 
 ## Add a tab Teams app
 
-The following are the steps to configure the Tab capability:
+The following steps help you to configure the tab capability:
 
-1. Configure Tab capability in Teams application manifest. (to be linked).
-1. Setup local debug environment. (to be linked).
-1. Move the application to Azure. (to be linked).
+1. [Configure tab capability in app manifest](#configure-bot-capability-in-app-manifest)
+1. [Setup local debug environment](#setup-local-debug-environment-in-visual-studio-code)
+1. [Move the application to Azure](#move-the-application-to-azure)
 
-If you prefer to create a server-side tab app, you don't need to update your folder structure, debug profile, or bicep infrastructure. Simply adding new routes to the tab page in your bot service and updating Teams application manifest. However, this document assumes that you're adding a client-side tab app.
+If you prefer to develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab page in your bot service and update app manifest. However, the following steps describe how to configure the tab capability for a client-side tab app.
 
-For a complete example, see [Hello World Bot with Tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
+To create a hello world bot with tab, see [Hello World Bot with Tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
 
-### Configure bot capability in Teams application manifest
+### Configure bot capability in app manifest
 
-1. To configure your tab within a group or channel, or personal scope in your Teams application manifest appPackage/manifest.json, follow these examples: Examples:
+1. To configure your tab within a group, channel, or personal scope in your app manifest appPackage or manifest.json, use the following examples:
 
 ```JSON
   "staticTabs": [
@@ -64,7 +64,7 @@ For a complete example, see [Hello World Bot with Tab](https://github.com/Office
   ],
 ```
 
-1. Add your tab domain to the validDomains field. Example:
+1. Add your tab domain to the `validDomains` field as follows:
 
 ```JSON
 "validDomains": [
@@ -72,11 +72,11 @@ For a complete example, see [Hello World Bot with Tab](https://github.com/Office
 ],
 ```
 
-`TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Teams Toolkit. They'll be replaced with the true endpoint in runtime based on your current environment(local, dev, etc.).
+`TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Teams Toolkit. They are replaced with the true endpoint in runtime based on your current environment.
 
 ### Setup local debug environment in Visual Studio Code
 
-1. To begin, bring your tab app code into your project. If you do not have one, you can create a new Tab app project with Teams Toolkit and copy the source code to into your current project. For example, your folder structure look like:
+1. To begin, bring your tab app code into your project. If you don't have one, you can create a new Tab app project with Teams Toolkit and copy the source code to into your current project. For example, your folder structure look like:
 
 ```yml
     .
@@ -92,7 +92,7 @@ For a complete example, see [Hello World Bot with Tab](https://github.com/Office
     |-- teamsapp.yml
 ```
 
-We recommend to reorganizing the folder structure as follows:
+We recommend you to reorganize the folder structure as follows:
 
 ```yml
     .
@@ -108,7 +108,7 @@ We recommend to reorganizing the folder structure as follows:
     |-- teamsapp.yml
 ```
 
-Also remember to update your teamsapp.yml and teamsapp.local.yml to align with the folder structure. For example
+Ensure that you update teamsapp.yml and teamsapp.local.yml to align with the folder structure. For example:
 
 ```json
     deploy:
@@ -177,7 +177,8 @@ Also remember to update your teamsapp.yml and teamsapp.local.yml to align with t
 }
 ```
 
-1. Update the `teamsapp.local.yml` file and add new actions. These actions enables your tab project to work seamlessly with Teams Toolkit.
+1. Update the `teamsapp.local.yml` file and add new actions.
+   These actions enable your tab project to work seamlessly with Teams Toolkit.
 
 ```json
 provision:
@@ -214,11 +215,11 @@ deploy:
         SSL_KEY_FILE: ${{SSL_KEY_FILE}}
 ```
 
-1. Once you've configured your project and updated the necessary files, you can try local debugging with Visual Studio Code. This allows you to test and troubleshoot your tab app before deploying it to Teams.
+1. After you configure your project and update the necessary files, debug your app locally in Visual Studio Code.
 
 ### Move the application to Azure
 
-If you prefer to create a server-side tab app, you don't need to update your bicep files or Azure infrastructure. Your tab app can be hosted in the same Azure App Service as your bot. However, this document assumes that you're adding a client-side tab app.
+If you prefer to develop a server-side tab app, you don't need to update your bicep files or Azure infrastructure. Your tab app can be hosted in the same Azure App Service as your bot.
 
 1. Add the following snippet to your bicep file to provision an Azure Storage Account for your tab app.
 
@@ -249,7 +250,7 @@ output TAB_DOMAIN string = siteDomain
 output TAB_ENDPOINT string = 'https://${siteDomain}'
 ```
 
-1. Additionally, make sure to update the `azure.parameters.json` file to ensure that necessary parameters are set correctly.
+1. Update the `azure.parameters.json` file to ensure that necessary parameters are set correctly. For example:
 
 ```json
 {
@@ -262,12 +263,11 @@ output TAB_ENDPOINT string = 'https://${siteDomain}'
     "storageSku": {
       "value": "Standard_LRS"
     },
-    ...
   }
 }
 ```
 
-1. To host your tab app in Azure Storage, you'll need to enable the static website feature for the storage account. Add the following action in your `teamsapp.yml` file.
+1. To host your tab app in Azure Storage, you need to enable the static website feature for the storage account. Add the following action in your `teamsapp.yml` file:
 
 ```json
 provision:
@@ -279,7 +279,7 @@ provision:
 ```
 
 1. Run `Teams: Provision` command in Visual Studio Code to apply the bicep to Azure.
-1. To automate the build and deployment of your tab app, add the following build and deploy action to your `teamsapp.yml` file.
+1. To automate the build and deployment of your tab app, add the following build and deploy action to your `teamsapp.yml` file:
 
 ```json
   - uses: cli/runNpmCommand # Run npm command
@@ -302,7 +302,7 @@ provision:
 
 1. Run `Teams: Deploy` command in Visual Studio Code to deploy your Tab app code to Azure.
 
-1. Open the `Run and Debug Activity Panel` and select `Launch Remote (Edge)` or `Launch Remote (Chrome)`. Press F5 to preview your Teams app.
+1. Open the `Run and Debug Activity Panel` and select `Launch Remote (Edge)` or `Launch Remote (Chrome)` to debug and preview your Teams app.
 
 ## See also
 
