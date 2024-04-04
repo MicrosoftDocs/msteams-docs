@@ -10,7 +10,7 @@ ms.date: 02/19/2024
 
 # Configure tab capability within your Teams app
 
-Tabs are Teams-aware webpages embedded in Microsoft Teams. They're simple HTML `iframe` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. Learn more from [Build tabs for Teams](../tabs/what-are-tabs.md).
+Tabs are webpages embedded in Microsoft Teams. It function as simple HTML `iframe` tags that point to domains declared in the app manifest (previously called Teams app manifest). Tabs can be added into a channel within a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Build tabs for Teams](../tabs/what-are-tabs.md).
 
 ## Prerequisites
 
