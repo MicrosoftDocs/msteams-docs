@@ -66,6 +66,7 @@ landingContent:
       - text: Share to Teams from personal app or tab for Teams mobile clients
         url: concepts/build-and-test/share-to-teams-from-personal-app-or-tab.md
       - text: Build API-based message extension using Developer Portal for Teams
+        url: messaging-extensions/build-api-based-message-extension.md
 
     - linkListType: reference
       links:
