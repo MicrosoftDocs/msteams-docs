@@ -26,8 +26,8 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
-* ***April 04, 2024***: [Stageview API with the openmode property allows you to open your app content in different Stageview experience.](tabs/tabs-link-unfurling.md)
-* ***April 3, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
+* ***April 04, 2024***: [Stageview API with the openmode property allows you to open your app content in different Stageview experience.](tabs/open-content-in-stageview.md)
+* ***April 03, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
 
 :::column-end:::
 :::row-end:::

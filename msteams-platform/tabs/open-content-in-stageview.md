@@ -50,7 +50,7 @@ Stageview Modal is a full-screen UI component used to render your app content in
 > [!NOTE]
 > Teams web client supports Stageview Modal only.
 
-:::image type="content" source="~/assets/images/tab-images/modal-view1.png" alt-text="The screenshot shows the Stageview Modal in Teams."
+:::image type="content" source="~/assets/images/tab-images/modal-view1.png" alt-text="The screenshot shows the Stageview Modal in Teams.":::
 
 ## Invoke Stageview
 
@@ -72,7 +72,7 @@ You can invoke Stageview in Teams through one of the following methods and confi
 * `popout`
 * `modal`
 
-The following table provides the Stageview responses of the `openMode` property for each value:
+The following table provides the Stageview response of the `openMode` values:
 
 | Input | Response |
 | ---| ---|
@@ -83,7 +83,9 @@ The following table provides the Stageview responses of the `openMode` property 
 When `openMode` isn't defined, the content opens by default in Collaborative Stageview with an associated side panel conversation. The fallback hierarchy for a Stageview response is `popoutWithChat` > `popout` > `modal`.
 
 > [!NOTE]
-> In scenarios where pop-out experience isn't supported, for example, Teams web client, the content opens in Stageview Modal even when the `openMode` property is defined.
+>
+> * The `openMode` values are case sensitive. If you don't use the correct casing, the content opens in Stageview Modal.
+> * When pop-out experience isn't supported, for example in a Teams web client, the content opens in Stageview Modal even when the `openMode` property is defined.
 
 </details>
 
@@ -136,7 +138,7 @@ If your app isn't optimized to work in Teams mobile client, Stageview for apps d
 The stageView API from TeamsJS allows you to open the Teams window in a Stageview experience based on the `openMode` defined. If the `openMode` property isn't defined, the default response is a Collaborative Stageview with an associated side panel conversation. In a Collaborative Stageview experience, the side panel conversation is the same thread from where the Stageview was invoked such as chat or group chat.
 
 > [!NOTE]
-> The stageView API supports an optional `threadId` parameter that allows you to bring a specific conversation to the Collaborative Stageview side panel. Mapping `contentUrl` to `threadId` allows you to persist a conversation alongside content.
+> The stageView API supports an optional `threadId` parameter that allows you to bring a specific conversation to the Collaborative Stageview side panel. Mapping `contentUrl` to `threadId` allows you to persist a conversation alongside the content.
 
 The following codes are the samples for each `openMode` value in stageView API:
 
