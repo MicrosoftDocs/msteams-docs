@@ -24,14 +24,14 @@ Here's an illustration that shows the bot configuration experience:
 
 | Steps | Description |
 | --------------------------------- | --- |
-|Configure bot during installation||
+||Configure bot during installation|
 | 1 | Select **Add to a team** from the dropdown menu to add a bot to Teams.|
 | 2 | Enter the name of a channel in the search field.|
 | 3 | Select **Add**.|
 | 4 | Bot is added to the channel.|
 | 5 | After the setup phase, the bot sends a welcome Adaptive Card to the channel. Any user in the channel can configure the bot. If a conflict arises, the system considers the most recently saved settings.|
 | 6 | Bot is configured.|
-|Reconfigure bot post-installation||
+||Reconfigure bot post-installation|
 | 7 | Hover over the bot, the bot profile card appears. To update or change the bot's configuration settings, select the settings icon in the bot profile card.|
 | 8 | You can also trigger the reconfiguration settings by @mentioning the bot in the message compose area.|
 
