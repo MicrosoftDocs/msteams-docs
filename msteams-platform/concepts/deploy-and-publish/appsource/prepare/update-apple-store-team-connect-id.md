@@ -22,7 +22,7 @@ To enable end-users to install your app on the Teams iOS platform, update your A
 Your Apple Developer Program Team ID is now updated and users can install your app on the Teams iOS platform.
 
 > [!NOTE]
-> Apple Developer Program Team ID is mandatory for a Teams app to show on iOS devices, irrespective of installation.
+> Apple Developer Program Team ID is mandatory as per compliance requirement for a Teams app to appear on iOS devices, irrespective of the installation’s origin.
 
 To get Apple Developer Program Team ID from Apple Developer portal, follow these steps:
 
