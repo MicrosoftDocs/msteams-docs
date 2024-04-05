@@ -1,6 +1,6 @@
 ---
 title: Text formatting in cards
-description: In this module, learn what is card text formatting in Microsoft Teams and format cards with Markdown.
+description: In this module, learn what is card text formatting in Microsoft Teams, format cards with Markdown, and design responsive Adaptive Cards.
 ms.localizationpriority: high
 ms.topic: reference
 ms.date: 06/25/2021
@@ -31,7 +31,7 @@ The following card types support Markdown formatting in Teams:
 > [!NOTE]
 > Markdown isn't supported for OAuth sign in cards in bots.
 
-You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in Stage View selectively.
+You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in Stageview selectively.
 
 Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards and connector cards. In this section, you can go through the Markdown format example for Adaptive Cards and connector cards.
 
@@ -136,6 +136,7 @@ Bots and message extensions can include mentions within the card content in [Tex
 > * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
 > * Channel and team mentions aren't supported in bot messages.
 > * You can @mention multiple users in a single Adaptive Card message, however, ensure that the message size limit doesn't exceed 28 KB for [Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) and 40 KB for a [bot message](~/bots/how-to/format-your-bot-messages.md).
+> * Adaptive Cards sent from Incoming Webhooks only support user mentions and don't support bot mentions.
 
 To include a mention in an Adaptive Card, your app needs to include the following elements:
 
@@ -180,7 +181,7 @@ The following code shows an example of Adaptive Card with a mention:
 
 ### Microsoft Entra Object ID and UPN in user mention
 
-Teams platform allows to mention users with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
+Teams platform allows you to mention users with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
 
 The following table describes the newly supported user mention IDs:
 
@@ -396,7 +397,7 @@ The following table lists the query parameters:
 |`displayName`     |   Name of the user     |
 |`userPrincipalName`|The user's principal name of the account in Microsoft Entra ID|
 
-Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute.  The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
+Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute. The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other  properties under `properties` is ignored by `component` type in the Adaptive Card schema.
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as `name`, `id` and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
@@ -492,6 +493,196 @@ The following image shows the default view of the Adaptive Card when you have no
 
 :::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Small width Adaptive Card view":::
 
+### Adaptive Card responsive layout
+
+Adaptive Cards automatically adapt their look and feel to the host application's style, but have a fixed layout that remains the same across Teams mobile and desktop clients. You must design your Adaptive Cards to look great on any device in order to provide an enhanced user experience across chat, channels, and meeting chat. In this article, you'll learn about designing responsive Adaptive Cards.
+
+Adaptive Card responsive layout helps you to design cards with different layouts that target different card widths.
+
+#### Design responsive Adaptive Cards
+
+Use the `targetWidth` property on any element to:
+
+* Show or hide any element based on the card's width.
+* Set different target widths on different elements to create different layouts.
+
+  The following table lists the available `targetWidth` values:
+
+  |Value  |Description  |
+  |---------|---------|
+  | `veryNarrow` | The element is visible when the Adaptive Card's width is very narrow such as in a meeting chat. |
+  | `narrow` | The element is visible when the Adaptive Card's width is narrow such as on a mobile phone in portrait mode. |
+  | `standard` | The element is visible when the Adaptive Card's width is standard such as on a mobile phone in landscape mode, on a tablet in portrait mode, or in a chat on desktop. |
+  | `wide` | The element is visible when the Adaptive Card's width is wide such as on a tablet in landscape mode, in a channel or chat on desktop when you set your card to be [full width](#full-width-adaptive-card). |
+
+  You can also set the `targetWidth` property to make an element visible for a range of card widths using the `atLeast` and
+  `atMost` prefixes. For example, you can make an element visible only when the card width is 'standard or above' or only when the card width is 'narrow or below'. The following table provides guidance on how to make an element visible for a range of card widths:
+
+  | Example | Description  |
+  |---------|---------|
+  | `"targetWidth": "atLeast:standard"` | The element is visible only when the Adaptive Card's width is at least standard, which means standard or wide. |
+  | `"targetWidth": "atMost:narrow"` |The element is visible only when the Adaptive Card's width is at most narrow, which means very narrow or narrow. |
+
+  > [!NOTE]
+  > You don't have to set `targetWidth` on all elements. If you don't set `targetWidth` for an element, the element is always visible irrespective of the card's width.
+
+The following are JSON samples for an Adaptive Card designed without using `targetWidth` and modified to use`targetWidth`:
+
+* Adaptive Card designed without using `targetWidth`:
+
+    ```json
+    {
+      "type": "AdaptiveCard",
+      "body": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "items": [
+                {
+                  "type": "Image",
+                  "style": "Person",
+                  "url": "https://aka.ms/AAp9xo4",
+                  "size": "Small"
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "spacing": "medium",
+              "verticalContentAlignment": "center",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "David Claux",
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "spacing": "medium",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Platform Architect",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ],
+              "width": "stretch",
+              "verticalContentAlignment": "center"
+            }
+          ]
+        }
+      ],
+      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+      "version": "1.5"
+    }
+
+    ```
+
+  The following images show the rendering of the Adaptive Card for different card widths:
+
+  * When the card's width is **wide**, the card looks good.
+
+    :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the card is designed without using targetWidth property.":::
+
+  * When the card's width is **standard** or **narrow**, the role is squeezed.
+
+    :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the card is designed without using targetWidth property.":::
+
+  * When the card's width is **very narrow**, the name and role are significantly squeezed.
+
+    :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the card is designed without using targetWidth property.":::
+
+* Adaptive Card updated to be responsive using `targetWidth`:
+
+   ``` json
+    {
+      "type": "AdaptiveCard",
+      "body": [
+        {
+          "type": "ColumnSet",
+          "columns": [
+            {
+              "type": "Column",
+              "targetWidth": "atLeast:narrow",
+              "items": [
+                {
+                  "type": "Image",
+                  "style": "Person",
+                  "url": "https://aka.ms/AAp9xo4",
+                  "size": "Small"
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "spacing": "medium",
+              "verticalContentAlignment": "center",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "weight": "Bolder",
+                  "text": "David Claux",
+                  "wrap": true
+                },
+                {
+                  "type": "TextBlock",
+                  "targetWidth": "atMost:narrow",
+                  "spacing": "None",
+                  "text": "Platform Architect",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ],
+              "width": "auto"
+            },
+            {
+              "type": "Column",
+              "targetWidth": "atLeast:standard",
+              "spacing": "medium",
+              "items": [
+                {
+                  "type": "TextBlock",
+                  "text": "Platform Architect",
+                  "isSubtle": true,
+                  "wrap": true
+                }
+              ],
+              "width": "stretch",
+              "verticalContentAlignment": "center"
+            }
+          ]
+        }
+      ],
+      "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
+      "version": "1.5"
+    }
+   ```
+
+  Let's see how the same Adaptive Card renders after using the `targetWidth` property for different card widths:
+
+  * When the card's width is **wide**, the card still looks good.
+
+    :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is wide.":::
+
+  * When the card's width is **standard** or **narrow**, the role is moved under the name as there's no horizontal space to show them side-by-side.
+
+    :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is standard or narrow.":::
+
+  * When the card's width is **very narrow**, we can hide the image and only keep the most meaningful information.
+
+    :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is veryNarrow.":::
+  
+For more information on how to design an Adaptive Card, see [designing Adaptive Cards for your Microsoft Teams app](design-effective-cards.md).
+
 ### Typeahead support
 
 Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet.html) schema element, asking users to filter and select a sizeable number of choices can significantly slow down task completion. Typeahead support within Adaptive Cards can simplify input selection by narrowing or filtering the set of input choices as the user types the input.
@@ -515,9 +706,9 @@ The following code shows an example of Adaptive Card with typeahead support:
 }
 ```
 
-### Stage View for images in Adaptive Cards
+### Stageview for images in Adaptive Cards
 
-In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stage View selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following is an example of the `msteams` property:
+In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stageview selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following is an example of the `msteams` property:
 
 ``` json
 {
@@ -540,16 +731,16 @@ When users hover over the image, an expand icon appears at the upper-right corne
 
 :::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Adaptive Card with expandable image":::
 
-The image appears in Stage View when the user selects the expand icon as shown in the following image:
+The image appears in Stageview when the user selects the expand icon as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Image expanded to Stage View":::
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Screesnhots shows the image expanded to Stageview.":::
 
-In the Stage View, users can zoom in and zoom out of the image. You can select the images in your Adaptive Card that must have this capability.
+In the Stageview, users can zoom in and zoom out of the image. You can select the images in your Adaptive Card that must have this capability.
 
 > [!NOTE]
 >
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
-> * For Teams mobile apps, Stage View functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stage View by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
+> * For Teams mobile apps, Stageview functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stageview by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
 # [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 
@@ -659,7 +850,7 @@ To enable overflow menu, configure the `mode` property with the value as `primar
 
 |Property|Type|Required|Description|
 |---|---|---|---|
-|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action. Secondary actions will be collapsed into an overflow menu.|
+|`mode`| Enum (Primary, Secondary) |No |Whether or not the action is a primary or secondary action. Secondary actions are collapsed into an overflow menu.|
 
 The following is an example of the `mode` property in the `actions` type and the `ActionSet` element:
 
@@ -895,9 +1086,9 @@ You can test formatting in your own cards by modifying this code.
 
 ## Code samples
 
-|S.No.| Description|.NET|Node.js|Manifest
+|S.No.| Description|.NET|Node.js|Manifest|
 |:--|:--|:--------------------------------------------------------|-----|-----|
-|1|This sample app shows different card formatting supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip)
+|1|This sample app shows different card formatting supported in Teams.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-formatting-cards/csharp/demo-manifest/bot-formatting-cards.zip)|
 
 ## See also
 
