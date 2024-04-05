@@ -86,7 +86,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       * [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse)
 
-      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L168)
+      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L550)
 
          ```csharp
           ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
@@ -138,7 +138,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       * [SDK Reference]
 
-      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L84)
+      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
          ```csharp
          protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
@@ -191,7 +191,9 @@ If you set the `fetchTask` property in the app manifest to:
 
       # [C#](#tab/teams-bot-sdk3)
 
-        [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulemessageresponse)
+      * [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulemessageresponse)
+
+      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L224)
 
          ```csharp
             ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
@@ -207,6 +209,8 @@ If you set the `fetchTask` property in the app manifest to:
          ```   
 
       # [JavaScript](#tab/JS3)
+
+         [SDK reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L119).
 
          ```javascript
               {
