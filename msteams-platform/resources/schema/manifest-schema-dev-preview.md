@@ -283,9 +283,9 @@ The version of the app manifest schema this manifest is using.
 
 **Required** &ndash; String
 
-The version of the specific app. If you update something in your app manifest, the version must be incremented as well. This way, when the new app manifest is installed, it overwrites the existing one and the user gets the new functionality. If this app was submitted to the Microsoft Teams Store, the new app manifest has to be resubmitted and revalidated. Then, users of this app will get the new updated app manifest automatically in a few hours, after it's approved.
+The version of the specific app. If you update your app manifest, you must increment the version. For custom apps, share the updated version with IT admins for updating in their organization. For store apps, submit the new app version for app validation. After validation, the new version of the app is available on Teams app store. When users update the app, the new version of the app replaces their previous app.
 
-If the app requested permissions change, users are prompted to upgrade and re-consent to the app.
+If you change app permissions, Teams prompts users to grant consent to the app permissions.
 
 This version string must follow the [semver](http://semver.org/) standard (MAJOR.MINOR.PATCH).
 
@@ -296,22 +296,22 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 **Required** &ndash; Microsoft app ID
 
-The unique Microsoft-generated identifier for this app. The format of the ID is GUID. If you've registered a bot through Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you might already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
+The unique Microsoft-generated identifier for this app. The format of the ID is GUID. If you registered a bot through Microsoft Bot Framework, or your tab's web app already signs in with Microsoft, then you might already have an ID and must enter it here. Otherwise, you must generate a new ID at the Microsoft Application Registration Portal ([My Applications](https://apps.dev.microsoft.com)), enter it here, and then reuse it when you [add a bot](~/bots/how-to/create-a-bot-for-teams.md).
 
 ## developer
 
 **Required** &ndash; Object
 
-Specifies information about your company. For apps submitted to Microsoft AppSource (formerly Office Store), these values must match the information in your AppSource entry.
+Specifies information about the developer and their business. For store apps, the value must match the values that you provide in Partner Center app submission form.
 
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
-|`name`||32 characters|✔️|The display name for the developer.|
-|`websiteUrl`||2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
-|`privacyUrl`||2048 characters|✔️|The https:// URL to the developer's privacy policy.|
-|`termsOfUseUrl`||2048 characters|✔️|The https:// URL to the developer's terms of use.|
-|`mpnId`||10 characters||**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
-|`contactInfo`|Object|||App developer contact information.|
+| Name            | Type   | Maximum size    | Required | Description                                                                                                              |
+|-----------------|--------|-----------------|----------|--------------------------------------------------------------------------------------------------------------------------|
+| `name`          |        | 32 characters   | ✔️      | The display name for the developer.                                                                                      |
+| `websiteUrl`    |        | 2,048 characters | ✔️      | The `https://` URL to the app-specific page on your website. |
+| `privacyUrl`    |        | 2,048 characters | ✔️      | The `https://` URL to the apps's privacy policy.                                                                      |
+| `termsOfUseUrl` |        | 2,048 characters | ✔️      | The `https://` URL to the apps's terms of use.                                                                        |
+| `mpnId`         |        | 10 characters   |          | **Optional** The Microsoft Partner Network ID that identifies the partner organization creating the app.                 |
+| `contactInfo`   | Object |                 |          | App developer's contact information.                                                                                       |
 
 ### developer.contactInfo
 
@@ -321,15 +321,15 @@ App developer contact information. For more information, see [developer provided
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`defaultsupport`|Object||✔️| The default developer contact information for your app.|
-|`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address for user support through chat. Minimum: 1; maximum: 10. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
-|`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for support inquiry. Minimum: 1; maximum: 1. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
+|`defaultsupport`|Object||✔️| The default contact information for your app.|
+|`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address for customer queries using Teams chat. Minimum: 1; maximum: 10. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
+|`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for customer inquiry. Minimum: 1; maximum: 1. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 
 ## localizationInfo
 
 **Optional** &ndash; Object
 
-Allows the specification of a default language, and pointers to additional language files. See [localization](~/concepts/build-and-test/apps-localization.md).
+Allows the specification of a default language, and pointers to more language files. See [localization](~/concepts/build-and-test/apps-localization.md).
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
@@ -337,12 +337,12 @@ Allows the specification of a default language, and pointers to additional langu
 
 ### localizationInfo.additionalLanguages
 
-An array of objects specifying additional language translations.
+An array of objects specifying more language translations.
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
 |`languageTag`|4 characters|✔️|The language tag of the strings in the provided file.|
-|`file`|2048 characters|✔️|A relative file path to the .json file that contains the translated strings.|
+|`file`|2,048 characters|✔️|A relative file path to the .json file that contains the translated strings.|
 
 ## name
 
@@ -376,8 +376,8 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`outline`|2048 characters|✔️|A relative file path to a transparent 32x32 PNG outline icon. The border color must be white.|
-|`color`|2048 characters|✔️|A relative file path to a full color 192x192 PNG icon.|
+|`outline`|2,048 characters|✔️|A relative file path to a transparent 32x32 PNG outline icon. The border color must be white.|
+|`color`|2,048 characters|✔️|A relative file path to a full color 192x192 PNG icon.|
 
 ## accentColor
 
@@ -397,11 +397,11 @@ The object is an array with all elements of the type `object`. This block is req
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. <br>Default value: `true`|
+|`configurationUrl`|String|2,048 characters|✔️|The https:// URL to use when configuring the tab.|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether a user can update an instance of the tab's configuration after creation. <br>Default value: `true`|
 |`scopes`|Array of enum|2|✔️|Currently, configurable tabs support only the `team` and `groupChat` scopes. |
 |`context` |Array of enum|8||The set of `contextItem` scopes where a [tab is supported](../../tabs/how-to/access-teams-context.md). <br>Default values: `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `personalTab`.|
-|`sharePointPreviewImage`|String|2048 characters||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
+|`sharePointPreviewImage`|String|2,048 characters||A relative file path to a tab preview image for use in SharePoint. Size 1024x768. |
 |`supportedSharePointHosts`|Array of enum|2||Defines how your tab is made available in SharePoint. Options are `sharePointFullPage`, `sharePointWebPart`|
 |`meetingSurfaces`|Array of enum|2||The set of `meetingSurfaceItem` scopes to which a tab belongs. <br>Default values: `sidePanel`, `stage`|
 |`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. <br>Default values: `desktop`, `mobile`, `teamsMeetingDevices`|
@@ -420,11 +420,11 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 |---|---|---|---|---|
 |`entityId`|String|64 characters|✔️|A unique identifier for the entity that the tab displays.|
 |`name`|String|128 characters|✔️|The display name of the tab.|
-|`contentUrl`|String|2048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
+|`contentUrl`|String|2,048 characters|✔️|The https:// URL that points to the entity UI to be displayed in the Teams canvas.|
 |`contentBotId`|String| | | The Microsoft Teams app ID specified for the bot in the Bot Framework portal. |
-|`websiteUrl`|String|2048 characters||The https:// URL to point at if a user opts to view in a browser.|
+|`websiteUrl`|String|2,048 characters||The https:// URL to point at if a user opts to view in a browser.|
 |`scopes`|Array of enum|3|✔️|Static tabs support the `personal`, `team`, and `groupChat` scopes, which means it can be provisioned as part of the personal, group chat, and channel meetings experience.|
-|`searchUrl`|String|2048 characters||The https:// URL to direct a user's search queries.|
+|`searchUrl`|String|2,048 characters||The https:// URL to direct a user's search queries.|
 |`context`|Array of enum|8||The set of `contextItem` scopes to which a tab belongs. <br>Default values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingSidePanel`, `meetingStage`, `teamLevelApp`|
 |`supportedPlatform`|Array of enum|3||The set of `supportedPlatform` scopes to which a tab belongs. <br>Default values: `desktop`, `mobile`, `teamsMeetingDevices`|
 
@@ -434,7 +434,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 Defines a bot solution, along with optional information such as default command properties.
 
-The object is an array (maximum of only 1 element&mdash;currently only one bot is allowed per app) with all elements of the type `object`. This block is required only for solutions that provide a bot experience.
+The object is an array (maximum of only one element&mdash;currently only one bot is allowed per app) with all elements of the type `object`. This block is required only for solutions that provide a bot experience.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -455,17 +455,17 @@ The object is an array (maximum of only 1 element&mdash;currently only one bot i
 |`team.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`team.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
-|`team.taskInfo.url`|String|2048 characters||Initial webview URL.|
+|`team.taskInfo.url`|String|2,048 characters||Initial webview URL.|
 |`groupChat.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch dialog dynamically. <br>Default value: `false`|
 |`groupChat.taskInfo`|Object|||Dialog to be launched when fetch task set to false.<br>Default value: `false`|
 |`groupChat.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`groupChat.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`groupChat.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
-|`groupChat.taskInfo.url`|String|2048 characters||Initial webview URL.|
+|`groupChat.taskInfo.url`|String|2,048 characters||Initial webview URL.|
 
 ### bots.commandLists
 
-An optional list of commands that your bot can recommend to users. The object is an array (maximum of 2 elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information, see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
+An optional list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information, see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -478,11 +478,11 @@ An optional list of commands that your bot can recommend to users. The object is
 
 The `connectors` block defines a connector for Microsoft 365 Groups for the app.
 
-The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a Connector. Only one connector per app is supported.
+The object is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a Connector. Only one connector per app is supported.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the connector using the inline configuration experience.|
+|`configurationUrl`|String|2,048 characters|✔️|The https:// URL to use when configuring the connector using the inline configuration experience.|
 |`connectorId`|String|64 characters|✔️|A unique identifier for the Connector that matches its ID in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).|
 |`scopes`|Array of enum|1|✔️|Specifies whether the Connector offers an experience in the context of a channel in a `team`, or an experience scoped to an individual user alone (`personal`). Currently, only the `team` scope is supported.|
 
@@ -495,20 +495,20 @@ Defines a message extension for the app.
 > [!NOTE]
 > The name of the feature was changed from "compose extension" to "message extension" in November, 2017, but the app manifest name remains the same so that existing extensions continue to function.
 
-The object is an array (maximum of 1 element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
+The object is an array (maximum of one element) with all elements of type `object`. This block is required only for solutions that provide a message extension.
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
 |`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`composeExtensionType`|String|||Type of the compose extension. Enum values are `botBased` and `apiBased`.|
-|`apiSpecificationFile`|String|2048 characters||A relative file path to the api specification file in the manifest package.|
-|`canUpdateConfiguration`|Boolean|||A value indicating whether the configuration of a message extension can be updated by the user. <br>Default value: `true`|
+|`apiSpecificationFile`|String|2,048 characters||A relative file path to the API specification file in the manifest package.|
+|`canUpdateConfiguration`|Boolean|||A value indicating whether a user can update the configuration of a message extension. <br>Default value: `true`|
 |`commands`|Array of object|10||Array of commands the message extension supports.|
 |`messageHandlers`|Array of objects|5||A list of handlers that allow apps to be invoked when certain conditions are met. Domains must also be listed in `validDomains`.|
 |`messageHandlers.type`|String|||The type of message handler. Must be `"link"`.|
-|`messageHandlers.value.domains`|Array of Strings|2048 characters||Array of domains that the link message handler can register for.|
-|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false` <br> To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportAnonymousAccess` is superseded by `supportsAnonymizedPayloads`.|
-|`type`     |  Type of the compose extension.  Supported values are `apiBased` or `botBased`. |
+|`messageHandlers.value.domains`|Array of Strings|2,048 characters||Array of domains that the link message handler can register for.|
+|`messageHandlers.supportsAnonymizedPayloads`|Boolean|||A Boolean value that indicates whether the app's link message handler supports anonymous invoke flow. <br>Default value: `false` <br> To enable zero install for link unfurling, the value needs to be set to `true`. <br/> **Note**: The property `supportsAnonymizedPayloads` supersedes the property `supportAnonymousAccess`.|
+|`type`     |  Type of the compose extension. Supported values are `apiBased` or `botBased`. |  |  | |
 
 ### composeExtensions.commands
 
@@ -520,7 +520,7 @@ Each command item is an object with the following structure:
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
 |`type`|String|64 characters||Type of the command. One of `query` or `action`. Default: `query`|
-|`apiResponseRenderingTemplateFile`|String|2048 characters||A relative file path for api response rendering template file.|
+|`apiResponseRenderingTemplateFile`|String|2,048 characters||A relative file path for API response rendering template file.|
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command runs initially with no parameters. <br>Default value: `false`|
@@ -530,9 +530,9 @@ Each command item is an object with the following structure:
 |`taskInfo.title`|String|64 characters||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as `large`, `medium`, or `small`.|
-|`taskInfo.url`|String|2048 characters||Initial webview URL.|
+|`taskInfo.url`|String|2,048 characters||Initial webview URL.|
 |`parameters`|Array of object|5||The list of parameters the command takes. Minimum: 1; maximum: 5|
-|`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request. </br> For Api-based message extension, The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters. |
+|`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The name is included in the user request. </br> For Api-based message extension, The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters. |
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
 |`parameter.inputType`|String|||Defines the type of control displayed on a dialog for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
@@ -540,7 +540,7 @@ Each command item is an object with the following structure:
 |`parameter.choices`|Array of objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
 |`parameter.choices.title`|String|128 characters||Title of the choice.|
 |`parameter.choices.value`|String|512 characters||Value of the choice.|
-|`apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response.  |
+|`apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response.  |  |  |  |
 
 ## scopeConstraints
 
@@ -592,7 +592,7 @@ It's **not** necessary to include the domains of identity providers you want to 
 > [!IMPORTANT]
 > Do not add domains that are outside your control, either directly or through wildcards. For example, `yourapp.onmicrosoft.com` is valid, but `*.onmicrosoft.com` isn't valid.
 
-The object is an array with all elements of the type `string`. The maximum item of the object is 16 and maximum length is 2048 characters.
+The object is an array with all elements of the type `string`. The maximum item of the object is 16 and maximum length is 2,048 characters.
 
 ## webApplicationInfo
 
@@ -603,17 +603,17 @@ Specify your Microsoft Entra App ID and Graph information to help users seamless
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String| |✔️|Microsoft Entra application ID of the app. This ID must be a GUID.|
-|`resource`|String|2048 characters||Resource URL of the app for acquiring auth token for SSO.|
+|`resource`|String|2,048 characters||Resource URL of the app for acquiring auth token for SSO.|
 
 ## graphConnector
 
 **Optional** &ndash; Object
 
-Specify the app's Graph connector configuration. If this is present, then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
+Specify the app's Graph connector configuration. If this value is present, then [webApplicationInfo.id](#webapplicationinfo) must also be specified.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`notificationUrl`|string|2048 characters|✔️|The https:// URL where Graph-connector notifications for the application must be sent.|
+|`notificationUrl`|string|2,048 characters|✔️|The https:// URL where Graph-connector notifications for the application must be sent.|
 
 ## showLoadingIndicator
 
@@ -740,7 +740,7 @@ A value that indicates whether an app is blocked by default until admin allows i
 
 **Optional** &ndash; String
 
-The https:// URL to the page that provides additional app information for the admins. The maximum length of the string is 2048 characters.
+The `https://` URL to the page that provides app information for the IT admins. The maximum length of the string is 2,048 characters.
 
 ## defaultInstallScope
 
@@ -789,8 +789,8 @@ Specify meeting extension definition. For more information, see [custom Together
 |---|---|---|---|---|
 |`scenes`|Array of objects| 5 items||Meeting supported scenes.|
 |`supportsStreaming`|Boolean|||A Boolean value that indicates whether an app can stream the meeting's audio and video content to a real-time meeting protocol (RTMP) endpoint. <br>Default value: `false`|
-|`videoFiltersConfigurationUrl`|String|2048 characters||The https:// URL for configuring the video filters.|
-|`supportsAnonymousGuestUsers`|Boolean|||A Boolean value that indicates whether the app supports access by anonymous guest users. <br>Default value: `false`|
+|`videoFiltersConfigurationUrl`|String|2,048 characters||The https:// URL for configuring the video filters.|
+|`supportsAnonymousGuestUsers`|Boolean|||A Boolean value that indicates whether the app supports access by anonymous guests. <br>Default value: `false`|
 
 ### meetingExtensionDefinition.scenes
 
@@ -798,8 +798,8 @@ Specify meeting extension definition. For more information, see [custom Together
 |---|---|---|---|---|
 |`id`|String||✔️| The unique identifier for the scene. This ID must be a GUID. |
 |`name`| String | 128 characters |✔️| The name of the scene. |
-|`file`|String|2048 characters|✔️| The relative file path to the scenes' metadata json file. |
-|`preview`|String|2048 characters|✔️| The relative file path to the scenes' PNG preview icon. |
+|`file`|String|2,048 characters|✔️| The relative file path to the scenes' metadata json file. |
+|`preview`|String|2,048 characters|✔️| The relative file path to the scenes' PNG preview icon. |
 |`maxAudience`| Integer | 50  |✔️| The maximum number of audiences supported in the scene. |
 |`seatsReservedForOrganizersOrPresenters`| Integer | 50 |✔️| The number of seats reserved for organizers or presenters.|
 
@@ -811,7 +811,7 @@ This object indicates meeting supported video filters.
 |---|---|---|---|---|
 |`id`|String||✔️| The unique identifier for the video filter. This ID must be a GUID. |
 |`name`| String | 128 characters |✔️| The name of the video filter. |
-|`thumbnail`|String|2048 characters|✔️| The relative file path to the video filter's thumbnail. |
+|`thumbnail`|String|2,048 characters|✔️| The relative file path to the video filter's thumbnail. |
 
 ## authorization
 
@@ -888,22 +888,22 @@ Delegated permissions allow the app to access data on behalf of the signed-in us
 
 **Optional** &ndash; Object
 
-The `extensions` property specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
+The `extensions` property specifies Outlook Add-ins within an app manifest and simplifies the distribution and acquisition across the Microsoft 365 ecosystem. Each app supports only one extension.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`requirements`| Object | | | Specifies the set of client or host requirements for the extension. |
-|`runtimes`| Array | | | Configures the set of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
+|`runtimes`| Array | | | Configures the set of runtimes and actions that each extension point can use. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
 |`ribbons`| Array | | | Defines the ribbons extension point. |
 |`autoRunEvents`| Array | | | Defines the event-based activation extension point. |
-|`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
-|`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
+|`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. Use it to hide or prioritize add-ins from the same publisher with overlapping functionality. |
+|`audienceClaimUrl`| String | 2,048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
 
 ### extensions.requirements
 
-The `extensions.requirements` property specifies the [requirement sets](/javascript/api/requirement-sets) for  Microsoft 365 Add-ins. If the Microsoft 365 version doesn't support the specified requirements, then the extension won’t be available. Requirements are supported at the object and child object level.
+The `extensions.requirements` property specifies the [requirement sets](/javascript/api/requirement-sets) for  Microsoft 365 Add-ins. If the Microsoft 365 version doesn't support the specified requirements, then the extension isn't available. Requirements are supported at the object and child object level.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -972,7 +972,7 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.groups.controls.type`| String | | ✔️ | Defines the control type. <br>Supported values: `button`, `menu`|
 |`tabs.groups.controls.builtinControlId`| String | 64 characters | ✔️ | Specifies the ID of the existing Microsoft 365 control. For more information, see [find the IDs of controls and control groups](/office/dev/add-ins/design/built-in-button-integration#find-the-ids-of-controls-and-control-groups).|
 |`tabs.groups.controls.label`| String | 64 characters | ✔️ | Specifies the text displayed for the control.|
-|`tabs.groups.controls.icons`| Array | | | Defines the icon(s) for the control. |
+|`tabs.groups.controls.icons`| Array | | | Defines one or more icons for the control. |
 |`tabs.groups.controls.icons.size`| Number | | ✔️ | Specifies the size of the icon in pixels, enumerated as `16`,`20`,`24`,`32`,`40`,`48`,`64`,`80`. <br> Required image size: `16`, `32`, `80`|
 |`tabs.groups.controls.icons.url`| URL| | | Specifies the absolute URL to the icon.|
 |`tabs.groups.controls.supertip`| Object | | ✔️ | Configures a supertip for the control. |
@@ -999,14 +999,14 @@ The `extensions.autoRunEvents` property defines event-based activation extension
 
 ### extensions.alternates
 
-The `extensions.alternates` property is used to hide or prioritize specific in-market add-ins when you've published multiple add-ins with overlapping functionality.
+Use `extensions.alternates` property to hide or prioritize specific in-market add-ins when you publish multiple add-ins with overlapping functionality.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`prefer`| Object | | | Specifies the backward compatibility with an equivalent COM add-in, XLL add-in, or both.|
 |`prefer.comAddin`| Object | | | Specifies a COM add-in that must be used in place of the Microsoft 365 Web Add-in for Windows.|
 |`prefer.comAddin.progId`| String | 64 characters | ✔️ | Identifies the application type in which the extension can run.|
-|`hide`| Object | | | Configures how to hide another add-in that you've published whenever the add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this property when you've previously published an add-in that uses the old XML app manifest and you're replacing it with a version that uses the new JSON app manifest. |
+|`hide`| Object | | | Configures how to hide another add-in that you've published whenever the add-in is installed, so users don't see both in the Microsoft 365 UI. For example, use this property if you have a published add-in that uses the old XML app manifest and you're replacing it with a version that uses the new JSON app manifest. |
 |`hide.storeOfficeAddin`| Object | | | Specifies a Microsoft 365 Add-in available in Microsoft AppSource. |
 |`hide.storeOfficeAddin.officeAddinId`| String | 64 characters | ✔️ | Specifies the ID of the in-market add-in to hide. The GUID is taken from the app manifest `id` property if the in-market add-in uses the JSON app manifest. The GUID is taken from the `<Id>` element if the in-market add-in uses the XML app manifest. |
 |`hide.storeOfficeAddin.assetId`| String | 64 characters | ✔️ | Specifies the AppSource asset ID of the in-market add-in to hide.|
@@ -1065,4 +1065,4 @@ Required if the handler type is `openPage`. Object containing metadata of the pa
 * [Enable app customization](~/concepts/design/enable-app-customization.md)
 * [Localize your app](~/concepts/build-and-test/apps-localization.md)
 * [Integrate media capabilities](~/concepts/device-capabilities/media-capabilities.md)
-* [Different versions of app manifest schema](https://github.com/microsoft/json-schemas/tree/main/teams)
+* [View different versions of app manifest schema](https://github.com/microsoft/json-schemas/tree/main/teams)
