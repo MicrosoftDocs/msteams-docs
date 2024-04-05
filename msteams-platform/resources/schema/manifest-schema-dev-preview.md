@@ -1043,12 +1043,12 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`requirements.scopes`| Array of enums | 1 | | Identifies the scopes in which the add-in can run and defines the Microsoft 365 applications in which the extension can run. For example, `mail` (Outlook). <br>Supported value: `mail` |
 |`requirements.formFactors`| Array of enums | | | Identifies the form factors that support the add-in. <br>Supported values: `mobile`, `desktop`|
 |`alternateIcons`| Object | | | Specifies the main icons that are used to represent the add-in on older versions of Office. This property is **required** if the Office add-in is to be installable in Office on Mac, perpetual Office licenses, and Microsoft 365 subscription versions of Office on Windows earlier than 2304 (Build 16320.00000).|
-|`alternateIcons.icon`| Object | | ✔️ | Specifies the size and URL of the image file that is used to represent the add-in. The image must be in one of the following file formats: GIF, JPG, PNG, EXIF, BMP, or TIFF. |
-|`alternateIcons.icon.size`| Number enum | | ✔️ | This property is not currently used. The icon that the "icon.url" property points to must be 64 x 64 pixels.|
-|`alternateIcons.icon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in. |
-|`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies the size and URL of the image file that is used to represent the add-in on high DPI screens. The image must be in one of the following file formats: GIF, JPG, PNG, EXIF, BMP, or TIFF. |
-|`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | This property is not currently used. The icon that the "highResolutionIcon.url" property points to must be 128 x 128 pixels.|
-|`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. |
+|`alternateIcons.icon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in. |
+|`alternateIcons.icon.size`| Number enum | | ✔️ | This property is reserved for future use. The value must be 64.|
+|`alternateIcons.icon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in. Icon image must be 64 x 64 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
+|`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in on high DPI screens. |
+|`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | This property is reserved for future use. The value must be 64 (not 128). |
+|`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
 ## actions
 
