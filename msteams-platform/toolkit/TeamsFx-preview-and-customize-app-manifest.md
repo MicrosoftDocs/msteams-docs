@@ -1,7 +1,7 @@
 ---
 title: Customize app manifest in Teams Toolkit
 author: surbhigupta
-description: In this module, learn how to edit, preview, and customize app manifest in different environments.
+description: Learn how to edit, preview, and customize app manifest in different environments.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
