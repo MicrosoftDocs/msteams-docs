@@ -9,19 +9,15 @@ ms.localizationpriority: high
 
 # Bot configuration experience
 
-Bot configuration helps you to enable the bot configuration settings for the user during the bot installation and also from the channel or group chat scope after the bot is installed.
+Bot configuration helps you to enable the bot configuration settings for the user during installation and reconfigure the bot from the channel or group chat scope after the bot is installed. Bot configuration experience is supported in channel or group chat only.
 
-> [!NOTE]
->
-> Bot configuration experience is supported in channel or group chat.
-
-Let's consider a scenario where a user installs a bot only to discover that the default settings don't align with their workflow. Users might feel limited by the preset behavior of the bot resulting in decreased engagement and usage. However, by implementing bot configuration, you can empower users to tailor bot settings according to their preferences.
+Let's consider a scenario where a user installs a bot only to discover that the default settings don't align with their workflow.By implementing bot configuration, you can empower users to tailor bot settings according to their preferences.
 
 Here's an example of a user who adds a bot to a channel and sets up the bot so that it is configured to user's specific needs, in this case selecting the project folder. The user then reconfigures the bot to point to a different folder.
 
 |Configure|Reconfigure|
 |---------|-----------|
-|GIF |GIF |
+|:::image type="content" source="../../assets/images/bots/configuration.gif" alt-text="Congifgure bot"::: | :::image type="content" source="../../assets/images/bots/reconfiguration.gif" alt-text=""::: |
 
 Bot configuration allows users to customize the behavior of the bot and ensures that interactions align with their workflow and preferences. Personalized experiences lead to higher user engagement, encourage frequent interactions, and drive engagement metrics such as monthly active users (MAU) rates. Bot configuration offers adaptability, which allows users to reconfigure bot settings as their requirements change, ensuring that the bot continues to provide value and relevance in the long term.
 
@@ -84,9 +80,9 @@ If you set the `fetchTask` property in the app manifest to:
 
       The `adaptiveCardForContinue` and `adaptiveCardForSubmit` are functions that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to generate Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
-      When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.   
+      When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
-      # [C#](#tab/teams-bot-sdk5)
+# [C#](#tab/teams-bot-sdk5)
 
       * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
 
@@ -113,7 +109,7 @@ If you set the `fetchTask` property in the app manifest to:
             };
          ```
 
-      # [JavaScript](#tab/JS2)
+# [JavaScript](#tab/JS2)
 
       * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
 
@@ -134,8 +130,8 @@ If you set the `fetchTask` property in the app manifest to:
             };
             return response;
          ```
-      
-      # [C#](#tab/teams-bot-sdk6)
+
+# [C#](#tab/teams-bot-sdk6)
 
       * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
 
@@ -154,7 +150,7 @@ If you set the `fetchTask` property in the app manifest to:
                   return Task.FromResult(response);
           ```
 
-      # [JavaScript](#tab/JS5)
+# [JavaScript](#tab/JS5)
 
       * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
 
@@ -170,11 +166,12 @@ If you set the `fetchTask` property in the app manifest to:
               }
               return response;
          ```
+
       ---
 
    1. `config/auth`: You can also request the user to authenticate as a response to `config/continue` request.  The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
-      # [C#](#tab/teams-bot-sdk4)
+# [C#](#tab/teams-bot-sdk4)
 
       * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
 
@@ -204,7 +201,7 @@ If you set the `fetchTask` property in the app manifest to:
          };
          ```
 
-      # [JavaScript](#tab/JS3)
+# [JavaScript](#tab/JS3)
 
       * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
 
@@ -228,7 +225,7 @@ If you set the `fetchTask` property in the app manifest to:
 
 ## Bot configuration experience in Teams
 
-After you've created and published the bot in Microsoft Teams Store, the user can follow these steps: 
+After you've created and published the bot in Microsoft Teams Store, the user can follow these steps:
 
 **To configure the bot during installation**
 
