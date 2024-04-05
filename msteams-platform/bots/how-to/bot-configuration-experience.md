@@ -9,7 +9,7 @@ ms.localizationpriority: high
 
 # Bot configuration experience
 
-Bot configuration helps you to enable the bot configuration settings for users to configure the bot during insallation and reconfigure the bot from the channel or group chat scope where the bot is installed. Bot configuration experience is supported in channel or group chat only.
+Bot configuration helps you to enable the bot configuration settings for users to configure the bot during installation and reconfigure the bot from the channel or group chat scope where the bot is installed. Bot configuration experience is supported in channel or group chat only.
 
 Let's consider a scenario where a user installs a bot where the default settings don't align with their workflow. By implementing bot configuration, you can empower users to tailor bot settings according to their preferences. Here's an example of a user adding a bot to a channel and configuring the bot to their specific needs, in this case selecting the project folder. The user then reconfigures the bot to point to a different folder.
 
@@ -66,7 +66,7 @@ For more information, see [app manifest schema](../../resources/schema/manifest-
 
 ### Configure your bot
 
-When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `ConfigFetch` defined in the teamsBot.js file.
+When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `ConfigFetch` defined in the `teamsBot.js` file.
 
 If you set the `fetchTask` property in the app manifest to:
 
@@ -74,7 +74,7 @@ If you set the `fetchTask` property in the app manifest to:
 
 * **true**: The bot initiates `ConfigFetch` to fetch content. When invoking the bot, you can return an Adaptive Card or a dialog depending on the context provided in [channelData and userdata](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
 
-   Bot can respond to `ConfigFetch` request in two ways:
+   Bot can respond to `ConfigFetch` request in three ways:
 
    1. `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
 
@@ -84,7 +84,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       # [C#](#tab/teams-bot-sdk1)
 
-      * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable)
+      * [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable&branch=main)
 
       * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L168)
 
@@ -132,7 +132,7 @@ If you set the `fetchTask` property in the app manifest to:
          ```
       ---
 
-   1. `type: auth`: You can also request the user to authenticate as a response to `ConfigFetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
+   1. `type: "auth"`: You can also request the user to authenticate as a response to `ConfigFetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
       # [C#](#tab/teams-bot-sdk2)
 
@@ -191,6 +191,8 @@ If you set the `fetchTask` property in the app manifest to:
 
       # [C#](#tab/teams-bot-sdk3)
 
+        [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulemessageresponse?view=botbuilder-dotnet-stable&branch=main)
+
          ```csharp
             ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
                   {
@@ -219,9 +221,9 @@ If you set the `fetchTask` property in the app manifest to:
 
       ---
 
-When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `ConfigFetch` in the bot logic. The user can reconfigure the bot seetings post-installation in two ways:
+When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `ConfigFetch` in the bot logic. The user can reconfigure the bot settings post-installation in two ways:
 
-* @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or change the bot's configuration settings in the dialog.
+* @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or changes the bot's configuration settings in the dialog.
 
    :::image type="content" source="../../assets/images/bots/mention-bot-in-compose-area.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
@@ -232,6 +234,8 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 
 ## Best practices
+
+* If you want to have an individual channel-level configuration of your bot, ensure that you track the configuration as per the channel. Configuration Data isn't stored and the invoke payload includes the sufficient [channelData](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
 
 * Provide a clear and user-friendly dialog that prompts the user to enter the required information for the bot to operate properly, such as a URL, an area path, or a dashboard link.
 
