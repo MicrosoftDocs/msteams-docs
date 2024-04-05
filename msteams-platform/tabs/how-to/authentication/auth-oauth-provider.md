@@ -45,7 +45,7 @@ The following image provides the flow to add authentication to external browsers
 
 1. Initiate the external auth-login process. The third-party app calls the TeamsJS function `authentication.authenticate` with `isExternal` set as true to initiate the external auth-login process.
 
-   The passed `url` contains placeholders for `{authId}`, `{oauthRedirectMethod}` and `{hostRedirectUrl}`.  
+   The passed `url` contains placeholders for `{authId}`, `{oauthRedirectMethod}`, and `{hostRedirectUrl}`.  
 
     ```JavaScript
        authentication.authenticate({
@@ -59,7 +59,7 @@ The following image provides the flow to add authentication to external browsers
         })
     ```
 
-1. The Teams clients open the URL in an external browser after automatically replacing the placeholders for `oauthRedirectMethod`, `authId` and `hostRedirectUrl` with suitable values.
+1. The Teams clients open the URL in an external browser after automatically replacing the placeholders for `oauthRedirectMethod`, `authId`, and `hostRedirectUrl` with suitable values.
 
    **Example**
 
@@ -73,10 +73,10 @@ The following image provides the flow to add authentication to external browsers
    | --- | --- |
    | `oauthRedirectMethod` |Indicates how the third-party app must send the response of authentication request back to the client, with one of the two values: deep link or page.|
    |`authId` |The request-id Teams creates for this specific authentication request that needs to be sent back to the client through a deep link.|
-   |`hostRedirectUrl` |The deep link containing the url scheme of the initiating client to redirect back to after the completion of authentication|
+   |`hostRedirectUrl` | The deep link includes the URL schema of the initiating client to redirect after the authentication. |
 
     > [!TIP]
-    > The app can marshal `authId`, `oauthRedirectMethod` and `hostRedirectUrl` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId`, `oauthRedirectMethod` and `hostRedirectUrl`, when OAuthProvider redirects back to the server and the app uses the values for sending authentication response back to the initiating client as described in step 6.
+    > The app can marshal `authId`, `oauthRedirectMethod`, and `hostRedirectUrl` in the OAuth `state` query parameter while generating the login URL for the OAuthProvider. The `state` contains the passed `authId`, `oauthRedirectMethod`, and `hostRedirectUrl`, when OAuthProvider redirects to the server and the app uses the values for sending authentication response back to the initiating client as described in step 6.
 
 1. The third-party app server redirects to specified `url`. The third-party app server redirects to OAuth providers auth page in the external browser. The `redirect_uri` is a dedicated route on the app server. You can register `redirect_uri` in the OAuth provider’s dev console as static, the parameters need to be sent through the state object.
 
@@ -101,7 +101,7 @@ The following image provides the flow to add authentication to external browsers
       …
       ```
 
-   In example, for Teams mobile client the modified `hostRedirectUrl` would result into the following
+   For example, in Teams mobile client, the modified `hostRedirectUrl` results the following:
 
    ```JavaScript
    return res.redirect(`msteams://teams.microsoft.com/l/auth-callback?authId=${state.authId}&result=${req.query.code}`)
