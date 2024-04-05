@@ -84,7 +84,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       # [C#](#tab/teams-bot-sdk1)
 
-      * [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse?view=botbuilder-dotnet-stable&branch=main)
+      * [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse)
 
       * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L168)
 
@@ -191,7 +191,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       # [C#](#tab/teams-bot-sdk3)
 
-        [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulemessageresponse?view=botbuilder-dotnet-stable&branch=main)
+        [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulemessageresponse)
 
          ```csharp
             ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
@@ -235,7 +235,7 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 ## Best practices
 
-* If you want to have an individual channel-level configuration of your bot, ensure that you track the configuration as per the channel. Configuration Data isn't stored and the invoke payload includes the sufficient [channelData](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
+* If you want to have an individual channel-level configuration of your bot, ensure that you track the configuration as per the channel. Configuration data isn't stored and the invoke payload includes the sufficient [channelData](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
 
 * Provide a clear and user-friendly dialog that prompts the user to enter the required information for the bot to operate properly, such as a URL, an area path, or a dashboard link.
 
