@@ -23,10 +23,13 @@ The tab naming convention for your installed bot depends on the `isNotificationO
 
 When the `isNotificationOnly` manifest property is set to `true`, the tab for the installed bot app is named **Activity**.
 
+:::image type="content" source="~/assets/images/bots/notification_bot_true.png" alt-text="Screenshot shows an example of **Activity** tab.":::
 
 # [`isNotificationOnly: false`](#tab/false)
 
 When the `isNotificationOnly` manifest property is set to `false`, the tab for the installed bot app is named **Chat**.
+
+:::image type="content" source="~/assets/images/bots/notification_bot_false.png" alt-text="Screenshot shows an example of **Chat** tab.":::
 
 ---
 
