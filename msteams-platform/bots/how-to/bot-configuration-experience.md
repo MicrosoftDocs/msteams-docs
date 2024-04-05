@@ -80,6 +80,8 @@ If you set the `fetchTask` property in the app manifest to:
 
       The `adaptiveCardForContinue` and `adaptiveCardForSubmit` are custom functions that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
+      When the user submits the configuration, the `OnTeamsConfigSubmitAsync` method is triggered.  It reads the user's input and returns a different Adaptive Card. You can also update the bot configuration to return a [dialogs](../../task-modules-and-cards/what-are-task-modules.md).
+
       # [C#](#tab/teams-bot-sdk1)
 
       * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable)
@@ -183,8 +185,6 @@ If you set the `fetchTask` property in the app manifest to:
          ```
 
       ---
-
-   1. `type="submit"`: When the user submits the configuration, the `OnTeamsConfigSubmitAsync` method is triggered.  It reads the user's input and returns a different Adaptive Card. You can also update the bot configuration to return a [dialogs](../../task-modules-and-cards/what-are-task-modules.md).
 
 
    1. `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
