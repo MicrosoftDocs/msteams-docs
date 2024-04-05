@@ -91,7 +91,7 @@ If you set the `fetchTask` property in the app manifest to:
 
    Bot can respond to `ConfigFetch` request in two ways:
 
-   1. `config/continue`: `config/continue` is used to define a continuation of a task module or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
+   1. `config/continue`: `config/continue` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
 
       The `adaptiveCardForContinue` and `adaptiveCardForSubmit` are functions that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to generate Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
