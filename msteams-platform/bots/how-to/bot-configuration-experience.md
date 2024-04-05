@@ -11,8 +11,7 @@ ms.localizationpriority: high
 
 > [!NOTE]
 >
-> * Bot configuration experience is available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * Bot configuration experience is supported in channel or group chat scopes only.
+> Bot configuration experience is supported in channel or group chat only.
 
 You can create a bot to enable the bot configuration settings for the user during the bot installation and also from the channel or group chat scope after the bot is installed.
 
