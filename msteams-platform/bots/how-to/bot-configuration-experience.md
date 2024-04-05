@@ -115,7 +115,7 @@ If you set the `fetchTask` property in the app manifest to:
 
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L83)
 
-         ```javascript
+      ```javascript
             const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
             response = {
                config: {
@@ -129,7 +129,7 @@ If you set the `fetchTask` property in the app manifest to:
                },
             };
             return response;
-         ```
+     ```
 
    # [C#](#tab/teams-bot-sdk6)
 
@@ -137,7 +137,7 @@ If you set the `fetchTask` property in the app manifest to:
 
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L131)
 
-         ```csharp
+      ```csharp
             ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
                   {
                      Config = new TaskModuleMessageResponse
@@ -148,7 +148,7 @@ If you set the `fetchTask` property in the app manifest to:
                   };
 
                   return Task.FromResult(response);
-          ```
+      ```
 
 
 # [JavaScript](#tab/JS5)
@@ -157,7 +157,7 @@ If you set the `fetchTask` property in the app manifest to:
 
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L120)
 
-         ```javascript
+      ```javascript
               {
               response = {
                  config: {
@@ -166,7 +166,7 @@ If you set the `fetchTask` property in the app manifest to:
                  },
               }
               return response;
-         ```
+      ```
 
       ---
 
@@ -178,7 +178,7 @@ If you set the `fetchTask` property in the app manifest to:
 
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L84)
 
-         ```csharp
+      ```csharp
          protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
          {
             ConfigResponseBase response = new ConfigResponse<BotConfigAuth>
@@ -200,7 +200,7 @@ If you set the `fetchTask` property in the app manifest to:
                   Type = "auth"
                }
          };
-         ```
+      ```
 
    # [JavaScript](#tab/JS3)
 
@@ -208,7 +208,7 @@ If you set the `fetchTask` property in the app manifest to:
 
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L69C7-L80C6)
 
-         ```javascript
+      ```javascript
             config: {
             type: "auth",
             suggestedActions: {
@@ -220,7 +220,7 @@ If you set the `fetchTask` property in the app manifest to:
                }]
             },
             },
-         ```
+      ```
 
       ---
 
