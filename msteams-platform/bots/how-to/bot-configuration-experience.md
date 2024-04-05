@@ -25,13 +25,7 @@ Let's consider a scenario where a user installs a bot only to discover that the 
 
 Bot configuration allows users to customize the behavior of the bot and ensures that interactions align with their workflow and preferences. Personalized experiences lead to higher user engagement, encourage frequent interactions, and drive engagement metrics such as monthly active users (MAU) rates. Bot configuration offers adaptability, which allows users to reconfigure bot settings as their requirements change, ensuring that the bot continues to provide value and relevance in the long term.
 
-## How it works?
-
 When you plan to implement bot configuration, you must ensure that you're able to configure a bot on first installation and reconfigure it at any time. The configuration is supported for bots in channel scope within a team, and group chat. The experience can also be leveraged by users to be channel specific.
-
-User installs bot in a personal, group, or team the bot is installed in the respective scope. If the bot configuration property is defined in the manifest, the configuration is initiated according to the manifest, else a welcome card is diplayed in the specific scope. If the manifest property is not defined, a non-configurable card is displayed.
-
-If a user wants to reconfigure the bot via the bot command or a bot card, again bot configuration property is defined in the manifest is triggered.
 
 ## Enable bot configuration experience
 
