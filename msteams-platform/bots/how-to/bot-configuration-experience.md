@@ -9,40 +9,29 @@ ms.localizationpriority: high
 
 # Bot configuration experience
 
+Bot configuration helps you to enable the bot configuration settings for the user during the bot installation and also from the channel or group chat scope after the bot is installed.
+
 > [!NOTE]
 >
 > Bot configuration experience is supported in channel or group chat.
 
-Bot configuration in Microsoft Teams helps you to streamline the setup process for bots that need specific information to function, such as integration with external services. Asking for configuration details after installation can be disruptive and provides unpleasant experience to the user. Bot configuration allows the user to input necessary information such as URLs or dashboard links during installation. This enhances the user experience by eliminating the need for additional configuration steps.
+Let's consider a scenario where a user installs a bot only to discover that the default settings don't align with their workflow. Users might feel limited by the preset behavior of the bot resulting in decreased engagement and usage. However, by implementing bot configuration, you can empower users to tailor bot settings according to their preferences.
 
-Let's consider a situation where a user installs a bot only to discover that the default settings don't align with their workflow. If the bot lacks configuration capabilities, users might feel limited by its preset behavior resulting in decreased engagement and usage. However, by incorporating bot configuration, you can empower users to tailor bot settings according to their preferences.
+Here's an example of a user who adds a bot to a channel and sets up the bot so that it is configured to user's specific needs, in this case selecting the project folder. The user then reconfigures the bot to point to a different folder.
 
-Here's an illustration that shows the bot configuration experience:
+|Configure|Reconfigure|
+|---------|-----------|
+|GIF |GIF |
 
-   :::image type="content" source="../../assets/images/bots/scenario.gif" alt-text="Graphic shows the process for integrating a bot into a Teams channel.":::
+Bot configuration allows users to customize the behavior of the bot and ensures that interactions align with their workflow and preferences. Personalized experiences lead to higher user engagement, encourage frequent interactions, and drive engagement metrics such as monthly active users (MAU) rates. Bot configuration offers adaptability, which allows users to reconfigure bot settings as their requirements change, ensuring that the bot continues to provide value and relevance in the long term.
 
-| Steps | Description |
-| --- | --- |
-||**Configure bot during installation**|
-| 1 | Select **Add to a team** from the dropdown menu to add a bot to Teams.|
-| 2 | Enter the name of a channel in the search field.|
-| 3 | Select **Add**.|
-| 4 | Bot is added to the channel.|
-| 5 | After the setup phase, the bot sends a welcome Adaptive Card to the channel. Any user in the channel can configure the bot. If a conflict arises, the system considers the most recently saved settings.|
-| 6 | Bot is configured.|
-||**Reconfigure bot**|
-| 7 | Hover over the bot, the bot profile card appears. To update or change the bot's configuration settings, select the settings icon in the bot profile card.|
-| 8 | You can also trigger the reconfiguration settings by @mentioning the bot in the message compose area.|
+# How it works>
 
-## Benefits
+When you plan to implement bot configuration, you must ensure that you're able to configure a bot on first installation and reconfigure it at any time. The configuration is supported for bots in channel scope within a team, and group chat. The experience can also be leveraged by users to be channel specific.
 
-* **Personalized user experience**: Bot configuration allows users to customize the behavior of the bot and ensures that interactions align with their workflow and preferences.
+User installs bot in a personal, group, or team the bot is installed in the respective scope. If the bot configuration property is defined in the manifest, the configuration is initiated according to the manifest, else a welcome card is diplayed in the specific scope. If the manifest property is not defined, a non-configurable card is displayed.
 
-* **Increased engagement**: Personalized experiences lead to higher user engagement. Configured bots are more likely to meet user expectations, encouraging frequent interactions and driving up engagement metrics such as monthly active users (MAU) rates.
-
-* **Adaptability**: User needs change over time, bots must adapt to meet these evolving requirements. Bot configuration allows users to reconfigure settings as their requirements change, ensuring the bot continues to provide value and relevance in the long term.
-
-When you're creating a bot, it’s important to ensure users have a smooth experience and are able to personalize their bots. You can use methods from the Bot Framework SDK to implement bot configuration.
+If a user wants to reconfigure the bot via the bot command or a bot card, again bot configuration property is defined in the manifest is triggered.
 
 ## Enable bot configuration experience
 
