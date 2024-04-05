@@ -11,7 +11,7 @@ ms.localizationpriority: high
 
 > [!NOTE]
 >
-> Bot configuration experience is supported in channel or group chat only.
+> Bot configuration experience is supported in channel or group chat.
 
 Bot configuration in Microsoft Teams helps you to streamline the setup process for bots that need specific information to function, such as integration with external services. Asking for configuration details after installation can be disruptive and provides unpleasant experience to the user. Bot configuration allows the user to input necessary information such as URLs or dashboard links during installation. This enhances the user experience by eliminating the need for additional configuration steps.
 
