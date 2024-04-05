@@ -317,12 +317,12 @@ Specifies information about the developer and their business. For store apps, th
 
 **Required** &ndash; Object
 
-App developer contact information. For more information, see [developer provided app information](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation).
+App developer contact information that is used for customers to contact you when they evaluate their app or if they have any queries about your app. For more information, see [developer provided app information](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation). Customers contact you using Teams chat, so request your IT admins to [enable external communications](/microsoftteams/communicate-with-users-from-other-organizations) in your organization. Provide only one contact email address for this feature to work. We recommend that you triage the queries and route those internally within your organization based on the questions asked by the customers.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`defaultsupport`|Object||✔️| The default contact information for your app.|
-|`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address for customer queries using Teams chat. Minimum: 1; maximum: 10. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
+|`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address for customer queries using Teams chat. Minimum: 1; maximum: 10. The object is an array with all elements of the type string. The maximum length of email is 80 characters. Provide only one contact email address for customers to be able to contact you. |
 |`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for customer inquiry. Minimum: 1; maximum: 1. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 
 ## localizationInfo
