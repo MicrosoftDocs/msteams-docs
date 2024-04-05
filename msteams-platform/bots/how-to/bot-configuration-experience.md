@@ -216,7 +216,8 @@ If you set the `fetchTask` property in the app manifest to:
               }
               return response;
          ```
-      ---   
+
+      ---
 
 When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `ConfigFetch` in the bot logic. The user can reconfigure the bot seetings post-installation in two ways:
 
