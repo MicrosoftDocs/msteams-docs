@@ -21,7 +21,7 @@ Here's an example of a user who adds a bot to a channel and sets up the bot so t
 
 |Configure|Reconfigure|
 |---------|-----------|
-|GIF |GIF |
+|:::image type="content" source="../../assets/images/bots/configuration.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel."::: |:::image type="content" source="../../assets/images/bots/reconfiguration.gif" alt-text="Graphic shows the process of reconfiguring a bot into a Teams channel."::: |
 
 Bot configuration allows users to customize the behavior of the bot and ensures that interactions align with their workflow and preferences. Personalized experiences lead to higher user engagement, encourage frequent interactions, and drive engagement metrics such as monthly active users (MAU) rates. Bot configuration offers adaptability, which allows users to reconfigure bot settings as their requirements change, ensuring that the bot continues to provide value and relevance in the long term.
 
@@ -80,9 +80,9 @@ If you set the `fetchTask` property in the app manifest to:
 
    Bot can respond to `ConfigFetch` request in two ways:
 
-   1. `config/continue`: `config/continue` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
+   1. `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
 
-      The `adaptiveCardForContinue` and `adaptiveCardForSubmit` are functions that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to generate Adaptive Cards for different scenarios based on the user’s interaction with the bot.
+      The `adaptiveCardForContinue` and `adaptiveCardForSubmit` are custom functions that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
       When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.   
 
@@ -113,6 +113,19 @@ If you set the `fetchTask` property in the app manifest to:
             };
          ```
 
+         ```csharp
+            ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
+                  {
+                     Config = new TaskModuleMessageResponse
+                     {
+                           Type = "message",
+                           Value = "You have chosen to finish setting up bot"
+                     }
+                  };
+
+                  return Task.FromResult(response);
+         ```         
+
       # [JavaScript](#tab/JS2)
 
       * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
@@ -134,31 +147,6 @@ If you set the `fetchTask` property in the app manifest to:
             };
             return response;
          ```
-      
-      # [C#](#tab/teams-bot-sdk6)
-
-      * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
-
-      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L131)
-
-         ```csharp
-            ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
-                  {
-                     Config = new TaskModuleMessageResponse
-                     {
-                           Type = "message",
-                           Value = "You have chosen to finish setting up bot"
-                     }
-                  };
-
-                  return Task.FromResult(response);
-          ```
-
-      # [JavaScript](#tab/JS5)
-
-      * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
-
-      * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L120)
 
          ```javascript
               {
@@ -170,9 +158,10 @@ If you set the `fetchTask` property in the app manifest to:
               }
               return response;
          ```
+     
       ---
 
-   1. `config/auth`: You can also request the user to authenticate as a response to `config/continue` request.  The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
+   1. `type: auth`: You can also request the user to authenticate as a response to `config/continue` request.  The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
       # [C#](#tab/teams-bot-sdk4)
 
