@@ -221,7 +221,7 @@ If you set the `fetchTask` property in the app manifest to:
 
 When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `ConfigFetch` in the bot logic. The user can reconfigure the bot seetings post-installation in two ways:
 
-* @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A bot profile card appears, update, or change the bot's configuration settings in the profile card.
+* @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or change the bot's configuration settings in the dialog.
 
    :::image type="content" source="../../assets/images/bots/mention-bot-in-compose-area.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
