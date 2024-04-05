@@ -66,6 +66,8 @@ For more information, see [app manifest schema](../../resources/schema/manifest-
 
 ### Configure your bot
 
+When a user installs the bot in a team or group chat scope, the `fetchTask` property in the app manifest file initiates `ConfigFetch` defined in the teamsBot.js file.
+
 If you set the `fetchTask` property in the app manifest to:
 
 * **false**: The bot doesn't fetch a dialog or an Adaptive Card. Instead, the bot must provide a static dialog or card that is used when the bot is invoked. For more information, see [dialogs.](../../task-modules-and-cards/what-are-task-modules.md)
@@ -209,35 +211,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       ---
 
-## Bot configuration experience in Teams
-
-After you've created and published the bot in Microsoft Teams Store, the user can follow these steps:
-
-**To configure the bot during installation**
-
-1. Go to **Microsoft Teams**.
-
-1. Select **Apps**.
-
-1. From Teams Store, select a bot app that you want to install.
-
-1. From the dropdown next to **Add**, select **Add to a team** or **Add to a chat**.
-
-   :::image type="content" source="../../assets/images/bots/group-chat-add-Bot.png" alt-text="Screenshot shows add your bot to chat.":::
-
-1. Enter the name of a team or channel in the search field.
-
-   :::image type="content" source="../../assets/images/bots/add-bot-to-chat.png" alt-text="Screenshot shows bot added to a chat.":::
-
-1. Select **Set up a bot**.
-
-   :::image type="content" source="../../assets/images/bots/set-up-a-bot.png" alt-text="Screenshot shows set up a bot option in a chat.":::
-
-   The bot is installed in the chat.
-
-**To reconfigure the bot**
-
-You can reconfigure the bot post-installation in two ways:
+When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `ConfigFetch` in the bot logic. The user can reconfigure the bot seetings post-installation in two ways:
 
 * @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A bot profile card appears, update, or change the bot's configuration settings in the profile card.
 
@@ -246,6 +220,8 @@ You can reconfigure the bot post-installation in two ways:
 * Hover over the bot, the bot profile card appears. To update or change the bot's configuration settings, select the settings icon in the bot profile card.
 
    :::image type="content" source="../../assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
+
+
 
 ## Best practices
 
