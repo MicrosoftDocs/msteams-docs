@@ -91,147 +91,6 @@ You can test or validate the Adaptive Card schema using the **Adaptive cards edi
 App registration is disabled for the user or the user doesn't have enough permissions to create an app. For more information, see [limitations and known issues.](~/bots/bot-features.md#limitations-and-known-issues)
 </details>
 
-## Microsoft 365 Chat
-
-<details>
-
-<summary>Why isn't Microsoft 365 Chat including my plugin in a response?</summary>
-
-Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
-
-If the problem continues, use the thumbs down indicator in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
-
-</details>
-</br>
-<details>
-
-<summary> What descriptions should I include in app manifest? </summary>
-
-Here's an example description that work for NPM Finder.
-
-```json
- "name": { 
-
-        "short": "NPM Finder", 
-
-        "full": "Nuget Package Manager Finder" 
-
-    }, 
-
-    "description": { 
-
-        "short": "Returns information about available NPM packages", 
-
-        "full": "The Nuget Package Manager (NPM) Finder application provides information (such as title and description) about Nuget packages available in the global NPM catalog." 
-
-    }, 
-
-… 
-
-            "commands": [ 
-
-                { 
-
-                    "id": "searchQuery", 
-
-                    "context": [ 
-
-                        "compose", 
-
-                        "commandBox" 
-
-                    ], 
-
-                    "description": "Searches the global NPM catalog for available packages", 
-
-                    "title": "Search", 
-
-                    "type": "query", 
-
-                    "parameters": [ 
-
-                        { 
-
-                            "name": "searchQuery", 
-
-                            "title": "Search Query", 
-
-                            "description": "A package name or description of capability to search", 
-
-                            "inputType": "text" 
-
-                        } 
-
-                    ] 
-
-```
-
-</details>
-</br>
-<details>
-
-<summary> Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
-
-Use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
-
-</details>
-</br>
-<details>
-
-<summary> Can I build my own Teams message extension? </summary>
-
-Yes, you can. Ensure that you have a descriptive app manifest and upload the app to Outlook and interacted with it.</br>
-</details>
-</br>
-<details>
-
-<summary> How can I get my existing Teams message extension to work with Microsoft 365 Chat? </summary>
-
-1. Register the bot channel in Azure Bot Service.
-1. Upload the app to Outlook.
-
-</details>
-</br>
-
-<details>
-<summary>What are the guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365? </summary>
-
-You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365) for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365.
-
-</details>
-</br>
-
-<details>
-
-<summary> What is the certification process?</summary>
-
-After publishing the plugin, start the App Compliance flow in Partner Center. If [Publisher verification](/entra/identity-platform/publisher-verification-overview) is incomplete, ensure that the App Compliance flow is completed before Microsoft 365 Certification. Then, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), which gathers self-attested data about the plugin, company, and operations. For more information, see [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview).
-
-To start the [Microsoft 365 Certification process](/microsoft-365-app-certification/docs/certification), upload initial documents that define the assessment scope for the plugin and operating environment. Depending on the scope, provide evidence for specific controls related to application security, operational security, and data handling or privacy. If you build your plugin on Azure, you can use the App Compliance Automation Tool (ACAT) to scan the environment and generate evidence for several controls, reducing the manual workload. For more information, see [App Compliance Automation Tool for Microsoft 365](/microsoft-365-app-certification/docs/acat-overview).
-
-</details>
-</br>
-<details>
-
-<summary> How are plugins certified?</summary>
-
-After the app passes the proactive validation, developers of both existing and new message extensions that aren't certified will be encouraged to certify their plugin. This is communicated through an email confirming their message extension is validated.
-</details>
-</br>
-<details>
-
-<summary> How are new plugins certified?</summary>
-
-Developers will be encouraged to certify their new plugin after successfully completing validation.
-</details>
-</br>
-
-<details>
-<summary>How can I create or upgrade a message extension plugin for Copilot for Microsoft 365?</summary>
-
- You can [create or upgrade a message extension as a plugin in Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Copilot for Microsoft 365. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](messaging-extensions/high-quality-message-extension.md).
-</details>
-
 ## Live share
 
 <details>
@@ -345,8 +204,6 @@ Yes, Live Share supports guest and external users for most meeting types. Howeve
 
 No, Live Share doesn't support Teams Rooms devices.
 
-<br>
-
 </details>
 
 <details>
@@ -354,8 +211,135 @@ No, Live Share doesn't support Teams Rooms devices.
 
 No, Live Share doesn't support meeting recordings.
 
-<br>
+</details>
 
+## Microsoft 365 Chat
+
+<details>
+
+<summary>Why isn't Microsoft 365 Chat including my plugin in a response?</summary>
+
+Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
+
+If the problem continues, use the thumbs down indicator in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
+
+</details>
+<details>
+
+<summary> What descriptions should I include in app manifest? </summary>
+
+Here's an example description that work for NPM Finder.
+
+```json
+ "name": { 
+
+        "short": "NPM Finder", 
+
+        "full": "Nuget Package Manager Finder" 
+
+    }, 
+
+    "description": { 
+
+        "short": "Returns information about available NPM packages", 
+
+        "full": "The Nuget Package Manager (NPM) Finder application provides information (such as title and description) about Nuget packages available in the global NPM catalog." 
+
+    }, 
+
+… 
+
+            "commands": [ 
+
+                { 
+
+                    "id": "searchQuery", 
+
+                    "context": [ 
+
+                        "compose", 
+
+                        "commandBox" 
+
+                    ], 
+
+                    "description": "Searches the global NPM catalog for available packages", 
+
+                    "title": "Search", 
+
+                    "type": "query", 
+
+                    "parameters": [ 
+
+                        { 
+
+                            "name": "searchQuery", 
+
+                            "title": "Search Query", 
+
+                            "description": "A package name or description of capability to search", 
+
+                            "inputType": "text" 
+
+                        } 
+
+                    ] 
+
+```
+
+</details>
+<details>
+
+<summary> Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
+
+Use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
+
+</details>
+<details>
+
+<summary> Can I build my own Teams message extension? </summary>
+
+Yes, you can. Ensure that you have a descriptive app manifest and upload the app to Outlook and interacted with it.</br>
+</details>
+<details>
+
+<summary> How can I get my existing Teams message extension to work with Microsoft 365 Chat? </summary>
+
+1. Register the bot channel in Azure Bot Service.
+1. Upload the app to Outlook.
+
+</details>
+<details>
+<summary>What are the guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365? </summary>
+
+You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365) for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365.
+
+</details>
+<details>
+
+<summary> What is the certification process?</summary>
+
+After publishing the plugin, start the App Compliance flow in Partner Center. If [Publisher verification](/entra/identity-platform/publisher-verification-overview) is incomplete, ensure that the App Compliance flow is completed before Microsoft 365 Certification. Then, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), which gathers self-attested data about the plugin, company, and operations. For more information, see [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview).
+
+To start the [Microsoft 365 Certification process](/microsoft-365-app-certification/docs/certification), upload initial documents that define the assessment scope for the plugin and operating environment. Depending on the scope, provide evidence for specific controls related to application security, operational security, and data handling or privacy. If you build your plugin on Azure, you can use the App Compliance Automation Tool (ACAT) to scan the environment and generate evidence for several controls, reducing the manual workload. For more information, see [App Compliance Automation Tool for Microsoft 365](/microsoft-365-app-certification/docs/acat-overview).
+
+</details>
+<details>
+
+<summary> How are plugins certified?</summary>
+
+After the app passes the proactive validation, developers of both existing and new message extensions that aren't certified will be encouraged to certify their plugin. This is communicated through an email confirming their message extension is validated.
+</details>
+<details>
+
+<summary> How are new plugins certified?</summary>
+
+Developers will be encouraged to certify their new plugin after successfully completing validation.
+</details>
+<details>
+<summary>How can I create or upgrade a message extension plugin for Copilot for Microsoft 365?</summary>
+
+ You can [create or upgrade a message extension as a plugin in Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Copilot for Microsoft 365. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](messaging-extensions/high-quality-message-extension.md).
 </details>
 
 ## Microsoft Graph
@@ -830,7 +814,7 @@ Open the sign in simple start page instead of opening login page directly to res
 &nbsp;
 </details>
 <details>
-<summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
+<summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as authorization_code?</summary>
 
 Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Microsoft Entra ID.
 <br>
@@ -844,6 +828,70 @@ If you use Teams Toolkit to build your app, see [Add single sign-on to Teams app
 For more information about Node js code sample, see [Bot SSO quick-start](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js).
 <br>
 &nbsp;
+</details>
+
+## Stageview
+
+</br>
+
+<details>
+
+<summary>Which Stageview should I use?</summary>
+
+Collaborative Stageview allows the users to open content along with a side panel conversation in a Teams window. This view is best suited for most of the collaboration scenarios.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>What's the difference between Stageview Modal and dialogs?</summary>
+
+Stageview Modal is useful to display rich content to the users, such as page, dashboard, or file. <br> Dialogs (referred as task modules in TeamsJS v1.x) are useful to display messages that need users' attention or collect information required to move to the next step.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>When Stageview is invoked, the content opens in Collaborative Stageview but gets loaded in the main Teams window instead of a new window. How to open the content in a new window?</summary>
+
+Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](resources/schema/manifest-schema.md).
+
+</br>
+
+</details>
+
+<details>
+
+<summary>Why isn't any content displayed in a new Teams window even when contentUrl matches with validDomains?</summary>
+
+Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app is loaded successfully. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out and displays an error screen with a retry option. For app updates, this step is applicable for tabs that are already configured. If you don't perform this step, an error screen is displayed for the existing users.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>Can I include a deep link in my contentUrl?</summary>
+
+No, deep links aren't supported in `contentUrl`.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>How do I keep a specific thread shown alongside my content?</summary>
+
+Collaborative Stageview from a deep link or a stageView API comes with the additional `threadId` parameter. You can explicitly define the chat thread to be displayed in the side panel for your specific `contentUrl`. For more information about retrieving a `threadId`, see [get conversation thread](/graph/api/group-get-thread).
+
+</br>
+
 </details>
 
 ## Tabs
