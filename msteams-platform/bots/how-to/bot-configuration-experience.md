@@ -9,11 +9,9 @@ ms.localizationpriority: high
 
 # Bot configuration experience
 
-Bot configuration helps you to enable the bot configuration settings for the user during installation and reconfigure the bot from the channel or group chat scope after the bot is installed. Bot configuration experience is supported in channel or group chat only.
+Bot configuration helps you to enable the bot configuration settings for users during installation and reconfigure the bot from the channel or group chat scope after the bot is installed. Bot configuration experience is supported in channel or group chat only.
 
-Let's consider a scenario where a user installs a bot only to discover that the default settings don't align with their workflow.By implementing bot configuration, you can empower users to tailor bot settings according to their preferences.
-
-Here's an example of a user who adds a bot to a channel and sets up the bot so that it is configured to user's specific needs, in this case selecting the project folder. The user then reconfigures the bot to point to a different folder.
+Let's consider a scenario where a user installs a bot only to discover that the default settings don't align with their workflow. By implementing bot configuration, you can empower users to tailor bot settings according to their preferences. Here's an example of a user adding a bot to a channel and configuring the bot to their specific needs, in this case selecting the project folder. The user then reconfigures the bot to point to a different folder.
 
 |Configure|Reconfigure|
 |---------|-----------|
