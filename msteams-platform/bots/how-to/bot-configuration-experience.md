@@ -210,7 +210,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       # [JavaScript](#tab/JS3)
 
-         [SDK reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L119).
+        [SDK reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L119).
 
          ```javascript
               {
