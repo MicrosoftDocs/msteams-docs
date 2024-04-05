@@ -15,11 +15,11 @@ Let's consider a scenario where a user installs a bot where the default settings
 
 **Configure**
 
-:::image type="content" source="../../assets/images/bots/configuration.gif" alt-text="Congifgure bot":::
+:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Congifgure bot":::
 
 **Reconfigure**
 
-:::image type="content" source="../../assets/images/bots/reconfiguration.gif" alt-text="bot config":::
+::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
 ## Why build bot configuration experience?
 
@@ -225,11 +225,11 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 * @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or changes the bot's configuration settings in the dialog.
 
-   :::image type="content" source="../../assets/images/bots/mention-bot-in-compose-area.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
+   :::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
 * Hover over the bot, the bot profile card appears. To update or change the bot's configuration settings, select the settings icon in the bot profile card.
 
-   :::image type="content" source="../../assets/images/bots/configurationbot.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
+   :::image type="content" source="../../assets/images/bots/reconfiguration-hover.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
 
 
