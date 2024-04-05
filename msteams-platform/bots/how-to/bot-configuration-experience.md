@@ -15,9 +15,7 @@ Let’s consider a scenario where a user installs a bot but finds that the defau
 
 **Configure**
 
-|Configure|Reconfigure|
-|---------|-----------|
-|:::image type="content" source="../../assets/images/bots/configuration.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel."::: |:::image type="content" source="../../assets/images/bots/reconfiguration.gif" alt-text="Graphic shows the process of reconfiguring a bot into a Teams channel."::: |
+:::image type="content" source="../../assets/images/bots/configuration.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel.":::
 
 **Reconfigure**
 
