@@ -19,7 +19,7 @@ Let's consider a scenario where a user installs a bot where the default settings
 
 **Reconfigure**
 
-::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
+:::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
 ## Why build bot configuration experience?
 
