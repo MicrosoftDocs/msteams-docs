@@ -13,13 +13,19 @@ Bot configuration helps you to enable the bot configuration settings for users d
 
 Let's consider a scenario where a user installs a bot only to discover that the default settings don't align with their workflow. By implementing bot configuration, you can empower users to tailor bot settings according to their preferences. Here's an example of a user adding a bot to a channel and configuring the bot to their specific needs, in this case selecting the project folder. The user then reconfigures the bot to point to a different folder.
 
-|Configure|Reconfigure|
-|---------|-----------|
-|:::image type="content" source="../../assets/images/bots/configuration.gif" alt-text="Congifgure bot"::: | :::image type="content" source="../../assets/images/bots/reconfiguration.gif" alt-text="bot config"::: |
+**Configure**
+
+:::image type="content" source="../../assets/images/bots/configuration.gif" alt-text="Congifgure bot":::
+
+**Reconfigure**
+
+:::image type="content" source="../../assets/images/bots/reconfiguration.gif" alt-text="bot config":::
+
+## Why implement bot configuration?
 
 Bot configuration allows users to customize the behavior of the bot and ensures that interactions align with their workflow and preferences. Personalized experiences lead to higher user engagement, encourage frequent interactions, and drive engagement metrics such as monthly active users (MAU) rates. Bot configuration offers adaptability, which allows users to reconfigure bot settings as their requirements change, ensuring that the bot continues to provide value and relevance in the long term.
 
-## How it works>
+## How it works?
 
 When you plan to implement bot configuration, you must ensure that you're able to configure a bot on first installation and reconfigure it at any time. The configuration is supported for bots in channel scope within a team, and group chat. The experience can also be leveraged by users to be channel specific.
 
@@ -29,7 +35,7 @@ If a user wants to reconfigure the bot via the bot command or a bot card, again 
 
 ## Enable bot configuration experience
 
-To enable the bot configuration settings for users during installation and post-installation, follow these steps:
+To enable the bot configuration experience for users during installation and post-installation, follow these steps:
 
 1. [Update app manifest](#update-app-manifest)
 
