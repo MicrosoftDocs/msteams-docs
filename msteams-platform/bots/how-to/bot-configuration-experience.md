@@ -1,7 +1,7 @@
 ---
 title: Bot configuration experience
 author: surbhigupta
-description: Learn about bot configuration experience.
+description: Learn about bot configuration experience
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
