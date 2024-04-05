@@ -15,42 +15,43 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
 
 The article provides an overview of Teams' compatibility across government cloud services, detailing its capabilities for each tenant and providing guidance on deployment.
 
-| Teams in Government | Teams in Gallatin |
+| Teams in Government | Teams operated by 21Vianet |
 |---|---|
-| GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans). | [Gallatin](/officeupdates/teams-app-versioning) cloud service managed by 21Vianet is specific to China and you can purchase the suitable [Microsoft 365 plan for Gallatin](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365) to utilize the services offered within China. |
+| GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans). | [Teams operated by 21Vianet](/officeupdates/teams-app-versioning) cloud service is specific to China and you can purchase the suitable [Microsoft 365 plan for Gallatin](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365) to utilize the services offered within China. |
 
-## Teams for Government clouds
+## Teams app capabilities for Government clouds
 
  Teams is compatible with all Microsoft 365 Government environment, but the capabilities and features vary by tenant. Some features available in commercial tenants may not be accessible in government tenant due to security and compliance restrictions, while others features take time to roll out. Understanding supported Teams apps and capabilities is crucial for effective utilization within government tenants.
 
 The following table details the Teams apps and capabilities for GCC, GCC High, DOD, and Gallatin:
 
-| &nbsp; | GCC | GCC High | DOD | Gallatin |
+| &nbsp; | GCC | GCC High | DOD | Teams operated by 21Vianet |
 |-------------|---------|---|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Apps built by Microsoft. | ✔️ | ✔️ | ✔️ | ✔️ |
 | Third-party apps built by external developers. | ✔️ | ❌ | ❌ | ❌ |
-| Custom apps built for your org (LOB apps) distributed and used in specific tenant. | ✔️ | ✔️ | ✔️ | ❌ |
+| Custom apps built for your org (LOB apps) distributed and used in specific organization. | ✔️ | ✔️ | ✔️ | ✔️ |
 | **App capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ | ✔️ |
-| Bots and message extensions | ✔️ | ✔️ | ✔️ | ❌ |
+| Bots and message extensions | ✔️ | ✔️ | ✔️ | ✔️ |
 | Message actions | ✔️ | ✔️ | ✔️ | ❌ |
 | Cards: Adaptive, Hero, Thumbnail, Microsoft 365 connector, Receipt, Sign in, and OAuth cards | ✔️ | ✔️ | ✔️ | ❌ |
 | Dialogs | ✔️ | ✔️ | ✔️ | ✔️ |
 | Link unfurling | ✔️ | ✔️ | ✔️ | ❌ |
 | Meeting extensions | ✔️ | ✔️ | ✔️ | ❌ |
-| Connectors and webhooks | ✔️ | ❌ | ❌ | ❌ |
+| Connectors and webhooks | ✔️ | ✔️ | ❌ | ❌ |
 | Workflows| ✔️ | ❌ | ❌ | ❌ |
-| **Others** | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| Teams Store | ✔️ | ✔️ | ✔️ |  ❌ |
-| In-context Teams Store or app flyouts | ✔️ | ✔️ | ✔️ |  ❌ |
-| Manage apps in Teams | ✔️ | ✔️ | ✔️ |  ❌ |
-| Manage apps in Teams Admin Center | ✔️ | ✔️ | ✔️ |  ❌ |
-| Graph APIs | ✔️ | ✔️ | ✔️ |  ❌ |
+| **Experiences** | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
+| Teams Store | ✔️ | ✔️ | ✔️ |  ✔️ |
+| In-context Teams Store or app flyouts | ✔️ | ✔️ | ✔️ |  ✔️ |
+| Manage apps in Teams | ✔️ | ✔️ | ✔️ |  ✔️ |
+| Manage apps in Teams Admin Center | ✔️ | ✔️ | ✔️ |  ✔️ |
+| Graph APIs | ✔️ | ✔️ | ✔️ |  ✔️ |
 | Developer Portal for Teams | ✔️ | ❌ | ❌ |  ❌ |
 
 > [!NOTE]
 > Third-party apps are turned off by default for GCC and aren't available for GCC High, DOD, and Gallatin. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
+> Only Incoming Webhooks are supported in GCC High.
 
 ### Plan to deploy Teams in Government clouds
 
