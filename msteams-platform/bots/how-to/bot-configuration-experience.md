@@ -15,7 +15,7 @@ Let’s consider a scenario where a user installs a bot but finds that the defau
 
 **Configure**
 
-:::image type="content" source="../../assets/images/bots/configuration.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel.":::
+:::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel.":::
 
 **Reconfigure**
 
@@ -183,9 +183,7 @@ Bot can respond to `ConfigFetch` request in three ways:
          },
          },
       ```
-
    ---
-
 
 1. `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
