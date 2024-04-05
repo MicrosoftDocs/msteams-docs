@@ -80,7 +80,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       The `adaptiveCardForContinue` and `adaptiveCardForSubmit` are custom functions that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
-      # [C#](#tab/teams-bot-sdk5)
+      # [C#](#tab/teams-bot-sdk1)
 
       * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable)
 
@@ -107,7 +107,7 @@ If you set the `fetchTask` property in the app manifest to:
             };
          ```   
 
-      # [JavaScript](#tab/JS2)
+      # [JavaScript](#tab/JS1)
 
       * [SDK Reference]
 
@@ -132,7 +132,7 @@ If you set the `fetchTask` property in the app manifest to:
 
    1. `type: auth`: You can also request the user to authenticate as a response to `config/continue` request.  The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
-      # [C#](#tab/teams-bot-sdk4)
+      # [C#](#tab/teams-bot-sdk2)
 
       * [SDK Reference]
 
@@ -162,7 +162,7 @@ If you set the `fetchTask` property in the app manifest to:
          };
          ```
 
-      # [JavaScript](#tab/JS3)
+      # [JavaScript](#tab/JS2)
 
       * [SDK Reference]
 
@@ -189,7 +189,7 @@ If you set the `fetchTask` property in the app manifest to:
 
    1. `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
-      # [C#](#tab/teams-bot-sdk5)
+      # [C#](#tab/teams-bot-sdk3)
 
          ```csharp
             ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
@@ -204,7 +204,7 @@ If you set the `fetchTask` property in the app manifest to:
                   return Task.FromResult(response);
          ```   
 
-      # [JavaScript](#tab/JS4)
+      # [JavaScript](#tab/JS3)
 
          ```javascript
               {
