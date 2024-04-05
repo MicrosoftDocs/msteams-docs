@@ -82,7 +82,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
-# [C#](#tab/teams-bot-sdk5)
+   # [C#](#tab/teams-bot-sdk5)
 
    * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
 
@@ -109,7 +109,7 @@ If you set the `fetchTask` property in the app manifest to:
             };
          ```
 
-# [JavaScript](#tab/JS2)
+   # [JavaScript](#tab/JS2)
 
    * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
 
@@ -131,7 +131,7 @@ If you set the `fetchTask` property in the app manifest to:
             return response;
          ```
 
-# [C#](#tab/teams-bot-sdk6)
+   # [C#](#tab/teams-bot-sdk6)
 
    * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
 
@@ -172,7 +172,7 @@ If you set the `fetchTask` property in the app manifest to:
 
    1. `config/auth`: You can also request the user to authenticate as a response to `config/continue` request.  The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
-# [C#](#tab/teams-bot-sdk4)
+   # [C#](#tab/teams-bot-sdk4)
 
    * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)
 
@@ -202,7 +202,7 @@ If you set the `fetchTask` property in the app manifest to:
          };
          ```
 
-# [JavaScript](#tab/JS3)
+   # [JavaScript](#tab/JS3)
 
    * [Code sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)
 
