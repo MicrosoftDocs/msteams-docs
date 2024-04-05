@@ -10,7 +10,7 @@ ms.date: 03/01/2024
 
 # Configure Message Extension capability within your Teams app
 
-Message Extension allows users to interact with your web service while composing messages in the Microsoft Teams client. Users can invoke your web service to assist message composition, from the message compose box, or from the search bar.
+Message extension allows users to interact with your web service while composing messages in the Microsoft Teams. Users can invoke your web service to assist message composition, from the message compose box, or from the search bar.
 
 Message Extensions are implemented on top of the Bot support architecture within Teams. Learn more from [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
