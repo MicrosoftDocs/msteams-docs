@@ -212,7 +212,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       [SDK reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L119).
 
-        ```javascript
+      ```javascript
               {
               response = {
                  config: {
@@ -221,7 +221,7 @@ If you set the `fetchTask` property in the app manifest to:
                  },
               }
               return response;
-        ```
+      ```
 
       ---
 
