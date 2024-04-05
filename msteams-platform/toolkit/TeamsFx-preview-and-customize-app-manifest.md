@@ -1,7 +1,7 @@
 ---
 title: Customize app manifest in Teams Toolkit
 author: surbhigupta
-description: In this module, learn how to edit, preview, and customize app manifest in different environment.
+description: In this module, learn how to edit, preview, and customize app manifest in different environments.
 ms.author: surbhigupta
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,9 +10,9 @@ ms.date: 05/13/2022
 
 # Customize app manifest
 
-App manifest (previously called Teams app manifest) describes how your app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains environment variables in the format of `${{XX_XX}}`, and the actual values are resolved using Microsoft Teams Toolkit with .env files such as `env/.env.dev` and `env/.env.local`.
+App manifest (previously called Teams app manifest) describes how your app integrates into Microsoft Teams. After scaffolding, the default app manifest file is available at `appPackage/manifest.json`. The app manifest file contains environment variables in the format of `${{XX_XX}}`, and the actual values are resolved using Microsoft Teams Toolkit with `env` files such as `env/.env.dev` and `env/.env.local`.
 
-To preview app manifest with actual content, Teams Toolkit generates the preview app manifest files under `appPackage/build` folder:
+To preview app manifest with actual content, Teams Toolkit generates the preview app manifest files under `appPackage/build` folder.
 
 ```text
 └───appPackage
@@ -27,21 +27,21 @@ You can preview the app manifest file in local and remote environments.
 
 ## Preview the app manifest file in local environment
 
-To preview the app manifest file in local environment, you can select the F5 key to run local debug. After you generate the environment variables in `env/.env.local`, the app package and the preview app manifest are built under `appPackage/build` folder.
+To preview the app manifest file in local environment, select the F5 key to run local debug. The debug process generates the environment variables in `env/.env.local`, the app package and the preview app manifest under `appPackage/build` folder.
 
-You can also trigger `Zip Teams App Package` from tree view or `Teams: Zip Teams app Package` from the command palette to generate the previewed app manifest and app package.
+You can also select **Zip Teams App Package** from tree view or execute `Teams: Zip Teams app Package` command from the command palette to generate the preview app manifest and app package.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot shows the selection of zip Teams App package.":::
 
 ## Preview the app manifest file in remote environment
 
-To preview the app manifest file in remote environment, you can trigger `Provision` from tree view or `Teams: Provision in the cloud` from the command palette. It generates environment variables for a remote Teams app, build app package and the preview app manifest under `appPackage/build` folder.
+To preview the app manifest file in remote environment, select **Provision** from tree view or execute `Teams: Provision in the cloud` command from the command palette. The provisioning process generates environment variables for a remote Teams app, builds app package and the preview app manifest under `appPackage/build` folder.
 
-You can also trigger Zip Teams App Package from tree view or `Teams: Zip Teams app Package` from the command palette to generate the preview app manifest and app package.
+You can also select **Zip Teams App Package** from tree view or execute `Teams: Zip Teams app Package` command from the command palette to generate the preview app manifest and app package.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package (1).png" alt-text="Screenshot shows the selection of zip Teams app package in preview app manifest file.":::
 
-## Customize the app manifest for Visual Studio Code
+## Customize the app manifest in Visual Studio Code
 
 During local debugging or provisioning, Teams Toolkit loads app manifest from `appPackage/manifest.json`, resolves it using the environment variables defined in `env/.env.xx`, and then creates or updates the Teams app in [Developer Portal for Teams](https://dev.teams.microsoft.com/home).
 
@@ -55,7 +55,7 @@ During local debugging or provisioning, Teams Toolkit loads app manifest from `a
       outputJsonPath: ./appPackage/build/manifest.${{TEAMSFX_ENV}}.json
     ```
 
-1. You can define your own environment variables. The default `manifest.json` contains placeholders in the format of ${{xx_xx}} that you can customize to add your environment variables. For example, you can customize app description by defining a new environment variable in `env/.env.xx` file and update `manifest.json` with the corresponding placeholder.
+1. You can define your own environment variables. The default `manifest.json` contains placeholders in the format of ${{xx_xx}} that you can customize to add your environment variables. For example, you can customize app description by defining a new environment variable in `env/.env.xx` file and updating `manifest.json` with the corresponding placeholder.
 
     ```env.dev
     TEAMS_APP_DESCRIPTION=This is an amazing app
@@ -74,7 +74,7 @@ During local debugging or provisioning, Teams Toolkit loads app manifest from `a
 
 ## Validate Application
 
-After customization, you can validate your app manifest or app package. You can trigger `Validate Application` from tree view, or `Teams: ValidateApplication` from command palette. There are two options, `Validate using manifest schema` or `Validate app package using validation rules`.
+After customization, you can validate your app manifest or app package. You can select **Validate Application** from tree view, or execute `Teams: ValidateApplication` command from the command palette. There are two options, `Validate using manifest schema` or `Validate app package using validation rules`.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-application.png" alt-text="Screenshot shows the selection of validate application under utility.":::
 
