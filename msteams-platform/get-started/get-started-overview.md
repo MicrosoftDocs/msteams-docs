@@ -66,14 +66,13 @@ To create a basic Teams tab app, follow these steps:
 
    :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows the codespace building your tab.":::
 
-   Teams Toolkit prepares the tab app project for you and opens it in Visual Studio Code in the browser. The Teams Toolkit icon appears in the activity bar.
+   Microsoft Teams Toolkit prepares the tab app project for you and opens it in Microsoft Visual Studio Code in the browser. The Teams Toolkit icon appears in the activity bar.
 
-3. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
+3. Select **Sign in to your Microsoft 365** to sign in with your Microsoft 365 account.
 
    :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/toolkit-in-browser-sign-in.png":::
 
     > [!NOTE]
-    >
     > When you build your app, GitHub Codespaces loads it in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups for your app to open.
 
 4. In the panel, select **PORTS**. Right-click on the active port and select **Port Visibility** > **Public** in the drop down.
@@ -176,7 +175,7 @@ Follow these steps to build a search-based message extension app that allows use
 
    :::image type="content" source="../assets/images/get-started/building-codespace.png" alt-text="Screenshot shows the codespace building your message extension.":::
 
-   Teams Toolkit prepares the message extension for you and opens it in Microsoft Visual Studio Code in the browser. The Teams Toolkit icon appears in the activity bar.
+   Teams Toolkit prepares the message extension for you and opens it in Visual Studio Code in the browser. The Teams Toolkit icon appears in the activity bar.
 
 3. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
