@@ -67,7 +67,7 @@ The following image provides the flow to add authentication to external browsers
     https://3p.app.server/auth?oauthRedirectMethod=deeplink&authId=1234567890&hostRedirectUrl=msteams://teams.microsoft.com/l/auth-callback?authId=1234567890&result={result} 
    ```
 
-1. The third-party app server responds. The third-party app server receives and saves the `url` with the following two query parameters:
+1. The third-party app server responds. The third-party app server receives and saves the `url` with the following three query parameters:
 
    | Parameter | Description|
    | --- | --- |
