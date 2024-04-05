@@ -82,7 +82,7 @@ If you set the `fetchTask` property in the app manifest to:
 
       When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
-      # [C#](#tab/teams-bot-sdk5) SDK reference
+      # [C#](#tab/teams-bot-sdk5)
 
       * [SDK reference](/dotnet/api/microsoft.bot.builder.activityhandler.onmessageactivityasync?view=botbuilder-dotnet-stable)
 
