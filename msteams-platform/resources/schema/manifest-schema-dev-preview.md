@@ -317,9 +317,9 @@ Specifies information about the developer and their business. For store apps, th
 
 **Required** &ndash; Object
 
-App developer contact information that is used for customers to contact you when they evaluate their app or if they have any queries about your app. For more information, see [developer provided app information](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation). Customers contact you using Teams chat, so request your IT admins to [enable external communications](/microsoftteams/communicate-with-users-from-other-organizations) in your organization. We recommend that you triage the queries and route those internally within your organization based on the questions asked by the customers.
+Your contact information that is used by customers to contact you via Teams chat. Customers may need extra information when evaluating your app or if they have any queries about your app when it doesn't work. Customers contact you using Teams chat, so request your IT admins to [enable external communications](/microsoftteams/communicate-with-users-from-other-organizations) in your organization. For more information, see [developer provided app and contact information](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation). Provide only one contact email address for this feature to work.
 
-Provide only one contact email address for this feature to work.
+We recommend that you triage the customer queries in a timely manner and route those internally within your organization based on the questions asked by the customers. It helps improve app adoption, developer trust, and revenue if you monetize your app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
