@@ -79,7 +79,7 @@ landingContent:
     - linkListType: get-started
       links:
       - text: Get started with building apps
-        url: ../msteams-platform/get-started/get-started-overview.md
+        url: ../msteams-platform/get-started/build-first-teams-app.md
       - text: Get started with GitHub
         url: /contribute/additional-resources
       - text: Glossary

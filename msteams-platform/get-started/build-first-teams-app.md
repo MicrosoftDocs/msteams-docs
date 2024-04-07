@@ -68,9 +68,9 @@ To create a basic Teams tab app, follow these steps:
 
    Microsoft Teams Toolkit prepares the tab app project for you and opens it in Microsoft Visual Studio Code in the browser. The Teams Toolkit icon appears in the activity bar.
 
-3. Select **Sign in to your Microsoft 365** to sign in with your Microsoft 365 account.
+3. Select **Sign in to your Microsoft 365** and sign in with your Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/toolkit-in-browser-sign-in.png":::
+   :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in." lightbox="../assets/images/get-started/toolkit-in-browser-sign-in.png":::
 
 4. In the panel, select **PORTS**. Right-click on the active port and select **Port Visibility** > **Public** in the dropdown.
 
@@ -85,15 +85,19 @@ To create a basic Teams tab app, follow these steps:
 
 6. Select **Preview (Codespaces)**.
 
-      :::image type="content" source="../assets/images/get-started/codespace/codespace-debug.png" alt-text="Screenshot shows the option to debug your tab app in Codespaces.":::
+      :::image type="content" source="../assets/images/get-started/codespace/codespace-debug.png" alt-text="Screenshot shows the option to debug your tab app in GitHub Codespaces.":::
 
-7. Teams Toolkit builds your tab app and opens it in Teams in a new browser tab. If the browser prompts you, sign in to your Teams account. A dialog box opens to let you add the tab app to Teams. Select **Add**.
+      GitHub Codespaces builds your tab app, loads it to Teams, and opens it in a new browser tab. If the browser prompts you, sign in to your Teams account.
+
+7. A dialog box opens to let you add the tab app to Teams. Select **Add**.
 
       :::image type="content" source="../assets/images/get-started/codespace/codespace-open-in-browser.png" alt-text="Screenshot shows the option to add the tab app to Teams.":::
 
       Teams loads the tab app.
 
       :::image type="content" source="../assets/images/get-started/tab-app-in-teams.png" alt-text="Screenshot shows a preview of your tab app in Teams." lightbox="../assets/images/get-started/tab-app-in-teams.png":::
+
+Congratulations! You've successfully built your first Teams tab app.
 
 # [Bot](#tab/bot1)
 
@@ -117,39 +121,45 @@ Follow these steps to create a notification bot that proactively sends messages 
 
    Teams Toolkit prepares the notification bot project for you and opens it in Visual Studio Code in the browser. The Teams Toolkit icon appears in the activity bar.
 
-3. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
+3. Select **Sign in to your Microsoft 365** and sign in with your Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/toolkit-in-browser-sign-in.png":::
+   :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in." lightbox="../assets/images/get-started/toolkit-in-browser-sign-in.png":::
+
+4. In the panel, select **PORTS**. Right-click on the active port and select **Port Visibility** > **Public** in the dropdown.
+
+   :::image type="content" source="../assets/images/get-started/tab-in-teams.png" alt-text="Screenshot shows how to make port publicly accessible.":::
 
     > [!NOTE]
-    >
     > When you build your app, GitHub Codespaces loads it in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups for your app to open.
 
-4. Select **Preview your Teams App (F5)** to build your notification bot.
+5. Select **Preview your Teams App (F5)**.
 
-      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows the Teams Toolkit window in browser with your notification bot."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
+      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows the option to preview your notification bot app." lightbox="../assets/images/get-started/toolkit-in-browser.png":::
 
-   GitHub Codespaces builds your notification bot app, loads it to Teams client, and opens it in a separate browser tab.
+6. Select **Debug (Codespaces)**.
 
-5. Once the app dialog appears, select **Add** to install your notification bot in Teams.
+      :::image type="content" source="../assets/images/get-started/codespace/codespace-debug-bot.png" alt-text="Screenshot shows the option to debug your bot app in GitHub Codespaces.":::
 
-   :::image type="content" source="../assets/images/get-started/codespace/bot-teams.png" alt-text="Screenshot shows the notification bot loaded in the Teams client.":::
+   GitHub Codespaces builds your notification bot app, loads it to Teams, and opens it in a new browser tab.
 
-6. Open a new terminal in your codespace and run the following command to trigger an event for sending a notification to your bot:
+5. A dialog box opens to let you add the tab app to Teams. Select **Add**.
+
+   :::image type="content" source="../assets/images/get-started/codespace/bot-teams.png" alt-text="Screenshot shows the option to add the notification bot to Teams.":::
+
+6. Open a new terminal in your codespace and run the following command to trigger an event to send a notification to your bot:
 
    ```bash
    curl -X POST http://localhost:3978/api/notification
    ```
 
    > [!TIP]
-   >
-   > In real time, events are triggered by an external source, such as a third-party API that cause the notification bot to send the user a notification. To emulate an event trigger, you can send an event manually via curl commands on terminal.
+   > In a real-world scenario, external sources such as third-party APIs trigger events that cause the notification bot to send a notification to the user. To emulate an event trigger, you can send an event manually via curl commands on terminal.
 
-   The notification bot app sends a notification as an Adaptive Card to your Teams client:
+   The notification bot app sends a notification with an Adaptive Card in Teams.
 
-   :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows the notification bot sending a notification in the Teams client.":::
+   :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows the notification bot sending a notification in Teams.":::
 
-   You successfully created the notification bot and loaded it in the Teams client.
+Congratulations! You've successfully built your first Teams notification bot app.
 
 # [Message Extension](#tab/msgext1)
 
@@ -175,7 +185,7 @@ Follow these steps to build a search-based message extension app that allows use
 
 3. Select **Sign in to your Microsoft 365** and **Sign in to Azure** to sign in with your Microsoft 365 account.
 
-   :::image type="content" source="../assets/images/get-started/codespace/me-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/codespace/me-sign-in.png":::
+   :::image type="content" source="../assets/images/get-started/codespace/me-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in." lightbox="../assets/images/get-started/codespace/me-sign-in.png":::
 
     > [!NOTE]
     >
@@ -183,7 +193,7 @@ Follow these steps to build a search-based message extension app that allows use
 
 4. Select **Preview your Teams App (F5)** to build your message extension.
 
-      :::image type="content" source="../assets/images/get-started/codespace/me-preview-teams.png" alt-text="Screenshot shows the Teams Toolkit window in browser with your message extension."lightbox="../assets/images/get-started/codespace/me-preview-teams.png":::
+      :::image type="content" source="../assets/images/get-started/codespace/me-preview-teams.png" alt-text="Screenshot shows the Teams Toolkit window in browser with your message extension." lightbox="../assets/images/get-started/codespace/me-preview-teams.png":::
 
       GitHub Codespaces builds your message extension app and opens it in a new browser tab.
 
@@ -223,7 +233,7 @@ To learn more about the code samples, see [Microsoft Teams samples](https://gith
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Choose what suits you](choose-what-suits-you.md)
+> [Explore tools and SDKs](explore-tools-and-sdks.md)
 
 ## See also
 

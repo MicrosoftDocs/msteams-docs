@@ -71,14 +71,14 @@ Let's go through Teams Developer Documentation based on your requirements for bu
 
 | What do you want? | Where to go |
 | --------| --------|
-| You're new to Teams app development and want to create a new Teams app. | [Get started](get-started/get-started-overview.md) |
+| You're new to Teams app development and want to create a new Teams app. | bui[Build your first Teams app](get-started/build-first-teams-app.md) |
 | You've created apps with Teams before and want to learn more about app functionalities. | Build modules for [tabs](tabs/what-are-tabs.md), [bots](bots/what-are-bots.md), [message extensions](messaging-extensions/what-are-messaging-extensions.md), [meeting app](apps-in-teams-meetings/teams-apps-in-meetings.md), and more. |
-| You want to find more information about the tools and SDKs that are available with Teams. | [Explore SDKs](get-started/choose-what-suits-you.md#explore-sdks) and [Explore Tools](get-started/choose-what-suits-you.md#explore-tools) |
+| You want to find more information about the tools and SDKs that are available with Teams. | [Explore Tools](get-started/explore-tools-and-sdks.md#explore-tools) and [Explore SDKs](get-started/explore-tools-and-sdks.md#explore-sdks) |
 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Build your first Teams app](get-started/get-started-overview.md)
+> [Build your first Teams app](get-started/build-first-teams-app.md)
 
 ## See also
 

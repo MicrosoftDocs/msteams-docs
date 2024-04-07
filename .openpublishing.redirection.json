@@ -1030,19 +1030,27 @@
       },
       {
         "source_path": "msteams-platform/get-started/build-basic-tab-app.md",
-        "redirect_url": "/microsoftteams/get-started/get-started-overview"
+        "redirect_url": "/microsoftteams/get-started/build-first-teams-app"
       },
       {
         "source_path": "msteams-platform/get-started/build-message-extension.md",
-        "redirect_url": "/microsoftteams/get-started/get-started-overview"
+        "redirect_url": "/microsoftteams/get-started/build-first-teams-app"
       },
       {
         "source_path": "msteams-platform/get-started/build-notification-bot.md",
-        "redirect_url": "/microsoftteams/get-started/get-started-overview"
+        "redirect_url": "/microsoftteams/get-started/build-first-teams-app"
       },
       {
         "source_path": "msteams-platform/get-started/teams-toolkit-tutorial.md",
-        "redirect_url": "/microsoftteams/get-started/get-started-overview"
+        "redirect_url": "/microsoftteams/get-started/build-first-teams-app"
+      },
+      {
+        "source_path": "msteams-platform/get-started/get-started-overview.md",
+        "redirect_url": "/microsoftteams/get-started/build-first-teams-app"
+      },
+      {
+        "source_path": "msteams-platform/get-started/choose-what-suits-you.md",
+        "redirect_url": "/microsoftteams/get-started/explore-tools-and-sdks"
       },
       {
         "source_path": "msteams-platform/tabs/tabs-link-unfurling.md",
