@@ -72,32 +72,28 @@ To create a basic Teams tab app, follow these steps:
 
    :::image type="content" source="../assets/images/get-started/toolkit-in-browser-sign-in.png" alt-text="Screenshot shows the Teams Toolkit window in browser to sign in."lightbox="../assets/images/get-started/toolkit-in-browser-sign-in.png":::
 
-    > [!NOTE]
-    > When you build your app, GitHub Codespaces loads it in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups for your app to open.
-
-4. In the panel, select **PORTS**. Right-click on the active port and select **Port Visibility** > **Public** in the drop down.
+4. In the panel, select **PORTS**. Right-click on the active port and select **Port Visibility** > **Public** in the dropdown.
 
    :::image type="content" source="../assets/images/get-started/tab-in-teams.png" alt-text="Screenshot shows how to make port publicly accessible.":::
 
+    > [!NOTE]
+    > When you build your app, GitHub Codespaces loads it in a new tab. If your browser blocks pop-up tabs or windows, you'll need to allow pop-ups for your app to open.
+
 5. Select **Preview your Teams App (F5)**.
 
-      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows the Teams Toolkit window in browser with your tab app."lightbox="../assets/images/get-started/toolkit-in-browser.png":::
+      :::image type="content" source="../assets/images/get-started/toolkit-in-browser.png" alt-text="Screenshot shows the Teams Toolkit window in browser with your tab app." lightbox="../assets/images/get-started/toolkit-in-browser.png":::
 
 6. Select **Preview (Codespaces)**.
 
       :::image type="content" source="../assets/images/get-started/codespace/codespace-debug.png" alt-text="Screenshot shows the option to debug your tab app in Codespaces.":::
 
-7. A message appears when GitHub Codespaces finishes building your tab app. Select **Open in Browser**.
+7. Teams Toolkit builds your tab app and opens it in Teams in a new browser tab. If the browser prompts you, sign in to your Teams account. A dialog box opens to let you add the tab app to Teams. Select **Add**.
 
-      :::image type="content" source="../assets/images/get-started/codespace/codespace-open-in-browser.png" alt-text="Screenshot shows the option to open your Codespaces tab app in browser.":::
+      :::image type="content" source="../assets/images/get-started/codespace/codespace-open-in-browser.png" alt-text="Screenshot shows the option to add the tab app to Teams.":::
 
-8. A new browser tab opens with a warning. Select **Continue**.
+      Teams loads the tab app.
 
-      :::image type="content" source="../assets/images/get-started/codespace/codespace-confirmation-tab.png" alt-text="Screenshot shows the warning that appears in Codespaces.":::
-
-   GitHub Codespaces opens your tab app in a new browser tab.
-
-   :::image type="content" source="../assets/images/get-started/tab-app-in-teams.png" alt-text="Screenshot shows a preview of your tab app in a new browser."lightbox="../assets/images/get-started/tab-app-in-teams.png":::
+      :::image type="content" source="../assets/images/get-started/tab-app-in-teams.png" alt-text="Screenshot shows a preview of your tab app in Teams." lightbox="../assets/images/get-started/tab-app-in-teams.png":::
 
 # [Bot](#tab/bot1)
 
