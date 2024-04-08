@@ -38,81 +38,90 @@ Before you get started, ensure that you meet the following requirements:
 
 The following code is an example of an OpenAPI Description document:
 
-      ```yml
-      openapi: 3.0.1
-      info:
-      title: OpenTools Plugin
-      description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
-      version: 'v1'
-      servers:
-      - url: https://gptplugin.opentools.ai
-      paths:
-      /tools:
-         get:
-            operationId: searchTools
-            summary: Search for AI Tools
-            parameters:
-            - in: query
-               name: search
-               required: true
-               schema:
-                  type: string
-               description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
-            responses:
-            "200":
-               description: OK
-               content:
-                  application/json:
-                  schema:
-                     $ref: '#/components/schemas/searchToolsResponse'
-            "400":
-               description: Search Error
-               content:
-                  application/json:
-                  schema:
-                     $ref: '#/components/schemas/searchToolsError'
-      components:
-      schemas:
-         searchToolsResponse:
-            required:
-            - search
-            type: object
-            properties:
-            tools:
-               type: array
-               items:
-                  type: object
-                  properties:
-                  name:
-                     type: string
-                     description: The name of the tool.
-                  opentools_url:
-                     type: string
-                     description: The URL to access the tool.
-                  main_summary:
-                     type: string
-                     description: A summary of what the tool is.
-                  pricing_summary:
-                     type: string
-                     description: A summary of the pricing of the tool.
-                  categories:
-                     type: array
-                     items:
-                        type: string
-                     description: The categories assigned to the tool.
-                  platforms:
-                     type: array
-                     items:
-                        type: string
-                     description: The platforms that this tool is available on.
-               description: The list of AI tools.
-         searchToolsError:
-            type: object
-            properties:
-            message:
-               type: string
-               description: Message of the error.
-      ```
+```yml
+{
+        "version": "1.0",
+        "responseLayout": "grid",
+        "responseCardTemplate": {
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "type": "AdaptiveCard",
+            "version": "1.4",
+            "body": [
+                {
+                    "type": "Container",
+                    "items": [
+                        {
+                            "type": "ColumnSet",
+                            "columns": [
+                                {
+                                    "type": "Column",
+                                     "width": "stretch",
+                                    "items": [
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Title: ${if(title, title, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Description: ${if(description, description, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "TextBlock",
+                                            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+                                            "wrap": true
+                                        },
+                                        {
+                                            "type": "Image",
+                                            "url": "${image}",
+                                            "size": "Medium",
+                                            "$when": "${image != null}"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "Column",
+                                    "width": "auto",
+                                    "items": [
+                                        {
+                                            "type": "Image",
+                                            "url": "${if(image, image, '')}",
+                                            "size": "Medium"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "FactSet",
+                            "facts": [
+                                {
+                                    "title": "Repair ID:",
+                                    "value": "${if(id, id, 'N/A')}"
+                                },
+                                {
+                                    "title": "Date:",
+                                    "value": "${if(date, date, 'N/A')}"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "previewCardTemplate": {
+            "title": "Title: ${if(title, title, 'N/A')}",
+            "subtitle": "Description: ${if(description, description, 'N/A')}",
+            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
+            "image": {
+            "url": "${image}",
+            "$when": "${image != null}"
+              }
+            }
+        }
+    }
+```
 
 For more information, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
 
@@ -242,6 +251,7 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 The following code is an example of a Response rendering template: <br/>
 <br/>
   <details><summary>Response rendering template example</summary>
+  ```json
   {
   "version": "1.0",
   "jsonPath": "repairs",
