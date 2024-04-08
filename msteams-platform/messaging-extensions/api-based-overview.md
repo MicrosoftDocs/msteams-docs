@@ -67,7 +67,7 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
       "authorization": {
         "authType": "apiSecretServiceAuth ",
         "apiSecretServiceAuthConfiguration": {
-          "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
+          "apiSecretRegistrationId": "9xxxxb0f-xxxx-xxxx-xxxx-15xxxxxxx813"
         }
       },
       "apiSpecificationFile": "aitools-openapi.yml",

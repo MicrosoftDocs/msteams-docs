@@ -213,6 +213,7 @@ Ensure that you adhere to following guidelines for app manifest:
    "validDomains": []
    }
    ```
+
 ### Parameters
 
 |Name  |Description                                    |
@@ -251,6 +252,7 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 The following code is an example of a Response rendering template: <br/>
 <br/>
   <details><summary>Response rendering template example</summary>
+
   ```json
   {
   "version": "1.0",
@@ -333,8 +335,8 @@ The following code is an example of a Response rendering template: <br/>
       "$when": "${image != null}"
       }
     }
-  }
-  ```
+   }
+   ```
   </details>
 
 #### Parameters
