@@ -11,15 +11,17 @@
   items:
   - name: Teams app that fits
     href: overview.md
-    displayName: Why build apps with Microsoft Teams platform
+    displayName: Microsoft Teams apps, Teams platform, drive organization goals
   - name: Explore Teams platform features
     href: overview-explore.md
+    displayName: app capabilities, user story, tab, bot, message extension, Microsoft Graph
   - name: Build your first Teams app
-    href: get-started/get-started-overview.md
-    displayName: First Teams app, Python, .NET, Java, Node.js, get started
-  - name: Choose what suits you
-    href: get-started/choose-what-suits-you.md
- 
+    href: get-started/build-first-teams-app.md
+    displayName: First Teams app, get started, tab, bot, message extension, step-by-step guide, sbs, code sample
+  - name: Explore Tools and SDKs
+    href: get-started/explore-tools-and-sdks.md
+    displayName: tools, SDK, UI components, languages
+
 - name: Plan your app
   items:
   - name: Overview
