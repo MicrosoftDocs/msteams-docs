@@ -208,7 +208,9 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    # [JavaScript](#tab/JS3)
 
-   [SDK reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L119)
+   * [SDK Reference]
+
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L119)
 
       ```javascript
                {
@@ -241,6 +243,8 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 * Provide a clear and user-friendly dialog that prompts the user to enter the required information for the bot to operate properly, such as a URL, an area path, or a dashboard link.
 
 * Avoid sending multiple notifications or requests for configuration after the installation, as it might confuse the users.
+
+* Single sign-on (SSO) is not supported.
 
 ## Code sample
 
