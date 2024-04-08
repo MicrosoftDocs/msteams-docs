@@ -435,7 +435,7 @@ You can update `none` as a value for `authorization` in an API-based message ext
 
 # [API secret service auth](#tab/api-service-auth)
 
-API secret service authentication is a secure method for your app to authenticate with API. You can  [register an API key](#register-an-api-key) through the developer portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. 
+API secret service authentication is a secure method for your app to authenticate with API. You can  [register an API key](#register-an-api-key) through the developer portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property.
 
 When an API request is initiated, the system retrieves the API key from a secure storage location and includes it in the authorization header using the bearer token scheme. The API endpoint, upon receiving the request, verifies the validity of the API key. If the verification is successful, the endpoint processes the request and returns the desired response, ensuring that only authenticated requests receive access to the API’s resources.
 
@@ -500,6 +500,8 @@ Before you start, ensure you have the following:
 
 * An Azure account with an active subscription.
 * Basic familiarity with Microsoft Entra ID and Teams app development.
+
+:::image type="content" source="../assets/images/Copilot/api-me-entra-sso.png" alt-text="Screenshot shows how Microsoft Entra SSO authorization works to authenticationan API.":::
 
 To enable `microsoftEntra` authentication method for API-based message extension, follow these steps:
 
@@ -569,6 +571,8 @@ To enable `microsoftEntra` authentication method for API-based message extension
       }
     }
    ```
+
+### Build an API-based message extension with SSO
 
 ---
 
@@ -708,7 +712,12 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
 
 1. Based on the options selected in **step 6**, select the following:
 
-   # [New API](#tab/new-api)
+# [New API](#tab/new-api)
+
+   1. Select the authentication type:
+      * **None**
+      * **API Key**
+      * **Microsoft Entra**
 
    1. Select a programming language.
 
@@ -727,7 +736,7 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
         |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
         |`repairsData.json`    |  The data source for the repair API.       |
 
-   # [OpenAPI Description](#tab/openapi-specification)
+# [OpenAPI Description](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI Description document location.
 
@@ -839,7 +848,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 1. Based on the options selected in **step 7**, select the following:
 
-   # [New API](#tab/new-api2)
+# [New API](#tab/new-api2)
 
    1. To get started, you must update the source code in the following files:
 
@@ -870,7 +879,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
    1. Select the **F5** key or select **Debug** > **Start Debugging**. Visual Studio launches a Teams web client.
 
-   # [OpenAPI Description](#tab/openapi-specification2)
+# [OpenAPI Description](#tab/openapi-specification2)
 
    1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
    1. Select the dropdown and select the APIs from the list.
