@@ -476,7 +476,7 @@ To register an API Key, follow these steps:
 
 ### Update app manifest
 
-You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you [submit the API key](#api-service-authtabapi-service-auth) through the Developer portal for Teams.
+You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you submit the API key through the Developer portal for Teams.
 
 ```json
 "composeExtensions": [
@@ -783,7 +783,7 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
    # [Microsoft Entra](#tab/microsoft-entra)
 
      1. In the manifest.json file, update `${{OPENAPI_SERVER_DOMAIN}}` in the `"resource"` property with the server.url domain in the apispecification file.
-   ---
+     ---
 
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
 1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
