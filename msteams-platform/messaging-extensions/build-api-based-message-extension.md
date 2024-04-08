@@ -757,6 +757,34 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
 
+   # [API Key](#tab/api-key)
+
+     Use the following steps to generate and set up your API key:
+
+     1. Open your terminal.
+     2. To install all dependency packages, run the following command:
+        ```
+        npm install
+        ```
+     3. Once the installation is complete, generate your API key with this command:
+        ```
+        npm run keygen
+        ```
+        You should see an output similar to: "Generated a new API Key: xxx..."
+
+     4. Enter the generated API key into your environment file. Replace `<your-api-key>` with the actual key:
+        ```
+        SECRET_API_KEY=<your-api-key>
+        ```
+        Insert this line into the `env/.env.*.user` file.
+
+     Make sure to replace `<your-api-key>` with the actual API key that you received in step 3. Save the changes to the environment file, and you're ready to use your new API key.
+
+   # [Microsoft Entra](#tab/microsoft-entra)
+
+     1. In the manifest.json file, update `${{OPENAPI_SERVER_DOMAIN}}` in the `"resource"` property with the server.url domain in the apispecification file.
+   ---
+
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
 1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.
 1. Go to a chat message and select the **Actions and apps** icon. In the flyout menu, search for your app.
