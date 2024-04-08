@@ -11,9 +11,6 @@ ms.date: 05/04/2023
 
 Tabs are client-aware webpages embedded in Microsoft Teams, Outlook, and Microsoft 365. They're simple HTML `<iframe/>` tags that point to domains declared in the app manifest and can be added as part of a channel inside a team, group chat, or personal app for an individual user. You can include custom tabs with your app to embed your own web content in Teams or add Teams-specific functionality to your web content. For more information, see [Teams JavaScript client library](/javascript/api/overview/msteams-client).
 
-> [!IMPORTANT]
-> Custom tabs are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD).
-
 The following image shows static tabs:
 
 # [Desktop](#tab/desktop)
@@ -59,7 +56,7 @@ Following are a few benefits of static tabs:
 
 * **Optional configuration**: You can change the default URL in your tab instance by changing the `contentUrl` property of your app after it's pinned in Teams.
 
-[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md) deliver content only to channels and group chats and create collaborative spaces around dedicated web-based content.
+[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md) deliver content only to channels and group chats and create collaborative spaces around dedicated web-based content with a mandatory configuration page.
 
 Following image shows static tabs with customizable experience added to different contexts in Teams:
 

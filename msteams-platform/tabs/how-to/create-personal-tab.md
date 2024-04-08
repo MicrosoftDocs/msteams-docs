@@ -1,5 +1,5 @@
 ---
-title: Create a static tab
+title: Create a tab
 author: laujan
 description: Learn to build a personal or static tab. Select the Node.js, ASP.NET Core, or ASP.NET Core MVC environment. Generate app, add content, create package, build, and run app.
 ms.localizationpriority: high
@@ -8,9 +8,11 @@ zone_pivot_groups: teams-app-environment
 ms.date: 02/27/2023
 ---
 
-# Create a static tab
+# Create a tab
 
-Static tabs are part of the Teams apps can be pinned to the left navigation bar for easy access. Static tabs work in personal chat, group chat, channels, and meetings with a customizable experience. Static tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app.
+Tabs are part of the Teams apps that can be pinned to the left navigation bar for easy access and behave more like apps, as you can pin only one tab per app. 
+
+Static tabs work in personal chat, group chat, channels, and meetings with a customizable experience. 
 
 Ensure that you've all the [prerequisites](~/tabs/how-to/tab-requirements.md) to build your static tab.
 

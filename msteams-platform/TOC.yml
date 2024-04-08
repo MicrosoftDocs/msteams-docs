@@ -360,7 +360,7 @@
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
     displayName: clickjacking
-  - name: Create a static tab
+  - name: Create a tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs, channel, or group custom tab
   - name: Create a content page
