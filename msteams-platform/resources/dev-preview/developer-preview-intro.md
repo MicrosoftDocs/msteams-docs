@@ -67,7 +67,7 @@ To enable the public developer preview on Teams mobile client:
 > [!NOTE]
 > 
 > * If you [enable custom Teams apps and turn on custom app uploading](../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) doesn't enable developer preview features in Microsoft Teams [set the update policy](/MicrosoftTeams/public-preview-doc-updates#set-the-update-policy).
-> * **Developer preview** on Android is restricted to beta Version of Teams App. To join beta version of Teams app, follow instructions as mentioned [beta versions of apps.](https://support.google.com/googleplay/answer/7003180?hl=en#:~:text=Get%20beta%20versions%20of%20apps)
+> * **Developer preview** for Android is available only on the beta version of the Teams app. To join the beta version of Teams app, follow the instructions in [beta versions of apps.](https://support.google.com/googleplay/answer/7003180?hl=en#:~:text=Get%20beta%20versions%20of%20apps)
 
 ## Disable developer preview
 
