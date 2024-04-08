@@ -194,7 +194,6 @@ When you modify existing preapproval, the following RSC configurations are avail
 <details>
 
 <summary><b>Update the preapproval for chat RSC</b></summary>
-**:**
 
 ```powershell
 Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat', 'TeamsAppInstallation.Read.Chat ')
