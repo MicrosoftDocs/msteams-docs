@@ -60,40 +60,17 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 
 ```json
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-+  "manifestVersion": "devPreview",
-  "version": "1.0.0",
-  "id": "04805b4b-xxxx-xxxx-xxxx-4dbc1cac8f89",
-  "packageName": "com.microsoft.teams.extension",
-  "developer": {
-    "name": "Teams App, Inc.",
-    "websiteUrl": "https://www.example.com",
-    "privacyUrl": "https://www.example.com/termofuse",
-    "termsOfUseUrl": "https://www.example.com/privacy"
-  },
-  "icons": {
-    "color": "color.png",
-    "outline": "outline.png"
-  },
-  "name": {
-    "short": "AI tools",
-    "full": "AI tools"
-  },
-  "description": {
-    "short": "AI tools",
-    "full": "AI tools"
-  },
-  "accentColor": "#FFFFFF",
   "composeExtensions": [
     {
-+      "composeExtensionType": "apiBased",
-+      "authorization": {
-+        "authType": "apiSecretServiceAuth ",
-+        "apiSecretServiceAuthConfiguration": {
-+            "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
-+        }
-+      },
-+      "apiSpecificationFile": "aitools-openapi.yml",
+      "+": null,
+      "composeExtensionType": "apiBased",
+      "authorization": {
+        "authType": "apiSecretServiceAuth ",
+        "apiSecretServiceAuthConfiguration": {
+          "apiSecretRegistrationId": "96270b0f-7298-40cc-b333-152f84321813"
+        }
+      },
+      "apiSpecificationFile": "aitools-openapi.yml",
       "commands": [
         {
           "id": "searchTools",
@@ -111,29 +88,13 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
               "description": "e.g. search='tool to create music'"
             }
           ],
-+          "apiResponseRenderingTemplateFile": "response-template.json"
+          "apiResponseRenderingTemplateFile": "response-template.json"
         }
       ]
     }
-  ],
-  "validDomains": []
+  ]
 }
 ```
-
-|Name  |Description                                    |
-|:---------|               ---------------------------------------------------------|
-|`composeExtensions.composeExtensionType`     |  Compose extension type. Update the value to `apiBased`. |
-|`composeExtensions.authorization`|Authorization related information for the API-based message extension|
-|`composeExtensions.authorization.authType`|Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
-|`composeExtensions.authorization.apiSecretServiceAuthConfiguration`|Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`.|
-|`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`| Registration id returned when developer submits the API key through Developer Portal.|
-|`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
-|`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationId` available in the OpenAPI Description.       |
-|`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
-|`composeExtensions.commands.parameters`    | Defines a static list of parameters for the command. The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters.     |
-|`composeExtensions.commands.apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response. *[Mandatory]* |
-
-For more information, see [composeExtensions](../resources/schema/manifest-schema-dev-preview.md#composeextensions).
 
 ## Next step
 
