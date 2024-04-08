@@ -21,6 +21,7 @@ Integrating Teams interoperability into your customer-facing web or native app e
 Custom web and native apps can interact with two types of Teams B2C experiences: virtual appointments and contact center.
 
 The following image shows an example of how you can integrate the Teams interoperable meeting and calling experience into your web or native app:
+
 :::image type="content" source="../assets/images/call-with-chat-composite-hero.png" alt-text="Screenshot shows the meeting and calling experience that you can embed in to your app or web client.":::
 
 ## Virtual appointments
@@ -49,7 +50,7 @@ For more information and quickstarts, see:
 
 ## Contact center
 
-Contact center apps focus on unscheduled communication between consumers and agents. The unscheduled nature of the interaction is a key attribute of contact center apps. The contact center communication app has a number diverse needs, including:
+Contact center apps focus on unscheduled communication between consumers and agents. The unscheduled nature of the interaction is a key attribute of contact center apps. The contact center captures a large family of apps diverse across the following:
 
 * **Scale:** Small businesses might have few employees operating as agents in a limited role, such as a restaurant providing a contact number for booking reservations. An airline might employ thousands of staff and vendors providing a 24/7 contact center.
 * **Channel:** Organizations can engage with consumers through the telephone system, apps, short message service (SMS), or consumer communication platforms.
