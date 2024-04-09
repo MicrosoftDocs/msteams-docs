@@ -9,7 +9,7 @@ ms.date: 08/29/2023
 
 # Preapproval of RSC permissions
 
-Preapproval of resource-specific consent (RSC) permissions allows admins to approve RSC based on individual app in Microsoft Teams. Initially, admins had the ability to turn on or turn off RSC permission in the Teams Admin Center to either approve or block all RSC enabled apps.
+Preapproval of resource-specific consent (RSC) permissions allows admins to approve RSC based on an individual app in Microsoft Teams. Initially, admins had the ability to turn on or turn off RSC permission in the Teams Admin Center to either approve or block all RSC enabled apps.
 
 Admins can use preapproved RSC permissions to select specific apps for their users to install in Teams, without needing to approve or deny every app that requires these permissions.
 
@@ -41,6 +41,7 @@ To enable preapproval for RSC permissions, change your RSC settings with the `Se
 |`ApprovedForAllApps`|You can allow users in your tenant to access any RSC enabled app. After you enable this configuration, there's no need for preapproval of RSC permissions, as all RSC enabled apps are automatically approved for use.|
 |`ApprovedForPreApprovedAppsOnly`|RSC enabled apps can be allowed on an individual basis. Admins can determine which apps are authorized for specific RSC permissions.|
 |`DisabledForAllApps`| No RSC permissions can be consented to by users. In this case, preapproval of RSC permissions doesn't affect on users ability to consent to RSC enabled apps.|
+| ManagedByMicrosoft | This is the default state for all tenants. It allows chat and team RSC permissions to be consented for all users but can be changed at any time at Microsoft's discretion. |
 
    > [!WARNING]
    > If you change your chat or team RSC configuration to `DisabledForAllApps`, it disables preapproval in your tenant and users run into errors when they install RSC enabled apps.
@@ -178,7 +179,7 @@ After you create a preapproval policy, you can modify the policy to change the p
 
 You can update a preapproval policy with the `Update-MgBetaTeamAppPreApproval` cmdlet. When you specify which permissions to be updated, you must distinguish the type of RSC permissions is modified.
 
-When you modify existing preapproval, the following RSC configurations are available:
+When you modify an existing preapproval, the following RSC configurations are available:
 
 |Configuration| Description|
 |---|---|
@@ -191,7 +192,7 @@ When you modify existing preapproval, the following RSC configurations are avail
 <summary><b>Update the preapproval for chat RSC</b></summary>
 
 ```powershell
-Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat', 'TeamsAppInstallation.Read.Chat ')
+Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat', 'TeamsAppInstallation.Read.Chat')
 ```
 
 </details>
@@ -202,7 +203,7 @@ Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
 <summary><b>Update the preapproval for team RSC</b></summary>
 
 ```powershell
-Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('OnlineMeeting.ReadBasic.Group', 'TeamsAppInstallation.Read.Group)
+Update-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('OnlineMeeting.ReadBasic.Group', 'TeamsAppInstallation.Read.Group')
 ```
 
 </details>
@@ -218,7 +219,7 @@ New-MgBetaTeamAppPreApproval  -TeamsAppId d46d75f9-d445-457e-b555-24bd2f54c15a -
 
 ## Get preapproved permissions for an app
 
-You can check to see what RSC permissions an app has been preapproved for by using the following cmdlet.
+Use the following cmdlet to verify the RSC permissions that were preapproved for an app:
 
 ```powershell
 Get-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
