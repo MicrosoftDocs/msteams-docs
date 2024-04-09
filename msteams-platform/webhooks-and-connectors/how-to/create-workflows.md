@@ -9,13 +9,30 @@ ms.date: 03/01/2024
 
 # Create workflows
 
-Workflows let you automate repetitive tasks or processes that connect one or more apps to Teams. In short, they can save you time and effort.
+Workflows are designed to streamline your routine tasks and processes by integrating various apps with Teams. Workflows allow users let you automate repetitive tasks or processes to save time and effort spent following up on repetitive tasks. The article shows you the steps to incorporate, execute, and oversee your workflows.
 
-The easiest way to get started is to browse our selection of pre-built workflows.
+If you're facing one or more of the following scenarios, then workflows opportunities to automate:
 
-1. Select Apps icon :::image type="icon" source="../../assets/images/workflows/app icon.png" border="false"::: from the left of Teams.
+* Repetitive tasks within Teams.
+* Alternating between Teams and other apps for updates or tasks.
+* Transferring information from Teams to other applications.
+* Preferring Teams notifications over email alerts.
+* Regularly asking the same questions in Teams communications.
 
-1. Scroll and select Workflow logo Workflows from the navigation on the left.
+> [!NOTE]
+> If you're using connectors to automate repetitive tasks, we are transitioning to Workflow for more efficient automation.
+
+You can create a workflow in the channel and chat scopes. Once you create the workflow, you can add or run a workflow from messaging area or from the message.
+
+[Snip image]
+
+## Add Workflows
+
+The easiest way to get started is to browse our selection of pre-built workflows. To add a workflow:
+
+1. In Teams, select the Apps :::image type="icon" source="../../assets/images/workflows/app icon.png" border="false"::: icon.
+
+1. Select Workflows.
 
     :::image type="content" source="../../assets/images/workflows/workflows-sidepanel.png" alt-text="Screenshot shows the Workflows in the side panel.":::
 
@@ -23,9 +40,13 @@ The easiest way to get started is to browse our selection of pre-built workflows
 
     :::image type="content" source="../../assets/images/workflows/select-workflow.png" alt-text="Screenshot shows the Workflows in the main window.":::
 
+    If you're adding Workflows for the first time, the Workflows app is first added.
+
 1. Follow the prompts to Sign in.
 1. When done, you’ll get a confirmation saying, "Workflow added successfully!" The confirmation also includes instructions for running your workflow.
 1. Select **Add**.
+
+Workflows that you added here are shown in the channel or chat, when you want to add a Workflow in that scope.
 
 ## Select the channel
 
