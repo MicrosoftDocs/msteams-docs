@@ -589,7 +589,17 @@ Before you start, ensure you have the following:
 * An Azure account with an active subscription.
 * Basic familiarity with Microsoft Entra ID and Teams app development.
 
-:::image type="content" source="../assets/images/Copilot/api-me-entra-sso.png" alt-text="Screenshot shows how Microsoft Entra SSO authorization works to authentication API.":::
+The following image shows how SSO works when a Teams app user attempts to access API-bsed message extension app:
+
+:::image type="content" source="../assets/images/Copilot/api-me-entra-sso.png" alt-text="Screenshot shows how Microsoft Entra SSO authorization works to authentication API." lightbox="../assets/images/Copilot/api-me-entra-sso.png" :::
+
+* The user invokes the API ME app from a message extension in Teams and requests a command that requires authentication.
+* The app sends a request to the Teams backend service with the app ID and the required scope (access as user).
+* The Teams backend service checks if the user has already consented to the app and the scope. If not, it shows a consent screen to the user and asks for permission.
+* If the user consents, the Teams backend service generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
+* The app validates the token and extracts the user information from it, such as the name, email, and object ID.
+* The app can use the token to call its own API or exchange it for another token to call an external service, such as Graph API, with the appropriate permissions.
+The app returns the response to the user in Teams.
 
 To enable `microsoftEntra` authentication method for API-based message extension, follow these steps:
 
@@ -655,7 +665,7 @@ To configure scope and authorize trusted client applications, you need:
 
 * [Add Application ID URI](#application-id-uri): Configure scope (permission) options for your app. Expose a web API and configure the application ID URI.
 * [Configure API scope](#configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
-* [Configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users won't have the opportunity to decline consent.
+* [Configure authorized client application](#configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users won't have the opportunity to decline consent.
 
 #### Application ID URI
 
