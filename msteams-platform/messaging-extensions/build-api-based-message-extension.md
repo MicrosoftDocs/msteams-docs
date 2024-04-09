@@ -151,7 +151,6 @@ Ensure that you adhere to following guidelines for app manifest:
 * You can use the Teams Store app validation tool to validate the app package, including the app manifest and the OpenAPI description document. This ensures the app meets Teams Store standards.
 * You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, which includes the app manifest and the OpenAPI description document.
 
-
   ```json
    {
    "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
@@ -222,7 +221,7 @@ Ensure that you adhere to following guidelines for app manifest:
 |`composeExtensions.authorization`|Authorization related information for the API-based message extension|
 |`composeExtensions.authorization.authType`|Enum of possible authorization types. Supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.|
 |`composeExtensions.authorization.apiSecretServiceAuthConfiguration`|Object capturing details needed to do service auth. Applicable only when auth type is `apiSecretServiceAuth`.|
-|`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`| Registration id returned when developer submits the API key through Developer Portal.|
+|`composeExtensions.authorization.apiSecretServiceAuthConfiguration.apiSecretRegistrationId`| Registration ID returned when developer submits the API key through Developer Portal.|
 |`composeExtensions.apiSpecificationFile`     |  References an OpenAPI Description file in the app package. Include when type is `apiBased`.      |
 |`composeExtensions.commands.id`      | Unique ID that you assign to search command. The user request includes this ID. The ID must match the `OperationId` available in the OpenAPI Description.       |
 |`composeExtensions.commands.context`      | Array where the entry points for message extension is defined. The default values are `compose` and `commandBox`. |
@@ -245,7 +244,7 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 * **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented.
 * **A `jsonPath` is recommended** for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
 * **Define `jsonPath` as the path** to the relevant data/array in the API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and returns as separate results. *[Optional]*
-* **Get a sample response** for validating the response rendering template. This will serve as a test to ensure your template works as expected.
+* **Get a sample response** for validating the response rendering template. This serves as a test to ensure your template works as expected.
 * **Use tools such as Fiddler or Postman** to call the API and ensure that the request and the response are valid. This step is crucial for troubleshooting and confirming that your API is functioning correctly.
 * **You can use the Adaptive Card Designer** to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
 
@@ -337,6 +336,7 @@ The following code is an example of a Response rendering template: <br/>
     }
    }
    ```
+
   </details>
 
 #### Parameters
@@ -513,14 +513,13 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 </details>
 
-
 ## Authentication
 
 You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods. For more information, see [composeExtensions](../resources/schema/manifest-schema.md#composeextensions).
 
 # [None](#tab/none)
 
-You can update `none` as a value for `authorization` in an API-based message extension when the message extension does not require any authentication for the user to access the API.
+You can update `none` as a value for `authorization` in an API-based message extension when the message extension doesn't require any authentication for the user to access the API.
 
 # [API secret service auth](#tab/api-service-auth)
 
@@ -554,7 +553,7 @@ To register an API Key, follow these steps:
 
    |Option   |When to use  | description|
    |---------|---------|----------------|
-   |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key is can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
+   |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
    |**Existing Teams app**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
 
 1. Select **+ Add Secret** and enter the OpenAI API secret key.
@@ -590,76 +589,333 @@ Before you start, ensure you have the following:
 * An Azure account with an active subscription.
 * Basic familiarity with Microsoft Entra ID and Teams app development.
 
-:::image type="content" source="../assets/images/Copilot/api-me-entra-sso.png" alt-text="Screenshot shows how Microsoft Entra SSO authorization works to authenticationan API.":::
+:::image type="content" source="../assets/images/Copilot/api-me-entra-sso.png" alt-text="Screenshot shows how Microsoft Entra SSO authorization works to authentication API.":::
 
 To enable `microsoftEntra` authentication method for API-based message extension, follow these steps:
 
-1. **Configure App with Microsoft Entra ID**: Create an Microsoft Entra ID app to generate an app ID and application ID URI. This is used to configure scopes and authorize trusted client applications for generating access tokens. You can follow the steps outlined in the [Microsoft Entra ID app creation guide](/azure/active-directory/develop/quickstart-register-app).
+### Register a new app in Microsoft Entra ID
 
-1. **Add Code to Handle Access Tokens**: Add the code to handle access tokens. This token should be sent to your app's server code in the Authorization header. Ensure to validate the access token when it's received. Here's an example of how to handle access tokens:
+1. Open the [Azure portal](https://ms.portal.azure.com/) on your web browser.
 
-   ```javascript
-   // Handle access token
-   app.use((req, res, next) => {
-   const authHeader = req.headers.authorization;
-   const token = authHeader && authHeader.split(' ')[1];
-   
-   if (token == null) return res.sendStatus(401);
-   
-   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
-      if (err) return res.sendStatus(403);
-      req.user = user;
-      next();
-   });
-   });
-   ```
+2. Select the **App registrations** icon.
 
-1. **Update app manifest**: Update your Teams client app manifest with the app ID and application ID URI generated on Microsoft Entra ID. This allows Teams to request access tokens on behalf of your app. The "webApplicationInfo" section in the manifest file is where you specify this information.
+   :::image type="content" source="../assets/images/authentication/teams-sso-tabs/azure-portal.png" alt-text="Microsoft Entra admin center page.":::
 
-   ```json
-    "webApplicationInfo": {
-      "id": "{Microsoft Entra ID AppId}",
-      "resource": "api://subdomain.example.com/botId-{guid}"
-    }
-   ```
+   The **App registrations** page appears.
 
-1. **Add SSO Support to the Plugin**: Add the following auth section to the plugin part of the manifest. This indicates that the plugin supports SSO.
+3. Select **+ New registration** icon.
 
-   ```json
-    "authorization": {
-      "authType": "microsoftEntra",
-      "microsoftEntraConfiguration": {
-        "supportsSingleSignOn": true,
-    
-      }
-    },
-   ```
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/app-registrations.png" alt-text="New registration page on Microsoft Entra admin center.":::
 
-1. **Validate the Token**: Before the token is sent to the plugin, validate that the resource URI and the domain the request is sent to be the same. Also, confirm the user ID in the token is the same as the one used for SMBA auth.
+    The **Register an application** page appears.
 
-1. **Send Invoke Request with Access Token**: The client sends an invoke request with the access token. An invoke request is a type of HTTP request that is used to trigger actions on the server. Here's an example payload that contains the access token.
+4. Enter the name of your app that you want to be displayed to the app user. You can change the name at a later stage, if you want to.
 
-   ```json
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Microsoft Entra admin center.":::
+
+5. Select the type of user account that can access your app. You can select from single or multitenant options in organizational directories, or restrict the access to personal Microsoft accounts only.
+
+    <details>
+    <summary><b>Options for supported account types</b></summary>
+
+    | Option | Select this to... |
+    | --- | --- |
+    | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called custom app built for your org (LOB app), this app is a single-tenant application in the Microsoft identity platform. |
+    | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | Let users in any Microsoft Entra tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multitenant application in the Microsoft identity platform.|
+    | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (for example, Skype, Xbox) | Target the widest set of customers. <br> By selecting this option, you're registering a multitenant application that can support app users who have personal Microsoft accounts also. |
+    | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
+
+    </details>
+
+    > [!NOTE]
+    > You don't need  to enter **Redirect URI** for enabling SSO for a tab app.
+
+7. Select **Register**.
+    A message pops up on the browser stating that the app was created.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/app-created-msg.png" alt-text="Register app on Microsoft Entra admin center.":::
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-bots/app-created-msg.png" alt-text="d":::
+
+    The page with app ID and other configurations is displayed.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/tab-app-created.png" alt-text="App registration is successful.":::
+
+8. Note and save the app ID from **Application (client) ID** to update the app manifest later.
+
+    Your app is registered in Microsoft Entra ID. You now have app ID for your tab app.
+
+</details>
+
+### Configure scope for access token
+
+After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
+
+To configure scope and authorize trusted client applications, you need:
+
+* [Add Application ID URI](#application-id-uri): Configure scope (permission) options for your app. Expose a web API and configure the application ID URI.
+* [Configure API scope](#configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
+* [Configure authorized client application](#to-configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users won't have the opportunity to decline consent.
+
+#### Application ID URI
+
+1. Select **Manage** > **Expose an API** from the left pane.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/expose-api-menu.png" alt-text="Expose an API menu option.":::
+
+    The **Expose an API** page appears.
+
+1. Select **Add** to generate application ID URI in the form of `api://{AppID}`.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/expose-an-api.png" alt-text="Set app ID URI":::
+
+    The section for setting application ID URI appears.
+
+1. Enter the application ID URI in the format explained here.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Application ID URI":::
+
+    * The **Application ID URI** is prefilled with app ID (GUID) in the format `api://{AppID}`.
+    * The application ID URI format must be: `api://fully-qualified-domain-name.com/{AppID}`.
+    * Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
+
+    where,
+    * `fully-qualified-domain-name.com` is the human-readable domain name from which your tab app is served. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same.
+
+      If you're using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
+    * `AppID` is the app ID (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
+
+    > [!IMPORTANT]
+    >
+    > * **Sensitive information**: The application ID URI is logged as part of the authentication process and mustn't contain sensitive information.
+    >
+    > * **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where {YourClientId} is your bot app ID.
+    >
+    > * **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
+    >
+    >   For example, to create an app service or web app with resource name, `demoapplication`:
+    >
+    >   | If base resource name used is | URL will be... | Format is supported on... |
+    >   | --- | --- | --- |
+    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
+    >
+    >    Use the lower case option *demoapplication* as base resource name.
+
+1. Select **Save**.
+
+    A message pops up on the browser stating that the application ID URI was updated.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/app-id-uri-msg.png" alt-text="Application ID URI message":::
+
+    The application ID URI displays on the page.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated":::
+
+1. Note and save the Application ID URI to update the app manifest later.
+
+#### Configure API scope
+
+1. Select **+ Add a scope** in the **Scopes defined by this API** section.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/select-scope.png" alt-text="Select scope":::
+
+    The **Add a scope** page appears.
+
+1. Enter the details for configuring scope.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/add-scope.png" alt-text="The screenshot shows how to add scope details in Azure.":::
+
+    1. Enter the scope name. This field is mandatory.
+    2. Select the user who can give consent for this scope. The default option is **Admins only**.
+    3. Enter the **Admin consent display name**. This field is mandatory.
+    4. Enter the description for admin consent. This field is mandatory.
+    5. Enter the **User consent display name**.
+    6. Enter the description for user consent description.
+    7. Select the **Enabled** option for state.
+    8. Select **Add scope**.
+
+    A message pops up on the browser stating that the scope was added.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/scope-added-msg.png" alt-text="Scope added message":::
+
+    The new scope you defined displays on the page.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/scope-added.png" alt-text="Scope added and displayed":::
+
+#### Configure authorized client application
+
+1. Move through the **Expose an API** page to the **Authorized client application** section, and select **+ Add a client application**.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/auth-client-apps.png" alt-text="Authorized client application":::
+
+    The **Add a client application** page appears.
+
+1. Enter the appropriate Microsoft 365 client ID for the applications that you want to authorize for your app’s web application.
+
+    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/add-client-app.png" alt-text="Add a client application":::
+
+    > [!NOTE]
+    >
+    > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
+    > * For a Teams tab app, you need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
+
+    1. Select one of the following client IDs:
+
+       | Use client ID | For authorizing... |
+       | --- | --- |
+       | 1fec8e78-bce4-4aaf-ab1b-5451cc387264 | Teams mobile or desktop application |
+       | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346 | Teams web application |
+       | 4765445b-32c6-49b0-83e6-1d93765276ca | Microsoft 365 web application |
+       | 0ec893e0-5785-4de6-99da-4ed124e5296c | Microsoft 365 desktop application |
+       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Microsoft 365 mobile application |
+       | d3590ed6-52b3-4102-aeff-aad2292ab01c | Outlook desktop application |
+       | bc59ab01-8403-45c6-8796-ac3ef710b3e3 | Outlook web application |
+       | 27922004-5251-4030-b22d-91ecd9a37ea4 | Outlook mobile application |
+       |9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7|Bing |
+       |ef47e344-4bff-4e28-87da-6551a21ffbe0| Bing (Staging)|
+
+    1. Select the application ID URI you created for your app in **Authorized scopes** to add the scope to the web API you exposed.
+
+    1. Select **Add application**.
+
+       A message pops up on the browser stating that the authorized client app was added.
+
+       :::image type="content" source="../assets/images/authentication/teams-sso-tabs/update-app-auth-msg.png" alt-text="Client application added message":::
+
+       The authorized app's client ID displays on the page.
+
+       :::image type="content" source="../assets/images/authentication/teams-sso-tabs/client-app-added.png" alt-text="Client app added and displayed":::
+
+> [!NOTE]
+> You can authorize more than one client application. Repeat the steps of this procedure for configuring another authorized client application.
+
+You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
+
+### Update app manifest
+
+**webApplicationInfo property**
+
+Configure the `webApplicationInfo` property in the app manifest file. This property enables SSO for your app to help app users access your tab app seamlessly.
+
+&nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
+
+`webApplicationInfo` has two elements, `id` and `resource`.
+
+| Element | Description |
+| --- | --- |
+| id | Enter the app ID (GUID) that you created in Microsoft Entra ID. |
+| resource | Enter your app's subdomain URI and the application ID URI that you created in Microsoft Entra ID when creating scope. You can copy it from the **Microsoft Entra ID** > **Expose an API** section. |
+
+> [!NOTE]
+> Use the app manifest version 1.5 or later to implement the `webApplicationInfo` property.
+
+The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest.
+
+For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
+
+To configure app manifest:
+
+1. Open the tab app project.
+2. Open the app manifest folder.
+
+    > [!NOTE]
+    >
+    > * The app manifest folder should be at the root of your project. For more information, see [Create a Microsoft Teams app package](../concepts/build-and-test/apps-package.md).
+    > * For more information on learning how to create a manifest.json, see [the app manifest schema](../resources/schema/manifest-schema.md).
+
+1. Open the `manifest.json` file
+1. Add the following code snippet to the app manifest file to add the new property:
+
+    ```json
+    "webApplicationInfo":
     {
-      "name": "composeExtension/query",
-      "value": {
-        "commandId": "insertWiki",
-        "parameters": [
-          {
-            "name": "searchKeyword",
-            "value": "lakers"
-          }
-        ],
-        "authentication": {
-          "token": "…"
-        },
-        "queryOptions": {
-          "skip": 0,
-          "count": 25
-        }
-      }
+    "id": "{Microsoft Entra AppId}",
+    "resource": "api://subdomain.example.com/{Microsoft Entra AppId}"
     }
-   ```
+    ```
+
+    where,
+    * `{Microsoft Entra AppId}` is the app ID you created when you registered your app in Microsoft Entra ID. It's the GUID.
+    * `subdomain.example.com` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
+
+4. Update the app ID from Microsoft Entra ID in the **id** property.
+5. Update the subdomain URL in the following properties:
+   1. `contentUrl`
+   2. `configurationUrl`
+   3. `validDomains`
+6. Save the app manifest file. For more information, see [app manifest](../resources/schema/manifest-schema.md).
+
+<br>
+<details>
+<summary>Here's an example of the updated app manifest</summary>
+
+```json
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
+  "manifestVersion": "1.11",
+  "version": "1.0.0",
+  "id": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
+  "developer": {
+    "name": "Microsoft",
+    "websiteUrl": "https://www.microsoft.com",
+    "privacyUrl": "https://www.microsoft.com/privacy",
+    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
+  },
+  "name": {
+    "short": "Teams Auth SSO",
+    "full": "Teams Auth SSO"
+  },
+  "description": {
+    "short": "Teams Auth SSO app",
+    "full": "The Teams Auth SSO app"
+  },
+  "icons": {
+    "outline": "outline.png",
+    "color": "color.png"
+  },
+  "accentColor": "#60A18E",
+  "staticTabs": [
+    {
+      "entityId": "auth",
+      "name": "Auth",
+      "contentUrl": "https://contoso.com/Home/Index",
+      "scopes": [ "personal" ]
+    }
+  ],
+  "configurableTabs": [
+    {
+      "configurationUrl": "https://contoso.com/Home/Configure",
+      "canUpdateConfiguration": true,
+      "scopes": [
+        "team"
+      ]
+    }
+  ],
+  "permissions": [ "identity", "messageTeamMembers" ],
+  "validDomains": [
+    "contoso.com"
+  ],
+  "webApplicationInfo": {
+    "id": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
+    "resource": "api://contoso.com/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c"
+  }
+}
+```
+
+</details>
+
+> [!NOTE]
+> During debug, you can use ngrok to test your app in Microsoft Entra ID. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
+
+#### Validate token
+
+After the API ME gets a request header with token, the user should do the following steps:
+
+1. Validate the token by checking the audience, scope, issuer, and signature claims.
+1. Extract the user information from the token, such as name, email, and object ID.
+1. Use the token to call the API ME app's own API or exchange it for another token to call an external service, such as Graph API, with the appropriate permissions.
+1. Return the response to the user in Teams.
 
 ---
 
@@ -673,16 +929,15 @@ Analyzing network traces and standardized errors can be instrumental in identify
 
 * **Network Trace Analysis**: By filtering the network trace for “invoke” actions, you can examine the standardizedError returned in the response. This error provides detailed information about what went wrong with the API request.
 
-* **Error Codes and Messages**: The standardizedError object includes an errorCode, errorSubCode, and an errorDescription. For example, a 412 error code with a description of “Missing required parameter term” indicates that a required parameter was not included in the request.
+* **Error Codes and Messages**: The standardizedError object includes an errorCode, errorSubCode, and an errorDescription. For example, a 412 error code with a description of “Missing required parameter term” indicates that a required parameter wasn't included in the request.
 
 * **Common HTTP Error Responses**:
   * A 400 Bad Request error may occur if a request parameter is missing or incorrectly formatted.
   * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-  * A 500 Internal Server Error indicates that the service does not know how to respond, possibly due to a server-side issue.
+  * A 500 Internal Server Error indicates that the service doesn't know how to respond, possibly due to a server-side issue.
 
 * **Headers and Parameters**: Ensure that all necessary headers are defined in the request and that all required parameters are included.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the API spec and use tools like Fiddler or Postman to test the request, including the authorization header for the API key if necessary.
-
 
 ## See also

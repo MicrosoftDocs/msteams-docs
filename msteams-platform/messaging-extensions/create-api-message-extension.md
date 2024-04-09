@@ -203,17 +203,14 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
         ```
         You should see an output similar to: "Generated a new API Key: xxx..."
 
-     4. Enter the generated API key into your environment file. Replace `<your-api-key>` with the actual key:
+     4. Enter the generated API key into your `env/.env.*.user` file file. Replace `<your-api-key>` with the actual key:
         ```
         SECRET_API_KEY=<your-api-key>
         ```
-        Insert this line into the `env/.env.*.user` file.
-
-     Make sure to replace `<your-api-key>` with the actual API key that you received in step 3. Save the changes to the environment file, and you're ready to use your new API key.
 
    # [Microsoft Entra](#tab/microsoft-entra)
 
-     1. In the manifest.json file, update `${{OPENAPI_SERVER_DOMAIN}}` in the `"resource"` property with the server.url domain in the apispecification file.
+     1. In the manifest.json file, update `${{OPENAPI_SERVER_DOMAIN}}` in the `"resource"` property with the server.url domain in the OpenAPI Specification file.
      ---
 
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
