@@ -72,7 +72,7 @@ To create a hello world bot with tab, see [Hello World Bot with Tab](https://git
    ],
    ```
 
-   `TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Teams Toolkit. They are replaced with the true endpoint in runtime based on your current environment.
+   `TAB_ENDPOINT` and `TAB_DOMAIN` are built-in variables of Teams Toolkit. They're replaced with the true endpoint in runtime based on your current environment.
 
 ### Setup local debug environment in Visual Studio Code
 
@@ -223,7 +223,7 @@ To create a hello world bot with tab, see [Hello World Bot with Tab](https://git
 
 If you prefer to develop a server-side tab app, you don't need to update your bicep files or Azure infrastructure. Your tab app can be hosted in the same Azure App Service as your bot.
 
-1. Add the following snippet to your bicep file to provision an Azure Storage Account for your tab app.
+1. To provision an Azure Storage Account for your tab app, add the following code snippet to your bicep file:
 
    ```json
    @maxLength(20)
