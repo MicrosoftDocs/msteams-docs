@@ -162,6 +162,10 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the app validation in progress.":::
 
+        You can check your validation status such as **Created**, **In progress**, and **Completed**. Select **Refresh status** to retrieve latest validation status.
+
+        :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status.":::
+
     1. After validation, it shows the list of test cases your app has passed or failed.
 
         :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
