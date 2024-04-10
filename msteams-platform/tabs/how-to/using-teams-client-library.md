@@ -54,15 +54,15 @@ For more information regarding the authentication parameter, see [use external O
 
 #### Teams apps running across Microsoft 365
 
-Enable an existing Teams app to run in Outlook and Microsoft 365:
+Following are the requirements to enable an existing Teams app to run in Outlook and Microsoft 365:
 
 1. Dependency on TeamsJS version 2.x.x ( `@microsoft/teams-js@2.0.0`) or later.
 
 2. [Modify existing application code](#2-update-teamsjs-references) according to the required changes described in this article.
 
-3. [Updating your app manifest](#3-update-the-app-manifest-optional) (previously called Teams app manifest) to version 1.13 or later.
+3. [Update your app manifest](#3-update-the-app-manifest-optional) (previously called Teams app manifest) to version 1.13 or later.
 
-For more info, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
+For more information, see [Extend Teams apps across Microsoft 365](../../m365-apps/overview.md).
 
 ### Callbacks converted to promises
 
@@ -262,7 +262,7 @@ The `pages` namespace includes functionality for running and navigating webpages
 ##### *dialog* namespace
 
 > [!NOTE]
-> The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client.
+> The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
 The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are renamed:
 
@@ -278,7 +278,7 @@ Additionally, this capability is split into two main subcapabilities, `dialog.ur
 
 ##### *teamsCore* namespace
 
-To generalize the TeamsJS library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the global namespace) is moved to a *teamsCore* namespace:
+To generalize the TeamsJS library to run other Microsoft 365 hosts such as Microsoft 365 app and Outlook, Teams-specific functionality (originally in the *global* namespace) is moved to a *teamsCore* namespace:
 
 | Original namespace `global (window)` | New namespace `teamsCore`  |
 | - | - |
