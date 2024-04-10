@@ -479,6 +479,8 @@ Teams platform features that aren't available.
 
 * ***April 10, 2024***: The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the [new Teams Client](resources/teams-updates.md#limitations). We recommended you to render a dialog within your own frame.
 
+* ***April 01, 2024***: Azure AD PowerShell is deprecated on March 30, 2024. To interact with Microsoft Entra ID, we recommend you to migrate to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
+
 * ***February 02, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to *cloud.microsoft* domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before June 2024 to ensure continued functionality.
 
 * ***February 02, 2024***: The Collaboration controls for model-driven applications **are** set to retire by May 2024. We recommend removing the Collaboration controls and Collaboration connector from all Power Apps solutions and prepare users for the upcoming [Collaboration controls](~/samples/collaboration-control.md) retirement.
