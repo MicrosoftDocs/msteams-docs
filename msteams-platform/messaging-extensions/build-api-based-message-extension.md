@@ -135,7 +135,7 @@ Ensure that you adhere to following guidelines for app manifest:
 * A [response rendering template](#response-template) must be defined per command, which is used to convert responses from an API.
 * Full description must not exceed 128 characters.
 * If your message extension requires authentication, add `authorization` under the `composeExtensions`.
-* Define the type of authentication your application by setting the `authType` property under the `authorization`. The supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.
+* Define the type of authentication your application by setting the `authType` property under the `authorization`. The supported values are `none`, [`apiSecretServiceAuth`](#secret-service-auth), and `microsoftEntra`.
 * Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses Microsoft Entra SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`.
 * If your application uses API key based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
 * You can use the Teams Store app validation tool to validate the app package, including the app manifest and the OpenAPI description document. This ensures the app meets Teams Store standards.
@@ -522,7 +522,9 @@ You can update `none` as a value for `authorization` in an API-based message ext
 
 # [API secret service auth](#tab/api-service-auth)
 
-API secret service authentication is a secure method for your app to authenticate with API. You can  [register an API key](#register-an-api-key) through the developer portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property.
+<a name="secret-service-auth"></a>
+
+API secret service authentication  is a secure method for your app to authenticate with API. You can  [register an API key](#register-an-api-key) through the developer portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property.
 
 When an API request is initiated, the system retrieves the API key from a secure storage location and includes it in the authorization header using the bearer token scheme. The API endpoint, upon receiving the request, verifies the validity of the API key. If the verification is successful, the endpoint processes the request and returns the desired response, ensuring that only authenticated requests receive access to the API’s resources.
 
