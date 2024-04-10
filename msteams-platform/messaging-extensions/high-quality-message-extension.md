@@ -617,6 +617,21 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
+### Best Practices
+
+* Ensure Adaptive Cards don't display a horizontal scroll by not setting fixed widths.
+* **Column sets**:
+  * Limit ColumnSets to a maximum of three columns to maintain readability.
+  * Refrain from setting explicit pixel widths for more than one column within a set.
+  * When specifying explicit widths, ensure the column does not exceed one-quarter of the narrowest card width, such as in a meeting chat pane or Copilot interface.
+  * Generally, an explicit width should not exceed 48 pixels, though some scenarios may allow for exceptions.
+* **Image Sizing**:
+  * Prefer specifying the size of the column containing an image rather than the image itself, setting the image size to "auto" or "stretch" within a ColumnSet.
+  * For standalone images, it's advisable to default to "auto" or "stretch" for sizing.
+  * If using explicit pixel widths, ensure they do not surpass three-quarters of the narrowest card width.
+  * Opt for setting either the width or the height, but not both, to preserve the image's aspect ratio.
+  * Typically, only the image's width should be set, not the height, unless the scenario requires otherwise.
+
 ## Technical requirements
 
 For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
