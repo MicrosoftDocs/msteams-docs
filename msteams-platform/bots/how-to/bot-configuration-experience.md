@@ -1,7 +1,7 @@
 ---
 title: Bot configuration experience
 author: surbhigupta
-description: Learn about bot configuration experience
+description: Learn about bot configuration experience.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -23,7 +23,10 @@ Let’s consider a scenario where a user installs a bot but finds that the defau
 
 ## Why build bot configuration experience?
 
-Bot configuration allows users to customize the behavior of the bot and ensures that interactions align with their workflow and preferences. Personalized experiences lead to higher user engagement, encourage frequent interactions, and drive engagement metrics for your bot such as monthly active users (MAU) rates. Bot configuration offers adaptability, which allows users to reconfigure bot settings as their requirements change, ensuring that the bot continues to provide value and relevance in the long term.
+Configuring bots is essential for applications, as it forms the foundation of their operational efficiency. Earlier, users were unable to configure their bots after installation, requiring users to repeatedly complete necessary configurations before the app could provide its intended value. This constant need for user intervention, particularly in group settings, often postponed the app's benefits. 
+With the new bot configuration capabilities, you can now prompt for necessary configurations during installation, in group chats or channels. This ensures the bot aligns with the users' specific workflows and preferences from the start, integrating seamlessly into their daily operations. However, this feature is designed with flexibility, allowing easy reconfiguration of bot settings to adapt to changing user needs. This adaptability ensures the bot remains a valuable and relevant tool over time, consistently meeting the changing needs of its users.
+This article guides you on how to implement and utilize bot configurations to improve your app's integration and performance.
+
 
 ## Build bot configuration experience
 
@@ -244,7 +247,7 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 * Avoid sending multiple notifications or requests for configuration after the installation, as it might confuse the users.
 
-* Single sign-on (SSO) is not supported.
+* Single sign-on (SSO) isn't supported.
 
 ## Code sample
 
