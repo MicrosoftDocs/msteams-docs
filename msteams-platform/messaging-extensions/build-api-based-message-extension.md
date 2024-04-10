@@ -929,7 +929,7 @@ To configure app manifest:
 > [!NOTE]
 > The API receives a Microsoft Entra ID token with the scope set to `access_as_user` as registered in the Microsoft Entra portal. However, the token is not authorized to call any other downstream APIs, such as Microsoft Graph.
 
-After the API-besed message extension gets a request header with token, the user should do the following steps:
+After the API-besed message extension gets a request header with token, perform the following steps:
 
 1. Validate the token by checking the audience, scope, issuer, and signature claims.
 1. Extract the user information from the token, such as name, email, and object ID.
