@@ -592,7 +592,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 :::image type="content" source="../assets/images/Copilot/api-me-entra-sso.png" alt-text="Screenshot shows how Microsoft Entra SSO authorization works to authentication API." lightbox="../assets/images/Copilot/api-me-entra-sso.png" :::
 
-* The user invokes the API ME app from a message extension in Teams and requests a command that requires authentication.
+* The user invokes the API-besed message extension app from a message extension in Teams and requests a command that requires authentication.
 * The app sends a request to the Teams backend service with the app ID and the required scope (access as user).
 * The Teams backend service checks if the user has already consented to the app and the scope. If not, it shows a consent screen to the user and asks for permission.
 * If the user consents, the Teams backend service generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
@@ -680,7 +680,7 @@ To configure scope and authorize trusted client applications, you need:
 
     The section for setting application ID URI appears.
 
-1. Enter the application ID URI in the format explained here.
+1. Enter the **Application ID URI** in the format explained here.
 
     :::image type="content" source="../assets/images/authentication/teams-sso-tabs/set-app-id-uri.png" alt-text="Application ID URI":::
 
@@ -919,16 +919,35 @@ To configure app manifest:
 
 #### Validate token
 
-After the API ME gets a request header with token, the user should do the following steps:
+> [!NOTE]
+> The API receives a Microsoft Entra ID token with the scope set to `access_as_user` as registered in the Microsoft Entra portal. However, the token is not authorized to call any other downstream APIs, such as Microsoft Graph.
+
+After the API-besed message extension gets a request header with token, the user should do the following steps:
 
 1. Validate the token by checking the audience, scope, issuer, and signature claims.
 1. Extract the user information from the token, such as name, email, and object ID.
-1. Use the token to call the API ME app's own API or exchange it for another token to call an external service, such as Graph API, with the appropriate permissions.
+1. Use the token to call the message extension app's own API or exchange it for another token to call an external service, such as Graph API, with the appropriate permissions.
 1. Return the response to the user in Teams.
 
+```mermaid 
+
+sequenceDiagram
+    participant User
+    participant Token
+    participant API
+    participant Service
+
+User->>Token: Validate (audience, scope, issuer, signature)
+Token->>User: Extract user info (name, email, object ID)
+User->>API: Call message extension app's API
+API->>Token: Exchange for service token (if needed)
+Token->>Service: Call external service (For example, Graph API)
+Service->>User: Return response to Teams
+
+```
 ---
 
-### Validate
+### Validate your app
 
 Use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate that the package, including the app manifest and OpenAPI spec file are valid.
 
