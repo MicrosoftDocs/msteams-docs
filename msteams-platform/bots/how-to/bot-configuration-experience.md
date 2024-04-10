@@ -23,11 +23,9 @@ Let’s consider a scenario where a user installs a bot but finds that the defau
 
 ## Why build bot configuration experience?
 
-Configuring bots is essential for applications, as it forms the foundation of their operational efficiency. Earlier, users were unable to configure their bots after installation, requiring users to repeatedly complete necessary configurations before the app could provide its intended value. This constant need for user intervention, particularly in group settings, often postponed the app's benefits.
-
-With the new bot configuration capabilities, you can now prompt for necessary configurations during installation, in group chats or channels. This ensures the bot aligns with the users' specific workflows and preferences from the start, integrating seamlessly into their daily operations. However, this feature is designed with flexibility, allowing easy reconfiguration of bot settings to adapt to changing user needs. This adaptability ensures the bot remains a valuable and relevant tool over time, consistently meeting the changing needs of its users.
-
-This article guides you on how to implement and utilize bot configurations to improve your app's integration and performance.
+Bot configuration stands is an important feature for applications, laying the foundation for their operational effectiveness. Earlier, users were unable to configure their bots after installation, which required requiring users to complete necessary configurations before the app could deliver its intended value. This requirement for continual user intervention, especially in group scope, often delayed the app's benefits.
+ 
+With the introduction of bot configuration capabilities, you can prompt for necessary  configurations during installation in group chats or channels. This ensures that the bot aligns with the  user specific workflows and preferences from the outset, creating a seamless integration into their daily operations. Bot configuration is built with flexibility in mind, allowing for easy reconfiguration of bot settings in response to changing user needs. This adaptability ensures that the bot remains a valuable and relevant continually meeting the evolving requirements of the users. Let's learn how  to implement and use bot configurations to enhance your app's integration and performance in Teams.
 
 
 ## Build bot configuration experience
@@ -89,9 +87,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    # [C#](#tab/teams-bot-sdk1)
 
-   * [SDK reference]
-
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L550)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L550)
 
       ```csharp
          ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
@@ -116,9 +112,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    # [JavaScript](#tab/JS1)
 
-   * [SDK Reference]
-
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L54)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L54)
 
       ```javascript
          const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
@@ -141,9 +135,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    # [C#](#tab/teams-bot-sdk2)
 
-   * [SDK Reference]
-
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
       ```csharp
       protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
@@ -171,9 +163,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    # [JavaScript](#tab/JS2)
 
-   * [SDK Reference]
-
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
 
       ```javascript
          config: {
@@ -194,9 +184,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    # [C#](#tab/teams-bot-sdk3)
 
-   * [SDK reference]
-
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L224)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L224)
 
       ```csharp
          ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
@@ -213,9 +201,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    # [JavaScript](#tab/JS3)
 
-   * [SDK Reference]
-
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72)
 
       ```javascript
                {
@@ -253,9 +239,10 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 ## Code sample
 
-| **Sample name** | **Description** |**.NET** |**Node.js** |
-|-----------------|-----------------|----------------|
-| Bot configuration experience | This sample code describes the configuration and reconfiguration for bots in team and group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|
+| **Sample name** | **Description** |**.NET** |**Node.js** |**Manifest**|
+|-----------------|-----------------|----------------|----------------|
+| Bot configuration app | This sample code describes the configuration and reconfiguration for bots in team and group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
+| Bot configuration app auth | This sample code describes the configuration and reconfiguration for bots in team and group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
 
 ## Step-by-step guide
 
