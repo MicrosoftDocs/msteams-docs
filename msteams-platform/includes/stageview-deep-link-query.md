@@ -1,6 +1,6 @@
 | Property name | Type | Character limit | Required | Description |
 | --- | --- | --- | --- | --- |
-| entityId | String | 64 | Yes | A unique ID of the entity that the tab displays. |
+| entityId | String | 64 | Optional | A unique ID of the entity that the tab displays. |
 | appId | String | 64 | Yes | The ID of the Teams app that's to be opened. |
 | name | String | 128 | Optional | The display name of the tab in the channel interface. If no value is provided, the app name is displayed. |
 | contentUrl | String | 2048 | Yes | The https:// URL that points to the entity UI to be displayed in Teams. |
