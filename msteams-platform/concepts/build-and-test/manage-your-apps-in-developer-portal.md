@@ -152,11 +152,11 @@ In the **Publish** section, you can publish your app to your org or to the Teams
     1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
     1. Go to **Publish** > **App validation** > **Get started**.
 
-        :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the app validation in Teams developer portal.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the app validation in Teams developer portal." lightbox="../../assets/images/tdp/app-validation-get-started.png":::
 
     1. Select the validation acknowledgments checkbox and select the **Start validation**.
 
-        :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgment of your app package.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgment of your app package." lightbox="../../assets/images/tdp/app-validation-start.png":::
 
         Teams Developer Portal now starts to validate your app package:
 
