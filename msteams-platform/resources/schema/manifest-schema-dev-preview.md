@@ -527,8 +527,8 @@ Each command item is an object with the following structure:
 |`parameter.inputType`|String|||Defines the type of control displayed on a dialog for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
 |`parameter.value`|String|512 characters||Initial value for the parameter.|
 |`parameter.choices`|Array of objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
-|`parameter.choices.title`|String|128 characters||Title of the choice.|
-|`parameter.choices.value`|String|512 characters||Value of the choice.|
+|`parameter.choices.title`|String|128 characters|✔️|Title of the choice.|
+|`parameter.choices.value`|String|512 characters|✔️|Value of the choice.|
 |`apiResponseRenderingTemplateFile`| Template used to format the JSON response from developer’s API to Adaptive Card response.  |
 
 ## scopeConstraints
