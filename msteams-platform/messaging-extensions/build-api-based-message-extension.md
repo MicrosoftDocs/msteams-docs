@@ -18,9 +18,8 @@ API-based message extensions are a type of Teams app that integrates external AP
 Before you get started, ensure that you meet the following requirements:
 </br>
 <details>
-<summary id="OAD" >1. OpenAPI Description (OAD)</summary>
 
- Ensure that you adhere to following guidelines for OpenAPI Description (OAD) document:
+Ensure that you adhere to following guidelines for OpenAPI Description (OAD) document:
 
 * OpenAPI versions 2.0 and 3.0.x are supported.
 * JSON and YAML are the supported formats.
@@ -39,88 +38,79 @@ Before you get started, ensure that you meet the following requirements:
 The following code is an example of an OpenAPI Description document:
 
 ```yml
-{
-        "version": "1.0",
-        "responseLayout": "grid",
-        "responseCardTemplate": {
-            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
-            "type": "AdaptiveCard",
-            "version": "1.4",
-            "body": [
-                {
-                    "type": "Container",
-                    "items": [
-                        {
-                            "type": "ColumnSet",
-                            "columns": [
-                                {
-                                    "type": "Column",
-                                     "width": "stretch",
-                                    "items": [
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Title: ${if(title, title, 'N/A')}",
-                                            "wrap": true
-                                        },
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Description: ${if(description, description, 'N/A')}",
-                                            "wrap": true
-                                        },
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
-                                            "wrap": true
-                                        },
-                                        {
-                                            "type": "Image",
-                                            "url": "${image}",
-                                            "size": "Medium",
-                                            "$when": "${image != null}"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Column",
-                                    "width": "auto",
-                                    "items": [
-                                        {
-                                            "type": "Image",
-                                            "url": "${if(image, image, '')}",
-                                            "size": "Medium"
-                                        }
-                                    ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "FactSet",
-                            "facts": [
-                                {
-                                    "title": "Repair ID:",
-                                    "value": "${if(id, id, 'N/A')}"
-                                },
-                                {
-                                    "title": "Date:",
-                                    "value": "${if(date, date, 'N/A')}"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "previewCardTemplate": {
-            "title": "Title: ${if(title, title, 'N/A')}",
-            "subtitle": "Description: ${if(description, description, 'N/A')}",
-            "text": "Assigned To: ${if(assignedTo, assignedTo, 'N/A')}",
-            "image": {
-            "url": "${image}",
-            "$when": "${image != null}"
-              }
-            }
-        }
-    }
+openapi: 3.0.1
+info:
+title: OpenTools Plugin
+description: A plugin that allows the user to find the most appropriate AI tools for their use cases, with their pricing information.
+version: 'v1'
+servers:
+- url: https://gptplugin.opentools.ai
+paths:
+/tools:
+ get:
+   operationId: searchTools
+   summary: Search for AI Tools
+   parameters:
+     - in: query
+       name: search
+       required: true
+       schema:
+         type: string
+       description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+   responses:
+     "200":
+       description: OK
+       content:
+         application/json:
+           schema:
+             $ref: '#/components/schemas/searchToolsResponse'
+     "400":
+       description: Search Error
+       content:
+         application/json:
+           schema:
+             $ref: '#/components/schemas/searchToolsError'
+components:
+schemas:
+ searchToolsResponse:
+   required:
+     - search
+   type: object
+   properties:
+     tools:
+       type: array
+       items:
+         type: object
+         properties:
+           name:
+             type: string
+             description: The name of the tool.
+           opentools_url:
+             type: string
+             description: The URL to access the tool.
+           main_summary:
+             type: string
+             description: A summary of what the tool is.
+           pricing_summary:
+             type: string
+             description: A summary of the pricing of the tool.
+           categories:
+             type: array
+             items:
+               type: string
+             description: The categories assigned to the tool.
+           platforms:
+             type: array
+             items:
+               type: string
+             description: The platforms that this tool is available on.
+       description: The list of AI tools.
+ searchToolsError:
+   type: object
+   properties:
+     message:
+       type: string
+       description: Message of the error.
 ```
 
 For more information, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
@@ -138,13 +128,13 @@ Ensure that you adhere to following guidelines for app manifest:
 * Define `composeExtensions.apiSpecificationFile` as the relative path to the OpenAPI Description file within the folder. This links the app manifest to the API specification.
 * Define `apiResponseRenderingTemplateFile` as the relative path to the response rendering template. This specifies the location of the template used for rendering API responses.
 * Each command must have a link to the response rendering template. This connects each command to its corresponding response format.
+* The `Commands.id` property in the app manifest must match the `operationId` in the OpenAPI Description.
 * If a required parameter is without a default value, the command `parameters.name` in the app manifest must match the `parameters.name` in the OpenAPI Description document.
 * If there’s no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
-* The `Commands.id` property in the app manifest must match the corresponding `operationId` in the OpenAPI Description.
 * Make sure that the parameters for each command match exactly with the names of the parameters defined for the operation in the OpenAPI spec.
-* A response rendering template must be defined per command, which is used to convert responses from an API.
+* A [response rendering template](#response-template) must be defined per command, which is used to convert responses from an API.
 * Full description must not exceed 128 characters.
-* Add `authorization` under the `composeExtensions`.
+* If your message extension requires authentication, add `authorization` under the `composeExtensions`.
 * Define the type of authentication your application by setting the `authType` property under the `authorization`. The supported values are `none`, `apiSecretServiceAuth`, and `microsoftEntra`.
 * Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses Microsoft Entra SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`.
 * If your application uses API key based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
@@ -234,7 +224,7 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 </br>
 
-<details><summary>3. Response rendering template</summary>
+<details><summary id="response-template" >3. Response rendering template</summary>
 
 > [!NOTE]
 >
@@ -339,6 +329,14 @@ The following code is an example of a Response rendering template: <br/>
 
   </details>
 
+  **Preview Card**
+
+  :::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of compose extension displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the  'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
+
+ **Expanded Adaptive Card**
+
+  :::image type="content" source="../assets/images/Copilot/api-based-message-extension-expanded-adaptive-card.png" alt-text="Example of how the Adaptive Card looks like expanded once a user selects a preview card. The Adaptive Card shows the Title, the full Description, AssignedTo, RepairId, and Date values.":::
+
 #### Parameters
 
 |Property  |Type  |Description  |Required  |
@@ -387,6 +385,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
         name:
           type: string
           example: doggie
+       ```
 
   * **Target Schema**: `Textblock`
 
