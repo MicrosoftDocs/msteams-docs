@@ -21,6 +21,7 @@ Deep links allow users to know more about an app and install it in different sco
 * [To go to a chat with the application](#deep-link-to-a-chat-with-the-application)
 * [To share deep link for a tab](#share-deep-link-for-a-tab)
 * [To open a dialog (referred as task module in TeamsJS v1.x)](#deep-link-to-open-a-dialog)
+* [To invoke Stageview](#deep-link-to-invoke-stageview)
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -312,7 +313,11 @@ A deep link doesn't open in the meeting side panel in the following scenarios:
 * The deep link is selected outside of the meeting window or component.
 * The deep link doesn't match the current meeting, for example, if the deep link is created from another meeting.
 
-## Code Sample
+## Deep link to invoke Stageview
+
+You can invoke Stageview through deep link from your tab by wrapping the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. The `openMode` property defined in the API determines the Stageview response. For more information, see [invoke Stageview through deep link](../../tabs/tabs-link-unfurling.md#invoke-from-deep-link).
+
+## Code sample
 
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
