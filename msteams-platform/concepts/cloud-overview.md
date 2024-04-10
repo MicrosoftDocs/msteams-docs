@@ -11,19 +11,45 @@ ms.date: 09/29/2023
 
 Microsoft Teams plays a key role to facilitate secure and efficient communication across various government sectors and agencies. Government entities handle sensitive and confidential data and there's a crucial need for cloud platforms that are secure and compliant. To meet the stringent security requirements, Microsoft offers the following specialized government cloud services:
 
+:::row:::
+   :::column:::
+      :::image type="icon" source="~/assets/images/app-fundamentals/gcc.png" link="/microsoftteams/plan-for-government-gcc" border="false":::
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/app-fundamentals/gcc-high.png" link="/microsoftteams/plan-for-government-gcc-high" border="false":::
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+     :::image type="icon" source="~/assets/images/app-fundamentals/dod.png" link="/microsoftteams/plan-for-government-dod" border="false":::
+   :::column-end:::
+:::row-end:::
+:::row:::
+   :::column span="":::
+      :::image type="icon" source="~/assets/images/app-fundamentals/gallatin.png" link="/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet" border="false":::
+   :::column-end:::
+:::row-end:::
+
+* [Government Community Cloud (GCC)](/microsoftteams/plan-for-government-gcc)
+* [Government Community Cloud High (GCC High)](/microsoftteams/plan-for-government-gcc-high)
+* [Department of Defense (DOD)](/microsoftteams/plan-for-government-dod)
+* [Teams operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet) (internally referred as Gallatin)
+
 :::image type="content" source="../assets/images/app-fundamentals/cloud-type.png" alt-text="Illustration shows the types of government clouds." border="false":::
 
-The article provides an overview of Teams' compatibility across government cloud services, detailing its capabilities for each tenant and providing guidance on deployment.
+The article provides an overview of Teams' compatibility across different government cloud services, detailing its capabilities for each tenant, and providing guidance on deployment.
 
-| Teams in Government | Teams operated by 21Vianet |
+| Teams in Government cloud | Teams operated by 21Vianet |
 |---|---|
-| GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans). | [Teams operated by 21Vianet](/officeupdates/teams-app-versioning) cloud service is specific to China and you can purchase the suitable [Microsoft 365 plan for Gallatin](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365) to utilize the services offered within China. |
+| GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans). | [Teams operated by 21Vianet](/officeupdates/teams-app-versioning) cloud service is specific to China and you can purchase the suitable [Microsoft 365 plan](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365) to utilize the services offered within China. |
 
 ## Teams app capabilities for Government clouds
 
  Teams is compatible with all Microsoft 365 Government environment, but the capabilities and features vary by tenant. Some features available in commercial tenants may not be accessible in government tenant due to security and compliance restrictions, while others features take time to roll out. Understanding supported Teams apps and capabilities is crucial for effective utilization within government tenants.
 
-The following table details the Teams apps and capabilities for GCC, GCC High, DOD, and Gallatin:
+The following table details the Teams apps and capabilities for GCC, GCC High, DOD, and Teams operated by 21Vianet:
 
 | &nbsp; | GCC | GCC High | DOD | Teams operated by 21Vianet |
 |-------------|---------|---|---|---|
