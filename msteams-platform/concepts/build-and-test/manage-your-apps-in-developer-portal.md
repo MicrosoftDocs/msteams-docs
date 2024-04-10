@@ -162,11 +162,13 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the app validation in progress.":::
 
-        After you select **Start validation**, your app validation status becomes **Created**, then it moves to **In progress** status once the app validation is initiated. When the app validation completes, the status updates to **Completed**. You can select **Refresh status** to retrieve latest validation status when the validation in **In progress** status.
+        After you select **Start validation**, your app validation status becomes **Created**, then it moves to **In progress** status once the app validation is initiated. When the app validation completes, the status updates to **Completed**.
+
+        You can select **Refresh status** to retrieve latest validation status when the validation in **In progress** status.
 
         :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status.":::
 
-    1. After validation, it shows the list of test cases your app has passed or failed. Here are the list of app validation test result status:
+    1. After validation, it shows the list of test cases your app has passed or failed. Here are the list of app validation test result status:<br>
 
         1. **Success** - Your app validation test is successful.
         1. **Warning** - You can review and resolve the warning.
