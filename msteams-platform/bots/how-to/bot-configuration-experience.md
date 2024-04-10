@@ -132,7 +132,10 @@ Bot can respond to `ConfigFetch` request in three ways:
       ```
    ---
 
-1. `type: "auth"`: You can also request the user to authenticate as a response to `ConfigFetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. For more information, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
+1. `type: "auth"`: You can also request the user to authenticate as a response to `ConfigFetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. 
+
+> [NOTE!]
+> For `type: "auth"` only third party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
 
    # [C#](#tab/teams-bot-sdk2)
 
@@ -240,7 +243,6 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 * Avoid sending multiple notifications or requests for configuration after the installation, as it might confuse the users.
 
-* Single sign-on (SSO) isn't supported.
 
 ## Code sample
 
