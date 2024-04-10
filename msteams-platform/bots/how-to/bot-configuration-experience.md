@@ -23,8 +23,10 @@ Let’s consider a scenario where a user installs a bot but finds that the defau
 
 ## Why build bot configuration experience?
 
-Configuring bots is essential for applications, as it forms the foundation of their operational efficiency. Earlier, users were unable to configure their bots after installation, requiring users to repeatedly complete necessary configurations before the app could provide its intended value. This constant need for user intervention, particularly in group settings, often postponed the app's benefits. 
+Configuring bots is essential for applications, as it forms the foundation of their operational efficiency. Earlier, users were unable to configure their bots after installation, requiring users to repeatedly complete necessary configurations before the app could provide its intended value. This constant need for user intervention, particularly in group settings, often postponed the app's benefits.
+
 With the new bot configuration capabilities, you can now prompt for necessary configurations during installation, in group chats or channels. This ensures the bot aligns with the users' specific workflows and preferences from the start, integrating seamlessly into their daily operations. However, this feature is designed with flexibility, allowing easy reconfiguration of bot settings to adapt to changing user needs. This adaptability ensures the bot remains a valuable and relevant tool over time, consistently meeting the changing needs of its users.
+
 This article guides you on how to implement and utilize bot configurations to improve your app's integration and performance.
 
 
