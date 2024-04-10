@@ -31,7 +31,7 @@ The following card types support Markdown formatting in Teams:
 > [!NOTE]
 > Markdown isn't supported for OAuth sign in cards in bots.
 
-You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in Stage View selectively.
+You can use newlines for Adaptive Cards using `\r` or `\n` escape sequences for newlines in lists. Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards. Card-based mentions are supported in web, desktop, and mobile clients. You can use the information masking property to mask specific information, such as password or sensitive information from users within the Adaptive Card `Input.Text` input element. You can expand the width of an Adaptive Card using the `width` object. You can enable typeahead support within Adaptive Cards and filter the set of input choices as the user types the input. You can use the `msteams` property to add the ability to display images in Stageview selectively.
 
 Formatting is different between the desktop and the mobile versions of Teams for Adaptive Cards and connector cards. In this section, you can go through the Markdown format example for Adaptive Cards and connector cards.
 
@@ -136,6 +136,7 @@ Bots and message extensions can include mentions within the card content in [Tex
 > * [Media elements](https://adaptivecards.io/explorer/Media.html) are currently not supported in Adaptive Cards on Teams platform.
 > * Channel and team mentions aren't supported in bot messages.
 > * You can @mention multiple users in a single Adaptive Card message, however, ensure that the message size limit doesn't exceed 28 KB for [Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) and 40 KB for a [bot message](~/bots/how-to/format-your-bot-messages.md).
+> * Adaptive Cards sent from Incoming Webhooks only support user mentions and don't support bot mentions.
 
 To include a mention in an Adaptive Card, your app needs to include the following elements:
 
@@ -705,9 +706,9 @@ The following code shows an example of Adaptive Card with typeahead support:
 }
 ```
 
-### Stage View for images in Adaptive Cards
+### Stageview for images in Adaptive Cards
 
-In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stage View selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following code is an example of the `msteams` property:
+In an Adaptive Card, you can use the `msteams` property to add the ability to display images in Stageview selectively. When users hover over the images, they can see an expand icon, for which the `allowExpand` attribute is set to `true`. The following is an example of the `msteams` property:
 
 ``` json
 {
@@ -730,16 +731,16 @@ When users hover over the image, an expand icon appears at the upper-right corne
 
 :::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Adaptive Card with expandable image":::
 
-The image appears in Stage View when the user selects the expand icon as shown in the following image:
+The image appears in Stageview when the user selects the expand icon as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Image expanded to Stage View":::
+:::image type="content" source="../../assets/images/Cards/adaptivecard-expand-image.png" alt-text="Screesnhots shows the image expanded to Stageview.":::
 
-In the Stage View, users can zoom in and zoom out of the image. You can select the images in your Adaptive Card that must have this capability.
+In the Stageview, users can zoom in and zoom out of the image. You can select the images in your Adaptive Card that must have this capability.
 
 > [!NOTE]
 >
 > * Zoom in and zoom out capability applies only to the image elements that is image type in an Adaptive Card.
-> * For Teams mobile apps, Stage View functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stage View by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
+> * For Teams mobile apps, Stageview functionality for images in Adaptive Cards is available by default. Users can view Adaptive Card images in Stageview by simply tapping on the image, irrespective of whether the `allowExpand` attribute is present or not.
 
 # [Markdown format for connector cards for Microsoft 365 Groups](#tab/connector-md)
 
