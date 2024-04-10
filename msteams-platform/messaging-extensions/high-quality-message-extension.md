@@ -619,18 +619,20 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 ### Best Practices
 
-* Ensure Adaptive Cards don't display a horizontal scroll by not setting fixed widths.
-* **Column sets**:
-  * Limit ColumnSets to a maximum of three columns to maintain readability.
-  * Refrain from setting explicit pixel widths for more than one column within a set.
-  * When specifying explicit widths, ensure the column does not exceed one-quarter of the narrowest card width, such as in a meeting chat pane or Copilot interface.
-  * Generally, an explicit width should not exceed 48 pixels, though some scenarios may allow for exceptions.
+Adaptive Cards must provide a seamless interaction for users across devices. When designing an Adaptive Card, ensure that you consider following best practices:
+
+* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width.
+* **ColumnSets**:
+  * Don't define ColumnSets with more than three columns.
+  * Don’t use explicit pixel width on more than one column in the set.
+  *  ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Copilot.
+  *  Generally, an explicit width must not exceed 48 pixels, though some scenarios might allow for exceptions.
 * **Image Sizing**:
-  * Prefer specifying the size of the column containing an image rather than the image itself, setting the image size to "auto" or "stretch" within a ColumnSet.
-  * For standalone images, it's advisable to default to "auto" or "stretch" for sizing.
-  * If using explicit pixel widths, ensure they do not surpass three-quarters of the narrowest card width.
-  * Opt for setting either the width or the height, but not both, to preserve the image's aspect ratio.
-  * Typically, only the image's width should be set, not the height, unless the scenario requires otherwise.
+  * When using an image inside a ColumnSet with more than one Column, specify the size of the column containing an image rather than the image instead.
+  * If the image isn’t in a ColumnSet, we recommend you to set its size to `“auto”` or `“stretch”`.
+  * If you want to define explicit width in pixels, ensure that they don't exceed 3/4 of the narrowest card width.
+  * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
+  * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
 
 ## Technical requirements
 
