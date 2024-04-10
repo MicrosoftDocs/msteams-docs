@@ -134,11 +134,10 @@ Ensure that you adhere to following guidelines for app manifest:
 * Make sure that the parameters for each command match exactly with the names of the parameters defined for the operation in the OpenAPI spec.
 * A [response rendering template](#response-template) must be defined per command, which is used to convert responses from an API.
 * Full description must not exceed 128 characters.
-* If your message extension requires authentication, add `authorization` under the `composeExtensions`.
-* Define the type of authentication your application by setting the `authType` property under the `authorization`. The supported values are `none`, [`apiSecretServiceAuth`](#secret-service-auth), and `microsoftEntra`.
-* Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses Microsoft Entra SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`.
-* If your application uses API key based authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
-* You can use the Teams Store app validation tool to validate the app package, including the app manifest and the OpenAPI description document. This ensures the app meets Teams Store standards.
+* If your message extension requires [authentication](#auth), add `authorization` under the `composeExtensions`.
+* Define the type of authentication your application by setting the `authType` property under the `authorization`. The supported values are [`none`](#none), [`apiSecretServiceAuth`](#secret-service-auth), and [`microsoftEntra`](#microsoft-entra).
+* If your application uses authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
+* Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses Microsoft Entra SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`
 * You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, which includes the app manifest and the OpenAPI description document.
 
   ```json
@@ -514,9 +513,13 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 ## Authentication
 
+<a name="auth"></a>
+
 You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods. For more information, see [composeExtensions](../resources/schema/manifest-schema.md#composeextensions).
 
 # [None](#tab/none)
+
+<a name="none"></a>
 
 You can update `none` as a value for `authorization` in an API-based message extension when the message extension doesn't require any authentication for the user to access the API.
 
@@ -580,6 +583,8 @@ You can authorize incoming requests to your service by configuring a static API 
 ```
 
 # [Microsoft Entra ID](#tab/microsoft-entra-id)
+
+<a name="microsoft-entra"></a>
 
 `microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
 
