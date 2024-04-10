@@ -84,7 +84,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    # [C#](#tab/teams-bot-sdk1)
 
-   * [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulecontinueresponse)
+   * [SDK reference]
 
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L550)
 
@@ -95,10 +95,10 @@ Bot can respond to `ConfigFetch` request in three ways:
             {
                   Value = new TaskModuleTaskInfo
                   {
-                     Height = 123,
-                     Width = 456,
-                     Title = "test title",
-                     Card = new Attachment
+                     Height = 500,
+                     Width = 600,
+                     Title = "Task module fetch response",
+                     Card = new Microsoft.Bot.Schema.Attachment
                      {
                         ContentType = AdaptiveCard.ContentType,
                         Content = card
@@ -113,7 +113,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    * [SDK Reference]
 
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L83)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L54)
 
       ```javascript
          const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
@@ -121,8 +121,8 @@ Bot can respond to `ConfigFetch` request in three ways:
             config: {
                value: {
                   card: adaptiveCard,
-                  height: 200,
-                  width: 200,
+                  height: 500,
+                  width: 600,
                   title: 'test card',
                },
                type: 'continue',
@@ -168,7 +168,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    * [SDK Reference]
 
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L69C7-L80C6)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
 
       ```javascript
          config: {
@@ -189,7 +189,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    # [C#](#tab/teams-bot-sdk3)
 
-   * [SDK reference](/dotnet/api/microsoft.bot.schema.teams.taskmodulemessageresponse)
+   * [SDK reference]
 
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L224)
 
@@ -199,7 +199,7 @@ Bot can respond to `ConfigFetch` request in three ways:
                   Config = new TaskModuleMessageResponse
                   {
                         Type = "message",
-                        Value = "You have chosen to finish setting up bot"
+                        Value = "Your request has been submitted successfully!"
                   }
                };
 
@@ -210,7 +210,7 @@ Bot can respond to `ConfigFetch` request in three ways:
 
    * [SDK Reference]
 
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L119)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72)
 
       ```javascript
                {
