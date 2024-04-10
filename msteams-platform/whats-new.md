@@ -27,7 +27,7 @@ Teams platform features that are available to all app developers.
 **2024 April**
 
 * ***April 12, 2024***: [Bot configuration helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot from the channel or group chat scope.](bots/how-to/bot-configuration-experience.md)
-* **April 04, 2024***: [Added support for python in Teams AI library.](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+* ***April 04, 2024***: [Added support for python in Teams AI library.](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
 * ***April 04, 2024***: [Stageview API with the openmode property allows you to open your app content in different Stageview experience.](tabs/open-content-in-stageview.md)
 * ***April 03, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
 
