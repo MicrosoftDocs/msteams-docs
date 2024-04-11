@@ -860,16 +860,24 @@ To configure app manifest:
    3. `validDomains`
 1. Save the app manifest file. For more information, see [app manifest](../resources/schema/manifest-schema.md).
 
-> [!NOTE]
-> During debug, you can use ngrok to test your app in Microsoft Entra ID. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
-
 #### Authenticate token
+
+When the message extension calls the API durng authentication, it receives a request with the user’s authentication token (AED token). The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is "Authorization: Bearer <token_value>". For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
+
+```http
+GET /api/resource HTTP/1.1
+Host: api.example.com
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+```
 
 After the API-besed message extension gets a request header with token, perform the following steps:
 
-* Authenticate: Verify the token for the audience, scope, issuer, and signature claims.
+* **Authenticate**: Verify the token for the audience, scope, issuer, and signature claims to check if the token is for your app.
 
-* Use the token: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API.
+* **Use the token**: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API.
+
+  > [!NOTE]
+  > The API receives an Microsoft Entra token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
 ---
 
 ### Validate your app
