@@ -16,8 +16,9 @@ ms.date: 10/19/2023
 API-based message extensions are a type of Teams app that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
 
 Before you get started, ensure that you meet the following requirements:
+
 </br>
-<details>
+<details><summary id="oad">1. OpenAPI Description (OAD) </summary>
 
 Ensure that you adhere to following guidelines for OpenAPI Description (OAD) document:
 
@@ -119,7 +120,7 @@ For more information, see [OpenAPI structure.](https://swagger.io/docs/specifica
 
 </br>
 
-<details><summary>2. App manifest</summary>
+<details><summary id="app-manifest">2. App manifest</summary>
 
 Ensure that you adhere to following guidelines for app manifest:
 
@@ -223,7 +224,7 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 </br>
 
-<details><summary id="response-template" >3. Response rendering template</summary>
+<details><summary id="response-template">3. Response rendering template</summary>
 
 > [!NOTE]
 >
@@ -601,7 +602,7 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 * The user invokes the API-besed message extension app from a message extension in Teams and requests a command that requires authentication.
 * The app sends a request to the Teams backend service with the app ID and the required scope (access as user).
-* The Teams backend service checks if the user has already consented to the app and the scope. If not, it shows a consent screen to the user and asks for permission.
+* The Teams backend service checks if the user consented to the app and the scope. If not, it shows a consent screen to the user and asks for permission.
 * If the user consents, the Teams backend service generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
 * The app validates the token and extracts the user information from it, such as the name, email, and object ID.
 * The app can use the token to call its own API or exchange it for another token to call an external service, such as Graph API, with the appropriate permissions.
@@ -694,12 +695,6 @@ To configure scope and authorize trusted client applications, you need:
     * The **Application ID URI** is prefilled with app ID (GUID) in the format `api://{AppID}`.
     * The application ID URI format must be: `api://fully-qualified-domain-name.com/{AppID}`.
     * Insert the `fully-qualified-domain-name.com` between `api://` and `{AppID}` (which is, GUID). For example, api://example.com/{AppID}.
-
-    where,
-    * `fully-qualified-domain-name.com` is the human-readable domain name from which your tab app is served. Your application's domain name and the domain name you register for your Microsoft Entra application must be the same.
-
-      If you're using a tunneling service, such as ngrok, you must update this value whenever your ngrok subdomain changes.
-    * `AppID` is the app ID (GUID) that was generated when you registered your app. You can view it in the **Overview** section.
 
     > [!IMPORTANT]
     >
@@ -810,25 +805,16 @@ You've successfully configured app scope, permissions, and client applications. 
 
 ### Update app manifest
 
-**webApplicationInfo property**
-
-Configure the `webApplicationInfo` property in the app manifest file. This property enables SSO for your app to help app users access your tab app seamlessly.
-
-&nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
-
-`webApplicationInfo` has two elements, `id` and `resource`.
-
-| Element | Description |
-| --- | --- |
-| id | Enter the app ID (GUID) that you created in Microsoft Entra ID. |
-| resource | Enter your app's subdomain URI and the application ID URI that you created in Microsoft Entra ID when creating scope. You can copy it from the **Microsoft Entra ID** > **Expose an API** section. |
-
 > [!NOTE]
-> Use the app manifest version 1.5 or later to implement the `webApplicationInfo` property.
+> `webApplicationInfo` is supported inthe app manifest version 1.5 or later.
 
-The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest.
+Update the following properties in the app manifest file:
 
-For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
+* `webApplicationInfo`: Enables SSO for your app to help app users access your tab app seamlessly. section, which contains crucial details about your app. The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
+
+   &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
+
+* `microsoftEntraConfiguration`: Enables Single sign-on authentication for your app. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications. 
 
 To configure app manifest:
 
@@ -841,7 +827,9 @@ To configure app manifest:
     > * For more information on learning how to create a manifest.json, see [the app manifest schema](../resources/schema/manifest-schema.md).
 
 1. Open the `manifest.json` file
-1. Add the following code snippet to the app manifest file to add the new property:
+1. Add the following code snippet to the app manifest file:
+
+   **webApplicationInfo**
 
     ```json
     "webApplicationInfo":
@@ -855,103 +843,33 @@ To configure app manifest:
     * `{Microsoft Entra AppId}` is the app ID you created when you registered your app in Microsoft Entra ID. It's the GUID.
     * `subdomain.example.com` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
 
-4. Update the app ID from Microsoft Entra ID in the **id** property.
-5. Update the subdomain URL in the following properties:
+    **MicrosoftEntraConfiguration**
+
+    ```json
+    "authorization": {
+      "authType": "microsoftEntra",
+      “microsoftEntraConfiguration”: {
+        “supportsSingleSignOn”: true
+      }
+    },
+    ```
+
+1. Update the subdomain URL in the following properties:
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-6. Save the app manifest file. For more information, see [app manifest](../resources/schema/manifest-schema.md).
-
-<br>
-<details>
-<summary>Here's an example of the updated app manifest</summary>
-
-```json
-{
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.11/MicrosoftTeams.schema.json",
-  "manifestVersion": "1.11",
-  "version": "1.0.0",
-  "id": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
-  "developer": {
-    "name": "Microsoft",
-    "websiteUrl": "https://www.microsoft.com",
-    "privacyUrl": "https://www.microsoft.com/privacy",
-    "termsOfUseUrl": "https://www.microsoft.com/termsofuse"
-  },
-  "name": {
-    "short": "Teams Auth SSO",
-    "full": "Teams Auth SSO"
-  },
-  "description": {
-    "short": "Teams Auth SSO app",
-    "full": "The Teams Auth SSO app"
-  },
-  "icons": {
-    "outline": "outline.png",
-    "color": "color.png"
-  },
-  "accentColor": "#60A18E",
-  "staticTabs": [
-    {
-      "entityId": "auth",
-      "name": "Auth",
-      "contentUrl": "https://contoso.com/Home/Index",
-      "scopes": [ "personal" ]
-    }
-  ],
-  "configurableTabs": [
-    {
-      "configurationUrl": "https://contoso.com/Home/Configure",
-      "canUpdateConfiguration": true,
-      "scopes": [
-        "team"
-      ]
-    }
-  ],
-  "permissions": [ "identity", "messageTeamMembers" ],
-  "validDomains": [
-    "contoso.com"
-  ],
-  "webApplicationInfo": {
-    "id": "bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c",
-    "resource": "api://contoso.com/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c"
-  }
-}
-```
-
-</details>
+1. Save the app manifest file. For more information, see [app manifest](../resources/schema/manifest-schema.md).
 
 > [!NOTE]
 > During debug, you can use ngrok to test your app in Microsoft Entra ID. In that case, you need to replace the subdomain in `api://subdomain.example.com/00000000-0000-0000-0000-000000000000` with the ngrok URL. You'll need to update the URL whenever your ngrok subdomain changes. For example, api://23c3-103-50-148-128.ngrok.io/bccfbe67-e08b-4ec1-a7fd-e0aaf41a097c.
 
-#### Validate token
-
-> [!NOTE]
-> The API receives a Microsoft Entra ID token with the scope set to `access_as_user` as registered in the Microsoft Entra portal. However, the token is not authorized to call any other downstream APIs, such as Microsoft Graph.
+#### Authenticate token
 
 After the API-besed message extension gets a request header with token, perform the following steps:
 
-1. Validate the token by checking the audience, scope, issuer, and signature claims.
-1. Extract the user information from the token, such as name, email, and object ID.
-1. Use the token to call the message extension app's own API or exchange it for another token to call an external service, such as Graph API, with the appropriate permissions.
-1. Return the response to the user in Teams.
+* Authenticate: Verify the token for the audience, scope, issuer, and signature claims.
 
-```mermaid 
-
-sequenceDiagram
-    participant User
-    participant Token
-    participant API
-    participant Service
-
-User->>Token: Validate (audience, scope, issuer, signature)
-Token->>User: Extract user info (name, email, object ID)
-User->>API: Call message extension app's API
-API->>Token: Exchange for service token (if needed)
-Token->>Service: Call external service (For example, Graph API)
-Service->>User: Return response to Teams
-
-```
+* Use the token: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API.
 ---
 
 ### Validate your app
@@ -960,19 +878,43 @@ Use [Teams app validator](https://dev.teams.microsoft.com/validation) to validat
 
 ### Troubleshoot
 
-Analyzing network traces and standardized errors can be instrumental in identifying and resolving API request issues.
+If you encounter any issues while sideloading or running your app in Teams, use the following troubleshooting steps to resolve your issue:
 
-* **Network Trace Analysis**: By filtering the network trace for “invoke” actions, you can examine the standardizedError returned in the response. This error provides detailed information about what went wrong with the API request.
+1. If you get a **Manifest parsing has failed** error message when sideloading the app to teams, select **Copy error details to clipboard**. The clipboard contains the reason and the issue related to the app manifest file.
 
-* **Error Codes and Messages**: The standardizedError object includes an errorCode, errorSubCode, and an errorDescription. For example, a 412 error code with a description of “Missing required parameter term” indicates that a required parameter wasn't included in the request.
+   1. Validate and ensure that you adhere to the [app manifest](#app-manifest) and the [OpenAPI Description document](#oad) adhere to the requirements.
 
-* **Common HTTP Error Responses**:
-  * A 400 Bad Request error may occur if a request parameter is missing or incorrectly formatted.
-  * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-  * A 500 Internal Server Error indicates that the service doesn't know how to respond, possibly due to a server-side issue.
+   :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-sideload.png" alt-text="Screenshot shows the error message when sideloading an app to Teams along with the option to copy the error details to clipboard.":::
 
-* **Headers and Parameters**: Ensure that all necessary headers are defined in the request and that all required parameters are included.
+1. **Network Trace Analysis**:
 
-* **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the API spec and use tools like Fiddler or Postman to test the request, including the authorization header for the API key if necessary.
+   1. Open [Teams web client](https://teams.microsoft.com).
+   1. Sign in with your Microsoft 365 credentials.
+   1. Go to a chat, and run your message extension app.
+   1. At the top-right, select **Settings and more (...)**. Go to **More tools** > **Developer tools**.
+   1. Select **Network**. Select the **filter** option and enter **invoke** in the search field.
+  
+   1. Select an Error from the list.
+   1. In the right pane, select the **Response** tab.
+   
+   1. A JSON object representing an error response from a service or API is displayed. It contains a `standardizedError` object with `errorCode`, `errorSubCode`, and `errorDescription`, which have more details about the error.
+
+      :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-network.png" alt-text="Screenshots shows the network tab, the list of Invoke Errors, and the error details in the response tab in Developer tools while running a message extension in Teams and getting an error.":::
+
+     **Common HTTP Error Responses**:
+     * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
+     * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
+     * A 500 Internal Server Error indicates that the service doesn't know how to respond, possibly due to a server-side issue.
+
+1. **Console log**: Select the **Console** tab in developer tools to view error messages that occur while running your app in Teams web client.
+   1. Go to **Developer tools** > **Console**.
+   1. Select the drop-down next to the **filter** filed and select **Errors**.
+
+   :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-console.png" alt-text="Screenshots shows the Console tab and the Error option selected in the drop-down in Developer tools.":::
+
+1. **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the API spec and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
+
+If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback#product-support-and-service-issues) for further assistance.
+
 
 ## See also
