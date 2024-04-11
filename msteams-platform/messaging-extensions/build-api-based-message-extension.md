@@ -925,7 +925,7 @@ If you encounter any issues while sideloading or running your app in Teams, use 
 
 1. **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
-If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback#product-support-and-service-issues) for further assistance.
+If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
 
 
 ## See also
