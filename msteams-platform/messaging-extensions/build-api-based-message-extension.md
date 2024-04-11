@@ -878,13 +878,14 @@ After the API-besed message extension gets a request header with token, perform 
 
   > [!NOTE]
   > The API receives an Microsoft Entra token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
+
 ---
 
 ### Validate your app
 
 Use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate that the package, including the app manifest and OpenAPI spec file are valid.
 
-### Troubleshoot
+### Troubleshooting
 
 If you encounter any issues while sideloading or running your app in Teams, use the following troubleshooting steps to resolve your issue:
 
@@ -916,11 +917,13 @@ If you encounter any issues while sideloading or running your app in Teams, use 
 
 1. **Console log**: Select the **Console** tab in developer tools to view error messages that occur while running your app in Teams web client.
    1. Go to **Developer tools** > **Console**.
-   1. Select the drop-down next to the **filter** filed and select **Errors**.
+   1. Select the drop-down next to the **filter** filed and select **Errors**.</br>
+
 
    :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-console.png" alt-text="Screenshots shows the Console tab and the Error option selected in the drop-down in Developer tools.":::
 
-1. **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the API spec and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
+
+1. **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback#product-support-and-service-issues) for further assistance.
 
