@@ -511,6 +511,22 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 |`supportsCalling`|Boolean|||A value indicating where a bot supports audio calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
 |`supportsVideo`|Boolean|||A value indicating where a bot supports video calling. **IMPORTANT**: This property is currently experimental. Experimental properties might be incomplete and might undergo changes before they're fully available. The property is provided for testing and exploration purposes only and must not be used in production applications. Default: **`false`**|
 
+### bots.configuration
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch dialog (referred as task module in TeamsJS v1.x) dynamically. <br>Default value: `false`|
+|`team.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
+|`team.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`team.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`team.taskInfo.url`|String|2048 characters||Initial webview URL.|
+|`groupChat.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch dialog dynamically. <br>Default value: `false`|
+|`groupChat.taskInfo`|Object|||Dialog to be launched when fetch task set to false.<br>Default value: `false`|
+|`groupChat.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
+|`groupChat.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`groupChat.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
+|`groupChat.taskInfo.url`|String|2048 characters||Initial webview URL.|
+
 ### bots.commandLists
 
 A list of commands that your bot can recommend to users. The object is an array (maximum of two elements) with all elements of type `object`; you must define a separate command list for each scope that your bot supports. For more information, see [Bot menus](~/bots/how-to/create-a-bot-commands-menu.md).
@@ -571,11 +587,15 @@ Each command item is an object with the following structure:
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
-|`title`|String|32 characters|✔️|The user-friendly command name.|
 |`type`|String|||Type of the command. One of `query` or `action`. Default: **query**.|
+|`samplePrompts`|array|5 |No|Property used to provide sample prompts supported by the plugin.|
+|`samplePrompts.text`|string|128 characters|✔️|Content of the sample prompt.|
+|`apiResponseRenderingTemplateFile`|String|2048 characters||A relative file path for api [response rendering template](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json) file used to format the JSON response from developer’s API to Adaptive Card response.|
+|`context`|Array of Strings|3 characters||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
+|`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
+|`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by the large language model.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
-|`context`|Array of strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog (referred as task module in TeamsJS v1.x) dynamically. Default is **false**.|
 |`taskInfo`|Object|||Specify the dialog to pre-load when using a message extension command.|
 |`taskInfo.title`|String|64 characters||Initial dialog title.|
@@ -583,14 +603,15 @@ Each command item is an object with the following structure:
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout such as 'large', 'medium', or 'small'.|
 |`taskInfo.url`|String|||Initial webview URL.|
 |`parameters`|Array of object|5 items||The list of parameters the command takes. Minimum: 1; maximum: 5.|
-|`parameters.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
-|`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
-|`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameters.value`|String|512 characters||Initial value for the parameter. Currently the value isn't supported|
-|`parameters.inputType`|String|||Defines the type of control displayed on a dialog for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
-|`parameters.choices`|Array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
-|`parameters.choices.title`|String|128 characters|✔️|Title of the choice.|
-|`parameters.choices.value`|String|512 characters|✔️|Value of the choice.|
+|`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
+|`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
+|`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
+|`parameter.semanticDescription`|String|2000 characters||Semantic description of the parameter for consumption by the large language model.|
+|`parameter.value`|String|512 characters||Initial value for the parameter. Currently the value isn't supported|
+|`parameter.inputType`|String|||Defines the type of control displayed on a dialog for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
+|`parameter.choices`|Array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
+|`parameter.choices.title`|String|128 characters|✔️|Title of the choice.|
+|`parameter.choices.value`|String|512 characters|✔️|Value of the choice.|
 
 ## permissions
 
@@ -1105,6 +1126,52 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon`| Object | | ✔️ | Specifies properties of the image file used to represent the add-in on high DPI screens. |
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | This property is reserved for future use. The value must be 64 (not 128). |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
+
+## dashboardCards
+
+**Optional** &ndash; Array
+
+Defines a list of cards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information. To learn more about creating cards for Viva Connections Dashboard, see [Overview of Bot Powered Adaptive Card Extensions](/sharepoint/dev/spfx/viva/bot-powered/overview-bot-powered-aces).
+
+This item is an array of `dashboardCard` elements of type `object`.
+
+### dashboardCards.dashboardCard
+
+Defines a single dashboard card and its properties.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | | ✔️ |  A unique identifier for this dashboard card. ID must be a GUID. |
+|`displayName`| String | 255 characters | ✔️ | Display name of the card.|
+|`description`| String | 255 characters | ✔️ | Description of the card.|
+|`pickerGroupId`| String | | ✔️ | ID of the group in the card picker. ID must be a GUID.|
+|`icon`| Object | | | Specifies icon for the card. |
+|`contentSource`| Object | | ✔️ | Specifies the source of the card's content |
+|`defaultSize`| String | | ✔️ | Rendering size for the dashboard card. Options: `medium` or `large`. |
+
+### dashboardCards.dashboardCard.icon
+
+Defines the icon properties of a given dashboard card.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`iconUrl`| String | 2048 characters | | Location of the icon for the card, to be displayed in the toolbox and card bar. |
+|`officeUIFabricIconName`| String | 255 characters | | Office UI Fabric or Fluent UI icon friendly name for the card. This value is used if *iconUrl* is not specified. |
+
+### dashboardCards.dashboardCard.contentSource
+
+Defines the content source of a given dashboard card.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`sourceType`| String | | | Represents the source of a card's content. Options: `bot`.|
+|`botConfiguration`| Object | | | The configuration for the bot source. Required if the *sourceType* is set to `bot`.|
+
+#### dashboardCards.dashboardCard.contentSource.botConfiguration
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. ID must be a GUID.|
 
 ## Create an app manifest file
 
