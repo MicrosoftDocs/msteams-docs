@@ -13,7 +13,7 @@ ms.date: 10/19/2023
 > [!NOTE]
 > API-based message extensions only support search commands.
 
-API-based message extensions are a type of Teams app that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
+API-based message extensions are a type of Microsoft Teams app that integrate external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
 
 Before you get started, ensure that you meet the following requirements:
 
@@ -223,12 +223,12 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 > [!NOTE]
 >
-> Teams supports Adaptive Cards up to version 1.5, and  the Adaptive Cards Designer supports up to version 1.6.
+> Teams supports Adaptive Cards up to version 1.5 and the Adaptive Cards Designer supports up to version 1.6.
 
 * **Define the schema reference URL** in the `$schema` property to establish the structure of your template.
 * **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented.
 * **A `jsonPath` is recommended** for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
-* **Define `jsonPath` as the path** to the relevant data/array in the API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and returns as separate results. *[Optional]*
+* **Define `jsonPath` as the path** to the relevant data or array in the API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and returns as a separate result. *[Optional]*
 * **Get a sample response** for validating the response rendering template. This serves as a test to ensure your template works as expected.
 * **Use tools such as Fiddler or Postman** to call the API and ensure that the request and the response are valid. This step is crucial for troubleshooting and confirming that your API is functioning correctly.
 * **You can use the Adaptive Card Designer** to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
@@ -326,7 +326,7 @@ The following code is an example of a Response rendering template: <br/>
 
   **Preview Card**
 
-  :::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of compose extension displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the  'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
+  :::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of compose extension displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the 'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
 
  **Expanded Adaptive Card**
 
@@ -338,7 +338,7 @@ The following code is an example of a Response rendering template: <br/>
 |--------- |---------|---------|---------|
 |`version` |  `string` | The schema version of the current response rendering template.        |  Yes       |
 |`jsonPath`     | `string`        | The path to the relevant section in the results to which the responseCardTemplate and previewCardTemplate should be applied. If not set, the root object is treated as the relevant section. If the relevant section is an array, each entry is mapped to the responseCardTemplate and the previewCardTemplate.        |   No      |
-|`responseLayout`    | `responseLayoutType`        |  Specifies the layout of the results in the message extension flyout. The Supported types are `list` and `grid`.       |    Yes     |
+|`responseLayout`    | `responseLayoutType`        |  Specifies the layout of the results in the message extension flyout. The supported types are `list` and `grid`.       |    Yes     |
 |`responseCardTemplate`    |  `adaptiveCardTemplate`  | A template for creating an Adaptive Card from a result entry.      |   Yes      |
 |`previewCardTemplate`     |  `previewCardTemplate`       | A template for creating a preview card from a result entry. The resulting preview card is displayed in the message extension flyout menu.        |  Yes       |
 
@@ -509,7 +509,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 ## Authentication
 
-You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add `authorization` property under the `composeExtensions` in app manifest and define the type of authentication your application by setting the `authType` property under the `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
+You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add `authorization` property under the `composeExtensions` in app manifest and define the type of authentication your application by setting the `authType` property under the `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
 
 * [`none`](#none)
 * [`apiSecretServiceAuth`](#secret-service-auth)
@@ -517,6 +517,7 @@ You can implement authentication in API-based search message extensions to provi
 
 <details><summary id="none">none</summary>
 <br>
+
 You can update `none` as a value for `authorization` in an API-based message extension when the message extension doesn't require any authentication for the user to access the API.
 
 ```json
@@ -531,7 +532,7 @@ You can update `none` as a value for `authorization` in an API-based message ext
 
 <details><summary id="secret-service-auth">Secret service auth</summary>
 
-API secret service authentication  is a secure method for your app to authenticate with API. You can  [register an API key](#register-an-api-key) through the developer portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
+API secret service authentication is a secure method for your app to authenticate with API. You can [register an API key](#register-an-api-key) through the Developer Portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
 
 When an API request is initiated, the system retrieves the API key from a secure storage location and includes it in the authorization header using the bearer token scheme. The API endpoint, upon receiving the request, verifies the validity of the API key. If the verification is successful, the endpoint processes the request and returns the desired response, ensuring that only authenticated requests receive access to the API’s resources.
 
@@ -580,7 +581,7 @@ To register an API Key, follow these steps:
 
 1. Select **+ Add Secret**. A **Add an API key** dialog appears.
 
-1. Enter a value for the secret and select **Save**,
+1. Enter a value for the secret and select **Save**.
 
    > [!NOTE]
    >
@@ -617,7 +618,7 @@ You can authorize incoming requests to your service by configuring a static API 
 
 <details><summary id="microsoft-entra">Microsoft Entra </summary>
 
-`microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
+`microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who has signed into Teams doesn't need to sign in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
 
 ### Prerequisites
 
@@ -630,11 +631,11 @@ The following image shows how SSO works when a Teams app user attempts to access
 
 :::image type="content" source="../assets/images/Copilot/api-me-entra-sso.png" alt-text="Screenshot shows how Microsoft Entra SSO authorization works to authentication API." lightbox="../assets/images/Copilot/api-me-entra-sso.png" :::
 
-* The user invokes the API-besed message extension app from a message extension in Teams and requests a command that requires authentication.
+* The user invokes the API-based message extension app from a message extension in Teams and requests a command that requires authentication.
 * The app sends a request to the Teams backend service with the app ID and the required scope (access_as_user).
 * The Teams backend service checks if the user consented to the app and the scope. If not, it shows a consent screen to the user and asks for permission.
 * If the user consents, the Teams backend service generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
-* The app validates the token and extracts the user information from it, such as the name, email, and object ID.
+* The app validates the token. The user can extract the user information from the token, such as the name, email, and object ID.
 * The app can use the token to call its own API.
 * The app returns the response to the user in Teams.
 
@@ -667,7 +668,7 @@ To enable `microsoftEntra` authentication method for API-based message extension
 
     | Option | Select this to... |
     | --- | --- |
-    | Accounts in this organizational directory only  (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called custom app built for your org (LOB app), this app is a single-tenant application in the Microsoft identity platform. |
+    | Accounts in this organizational directory only (Microsoft only - Single tenant) | Build an application for use only by users (or guests) in your tenant. <br> Often called custom app built for your org (LOB app), this app is a single-tenant application in the Microsoft identity platform. |
     | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) | Let users in any Microsoft Entra tenant use your application. This option is appropriate if, for example, you're building a SaaS application, and you intend to make it available to multiple organizations. <br> This type of app is known as a multitenant application in the Microsoft identity platform.|
     | Accounts in any organizational directory (Any Microsoft Entra ID tenant - Multitenant) and personal Microsoft accounts (for example, Skype, Xbox) | Target the widest set of customers. <br> By selecting this option, you're registering a multitenant application that can support app users who have personal Microsoft accounts also. |
     | Personal Microsoft accounts only | Build an application only for users who have personal Microsoft accounts. |
@@ -692,7 +693,7 @@ To enable `microsoftEntra` authentication method for API-based message extension
 
 ### Configure scope for access token
 
-After you've created a new app registration, configure scope (permission) options for sending access token to Teams Client, and authorizing trusted client applications to enable SSO.
+After you've created a new app registration, configure scope (permission) options for sending access token to Teams client, and authorizing trusted client applications to enable SSO.
 
 To configure scope and authorize trusted client applications, you need:
 
@@ -724,7 +725,7 @@ To configure scope and authorize trusted client applications, you need:
     >
     > * **Sensitive information**: The application ID URI is logged as part of the authentication process and mustn't contain sensitive information.
     >
-    > * **Application ID URI for app with multiple capabilities**: If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as `api://fully-qualified-domain-name.com/botid-{YourClientId}`, where {YourClientId} is your bot app ID.
+    > * **Application ID URI for app with multiple capabilities**: If you're building an API-based messaging extension, enter the application ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
     >
     > * **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
     >
@@ -745,7 +746,7 @@ To configure scope and authorize trusted client applications, you need:
 
     The application ID URI displays on the page.
 
-    :::image type="content" source="../assets/images/authentication/teams-sso-tabs/app-id-uri-added.png" alt-text="Application ID URI updated":::
+    :::image type="content" source="../assets/images/Copilot/api-based-me-entra-sso-app-id-uri-final.png" alt-text="Application ID URI updated":::
 
 1. Note and save the Application ID URI to update the app manifest later.
 
@@ -795,7 +796,7 @@ To configure scope and authorize trusted client applications, you need:
 
     > [!NOTE]
     >
-    > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams, Microsoft 365 app, and Outlook are the actual IDs that you must add.
+    > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams are the actual IDs that you must add.
     > * For a Teams API-based message extension app, you need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
 
     1. Select one of the following client IDs:
@@ -883,7 +884,7 @@ For more information, see [composeExtensions.commands](../resources/schema/manif
 
 #### Authenticate token
 
-When the message extension calls the API during authentication, it receives a request with the user’s authentication token (AED token). The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is "Authorization: Bearer <token_value>". For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
+When the message extension calls the API during authentication, it receives a request with the user’s authentication token (AED token). The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
 
 ```http
 GET /api/resource HTTP/1.1
@@ -891,13 +892,13 @@ Host: api.example.com
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
 ```
 
-After the API-besed message extension gets a request header with token, perform the following steps:
+After the API-based message extension gets a request header with token, perform the following steps:
 
 * **Authenticate**: Verify the token for the audience, scope, issuer, and signature claims to check if the token is for your app.
 
   The following is an example of a JSON Web Token (JWT) with a header and response:
 
-# [Token V2](#tab/token-v2)
+  # [Token V2](#tab/token-v2)
 
   ```json
   {
@@ -926,7 +927,7 @@ After the API-besed message extension gets a request header with token, perform 
     }
   ```
 
-# [Token V1](#tab/token-v1)
+  # [Token V1](#tab/token-v1)
 
   ```json
   {
@@ -965,13 +966,13 @@ After the API-besed message extension gets a request header with token, perform 
 
 ### Troubleshooting
 
-* If you get a **Manifest parsing has failed** error message when sideloading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate the app package, including the app manifest and OpenAPI spec file. Review the [app manifest](#app-manifest) and the [OpenAPI Description document](#oad) requirements to resolve errors or warnings and try uploading your app.
+* If you get a **Manifest parsing has failed** error message when uploading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate the app package, including the app manifest and OpenAPI spec file. Review the [app manifest](#app-manifest) and the [OpenAPI Description document](#oad) requirements to resolve errors or warnings and try uploading your app.
 
-   :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-sideload.png" alt-text="Screenshot shows the error message when sideloading an app to Teams along with the option to copy the error details to clipboard.":::
+   :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-sideload.png" alt-text="Screenshot shows the error message when uploading an app to Teams along with the option to copy the error details to clipboard.":::
 
 * If you encounter any issues while running your app in Teams, use the following troubleshooting steps to identify and resolve your issue:
 
-  1. **Network**: Select the **Network** tab in Developer Tools to inspect network activity
+  * **Network**: Select the **Network** tab in Developer Tools to inspect network activity
 
      1. Open [Teams web client](https://teams.microsoft.com).
      1. Sign in with your Microsoft 365 credentials.
@@ -987,18 +988,12 @@ After the API-besed message extension gets a request header with token, perform 
         :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-network.png" alt-text="Screenshots shows the network tab, the list of Invoke Errors, and the error details in the response tab in Developer tools while running a message extension in Teams and getting an error.":::
 
       **Common HTTP Error Responses**:
+
       * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
       * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
       * A 500 Internal Server Error indicates that the service doesn't know how to respond, possibly due to a server-side issue.
-
-  1. **Console log**: Select the **Console** tab in developer tools to view error messages that occur while running your app in Teams web client.
-     1. Go to **Developer tools** > **Console**.
-     1. Select the drop-down next to the **filter** filed and select **Errors**.</br>
-
-     :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-console.png" alt-text="Screenshots shows the Console tab and the Error option selected in the drop-down in Developer tools.":::
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
 
-## See also
