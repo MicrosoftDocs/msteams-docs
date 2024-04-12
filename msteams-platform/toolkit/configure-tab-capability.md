@@ -26,8 +26,8 @@ Before starting, we recommend you create a [tab app with Microsoft Teams Toolkit
 
 The following steps help you to configure the tab capability:
 
-1. [Configure tab capability in app manifest](#configure-bot-capability-in-app-manifest)
-1. [Setup local debug environment](#setup-local-debug-environment-in-visual-studio-code)
+1. [Configure tab capability in app manifest](#configure-tab-capability-in-app-manifest)
+1. [Setup local debug environment in Microsoft Visual Studio Code](#setup-local-debug-environment-in-microsoft-visual-studio-code)
 1. [Move the application to Azure](#move-the-application-to-azure)
 
 If you prefer to develop a server-side tab app, you don't need to update the folder structure, debug profile, or bicep infrastructure. Add new routes to the tab page in your bot service and update app manifest. However, the following steps describe how to configure the tab capability for a client-side tab app. For example, see [Hello World Bot with Tab](https://github.com/OfficeDev/TeamsFx-Samples/tree/main/hello-world-bot-with-tab).
