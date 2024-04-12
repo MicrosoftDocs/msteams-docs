@@ -424,11 +424,11 @@
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete
+      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete, send message from bot
       items:
       - name: Receive all conversation messages
         href: bots/how-to/conversations/channel-messages-with-rsc.md
-        displayName: mention
+        displayName: mention, send messages from bot, receive chat messages, bot messages, bots with RSC permissions
     - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
       displayName: compose
@@ -801,6 +801,7 @@
     displayName: Permissions, delegated, user, team, chat, application
   - name: Proactive installation of apps using Graph API to send messages
     href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
+    displayName: app installation, proactive message, proactive bot installation, add bot to conversation, bot conversation using graph api
   - name: Import third-party messages
     href: graph-api/import-messages/import-external-messages-to-teams.md
   - name: Code samples
