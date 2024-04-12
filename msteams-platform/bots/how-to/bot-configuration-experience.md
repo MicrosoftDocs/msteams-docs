@@ -9,14 +9,16 @@ ms.localizationpriority: high
 
 # Bot configuration experience
 
-Bot configuration is an important functionality for apps within the Teams platform, laying the foundation for their operational effectiveness. Earlier, users were unable to configure their bots post-installation and received repeated prompts to complete necessary configurations to get the intended value of the app. This requirement for continuous user intervention, especially in channel or group chat often delayed the realization of the app's benefits.
-
-With the introduction of bot configuration experience, you can prompt necessary configurations in channel or group chat during installation and reconfigure the bot from the channel or group chat scope where the bot is installed. This ensures that the bot aligns with its users specific workflows and preferences from the start, creating a seamless integration into their daily operations. Bot configuration offers flexibility by allowing easy reconfiguration of the bot settings in response to the changing user needs. This adaptability ensures that the bot remains valuable and relevant meeting the evolving requirements of its users. In this article, learn how to implement and leverage bot configurations to enhance your app's integration and performance within the Teams environment.
+Bot configuration helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot from the channel or group chat scope where the bot is installed. Bot configuration is an important functionality for apps within the Teams platform, laying the foundation for their operational effectiveness.
 
 > [!NOTE]
-> Bot configuration experience is supported in channel or group chat only.
+> Bot configuration experience is supported only in channel or group chat.
 
-Let’s consider a scenario where a user installs a bot but finds that the default settings don't match their workflow. By implementing bot configuration, you can empower users to tailor bot settings according to their preferences. Here's an example, a user adds the bot to a group chat and then configures it to align with their specific requirements. The user then reconfigures the bot to change the status.
+Earlier, users were unable to configure their bots post-installation and received repeated prompts to complete necessary configurations to get the intended value of the app. This requirement for continuous user intervention, especially in channel or group chat often delayed the realization of the app's benefits.
+
+With the introduction of bot configuration experience, you can prompt for necessary configurations in channel or group chat during installation. This ensures that the bot aligns with its users specific workflows and preferences from the start, creating a seamless integration into their daily operations. Bot configuration offers flexibility by allowing easy reconfiguration of the bot settings in response to the changing user needs. This adaptability ensures that the bot remains valuable and relevant meeting the evolving requirements of its users.
+
+Let’s consider a scenario where a user installs a bot but finds that the default settings don't match their workflow. By implementing bot configuration, you can empower users to customize bot settings according to their preferences. Here's an example, a user adds the bot to a group chat and then configures it to align with their specific requirements. The user then reconfigures the bot to change the status.
 
 **Configure**
 
