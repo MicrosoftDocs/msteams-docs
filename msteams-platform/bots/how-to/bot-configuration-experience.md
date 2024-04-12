@@ -88,18 +88,18 @@ The following table lists the response type associated with the invoke requests:
 
    The `adaptiveCardForContinue` is a custom function that returns the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
-   When the user submits the configuration, the `OnTeamsConfigSubmitAsync` method is triggered. It reads the user's input and returns a different Adaptive Card. You can also update the bot configuration to return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
+   When the user submits the configuration, the `config/submit` invoke is triggered. It reads the user's input and returns a different Adaptive Card. You can also update the bot configuration to return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
 
    # [C#](#tab/teams-bot-sdk1)
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
    ```csharp
-         protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
-         {
-         ConfigResponseBase response = adaptiveCardForContinue();
-         return Task.FromResult(response);
-         }
+   protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+   {
+      ConfigResponseBase response = adaptiveCardForContinue();
+      return Task.FromResult(response);
+   }
    ```
 
    # [JavaScript](#tab/JS1)
@@ -107,22 +107,22 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
 
    ```javascript
-      async handleTeamsConfigFetch(_context, _configData) {
-         let response = {};
-         const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
-         response = {
-            config: {
-            value: {
-               card: adaptiveCard,
-               height: 500,
-               width: 600,
-               title: 'test card',
-            },
-            type: 'continue',
-            },
-         };
-         return response;
-      }
+   async handleTeamsConfigFetch(_context, _configData) {
+      let response = {};
+      const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
+      response = {
+         config: {
+         value: {
+            card: adaptiveCard,
+            height: 500,
+            width: 600,
+            title: 'test card',
+         },
+         type: 'continue',
+         },
+      };
+      return response;
+   }
    ```
 
    ---
