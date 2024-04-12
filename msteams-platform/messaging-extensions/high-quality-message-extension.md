@@ -394,7 +394,7 @@ For M365 Chat, a search-based message extension must support more than three uni
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
 <br>
-<details><summary>The following JSON code is an example of multiple parameters defined in app manifest:</summary>
+<details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
 
 ```json
 "commands": [
@@ -494,13 +494,15 @@ The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionsco
 * Prompt library or Copilot Lab: When a user seeks help with prompts.
 * Plugin suggestions: To guide users towards better utterances.
 
-Important points to note:
+:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Copilot.":::
 
-* If an app doesn't specify the `samplePrompts` field, the prompts aren't displayed.
-* The `samplePrompts` field is mandatory for app validation during the app submission process.
-* If you define multiple commands for your app, a maximum of three prompts (one from each of the top three commands) are displayed to the user. The prompts rotate to provide the user with a diverse set of prompts across different commands.
+> [!NOTE]
+>
+> * If the app manifest doesn't specify the `samplePrompts` property, the prompts aren't displayed.
+> * The `samplePrompts` property is mandatory for app validation during the app submission process.
+> * If you define multiple commands for your app, a maximum of three prompts (one from each of the top three commands) are displayed to the user. The prompts rotate to provide the user with a diverse set of prompts across different commands.
 
-During app ingestion, we require the following validations for this field:
+We recommend you to follow these guidelines to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
 * A maximum of five prompts per command is allowed.
 * A plugin must have at least three prompts and maximum of five prompts for each command.
@@ -510,7 +512,7 @@ During app ingestion, we require the following validations for this field:
 * All sample prompts must be functional and return responses.
 * Prompt must be relevant to the commands.
 
-The following code is an example of the `samplePrompts` property updated in app manifest:
+The following code is an example of the `samplePrompts` property in app manifest:
 
 ```json
 composeExtensions": [
