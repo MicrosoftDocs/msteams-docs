@@ -135,11 +135,6 @@ Ensure that you adhere to following guidelines for app manifest:
 * Make sure that the parameters for each command match exactly with the names of the parameters defined for the operation in the OpenAPI spec.
 * A [response rendering template](#response-template) must be defined per command, which is used to convert responses from an API.
 * Full description must not exceed 128 characters.
-* If your message extension requires [authentication](#auth), add `authorization` under the `composeExtensions`.
-* Define the type of authentication your application by setting the `authType` property under the `authorization`. The supported values are [`none`](#none), [`apiSecretServiceAuth`](#secret-service-auth), and [`microsoftEntra`](#microsoft-entra).
-* If your application uses authentication, you would add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
-* Depending on the type of authentication your application uses, you might need to add a corresponding configuration object under the `authorization` node. For example, if your application uses Microsoft Entra SSO, you would add a `microsoftEntraConfiguration` object with a `supportsSingleSignOn` property set to `true`
-* You can use [Teams Store app validation](https://dev.teams.microsoft.com/validation) tool to validate the app package, which includes the app manifest and the OpenAPI description document.
 
   ```json
    {
@@ -514,9 +509,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 ## Authentication
 
-<a name="auth"></a>
-
-You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the following authentication methods:
+You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add `authorization` property under the `composeExtensions` in app manifest and define the type of authentication your application by setting the `authType` property under the `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
 
 * [`none`](#none)
 * [`apiSecretServiceAuth`](#secret-service-auth)
@@ -532,7 +525,7 @@ You can update `none` as a value for `authorization` in an API-based message ext
 
 <details><summary id="secret-service-auth">Secret service auth</summary>
 
-API secret service authentication  is a secure method for your app to authenticate with API. You can  [register an API key](#register-an-api-key) through the developer portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property.
+API secret service authentication  is a secure method for your app to authenticate with API. You can  [register an API key](#register-an-api-key) through the developer portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
 
 When an API request is initiated, the system retrieves the API key from a secure storage location and includes it in the authorization header using the bearer token scheme. The API endpoint, upon receiving the request, verifies the validity of the API key. If the verification is successful, the endpoint processes the request and returns the desired response, ensuring that only authenticated requests receive access to the API’s resources.
 
@@ -874,11 +867,10 @@ To configure app manifest:
       }
     },
     ```
-
 1. Update the subdomain URL in the following properties:
    1. `contentUrl`
    2. `configurationUrl`
-   3. `validDomains`
+  
 1. Save the app manifest file.
 
 For more information, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
