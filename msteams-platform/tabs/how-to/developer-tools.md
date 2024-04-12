@@ -40,6 +40,7 @@ The following example shows DevTools open and inspecting a tab configuration dia
 
 You can also enable the DevTools from the Teams Android client. To enable DevTools, you must:
 
+1. **Join the beta** in Play Store. **Developer preview** for Android is available only on the beta version of Teams app. To join the beta version of Teams app, follow the instructions listed in [Get beta versions of apps.](https://support.google.com/googleplay/answer/7003180?hl=en#:~:text=Get%20beta%20versions%20of%20apps)
 1. Enable the [developer preview](~/resources/dev-preview/developer-preview-intro.md).
 1. Connect your device to your desktop computer, and set up your Android device for [remote debugging](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
 1. In your Chrome browser, open `chrome://inspect/#devices`.
