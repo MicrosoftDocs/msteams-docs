@@ -27,7 +27,8 @@ Teams platform features that are available to all app developers.
 **2024 April**
 
 * ***April 12, 2024***: [Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards](resources/schema/manifest-schema.md).
-* ***April 12, 2024***: [Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem](resources/schema/manifest-schema.md##extensionsrequirements).
+* ***April 12, 2024***: [Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem](resources/schema/manifest-schema.md#extensionsrequirements).
+
 * ***April 12, 2024***: [Create Dashboardcards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information](resources/schema/manifest-schema.md#dashboardcards).
 * ***April 12, 2024***: [Share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the CodeBlock element.](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)
 * ***April 12, 2024***: [Introduced bot configuration experience that helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot.](bots/how-to/bot-configuration-experience.md)
