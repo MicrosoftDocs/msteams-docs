@@ -61,7 +61,7 @@ You can add single sign-on authentication to your conversation bot using the fol
 
 ## Bot configuration experience
 
-Bot configuration experience helps the users to interact with the bot in Teams. Users can interact with the bot either by sending a message or selecting a command from the command list. After the bot is installed in a channel or team, all the members from the channel or team can provide inputs to the bot at the same time, the bot only considers the last input provided by the user. For more information, see [bot configuration experience](how-to/bot-configuration-experience.md).
+Bot configuration experience allows users to customize their bot settings. you can prompt necessary configurations in channel or group chat during installation and allow reconfiguration of the bot where the bot is installed. For more information, see [bot configuration experience](how-to/bot-configuration-experience.md).
 
 You can change the bot name displayed in Teams environment, and you need to update it in the following occurrences:
 
