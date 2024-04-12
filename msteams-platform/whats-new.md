@@ -28,9 +28,9 @@ Teams platform features that are available to all app developers.
 
 * ***April 12, 2024***: [Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards](resources/schema/manifest-schema.md).
 
-* ***April 12, 2024***: [Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem](resources/schema/manifest-schema.md#rsc-delegated-permissions).
+* ***April 12, 2024***: [Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem](resources/schema/manifest-schema.md##extensionsrequirements).
 
-* ***April 12, 2024***: [Create Dashboardcards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information](resources/schema/manifest-schema.md#rsc-delegated-permissions).
+* ***April 12, 2024***: [Create Dashboardcards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information](resources/schema/manifest-schema.md#dashboardcards).
 
 * ***April 12, 2024***: [Use Sample prompts to guide users on how to use the various plugins within Copilot](messaging-extensions/high-quality-message-extension.md#sample-prompts).
 
@@ -484,6 +484,8 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 :::column span="2":::
 
 Teams platform features that aren't available.
+
+* ***April 12, 2024***: The `packageName` property is deprected as part of manifest v1.17.
 
 * ***April 10, 2024***: [Location](concepts/device-capabilities/location-capability.md#location-apis) and [Media](concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation and Media.
 
