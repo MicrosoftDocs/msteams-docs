@@ -68,15 +68,22 @@ For more information, see [app manifest schema](../../resources/schema/manifest-
 
 ### Configure your bot
 
-When a user installs the bot in channel or group chat, the `fetchTask` property in the app manifest file initiates `ConfigFetch` defined in the `teamsBot.js` file.
+When a user installs the bot in channel or group chat, the `fetchTask` property in the app manifest file initiates either `config/fetch` or `config/submit`as defined in the `teamsBot.js` file.
 
 If you set the `fetchTask` property in the app manifest to:
 
 * **false**: The bot doesn't fetch a dialog or an Adaptive Card. Instead, the bot must provide a static dialog or card that is used when the bot is invoked. For more information, see [dialogs](../../task-modules-and-cards/what-are-task-modules.md).
 
-* **true**: The bot initiates `ConfigFetch` to fetch content. When the bot is invoked, you can return an Adaptive Card or a dialog depending on the context provided in [channelData and userdata](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
+* **true**: The bot initiates either `config/fetch` or `config/submit`as defined. When the bot is invoked, you can return an Adaptive Card or a dialog depending on the context provided in [channelData and userdata](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
 
-Bot can respond to `ConfigFetch` request in three ways:
+The following table lists the response type associated with the invoke requests:
+
+|Invoke request |Response type |
+| --- | --- |
+| `config/fetch` | `Type: 'continue'` or `Type = 'auth'` |
+| `config/submit` | `Type: 'continue'` or `Type: 'message'` |
+
+Bot can respond to the invoke requests as follows:
 
 1. `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
 
@@ -113,22 +120,25 @@ Bot can respond to `ConfigFetch` request in three ways:
    # [JavaScript](#tab/JS1)
 
    * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L54)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52-L69)
 
       ```javascript
+         async handleTeamsConfigFetch(_context, _configData) {
+         let response = {};
          const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
          response = {
             config: {
-               value: {
-                  card: adaptiveCard,
-                  height: 500,
-                  width: 600,
-                  title: 'test card',
+              value: {
+                 card: adaptiveCard,
+                 height: 500,
+                 width: 600,
+                 title: 'test card',
                },
-               type: 'continue',
+             type: 'continue',
             },
          };
          return response;
+         }
       ```
    ---
 
@@ -169,20 +179,28 @@ Bot can respond to `ConfigFetch` request in three ways:
    # [JavaScript](#tab/JS2)
 
    * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51-L69)
 
       ```javascript
-         config: {
-         type: "auth",
-         suggestedActions: {
-         actions: [
+          async handleTeamsConfigFetch(_context, _configData) {
+          let response = {};
+
+          response = {
+          config: {
+          type: "auth",
+          suggestedActions: {
+          actions: [
             {
-            type: "openUrl",
-            value: "https://example.com/auth",
-            title: "Sign in to this app"
+              type: "openUrl",
+              value: "https://example.com/auth",
+              title: "Sign in to this app"
             }]
-         },
-         },
+           },
+          },
+          };
+
+          return response;
+          }
       ```
    ---
 
@@ -209,22 +227,26 @@ Bot can respond to `ConfigFetch` request in three ways:
    # [JavaScript](#tab/JS3)
 
    * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72-L83)
 
       ```javascript
-               {
-               response = {
-                  config: {
-                  type: 'message',
-                  value: 'You have chosen to finish setting up bot',
-                  },
-               }
-               return response;
+            async handleTeamsConfigSubmit(context, _configData) {
+            let response = {};
+    
+             response = {
+             config: {
+             type: 'message',
+             value: 'You have chosen to finish setting up bot',
+           },
+          }
+            return response;
+          }
+         }
       ```
 
    ---
 
-When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `ConfigFetch` in the bot logic. The user can reconfigure the bot settings post-installation in two ways:
+When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `config/fetch` in the bot logic. The user can reconfigure the bot settings post-installation in two ways:
 
 * @mention the bot in the message compose area. Select the **Settings** option that appears above the message compose area. A dialog appears, update, or changes the bot's configuration settings in the dialog.
 
@@ -248,8 +270,8 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
 | **Sample name** | **Description** |**.NET** |**Node.js** |**Manifest**|
 |-----------------|-----------------|----------------|----------------|
-| Bot configuration app | This sample code describes the configuration and reconfiguration for bots in team and group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
-| Bot configuration app with auth | This sample code describes the configuration and reconfiguration for bots in team and group chat. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
+| Bot configuration app | This sample code describes the configuration and reconfiguration for bots in team and group chat with continue and message response types. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app/csharp/demo-manifest)|
+| Bot configuration app with auth | This sample code describes the configuration and reconfiguration for bots in team and group chat with auth and message response types. |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/nodejs)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-configuration-app-auth/csharp/demo-manifest)|
 
 ## Step-by-step guide
 
