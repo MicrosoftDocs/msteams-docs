@@ -505,7 +505,6 @@ The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionsco
 
 We recommend you to follow these guidelines to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
-* A maximum of five prompts per command is allowed.
 * A plugin must have at least three prompts and maximum of five prompts for each command.
 * Each prompt must not exceed 128 characters.
 * Two commands within the same plugin must not have identical prompts.
