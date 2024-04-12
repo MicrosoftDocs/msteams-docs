@@ -542,7 +542,9 @@ API key registration allows you to secure their APIs that are behind an auth and
 
 To register an API Key, follow these steps:
 
-1. Go to **Tools** > **API Key Registration**.
+1. Go to **Tools** > **API key registration**.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-registration.png" alt-text="Screenshot shows the API key registration option in Developer Portal for Teams.":::
 
 1. Select **+ New API key**.
 
@@ -551,25 +553,47 @@ To register an API Key, follow these steps:
    1. **Description**: Description of the API Key.
    1. **Add domain**: Update the base path for API endpoints. The path must be a secure HTTPS URL, include a fully qualified domain name, and can optionally include a specific path. For example, `https://api.yelp.com`.
 
-1. Under **Set a target tenant**, select the following:
+      :::image type="content" source="../assets/images/Copilot/api-based-me-register-key-domain.png" alt-text="Screenshot shows the Description and Add domain options in the API key registration page in Developer Portal for Teams.":::
+
+1. Under **Set a target tenant**, select any of the following:
+
+   * **Home tenent**
+   * **Any tenant**
 
    |Option   |When to use  | description|
    |---------|---------|----------------|
    |**Home tenant**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        |  The API key is only usable within the tenant where the the API is registered. |
    |**Any tenant**     | After you've completed testing the app and want to enable the app across different tenants. Ensure that you update your target tenant to **Any tenant** before submitting your app package to the Partner Center.        | The API key can be used in other tenants after the app is available in the Teams Store. |
 
-1. Under **Set a Teams app**, select the following:
+   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams.":::
+
+1. Under **Set a Teams app**, select any of the following:
+
+   * **Any Teams app**
+   * **Existing Teams app**
 
    |Option   |When to use  | description|
    |---------|---------|----------------|
    |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
    |**Existing Teams app**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
 
-1. Select **+ Add Secret** and enter the OpenAI API secret key.
+   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-teams-app.png" alt-text="Screenshot shows the Any Teams app and Existing Teams app options under Set a Teams app heading in Developer Portal for Teams.":::
 
-   You can maintain up to two secrets for each API key registration. If one key is compromised, it can be promptly removed and allows Teams to switch to the second key. Also, if the first key results in a 401 error, Teams automatically attempts to use the second key. It helps with uninterrupted service for users and eliminates any potential downtime during the creation of a new secret.
+1. Select **+ Add Secret** and enter a value for the secret.
+
+   > [!NOTE]
+   >
+   > * You can maintain up to two secrets for each API key registration. If one key is compromised, it can be promptly removed and allows Teams to switch to the second key.
+   > * The secret value must have at least 10 characters and at most 128 characters.
+   > * If the first key results in a 401 error, Teams automatically attempts to use the second key. It helps with uninterrupted service for users and eliminates any potential downtime during the creation of a new secret.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-secret.png" alt-text="Screenshot shows the Enter the value for this secret option to add a secret to teh API key.":::
 
 1. Select **Save**. An **API key registration ID** is generated.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-reg-id.png" alt-text="Screenshot shows the API key registration ID generated in Developer Portal for Teams.":::
+
+   Save the API key registration ID and update it as a value for the `apiSecretRegistrationId` property in the app manifest.
 
 ### Update app manifest
 
