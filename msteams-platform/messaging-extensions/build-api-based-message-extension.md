@@ -517,7 +517,6 @@ You can implement authentication in API-based search message extensions to provi
 
 <details><summary id="none">None</summary>
 <br>
-
 You can update `none` as a value for `authorization` in an API-based message extension when the message extension doesn't require any authentication for the user to access the API.
 
 ```json
@@ -525,7 +524,7 @@ You can update `none` as a value for `authorization` in an API-based message ext
       "authType": "none"
       }
     },
-    ```
+```
 
 </details>
 <br/>
@@ -591,12 +590,11 @@ To register an API Key, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-secret.png" alt-text="Screenshot shows the Enter the value for this secret option to add a secret to teh API key.":::
 
-An **API key registration ID** is generated. 
+An **API key registration ID** is generated.
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-reg-id.png" alt-text="Screenshot shows the API key registration ID generated in Developer Portal for Teams.":::
 
 Copy and save the API key registration ID and update it as a value for the `apiSecretRegistrationId` property in the app manifest.
-
 
 ### Update app manifest
 
