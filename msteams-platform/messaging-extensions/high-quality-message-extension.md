@@ -166,13 +166,13 @@ The `semanticDescription` property isn't a mandatory field. However, if you add 
 
 We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
-* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.”
-* Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols.
-Grammar and punctuation errors.
-* Avoid overly verbose, flowery, or marketing language.
-* Avoid superlative claims such as “#1,” “amazing,” or “best.”
+* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
+* Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
+* Avoid grammar and punctuation errors. *[Mandatory fix]*
+* Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
+* Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
 
-The following table lists the command description examples for each category:
+The following table lists the command and semantic description examples for each category:
 
 # [Tasks](#tab/tasks)
 
