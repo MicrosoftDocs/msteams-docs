@@ -77,7 +77,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 1. Under **Command details**, go to **Adaptive card template** and select **Upload now**.
 
-    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the adaptive Card template in for the command.":::
+    :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-adaptive-card-template.png" alt-text="Screenshot shows the Upload now option to add the Adaptive Card template in for the command.":::
 
    > [!NOTE]
    > If you have more than one API, ensure that you upload the **Adaptive card template** for each API.
@@ -103,7 +103,7 @@ You can add commands and parameters to your message extension, to add commands:
 
 An API-based message extension is created.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
+:::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for Copilot app created in the app features page in Teams Developer Portal.":::
 
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
