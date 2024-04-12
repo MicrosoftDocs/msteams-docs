@@ -124,20 +124,20 @@ Bot can respond to the invoke requests as follows:
 
       ```javascript
          async handleTeamsConfigFetch(_context, _configData) {
-         let response = {};
-         const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
-         response = {
-            config: {
-              value: {
+           let response = {};
+           const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
+           response = {
+             config: {
+               value: {
                  card: adaptiveCard,
                  height: 500,
                  width: 600,
                  title: 'test card',
                },
-             type: 'continue',
-            },
-         };
-         return response;
+               type: 'continue',
+             },
+           };
+           return response;
          }
       ```
    ---
@@ -183,23 +183,23 @@ Bot can respond to the invoke requests as follows:
 
       ```javascript
           async handleTeamsConfigFetch(_context, _configData) {
-          let response = {};
+            let response = {};
 
-          response = {
-          config: {
-          type: "auth",
-          suggestedActions: {
-          actions: [
-            {
-              type: "openUrl",
-              value: "https://example.com/auth",
-              title: "Sign in to this app"
-            }]
+            response = {
+            config: {
+            type: "auth",
+            suggestedActions: {
+            actions: [
+              {
+                type: "openUrl",
+                value: "https://example.com/auth",
+                title: "Sign in to this app"
+              }]
+            },
            },
-          },
           };
 
-          return response;
+           return response;
           }
       ```
    ---
@@ -230,17 +230,17 @@ Bot can respond to the invoke requests as follows:
    * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72-L83)
 
       ```javascript
-            async handleTeamsConfigSubmit(context, _configData) {
-            let response = {};
+          async handleTeamsConfigSubmit(context, _configData) {
+             let response = {};
     
              response = {
-             config: {
-             type: 'message',
-             value: 'You have chosen to finish setting up bot',
-           },
-          }
-            return response;
-          }
+                config: {
+                   type: 'message',
+                   value: 'You have chosen to finish setting up bot',
+                },
+             }
+             return response;
+           }
          }
       ```
 
