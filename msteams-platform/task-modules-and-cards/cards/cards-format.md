@@ -451,7 +451,7 @@ The following image is an example of masking information in Adaptive Cards:
 
 ### Full width Adaptive Card
 
-You can use the `msteams` property to expand the width of an Adaptive Card and make use of available canvas space. The next section provides information on how to use the property.
+You can use the `msteams` property to expand the width of an Adaptive Card and make use of extra canvas space. The next section provides information on how to use the property.
 
 > [!NOTE]
 > Test your full width Adaptive Card in narrow form factors such as mobile and meeting side panels to ensure that content isn't truncated.
@@ -590,15 +590,15 @@ The following are JSON samples for an Adaptive Card designed without using `targ
 
   * When the card's width is **wide**, the card looks good.
 
-    :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how adaptive card with card width as wide renders when the card is designed without using targetWidth property.":::
+    :::image type="content" source="../../assets/images/Cards/card-width-wide.png" alt-text="Screenshot shows how an Adaptive Card with card width as wide renders when the card is designed without using targetWidth property.":::
 
   * When the card's width is **standard** or **narrow**, the role is squeezed.
 
-    :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card with card width as standard or narrow renders when the card is designed without using targetWidth property.":::
+    :::image type="content" source="../../assets/images/Cards/card-width-standard-narrow.png" alt-text="Screenshot shows how an Adaptive Card with card width as standard or narrow renders when the card is designed without using targetWidth property.":::
 
   * When the card's width is **very narrow**, the name and role are significantly squeezed.
 
-    :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how adaptive card with card width as very narrow  renders when the card is designed without using targetWidth property.":::
+    :::image type="content" source="../../assets/images/Cards/card-width-very-narrow.png" alt-text="Screenshot shows how an Adaptive Card with card width as very narrow  renders when the card is designed without using targetWidth property.":::
 
 * Adaptive Card updated to be responsive using `targetWidth`:
 
@@ -671,15 +671,15 @@ The following are JSON samples for an Adaptive Card designed without using `targ
 
   * When the card's width is **wide**, the card still looks good.
 
-    :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how Adaptive Card renders when the targetWidth property is wide.":::
+    :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how an Adaptive Card renders when the targetWidth property is wide.":::
 
   * When the card's width is **standard** or **narrow**, the role is moved under the name as there's no horizontal space to show them side-by-side.
 
-    :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how Adaptive Card renders when the targetWidth property is standard or narrow.":::
+    :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how an Adaptive Card renders when the targetWidth property is standard or narrow.":::
 
   * When the card's width is **very narrow**, we can hide the image and only keep the most meaningful information.
 
-    :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how Adaptive Card renders when the targetWidth property is veryNarrow.":::
+    :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how an Adaptive Card renders when the targetWidth property is veryNarrow.":::
   
 For more information on how to design an Adaptive Card, see [designing Adaptive Cards for your Teams app](design-effective-cards.md).
 
@@ -769,7 +769,7 @@ On the desktop, Markdown formatting for connector cards appears as shown in the 
 
 On iOS, Markdown formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Screenshot shows Markdown formatting for connector cards in the iOS client.":::
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Screenshot shows Markdown formatting for connector cards in Teams iOS client.":::
 
 Connector cards using Markdown for iOS include the following issues:
 
@@ -778,7 +778,7 @@ Connector cards using Markdown for iOS include the following issues:
 
 On Android, Markdown formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Screenshot shows Markdown formatting for connector cards in the Android client.":::
+:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Screenshot shows Markdown formatting for connector cards in Teams Android client.":::
 
 ### Format example for Markdown connector cards
 
@@ -856,7 +856,6 @@ The `CodeBlock` element supports the following languages only:
 | JavaScript | ✔️ | XML | ✔️ |
 
 > [!NOTE]
->
 > `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
 
 The following code is an example of an Adaptive Card displaying a code snippet:
