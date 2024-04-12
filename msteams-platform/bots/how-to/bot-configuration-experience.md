@@ -84,7 +84,7 @@ The following table lists the response type associated with the invoke requests:
 
 * `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
 
-   The `adaptiveCardForContinue` is custom function that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
+   The `adaptiveCardForContinue` is a custom function that returns the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
    When the user submits the configuration, the `OnTeamsConfigSubmitAsync` method is triggered. It reads the user's input and returns a different Adaptive Card. You can also update the bot configuration to return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
 
@@ -104,7 +104,7 @@ The following table lists the response type associated with the invoke requests:
    # [JavaScript](#tab/JS1)
 
    * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52-L69)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
 
       ```javascript
          async handleTeamsConfigFetch(_context, _configData) {
@@ -164,7 +164,7 @@ The following table lists the response type associated with the invoke requests:
    # [JavaScript](#tab/JS2)
 
    * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51-L69)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
 
       ```javascript
           async handleTeamsConfigFetch(_context, _configData) {
