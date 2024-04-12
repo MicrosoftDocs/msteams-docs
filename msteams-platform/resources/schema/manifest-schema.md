@@ -1127,6 +1127,52 @@ The `extensions.alternates` property is used to hide or prioritize specific in-m
 |`alternateIcons.highResolutionIcon.size`| Number enum | | ✔️ | This property is reserved for future use. The value must be 64 (not 128). |
 |`alternateIcons.highResolutionIcon.url`| String | 2048 characters | ✔️ | Specifies the full, absolute URL of the image file that is used to represent the add-in on high DPI screens. Icon image must be 128 x 128 pixels and use one of the following file formats: GIF, JPG, PNG, EXIF, BMP, TIFF.|
 
+## dashboardCards
+
+**Optional** &ndash; Array
+
+Defines a list of cards that can be pinned to a dashboard, such as Microsoft Viva Connections, to provide a summarized view of app information. To learn more about creating cards for Viva Connections Dashboard, see [Overview of Bot Powered Adaptive Card Extensions](/sharepoint/dev/spfx/viva/bot-powered/overview-bot-powered-aces).
+
+This item is an array of `dashboardCard` elements of type `object`.
+
+### dashboardCards.dashboardCard
+
+Defines a single dashboard card and its properties.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`id`| String | | ✔️ |  A unique identifier for this dashboard card. ID must be a GUID. |
+|`displayName`| String | 255 characters | ✔️ | Display name of the card.|
+|`description`| String | 255 characters | ✔️ | Description of the card.|
+|`pickerGroupId`| String | | ✔️ | ID of the group in the card picker. ID must be a GUID.|
+|`icon`| Object | | | Specifies icon for the card. |
+|`contentSource`| Object | | ✔️ | Specifies the source of the card's content |
+|`defaultSize`| String | | ✔️ | Rendering size for the dashboard card. Options: `medium` or `large`. |
+
+### dashboardCards.dashboardCard.icon
+
+Defines the icon properties of a given dashboard card.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`iconUrl`| String | 2048 characters | | Location of the icon for the card, to be displayed in the toolbox and card bar. |
+|`officeUIFabricIconName`| String | 255 characters | | Office UI Fabric or Fluent UI icon friendly name for the card. This value is used if *iconUrl* is not specified. |
+
+### dashboardCards.dashboardCard.contentSource
+
+Defines the content source of a given dashboard card.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`sourceType`| String | | | Represents the source of a card's content. Options: `bot`.|
+|`botConfiguration`| Object | | | The configuration for the bot source. Required if the *sourceType* is set to `bot`.|
+
+#### dashboardCards.dashboardCard.contentSource.botConfiguration
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+|`botId`| String | | | The unique Microsoft app ID for the bot as registered with the Bot Framework. ID must be a GUID.|
+
 ## Create an app manifest file
 
 If your app doesn't have an app manifest file, you need to create it.
