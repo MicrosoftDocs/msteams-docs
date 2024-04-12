@@ -509,11 +509,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 ## Authentication
 
-You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add `authorization` property under the `composeExtensions` in app manifest and define the type of authentication your application by setting the `authType` property under the `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
-
-* [`none`](#none)
-* [`apiSecretServiceAuth`](#secret-service-auth)
-* [`microsoftEntra`](#microsoft-entra)
+You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add the `authorization` property under `composeExtensions` in app manifest and define the type of authentication your application by setting the `authType` property under `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
 
 <details><summary id="none">none</summary>
 <br>
