@@ -9,11 +9,11 @@ ms.localizationpriority: high
 
 # Bot configuration experience
 
-Bot configuration experience allows users to set up and adjust their bots directly within the channel or group chat on the Teams platform. This enhances the operational efficiency by offering customizable settings tailored to user workflows and evolving requirements. Earlier, users were unable to configure their bots post-installation as they had to @mention the bot without clear guidance, resulting in lengthy and disruptive conversations that hindered the effective use of the app. 
+Bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat post-installation, enhancing operational efficiency from the start. This functionality eliminates the need for repeated user interventions that previously hampered timely benefits realization from apps. Users can now tailor the bot to their specific workflows and preferences during installation and reconfigure settings as needed to adapt to changing requirements, ensuring the bot's ongoing relevance and value.
 
-With the introduction of the bot configuration experience users can configure the bot during installation and easily reconfigure the bot settings as needed, ensuring that the bot is seamlessly integrated into daily operations and remain aligned with specific user preferences. For instance, apps that track and share news topic or monitor repository issues in chats can benefit from the bot configuration experience. In a typical scenario, a user can configure a bot to track specific news topics initially and later reconfigure it to change the tracking parameters, optimizing the bot's utility irrespective of the default settings.
+For instance, consider a bot that tracks and shares news topics, or monitors GitHub repositories. Initially configured to align with user workflows, these bots can easily be reconfigured to respond to new topics or repositories directly from the group chat, streamlining content management, and interaction without leaving the Teams environment. This flexible configuration experience significantly enhances user experience and productivity by integrating bots seamlessly into daily operations.
 
-Here's an example, a user adds the bot to a group chat and then configures it to align with their specific requirements. The user then reconfigures the bot to change the status.
+Here's an example, where a user adds the bot to a group chat and then configures it to align with their specific requirements. The user then reconfigures the bot to change the status. 
 
 **Configure**
 
