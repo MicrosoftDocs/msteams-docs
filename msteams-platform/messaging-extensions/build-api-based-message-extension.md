@@ -520,6 +520,13 @@ You can implement authentication in API-based search message extensions to provi
 
 You can update `none` as a value for `authorization` in an API-based message extension when the message extension doesn't require any authentication for the user to access the API.
 
+```json
+    "authorization": {
+      "authType": "none"
+      }
+    },
+    ```
+
 </details>
 <br/>
 
