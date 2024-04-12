@@ -10,7 +10,7 @@ ms.date: 02/16/2024
 
 # Configure bot capability within your Teams app
 
-A bot, chatbot, or conversational bot is an app that responds to simple commands sent in chat and replies in meaningful ways. Examples of bots in everyday use include: bots that notify about build failures, bots that provide information about the weather or bus schedules, or provide travel information. A bot interaction can be a quick question and answer, or it can be a complex conversation. Being a cloud application, a bot can provide valuable and secure access to cloud services and corporate resources. Learn more from [Build bots for Teams](../bots/what-are-bots.md).
+A bot, chatbot, or conversational bot is an app that responds to simple commands sent in chat and replies in meaningful ways. Bots that notify about build failures, bots that provide information about the weather or bus schedules, or provide travel information are examples of bots in everyday use. A bot interaction can be a quick question and answer, or it can be a complex conversation. BA bot can provide valuable and secure access to cloud services and corporate resources as a cloud application. For more information, see [build bots for Teams](../bots/what-are-bots.md).
 
 ## Prerequisites
 
@@ -78,7 +78,7 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
 
 ### Bring bot code to your project
 
-1. You can bring your bot app code into your project. If you don't have an app code, use the previously created bot app project and copy the source code into your current project. We recommend you copy them into a `bot/` folder. Following folder structure is an example of your folder structure:
+1. You can bring your bot app code into your project. If you don't have an app code, use the previously created bot app project, and copy the source code into your current project. We recommend you copy them into a `bot/` folder. Following folder structure is an example of your folder structure:
 
 ```yml
     |-- .vscode/
