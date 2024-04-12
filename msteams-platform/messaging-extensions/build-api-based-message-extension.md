@@ -516,8 +516,11 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 <a name="auth"></a>
 
-You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods. For more information, see [composeExtensions](../resources/schema/manifest-schema.md#composeextensions).
+You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the following authentication methods:
 
+* [`none`](#none)
+* [`apiSecretServiceAuth`](#secret-service-auth)
+* [`microsoftEntra`](#microsoft-entra)
 
 <details><summary id="none">None</summary>
 <br>
@@ -570,7 +573,7 @@ To register an API Key, follow these steps:
 
 ### Update app manifest
 
-You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you submit the API key through the Developer portal for Teams.
+You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you submit the API key through the Developer portal for Teams. For more information, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands)
 
 ```json
 "composeExtensions": [
@@ -661,8 +664,6 @@ To enable `microsoftEntra` authentication method for API-based message extension
 8. Note and save the app ID from **Application (client) ID** to update the app manifest later.
 
     Your app is registered in Microsoft Entra ID. You now have app ID for your API-based message extension app.
-
-</details>
 
 ### Configure scope for access token
 
@@ -807,7 +808,7 @@ Update the following properties in the app manifest file:
 
    &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
-* `microsoftEntraConfiguration`: Enables Single sign-on authentication for your app. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications. 
+* `microsoftEntraConfiguration`: Enables Single sign-on authentication for your app. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications.
 
 To configure app manifest:
 
@@ -851,7 +852,9 @@ To configure app manifest:
    1. `contentUrl`
    2. `configurationUrl`
    3. `validDomains`
-1. Save the app manifest file. For more information, see [app manifest](../resources/schema/manifest-schema.md).
+1. Save the app manifest file.
+
+For more information, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
 
 #### Authenticate token
 
@@ -869,7 +872,7 @@ After the API-besed message extension gets a request header with token, perform 
 
   The following is an example of a JSON Web Token (JWT) with a header and response:
 
-  # [Token V2](#tab/token-v2)
+# [Token V2](#tab/token-v2)
 
   ```json
   {
@@ -898,7 +901,7 @@ After the API-besed message extension gets a request header with token, perform 
     }
   ```
 
-  # [Token V1](#tab/token-v1)
+# [Token V1](#tab/token-v1)
 
   ```json
   {
@@ -937,7 +940,7 @@ After the API-besed message extension gets a request header with token, perform 
 
 ### Troubleshooting
 
-* If you get a **Manifest parsing has failed** error message when sideloading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate that the package, including the app manifest and OpenAPI spec file are valid. Ensure that you adhere to the [app manifest](#app-manifest) and the [OpenAPI Description document](#oad) requirements. 
+* If you get a **Manifest parsing has failed** error message when sideloading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate that the package, including the app manifest and OpenAPI spec file are valid. Ensure that you adhere to the [app manifest](#app-manifest) and the [OpenAPI Description document](#oad) requirements.
 
    :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-sideload.png" alt-text="Screenshot shows the error message when sideloading an app to Teams along with the option to copy the error details to clipboard.":::
 
@@ -953,7 +956,7 @@ After the API-besed message extension gets a request header with token, perform 
   
      1. Select an Error from the list.
      1. In the right pane, select the **Response** tab.
-   
+
      1. A JSON object representing an error response from a service or API is displayed. It contains a `standardizedError` object with `errorCode`, `errorSubCode`, and `errorDescription`, which have more details about the error.
 
         :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-network.png" alt-text="Screenshots shows the network tab, the list of Invoke Errors, and the error details in the response tab in Developer tools while running a message extension in Teams and getting an error.":::
@@ -967,13 +970,10 @@ After the API-besed message extension gets a request header with token, perform 
      1. Go to **Developer tools** > **Console**.
      1. Select the drop-down next to the **filter** filed and select **Errors**.</br>
 
-
      :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-console.png" alt-text="Screenshots shows the Console tab and the Error option selected in the drop-down in Developer tools.":::
-
 
 1. **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
-
 
 ## See also
