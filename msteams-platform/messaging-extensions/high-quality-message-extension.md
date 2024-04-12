@@ -518,7 +518,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 composeExtensions": [
     {
         "canUpdateConfiguration": true,
-        "botId": "bbfa8de5-3393-4f31-92b4-46fced216599",
+        "botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
         "commands": [
             {
                 "id": "orders",
