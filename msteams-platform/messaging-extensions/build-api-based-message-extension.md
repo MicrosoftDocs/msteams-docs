@@ -570,16 +570,18 @@ To register an API Key, follow these steps:
 1. Under **Set a Teams app**, select any of the following:
 
    * **Any Teams app**
-   * **Existing Teams app**
+   * **Existing Teams app ID**
 
    |Option   |When to use  | description|
    |---------|---------|----------------|
    |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
-   |**Existing Teams app**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
+   |**Existing Teams app ID**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-teams-app.png" alt-text="Screenshot shows the Any Teams app and Existing Teams app options under Set a Teams app heading in Developer Portal for Teams.":::
 
-1. Select **+ Add Secret** and enter a value for the secret.
+1. Select **+ Add Secret**. A **Add an API key** dialog appears.
+
+1. Enter a value for the secret and select **Save**,
 
    > [!NOTE]
    >
@@ -589,11 +591,12 @@ To register an API Key, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-secret.png" alt-text="Screenshot shows the Enter the value for this secret option to add a secret to teh API key.":::
 
-1. Select **Save**. An **API key registration ID** is generated.
+An **API key registration ID** is generated. 
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-reg-id.png" alt-text="Screenshot shows the API key registration ID generated in Developer Portal for Teams.":::
+:::image type="content" source="../assets/images/Copilot/api-based-me-api-key-reg-id.png" alt-text="Screenshot shows the API key registration ID generated in Developer Portal for Teams.":::
 
-   Save the API key registration ID and update it as a value for the `apiSecretRegistrationId` property in the app manifest.
+Copy and save the API key registration ID and update it as a value for the `apiSecretRegistrationId` property in the app manifest.
+
 
 ### Update app manifest
 
