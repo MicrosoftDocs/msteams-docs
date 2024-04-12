@@ -6,7 +6,7 @@ ms.topic: reference
 ms.date: 06/25/2021
 ---
 
-# Format cards in Microsoft Teams
+# Format cards in Teams
 
 Following are the two ways to add rich text formatting to your cards:
 
@@ -67,11 +67,11 @@ On the desktop, Adaptive Card Markdown formatting appears as shown in the follow
 
 On iOS, Adaptive Card Markdown formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams iOS Platform.":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-iOS-75.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams iOS platform.":::
 
 On Android, Adaptive Card Markdown formatting appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams android Platform.":::
+:::image type="content" source="../../assets/images/Cards/Adaptive-markdown-Android.png" alt-text="Screenshot shows an example of Adaptive Card Markdown formatting in Teams Android platform.":::
 
 For more information, see [text features in Adaptive Cards](/adaptive-cards/create/textfeatures).
 
@@ -123,7 +123,7 @@ Adaptive Cards support emoji. The following code shows an example of Adaptive Ca
 > [!NOTE]
 > If you are using REST APIs, then set `charset=UTF-8` in your request headers to add emojis in Adaptive Cards.
 
-:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Adaptive card emoji":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Screenshot shows an Adaptive card emoji":::
 
 ### Mention support within Adaptive Cards
 
@@ -237,7 +237,7 @@ Example for user mention in bots with Adaptive Cards as follows:
 
 Following image illustrates the user mention with Adaptive Card in Bot:
 
-:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="User mention in bot with Adaptive Card":::
+:::image type="content" source="../../assets/images/authentication/user-mention-in-bot.png" alt-text="Screenshot shows a user mention in bot with Adaptive Card.":::
 
 #### User mention in Incoming Webhook with Adaptive Cards
 
@@ -301,7 +301,7 @@ Example for user mention in Incoming Webhook as follows:
 
 Following image illustrates user mention in Incoming Webhook:
 
-:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="User mention in Incoming Webhook":::
+:::image type="content" source="../../assets/images/authentication/user-mention-in-incoming-webhook.png" alt-text="Screenshot shows a user mention in Incoming Webhook.":::
 
 ### People icon in an Adaptive Card
 
@@ -309,7 +309,7 @@ People icon helps users to view the images of users in an Adaptive Card. You can
 
 There are two types of people icons that are supported in an Adaptive Card:
 
-* Persona: If you want to show a single user in an Adaptive Card, the Adaptive Card displays the people icon and the name of the user.
+* Persona: If you want to show a single user in an Adaptive Card, it displays the people icon and the name of the user.
 
     The following JSON code is an example of a Persona card:
 
@@ -338,7 +338,7 @@ There are two types of people icons that are supported in an Adaptive Card:
     }
     ```
 
-* Persona Set: If you want to show multiple users in an Adaptive Card, the Adaptive Card displays only the people icon of the users.
+* Persona Set: If you want to show multiple users in an Adaptive Card, it displays only the people icon of the users.
 
     The following JSON code is an example of a Persona Set:
 
@@ -417,7 +417,7 @@ When a user hovers on a people icon, the people card of that user is displayed.
   :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-1.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile client.":::
 :::column-end:::
 :::column:::
-  :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-2.png" alt-text="Screenshot shows an example of people icon in a persona and persona set in Teams mobile.":::
+  :::image type="content" source="../../assets/images/adaptive-cards/people-icon-mobile-2.png" alt-text="Screenshot shows another example of people icon in a persona and persona set in Teams mobile client.":::
 :::column-end:::
 
 :::row-end:::
@@ -447,7 +447,7 @@ The following code shows an example of Adaptive Card with masking property:
 
 The following image is an example of masking information in Adaptive Cards:
 
-:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Masking information view":::
+:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Screenshot shows masking information view in Adaptive Cards.":::
 
 ### Full width Adaptive Card
 
@@ -487,11 +487,11 @@ To make a full width Adaptive Card, your app must include the elements from the 
 
 The following image shows a full width Adaptive Card:
 
-:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Full width Adaptive Card view":::
+:::image type="content" source="../../assets/images/Cards/full-width-adaptive-card.png" alt-text="Screenshot shows a full width Adaptive Card.":::
 
-The following image shows the default view of the Adaptive Card when you haven't set the `width` property to **Full**:
+The following image shows the default view of an Adaptive Card when you haven't set the `width` property to **Full**:
 
-:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Small width Adaptive Card view":::
+:::image type="content" source="../../assets/images/Cards/small-width-adaptive-card.png" alt-text="Screenshot shows a small width Adaptive Card.":::
 
 ### Adaptive Card responsive layout
 
@@ -671,17 +671,17 @@ The following are JSON samples for an Adaptive Card designed without using `targ
 
   * When the card's width is **wide**, the card still looks good.
 
-    :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is wide.":::
+    :::image type="content" source="../../assets/images/Cards/target-width-wide.png" alt-text="Screenshot shows how Adaptive Card renders when the targetWidth property is wide.":::
 
   * When the card's width is **standard** or **narrow**, the role is moved under the name as there's no horizontal space to show them side-by-side.
 
-    :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is standard or narrow.":::
+    :::image type="content" source="../../assets/images/Cards/target-width-standard-narrow.png" alt-text="Screenshot shows how Adaptive Card renders when the targetWidth property is standard or narrow.":::
 
   * When the card's width is **very narrow**, we can hide the image and only keep the most meaningful information.
 
-    :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how adaptive card renders when the targetWidth property is veryNarrow.":::
+    :::image type="content" source="../../assets/images/Cards/target-width-very-narrow.png" alt-text="Screenshot shows how Adaptive Card renders when the targetWidth property is veryNarrow.":::
   
-For more information on how to design an Adaptive Card, see [designing Adaptive Cards for your Microsoft Teams app](design-effective-cards.md).
+For more information on how to design an Adaptive Card, see [designing Adaptive Cards for your Teams app](design-effective-cards.md).
 
 ### Typeahead support
 
@@ -729,7 +729,7 @@ In an Adaptive Card, you can use the `msteams` property to add the ability to di
 
 When users hover over the image, an expand icon appears at the upper-right corner as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Adaptive Card with expandable image":::
+:::image type="content" source="../../assets/images/Cards/adaptivecard-hover-expand-icon.png" alt-text="Screenshot shows an Adaptive Card with an expandable image.":::
 
 The image appears in Stageview when the user selects the expand icon as shown in the following image:
 
@@ -765,11 +765,11 @@ In connector cards, newlines are rendered for `\n\n`, but not for `\n` or `\r`.
 
 On the desktop, Markdown formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="Markdown formatting for connector cards":::
+:::image type="content" source="../../assets/images/Cards/connector-desktop-markdown-combined.png" alt-text="Screenshot shows Markdown formatting for connector cards.":::
 
 On iOS, Markdown formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Markdown formatting for connector cards in the iOS client":::
+:::image type="content" source="../../assets/images/Cards/connector-iphone-html-combined-80.png" alt-text="Screenshot shows Markdown formatting for connector cards in the iOS client.":::
 
 Connector cards using Markdown for iOS include the following issues:
 
@@ -778,7 +778,7 @@ Connector cards using Markdown for iOS include the following issues:
 
 On Android, Markdown formatting for connector cards appears as shown in the following image:
 
-:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Markdown formatting for connector cards in the Android client":::
+:::image type="content" source="../../assets/images/Cards/connector-android-markdown-combined.png" alt-text="Screenshot shows Markdown formatting for connector cards in the Android client.":::
 
 ### Format example for Markdown connector cards
 
@@ -902,20 +902,20 @@ The `CodeBlock` element supports the following properties:
 
 | Property | Type | Required | Description |
 |---|---|---|---|
-| `codeSnippet` | String | Yes | The code snippet to be displayed in the Adaptive Card. |
-| `language` | Enum | Yes | The language of the code snippet to be displayed in the Adaptive Card. |
+| `codeSnippet` | String | Yes | The code snippet to be displayed in an Adaptive Card. |
+| `language` | Enum | Yes | The language of the code snippet to be displayed in an Adaptive Card. |
 | `startLineNumber` | Number | No | The line number in the source where the code snippet begins. If left blank, defaults to 1. |
 
 > [!TIP]
 >
 > * Special characters have specific functions in the `codeSnippet` property. For example, the newline character `\n` triggers a line break.
-> * To display the newline character `\n` as part of the code snippet in the Adaptive Card, ensure that you escape it as `\\n` in the `codeSnippet` property. Else, Teams renders the code after the `\n` in the next line of the card.
+> * To display the newline character `\n` as part of the code snippet in an Adaptive Card, ensure that you escape it as `\\n` in the `codeSnippet` property. Else, Teams renders the code after the `\n` in the next line of the card.
 
 ### Limitations
 
-* Adaptive Card with `CodeBlock` is only available in web and desktop Teams clients.
-* The code snippet in the Adaptive Card is read-only and not editable.
-* The Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user must select **Expand** to see the rest of the code snippet.
+* An Adaptive Card with `CodeBlock` is only available in web and desktop Teams clients.
+* The code snippet in an Adaptive Card is read-only and not editable.
+* An Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user must select **Expand** to see the rest of the code snippet.
 
 ## Adaptive Cards overflow menu
 
@@ -928,7 +928,7 @@ Adaptive Card in Teams supports overflow menu. You can populate an overflow menu
 > [!NOTE]
 > An Adaptive Card supports up to six primary actions to be viewed on the card. Any additional primary action is viewed in the overflow menu.
 
-  :::image type="content" source="../../assets/images/Cards/overflow-menu-gif.gif" alt-text="GIF shows the overflow menu experience in an Adaptive Card.":::
+  :::image type="content" source="../../assets/images/Cards/overflow-menu-gif.gif" alt-text="The graphical representation shows the overflow menu experience in an Adaptive Card.":::
 
 ### Enable overflow menu
 
@@ -1010,17 +1010,17 @@ The following example shows the overflow menu experience in Teams desktop and mo
 
 When a user selects the overflow menu on a desktop, the buttons that are set as secondary appear in the Adaptive Card.
 
-  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-1.png" alt-text="Screenshot shows an example of buttons in an Adaptive Card on Teams desktop.":::
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-1.png" alt-text="Screenshot shows an example of buttons in an Adaptive Card on Teams desktop client.":::
 
-  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-2.png" alt-text="Screenshot shows an example of an Adaptive Card with the list of actions in an overflow menu on Teams desktop.":::
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-image-2.png" alt-text="Screenshot shows an example of an Adaptive Card with the list of actions in an overflow menu on Teams desktop client.":::
   
-  :::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="Screenshot shows an example of an Adaptive Card with the buttons that are set as secondary as options in an overflow menu on Teams desktop.":::
+  :::image type="content" source="../../assets/images/Cards/desktop-overflow-menu-image-3.png" alt-text="Screenshot shows an example of an Adaptive Card with the buttons that are set as secondary as options in an overflow menu on Teams desktop client.":::
 
 # [Mobile](#tab/mobile)
 
-When a user selects the overflow menu on mobile, the Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. A long press on any message displays a list of related messages. This option is available only for actions.
+When a user selects the overflow menu on mobile, Adaptive Card displays the buttons that are defined. There's an integrated sheet that displays an overflow menu with card related tasks with a message option. A long press on any message displays a list of related messages. This option is available only for actions.
 
-  :::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile.":::
+  :::image type="content" source="../../assets/images/over-flow-menu-mob-1.png" alt-text="Screenshot shows an example of overflow menu on Teams mobile client.":::
 
 ---
 
