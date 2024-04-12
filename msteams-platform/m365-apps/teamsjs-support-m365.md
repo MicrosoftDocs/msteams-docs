@@ -2355,7 +2355,7 @@ Namespace to open a share dialog for web content. For more information, see [Sha
 
 [Reference](/javascript/api/@microsoft/teams-js/stageview) | [Known issues](https://github.com/OfficeDev/microsoft-teams-library-js/issues?q=is%3Aissue+stageView)
 
-Preview. Namespace to interact with the Stage View specific part of the library.
+Preview. Namespace to interact with the Stageview specific part of the library.
 
 <br />
 <table border>
