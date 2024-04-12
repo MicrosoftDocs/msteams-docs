@@ -42,7 +42,7 @@ A good description offers a clear and concise summary of the app’s features an
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in M365 Chat.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in M365 Chat.":::
 
 Ensure that you adhere to the description guidelines listed in the following table:
 
@@ -158,7 +158,19 @@ Command description maps user intent and utterance to search command inside a pl
 * Include verbs and synonyms, if applicable.
 * Focus on keywords that are likely to be used in the search function of your native apps.
 
-The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for commands supports up to 5000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Microsoft Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+#### Semantic description
+
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Microsoft Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
+The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
+
+We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
+
+* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.”
+* Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols.
+Grammar and punctuation errors.
+* Avoid overly verbose, flowery, or marketing language.
+* Avoid superlative claims such as “#1,” “amazing,” or “best.”
 
 The following table lists the command description examples for each category:
 
@@ -259,7 +271,7 @@ The following table lists the command description examples for each category:
 
 Each message extension command supports up to five parameters and first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
-The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
 A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for each category:
 
@@ -411,7 +423,7 @@ For M365 Chat, a search-based message extension must support more than three uni
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
 <br>
-<details><summary>The following JSON code is an example of multiple parameters defined in app manifest:</summary>
+<details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
 
 ```json
 "commands": [
