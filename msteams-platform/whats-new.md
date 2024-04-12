@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
+* ***April 12, 2024***: [Implement authentication in API-based search message extensions to provide secure and seamless access to your app.](messaging-extensions/build-api-based-message-extension.md#authentication)
 * ***April 10, 2024***: [Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.](m365-apps/overview.md#outlook-add-ins)
 * ***April 04, 2024***: [Stageview API with the openmode property allows you to open your app content in different Stageview experience.](tabs/open-content-in-stageview.md)
 * ***April 03, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)

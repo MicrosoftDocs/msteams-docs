@@ -47,6 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Authentication in API-based message extension.
+        url: messaging-extensions/build-api-based-message-extension.md#authentication
       - text: Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.
         url: m365-apps/overview.md#outlook-add-ins
       - text: Added support for python in Teams AI library
@@ -65,8 +67,6 @@ landingContent:
         url: concepts/build-and-test/adaptive-card-previewer-vs.md
       - text: Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022
         url: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
-      - text: Extend a Teams meeting app to Outlook
-        url: m365-apps/extend-m365-meeting-app.md
 
  
     - linkListType: reference
