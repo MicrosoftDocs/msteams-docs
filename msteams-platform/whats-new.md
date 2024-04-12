@@ -26,6 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
+* ***April 12, 2024***: [Use Sample prompts to guide users on how to use the various plugins within Copilot](messaging-extensions/high-quality-message-extension.md#sample-prompts)
 * ***April 10, 2024***: [Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.](m365-apps/overview.md#outlook-add-ins)
 * ***April 04, 2024***: [Stageview API with the openmode property allows you to open your app content in different Stageview experience.](tabs/open-content-in-stageview.md)
 * ***April 03, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
