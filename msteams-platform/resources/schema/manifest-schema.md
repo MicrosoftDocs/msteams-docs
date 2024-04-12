@@ -571,12 +571,15 @@ Each command item is an object with the following structure:
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`id`|String|64 characters|✔️|The ID for the command.|
-|`title`|String|32 characters|✔️|The user-friendly command name.|
 |`type`|String|||Type of the command. One of `query` or `action`. Default: **query**.|
+|`samplePrompts`|array|5 |No|Property used to provide sample prompts supported by the plugin.|
+|`samplePrompts.text`|string|128 characters|✔️|Content of the sample prompt.|
+|`apiResponseRenderingTemplateFile`|String|2048 characters||A relative file path for api [response rendering template](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json) file used to format the JSON response from developer’s API to Adaptive Card response.|
+|`context`|Array of Strings|3 characters||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
+|`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
 |`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by the large language model.|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
-|`context`|Array of strings|3||Defines where the message extension can be invoked from. Any combination of`compose`,`commandBox`,`message`. Default is `["compose","commandBox"]`.|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog (referred as task module in TeamsJS v1.x) dynamically. Default is **false**.|
 |`taskInfo`|Object|||Specify the dialog to pre-load when using a message extension command.|
 |`taskInfo.title`|String|64 characters||Initial dialog title.|
