@@ -31,7 +31,7 @@ Ensure that you adhere to following guidelines for OpenAPI Description (OAD) doc
 * Only one required parameter without a default value is allowed.
 * A required parameter with a default value is considered optional.
 * Users must not enter a parameter for a header or cookie.
-* The operation must not have a required Header or Cookie parameters without default values.
+* The operation must not have a required header or cookie parameters without default values.
 * Ensure that there are no remote references in the OpenAPI Description document.
 * Constructing arrays for the request isn’t supported; however, nested objects within a JSON request body are supported.
 * Teams doesn't support the `oneOf`, `anyOf`, `allOf`, and `not` (swagger.io) constructs.
@@ -509,7 +509,7 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 ## Authentication
 
-You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add the `authorization` property under `composeExtensions` in app manifest and define the type of authentication your application by setting the `authType` property under `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
+You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add the `authorization` property under `composeExtensions` in app manifest and define the type of authentication for your application by setting the `authType` property under `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
 
 <details><summary id="none">none</summary>
 <br>
@@ -968,7 +968,7 @@ After the API-based message extension gets a request header with token, perform 
 
 * If you encounter any issues while running your app in Teams, use the following troubleshooting steps to identify and resolve your issue:
 
-  * **Network**: Select the **Network** tab in Developer Tools to inspect network activity
+  * **Network**: Select the **Network** tab in Developer tools to inspect network activity
 
      1. Open [Teams web client](https://teams.microsoft.com).
      1. Sign in with your Microsoft 365 credentials.
@@ -976,7 +976,7 @@ After the API-based message extension gets a request header with token, perform 
      1. At the top-right, select **Settings and more (...)**. Go to **More tools** > **Developer tools**.
      1. Select **Network**. Select the **filter** option and enter **invoke** in the search field.
   
-     1. Select an Error from the list.
+     1. Select an error from the list.
      1. In the right pane, select the **Response** tab.
 
      1. A JSON object representing an error response from a service or API is displayed. It contains a `standardizedError` object with `errorCode`, `errorSubCode`, and `errorDescription`, which have more details about the error.
