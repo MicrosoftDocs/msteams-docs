@@ -515,7 +515,7 @@ You can implement authentication in API-based search message extensions to provi
 * [`apiSecretServiceAuth`](#secret-service-auth)
 * [`microsoftEntra`](#microsoft-entra)
 
-<details><summary id="none">None</summary>
+<details><summary id="none">none</summary>
 <br>
 You can update `none` as a value for `authorization` in an API-based message extension when the message extension doesn't require any authentication for the user to access the API.
 
@@ -588,7 +588,7 @@ To register an API Key, follow these steps:
    > * The secret value must have at least 10 characters and at most 128 characters.
    > * If the first key results in a 401 error, Teams automatically attempts to use the second key. It helps with uninterrupted service for users and eliminates any potential downtime during the creation of a new secret.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-secret.png" alt-text="Screenshot shows the Enter the value for this secret option to add a secret to teh API key.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-secret.png" alt-text="Screenshot shows the Enter the value for this secret option to add a secret to the API key.":::
 
 An **API key registration ID** is generated.
 
@@ -598,7 +598,7 @@ Copy and save the API key registration ID and update it as a value for the `apiS
 
 ### Update app manifest
 
-You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you submit the API key through the Developer portal for Teams. For more information, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands)
+You can authorize incoming requests to your service by configuring a static API key. The API key is stored securely and added to the API call. Add an `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property, which contains the reference ID when you submit the API key through the Developer portal for Teams. For more information, see [composeExtensions.commands.](../resources/schema/manifest-schema.md#composeextensionscommands)
 
 ```json
 "composeExtensions": [
@@ -680,11 +680,11 @@ To enable `microsoftEntra` authentication method for API-based message extension
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
 
-    :::image type="content" source="../assets/images/Copilot/api-me-entra-sso-register.png" alt-text="Screenshot shows an example of the notification after the app registration is successfull on Azure Portal.":::
+    :::image type="content" source="../assets/images/Copilot/api-me-entra-sso-register.png" alt-text="Screenshot shows an example of the notification after the app registration is successful on Azure portal.":::
 
     The page with app ID and other configurations is displayed.
 
-    :::image type="content" source="../assets/images/Copilot/api-me-entra-sso-app-details.png" alt-text="Screenshot shows the app details page in Azure Portal.":::
+    :::image type="content" source="../assets/images/Copilot/api-me-entra-sso-app-details.png" alt-text="Screenshot shows the app details page in Azure portal.":::
 
 8. Note and save the app ID from **Application (client) ID** to update the app manifest later.
 
@@ -883,7 +883,7 @@ For more information, see [composeExtensions.commands](../resources/schema/manif
 
 #### Authenticate token
 
-When the message extension calls the API durng authentication, it receives a request with the user’s authentication token (AED token). The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is "Authorization: Bearer <token_value>". For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
+When the message extension calls the API during authentication, it receives a request with the user’s authentication token (AED token). The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is "Authorization: Bearer <token_value>". For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
 
 ```http
 GET /api/resource HTTP/1.1
@@ -969,7 +969,7 @@ After the API-besed message extension gets a request header with token, perform 
 
    :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-sideload.png" alt-text="Screenshot shows the error message when sideloading an app to Teams along with the option to copy the error details to clipboard.":::
 
-* If you encounter any issues while running your app in Teams, use the following troubleshooting steps to identify and resolve your issue :
+* If you encounter any issues while running your app in Teams, use the following troubleshooting steps to identify and resolve your issue:
 
   1. **Network**: Select the **Network** tab in Developer Tools to inspect network activity
 
