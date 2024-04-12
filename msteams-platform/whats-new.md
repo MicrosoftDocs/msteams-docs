@@ -27,6 +27,7 @@ Teams platform features that are available to all app developers.
 **2024 April**
 
 * ***April 12, 2024***: [Bot configuration helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot from the channel or group chat scope.](bots/how-to/bot-configuration-experience.md)
+* ***April 10, 2024***: [Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.](m365-apps/overview.md#outlook-add-ins)
 * ***April 04, 2024***: [Added support for python in Teams AI library.](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
 * ***April 04, 2024***: [Stageview API with the openmode property allows you to open your app content in different Stageview experience.](tabs/open-content-in-stageview.md)
 * ***April 03, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
@@ -475,6 +476,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
+* ***April 01, 2024***: Azure AD PowerShell is deprecated on March 30, 2024. To interact with Microsoft Entra ID, we recommend you to migrate to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 * ***February 07, 2024***: Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
 
 * ***February 02, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to *cloud.microsoft* domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before June 2024 to ensure continued functionality.
