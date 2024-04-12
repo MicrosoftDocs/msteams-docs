@@ -43,7 +43,7 @@ A good description offers a clear and concise summary of the app’s features an
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in M365 Chat.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in M365 Chat.":::
 
 Ensure that you adhere to the description guidelines listed in the following table:
 
@@ -159,7 +159,21 @@ Command description maps user intent and utterance to search command inside a pl
 * Include verbs and synonyms, if applicable.
 * Focus on keywords that are likely to be used in the search function of your native apps.
 
-The following table lists the command description examples for each category:
+#### Semantic description
+
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Microsoft Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
+The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
+
+We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
+
+* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
+* Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
+* Avoid grammar and punctuation errors. *[Mandatory fix]*
+* Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
+* Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
+
+The following table lists the command and semantic description examples for each category:
 
 # [Tasks](#tab/tasks)
 
@@ -174,6 +188,7 @@ The following table lists the command description examples for each category:
           "type": "query",
           "title": "Tasks",
           "description": "Search for high priority tasks related to Northwind that are due tomorrow.",
+          "SemanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details."
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -196,6 +211,7 @@ The following table lists the command description examples for each category:
           "type": "query",
           "title": "Survey",
           "description": "Search for surveys, drafts, and results with keywords or number of respondents.",
+          "semanticDescription": "This command enables users to search for surveys, drafts, and results based on specific keywords or the number of respondents."
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -218,6 +234,7 @@ The following table lists the command description examples for each category:
           "type": "query",
           "title": "CRM",
           "description": "Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.",
+          "semanticDescription": "This command allows users to search for leads in the CRM system based on specific criteria.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -255,6 +272,8 @@ The following table lists the command description examples for each category:
 
 Each message extension command supports up to five parameters and first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
 A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for each category:
 
 # [Tasks](#tab/tasks)
@@ -269,19 +288,21 @@ Advanced search: Search for high priority tasks related to Northwind that are du
     {
         "name": "Name",
         "title": "Project or Task Name",
-        "description": "Project name or task name as keyword",
+        "description": "Project name or task name as keyword.",
         "inputType": "text"
     },
     {
         "name": "Time",
         "title": "Time",
-        "description": "Date or number of days for which you need tasks for.Output: Number",
+        "description": "Date or number of days for which you need tasks for.",
+        "semanticDescription": "Date or number of days for which you need tasks for. Output: Number",
         "inputType": "text"
     },
     {
         "name": "Priority",
         "title": "Priority",
-        "description": "Priority of tasks. Acceptable values are high, medium, low, NA ",
+        "description": "Priority of tasks.",
+        "semanticDescription": "Priority of tasks. Acceptable values are high, medium, low, NA",
         "inputType": "text"
     }] 
 ```
@@ -298,19 +319,20 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
   {
     "name": "SurveyName",
     "title": "Name of Survey",
-    "description": "survey name or related keyword",
+    "description": "Survey name or related keyword",
     "inputType": "text"
   },
   {
     "name": "Tags",
     "title": "Tags",
-    "description": "product name or keywords related pertaining to a question",
+    "description": "Product name or keywords related pertaining to a question",
     "inputType": "text"
   },
   {
     "name": "ResponseNumber",
     "title": "Response number",
-    "description": "number of responses received for a survey. Output: Number",
+    "description": "Number of responses received for a survey.",
+    "semanticDescription": "Number of responses received for a survey. Output: Number",
     "inputType": "text"
   }
 ]
@@ -328,19 +350,22 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
   {
     "name": "TypeofLeads",
     "title": "Type of Leads",
-    "description": "what types of leads user is looking for. Acceptable fields are: Qualified, Unqualified and New.",
+    "description": "Type of leads to find.",
+    "semanticDescription": "Type of leads to find. Acceptable fields are: Qualified, Unqualified and New.",
     "inputType": "text"
   },
   {
     "name": "Status",
     "title": "Status",
-    "description": "status of leads. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
+    "description": "Status of leads to find.",
+    "semanticDescription": "Status of leads to find. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
     "inputType": "text"
   },
   {
     "name": "Time",
     "title": "Time",
-    "description": "number of days for which you need status of leads for. Output: Number",
+    "description": "Number of days to search for leads with given status.",
+    "semanticIndex": "Number of days to search for leads with given status. Output: Number",
     "inputType": "text"
   }
 ]
@@ -358,25 +383,29 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
   {
     "name": "StockIndex",
     "title": "Stock Index",
-    "description": "Name of index in which user wants to find stocks",
+    "description": "Name of index to search for stocks",
+    "semanticDescription": "Name of stock market index used to search for stocks",
     "inputType": "text"
   },
   {
     "name": "NumberofStocks",
     "title": "Ranked Number of Stocks",
-    "description": "Provide number of stocks in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
+    "description": "Number of stocks to return.",
+    "semanticDescription": "Number of stocks to return in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
     "inputType": "text"
   },
   {
     "name": "P/B",
     "title": "Price to Book Ratio",
-    "description": "P/B or Price to book ratio of a stock. Output format: >x.xx or <x.xx",
+    "description": "Price-to-book ratio of a stock.",
+    "semanticDescription": "Price to book (P/B) ratio of a stock. Output format: >x.xx or <x.xx",
     "inputType": "text"
   },
   {
     "name": "P/E",
     "title": "Price to Earnings Ratio",
-    "description": "P/E or Price to Earnings ratio of a stock with comparison. Output format: >x.xx or <x.xx",
+    "description": "Price-to-earnings ratio of a stock with comparison.",
+    "semanticDescription": "Price to Earnings (P/E) ratio of a stock with comparison. Output format: >x.xx or <x.xx",
     "inputType": "text"
   }
 ]
