@@ -95,7 +95,7 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
    ```csharp
-   protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+   protected override Task<ConfigResponseBase>OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
    {
       ConfigResponseBase response = adaptiveCardForContinue();
       return Task.FromResult(response);
@@ -112,20 +112,20 @@ The following table lists the response type associated with the invoke requests:
       const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
       response = {
          config: {
-         value: {
-            card: adaptiveCard,
-            height: 500,
-            width: 600,
-            title: 'test card',
-         },
-         type: 'continue',
+            value: {
+               card: adaptiveCard,
+               height: 500,
+               width: 600,
+               title: 'test card',
+            },
+            type: 'continue',
          },
       };
       return response;
    }
    ```
 
-   ---
+---
 
 * `type: "auth"`: You can also request the user to authenticate as a response to `config/fetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality.
 
@@ -137,26 +137,21 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
    ```csharp
-   protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+   protected override Task<ConfigResponseBase>OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
    {
-      ConfigResponseBase response = new ConfigResponse<BotConfigAuth>
-   {
-         Config = new BotConfigAuth
-         {
-            SuggestedActions = new SuggestedActions
-            {
-               Actions = new List<CardAction>
-               {
-                     new CardAction
-                     {
-                        type: "openUrl",
-                        value: "https://example.com/auth",
-                        title: "Sign in to this app"
-                     }
+      ConfigResponseBase response = new ConfigResponse<BotConfigAuth> {
+         Config = new BotConfigAuth {
+            SuggestedActions = new SuggestedActions {
+               Actions = new List<CardAction> {
+                  new CardAction {
+                     type: "openUrl",
+                     value: "https://example.com/auth",
+                     title: "Sign in to this app"
+                  }
                }
             },
-            Type = "auth"
-         }
+         Type = "auth"
+      }
    };
    ```
 
@@ -165,28 +160,25 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
 
    ```javascript
-         async handleTeamsConfigFetch(_context, _configData) {
-         let response = {};
-
-         response = {
+   async handleTeamsConfigFetch(_context, _configData) {
+      let response = {};
+      response = {
          config: {
-         type: "auth",
-         suggestedActions: {
-         actions: [
-            {
-               type: "openUrl",
-               value: "https://example.com/auth",
-               title: "Sign in to this app"
-            }]
-         },
-         },
-         };
-
-         return response;
-         }
+            type: "auth",
+            suggestedActions: {
+               actions: [{
+                  type: "openUrl",
+                  value: "https://example.com/auth",
+                  title: "Sign in to this app"
+               }]
+            },
+        },
+      };
+      return response;
+   }
    ```
 
-   ---
+---
 
 * `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
@@ -195,19 +187,18 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L102-L114)
 
    ```csharp
-         protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+   protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+   {
+      ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
+      {
+         Config = new TaskModuleMessageResponse
          {
-         ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
-         {
-               Config = new TaskModuleMessageResponse
-               {
-                  Type = "message",
-                  Value = "You have chosen to finish setting up bot"
-               }
-         };
-
-         return Task.FromResult(response);
+            Type = "message",
+            Value = "You have chosen to finish setting up bot"
          }
+      };
+      return Task.FromResult(response);
+   }
    ```
 
    # [JavaScript](#tab/JS3)
@@ -215,21 +206,19 @@ The following table lists the response type associated with the invoke requests:
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72-L83)
 
    ```javascript
-         async handleTeamsConfigSubmit(context, _configData) {
-            let response = {};
-   
-            response = {
-               config: {
-                  type: 'message',
-                  value: 'You have chosen to finish setting up bot',
-               },
-            }
-            return response;
-         }
+   async handleTeamsConfigSubmit(context, _configData) {
+      let response = {};
+      response = {
+         config: {
+            type: 'message',
+            value: 'You have chosen to finish setting up bot',
+         },
       }
+      return response;
+   }
    ```
 
-   ---
+---
 
 When a user reconfigures the bot, the `fetchTask` property in the app manifest file initiates `config/fetch` in the bot logic. The user can reconfigure the bot settings post-installation in two ways:
 
