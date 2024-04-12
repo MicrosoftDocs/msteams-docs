@@ -912,7 +912,7 @@ The `CodeBlock` element supports the following properties:
 
 ### Limitations
 
-* An Adaptive Card with `CodeBlock` is only available in web and desktop Teams clients.
+* An Adaptive Card with `CodeBlock` is only available in Teams web and desktop clients.
 * The code snippet in an Adaptive Card is read-only and not editable.
 * An Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user must select **Expand** to see the rest of the code snippet.
 
