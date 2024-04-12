@@ -488,23 +488,58 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 ## Sample Prompts
 
-Sample prompts guide users on how to use the various plugins within Copilot. You can have a maximum of five sample prompts for each command, each with a character limit of 128. The prompts should be adaptable to different locales (localizable) and clear (unambiguous) across different commands. Sample prompts are available in the following areas within Copilot:
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. The prompts should be adaptable to different locales and clear across different commands. Sample prompts are available in the following areas within Copilot for Microsoft 365:
 
-* First Run Experience (FRE) - This is when a user first installs or enables a plugin.
-* Prompt library or Copilot Lab - This is when a user seeks help with prompts.
-* Plugin suggestions - This is to guide users towards better utterances.
+* First Run Experience (FRE): When a user first installs or enables a plugin.
+* Prompt library or Copilot Lab: When a user seeks help with prompts.
+* Plugin suggestions: To guide users towards better utterances.
 
 Important points to note:
 
-* If a developer doesn't specify this field, the prompts won't be displayed.
-* To ensure this field is filled, we include it as a step check in the app submission and validation process.
-* If a developer defines multiple commands, we display a maximum of three prompts (one from each of the top three commands) to the user. This display rotates to provide the user with a diverse set of prompts across different commands.
+* If an app doesn't specify the `samplePrompts` field, the prompts aren't displayed.
+* The `samplePrompts` field is mandatory for app validation during the app submission process.
+* If you define multiple commands for your app, a maximum of three prompts (one from each of the top three commands) are displayed to the user. The prompts rotate to provide the user with a diverse set of prompts across different commands.
 
 During app ingestion, we require the following validations for this field:
 
 * A maximum of five prompts per command is allowed.
-* Each prompt shouldn't exceed 128 characters.
-* Two commands within the same plugin shouldn't have identical prompts.
+* A plugin must have at least three prompts and maximum of five prompts for each command.
+* Each prompt must not exceed 128 characters.
+* Two commands within the same plugin must not have identical prompts.
+* Sample prompts must be generic in nature and not include custom references. For example, project names and task name.
+* All sample prompts must be functional and return responses.
+* Prompt must be relevant to the commands.
+
+The following code is an example of the `samplePrompts` property updated in app manifest:
+
+```json
+composeExtensions": [
+    {
+        "canUpdateConfiguration": true,
+        "botId": "bbfa8de5-3393-4f31-92b4-46fced216599",
+        "commands": [
+            {
+                "id": "orders",
+                "title": "Orders",
+                "context": [
+                    "Commandbox",
+                    "Compose"
+                ],
+                "description": "Search for orders",
+                "semanticDescription": "Search for orders",
+                "samplePrompts": [
+                    { "text": "Search for all orders" },
+
+                    { "text": "Search for orders related to Contoso" },
+                    { "text": "Search for all pending orders" },
+                    { "text": "Search for all completed ordered for Fabrikam" }
+                ],
+                // ...
+            },
+            // ...
+        ]
+    }
+```
 
 ## Adaptive Card response
 
