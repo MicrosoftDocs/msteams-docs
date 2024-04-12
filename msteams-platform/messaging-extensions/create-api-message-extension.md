@@ -105,14 +105,6 @@ An API-based message extension is created.
 
 :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-plugin-copilot.png" alt-text="Screenshot shows the plugin for copilot app created in the app features page in Teams Developer Portal.":::
 
-**Add the API key to your message extension**
-
-1. Under App features, select the message extension that you've created.
-
-1. Under **Authentication**, select **API Key** and add the **API key registration ID** you've created earlier.
-
-1. Select **Save**.
-
 To test your API-based message extension created in the Developer Portal for Teams, you can use the following methods:
 
 * **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You're redirected to Teams, where you can add the app to Teams to preview the app.
@@ -187,31 +179,6 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-accounts.png" alt-text="Screenshot shows the Microsoft 365 and Azure sign in option in Teams Toolkit.":::
-
-   # [API Key](#tab/api-key)
-
-     Use the following steps to generate and set up your API key:
-
-     1. Open your terminal.
-     2. To install all dependency packages, run the following command:
-        ```
-        npm install
-        ```
-     3. Once the installation is complete, generate your API key with this command:
-        ```
-        npm run keygen
-        ```
-        You should see an output similar to: "Generated a new API Key: xxx..."
-
-     4. Enter the generated API key into your `env/.env.*.user` file file. Replace `<your-api-key>` with the actual key:
-        ```
-        SECRET_API_KEY=<your-api-key>
-        ```
-
-   # [Microsoft Entra](#tab/microsoft-entra)
-
-     1. In the manifest.json file, update `${{OPENAPI_SERVER_DOMAIN}}` in the `"resource"` property with the server.url domain in the OpenAPI Specification file.
-     ---
 
 1. From the left pane, Select **Run and Debug (Ctrl+Shift+D)**.
 1. From the launch configuration dropdown, select `Preview in Teams (Edge)` or `Preview in Teams (Chrome)`. Teams Toolkit launches Teams web client in a browser window.

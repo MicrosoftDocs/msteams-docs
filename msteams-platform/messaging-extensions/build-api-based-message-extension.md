@@ -964,7 +964,7 @@ After the API-besed message extension gets a request header with token, perform 
 
 ### Troubleshooting
 
-* If you get a **Manifest parsing has failed** error message when sideloading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate that the package, including the app manifest and OpenAPI spec file are valid. Ensure that you adhere to the [app manifest](#app-manifest) and the [OpenAPI Description document](#oad) requirements.
+* If you get a **Manifest parsing has failed** error message when sideloading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate the app package, including the app manifest and OpenAPI spec file. Review the [app manifest](#app-manifest) and the [OpenAPI Description document](#oad) requirements to resolve errors or warnings and try uploading your app.
 
    :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-sideload.png" alt-text="Screenshot shows the error message when sideloading an app to Teams along with the option to copy the error details to clipboard.":::
 
