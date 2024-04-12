@@ -9,7 +9,7 @@ ms.date: 04/08/2024
 ---
 # Create an API-based message extension
 
-You can create an API-based message extension using Developer Portal for Teams, Visual Studio Code, Teams Toolkit command line interface (CLI), or Visual Studio.
+You can create an API-based message extension using Developer Portal for Teams and Teams Toolkit for Visual Studio Code, command line interface (CLI), or Visual Studio.
 
 # [Developer Portal for Teams](#tab/developer-portal-for-teams)
 
