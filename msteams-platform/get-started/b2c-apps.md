@@ -6,7 +6,7 @@ ms.date: 03/01/2024
 ms.topic: reference
 ---
 
-# Integrate Teams meetings and calls in an external app
+# Integrate Teams meetings and calls in external apps
 
 Microsoft Teams provides built-in business-to-consumer (B2C) communication functionality. For example, bank mortgage officers can conduct virtual appointments with customers using Teams meetings.
 
