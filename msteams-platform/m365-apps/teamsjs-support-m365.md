@@ -6,7 +6,7 @@ description: Understand the level of support for different TeamsJS library capab
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.custom: m365apps
-ms.date: 03/24/2024
+ms.date: 04/12/2024
 keywords: TeamsJS Teams JavaScript library capability Microsoft 365 M365
 ---
 
@@ -409,7 +409,7 @@ The following table lists support for TeamsJS capabilities that run only in the 
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
