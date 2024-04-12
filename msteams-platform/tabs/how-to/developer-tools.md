@@ -8,7 +8,7 @@ ms.date: 08/29/2022
 
 # DevTools for Microsoft Teams tabs
 
-When Teams is running in a browser, it's easy to access the browser's DevTools: F12 on Windows or Command-Option-I on MacOS. The DevTools gives you access to:
+When Teams is running in a browser, it's easy to access the browser's DevTools: F12 on Windows or Command-Option-I on macOS. The DevTools gives you access to:
 
 1. View console logs.
 1. View or modify HTML, CSS, and network requests during runtime.
@@ -28,13 +28,13 @@ While the web version and the desktop version of Teams are almost the same, ther
 
       :::image type="content" source="../../assets/images/dev-preview/devtools-right-click.png" alt-text="Screenshot shows the option to open DevTools from Windows desktop.":::
 
-    * On MacOS, select the Microsoft Teams icon in the Dock.
+    * On macOS, select the Microsoft Teams icon in the Dock.
 
-      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="Screenshot shows the option to open DevTools from MacOS dock.":::
+      :::image type="content" source="../../assets/images/dev-preview/mac-os-developer-tools.PNG" alt-text="Screenshot shows the option to open DevTools from macOS dock.":::
 
 The following example shows DevTools open and inspecting a tab configuration dialog:
 
-   :::image type="content" source="../../assets/images/dev-preview/tab-and-devtools.png" alt-text="Screenshot shows the Tab and DevTools."  lightbox="../../assets/images/dev-preview/tab-and-devtools.png":::
+   :::image type="content" source="../../assets/images/dev-preview/tab-and-devtools.png" alt-text="Screenshot shows the Tab and DevTools." lightbox="../../assets/images/dev-preview/tab-and-devtools.png":::
 
 ## Access DevTools from an Android device
 
