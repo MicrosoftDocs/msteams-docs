@@ -672,7 +672,7 @@ To enable `microsoftEntra` authentication method for API-based message extension
     </details>
 
     > [!NOTE]
-    > You don't need  to enter **Redirect URI** for enabling SSO for an API-based message extension app.
+    > You don't need to enter **Redirect URI** for enabling SSO for an API-based message extension app.
 
 7. Select **Register**.
     A message pops up on the browser stating that the app was created.
@@ -699,7 +699,7 @@ To configure scope and authorize trusted client applications, you need:
 
 #### Application ID URI
 
-1. Select **Manage** > **Expose an API** from the left pane.::
+1. Select **Manage** > **Expose an API** from the left pane.
 
     The **Expose an API** page appears.
 
@@ -975,7 +975,6 @@ After the API-based message extension gets a request header with token, perform 
      1. Go to a chat, and run your message extension app.
      1. At the top-right, select **Settings and more (...)**. Go to **More tools** > **Developer tools**.
      1. Select **Network**. Select the **filter** option and enter **invoke** in the search field.
-  
      1. Select an error from the list.
      1. In the right pane, select the **Response** tab.
 
