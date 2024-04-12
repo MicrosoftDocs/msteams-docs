@@ -456,7 +456,7 @@ The following steps help you to add bot capability to a message extension app:
 
 * [Create bot app using Teams Toolkit](#create-bot-app-using-teams-toolkit).
 * [Update manifest file](#add-bot-capability-in-app-manifest).
-* [Bring bot code to project](#bring-bot-code-to-project-1).
+* [Bring bot code to project](#bring-bot-code-to-project).
 
 ### Create bot app using Teams Toolkit
 
