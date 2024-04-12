@@ -344,7 +344,7 @@ The following code is an example of a Response rendering template: <br/>
 
 #### Json path
 
-The JSON Path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
+The JSON path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
 
 **Example**
 Let's say you have the below JSON for a list of products and you want to create a card result for each entry.
@@ -534,7 +534,7 @@ When an API request is initiated, the system retrieves the API key from a secure
 
 ### Register an API key
 
-API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  You can then paste the API key ID in the simplified messaging extension and the API key ID enables the authentication for the API calls that are behind an auth.
+API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  You can then paste the API key ID in the simplified message extension and the API key ID enables the authentication for the API calls that are behind an auth.
 
 To register an API Key, follow these steps:
 
@@ -721,7 +721,7 @@ To configure scope and authorize trusted client applications, you need:
     >
     > * **Sensitive information**: The application ID URI is logged as part of the authentication process and mustn't contain sensitive information.
     >
-    > * **Application ID URI for app with multiple capabilities**: If you're building an API-based messaging extension, enter the application ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
+    > * **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the application ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
     >
     > * **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
     >
