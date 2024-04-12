@@ -92,8 +92,7 @@ The following table lists the response type associated with the invoke requests:
 
    # [C#](#tab/teams-bot-sdk1)
 
-   * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
       ```csharp
           protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
@@ -105,8 +104,7 @@ The following table lists the response type associated with the invoke requests:
 
    # [JavaScript](#tab/JS1)
 
-   * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
 
       ```javascript
          async handleTeamsConfigFetch(_context, _configData) {
@@ -136,8 +134,7 @@ The following table lists the response type associated with the invoke requests:
 
    # [C#](#tab/teams-bot-sdk2)
 
-   * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
       ```csharp
       protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
@@ -165,8 +162,7 @@ The following table lists the response type associated with the invoke requests:
 
    # [JavaScript](#tab/JS2)
 
-   * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L51)
 
       ```javascript
           async handleTeamsConfigFetch(_context, _configData) {
@@ -196,8 +192,7 @@ The following table lists the response type associated with the invoke requests:
 
    # [C#](#tab/teams-bot-sdk3)
 
-   * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L102-L114)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L102-L114)
 
       ```csharp
            protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
@@ -217,8 +212,7 @@ The following table lists the response type associated with the invoke requests:
 
    # [JavaScript](#tab/JS3)
 
-   * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72-L83)
+   [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/nodejs/teamsBot.js#L72-L83)
 
       ```javascript
           async handleTeamsConfigSubmit(context, _configData) {
