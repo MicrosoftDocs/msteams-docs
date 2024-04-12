@@ -9,10 +9,7 @@ ms.localizationpriority: high
 
 # Bot configuration experience
 
-Bot configuration helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot from the channel or group chat scope where the bot is installed. Bot configuration is an important functionality for apps within the Teams platform, laying the foundation for their operational effectiveness.
-
-> [!NOTE]
-> Bot configuration experience is supported only in channel or group chat.
+Bot configuration experience helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot from the channel or group chat scope where the bot is installed. Bot configuration is an important functionality for apps within the Teams platform, laying the foundation for their operational effectiveness.
 
 Earlier, users were unable to configure their bots post-installation and received repeated prompts to complete necessary configurations to get the intended value of the app. This requirement for continuous user intervention, especially in channel or group chat often delayed the realization of the app's benefits.
 
@@ -29,6 +26,9 @@ Let’s consider a scenario where a user installs a bot but finds that the defau
 :::image type="content" source="../../assets/images/bots/reconfiguration-mention-bot.gif" alt-text="Screenshot shows the configuration option for the bot in the message compose area.":::
 
 ## Build bot configuration experience
+
+> [!NOTE]
+> Bot configuration experience is supported only in channel or group chat.
 
 When you build the bot configuration experience, you must ensure that the user must be able to configure a bot on first installation and reconfigure it at any time.
 
