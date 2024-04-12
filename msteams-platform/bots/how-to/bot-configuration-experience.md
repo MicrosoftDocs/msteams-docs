@@ -18,7 +18,6 @@ With the introduction of bot configuration experience, you can prompt necessary 
 
 Let’s consider a scenario where a user installs a bot but finds that the default settings don't match their workflow. By implementing bot configuration, you can empower users to tailor bot settings according to their preferences. Here's an example, a user adds the bot to a group chat and then configures it to align with their specific requirements. The user then reconfigures the bot to change the status.
 
-
 **Configure**
 
 :::image type="content" source="../../assets/images/bots/configuration-bot.gif" alt-text="Graphic shows the process of configuring a bot into a Teams channel.":::
@@ -83,38 +82,24 @@ The following table lists the response type associated with the invoke requests:
 | `config/fetch` | `Type: "continue"` or `Type = "auth"` |
 | `config/submit` | `Type: "continue"` or `Type: "message"` |
 
-
 * `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
 
-   The `adaptiveCardForContinue` and `adaptiveCardForSubmit` are custom functions that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
+   The `adaptiveCardForContinue` is custom function that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
    When the user submits the configuration, the `OnTeamsConfigSubmitAsync` method is triggered. It reads the user's input and returns a different Adaptive Card. You can also update the bot configuration to return a [dialog](../../task-modules-and-cards/what-are-task-modules.md).
 
    # [C#](#tab/teams-bot-sdk1)
 
    * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L550)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
       ```csharp
-         ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
-         {
-            Config = new TaskModuleContinueResponse
-            {
-                  Value = new TaskModuleTaskInfo
-                  {
-                     Height = 500,
-                     Width = 600,
-                     Title = "Task module fetch response",
-                     Card = new Microsoft.Bot.Schema.Attachment
-                     {
-                        ContentType = AdaptiveCard.ContentType,
-                        Content = card
-                     }
-                  },
-                  Type = "continue"
-            }
-         };
-      ```   
+          protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+          {
+            ConfigResponseBase response = adaptiveCardForContinue();
+            return Task.FromResult(response);
+          }
+      ```
 
    # [JavaScript](#tab/JS1)
 
@@ -139,9 +124,10 @@ The following table lists the response type associated with the invoke requests:
            return response;
          }
       ```
+
    ---
 
-* `type: "auth"`: You can also request the user to authenticate as a response to `ConfigFetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. 
+* `type: "auth"`: You can also request the user to authenticate as a response to `config/fetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality.
 
    > [!NOTE]
    > For `type: "auth"` only third party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
@@ -201,6 +187,7 @@ The following table lists the response type associated with the invoke requests:
            return response;
           }
       ```
+
    ---
 
 * `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
@@ -208,20 +195,23 @@ The following table lists the response type associated with the invoke requests:
    # [C#](#tab/teams-bot-sdk3)
 
    * [SDK reference]
-   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L224)
+   * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app-auth/csharp/Bot%20configuration/Bots/TeamsBot.cs#L102-L114)
 
       ```csharp
-         ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
-               {
-                  Config = new TaskModuleMessageResponse
-                  {
-                        Type = "message",
-                        Value = "Your request has been submitted successfully!"
-                  }
-               };
+           protected override Task<ConfigResponseBase> OnTeamsConfigSubmitAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+           {
+            ConfigResponseBase response = new ConfigResponse<TaskModuleResponseBase>
+            {
+                Config = new TaskModuleMessageResponse
+                {
+                    Type = "message",
+                    Value = "You have chosen to finish setting up bot"
+                }
+            };
 
-               return Task.FromResult(response);
-      ```   
+            return Task.FromResult(response);
+           }
+      ```
 
    # [JavaScript](#tab/JS3)
 
@@ -255,7 +245,6 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 
    :::image type="content" source="../../assets/images/bots/reconfiguration-hover.gif" alt-text="Screenshot shows the configuration option for the bot in a Teams group chat.":::
 
-
 ## Best practices
 
 * If you want to have an individual channel-level configuration of your bot, ensure that you track the configuration as per the channel. Configuration data isn't stored and the invoke payload includes the sufficient [channelData](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
@@ -263,7 +252,6 @@ When a user reconfigures the bot, the `fetchTask` property in the app manifest f
 * Provide a clear and user-friendly dialog that prompts the user to enter the required information for the bot to operate properly, such as a URL, an area path, or a dashboard link.
 
 * Avoid sending multiple notifications or requests for configuration after the installation, as it might confuse the users.
-
 
 ## Code sample
 
