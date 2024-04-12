@@ -518,15 +518,16 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 You can implement authentication in API-based search message extensions to provide secure and seamless access to applications. To enable authentication for your message extension, update your app manifest with the `none`, `apiSecretServiceAuth`, and `microsoftEntra` authentication methods. For more information, see [composeExtensions](../resources/schema/manifest-schema.md#composeextensions).
 
-# [None](#tab/none)
 
-<a name="none"></a>
+<details><summary id="none">None</summary>
+<br>
 
 You can update `none` as a value for `authorization` in an API-based message extension when the message extension doesn't require any authentication for the user to access the API.
 
-# [API secret service auth](#tab/api-service-auth)
+</details>
+<br/>
 
-<a name="secret-service-auth"></a>
+<details><summary id="secret-service-auth">Secret service auth</summary>
 
 API secret service authentication  is a secure method for your app to authenticate with API. You can  [register an API key](#register-an-api-key) through the developer portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property.
 
@@ -583,9 +584,10 @@ You can authorize incoming requests to your service by configuring a static API 
       },
 ```
 
-# [Microsoft Entra ID](#tab/microsoft-entra-id)
+</details>
+<br/>
 
-<a name="microsoft-entra"></a>
+<details><summary id="microsoft-entra">Microsoft Entra </summary>
 
 `microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who has logged into Teams doesn't need to log in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
 
@@ -876,24 +878,24 @@ After the API-besed message extension gets a request header with token, perform 
   "alg": "RS256",
   "kid": "q-23falevZhhD3hm9CQbkP5MQyU"
   }.{
-  "aud": "00000002-0000-0000-c000-000000000000",
-  "iss": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/v2.0",
-  "iat": 1712509315,
-  "nbf": 1712509315,
-  "exp": 1712513961,
-  "aio": "Y2NgYEjJqF0stqv73u41a6ZmxPEvBgA=",
-  "azp": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
-  "azpacr": "0",
-  "name": "John Doe",
-  "oid": "00000000-0000-0000-0000-000000000000",
-  "preferred_username": "john.doe@contoso.com",
-  "rh": "I",
-  "scp": "access_as_user",
-  "sub": "e4uM7JgAEm08GBuasSltQjvPuMX1fR5TqxopJpqZJB8",
-  "tid": "12345678-aaaa-bbbb-cccc-9876543210ab",
-  "uti": "h7DMQwSPAEeiEe62JJUGAA",
-  "ver": "2.0"
-  }
+    "aud": "00000002-0000-0000-c000-000000000000",
+    "iss": "https://login.microsoftonline.com/72f988bf-86f1-41af-91ab-2d7cd011db47/v2.0",
+    "iat": 1712509315,
+    "nbf": 1712509315,
+    "exp": 1712513961,
+    "aio": "Y2NgYEjJqF0stqv73u41a6ZmxPEvBgA=",
+    "azp": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
+    "azpacr": "0",
+    "name": "John Doe",
+    "oid": "00000000-0000-0000-0000-000000000000",
+    "preferred_username": "john.doe@contoso.com",
+    "rh": "I",
+    "scp": "access_as_user",
+    "sub": "e4uM7JgAEm08GBuasSltQjvPuMX1fR5TqxopJpqZJB8",
+    "tid": "12345678-aaaa-bbbb-cccc-9876543210ab",
+    "uti": "h7DMQwSPAEeiEe62JJUGAA",
+    "ver": "2.0"
+    }
   ```
 
   # [Token V1](#tab/token-v1)
@@ -922,7 +924,7 @@ After the API-besed message extension gets a request header with token, perform 
     "sub": "AAAAAAAAAAAAAAAAAAAAAIkzqFVrSaSaFHy782bbtaQ",
     "tid": "12345678-aaaa-bbbb-cccc-9876543210ab",
     "uti": "fqiBqXLPj0eQa82S-IYFAA",
-  }
+    }
   ```
 
 * **Use the token**: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API.
@@ -930,7 +932,8 @@ After the API-besed message extension gets a request header with token, perform 
   > [!NOTE]
   > The API receives an Microsoft Entra token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
 
----
+</details>
+<br/>
 
 ### Troubleshooting
 
