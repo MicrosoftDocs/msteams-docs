@@ -123,7 +123,7 @@ Adaptive Cards support emoji. The following code shows an example of Adaptive Ca
 > [!NOTE]
 > If you are using REST APIs, then set `charset=UTF-8` in your request headers to add emojis in Adaptive Cards.
 
-:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Screenshot shows an Adaptive card emoji":::
+:::image type="content" source="../../assets/images/Cards/adaptive-card-emoji.png" alt-text="Screenshot shows an Adaptive card emoji.":::
 
 ### Mention support within Adaptive Cards
 
@@ -181,7 +181,7 @@ The following code shows an example of Adaptive Card with a mention:
 
 ### Microsoft Entra Object ID and UPN in user mention
 
-Teams allows you to mention users with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
+Teams platform allows you to mention users with their Microsoft Entra Object ID and User Principle Name (UPN), in addition to the existing mention IDs. Bots with Adaptive Cards and Connectors with Incoming Webhooks support the two user mention IDs.
 
 The following table describes the newly supported user mention IDs:
 
@@ -387,17 +387,17 @@ The following image is an example of the people icon in an Adaptive Card:
 
 The following table lists the query parameters:
 
-| Property Name | Description |
+| Property name | Description |
 |---------|---------|
 | `type` | `component` |
-| `name` | `graph.microsoft.com/users`. Search all members across the organization. |
+| `name` | Use `graph.microsoft.com/users` to search all members across the organization |
 | `view` | `compact` |
 | `properties` | Passed to the component template |
 | `id` | User's MRI |
 | `displayName` | Name of the user |
 | `userPrincipalName` | The user's principal name of the account in Microsoft Entra ID |
 
-Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` property. The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other properties under `properties` is ignored by `component` type in the Adaptive Card schema.
+Adaptive Components are high-level components powered by [templating](/adaptive-cards/templating/) and native Adaptive Card elements. The type `component` can be used anywhere inside the card body and the component data is defined in the `properties` attribute. The component data under `properties` is passed directly to the component. The `properties` property defines the format for Persona and Persona Set and all other properties under `properties` is ignored by `component` type in the Adaptive Card schema.
 
 Your bot can query for the list of members and their basic user profiles, including Teams user IDs and Microsoft Entra information, such as `name`, `id`, and `userPrincipalName`. For more information, see [Fetch the roster or user profile](../../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
@@ -447,7 +447,7 @@ The following code shows an example of Adaptive Card with masking property:
 
 The following image is an example of masking information in Adaptive Cards:
 
-:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Screenshot shows masking information view in Adaptive Cards.":::
+:::image type="content" source="../../assets/images/Cards/masking-information-view.png" alt-text="Screenshot shows masking information view in an Adaptive Card.":::
 
 ### Full width Adaptive Card
 
@@ -833,13 +833,13 @@ The following code shows an example of formatting for Markdown connector cards:
 
 ### CodeBlock in Adaptive Cards
 
-Share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element. Adaptive Cards with `CodeBlock` make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. Additionally, you can add action buttons to view the code at its source or edit the code in integrated development environments (IDEs) such as Microsoft Visual Studio or Microsoft Visual Studio Code.
+Share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element. Adaptive Cards with the `CodeBlock` element make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the code's language. Additionally, you can add action buttons to view the code at its source or edit the code in integrated development environments (IDEs) such as Microsoft Visual Studio or Microsoft Visual Studio Code.
 
 The following screenshot shows an Adaptive Card with a code snippet:
 
   :::image type="content" source="../../assets/images/adaptive-cards/code-block-adaptive-card.png" alt-text="Screenshot shows an Adaptive Card with a code snippet.":::
 
-The `CodeBlock` element supports the following languages only:
+The `CodeBlock` element supports the following languages:
 
 | Language | Supported | Language | Supported |
 |:---|:---:|:---|:---:|
@@ -856,7 +856,7 @@ The `CodeBlock` element supports the following languages only:
 | JavaScript | ✔️ | XML | ✔️ |
 
 > [!NOTE]
-> `CodeBlock` recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
+> The `CodeBlock` element recognizes plain text as a language if you set the enum value to `PlainText` in the `language` property of the schema.
 
 The following code is an example of an Adaptive Card displaying a code snippet:
 
@@ -912,7 +912,7 @@ The `CodeBlock` element supports the following properties:
 
 ### Limitations
 
-* An Adaptive Card with `CodeBlock` is only available in Teams web and desktop clients.
+* An Adaptive Card with the `CodeBlock` element is supported only in Teams web and desktop clients.
 * The code snippet in an Adaptive Card is read-only and not editable.
 * An Adaptive Card only previews the first 10 lines of the code snippet. If there are more than 10 lines of code, the user must select **Expand** to see the rest of the code snippet.
 
