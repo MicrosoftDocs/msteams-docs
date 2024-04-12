@@ -13,7 +13,7 @@ Microsoft Teams provides built-in business-to-consumer (B2C) communication funct
 Customers can join the meeting in the following ways:
 
 * Use Teams native apps or Teams web client.
-* Dial into the meeting’s telephone number.
+* Dial the meeting’s telephone number.
 * Use custom apps that work with Teams calling and meetings.
 
 Integrating Teams interoperability into your customer-facing web or native app enables customized user experiences. You can build a web app compatible with mobile and desktop, or create native apps for iOS, Android, and Windows. This integration maintains the advantages of using Teams for employee interactions. These interactions can include employee familiarity, Teams copilot features, expandability with Teams apps and bots, and adherence to Microsoft 365 security and compliance.
