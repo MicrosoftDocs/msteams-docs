@@ -94,36 +94,36 @@ The following table lists the response type associated with the invoke requests:
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/csharp/Bot%20configuration/Bots/TeamsBot.cs#L78)
 
-      ```csharp
-          protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
-          {
-            ConfigResponseBase response = adaptiveCardForContinue();
-            return Task.FromResult(response);
-          }
-      ```
+   ```csharp
+         protected override Task<ConfigResponseBase> OnTeamsConfigFetchAsync(ITurnContext<IInvokeActivity> turnContext, JObject configData, CancellationToken cancellationToken)
+         {
+         ConfigResponseBase response = adaptiveCardForContinue();
+         return Task.FromResult(response);
+         }
+   ```
 
    # [JavaScript](#tab/JS1)
 
    [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-configuration-app/nodejs/teamsBot.js#L52)
 
-      ```javascript
-         async handleTeamsConfigFetch(_context, _configData) {
-           let response = {};
-           const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
-           response = {
-             config: {
-               value: {
-                 card: adaptiveCard,
-                 height: 500,
-                 width: 600,
-                 title: 'test card',
-               },
-               type: 'continue',
-             },
-           };
-           return response;
-         }
-      ```
+   ```javascript
+      async handleTeamsConfigFetch(_context, _configData) {
+         let response = {};
+         const adaptiveCard = CardFactory.adaptiveCard(this.adaptiveCardForContinue());
+         response = {
+            config: {
+            value: {
+               card: adaptiveCard,
+               height: 500,
+               width: 600,
+               title: 'test card',
+            },
+            type: 'continue',
+            },
+         };
+         return response;
+      }
+   ```
 
    ---
 
