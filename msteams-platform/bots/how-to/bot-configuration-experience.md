@@ -68,13 +68,13 @@ For more information, see [app manifest schema](../../resources/schema/manifest-
 
 ### Configure your bot
 
-When a user installs the bot in channel or group chat, the `fetchTask` property in the app manifest file initiates either `config/fetch` or `config/submit`as defined in the `teamsBot.js` file.
+When a user installs the bot in channel or group chat, the `fetchTask` property in the app manifest file initiates either `config/fetch` or `config/submit` as defined in the `teamsBot.js` file.
 
 If you set the `fetchTask` property in the app manifest to:
 
 * **false**: The bot doesn't fetch a dialog or an Adaptive Card. Instead, the bot must provide a static dialog or card that is used when the bot is invoked. For more information, see [dialogs](../../task-modules-and-cards/what-are-task-modules.md).
 
-* **true**: The bot initiates either `config/fetch` or `config/submit`as defined. When the bot is invoked, you can return an Adaptive Card or a dialog depending on the context provided in [channelData and userdata](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
+* **true**: The bot initiates either `config/fetch` or `config/submit` as defined. When the bot is invoked, you can return an Adaptive Card or a dialog depending on the context provided in [channelData and userdata](../../messaging-extensions/how-to/action-commands/create-task-module.md#payload-activity-properties-when-a-dialog-is-invoked-from-a-group-chat).
 
 The following table lists the response type associated with the invoke requests:
 
@@ -85,7 +85,7 @@ The following table lists the response type associated with the invoke requests:
 
 Bot can respond to the invoke requests as follows:
 
-1. `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
+* `type: "continue"`: `type: "continue"` is used to define a continuation of a dialog or Adaptive Card within a bot configuration. When the type is set to `continue`, it indicates that the bot is expecting further interaction from the user to continue with the configuration process.
 
    The `adaptiveCardForContinue` and `adaptiveCardForSubmit` are custom functions that return the JSON for an Adaptive Card to be used in different stages of a bot’s workflow. These functions are used to return Adaptive Cards for different scenarios based on the user’s interaction with the bot.
 
@@ -142,7 +142,7 @@ Bot can respond to the invoke requests as follows:
       ```
    ---
 
-1. `type: "auth"`: You can also request the user to authenticate as a response to `ConfigFetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. 
+* `type: "auth"`: You can also request the user to authenticate as a response to `ConfigFetch` request. The `type: "auth"` configuration prompts the user to sign in through a specified URL, which must be linked to a valid authentication page that can be opened in a browser. Authentication is essential for scenarios where the bot requires the user to be authenticated. It ensures that the user’s identity is verified, maintaining security, and personalized experiences within the bot’s functionality. 
 
    > [!NOTE]
    > For `type: "auth"` only third party authentication is supported. Single sign-on (SSO) isn't supported. For more information on third party authentication, see [add authentication.](../../messaging-extensions/how-to/add-authentication.md)
@@ -204,7 +204,7 @@ Bot can respond to the invoke requests as follows:
       ```
    ---
 
-1. `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
+* `type="message"`: When the type is set to message, it indicates that the bot is sending a simple message back to the user, indicating the end of the interaction or providing information without requiring further input.
 
    # [C#](#tab/teams-bot-sdk3)
 
