@@ -560,7 +560,7 @@ To register an API Key, follow these steps:
    * **Home tenent**
    * **Any tenant**
 
-   |Option   |When to use  | description|
+   |Option   |When to use  | Description|
    |---------|---------|----------------|
    |**Home tenant**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        |  The API key is only usable within the tenant where the the API is registered. |
    |**Any tenant**     | After you've completed testing the app and want to enable the app across different tenants. Ensure that you update your target tenant to **Any tenant** before submitting your app package to the Partner Center.        | The API key can be used in other tenants after the app is available in the Teams Store. |
@@ -572,7 +572,7 @@ To register an API Key, follow these steps:
    * **Any Teams app**
    * **Existing Teams app ID**
 
-   |Option   |When to use  | description|
+   |Option   |When to use  | Description|
    |---------|---------|----------------|
    |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
    |**Existing Teams app ID**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
@@ -874,6 +874,7 @@ To configure app manifest:
       }
     },
     ```
+
 1. Update the subdomain URL in the following properties:
    1. `contentUrl`
    2. `configurationUrl`
