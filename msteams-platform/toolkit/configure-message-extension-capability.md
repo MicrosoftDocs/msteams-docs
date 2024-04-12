@@ -16,7 +16,7 @@ Message Extensions are implemented on top of the bot support architecture within
 
 ## Prerequisites
 
-To configure message extension as an additional capability, ensure the following:
+To configure message extension as an additional capability, ensure the following prerequisites:
 
 * App manifest (previously called Teams app manifest).
 * A Microsoft 365 account to test the application.
@@ -131,7 +131,7 @@ To create message extension app with Teams Toolkit, see [create new message exte
 
 ### Bring message extension code to your project
 
-1. You can bring your message extension app code into your project. If you don't have an app code, use the previously created message extension app project and copy the source code to into your current project. We suggest you copy them into a `bot/` folder. Following folder structure is an example of your folder structure:
+1. You can bring your message extension app code into your project. If you don't have an app code, use the previously created message extension app project and copy the source code into your current project. We suggest you copy them into a `bot/` folder. Following folder structure is an example of your folder structure:
 
    |--.vscode/
    |--appPackage/
@@ -155,7 +155,7 @@ To create message extension app with Teams Toolkit, see [create new message exte
    |--teamsapp.local.yml
    |--teamsapp.yml
 
-   We recommend you to reorganize the folder structure and create a root `package.json` as following. You can create a root `package.json` using command `npm init -y`.
+   You can create a root `package.json` using command `npm init -y`. We recommend you reorganize the folder structure and create a root `package.json` as given in the following folder structure:
 
    |--.vscode/
    |--appPackage/
@@ -348,7 +348,7 @@ To create message extension app with Teams Toolkit, see [create new message exte
            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information and reference, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
+   For more information and references, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
 
 1. Open the `Run and Debug Activity Panel` and select `Debug (Edge)` or `Debug (Chrome)`. Press F5 to debug and preview your Teams app locally.
 
@@ -490,7 +490,7 @@ To create message extension app with Teams Toolkit, see [create new message exte
 
 1. Run `Teams: Provision` command in Visual Studio Code to apply the bicep to Azure.
 1. Run `Teams: Deploy` command in Visual Studio Code to deploy your app code to Azure.
-1. Open the `Run and Debug Activity Panel` and select `Launch Remote (Edge)` or `Launch Remote (Chrome)`.
+1. Open the **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
 1. Press F5 to debug and preview your Teams app.
 
 ### Add message extension to Teams bot app
@@ -599,7 +599,7 @@ To create a message extension app, see [create a message extension app with Team
 
 #### Bring message extension code to project
 
-If you're adding message extension to a bot Teams app, you should have a class that extends `TeamsActivityHandler`. Bring your message extension functions, or copy functions from your previously created message extension app to your own class. Following code is an example if you copy functions from a message extension app created with Teams Toolkit:
+If you're adding message extension to a bot Teams app, you should have a class that extends `TeamsActivityHandler`. Bring your message extension functions or copy functions from your previously created message extension app to your own class. Following code is an example if you copy functions from a message extension app created with Teams Toolkit:
 
    ```json
      public class YourHandler extends TeamsActivityHandler{
