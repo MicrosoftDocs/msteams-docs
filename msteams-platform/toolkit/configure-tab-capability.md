@@ -91,7 +91,7 @@ If you prefer to develop a server-side tab app, you don't need to update the fol
        |-- teamsapp.yml
    ```
 
-   We recommend you to reorganize the folder structure as given in the following folder structure:
+   We recommend you reorganize the folder structure as given in the following folder structure:
 
    ```yml
        .
@@ -268,7 +268,7 @@ If you prefer to develop a server-side tab app, you don't need to update your bi
    }
    ```
 
-1. To host your tab app in Azure Storage, you need to enable the static website feature for the storage account. Add the following action in your `teamsapp.yml` file:
+1. To host your tab app in Azure Storage, you need to enable the static website feature for the storage account. Add the following action to your `teamsapp.yml` file:
 
    ```json
    provision:
