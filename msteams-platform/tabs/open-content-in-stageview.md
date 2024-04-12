@@ -66,7 +66,7 @@ You can invoke Stageview in Teams through one of the following methods and confi
 <details>
 <summary id="openmode" ><b>openMode property</b></summary>
 
-`openMode` is a property in [StageViewParams interface](/javascript/api/@microsoft/teams-js/stageview.stageviewparams). The `openMode` property must be defined in a [stageView API](#invoke-from-stageview-api) or a [deep link](#invoke-from-deep-link) to determine the type of Stageview response. The `openMode` property has the following three values:
+`openMode` is a property in [StageViewParams interface](/javascript/api/@microsoft/teams-js/stageview.stageviewparams). The `openMode` property is optional and can be defined in a [stageView API](#invoke-from-stageview-api) or a [deep link](#invoke-from-deep-link) to determine the type of Stageview response. The `openMode` property has the following three values:
 
 * `popoutWithChat`
 * `popout`

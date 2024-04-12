@@ -49,7 +49,9 @@ landingContent:
       links:
       - text: Share code snippets as Adaptive Cards with the CodeBlock property
         url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
-      - text: Added support for Python in Teams AI library
+      - text: Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.
+        url: m365-apps/overview.md#outlook-add-ins
+      - text: Added support for python in Teams AI library
         url: bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md
       - text: Stageview API with the openmode property allows you to open your app content in different Stageview experience
         url: tabs/open-content-in-stageview.md
@@ -65,10 +67,7 @@ landingContent:
         url: concepts/build-and-test/adaptive-card-previewer-vs.md
       - text: Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022
         url: toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md
-      - text: Extend a Teams meeting app to Outlook
-        url: m365-apps/extend-m365-meeting-app.md
 
- 
     - linkListType: reference
       links:
       - text: Community chat room for Microsoft Teams app developers
