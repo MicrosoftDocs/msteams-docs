@@ -1740,7 +1740,7 @@ Namespace to interact with the menu-related part of the library. This module is 
             <td></td>
             <td></td>
             <td></td>
-            <td>&#x2713;</td>
+            <td></td>
             <td></td>
             <td></td>
             <td></td>
