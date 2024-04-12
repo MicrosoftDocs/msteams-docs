@@ -19,7 +19,8 @@ Message Extensions are implemented on top of the bot support architecture within
 To configure message extension as an additional capability, ensure the following prerequisites:
 
 * App manifest (previously called Teams app manifest).
-* A Microsoft 365 account to test the application.
+* [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
+* Microsoft Azure Storage account.
 
 To add message extension to a Teams tab app, see [Add message extension to Teams tab app](#add-message-extension-to-teams-tab-app).
 
@@ -210,7 +211,7 @@ To create message extension app with Teams Toolkit, see [create new message exte
    * `Start bot`
    * `Start frontend`.
 
-    Add `Start bot` and `Start frontend` to task `Start application`'s `dependOn`. Config `Start bot` and `Start frondend`'s cwd option as we already moved tab and bot's code to `tab/` and `bot/` folder separately. Add `Start local tunnel` to task `Start Teams App Locally`'s `dependOn`. For example:
+    Add `Start bot` and `Start frontend` to task `Start application`'s `dependOn`. Config `Start bot` and `Start frondend`'s cwd option as we moved the code for tab and bot to `tab/` and `bot/` folder separately. Add `Start local tunnel` to task `Start Teams App Locally`'s `dependOn`. For example:
 
    ```json
    "tasks":[
@@ -350,7 +351,7 @@ To create message extension app with Teams Toolkit, see [create new message exte
 
    For more information and references, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
 
-1. Open the `Run and Debug Activity Panel` and select `Debug (Edge)` or `Debug (Chrome)`. Press F5 to debug and preview your Teams app locally.
+1. Open the **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**. Press F5 to debug and preview your Teams app locally.
 
 ### Move your app to Azure
 
