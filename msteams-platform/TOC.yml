@@ -812,7 +812,7 @@
   items:
   - name: Overview
     href: m365-apps/overview.md
-    displayName: Application, Outlook, and Office as application hosts, extend 
+    displayName: Application, Outlook, and Office as application hosts, extend, Outlook Add-ins 
   - name: Prerequisites
     href: m365-apps/prerequisites.md
   - name: Teams tabs in Microsoft 365 and Outlook
