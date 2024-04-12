@@ -47,6 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: Authentication in API-based message extension
+        url: messaging-extensions/build-api-based-message-extension.md#authentication
       - text: Share code snippets as richly formatted Adaptive Cards with the CodeBlock element
         url: task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards
       - text: Bot configuration experience
@@ -65,8 +67,6 @@ landingContent:
         url: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
       - text: Configure Teams deep links using the msteams:// and https:// protocol handlers
         url: concepts/build-and-test/deep-links.md#protocol-handlers-in-deep-links
-      - text: Adaptive Card responsive layout
-        url: task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout
 
     - linkListType: reference
       links:
