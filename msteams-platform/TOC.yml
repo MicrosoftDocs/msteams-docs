@@ -356,10 +356,10 @@
   items:
   - name: Overview
     href: tabs/what-are-tabs.md
-    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps
+    displayName: Webpages embedded in Teams, declare custom tab in app manifest, contentUrl, web apps, device permissions for tabs
   - name: Prerequisites
     href: tabs/how-to/tab-requirements.md
-    displayName: clickjacking
+    displayName: clickjacking, device permissions for tabs
   - name: Create a personal tab
     href: tabs/how-to/create-personal-tab.md
     displayName: App generator, Reorder static personal tabs, channel, or group custom tab
@@ -437,7 +437,7 @@
       displayName: Teams conversational bots, mention, tag mention, user mention
     - name: Conversation events in your Teams bot
       href: bots/how-to/conversations/subscribe-to-conversation-events.md 
-      displayName: activity, Message reaction events, event handling for install and uninstall events
+      displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
       displayName: conversationId 
@@ -544,10 +544,10 @@
         displayName: Handle tap actions, Just-in-time install, JIT
       - name: Guidelines to extend bot-based message extension as plugin
         href: messaging-extensions/high-quality-message-extension.md
-        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365  
+        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
-        displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365
+        displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
       - name: Microsoft 365 Chat plugin FAQ
         href: messaging-extensions/copilot-plugin-faq.md
         displayName: M365, bot-based message extension, plugin
@@ -562,7 +562,7 @@
   items:
   - name: Overview
     href: apps-in-teams-meetings/teams-apps-in-meetings.md
-    displayName: guest 
+    displayName: apps in meetings, meeting lifecycle, meeting types in Teams, guest user, in-tenant user, federated or external user, anonymous user, scenes for meetings, meeting participants, app caching in Teams meeting
   - name: Enable and configure apps for Teams meetings
     items:
     - name: Build tabs for meeting
@@ -903,7 +903,7 @@
     displayName: Customize your app, update app name, branding, hide and unhide app, accent
   - name: Configure default options for Teams app
     href: concepts/deploy-and-publish/add-default-install-scope.md
-    displayName: default install scope, default capability for shared scopes, block apps 
+    displayName: default install scope, default capability for shared scopes, block apps, apps to meetings, app default options 
   - name: Create Teams app package
     href: concepts/build-and-test/apps-package.md
     displayName: Host your app, HTTPS, cloud server, bot icon, app icons
@@ -1097,15 +1097,19 @@
     items:
     - name: Overview
       href: concepts/build-and-test/deep-links.md
-      displayName: Navigate within your app, executeDeepLink, protocol handlers
+      displayName: create deep link, protocol handlers, chat deep link, app deep link, workflow deep link, navigate within your app, executeDeepLink, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
+      displayName: create deep link for app, deep link for custom app, deep link for tab, deep link for app install dialog, deep link invoke Stageview, navigate within your app, executeDeepLink, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to Teams chat
-      href: concepts/build-and-test/deep-link-teams.md   
+      href: concepts/build-and-test/deep-link-teams.md
+      displayName: create deep link for specific chat, deep link for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   
     - name: Deep link to a workflow in Teams
       href: concepts/build-and-test/deep-link-workflow.md
+      displayName: create deep link for workflow, deep link for meeting schedule dialog, audio video call, deep link to join meeting, share content to meeting stage, deep link parameters, deep link URL
     - name: Execution and handling of deep links
-      href: concepts/build-and-test/deep-links-execution-handling.md    
+      href: concepts/build-and-test/deep-links-execution-handling.md
+      displayName: execute deep link, deep link API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL    
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
 - name: Resources
