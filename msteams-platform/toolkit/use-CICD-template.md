@@ -12,22 +12,22 @@ ms.date: 04/20/2022
 
 You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeline for Microsoft Teams apps created with the Teams Toolkit. A Teams app CI/CD pipeline typically consists of three parts:
 
-1. Building the project.
-1. Deploying the project to cloud resources.
+1. Build the project.
+1. Deploy the project to cloud resources.
 1. Generating the Teams app package.
 
 > [!NOTE]
 > To create a pipeline for a Teams app, it's required to prepare the necessary cloud resources, such as Azure Web App, Azure Functions, or Azure Static Web App, and configure the app settings.
 
-## Building the project
+## Build the project
 
-Building the project involves source code compilation and the creation of necessary deployment artifacts:
+To build the project, it is necessary to compile the source code and create the required deployment artifacts:
 
-1. It's recommended to use the Teams Toolkit CLI for the deployment process through [set up CI/CD pipelines with Teams Toolkit CLI](#set-up-cicd-pipelines-with-teams-toolkit-cli).
+* It's recommended to use the Teams Toolkit CLI for the deployment process through [set up CI/CD pipelines with Teams Toolkit CLI](#set-up-cicd-pipelines-with-teams-toolkit-cli).
 
-1. If you opt not to use the Teams Toolkit CLI for deployment or wish to customize your pipeline through [set up CI/CD pipelines using your own workflow](#set-up-cicd-pipelines-using-your-own-workflow).
+* If you opt not to use the Teams Toolkit CLI for deployment or wish to customize your pipeline through [set up CI/CD pipelines using your own workflow](#set-up-cicd-pipelines-using-your-own-workflow).
 
-1. Create the Teams app package enables you to evaluate your Teams app post-deployment through [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md).
+* Create the Teams app package enables you to evaluate your Teams app post-deployment through [distribute your Microsoft Teams app](../concepts/deploy-and-publish/apps-publish-overview.md).
 
 ### Set up CI/CD pipelines with Teams Toolkit CLI
 
@@ -43,12 +43,12 @@ You can use [Teams Toolkit command line interface](Teams-Toolkit-CLI.md) to auto
 
 1. Set up required resources for your Teams app, You've two options to set up the resources such as Teams app ID, bot ID, and others:
 
-    1. You can either manually extract these details from the manifest file under the appPackage  folder.
+    1. You can either manually extract these details from the manifest file under the `appPackage`  folder.
     1. You can run the `Provision` command in Teams Toolkit to generate them automatically.
 
 1. To configure Azure resources, you've two options:
 
-    1. You can manually prepare these resources by examining the Bicep files under the infra folder.
+    1. You can manually prepare these resources by examining the bicep files under the infra folder.
     1. You can run the `Provision` command in Teams Toolkit to prepare these Azure resources automatically.
 
 1. Set up a service principal. Ensure that you've a service principal and its access policies on resources are properly configured. For more information, see
@@ -66,7 +66,7 @@ You can use [Teams Toolkit command line interface](Teams-Toolkit-CLI.md) to auto
 
 To set up the pipeline with GitHub, follow these steps:
 
-1. Create a cd.yml under .github workflow folder and add the following code to the file:
+1. Create a `cd.yml` file in your project under `.github/workflows` folder and add the following code in the file:
 
     ```yaml
     on:
@@ -122,17 +122,17 @@ To set up the pipeline with GitHub, follow these steps:
 
 1. Set variables or secrets in the repository.
 
-    The following variables and secrets are needed for the pipeline:
+    The pipeline requires the following variables and secrets:
 
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`.
 
-    * Go to the `teamsapp.yml` file. In the `deploy` stage, the keys for the required variables are enclosed in ${{}}. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
+    * Go to the `teamsapp.yml` file. In the `deploy` stage, the placeholders enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
 
     The following image shows the `BOT_AZURE_APP_SERVICE_RESOURCE_ID` in `teamsapp.yml` file:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource id in teamsapp.yml file.":::
 
-    * Go to the `appPackage/manifest.json` file. The keys for the required variables are enclosed in ${{}} placeholders. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
+    * Go to the `appPackage/manifest.json` file. The placeholders enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
 
     The following image shows the `TEAMS_APP_ID` in `manifest.json` file:
 
@@ -146,7 +146,9 @@ To set up the pipeline with GitHub, follow these steps:
     * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`.
     * `TEAMS_APP_ID`.
 
-    To set variables or secrets, navigate to the **Settings** of your repository, then select **Secrets and variables** > **Actions**.
+    Go to github. To set variables or secrets, navigate to your repository’s **Settings**, then select **Secrets and variables** > **Actions**.
+
+    :::image type="content" source="../assets/images/teams-toolkit-v2/repo-settings.png" alt-text="Screenshot shows the repo settings.":::
 
     > [!NOTE]
     > The `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET` to be set as secret.
@@ -173,7 +175,7 @@ To set up the pipeline with GitHub, follow these steps:
 
 #### Set up pipeline with Azure DevOps
 
-1. Create a cd.yml under .github workflow folder and add the following code to the file:
+1. Create a `cd.yml` file in your project under `.github/workflows` folder and add the following code in the file:
 
     ```yaml
     trigger:
@@ -226,13 +228,13 @@ To set up the pipeline with GitHub, follow these steps:
 
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`.
 
-    * Go to the `teamsapp.yml` file. In the `deploy` stage, the keys for the required variables are enclosed in ${{}}. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
+    * Go to the `teamsapp.yml` file. In the `deploy` stage, the placeholders enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
 
     The following image shows the `BOT_AZURE_APP_SERVICE_RESOURCE_ID` in `teamsapp.yml` file:
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
 
-    * Go to the `appPackage/manifest.json` file. The keys for the required variables are enclosed in ${{}} placeholders. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
+    * Go to the `appPackage/manifest.json` file. The placeholders enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
 
     The following image shows the `TEAMS_APP_ID` in `manifest.json` file:
 
