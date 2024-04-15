@@ -301,7 +301,7 @@ If you prefer to develop a server-side tab app, you don't need to update your bi
          resourceId: ${{TAB_AZURE_STORAGE_RESOURCE_ID}}
    ```
 
-1. Run `Teams: Deploy` command in Visual Studio Code to deploy your Tab app code to Azure.
+1. Run `Teams: Deploy` command in Visual Studio Code to deploy your tab app code to Azure.
 
 1. Open the **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)** to debug and preview your Teams app.
 
