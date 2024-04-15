@@ -2,12 +2,12 @@
 title:  Build API-based message extension
 metadata:
   title: Build API-based message extension
-  description: Learn how to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
+  description: In this learn module, learn how to build a message extension using an OpenAPI Description document and Response rendering template to interact with external services.
   audience: Developer
   level: Advanced
   ms.date: 10/16/2023
   ms.topic: interactive-tutorial
-  nextTutorialHref: messaging-extensions/api-based-overview.md                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  nextTutorialHref: messaging-extensions/api-based-overview.md                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
   nextTutorialTitle: Build message extension using API
   ms.custom: mvc
   ms.localizationpriority: high
@@ -21,7 +21,7 @@ items:
 
     Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
 
-    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a messaging extension to fetch and display customer data directly from Teams. By reducing the need to switch between different applications, users save time and efficiency. API-based message extension is supported on Teams web, desktop, and mobile clients. 
+    You can use API-based message extensions to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a messaging extension to fetch and display customer data directly from Teams, which helps save time and improve efficiency by reducing the need to switch between different applications. This feature is supported on all platforms where Teams is available, including desktop, web, and mobile. 
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -40,16 +40,18 @@ items:
 
    ## Set up your Teams development tenant
 
-   A **tenant** is like a space, or a container for your organization in Teams where you chat, share files, and run meetings. This space is also where you upload and test your custom app. Let's verify if you're ready to develop with the tenant.
+   A **tenant** is like a space, or a container for your organization in Teams, where you chat, share files, and run meetings. This space is also where your upload and test your custom app. Let's verify if you're ready to develop with the tenant.
 
    ### Check for custom app upload option
 
    After creating the app, you must load your app in Teams without distributing it. This process is known as custom app upload. Sign in to your Microsoft 365 account to view this option.
 
     > [!NOTE]
-    > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
+    > custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
 
-   Do you already have a tenant and do you have the admin access? Let's check if you really do! Verify if you can upload a custom app in Teams: 
+   Do you already have a tenant, and do you have the admin access? Let's check if you really do!
+
+   Verify if you can upload a custom app in Teams:
 
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
@@ -63,22 +65,22 @@ items:
 
    ### Create a free Teams developer tenant (optional)
 
-   If you don't have a Teams developer account, you can get it for free. Join the Microsoft 365 developer program!
+   If you don't have a Teams developer account, you can get it free. Join the Microsoft 365 developer program!
 
    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
    1. Select **Join Now** and follow the onscreen instructions.
    1. In the welcome screen, select **Set up E5 subscription**.
-   1. Create your administrator account. After you finish, the following screen appears.
+   1. Set up your administrator account. After you finish, the following screen appears.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
-   1. Sign in to Teams using the administrator account you created. Verify that you have the **Upload a custom app** option in Teams.
+   1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
 
    ## Get a free Azure account
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   You have all the tools to create your account. Next, let's create your development environment and start building! Select the app you want to build first.
+   You've all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
 
 
 - title: Create OpenAPI Description document
@@ -102,12 +104,12 @@ items:
     * Only one required parameter without a default value is allowed.
     * Only POST and GET HTTP methods are supported.
     * The OpenAPI Description document must have an `operationId`.
-    * The operation must not have a required Header or Cookie parameters without default values.
+    * The operation must not have required Header or Cookie parameters without default values.
     * A command must have exactly one parameter.
     * Ensure that there are no remote references in the OpenAPI Description document.
     * A required parameter with a default value is considered optional.
 
-    We used the following OpenAPI Description as an example for this tutorial:
+    We've used the following OpenAPI Description as an example for this tutorial:
 
     <details><summary>OpenAPI Description</summary>
     
@@ -130,7 +132,7 @@ items:
               required: true
               schema:
                 type: string
-              description: Used to search for AI tools by their category based on the keywords. For example, "tool to create music" gives tools that can create music.
+              description: Used to search for AI tools by their category based on the keywords. For example, "tool to create music" will give tools that can create music.
           responses:
             "200":
               description: OK
@@ -207,7 +209,7 @@ items:
        :::image type="content" source="assets/images/Copilot/api-me-sbs-execute-get-response.png" alt-text="Screenshots shows the parameters, its values and the **EXECUTE** option in the swagger editor.":::
 
     1. Go to **Server response** > **Response Body**.
-    1. Under `products`, copy the first product from the list, and save it for future reference.
+    1. Under `products`, copy the first product from the list and save it for future reference.
 
        :::image type="content" source="assets/images/Copilot/api-me-sbs-product-response.png" alt-text="Screenshots shows the highlighted product that is selected from the response body.":::
 
@@ -231,7 +233,7 @@ items:
                 "AI Detection"
             ],
             "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
-            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences. It provides customization options such as genre, mood, length, and instrumentation.",
+            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
             "name": "AI Music Generator",
             "opentools_url": "https://goto.opentools.ai/ai-music-generator",
             "platforms": [
@@ -277,7 +279,7 @@ items:
             },
             {
             "type": "TextBlock",
-            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. AI Music Generator makes music production accessible to everyone.",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
             "wrap": true
             },
             {
@@ -310,9 +312,9 @@ items:
 
     1. To verify if the Adaptive Card generated binds to the sample data, follow these steps:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
-       1. At the upper-left corner, go to **Select host app** and from the dropdown, select **Microsoft Teams**.
-       1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
-       1. Go to **SAMPLE DATA EDITOR** and paste the API response that you saved earlier.
+       1. At the upper-left, go to **Select host app** and from the dropdown, select **Microsoft Teams**.
+       1. Go to **CARD PAYLOAD EDITOR**, paste the Adaptive Card template code.
+       1. Go to **SAMPLE DATA EDITOR**, paste the GET API response that you saved earlier.
 
           :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
        
@@ -364,7 +366,7 @@ items:
        1. `"$schema"`: `"http://adaptivecards.io/schemas/adaptive-card.json"`
        1. `"jsonPath"`: `"tools"`
 
-          `jsonPath` is the path to the result in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is "tools." For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
+          `jsonPath` is the path to the result(s) in the response JSON response. Add the `jsonPath` to the relevant data/array from the product list in the API response. In this case, the `jsonPath` is "tools". For more information on how to determiner the JSON path, see [Querying JSON with JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm).
 
        1. `"responseLayout"`: `"list"`
 
@@ -492,8 +494,8 @@ items:
             "full": "Search ME API full"
         },
         "description": {
-            "short": "product app for testing API message extension",
-            "full": "product app for testing API Message extension"
+            "short": "product app for testing API MEs",
+            "full": "product app for testing API MEs"
         },
         "accentColor": "#FFFFFF",
         "composeExtensions": [
@@ -569,7 +571,7 @@ items:
     1. Go to a chat and from the message compose area, select **+** and search for your app.
     1. Select the app and make a search query.
 
-       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app is invoked from the chat menu.":::
+       :::image type="content" source="assets/images/Copilot/api-based-me-ttk-invoke-teams.png" alt-text="Screenshot shows that a message extension app  is invoked from the plus icon in the chat menu and the app is displayed in the flyout menu.":::
 
     1. The app responds with an Adaptive Card in the chat window.
     1. Select **Send**.
@@ -580,5 +582,6 @@ items:
   durationInMinutes: 1
   content: |
 
-    You did it! You learned to create a API-based message extension using OpenAPI Description document.
+    You've done it! 
+    You've learned to create a API-based message extension using OpenAPI Description document.
 
