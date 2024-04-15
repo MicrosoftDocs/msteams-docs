@@ -43,7 +43,7 @@ items:
 
    ## Prepare development environment
 
-   After you've installed the required tools, set up the development environment. 
+   After you install the required tools, set up the development environment. 
 
 
    ### Install the Teams Toolkit
@@ -237,7 +237,7 @@ items:
               required: true
               schema:
                 type: string
-              description: Used to search for AI tools by their category based on the keywords. For example, ?search="tool to create music" will give tools that can create music.
+              description: Used to search for AI tools by their category based on the keywords. For example, search="tool to create music" gives tools that can create music.
           responses:
             "200":
               description: OK
@@ -484,5 +484,5 @@ items:
 
     You've done it!
 
-    You've created an API based message extension.
+    You created an API based message extension.
 
