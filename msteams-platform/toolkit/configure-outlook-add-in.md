@@ -1,7 +1,7 @@
 ---
 title: Configure Outlook Add-in capability within your Teams app
 author: surbhigupta
-description: Learn to configure bot capability within your Teams app.
+description: Learn to configure Outlook Add-in capability within your Teams app.
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: overview
@@ -10,9 +10,9 @@ ms.date: 02/16/2024
 
 # Configure Outlook Add-in capability within your Teams app
 
-Office Add-ins are web apps that extend the functionality of Outlook. Some of the things that can be done with an Outlook Add-in:
+The Outlook add-in for Microsoft Teams enhances collaboration and productivity by seamlessly integrating Teams functionality into the Outlook environment. Office Add-ins are web apps that extend the functionality of Outlook. The functionalities of an Outlook Add-in include:
 
-* Read and write the content of email messages and meeting invitations, as well as responses, cancellations, and appointments.
+* Read and write the content of an email, messages, meeting invitations, responses, cancellations, and appointments.
 * Read properties of the user's mailbox.
 * Respond automatically to events, such as sending an email.
 * Integrate with external services including CRM and project management.
@@ -24,15 +24,16 @@ For more information, see [Outlook Add-ins Overview](/office/dev/add-ins/outlook
 
 To configure an Office Add-in as an additional capability, you must meet the following conditions:
 
-* You must have a Microsoft 365 account that includes Teams, or separate subscriptions to both Microsoft 365 and Teams, to test the application. For example, an *.onmicrosoft.com account.
+* A Microsoft 365 account with subscriptions to both Microsoft 365 and Teams, to test the application. For example, an *.onmicrosoft.com account.
 
 * Your Microsoft 365 account has been added as an account in desktop Outlook. For more information, see [Add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726).
 
-* To deploy the Teams app to Azure as described in the last section of this article, you need an Azure account to an Azure subscription. Create your free Azure account if you don't already have one by using the link [Free Azure account](https://azure.microsoft.com/free/).
+* Azure account with Azure subscription to deploy the Teams app to Azure.
+  If you don't have an Azure account, [create a free Azure account](https://azure.microsoft.com/free/).
 
 ## Overview
 
-The following are the major steps to adding an Outlook Add-in to a Teams app. Details are in the sections below.
+The following steps help you add an Outlook Add-in to a Teams app:
 
 1. [Prepare the Teams app project](#prepare-the-teams-app-project).
 1. [Create an Office Add-in project](#create-an-outlook-add-in-project) that is initially separate from your Teams app project.
@@ -44,7 +45,8 @@ The following are the major steps to adding an Outlook Add-in to a Teams app. De
 
 ### Prepare the Teams app project
 
-Begin by separating the source code for the tab (or bot) into its own subfolder. These instructions assume that the project initially has the following structure. To create a Teams app project with this structure, be sure you are using the latest released version of Teams Toolkit.
+1. Add the source code for tab or bot into the respective subfolder.
+1. . Ensure to use the latest released version of Teams Toolkit to create a Teams app project. We recommend you to ensure the following folder structure for your project:
 
 |-- .vscode/
 |-- appPackage/
@@ -64,18 +66,19 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
 |-- web.config
 
 > [!NOTE]
-> If you are working with a new Teams tab project, the node_modules folder and the package-lock.json file will not be present. The node_modules is created in a later step when you run npm install in the root of the project. The build folder will not be present unless and until you run a build script on the project.
+> In a new Teams tab project, the node_modules folder and the package-lock.json file aren't present when creating the project. The node_modules is created when you run npm install in the root of the project. The build folder appears after you run a build script on the project.
 
 1. Create a folder under the root named **tab** or **bot**.
 
     > [!NOTE]
-    > For simplicity, the remainder of this article assumes that the existing Teams app is a tab. If you started with a bot instead, replace "tab" with "bot" in all of these instructions, including the content you add or edit in various files.
+    > In this guide, we assumes that the existing Teams app is a tab. If you work with a bot instead, replace **tab** with **bot** in all the instructions.
 
-1. Copy the infra folder into the new subfolder, and then delete the azure.parameters.json file from the new tab/infra folder.
+1. Copy the **infra** folder into the new subfolder.
+1. Delete the **azure.parameters.json** file from the new tab/infra folder.
 
-1. Move the node_modules and src folders into the new subfolder.
+1. Move the `node_modules` and `src` folders into the new subfolder.
 
-1. Move the .webappignore, package-lock.json, package.json, tsconfig.json, and web.config files into the new subfolder.
+1. Move the `.webappignore`, `package-lock.json`, `package.json`, `tsconfig.json`, and `web.config` files into the new subfolder. For example:
 
 |-- .vscode/
 |-- appPackage/
@@ -96,9 +99,10 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
 |-- teamsapp.local.yml
 |-- teamsapp.yml
 
-1. In the package.json that you just moved to the tab folder, delete the script named "dev:teamsfx" from the "scripts" object. This script is added to a new package.json in the next step.
+1. In the `package.json`, delete the script named `dev:teamsfx` from the `scripts` object.
+   This script is added to a new package.json in the next step.
 
-1. Create a new file named package.json in the root of the project and give it the following content:
+1. Create a new file named `package.json` in the root of the project and add the following code:
 
 ```json
 {
@@ -124,7 +128,8 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
 
 1. Change the name, version, and author properties, as needed.
 
-1. Open the teamsapp.yml file in the root of the project and find the line `ignoreFile: .webappignore`. Change this to `ignoreFile: ./tab/.webappignore`.
+1. Open the `teamsapp.yml` file in the root of the project.
+1. Update `ignoreFile: .webappignore` to `ignoreFile: ./tab/.webappignore`.
 
 1. Open the teamsapp.local.yml file in the root of the project and find the line `args: install --no-audit`. Change this to `args: run install:tab --no-audit`.
 
