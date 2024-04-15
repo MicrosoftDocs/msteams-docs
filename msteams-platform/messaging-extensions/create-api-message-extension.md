@@ -1,7 +1,7 @@
 ---
 title: Create API-based message extension
 author: v-ypalikila
-description: Learn how to create an API message extension using Teams Visual Studio, Visual Studio Code, and Teams Toolkit.
+description: Learn how to create or build an API-based message extension using Teams Toolkit for Visual Studio, Visual Studio Code, and CLI.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
