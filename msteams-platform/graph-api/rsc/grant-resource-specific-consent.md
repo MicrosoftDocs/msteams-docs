@@ -346,7 +346,7 @@ To install your app on which you've enabled RSC permission in a team, chat, or u
 1. [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
 
 > [!NOTE]
-> Users need to have one of the following Microsoft 365 roles to view the RSC settings for Team or Chat:  
+> To see the RSC settings for Team or Chat, users must have one of these Microsoft 365 roles:
 > * Global Administrator
 > * Global Reader
 > * Teams Administrator
