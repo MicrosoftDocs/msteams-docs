@@ -515,6 +515,8 @@
     - name: Build API-based message extension
       href: messaging-extensions/build-api-based-message-extension.md
       display name: Response rendering template, OpenAPI Description, Search, single parameter
+    - name: Create API-based message extension
+      href: messaging-extensions/create-api-message-extension.md  
   - name: Build message extensions using Bot Framework  
     items:
     - name: Overview
@@ -540,12 +542,12 @@
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
+      - name: Guidelines to extend bot-based message extension as plugin
+        href: messaging-extensions/high-quality-message-extension.md
+        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365  
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365
-      - name: Guidelines to extend bot-based message extension as plugin
-        href: messaging-extensions/high-quality-message-extension.md
-        displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365
       - name: Microsoft 365 Chat plugin FAQ
         href: messaging-extensions/copilot-plugin-faq.md
         displayName: M365, bot-based message extension, plugin
@@ -632,6 +634,9 @@
   - name: Custom Together Mode scenes in Teams
     href: apps-in-teams-meetings/teams-together-mode.md
     displayName: Single virtual scene, scene studio
+  - name: Integrate Teams meetings and calls in external apps
+    href: get-started/b2c-apps.md
+    displayName: Teams meeting, Teams call, Teams meeting and call for external apps, external apps
 - name: Build webhooks and connectors
   items:
   - name: Overview
@@ -660,9 +665,9 @@
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
       displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
-    - name: Format cards in Microsoft Teams
+    - name: Format cards in Teams
       href: task-modules-and-cards/cards/cards-format.md
-      displayName: Information masking, background, extension, notification, HTML, rich text, responsive Adaptive Cards, targetwidth
+      displayName: Information masking, background, extension, notification, HTML, rich text, responsive Adaptive Cards, targetwidth, CodeBlock
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
       displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
@@ -809,7 +814,7 @@
   items:
   - name: Overview
     href: m365-apps/overview.md
-    displayName: Application, Outlook, and Office as application hosts, extend 
+    displayName: Application, Outlook, and Office as application hosts, extend, Outlook Add-ins 
   - name: Prerequisites
     href: m365-apps/prerequisites.md
   - name: Teams tabs in Microsoft 365 and Outlook
