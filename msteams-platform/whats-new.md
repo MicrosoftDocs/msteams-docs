@@ -1,6 +1,6 @@
 ---
 title: What is new and updated for developers in Teams
-description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates
+description: Learn about new Microsoft Teams developer features and updates to existing features, deprecation notes, and changes. Subscribe to the RSS feed for latest updates.
 ms.topic: reference
 ms.localizationpriority: high
 zone_pivot_groups: What-new-features
@@ -26,7 +26,15 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
-***April 04, 2024***: [Added support for python in Teams AI library.](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+* ***April 12, 2024***: [Implement authentication in API-based search message extensions to provide secure and seamless access to your app.](messaging-extensions/build-api-based-message-extension.md#authentication)
+* ***April 12, 2024***: [Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards](resources/schema/manifest-schema.md).
+* ***April 12, 2024***: [Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem](resources/schema/manifest-schema.md#extensionsrequirements).
+* ***April 12, 2024***: [Create Dashboardcards that can be pinned to a dashboard such as Microsoft Viva Connections to provide a summarized view of app information](resources/schema/manifest-schema.md#dashboardcards).
+* ***April 12, 2024***: [Share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the CodeBlock element.](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)
+* ***April 12, 2024***: [Introduced bot configuration experience that helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot.](bots/how-to/bot-configuration-experience.md)
+* ***April 12, 2024***: [Use sample prompts to guide users on how to use the various plugins within Copilot.](messaging-extensions/high-quality-message-extension.md#sample-prompts)
+* ***April 10, 2024***: [Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.](m365-apps/overview.md#outlook-add-ins)
+* ***April 04, 2024***: [Added support for python in Teams AI library.](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
 * ***April 04, 2024***: [Stageview API with the openmode property allows you to open your app content in different Stageview experience.](tabs/open-content-in-stageview.md)
 * ***April 03, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
 
@@ -419,7 +427,6 @@ Developer preview is a public program that provides early access to unreleased T
 |02/11/2023| Introduced Adaptive Card Previewer in public developer preview. | Tools > [Adaptive Card Previewer](concepts/build-and-test/adaptive-card-previewer.md)|
 |25/10/2023| Introduced the `extensions` property in public developer preview app manifest schema. | App manifest > [Public developer preview](resources/schema/manifest-schema-dev-preview.md#extensions)|
 |25/10/2023| Build message extensions using API (API-based) to interact directly with third-party data, apps, and services. | Build message extensions > [Build message extensions using API](messaging-extensions/api-based-overview.md)|
-|28/09/2023| Configure your bot during installation or after installation from the team or group chat where the bot is installed. | Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
 |31/08/2023| The new Teams client supports light theme for apps in Teams meetings. | Build tabs > [Get context for your tab](tabs/how-to/access-teams-context.md#handle-theme-change)|
 |28/08/2023| Teams app manifest is now referred to as app manifest. | App manifest > [App manifest schema](resources/schema/manifest-schema.md)|
 |21/08/2023| Introduced the new Microsoft Teams client to provide better experience for your apps and users | Resources > [Introducing the new Microsoft Teams client](resources/teams-updates.md)|
@@ -475,22 +482,40 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***February 07, 2024***: Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
+* ***April 12, 2024***: The `packageName` property is deprecated as part of manifest v1.17.
+
+* ***April 10, 2024***: [Location](concepts/device-capabilities/location-capability.md#location-apis) and [Media](concepts/device-capabilities/media-capabilities.md#media-capability-apis) APIs aren't supported in the new Teams client. We recommend using HTML5 Geolocation and Media.
+
+* ***April 10, 2024***: The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the [new Teams Client](resources/teams-updates.md#limitations). We recommended you to render a dialog within your own frame.
+
+* ***April 01, 2024***: Azure AD PowerShell is deprecated on March 30, 2024. To interact with Microsoft Entra ID, we recommend you to migrate to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview).
 
 * ***February 02, 2024***: Teams, Outlook, and Microsoft 365 web domains are migrating to *cloud.microsoft* domain. [Configure your app](m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers) before June 2024 to ensure continued functionality.
 
 * ***February 02, 2024***: The Collaboration controls for model-driven applications **are** set to retire by May 2024. We recommend removing the Collaboration controls and Collaboration connector from all Power Apps solutions and prepare users for the upcoming [Collaboration controls](~/samples/collaboration-control.md) retirement.
 
-* ***October 11, 2023***: Adaptive Card tabs **are** deprecated in the new Microsoft Teams. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
-
-* ***May 17, 2023***: [Teams Toolkit v4](toolkit/teams-toolkit-fundamentals.md) extension within Visual Studio Code **will be** deprecated. We recommend that you use Teams Toolkit v5 within Visual Studio Code for building your Teams app.
-
-* ***May 05, 2023***: Adaptive Card tabs **will be** deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a [web-based tab](tabs/what-are-tabs.md).
-
-* ***August 01, 2022***: App Studio is deprecated, use [Developer Portal](concepts/build-and-test/teams-developer-portal.md) for Teams.
-
 :::column-end:::
 :::row-end:::
+
+<details>
+<summary><b>2023</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
+| 05/05/2023| Adaptive Card tabs **will be** deprecated in the new Microsoft Teams. Apps are expected to be available in the new Microsoft Teams by June 2023. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a web-based tab. | Build tabs > [Overview](tabs/what-are-tabs.md)|
+| 17/05/2023 | Teams Toolkit v4 extension within Visual Studio Code **will be** deprecated. We recommend that you use Teams Toolkit v5 within Visual Studio Code for building your Teams app. | Tools and SDKs > Teams Toolkit for Visual Studio Code > [Teams Toolkit Overview](toolkit/teams-toolkit-fundamentals.md)|
+| 11/10/2023 | Adaptive Card tabs **are** deprecated in the new Microsoft Teams. If your app is using Adaptive Card tabs, we recommend you to rebuild the tab as a web-based tab. | Build tabs > [Overview](tabs/what-are-tabs.md) |
+
+</details>
+
+<details>
+<summary><b>2022</b></summary>
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ------------------ |
+|01/08/2022 | App Studio is deprecated, use Developer Portal for Teams.| Tools and SDKs > Tools > [Developer Portal for Teams](concepts/build-and-test/teams-developer-portal.md)|
+
+</details>
 
 ::: zone-end
 
