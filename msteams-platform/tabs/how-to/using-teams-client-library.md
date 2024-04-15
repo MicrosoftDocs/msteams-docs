@@ -262,7 +262,7 @@ The `pages` namespace includes functionality for running and navigating webpages
 ##### *dialog* namespace
 
 > [!NOTE]
-> The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](../tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
+> The `window.alert`, `window.confirm`, and `window.prompt` APIs used to display a dialog aren't supported in the new Teams Client. We recommended you to render a dialog within your own frame, for example, using the [Fluent V9 dialog](https://react.fluentui.dev/?path=/docs/components-dialog--default) or use the Microsoft Teams JavaScript client library (TeamsJS) to display a [Teams dialog](~/tabs/what-are-tabs.md) using Adaptive Card or a nested `<iframe>`.
 
 The TeamsJS *tasks* namespace is renamed to *dialog*, and the following APIs are renamed:
 
