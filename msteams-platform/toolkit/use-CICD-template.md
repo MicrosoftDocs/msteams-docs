@@ -169,7 +169,7 @@ To set up the pipeline with GitHub, follow these steps:
 
     After the pipeline executes successfully, the log displays that the code is deployed to Azure and the appPackage is generated in the artifacts.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/published.png" alt-text="Screenshot shows the pipeline runs successfully.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/artifact.png" alt-text="Screenshot shows the appPackage is generated in the artifacts.":::
 
 #### Set up pipeline with Azure DevOps
 
