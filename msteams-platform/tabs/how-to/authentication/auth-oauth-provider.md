@@ -91,7 +91,6 @@ The following image provides the flow to add authentication to external browsers
 1. The third-party app server handles the response and checks `oauthRedirectMethod`, which is returned from external OAuth provider in the state object to determine whether the response needs to be returned through the auth-callback deep link or through web page that calls `notifySuccess()`.
 
       ```JavaScript
-      const state = JSON.parse(req.query.state)
       if (state.oauthRedirectMethod === 'deeplink') {
          const clientRedirectUrl: string = state.hostRedirectUrl.replace('{result}', req.query.code)
          return res.redirect(clientRedirectUrl)
