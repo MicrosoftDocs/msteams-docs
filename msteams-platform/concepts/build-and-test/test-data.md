@@ -1,9 +1,9 @@
 ---
 title: Add test data to your Microsoft 365 test tenant
-description: Learn to set up your Microsoft 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets
+description: Learn to set up your Microsoft 365 developer program subscription for successful testing of Microsoft Teams Apps using code snippets.
 ms.topic: how-to
 ms.localizationpriority: medium    
-ms.custom: has-azure-ad-ps-ref
+ms.custom: has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.date: 11/01/2019
 ---
 
@@ -27,6 +27,9 @@ You can test your Microsoft Teams app with sample data with a Microsoft 365 deve
 By default, only global admins or Teams service admins can upload the custom apps in a tenant. You can also allow users to upload custom apps for their own use or to teams for testing. For more information, see [manage custom app policies and settings in Teams](/microsoftteams/teams-custom-app-policies-and-settings).
 
 ## Create teams and channels for testing
+
+> [!NOTE]
+> Azure AD PowerShell is deprecated on March 30, 2024. For more information, see [deprecation update](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/important-azure-ad-graph-retirement-and-powershell-module/ba-p/3848270). To interact with Microsoft Entra ID, we recommend you to migrate to [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview). Microsoft Graph PowerShell allows access to all Microsoft Graph APIs and is available on PowerShell 7. For more information, see [migration FAQ](/powershell/azure/active-directory/migration-faq).
 
 1. Save the following snippet as a **.xml** file and note the file path. This XML defines the structure of the team and channel that is created along with its members:
 
