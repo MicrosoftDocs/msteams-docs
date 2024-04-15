@@ -78,7 +78,7 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
 
 ### Bring bot code to your project
 
-1. You can bring your bot app code into your project. If you don't have an app code, use the previously created bot app project, and copy the source code into your current project. We recommend you copy them into a `bot/` folder. The following folder structure is an example of how your project's folder structure should look like:
+1. You can bring your bot app code into your project. If you don't have an app code, use the previously created bot app project, and copy the source code into your current project. We recommend you copy them into a `bot/` folder. The following folder structure is an example of how your project's folder structure looks like:
 
 ```yml
     |-- .vscode/
