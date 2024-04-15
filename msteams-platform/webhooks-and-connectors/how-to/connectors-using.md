@@ -235,9 +235,52 @@ To send Adaptive Cards through an Incoming Webhook, follow these steps:
 > [!TIP]
 > Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) to test the body of POST request.
 
+## Send Adaptive Cards having Base64 encoded image using an Incoming Webhook
+
+You can also send Adaptive Cards with a Base64 encoded image through an Incoming Webhook using the following steps:
+
+1. Set up a custom webhook in Teams.
+1. Create Adaptive Card JSON file using the following code:
+
+    ```json
+    {
+      "type": "message",
+      "attachments": [
+        {
+          "contentType": "application/vnd.microsoft.card.adaptive",
+          "content": {
+            "type": "AdaptiveCard",
+            "body": [
+              {
+                "type": "Image",
+                "url": "data&colon;image/jpeg;base64,/xxxxxxxx"
+              }
+            ],
+            "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+            "version": "1.0"
+          }
+        }
+      ]
+    }
+    ```
+
+    In this example, the image is included as an attachment of type `Image` with the URL set to the Base64 encoded image data. Ensure that you replace `/xxxxxxxx` with the actual Base64 encoded image data.
+
+    The properties for Adaptive Card JSON file are as follows:
+
+    * The `"type"` field must be `"message"`.
+    * The `"attachments"` array contains a set of card objects.
+    * The `"contentType"` field must be set to Adaptive Card type.
+    * The `"content"` object is the card formatted in JSON.
+
+1. Test your Adaptive Card with Postman:
+
+    * Test the Adaptive Card using Postman to send a POST request to the URL, created to set up Incoming Webhook.
+    * Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.
+
 ## Rate limiting for connectors
 
-Application rate limits control the traffic that a connector or an Incoming Webhook is permitted to generate on a channel. Teams track requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate.
+Application rate limits control the traffic that a connector or an Incoming Webhook is permitted to generate on a channel. Teams tracks requests using a fixed rate window and incremental counter measured in seconds. If more than four requests are made in a second, the client connection is throttled until the window refreshes for the duration of the fixed rate.
 
 ### Transactions per second thresholds
 
