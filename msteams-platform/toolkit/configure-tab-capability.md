@@ -18,7 +18,7 @@ To configure a tab as an additional capability, ensure the following prerequisit
 
 * Your app manifest file.
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
-* Microsoft Azure account with an active subscription.
+* Microsoft Storage account.
 
 Before starting, we recommend you create a [tab app with Microsoft Teams Toolkit](create-new-project.md).
 
