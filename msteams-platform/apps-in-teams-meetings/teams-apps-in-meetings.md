@@ -70,7 +70,6 @@ Meetings enable collaboration, partnership, informed communication, and shared f
 <br>
 You can create scenes for meetings, provide notifications to users, populate in-meeting dialogs, and more with meeting app extensibility.
 
-
 Custom apps built for your org (LOB apps) built for meetings and calls are available in Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD) environments.
 
 Third-party apps built for meetings and calls are available in Government Community Cloud (GCC) but aren't available for GCC-High and Department of Defense (DOD) tenants.
@@ -159,3 +158,4 @@ For more information, see [roles in a Teams meeting](https://support.microsoft.c
 * [Meeting apps APIs](meeting-apps-apis.md)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
+* [Integrate Teams meetings and calls in external apps](../get-started/b2c-apps.md)
