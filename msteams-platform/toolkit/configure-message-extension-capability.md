@@ -8,11 +8,11 @@ ms.topic: overview
 ms.date: 03/01/2024
 ---
 
-# Configure Message Extension capability within your Teams app
+# Configure Message extension capability within your Teams app
 
 Message extension allows users to interact with your web service when composing messages in Microsoft Teams. Users can invoke your web service to assist message composition from the message compose box or from the search bar.
 
-Message Extensions are implemented on top of the bot support architecture within Teams. For more information, see [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
+Message extensions are implemented on top of the bot support architecture within Teams. For more information, see [Build message extensions](../messaging-extensions/what-are-messaging-extensions.md).
 
 ## Prerequisites
 
@@ -30,109 +30,107 @@ To add message extension to a Teams bot app, see [Add message extension to Teams
 
 The following steps help you to add message extension capability to a tab app:
 
-1. [Create message extension app using Teams Toolkit](#create-message-extension-app-using-teams-toolkit)
-1. [Configure Message Extension capability within your Teams app](#configure-message-extension-capability-within-your-teams-app)
+1. [Create message extension app using Microsoft Teams Toolkit](#create-message-extension-app-using-microsoft-teams-toolkit)
+1. [Configure Message extension capability within your Teams app](#configure-message-extension-capability-within-your-teams-app)
 1. [Bring message extension code to your project](#bring-message-extension-code-to-your-project)
 1. [Setup local debug environment](#setup-local-debug-environment)
 1. [Move your app to Azure](#move-your-app-to-azure)
 
-### Create message extension app using Teams Toolkit
+### Create message extension app using Microsoft Teams Toolkit
 
 To create message extension app with Teams Toolkit, see [create new message extension app with Teams Toolkit](create-new-project.md).
 
-### Configure Message Extension capability in app manifest
+### Configure Message extension capability in app manifest
 
-1. You can configure message extension in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions).
+You can configure message extension capability in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#composeextensions). The following code snippet is an example:
 
-   Example:
-
-   ```json
-    "composeExtensions": [
-       {
-           "botId": "${{BOT_ID}}",
-           "commands": [
-               {
-                   "id": "createCard",
-                   "context": [
-                       "compose"
-                   ],
-                   "description": "Command to run action to create a Card from Compose Box",
-                   "title": "Create Card",
-                   "type": "action",
-                   "parameters": [
-                       {
-                           "name": "title",
-                           "title": "Card title",
-                           "description": "Title for the card",
-                           "inputType": "text"
-                       },
-                       {
-                           "name": "subTitle",
-                           "title": "Subtitle",
-                           "description": "Subtitle for the card",
-                           "inputType": "text"
-                       },
-                       {
-                           "name": "text",
-                           "title": "Text",
-                           "description": "Text for the card",
-                           "inputType": "textarea"
-                       }
-                   ]
-               },
-               {
-                   "id": "shareMessage",
-                   "context": [
-                       "message"
-                   ],
-                   "description": "Test command to run action on message context (message sharing)",
-                   "title": "Share Message",
-                   "type": "action",
-                   "parameters": [
-                       {
-                           "name": "includeImage",
-                           "title": "Include Image",
-                           "description": "Include image in Hero Card",
-                           "inputType": "toggle"
-                       }
-                   ]
-               },
-               {
-                   "id": "searchQuery",
-                   "context": [
-                       "compose",
-                       "commandBox"
-                   ],
-                   "description": "Test command to run query",
-                   "title": "Search",
-                   "type": "query",
-                   "parameters": [
-                       {
-                           "name": "searchQuery",
-                           "title": "Search Query",
-                           "description": "Your search query",
-                           "inputType": "text"
-                       }
-                   ]
-               }
-           ],
-           "messageHandlers": [
-               {
-                   "type": "link",
-                   "value": {
-                       "domains": [
-                           "*.botframework.com"
-                       ]
-                   }
-               }
-           ]
-       }
-   ]
-   ```
+```json
+"composeExtensions": [
+    {
+        "botId": "${{BOT_ID}}",
+        "commands": [
+            {
+                "id": "createCard",
+                "context": [
+                    "compose"
+                ],
+                "description": "Command to run action to create a Card from Compose Box",
+                "title": "Create Card",
+                "type": "action",
+                "parameters": [
+                    {
+                        "name": "title",
+                        "title": "Card title",
+                        "description": "Title for the card",
+                        "inputType": "text"
+                    },
+                    {
+                        "name": "subTitle",
+                        "title": "Subtitle",
+                        "description": "Subtitle for the card",
+                        "inputType": "text"
+                    },
+                    {
+                        "name": "text",
+                        "title": "Text",
+                        "description": "Text for the card",
+                        "inputType": "textarea"
+                    }
+                ]
+            },
+            {
+                "id": "shareMessage",
+                "context": [
+                    "message"
+                ],
+                "description": "Test command to run action on message context (message sharing)",
+                "title": "Share Message",
+                "type": "action",
+                "parameters": [
+                    {
+                        "name": "includeImage",
+                        "title": "Include Image",
+                        "description": "Include image in Hero Card",
+                        "inputType": "toggle"
+                    }
+                ]
+            },
+            {
+                "id": "searchQuery",
+                "context": [
+                    "compose",
+                    "commandBox"
+               ],
+               "description": "Test command to run query",
+               "title": "Search",
+                "type": "query",
+                "parameters": [
+                    {
+                        "name": "searchQuery",
+                        "title": "Search Query",
+                        "description": "Your search query",
+                        "inputType": "text"
+                    }
+                ]
+            }
+        ],
+        "messageHandlers": [
+            {
+                "type": "link",
+                "value": {
+                    "domains": [
+                        "*.botframework.com"
+                    ]
+                }
+            }
+        ]
+    }
+]
+```
 
 ### Bring message extension code to your project
 
-1. You can bring your message extension app code into your project. If you don't have an app code, use the previously created message extension app project and copy the source code into your current project. We suggest you copy them into a `bot/` folder. Following folder structure is an example of your folder structure:
+1. You can bring your message extension app code into your project. If you don't have an app code, use the previously created message extension app project and copy the source code into your current project. We suggest you copy them into a `bot/` folder. The following folder structure is an example of how your project's folder structure looks like:
 
    |--.vscode/
    |--appPackage/
@@ -181,7 +179,7 @@ To create message extension app with Teams Toolkit, see [create new message exte
    |--teamsapp.local.yml
    |--teamsapp.yml
 
-1. Add the following code to your root package.json:
+1. Add the following code to your root `package.json`:
 
    ```json
    "scripts": {
@@ -201,17 +199,17 @@ To create message extension app with Teams Toolkit, see [create new message exte
    ```
 
 > [!NOTE]
-> If you're working on a JavaScript project, the bot doesn't need build. You should remove `build:bot` script and update the `build` script to `npm run build:tab`.
+> If you're working on a JavaScript project, the bot doesn't need build. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
 
 ### Setup local debug environment
 
 1. Add the following new tasks in `.vscode/task.json`:
 
-   *`Start local tunnel`
+   * `Start local tunnel`
    * `Start bot`
    * `Start frontend`.
 
-    Add `Start bot` and `Start frontend` to task `Start application`'s `dependOn`. Config `Start bot` and `Start frondend`'s cwd option as we moved the code for tab and bot to `tab/` and `bot/` folder separately. Add `Start local tunnel` to task `Start Teams App Locally`'s `dependOn`. For example:
+    Add `Start bot` and `Start frontend` to task `Start application`'s `dependOn`. Config `Start bot` and `Start frontend`'s `cwd` option as we moved the code for tab and bot to `tab/` and `bot/` folder separately. Add `Start local tunnel` to task `Start Teams App Locally`'s `dependOn`. For example:
 
    ```json
    "tasks":[
@@ -349,9 +347,10 @@ To create message extension app with Teams Toolkit, see [create new message exte
            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
    ```
 
-   For more information and references, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
+   For more information, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
 
-1. Open the **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**. Press F5 to debug and preview your Teams app locally.
+1. Open the **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**.
+1. Select the F5 key to debug and preview your Teams app locally.
 
 ### Move your app to Azure
 
@@ -421,7 +420,7 @@ To create message extension app with Teams Toolkit, see [create new message exte
    output BOT_DOMAIN string = webApp2.properties.defaultHostName
    ```
 
-1. Update the `azure.parameters.json` file to ensure that necessary parameters are set correctly:
+1. Update the `azure.parameters.json` file with the following code to ensure that necessary parameters are set correctly:
 
    ```json
    {
@@ -487,16 +486,16 @@ To create message extension app with Teams Toolkit, see [create new message exte
          resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
    ```
 
-   For more information and reference, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
+   For more information, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
 
 1. Run `Teams: Provision` command in Visual Studio Code to apply the bicep to Azure.
 1. Run `Teams: Deploy` command in Visual Studio Code to deploy your app code to Azure.
 1. Open the **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
-1. Press F5 to debug and preview your Teams app.
+1. Select the F5 key to debug and preview your Teams app.
 
 ### Add message extension to Teams bot app
 
-You can add message extension to Teams bot app easily than adding to a tab app as message extension use the bot support framework.
+You can add message extension to a Teams bot app more easily than adding it to a tab app as message extension use the bot support framework.
 
 The following steps help you to add message extension capability to a bot app:
 
@@ -600,7 +599,7 @@ To create a message extension app, see [create a message extension app with Team
 
 #### Bring message extension code to project
 
-If you're adding message extension to a bot Teams app, you should have a class that extends `TeamsActivityHandler`. Bring your message extension functions or copy functions from your previously created message extension app to your own class. Following code is an example if you copy functions from a message extension app created with Teams Toolkit:
+If you're adding message extension to a bot Teams app, you should have a class that extends `TeamsActivityHandler`. Bring your message extension functions or copy functions from your previously created message extension app to your own class. The following code is an example if you copy functions from a message extension app created with Teams Toolkit:
 
    ```json
      public class YourHandler extends TeamsActivityHandler{
