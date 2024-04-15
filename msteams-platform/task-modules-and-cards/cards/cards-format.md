@@ -689,6 +689,9 @@ Within the [`Input.Choiceset`](https://adaptivecards.io/explorer/Input.ChoiceSet
 
 To enable typeahead within the `Input.Choiceset`, set `style` to `filtered` and ensure `isMultiSelect` is set to `false`.
 
+> [!NOTE]
+> Adaptive Cards in Teams don't inherently support events that watch over input elements for changes.
+
 #### Sample Adaptive Card with typeahead support
 
 The following code shows an example of Adaptive Card with typeahead support:
