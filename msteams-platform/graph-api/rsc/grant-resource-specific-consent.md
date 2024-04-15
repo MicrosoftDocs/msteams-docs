@@ -351,9 +351,8 @@ The tenant-level controls of application RSC permissions vary based on the resou
 
 For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
-<br>
+Tenant level RSC settings are managed by PowerShell and Graph API. For more information on managing Microsoft Graph settings with PowerShell, see [get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
 
-Before you manage your team and chat RSC settings with PowerShell, you need to connect PowerShell to your tenant using Microsoft Graph. For more information on managing Microsoft Graph settings with PowerShell, see [get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
 You can use the `Connect-MgGraph` cmdlet and connect with the following permissions:
 
 1. `TeamworkAppSettings.ReadWrite.All`
