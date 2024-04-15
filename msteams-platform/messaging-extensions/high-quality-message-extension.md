@@ -544,32 +544,38 @@ We recommend you to follow these guidelines to increase the chances of your app 
 The following code is an example of the `samplePrompts` property in app manifest:
 
 ```json
-composeExtensions": [
-    {
-        "canUpdateConfiguration": true,
-        "botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
-        "commands": [
-            {
-                "id": "orders",
-                "title": "Orders",
-                "context": [
-                    "Commandbox",
-                    "Compose"
-                ],
-                "description": "Search for orders",
-                "semanticDescription": "Search for orders",
-                "samplePrompts": [
-                    { "text": "Search for all orders" },
-
-                    { "text": "Search for orders related to Contoso" },
-                    { "text": "Search for all pending orders" },
-                    { "text": "Search for all completed ordered for Fabrikam" }
-                ],
-                // ...
-            },
-            // ...
-        ]
-    }
+"composeExtensions": [
+	{
+		"canUpdateConfiguration": true,
+		"botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
+		"commands": [
+			{
+				"id": "orders",
+				"title": "Orders",
+				"context": [
+					"Commandbox",
+					"Compose"
+				],
+				"description": "Search for orders",
+				"semanticDescription": "Search for orders",
+				"samplePrompts": [
+					{
+						"text": "Search for all orders"
+					},
+					{
+						"text": "Search for orders related to Contoso"
+					},
+					{
+						"text": "Search for all pending orders"
+					},
+					{
+						"text": "Search for all completed ordered for Fabrikam"
+					}
+				]
+			}
+		]
+	}
+]
 ```
 
 ## Adaptive Card response
