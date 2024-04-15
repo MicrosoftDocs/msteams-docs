@@ -175,43 +175,43 @@ To set up the pipeline with GitHub, follow these steps:
 
 1. Create a cd.yml under .github workflow folder and add the following code to the file:
 
-  ```yaml
-  trigger:
-    - main
-  
-  pool:
-    vmImage: ubuntu-latest
-  
-  variables:
-    TEAMSAPP_CLI_VERSION: 3.0.0
-  
-  steps:
-    - task: NodeTool@0
-      inputs:
-        versionSpec: "20"
-        checkLatest: true
-  
-    - script: |
-        npm install @microsoft/teamsapp-cli@$(TEAMSAPP_CLI_VERSION)
-      displayName: "Install CLI"
-  
-    - script: |
-        npx teamsapp account login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET) --interactive false
-      displayName: "Login Azure by service principal"
-  
-    - script: |
-        npx teamsapp deploy --ignore-env-file true --interactive false
-      displayName: "Deploy to Azure"
-      workingDirectory: $(System.DefaultWorkingDirectory)
-  
-    - script: |
-        npx teamsapp package
-      displayName: "Package app"
-      workingDirectory: $(System.DefaultWorkingDirectory)
-  
-    - publish: $(System.DefaultWorkingDirectory)/appPackage/build/appPackage.zip
-      artifact: artifact
-  ```
+    ```yaml
+    trigger:
+      - main
+    
+    pool:
+      vmImage: ubuntu-latest
+    
+    variables:
+      TEAMSAPP_CLI_VERSION: 3.0.0
+    
+    steps:
+      - task: NodeTool@0
+        inputs:
+          versionSpec: "20"
+          checkLatest: true
+    
+      - script: |
+          npm install @microsoft/teamsapp-cli@$(TEAMSAPP_CLI_VERSION)
+        displayName: "Install CLI"
+    
+      - script: |
+          npx teamsapp account login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET) --interactive false
+        displayName: "Login Azure by service principal"
+    
+      - script: |
+          npx teamsapp deploy --ignore-env-file true --interactive false
+        displayName: "Deploy to Azure"
+        workingDirectory: $(System.DefaultWorkingDirectory)
+    
+      - script: |
+          npx teamsapp package
+        displayName: "Package app"
+        workingDirectory: $(System.DefaultWorkingDirectory)
+    
+      - publish: $(System.DefaultWorkingDirectory)/appPackage/build/appPackage.zip
+        artifact: artifact
+    ```
 
     > [!NOTE]
     > The default pipeline triggers when push events occur on the main branch. You can modify it to meet your specific requirements.
