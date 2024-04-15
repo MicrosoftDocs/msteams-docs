@@ -10,7 +10,7 @@ ms.date: 05/20/2022
 
 # Edit Microsoft Entra manifest
 
-Teams Toolkit now manages Microsoft Entra application with the manifest file as the source of truth during your Teams application development lifecycle.
+Microsoft Teams Toolkit now manages Microsoft Entra application with the app manifest file as the source of truth during your Microsoft Teams application development lifecycle.
 
 <a name='customize-azure-ad-manifest-template'></a>
 
