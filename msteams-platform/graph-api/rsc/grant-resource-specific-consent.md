@@ -352,7 +352,9 @@ The tenant-level controls of application RSC permissions vary based on the resou
 For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
 > [!WARNING]
-> The way you manage settings for team and chat RSC permissions is changing. The pre-selection period for government clouds has begun and will run through May 14th, 2024. For all other customrs, refer to the instructions below to modify your consent settings in PowerShell. 
+> The way you manage settings for team and chat RSC permissions is changing. The pre-selection period for government clouds has begun and will run through May 14th, 2024. Government cloud organizations can continue to use Group Owner Consent until the pre-selection period has ended. For all other organizations, refer to the instructions below to modify your consent settings in PowerShell.
+
+For organizations in government clouds, you can still manage consent settings with [group owner consent settings in Microsoft Entra admin center](/entra/identity/enterprise-apps/configure-user-consent-groups?pivots=portal) through May 14th, 2024.
 
 Tenant level RSC settings are managed by PowerShell and Graph API. For more information on managing Microsoft Graph settings with PowerShell, see [get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
 
