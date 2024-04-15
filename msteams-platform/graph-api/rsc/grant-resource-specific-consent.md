@@ -351,79 +351,7 @@ The tenant-level controls of application RSC permissions vary based on the resou
 
 For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
->[!WARNING]
-> From March 2024, the way you manage settings for team and chat RSC permissions will change. The following instructions include the dates when new settings will be available for admins to modify. These settings will not change for government clouds and we will communicate when the settings change for government clouds.
-
-<b> Before March 14th, 2024 </b>
 <br>
-<details>
-
-<summary><b>Configure group owner consent settings for RSC in a team using the Microsoft Entra admin center [Will be deprecated in March 2024]</b></summary>
-
->[!IMPORTANT]
->After March 14th, 2024, this setting will be deprecated and no longer available for adjustments. After it is deprecated, use the PowerShell cmdlets listed in **Configure team RSC via PowerShell cmdlets** to adjust your team RSC settings.
-
-You can enable or disable group owner consent directly within the Microsoft Entra admin center:
-
-1. Sign in to the [Microsoft Entra admin center](https://portal.azure.com) as a global administrator.
-1. Select **Microsoft Entra ID** > **Enterprise apps** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
-1. Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data**. By default, **Allow group owner consent for all group owners** is selected. For a team owner to install an app using RSC, enable group owner consent for that user.
-
-    :::image type="content" source="../../assets/images/azure-rsc-team-configuration.png" alt-text="Screenshot shows the Azure RSC team configuration.":::
-
-In addition, you can enable or disable group owner consent using PowerShell. Follow the steps outlined in [Configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
-
-</details>
-
-<br>
-<details>
-
-<summary><b>Configure chat owner consent settings for RSC in a chat using Graph APIs [Will be deprecated in May 2024]</b></summary>
-
->[!IMPORTANT]
->After March 14, you must use the PowerShell cmdlets listed in **Configure chat RSC via PowerShell cmdlets** to manage your chat RSC settings.
-
-You can enable or disable RSC for chats using Graph API. The property `isChatResourceSpecificConsentEnabled` in [teamsAppSettings](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
-
-:::image type="content" source="../../assets/images/rsc/graph-rsc-chat-configuration.PNG" alt-text="Screenshot shows the Graph RSC team configuration.":::
-
-The default value of the property `isChatResourceSpecificConsentEnabled` is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. The default value is defined either when:
-
-* [TeamsAppSettings](/graph/api/teamsappsettings-get) are retrieved for the first time.
-* Teams app with RSC permissions is installed in a chat or meeting.
-
-> [!NOTE]
-> Admin control is added to allow or block RSC settings based on the sensitivity of the accessed data. The control is independent of the org-wide app settings for RSC that allows or blocks RSC permissions for all apps in the tenant.
-
-<br>
-</details>
-
-<br>
-<details>
-
-<summary><b>Configure user owner consent settings for RSC for a user using the Graph APIs</b></summary>
-
-You can enable or disable RSC for user using Graph API. The property `isUserPersonalScopeResourceSpecificConsentEnabled` in [teamsAppSettings](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether user RSC is enabled in the tenant.
-
-:::image type="content" source="../../assets/images/rsc/graph-rsc-user-configuration.PNG" alt-text="The screenshot shows the Graph RSC user configuration.":::
-
-The default value of the property `isUserPersonalScopeResourceSpecificConsentEnabled` is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for user is first used. The default value is defined either when:
-
-* [TeamsAppSettings](/graph/api/teamsappsettings-get) are retrieved for the first time.
-* Teams app with RSC permissions is installed for a user.
-
-> [!NOTE]
-> Admin control is added to allow or block RSC consent settings based on the sensitivity of the data accessed. It isn't based on the single master switch that enables or disables consent settings for app RSC permissions for all apps in the tenant.
-
-</details>
-
-<br>
-
->[!IMPORTANT]
->The pre-selection period for the transition from Group Owner Consent to PowerShell-based team RSC has started and remains active until March 4, 2024. After that, the transition to team RSC policies is managed by PowerShell.
-<br>
-
-<b> After March 14th, 2024 </b>
 
 Before you manage your team and chat RSC settings with PowerShell, you need to connect PowerShell to your tenant using Microsoft Graph. For more information on managing Microsoft Graph settings with PowerShell, see [get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
 You can use the `Connect-MgGraph` cmdlet and connect with the following permissions:
