@@ -28,7 +28,7 @@ To configure an Office Add-in as an additional capability, you must meet the fol
 
 * Your Microsoft 365 account has been added as an account in desktop Outlook. For more information, see [Add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726).
 
-* To deploy the Teams app to Azure as described in the last section of this article, you need an Azure account to an Azure subscription. Create your free Azure account if you don't already have one by using the link [Free Azure account](https://azure.microsoft.com/en-us/free/).
+* To deploy the Teams app to Azure as described in the last section of this article, you need an Azure account to an Azure subscription. Create your free Azure account if you don't already have one by using the link [Free Azure account](https://azure.microsoft.com/free/).
 
 ## Overview
 
@@ -471,7 +471,7 @@ To see both the app and the add-in running at the same time, take the following 
 1. In Outlook, open the Inbox of your Microsoft 365 account identity and open any message. A Contoso Add-in tab with two buttons will appear on the Home ribbon (or the Message ribbon, if you have opened the message in its own window).
 1. Click the Show Taskpane button and a task pane opens. Click the Perform an action button and a small notification appears near the top of the message.
 1. To stop debugging and uninstall the add-in, select Run | Stop Debugging in Visual Studio Code. If the Webpack dev-server window does not close, open the Visual Studio Code TERMINAL in the root of the project and run `npm stop`.
-1. If you had to manually sideload the Teams Tab app, remove it from Teams as instructed in a href="<https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/apps-upload#remove-your-app">Remove> your app.
+1. If you had to manually sideload the Teams Tab app, [remove your app from Teams](../concepts/deploy-and-publish/apps-upload.md#remove-your-app).
 
 ### Move the application to Azure
 

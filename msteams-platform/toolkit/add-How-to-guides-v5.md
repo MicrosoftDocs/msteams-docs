@@ -22,7 +22,7 @@ Teams Toolkit project templates focus on getting started with an app that implem
 | Configure Tab Capability | [How to configure Tab capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Tab-capability-within-your-Teams-app) |
 | Configure Bot Capability | [How to configure Bot capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Bot-capability-within-your-Teams-app) |
 | Configure Message Extension Capability | [How to configure Message Extension capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-configure-Message-Extension-capability-within-your-Teams-app) |
-| Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Configure-Outlook-Add-in-capability-within-your-Teams-app) |
+| Configure Outlook add-in Capability | [How to configure Outlook add-in capability within your Teams app](configure-outlook-add-in.md) |
 
 ## Open the guides from Teams Toolkit
 
