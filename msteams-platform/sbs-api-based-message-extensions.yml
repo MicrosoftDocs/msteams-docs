@@ -17,8 +17,7 @@ items:
 
     > [!NOTE]
     >
-    > * API-based message extensions only support search commands.
-    > * API-based message extensions are available only in [public developer preview](resources/dev-preview/developer-preview-intro.md).
+    > API-based message extensions only support search commands.
 
     Message extensions built using API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. API-based message extensions can help streamline workflows by reducing the need to switch between different applications.
 
@@ -50,9 +49,7 @@ items:
     > [!NOTE]
     > Custom app upload is necessary for previewing and testing apps in Teams local environment. If it isn't enabled, you can't preview and test your app in Teams local environment.
 
-   Do you already have a tenant and do you have the admin access? Let's check if you really do!
-
-   Verify if you can upload a custom app in Teams:
+   Do you already have a tenant and do you have the admin access? Let's check if you really do! Verify if you can upload a custom app in Teams: 
 
     1. In the Teams client, select the **Apps** icon.
     1. Select **Manage your apps**.
@@ -71,17 +68,17 @@ items:
    1. Go to the [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program).
    1. Select **Join Now** and follow the onscreen instructions.
    1. In the welcome screen, select **Set up E5 subscription**.
-   1. Set up your administrator account. After you finish, the following screen appears.
+   1. Create your administrator account. After you finish, the following screen appears.
 
        :::image type="content" source="~/assets/images/teams-toolkit-v2/prerequisites/microsoft-365.png" alt-text="Screenshot shows the Microsoft 365 Developer Program.":::
 
-   1. Sign in to Teams using the administrator account you just set up. Verify that you have the **Upload a custom app** option in Teams.
+   1. Sign in to Teams using the administrator account you created. Verify that you have the **Upload a custom app** option in Teams.
 
    ## Get a free Azure account
 
    If you want to host your app or access resources in Azure, you must have an Azure subscription. [Create a free account](https://azure.microsoft.com/free/) before you begin.
 
-   You have all the tools to set up your account. Next, let's set up your development environment and start building! Select the app you want to build first.
+   You have all the tools to create your account. Next, let's create your development environment and start building! Select the app you want to build first.
 
 
 - title: Create OpenAPI Description document
@@ -234,7 +231,7 @@ items:
                 "AI Detection"
             ],
             "chatbot_short_url": "https://goto.opentools.ai/c/ai-music-generator",
-            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. With advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "main_summary": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences. It provides customization options such as genre, mood, length, and instrumentation.",
             "name": "AI Music Generator",
             "opentools_url": "https://goto.opentools.ai/ai-music-generator",
             "platforms": [
@@ -280,7 +277,7 @@ items:
             },
             {
             "type": "TextBlock",
-            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. Powered by advanced AI technology, AI Music Generator makes music production accessible to everyone.",
+            "text": "AI Music Generator is an AI-powered music composing tool that allows users to create original and personalized music for various purposes. It can generate melodies, harmonies, and rhythms tailored to specific needs and preferences, with customization options such as genre, mood, length, and instrumentation. The tool is designed for creative individuals, from beginners to professionals, and can produce high-quality music in seconds. Every generated piece of music is royalty-free and can be used instantly, with no limitations on beat creation. AI Music Generator makes music production accessible to everyone.",
             "wrap": true
             },
             {
@@ -315,7 +312,7 @@ items:
        1. Go to [Adaptive Card Designer](https://adaptivecards.io/designer/).
        1. At the upper-left corner, go to **Select host app** and from the dropdown, select **Microsoft Teams**.
        1. Go to **CARD PAYLOAD EDITOR** and paste the Adaptive Card template code.
-       1. Go to **SAMPLE DATA EDITOR** and paste the GET API response that you saved earlier.
+       1. Go to **SAMPLE DATA EDITOR** and paste the API response that you saved earlier.
 
           :::image type="content" source="assets/images/Copilot/api-me-sbs-adaptive-card-designer.png" alt-text="Screenshots shows the Adaptive Card designer with the Adaptive Card template and the sample data."::: 
        

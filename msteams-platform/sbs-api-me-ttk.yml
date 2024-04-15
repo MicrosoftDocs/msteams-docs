@@ -17,9 +17,8 @@ items:
 
     > [!NOTE]
     >
-    > * API-based message extensions only support search commands.
-    > * API-based message extensions are available only in [public developer preview](resources/dev-preview/developer-preview-intro.md).
-
+    > API-based message extensions only support search commands.
+    
     Message extensions built using an API (API-based) significantly enhance the functionality of your Teams apps by allowing them to interact with external services. It helps streamline workflows by reducing the need to switch between different applications.
 
     You can use API message extension to integrate external services that are commonly used in the business workflow. For example, a business that frequently uses a CRM system for customer management could use a Messaging Extension to fetch and display customer data directly from Teams. By reducing the need to switch between different applications,  the user saves time and improves. API-based message extension is supported on Teams desktop, web, and mobile clients. 
