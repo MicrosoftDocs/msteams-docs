@@ -351,6 +351,9 @@ The tenant-level controls of application RSC permissions vary based on the resou
 
 For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
+> [!WARNING]
+> The way you manage settings for team and chat RSC permissions is changing. The pre-selection period for government clouds has begun and will run through May 14th, 2024. For all other customrs, refer to the instructions below to modify your consent settings in PowerShell. 
+
 Tenant level RSC settings are managed by PowerShell and Graph API. For more information on managing Microsoft Graph settings with PowerShell, see [get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
 
 You can use the `Connect-MgGraph` cmdlet and connect with the following permissions:
