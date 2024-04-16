@@ -116,7 +116,7 @@ Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f020
 
 Use the following deep link format can be used in a bot, connector, or message extension card for configuring a deep link to connect to a file in a channel:
 
-`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectUrl=<objectUrl>&baseUrl=<baseUrl>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 The query parameters are:
 
