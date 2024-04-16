@@ -136,31 +136,31 @@ In the **Publish** section, you can publish your app to your org or to the Teams
    > [!NOTE]
    > The app validation tool checks your app package against the test cases that Microsoft uses to review your app. Resolve errors or warnings and read the **App submission checklist** before submitting your app.
 
-   You can download the app package by selecting **Download app package** button from the **Publish to store** page.
+   You can download the app package by selecting the **Download app package** button from the **Publish to store** page.
 
 * **App package**: The app package describes how your app is configured that includes app features, required resources, and other important attributes in manifest. The app definition refers to the configuration and settings associated with the application. The Icon tab shows the icon used for your app.
 
-* **App validation**: The app validation tool evaluates your app package based on the test cases that Microsoft uses to review your app. The app validation tool identifies any errors or warnings in your app package and provides guidelines for resolution.
+* **App validation**: Evaluate your app package based on the test cases that Microsoft uses to review your app. The **App validation** tool identifies any errors or warnings in your app package and provides guidelines for resolution.
 
     If your app failed any test cases, you can review the guidelines and make necessary updates to your app package based on the Microsoft test case results. You can also download your app package and validation report.
 
     <br>
     <details>
     <summary><b>Validate your app package</b></summary><br>
-    To ensure that your app functions as expected on Teams, use the app validation tool to check your app package against Microsoft's test cases:
+    To ensure that your app functions as expected on Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
 
     1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
     1. Go to **Publish** > **App validation** > **Get started**.
 
-        :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the app validation in Teams developer portal." lightbox="../../assets/images/tdp/app-validation-get-started.png":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the App validation in Teams developer portal." lightbox="../../assets/images/tdp/app-validation-get-started.png":::
 
     1. Select the validation acknowledgments checkbox and select the **Start validation**.
 
-        :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the app validation acknowledgment of your app package." lightbox="../../assets/images/tdp/app-validation-start.png":::
+        :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the App validation acknowledgment of your app package." lightbox="../../assets/images/tdp/app-validation-start.png":::
 
         Teams Developer Portal now starts to validate your app package:
 
-        :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the app validation in progress.":::
+        :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the App validation in progress.":::
 
         After you select **Start validation**, your app validation status becomes **Created**, then it moves to **In progress** status once the app validation is initiated. When the app validation completes, the status updates to **Completed**.
 
@@ -168,7 +168,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status.":::
 
-    1. After validation, it shows the list of test cases your app has passed or failed. Here are the list of app validation test result status:<br>
+    1. After validation, it shows the list of test cases your app has passed or failed. Here is the list of app validation test result status:<br>
 
         1. **Success** - Your app validation test is successful.
         1. **Warning** - You can review and resolve the warning.
@@ -176,8 +176,6 @@ In the **Publish** section, you can publish your app to your org or to the Teams
         1. **Skipped** - Unable to execute the test case for now. You must submit the new validation request again.
 
         :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
-
-    You've successfully validated your app package in the Teams Developer Portal.
 
     </details>
 
