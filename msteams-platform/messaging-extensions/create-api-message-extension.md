@@ -141,6 +141,28 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
       * **API Key**
       * **Microsoft Entra**
 
+      # [API Key](#tab/api-key)
+
+        Use the following steps to generate and set up your API key:
+        1. Open your terminal.
+        2. To install all dependency packages, run the following command:
+           ```
+           npm install
+           ```
+        3. Once the installation is complete, generate your API key with this command:
+           ```
+           npm run keygen
+           ```
+           You should see an output similar to: "Generated a new API Key: xxx..."
+        4. Enter the generated API key into your `env/.env.*.user` file file. Replace `<your-api-key>` with the actual key:
+           ```
+           SECRET_API_KEY=<your-api-key>
+           ```
+      # [Microsoft Entra](#tab/microsoft-entra)
+
+        1. In the manifest.json file, update `${{OPENAPI_SERVER_DOMAIN}}` in the `"resource"` property with the server.url domain in the OpenAPI Specification file.
+        ---
+
    1. Select a programming language.
 
        :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-programming language.png" alt-text="Screenshot shows the programming language options.":::
