@@ -507,6 +507,73 @@ The properties in OpenAPI Description document are mapped to the Adaptive Card t
 
 </details>
 
+##### Multi parameters
+
+Multi parameters allow API-based message extensions to have more than one input type for query commands. For example, you can search for animes by genre, rating, status, and date. The developer can specify the input types, titles, descriptions, and required fields for the parameters in the manifest.
+
+* The `isRequired` property in the parameter field indicates if a parameter is mandatory for the query command.
+* The `inputType`, `title`, and `description` properties in  `parameters` must match the values in the OpenAPI Description document.
+
+**Example**
+
+```json
+{
+      "type": "AdaptiveCard",
+      "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+      "version": "1.6",
+      "body": [
+          {
+              "type": "Input.Text",
+              "placeholder": "Query to search for authors",
+              "label": "Search query",
+             "id": "query"
+         },
+         {
+             "type": "Input.ChoiceSet",
+             "choices": [
+                 {
+                     "title": "English",
+                     "value": "en"
+                 },
+                 {
+                     "title": "Tamil",
+                     "value": "ta"
+                 },
+                 {
+                     "title": "Spanish",
+                     "value": "es"
+                 }
+             ],
+             "placeholder": "The languages to scope the quotes to",
+             "id": "language",
+             "label": "Language"
+         },
+         {
+             "type": "Input.Toggle",
+             "title": "Show additional details",
+             "label": "Show additional details",
+             "id": "detailed"
+         },
+         {
+             "type": "Input.Number",
+             "placeholder": "Response is paged. This parameter controls where response starts the listing at",
+             "id": "start",
+             "label": "start",
+             "value": 0,
+             "isVisible": false
+         },
+         {
+             "type": "Input.Number",
+             "placeholder": "Response is paged. This parameter controls how many is returned in the result. The maximum depends on the subscription level.",
+             "id": "limit",
+             "label": "limit",
+             "value": 30,
+             "isVisible": false
+         }
+     ]
+ }  
+```
+
 ## Authentication
 
 You can implement authentication in API-based message extensions to provide secure and seamless access to applications. If your message extension requires authentication, add the `authorization` property under `composeExtensions` in app manifest and define the type of authentication for your application by setting the `authType` property under `authorization`. To enable authentication for your message extension, update your app manifest with any of the following authentication methods:
@@ -608,6 +675,8 @@ You can authorize incoming requests to your service by configuring a static API 
         }
       },
 ```
+
+You can also add an API key authentication for your message extension using Teams Toolkit for Visual Studio Code. For more information, see [Create an API-based message extension](create-api-message-extension.md).
 
 </details>
 <br/>
