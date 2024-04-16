@@ -193,6 +193,8 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
 
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
+   1. Under **LIFECYCLE**, select **Provision**.
+   1. In the pop-up that appears, enter the **API key** and select **Enter**.
 
     ---
 
