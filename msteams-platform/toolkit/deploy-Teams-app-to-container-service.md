@@ -154,13 +154,13 @@ Deploy a Teams bot to your personal Kubernetes cluster or a Kubernetes service f
 
 ### Architecture
 
-image
+:::image type="content" source="../assets/images/teams-toolkit-v2/on-premise-kubernetes-cluster-architecture.png" alt-text="Screenshot shows the on-premise kubernetes cluster architecture.":::
 
-Teams backend server communicates with your bot via the Azure Bot Service, so the bot definitely needs a public HTTPS address. You need to deploy an ingress controller and provision a TLS certificate on your Kubernetes.
+The Teams backend server interacts with your bot through the Azure Bot Service, necessitating a public HTTPS address for your bot. To achieve this, deploy an ingress controller and provide a TLS certificate on your Kubernetes.
 
-The bot needs to authenticate to Azure Bot Service by Microsoft Entra ID, so you should provision a secret that contains the App ID and password on your Kubernetes and refer to it in your container runtime.
+To authenticate the bot with Azure Bot Service, provision a secret on your Kubernetes that includes the App ID and password from Entra ID. Then, reference this secret in your container runtime.
 
-## Provision resources with Teams Toolkit
+### Provision resources with Teams Toolkit
 
 You can leverage the provision command in Teams Toolkit to create the Teams app with bot capability, the Azure Bot Service and the Microsoft Entra ID for authentication.
 
@@ -199,7 +199,7 @@ Create a Kubernetes secret that contains BOT_ID and BOT_PASSWORD. You can store 
 
 kubectl create secret generic dev-secrets --from-env-file ./deploy/.env.dev-secrets -n $NAMESPACE
 
-## Apply the deployment
+### Apply the deployment
 
 The sample contains an example deployment file deploy/sso-bot.yaml for your reference. You need to update the placeholders before applying it.
 
@@ -220,7 +220,7 @@ Deploying a Teams tab app to AKS is not more complicated than deploying a web ap
 
 You can also deploy a Teams tab app to your own Kubernetes cluster or Kubernetes service in other Cloud services, which involves similar steps to deploying on Azure Kubernetes Service.
 
-## Setup ingress with HTTPS on AKS
+### Setup ingress with HTTPS on AKS
 
 Ensure you have an existing Azure Kubernetes Service connected to your Azure Container Registry, which hosts your container images. If you do not have one, please refer to this tutorial: AKS Tutorials.
 Run the following commands to install ingress controller and certificate manager. This is not the only way to set up ingress and TLS certificates on your Kubernetes cluster. For more information, refer to Create an ingress controller and Use TLS with Let's Encrypt certificates.
@@ -250,7 +250,7 @@ ingress-nginx-controller LoadBalancer $CLUSTER_IP $EXTERNAL_IP 80:32514/TCP,443:
 
 $DNSLABEL.$REGION.cloudapp.azure.com
 
-## Provision resources with Teams Toolkit
+### Provision resources with Teams Toolkit
 
 You can leverage the provision command in Teams Toolkit to create the Teams app with tab capability and the Microsoft Entra ID for authentication if necessary. You can make some updates to the sample code to make it works with your Azure Kubernetes Service.
 
@@ -262,7 +262,7 @@ Run the provision command in Teams Toolkit.
 
 If you leverage Teams Toolkit to create a Microsoft Entra ID, you may want to configure Entra ID as environment variables of your applications. After provisioning, you can find the AAD_APP_CLIENT_ID in env/.env.${envName} file and the encrypted SECRET_AAD_APP_CLIENT_SECRET in env/.env.${envName}.user file. Click the Decrypt secret annotation to get the real value of SECRET_AAD_APP_CLIENT_SECRET.
 
-## Apply the deployment
+### Apply the deployment
 
 The sample contains an example deployment file deploy/tab.yaml for your reference. You need to update the placeholders before applying it.
 
