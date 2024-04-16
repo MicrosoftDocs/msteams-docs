@@ -114,7 +114,7 @@ schemas:
        description: Message of the error.
 ```
 
-For more information, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
+For more information about writing an OpenAPI specification, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
 
 </details>
 
@@ -239,7 +239,8 @@ The following code is an example of a Response rendering template: <br/>
 
   ```json
   {
-  "version": "1.0",
+  "version": "devPreview",
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json",
   "jsonPath": "repairs",
   "responseLayout": "grid",
   "responseCardTemplate": {
@@ -344,7 +345,7 @@ The following code is an example of a Response rendering template: <br/>
 
 #### Json path
 
-The JSON path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
+The JSON path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined at [ResponseRenderingTemplate schema](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json). If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
 
 **Example**
 Let's say you have the below JSON for a list of products and you want to create a card result for each entry.
@@ -534,7 +535,7 @@ When an API request is initiated, the system retrieves the API key from a secure
 
 ### Register an API key
 
-API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  You can then paste the API key ID in the simplified message extension and the API key ID enables the authentication for the API calls that are behind an auth.
+API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  You can then paste the API key ID in the message extension and the API key ID enables the authentication for the API calls that are behind an auth.
 
 To register an API Key, follow these steps:
 
@@ -553,7 +554,7 @@ To register an API Key, follow these steps:
 
 1. Under **Set a target tenant**, select any of the following:
 
-   * **Home tenent**
+   * **Home tenant**
    * **Any tenant**
 
    |Option   |When to use  | Description|
@@ -826,7 +827,7 @@ You've successfully configured app scope, permissions, and client applications. 
 
 Update the following properties in the app manifest file:
 
-* `webApplicationInfo`: Enables SSO for your app to help app users access your API-based message extension app seamlessly. section, which contains crucial details about your app. The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's subdomain URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
+* `webApplicationInfo`: Enables SSO for your app to help app users access your API-based message extension app seamlessly. section, which contains crucial details about your app. The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's application ID URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
 
    &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
@@ -880,7 +881,7 @@ For more information, see [composeExtensions.commands](../resources/schema/manif
 
 #### Authenticate token
 
-When the message extension calls the API during authentication, it receives a request with the user’s authentication token (AED token). The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
+When the message extension calls the API during authentication, it receives a request with the user’s authentication token. The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
 
 ```http
 GET /api/resource HTTP/1.1
@@ -894,7 +895,7 @@ After the API-based message extension gets a request header with token, perform 
 
   The following is an example of a JSON Web Token (JWT) with a header and response:
 
-  # [Token V2](#tab/token-v2)
+# [Token V2](#tab/token-v2)
 
   ```json
   {
@@ -923,7 +924,7 @@ After the API-based message extension gets a request header with token, perform 
     }
   ```
 
-  # [Token V1](#tab/token-v1)
+# [Token V1](#tab/token-v1)
 
   ```json
   {
@@ -984,11 +985,10 @@ After the API-based message extension gets a request header with token, perform 
 
       **Common HTTP Error Responses**:
 
-      * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
-      * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-      * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
+    * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
+    * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
+    * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
-

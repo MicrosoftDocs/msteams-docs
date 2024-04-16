@@ -28,6 +28,11 @@ See the video to learn more about building an API-based message extension using 
 
 ## Prerequisites
 
+```yml
+
+
+
+
 Before you get started, ensure that you adhere to the following requirements:
 
 > [!div class="checklist"]
