@@ -9,6 +9,9 @@ ms.date: 12/09/2022
 
 # Create and send messages
 
+> [!NOTE]
+> If you're using connectors to automate repetitive tasks, we are transitioning to Workflow for more efficient automation.
+
 You can create actionable messages and send it through Incoming Webhook or connector for Microsoft 365 Groups.
 
 ## Create actionable messages
