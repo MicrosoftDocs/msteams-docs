@@ -52,7 +52,7 @@ The Teams backend server communicates with your bot via the Azure Bot Service, w
 
 Your bot authenticates with the Azure Bot Service using Microsoft Entra ID, so you should provision a secret that contains the App ID and password on your Kubernetes and reference it in your container runtime.
 
-## Setup ingress with HTTPS on AKS
+### Setup ingress with HTTPS on AKS
 
 Ensure you have an existing Azure Kubernetes Service connected to your Azure Container Registry, which hosts your container images. If you do not have one, please refer to this tutorial: AKS Tutorials.
 Run the following commands to install ingress controller and certificate manager. This is not the only way to set up ingress and TLS certificates on your Kubernetes cluster. For more information, refer to Create an ingress controller and Use TLS with Let's Encrypt certificates.
@@ -82,7 +82,7 @@ ingress-nginx-controller LoadBalancer $CLUSTER_IP $EXTERNAL_IP 80:32514/TCP,443:
 
 $DNSLABEL.$REGION.cloudapp.azure.com
 
-## Provision resources with Teams Toolkit
+### Provision resources with Teams Toolkit
 
 You can leverage the provision command in Teams Toolkit to create the Teams app with bot capability, the Azure Bot Service and the Microsoft Entra ID for authentication. You can make some updates to the sample code to make it works with your Azure Kubernetes Service.
 
@@ -107,7 +107,7 @@ Create a Kubernetes secret that contains BOT_ID and BOT_PASSWORD. You can store 
 
 kubectl create secret generic dev-secrets --from-env-file ./deploy/.env.dev-secrets -n $NAMESPACE
 
-## Apply the deployment
+### Apply the deployment
 
 The sample contains an example deployment file deploy/sso-bot.yaml for your reference. You need to update the placeholders before applying it.
 
