@@ -19,6 +19,16 @@ Capture the attention of users with the hero showcase card, which features a cap
 
 Download the sample here.
 
+# [Desktop](#tab/desktop1)
+
+:::image type="content" source="../../assets/images/adaptive-cards/recipe-hero-desktop.png" alt-text="Screenshot shows the desktop version of the recipe hero Adaptive Card sample.":::
+
+# [Mobile](#tab/mobile1)
+
+:::image type="content" source="../../assets/images/adaptive-cards/recipe-hero-mobile.png" alt-text="Screenshot shows the mobile version of the recipe hero Adaptive Card sample.":::
+
+---
+
 ## Work item thumbnail
 
 This sleek card design optimizes space with a small image, making it ideal for displaying concise information.
@@ -37,22 +47,23 @@ Use this Adaptive Card sample to showcase bite-sized video content, such as tuto
 
 ## Course video
 
-This versatile and robust card serves as a learning hub for video content. Tailor it for your specific needs, whether it's a series of coruses, tutorials, or informative clips. Customize titles, descriptions, and author information to create engaging viewing experiences.
+This robust card sample serves as a learning hub with video content. Customize it with a series of courses, tutorials, or informative clips. Modify the title, description, and information about the author to suit the needs of your users.
 
 ## Standard video
 
-Get straight to the point with this compact design. From tech updates to creative inspiration, this card delivers. Tap the overflow menu for more options—bookmark, share, or dive deeper.
+Get straight to the point with this compact, standard video card design. Use this card to share a range of content, from tech updates to creative inspiration. Users have the option to select the overflow menu for additional features, such as bookmarks. They can also take actions like sharing or learning more about the content.
 
 ## Issue status
 
-The issue card template is designed to highlight a unique issue and provides top-level details such as the status and owner. It can be easily customized with other pertinent information.
+The issue card sample is designed to highlight a unique issue and provides important details such as the status and owner. You can easily customize the card with other relevant information, such as priority or due date.
 
 ## Account details
 
-This design focuses on a high-level summary for an individual sales opportunity. It displays the company name, opportunity status, estimated revenue, and account owner. Additionally, there are buttons for further exploration.
+This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to explore further.
 
 ## See also
 
-[Designing Adaptive Cards for your Microsoft Teams app](design-effective-cards.md)
-[Media elements in Adaptive Card](media-elements-in-adaptive-cards.md)
-[Types of cards](cards-reference.md)
+* [Designing Adaptive Cards for your Microsoft Teams app](design-effective-cards.md)
+* [Media elements in Adaptive Card](media-elements-in-adaptive-cards.md)
+* [Types of cards](cards-reference.md)
+* [Adaptive Card Designer](https://adaptivecards.io/designer/)
