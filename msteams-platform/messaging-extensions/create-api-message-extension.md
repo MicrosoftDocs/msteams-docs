@@ -143,21 +143,29 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
 
       # [API Key](#tab/api-key)
 
-        Use the following steps to generate and set up your API key:
+        To generate and set up your API key, follow these steps:
+
         1. Open your terminal.
-        2. To install all dependency packages, run the following command:
+        2. Run the following command to install all dependency packages:
+
            ```
            npm install
            ```
-        3. Once the installation is complete, generate your API key with this command:
+
+        3. Run the following command to generate your API key:
+
            ```
            npm run keygen
            ```
-           You should see an output similar to: "Generated a new API Key: xxx..."
-        4. Enter the generated API key into your `env/.env.*.user` file file. Replace `<your-api-key>` with the actual key:
+
+           The API ket is generated as "Generated a new API Key: xxx..."
+
+        4. Enter the generated API key into your `env/.env.*.user` file. Replace `<your-api-key>` with the actual key:
+
            ```
            SECRET_API_KEY=<your-api-key>
            ```
+
       # [Microsoft Entra](#tab/microsoft-entra)
 
         1. In the manifest.json file, update `${{OPENAPI_SERVER_DOMAIN}}` in the `"resource"` property with the server.url domain in the OpenAPI Specification file.
@@ -194,7 +202,12 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
    1. Under **LIFECYCLE**, select **Provision**.
-   1. In the pop-up that appears, enter the **API key** and select **Enter**.
+   1. If your OpenAPI specification document has a security scheme `bearerAuth` which uses the HTTP bearer scheme, enter the API key in the command window and select **Enter**.
+
+        :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-api-key.png" alt-text="Screenshot shows the Enter API key command that appears in Teams Toolkit for visual studio code.":::
+
+      > [!NOTE]
+      > The API key must be a string with 10 to 128 characters.
 
     ---
 
@@ -336,7 +349,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
       :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Teams Toolkit in Visual Studio.":::
 
       If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
-
+   
    1. Right-click your project and select **Teams Toolkit** > **Preview in** > **Teams**.
    1. Select the **manifest.json** file and select **Open**. Visual Studio launches a Teams web client.
 
