@@ -137,9 +137,11 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
    # [New API](#tab/new-api)
 
    1. Select the authentication type:
-      * **None**
-      * **API Key**
-      * **Microsoft Entra**
+      * **None**: Select if you don't want any authentication for the user to access the API.
+      * **API Key**: Select if you want to authenticate using an API key.
+      * **Microsoft Entra**: Select if you want to authenticate using app user's Teams identity.
+
+      :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-auth-type.png" alt-text="Screenshot shows the authentication options for API-based message extension.":::
 
    1. Select a programming language.
 
@@ -158,18 +160,15 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
         |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
         |`repairsData.json`    |  The data source for the repair API.       |
 
-   1. Based on the options selected in **step 1**, select the following:
+   1. Based on the oprtions selected in **step a**, follow these steps:
+   
+      * If you've selected **none** or **Microsoft Entra**, skip to the next step.
+      * If you've selected API key, follow these steps:
 
-      <details><summary>None</summary>
-      **Skip to step 8**.
-      </details>
-      </br>
-      <details><summary>API key</summary>
+         Generate and set up your API key as follows:
 
-        To generate and set up your API key, follow these steps:
-
-        1. Open your terminal.
-        2. Run the following command to install all dependency packages:
+        1. In Visual Studio Code, go to **View** > **Terminal**.
+        2. Run the following command to install dependency packages:
 
            ```
            npm install
@@ -189,11 +188,6 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
            SECRET_API_KEY=<your-api-key>
            ```
       </details>
-      <br/>
-      <details><summary>Microsoft Entra</summary>
-      **Skip to step 8.**
-      </details>
-
 
    # [OpenAPI Description](#tab/openapi-specification)
 
