@@ -141,7 +141,30 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
       * **API Key**
       * **Microsoft Entra**
 
-      # [API Key](#tab/api-key)
+   1. Select a programming language.
+
+       :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-programming language.png" alt-text="Screenshot shows the programming language options.":::
+
+   1. Select **Default folder**.
+
+   1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
+   1. To get started, you must update the source code in the following files:
+
+        |File  |Contents |
+        |---------|---------|
+        |`repair/function.json`    |A configuration file that defines the function’s trigger and other settings. For more information, see [Azure Functions](/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=python-v2%2Cisolated-process%2Cnodejs-v4%2Cfunctionsv2&pivots=programming-language-csharp)        |
+        |`repair/index.ts`     | The main file of a function in Azure Functions.        |
+        |`appPackage/apiSpecificationFiles/repair.yml`     |  A file that describes the structure and behavior of the repair API.       |
+        |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
+        |`repairsData.json`    |  The data source for the repair API.       |
+
+   1. Based on the options selected in **step 1**, select the following:
+
+      <details><summary>None</summary>
+      **Skip to step 8**.
+      </details>
+      </br>
+      <details><summary>API key</summary>
 
         To generate and set up your API key, follow these steps:
 
@@ -165,28 +188,12 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
            ```
            SECRET_API_KEY=<your-api-key>
            ```
+      </details>
+      <br/>
+      <details><summary>Microsoft Entra</summary>
+      **Skip to step 8.**
+      </details>
 
-      # [Microsoft Entra](#tab/microsoft-entra)
-
-        1. In the manifest.json file, update `${{OPENAPI_SERVER_DOMAIN}}` in the `"resource"` property with the server.url domain in the OpenAPI Specification file.
-        ---
-
-   1. Select a programming language.
-
-       :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-programming language.png" alt-text="Screenshot shows the programming language options.":::
-
-   1. Select **Default folder**.
-
-   1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
-   1. To get started, you must update the source code in the following files:
-
-        |File  |Contents |
-        |---------|---------|
-        |`repair/function.json`    |A configuration file that defines the function’s trigger and other settings. For more information, see [Azure Functions](/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=python-v2%2Cisolated-process%2Cnodejs-v4%2Cfunctionsv2&pivots=programming-language-csharp)        |
-        |`repair/index.ts`     | The main file of a function in Azure Functions.        |
-        |`appPackage/apiSpecificationFiles/repair.yml`     |  A file that describes the structure and behavior of the repair API.       |
-        |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
-        |`repairsData.json`    |  The data source for the repair API.       |
 
    # [OpenAPI Description](#tab/openapi-specification)
 
