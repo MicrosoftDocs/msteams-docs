@@ -151,14 +151,17 @@ The following example shows how users can manage licenses for third-party apps f
 
     :::image type="content" source="../../../../assets/images/saas-offer/unassign-button.png" alt-text="Screenshot shows the unassign option highlighted in red to unassign the selected users.":::
 
-## Promote your app
+## Promote app adoption
+
+Here are some best practices that you can use to promote third-party apps:
 
 You can promote third-party app by one of the following methods:
 
-* Experimentation
-* Banner promotion
+* Provide a Freemium account that account for better user conversion.
+* Provide Share call-to-action button that helps users to share the app enabling onboarding of team members.
+* Banner promotion for marketing campaign that leads to higher app installation and meaningful engagement.
 * Solving blockers
-* Adoption change management
+* Adoption change management to reach users on a constant basis
 * GTM
 
 ## Admin purchasing experience
