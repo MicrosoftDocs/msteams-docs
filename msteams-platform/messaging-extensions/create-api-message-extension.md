@@ -136,6 +136,10 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
 
    # [New API](#tab/new-api)
 
+
+   > [!NOTE]
+   > The authentication flow for Microsoft Entra is only functional in remote environments. You can't test it in a local environment due to the lack of authentication support in Azure Function core tools. The repair API can be invoked anonymously in a local environment.
+
    1. Select the authentication type:
       * **None**: Select if you don't want any authentication for the user to access the API.
       * **API Key**: Select if you want to authenticate using an API key.
