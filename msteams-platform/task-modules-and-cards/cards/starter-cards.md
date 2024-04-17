@@ -79,11 +79,11 @@ Download the sample here.
 
 # [Desktop](#tab/desktop4)
 
-:::image type="content" source="../../assets/images/adaptive-cards/communication-card-desktop.png" alt-text="Screenshot shows the desktop version of the communcations Adaptive Card sample.":::
+:::image type="content" source="../../assets/images/adaptive-cards/communication-card-desktop.png" alt-text="Screenshot shows the desktop version of the communication Adaptive Card sample.":::
 
 # [Mobile](#tab/mobile4)
 
-:::image type="content" source="../../assets/images/adaptive-cards/communication-card-mobile.png" alt-text="Screenshot shows the mobile version of the communcations Adaptive Card sample.":::
+:::image type="content" source="../../assets/images/adaptive-cards/communication-card-mobile.png" alt-text="Screenshot shows the mobile version of the communication Adaptive Card sample.":::
 
 ---
 
@@ -127,7 +127,11 @@ Download the sample here.
 
 # [Desktop](#tab/desktop7)
 
+:::image type="content" source="../../assets/images/adaptive-cards/standard-video-desktop.png" alt-text="Screenshot shows the desktop version of the standard video Adaptive Card sample.":::
+
 # [Mobile](#tab/mobile7)
+
+:::image type="content" source="../../assets/images/adaptive-cards/standard-video-mobile.png" alt-text="Screenshot shows the mobile version of the standard video Adaptive Card sample.":::
 
 ---
 
@@ -139,7 +143,11 @@ Download the sample here.
 
 # [Desktop](#tab/desktop8)
 
+:::image type="content" source="../../assets/images/adaptive-cards/issue-status-desktop.png" alt-text="Screenshot shows the desktop version of the issue status Adaptive Card sample.":::
+
 # [Mobile](#tab/mobile8)
+
+:::image type="content" source="../../assets/images/adaptive-cards/issue-status-mobile.png" alt-text="Screenshot shows the mobile version of the issue status Adaptive Card sample.":::
 
 ---
 
@@ -151,7 +159,11 @@ Download the sample here.
 
 # [Desktop](#tab/desktop9)
 
+:::image type="content" source="../../assets/images/adaptive-cards/account-details-desktop.png" alt-text="Screenshot shows the desktop version of the account details Adaptive Card sample.":::
+
 # [Mobile](#tab/mobile9)
+
+:::image type="content" source="../../assets/images/adaptive-cards/account-details-mobile.png" alt-text="Screenshot shows the mobile version of the account details Adaptive Card sample.":::
 
 ---
 
