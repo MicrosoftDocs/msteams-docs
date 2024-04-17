@@ -39,7 +39,7 @@ Admins can set up an app governance process that manages your organization's IT 
 
 ## Understand how you can drive app adoption
 
-By following these five easy steps, you make it easy for your customers to adopt apps within their organizations.
+You can help your customers to adopt apps within their organizations by following these steps.
 
 :::row:::
    :::column span="1":::
