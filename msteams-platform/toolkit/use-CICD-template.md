@@ -138,7 +138,7 @@ To set up the pipeline with GitHub, follow these steps:
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manifest.png" alt-text="Screenshot shows the Teams app ID in manifest file.":::
 
-1. Navigate to your repository’s **Settings** and select **Secrets and variables** > **Actions**.
+1. In the GitHub, navigate to your repository’s **Settings** and select **Secrets and variables** > **Actions**.
 
     Update the variable keys that you've gathered for the following variables:
 
