@@ -153,16 +153,14 @@ The following example shows how users can manage licenses for third-party apps f
 
 ## Promote app adoption
 
-Here are some best practices that you can use to promote third-party apps:
-
-You can promote third-party app by one of the following methods:
+You can promote third-party app by adopting more than one of the following best practices:
 
 * Provide a Freemium account that account for better user conversion.
-* Provide Share call-to-action button that helps users to share the app enabling onboarding of team members.
+* Provide call-to-action button that can be shared in an Adaptive Card for users to share the app and onboard other team members.
 * Banner promotion for marketing campaign that leads to higher app installation and meaningful engagement.
+* Adoption change management through email to reach users on a constant basis.
 * Solving blockers
-* Adoption change management to reach users on a constant basis
-* GTM
+* Growth Marketing
 
 ## Admin purchasing experience
 
