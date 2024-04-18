@@ -266,8 +266,8 @@ The properties for Adaptive Card JSON file are as follows:
 
 1. Test your Adaptive Card with Postman:
 
-    * Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up Incoming Webhook.
-    * Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.
+    1. Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up Incoming Webhook.
+    1. Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.
 
 > [!TIP]
 > Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) to test the body of POST request.
