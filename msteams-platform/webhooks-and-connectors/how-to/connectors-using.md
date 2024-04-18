@@ -192,14 +192,14 @@ To post a message to the webhook with PowerShell, follow these steps:
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-To send Adaptive Cards with either text or a Base64 encoded image through an Incoming Webhook, follow these steps:
+To send Adaptive Cards with text or a Base64 encoded image through an Incoming Webhook, follow these steps:
 
 1. [Set up a custom webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 1. Create Adaptive Card JSON file using the following code:
 
 # [Text](#tab/text1)
 
-    ```json
+```json
     {
        "type":"message",
        "attachments":[
@@ -220,11 +220,18 @@ To send Adaptive Cards with either text or a Base64 encoded image through an Inc
           }
        ]
     }
-    ```
+```
+
+The properties for Adaptive Card JSON file are as follows:
+
+* The `"type"` field must be `"message"`.
+* The `"attachments"` array contains a set of card objects.
+* The `"contentType"` field must be set to Adaptive Card type.
+* The `"content"` object is the card formatted in JSON.
 
 # [Base64 encoded image](#tab/image1)
 
-    ```json
+```json
     {
       "type": "message",
       "attachments": [
@@ -244,18 +251,18 @@ To send Adaptive Cards with either text or a Base64 encoded image through an Inc
         }
       ]
     }
-    ```
+```
 
-    In this example, the image is included as an attachment of type `Image` with the URL set to the Base64 encoded image data. Ensure that you replace `/xxxxxxxx` with the actual Base64 encoded image data.
+In this example, the image is included as an attachment of type `Image` with the URL set to the Base64 encoded image data. Ensure that you replace `/xxxxxxxx` with the actual Base64 encoded image data.
+
+The properties for Adaptive Card JSON file are as follows:
+
+* The `"type"` field must be `"message"`.
+* The `"attachments"` array contains a set of card objects.
+* The `"contentType"` field must be set to Adaptive Card type.
+* The `"content"` object is the card formatted in JSON.
 
 ---
-
-    The properties for Adaptive Card JSON file are as follows:
-
-    * The `"type"` field must be `"message"`.
-    * The `"attachments"` array contains a set of card objects.
-    * The `"contentType"` field must be set to Adaptive Card type.
-    * The `"content"` object is the card formatted in JSON.
 
 1. Test your Adaptive Card with Postman:
 
