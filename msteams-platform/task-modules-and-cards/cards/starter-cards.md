@@ -8,7 +8,7 @@ ms.date: 04/12/2024
 
 # Teams Adaptive Card starter collection
 
-This article provides a curated set of nine Adaptive Card samples for Microsoft Teams, crafted by Microsoft. The samples serve as a practical starting point to inspire you to design your own Adaptive Card. They help you understand Microsoft’s design principles, offer insights into the proper structure, and explore interaction patterns in Adaptive Cards. Use the templates as they are, or customize them for your app's unique use case scenarios, and create an engaging user experience.
+This article provides a curated set of nine Adaptive Card samples for Microsoft Teams, created by Microsoft. The samples serve as a practical starting point to inspire you to design your own Adaptive Card. They help you understand Microsoft’s design principles, offer insights into the proper structure, and explore interaction patterns in Adaptive Cards. Use the following templates as they are, or customize them for your app's unique use case scenarios to create an engaging user experience:
 
 * [Recipe hero](#recipe-hero)
 * [Work item thumbnail](#work-item-thumbnail)
@@ -57,7 +57,7 @@ Download the sample here.
 
 ## List
 
-Use this card to showcase a selection of personalized content, curated specifically for your users. Highlight what’s most important to them, from articles and videos to courses. Users can select any module to explore its content in more depth or open it for a comprehensive view within the app.
+Use this card to showcase a selection of personalized content, curated specifically for your users. Highlight what’s most important to them, such as articles, videos, or courses. Users can select any module to explore its content or open it for a comprehensive view within the app.
 
 Download the sample here.
 
@@ -153,7 +153,7 @@ Download the sample here.
 
 ## Account details
 
-This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to explore further.
+This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to further explore the content.
 
 Download the sample here.
 
