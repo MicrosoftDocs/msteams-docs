@@ -11,6 +11,21 @@ ms.date: 09/29/2023
 
 Microsoft Teams plays a key role to facilitate secure and efficient communication across various government sectors and agencies. Government entities handle sensitive and confidential data and there's a crucial need for cloud platforms that are secure and compliant. To meet the stringent security requirements, Microsoft offers the following specialized government cloud services:
 
+:::row:::
+   :::column:::
+      :::image type="icon" source="../assets/images/app-fundamentals/gcc.png" link="/microsoftteams/plan-for-government-gcc.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../assets/images/app-fundamentals/gcc-high.png" link="/microsoftteams/plan-for-government-gcc-high.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../assets/images/app-fundamentals/dod.png" link="/microsoftteams/plan-for-government-dod.md" border="false":::
+   :::column-end:::
+   :::column:::
+      :::image type="icon" source="../assets/images/app-fundamentals/gallatin.png" link="/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet.md" border="false":::
+   :::column-end:::
+:::row-end:::
+
 * [Government Community Cloud (GCC)](/microsoftteams/plan-for-government-gcc)
 * [Government Community Cloud High (GCC High)](/microsoftteams/plan-for-government-gcc-high)
 * [Department of Defense (DOD)](/microsoftteams/plan-for-government-dod)
