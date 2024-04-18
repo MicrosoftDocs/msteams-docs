@@ -59,13 +59,13 @@ During local debug or provision process, Teams Toolkit loads app manifest from `
 
 `env.dev`
 
-    ```bash
+```bash
     TEAMS_APP_DESCRIPTION=This is an amazing app
-    ```
+```
 
 `manifest.json`
 
-    ```json
+```json
     {
         "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
         "manifestVersion": "1.16",
@@ -74,7 +74,7 @@ During local debug or provision process, Teams Toolkit loads app manifest from `
             "full": "Full description of tab0418"
         },
     }
-    ```
+```
 
 ## Validate your app
 
