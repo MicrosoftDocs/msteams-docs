@@ -192,10 +192,12 @@ To post a message to the webhook with PowerShell, follow these steps:
 > * All native Adaptive Card schema elements, except `Action.Submit`, are fully supported.
 > * The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), and [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html).
 
-To send Adaptive Cards through an Incoming Webhook, follow these steps:
+To send Adaptive Cards with either text or a Base64 encoded image through an Incoming Webhook, follow these steps:
 
 1. [Set up a custom webhook](~/webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 1. Create Adaptive Card JSON file using the following code:
+
+# [Text](#tab/text1)
 
     ```json
     {
@@ -220,27 +222,7 @@ To send Adaptive Cards through an Incoming Webhook, follow these steps:
     }
     ```
 
-    The properties for Adaptive Card JSON file are as follows:
-
-    * The `"type"` field must be `"message"`.
-    * The `"attachments"` array contains a set of card objects.
-    * The `"contentType"` field must be set to Adaptive Card type.
-    * The `"content"` object is the card formatted in JSON.
-
-1. Test your Adaptive Card with Postman:
-
-    * Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up Incoming Webhook.
-    * Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.
-
-> [!TIP]
-> Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) to test the body of POST request.
-
-## Send Adaptive Cards having Base64 encoded image using an Incoming Webhook
-
-You can also send Adaptive Cards with a Base64 encoded image through an Incoming Webhook using the following steps:
-
-1. Set up a custom webhook in Teams.
-1. Create Adaptive Card JSON file using the following code:
+# [Base64 encoded image](#tab/image1)
 
     ```json
     {
@@ -266,6 +248,8 @@ You can also send Adaptive Cards with a Base64 encoded image through an Incoming
 
     In this example, the image is included as an attachment of type `Image` with the URL set to the Base64 encoded image data. Ensure that you replace `/xxxxxxxx` with the actual Base64 encoded image data.
 
+---
+
     The properties for Adaptive Card JSON file are as follows:
 
     * The `"type"` field must be `"message"`.
@@ -275,8 +259,11 @@ You can also send Adaptive Cards with a Base64 encoded image through an Incoming
 
 1. Test your Adaptive Card with Postman:
 
-    * Test the Adaptive Card using Postman to send a POST request to the URL, created to set up Incoming Webhook.
+    * Test the Adaptive Card using [Postman](https://www.postman.com) to send a POST request to the URL, created to set up Incoming Webhook.
     * Paste the JSON file in the body of the request and view the Adaptive Card message in Teams.
+
+> [!TIP]
+> Use Adaptive Card [code samples and templates](https://adaptivecards.io/samples) to test the body of POST request.
 
 ## Rate limiting for connectors
 
