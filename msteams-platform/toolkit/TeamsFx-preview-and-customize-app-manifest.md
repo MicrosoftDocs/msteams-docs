@@ -59,7 +59,7 @@ During local debug or provision process, Teams Toolkit loads app manifest from `
 
 `env.dev`
 
-    ```
+    ```bash
     TEAMS_APP_DESCRIPTION=This is an amazing app
     ```
 
@@ -133,9 +133,9 @@ teamsfx update teams-app
 
 If the app manifest file is outdated due to configuration file or template changes, select any one of the following actions:
 
-* Preview only: Local app manifest file is overwritten according to current configuration.
-* Preview and update: Local app manifest file is overwritten according to current configuration and also updated to Teams platform.
-* Cancel: No action is taken.
+* **Preview only**: Local app manifest file is overwritten according to current configuration.
+* **Preview and update**: Local app manifest file is overwritten according to current configuration and also updated to Teams platform.
+* **Cancel**: No action is taken.
 
 ## To preview values for local and dev environment
 
@@ -150,7 +150,7 @@ You can go to `.env` file by selecting CodeLens, which provides a dropdown list 
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/select-env-with-local.png" alt-text="Screenshot shows the selection of dev environment.":::
 
-To preview values for all the environments, you can hover over the placeholder. It shows a list of environment names and corresponding values. If you didn't provision the environment or execute local debug, the environment variables might not exist. Select **Teams: Provision** in the command palette or debug the app locally to see the placeholder value.
+To preview values for all the environments, you can hover over the placeholder. It shows a list of environment names and corresponding values. If you didn't provision the environment or execute local debug, the environment variables might not exist. Provision or debug the app locally to see the placeholder value.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/hover-v5.png" alt-text="Screenshot shows the placeholder when hovered displays a list with environment names and corresponding values.":::
 
