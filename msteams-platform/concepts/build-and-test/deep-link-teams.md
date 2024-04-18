@@ -16,11 +16,11 @@ In this article, you’ll learn to create:
 
 - [Deep link to start a new chat](#deep-link-to-start-a-new-chat)<br>
 - [Deep link to navigate to a chat](#deep-link-to-navigate-to-a-chat)<br>
-- [Deep link to navigate to channel conversation](#deep-links-to-navigate-to-channel-conversation)<br>
-- [Deep link to navigate to chat messages](#deep-links-to-navigate-to-chat-messages)<br>
+- [Deep link to navigate to channel conversation](#deep-link-to-navigate-to-channel-conversation)<br>
+- [Deep link to navigate to chat messages](#deep-link-to-navigate-to-chat-messages)<br>
 - [Deep link to navigate to a team](#deep-link-to-navigate-to-a-team)<br>
 - [Deep link to navigate to channel](#deep-link-to-navigate-to-channel)<br>
-- [Generate deep link to a file in a channel](#generate-deep-links-to-a-file-in-a-channel)
+- [Generate deep link to a file in a channel](#generate-deep-link-to-a-file-in-a-channel)
 
 ## Deep link to start a new chat
 

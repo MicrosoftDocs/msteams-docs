@@ -333,7 +333,7 @@ Explore updates from the previous GA releases listed here.
 | 05/06/2019 | Application Certification program for Teams Store apps. | [Application Certification](~/concepts/deploy-and-publish/appsource/post-publish/overview.md#complete-microsoft-365-certification) |
 | 05/06/2019 | App Templates are now available | [App Templates](~/samples/app-templates.md) |
 | 04/23/2019 | Action-based Message Extensions are now available. | [Action-based Message Extensions](~/concepts/messaging-extensions/create-extensions.md) |
-| 02/18/2019 | Creating deep links to private chat. | [Deep linking to a chat](concepts/build-and-test/deep-link-teams.md#deep-links-to-navigate-to-chat-messages) |
+| 02/18/2019 | Creating deep links to private chat. | [Deep linking to a chat](concepts/build-and-test/deep-link-teams.md#deep-link-to-navigate-to-chat-messages) |
 | 01/23/2019 | Surfacing SKU and licenceType information in the tab context. | [Tab Context](~/concepts/tabs/tabs-context.md) |
 
 </details>
@@ -346,7 +346,7 @@ Explore updates from the previous GA releases listed here.
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ------------------ |
 | 11/12/2018 | Tabs in group chat are now available in the released version of Teams. The tabs section is updated for clarity.| [Configurable tabs](~/concepts/tabs/tabs-configurable.md) |
-| 11/09/2018 | You can now create deep links to private chats between users. | [Deep linking to a chat](concepts/build-and-test/deep-link-teams.md#deep-links-to-navigate-to-chat-messages) |
+| 11/09/2018 | You can now create deep links to private chats between users. | [Deep linking to a chat](concepts/build-and-test/deep-link-teams.md#deep-link-to-navigate-to-chat-messages) |
 | 11/08/2018 | SharePoint Framework 1.7 and a new feature to use Microsoft Teams tab as a SharePoint Framework web part is shipped. | [Tabs in SharePoint](~/concepts/tabs/tabs-in-sharepoint.md) |
 | 11/05/2018 | The **task module** feature is released. A task module allows you to create modal pop-up experiences in your Teams application, from both bots and tabs. Inside the pop-up, you can run your own custom HTML/JavaScript code, show an `<iframe>`-based widget such as a YouTube or Microsoft Stream video, or display an [Adaptive card](/adaptive-cards/). | [Task module Overview](~/concepts/task-modules/task-modules-overview.md), [task module in tabs](~/concepts/task-modules/task-modules-tabs.md),  [task module in bots](~/concepts/task-modules/task-modules-bots.md) |
 | 10/05/2018 | Formatting information for cards is updated and tested in the desktop, iOS, and Android clients for Teams. | [Cards](~/concepts/cards/cards.md), [Card formatting](~/concepts/cards/cards-format.md) |
