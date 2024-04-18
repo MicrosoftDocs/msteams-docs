@@ -1,7 +1,7 @@
 ---
 title: Plan for Government clouds
 author: v-preethah
-description: Understand Teams features and capabilities available for Government Community Cloud (GCC), GCC High, and DOD tenants. Get an overview on how to deploy Teams in Government clouds.
+description: Understand Teams features and capabilities available for Government Community Cloud (GCC), GCC High, DOD, and Teams operated by 21Vianet tenants. Get an overview on how to deploy Teams in Government clouds.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.date: 09/29/2023
@@ -25,13 +25,6 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
       :::image type="icon" source="../assets/images/app-fundamentals/gallatin.png" link="/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet" border="false":::
    :::column-end:::
 :::row-end:::
-
-* [Government Community Cloud (GCC)](/microsoftteams/plan-for-government-gcc)
-* [Government Community Cloud High (GCC High)](/microsoftteams/plan-for-government-gcc-high)
-* [Department of Defense (DOD)](/microsoftteams/plan-for-government-dod)
-* [Teams operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet) (internally referred as Gallatin)
-
-:::image type="content" source="../assets/images/app-fundamentals/cloud-type.png" alt-text="Illustration shows the types of government clouds." border="false":::
 
 The article provides an overview of Teams' compatibility across different government cloud services, detailing its capabilities for each tenant, and providing guidance on deployment.
 
