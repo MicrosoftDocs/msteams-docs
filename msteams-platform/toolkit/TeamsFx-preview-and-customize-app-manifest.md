@@ -76,9 +76,9 @@ During local debug or provision process, Teams Toolkit loads app manifest from `
     }
     ```
 
-## Validate Application
+## Validate your app
 
-After customization, you can validate your app manifest or app package. You can select **Validate Application** from tree view, or execute **Teams: ValidateApplication** from the command palette. There are two options, **Validate using manifest schema** or **Validate app package using validation rules**.
+After customization, you can validate your app manifest or app package. You can select **Validate Application** from tree view or execute **Teams: Validate Application** from the command palette. There are two options, **Validate using manifest schema** or **Validate app package using validation rules**.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validate-application.png" alt-text="Screenshot shows the selection of validate application under utility.":::
 
@@ -112,7 +112,7 @@ teamsfx validate --app-package-file-path <YOUR-PATH-TO-APP-PACKAGE>
 
 This option has different validation rules compared to the app manifest schema method. For example, if the static tab section has an entityId set to `conversations` and a name, the following error appears:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validation-output.png" alt-text="Screenshot shows the validation output."::: lightbox="../assets/images/teams-toolkit-v2/customize app manifest/validation-output.png"
+:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/validation-output.png" alt-text="Screenshot shows the validation output." lightbox="../assets/images/teams-toolkit-v2/customize app manifest/validation-output.png":::
 
 ## Update Teams app
 
