@@ -38,7 +38,7 @@ Before you start, ensure that you meet the following requirements:
 
 ## Add an Outlook Add-in to a Teams app
 
-The following are the major steps to adding an Outlook Add-in to a Teams app.
+To add an Outlook Add-in to a Teams app:
 
 1. [Prepare the Teams app project](#prepare-the-teams-app-project)
 1. [Create an Office Add-in project](#create-an-outlook-add-in-project) that is initially separate from your Teams app project.
@@ -74,10 +74,12 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
 > [!NOTE]
 > If you're working with a new Teams tab project, the node_modules folder and the package-lock.json file isn't present. The node_modules is created in a later step when you run `npm install` in the root of the project. The build folder isn't present unless and until you run a build script on the project. 
 
+To separate the source code for the tab or bot, perform the following steps:
+
 1. Create a folder under the root named "tab" (or "bot").
 
     > [!NOTE]
-    > For simplicity, the remainder of this article assumes that the existing Teams app is a tab. If you started with a bot instead, replace "tab" with "bot" in all of these instructions, including the content you add or edit in various files. 
+    > For simplicity, the remainder of this article assumes that the existing Teams app is a tab. If you started with a bot, replace "tab" with "bot" in all of these instructions, including the content you add or edit in various files. 
 
 1. Copy the **infra** folder into the new subfolder, and then delete the `azure.parameters.json` file from the new **tab** > **infra** folder.
 1. Move the **node_modules** and **src** folders into the new subfolder.
@@ -139,7 +141,9 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
     1. Open Teams Toolkit. 
     1. In the **ACCOUNTS** section, verify that you're signed in to Microsoft 365 account.
     1. Select **View** > **Run** in Visual Studio Code.
-    1. In the **RUN AND DEBUG** drop down menu, select the option, **Debug in Teams (Edge)**, and then press F5. The project builds and runs. This process can take a couple of minutes. Eventually, Teams opens in a browser with a prompt to add your tab app.
+    1. In the **RUN AND DEBUG** dropdown menu, select **Debug in Teams (Edge)**, and press F5. 
+	
+	    The project builds and runs. This process can take a couple of minutes. When it completes, Teams opens in a browser with a prompt to add your tab app.
 
       > [!NOTE]
       > If this is the first time you've debugged a Teams app on this computer, you're prompted to install an SSL certificate. Select **Install** and then **Yes** to the second prompt. Login to your Microsoft 365 account if you're prompted to do so.
