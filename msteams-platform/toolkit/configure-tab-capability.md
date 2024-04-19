@@ -65,7 +65,7 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
      ],
    ```
 
-1. Update the `manifest.json` with tab domain to the `validDomains` field:
+1. Update the `manifest.json`file with tab domain to the `validDomains` field:
 
    ```JSON
    "validDomains": [
@@ -216,7 +216,6 @@ For a complete example on how to configure a tab in Teams bot app, see [Hello Wo
            PORT: 53000
            SSL_CRT_FILE: ${{SSL_CRT_FILE}}
            SSL_KEY_FILE: ${{SSL_KEY_FILE}}
-
    ```
 
 1. After you configure your project and update the necessary files, debug your app locally in Visual Studio Code.
