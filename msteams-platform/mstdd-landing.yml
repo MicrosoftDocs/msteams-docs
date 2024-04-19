@@ -47,8 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Introducing Teams Adaptive Card starter collection
-        url: task-modules-and-cards/cards/starter-cards.md
+      - text: Introduced Teams Adaptive Card samples
+        url: task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards
       - text: Authentication in API-based message extension
         url: messaging-extensions/build-api-based-message-extension.md#authentication
       - text: Share code snippets as richly formatted Adaptive Cards with the CodeBlock element

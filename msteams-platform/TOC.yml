@@ -120,7 +120,7 @@
       href: concepts/design/design-teams-app-advanced-ui-components.md
     - name: Adaptive Cards
       href: task-modules-and-cards/cards/design-effective-cards.md
-      displayName: column, ColumnSet 
+      displayName: column, ColumnSet, Adaptive Card samples, hero card, list card 
     - name: Dialogs
       href: task-modules-and-cards/task-modules/design-teams-task-modules.md
       displayname: Forms
@@ -665,9 +665,6 @@
     - name: Types of cards
       href: task-modules-and-cards/cards/cards-reference.md
       displayName: MessageCard, correlationId, Markdown, what-are-webhooks-and-connectors Button, Flexible layout, receipt card, carousel card, Hero card, List card, Card collections, Thumbnail card, Receipt card
-    - name: Starter cards
-      href: task-modules-and-cards/cards/starter-cards.md
-      displayName: starter cards, Adaptive Card, template, sample, recipe hero, work item thumbnail, list, communications, author highlight video, course video, standard video, issue status, account details
     - name: Format cards in Teams
       href: task-modules-and-cards/cards/cards-format.md
       displayName: Information masking, background, extension, notification, HTML, rich text, responsive Adaptive Cards, targetwidth, CodeBlock
