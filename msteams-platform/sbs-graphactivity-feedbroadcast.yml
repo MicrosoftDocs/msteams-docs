@@ -119,8 +119,8 @@ items:
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
-     > [!NOTE]
-      > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain updates. For example, `api://f631****.ngrok.io/c4e88a5d-e3d4-47f4-accb-0ef9de3bce8a`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+       > [!NOTE]
+        > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain updates. For example, `api://f631****.ngrok.io/c4e88a5d-e3d4-47f4-accb-0ef9de3bce8a`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
@@ -139,15 +139,16 @@ items:
     1. Select **Delegated permissions**.
 
     1. Select the following permissions:
-      * Directory.Read.All
-      * Directory.ReadWrite.All
-      * TeamsActivity.Send
-      * TeamsAppInstallation.ReadForUser
-      * TeamsAppInstallation.ReadWriteForUser
-      * User.Read
+
+       * Directory.Read.All
+       * Directory.ReadWrite.All
+       * TeamsActivity.Send
+       * TeamsAppInstallation.ReadForUser
+       * TeamsAppInstallation.ReadWriteForUser
+       * User.Read
     
-        > [!NOTE]
-         > User. Read is enabled by default.
+         > [!NOTE]
+          > User. Read is enabled by default.
       
     1. Select **Add permissions**.
 
@@ -180,10 +181,9 @@ items:
 
        :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/admin-consent.png" alt-text="Screenshot shows the admin consent message." border="true":::
      
-     > [!NOTE]
-      >
-       > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
-       > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
+       > [!NOTE]
+         > * If an app isn't granted IT admin consent, users must provide consent the first time they use an app.
+         > * Users need to consent to the API permissions only if the Microsoft Entra app is registered in a different tenant.
     
     **Add a web authentication**
 
@@ -217,7 +217,7 @@ items:
   content: |
     1. Go to **appsettings.json** file in cloned repository.
 
-           :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettings-location.png" alt-text="Screenshot shows the location of the app settings file." border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/appsettings-location.png" alt-text="Screenshot shows the location of the app settings file." border="true":::
 
     1. Open the **appsettings.json** file in the latest version of Visual Studio and update the following information:  
 
