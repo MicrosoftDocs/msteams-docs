@@ -79,7 +79,7 @@ You can create a workflow in the channel and chat scopes in the same way you cre
 
 To create a workflow and add in a channel:
 
-1. Select the Teams (icon image) icon.
+1. Select the Teams :::image type="icon" source="../../assets/images/workflows/app icon.png" border="false"::: icon.
 
 1. Select the channel you want to add the workflow.
 
