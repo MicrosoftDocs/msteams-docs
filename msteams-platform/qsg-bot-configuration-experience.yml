@@ -16,8 +16,7 @@ items:
   content: |
     > [!NOTE]
     >
-    > * Bot configuration experience is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-    > * Bot configuration experience is supported in channel or group chat scopes only.
+    > Bot configuration experience is supported in channel or group chat scopes only.
     
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot app with Teams using Javascript. 

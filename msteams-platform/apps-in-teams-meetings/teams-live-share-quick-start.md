@@ -4,7 +4,7 @@ author: surbhigupta
 description:  In this module, learn how to quickly try the Dice Roller sample
 ms.topic: conceptual
 ms.localizationpriority: high
-ms.author: stevenic
+ms.author: surbhigupta
 ms.date: 04/07/2022
 ---
 
