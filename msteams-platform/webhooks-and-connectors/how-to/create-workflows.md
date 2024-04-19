@@ -24,7 +24,7 @@ You can automate tasks using workflows if you're facing one or more of the follo
 
 ## Add Workflows
 
-When you're adding a workflow for the first time, the Workflows app first gets added in the Teams navigation pane and the workflow you selected is added in the respective scope. The easiest way to get started is to browse selection of pre-built workflows.
+If you're adding Workflows, the easiest way to get started is to browse the selection of pre-built workflows in the Apps section. When you're adding a workflow for the first time, the Workflows app first gets added in the Teams navigation pane and the workflow you selected is added in the respective scope.
 
 To add a workflow:
 
