@@ -123,7 +123,7 @@ The query parameters are:
 * `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: Tenant ID, such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType`: Supported file type, such as .docx, .pptx, .xlsx, and .pdf.
-* `objectURL`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
+* `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
 * `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`.
 * `serviceName`: Name of the service, app ID. For example, `teams`.
 * `threadId`: The threadID is the team ID of the team where the file is stored. It's optional and can't be set for files stored in a user's OneDrive folder. For example, `19:<f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype>`.
