@@ -29,7 +29,7 @@ You can preview the app manifest file in local and remote environments.
 
 To preview the app manifest file in local environment, select the F5 key to run local debug. After you generate the environment variables in `env/.env.local`, the app package and the preview app manifest are built under `appPackage/build` folder.
 
-You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams app Package** from command palette to generate the preview app manifest and app package.
+You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams App Package** from command palette to generate the preview app manifest and app package.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package.png" alt-text="Screenshot shows the selection of Zip Teams App Package.":::
 
