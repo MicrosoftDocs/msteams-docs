@@ -218,7 +218,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
 1. Setup Azure pipeline.
 
-    After you push your code to the repo, navigate to **Pipelines** and select **New pipeline**. Then, select your repo and the existing yml file to configure your pipeline.
+    After you push your code to the repo, navigate to **Pipelines** and select **New pipeline**. Select your repo and the existing yml file to configure your pipeline.
 
 1. Set variables or secrets in pipeline.
 
@@ -265,11 +265,11 @@ To set up the pipeline with Azure DevOps, follow these steps:
 If the Teams App CLI doesn't meet your pipeline requirements, you can develop a custom deployment process that suits your needs. This section provides guidance on deploying to Azure with custom methods. If you're using a different cloud platform, refer to this section for guidance.
 
 > [!NOTE]
-> If you already have a complete CI/CD pipeline for deploying to your Azure resource, and your Teams app needs to read environment variables during runtime, configure these environment variables in the settings of your Azure resource. For testing post-deployment, see [generate the appPackage for the teams app](#generate-the-apppackage-for-the-teams-app).
+> If you already have a complete CI/CD pipeline for deploying to your Azure resource, and your Teams app needs to read environment variables during runtime, configure these environment variables in the settings of your Azure resource. For post-deployment testing, see [generate the appPackage for the teams app](#generate-the-apppackage-for-the-teams-app).
 
 The `teamsapp deploy` command executes the actions defined in the `deploy` stage of the `teamsapp.yml` file. The `deploy` stage consists of `build` and `deploy` actions. To create a custom deployment method, rewrite these actions based on your specific requirements and preferences.
 
-A basic bot TypeScript project as an example, the deploy stage in its `teamsapp.yml` is as follows:
+As an example, a basic bot TypeScript project has the following deploy stage in its `teamsapp.yml`:
 
 ```yaml
 deploy:
@@ -353,18 +353,18 @@ Deploy:
 
 ### Credential needed for login to Azure
 
-When deploying app code to Azure App Service, Azure Functions, or Azure Container App through CI/CD, a service principal is required for Azure login. Two methods exist for Azure login using a service principal:
+When you deploy app code to Azure App Service, Azure Functions, or Azure Container App through CI/CD, you need a service principal for Azure login. You can log in to Azure using a service principal in two ways:
 
 * OpenID Connect (OIDC).
 * secret.
 
 The TeamsApp CLI currently supports sign-in using a service principal with a secret. If you wish to use OIDC, follow these steps:
 
-* For GitHub action, see how to [Use the Azure login action with OpenID Connect](/azure/developer/github/connect-from-azure#use-the-azure-login-action-with-openid-connect).
+* For GitHub action, see how to [use the Azure login action with OpenID Connect](/azure/developer/github/connect-from-azure#use-the-azure-login-action-with-openid-connect).
 
-* For Azure pipeline, see how to [Create an Azure Resource Manager service connection that uses workload identity federation](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-that-uses-workload-identity-federation).
+* For Azure pipeline, see how to [create an Azure Resource Manager service connection that uses workload identity federation](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-that-uses-workload-identity-federation).
 
-## Generate the appPackage for the teams app
+### Generate the appPackage for the teams app
 
 To distribute your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in Teamsapp CLI. If you're unable to use Teamsapp CLI, follow these steps to manually create the appPackage:
 
