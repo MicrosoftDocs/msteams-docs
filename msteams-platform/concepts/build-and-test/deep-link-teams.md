@@ -12,13 +12,13 @@ ms.date: 01/31/2023
 
 You can create a deep link to a Teams chat, such as to start a new chat, go to a channel conversation, and access a file within a channel.
 
-In this article, you’ll learn to create a deep link:
+In this article, you’ll learn to create:
 
-* [To start a new chat](#deep-link-to-start-a-new-chat)
-* [To navigate to a chat](#deep-link-to-navigate-to-a-chat)
-* [To navigate to channel conversation](#deep-links-to-navigate-to-channel-conversation)
-* [To navigate to chat messages](#deep-links-to-navigate-to-chat-messages)
-* [To file in a channel](#generate-deep-links-to-file-in-a-channel)
+- [Deep link to start a new chat](#deep-link-to-start-a-new-chat)<br>
+- [Deep link to navigate to a chat](#deep-link-to-navigate-to-a-chat)<br>
+- [Deep links to navigate to channel conversation](#deep-links-to-navigate-to-channel-conversation)<br>
+- [Deep links to navigate to chat messages](#deep-links-to-navigate-to-chat-messages)<br>
+- [Generate deep links to a file in a channel](#generate-deep-links-to-a-file-in-a-channel)
 
 ## Deep link to start a new chat
 
@@ -33,11 +33,13 @@ You can configure deep links to start a new chat in one of the following two way
 * [Configure deep link to start a chat manually](#configure-deep-link-to-start-a-chat-manually)
 * [Configure deep link to start a chat using TeamsJS library](#configure-deep-link-to-start-a-chat-using-teamsjs-library)
 
-#### Configure deep link to start a chat manually
+### Configure deep link to start a chat manually
 
-While use of the typed APIs is recommended, you can alternatively use the following format for a manually created deep link that you can use in a bot, connector, or message extension card. To use this deep link with your bot, specify this as the URL target in your card's button or tap action through the `openUrl` action type.
+While use of the typed APIs is recommended, you can alternatively use the following format for a manually created deep link that you can use in a bot, connector, or message extension card:
 
 `https://teams.microsoft.com/l/chat/0/0?tenantId=<tenantId>&users=<user1>,<user2>,...&topicName=<chat name>&message=<precanned text>`
+
+To use this deep link with your bot, specify the deep link as the URL target in your card's button or tap action through the `openUrl` action type.
 
 The query parameters are:
 
@@ -47,7 +49,7 @@ The query parameters are:
 
 Example: `https://teams.microsoft.com/l/chat/0/0?users=joe@contoso.com,bob@contoso.com&topicName=Prep%20For%20Meeting%20Tomorrow&message=Hi%20folks%2C%20kicking%20off%20a%20chat%20about%20our%20meeting%20tomorrow`
 
-#### Configure deep link to start a chat using TeamsJS library
+### Configure deep link to start a chat using TeamsJS library
 
 The following example demonstrates how to open a chat message to a group of participants with an initial message. You can target the deep link to an existing or a new chat. If a chat already exists, the deep link opens in that chat.
 
@@ -110,11 +112,11 @@ The query parameters are:
 
 Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f0205c702c_f1b94dcf-0aa3-4989-bcdf-ef4a5ed00f86@unq.gbl.spaces/1563480968434?context=%7B%22contextType%22:%22chat%22%7D`
 
-## Generate deep links to file in a channel
+## Generate deep links to a file in a channel
 
 Use the following deep link format can be used in a bot, connector, or message extension card for configuring a deep link to connect to a file in a channel:
 
-`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectUrl=<objectUrl>&baseUrl=<baseUrl>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 The query parameters are:
 
@@ -124,11 +126,13 @@ The query parameters are:
 * `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
 * `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`.
 * `serviceName`: Name of the service, app ID. For example, `teams`.
-* `threadId`: The threadID is the team ID of the team where the file is stored. It's optional and can't be set for files stored in a user's OneDrive folder. threadId - 19:<f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype>.
+* `threadId`: The threadID is the team ID of the team where the file is stored. It's optional and can't be set for files stored in a user's OneDrive folder. For example, `19:<f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype>`.
 * `groupId`: Group ID of the file. For example, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
-> You can see `threadId` and `groupId` in the URL from the channel.  
+>
+> * You can see `threadId` and `groupId` in the URL from the channel.
+> * In the new Teams client, the deep link format using `objectURL` for a file in a channel isn't supported, use `objectUrl` in the deep link format.
 
 The following example format illustrates the deep link to files:
 
@@ -153,4 +157,4 @@ groupId: "ae063b79-5315-4ddb-ba70-27328ba6c31e"
 
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|
-|Deep link consuming Subentity ID | This sample shows how to use deep-link from bot chat to tab consuming Subentity ID. It also shows deeplinks for navigate to app, navigate to chat, open profile dialog and open scheduling dialog.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
+|Deep link consuming Subentity ID | This sample shows how to use a deep link from a bot chat to a tab consuming the Subentity ID. It also shows deep links for:<br>- Navigating to an app<br>- Navigating to a chat<br>- Open a profile dialog<br>- Open a scheduling dialog |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-deeplink/nodejs)|
