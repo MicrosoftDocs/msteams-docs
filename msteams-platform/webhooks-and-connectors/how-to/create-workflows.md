@@ -40,17 +40,29 @@ To add a workflow:
 
     If you're adding a workflow for the first time, the Workflows app dialog opens to install the app.
 
-1. Select **Add** or select a suitable scope from the **Add** dropdown list.
+1. Select **Add**.
+
+    Alternatively, you can select a suitable scope from the **Add** dropdown list.
+
+    :::image type="content" source="../../assets/images/workflows/add-workflows-app.png" alt-text="Screenshot shows the option to add Workflows app.":::
 
     After the app is added, the respective workflow dialog appears and validates the connections required for the workflow to function.
 
 1. Modify the name as required or use the suggested name and select **Next**.
 
+    :::image type="content" source="../../assets/images/workflows/workflow-validation.png" alt-text="Screenshot shows the validation screen.":::
+
 1. Fill in the required details. It varies based on the type of workflow you opted.
 
 1. Select **Add workflow**.
 
+    :::image type="content" source="../../assets/images/workflows/add-workflow.png" alt-text="Screenshot shows the option to add workflow.":::
+
     A confirmation dialog appears displaying **Workflow added successfully!**
+
+1. Select **Done**.
+
+    :::image type="content" source="../../assets/images/workflows/workflow-added.png" alt-text="Screenshot shows that the workflow is added successfully.":::
 
 After creating a workflow, you can further [manage workflows](#manage-workflows) from the Workflows app within Teams.
 
