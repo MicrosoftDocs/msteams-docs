@@ -122,9 +122,9 @@ You can use the provision command in Teams Toolkit to create a Teams app with bo
 
 1. To create a Kubernetes secret that contains `BOT_ID` and `BOT_PASSWORD`, save the key value pair in the `./deploy/.env.dev-secrets`file and execute the command to provision the secret.
 
-```bash
-kubectl create secret generic dev-secrets --from-env-file ./deploy/.env.dev-secrets -n $NAMESPACE
-```
+    ```bash
+    kubectl create secret generic dev-secrets --from-env-file ./deploy/.env.dev-secrets -n $NAMESPACE
+    ```
 
 ### Apply the deployment
 
@@ -138,9 +138,9 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your reference
 
 1. Apply `deploy/sso-bot.yaml`.
 
-```bash
-kubectl apply -f deploy/sso-bot.yaml -n $NAMESPACE
-```
+    ```bash
+    kubectl apply -f deploy/sso-bot.yaml -n $NAMESPACE
+    ```
 
 1. Go to Visual Studio Code.
 
@@ -193,7 +193,7 @@ You can modify the sample code to ensure compatibility with your Kubernetes Serv
             - name: msteams
     ```
 
-  You can remove the `arm/deploy` action in `teamsapp.yml` file, as we don't need any Azure resources.
+    You can remove the `arm/deploy` action in `teamsapp.yml` file, as we don't need any Azure resources.
 
 1. Run the `provision` command in Teams Toolkit.
 
@@ -201,9 +201,9 @@ You can modify the sample code to ensure compatibility with your Kubernetes Serv
 
 1. To create a Kubernetes secret containing `BOT_ID` and `BOT_PASSWORD`, save the key-value pair in the `./deploy/.env.dev-secrets` file. Run the command to provision the secret.
 
-```bash
-kubectl create secret generic dev-secrets --from-env-file ./deploy/.env.dev-secrets -n $NAMESPACE
-```
+    ```bash
+    kubectl create secret generic dev-secrets --from-env-file ./deploy/.env.dev-secrets -n $NAMESPACE
+    ```
 
 ### Apply the deployment
 
