@@ -209,9 +209,9 @@ You can modify the sample code to ensure compatibility with your Kubernetes Serv
 
 The sample includes a deployment file, `deploy/sso-bot.yaml`, for your guidance. Update the placeholders in this file before you apply it.
 
-1. Update the <image> placeholder with your image. For example, `myacr.azurecr.io/sso-bot:latest`.
+1. Update the `<image>` placeholder with your image. For example, `myacr.azurecr.io/sso-bot:latest`.
 
-1. Update the <hostname> with your ingress FQDN.
+1. Update the `<hostname>` with your ingress FQDN.
 
 1. Apply `deploy/sso-bot.yaml`.
 
@@ -287,11 +287,11 @@ Use the provision command in the Teams Toolkit to create a Teams app with tab fu
 
 The sample includes a deployment file, `deploy/tab.yaml`, for your reference. Update the placeholders in this file before you apply it.
 
-1. Update the <tab-image> placeholder with your image. For example, `myacr.azurecr.io/tab:latest`.
+1. Update the `<tab-image>` placeholder with your image. For example, `myacr.azurecr.io/tab:latest`.
 
-1. Update the <api-image> placeholder with your API image. If you don't have an API, remove the `hello-world-api`service and deployment from the yaml file.
+1. Update the `<api-image>` placeholder with your API image. If you don't have an API, remove the `hello-world-api`service and deployment from the yaml file.
 
-1. Update the <hostname> with your ingress FQDN.
+1. Update the `<hostname>` with your ingress FQDN.
 
 1. Apply `deploy/tab.yaml`.
 
