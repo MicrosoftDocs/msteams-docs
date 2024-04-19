@@ -220,19 +220,19 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
     After you push your code to the repo, navigate to **Pipelines** and select **New pipeline**. Select your repo and the existing yml file to configure your pipeline.
 
-1. Set variables or secrets in pipeline.
+1. Locate the following variables and secrets:
 
     The following variables and secrets are needed for the pipeline:
 
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`.
 
-    * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`: Go to the `teamsapp.yml` file. In the `deploy` stage, the placeholders enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
+    * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`: Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
 
-    * `TEAMS_APP_ID`: Go to the `appPackage/manifest.json` file. The placeholders enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the env folder.
+    * `TEAMS_APP_ID`: Go to the `appPackage/manifest.json` file. Go to `id`, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/manifest.png" alt-text="Screenshot shows the Teams app ID in manifest file.":::
+     ::image type="content" source="../assets/images/teams-toolkit-v2/manifest.png" alt-text="Screenshot shows the Teams app ID in manifest file.":::
 
     You need to set the following key name variables in the repo:
 
