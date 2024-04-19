@@ -19,7 +19,7 @@ You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeli
 > [!NOTE]
 > To create a pipeline for a Teams app, it's required to prepare the necessary cloud resources, such as Azure Web App, Azure Functions, or Azure Static Web App, and configure the app settings.
 
-To build the project, you must compile the source code and create the required deployment artifacts. There are two methods to deploy the artifatcs:
+To build the project, you must compile the source code and create the required deployment artifacts. There are two methods to deploy the artifacts:
 
 * [Set up CI/CD pipelines with Teams Toolkit CLI](#set-up-cicd-pipelines-with-teams-toolkit-cli). *[Recommended]*
 
@@ -37,7 +37,7 @@ You can use [Teams Toolkit command line interface](Teams-Toolkit-CLI.md) to auto
 
 ### Prerequisites
 
-1. Set up required resources for your Teams app, such as Teams app ID, bot ID, and so on as follows:
+1. Set up required resources for your Teams app, such as Teams app ID, bot ID, and so on, as follows:
 
     * Manually extract the resources from the `manifest.json` file under the `appPackage` folder.
     * Automatically generate to run the `Provision` command in Teams Toolkit.
@@ -52,7 +52,7 @@ You can use [Teams Toolkit command line interface](Teams-Toolkit-CLI.md) to auto
     * [Create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal).
     * [Create service principal using Azure CLI](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash).
 
-    The Teamsapp command-line interface (CLI) supports Azure login with a service principal secret. [Create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal.
+    The `Teamsapp` command-line interface (CLI) supports Azure login with a service principal secret. [Create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/service-principal.png" alt-text="Screenshot shows the service principal secret.":::
 
@@ -132,7 +132,7 @@ To set up the pipeline with GitHub, follow these steps:
 
     * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`: Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource id in teamsapp.yml file.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
 
     * `TEAMS_APP_ID`: Go to the `appPackage/manifest.json` file. Go to `id`, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
@@ -366,7 +366,7 @@ The TeamsApp CLI currently supports sign-in using a service principal with a sec
 
 ### Generate the appPackage for the teams app
 
-To distribute your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in Teamsapp CLI. If you're unable to use Teamsapp CLI, follow these steps to manually create the appPackage:
+To distribute your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in `Teamsapp` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the appPackage:
 
 1. Prepare a `appPackage` folder.
 1. Place the `manifest.json` file in the `appPackage` folder. The default `manifest.json` file in the Teams Toolkit project contains placeholders, denoted by ${{}}. Replace these placeholders with the correct values.
