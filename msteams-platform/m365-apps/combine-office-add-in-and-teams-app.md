@@ -154,10 +154,14 @@ To separate the source code for the tab or bot, perform the following steps:
 ### Create an Outlook Add-in project
 
 1. Open a second instance of Visual Studio Code.
-1. With Teams Toolkit open in Visual Studio Code, select **Create a new app**.
-1. In the **Select an option** drop down menu, select **Outlook add-in**, and then select **Taskpane**.
+1. Select Teams Toolkit from the **Activity Bar**.
+1. Select **Create a new app**.
+1. In the **Select an option** dropdown menu, select **Outlook add-in > Taskpane**.
 1. Select the folder where you want to create the add-in.
-1. Give a name (with no spaces) to the project when prompted and Teams Toolkit creates the project with basic files and scaffolding *and open it in a separate Visual Studio Code window*. You will use this project as a source for files and markup that you add to the Teams project.
+1. Give a name (with no spaces) to the project when prompted.
+
+    Teams Toolkit creates the project with basic files and scaffolding and opens it in a new Visual Studio Code window. You will use this project as a source for files and markup that you add to the Teams project.
+    
 1. Although you won't be developing this project, verify that it can be sideloaded from Visual Studio Code before you continue. Use the following steps:
 
     1. Make sure Outlook desktop is closed.
@@ -166,8 +170,15 @@ To separate the source code for the tab or bot, perform the following steps:
     1. In the **ACCOUNTS** section, verify that you're signed into Microsoft 365.
     1. Select **View** > **Run** in Visual Studio Code. 
     1. In the **RUN AND DEBUG** dropdown menu, select **Outlook Desktop (Edge Chromium)** and press F5. 
+
        The project builds and a Webpack dev-server window opens. This process can take a couple of minutes and opens an Outlook desktop window.
-    1. Open the **Inbox** *of your Microsoft 365 account identity* and open any message. A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you open the message in its own window).
+
+    1. Go to Outlook.
+    1. Open the **Inbox** *of your Microsoft 365 account identity*.
+    1. Open any message. 
+
+        A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you open the message in its own window).
+
     1. Select the **Show Taskpane** button. A task pane opens. 
     1. Select the **Perform an action** button. A small notification appears near the top of the message.
     1. To stop debugging and to uninstall the add-in, select **Run** > **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
@@ -182,8 +193,13 @@ The Teams app's manifest is generated at debug-and-sideload time (or build time)
 Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
 
 1. Copy the "$schema" and "manifestVersion" property values from the add-in's manifest to the corresponding properties of the Teams app's manifest template file.
-1. Adjust the "name.full", "description.short", and "description.full" property values as needed to take account of the fact that an Outlook add-in is part of the app. 
-1. Do the same for the "name.short" value. We recommend that you keep the `${{TEAMSFX_ENV}}` on the end of the name. This variable is replaced with "local" when you're debugging on localhost and with "dev" when you're either debugging from a remote domain or in production mode. (Historically, Office Add-in developer documentation uses the term "dev" or "dev mode" to refer to running the add-in on a localhost. It uses the term "prod" or "production mode" to refer to running the add-in on a remote host for staging or production. Teams developer documentation uses the term "local" to refer to running the add-in on a localhost, and the term "dev" to refer to running the add-in on a remote host for remote debugging, which is usually called "staging." We're working on getting the terminology consistent.)
+1. Modify the "name.full", "description.short", and "description.full" property values as required to reflect the fact that an Outlook add-in is part of the app. 
+1. Do the same for the "name.short" value. 
+
+    We recommend that you keep the `${{TEAMSFX_ENV}}` on the end of the name. This variable is replaced with the string "local" when you're debugging on localhost and with "dev" when you're either debugging from a remote domain or in production mode. 
+    
+    > [!NOTE]
+    > Historically, Office Add-in developer documentation uses the term "dev" or "dev mode" to refer to running the add-in on a localhost. It uses the term "prod" or "production mode" to refer to running the add-in on a remote host for staging or production. Teams developer documentation uses the term "local" to refer to running the add-in on a localhost, and the term "dev" to refer to running the add-in on a remote host for remote debugging, which is usually called "staging." We're working on getting the terminology consistent.
 
     The following JSON is an example:
 
@@ -192,13 +208,13 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     ```
 
     > [!NOTE]
-    > The "name.short" value appears in both the Teams tab capability and the Outlook add-in. Examples: 
+    > The "name.short" value appears in both the Teams tab capability and the Outlook add-in. Here are a few examples: 
     >
     > - It is the label under the launch button of the Teams tab.
     > - It is content of the title bar of the add-in's task pane.
 
 1. If you changed the "name.short" value from its default (which is the name of the project followed by the `${{TEAMSFX_ENV}}` variable), make exactly the same change in all places where the project name appears in the following two files in the root of the project: teamsapp.yml and teamsapp.local.yml.
-1. If there is no "authorization.permissions.resourceSpecific" array in the Teams manifest template, copy it from the add-in manifest as a top-level property. If there already is one in the Teams template, copy any objects from the array in the add-in manifest to the array in the Teams template. The following JSON is an example:
+1. If there's no "authorization.permissions.resourceSpecific" array in the Teams manifest template, copy it from the add-in manifest as a top-level property. If there already is one in the Teams template, copy any objects from the array in the add-in manifest to the array in the Teams template. The following JSON is an example:
 
     ```json
     "authorization": {
@@ -372,7 +388,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     }
     ```
 
-1. Add the following task to the tasks array in the .vscode\tasks.json file of the project. Among other things, this task creates the final manifest.
+1. Add the following task to the tasks array in the `.vscode\tasks.json` file of the project. Among other things, this task creates the final manifest.
 
     ```
     {
@@ -414,7 +430,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     },
    ```
 
-1. Open the .vscode\launch.json file in the project, which configures the **RUN AND DEBUG** UI in Visual Studio Code and add the following two objects to the top of the "configurations" array.
+1. Open the `.vscode\launch.json` file in the project, which configures the **RUN AND DEBUG** UI in Visual Studio Code and add the following two objects to the top of the "configurations" array.
 
     ```
     {
@@ -450,7 +466,12 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
       1. Select **View** > **Run** in Visual Studio Code. 
       1. In the **RUN AND DEBUG** dropdown menu, select **Launch Add-in Outlook Desktop (Edge Chromium)** and press F5. 
          The project builds and a Webpack dev-server window opens. This process can take a couple of minutes and opens an Outlook desktop window.
-      1. Open the **Inbox** *of your Microsoft 365 account identity* and open any message. A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you open the message in its own window).
+      1. Go to Outlook.
+      1. Open the **Inbox** *of your Microsoft 365 account identity*.
+      1. Open any message. 
+      
+          A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you open the message in its own window).
+
       1. Select the **Show Taskpane** button. A task pane opens. 
       1. Select the **Perform an action** button. A small notification appears near the top of the message.
       1. To stop debugging and to uninstall the add-in, select **Run** > **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
@@ -459,9 +480,9 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
 
 You can sideload and run the app and the add-in simultaneously, but the debugger can't reliably attach when both are running. So to debug, run only one at a time. 
 
-To debug the app, see the last step of the **Prepare the Teams app project** section.
+To debug the app, refer to the last step of the [Prepare the Teams app project](#prepare-the-teams-app-project) section.
 
-To debug the add-in, see the last step of the **Edit the tooling configuration files** section.
+To debug the add-in, refer to the last step of the [Edit the tooling configuration files](#edit-the-tooling-configuration-files) section.
 
 To see both the app and the add-in running at the same time, take the following steps.
 
@@ -473,11 +494,16 @@ To see both the app and the add-in running at the same time, take the following 
 1. In the **RUN AND DEBUG** dropdown menu, select **Launch App and Add-in Outlook Desktop (Edge Chromium)** and press F5. 
     The project builds and a Webpack dev-server window opens. The tab app is hosted in the Visual Studio Code terminal. This process can take a couple of minutes and the following actions occur:
 
-    - Teams opens in a browser with a prompt to add your tab app. *If Teams has not opened by the time Outlook desktop opens, then automatic sideloading has failed.* You can manually sideload it to see both the app and the add-in running at the same time. For sideloading instructions, see [Upload your app in Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload). You'll find the manifest.zip file to upload at `C:\Users\{yourname}\AppData\Local\Temp`.
+    - Teams opens in a browser with a prompt to add your tab app. If Teams hasn't opened by the time Outlook desktop opens, then automatic sideloading has failed. You can manually sideload it to see both the app and the add-in running at the same time. For sideloading instructions, see [Upload your app in Teams](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload). You'll find the manifest.zip file to upload at `C:\Users\{yourname}\AppData\Local\Temp`.
     - Outlook desktop opens.
 
 1. In the Teams prompt, select **Add** and the tab opens.
-1. In Outlook, open the **Inbox** *of your Microsoft 365 account identity* and open any message. A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you open the message in its own window).
+1. Go to Outlook.
+1. In Outlook, open the **Inbox** *of your Microsoft 365 account identity*.
+1. Open any message. 
+
+    A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you open the message in its own window).
+
 1. Select the **Show Taskpane** button. A task pane opens. 
 1. Select the **Perform an action** button. A small notification appears near the top of the message.
 1. To stop debugging and to uninstall the add-in, select **Run** > **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
@@ -613,10 +639,6 @@ To see both the app and the add-in running at the same time, take the following 
 
 1. In Visual Studio Code, select **View** > **Run**. 
 1. In the dropdown menu, select **Launch Remote in Teams (Edge)** or **Launch Remote in Teams (Chrome)**.
-
-    - **Launch Remote in Teams (Edge)**
-    - **Launch Remote in Teams (Chrome)** 
-
 1. Press F5 to preview your Teams tab capability.
 
 ### Run the add-in capability from the remote deployment
@@ -627,7 +649,12 @@ To see both the app and the add-in running at the same time, take the following 
 1. Copy the file `\add-in\dist\manifest.dev.json` to the `\appPackage` folder.
 1. Rename the copy in the `\appPackage` folder to `manifest.addinPreview.json`.
 1. In the **TERMINAL**, run `npx office-addin-dev-settings sideload .\appPackage\manifest.addinPreview.json`. This process can take a couple of minutes and opens the Outlook desktop. (If you're prompted to install `office-addin-dev-settings`, respond **yes**.)
-1. Open the **Inbox** of *your Microsoft 365 account identity* and open any message. A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you open the message in its own window).
+1. Go to Outlook.
+1. Open the **Inbox** of *your Microsoft 365 account identity*.
+1. Open any message. 
+
+    A **Contoso Add-in** tab with two buttons appears on the **Home** ribbon (or the **Message** ribbon, if you open the message in its own window).
+
 1. Select the **Show Taskpane** button. A task pane opens. 
 1. Select the **Perform an action** button. A small notification appears near the top of the message.
 
