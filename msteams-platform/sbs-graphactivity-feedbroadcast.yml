@@ -27,7 +27,7 @@ items:
 
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You can see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Screenshot shows the output of feed broadcast.""=lightbox="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Screenshot shows the output of feed broadcast." lightbox="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" border="true":::
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient.png" alt-text="Screenshot shows the final output of activity feed notification." border="true"::: 
 
