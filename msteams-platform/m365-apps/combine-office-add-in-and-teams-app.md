@@ -29,14 +29,14 @@ This article will walk you through the steps to add an Outlook Add-in to a Teams
 
 ## Prerequisites 
 
-To configure an Office Add-in, ensure that you meet the following requirements: 
+Before you start, ensure that you meet the following requirements: 
 
 - A Microsoft 365 account that includes Teams to test the application. Alternatively, you can have separate subscriptions to both Microsoft 365 and Teams. For example, a test account with *.onmicrosoft.com through the [Microsoft 365 Developer Program](/office/developer-program/microsoft-365-developer-program). 
 - Your Microsoft 365 account is added as an account in desktop Outlook. For more information, see [add an email account to Outlook](https://support.microsoft.com/office/add-an-email-account-to-outlook-e9da47c4-9b89-4b49-b945-a204aeea6726).
- - An Azure account with active subscription to deploy the Teams app to Azure. If you don't already have one, you can create your [free Azure account](https://azure.microsoft.com/free/).
+ - An Azure account with active subscription to deploy the Teams app to Azure. If you don't have one, you can create your [free Azure account](https://azure.microsoft.com/free/).
  - A Teams app created using the latest version of Teams Toolkit.
 
-## Overview
+## Add an Outlook Add-in to a Teams app
 
 The following are the major steps to adding an Outlook Add-in to a Teams app.
 
@@ -48,9 +48,9 @@ The following are the major steps to adding an Outlook Add-in to a Teams app.
 1. [Run the app and add-in locally at the same time](#run-the-app-and-add-in-locally-at-the-same-time)
 1. [Move the application to Azure](#move-the-application-to-azure).
 
-## Prepare the Teams app project
+### Prepare the Teams app project
 
-Begin by separating the source code for the tab (or bot) into its own subfolder. These instructions assume that the project initially has the following structure. To create a Teams app project with this structure, be sure you're using the latest released version of Teams Toolkit. 
+Begin by separating the source code for the tab (or bot) into its own subfolder. These instructions assume that the project initially has the following structure. To create a Teams app project with this structure, use the latest Teams Toolkit version. 
 
 ```
 |-- .vscode/
@@ -79,9 +79,9 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
     > [!NOTE]
     > For simplicity, the remainder of this article assumes that the existing Teams app is a tab. If you started with a bot instead, replace "tab" with "bot" in all of these instructions, including the content you add or edit in various files. 
 
-1. *Copy* the infra folder into the new subfolder, and then delete the azure.parameters.json file from the new tab/infra folder.
-1. *Move* the node_modules and src folders into the new subfolder.
-1. *Move* the .webappignore, package-lock.json, package.json, tsconfig.json, and web.config files into the new subfolder. 
+1. Copy the **infra** folder into the new subfolder, and then delete the `azure.parameters.json` file from the new **tab** > **infra** folder.
+1. Move the **node_modules** and **src** folders into the new subfolder.
+1. Move the `.webappignore`, `package-lock.json`, `package.json`, `tsconfig.json`, and `web.config` files into the new subfolder. 
 
     ```
     |-- .vscode/
@@ -104,8 +104,8 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
     |-- teamsapp.yml
     ```
 
-1. In the package.json that you just moved to the tab folder, delete the script named "dev:teamsfx" from the "scripts" object. This script is added to a new package.json in the next step.
-1. Create a new file named package.json *in the root of the project* and give it the following content:
+1. In the `package.json` that you just moved to the tab folder, delete the script named `dev:teamsfx` from the `scripts` object. This script is added to a new `package.json` in the next step.
+1. Create a new file named `package.json` in the root of the project and add the following content:
 
     ```
     {
@@ -129,24 +129,25 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
     }
     ```
 
-1. Change the "name", "version", and "author" properties, as needed.
-1. Open the teamsapp.yml file in the root of the project and find the line `ignoreFile: .webappignore`. Change this to `ignoreFile: ./tab/.webappignore`.
-1. Open the teamsapp.local.yml file in the root of the project and find the line `args: install --no-audit`. Change this to `args: run install:tab --no-audit`.
-1. Open **TERMINAL** in Visual Studio Code. Navigate to the root of the project and run `npm install`. Among other things, a new node_modules folder and a new package.lock.json file are created in the project root. 
-1. Next run `npm run install:tab`. Among other things, a new node_modules folder and a new package.lock.json file are created are created in the tab folder, if they aren't there already. 
+1. Change the `name`, `version`, and `author` properties, as needed.
+1. Open the `teamsapp.yml` file in the root of the project, find the line `ignoreFile: .webappignore`, and change it to `ignoreFile: ./tab/.webappignore`.
+1. Open the `teamsapp.local.yml` file in the root of the project, find the line `args: install --no-audit`, and change this to `args: run install:tab --no-audit`.
+1. Open **TERMINAL** in Visual Studio Code. Navigate to the root of the project and run `npm install`. A new `node_modules` folder and a new `package.lock.json` file are created in the project root. 
+1. Next run `npm run install:tab`. A new `node_modules` folder and a new `package.lock.json` file are created in the tab folder, if they aren't there already. 
 1. Verify that you can sideload the tab with the following steps:
 
-    1. Open Teams Toolkit, and in the **ACCOUNTS** section, verify that you're signed into Microsoft 365.
-    1. Select **View** | **Run** in Visual Studio Code.
+    1. Open Teams Toolkit. 
+    1. In the **ACCOUNTS** section, verify that you're signed in to Microsoft 365 account.
+    1. Select **View** > **Run** in Visual Studio Code.
     1. In the **RUN AND DEBUG** drop down menu, select the option, **Debug in Teams (Edge)**, and then press F5. The project builds and runs. This process can take a couple of minutes. Eventually, Teams opens in a browser with a prompt to add your tab app.
 
-      > [!Note]
+      > [!NOTE]
       > If this is the first time you've debugged a Teams app on this computer, you're prompted to install an SSL certificate. Select **Install** and then **Yes** to the second prompt. Login to your Microsoft 365 account if you're prompted to do so.
 
     1. Select **Add**.
-    1. To stop debugging and uninstall the app, select **Run** | **Stop Debugging** in Visual Studio Code.
+    1. To stop debugging and uninstall the app, select **Run** > **Stop Debugging** in Visual Studio Code.
 
-## Create an Outlook Add-in project
+### Create an Outlook Add-in project
 
 1. Open a second instance of Visual Studio Code.
 1. With Teams Toolkit open in Visual Studio Code, select **Create a new app**.
@@ -163,7 +164,7 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
     1. Select the **Show Taskpane** button and a task pane opens. Select the **Perform an action** button and a small notification appears near the top of the message.
     1. To stop debugging and uninstall the add-in, select **Run** | **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
 
-## Merge the manifest
+### Merge the manifest
 
 The Teams app's manifest is generated at debug-and-sideload time (or build time) from the file manifest.json in the \appPackage folder of the Teams project. *This file is actually a kind of **template** for a manifest. In this article it is referred to as the "template" or "manifest template".* Most of the markup is hardcoded into the template, but there are also some configuration files that contain data that gets injected into the final generated manifest. In this procedure, you do the following tasks:
 
@@ -229,7 +230,7 @@ Unless specified otherwise, the file you change is \appPackage\manifest.json.
 
 1. Copy the entire "extensions" property from the add-in's manifest into the Teams app manifest template as a top-level property.
 
-## Copy the Outlook Add-in files to the Teams app project
+### Copy the Outlook Add-in files to the Teams app project
 
 1. Create a top-level folder called "add-in" in the Teams app project.
 1. Copy the following files and folders from the add-in project to the "add-in" folder of the Teams app project.
@@ -281,7 +282,7 @@ Unless specified otherwise, the file you change is \appPackage\manifest.json.
     |-- teamsapp.yml
     ```
 
-## Edit the tooling configuration files
+### Edit the tooling configuration files
 
 1. Open the package.json file *in the root of the project*.
 1. Add the following scripts to the "scripts" object:
@@ -441,7 +442,7 @@ Unless specified otherwise, the file you change is \appPackage\manifest.json.
       1. Select the **Show Taskpane** button and a task pane opens. Select the **Perform an action** button and a small notification appears near the top of the message.
       1. To stop debugging and uninstall the add-in, select **Run** | **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
 
-## Run the app and add-in locally at the same time
+### Run the app and add-in locally at the same time
 
 You can sideload and run the app and the add-in simultaneously, but the debugger can't reliably attach when both are running. So to debug, run only one at a time. 
 
@@ -465,7 +466,7 @@ To see both the app and the add-in running at the same time, take the following 
 1. To stop debugging and uninstall the add-in, select **Run** | **Stop Debugging** in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code **TERMINAL** in the root of the project and run `npm stop`.
 1. If you had to manually sideload the Teams Tab app, remove it from Teams as instructed in [Remove your app](/microsoftteams/platform/concepts/deploy-and-publish/apps-upload#remove-your-app). 
 
-## Move the application to Azure
+### Move the application to Azure
 
 1. Open the teamsapp.yml file in the root of the project and find the line `deploymentName: Create-resources-for-tab`. Change it to `deploymentName: Create-resources-for-tab-and-addin`.
 
