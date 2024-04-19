@@ -116,25 +116,27 @@ Example: `http://teams.microsoft.com/l/message/19:253f5895-9a62-4362-8d38-43f020
 
 Use the following deep link format can be used in a bot, connector, or message extension card for configuring a deep link to connect to a file in a channel:
 
-`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectUrl=<objectUrl>&baseUrl=<baseUrl>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseUrl>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 The query parameters are:
 
 * `fileId`: Unique file ID from Sharepoint Online, also known as `sourcedoc`. For example, `1FA202A5-3762-4F10-B550-C04F81F6ACBD`.
 * `tenantId`: Tenant ID, such as `0d9b645f-597b-41f0-a2a3-ef103fbd91bb`.
 * `fileType`: Supported file type, such as .docx, .pptx, .xlsx, and .pdf.
-* `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
+* `objectURL`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
 * `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`.
 * `serviceName`: Name of the service, app ID. For example, `teams`.
 * `threadId`: The threadID is the team ID of the team where the file is stored. It's optional and can't be set for files stored in a user's OneDrive folder. threadId - 19:<f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype>.
 * `groupId`: Group ID of the file. For example, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
-> You can see `threadId` and `groupId` in the URL from the channel.  
+>
+> * You can see `threadId` and `groupId` in the URL from the channel.
+> * In the new Teams client, the deep link format using `objectURL` for a file in a channel isn't supported, use `objectUrl` in the deep link format.
 
 The following example format illustrates the deep link to files:
 
-`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
+`https://teams.microsoft.com/l/file/5E0154FC-F2B4-4DA5-8CDA-F096E72C0A80?tenantId=0d9b645f-597b-41f0-a2a3-ef103fbd91bb&fileType=pptx&objectURL=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform%2FShared%20Documents%2FFC7-%20Bot%20and%20Action%20Infra%2FKaizala%20Actions%20in%20Adaptive%20Cards%20-%20Deck.pptx&baseUrl=https%3A%2F%2Fmicrosoft.sharepoint.com%2Fteams%2FActionPlatform&serviceName=teams&threadId=19:f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype&groupId=ae063b79-5315-4ddb-ba70-27328ba6c31e`
 
 ### Serialization of this object
 
