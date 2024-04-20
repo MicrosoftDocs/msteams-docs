@@ -162,6 +162,70 @@ Use when you want to combine text and media, like audio or video.
 
 ---
 
+#### Sample: Communications
+
+This versatile card is designed for communication, social interaction, and sharing updates. Be it company announcements, posts, or community engagement, this card adapts to your content. Customize it with your own text, images, and links to create interesting social experiences.
+
+Download the sample here.
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/communication-card-desktop.png" alt-text="Screenshot shows the desktop version of the communication Adaptive Card sample.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/communication-card-mobile.png" alt-text="Screenshot shows the mobile version of the communication Adaptive Card sample.":::
+
+---
+
+#### Sample: Author highlight video
+
+Use this Adaptive Card sample to showcase short video content, such as tutorials, interviews, or creative pieces. Customize it with your own title, description, and information about the author to create engaging viewing experiences for users.
+
+Download the sample here.
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/author-highlight-video-desktop.png" alt-text="Screenshot shows the desktop version of the author highlight video Adaptive Card sample.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/author-highlight-video-mobile.png" alt-text="Screenshot shows the mobile version of the author highlight video Adaptive Card sample.":::
+
+---
+
+#### Sample: Course video
+
+This robust card sample serves as a learning hub with video content. Customize it with a series of courses, tutorials, or informative clips. Modify the title, description, and information about the author to suit the needs of your users.
+
+Download the sample here.
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/course-video-desktop.png" alt-text="Screenshot shows the desktop version of the course video Adaptive Card sample.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/course-video-mobile.png" alt-text="Screenshot shows the mobile version of the course video Adaptive Card sample.":::
+
+---
+
+#### Sample: Standard video
+
+Get straight to the point with this compact, standard video card design. Use this card to share a range of content, from tech updates to creative inspiration. Users can select the overflow menu for more features, such as bookmarks. They can also take actions like sharing or learning more about the content.
+
+Download the sample here.
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/standard-video-desktop.png" alt-text="Screenshot shows the desktop version of the standard video Adaptive Card sample.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/standard-video-mobile.png" alt-text="Screenshot shows the mobile version of the standard video Adaptive Card sample.":::
+
+---
+
 ### People
 
 Use when you want to efficiently communicate the individuals involved in a task.
@@ -176,6 +240,22 @@ Use when you want to efficiently communicate the individuals involved in a task.
 
 ---
 
+#### Sample: Account details
+
+This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to further explore the content.
+
+Download the sample here.
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/account-details-desktop.png" alt-text="Screenshot shows the desktop version of the account details Adaptive Card sample.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/account-details-mobile.png" alt-text="Screenshot shows the mobile version of the account details Adaptive Card sample.":::
+
+---
+
 ### Request ticket
 
 Use to get quick inputs from a user to automatically create a task or ticket.
@@ -187,6 +267,22 @@ Use to get quick inputs from a user to automatically create a task or ticket.
 # [Mobile](#tab/mobile)
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card on mobile.":::
+
+---
+
+#### Sample: Issue status
+
+The issue card sample is designed to highlight a unique issue and provides important details such as the status and owner. You can easily customize the card with other relevant information, such as priority or due date.
+
+Download the sample here.
+
+# [Desktop](#tab/desktop)
+
+:::image type="content" source="../../assets/images/adaptive-cards/issue-status-desktop.png" alt-text="Screenshot shows the desktop version of the issue status Adaptive Card sample.":::
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="../../assets/images/adaptive-cards/issue-status-mobile.png" alt-text="Screenshot shows the mobile version of the issue status Adaptive Card sample.":::
 
 ---
 
@@ -765,99 +861,3 @@ It's easy to send multiple cards into a conversation, but once cards scroll out 
 * [Respond to the dialog submit action](~/messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
 * [User Specific Views](~/task-modules-and-cards/cards/universal-actions-for-adaptive-cards/user-specific-views.md)
 * [Adaptive Card Previewer](../../concepts/build-and-test/adaptive-card-previewer.md)
-
-## Communications
-
-This versatile card is designed for communication, social interaction, and sharing updates. Be it company announcements, posts, or community engagement, this card adapts to your content. Customize it with your own text, images, and links to create interesting social experiences.
-
-Download the sample here.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/communication-card-desktop.png" alt-text="Screenshot shows the desktop version of the communication Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/communication-card-mobile.png" alt-text="Screenshot shows the mobile version of the communication Adaptive Card sample.":::
-
----
-
-## Author highlight video
-
-Use this Adaptive Card sample to showcase bite-sized video content, such as tutorials, interviews, or creative pieces. Customize it with your own title, description, and information about the author to create engaging viewing experiences for users.
-
-Download the sample here.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/author-highlight-video-desktop.png" alt-text="Screenshot shows the desktop version of the author highlight video Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/author-highlight-video-mobile.png" alt-text="Screenshot shows the mobile version of the author highlight video Adaptive Card sample.":::
-
----
-
-## Course video
-
-This robust card sample serves as a learning hub with video content. Customize it with a series of courses, tutorials, or informative clips. Modify the title, description, and information about the author to suit the needs of your users.
-
-Download the sample here.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/course-video-desktop.png" alt-text="Screenshot shows the desktop version of the course video Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/course-video-mobile.png" alt-text="Screenshot shows the mobile version of the course video Adaptive Card sample.":::
-
----
-
-## Standard video
-
-Get straight to the point with this compact, standard video card design. Use this card to share a range of content, from tech updates to creative inspiration. Users can select the overflow menu for more features, such as bookmarks. They can also take actions like sharing or learning more about the content.
-
-Download the sample here.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/standard-video-desktop.png" alt-text="Screenshot shows the desktop version of the standard video Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/standard-video-mobile.png" alt-text="Screenshot shows the mobile version of the standard video Adaptive Card sample.":::
-
----
-
-## Issue status
-
-The issue card sample is designed to highlight a unique issue and provides important details such as the status and owner. You can easily customize the card with other relevant information, such as priority or due date.
-
-Download the sample here.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/issue-status-desktop.png" alt-text="Screenshot shows the desktop version of the issue status Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/issue-status-mobile.png" alt-text="Screenshot shows the mobile version of the issue status Adaptive Card sample.":::
-
----
-
-## Account details
-
-This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to further explore the content.
-
-Download the sample here.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/account-details-desktop.png" alt-text="Screenshot shows the desktop version of the account details Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/account-details-mobile.png" alt-text="Screenshot shows the mobile version of the account details Adaptive Card sample.":::
-
----
