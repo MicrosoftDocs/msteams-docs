@@ -79,15 +79,15 @@ You can add or update the bot icon for the Teams apps as follows:
 
     ```
 
-* [Uploading a custom app](~/concepts/deploy-and-publish/apps-upload.md) in Teams or [custom apps built for your org (LOB apps)](/microsoftteams/teams-custom-app-policies-and-settings): 
+* [Uploading a custom app](~/concepts/deploy-and-publish/apps-upload.md) in Teams or [custom apps built for your org (LOB apps)](/microsoftteams/teams-custom-app-policies-and-settings): </br>
   
   * [**Azure portal**](https://ms.portal.azure.com/#home): You can change your bot icon by navigating to [Azure portal.](/azure/bot-service/bot-service-manage-overview#settings)
 
-  :::image type="content" source="~/assets/images/bots/bot-icon-update.png" alt-text="Screenshot of the Azure portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-update.png":::
-
+    :::image type="content" source="~/assets/images/bots/bot-icon-update.png" alt-text="Screenshot of the Azure portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-update.png":::
+</br>
   * [**Bot Framework Portal**](https://dev.botframework.com/bots): For bots created using Bot Framework Portal you can update the bot icon in settings page.
 
-  :::image type="content" source="~/assets/images/bots/bot-icon-frame-work.png" alt-text="Screenshot of the Bot Framework Portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-frame-work.png":::
+    :::image type="content" source="~/assets/images/bots/bot-icon-frame-work.png" alt-text="Screenshot of the Bot Framework Portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-frame-work.png":::
 
 > [!NOTE]
 > The bot icon is cached until the user signs out and signs back in Teams.
