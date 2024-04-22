@@ -653,7 +653,7 @@ To enable `microsoftEntra` authentication method for API-based message extension
 
     The **Register an application** page appears.
 
-4. Enter the name of your app that you want to be displayed to the app user. You can change the name at a later stage, if you want to.
+4. Enter the name of your app that you want to be displayed to the app user. You can change the name at a later stage if you want to.
 
     :::image type="content" source="../assets/images/authentication/teams-sso-tabs/register-app.png" alt-text="App registration page on Microsoft Entra admin center.":::
 
@@ -685,7 +685,7 @@ To enable `microsoftEntra` authentication method for API-based message extension
 
 8. Note and save the app ID from **Application (client) ID** to update the app manifest later.
 
-    Your app is registered in Microsoft Entra ID. You now have app ID for your API-based message extension app.
+    Your app is registered in Microsoft Entra ID. You now have the app ID for your API-based message extension app.
 
 ### Configure scope for access token
 
@@ -694,8 +694,8 @@ After you've created a new app registration, configure scope (permission) option
 To configure scope and authorize trusted client applications, you need:
 
 * [Add Application ID URI](#application-id-uri): Configure scope (permission) options for your app. Expose a web API and configure the application ID URI.
-* [Configure API scope](#configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can let only admins provide consent for higher-privileged permissions.
-* [Configure authorized client application](#configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users won't have the opportunity to decline consent.
+* [Configure API scope](#configure-api-scope): Define scope for the API, and the users who can consent for a scope. You can only let admins provide consent for higher-privileged permissions.
+* [Configure authorized client application](#configure-authorized-client-application): Create authorized client IDs for applications that you want to preauthorize. It allows the app user to access the app scopes (permissions) you've configured, without requiring any further consent. Preauthorize only those client applications you trust as your app users don't have the opportunity to decline consent.
 
 #### Application ID URI
 
@@ -730,9 +730,9 @@ To configure scope and authorize trusted client applications, you need:
     >   | If base resource name used is | URL will be... | Format is supported on... |
     >   | --- | --- | --- |
     >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
-    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported in Android. |
+    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported on Android. |
     >
-    >    Use the lower case option *demoapplication* as base resource name.
+    >    Use the lower-case option *demoapplication* as base resource name.
 
 1. Select **Save**.
 
@@ -955,7 +955,7 @@ After the API-based message extension gets a request header with token, perform 
 * **Use the token**: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API.
 
   > [!NOTE]
-  > The API receives an Microsoft Entra token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
+  > The API receives a Microsoft Entra token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
 
 </details>
 <br/>
@@ -986,7 +986,7 @@ After the API-based message extension gets a request header with token, perform 
 
       * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
       * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-      * A 500 Internal Server Error indicates that the service doesn't know how to respond, possibly due to a server-side issue.
+      * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
