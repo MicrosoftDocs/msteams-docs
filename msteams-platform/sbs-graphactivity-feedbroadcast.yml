@@ -27,7 +27,7 @@ items:
 
     This step-by-step guide helps you to broadcast messages and notify all the members of an organization using activity feed notification. You can see the following output:
 
-      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Screenshot shows the output of feed broadcast." lightbox="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" border="true":::
+      :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/msg-broadcast-output-ready.png" alt-text="Screenshot shows the output of feed broadcast." lightbox="~/assets/images/sbs-graphactivity-feedbroadcast/message-broadcast-output-ready.png" border="true":::
 
       :::image type="content" source="~/assets/images/sbs-graphactivity-feedbroadcast/notification-recipient.png" alt-text="Screenshot shows the final output of activity feed notification." border="true"::: 
 
@@ -119,8 +119,8 @@ items:
 
     [!INCLUDE [Application ID URI](includes/get-started/application-id-uri.md)]
 
-       > [!NOTE]
-       > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain updates. For example, `api://f631****.ngrok.io/c4e88a5d-e3d4-47f4-accb-0ef9de3bce8a`, where `f631****.ngrok.io` is the new ngrok subdomain name.
+         > [!NOTE]
+         > If you're using a tunneling service such as ngrok, ensure you update the value whenever your ngrok subdomain updates. For example, `api://f631****.ngrok.io/c4e88a5d-e3d4-47f4-accb-0ef9de3bce8a`, where `f631****.ngrok.io` is the new ngrok subdomain name.
 
     [!INCLUDE [Azure add scope](includes/get-started/azure-add-scope.md)]
 
