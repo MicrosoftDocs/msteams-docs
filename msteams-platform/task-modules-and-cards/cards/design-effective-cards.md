@@ -30,22 +30,6 @@ You also can start designing your Adaptive Cards directly in the browser.
 
 ## Types of Adaptive Cards
 
-The following types of Adaptive Cards are available in Teams:
-
-* [Hero](#hero)
-* [Thumbnail](#thumbnail)
-* [List](#list)
-* [Digest](#digest)
-* [Media](#media)
-* [People](#people)
-* [Request ticket](#request-ticket)
-* [ImageSet](#imageset)
-* [ActionSet](#actionset)
-* [ChoiceSet](#choiceset)
-
-> [!NOTE]
-> Download Adaptive Card samples with ready-to-use code [here](https://github.com/pnp/AdaptiveCards-Templates).
-
 ### Hero
 
 Our largest card. Use for sharing articles or scenarios where an image tells most of the story.
@@ -73,6 +57,9 @@ The hero showcase card features a captivating image and is ideal for highlightin
 :::image type="content" source="../../assets/images/adaptive-cards/recipe-hero-mobile.png" alt-text="Screenshot shows the mobile version of the recipe hero Adaptive Card sample.":::
 
 ---
+
+> [!NOTE]
+> Download Adaptive Card samples with ready-to-use code [here](https://github.com/pnp/AdaptiveCards-Templates).
 
 ### Thumbnail
 
@@ -118,7 +105,7 @@ Use in scenarios where you want the user to pick an item from a list, but the it
 
 #### Sample: List
 
-Use this card to showcase a selection of personalized content, curated specifically for your users. Highlight what’s most important to them, such as articles, videos, or courses. Users can select any module to explore its content or open it for a comprehensive view within the app.
+Use this card to showcase a selection of personalized content, such as curated lists of articles, videos, or courses. Users can select any module to explore its content or open it for a comprehensive view within the app.
 
 # [Desktop](#tab/desktop)
 
@@ -174,7 +161,7 @@ This versatile card is designed for communication, social interaction, and shari
 
 #### Sample: Author highlight video
 
-Use this Adaptive Card sample to showcase short video content, such as tutorials, interviews, or creative pieces. Customize it with your own title, description, and information about the author to create engaging viewing experiences for users.
+Use this card sample to showcase short video content, such as tutorials, interviews, or creative pieces. Customize it with your own title, description, and information about the author to create an engaging viewing experience for users.
 
 # [Desktop](#tab/desktop)
 
@@ -202,7 +189,7 @@ This card sample serves as a learning hub with video content. Customize it with 
 
 #### Sample: Standard video
 
-Get straight to the point with this compact, standard video card design. Use this card to share a range of content, from tech updates to creative inspiration. Users can select the overflow menu for more features, such as bookmarks. They can also take actions like sharing or learning more about the content.
+Use this compact, standard video card sample to share a range of content, from tech updates to creative inspiration. Users can select the overflow menu to access more features, such as bookmarks. They can also take actions like sharing or learning more about the content.
 
 # [Desktop](#tab/desktop)
 
