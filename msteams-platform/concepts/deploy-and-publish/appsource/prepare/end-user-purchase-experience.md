@@ -155,12 +155,14 @@ The following example shows how users can manage licenses for third-party apps f
 
 You can promote third-party app by adopting more than one of the following best practices:
 
-* Provide a Freemium account that account for better user conversion.
-* Provide call-to-action button that can be shared in an Adaptive Card for users to share the app and onboard other team members.
+* Freemium account that account for better user conversion.
+* Call-to-action button that can be shared in an Adaptive Card for users to share the app and onboard other team members.
 * Banner promotion for marketing campaign that leads to higher app installation and meaningful engagement.
-* Adoption change management through email to reach users on a constant basis.
-* Solving blockers
-* Growth Marketing
+* Adoption change management is critical for an app's growth to reach users on a constant basis about the existing and new features through email communication.
+* Solving blockers to address and eliminate adoption blockers and VoCs through ISVs and Teams Engineering is important for growth.
+* Growth marketing to established strategy for driving usage and growth for apps in a SaaS offers.
+
+For mor information, see [educate users and drive adoption change management for your app](../../../../promote-app-adoption.md#step-3-educate-users-and-drive-adoption-change-management-for-your-app).
 
 ## Admin purchasing experience
 
