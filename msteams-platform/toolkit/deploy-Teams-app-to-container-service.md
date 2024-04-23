@@ -39,7 +39,7 @@ The `provision` command creates and configures the following resources:
 
 * A Teams app with tab or bot capability.
 * An Azure Container Registry to host your container image.
-* An Azure Container App environment and an Azure Container Apps to host your bot app.
+* An Azure Container App environment and an Azure Container Apps to host your app.
 * An Azure Entra App for authentication.
 
 In the sample Teams bot, the `provision` command also creates an Azure Bot Service to channel Teams client and Azure Container Apps.
@@ -143,8 +143,6 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your reference
 
     1. `<hostname>`: Update your ingress FQDN.
 
-    1. `<email>`: Update your email address for generating TLS certificate.
-
 1. Run the following command to apply `deploy/sso-bot.yaml`:
 
     ```bash
@@ -193,8 +191,8 @@ You can modify the sample code to ensure compatibility with your Kubernetes Serv
 
 1. Add the `botFramework/create` action during the provision stage in `teamsapp.yml` file. This action enables the Teams Toolkit to create a bot registration with the appropriate messaging endpoint.
 
->[!NOTE]
-> We recommend you to use Azure Bot Service for channeling. If you don't have an Azure account and can't create Azure Bot Service, you can create a bot registration.
+    >[!NOTE]
+    > We recommend you to use Azure Bot Service for channeling. If you don't have an Azure account and can't create Azure Bot Service, you can create a bot registration.
 
     ```yml
     - uses: botFramework/create
