@@ -1,7 +1,7 @@
 ---
-title: Configure-bot-capability
+title: Configure bot capability
 author: surbhigupta
-description: Learn to configure bot capability within your Teams app.
+description: Learn how to configure bot capability within your Teams app.
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: overview
@@ -14,31 +14,29 @@ A bot, chatbot, or conversational bot is an app that responds to simple commands
 
 ## Prerequisites
 
-To configure bot as an additional capability, ensure the following prerequisites:
+To configure bot as an additional capability, ensure the following prerequisites are met:
 
-* Your app manifest (previously called Teams app manifest).
+* The app manifest (previously called Teams app manifest) file.
 * A [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
-* Microsoft Storage account.
+* [Microsoft Azure Storage account](/azure/storage/common/storage-account-create).
 
-To add bot to a Teams tab app, see [add bot to Teams tab app](#add-bot-to-teams-tab-app).
+## Add bot to Teams app
 
-To add bot to a message extension Teams app, see [add bot to a message extension Teams app](#add-bot-to-a-message-extension-teams-app).
+# [Add bot to Teams tab app](#tab/tabapp)
 
-## Add bot to Teams tab app
-
-The following steps help you to add bot capability to a tab app:
+The following steps help you to add bot to a tab app:
 
 * [Create bot Teams app using Microsoft Teams Toolkit](#create-bot-app-using-microsoft-teams-toolkit).
-* [Configure bot capability in app manifest](#configure-bot-capability-in-app-manifest).
-* [Bring bot code to your project](#bring-bot-code-to-your-project).
+* [Configure bot in app manifest](#configure-bot-in-app-manifest).
+* [Add bot code to your project](#add-bot-code-to-your-project).
 * [Setup local debug environment](#setup-local-debug-environment).
-* [Move the application to Azure](#move-the-application-to-azure).
+* [Provision the app to Azure](#provision-the-app-to-azure).
 
-### Create bot app using Microsoft Teams Toolkit
+## Create bot app using Microsoft Teams Toolkit
 
 To create a bot app using Teams Toolkit, see [create a bot app with Teams Toolkit](create-new-project.md).
 
-### Configure bot capability in app manifest
+## Configure bot in app manifest
 
 You can configure message extension in `appPackage/manifest.json`. You can configure message extension in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#bots).
 
@@ -76,86 +74,86 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
     ]
 ```
 
-### Bring bot code to your project
+## Add bot code to your project
 
-1. You can bring your bot app code into your project. If you don't have an app code, use the previously created bot app project, and copy the source code into your current project. We recommend you copy them into a `bot/` folder. The following folder structure is an example of how your project's folder structure looks like:
+1. You can add your bot app code into your project. If you don't have an app code, use the previously created bot app project, and copy the source code into your current project. We recommend you copy them into a `bot/` folder. The following folder structure is an example of how your project's folder structure looks like:
 
-```yml
-    |-- .vscode/
-    |-- appPackage/
-    |-- env/
-    |-- infra/
-    |--public/
-    |-- bot/           <!--bot source code-->
-    |   |-- adaptiveCards/
-    |   |-- index.ts
-    |   |-- config.ts
-    |   |-- teamsBot.ts
-    |   |-- package.json
-    |   |-- tsconfig.json
-    |   |-- web.config
-    |   |-- .webappignore
-    |-- src/            <!--your current source code-->
-    |   |-- app.ts
-    |   |-- static/
-    |   |-- views/
-    |-- package.json
-    |-- tsconfig.json
-    |-- teamsapp.local.yml
-    |-- teamsapp.yml
-```
+   ```yml
+       |-- .vscode/
+       |-- appPackage/
+       |-- env/
+       |-- infra/
+       |--public/
+       |-- bot/           <!--bot source code-->
+       |   |-- adaptiveCards/
+       |   |-- index.ts
+       |   |-- config.ts
+       |   |-- teamsBot.ts
+       |   |-- package.json
+       |   |-- tsconfig.json
+       |   |-- web.config
+       |   |-- .webappignore
+       |-- src/            <!--your current source code-->
+       |   |-- app.ts
+       |   |-- static/
+       |   |-- views/
+       |-- package.json
+       |-- tsconfig.json
+       |-- teamsapp.local.yml
+       |-- teamsapp.yml
+   ```
 
-1. Create a root `package.json` using command `npm init -y`. We recommend you reorganize the folder structure and create a root `package.json` as given in the following folder structure:
+1. Create a root `package.json` using command `npm init -y`. We recommend you to reorganize the folder structure and create a root `package.json` as given in the following folder structure:
 
-```yml
-    |-- .vscode/
-    |-- appPackage/
-    |-- env/
-    |-- infra/
-    |-- bot/            <!--bot source code-->
-    |   |-- adaptiveCards/
-    |   |-- index.ts
-    |   |-- config.ts
-    |   |-- teamsBot.ts
-    |   |-- package.json
-    |   |-- tsconfig.json
-    |   |-- web.config
-    |   |-- .webappignore
-    |-- tab/           <!--move your current source code to a new sub folder-->
-    |   |-- src/
-    |   |   |-- app.ts
-    |   |   |-- static/
-    |   |   |-- views/
-    |   |-- package.json
-    |   |-- tsconfig.json
-    |-- package.json <!--root package.json-->
-    |-- teamsapp.local.yml
-    |-- teamsapp.yml
-```
+   ```yml
+       |-- .vscode/
+       |-- appPackage/
+       |-- env/
+       |-- infra/
+       |-- bot/            <!--bot source code-->
+       |   |-- adaptiveCards/
+       |   |-- index.ts
+       |   |-- config.ts
+       |   |-- teamsBot.ts
+       |   |-- package.json
+       |   |-- tsconfig.json
+       |   |-- web.config
+       |   |-- .webappignore
+       |-- tab/           <!--move your current source code to a new sub folder-->
+       |   |-- src/
+       |   |   |-- app.ts
+       |   |   |-- static/
+       |   |   |-- views/
+       |   |-- package.json
+       |   |-- tsconfig.json
+       |-- package.json <!--root package.json-->
+       |-- teamsapp.local.yml
+       |-- teamsapp.yml
+   ```
 
 1. Add the following code to your root `package.json`:
 
-```json
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1",
-      "install:bot": "cd bot && npm install",
-      "install:tab": "cd tab && npm install",
-      "install": "concurrently \"npm run install:bot\" \"npm run install:tab\"",
-      "dev:bot": "cd bot && npm run dev",
-      "start:tab": "cd tab && npm run start",
-      "build:tab": "cd tab && npm run build",
-      "build:bot": "cd bot && npm run build",
-      "build": "concurrently \"npm run build:tab\" \"npm run build:bot\""
-    },
-    "dependencies": {
-        "concurrently": "^7.6.0"
-    },
-```
+   ```json
+       "scripts": {
+         "test": "echo \"Error: no test specified\" && exit 1",
+         "install:bot": "cd bot && npm install",
+         "install:tab": "cd tab && npm install",
+         "install": "concurrently \"npm run install:bot\" \"npm run install:tab\"",
+         "dev:bot": "cd bot && npm run dev",
+         "start:tab": "cd tab && npm run start",
+         "build:tab": "cd tab && npm run build",
+         "build:bot": "cd bot && npm run build",
+         "build": "concurrently \"npm run build:tab\" \"npm run build:bot\""
+       },
+       "dependencies": {
+           "concurrently": "^7.6.0"
+       },
+   ```
 
-> [!NOTE]
-> If you're working on a JavaScript project, the bot doesn't need build. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
+   > [!NOTE]
+   > If you're working on a JavaScript project, the bot doesn't need build. You must remove `build:bot` script and update the `build` script to `npm run build:tab`.
 
-### Setup local debug environment
+## Setup local debug environment
 
 1. Add the following new tasks in `.vscode/task.json`:
 
@@ -165,103 +163,103 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
 
     Add `Start bot` and `Start frontend` to task `Start application`'s `dependOn`. Configure `Start bot` and `Start frontend`'s `cwd` option as we moved the code for tab and bot to `tab/` and `bot/` folder separately. Add `Start local tunnel` to task `Start Teams App Locally`'s `dependOn`. For example:
 
-```json
-    "tasks":[
-            {
-                // Start the local tunnel service to forward public URL to local port and inspect traffic.
-                // See https://aka.ms/teamsfx-tasks/local-tunnel for the detailed args definitions.
-                "label": "Start local tunnel",
-                "type": "teamsfx",
-                "command": "debug-start-local-tunnel",
-                "args": {
-                    "type": "dev-tunnel",
-                    "ports": [
-                        {
-                            "portNumber": 3978,
-                            "protocol": "http",
-                            "access": "public",
-                            "writeToEnvironmentFile": {
-                                "endpoint": "BOT_ENDPOINT", // output tunnel endpoint as BOT_ENDPOINT
-                                "domain": "BOT_DOMAIN" // output tunnel domain as BOT_DOMAIN
-                            }
-                        }
+   ```json
+       "tasks":[
+               {
+                   // Start the local tunnel service to forward public URL to local port and inspect traffic.
+                   // See https://aka.ms/teamsfx-tasks/local-tunnel for the detailed args definitions.
+                   "label": "Start local tunnel",
+                   "type": "teamsfx",
+                   "command": "debug-start-local-tunnel",
+                   "args": {
+                       "type": "dev-tunnel",
+                       "ports": [
+                           {
+                               "portNumber": 3978,
+                               "protocol": "http",
+                               "access": "public",
+                               "writeToEnvironmentFile": {
+                                   "endpoint": "BOT_ENDPOINT", // output tunnel endpoint as BOT_ENDPOINT
+                                   "domain": "BOT_DOMAIN" // output tunnel domain as BOT_DOMAIN
+                               }
+                           }
+                       ],
+                       "env": "local"
+                   },
+                   "isBackground": true,
+                   "problemMatcher": "$teamsfx-local-tunnel-watch"
+               },
+               {
+                   "label": "Start bot",
+                   "type": "shell",
+                   "command": "npm run dev:teamsfx",
+                   "isBackground": true,
+                   "options": {
+                       "cwd": "${workspaceFolder}/bot"
+                   },
+                   "problemMatcher": {
+                       "pattern": [
+                           {
+                               "regexp": "^.*$",
+                               "file": 0,
+                               "location": 1,
+                               "message": 2
+                           }
+                       ],
+                       "background": {
+                           "activeOnStart": true,
+                           "beginsPattern": "[nodemon] starting",
+                           "endsPattern": "restify listening to|Bot/ME service listening at|[nodemon] app crashed"
+                       }
+                   }
+               },
+               {
+                  "label": "Start frontend",
+                  "type": "shell",
+                  "command": "npm run dev:teamsfx",
+                  "isBackground": true,
+                  "options": {
+                       "cwd": "${workspaceFolder}/tab"
+                   },
+                   "problemMatcher": {
+                       "pattern": {
+                           "regexp": "^.*$",
+                           "file": 0,
+                           "location": 1,
+                           "message": 2
+                       },
+                       "background": {
+                           "activeOnStart": true,
+                           "beginsPattern": ".*",
+                           "endsPattern": "listening to|Compiled|Failed|compiled|failed"
+                       }
+                   }
+               },
+                {
+                    "label": "Start application",
+                    "dependsOn": [
+                        "Start bot",
+                        "Start frontend"
+                    ]
+                },
+                {
+                    "label": "Start Teams App Locally",
+                    "dependsOn": [
+                        "Validate prerequisites",
+                        "Start local tunnel",
+                        "Provision",
+                        "Deploy",
+                        "Start application"
                     ],
-                    "env": "local"
+                    "dependsOrder": "sequence"
                 },
-                "isBackground": true,
-                "problemMatcher": "$teamsfx-local-tunnel-watch"
-            },
-            {
-                "label": "Start bot",
-                "type": "shell",
-                "command": "npm run dev:teamsfx",
-                "isBackground": true,
-                "options": {
-                    "cwd": "${workspaceFolder}/bot"
-                },
-                "problemMatcher": {
-                    "pattern": [
-                        {
-                            "regexp": "^.*$",
-                            "file": 0,
-                            "location": 1,
-                            "message": 2
-                        }
-                    ],
-                    "background": {
-                        "activeOnStart": true,
-                        "beginsPattern": "[nodemon] starting",
-                        "endsPattern": "restify listening to|Bot/ME service listening at|[nodemon] app crashed"
-                    }
-                }
-            },
-            {
-               "label": "Start frontend",
-               "type": "shell",
-               "command": "npm run dev:teamsfx",
-               "isBackground": true,
-               "options": {
-                    "cwd": "${workspaceFolder}/tab"
-                },
-                "problemMatcher": {
-                    "pattern": {
-                        "regexp": "^.*$",
-                        "file": 0,
-                        "location": 1,
-                        "message": 2
-                    },
-                    "background": {
-                        "activeOnStart": true,
-                        "beginsPattern": ".*",
-                        "endsPattern": "listening to|Compiled|Failed|compiled|failed"
-                    }
-                }
-            },
-             {
-                 "label": "Start application",
-                 "dependsOn": [
-                     "Start bot",
-                     "Start frontend"
-                 ]
-             },
-             {
-                 "label": "Start Teams App Locally",
-                 "dependsOn": [
-                     "Validate prerequisites",
-                     "Start local tunnel",
-                     "Provision",
-                     "Deploy",
-                     "Start application"
-                 ],
-                 "dependsOrder": "sequence"
-             },
-    ]
-```
+       ]
+   ```
 
 1. Add action `botAadApp/create` and `botFramework/create` under provision in `teamsapp.local.yml`.
 1. Add the following code in `file/createOrUpdateEnvironmentFile` action under deploy:
 
-```yml
+   ```yml
     provision:
       - uses: botAadApp/create
         with:
@@ -299,19 +297,19 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
           envs:
             BOT_ID: ${{BOT_ID}}
             BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
-```
+   ```
 
    For more information, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
 
 1. Open the **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**.
 1. Select the F5 key to debug and preview your Teams app locally.
 
-### Move the application to Azure
+## Provision the app to Azure
 
 1. Copy the `botRegistration/` folder from bot to `infra/`.
 1. Add following code to the bicep file:
 
-```json
+   ```json
     param resourceBaseName2 string
     param webAppName2 string = resourceBaseName2
     @maxLength(42)
@@ -372,11 +370,11 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
     // The output will be persisted in .env.{envName}. Visit https://aka.ms/teamsfx-actions/arm-deploy for more details.
     output BOT_AZURE_APP_SERVICE_RESOURCE_ID string = webApp2.id
     output BOT_DOMAIN string = webApp2.properties.defaultHostName
-```
+   ```
 
 1. Update the `azure.parameters.json` file with the following code to ensure that necessary parameters are set correctly:
 
-```json
+   ```json
     {
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
@@ -401,12 +399,12 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
       }
     }
     }
-```
+   ```
 
 1. Add `botAadApp/create` action under `provision` section in the `teamsapp.yml` file.
 1. Add the following code in `deploy` section:
 
-```yml
+   ```yml
     deploy:
       - uses: cli/runNpmCommand # Run npm command
         with:
@@ -439,7 +437,7 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
           # You can replace it with your existing Azure Resource id
           # or add it to your environment variable file.
           resourceId: ${{BOT_AZURE_APP_SERVICE_RESOURCE_ID}}
-```
+   ```
 
    For more information, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
 
@@ -448,25 +446,25 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
 1. Open the **Run and Debug Activity Panel** and select **Launch Remote (Edge)** or **Launch Remote (Chrome)**.
 1. Select F5 key to debug and preview your Teams app.
 
-## Add bot to a message extension Teams app
+# [Add bot to Teams message extension app](#tab/messageextensionapp)
 
 You can add a message extension to a Teams bot app more easily than adding it to a tab app, as message extensions use the bot support framework.
 
-The following steps help you to add bot capability to a message extension app:
+The following steps help you to add bot to a message extension app:
 
 * [Create bot app using Teams Toolkit](#create-bot-app-using-teams-toolkit).
-* [Update manifest file](#add-bot-capability-in-app-manifest).
-* [Bring bot code to project](#bring-bot-code-to-project).
+* [Update manifest file](#add-bot-in-app-manifest).
+* [Add bot code to project](#add-bot-code-to-project).
 
-### Create bot app using Teams Toolkit
+## Create bot app using Teams Toolkit
 
 To create a bot app with Teams Toolkit, see [create a new Teams app](create-new-project.md).
 
-### Add bot capability in app manifest
+## Add bot in app manifest
 
-1. You can configure bot capability in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#bots).
+1. You can configure bot in `appPackage/manifest.json`. If you need to customize your app, see the [app manifest schema](../resources/schema/manifest-schema.md#bots).
 
-```json
+   ```json
     "bots": [
         {
             "botId": "${{BOT_ID}}",
@@ -498,13 +496,13 @@ To create a bot app with Teams Toolkit, see [create a new Teams app](create-new-
             ]
         }
     ]
-```
+   ```
 
-### Bring bot code to project
+## Add bot code to project
 
-If you're adding bot to a message extension Teams app, you should have a class that extends `TeamsActivityHandler`. Bring your bot code or copy the code from your previously created bot app to your own class. The following code is an example if you copy the code from a bot app created with Teams Toolkit:
+If you're adding bot to a message extension Teams app, you should have a class that extends `TeamsActivityHandler`. Add your bot code or copy the code from your previously created bot app to your own class. The following code is an example if you copy the code from a bot app created with Teams Toolkit:
 
-```json
+   ```json
       public class YourHandler extends TeamsActivityHandler{
     
         // bot code
@@ -521,4 +519,4 @@ If you're adding bot to a message extension Teams app, you should have a class t
          * your own message extension code
         */
       }
-```
+   ```
