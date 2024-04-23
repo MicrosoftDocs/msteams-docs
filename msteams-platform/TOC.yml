@@ -44,16 +44,22 @@
   - name: Build tabs
     expanded: false
     items:
-    - name: Build a tab app
+    - name: Overview
       href: concepts/design/overview-analytics.md
-    - name: Debug a tab app
+    - name: Quick Start to build tab app use Teams Toolkit
       href: concepts/design/strategize-measure.md
-    - name: Build a Teams tab with SharePoint Framework
+    - name: Create a static tab and run everywhere
       href: concepts/design/plan-to-monetize.md
-      displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee
-    - name: Extend a Teams tab across Microsoft 365 and Outlook
+    - name: Open content in stage view
       href: concepts/design/plan-to-monetize.md
-      displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee   
+    - name: Get cotext for your tab
+      href: concepts/design/plan-to-monetize.md
+    - name: Navigate within your tab
+      href: concepts/design/plan-to-monetize.md
+    - name: Case Study - Build dashboard tab app
+      href: concepts/design/plan-to-monetize.md
+    - name: Tab on mobile
+      href: concepts/design/plan-to-monetize.md
   - name: Build bots
     expanded: false
     items:
