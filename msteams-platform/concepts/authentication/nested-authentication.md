@@ -10,10 +10,10 @@ ms.localizationpriority: medium
 
 # Nested authentication
 
-Nested authentication is a new authentication protocol for single page applications that are embedded in host environments like Teams, Outlook, and Harmony. It simplifies the authentication process and allows the app to request specific permissions for the resources it needs. It also aligns with the web authentication using MSAL JS, which many apps already use.
+Nested authentication is a new authentication protocol for single page applications that are embedded in host environments like Teams, Outlook, and Harmony. It simplifies the authentication process and allows the app to request specific permissions for the resources it needs. It also aligns with the web authentication using Microsoft Authentication Library (MSAL) JS, which many apps already use.
 
 The existing authentication flow for embedded apps depends on the host environment and requires a middle tier service to do the on-behalf-of token exchange. The app also has to use the Teams JS SDK to get the token and consent to the host app's permissions.
-The nested authentication flow is consistent across all host environments and doesn't require a middle tier service or the Teams JS SDK. The app only has to register its app in Azure AD, configure a broker schema redirect URI, enable the native bridging in the manifest, and use MSAL JS to acquire the token and call the APIs. The app can also check the support status of nested authentication using the Teams JS SDK and provide a fallback experience for unsupported environments.
+The nested authentication flow is consistent across all host environments and doesn't require a middle tier service or the Teams JS SDK. The app only has to register its app in Microsoft Entra, configure a broker schema redirect URI, enable the native bridging in the manifest, and use MSAL JS to acquire the token and call the APIs. The app can also check the support status of nested authentication using the Teams JS SDK and provide a fallback experience for unsupported environments.
 
 ## Configure nested authentication
 
@@ -22,12 +22,12 @@ The nested authentication flow is consistent across all host environments and do
 
 To use nested auth, developers need to follow these steps:
 
-* Register their single page application in Azure AD and configure the app registration with a broker schema redirect URI. This enables the app to be brokered by the host environments. 12
-* Enable the native bridging in the app manifest by setting the supportsNestedAppAuth property to true. This allows the app to communicate with the host environment. 3
-* Initialize MSAL JS in the app and acquire the token using the new nested authentication flow. This prompts the user to consent to the app's permissions and return a token with the requested scopes. 4
+* Register their single page application in Microsoft Entra and configure the app registration with a broker schema redirect URI. This allows the host environments to broker the app.
+* Enable the native bridging in the app manifest by setting the supportsNestedAppAuth property to true. This allows the app to communicate with the host environment.
+* Initialize MSAL JS in the app and acquire the token using the new nested authentication flow. This prompts the user to consent to the app's permissions and return a token with the requested scopes.
 * Use the token to call the Microsoft Graph or other APIs that the app needs.
 
-• Migration: Developers who want to use nested app authentication need to register their single page application in Azure AD and configure a broker schema redirect URI. They also need to enable the native bridging in the app manifest and initialize MSAL JS in the app. They can then acquire the token using the new nested app authentication flow and use it to call the Microsoft Graph or other APIs.
+• Migration: Developers who want to use nested app authentication need to register their single page application in Microsoft Entra and configure a broker schema redirect URI. They also need to enable the native bridging in the app manifest and initialize MSAL JS in the app. They can then acquire the token using the new nested app authentication flow and use it to call the Microsoft Graph or other APIs.
 • Fallback: Developers need to check the support status of nested app authentication using the Teams JS SDK and provide a fallback experience for unsupported environments. For example, they can use the classic SSO or OBO flow for Teams mobile or Surface Hub.
 
 ### Register your single-page application
@@ -36,11 +36,13 @@ To use nested auth, developers need to follow these steps:
 
 ### Add trusted brokers
 
-To enable NAA, your application must configure one or more specialized redirect URIs that indicate to the Microsoft identity platform that your application allows itself to be brokered by supported hosts. The redirect_uri of the application must be of type Single Page Application and conform to the following scheme:
+Your application must actively configure one or more specialized redirect URIs to signal to the Microsoft identity platform that it's designed to be brokered by supported hosts, thereby enabling Nested App Auth. The redirect_uri of the application must be of type Single Page Application and conform to the following scheme:
 
+```
 brk-<broker_application_id>://<your_domain>
+```
 
-Where <broker_application_id> is the app id or alias of the broker or brokers you wish to trust and <your_domain> is the fully-qualified domain name where your application is hosted. For example, brk-multihub://contoso.com.
+Where <broker_application_id> is the app ID or alias of the broker or brokers you wish to trust and <your_domain> is the fully qualified domain name where your application is hosted. For example, **brk-multihub://contoso.com**.
 
 For your convenience, many broker groups are preconfigured in ESTS for common scenarios.
 
@@ -53,7 +55,7 @@ For your convenience, many broker groups are preconfigured in ESTS for common sc
 |Office Rich Client & Outlook Mobile     | 27922004-5251-4030-b22d-91ecd9a37ea4  |
 |Outlook for macOS     |  d3590ed6-52b3-4102-aeff-aad2292ab01c   |
 
-### Enable Native Bridging in your config
+### Enable native bridging
 
 ```javascript
 
@@ -114,7 +116,7 @@ publicClientApplication
 
 ```
 
-If a user is required to interact with an AAD consent dialog (acquireTokenPopup), then they will/may first be shown a speed bump dialog. This is to ensure that user has shown intent to open the AAD window and to prevent the window from randomly appearing on the user's screen.
+If a user is required to interact with a Microsoft Entra ID consent dialog (acquireTokenPopup), then they will/may first be shown a speed bump dialog. This is to ensure that user showed intent to open the Microsoft Entra ID window and to prevent the window from randomly appearing on the user's screen.
 
 ### Call an API
 
@@ -140,9 +142,9 @@ fetch(graphEndpoint, options)
 ### Best practices
 
 * Use silent authentication whenever possible
-* MSAL.js provides the acquireTokenSilent method, which handles token renewal by making silent token requests without prompting the user. The method first looks for a valid cached token in the browser storage. If it doesn't find one, the library makes the silent request to Azure AD and if there's an active user session (determined by a cookie set in browser on the Azure AD domain), a fresh token is returned. The library doesn't automatically invoke the acquireTokenSilent method. It's recommended that you call acquireTokenSilent in your app before making an API call to get the valid token.
-* In certain cases, the acquireTokenSilent method's attempt to get the token fails. Some examples of this are when there's an expired user session with Azure AD or a password change by the user, which requires user interaction. When the acquireTokenSilent fails, you need to call the interactive acquire token method (acquireTokenPopup).
-* Have a fallback when NAA isn't supported
-* While we strive to provide a high-degree of compatibility with these flows across the Microsoft ecosystem, your application may appear in down-level/legacy clients that haven't been updated to support NAA. In these cases, your application won't support seamless SSO and you may need to invoke special APIs for interacting with the user to open authentication dialogs. For more info, see Authenticate and authorize with the Office dialog API.
-* Test your application in multiple environments
+* MSAL.js provides the acquireTokenSilent method, which handles token renewal by making silent token requests without prompting the user. The method first looks for a valid cached token in the browser storage. If it doesn't find one, the library makes the silent request to Microsoft Entra and if there's an active user session (determined by a cookie set in browser on the Microsoft Entra domain), a fresh token is returned. The library doesn't automatically invoke the acquireTokenSilent method. We recommended that you call acquireTokenSilent in your app before making an API call to get the valid token.
+* In certain cases, the acquireTokenSilent method's attempt to get the token fails. For example, when there's an expired user session with Microsoft Entra or a password change by the user, which requires user interaction. When the acquireTokenSilent fails, you need to call the interactive acquire token method (acquireTokenPopup).
+* Have a fallback when NAA isn't supported.
+* While we strive to provide a high-degree of compatibility with these flows across the Microsoft ecosystem, your application might appear in down-level/legacy clients aren't updated to support NAA. In these cases, your application doesn't support seamless SSO and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more info, see Authenticate and authorize with the Office dialog API.
+* Test your application in multiple environments.
 * If your application is expected to work in both WebView and browser deployments, we recommend testing your application in both of these deployment environments to ensure it behaves as you expect. Not all APIs supported in the browser work inside of WebViews.
