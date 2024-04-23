@@ -167,6 +167,7 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
    1. Based on the oprtions selected in **step a**, follow these steps:
    
       * If you've selected **none** or **Microsoft Entra**, skip to the next step.
+
       * If you've selected API key, follow these steps:
 
          Generate and set up your API key as follows:
@@ -184,7 +185,7 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
            npm run keygen
            ```
 
-           The API ket is generated as "Generated a new API Key: xxx..."
+           The API ket is generated as **Generated a new API Key: xxx...**. The generated API key is registed and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer portal for Teams. For more information on API key registration, see [Register an API key](build-api-based-message-extension.md#register-an-api-key).
 
         4. Enter the generated API key into your `env/.env.*.user` file. Replace `<your-api-key>` with the actual key:
 
@@ -215,6 +216,9 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
       > The API key must be a string with 10 to 128 characters.
 
     ---
+
+     > [!NOTE]
+     > Teams toolkit source files includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns an 401 HTTP status code, indicating an Unauthorized response. 
 
 1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
