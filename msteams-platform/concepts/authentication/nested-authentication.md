@@ -1,7 +1,7 @@
 ---
 title: Nested authentication
 description: Learn about nested authentication in the Microsoft Teams platform.
-ms.date: 04-23-2024
+ms.date:
 ms.topic: conceptual
 author: v-ypalikila
 ms.author: surbhigupta
