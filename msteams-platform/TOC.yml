@@ -198,7 +198,7 @@
           - name: Deploy to the cloud
             href: toolkit/deploy.md
           - name: Deploy Teams app to container service
-            href: toolkit\deploy-Teams-app-to-container-service.md           
+            href: toolkit/deploy-Teams-app-to-container-service.md           
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
