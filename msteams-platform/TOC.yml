@@ -37,6 +37,19 @@
 - name: Build Teams app
   expanded: false 
   items:
+  - name: Teams App manifest
+    expanded: false
+    items:
+    - name: Teams App manifest schema
+      href: resources/schema/manifest-schema.md
+      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
+    - name: Public developer preview
+      items:
+        - name: Overview
+          href: resources/dev-preview/developer-preview-intro.md          
+        - name: Public developer preview app manifest schema
+          href: resources/schema/manifest-schema-dev-preview.md
+          displayName: properties
   - name: Build tabs
     expanded: false
     items:
@@ -59,20 +72,69 @@
   - name: Build bots
     expanded: false
     items:
-    - name: Activity handlers
+    - name: Overview
       href: concepts/design/design-teams-app-overview.md
       displayName: Design principles, Figma, UI Kit, UI library, Fluent UI 
-    - name: Messaging and conversations
+    - name: Choose the technology stack to build your bots
       href: concepts/design/design-teams-app-process.md
-    - name: Build a bot app
+    - name: Quick start to build an echo bot
       href: concepts/design/design-teams-app-fundamentals.md
       displayName: icons, Font, Color 
-    - name: Debug a bot app
-      href: concepts/design/design-teams-app-layout-scaling.md
-      displayName: layout, scaling 
-    - name: Teams AI library
+    - name: Typical scenarios for Bot
+      expanded: false
+      items:
+      - name: Conversational Bot
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color 
+      - name: Notification Bot
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color
+      - name: Command Bot
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color
+      - name: Workflow Bot
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color
+    - name: Bot messaging and activity handlers
+      expanded: false
+      items:
+      - name: Send and receive bot messages
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color 
+      - name: Bot activity handlers
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color
+      - name: Get context for Bot app
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color 
+      - name: Proactive messageing
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color 
+      - name: Formatting bot messages
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color
+      - name: Send and Receive files
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color 
+      - name: Bot conversation in channel and group chat
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color 
+    - name: Configure right scope for Bot app
       href: concepts/design/design-teams-app-icon-store-appbar.md
-      displayName: icons, Font, Color 
+      displayName: icons, Font, Color
+    - name: Add AI flavor to bot app/Build intelligent Bot (WIP)
+      expanded: false
+      items:
+      - name: Overview of Copilot SDKs
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color 
+      - name: Send messages with AI power
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color 
+      - name: Access custom data in RAG intelligent Bot
+        href: concepts/design/design-teams-app-icon-store-appbar.md
+        displayName: icons, Font, Color       
+      
   - name: Build message extensions
     expanded: false
     items:
@@ -93,54 +155,35 @@
     items:
     - name: Overview
       href: tabs/design/tabs.md
-  - name: Build webhooks and connectors
-    expanded: false
-    items:
-    - name: Overview
-      href: tabs/design/tabs.md
   - name: Adaptive Cards and dialogs
     expanded: false
     items:
     - name: Overview
       href: tabs/design/tabs.md
-  - name: App manifest
-    expanded: false
-    items:
-    - name: App manifest schema
-      href: resources/schema/manifest-schema.md
-      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: Public developer preview
-      items:
-        - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview app manifest schema
-          href: resources/schema/manifest-schema-dev-preview.md
-          displayName: properties
 
 - name:	Advanced Teams app development tutorial
   expanded: false
   items:
+  - name: Tab app advanced usage
+    expanded: false
+    items:
+    - name: Tab app for shared channels
+      href: concepts/build-and-test/shared-channels.md
+    - name: Tab app caching
+      href: tabs/how-to/app-caching.md
+    - name: Send activity feed notifications
+      href: tabs/how-to/app-caching.md
   - name: Utilize Teams data with Microsoft Graph
     expanded: false
     items:
-    - name: Overview
-      href: /graph/teams-concept-overview
-      displayName: Permissions, communication, channels, delegated, reports, extensions
     - name: Microsoft Graph Toolkit
       href: /graph/toolkit/overview
       displayName: Access, routing
-    - name: Get started
-      href: /graph/toolkit/get-started/build-a-microsoft-teams-tab
-      displayName: Access, report, MSAL2
     - name: Teams app permissions
       href: graph-api/App-permissions/Teams-app-permissions.md
-    - name: Resource-specific consent
-      items:
-      - name: Overview
-        href: graph-api/rsc/resource-specific-consent.md
-      - name: Grant RSC permission to your app
-        href: graph-api/rsc/grant-resource-specific-consent.md
-        displayName: Permissions, delegated, user, team, chat, application
+    - name: Grant RSC permission to your app
+      href: graph-api/rsc/grant-resource-specific-consent.md
+      displayName: Permissions, delegated, user, team, chat, application
     - name: Proactive installation of apps using Graph API to send messages
       href: graph-api/proactive-bots-and-messages/graph-proactive-bots-and-messages.md
     - name: Import third-party messages
@@ -150,28 +193,81 @@
   - name: Enable SSO with Teams identity
     expanded: false
     items:
-    - name: Overview
-      href: concepts/authentication/authentication.md
-      displayName: Single sign-on, OAuth provider
-  - name: Use third-party authentication
-    expanded: false
+    - name: Enable SSO for your tab app
+      items:
+      - name: Overview for tab SSO
+        href: tabs/how-to/authentication/tab-sso-overview.md
+      - name: Configure your tab app in Microsoft Entra ID
+        href: tabs/how-to/authentication/tab-sso-register-aad.md
+      - name: Add code to enable SSO
+        href: tabs/how-to/authentication/tab-sso-code.md
+        displayName: getAuthToken
+      - name: Update app manifest for SSO and preview app
+        href: tabs/how-to/authentication/tab-sso-manifest.md
+      - name: Grant Microsoft Graph permissions and scopes
+        href: tabs/how-to/authentication/tab-sso-graph-api.md
+    - name: Enable SSO for your bot and message extension app
+      items:
+      - name: Overview
+        href: bots/how-to/authentication/bot-sso-overview.md
+      - name: Configure your app in Microsoft Entra ID
+        href: bots/how-to/authentication/bot-sso-register-aad.md
+      - name: Add code to enable SSO
+        href: bots/how-to/authentication/bot-sso-code.md
+      - name: Update app manifest for SSO and preview app
+        href: bots/how-to/authentication/bot-sso-manifest.md
+      - name: Grant Microsoft Graph permissions and scopes
+        href: bots/how-to/authentication/bot-sso-graph-api.md
+    - name: Enable SSO for your Adaptive Cards Universal Actions in bot
+      items:
+      - name: Overview
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/enable-sso-for-your-adaptive-cards-universal-action.md
+        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
+      - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
+        href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
+        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
+    - name: Troubleshoot SSO authentication
+      href: tabs/how-to/authentication/tab-sso-troubleshooting.md
+      displayName: Caching
+  - name: Use third party IdP authentication
     items:
     - name: Overview
-      href: concepts/authentication/authentication.md
-      displayName: Single sign-on, OAuth provider
-  - name: Integrate an existing app with Teams
-    expanded: false
-    items:
-    - name: Overview
-      href: concepts/authentication/authentication.md
-      displayName: Single sign-on, OAuth provider
-  - name: How to add a tab to your bot app
-    expanded: false
-    items:
-    - name: Overview
-      href: concepts/authentication/authentication.md
-      displayName: Single sign-on, OAuth provider
-
+      href: tabs/how-to/authentication/auth-flow-tab.md
+    - name: Add third party IdP authentication to tab app
+      href: tabs/how-to/authentication/auth-tab-aad.md
+    - name: Add third party IdP authentication to bot app
+      href: bots/how-to/authentication/add-authentication.md
+      displayName: Loop, validDomain, valid domain, validdomain
+    - name: Add third party IdP authentication to message extension app
+      href: messaging-extensions/how-to/add-authentication.md
+    - name: Add third party IdP authentication to Adaptive Cards Universal Actions
+      href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/authentication-flow-in-universal-action-for-adaptive-cards.md
+      displayName: Adaptive cards universal action third party Idp authentication, Action.Execute OAuth nominal authentication
+  - name: Use external OAuth providers
+    href: tabs/how-to/authentication/auth-oauth-provider.md
+  - name: Integrate device capabilities
+  items:
+  - name: Overview
+    href: concepts/device-capabilities/device-capabilities-overview.md
+    displayName: Camera, microphone, gallery, QR, barcode scanner, location
+  - name: Request device permissions for Teams app
+    href: concepts/device-capabilities/native-device-permissions.md
+  - name: Device permissions for the browser
+    href: concepts/device-capabilities/browser-device-permissions.md
+    displayName: web apps 
+  - name: Integrate media capabilities
+    href: concepts/device-capabilities/media-capabilities.md
+    displayName: camera
+  - name: Integrate QR or barcode scanner capability
+    href: concepts/device-capabilities/qr-barcode-scanner-capability.md
+  - name: Integrate location capabilities
+    href: concepts/device-capabilities/location-capability.md
+    displayName: Attendance
+- name: Teams app sample gallery
+  expanded: false
+  items:
+  - name: Browse Teams app samples
+    href: concepts/device-capabilities/qr-barcode-scanner-capability.md
 - name: Tools and SDKs
   expanded: false
   items:
@@ -530,18 +626,7 @@
       - name: Succeed with your collaborative app
         href: concepts/deploy-and-publish/appsource/post-publish/app-growth/succeed.md
         displayName: TAM, PQL, metrics, success, ROI
-- name: App manifest
-  items:
-    - name: App manifest schema
-      href: resources/schema/manifest-schema.md
-      displayName: version, validDomain, valid domain, validdomain, properties, meetingExtensionDefinition
-    - name: Public developer preview
-      items:
-        - name: Overview
-          href: resources/dev-preview/developer-preview-intro.md          
-        - name: Public developer preview app manifest schema
-          href: resources/schema/manifest-schema-dev-preview.md
-          displayName: properties
+        
 - name: Integrate with Teams
   items:
   - name: Overview
