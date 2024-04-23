@@ -36,24 +36,11 @@ You can use [Teams Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) t
 
 #### Prerequisites
 
-1. Set up required resources for your Teams app, such as Teams app ID, bot ID, and so on, as follows:
-
-    * Manually extract the resources from the `manifest.json` file under the `appPackage` folder.
-    * Automatically generate to run the `Provision` command in Teams Toolkit.
-
-1. Configure Azure resources as follows:
-
-    * Manually prepare the resources by examining the bicep files under the `infra` folder.
-    * Automatically prepare the resources using the `Provision` command in Teams Toolkit.
-
-1. Ensure that you've a service principal and its access policies on resources are properly configured. Set up a service principal as follows:
-
-    * [Create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal).
-    * [Create service principal using Azure CLI](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash).
-
-    The `Teamsapp` command-line interface (CLI) supports Azure login with a service principal secret. [Create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal.
-
-    :::image type="content" source="../assets/images/teams-toolkit-v2/service-principal.png" alt-text="Screenshot shows the service principal secret.":::
+| &nbsp; | &nbsp; |
+| --- | --- |
+| Set up required resources for your Teams app, such as Teams app ID, bot ID, and so on. | Manually extract the resources from the `manifest.json` file under the `appPackage` folder. <br> Automatically generate to run the `Provision` command in Teams Toolkit. |
+| Configure Azure resources | Manually prepare the resources by examining the bicep files under the `infra` folder. <br> Automatically prepare the resources using the `Provision` command in Teams Toolkit.|
+| Ensure that you've a service principal and its access policies on resources are properly configured. Set up a service principal as follows:| [Create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal). <br> [Create service principal using Azure CLI](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash). <br> The `Teamsapp` command-line interface (CLI) supports Azure login with a service principal secret. [Create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal. <br> :::image type="content" source="../assets/images/teams-toolkit-v2/service-principal.png" alt-text="Screenshot shows the service principal secret.":::|
 
 After you've completed the prerequisites, let's set up a pipeline with GitHub or Azure repository.
 
