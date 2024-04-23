@@ -18,7 +18,7 @@ Message extensions are implemented on top of the bot support architecture within
 
 To configure message extension as an additional capability, ensure the following prerequisites are met:
 
-* The app manifest file.
+* The app manifest (previously called Teams app manifest) file.
 * [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
 * [Microsoft Azure Storage account](/azure/storage/common/storage-account-create).
 
