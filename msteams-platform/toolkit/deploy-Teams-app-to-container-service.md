@@ -10,7 +10,7 @@ ms.date: 04/16/2024
 
 # Deploying a Teams App to a Container Service
 
-Deploy a Teams bot or a Teams tab app to a container service. The deployment process consists of three parts:
+You can deploy a Teams bot app or a tab app to a container service. The deployment process consists of the following:
 
 * Azure Container Apps.
 * Azure Kubernetes Service.
@@ -18,9 +18,9 @@ Deploy a Teams bot or a Teams tab app to a container service. The deployment pro
 
 ## Prerequisites
 
-You can download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso-docker) or the [sample Teams tab app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-docker) from the Teams Toolkit sample gallery. This sample offers a ready-to-use experience for Azure Container Apps development. After making a few configuration changes, you can deploy it to Azure Kubernetes Service or an on-premise Kubernetes cluster.
+You can download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso-docker) or the [sample Teams tab app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-docker) from the Teams Toolkit sample gallery. This sample offers a ready-to-use experience for Azure Container Apps development. After making a few configuration changes, you can deploy it to Azure Kubernetes Service or an On-Premise Kubernetes Cluster.
 
-You need an Azure account and the Azure CLI (command line interfaces) for Azure Container Apps or Azure Kubernetes Service deployment.
+You need an Azure account and the Azure Command Line Interfaces (CLI) for Azure Container Apps or Azure Kubernetes Service deployment.
 
 > [!NOTE]
 > The commands in this article are based on bash. You might need to modify them to work in other CLI.
