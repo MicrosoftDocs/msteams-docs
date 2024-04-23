@@ -22,7 +22,7 @@ To configure message extension as an additional capability, ensure the following
 * [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
 * [Microsoft Azure Storage account](/azure/storage/common/storage-account-create).
 
-To add message extension to a Teams tab app, see [Add message extension to Teams tab app](#add-message-extension-to-teams-tab-apptabtabapp) and to add message extension to a Teams bot app, see [Add message extension to Teams bot app](#add-message-extension-to-teams-bot-apptabbotapp).
+## Add message extension to Teams app
 
 # [Add message extension to Teams tab app](#tab/tabapp)
 
