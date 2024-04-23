@@ -39,7 +39,7 @@ To preview the app manifest file in remote environment, you can trigger **Provis
 
 You can also trigger **Zip Teams App Package** from tree view or **Teams: Zip Teams App Package** from command palette to generate the preview app manifest and app package.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package (1).png" alt-text="Screenshot shows the selection of zip Teams app package in preview app manifest file.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/zip-app-package (1).png" alt-text="Screenshot shows the option to zip the Teams app package.":::
 
 ## Customize app manifest in Visual Studio Code
 
@@ -148,7 +148,7 @@ In `appPackage/manifest.json`, you can go to CodeLens to preview the values for 
 > [!NOTE]
 > Provision the environment or execute local debug to generate environment variables.
 
-You can go to `.env` file by selecting CodeLens, which provides a dropdown list with all the environment names. After you select one environment, the corresponding `.env` file opens.
+You can go to `.env` file by selecting CodeLens, which provides a dropdown list with all the environment names. After you select an environment, the corresponding `.env` file opens.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/customize app manifest/select-env-with-local.png" alt-text="Screenshot shows the selection of dev environment.":::
 
