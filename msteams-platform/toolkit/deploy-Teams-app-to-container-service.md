@@ -18,12 +18,16 @@ You can deploy a Teams bot app or a tab app to a container service. The deployme
 
 ## Prerequisites
 
-You can download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso-docker) or the [sample Teams tab app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-docker) from the Teams Toolkit sample gallery. This sample offers a ready-to-use experience for Azure Container Apps development. After making a few configuration changes, you can deploy it to Azure Kubernetes Service or an On-Premise Kubernetes Cluster.
+You can download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso-docker) or the [sample Teams tab app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-docker), which offers a ready-to-use experience for Azure Container Apps development. After making a few configuration changes, you can deploy it to Azure Kubernetes Service or an On-Premise Kubernetes Cluster.
 
-You need an Azure account and the Azure Command Line Interfaces (CLI) for Azure Container Apps or Azure Kubernetes Service deployment.
+Before you get statred ensure that you have the following tools:
+
+* Azure account
+
+* Azure Command Line Interfaces (CLI) for Azure Container Apps or Azure Kubernetes Service deployment.
 
 > [!NOTE]
-> The commands in this article are based on bash. You might need to modify them to work in other CLI.
+> This article is based on bash. Modify the commands if you want to work in other CLI.
 
 ## Deploy to Azure Container Apps
 
@@ -48,21 +52,21 @@ The `deploy` command executes the following actions:
 
 ## Deploy Teams bot to Azure Kubernetes Service
 
-Azure Kubernetes Service (AKS) is a managed container orchestration service provided by Azure. If you're seeking a fully managed Kubernetes experience within Azure, AKS serves as an ideal choice.
+Azure Kubernetes Service (AKS) is a managed container orchestration service provided by Azure. With AKS you can fully manage Kubernetes experience within Azure.
 
 ### Architecture
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/architecture.png" alt-text="Screenshot shows the Teams bot to Azure Kubernetes Service architecture.":::
 
-The Teams backend server interacts with your bot through the Azure Bot Service. This service requires that your bot is reachable through a public HTTPS endpoint. To set up, deploy an ingress controller on your Kubernetes cluster and secure it with a TLS certificate.
+The Teams backend server interacts with your bot through the Azure Bot Service. This service requires your bot to be reachable through a public HTTPS endpoint. To set up, deploy an ingress controller on your Kubernetes cluster and secure it with a TLS certificate.
 
-To authenticate your bot with Azure Bot Service, utilize Entra ID. You need to create a Kubernetes secret that includes the App ID and password. After creation, integrate this secret into your container's runtime configuration to enable authentication.
+To authenticate your bot with Azure Bot Service, use Entra ID. You need to create a Kubernetes secret that includes the App ID and password and integrate this secret into your container's runtime configuration.
 
 ### Setup ingress with HTTPS on AKS
 
 1. Ensure that your Azure Kubernetes Service is connected to your Azure Container Registry, which hosts your container images. For more information, see [use the Azure CLI](/azure/aks/learn/quick-kubernetes-deploy-cli/).
 
-1. Run the commands to install the ingress controller and certificate manager. This isn't the only way to set up ingress and TLS certificates on your Kubernetes cluster. For more information, see [create an unmanaged ingress controller](/azure/aks/ingress-basic?tabs=azure-cli) and [use TLS with Let's encrypt certificates](/azure/aks/ingress-tls#use-tls-with-lets-encrypt-certificates).
+1. Run the following commands to install the ingress controller and certificate manager:
 
     ```bash
     NAMESPACE=teams-bot
@@ -80,6 +84,9 @@ To authenticate your bot with Azure Bot Service, utilize Entra ID. You need to c
     helm repo update
     helm install cert-manager jetstack/cert-manager --namespace $NAMESPACE --set installCRDs=true --set nodeSelector."kubernetes\.io/os"=linux
     ```
+
+    > [!NOTE]
+    > You can also follow the instructions available in [create an unmanaged ingress controller](/azure/aks/ingress-basic?tabs=azure-cli) and [use TLS with Let's encrypt certificates](/azure/aks/ingress-tls#use-tls-with-lets-encrypt-certificates) to set up ingress and TLS certificates on your Kubernetes cluster.
 
 1. Update the DNS for the ingress public IP and get the ingress endpoint.
 
@@ -102,7 +109,7 @@ You can use the provision command in Teams Toolkit to create a Teams app with bo
 
 1. Update the `BOT_DOMAIN` value in `env/.env.${envName}` with your FQDN.
 
-1. Update the `arm/deploy` action within `teamsapp.yml` to ensure that Teams Toolkit provision an Azure Bot Service during the execution of the `provision` command.
+1. Update the `arm/deploy` action in `teamsapp.yml` to ensure that Teams Toolkit provisions an Azure Bot Service during the execution of the `provision` command.
 
     ```bash
     - uses: arm/deploy 
@@ -120,7 +127,7 @@ You can use the provision command in Teams Toolkit to create a Teams app with bo
 
 1. After provisioning, locate the `BOT_ID` in `env/.env.${envName}` file and the encrypted `SECRET_BOT_PASSWORD` in `env/.env.${envName}.user` file. To obtain the actual value of `BOT_PASSWORD`, select the Decrypt secret annotation.
 
-1. To create a Kubernetes secret that contains `BOT_ID` and `BOT_PASSWORD`, save the key value pair in the `./deploy/.env.dev-secrets`file and execute the command to provision the secret.
+1. To create a Kubernetes secret that contains `BOT_ID` and `BOT_PASSWORD`, save the key value pair in the `./deploy/.env.dev-secrets` file and execute the following command to provision the secret:
 
     ```bash
     kubectl create secret generic dev-secrets --from-env-file ./deploy/.env.dev-secrets -n $NAMESPACE
@@ -128,15 +135,17 @@ You can use the provision command in Teams Toolkit to create a Teams app with bo
 
 ### Apply the deployment
 
-The sample includes a deployment file, `deploy/sso-bot.yaml`, for your reference. Update the placeholders in this file before you apply it:
+The sample includes a deployment file, `deploy/sso-bot.yaml`, for your reference.
 
-1. Update the `<image>` placeholder with your image. For example, `myacr.azurecr.io/sso-bot:latest`.
+1. Update the following placeholders in this file before you apply it:
 
-1. Update the `<hostname>` with your ingress FQDN.
+    1. `<image>`: Update your image. For example, `myacr.azurecr.io/sso-bot:latest`.
 
-1. Update the `<email>` with your email address for generating TLS certificate.
+    1. `<hostname>`: Update your ingress FQDN.
 
-1. Apply `deploy/sso-bot.yaml`.
+    1. `<email>`: Update your email address for generating TLS certificate.
+
+1. Run the following command to apply `deploy/sso-bot.yaml`:
 
     ```bash
     kubectl apply -f deploy/sso-bot.yaml -n $NAMESPACE
@@ -144,7 +153,9 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your reference
 
 1. Go to Visual Studio Code.
 
-1. In the **Run and Debug** panel, select the **Launch Remote** configuration. To preview the Teams bot application deployed on Azure Kubernetes Service (AKS), press F5.
+1. In the **Run and Debug** panel, select the **Launch Remote** configuration.
+
+1. To preview the Teams bot application deployed on Azure Kubernetes Service (AKS), select **Start Debugging (F5)**.
 
 ## Deploy Teams bot to an On-Premise Kubernetes Cluster
 
@@ -156,7 +167,7 @@ Deploy a Teams bot to your personal Kubernetes cluster or a Kubernetes service f
 
 The Teams backend server communicates with your bot through the Azure Bot Service, which requires a public HTTPS address for your bot. To accomplish this, deploy an ingress controller and supply a TLS certificate on your Kubernetes.
 
-To authenticate your bot with Azure Bot Service, create a secret in Kubernetes that includes the App ID and password from Entra ID. Then, reference this secret in your container runtime.
+To authenticate your bot with Azure Bot Service, create a secret in Kubernetes that includes the App ID and password from Entra ID and add a secret in your container runtime.
 
 ### Provision resources with Teams Toolkit
 
@@ -166,7 +177,7 @@ You can modify the sample code to ensure compatibility with your Kubernetes Serv
 
 1. Update the `BOT_DOMAIN` value in `env/.env.${envName}` file with your FQDN.
 
-1. To enable Teams Toolkit to provision an Azure Bot Service when executing the `provision` command, update the `arm/deploy` action in the `teamsapp.yml` file.
+1. To enable Teams Toolkit to provision an Azure Bot Service when executing the `provision` command, update the `arm/deploy` action in the `teamsapp.yml` file as follows:
 
     ```yml
     - uses: arm/deploy 
@@ -180,7 +191,10 @@ You can modify the sample code to ensure compatibility with your Kubernetes Serv
         bicepCliVersion: v0.9.1
     ```
 
-1. We recommend using Azure Bot Service for channeling. If you don't have an Azure account and can't create Azure Bot Service, consider creating a bot registration as an alternative. Add the `botFramework/create` action during the provision stage in `teamsapp.yml` file. This action enables the Teams Toolkit to create a bot registration with the appropriate messaging endpoint.
+1. Add the `botFramework/create` action during the provision stage in `teamsapp.yml` file. This action enables the Teams Toolkit to create a bot registration with the appropriate messaging endpoint.
+
+>[!NOTE]
+> We recommend you to use Azure Bot Service for channeling. If you don't have an Azure account and can't create Azure Bot Service, you can create a bot registration.
 
     ```yml
     - uses: botFramework/create
@@ -197,9 +211,11 @@ You can modify the sample code to ensure compatibility with your Kubernetes Serv
 
 1. Run the `provision` command in Teams Toolkit.
 
-1. After the provisioning process, locate the `BOT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_BOT_PASSWORD` in the `env/.env.${envName}.user` file. To get the real value of `BOT_PASSWORD`, select the Decrypt secret annotation.
+1. After provisioning, locate the `BOT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_BOT_PASSWORD` in the `env/.env.${envName}.user` file. To get the real value of `BOT_PASSWORD`, select the Decrypt secret annotation.
 
-1. To create a Kubernetes secret containing `BOT_ID` and `BOT_PASSWORD`, save the key-value pair in the `./deploy/.env.dev-secrets` file. Run the command to provision the secret.
+1. To create a Kubernetes secret containing `BOT_ID` and `BOT_PASSWORD`, save the key-value pair in the `./deploy/.env.dev-secrets` file.
+
+1. Run the following command to provision the secret:
 
     ```bash
     kubectl create secret generic dev-secrets --from-env-file ./deploy/.env.dev-secrets -n $NAMESPACE
@@ -207,13 +223,15 @@ You can modify the sample code to ensure compatibility with your Kubernetes Serv
 
 ### Apply the deployment
 
-The sample includes a deployment file, `deploy/sso-bot.yaml`, for your guidance. Update the placeholders in this file before you apply it.
+The sample includes a deployment file, `deploy/sso-bot.yaml`, for your guidance.
 
-1. Update the `<image>` placeholder with your image. For example, `myacr.azurecr.io/sso-bot:latest`.
+1. Update the placeholders in this file before you apply it:
 
-1. Update the `<hostname>` with your ingress FQDN.
+    1. `<image>`: Update placeholder with your image. For example, `myacr.azurecr.io/sso-bot:latest`.
 
-1. Apply `deploy/sso-bot.yaml`.
+    1. `<hostname>`: Update placeholder with your ingress FQDN.
+
+1. Run the following code to apply `deploy/sso-bot.yaml`:
 
     ```bash
     kubectl apply -f deploy/sso-bot.yaml -n $NAMESPACE
@@ -221,13 +239,15 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your guidance.
 
 1. Go to Visual Studio Code.
 
-1. In the **Run and Debug** panel, select the **Launch Remote** configuration. To preview the Teams bot application deployed on Azure Kubernetes Service (AKS), press F5.
+1. In the **Run and Debug** panel, select the **Launch Remote** configuration.
+
+1. To preview the Teams bot application deployed on Azure Kubernetes Service (AKS), select **Start Debugging (F5)**.
 
 ## Deploy Teams tab app to Kubernetes
 
-Azure Kubernetes Service (AKS) serves as a managed container orchestration service offered by Azure. If you seek a fully managed Kubernetes version within Azure, consider AKS as your optimal choice.
+Azure Kubernetes Service (AKS) serves as a managed container orchestration service offered by Azure. With AKS you can fully manage Kubernetes experience within Azure.
 
-Deploying a Teams tab app to AKS is as straightforward as deploying a web app to AKS. However, since a Teams tab app requires an HTTPS connection, you need to own a domain and setup TLS ingress in your AKS.
+Deploying a Teams tab app to AKS is similar to deploying a web app to AKS. However, since a Teams tab app requires an HTTPS connection, you need to own a domain and setup TLS ingress in your AKS.
 
 You can also deploy a Teams tab app to your personal Kubernetes cluster or a Kubernetes service on different cloud platforms. This involves steps similar to those used when deploying on Azure Kubernetes Service.
 
@@ -235,7 +255,7 @@ You can also deploy a Teams tab app to your personal Kubernetes cluster or a Kub
 
 1. Ensure that your Azure Kubernetes Service is already connected to your Azure Container Registry, where your container images are hosted. For more information, see [Azure CLI](/azure/aks/learn/quick-kubernetes-deploy-cli).
 
-1. Run the commands to install the ingress controller and certificate manager. This isn't the only way to set up ingress and TLS certificates on your Kubernetes cluster. For more information, see [create an unmanaged ingress controller](/azure/aks/ingress-basic?tabs=azure-cli) and [use TLS with Let's encrypt certificates](/azure/aks/ingress-tls#use-tls-with-lets-encrypt-certificates).
+1. Run the following commands to install the ingress controller and certificate manager:
 
     ```yml
     NAMESPACE=teams-tab
@@ -254,7 +274,10 @@ You can also deploy a Teams tab app to your personal Kubernetes cluster or a Kub
     helm install cert-manager jetstack/cert-manager --namespace $NAMESPACE --set installCRDs=true --set nodeSelector."kubernetes\.io/os"=linux
     ```
 
-1. Update the DNS for the ingress public IP and get the ingress endpoint.
+    > [!NOTE]
+    > You can also follow the instructions available in [create an unmanaged ingress controller](/azure/aks/ingress-basic?tabs=azure-cli) and [use TLS with Let's encrypt certificates](/azure/aks/ingress-tls#use-tls-with-lets-encrypt-certificates) to set up ingress and TLS certificates on your Kubernetes cluster.
+
+1. Run the following command to update the DNS for the ingress public IP and get the ingress endpoint:
 
     ```bash
     > kubectl get services --namespace $NAMESPACE -w ingress-nginx-controller
@@ -279,21 +302,23 @@ Use the provision command in the Teams Toolkit to create a Teams app with tab fu
 
 1. Run the `provision` command in Teams Toolkit.
 
-1. Use the Teams Toolkit to create an Entra ID, which you might want to set as your apps environment variables. After the provisioning, locate the `AAD_APP_CLIENT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_AAD_APP_CLIENT_SECRET` in the `env/.env.${envName}.user` file.
+1. Use the Teams Toolkit to create an Entra ID, which you might want to set as your apps environment variables. After provisioning, locate the `AAD_APP_CLIENT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_AAD_APP_CLIENT_SECRET` in the `env/.env.${envName}.user` file.
 
 1. To get the actual value of `SECRET_AAD_APP_CLIENT_SECRET`, select the Decrypt secret annotation.
 
 ### Apply the deployment
 
-The sample includes a deployment file, `deploy/tab.yaml`, for your reference. Update the placeholders in this file before you apply it.
+The sample includes a deployment file, `deploy/tab.yaml`, for your reference.
 
-1. Update the `<tab-image>` placeholder with your image. For example, `myacr.azurecr.io/tab:latest`.
+1. Update the placeholders in this file before you apply it:
 
-1. Update the `<api-image>` placeholder with your API image. If you don't have an API, remove the `hello-world-api`service and deployment from the yaml file.
+    1. `<tab-image>`: Update placeholder with your image. For example, `myacr.azurecr.io/tab:latest`.
 
-1. Update the `<hostname>` with your ingress FQDN.
+    1. `<api-image>`: Update placeholder with your API image. If you don't have an API, remove the `hello-world-api`service and deployment from the yaml file.
 
-1. Apply `deploy/tab.yaml`.
+    1. `<hostname>`: Update the with your ingress FQDN.
+
+1. Run the following command to apply `deploy/tab.yaml`:
 
     ```bash
     kubectl apply -f deploy/tab.yaml -n $NAMESPACE
@@ -301,4 +326,6 @@ The sample includes a deployment file, `deploy/tab.yaml`, for your reference. Up
 
 1. Go to Visual Studio Code.
 
-1. In the **Run and Debug** panel, select the **Launch Remote** configuration. To preview the Teams bot application deployed on Azure Kubernetes Service (AKS), press F5.
+1. In the **Run and Debug** panel, select the **Launch Remote** configuration.
+
+1. To preview the Teams bot application deployed on Azure Kubernetes Service (AKS), select **Start Debugging (F5)**.
