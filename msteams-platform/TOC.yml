@@ -171,26 +171,6 @@
     - name: Overview
       href: concepts/authentication/authentication.md
       displayName: Single sign-on, OAuth provider
-    
-- name: Distribute your Teams app
-  expanded: false
-  items:
-  - name: Create a Teams app Package
-    href: bots/design/bots.md
-  - name: Upload an app to Teams in personal scope 
-    href: messaging-extensions/design/messaging-extension-design.md  
-  - name: Publish apps to your organization
-    href: apps-in-teams-meetings/design/designing-apps-in-meetings.md
-  - name: Publish apps to Teams Store
-
-- name: Grow and monetize your Teams app
-  href: concepts/design/design-teams-app-ui-templates.md
-
-- name: Teams developer documentation FAQs
-  href: teams-faq.md
-
-- name: Teams app code samples
-  href: toolkit/teams-toolkit-tutorial.md
 
 - name: Tools and SDKs
   expanded: false
