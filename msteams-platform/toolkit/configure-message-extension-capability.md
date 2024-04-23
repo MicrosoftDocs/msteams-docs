@@ -16,7 +16,7 @@ Message extensions are implemented on top of the bot support architecture within
 
 ## Prerequisites
 
-To configure message extension as an additional capability, ensure the following prerequisites:
+To configure message extension as an additional capability, ensure the following prerequisites are met:
 
 * The app manifest file.
 * [Microsoft 365 account](../concepts/build-and-test/prepare-your-o365-tenant.md) to test the application.
@@ -133,8 +133,7 @@ You can configure message extension in `appPackage/manifest.json`. If you need t
    ```
    |--.vscode/
    |--appPackage/
-
-  |--env/
+   |--env/
    |--infra/
    |--public/
    |--bot/           <!--message extension source code-->
@@ -153,13 +152,11 @@ You can configure message extension in `appPackage/manifest.json`. If you need t
    |--tsconfig.json
    |--teamsapp.local.yml
    |--teamsapp.yml
-
    ```
 
    You can create a root `package.json` using command `npm init -y`. We recommend you reorganize the folder structure and create a root `package.json` as given in the following folder structure:
 
    ```
-
    |--.vscode/
    |--appPackage/
    |--env/
@@ -182,7 +179,6 @@ You can configure message extension in `appPackage/manifest.json`. If you need t
    |--package.json <!--root package.json-->
    |--teamsapp.local.yml
    |--teamsapp.yml
-
    ```
 
 1. Add the following code to your root `package.json`:
