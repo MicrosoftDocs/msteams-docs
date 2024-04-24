@@ -28,7 +28,7 @@ To configure message extension as an additional capability, ensure the following
 
 The following steps help you to add message extension to a tab app:
 
-1. [Create tab app using Microsoft Teams Toolkit](#create-message-extension-app-using-microsoft-teams-toolkit)
+1. [Create tab app using Microsoft Teams Toolkit](#create-tab-app-using-microsoft-teams-toolkit)
 1. [Configure message extension within your Teams app](#configure-message-extension-in-app-manifest)
 1. [Add message extension code to your project](#add-message-extension-code-to-your-project)
 1. [Setup local debug environment](#setup-local-debug-environment)
