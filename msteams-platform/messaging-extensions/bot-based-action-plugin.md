@@ -80,7 +80,13 @@ Before you begin, ensure that you have met the following requirements:
 
 2. **Adjust Bot Logic**
 
-   Adjust your bot logic to process the parameters defined in the manifest. The bot should be able to handle the command and its parameters, perform the necessary actions, and return a response. For example, if a user initiates the `createTask` command, your bot should be able to create a task with the provided title and description.
+   Adjust your bot logic to process the parameters defined in the manifest. The bot should be able to handle the command and its parameters, perform the necessary actions, and return a response. 
+
+
+   To enable action commands with natural language in the Copilot chat window, the bot logic should be updated to:
+
+   * Use the getContext API to receive the values of the parameters that are defined in the manifest and passed by Copilot. 
+   * Respond with a synchronous card as part of the response from the task module, instead of a bot-sent card, to ensure the flow is returned to the compose box. 2
 
 3. **Ensure LLM Friendliness**
 
