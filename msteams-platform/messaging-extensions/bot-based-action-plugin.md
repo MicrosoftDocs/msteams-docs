@@ -82,5 +82,3 @@ Before you begin, ensure that you have updated your manifest to version 1.13+ an
 While  Actions offer numerous benefits, it's important to note that they're dependent on the capabilities of the external systems they interact with. Therefore, ensure that the external systems can handle the actions initiated by Copilot.
 
 As a best practice, always test your implementation thoroughly to ensure that it works as expected and provides a seamless user experience. Also, keep your command and parameter descriptions clear and concise to ensure they're easily understood by users.
-
-For more information on developing apps for Microsoft Teams, refer to the [Teams Developer Documentation](https://docs.microsoft.com/en-us/microsoftteams/platform/overview).
