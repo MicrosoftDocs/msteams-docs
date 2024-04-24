@@ -21,9 +21,9 @@ ms.subservice: m365apps
 - Integrate with external services including CRM and project management tools.
 - Add custom ribbon buttons or menu items to perform specific tasks.
 
-For more info, [Outlook Add-ins Overview](/office/dev/add-ins/outlook/outlook-add-ins-overview) provides information about what you can do with Outlook Add-ins, how they are structured, how they differ from older ways of extending Outlook, what platforms the add-in can run on (Windows, Mac, mobile, and the web), and how to get started creating one.
+Integrating an Outlook Add-in with a Teams application enables scenarios that neither of them could achieve independently. Consider a scenario where a salesperson can insert a customized discount in an email to a customer and record the offer in a backend database. The sales manager can also view data about all the discounts that have been offered in a Teams tab. For more information, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
 
-Combining an Outlook Add-in with a Teams app enables scenarios that can't be satisfied with either of them separately. For example, consider an app that enables a salesperson to insert a customized discount in an email to a customer and records the offer in a backend database. The sales manager can also view data about all the discounts that have been offered in a Teams tab. For more information, see [Discount Offers sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-add-in-combined/nodejs).
+[Outlook Add-ins Overview](/office/dev/add-ins/outlook/outlook-add-ins-overview) provides information about the capabilities of Outlook Add-ins, how they are structured, how they improve on older ways of extending Outlook, what platforms the add-in can run on (Windows, Mac, mobile, and the web), and how to get started creating one.
 
 This article will walk you through the steps to add an Outlook Add-in to a Teams app, test it, then deploy it to Azure.
 
@@ -145,8 +145,8 @@ To separate the source code for the tab or bot, perform the following steps:
 	
 	    The project builds and runs. This process can take a couple of minutes. When it completes, Teams opens in a browser with a prompt to add your tab app.
 
-      > [!NOTE]
-      > If this is the first time you've debugged a Teams app on this computer, you're prompted to install an SSL certificate. Select **Install** and then **Yes** to the second prompt. Login to your Microsoft 365 account if you're prompted to do so.
+        > [!NOTE]
+        > If this is the first time you've debugged a Teams app on this computer, you're prompted to install an SSL certificate. Select **Install** and then **Yes** to the second prompt. Login to your Microsoft 365 account if you're prompted to do so.
 
     1. Select **Add**.
     1. To stop debugging and uninstall the app, select **Run** > **Stop Debugging** in Visual Studio Code.
