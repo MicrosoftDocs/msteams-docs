@@ -63,6 +63,19 @@ You can plan your app's growth through the app lifecycle:
 
 [Back to top](#growth-lifecycle-for-your-app)
 
+## Promote app adoption
+
+Here are few best practices you can adopt to promote third-party apps:
+
+- Freemium account that account for better user conversion.
+- Call-to-action button that can be shared in an Adaptive Card for users to share the app and onboard other team members.
+- Banner promotion for marketing campaign that leads to higher app installation and meaningful engagement.
+- Adoption change management is critical for an app's growth to reach users on a constant basis about the existing and new features through email communication.
+- Solving blockers to address and eliminate adoption blockers and VoCs through ISVs and Teams Engineering is important for growth.
+- Growth marketing to established strategy for driving usage and growth for apps in a SaaS offers.
+
+For mor information, see [educate users and drive adoption change management for your app](../../../../promote-app-adoption.md#step-3-educate-users-and-drive-adoption-change-management-for-your-app).
+
 ## Next step
 
 > [!div class="nextstepaction"]
