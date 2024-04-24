@@ -13,7 +13,7 @@ ms.localizationpriority: medium
 After the user submits the search command, your web service receives a `composeExtension/query` invoke message that contains a `value` object with the search parameters. The invoke is triggered with the following conditions:
 
 * As characters are entered into the search box.
-* `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions), you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
+* `initialRun` is set to true in your [app manifest](../../../resources/schema/manifest-schema.md#composeextensions) and you receive the invoke message as soon as the search command is invoked. For more information, see [default query](#default-query).
 
 This document guides you on how to respond to user requests in the form of cards and previews, and the conditions under which Microsoft Teams issues a default query.
 
@@ -93,7 +93,7 @@ Your service must respond with the results matching the user query. The response
 
 ### `config` response type
 
-`config` response is used when a user configures the message extension for the first time. 
+Configuration response is the data returned by the server or application to configure and enable the message extension within the messaging platform. `config` response is used when a user configures the message extension for the first time. 
 It triggers a prompt for the user to set up the message extension and provide any necessary configuration.
 
 If message extension uses a configuration page, the [`onQuery`](/dotnet/api/microsoft.teams.ai.messageextensions-1.onquery) handler should first verify for any stored configuration data. If the message extension isn't configured, a `config` response must be returned, which includes a link to your configuration.
@@ -139,6 +139,85 @@ The following image shows the `config` command workflow:
 
 :::image type="content" source="../../../assets/images/messaging-extension/respond-to-search.png" alt-text="Screenshot shows the `config` command workflow and how it works.":::
 
+The following code is an example for message extension configuration:
+
+```json
+{
+    "name": "composeExtension/submitAction",
+    "type": "invoke",
+    "timestamp": "2024-03-08T14:10:47.575Z",
+    "localTimestamp": "2024-03-08T19:40:47.575+05:30",
+    "id": "f:7dfe18de-94e3-9f38-5d44-adeb31cd8243",
+    "channelId": "msteams",
+    "serviceUrl": "https://smba.trafficmanager.net/amer/",
+    "from": {
+        "id": "29:1PBlnIsEROUYzpFjULDVodMHrnpujmfhBdQAf0pcO1EkaDkhI0_Pj_ql-jZUYOGdSc3_KcqaIIjzbleraVJ2Z3g",
+        "name": "MOD Administrator",
+        "aadObjectId": "ce9def33-d7fc-444c-8728-be1f95e6b6f2"
+    },
+    "conversation": {
+        "isGroup": true,
+        "conversationType": "groupChat",
+        "tenantId": "4ad59956-0f88-4b88-a9d0-570b6eb4e66b",
+        "id": "19:1dd50ba7-e5bd-46ea-b34e-80a415148de7_ce9def33-d7fc-444c-8728-be1f95e6b6f2@unq.gbl.spaces"
+    },
+    "recipient": {
+        "id": "28:9a2b01fc-88c1-40e1-bf87-5079c8e35626",
+        "name": "PSDAzureBot"
+    },
+    "entities": [
+        {
+            "locale": "en-GB",
+            "country": "GB",
+            "platform": "Web",
+            "timezone": "Asia/Calcutta",
+            "type": "clientInfo"
+        }
+    ],
+    "channelData": {
+        "tenant": {
+            "id": "4ad59956-0f88-4b88-a9d0-570b6eb4e66b"
+        },
+        "source": {
+            "name": "compose"
+        }
+    },
+    "value": {
+        "commandId": "razorView",
+        "commandContext": "compose",
+        "data": {
+            "Title": "Welcome to RazorView!",
+            "DisplayData": " Today&#x27;s date is 8-3-2024, Friday"
+        },
+        "context": {
+            "theme": "default"
+        }
+    },
+    "locale": "en-GB",
+    "localTimezone": "Asia/Calcutta"
+}
+```
+
+The following response is the configuration response that appears when the user interacts with the compose extension:
+
+```json
+{
+    "composeExtension": {
+        "type": "config",
+        "suggestedActions": {
+            "actions": [
+                {
+                    "type": "openUrl",
+                    "value": "https://7a03-2405-201-a00c-7191-b472-ff64-112d-f806.ngrok-free.app"
+                }
+            ]
+        }
+    }
+}
+```
+
+:::image type="content" source="../../../assets/images/configuration-response-me.png" alt-text="The screenshot shows the configuration response for message extension.":::
+
 ### `auth` response type
 
 If your service requires user authentication, the users must sign in before they use the message extension. For more information, see [authentication](~/messaging-extensions/how-to/add-authentication.md#authentication).
@@ -162,7 +241,7 @@ return new MessagingExtensionResponse
 
 :::image type="content" source="../../../assets/images/messaging-extension/message-response-type.png" alt-text="Screenshot shows the `message` response type.":::
 
-### `result` Response type
+### Response card types for `result` and previews
 
 Teams supports the following card types:
 
