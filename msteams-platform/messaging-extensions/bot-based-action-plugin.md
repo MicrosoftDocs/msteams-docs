@@ -18,36 +18,30 @@ Moreover, the cross-app integration feature allows you to access and act on data
 
 # Implementing Actions in Copilot for Microsoft 365
 
-Actions in message extension for copilot for micrososft 365 is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps. The flow consists of the following steps:
+Actions in message extension for copilot for Microsoft 365 is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps. The flow consists of the following steps:
 
 * **Invocation**: The user types a natural language command in the Copilot chat window, such as "Can you file a sick leave for me?" or "Create a general issue".
 
-* **Disclosure**: Copilot shows a confirmation screen with the parameters and parameter values that will be sent to the app, such as alias, claim type, category, etc. The user can modify or cancel the parameters if needed.
+* **Disclosure**: Copilot shows a confirmation screen with the parameters and parameter values that are sent to the app, such as alias, claim type, category, etc. The user can modify or cancel the parameters if needed.
 
-* **Confirmation**: The user clicks on "Continue in plugin" to proceed with the action. Copilot opens a task module with the app's dialog, pre-populated with the parameter values. The user can fill in any additional details or upload files as required by the app.
+* **Confirmation**: The user selects on "Continue in plugin" to proceed with the action. Copilot opens a dialog with the app's dialog, prepopulated with the parameter values. The user can fill in any more details or upload files as required by the app.
 
 * **Completion**: The user submits the action and Copilot shows a notification with the status and outcome of the action, such as "Your details have been successfully submitted". The user can also view or edit the action details in the app.
 
 ## Why Implement  Actions?
 
-Implementing  Actions in your applications can significantly enhance user productivity by streamlining workflows. Users can complete tasks within Copilot without the need to switch contexts or applications. The feature also leverages AI to generate content and perform actions based on contextual understanding, optimizing time, and resources. Furthermore, it allows for cross-app integration, enabling users to access and act on data across different applications within the Microsoft 365 ecosystem.
+Implementing  Actions in your applications can significantly enhance user productivity by streamlining workflows. Users can complete tasks within Copilot without the need to switch contexts or applications. The feature also uses AI to generate content and perform actions based on contextual understanding, optimizing time, and resources. Furthermore, it allows for cross-app integration, enabling users to access and act on data across different applications within the Microsoft 365 ecosystem.
 
 This feature is useful in scenarios such as project management, incident management, HR/ERP workflows, approvals, meetings, content generation, employee recognition, and bookings. By implementing  Actions, you can simplify these processes and provide a unified user experience.
 
-## Prerequisites
-
-Before you begin, ensure that you have met the following requirements:
-
-* Update your manifest to version 1.13+ and add the Microsoft 365 channel for your plugin.
-* Define parameters for Action commands.
-* Ensure command and parameter descriptions are LLM friendly.
-* Return synchronous card response from the task module for user-initiated cards.
 
 ## Implementation Steps
 
+1. Updated your manifest to version 1.13 or later and add the Microsoft 365 channel for your plugin.
+
 1. **Define Parameters for Action Commands**
 
-   In your manifest, define parameters for Action commands. These parameters will be processed by your bot logic. Here's an example of how to define parameters:
+   In your manifest, define parameters for Action commands. These parameters are processed by your bot logic. Here's an example of how to define parameters:
 
    ```json
    "composeExtensions": [
@@ -76,28 +70,27 @@ Before you begin, ensure that you have met the following requirements:
    ]
    ```
 
-   In this example, two parameters are defined for the `createTask` command: `taskTitle` and `taskDescription`.
+   Ensure that your command and parameter descriptions are friendly to Language and Locale Model (LLM), which ensures that your commands are easily understood and used by users across different locales. For example, avoid using jargon or complex language in your descriptions.
 
 2. **Adjust Bot Logic**
 
-   Adjust your bot logic to process the parameters defined in the manifest. The bot should be able to handle the command and its parameters, perform the necessary actions, and return a response. 
-
-
-   To enable action commands with natural language in the Copilot chat window, the bot logic should be updated to:
+   Adjust your bot logic to process the parameters defined in the manifest. The bot should be able to handle the command and its parameters, perform the necessary actions, and return a response. To enable action commands with natural language in the Copilot chat window, the bot logic should be updated to:
 
    * Use the getContext API to receive the values of the parameters that are defined in the manifest and passed by Copilot. 
-   * Respond with a synchronous card as part of the response from the task module, instead of a bot-sent card, to ensure the flow is returned to the compose box. 2
 
-3. **Ensure LLM Friendliness**
+   ```JavaScript
+    await app.initialize();
+    const context = await app.getContext();
+    const dialogParameters = context.dialogParameters;
 
-   Make sure that your command and parameter descriptions are friendly to Language and Locale Model (LLM). This ensures that your commands are easily understood and used by users across different locales. For example, avoid using jargon or complex language in your descriptions.
+    // context.dialogParameters will contain key-value pairs prepopulated by Copilot.
+    // The keys will match the parameter names specified in the manifest.
+    // For example, if you had three parameters in your manifest called Title, Description, and Date,
+    // you can access the values Copilot has prepopulated for you using:
+    // dialogParameters.Title, dialogParameters.Description, dialogParameters.Date
+   ```
+   
 
 4. **Provide a Synchronous Card Response**
 
-   For user-initiated cards, provide a synchronous card response from the task module. This ensures that users receive immediate feedback upon initiating an action. For example, once a user creates a task, they should receive a confirmation card.
-
-## Limitations and Best Practices
-
-While  Actions offer numerous benefits, it's important to note that they're dependent on the capabilities of the external systems they interact with. Therefore, ensure that the external systems can handle the actions initiated by Copilot.
-
-As a best practice, always test your implementation thoroughly to ensure that it works as expected and provides a seamless user experience. Also, keep your command and parameter descriptions clear and concise to ensure they're easily understood by users.
+   For user-initiated cards, provide a synchronous card response from the dialog, which ensures that users receive immediate feedback upon initiating an action. For example, once a user creates a task, they should receive a confirmation card.
