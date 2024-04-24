@@ -51,7 +51,7 @@ You can use the Teams bot APIs to get information for members of a chat or team.
 
 You can add or update the bot icon for the Teams apps as follows:
 
-* [Microsoft Teams Store app](~/concepts/deploy-and-publish/appsource/publish.md): For Teams Store apps, bot icons are fetched from the app manifest (previously called Teams app manifest). You can update the bot profile icon by updating it through app manifest and republish the app.
+* [Microsoft Teams Store app](~/concepts/deploy-and-publish/appsource/publish.md): For Teams Store apps, bot icons are fetched from the app manifest (previously called Teams app manifest). You can update the bot profile icon by updating it through the app manifest and republishing the app.
     
     ```json
     
@@ -85,7 +85,7 @@ You can add or update the bot icon for the Teams apps as follows:
 
     :::image type="content" source="~/assets/images/bots/bot-icon-update.png" alt-text="Screenshot of the Azure portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-update.png":::
 </br>
-  * [**Bot Framework Portal**](https://dev.botframework.com/bots): For bots created using Bot Framework Portal you can update the bot icon in settings page.
+  * [**Bot Framework Portal**](https://dev.botframework.com/bots): For bots created using Bot Framework Portal, you can update the bot icon in the settings page.
 
     :::image type="content" source="~/assets/images/bots/bot-icon-frame-work.png" alt-text="Screenshot of the Bot Framework Portal to update bot icons." lightbox="~/assets/images/bots/bot-icon-frame-work.png":::
 
