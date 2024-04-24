@@ -169,6 +169,19 @@ If you unlink a SaaS offer included in your Teams Store listing, you must republ
    1. Select **Distribute > Publish to the Teams store**.
    1. Select **Open Partner Center** to begin the process of republishing your app without the offer.
 
+## Promote app adoption
+
+You can promote third-party app by adopting more than one of the following best practices:
+
+* Freemium account that account for better user conversion.
+* Call-to-action button that can be shared in an Adaptive Card for users to share the app and onboard other team members.
+* Banner promotion for marketing campaign that leads to higher app installation and meaningful engagement.
+* Adoption change management is critical for an app's growth to reach users on a constant basis about the existing and new features through email communication.
+* Solving blockers to address and eliminate adoption blockers and VoCs through ISVs and Teams Engineering is important for growth.
+* Growth marketing to established strategy for driving usage and growth for apps in a SaaS offers.
+
+For mor information, see [educate users and drive adoption change management for your app](../../../../promote-app-adoption.md#step-3-educate-users-and-drive-adoption-change-management-for-your-app).
+
 ## Code sample
 
 | **Sample name** | **Description** | **Node.js** | **Manifest**|
