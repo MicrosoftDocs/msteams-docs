@@ -30,7 +30,7 @@ The following table outlines the difference between Teams Microsoft Entra ID SSO
 | Register API in Microsoft Entra ID | ✔️ |  |
 | Define a custom scope in Microsoft Entra ID | ✔️ |  |
 | Authorize Teams client apps | ✔️ |  |
-| Revise Teams manifest | ✔️ | Recommended to help IT admins in providing consent via the Admin Portal |
+| Revise Teams manifest | ✔️ | Recommended helping IT admins in providing consent via the Admin Portal |
 | Acquire access token via Teams JS SDK | ✔️ |  |
 | Acquire access token via MSAL.js |  | ✔️ * Requires new msalconfig property: supportsNestedAppAuth |
 | Solicit user consent for more permissions | ✔️ |  |
@@ -40,6 +40,15 @@ To sum up, NAA is a potent and adaptable mechanism that bolsters the security an
 
 The existing authentication flow for embedded apps depends on the host environment and requires a middle tier service to do the on-behalf-of token exchange. The app also has to use the Teams JS SDK to get the token and consent to the host app's permissions.
 The nested authentication flow is consistent across all host environments and doesn't require a middle tier service or the Teams JS SDK. The app only has to register its app in Microsoft Entra, configure a broker schema redirect URI, enable the native bridging in the manifest, and use MSAL JS to acquire the token and call the APIs. The app can also check the support status of nested authentication using the Teams JS SDK and provide a fallback experience for unsupported environments.
+
+## Scenarios
+
+| Scenario | description |
+| --- | --- |
+| **Consenting to SSO (and other permissions)** | Tom, a new member of the Contoso design team, needs to use Mural in Teams to collaborate on whiteboards. Upon first use, a dialog prompts Tom to grant permissions, including reading their profile for their avatar (User.Read). After tom consents, Tom can use Mural seamlessly in future meetings across devices. |
+| **Reauthentication or Conditional Access step-up auth** |  Tom, while working from Australia, encounters a conditional access trigger requiring multifactor authentication (MFA) to access Mural in Teams. A dialog informs Tom of the more verification needed, leading them through the MFA process to continue using Mural. |
+| **Errors** | Tom faces an error with Mural displaying an 'Oh no!' page due to an issue retrieving account information. A retry button prompts Tom to reauthenticate, only to find that the system administrator has blocked access to Mural. |
+
 
 ## Configure nested authentication
 
