@@ -22,19 +22,19 @@ To configure bot as an additional capability, ensure the following prerequisites
 
 ## Add bot to Teams app
 
-# [Add bot to Teams tab app](#tab/tabapp)
+# [Add bot to tab app](#tab/tabapp)
 
 The following steps help you to add bot to a tab app:
 
-* [Create bot Teams app using Microsoft Teams Toolkit](#create-bot-app-using-microsoft-teams-toolkit).
+* [Create tab app using Microsoft Teams Toolkit](#create-bot-app-using-microsoft-teams-toolkit).
 * [Configure bot in app manifest](#configure-bot-in-app-manifest).
 * [Add bot code to your project](#add-bot-code-to-your-project).
 * [Setup local debug environment](#setup-local-debug-environment).
 * [Provision the app to Azure](#provision-the-app-to-azure).
 
-## Create bot app using Microsoft Teams Toolkit
+## Create tab app using Microsoft Teams Toolkit
 
-To create a bot app using Teams Toolkit, see [create a bot app with Teams Toolkit](create-new-project.md).
+To create a tab app using Teams Toolkit, see [create a bot app with Teams Toolkit](create-new-project.md).
 
 ## Configure bot in app manifest
 
@@ -161,7 +161,7 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
    * `Start bot`
    * `Start frontend`.
 
-    Add `Start bot` and `Start frontend` to task `Start application`'s `dependOn`. Configure `Start bot` and `Start frontend`'s `cwd` option as we moved the code for tab and bot to `tab/` and `bot/` folder separately. Add `Start local tunnel` to task `Start Teams App Locally`'s `dependOn`. For example:
+    Add `Start bot` and `Start frontend` to `dependOn` in the `Start application`task. Configure `Start bot` and `cwd` option in `Start frontend` as we moved the code for tab and bot to `tab/` and `bot/` folder separately. Add `Start local tunnel` to `dependOn` in the `Start Teams App Locally` task. For example:
 
    ```json
        "tasks":[
@@ -309,7 +309,7 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
 1. Copy the `botRegistration/` folder from bot to `infra/`.
 1. Add following code to the bicep file:
 
-   ```json
+   ```yml
     param resourceBaseName2 string
     param webAppName2 string = resourceBaseName2
     @maxLength(42)
@@ -448,17 +448,18 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
 
 # [Add bot to Teams message extension app](#tab/messageextensionapp)
 
-You can add a message extension to a Teams bot app more easily than adding it to a tab app, as message extensions use the bot support framework.
+You can add a Teams bot to a message extension app more easily than adding it to a tab app, as message extensions use the bot support framework.
 
 The following steps help you to add bot to a message extension app:
 
-* [Create bot app using Teams Toolkit](#create-bot-app-using-teams-toolkit).
+* [Create message extension app using Teams Toolkit](#create-message-extension-app-using-teams-toolkit).
 * [Update manifest file](#add-bot-in-app-manifest).
 * [Add bot code to project](#add-bot-code-to-project).
+* [Setup local debug environment (1)](#setup-local-debug-environment-1)
 
-## Create bot app using Teams Toolkit
+## Create message extension app using Teams Toolkit
 
-To create a bot app with Teams Toolkit, see [create a new Teams app](create-new-project.md).
+To create a message extension app with Teams Toolkit, see [create a new Teams app](create-new-project.md).
 
 ## Add bot in app manifest
 
@@ -502,7 +503,7 @@ To create a bot app with Teams Toolkit, see [create a new Teams app](create-new-
 
 If you're adding bot to a message extension Teams app, you should have a class that extends `TeamsActivityHandler`. Add your bot code or copy the code from your previously created bot app to your own class. The following code is an example if you copy the code from a bot app created with Teams Toolkit:
 
-   ```json
+   ```yml
       public class YourHandler extends TeamsActivityHandler{
     
         // bot code
@@ -520,3 +521,154 @@ If you're adding bot to a message extension Teams app, you should have a class t
         */
       }
    ```
+
+## Setup local debug environment
+
+1. Add the following new tasks in `.vscode/task.json`:
+
+   * `Start local tunnel`
+   * `Start bot`
+   * `Start frontend`.
+
+    Add `Start bot` and `Start frontend` to `dependOn` in the `Start application`task. Configure `Start bot` and `cwd` option in `Start frontend` as we moved the code for tab and bot to `tab/` and `bot/` folder separately. Add `Start local tunnel` to `dependOn` in the `Start Teams App Locally` task. For example:
+
+   ```json
+       "tasks":[
+               {
+                   // Start the local tunnel service to forward public URL to local port and inspect traffic.
+                   // See https://aka.ms/teamsfx-tasks/local-tunnel for the detailed args definitions.
+                   "label": "Start local tunnel",
+                   "type": "teamsfx",
+                   "command": "debug-start-local-tunnel",
+                   "args": {
+                       "type": "dev-tunnel",
+                       "ports": [
+                           {
+                               "portNumber": 3978,
+                               "protocol": "http",
+                               "access": "public",
+                               "writeToEnvironmentFile": {
+                                   "endpoint": "BOT_ENDPOINT", // output tunnel endpoint as BOT_ENDPOINT
+                                   "domain": "BOT_DOMAIN" // output tunnel domain as BOT_DOMAIN
+                               }
+                           }
+                       ],
+                       "env": "local"
+                   },
+                   "isBackground": true,
+                   "problemMatcher": "$teamsfx-local-tunnel-watch"
+               },
+               {
+                   "label": "Start bot",
+                   "type": "shell",
+                   "command": "npm run dev:teamsfx",
+                   "isBackground": true,
+                   "options": {
+                       "cwd": "${workspaceFolder}/bot"
+                   },
+                   "problemMatcher": {
+                       "pattern": [
+                           {
+                               "regexp": "^.*$",
+                               "file": 0,
+                               "location": 1,
+                               "message": 2
+                           }
+                       ],
+                       "background": {
+                           "activeOnStart": true,
+                           "beginsPattern": "[nodemon] starting",
+                           "endsPattern": "restify listening to|Bot/ME service listening at|[nodemon] app crashed"
+                       }
+                   }
+               },
+               {
+                  "label": "Start frontend",
+                  "type": "shell",
+                  "command": "npm run dev:teamsfx",
+                  "isBackground": true,
+                  "options": {
+                       "cwd": "${workspaceFolder}/tab"
+                   },
+                   "problemMatcher": {
+                       "pattern": {
+                           "regexp": "^.*$",
+                           "file": 0,
+                           "location": 1,
+                           "message": 2
+                       },
+                       "background": {
+                           "activeOnStart": true,
+                           "beginsPattern": ".*",
+                           "endsPattern": "listening to|Compiled|Failed|compiled|failed"
+                       }
+                   }
+               },
+                {
+                    "label": "Start application",
+                    "dependsOn": [
+                        "Start bot",
+                        "Start frontend"
+                    ]
+                },
+                {
+                    "label": "Start Teams App Locally",
+                    "dependsOn": [
+                        "Validate prerequisites",
+                        "Start local tunnel",
+                        "Provision",
+                        "Deploy",
+                        "Start application"
+                    ],
+                    "dependsOrder": "sequence"
+                },
+       ]
+   ```
+
+1. Add action `botAadApp/create` and `botFramework/create` under provision in `teamsapp.local.yml`.
+1. Add the following code in `file/createOrUpdateEnvironmentFile` action under deploy:
+
+   ```yml
+    provision:
+      - uses: botAadApp/create
+        with:
+          # The Microsoft Entra application's display name
+          name: bot-${{TEAMSFX_ENV}}
+        writeToEnvironmentFile:
+          # The Microsoft Entra application's client id created for bot.
+          botId: BOT_ID
+          # The Microsoft Entra application's client secret created for bot.
+          botPassword: SECRET_BOT_PASSWORD 
+    
+      # Create or update the bot registration on dev.botframework.com
+      - uses: botFramework/create
+        with:
+          botId: ${{BOT_ID}}
+          name: bot
+          messagingEndpoint: ${{BOT_ENDPOINT}}/api/messages
+          description: ""
+          channels:
+            - name: msteams
+    deploy:
+      - uses: file/createOrUpdateEnvironmentFile # Generate runtime environment variables
+        with:
+          target: ./tab/.localConfigs
+          envs:
+            BROWSER: none
+            HTTPS: true
+            PORT: 53000
+            SSL_CRT_FILE: ${{SSL_CRT_FILE}}
+            SSL_KEY_FILE: ${{SSL_KEY_FILE}}
+    
+      - uses: file/createOrUpdateEnvironmentFile # Generate runtime environment variables
+        with:
+          target: ./bot/.localConfigs
+          envs:
+            BOT_ID: ${{BOT_ID}}
+            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
+   ```
+
+   For more information, see the [sample project](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-bot-with-tab).
+
+1. Open the **Run and Debug Activity Panel** and select **Debug (Edge)** or **Debug (Chrome)**.
+1. Select the F5 key to debug and preview your Teams app locally.
