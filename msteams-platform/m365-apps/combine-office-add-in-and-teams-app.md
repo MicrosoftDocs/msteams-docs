@@ -76,7 +76,7 @@ Begin by separating the source code for the tab (or bot) into its own subfolder.
 
 To separate the source code for the tab or bot, perform the following steps:
 
-1. Create a folder under the root named "tab" (or "bot").
+1. Create a folder under the root named **tab** (or **bot**).
 
     > [!NOTE]
     > For simplicity, the remainder of this article assumes that the existing Teams app is a tab. If you started with a bot, replace "tab" with "bot" in all of these instructions, including the content you add or edit in various files. 
@@ -141,7 +141,7 @@ To separate the source code for the tab or bot, perform the following steps:
     1. Open Teams Toolkit. 
     1. In the **ACCOUNTS** section, verify that you're signed in to Microsoft 365 account.
     1. Select **View** > **Run** in Visual Studio Code.
-    1. In the **RUN AND DEBUG** dropdown menu, select **Debug in Teams (Edge)**, and press F5. 
+    1. In the **RUN AND DEBUG** dropdown menu, select **Debug in Teams (Edge)** and press F5. 
 	
 	    The project builds and runs. This process can take a couple of minutes. When it completes, Teams opens in a browser with a prompt to add your tab app.
 
@@ -156,13 +156,13 @@ To separate the source code for the tab or bot, perform the following steps:
 1. Open a second instance of Visual Studio Code.
 1. Select Teams Toolkit from the **Activity Bar**.
 1. Select **Create a new app**.
-1. In the **Select an option** dropdown menu, select **Outlook add-in > Taskpane**.
+1. In the **Select an option** dropdown menu, select **Outlook add-in** > **Taskpane**.
 1. Select the folder where you want to create the add-in.
 1. Give a name (with no spaces) to the project when prompted.
 
     Teams Toolkit creates the project with basic files and scaffolding and opens it in a new Visual Studio Code window. You will use this project as a source for files and markup that you add to the Teams project.
     
-1. Although you won't be developing this project, verify that it can be sideloaded from Visual Studio Code before you continue. Use the following steps:
+1. Although you won't be developing this project, perform the following steps to verify that it can be sideloaded from Visual Studio Code before you continue:
 
     1. Make sure Outlook desktop is closed.
     1. Open Visual Studio Code.
@@ -242,7 +242,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     ADDIN_ENDPOINT=
     ```
 
-1. In the Teams manifest template, add the placeholder `"${{ADDIN_DOMAIN}}",` to the top of the "validDomains" array. The Teams Toolkit replaces this with a localhost domain when you're developing locally. When you deploy the finished combined app to staging or production as described in [Move the application to Azure](#move-the-application-to-azure), Teams Toolkit replaces the placeholder with the staging/production URI. The following JSON is an example:
+1. In the Teams manifest template, add the placeholder `"${{ADDIN_DOMAIN}}",` to the top of the `"validDomains"` array. The Teams Toolkit replaces this with a localhost domain when you're developing locally. When you deploy the finished combined app to staging or production as described in [Move the application to Azure](#move-the-application-to-azure), Teams Toolkit replaces the placeholder with the staging/production URI. The following JSON is an example:
 
     ```json
     "validDomains": [
@@ -645,7 +645,7 @@ To see both the app and the add-in running at the same time, take the following 
 
 1. Copy the production URL from the `ADDIN_ENDPOINT` in `env/.env.dev` file.
 1. Edit `\add-in\webpack.config.js` file and change `urlProd` constant value to the value you just copied. Be sure to add a '/' at the end of the URL.
-1. In the Visual Studio Code **TERMINAL**, navigate to the root of the project, and then run `npm run build:add-in`.
+1. In the Visual Studio Code **TERMINAL**, navigate to the root of the project and then run `npm run build:add-in`.
 1. Copy the file `\add-in\dist\manifest.dev.json` to the `\appPackage` folder.
 1. Rename the copy in the `\appPackage` folder to `manifest.addinPreview.json`.
 1. In the **TERMINAL**, run `npx office-addin-dev-settings sideload .\appPackage\manifest.addinPreview.json`. This process can take a couple of minutes and opens the Outlook desktop. (If you're prompted to install `office-addin-dev-settings`, respond **yes**.)
