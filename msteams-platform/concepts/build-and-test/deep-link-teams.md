@@ -160,7 +160,7 @@ The query parameters are:
 
 Use the following deep link format can be used in a bot, connector, or message extension card for configuring a deep link to connect to a file in a channel:
 
-`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectURL=<objectURL>&baseUrl=<baseURL>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
+`https://teams.microsoft.com/l/file/<fileId>?tenantId=<tenantId>&fileType=<fileType>&objectUrl=<objectUrl>&baseUrl=<baseUrl>&serviceName=<Name>&threadId=<threadId>&groupId=<groupId>`
 
 The query parameters are:
 
@@ -170,11 +170,13 @@ The query parameters are:
 * `objectUrl`: Object URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}/SharedDocuments/{ChannelName}/FileName.ext`. For example, `https://microsoft.sharepoint.com/teams/(filepath)`.
 * `baseUrl`: Base URL of the file. The format is `https://{tenantName}.sharepoint.com/sites/{TeamName}`. For example, `https://microsoft.sharepoint.com/teams`.
 * `serviceName`: Name of the service, app ID. For example, `teams`.
-* `threadId`: The threadID is the team ID of the team where the file is stored. It's optional and can't be set for files stored in a user's OneDrive folder. threadId - 19:<f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype>.
+* `threadId`: The threadID is the team ID of the team where the file is stored. It's optional and can't be set for files stored in a user's OneDrive folder. For example, `19:<f8fbfc4d89e24ef5b3b8692538cebeb7@thread.skype>`.
 * `groupId`: Group ID of the file. For example, `ae063b79-5315-4ddb-ba70-27328ba6c31e`.
 
 > [!NOTE]
-> You can see `threadId` and `groupId` in the URL from the channel.  
+>
+> * You can see `threadId` and `groupId` in the URL from the channel.
+> * In the new Teams client, the deep link format using `objectURL` for a file in a channel isn't supported, use `objectUrl` in the deep link format.
 
 The following example format illustrates the deep link to files:
 
