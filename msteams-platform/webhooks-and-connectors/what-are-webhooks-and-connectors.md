@@ -37,7 +37,7 @@ Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webho
 
 #### Notification bot or Incoming Webhook
 
-Before you start to learn how to build Incoming Webhooks, you may also want to know that you can build a notification bot using Teams Toolkit or send activity feed notifications using Microsoft Graph API. Notification bots and activity feed notifications can enable more customizable experience to meet different business scenarios. For more information, see [plan to send app notifications](../concepts/design/design-app-notification.md)
+Before you start to learn how to build Incoming Webhooks, you may also want to know that you can build a notification bot using Teams Toolkit or send activity feed notifications using Microsoft Graph API. Notification bots and activity feed notifications can enable more customizable experience to meet different business scenarios. For more information, see [plan to send app notifications](../concepts/design/design-app-notification.md).
 
 | &nbsp; | Notification API | Notification bot |  Incoming Webhook |
 | --- | --- | --- | --- |
