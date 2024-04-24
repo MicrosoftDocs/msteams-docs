@@ -14,38 +14,38 @@ Actions in Copilot for Microsoft 365 revolutionizes the way users interact with 
 
 The versatility of  Actions extends to a wide range of scenarios, from project and incident management to HR/ERP workflows, approvals, meetings, content generation, employee recognition, and bookings. But the innovation doesn't stop there. With the added advantage of AI,  Actions can generate content and perform actions based on contextual understanding, optimizing your time, and resources. 
 
-Moreover, the cross-app integration feature allows you to access and act on data across different applications within the Microsoft 365 ecosystem, ensuring a unified user experience.  As developers, the future of efficient workflows is here, and it starts with  Actions in Copilot for Microsoft 365. Upgrade to version 1.13+ now and start leveraging the power of  Actions in Copilot for Microsoft 365.
+Moreover, the cross-app integration feature allows you to access and act on data across different applications within the Microsoft 365 ecosystem, ensuring a unified user experience.  As developers, the future of efficient workflows is here, and it starts with  Actions in Copilot for Microsoft 365. Upgrade to version 1.13+ now and start using the power of  Actions in Copilot for Microsoft 365.
 
 # Implementing Actions in Copilot for Microsoft 365
 
 Actions in message extension for copilot for Microsoft 365 is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps. The flow consists of the following steps:
 
-1. **Invocation**: 
-   Users initiate an action by entering a natural language query that aligns with an action's intent. The user types a natural language command in the Copilot chat window, such as "Can you file a sick leave for me?" or "Create a general issue".
+1. **Invocation**: Users initiate an action by entering a natural language query that aligns with an action's intent. The user types a natural language command in the Copilot chat window, such as "Can you file a sick leave for me?" or "Create a general issue".
 
-2. **Disclosure and Action Confirmation UI**: 
-   Copilot responds with the parameters to be sent to the third party service, derived from the plugin manifest. A customizable action confirmation message from the third party is also displayed,  with the parameters and parameter values that are sent to the app, such as alias, claim type, category, etc. The user can modify or cancel the parameters if needed.
+1. **Disclosure and Action Confirmation UI**: Copilot responds with the parameters to be sent to the third party service, derived from the plugin manifest. A customizable action confirmation message from the third party is also displayed,  with the parameters and parameter values that are sent to the app, such as alias, claim type, category, etc. The user can modify or cancel the parameters if needed.
 
-3. **User Action Confirmation**: 
-   Users explicitly confirm the action, which then shares the information with the plugin. The user selects on "Continue in plugin" to proceed with the action. Copilot opens a dialog with the app's dialog, prepopulated with the parameter values. The user can fill in any more details or upload files as required by the app.
+1. **User Action Confirmation**: Users explicitly confirm the action, which then shares the information with the plugin. The user selects on "Continue in plugin" to proceed with the action. Copilot opens a dialog with the app's dialog, prepopulated with the parameter values. The user can fill in any more details or upload files as required by the app.
 
-4. **Completion Confirmation**: 
-   The plugin acknowledges the action's completion, potentially through an adaptive card, text, or JSON templates. The user submits the action and Copilot shows a notification with the status and outcome of the action, such as "Your details have been successfully submitted". The user can also view or edit the action details in the app.
+1. **Completion Confirmation**: The plugin acknowledges the action's completion, potentially through an adaptive card, text, or JSON templates. The user submits the action and Copilot shows a notification with the status and outcome of the action, such as **Your details have been successfully submitted**. The user can also view or edit the action details in the app.
 
-5. **Clarification [Optional Step]**: 
-   If essential parameters are missing, Copilot might request additional information from the user.
+1. **Clarification [Optional Step]**: If essential parameters are missing, Copilot might request additional information from the user.
 
-6. **Modification [Optional Step]**: 
-   Users can modify the disclosed information by submitting a natural language query, leveraging rich LLM capabilities to alter existing parameter values.
+1. **Modification [Optional Step]**: Users can modify the disclosed information by submitting a natural language query, using rich Large Language Model (LLM) capabilities to alter existing parameter values.
 
-7. **3P Error [Optional Step]**: 
-   Should a service encounter an error, Copilot relays the plugin's error message to the user.
+1. **3P Error [Optional Step]**: Should a service encounter an error, Copilot relays the plugin's error message to the user. The following errors are supported:
 
-8. **Disclosure and Action Confirmation with Dialogs**: 
-   For plugins requiring complex inputs, business logic, or rich editing, a button to launch a modal-based form is provided. To ensure users have full control over their data and can make changes to the data generated by Copilot, it's vital to show users the information being sent with each parameter and seek explicit confirmation before triggering an action, as it might result in unintended changes.
+   1. **Recoverable Errors**:
+      * **Rectification Suggestions**: Developers can send an error response to the user with requests for corrections or more data in text or JSON format.
+      * **Authentication/Configuration Failure**: Developers can prompt the user to reauthorize if there's an authentication or configuration issue.
 
-9. **User Action Confirmation from Dialogs**: 
-   Users must confirm actions from dialogs to complete the process.
+   1. **Irrecoverable Errors**:
+      * **From Developer**: Developers should be able to send a failure message that Copilot will display to the user.
+      * **From Copilot**: In cases of API availability issues or network problems, Copilot can send an error message to the user.
+
+
+1. **Disclosure and Action Confirmation with Dialogs**: For plugins requiring complex inputs, business logic, or rich editing, a button to launch a modal-based form is provided. To ensure users have full control over their data and can make changes to the data generated by Copilot, it's vital to show users the information being sent with each parameter and seek explicit confirmation before triggering an action, as it might result in unintended changes.
+
+1. **User Action Confirmation from Dialogs**: Users must confirm actions from dialogs to complete the process.
 
 ## Why Implement  Actions?
 
