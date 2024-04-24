@@ -164,7 +164,7 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
         |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
         |`repairsData.json`    |  The data source for the repair API.       |
 
-   1. Based on the oprtions selected in **step a**, follow these steps:
+   1. Based on the options selected in **step a**, follow these steps:
    
       * If you've selected **none** or **Microsoft Entra**, skip to the next step.
 
@@ -185,7 +185,7 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
            npm run keygen
            ```
 
-           The API ket is generated as **Generated a new API Key: xxx...**. The generated API key is registed and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer portal for Teams. For more information on API key registration, see [Register an API key](build-api-based-message-extension.md#register-an-api-key).
+           The API key is generated as **Generated a new API Key: xxx...**. The generated API key is registered and recorded in the [API key registration tool](https://dev.teams.microsoft.com/api-key-registration) in Developer portal for Teams. For more information on API key registration, see [Register an API key](build-api-based-message-extension.md#register-an-api-key).
 
         4. Enter the generated API key into your `env/.env.*.user` file. Replace `<your-api-key>` with the actual key:
 
@@ -200,17 +200,17 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
 
       :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-plugin-copilot-openapi-spec-location.png" alt-text="Screenshot shows the option to select OpenAPI Description document location.":::
 
-   1. From the API list, select the GET API and select **OK**.
+   1. From the API list, select the required APIs and select **OK**.
 
       > [!NOTE]
-      > GET and POST APIs are supported for API based message extensions.
+      > GET and POST APIs are supported for API-based message extensions.
 
    1. Select **Default folder**.
    1. Enter the name of your app and select **Enter**. Teams Toolkit scaffolds the OpenAPI Description document and created an API-based message extension.
    1. Under **LIFECYCLE**, select **Provision**.
-   1. If your OpenAPI specification document has a security scheme `bearerAuth` which uses the HTTP bearer scheme, enter the API key in the command window and select **Enter**.
+   1. If your OpenAPI specification document has a security scheme `bearerAuth`, which uses the HTTP bearer scheme, enter the API key in the command window and select **Enter**.
 
-        :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-api-key.png" alt-text="Screenshot shows the Enter API key command that appears in Teams Toolkit for visual studio code.":::
+        :::image type="content" source="../assets/images/Copilot/api-based-me-ttk-api-key.png" alt-text="Screenshot shows the Enter API key command that appears in Teams Toolkit for Visual Studio Code.":::
 
       > [!NOTE]
       > The API key must be a string with 10 to 128 characters.
@@ -218,7 +218,7 @@ To build am API-based message extension using Teams Toolkit for Visual Studio Co
     ---
 
      > [!NOTE]
-     > Teams toolkit source files includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns an 401 HTTP status code, indicating an Unauthorized response. 
+     > Teams toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns an 401 HTTP status code, indicating an Unauthorized response. 
 
 1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
@@ -332,13 +332,13 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
       :::image type="content" source="../assets/images/Copilot/bot-based-VS-dev-tunnel.png" alt-text="Screenshot shows the create a tunnel option in Visual Studio.":::
 
-   1. Select the account to create the tunnel. The supported account types are Azure, Microsoft Account (MSA), and GitHub.
+   1. Select an account to create the tunnel. The supported account types are Azure, Microsoft Account (MSA), and GitHub.
       1. **Name**: Enter a name for the tunnel.
       1. **Tunnel Type**: Select **Persistent** or **Temporary**.
       1. **Access**: Select **Public**.
       1. Select **OK**. Visual Studio displays a confirmation message that a tunnel is created.
 
-       The tunnel you've created is listed under **Dev Tunnels**.
+       The tunnel you created is listed under **Dev Tunnels**.
 
    1. Go to **Solution Explorer** and select your project.
    1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
