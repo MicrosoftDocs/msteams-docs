@@ -1,6 +1,6 @@
 ---
 title: Add card actions in a bot
-description: In this module, learn what are card actions in Microsoft Teams, action types and how to use them in your bots.
+description: Learn what are card actions in Microsoft Teams, action types and how to use them in your bots.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/04/2023
@@ -438,7 +438,7 @@ Action.Submit is equivalent to the Bot Framework actions. You can also modify th
 
 > [!NOTE]
 >
->* The bot doesn’t receive user input as an event unless the user submits their actions in the Adaptive Card. Teams doesn’t recognize user actions, like selecting an option from multiple choices, as an input unless the user submits the selection.
+>* The bot doesn’t receive user input unless the user submits their actions in the Adaptive Card through a button, such as **Save** or **Submit**. For example, the bot doesn't consider user actions, such as selecting an option from multiple choices or filling out fields in a form, as inputs unless the user submits them.
 >* Adding `msteams` to data with a Bot Framework action doesn't work with an Adaptive Card dialog.
 >* Primary or destructive `ActionStyle` isn't supported in Teams.
 >* Your app has five seconds to respond to the invoke message.
