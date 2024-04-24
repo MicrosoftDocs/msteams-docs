@@ -62,6 +62,9 @@
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
+  - name: Plan to send app notifications
+    href: concepts/design/design-app-notification.md
+    displayName: notification, activity feed, message, alert, notify
 - name: Design your app
   items:
   - name: Overview
@@ -399,7 +402,7 @@
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
   - name: Send activity feed notifications
-    href: tabs/send-activity-feed-notification.md
+    href: /graph/teams-send-activityfeednotifications
     displayName: activity feed, notification, customize notification
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
@@ -450,7 +453,7 @@
       href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Interactive notification bot in Teams
       href: bots/how-to/conversations/interactive-notification-bot-in-teams.md
-      displayName: Adapter
+      displayName: Adapter, notification, bot
     - name: Command bot in Teams
       href: bots/how-to/conversations/command-bot-in-teams.md
     - name: Workflow bot in Teams
