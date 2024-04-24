@@ -5,6 +5,10 @@
 | Microsoft 365 app | `*.microsoft365.com`, `*.office.com`,  |
 | Outlook | `outlook.office.com`, `outlook.office365.com`, `outlook-sdf.office.com`, `outlook-sdf.office365.com` |
 
+```http
+https://*.cloud.microsoft https://teams.microsoft.com https://*.teams.microsoft.com https://*.microsoft365.com https://*.office.com
+```
+
 > [!WARNING]
 > Microsoft's cloud services, including web versions of Teams, Outlook  and Microsoft 365 domains are migrating to the *cloud.microsoft* domain. Perform the following steps before June 2024 to ensure your app continues to render on supported Microsoft 365 web client hosts:
 >
