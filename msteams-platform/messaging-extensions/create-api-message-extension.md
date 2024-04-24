@@ -115,7 +115,7 @@ To test your API-based message extension created in the Developer Portal for Tea
 > [!NOTE]
 > Teams Toolkit support for API-based message extension is available only in Teams Toolkit pre-release version. Before you get started, ensure that you've installed a [Teams Toolkit pre-release version](../toolkit/install-Teams-Toolkit.md#install-a-pre-release-version)
 
-To build am API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
+To build an API-based message extension using Teams Toolkit for Visual Studio Code, follow these steps:
 
 1. Open **Visual Studio Code**.
 1. From the left pane, Select **Teams Toolkit**.
@@ -320,13 +320,17 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
    1. To get started, you must update the source code in the following files:
 
-      |File  |Contents |
-      |---------|---------|
-      |`repair.cs` | The main file of a function in Azure Functions. Defines an Azure Function that retrieves and filters repair records based on a query parameter from an HTTP GET request, and returns the results as a JSON response.|
-      |`RepairData.cs`|The data source for the repair API. Contains a method that returns a hardcoded list of car repair tasks. |
-      |`Models/RepairModel.cs`|Defines a data model that represents a repair task with properties such as ID, Title, Description, AssignedTo, Date, and Image.|
-      |`appPackage/apiSpecificationFiles/repair.yml` |  A file that describes the structure and behavior of the repair API.|
-      |`appPackage/responseTemplates/repair.json` |  A generated Adaptive Card that used to render API response.|
+      | File | Contents |
+      | --- | --- |
+      | `src/functions/repair.ts` | The main file of a function in Azure Functions. Defines an Azure Function that retrieves and filters repair records based on a query parameter from an HTTP GET request, and returns the results as a JSON response. |
+      | `src/repairsData.json` | The data source for the repair API. |
+      | `src/keyGen.ts` | Designed to generate an API key used for authorization. |
+      | `appPackage/apiSpecificationFile/repair.yml` | A file that describes the structure and behavior of the repair API. |
+      | `appPackage/responseTemplates/repair.json` | A template file for rendering API response. |
+      | `teamsapp.yml`	| The main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
+      |`teamsapp.local.yml` |	Overrides teamsapp.yml with actions that enable local execution and debugging.|
+      |`aad.manifest.json` |	Defines the configuration of Microsoft Entra app. This template will only provision single tenant Microsoft Entra app.|
+
 
    1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
 
