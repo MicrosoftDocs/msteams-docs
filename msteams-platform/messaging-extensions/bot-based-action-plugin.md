@@ -16,7 +16,13 @@ The versatility of  Actions extends to a wide range of scenarios, from project a
 
 Moreover, the cross-app integration feature allows you to access and act on data across different applications within the Microsoft 365 ecosystem, ensuring a unified user experience.  As developers, the future of efficient workflows is here, and it starts with  Actions in Copilot for Microsoft 365. Upgrade to version 1.13+ now and start using the power of  Actions in Copilot for Microsoft 365.
 
-# Implementing Actions in Copilot for Microsoft 365
+## Why Implement  Actions?
+
+Implementing  Actions in your applications can significantly enhance user productivity by streamlining workflows. Users can complete tasks within Copilot without the need to switch contexts or applications. The feature also uses AI to generate content and perform actions based on contextual understanding, optimizing time, and resources. Furthermore, it allows for cross-app integration, enabling users to access and act on data across different applications within the Microsoft 365 ecosystem.
+
+This feature is useful in scenarios such as project management, incident management, HR/ERP workflows, approvals, meetings, content generation, employee recognition, and bookings. By implementing  Actions, you can simplify these processes and provide a unified user experience.
+
+## Build Actions in Copilot for Microsoft 365
 
 Actions in message extension for copilot for Microsoft 365 is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps. The flow consists of the following steps:
 
@@ -47,14 +53,8 @@ Actions in message extension for copilot for Microsoft 365 is the process of per
 
 1. **User Action Confirmation from Dialogs**: Users must confirm actions from dialogs to complete the process.
 
-## Why Implement  Actions?
 
-Implementing  Actions in your applications can significantly enhance user productivity by streamlining workflows. Users can complete tasks within Copilot without the need to switch contexts or applications. The feature also uses AI to generate content and perform actions based on contextual understanding, optimizing time, and resources. Furthermore, it allows for cross-app integration, enabling users to access and act on data across different applications within the Microsoft 365 ecosystem.
-
-This feature is useful in scenarios such as project management, incident management, HR/ERP workflows, approvals, meetings, content generation, employee recognition, and bookings. By implementing  Actions, you can simplify these processes and provide a unified user experience.
-
-
-## Implementation Steps
+## Add actions to bot-based message extension 
 
 1. Updated your manifest to version 1.13 or later and add the Microsoft 365 channel for your plugin.
 
