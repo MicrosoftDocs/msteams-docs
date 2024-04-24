@@ -18,7 +18,15 @@ Moreover, the cross-app integration feature allows you to access and act on data
 
 # Implementing Actions in Copilot for Microsoft 365
 
-Welcome to the comprehensive guide on implementing Third-Party () Actions in Copilot for Microsoft 365.  Actions are a feature that allows you to extend the capabilities of your applications by enabling users to interact with external systems directly through Copilot. Copilot is a feature in Microsoft 365 that leverages AI to generate content and perform actions based on contextual understanding. This guide provides you with the necessary steps and code snippets to implement  Actions in your applications.
+Actions in message extension for copilot for micrososft 365 is the process of performing actions with natural language commands in the Copilot chat window using message extension plugins. For example, users can ask Copilot to file a reimbursement claim, create a task, or add a person to a project using third-party apps. The flow consists of the following steps:
+
+* **Invocation**: The user types a natural language command in the Copilot chat window, such as "Can you file a sick leave for me?" or "Create a general issue".
+
+* **Disclosure**: Copilot shows a confirmation screen with the parameters and parameter values that will be sent to the app, such as alias, claim type, category, etc. The user can modify or cancel the parameters if needed.
+
+* **Confirmation**: The user clicks on "Continue in plugin" to proceed with the action. Copilot opens a task module with the app's dialog, pre-populated with the parameter values. The user can fill in any additional details or upload files as required by the app.
+
+* **Completion**: The user submits the action and Copilot shows a notification with the status and outcome of the action, such as "Your details have been successfully submitted". The user can also view or edit the action details in the app.
 
 ## Why Implement  Actions?
 
@@ -28,7 +36,12 @@ This feature is useful in scenarios such as project management, incident managem
 
 ## Prerequisites
 
-Before you begin, ensure that you have updated your manifest to version 1.13+ and added the Microsoft 365 channel for your plugin. To do this, navigate to the manifest file in your project directory and update the version number. Next, add the Microsoft 365 channel to the `validDomains` array in your manifest.
+Before you begin, ensure that you have met the following requirements:
+
+* Update your manifest to version 1.13+ and add the Microsoft 365 channel for your plugin.
+* Define parameters for Action commands.
+* Ensure command and parameter descriptions are LLM friendly.
+* Return synchronous card response from the task module for user-initiated cards.
 
 ## Implementation Steps
 
