@@ -469,7 +469,7 @@ items:
     
     To create the manifest, follow these steps: 
     
-    1. Create a new JSON file. Your app manifest must conform to the schema defined in the [public developer preview app manifest schema](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json).
+    1. Create a new JSON file. Your app manifest must conform to the 1.17 version of the schema defined in [App manifest schema](https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema).
 
     1. Add the following code to the JSON file:
 
@@ -477,8 +477,8 @@ items:
 
        ```json
        {
-        "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-        "manifestVersion": "devPreview",
+        "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+        "manifestVersion": "1.17",
         "version": "1.0.3",
         "id": "<<YOUR-MICROSOFT-APP-ID>>",
         "packageName": "com.microsoft.teams.extension",
