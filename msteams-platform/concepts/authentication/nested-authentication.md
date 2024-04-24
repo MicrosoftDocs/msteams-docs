@@ -10,7 +10,33 @@ ms.localizationpriority: medium
 
 # Nested authentication
 
-Nested authentication is a new authentication protocol for single page applications that are embedded in host environments like Teams, Outlook, and Harmony. It simplifies the authentication process and allows the app to request specific permissions for the resources it needs. It also aligns with the web authentication using Microsoft Authentication Library (MSAL) JS, which many apps already use.
+Nested authentication is a new authentication protocol for single page applications that are embedded in host environments like Teams, Outlook, and Harmony. It simplifies the authentication process and allows the app to request specific permissions for the resources it needs. It also aligns with the web authentication using Microsoft Authentication Library (MSAL) JS.
+
+Nested App Authentication (NAA) facilitates single sign-on (SSO) across applications nested within supported first-party apps. It offers enhanced security and architectural agility over traditional authentication models and the on-behalf-of flow, enabling the development of dynamic, user-focused applications.
+
+NAA endorses an "app-in-app" model, where a primary identity encompasses one or more app identities. Microsoft utilizes this framework in:
+
+- Office Add-Ins
+- Teams Tabs and Personal apps
+
+In this structure, each app secures tokens from Microsoft Entra ID through their distinct app ID. The primary (Hub) app orchestrates communication and token management with Microsoft Entra ID for the nested (hosted) apps.
+
+
+The following table outlines the difference between Teams Microsoft Entra ID SSO and Nested App Authentication:
+
+| Steps | Traditional Teams Microsoft Entra ID SSO | Nested App Authentication |
+| --- | --- | --- |
+| Expose redirect URI | ✔️ | ✔️ * SPA redirect URI necessary |
+| Register API in Microsoft Entra ID | ✔️ |  |
+| Define a custom scope in Microsoft Entra ID | ✔️ |  |
+| Authorize Teams client apps | ✔️ |  |
+| Revise Teams manifest | ✔️ | Recommended to help IT admins in providing consent via the Admin Portal |
+| Acquire access token via Teams JS SDK | ✔️ |  |
+| Acquire access token via MSAL.js |  | ✔️ * Requires new msalconfig property: supportsNestedAppAuth |
+| Solicit user consent for more permissions | ✔️ |  |
+| Conduct an OBO exchange on the server | ✔️ |  | 
+
+To sum up, NAA is a potent and adaptable mechanism that bolsters the security and capabilities of your apps. By mastering the outlined procedures, you can harness this functionality to craft dynamic, user-oriented applications. For more information on NAA, see the official Microsoft documentation.
 
 The existing authentication flow for embedded apps depends on the host environment and requires a middle tier service to do the on-behalf-of token exchange. The app also has to use the Teams JS SDK to get the token and consent to the host app's permissions.
 The nested authentication flow is consistent across all host environments and doesn't require a middle tier service or the Teams JS SDK. The app only has to register its app in Microsoft Entra, configure a broker schema redirect URI, enable the native bridging in the manifest, and use MSAL JS to acquire the token and call the APIs. The app can also check the support status of nested authentication using the Teams JS SDK and provide a fallback experience for unsupported environments.
@@ -20,7 +46,7 @@ The nested authentication flow is consistent across all host environments and do
 > [!NOTE]
 > Nested authentication is in developer preview and not supported by all host environments. Developers need to check the support status using the Teams JS SDK and provide a fallback experience for unsupported environments.
 
-To use nested auth, developers need to follow these steps:
+To use nested authentication, follow these steps:
 
 * Register their single page application in Microsoft Entra and configure the app registration with a broker schema redirect URI. This allows the host environments to broker the app.
 * Enable the native bridging in the app manifest by setting the supportsNestedAppAuth property to true. This allows the app to communicate with the host environment.
@@ -116,7 +142,7 @@ publicClientApplication
 
 ```
 
-If a user is required to interact with a Microsoft Entra ID consent dialog (acquireTokenPopup), then they will/may first be shown a speed bump dialog. This is to ensure that user showed intent to open the Microsoft Entra ID window and to prevent the window from randomly appearing on the user's screen.
+If a user is required to interact with a Microsoft Entra ID consent dialog (acquireTokenPopup), then they're shown a speed bump dialog to ensure that user showed intent to open the Microsoft Entra ID window and to prevent the window from randomly appearing on the user's screen.
 
 ### Call an API
 
@@ -141,8 +167,8 @@ fetch(graphEndpoint, options)
 
 ### Best practices
 
-* Use silent authentication whenever possible
-* MSAL.js provides the acquireTokenSilent method, which handles token renewal by making silent token requests without prompting the user. The method first looks for a valid cached token in the browser storage. If it doesn't find one, the library makes the silent request to Microsoft Entra and if there's an active user session (determined by a cookie set in browser on the Microsoft Entra domain), a fresh token is returned. The library doesn't automatically invoke the acquireTokenSilent method. We recommended that you call acquireTokenSilent in your app before making an API call to get the valid token.
+* Use silent authentication whenever possible.
+* MSAL.js provides the acquireTokenSilent method, which handles token renewal by making silent token requests without prompting the user. The method first looks for a valid cached token in the browser storage. If it doesn't find one, the library makes a silent request to Microsoft Entra and if there's an active user session (determined by a cookie set in browser on the Microsoft Entra domain), a fresh token is returned. The library doesn't automatically invoke the acquireTokenSilent method. We recommended that you call acquireTokenSilent in your app before making an API call to get the valid token.
 * In certain cases, the acquireTokenSilent method's attempt to get the token fails. For example, when there's an expired user session with Microsoft Entra or a password change by the user, which requires user interaction. When the acquireTokenSilent fails, you need to call the interactive acquire token method (acquireTokenPopup).
 * Have a fallback when NAA isn't supported.
 * While we strive to provide a high-degree of compatibility with these flows across the Microsoft ecosystem, your application might appear in down-level/legacy clients aren't updated to support NAA. In these cases, your application doesn't support seamless SSO and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more info, see Authenticate and authorize with the Office dialog API.
