@@ -26,11 +26,11 @@ To configure bot as an additional capability, ensure the following prerequisites
 
 The following steps help you to add bot to a tab app:
 
-* [Create tab app using Microsoft Teams Toolkit](#create-tab-app-using-microsoft-teams-toolkit).
-* [Configure bot in app manifest](#configure-bot-in-app-manifest).
-* [Add bot code to your project](#add-bot-code-to-your-project).
-* [Setup local debug environment](#setup-local-debug-environment).
-* [Provision the app to Azure](#provision-the-app-to-azure).
+* [Create tab app using Microsoft Teams Toolkit](#create-tab-app-using-microsoft-teams-toolkit)
+* [Configure bot in app manifest](#configure-bot-in-app-manifest)
+* [Add bot code to your project](#add-bot-code-to-your-project)
+* [Setup local debug environment](#setup-local-debug-environment)
+* [Provision the app to Azure](#provision-the-app-to-azure)
 
 ## Create tab app using Microsoft Teams Toolkit
 
@@ -452,9 +452,9 @@ You can add a bot to a message extension app more easily than adding it to a tab
 
 The following steps help you to add bot to a message extension app:
 
-* [Create message extension app using Teams Toolkit](#create-message-extension-app-using-teams-toolkit).
-* [Update manifest file](#add-bot-in-app-manifest).
-* [Add bot code to project](#add-bot-code-to-project).
+* [Create message extension app using Teams Toolkit](#create-message-extension-app-using-teams-toolkit)
+* [Update manifest file](#add-bot-in-app-manifest)
+* [Add bot code to project](#add-bot-code-to-project)
 * [Setup local debug environment](#setup-local-debug-environment-1)
 
 ## Create message extension app using Teams Toolkit
