@@ -448,14 +448,14 @@ You can configure message extension in `appPackage/manifest.json`. You can confi
 
 # [Add bot to Teams message extension app](#tab/messageextensionapp)
 
-You can add a Teams bot to a message extension app more easily than adding it to a tab app, as message extensions use the bot support framework.
+You can add a bot to a message extension app more easily than adding it to a tab app, as message extensions use the bot support framework.
 
 The following steps help you to add bot to a message extension app:
 
 * [Create message extension app using Teams Toolkit](#create-message-extension-app-using-teams-toolkit).
 * [Update manifest file](#add-bot-in-app-manifest).
 * [Add bot code to project](#add-bot-code-to-project).
-* [Setup local debug environment (1)](#setup-local-debug-environment-1)
+* [Setup local debug environment](#setup-local-debug-environment-1)
 
 ## Create message extension app using Teams Toolkit
 
@@ -501,7 +501,7 @@ To create a message extension app with Teams Toolkit, see [create a new Teams ap
 
 ## Add bot code to project
 
-If you're adding bot to a message extension Teams app, you should have a class that extends `TeamsActivityHandler`. Add your bot code or copy the code from your previously created bot app to your own class. The following code is an example if you copy the code from a bot app created with Teams Toolkit:
+If you're adding bot to a message extension app, you should have a class that extends `TeamsActivityHandler`. Add your bot code or copy the code from your previously created bot app to your own class. The following code is an example if you copy the code from a bot app created with Teams Toolkit:
 
    ```yml
       public class YourHandler extends TeamsActivityHandler{
