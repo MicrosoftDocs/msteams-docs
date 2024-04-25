@@ -44,6 +44,8 @@ When the user selects one of the feedback buttons, a feedback form appears that 
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-form.png" alt-text="Screenshot shows the feedback form in a bot.":::
 
+---
+
 The bot sends the user's input in the feedback form to you through a bot invoke. The following code snippet is an example of a bot invoke containing feedback from a user:
 
 ```json
