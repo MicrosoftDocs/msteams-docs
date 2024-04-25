@@ -830,7 +830,7 @@ Update the following properties in the app manifest file:
 
    &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
-* `microsoftEntraConfiguration`: Enables Single sign-on authentication for your app. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications.
+* `authorization.microsoftEntraConfiguration`: Enables Single sign-on authentication for your message extension. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications. For more information, see [composeextensions](../resources/schema/manifest-schema#composeextensions).
 
 To configure app manifest:
 
@@ -870,10 +870,6 @@ To configure app manifest:
     },
     ```
 
-1. Update the subdomain URL in the following properties:
-   1. `contentUrl`
-   2. `configurationUrl`
-  
 1. Save the app manifest file.
 
 For more information, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
@@ -956,6 +952,20 @@ After the API-based message extension gets a request header with token, perform 
 
   > [!NOTE]
   > The API receives a Microsoft Entra token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
+
+For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
+
+There are a number of libraries available that can handle JWT validation. Basic validation includes:
+
+- Checking that the token is well-formed.
+- Checking that the token was issued by the intended authority.
+- Checking that the token is targeted to the web API.
+
+Keep in mind the following guidelines when validating the token:
+
+- Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
+- The token's `aud1` parameter is set to the app ID generated during Microsoft Entra app registration.
+- The token's `scp` parameter is set to `access_as_user`.
 
 </details>
 <br/>
