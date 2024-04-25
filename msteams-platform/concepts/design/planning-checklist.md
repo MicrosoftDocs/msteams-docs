@@ -10,7 +10,7 @@ ms.date: 07/28/2022
 
 # Teams app planning checklist
 
-An app's lifecycle extends from planning your app to eventually deploying it, and beyond. It takes more than knowing your user and requirements to plan your app. Depending on your app needs, you might also consider planning for future updates.
+An app's lifecycle extends from planning your app to eventually deploying it, and beyond. It takes more than knowing your users and requirements to plan your app. Depending on your app needs, you might also consider planning for future updates.
 
 Let's take a practical look at planning for an app's lifecycle.
 
