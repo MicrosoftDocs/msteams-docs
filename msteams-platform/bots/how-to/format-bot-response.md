@@ -24,9 +24,9 @@ To enable feedback buttons in your bot, add a new `channelData` object in your b
        await context.sendActivity({
          type: ActivityTypes.Message,
          text: `Hey I'm a friendly AI bot. This mesasge is generated via AI - ${txt}`,
-+        channelData: {
-+          feedbackLoopEnabled: true // Feedback buttons 
-+        },
+         channelData: {
+           feedbackLoopEnabled: true // Feedback buttons 
+         },
        });
 ```
 
@@ -66,7 +66,37 @@ The bot sends the user's input received in the feedback form to you through a bo
 
 ## Handle feedback
 
-When your bot receives the invoke, ensure that it responds with an HTTP status code 200 response with no body. We recommend that your bot don't send the user any message or notification upon receiving feedback. Teams automatically sends a toast notifying the user that their feedback was submitted successfully.
+When your bot receives the invoke, you need to have an `onInvokeActivity` handler to process the invoke correctly.
+
+```json
+      public async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> {
+        try {
+          switch (context.activity.name) {
+            case "message/submitAction":
+                return CreateInvokeResponse(200);
+            default:
+              return {
+                status: 200,
+                body: `Unknown invoke activity handled as default- ${context.activity.name}`,
+              };
+          }
+        } catch (err) {
+          console.log(`Error in onInvokeActivity: ${err}`);
+          return {
+            status: 500,
+            body: `Invoke activity received- ${context.activity.name}`,
+          };
+        }
+      }
+      export const CreateInvokeResponse = (
+       status: number,
+       body?: unknown
+      ): InvokeResponse => {
+         return { status, body };
+      };
+```
+
+We recommend that your bot don't send the user any message or notification upon receiving feedback. Teams automatically sends a toast notifying the user that their feedback was submitted successfully.
 
 Once you start receiving feedback, ensure that you store the feedback. Teams doesn't store or process feedback after the invoke is sent to your bot. Store the message IDs and the content of the messages that your bot sends and receives. Match the message ID of the bot’s message with the corresponding feedback when your bot receives the invoke containing the feedback.
 
