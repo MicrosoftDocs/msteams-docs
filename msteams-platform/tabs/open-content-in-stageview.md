@@ -221,6 +221,8 @@ To display a specific chat in the side panel, you must specify a `threadId`. Oth
 
 `https://teams.microsoft.com/l/stage/{appId}/0?context={"contentUrl":"contentUrl","websiteUrl":"websiteUrl","name":"Contoso","openMode":"popoutWithChat","threadId":"threadId"}`
 
+The appID is your application ID. For more information on appID, see [different types of app IDs](../concepts/build-and-test/deep-link-application.md#app-id-for-different-types-of-apps).
+
 **Encoded deep link syntax for Collaborative Stageview:**
 
 `https://teams.microsoft.com/l/stage/%7BappId%7D/0?context=%7B%22contentUrl%22:%22contentUrl%22,%22websiteUrl%22:%22websiteUrl%22,%22name%22:%22Contoso%22,%22openMode%22:%22popoutWithChat%22,%22threadId%22:%22threadId%22%7D`
