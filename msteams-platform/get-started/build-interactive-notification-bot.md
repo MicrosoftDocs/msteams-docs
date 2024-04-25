@@ -75,7 +75,7 @@ To create an interactive Teams notification bot with GitHub Codespaces, follow t
    >
    > In real time, events are triggered by an external source, such as a third-party API that cause the notification bot to send the user an interactive notification. To emulate an event trigger, you can send an event manually through curl commands on terminal.
 
-   The notification bot app sends a interactive notification as an Adaptive Card to your Teams client:
+   The notification bot app sends an interactive notification as an Adaptive Card to your Teams client:
 
    :::image type="content" source="../assets/images/get-started/codespace/notification-bot.png" alt-text="Screenshot shows your notification bot loaded in the Teams client.":::
 
