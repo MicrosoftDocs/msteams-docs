@@ -830,7 +830,7 @@ Update the following properties in the app manifest file:
 
    &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
-* `authorization.microsoftEntraConfiguration`: Enables Single sign-on authentication for your message extension. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications. For more information, see [composeextensions](../resources/schema/manifest-schema#composeextensions).
+* `authorization.microsoftEntraConfiguration`: Enables Single sign-on authentication for your message extension. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications. For more information, see [composeextensions](../resources/schema/manifest-schema.md#composeextensions).
 
 To configure app manifest:
 
