@@ -537,7 +537,7 @@ A list of commands that your bot can recommend to users. The object is an array 
 |`items.commands`|Array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
 
 > [!NOTE]
-> Teams doesn't support the bot app on the mobile client when app manifest contains empty `commandLists`.
+> Teams doesn't support the bot app on the mobile client when the `commandLists` property in app manifest has no values.
 
 ### bots.commandLists.commands
 
