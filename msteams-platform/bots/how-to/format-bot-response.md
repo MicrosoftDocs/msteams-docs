@@ -6,7 +6,7 @@ ms.topic: conceptual
 
 # Format your bot response
 
-While large language models (LLMs) significantly enhance your bot’s capabilities, they can be inconsistent and often require careful fine-tuning to behave as intended. Feedback from users is helpful in assessing the performance of your bot in a real-world scenario and enables you to make effective and targeted upgrades.
+While large language models (LLMs) significantly enhance your bot’s capabilities, they can be inconsistent and often require careful modifications to behave as intended. Feedback from users is helpful in assessing the performance of your bot in a real-world scenario and enables you to make effective and targeted upgrades.
 
 Microsoft Teams allows you to enable feedback buttons in the messages your bot sends. Users can select these buttons to provide feedback about the quality of the message. An optional form appears that allows them to provide more detailed and specific feedback about the message.
 
@@ -66,7 +66,7 @@ The bot sends the user's input received in the feedback form to you through a bo
 
 ## Handle feedback
 
-When your bot receives the invoke, you need to have an `onInvokeActivity` handler to process the invoke correctly.
+When your bot receives the invoke, you need to have an `onInvokeActivity` handler to process the invoke correctly. Ensure that you return a `status:200` with no body.
 
 ```json
       public async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> {
