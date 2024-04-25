@@ -138,8 +138,8 @@ Ensure that you adhere to following guidelines for app manifest:
 
   ```json
    {
-   "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
-   +  "manifestVersion": "devPreview",
+   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+   +  "manifestVersion": "1.17",
    "version": "1.0.0",
    "id": "04805b4b-xxxx-xxxx-xxxx-4dbc1cac8f89",
    "packageName": "com.microsoft.teams.extension",
