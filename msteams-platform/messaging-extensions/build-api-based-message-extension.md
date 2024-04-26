@@ -114,7 +114,7 @@ schemas:
        description: Message of the error.
 ```
 
-For more information about writing an OpenAPI specification, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
+For more information on how to write OpenAPI definitions in YAML, see [OpenAPI structure.](https://swagger.io/docs/specification/basic-structure/)
 
 </details>
 
@@ -134,7 +134,7 @@ Ensure that you adhere to following guidelines for app manifest:
 * If there’s no required parameter, the command `parameters.name` in the app manifest must match the optional `parameters.name` in the OpenAPI Description.
 * Make sure that the parameters for each command match exactly with the names of the parameters defined for the operation in the OpenAPI spec.
 * A [response rendering template](#response-template) must be defined per command, which is used to convert responses from an API.
-* Full description must not exceed 128 characters.
+* The command and parameter descriptions must not exceed 128 characters.
 
   ```json
    {
@@ -223,15 +223,15 @@ For more information, see [composeExtensions](../resources/schema/manifest-schem
 
 > [!NOTE]
 >
-> Teams supports Adaptive Cards up to version 1.5 and the Adaptive Cards Designer supports up to version 1.6.
+> Teams supports Adaptive Cards up to version 1.5. When using Adaptive Card designer, ensure that you change the target version to 1.5.
 
-* **Define the schema reference URL** in the `$schema` property to establish the structure of your template.
-* **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented.
-* **A `jsonPath` is recommended** for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
+* **Define the schema reference URL** in the `$schema` property to establish the structure of your template to the [response rendering template schema](https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json).
+* **The supported values for `responseLayout`** are `list` and `grid`, which determine how the response is visually presented. For more information on the layout, see [respond to user requests](how-to/search-commands/respond-to-search.md#respond-to-user-requests).
+* **A `jsonPath` is rerequired** for arrays or when the data for the Adaptive Card isn't the root object. For example, if your data is nested under `productDetails`, your JSON path would be `productDetails`.
 * **Define `jsonPath` as the path** to the relevant data or array in the API response. If the path points to an array, then each entry in the array binds with the Adaptive Card template and returns as a separate result. *[Optional]*
 * **Get a sample response** for validating the response rendering template. This serves as a test to ensure your template works as expected.
 * **Use tools such as Fiddler or Postman** to call the API and ensure that the request and the response are valid. This step is crucial for troubleshooting and confirming that your API is functioning correctly.
-* **You can use the Adaptive Card Designer** to bind the API response to the response rendering template and preview the Adaptive Card. Insert the template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
+* **You can use the Adaptive Card Designer** to bind the API response to the response rendering template and preview the Adaptive Card. Insert the Adaptive Card template in the **CARD PAYLOAD EDITOR** and insert the sample response entry in the **SAMPLE DATA EDITOR**.
 
 The following code is an example of a Response rendering template: <br/>
 <br/>
@@ -239,8 +239,8 @@ The following code is an example of a Response rendering template: <br/>
 
   ```json
   {
-  "version": "devPreview",
-  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json",
+  "version": "1.0",
+  "$schema": "developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.ResponseRenderingTemplate.schema.json",
   "jsonPath": "repairs",
   "responseLayout": "grid",
   "responseCardTemplate": {
@@ -327,6 +327,8 @@ The following code is an example of a Response rendering template: <br/>
 
   **Preview Card**
 
+A preview card template in the response rendering template schema is used to map JSON responses to a preview card that users see when they select a search result. The preview card then expands into an Adaptive Card in the message compose box. The preview card template is part of the response rendering template, which also includes an Adaptive Card template and metadata.
+
   :::image type="content" source="../assets/images/Copilot/api-based-message-extension-preview-card.png" alt-text="Screenshot shows an example of compose extension displaying an array of preview cards when searching for a specific word. In this case, searching for 'a' in the 'SME test app' returns five cards showing 'Title', 'Description' (truncated) and 'AssignedTo' properties and values in each one.":::
 
  **Expanded Adaptive Card**
@@ -345,7 +347,7 @@ The following code is an example of a Response rendering template: <br/>
 
 #### Json path
 
-The JSON path is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined at [ResponseRenderingTemplate schema](https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.ResponseRenderingTemplate.schema.json). If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
+The [JSON path](https://www.newtonsoft.com/json/help/html/QueryJsonSelectToken.htm) is optional but should be used for arrays or where the object to be used as the data for the adaptive card isn't the root object. The JSON path should follow the format defined by Newtonsoft. This tool can be used. You can use the [JSON tool](https://jsonpath.com/) to validate a JSON path is correct given an example JSON token. If the JSON path points to an array, then each entry in that array is bound with the adaptive card template and returns as separate results.
 
 **Example**
 Let's say you have the below JSON for a list of products and you want to create a card result for each entry.
@@ -367,9 +369,12 @@ As you can see, the array of results is under "products", which is nested under 
 Use <https://adaptivecards.io/designer/> to preview the adaptive card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking.
 Note that Teams supports cards up to version 1.5 while the designer supports 1.6.
 
-#### Schema mapping
+#### OpenAPI schema conversion
 
-The properties in OpenAPI Description document are mapped to the Adaptive Card template as follows:
+> [!NOTE]
+> We send an accept-language header in the HTTP request that is sent to the endpoint defined in the OpenAPI description document. The accept-language is based on the Teams client locale and can be used by the developer for returning back a localized response.
+
+The following data types in the OpenAPI description document are converted into elements within an Adaptive Card as follows:
 
 * `string`, `number`, `integer`, `boolean` types are converted to a TextBlock.
 
@@ -515,7 +520,7 @@ You can implement authentication in API-based message extensions to provide secu
 <details><summary id="none">none</summary>
 <br>
 
-You can update `none` as a value for `authorization` in an API-based message extension when the message extension doesn't require any authentication for the user to access the API.
+You can update `none` as a value for `authorization` in an API-based message extension when the API doesn't require any authentication for the user. When Teams service sends a request to the API, it deosn't supply any authentication information.
 
 ```json
     "authorization": {
