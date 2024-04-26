@@ -27,8 +27,8 @@
     displayName: First Teams app, Python, .NET, Java, Node.js, get started
   - name: Build a tab app
     href: get-started/build-basic-tab-app.md
-  - name: Build a notification bot app
-    href: get-started/build-notification-bot.md
+  - name: Build an interactive notification bot app
+    href: get-started/build-interactive-notification-bot.md
   - name: Build a message extension app
     href: get-started/build-message-extension.md
   - name: Teams app tutorials and code samples
@@ -62,6 +62,9 @@
   - name: Plan to monetize your app
     href: concepts/design/plan-to-monetize.md
     displayName: Subscription, In-app purchases, Free trials, Test preview, paid, fee 
+  - name: Plan to send app notifications
+    href: concepts/design/design-app-notification.md
+    displayName: notification, activity feed, message, alert, notify
 - name: Design your app
   items:
   - name: Overview
@@ -399,7 +402,7 @@
     href: tabs/how-to/conversational-tabs.md
     displayName: configurable
   - name: Send activity feed notifications
-    href: tabs/send-activity-feed-notification.md
+    href: /graph/teams-send-activityfeednotifications
     displayName: activity feed, notification, customize notification
   - name: Tab margin changes
     href: resources/removing-tab-margins.md
@@ -448,9 +451,9 @@
       href: bots/how-to/update-and-delete-bot-messages.md      
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
-    - name: Notification bot in Teams
-      href: bots/how-to/conversations/notification-bot-in-teams.md
-      displayName: Adapter
+    - name: Interactive notification bot in Teams
+      href: bots/how-to/conversations/interactive-notification-bot-in-teams.md
+      displayName: Adapter, notification, bot
     - name: Command bot in Teams
       href: bots/how-to/conversations/command-bot-in-teams.md
     - name: Workflow bot in Teams
