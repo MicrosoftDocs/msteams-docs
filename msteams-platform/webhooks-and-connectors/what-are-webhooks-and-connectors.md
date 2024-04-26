@@ -31,6 +31,9 @@ Webhooks help Teams to integrate with external apps. With Outgoing Webhooks, you
 
 Connectors allow users to subscribe to receive notifications and messages from the web services. They expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards.
 
+> [!NOTE]
+> Connectors can't update messages or send messages as responses to existing messages.
+
 ### Incoming Webhooks
 
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, that accepts correctly formatted JSON and inserts the messages to that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
