@@ -955,17 +955,17 @@ After the API-based message extension gets a request header with token, perform 
 
 For more information about validating access token, see [Validate tokens](/azure/active-directory/develop/access-tokens#validate-tokens).
 
-There are a number of libraries available that can handle JWT validation. Basic validation includes:
+There are several libraries to handle JWT validation. For basic validation, ensure to check the following:
 
-- Checking that the token is well-formed.
-- Checking that the token was issued by the intended authority.
-- Checking that the token is targeted to the web API.
+* The token is well-formed.
+* The token was issued by the intended authority.
+* The token is targeted to the web API.
 
-Keep in mind the following guidelines when validating the token:
+Ensure the following when validating the token:
 
-- Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
-- The token's `aud1` parameter is set to the app ID generated during Microsoft Entra app registration.
-- The token's `scp` parameter is set to `access_as_user`.
+* Valid SSO tokens are issued by Microsoft Entra ID. The `iss` claim in the token must start with this value.
+* The token's `aud1` parameter is set to the app ID generated during Microsoft Entra app registration.
+* The token's `scp` parameter is set to `access_as_user`.
 
 </details>
 <br/>
