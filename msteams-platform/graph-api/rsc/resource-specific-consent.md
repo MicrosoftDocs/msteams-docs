@@ -108,7 +108,7 @@ The following table provides RSC application permissions for a team and their ap
 |`ChannelMeetingIncomingAudio.Detect.Group`|Detect incoming audio in channel meetings associated with this team.| Supported | NA |
 |`ChannelMeetingStage.Write.Group`|Show content on the meeting stage of channel meetings associated with this team.| Supported | NA |
 |`InAppPurchase.Allow.Group`|Show and complete in-app purchases for users in this team.| Supported | NA |
-|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for meetings associated with this team. | Supported | NA |
+|`LiveShareSession.ReadWrite.Group`| Create and synchronize Live Share sessions for this team. | Supported | NA |
 |`MeetingParticipantReaction.Read.Group`| Read reactions of participants in channel meetings associated with this team.| Supported | NA |
 
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
