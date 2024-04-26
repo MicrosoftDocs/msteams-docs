@@ -539,6 +539,9 @@ A list of commands that your bot can recommend to users. The object is an array 
 |`items.scopes`|Array of enums|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupChat`.|
 |`items.commands`|Array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
 
+> [!NOTE]
+> Teams mobile client doesn't support the bot app when there is no value in the `commandLists` property.
+
 ### bots.commandLists.commands
 
 |Name| Type| Maximum size | Required | Description|
