@@ -136,7 +136,6 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
 
    # [New API](#tab/new-api)
 
-
    > [!NOTE]
    > The authentication flow for Microsoft Entra is only functional in remote environments. You can't test it in a local environment due to the lack of authentication support in Azure Function core tools. The repair API can be invoked anonymously in a local environment.
 
@@ -156,16 +155,19 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
    1. Enter the name of your app and select **Enter**. Teams Toolkit creates a new plugin with API from Azure functions.
    1. To get started, you must update the source code in the following files:
 
-        |File  |Contents |
-        |---------|---------|
-        |`repair/function.json`    |A configuration file that defines the function’s trigger and other settings. For more information, see [Azure Functions](/azure/azure-functions/functions-bindings-http-webhook-trigger?tabs=python-v2%2Cisolated-process%2Cnodejs-v4%2Cfunctionsv2&pivots=programming-language-csharp)        |
-        |`repair/index.ts`     | The main file of a function in Azure Functions.        |
-        |`appPackage/apiSpecificationFiles/repair.yml`     |  A file that describes the structure and behavior of the repair API.       |
-        |`appPackage/responseTemplates/repair.json`     |  A generated Adaptive Card that used to render API response.       |
-        |`repairsData.json`    |  The data source for the repair API.       |
+      | File | Contents |
+      | --- | --- |
+      | `src/functions/repair.ts` | The main file of a function in Azure Functions. Defines an Azure Function that retrieves and filters repair records based on a query parameter from an HTTP GET request, and returns the results as a JSON response. |
+      | `src/repairsData.json` | The data source for the repair API. |
+      | `src/keyGen.ts` | Designed to generate an API key used for authorization. |
+      | `appPackage/apiSpecificationFile/repair.yml` | A file that describes the structure and behavior of the repair API. |
+      | `appPackage/responseTemplates/repair.json` | A template file for rendering API response. |
+      | `teamsapp.yml` | The main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
+      |`teamsapp.local.yml` | Overrides teamsapp.yml with actions that enable local execution and debugging.|
+      |`aad.manifest.json` | Defines the configuration of Microsoft Entra app. This template only provisions a single tenant Microsoft Entra app.|
 
    1. Based on the options selected in **step a**, follow these steps:
-   
+
       * If you've selected **none** or **Microsoft Entra**, skip to the next step.
 
       * If you've selected API key, follow these steps:
@@ -192,9 +194,10 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
            ```
            SECRET_API_KEY=<your-api-key>
            ```
+
       </details>
 
-   # [OpenAPI Description](#tab/openapi-specification)
+  # [OpenAPI Description](#tab/openapi-specification)
 
    1. Enter or browse the OpenAPI Description document location.
 
@@ -218,7 +221,7 @@ To build an API-based message extension using Teams Toolkit for Visual Studio Co
     ---
 
      > [!NOTE]
-     > Teams toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns an 401 HTTP status code, indicating an Unauthorized response. 
+     > Teams toolkit source file includes a security check to ensure that an incoming request is authorized. It uses a function `isApiKeyValid(req)` to verify if the request contains a valid API key. If the API key isn't valid, the code returns an 401 HTTP status code, indicating an Unauthorized response.
 
 1. From the left pane, select **Teams Toolkit**.
 1. Under **ACCOUNTS**, sign in with your [Microsoft 365 account](/microsoftteams/platform/toolkit/accounts) and Azure account if you haven't already.
@@ -316,21 +319,20 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 1. Based on the options selected in **step 7**, select the following:
 
-   # [New API](#tab/new-api2)
+# [New API](#tab/new-api2)
 
    1. To get started, you must update the source code in the following files:
 
-      | File | Contents |
-      | --- | --- |
-      | `src/functions/repair.ts` | The main file of a function in Azure Functions. Defines an Azure Function that retrieves and filters repair records based on a query parameter from an HTTP GET request, and returns the results as a JSON response. |
-      | `src/repairsData.json` | The data source for the repair API. |
-      | `src/keyGen.ts` | Designed to generate an API key used for authorization. |
-      | `appPackage/apiSpecificationFile/repair.yml` | A file that describes the structure and behavior of the repair API. |
-      | `appPackage/responseTemplates/repair.json` | A template file for rendering API response. |
-      | `teamsapp.yml`	| The main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
-      |`teamsapp.local.yml` |	Overrides teamsapp.yml with actions that enable local execution and debugging.|
-      |`aad.manifest.json` |	Defines the configuration of Microsoft Entra app. This template will only provision single tenant Microsoft Entra app.|
-
+      |File  |Contents |
+      |---------|---------|
+      |`Repair.cs` | The main file of a function in Azure Functions. Defines an Azure Function that retrieves and filters repair records based on a query parameter from an HTTP GET request, and returns the results as a JSON response.|
+      |`RepairData.cs`|The data source for the repair API. Contains a method that returns a hardcoded list of car repair tasks. |
+      |`Models/RepairModel.cs`|Defines a data model that represents a repair task with properties such as ID, Title, Description, AssignedTo, Date, and Image.|
+      |`appPackage/apiSpecificationFile/repair.yml` |  A file that describes the structure and behavior of the repair API.|
+      |`appPackage/responseTemplates/repair.json` |  A generated Adaptive Card that used to render API response.|
+      |`appPackage/responseTemplates/repair.data.json` | The data source for the repair API.|
+      | `teamsapp.yml` | The main Teams Toolkit project file. The project file defines two primary things: Properties and configuration Stage definitions.|
+      |`teamsapp.local.yml` | Overrides teamsapp.yml with actions that enable local execution and debugging.|
 
    1. After you've updated the source code, in the debug dropdown menu, select **Dev Tunnels (no active tunnel)** > **Create a Tunnel...**.
 
@@ -351,7 +353,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
    1. Select the **F5** key or select **Debug** > **Start Debugging**. Visual Studio launches a Teams web client.
 
-   # [OpenAPI Description](#tab/openapi-specification2)
+# [OpenAPI Description](#tab/openapi-specification2)
 
    1. Enter OpenAPI specification URL or select **Browse..** to upload a file from your local machine.
    1. Select the dropdown and select the APIs from the list.
@@ -362,7 +364,7 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
       :::image type="content" source="../assets/images/Copilot/api-based-VS-provision-cloud.png" alt-text="Screenshot shows the Provision in the Cloud option under Teams Toolkit in Visual Studio.":::
 
       If prompted, sign in with a Microsoft 365 account. A message appears that the app is successfully prepared.
-   
+
    1. Right-click your project and select **Teams Toolkit** > **Preview in** > **Teams**.
    1. Select the **manifest.json** file and select **Open**. Visual Studio launches a Teams web client.
 
