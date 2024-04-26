@@ -144,7 +144,7 @@
       items:
       - name: Teams Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
-        displayName: TTK, version
+        displayName: TTK, version, Developer Portal, debug, teams app test tool, dev tunnel
       - name: Install Teams Toolkit
         href: toolkit/install-Teams-Toolkit.md
         displayName: download
@@ -275,7 +275,7 @@
         displayName: AppID 
       - name: Develop your apps with Teams Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
-        displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app
+        displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
       - name: Analyze your apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
         displayName: dashboard
@@ -673,7 +673,7 @@
       displayName: Information masking, background, extension, notification, HTML, rich text, responsive Adaptive Cards, targetwidth, CodeBlock
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
-      displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin
+      displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin, adaptive card, configure cards, bots
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
       displayName: Setting, channel, static typeahead, persona, persona set
@@ -749,7 +749,7 @@
         displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
       - name: Add code to enable SSO for your Adaptive Cards Universal Actions in bot
         href: task-modules-and-cards/cards/Universal-actions-for-adaptive-cards/sso-adaptive-cards-universal-action.md
-        displayName: Adaptive cards universal action SSO authentication, Action.Execute SSO
+        displayName: SSO, Adaptive Cards, OAuth, universal action, SSO authentication, Action.Execute SSO
     - name: Troubleshoot SSO authentication
       href: tabs/how-to/authentication/tab-sso-troubleshooting.md
       displayName: Caching
