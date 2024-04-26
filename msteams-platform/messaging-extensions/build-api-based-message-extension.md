@@ -725,20 +725,10 @@ To configure scope and authorize trusted client applications, you need:
 
     > [!IMPORTANT]
     >
-    > * **Sensitive information**: The application ID URI is logged as part of the authentication process and mustn't contain sensitive information.
-    >
     > * **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the application ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
     >
     > * **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
-    >
-    >   For example, to create an app service or web app with resource name, `demoapplication`:
-    >
-    >   | If base resource name used is | URL will be... | Format is supported on... |
-    >   | --- | --- | --- |
-    >   | *demoapplication* | `https://demoapplication.example.net` | All platforms.|
-    >   | *DemoApplication* | `https://DemoApplication.example.net` | Desktop, web, and iOS only. It isn't supported on Android. |
-    >
-    >    Use the lower-case option *demoapplication* as base resource name.
+
 
 1. Select **Save**.
 
@@ -798,8 +788,7 @@ To configure scope and authorize trusted client applications, you need:
 
     > [!NOTE]
     >
-    > * The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams are the actual IDs that you must add.
-    > * For a Teams API-based message extension app, you need either Web or SPA, as you can't have a mobile or desktop client application in Teams.
+    > The Microsoft 365 client IDs for mobile, desktop, and web applications for Teams are the actual IDs that you must add.
 
     1. Select one of the following client IDs:
 
@@ -826,9 +815,6 @@ To configure scope and authorize trusted client applications, you need:
 You've successfully configured app scope, permissions, and client applications. Ensure that you note and save the application ID URI. Next, you configure the access token version.
 
 ### Update app manifest
-
-> [!NOTE]
-> `webApplicationInfo` is supported in the app manifest version 1.5 or later.
 
 Update the following properties in the app manifest file:
 
@@ -863,7 +849,7 @@ To configure app manifest:
 
     where,
     * `{Microsoft Entra AppId}` is the app ID you created when you registered your app in Microsoft Entra ID. It's the GUID.
-    * `subdomain.example.com` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
+    * `api://subdomain.example.com/{Microsoft Entra AppId}` is the application ID URI that you registered when creating scope in Microsoft Entra ID.
 
     **MicrosoftEntraConfiguration**
 
@@ -875,10 +861,6 @@ To configure app manifest:
       }
     },
     ```
-
-1. Update the subdomain URL in the following properties:
-   1. `contentUrl`
-   2. `configurationUrl`
   
 1. Save the app manifest file.
 
@@ -886,7 +868,7 @@ For more information, see [composeExtensions.commands](../resources/schema/manif
 
 #### Authenticate token
 
-When the message extension calls the API during authentication, it receives a request with the user’s authentication token. The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
+When the message extension calls the API during authentication, it receives a request with the user’s access token. The message extension then adds the token in the authorization header of the outgoing HTTP request. The header format is `Authorization: Bearer <token_value>`. For example, when a message extension makes an API call to a service that requires authentication. The extension constructs an HTTP request as follows:
 
 ```http
 GET /api/resource HTTP/1.1
