@@ -1,20 +1,21 @@
 ---
 title: Format your bot response
-description: Learn how to format and style your bot and the responses it generates for users.
+description: Learn how to format and style your AI-based bot and the responses it generates for users.
 ms.topic: conceptual
 ---
 
 # Format your bot response
 
-While large language models (LLMs) significantly enhance your bot’s capabilities, they can be inconsistent and often require careful modifications to behave as intended. Feedback from users is helpful in assessing the performance of your bot in a real-world scenario and enables you to make effective and targeted upgrades.
+While Large Language Models (LLMs) significantly enhance your bot’s capabilities, they can sometimes be inconsistent and require careful adjustments to behave as intended. User feedback is invaluable in evaluating your bot’s performance in real-world scenarios and enables you to make effective and targeted improvements.
 
-Microsoft Teams allows you to enable feedback buttons in the messages your bot sends. Users can select these buttons to provide feedback about the quality of the message. An optional form appears that allows them to provide more detailed and specific feedback about the message.
+Microsoft Teams allows you to enable feedback buttons in the messages sent by your bot. Users can interact with these buttons to indicate that they either like or dislike the message. Once they select a button, an optional form appears that allows them to provide detailed feedback about the message.
 
 > [!NOTE]
 >
-> * Feedback buttons for bots are available in public developer preview.
-> * Feeback buttons for bots are only available in Teams web and desktop clients.
-> * You can collect feedback on your bot’s responses across personal chat, group chat, and channels.
+> * Feedback buttons are available in public developer preview.
+> * Feeback buttons are only available in Teams web and desktop clients.
+> * You can collect feedback on your bot’s responses from personal chats, group chats, and channels.
+> * Feedback buttons are not available for message extensions.
 
 ## Enable feedback buttons
 
@@ -25,16 +26,16 @@ To enable feedback buttons in your bot, add a new `channelData` object in your b
          type: ActivityTypes.Message,
          text: `Hey I'm a friendly AI bot. This mesasge is generated via AI - ${txt}`,
          channelData: {
-           feedbackLoopEnabled: true // Feedback buttons 
+           feedbackLoopEnabled: true // Enable feedback buttons
          },
        });
 ```
 
-After you enable feedback buttons, the footer of your bot's message contains a like and dislike button that the user can select. You can enable feedback buttons for specific messages in your bot.
+After you enable feedback buttons, the footer of your bot's message contains a like and dislike button for the user to select. You have the option to enable feedback buttons for specific messages that your bot sends.
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" alt-text="Screenshots shows the feedback buttons in a bot.":::
 
-When the user selects one of the feedback buttons, a feedback form appears that asks the user for more information. Depending on the user's selection, a positive or a negative feedback form appears.
+When the user selects one of the feedback buttons, the feedback form that appears depends on the user's selection. A positive feedback form appears if the user likes a message and a negative feedback form appears if the user dislike a message.
 
 # [Positive feedback](#tab/pos)
 
@@ -46,7 +47,7 @@ When the user selects one of the feedback buttons, a feedback form appears that 
 
 ---
 
-The bot sends the user's input received in the feedback form to you through a bot invoke. The following code snippet is an example of a bot invoke containing feedback from a user:
+The bot sends the user's input, received in the feedback form, to you through a bot invoke. The following code snippet is an example of a bot invoke containing feedback from a user:
 
 ```json
     {
@@ -96,14 +97,14 @@ When your bot receives the invoke, you need to have an `onInvokeActivity` handle
       };
 ```
 
-We recommend that your bot don't send the user any message or notification upon receiving feedback. Teams automatically sends a toast notifying the user that their feedback was submitted successfully.
+We recommend that your bot doesn't send the user any message or notification upon receiving feedback. Teams automatically sends a toast notifying the user that their feedback was submitted successfully.
 
-Once you start receiving feedback, ensure that you store the feedback. Teams doesn't store or process feedback after the invoke is sent to your bot. Store the message IDs and the content of the messages that your bot sends and receives. Match the message ID of the bot’s message with the corresponding feedback when your bot receives the invoke containing the feedback.
+After you receive feedback, it’s important to store it. Teams doesn’t store or process feedback, nor does it provide an API or a storage mechanism for you to do so. Hence, you should store the message IDs and the content of the messages that your bot sends and receives. When your bot receives an invoke containing feedback, match the message ID of the bot’s message with the corresponding feedback.
 
 ### How to store messageID and message content pairs
 
 > [!NOTE]
-> If a user uninstalls your bot and still has access to the bot chat, Teams removes the feedback buttons from the bot's messages to prevent the user from providing feedback to the bot.
+> If a user uninstalls your bot but still has access to the bot chat, Teams removes the feedback buttons from the bot's messages to prevent the user from providing feedback to the bot.
 
 ## Error handling
 
