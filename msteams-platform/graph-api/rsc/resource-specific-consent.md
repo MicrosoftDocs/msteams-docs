@@ -143,7 +143,7 @@ The following table provides RSC permissions for a chat or meeting and their app
 | `OnlineMeetingRecording.Read.Chat` | Read the recordings of the meetings associated with this chat. |NA |Supported |
 | `OnlineMeetingNotification.Send.Chat` | Send notifications in the meetings associated with this chat. |NA |Supported |
 | `InAppPurchase.Allow.Chat` | Show and complete in-app purchases for users in this chat and any associated meetings. |Supported |NA |
-| `LiveShareSession.ReadWrite.Chat` | Create and synchronize Live Share sessions for meetings associated with this chat. |Supported |NA |
+| `LiveShareSession.ReadWrite.Chat` | Create and synchronize Live Share sessions for this chat. |Supported |NA |
 | `MeetingStage.Write.Chat` | Show content on the meeting stage of meetings associated with this chat. |Supported |NA |
 | `MeetingParticipantReaction.Read.Chat` | Read the reactions of participants in meetings associated with this chat. |Supported |NA |
 | `OnlineMeetingIncomingAudio.Detect.Chat` | Detect incoming audio in meetings associated with this chat. |Supported |NA |
