@@ -1,15 +1,15 @@
 ---
-title: Notification bot in Teams
+title: Interactive notification bot in Teams
 author: surbhigupta
-description: Learn how a notification bot works in Teams, and to customize notification behavior.
+description: Learn how an interactive notification bot works in Teams, and to customize notification behavior.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
 ---
 
-# Notification bot in Teams
+# Interactive notification bot in Teams
 
-Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
+Microsoft Teams Toolkit enables you to build applications that capture events and send them as interactive notifications to a personal, group chat, or a channel in Microsoft Teams. You can send notifications as plain text or [Adaptive Cards](../../../task-modules-and-cards/cards/cards-reference.md). The notification bot template creates an app that sends a message to Teams with Adaptive Cards triggered by HTTP post request.
 
 The app template is built using the TeamsFx SDK, which provides a simple set of functions over Microsoft Bot Framework to implement your requirement. For example, a travel agency builds an app in Teams for their users to keep them up-to-date with the weather forecast. In the following flowchart, a Teams app notifies about the weather forecast to the users using an Adaptive Card:
 
@@ -42,7 +42,7 @@ You can send a bot notification in the following scenarios:
 > [!NOTE]
 > Bot application needs to be installed with the corresponding scope before sending notification.
 
-[Back to top](#notification-bot-in-teams)
+[Back to top](#interactive-notification-bot-in-teams)
 
 ## Notification based on events
 
@@ -97,7 +97,7 @@ for (const target of await notificationApp.notification.installations()) {
 
 ---
 
-[Back to top](#notification-bot-in-teams)
+[Back to top](#interactive-notification-bot-in-teams)
 
 ## Notification bot installation
 
@@ -108,7 +108,7 @@ A notification bot needs to be installed into a team, or a group chat, or as per
 For more install options, see [configure default install options](../../../concepts/deploy-and-publish/apps-publish-overview.md#configure-default-install-options).
 For uninstalling, see [remove an app from Teams](https://support.microsoft.com/en-us/office/remove-an-app-from-teams-0bc48d54-e572-463c-a7b7-71bfdc0e4a9d).
 
-[Back to top](#notification-bot-in-teams)
+[Back to top](#interactive-notification-bot-in-teams)
 
 ## Customize notification
 
@@ -315,7 +315,7 @@ You can customize sending the notification to the following targets:
      > [!NOTE]
      > To prevent an undefined output and a missing notification, you need to include the specific person in notification installation scope.
 
-[Back to top](#notification-bot-in-teams)
+ [Back to top](#interactive-notification-bot-in-teams)
 
 ## Customize initialization
 
@@ -366,7 +366,7 @@ builder.Services.AddSingleton(sp =>
 
 ---
 
-[Back to top](#notification-bot-in-teams)
+[Back to top](#interactive-notification-bot-in-teams)
 
 ## Customize adapter
 
@@ -389,7 +389,7 @@ const notificationApp = new ConversationBot({
 notificationApp.adapter.onTurnError = ...
 ```
 
-[Back to top](#notification-bot-in-teams)
+[Back to top](#interactive-notification-bot-in-teams)
 
 ## Add storage
 
@@ -461,7 +461,7 @@ For more information about Azure blob storage, see the [notification storage imp
 > * It's recommended to use your own shared storage for production environment.
 > * If you implement your own Bot Framework SDK's storage, for example, `botbuilder-azure-blobs.BlobsStorage`, you need to implement another storage for notification. You can share the same Blob Connection String with different containers.
 
-[Back to top](#notification-bot-in-teams)
+[Back to top](#interactive-notification-bot-in-teams)
 
 ## Add authentication for notification API
 
@@ -473,7 +473,7 @@ If you select HTTP trigger, the scaffolded notification API doesn't have authent
 
 There can be more authentication or authorization solutions for an API, you can select as required.
 
-[Back to top](#notification-bot-in-teams)
+[Back to top](#interactive-notification-bot-in-teams)
 
 ## Connect to existing APIs
 
@@ -508,7 +508,7 @@ TeamsFx provides you with an [Incoming Webhook notification sample](https://gith
 * [Create an Incoming Webhook](../../../webhooks-and-connectors/how-to/add-incoming-webhook.md) in Teams.
 * Send notifications using Incoming Webhooks with Adaptive Cards.
 
-[Back to top](#notification-bot-in-teams)
+[Back to top](#interactive-notification-bot-in-teams)
 
 ### Send activity feed notifications
 
@@ -619,7 +619,7 @@ For more information on how to add adaptive card actions to command bot, see [Wo
 
 </details>
 
-[Back to top](#notification-bot-in-teams)
+[Back to top](#interactive-notification-bot-in-teams)
 
 ## Step-by-step guide
 
