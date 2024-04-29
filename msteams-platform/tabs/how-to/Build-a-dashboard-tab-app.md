@@ -24,7 +24,7 @@ Your team can get the latest updates from different sources in Teams using the T
 
 ## Add a new dashboard
 
-After you've created a dashboard tab app, you can add a new dashboard.
+After you create a dashboard tab app, you can add a new dashboard.
 
 To add a new dashboard, follow these steps:
 
