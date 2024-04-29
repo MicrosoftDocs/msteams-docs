@@ -620,7 +620,7 @@ You can authorize incoming requests to your service by configuring a static API 
 
 <details><summary id="microsoft-entra">Microsoft Entra </summary>
 
-`microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who has signed into Teams doesn't need to sign in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
+`microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who has signed into Teams doesn't need to sign in again to your app within the Teams environment. Microsoft Entra SSO enables the app to silently obtain a user token that is issued for its resource by Microsoft Entra. The app can then authenticate this token and retrieve the user profile information without the user's consent.
 
 ### Prerequisites
 
@@ -636,9 +636,8 @@ The following image shows how SSO works when a Teams app user attempts to access
 * The user invokes the API-based message extension app from a message extension in Teams and requests a command that requires authentication.
 * The app sends a request to the Teams backend service with the app ID and the required scope (access_as_user).
 * The Teams backend service checks if the user consented to the app and the scope. If not, it shows a consent screen to the user and asks for permission.
-* If the user consents, the Teams backend service generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
+* If the user consents, Microsoft Entra generates an access token for the user and the app, and sends it to the app in the authorization header of the request.
 * The app validates the token. The user can extract the user information from the token, such as the name, email, and object ID.
-* The app can use the token to call its own API.
 * The app returns the response to the user in Teams.
 
 To enable `microsoftEntra` authentication method for API-based message extension, follow these steps:
@@ -725,7 +724,12 @@ To configure scope and authorize trusted client applications, you need:
 
     > [!IMPORTANT]
     >
-    > * **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the application ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
+    > * If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Microsoft Entra application ID.
+    > * If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as api://fully-qualified-domain-name.com/botid-{YourClientId}, where {YourClientId} is your bot app ID.
+    > *  If you're building an app with a messaging extension or tab capabilities without the bot,  enter the application ID URI as api://fully-qualified-domain-name.com/{YourClientId}, where {YourClientId} is your Microsoft Entra application ID.
+    
+    
+    **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the application ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
     >
     > * **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
 
@@ -818,11 +822,11 @@ You've successfully configured app scope, permissions, and client applications. 
 
 Update the following properties in the app manifest file:
 
-* `webApplicationInfo`: Enables SSO for your app to help app users access your API-based message extension app seamlessly. section, which contains crucial details about your app. The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. Configure your app's application ID URI in `resource` to ensure that the authentication request using `getAuthToken()` is from the domain given in the app manifest. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
+* `webApplicationInfo`: The `webApplicationInfo` property is used to enable SSO for your app to help app users access your API-based message extension app seamlessly. The application ID URI that you registered in Microsoft Entra ID is configured with the scope of the API you exposed. For more information, see [webApplicationInfo](../resources/schema/manifest-schema.md#webapplicationinfo).
 
    &nbsp;&nbsp;:::image type="content" source="../assets/images/authentication/teams-sso-tabs/sso-manifest.png" alt-text="Screenshot shows the app manifest configuration.":::
 
-* `microsoftEntraConfiguration`: Enables Single sign-on authentication for your app. Configure the `supportsSingleSignOn` property to `true` to support SSO and  reduce the need for multiple authentications.
+* `microsoftEntraConfiguration`: Enables Single sign-on authentication for your app. Configure the `supportsSingleSignOn` property to `true` to support SSO and reduce the need for multiple authentications. If the property is set to `false` or is left empty, the user can't upload the app to Teams and the app fails validation.
 
 To configure app manifest:
 
