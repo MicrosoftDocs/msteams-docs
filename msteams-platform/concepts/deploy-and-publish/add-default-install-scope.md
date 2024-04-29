@@ -8,7 +8,7 @@ ms.date: 12/15/2022
 ---
 # Configure default options for Teams app
 
-It’s common for an app to support multiple scenarios in Teams, but you might have designed it with a specific scope and capability in mind. For example, if your app is primarily for team or channel use, you can make sure that the first install option users see in the Microsoft Teams Store is **Add to a team**.
+It’s common for an app to support multiple scenarios in Teams, but you might have designed it with a specific scope and capability in mind. For example, if your app is primarily for team or channel use, the install scope shows up for the channel, chat, or meeting scope for the users to see in the Microsoft Teams Store and to install in the respective scope. *(image placeholder update screen)*
 
 :::image type="content" source="../../assets/images/compose-extensions/addanapp.png" alt-text="Screenshot shows the Add to a team option.":::
 
