@@ -79,7 +79,7 @@ To set up the pipeline with GitHub, follow these steps:
     
           - name: Login Azure by service principal
             run: |
-              npx teamsapp account login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
+              npx teamsapp auth login azure --username ${{vars.AZURE_SERVICE_PRINCIPAL_CLIENT_ID}}  \
               --service-principal true \
               --tenant ${{vars.AZURE_TENANT_ID}} \
               --password ${{secrets.AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET }} \
@@ -182,7 +182,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
         displayName: "Install CLI"
     
       - script: |
-          npx teamsapp account login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET) --interactive false
+          npx teamsapp auth login azure --username $(AZURE_SERVICE_PRINCIPAL_CLIENT_ID) --service-principal true --tenant $(AZURE_TENANT_ID) --password $(AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET) --interactive false
         displayName: "Login Azure by service principal"
     
       - script: |
