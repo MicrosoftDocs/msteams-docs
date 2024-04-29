@@ -636,7 +636,7 @@ To use Microsoft Graph Toolkit as your widget content, follow these steps:
       npm install @microsoft/mgt-react @microsoft/mgt-teamsfx-provider
       ```
 
-1. Add a new Graph Toolkit widget: Create a new widget file in your project `src/views/widgets` folder, for example, `GraphWidget.tsx`. In this widget, we'll guide users to consent our app to access Microsoft Graph and then show the user's Todo list by using Microsoft Graph Toolkit.
+1. Add a new Graph Toolkit widget: Create a new widget file in your project `src/views/widgets` folder, for example, `GraphWidget.tsx`. In this widget, we guide users to consent our app to access Microsoft Graph and then show the user's Todo list by using Microsoft Graph Toolkit.
 
       The following code is an example of using Todo component from Microsoft Graph Toolkit in widget:
 
