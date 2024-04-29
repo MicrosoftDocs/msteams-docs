@@ -8,7 +8,7 @@ ms.topic: conceptual
 ms.date: 11/02/2022
 ---
 
-# Microsoft Teams Connect shared channels
+# Teams Connect shared channels
 
 Microsoft Teams Connect shared channels allow members of a channel to collaborate with users across other teams and organizations. You can create and share a shared channel with:
 
@@ -99,6 +99,10 @@ Apps must function cross-tenants in installation and usage. The following table 
 |----------|---------|-----------------|
 |Regular | Team Microsoft Entra group ID | Team Microsoft Entra group ID |
 |Shared | Empty | Host Team Microsoft Entra group ID |
+
+## Apps in group chats with external users
+
+Teams supports apps in group chats with external users from outside an organization. Only the host of the group chat can add, update, or remove apps to the group chat. However, all members of the chat, including external users, can use these apps. External users can't add, update, or remove apps from a group chat. This feature only applies to group chats and doesn't extend to one-on-one chats or channel chats with external users.
 
 ## See also
 
