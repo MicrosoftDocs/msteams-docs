@@ -6,7 +6,7 @@ ms.topic: conceptual
 ms.localizationpriority: medium
 ms.author: v-preethah
 ---
-# Format your bot messages
+# Format your AI bot messages
 
 As we make our bots intelligent and more conversational, there is an emerging need for user experiences which are designed for AI and promote user trust and transparency.  
 
