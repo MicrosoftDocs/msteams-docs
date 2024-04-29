@@ -157,7 +157,7 @@ A good welcome message can include the following:
 
 ### Notification messages
 
-To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. Ensure users have a clear understanding of why they've received a notification. Good notification messages generally include the following items:
+To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of a bot. Ensure users have a clear understanding of why they've received a notification. Good notification messages generally include the following items:
 
 * What happened? A clear indication of what happened to cause the notification.
 

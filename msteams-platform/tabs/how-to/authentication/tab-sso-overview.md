@@ -129,6 +129,7 @@ Here's a list of best practices:
 
 - Currently, SSO in Teams supports only OAuth 2.0 token. It doesn't support SAML token.
 - Multiple domains per app aren't supported. For more information, see [custom apps built for your org (LOB apps)](tab-sso-register-aad.md#before-you-configure-your-app).
+- Redirects aren't supported for iframed or brokered apps. Ensure that you use MSAL.js in the top frame of the window if you use the redirect APIs or use the popup API `(window.parent!==window) => true`.
 
 ## Next step
 
