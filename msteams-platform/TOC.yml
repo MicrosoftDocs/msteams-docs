@@ -673,7 +673,7 @@
       displayName: Information masking, background, extension, notification, HTML, rich text, responsive Adaptive Cards, targetwidth, CodeBlock
     - name: Card actions
       href: task-modules-and-cards/cards/cards-actions.md
-      displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin, adaptive card, configure cards, bots
+      displayName: openUrl, potentialAction, messageBack, imBack, invoke, signin, Adaptive Card, configure cards, bots
     - name: People Picker in Adaptive Cards
       href: task-modules-and-cards/cards/people-picker.md
       displayName: Setting, channel, static typeahead, persona, persona set
@@ -1103,10 +1103,10 @@
     items:
     - name: Overview
       href: concepts/build-and-test/deep-links.md
-      displayName: create deep link, protocol handlers, chat deep link, app deep link, workflow deep link, navigate within your app, executeDeepLink, protocol handlers, deep link parameters, deep link URL
+      displayName: create deep link, protocol handlers, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
-      displayName: create deep link for app, deep link for custom app, deep link for tab, deep link for app install dialog, deep link invoke Stageview, navigate within your app, executeDeepLink, protocol handlers, deep link parameters, deep link URL
+      displayName: create deep link for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to Teams chat
       href: concepts/build-and-test/deep-link-teams.md
       displayName: create deep link for specific chat, deep link for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   
