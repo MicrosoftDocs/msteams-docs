@@ -401,7 +401,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 |`full`|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters.|
 
 > [!NOTE]
-> The `name` property `full` must have a value in app manifest v1.17 or later and not required in app manifest v1.16.
+> In the app manifest v1.17 or later, the `full` property is mandatory and not required for app manifest v1.16.
 
 ## description
 
