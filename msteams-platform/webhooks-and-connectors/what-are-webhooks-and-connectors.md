@@ -31,30 +31,31 @@ Webhooks help Teams to integrate with external apps. With Outgoing Webhooks, you
 
 Connectors allow users to subscribe to receive notifications and messages from the web services. They expose the HTTPS endpoint for the service to post messages to Teams channels, typically in the form of cards.
 
+> [!NOTE]
+> Connectors can't update messages or send messages as responses to existing messages.
+
 ### Incoming Webhooks
 
 Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, that accepts correctly formatted JSON and inserts the messages to that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts. For more information, see [create Incoming Webhooks](how-to/add-incoming-webhook.md#create-an-incoming-webhook).
 
 #### Notification bot or Incoming Webhook
 
-Before you start to learn how to build Incoming Webhooks, you may also want to know that you can [build a notification bot](../get-started/build-notification-bot.md) using Teams Toolkit. Notification bots can enable more customizable experience to meet different business scenarios.
+Before you start to learn how to build Incoming Webhooks, you may also want to know that you can build a notification bot using Teams Toolkit or send activity feed notifications using Microsoft Graph API. Notification bots and activity feed notifications can enable more customizable experience to meet different business scenarios. For more information, see [plan to send app notifications](../concepts/design/design-app-notification.md).
 
-Learn more about the differences between a notification bot and Incoming Webhook so that you can choose the right solutions for your scenarios:
-
-| &nbsp; | Notification bot |  Incoming Webhook |
-| --- | --- | --- |
-| What is it? | A Teams app | A Teams feature |
-| Installation required | Yes | No |
-| Suitable scenarios | • Receive regular notifications and messages periodically, for example, receive daily notification of team tasks. <br>  • Receive notifications and messages based on real events. For example, once teammates upload files, you receive notifications. | Communicate with external apps and receive notifications and messages from other apps. |
-| Scope configuration | • Teams channel <br> • Group chat <br> • Personal chat | Teams channel |
-| Message process | A notification bot works as a Teams application. You can define your business logic to process data and show data in a customized format. | Webhook is a Teams feature rather than a Teams application, so it only receives and shows data without processing. |
-| Retrieve Teams context | Notification bot can retrieve Teams context such as the channel or user information, messages, etc. | No |
-| Send Adaptive Card | Yes | Yes |
-| Send a welcome message | Yes | No |
-| Trigger supported | All triggers are supported. If you use Teams Toolkit, you can quickly get a template project with the following triggers: <br> • Time trigger hosted on Azure functions. <br> • Restify HTTP trigger hosted on Azure app service. <br> • HTTP trigger hosted on Azure Functions. | All triggers are supported. |
-| Building Tools | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> •[Teams Toolkit Overview for Visual Studio](../toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md) <br> • [Teams Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools are required. |
-| Cloud resource required | Azure Bot Framework | No resources are required. |
-| Tutorial | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
+| &nbsp; | Notification API | Notification bot |  Incoming Webhook |
+| --- | --- | --- | --- |
+| What is it? | A RESTful web API  | A Teams app | A Teams feature |
+| Installation required | Yes | Yes | No |
+| Suitable scenarios | • Notify users about urgent or critical information. <br>  • Display rich content that requires user action in the main pane of Teams. <br> • Receive operating system notification with sound. <br> • Localized preview text in Activity. | • Receive regular notifications and messages periodically, for example, receive daily notification of team tasks. <br>  • Receive notifications and messages based on real events. For example, once teammates upload files, you receive notifications. | Communicate with external apps and receive notifications and messages from other apps. |
+| Scope configuration | • A single user <br> • A list of users <br> • Users in a chat <br> • Users in a team | • Teams channel <br> • Group chat <br> • Personal chat | Teams channel |
+| Message process |A Teams app makes a REST API call to trigger a notification in Activity in Teams. The API call passes the deep link to load content in the main pane. | A notification bot works as a Teams application. You can define your business logic to process data and show data in a customized format. | Webhook is a Teams feature rather than a Teams application, so it only receives and shows data without processing. |
+| Retrieve Teams context |App can use Graph APIs to work with Microsoft 365 data.  | Notification bot can retrieve Teams context such as channel or user information and messages. | No |
+| Send Adaptive Card | No | Yes | Yes |
+| Send a welcome message | Yes | Yes | No |
+| Trigger supported |All triggers are supported. | All triggers are supported. <br> If you use Teams Toolkit, you can quickly get a template project with the following triggers: <br> • Time trigger hosted on Azure functions. <br> • Restify HTTP trigger hosted on Azure app service. <br> • HTTP trigger hosted on Azure Functions.| All triggers are supported.|
+| Building Tools |[Quick start - Microsoft Graph](https://developer.microsoft.com/graph/quick-start) | • [Teams Toolkit Overview for Visual Studio Code](../toolkit/teams-toolkit-fundamentals.md) <br> • [Teams Toolkit Overview for Visual Studio](../toolkit/toolkit-v4/teams-toolkit-fundamentals-vs.md) <br> • [Teams Toolkit CLI](../toolkit/Teams-Toolkit-CLI.md) <br> • [TeamsFx SDK](../toolkit/TeamsFx-SDK.md) | No tools are required. |
+| Cloud resource required | Microsoft Entra app  | Azure Bot Framework  | No resources are required. |
+| Tutorial | • [Send activity feed notifications to users in Microsoft Teams](/graph/teams-send-activityfeednotifications) <br> • [Send activity feed notification](../sbs-graphactivity-feedbroadcast.yml) | [Build notification bot with JavaScript](../sbs-gs-notificationbot.yml) | [Incoming Webhook notification sample](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/incoming-webhook-notification) |
 
 ### Connectors for Microsoft 365 Groups
 
