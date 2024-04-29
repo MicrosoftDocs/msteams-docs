@@ -1,0 +1,105 @@
+### YamlMime:Tutorial
+title: Teams AI library quick start guide
+metadata:
+  title: Teams AI library quick start guide
+  description: In this module, learn how to quickly try the Teams AI library.
+  audience: Developer
+  level: Beginner
+  ms.date: 29/04/2024
+  ms.topic: interactive-tutorial
+  ms.custom: mvc
+  ms.localizationpriority: high
+items:
+- durationInMinutes: 1
+  content: |
+
+    This tutorial shows how to create Custom Copilot with Copilot SDK using Teams Toolkit and interact with your Large Language Model (LLM) on Teams. Copilot SDK streamlines the process of building intelligent Teams apps by using the AI components and LLM of your choice.
+
+    In this tutorial, you'll learn:
+
+    * How to create a new Custom Copilot with Teams Toolkit.
+    * About the directory structure of your app.
+    * How to interact with your LLM.
+
+
+- title: Prerequisites
+  durationInMinutes: 1
+  content: |
+   Ensure you install the following tools for building and deploying your apps.
+
+   | &nbsp; | Install | For using... |
+   | --- | --- | --- |
+   | &nbsp; | [Teams Toolkit](~/toolkit/install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version. |
+   | &nbsp; | [Node.js and NPM](https://nodejs.org/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+   | &nbsp; | [Microsoft Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+   | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
+   | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
+
+    
+- title: Build your first Custom Copilot using Visual Studio Code
+  durationInMinutes: 1
+  content: |
+     1. Go to **Visual Studio Code**.
+
+     1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
+
+     1. Select **Create a New App**.
+
+     1. Select **Custom Copilot** to create a new Custom Copilot project.
+
+     1. Select **Basic AI Chatbot** as a template.
+
+     1. Select **JavaScript** as the programming language.
+
+     1. Select **Azure OpenAI** as the LLM source.
+
+     1. Copy your **Azure OpenAI key** and **Azure OpenAI endpoint** and **deployment name** from Azure Portal and paste it in the steps. Alternatively, you can fill in these details later in the `env/.env.testtool.user` file, once your Custom Copilot is created.
+
+     1. Select a folder that will contain the root folder of your project and enter a suitable name for your Custom Copilot.
+     
+     1. Select **Enter** and your Custom Copilot will be created in a few seconds.
+
+     1. Let's customize the prompt of your Custom Copilot! In your project root, open `src/prompts/chat/skprompt.txt`, this is the file that developers can define the behaviour of Custom Copilot.
+
+     1. Copy the following prompt in `skprompt.txt` and save the file.
+
+        ```skprompt.txt
+        This is a conversation with an AI assistant specialized in the vast and intriguing universe of planets and space.
+        Encourage the AI to provide vivid and captivating explanations that spark curiosity and enhance learning.
+        Brighten the conversation with emojis! They add a playful and visually engaging element that makes learning about space more fun.
+        At the end of each response, share a fascinating fun fact about space or planets. These snippets aim to amaze and provide extra tidbits of knowledge!
+        ```
+
+     1. Select **Run and Debug** icon from the Visual Studio Code **Activity Bar**.
+
+     1. Select **Debug in Test Tool (Preview)** to run your Custom Copilot. Teams App Test Tool will open up in your browser.    
+
+     1. Congratulations, your Custom Copilot is running on Teams App Test Tool! Enjoy chatting and learning about planets and space!
+
+     ## Take a tour of the tab app source code
+
+     Have a look at what's inside this Custom Copilot > Basic AI Chatbot template.
+
+     | Folder name | Contents |
+     | --- | --- |
+     | `.vscode` | VSCode files for debugging. |
+     | `appPackage` | Templates for the Teams application manifest. |
+     | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
+     | `infra` | Templates for provisioning Azure resources. |
+     | `src/`| The source code for the notification Teams application. |
+     | `src/index.js`| The source code for the notification Teams application. |     
+     | `src/adapter.js`| The source code for the notification Teams application. |  
+     | `src/config.js`| The source code for the notification Teams application. |
+     | `src/prompts/chat/skprompt.txt`| The source code for the notification Teams application. |
+     | `src/prompts/chat/config.json`| The source code for the notification Teams application. |
+     | `src/app/app.js`| The source code for the notification Teams application. |
+     | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+     | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+     | `teamsapp.testtool.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+
+- title: Complete challenge
+  durationInMinutes: 1
+  content: |
+
+    Did you come up with something like this?
+
