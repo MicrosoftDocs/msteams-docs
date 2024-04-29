@@ -10,7 +10,7 @@ ms.date: 04/20/2022
 
 # Set up CI/CD pipelines
 
-You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeline for Microsoft Teams apps created with the Teams Toolkit. To create a CI/CD pipeline for Teams app follow these steps:
+You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeline for Microsoft Teams apps created with Teams Toolkit. To create a CI/CD pipeline for a Teams app follow these steps:
 
 1. [Build and deploy the project](#build-and-deploy-the-project).
 
