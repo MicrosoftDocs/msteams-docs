@@ -140,7 +140,7 @@ To set up the pipeline with GitHub, follow these steps:
     * `AZURE_TENANT_ID`.
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`.
 
-     :::image type="content" source="../assets/images/teams-toolkit-v2/modification.png" alt-text="Screenshot shows the modified pipeline yml.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/modification.png" alt-text="Screenshot shows the modified pipeline yml.":::
 
 1. Run the pipeline.
 
