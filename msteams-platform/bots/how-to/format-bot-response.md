@@ -6,7 +6,7 @@ ms.topic: conceptual
 
 # Format your bot response
 
-While Large Language Models (LLMs) significantly enhance your bot’s capabilities, they can sometimes be inconsistent and require careful adjustments to behave as intended. User feedback is invaluable in evaluating your bot’s performance in real-world scenarios and enables you to make effective and targeted improvements.
+While Large Language Models (LLMs) significantly enhance your bot’s capabilities, they can sometimes be inconsistent and require careful adjustments to behave as intended. User feedback is invaluable to evaluate your bot’s performance in real-world scenarios and enables you to make effective and targeted improvements.
 
 Microsoft Teams allows you to enable feedback buttons in the messages sent by your bot. Users can interact with these buttons to indicate that they either like or dislike the message. Once they select a button, an optional form appears that allows them to provide detailed feedback about the message.
 
@@ -97,9 +97,9 @@ When your bot receives the invoke, you need to have an `onInvokeActivity` handle
       };
 ```
 
-We recommend that your bot doesn't send the user any message or notification upon receiving feedback. Teams automatically sends a toast notifying the user that their feedback was submitted successfully.
+We recommend that you don't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
 
-After you receive feedback, it’s important to store it. Teams doesn’t store or process feedback, nor does it provide an API or a storage mechanism for you to do so. Hence, you should store the message IDs and the content of the messages that your bot sends and receives. When your bot receives an invoke containing feedback, match the message ID of the bot’s message with the corresponding feedback.
+It’s important to store feedback after you receive it. Teams doesn’t store or process feedback, nor does it provide an API or a storage mechanism for you to do so. Hence, you should store the message IDs and the content of the messages that your bot sends and receives. When your bot receives an invoke containing feedback, match the message ID of the bot’s message with the corresponding feedback.
 
 ### How to store messageID and message content pairs
 
