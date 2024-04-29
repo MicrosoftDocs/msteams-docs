@@ -1,20 +1,20 @@
 ---
-title: Create a command menu for your bot
+title: Create a Prompt Starters for your bot
 author: surbhigupta
-description: Learn how to create and handle a command menu for your Microsoft Teams bot, and best practices. Know how to remove commands from your manifest.
+description: Learn how to create and handle a Prompt Starters for your Microsoft Teams bot, and best practices. Know how to remove commands or Prompt Starters from your manifest.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-# Create a commands menu
+# Create Prompt Starters
 
 > [!NOTE]
 > It's recommended that you'd create a command bot by following the step-by-step guide to [Build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-To define a set of core commands that your bot can respond to, you can add a command menu with a dropdown list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
+To define a set of core commands that your bot can respond to, you can add a Prompt Starters with a for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 
 # [Desktop](#tab/desktop)
 
