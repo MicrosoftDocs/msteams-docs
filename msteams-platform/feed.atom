@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>Microsoft Teams Platform</title>
-	<updated>2024-04-09T04:15:01+05:30</updated>
+	<updated>2024-04-30T04:15:01+05:30</updated>
 	<generator>https://github.com/jpmonette/feed</generator>
 	<subtitle>Updated articles for Microsoft Teams Platform</subtitle>
 	<rights>https://learn.microsoft.com/legal/termsofuse</rights>
 	<category term="new"/>
 	<category term="updated"/>
+	<entry>
+		<title type="html"><![CDATA[App validation update: Inadequate app description ]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure#inadequate-app-description</id>
+		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure#inadequate-app-description?referrer=whats.new.rssfeed"/>
+		<updated>2024-04-30T11:04:01+05:30</updated>
+		<summary type="html"><![CDATA[ A great app description highlights your app's benefits and encourages customers to download it. Avoid the common mistakes in the app descriptions that prevent apps from passing Teams Store submission process.</br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?template=Doc-Feedback.yaml&pageUrl=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fcommon-reasons-for-app-validation-failure&pageQueryParams=&contentSourceUrl=https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fcommon-reasons-for-app-validation-failure.md&documentVersionIndependentId=7f3962a8-c69a-a971-7a94-0ed5b164344a&feedback=%0A%0A%5BEnter+feedback+here%5D%0A&author=%40v-ypalikila&metadata=*+ID%3A+7f3962a8-c69a-a971-7a94-0ed5b164344a+%0A*+Service%3A+**msteams**">feedback</a>? It is important to us.]]></summary>
+		<category label="new" term="new"/>
+	</entry>
 	<entry>
 		<title type="html"><![CDATA[Platform update: Open content in Stageview]]></title>		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/open-content-in-stageview?tabs=withchat</id>
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/tabs/open-content-in-stageview?tabs=withchat?referrer=whats.new.rssfeed"/>
@@ -110,14 +117,6 @@
 		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/concepts/deploy-and-publish/appsource/publish#teams-store-search-experience?referrer=whats.new.rssfeed"/>
 		<updated>2023-08-29T11:04:01+05:30</updated>
 		<summary type="html"><![CDATA[Use Teams store with intelligent search experience to display apps that are closest match to the user's specified characters. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%209f071593-9440-5115-242d-488cf25e9256%0A*%20Version%20Independent%20ID%3A%20746b1c6e-1bcc-21fe-e2be-149e7c10f1d5%0A*%20Content%3A%20%5BOverview%20-%20Publish%20your%20app%20to%20the%20Microsoft%20Teams%20store%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpublish%23teams-store-search-experience)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpublish.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fconcepts%2Fdeploy-and-publish%2Fappsource%2Fpublish.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40heath-hamilton%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
-		<category label="new" term="new"/>
-	</entry>
-	<entry>
-		<title type="html"><![CDATA[Doc update: Teams app manifest is now referred to as app manifest]]></title>
-		<id>https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema</id>
-		<link href="https://learn.microsoft.com/en-us/microsoftteams/platform/resources/schema/manifest-schema?referrer=whats.new.rssfeed"/>
-		<updated>2023-08-28T11:04:01+05:30</updated>
-		<summary type="html"><![CDATA[The app manifest (previously called Teams app manifest) describes how your app integrates into the Microsoft Teams product. </br></br>Would you please provide your <a href="https://github.com/MicrosoftDocs/msteams-docs/issues/new?title=&body=%0A%0A%5BEnter%20feedback%20here%5D%0A%0A%0A---%0A%23%23%23%23%20Document%20Details%0A%0A%E2%9A%A0%20*Do%20not%20edit%20this%20section.%20It%20is%20required%20for%20learn.microsoft.com%20%E2%9E%9F%20GitHub%20issue%20linking.*%0A%0A*%20ID%3A%200f94a488-d636-92b3-21eb-c88744c8f272%0A*%20Version%20Independent%20ID%3A%207b3413f4-9ade-accf-5cb2-83fead11a32a%0A*%20Content%3A%20%5BManifest%20schema%20reference%20-%20Teams%5D(https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fmicrosoftteams%2Fplatform%2Fresources%2Fschema%2Fmanifest-schema)%0A*%20Content%20Source%3A%20%5Bmsteams-platform%2Fresources%2Fschema%2Fmanifest-schema.md%5D(https%3A%2F%2Fgithub.com%2FMicrosoftDocs%2Fmsteams-docs%2Fblob%2Fmain%2Fmsteams-platform%2Fresources%2Fschema%2Fmanifest-schema.md)%0A*%20Service%3A%20**msteams**%0A*%20GitHub%20Login%3A%20%40surbhigupta%0A*%20Microsoft%20Alias%3A%20**surbhigupta**">feedback</a>? It is important to us.]]></summary>
 		<category label="new" term="new"/>
 	</entry>
 </feed>
