@@ -248,7 +248,6 @@ Explore updates from the previous GA releases listed here.
 |08/25/2021| Introduced step-by-step guide to create a Teams bot with Single sign-on (SSO) | Add authentication > Bots > [Step-by-step guide to create Teams bot with SSO](sbs-bots-with-sso.yml) |
 |08/19/2021| Installation update event received when you install a bot to a conversation thread | Build bots > Bot conversations > [Installation update event](bots/how-to/conversations/subscribe-to-conversation-events.md#installation-update-event) |
 |08/12/2021|Build tabs with Adaptive Cards| Build tabs > [Build tabs with Adaptive Cards](tabs/how-to/build-adaptive-card-tabs.md) |
-|08/04/2021|Tabs will no longer have margins surrounding their experiences | Build tabs > [Removing tab margins](resources/removing-tab-margins.md) |
 |07/08/2021|Teams mobile adds support for apps in meetings | Build apps for Teams meetings > [Build apps for Teams meeting](apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md) |
 |06/28/2021|Integrate People Picker capability | Integrate with Teams > [Integrate People Picker capability](concepts/device-capabilities/people-picker-capability.md) |  
 |06/25/2021| Introduced step-by-step guide to send proactive messages | Build bots > Bot conversation > Proactive messages > [Step-by-step guide to send proactive messages](sbs-send-proactive.yml) |
@@ -481,6 +480,8 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 :::column span="2":::
 
 Teams platform features that aren't available.
+
+* ***April 30, 2024***: Tab margin experience is now deprecated for all types os tabs.
 
 * ***April 12, 2024***: The `packageName` property is deprecated as part of manifest v1.17.
 

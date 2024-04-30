@@ -97,11 +97,6 @@ You can also listen for an event when the users selects **Close (X)** in the con
 |-------------|-------------|------|----|----|
 |Create Conversational tab| Microsoft Teams tab sample app for demonstrating create conversation tab. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp) |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/nodejs) |[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-conversations/csharp/demo-manifest/tab-conversations.zip)|
 
-## Next step
-
-> [!div class="nextstepaction"]
-> [Tab margin changes](~/resources/removing-tab-margins.md)
-
 ## See also
 
 * [Build tabs for Teams](../what-are-tabs.md)

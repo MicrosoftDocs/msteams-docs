@@ -295,4 +295,4 @@ If you don’t use Teams color tokens, your designs will be less scalable and ta
 
 ## See also
 
-[Tab margin changes](~/resources/removing-tab-margins.md)
+[Build tabs for Teams](../what-are-tabs.md)
