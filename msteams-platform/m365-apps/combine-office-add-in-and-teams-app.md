@@ -354,7 +354,7 @@ Unless specified otherwise, the file you change is `\appPackage\manifest.json`.
     #     manifestPath: ./appPackage/manifest.json 
     ```
 
-    Be careful to comment out only the `teamsApp/validateManifest` section. Don't comment out the `teamsManifest/validateAppPackage` section.
+    Ensure that you comment out only the `teamsApp/validateManifest` section. Don't comment out the `teamsManifest/validateAppPackage` section.
 
 1. Repeat the preceding step for the `teamsapp.yml` file. The three lines are found in both the `provision` and the `publish` sections. Comment them out in both places.
 1. Open the `.vscode\tasks.json` file in the **add-in** project and copy all the tasks in the `tasks` array. Add them to `tasks` array of the same file in the Teams project. Don't remove any of the tasks that are already there. Be sure all tasks are separated by commas. 
