@@ -28,11 +28,6 @@ See the video to learn more about building an API-based message extension using 
 
 ## Prerequisites
 
-```yml
-
-
-
-
 Before you get started, ensure that you adhere to the following requirements:
 
 > [!div class="checklist"]
@@ -84,6 +79,8 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
   ]
 }
 ```
+
+:::image type="content" source="../assets/images/Copilot/api-based-me-open-api-flow.png" alt-text="Screenshot shows the OpenAPI description flow from the user to Teams and back to the user.":::
 
 ## Next step
 

@@ -552,7 +552,7 @@ When an API request is initiated, the system retrieves the encrypted API key bef
 
 **Example**
 
-```
+```https
 GET https://example.com/search?myQuery=test
 Accept-Language: en-US
 Authorization: Bearer <MY_API_KEY>
