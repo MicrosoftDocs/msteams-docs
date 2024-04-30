@@ -80,7 +80,7 @@ You can manually close the conversation view by calling the `closeConversation()
 microsoftTeams.conversations.closeConversation();
 ```
 
-You can also listen for an event when the users selects **Close (X)** in the conversation view.
+You can also listen for an event when the users select **Close (X)** in the conversation view.
 
 ```javascript
 ⁠microsoftTeams.conversations.openConversation({
