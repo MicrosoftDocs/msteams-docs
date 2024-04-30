@@ -351,7 +351,7 @@ When you deploy app code to Azure App Service, Azure Functions, or Azure Contain
 
 * Secret: The TeamsApp CLI currently supports sign-in using a service principal with a secret.
 
-## Generate the appPackage for the teams app
+## Generate the Teams appPackage
 
 To distribute your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in `Teamsapp` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the appPackage:
 
