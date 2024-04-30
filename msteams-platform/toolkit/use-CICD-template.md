@@ -42,7 +42,11 @@ You can use [Teams Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) t
 | Configure Azure resources |• Manually prepare the resources by examining the bicep files under the `infra` folder. <br> • Automatically prepare the resources using the `Provision` command in Teams Toolkit.|
 | Ensure that you've a service principal and its access policies on resources are properly configured. Set up a service principal as follows:| • [Create service principal using Entra portal](/entra/identity-platform/howto-create-service-principal-portal). <br> • [Create service principal using Azure CLI](/cli/azure/azure-cli-sp-tutorial-1?tabs=bash). <br> • The `Teamsapp` command-line interface (CLI) supports Azure login with a service principal secret. [Create a secret](/entra/identity-platform/howto-create-service-principal-portal) and save the client ID, client secret, and tenant ID of the service principal. <br> :::image type="content" source="../assets/images/teams-toolkit-v2/service-principal.png" alt-text="Screenshot shows the service principal secret.":::|
 
-After you've completed the prerequisites, let's set up a pipeline with GitHub or Azure repository.
+After you've completed the prerequisites, let's set up a pipeline:
+
+* [Set up pipeline with GitHub](#set-up-pipeline-with-github).
+
+* [Set up pipeline with Azure DevOps](#set-up-pipeline-with-azure-devops).
 
 #### Set up pipeline with GitHub
 
