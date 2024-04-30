@@ -144,7 +144,7 @@
       items:
       - name: Teams Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
-        displayName: TTK, version, Developer Portal, debug, teams app test tool, dev tunnel
+        displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
       - name: Install Teams Toolkit
         href: toolkit/install-Teams-Toolkit.md
         displayName: download
@@ -427,7 +427,7 @@
       displayName: chat, Messages sent between your Microsoft Teams bot and one or more user
     - name: Messages in bot conversations
       href: bots/how-to/conversations/conversation-messages.md
-      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete, send message from bot
+      displayName: Picture messages, emojis, attribution for bot message, status code responses, app localization using bot and tab, form, soft delete, send messages from bot
       items:
       - name: Receive all conversation messages
         href: bots/how-to/conversations/channel-messages-with-rsc.md
