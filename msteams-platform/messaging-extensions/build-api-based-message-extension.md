@@ -520,7 +520,7 @@ You can implement authentication in API-based message extensions to provide secu
 <details><summary id="none">none</summary>
 <br>
 
-You can update `none` as a value for `authorization` in an API-based message extension when the API doesn't require any authentication for the user. When Teams service sends a request to the API, it deosn't supply any authentication information.
+You can update `none` as a value for `authorization` in an API-based message extension when the API doesn't require any authentication for the user. When Teams service sends a request to the API, it doesn't supply any authentication information.
 
 ```json
     "authorization": {
@@ -534,13 +534,32 @@ You can update `none` as a value for `authorization` in an API-based message ext
 
 <details><summary id="secret-service-auth">Secret service auth</summary>
 
+
+API secret service authentication is a method that allows your app to authenticate with your API. You can configure your endpoint to accept a secret to authenticate requests. The API secret must be registered in Microsoft Teams and when a user interacts with your message extension, Teams uses the secret to authenticate with your API. The following API key registration properties help you to secure your key and ensure it's limited to your application:
+
+* **Base URL**: Teams transmits the secrets to endpoints where the URL begins with the value in this field.
+* **Target Tenant**: To limit API access to your Microsoft 365 tenant.
+* **App ID**: To limit the key access to a specific app.
+* **Secret key**: To authorize access between your app and OpenAPI endpoints.
+
+
 API secret service authentication is a secure method for your app to authenticate with API. You can [register an API key](#register-an-api-key) through the Developer Portal for Teams, and generate an API key registration ID. [Update the app manifest](#update-app-manifest) with the `apiSecretServiceAuthConfiguration` object with an `apiSecretRegistrationId` property. This property should contain the reference ID returned when you submitted the API key through the portal.
 
-When an API request is initiated, the system retrieves the API key from a secure storage location and includes it in the authorization header using the bearer token scheme. The API endpoint, upon receiving the request, verifies the validity of the API key. If the verification is successful, the endpoint processes the request and returns the desired response, ensuring that only authenticated requests receive access to the API’s resources.
+> [!NOTE]
+> The API secret registration ID is not a secret itself and can be retrieved from the Teams App manifest. For more information on securing your secret, see best practices.
+
+When an API request is initiated, the system retrieves the encrypted API key before storage and is stored in a secured location and includes it in the authorization header using the bearer token scheme and sends it to the endpoint defined in the app manifest. The user should verify the validity of the API key.
+
+**Example**
+
+```
+GET https://example.com/search?myQuery=test
+Accept-Language: en-US
+Authorization: Bearer <MY_API_KEY>
+```
+
 
 ### Register an API key
-
-API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  You can then paste the API key ID in the message extension and the API key ID enables the authentication for the API calls that are behind an auth.
 
 To register an API Key, follow these steps:
 
@@ -553,31 +572,26 @@ To register an API Key, follow these steps:
 1. In the **API key registration** page, under **Register an API key**, update the following:
 
    1. **Description**: Description of the API Key.
-   1. **Add domain**: Update the base path for API endpoints. The path must be a secure HTTPS URL, include a fully qualified domain name, and can optionally include a specific path. For example, `https://api.yelp.com`.
+   1. **Add domain**: You must specify a path that initiates all the API endpoints. The path must start with https, include a fully qualified domain name, and optionally, a path. Teams only transmits the secrets to endpoints where the URL begins with this value. For example, `https://api.yelp.com`. *[Mandatory]*
+   
+      This ensures that the  key remains secure and isn't leaked to random endpoints, even if another app illicitly acquires the API secret registration ID and incorporates it into their own app. We enforce this URL constraint on API keys. If the path registered here doesn't prefix the target endpoint defined in the app manifest, the call gets dropped.
 
       :::image type="content" source="../assets/images/Copilot/api-based-me-register-key-domain.png" alt-text="Screenshot shows the Description and Add domain options in the API key registration page in Developer Portal for Teams.":::
 
 1. Under **Set a target tenant**, select any of the following:
 
-   * **Home tenant**
-   * **Any tenant**
+   * **Home tenant**: The API key is only functional within the tenant where it's registered.
+   * **Any tenant**: The API key t is usable in any tenant.
 
-   |Option   |When to use  | Description|
-   |---------|---------|----------------|
-   |**Home tenant**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        |  The API key is only usable within the tenant where the the API is registered. |
-   |**Any tenant**     | After you've completed testing the app and want to enable the app across different tenants. Ensure that you update your target tenant to **Any tenant** before submitting your app package to the Partner Center.        | The API key can be used in other tenants after the app is available in the Teams Store. |
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams.":::
 
 1. Under **Set a Teams app**, select any of the following:
 
-   * **Any Teams app**
-   * **Existing Teams app ID**
+   * **Any Teams app**: The API key can be used with any Teams app.
+   * **Existing Teams app ID**: The **Existing Teams app** option binds the API secret registration to your specific Teams app. 
 
-   |Option   |When to use  | Description|
-   |---------|---------|----------------|
-   |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
-   |**Existing Teams app ID**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
+   Adding a domain ensures that the key isn't exposed to endpoints. However, the API secret registration ID is publicly accessible and can be added to random apps, potentially sending unwanted data to a developer's endpoint. To prevent this, you can bind the registration to a specific app and Teams rejects requests for any app other than the one specified in the secret registration.
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-teams-app.png" alt-text="Screenshot shows the Any Teams app and Existing Teams app options under Set a Teams app heading in Developer Portal for Teams.":::
 
@@ -725,8 +739,8 @@ To configure scope and authorize trusted client applications, you need:
     > [!IMPORTANT]
     >
     > * If you're building a standalone bot, enter the application ID URI as api://botid-{YourBotId}. Here, {YourBotId} is your Microsoft Entra application ID.
-    > * If you're building an app with a bot, a messaging extension, and a tab, enter the application ID URI as api://fully-qualified-domain-name.com/botid-{YourClientId}, where {YourClientId} is your bot app ID.
-    > *  If you're building an app with a messaging extension or tab capabilities without the bot,  enter the application ID URI as api://fully-qualified-domain-name.com/{YourClientId}, where {YourClientId} is your Microsoft Entra application ID.
+    > * If you're building an app with a bot, a message extension, and a tab, enter the application ID URI as api://fully-qualified-domain-name.com/botid-{YourClientId}, where {YourClientId} is your bot app ID.
+    > *  If you're building an app with a message extension or tab capabilities without the bot,  enter the application ID URI as api://fully-qualified-domain-name.com/{YourClientId}, where {YourClientId} is your Microsoft Entra application ID.
     
     
     **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the application ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
