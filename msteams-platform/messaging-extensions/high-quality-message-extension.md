@@ -12,7 +12,8 @@ ms.date: 11/14/2023
 
 > [!IMPORTANT]
 >
-> * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
+> * Plugins for Microsoft Copilot for Microsoft 365 are available in public developer preview.
+> * Plugins for Microsoft Copilot for Microsoft 365 only work in Microsoft 365 Chat and Chat Copilot in one-on-one chats, group chats, and meeting chats in Microsoft Teams.
 > * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
@@ -423,7 +424,7 @@ For M365 Chat, a search-based message extension must support more than three uni
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
-* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property which supports up to 5 parameters. 
+* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property which supports up to 5 parameters.
 
 <br>
 <details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
@@ -547,36 +548,36 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 ```json
 "composeExtensions": [
-	{
-		"canUpdateConfiguration": true,
-		"botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
-		"commands": [
-			{
-				"id": "orders",
-				"title": "Orders",
-				"context": [
-					"Commandbox",
-					"Compose"
-				],
-				"description": "Search for orders",
-				"semanticDescription": "Search for orders",
-				"samplePrompts": [
-					{
-						"text": "Search for all orders"
-					},
-					{
-						"text": "Search for orders related to Contoso"
-					},
-					{
-						"text": "Search for all pending orders"
-					},
-					{
-						"text": "Search for all completed ordered for Fabrikam"
-					}
-				]
-			}
-		]
-	}
+ {
+  "canUpdateConfiguration": true,
+  "botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
+  "commands": [
+   {
+    "id": "orders",
+    "title": "Orders",
+    "context": [
+     "Commandbox",
+     "Compose"
+    ],
+    "description": "Search for orders",
+    "semanticDescription": "Search for orders",
+    "samplePrompts": [
+     {
+      "text": "Search for all orders"
+     },
+     {
+      "text": "Search for orders related to Contoso"
+     },
+     {
+      "text": "Search for all pending orders"
+     },
+     {
+      "text": "Search for all completed ordered for Fabrikam"
+     }
+    ]
+   }
+  ]
+ }
 ]
 ```
 
