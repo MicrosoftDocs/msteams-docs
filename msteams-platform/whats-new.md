@@ -481,7 +481,7 @@ Discover Microsoft Teams platform features that are deprecated. You can now get 
 
 Teams platform features that aren't available.
 
-* ***April 30, 2024***: Tab margin experience is now deprecated for all types os tabs.
+* ***April 30, 2024***: Tab margin experience is now deprecated for all types of tabs.
 
 * ***April 12, 2024***: The `packageName` property is deprecated as part of manifest v1.17.
 
