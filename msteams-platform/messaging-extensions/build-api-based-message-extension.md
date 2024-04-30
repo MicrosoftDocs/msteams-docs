@@ -607,11 +607,21 @@ To register an API Key, follow these steps:
 
    :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-secret.png" alt-text="Screenshot shows the Enter the value for this secret option to add a secret to the API key.":::
 
-An **API key registration ID** is generated.
+   An **API key registration ID** is generated.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-api-key-reg-id.png" alt-text="Screenshot shows the API key registration ID generated in Developer Portal for Teams.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-reg-id.png" alt-text="Screenshot shows the API key registration ID generated in Developer Portal for Teams.":::
 
-Copy and save the API key registration ID and update it as a value for the `apiSecretRegistrationId` property in the app manifest.
+1. In Developer portal for Teams, select **Apps** and select an app where you want to add the API key.
+
+1. Go to **App features** > **Message extension**.
+
+1. Under **Authentication**, select **API key** and add the API key registration ID.
+
+   :::image type="content" source="../assets/images/Copilot/api-based-me-auth-add-key.png" alt-text="Screenshot shows an example of the Authentication section with none and API key options in Developer Portal for Teams.":::
+
+1. Select **Save**.
+
+The API key registration ID is update as the value for the `apiSecretRegistrationId` property in the app manifest.
 
 ### Update app manifest
 
