@@ -6,9 +6,9 @@ ms.topic: conceptual
 
 # Format your bot response
 
-While Large Language Models (LLMs) significantly enhance your bot’s capabilities, they can sometimes be inconsistent and require careful adjustments to behave as intended. User feedback is invaluable to evaluate your bot’s performance in real-world scenarios and enables you to make effective and targeted improvements.
+While Large Language Models (LLMs) significantly enhance your bot’s conversational capabilities, they can sometimes be inconsistent and require careful adjustments to behave as intended. User feedback is invaluable to evaluate your bot’s performance in real-world scenarios and enables you to make effective and targeted improvements.
 
-Microsoft Teams allows you to enable feedback buttons in the messages sent by your bot. Users can interact with these buttons to indicate that they either like or dislike the message. Once they select a button, an optional form appears that allows them to provide detailed feedback about the message.
+Microsoft Teams allows you to enable feedback buttons in the messages sent by your bot. Users can interact with these buttons to indicate that they either like or dislike the message. After the user select a button, a dialog (referred as a task module in TeamsJS v1.x) appears that allows them to provide detailed feedback about the message.
 
 > [!NOTE]
 >
@@ -35,7 +35,7 @@ After you enable feedback buttons, the footer of your bot's message contains a l
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" alt-text="Screenshots shows the feedback buttons in a bot.":::
 
-When the user selects one of the feedback buttons, the feedback form that appears depends on the user's selection. A positive feedback form appears if the user likes a message and a negative feedback form appears if the user dislike a message.
+When the user selects one of the feedback buttons, the dialog that appears contains a feedback form depending on the user's selection. A positive feedback form appears if the user likes a message and a negative feedback form appears if the user dislike a message.
 
 # [Positive feedback](#tab/pos)
 
@@ -47,7 +47,7 @@ When the user selects one of the feedback buttons, the feedback form that appear
 
 ---
 
-The bot sends the user's input, received in the feedback form, to you through a bot invoke. The following code snippet is an example of a bot invoke containing feedback from a user:
+The bot sends the user's input, received in the feedback form, to you through a bot invoke. The following code snippet is an example of a bot invoke containing positive feedback from a user:
 
 ```json
     {
@@ -68,6 +68,8 @@ The bot sends the user's input, received in the feedback form, to you through a 
 ## Handle feedback
 
 When your bot receives the invoke, you need to have an `onInvokeActivity` handler to process the invoke correctly. Ensure that you return a `status:200` with no body.
+
+The following code snippet returns a response with a status code of 200 when the bot receives an invoke containing feedback. For other invokes, it returns a response with a status code of 200 and a message indicating that an unknown invoke activity was handled. If an error occurs during the execution of this method, it catches the error and returns a response with a status code of 500 and a body message indicating that an invoke activity was received:
 
 ```json
       public async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> {
@@ -97,11 +99,14 @@ When your bot receives the invoke, you need to have an `onInvokeActivity` handle
       };
 ```
 
-We recommend that you don't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
+> [!NOTE]
+> Don't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
 
-It’s important to store feedback after you receive it. Teams doesn’t store or process feedback, nor does it provide an API or a storage mechanism for you to do so. Hence, you should store the message IDs and the content of the messages that your bot sends and receives. When your bot receives an invoke containing feedback, match the message ID of the bot’s message with the corresponding feedback.
+It’s important to store feedback after you receive it. Teams doesn’t store or process feedback, nor does it provide an API or a storage mechanism for you to do so. Hence, ensure that you store the message IDs and the content of the messages that your bot sends and receives. When your bot receives an invoke containing feedback, match the message ID of the bot’s message with the corresponding feedback.
 
 ### How to store messageID and message content pairs
+
+***<placeholder_text>*** Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or message extensions or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 App, too. These apps expand the value of the Teams collaborative experience for users. ***<placeholder_text>***
 
 > [!NOTE]
 > If a user uninstalls your bot but still has access to the bot chat, Teams removes the feedback buttons from the bot's messages to prevent the user from providing feedback to the bot.
