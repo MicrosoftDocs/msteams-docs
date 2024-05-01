@@ -15,23 +15,26 @@ ms.author: anclear
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 Prompt Starters are commands or actions that help users start or continue conversations with bots. They are important for bots because they improve user engagement, retention, and discovery of the bot's capabilities.
-To define a set of core commands that your bot can respond to, you can add a Prompt Starters with a for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
+
+To assist users in initiating conversations with your bot, consider incorporating Prompt Starters. These are specially crafted prompts tailored to scenarios that are relevant to your bot, offering users a straightforward way to engage in meaningful interactions. Prompt Starters are displayed at the start of a new chat, providing users with an easy way to begin a conversation by simply clicking on them.
+
+You can add Prompt Starters to your bot through the command menu in your app manifest. Each command represents a Prompt Starter and includes a title along with a description. The title serves as the actual prompt, while the description explains the purpose of the prompt and what the user can achieve by using it. When a user selects a Prompt Starter, the title of the prompt automatically gets inserted into the compose box, facilitating a seamless start to the conversation.
 
 # [Desktop](#tab/desktop)
 
-:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
+**WIP**
 
 # [Mobile](#tab/mobile)
 
-:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
+**WIP**
 
 ---
 
-## Create a command menu for your bot
+## Create a Prompt Starter for your bot
 
-Command menus are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
+Prompt Starters are added through command menu that are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
 
-### Create a command menu for your bot using Developer Portal
+### Create a Prompt Starter for your bot using Developer Portal
 
 A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.
 
@@ -93,7 +96,7 @@ The manifest example code for single menu for both scopes is as follows:
             },
             {
               "title":"Search Flights",
-              "description":"Search flights from Seattle to Phoenix May 2-5 departing after 3pm"
+              "description":"Search flights from X to Y May 2-5 departing after 3pm"
             },
             {
               "title":"Search Hotels",
@@ -101,7 +104,7 @@ The manifest example code for single menu for both scopes is as follows:
             },
             {
               "title":"Best Time to Fly",
-              "description":"Best time to fly to London for a 5 day trip this summer"
+              "description":"Best time to fly to X for a 5 day trip this summer"
             }
           ]
         }
