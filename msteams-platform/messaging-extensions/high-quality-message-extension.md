@@ -270,7 +270,7 @@ The following table lists the command and semantic description examples for each
 
 ### Parameter description
 
-Each message extension command supports has a corresponding `parameters' property which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+Each message extension command supports has a corresponding `parameters' property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
 The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
@@ -423,7 +423,7 @@ For M365 Chat, a search-based message extension must support more than three uni
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
-* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property which supports up to 5 parameters. 
+* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters. 
 
 <br>
 <details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
@@ -711,22 +711,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
-### Best Practices
-
-Adaptive Cards must provide a seamless interaction for users across devices. When designing an Adaptive Card, ensure that you consider following best practices:
-
-* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width.
-* **ColumnSets**:
-  * Don't define ColumnSets with more than three columns.
-  * Don’t use explicit pixel width on more than one column in the set.
-  *  ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Copilot.
-  *  Generally, an explicit width must not exceed 48 pixels, though some scenarios might allow for exceptions.
-* **Image Sizing**:
-  * When using an image inside a ColumnSet with more than one Column, specify the size of the column containing an image rather than the image instead.
-  * If the image isn’t in a ColumnSet, we recommend you to set its size to `“auto”` or `“stretch”`.
-  * If you want to define explicit width in pixels, ensure that they don't exceed 3/4 of the narrowest card width.
-  * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
-  * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
+Ensure that you design Adaptive Cards, which provide a seamless and engaging user experience. We recommend you to follow the best practices listed in [designing Adaptive Cards for your Microsoft Teams apps](../task-modules-and-cards/cards/design-effective-cards.md#best-practices) to optimize your card designs.
 
 ## Technical requirements
 
