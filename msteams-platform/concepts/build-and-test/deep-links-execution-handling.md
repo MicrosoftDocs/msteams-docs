@@ -49,7 +49,7 @@ You can configure your app to post messages to a chat and add deep links to them
 
 When you add a deep link to a hyperlinked Markdown text message, it's triggered and opened within Teams. Following is an example:
 
-Example: `[App](https://teams.microsoft.com/l/app/{appId})`, where `appId` is your application ID. To know more about different app IDs used see, [App ID for different types of apps](deep-link-application.md#app-id-for-different-types-of-apps).
+Example: `[App](https://teams.microsoft.com/l/app/{appId})`, where `appId` is your application ID. For more information, see [app ID for different types of apps](deep-link-application.md#app-id-for-different-types-of-apps).
 
 For more information, see [use Markdown formatting in Teams](https://support.microsoft.com/en-us/office/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772).
 
@@ -57,7 +57,7 @@ For more information, see [use Markdown formatting in Teams](https://support.mic
 
 When you add a deep link to a raw text message, it's triggered and opened within Teams. Following is an example:
 
-Example: `https://teams.microsoft.com/l/app/{appId}`, where `appId` is your application ID. To know more about different app IDs used see, [App ID for different types of apps](deep-link-application.md#app-id-for-different-types-of-apps).
+Example: `https://teams.microsoft.com/l/app/{appId}`, where `appId` is your application ID. For more information, see [app ID for different types of apps](deep-link-application.md#app-id-for-different-types-of-apps).
 
 ### Adaptive Card
 
