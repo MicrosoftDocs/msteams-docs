@@ -187,7 +187,10 @@ The bot sends the user's input, received in the feedback form, to you through a 
 
 When your bot receives the invoke, you need to have an `onInvokeActivity` handler to process the invoke correctly. Ensure that you return a `status:200` with no body.
 
-The following code snippet returns a response with a status code of 200 when the bot receives an invoke containing feedback. For other invokes, it returns a response with a status code of 200 and a message indicating that an unknown invoke activity was handled. If an error occurs during the execution of this method, it catches the error and returns a response with a status code of 500 and a body message indicating that an invoke activity was received:
+> [!NOTE]
+> Don't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
+
+The following code snippet returns a response with a status code of 200 when the bot receives an invoke containing feedback:
 
 ```json
       public async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> {
@@ -217,25 +220,14 @@ The following code snippet returns a response with a status code of 200 when the
       };
 ```
 
-> [!NOTE]
-> Don't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
-
 It’s important to store feedback after you receive it. Teams doesn’t store or process feedback, nor does it provide an API or a storage mechanism for you to do so. Hence, ensure that you store the message IDs and the content of the messages that your bot sends and receives. When your bot receives an invoke containing feedback, match the message ID of the bot’s message with the corresponding feedback.
-
-### How to store messageID and message content pairs
-
-***<placeholder_text>*** Microsoft Teams offers a collection of apps that are provided by Microsoft or external services. Teams apps can be tabs, bots, or message extensions or any combination of the capabilities. You can extend Teams apps to work on Outlook and Microsoft 365 App, too. These apps expand the value of the Teams collaborative experience for users. ***<placeholder_text>***
 
 > [!NOTE]
 > If a user uninstalls your bot but still has access to the bot chat, Teams removes the feedback buttons from the bot's messages to prevent the user from providing feedback to the bot.
 
 ## Error handling
 
-Ensure that you handle the errors listed in the table appropriately in your bot. The following table lists the error codes and the conditions under which the errors are generated:
-
-| Error code | Error name | Condition |
-| --------- | --------------- | -------- |
-| **400** | Bad Request | `submit/messageAction` invoke response isn't empty |
+Teams returns a  400 Bad Request error if the `submit/messageAction` invoke response isn't empty. To learn more about handling common errors in bot conversations, see [Status codes from bot conversational APIs](conversations/conversation-messages.md#status-codes-from-bot-conversational-apis).
 
 ## Code samples
 
@@ -245,6 +237,6 @@ Ensure that you handle the errors listed in the table appropriately in your bot.
 
 ## See also
 
+* [Bot activity handlers](../bot-basics.md)
 * [Format your bot messages](format-your-bot-messages.md)
 * [Update and delete messages sent from bot](update-and-delete-bot-messages.md)
-* [Bot activity handlers](../bot-basics.md)
