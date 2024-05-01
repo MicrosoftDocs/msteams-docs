@@ -1,6 +1,6 @@
 ---
 title: Share in Meeting
-description: Learn how to add the share in meeting button, which allows users to share any document or third-party app to the meeting stage.
+description: Learn how to add the share to Teams button that allows users to share any document or third-party app to the meeting stage.
 ms.topic: reference
 ms.localizationpriority: medium
 keywords: Share in Meeting
@@ -8,29 +8,38 @@ ms.date: 02/08/2023
 ---
 # Share in meeting
 
-Share in meeting allows users to share documents or third-party web apps to the meeting stage. The meeting participants can collaborate and interact with the third-party web apps or edit the documents together.
+Share to Teams allows users to share documents or third-party web apps to an upcoming or an ongoing meeting. The meeting participants can collaborate and interact with the third-party web apps or edit the documents together.
 
-The following image shows the **Share in meeting** button on the web app:
+Share to Teams embedded in a web app or a document enables users to share content to an upcoming meeting or an ongoing meeting.
+
+> [!NOTE]
+> Share in meeting is getting integrated with Share to Teams allowing users to share from a webapp to Teams chats, channels, or meetings.
+
+The following image shows the **Share to Teams** button on the web app:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="Screenshot shows share in meeting button on the web app.":::
 
-During the meeting, when a user selects the **Share in meeting** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage. For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension.
+When a user selects the **Share to Teams** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage. For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension.
 
-When you select the **Share in meeting** button, it launches a deep link to the meeting stage. The following is the deep link format:
+When you select the **Share to Teams** button, it launches a deep link to the meeting stage. The following is the deep link format:
 
 `msteams:/l/meeting-share?deeplinkId={GUID}&fqdn={string}&lm=deeplink&appContext={json encoded app context}`
 
 For more information, see [generate a deep link to share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 
+When the meeting begins, the app side panel is automatically opened for the user who shared the content to the meeting. The developer can call the JS SDK API to get the list of content shared and display the content and have it readily available in the side panel.
+
+Note, in the event of an upcoming recurring meeting, where the app is already added, the developer can call the JS SDK to get the latest content to be displayed in the app side panel.
+
 ## Enable share in meeting
 
-The following are three different methods to enable share in meeting. You can use one of the methods depending on how much control you want on the **Share in meeting** buttons displayed on your web page:
+The following are three different methods to enable share in meeting. You can use one of the methods depending on how much control you want on the **Share to Teams** buttons displayed on your web page:
 
 # [Method 1](#tab/method-1)
 
 This method is the simplest way to display the share in meeting buttons with minimal customizations. You can customize the button styles, size, and languages.
 
-You can scan your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate **Share in meeting** buttons in your page.
+You can scan your web page to locate any HTML elements with the class name of type `teams-share-button` and dynamically generate **Share to Teams** buttons in your page.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -38,7 +47,7 @@ You can scan your web page to locate any HTML elements with the class name of ty
    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
-2. Add an HTML element on your webpage with the `teams-share-in-meeting-button` in the `class` attribute, the app ID (from manifest) in the `data-app-id` attribute, and the link to share in the `data-href` attribute. You can also include the `data-entity-name` and `data-entity-description` attributes.
+2. Add an HTML element on your webpage with the `teams-share-button` in the `class` attribute, the app ID (from manifest) in the `data-app-id` attribute, and the link to share in the `data-href` attribute. You can also include the `data-entity-name` and `data-entity-description` attributes.
 
    ```html
    <div
@@ -57,11 +66,17 @@ You can scan your web page to locate any HTML elements with the class name of ty
    * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
    * `data-locale`: Specifies the desired user language.
 
+4. Following attribute to allow users to share content in meetings, addition to existing capability to share in chat/channel. It will be considered as false by default.
+   * `allow-share-in-meeting` (optional): Set to true to enable users to share content in meetings.
+
+5. Following attribute to open content in side panel and request for all the content shared in the meeting to display in side panel and shared to stage.
+   * `sharing.history.getContent`: App can request for all the content shared in the current meeting to load in the side panel.
+
 # [Method 2](#tab/method-2)
 
 You can use this method to have some control over which button to render dynamically or when the script is executed. The script only executes when `window.shareToMicrosoftTeams.renderButtons()` is called. You can pass specific HTML elements through the `renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton])` API. You can customize the button styles, size, and languages.
 
-The `async shareToMicrosoftTeams.renderButtons(options)` API renders all share button that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the **Share** buttons or **Share in meeting** buttons.
+The `async shareToMicrosoftTeams.renderButtons(options)` API renders all share button that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the **Share** buttons or **Share to Teams** buttons.
 
 ```javascript
 options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }

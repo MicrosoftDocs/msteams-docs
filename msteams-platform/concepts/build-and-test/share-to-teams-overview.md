@@ -21,7 +21,7 @@ You can enable this feature on the following:
 
 ## Share to Teams from web apps
 
-You can embed the Share to Teams button on the web apps that allows users to share the content from the web apps to any chat, group chat, or channel in Teams, without switching the context.
+You can embed the Share to Teams button on the web apps that allows users to share the content from the web apps to any chat, group chat, meeting chat, or channel in Teams, without switching the context.
 
 For more information, see [Share to Teams from web apps](share-to-teams-from-web-apps.md).
 
@@ -34,3 +34,4 @@ For more information, see [Share to Teams from personal app or tab](share-to-tea
 ## See also
 
 [Integrate web apps](../../samples/integrate-web-apps-overview.md)
+[Share in meeting](share-in-meeting.md)

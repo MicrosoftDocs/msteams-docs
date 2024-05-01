@@ -8,7 +8,7 @@ ms.date: 07/22/2022
 
 # Share to Teams from web apps
 
-Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select Share to Teams button, it launches the Share to Teams experience in a pop-up window. This allows you to share a link directly to any person or Microsoft Teams channel without switching the context.
+Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select Share to Teams button, it launches the Share to Teams experience in a pop-up window. This allows you to share a link directly to any person, Microsoft Teams channel without switching the context, or to a meeting chat even before the meetings is initiated.
 
 The following image displays the pop-up window for Share to Teams preview experience:
 
