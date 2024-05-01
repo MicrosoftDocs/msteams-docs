@@ -80,6 +80,8 @@ Update app manifest (previously called Teams app manifest) with the `composeExte
 }
 ```
 
+:::image type="content" source="../assets/images/Copilot/api-based-me-open-api-flow.png" alt-text="Screenshot shows the OpenAPI description flow from the user to Teams and back to the user.":::
+
 ## Next step
 
 > [!div class="nextstepaction"]
