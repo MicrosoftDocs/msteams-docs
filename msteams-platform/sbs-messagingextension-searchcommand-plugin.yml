@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Build a bot-based message extension plugin for Copilot for Microsoft 365
+title: Build a bot-based message extension plugin for Copilot for Microsoft 365 and Copilot for chats in Teams
 metadata:
-  title: Build a bot-based message extension plugin for Copilot for Microsoft 365
-  description: In this tutorial, learn to build a bot-based message extension and extend it as a plugin in Microsoft Copilot for Microsoft 365.
+  title: Build a bot-based message extension plugin for Copilot for Microsoft 365 and Copilot for chats in Teams
+  description: In this tutorial, learn to build a bot-based message extension and extend it as a plugin in Microsoft Copilot for Microsoft 365 and Copilot for chats in Teams.
   audience: Developer
   level: Beginner
   ms.date: 11/14/2023
@@ -17,8 +17,8 @@ items:
     > [!NOTE]
     >
     > * Bot-based search message extension plugin is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
-    > * Only bot-based search message extension can be extended as a plugin in Microsoft Copilot for Microsoft 365.
-    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in M365 Chat in Microsoft Teams.
+    > * Only bot-based search message extension can be extended as a plugin in Microsoft Copilot for Microsoft 365 and Copilot for chats in Teams.
+    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in M365 Chat and Copilot for chats in Teams in Microsoft Teams.
     
     Start Microsoft Teams app development with your first Teams app. 
     You can create a bot-based message extension plugin with Teams using JavaScript.  
