@@ -14,6 +14,7 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
+Prompt Starters are commands or actions that help users start or continue conversations with bots. They are important for bots because they improve user engagement, retention, and discovery of the bot's capabilities.
 To define a set of core commands that your bot can respond to, you can add a Prompt Starters with a for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 
 # [Desktop](#tab/desktop)
@@ -24,7 +25,7 @@ To define a set of core commands that your bot can respond to, you can add a Pro
 
 :::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
-* * *
+---
 
 ## Create a command menu for your bot
 
