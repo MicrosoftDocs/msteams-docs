@@ -22,7 +22,7 @@ Webhooks and connectors help to connect the web services to channels and teams i
 
 ## Outgoing Webhooks
 
-Webhooks help Teams to integrate with external apps. With Outgoing Webhooks, you can send text messages from a channel to a web service. After configuring the Outgoing Webhooks, users can @mention Outgoing Webhook and send a message to a web service. The service responds within 10 seconds to the message with a text or a card.
+Webhooks help Teams to integrate with external apps. With Outgoing Webhooks, you can send text messages from a channel to a web service. After configuring the Outgoing Webhooks, users can @mention Outgoing Webhook and send a message to a web service. The service responds within 10 seconds to the message with a text or a card. For more information, see [create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md).
 
 > [!NOTE]
 > Outgoing Webhooks are configured on a per team basis and cannot be included as part of a normal Teams app.
@@ -36,7 +36,7 @@ Connectors allow users to subscribe to receive notifications and messages from t
 
 ### Incoming Webhooks
 
-Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, that accepts correctly formatted JSON and inserts the messages to that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts.
+Incoming Webhooks help in posting messages from apps to Teams. If Incoming Webhooks are enabled for a team in any channel, it exposes the HTTPS endpoint, that accepts correctly formatted JSON and inserts the messages to that channel. For example, you can create an Incoming Webhook in your DevOps channel, configure your build, and simultaneously deploy and monitor services to send alerts. For more information, see [create Incoming Webhooks](how-to/add-incoming-webhook.md#create-an-incoming-webhook).
 
 #### Notification bot or Incoming Webhook
 
@@ -59,23 +59,15 @@ Before you start to learn how to build Incoming Webhooks, you may also want to k
 
 ### Connectors for Microsoft 365 Groups
 
-Connectors for Microsoft 365 Groups allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using connector cards for Microsoft 365 Groups and can add a limited set of card actions to them. For example, a weather connector that allows users to select a location and any time of the day, to receive updates about tomorrow's weather. They're configured at channel level but are installed at team level.
+Connectors for Microsoft 365 Groups allow you to create a custom configuration page for your Incoming Webhook and package them as part of a Teams app. You send messages primarily using connector cards for Microsoft 365 Groups and can add a limited set of card actions to them. For example, a weather connector that allows users to select a location and any time of the day, to receive updates about tomorrow's weather. They're configured at channel level but are installed at team level. For more information, see [create connectors for Microsoft 365 Groups](~/webhooks-and-connectors/how-to/connectors-creating.md).
 
 > [!NOTE]
 > You can distribute the connector for Microsoft 365 Groups Teams app to our AppStore.
 
 ## Create and send messages
 
-Actionable messages allow users to take action without leaving their email client, increasing user engagement. With Microsoft 365 and Incoming Webhooks, you can send messages by posting a JSON payload to the webhook URL.
-
-## Next step
-
-> [!div class="nextstepaction"]
-> [Create Outgoing Webhooks](~/webhooks-and-connectors/how-to/add-outgoing-webhook.md)
+Actionable messages allow users to take action without leaving their email client, increasing user engagement. With Microsoft 365 and Incoming Webhooks, you can send messages by posting a JSON payload to the webhook URL. For more information, see [create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md).
 
 ## See also
 
-* [Create Incoming Webhooks](~/webhooks-and-connectors/how-to/add-incoming-webhook.md)
-* [App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
-* [Create connectors for Microsoft 365 Groups](~/webhooks-and-connectors/how-to/connectors-creating.md)
-* [Create and send messages](~/webhooks-and-connectors/how-to/connectors-using.md)
+[App capabilities mapped to features](../concepts/design/map-use-cases.md#app-capabilities-mapped-to-features)
