@@ -17,9 +17,10 @@ items:
 
     In this tutorial, you'll learn:
 
+    * How to setup your data on Azure OpenAI.
     * How to create a new Custom Copilot with Teams Toolkit.
-    * About the directory structure of your app.
-    * How to interact with your LLM.
+    * How to interact with your Large Language Model and data.
+    * The directory structure of your Custom Copilot.
 
 
 - title: Prerequisites
@@ -35,7 +36,57 @@ items:
    | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
    | &nbsp; | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
-    
+- title: Setup your data on Azure OpenAI
+  durationInMinutes: 1
+  content: | 
+     1. Go to **Azure Portal**.
+
+     1. Select the Azure OpenAI service that you created in the prerequisite.
+
+     1. Select **Go to Azure OpenAI Studio**.
+
+        :::image type="content" border="false" source="../../../assets/images/bots/go-to-azure-openai-studio.png" alt-text="Screenshot shows the go to azure openai studio in azure portal.":::
+
+     1. Select **Deployments** > **Create new deployment**.
+        
+        Update the values for the following fields:
+
+        * Select a model: gpt-35-turbo
+        * Model version: Auto-update to default
+        * Deployment type: Standard
+        * Deployment name: gpt-35-turbo
+        * Content filter: default
+
+     1. Select **Create**.
+
+        :::image type="content" border="false" source="../../../assets/images/bots/deploy-model.png" alt-text="Screenshot shows the new deploy model in azure portal.":::     
+
+     1. Select **Chat** > **Add a data source**.
+     
+     1. From the dropdown, select **Upload files (preview)**.
+
+     1. Select **Create a new Azure Blob storage resource** and follow the onscreen instructions.
+     
+     1. Select **Create a new Azure AI Search resource** and follow the onscreen instructions.
+     
+     1. Select the newly created Azure Blob storage and Azure AI Search from the dropdown.
+     
+        > [!NOTE]
+        > Save **Azure AI Search endpoint** and **key** details as they will be necessary for the subsequent steps.
+
+     1. Enter **nba** as an index name and select **Next**.
+
+        :::image type="content" border="false" source="../../../assets/images/bots/nba.png" alt-text="Screenshot shows how to create data source in azure portal.":::
+
+     1. Select **Browse for a file** and upload the nba.pdf, then select **Upload files**.
+
+     1. Select the **Data management** settings as default and select **Next**.
+     
+     1. Select **Save and close**.
+
+     After the data ingestion process is complete, you can start creating your Custom Copilot using the Copilot SDK and Teams Toolkit.
+ 
+
 - title: Build your first Custom Copilot using Visual Studio Code
   durationInMinutes: 1
   content: |
@@ -45,13 +96,23 @@ items:
 
      1. Select **Create a New App**.
 
+        :::image type="content" border="false" source="../../../assets/images/bots/create-a-new-app.png" alt-text="Screenshot shows how to create a new app in visual studio code.":::     
+
      1. Select **Custom Copilot** to create a new Custom Copilot project.
+
+        :::image type="content" border="false" source="../../../assets/images/bots/custom-copilot.png" alt-text="Screenshot shows custom copilot option in visual studio code.":::
 
      1. Select **Basic AI Chatbot** as a template.
 
+        :::image type="content" border="false" source="../../../assets/images/bots/basic-ai-chatbot.png" alt-text="Screenshot shows basic ai chatbot in visual studio code.":::
+
      1. Select **JavaScript** as the programming language.
 
+        :::image type="content" border="false" source="../../../assets/images/bots/programming-language.png" alt-text="Screenshot shows programming language in visual studio code.":::     
+
      1. Select **Azure OpenAI** as the LLM source.
+
+        :::image type="content" border="false" source="../../../assets/images/bots/large-language-model.png" alt-text="Screenshot shows large language model in visual studio code.":::     
 
      1. Copy your **Azure OpenAI key** and **Azure OpenAI endpoint** and **deployment name** from Azure Portal and paste it in the steps. Alternatively, you can fill in these details later in the `env/.env.testtool.user` file, once your Custom Copilot is created.
 
@@ -60,6 +121,8 @@ items:
      1. Select **Enter** and your Custom Copilot will be created in a few seconds.
 
      1. Let's customize the prompt of your Custom Copilot! In your project root, open `src/prompts/chat/skprompt.txt`, this is the file that developers can define the behaviour of Custom Copilot.
+
+        :::image type="content" border="false" source="../../../assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in visual studio code.":::
 
      1. Copy the following prompt in `skprompt.txt` and save the file.
 
@@ -70,11 +133,39 @@ items:
         At the end of each response, share a fascinating fun fact about space or planets. These snippets aim to amaze and provide extra tidbits of knowledge!
         ```
 
+     1. Copy the following code in `config.json` file under `completion`. Replace the `endpoint` and `key` with your Azure AI Search resource details:
+
+        ```json
+           "data_sources": [
+             {
+                    "type": "azure_search",
+                    "parameters": {
+                         "endpoint": "AZURE-AI-SEARCH-ENDPOINT",
+                         "index_name": "nba",
+                         "authentication": {
+                               "type": "api_key",
+                               "key": "AZURE-AI-SEARCH-KEY"
+                           }
+                     }
+               }
+             ]
+        ```
+
+     1. Open `src/app/app.js` and add the following variable inside `OpenAIModel`: 
+
+        ```javascript
+        azureApiVersion: '2024-02-15-preview'
+        ```
+ 
      1. Select **Run and Debug** icon from the Visual Studio Code **Activity Bar**.
 
      1. Select **Debug in Test Tool (Preview)** to run your Custom Copilot. Teams App Test Tool will open up in your browser.    
 
+        :::image type="content" border="false" source="../../../assets/images/bots/debug-in-test-tool.png" alt-text="Screenshot shows the debug in test tool.":::
+
      1. Congratulations, your Custom Copilot is running on Teams App Test Tool! Enjoy chatting and learning about planets and space!
+
+        :::image type="content" border="false" source="../../../assets/images/bots/teams-app-test-tool.png" alt-text="Screenshot shows the teams app test tool.":::
 
      ## Take a tour of the tab app source code
 
@@ -103,3 +194,4 @@ items:
 
     Did you come up with something like this?
 
+    :::image type="content" border="false" source="../../../assets/images/bots/teams-app-test-tool.png" alt-text="Screenshot shows the teams app test tool.":::
