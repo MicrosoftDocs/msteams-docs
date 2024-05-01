@@ -91,17 +91,137 @@ You can test or validate the Adaptive Card schema using the **Adaptive cards edi
 App registration is disabled for the user or the user doesn't have enough permissions to create an app. For more information, see [limitations and known issues.](~/bots/bot-features.md#limitations-and-known-issues)
 </details>
 
+## Live share
+
+<details>
+<summary>Can I use my own Azure Fluid Relay service?</summary>
+
+Yes! When initializing Live Share, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
+
+While most of you find it beneficial to use our free hosted service, there might still be times where it's beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
+
+* Require storage of data in Fluid containers beyond the lifetime of a meeting.
+* Transmit sensitive data through the service that requires a custom security policy.
+* Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
+
+For more information, see [how to guide](apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How long is data stored in Live Share's hosted service accessible?</summary>
+
+Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>What meeting types does Live Share support?</summary>
+
+Live Share supports scheduled meetings, one-on-one calls, group calls, and meet now. Channel meetings aren't yet supported.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Will Live Share's media package work with DRM content?</summary>
+
+Live Share's media package work doesn't with DRM content. Currently, Teams doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
+
+For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>How many people can attend a Live Share session?</summary>
+
+Currently, Live Share supports a maximum of 100 attendees per session. If it's something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Can I use Live Share's data structures outside of Teams?</summary>
+
+Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` don't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Can I use multiple Fluid containers?</summary>
+
+Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Can I change my Fluid container schema after creating the container?</summary>
+
+Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
+
+> [!NOTE]
+> If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
+
+To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you're testing in a Teams meeting, start a new meeting and try again.
+
+If you plan to update your app with new `SharedObject` or `LiveObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there might be active sessions at the time you roll out the change. Existing users in the session shouldn't be impacted, but users joining that session after you deployed a breaking change might have issues connecting to the session. To mitigate this, you might consider some of the following solutions:
+
+* Deploy schema changes for your web application outside of normal business hours.
+* Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
+
+> [!NOTE]
+> Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
+
+<br>
+&nbsp;
+</details>
+<details>
+<summary>Are there limits to how many change events I can emit through Live Share?</summary>
+
+While Live Share is in Preview, any limit to events emitted through Live Share isn't enforced. For optimal performance, you must debounce changes emitted through `SharedObject` or `LiveObject` instances to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
+<br>
+&nbsp;
+</details>
+
+<details>
+<summary>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</summary>
+
+Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+
+<br>
+
+</details>
+
+<details>
+<summary>Does Live Share support external and guest users?</summary>
+
+Yes, Live Share supports guest and external users for most meeting types. However, guest users aren't supported in channel meetings.
+
+<br>
+
+</details>
+
+<details>
+<summary>Does Live Share support Teams Rooms devices?</summary>
+
+No, Live Share doesn't support Teams Rooms devices.
+
+</details>
+
+<details>
+<summary>Do Live Share apps support meeting recordings?</summary>
+
+No, Live Share doesn't support meeting recordings.
+
+</details>
+
 ## Microsoft 365 Chat
 
 <details>
 
 <summary>Why isn't Microsoft 365 Chat including my plugin in a response?</summary>
 
-Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, make sure you've uploaded the app package to Outlook and interacted with the app, including authentication.
+Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
 
-If the problem continues, use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
-<br>
-&nbsp;
+If the problem continues, use the thumbs down indicator in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
 
 </details>
 <details>
@@ -167,191 +287,59 @@ Here's an example description that work for NPM Finder.
 
 ```
 
-<br>
-&nbsp;
-
 </details>
-
 <details>
 
 <summary> Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
 
 Use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
-<br>
-&nbsp;
-</details>
 
+</details>
 <details>
 
 <summary> Can I build my own Teams message extension? </summary>
 
-Yes, you can. Ensure that you have a descriptive app manifest and have uploaded the app to Outlook and interacted with it, including authentication.
-<br>
-&nbsp;
+Yes, you can. Ensure that you have a descriptive app manifest and upload the app to Outlook and interacted with it.</br>
 </details>
-
 <details>
 
-<summary> How can I get my existing Teams message extension to work with Microsoft Copilot for Microsoft 365? </summary>
+<summary> How can I get my existing Teams message extension to work with Microsoft 365 Chat? </summary>
 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.
-<br>
 
-&nbsp;
 </details>
+<details>
+<summary>What are the guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365? </summary>
 
+You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365) for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365.
+
+</details>
 <details>
 
 <summary> What is the certification process?</summary>
 
-After publishing their plugin, developers opt into the App Compliance flow in Partner Center. If they haven't completed Publisher Verification, they'll be prompted to do so before starting the Microsoft 365 Certification process.  The next step is to complete Publisher Attestation, which collects self-attested information about their plugin, company, and operations. This information is published on a [Microsoft 365 App Compliance Program site](/microsoft-365-app-certification/teams/teams-apps).  The developer then starts the Microsoft 365 Certification process by uploading initial documents to help scope the assessment to their plugin and operating environment. Based on the scope, the developer will then be required to provide evidence for specific controls related to application security, operational security, and data handling/privacy. Developers that build on Azure can also use the App Compliance Automation Tool (ACAT). This tool automatically scans their environment and produces evidence for several controls, reducing the developer's manual work.
-<br>
-&nbsp;
-</details>
+After publishing the plugin, start the App Compliance flow in Partner Center. If [Publisher verification](/entra/identity-platform/publisher-verification-overview) is incomplete, ensure that the App Compliance flow is completed before Microsoft 365 Certification. Then, complete [Publisher Attestation](/microsoft-365-app-certification/docs/attestation), which gathers self-attested data about the plugin, company, and operations. For more information, see [Microsoft 365 App Compliance Program](/microsoft-365-app-certification/overview).
 
+To start the [Microsoft 365 Certification process](/microsoft-365-app-certification/docs/certification), upload initial documents that define the assessment scope for the plugin and operating environment. Depending on the scope, provide evidence for specific controls related to application security, operational security, and data handling or privacy. If you build your plugin on Azure, you can use the App Compliance Automation Tool (ACAT) to scan the environment and generate evidence for several controls, reducing the manual workload. For more information, see [App Compliance Automation Tool for Microsoft 365](/microsoft-365-app-certification/docs/acat-overview).
+
+</details>
 <details>
 
 <summary> How are plugins certified?</summary>
 
-After passing the proactive validation, developers of both existing and new message extensions that haven't been certified will be encouraged to certify their plugin. This will be communicated through an email confirming their message extension has been validated.
-<br>
-&nbsp;
+After the app passes the proactive validation, developers of both existing and new message extensions that aren't certified will be encouraged to certify their plugin. This is communicated through an email confirming their message extension is validated.
 </details>
-
 <details>
 
 <summary> How are new plugins certified?</summary>
 
 Developers will be encouraged to certify their new plugin after successfully completing validation.
-<br>
-&nbsp;
-</details>
-
-## Live share
-
-<details>
-<summary>Can I use my own Azure Fluid Relay service?</summary>
-
-Yes! When initializing Live Share, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you'll need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
-
-While most of you find it beneficial to use our free hosted service, there may still be times where it's beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
-
-* Require storage of data in Fluid containers beyond the lifetime of a meeting.
-* Transmit sensitive data through the service that requires a custom security policy.
-* Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
-
-For more information, see [how to guide](apps-in-teams-meetings/teams-live-share-how-to/how-to-custom-azure-fluid-relay.md) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
-<br>
-&nbsp;
 </details>
 <details>
-<summary>How long is data stored in Live Share's hosted service accessible?</summary>
+<summary>How can I create or upgrade a message extension plugin for Copilot for Microsoft 365?</summary>
 
-Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service is accessible for 24 hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
-<br>
-&nbsp;
-</details>
-<details>
-<summary>What meeting types does Live Share support?</summary>
-
-Live Share supports scheduled meetings, one-on-one calls, group calls, and meet now. Channel meetings aren't yet supported.
-<br>
-&nbsp;
-</details>
-<details>
-<summary>Will Live Share's media package work with DRM content?</summary>
-
-Live Share's media package work doesn't with DRM content. Currently, Teams doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported.
-
-For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
-<br>
-&nbsp;
-</details>
-<details>
-<summary>How many people can attend a Live Share session?</summary>
-
-Currently, Live Share supports a maximum of 100 attendees per session. If it's something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
-<br>
-&nbsp;
-</details>
-<details>
-<summary>Can I use Live Share's data structures outside of Teams?</summary>
-
-Currently, Live Share packages require the Teams Client SDK to function properly. Features in `@microsoft/live-share` or `@microsoft/live-share-media` won't work outside Microsoft Teams. If this is something you're interested in, you can [start a discussion here](https://github.com/microsoft/live-share-sdk/discussions).
-<br>
-&nbsp;
-</details>
-<details>
-<summary>Can I use multiple Fluid containers?</summary>
-
-Currently, Live Share only supports having one container using our provided Azure Fluid Relay service. However, it's possible to use both a Live Share container and a container created by your own Azure Fluid Relay instance.
-<br>
-&nbsp;
-</details>
-<details>
-<summary>Can I change my Fluid container schema after creating the container?</summary>
-
-Currently, Live Share doesn't support adding new `initialObjects` to the Fluid `ContainerSchema` after creating or joining a container. Because Live Share sessions are short-lived, this is most commonly an issue during development after adding new features to your app.
-
-> [!NOTE]
-> If you are using the `dynamicObjectTypes` property in the `ContainerSchema`, you can add new types at any point. If you later remove types from the schema, existing DDS instances of those types will gracefully fail.
-
-To fix errors resulting from changes to `initialObjects` when testing locally in your browser, remove the hashed container ID from your URL and reload the page. If you're testing in a Teams meeting, start a new meeting and try again.
-
-If you plan to update your app with new `SharedObject` or `LiveObject` instances frequently, you should consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there might be active sessions at the time you roll out the change. Existing users in the session shouldn't be impacted, but users joining that session after you deployed a breaking change might have issues connecting to the session. To mitigate this, you might consider some of the following solutions:
-
-* Deploy schema changes for your web application outside of normal business hours.
-* Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
-
-> [!NOTE]
-> Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
-
-<br>
-&nbsp;
-</details>
-<details>
-<summary>Are there limits to how many change events I can emit through Live Share?</summary>
-
-While Live Share is in Preview, any limit to events emitted through Live Share isn't enforced. For optimal performance, you must debounce changes emitted through `SharedObject` or `LiveObject` instances to one message per 50 milliseconds or more. This is especially important when sending changes based on mouse or touch coordinates, such as when synchronizing cursor positions, inking, and dragging objects around a page.
-<br>
-&nbsp;
-</details>
-
-<details>
-<summary>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</summary>
-
-Live Share isn't supported for GCC, GCC-High, and DOD tenants.
-
-<br>
-
-</details>
-
-<details>
-<summary>Does Live Share support external and guest users?</summary>
-
-Yes, Live Share supports guest and external users for most meeting types. However, guest users aren't supported in channel meetings.
-
-<br>
-
-</details>
-
-<details>
-<summary>Does Live Share support Teams Rooms devices?</summary>
-
-No, Live Share doesn't support Teams Rooms devices.
-
-<br>
-
-</details>
-
-<details>
-<summary>Do Live Share apps support meeting recordings?</summary>
-
-No, Live Share doesn't support meeting recordings.
-
-<br>
-
+ You can [create or upgrade a message extension as a plugin in Copilot for Microsoft 365](messaging-extensions/build-bot-based-plugin.md) to interact with third-party tools and services and achieve more with Copilot for Microsoft 365. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in [guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365](messaging-extensions/high-quality-message-extension.md).
 </details>
 
 ## Microsoft Graph
@@ -826,7 +814,7 @@ Open the sign in simple start page instead of opening login page directly to res
 &nbsp;
 </details>
 <details>
-<summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as "authorization_code"?</summary>
+<summary>How can I generate the access token using the endpoint oauth2/v2.0/token with grant type as authorization_code?</summary>
 
 Configure the application you're using to only execute HTML encoding of the scopes once, so the scopes can be correctly sent and evaluated by Microsoft Entra ID.
 <br>
@@ -840,6 +828,70 @@ If you use Teams Toolkit to build your app, see [Add single sign-on to Teams app
 For more information about Node js code sample, see [Bot SSO quick-start](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation-sso-quickstart/js).
 <br>
 &nbsp;
+</details>
+
+## Stageview
+
+</br>
+
+<details>
+
+<summary>Which Stageview should I use?</summary>
+
+Collaborative Stageview allows the users to open content along with a side panel conversation in a Teams window. This view is best suited for most of the collaboration scenarios.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>What's the difference between Stageview Modal and dialogs?</summary>
+
+Stageview Modal is useful to display rich content to the users, such as page, dashboard, or file. <br> Dialogs (referred as task modules in TeamsJS v1.x) are useful to display messages that need users' attention or collect information required to move to the next step.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>When Stageview is invoked, the content opens in Collaborative Stageview but gets loaded in the main Teams window instead of a new window. How to open the content in a new window?</summary>
+
+Ensure that your `contentUrl` domain is accurately reflected in the manifest `validDomains` property. For more information, see [app manifest schema](resources/schema/manifest-schema.md).
+
+</br>
+
+</details>
+
+<details>
+
+<summary>Why isn't any content displayed in a new Teams window even when contentUrl matches with validDomains?</summary>
+
+Call `app.notifySuccess()` in all iframe-based contents to notify Teams that your app is loaded successfully. If applicable, Teams hides the loading indicator. If `notifySuccess` isn't called within 30 seconds, Teams assumes that the app is timed out and displays an error screen with a retry option. For app updates, this step is applicable for tabs that are already configured. If you don't perform this step, an error screen is displayed for the existing users.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>Can I include a deep link in my contentUrl?</summary>
+
+No, deep links aren't supported in `contentUrl`.
+
+</br>
+
+</details>
+
+<details>
+
+<summary>How do I keep a specific thread shown alongside my content?</summary>
+
+Collaborative Stageview from a deep link or a stageView API comes with the additional `threadId` parameter. You can explicitly define the chat thread to be displayed in the side panel for your specific `contentUrl`. For more information about retrieving a `threadId`, see [get conversation thread](/graph/api/group-get-thread).
+
+</br>
+
 </details>
 
 ## Tabs

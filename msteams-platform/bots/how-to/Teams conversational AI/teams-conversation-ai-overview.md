@@ -3,8 +3,9 @@ title: Teams AI library
 description: In this article, learn about Teams conversation AI.
 ms.localizationpriority: medium
 ms.topic: overview
-ms.author: surbhigupta
-ms.date: 11/27/2023
+ms.author: v-ypalikila
+author: michaelmaillot
+ms.date: 02/12/2024
 ---
 
 # Teams AI library
@@ -34,21 +35,6 @@ You can focus on writing your business logic, and allow Teams to handle the comp
 The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a  mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
 
 The following are some of the main features available through Teams AI library:
-
-* [Simple Teams-centric component scaffolding](#simple-teams-centric-component-scaffolding)
-* [Natural language modeling](#natural-language-modeling)
-* [Prompt engineering](#prompt-engineering)
-* [Conversational session history](#conversational-session-history)
-* [Localization](#localization)
-* [LLM modularity](#llm-modularity)
-* [Responsible AI](#responsible-ai)
-* [Predictive engine for mapping intents to actions](#predictive-engine-for-mapping-intents-to-actions)
-* [Action Planner](#action-planner)
-* [Prompt management](#prompt-management)
-* [Augmentation](#augmentation)
-* [Vector data sources](#vector-data-sources)
-* [Enhanced reasoning](#enhanced-reasoning)
-* [Feedback loop](#feedback-loop)
 
 ## Simple Teams-centric component scaffolding
 
@@ -110,7 +96,7 @@ Action Planner is the main component calling your Large Language Model (LLM) and
 
 ## Prompt management
 
-Dynamic prompt management is a feature of the AI system that allows it to adjust the size and content of the prompt that is sent to the language model, based on the available token budget and the data sources or augmentations. It can improve the efficiency and accuracy of the model by ensuring that the prompt doesn't exceed the context window or include irrelevant information. 
+Dynamic prompt management is a feature of the AI system that allows it to adjust the size and content of the prompt that is sent to the language model, based on the available token budget and the data sources or augmentations. It can improve the efficiency and accuracy of the model by ensuring that the prompt doesn't exceed the context window or include irrelevant information.
 
 ## Augmentation
 
@@ -120,14 +106,13 @@ Efficiently enhance and direct your AI model’s responses with Augmentation. Us
 
 * **Monologue**: Create AutoGPT-style agents capable of performing multi-step actions independently and reliability with full schema validation and automatic repair included.
 
-* **Sequences**: Enable your AI assistant to return a sequence of actions for execution with schema validation increasing reliability.
+* **Sequence**: Enable your AI assistant to return a sequence of actions for execution with schema validation increasing reliability.
 
 * **Functions**: Produce structured responses from your model by employing user-defined Functions. These functions are customizable using JSON schemas to define the parameters and their format. The ActionPlanner assesses model responses against the schema, making repairs as needed increasing response reliability and consistency.
 
 ### Vector data sources
 
-Vector databases are a new type of database designed to store vectors and enable efficient search over them. They return the most relevant results for a user's query. The vector search feature in a vector database allows retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input, query, or request is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database. 
-
+Vector databases are a new type of database designed to store vectors and enable efficient search over them. They return the most relevant results for a user's query. The vector search feature in a vector database allows retrieval-augmented generation to use LLMs and custom data or domain-specific information. This involves extracting relevant information from a custom data source and integrating it into the model request through prompt engineering. Before sending a request to the LLM, the user input, query, or request is transformed into an embedding, and vector search techniques are used to find the most similar embeddings in the database.
 
 ## Enhanced reasoning
 
@@ -135,36 +120,33 @@ Teams AI Library offers an  integrated fact-checking system to tackle bot halluc
 
 ## Feedback loop
 
-Feedback loop allows the bot to validate and correct the output of the language model. It checks the structure and parameters of the plan or monologue that the model returns, and provides feedback on errors or missing information. The model then tries to fix its mistakes and returns a valid output. The feedback loop can improve the reliability and accuracy of the AI system, and reduce the chances of hallucination or invalid actions.
+Feedback loop allows the bot to validate and correct the output of the language model. It checks the structure and parameters of the plan or monologue that the model returns and provides feedback on errors or missing information. The model then tries to fix its mistakes and returns a valid output. The feedback loop can improve the reliability and accuracy of the AI system and reduce the chances of hallucination or invalid actions.
 
 The following table lists the updates to the Teams AI library:
 
-|Type |Description  |JavaScript|C#|
-|---------|---------|||
-|OpenAIModel    |The OpenAIModel class lets you call both OAI and Azure OAI with one single component. New models can be defined for other model types like LLaMA2.              | ✔️ |✔️|
-|Embeddings    | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings.        | ✔️ |❌|
-|Prompts     | A new object-based prompt system enables better token management and reduces the likelihood of overflowing the model's context window.        | ✔️ |✔️|
-| Augmentation     | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only  `functions`, `sequences`, and `monologue` style augmentations are supported.        | ✔️ |✔️|
-|Data Sources     |  A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt.      | ✔️ |❌|
-
+|Type |Description  |.NET|JavaScript|Python|
+|---------|---------||||
+|OpenAIModel    |The OpenAIModel class lets you call both OAI and Azure OAI with one single component. New models can be defined for other model types like LLaMA2.              | ✔️ |✔️|✔️|
+|Embeddings    | The OpenAIEmbeddings class lets you generate embeddings using either OAI or Azure OAI. New embeddings can be defined for things like OSS Embeddings.        | ❌ |✔️|✔️|
+|Prompts     | A new object-based prompt system enables better token management and reduces the likelihood of overflowing the model's context window.        | ✔️ |✔️|✔️|
+| Augmentation     | Augmentations simplify prompt engineering tasks by letting the developer add named augmentations to their prompt. Only  `functions`, `sequence`, and `monologue` style augmentations are supported.        | ✔️ |✔️|✔️|
+|Data Sources     |  A new DataSource plugin makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources they wish to augment the prompt.      | ❌ |✔️|✔️|
 
 ## Code samples
 
-|Sample name | Description |.NET | Node.js |
-|----------------|-----------------|--------------|--------------|
-|Echo bot| This sample shows how to incorporate a basic conversational flow into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot) |
+|Sample name | Description |.NET | Node.js | Python|
+|----------------|-----------------|--------------|--------------|--------------|
+|Echo bot| This sample shows how to incorporate a basic conversational flow into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot) | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot)|
 | Search command message extension| This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand) |
 | Typeahead bot| This sample shows how to incorporate the typeahead search functionality in Adaptive Cards into a Microsoft Teams application using Bot Framework and the Teams AI library. | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.adaptiveCards.a.typeAheadBot) |
 |Conversational bot with AI: Teams chef|This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.a.teamsChefBot)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.a.teamsChefBot) |
-|Message extensions: GPT-ME|This sample is a message extension (ME) for Microsoft Teams that uses the text-davinci-003 model to help users generate and update posts.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.b.messageExtensions.gptME)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.b.messageExtensions.AI-ME) |
-|Light bot|This sample illustrates more complex conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf and manually defined responses, and maps user intents to user defined actions.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.c.actionMapping.lightBot) |
+|Message extensions: GPT-ME|This sample is a message extension (ME) for Microsoft Teams that uses the text-davinci-003 model to help users generate and update posts.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.b.messageExtensions.gptME)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.b.messageExtensions.AI-ME)|[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.b.messageExtensions.AI-ME)|
+|Light bot|This sample illustrates more complex conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf and manually defined responses, and maps user intents to user defined actions.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.c.actionMapping.lightBot)|[View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.c.actionMapping.lightBot)|
 |List bot|This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot harnesses the power of AI to simplify your workflow and bring order to your daily tasks and showcases the action chaining capabilities.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.d.chainedActions.listBot)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.d.chainedActions.listBot) |
 |DevOps bot|This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot uses the gpt-3.5-turbo model to chat with Teams users and perform DevOps action such as create, update, triage and summarize work items.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.e.chainedActions.devOpsBot)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.e.chainedActions.devOpsBot) |
 |Twenty questions|This sample shows showcases the incredible capabilities of language models and the concept of user intent. Challenge your skills as the human player and try to guess a secret within 20 questions, while the AI-powered bot answers your queries about the secret.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.e.twentyQuestions)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.e.twentyQuestions) |
 |Math tutor assistant|This example shows how to create a basic conversational experience using OpenAI's Assistants APIs. It uses OpenAI's Code Interpreter tool to create an assistant that's an expert on math.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.a.mathBot)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/06.assistants.a.mathBot) |
 |Food ordering assistant|This example shows how to create a conversational assistant that uses tools to call actions in your bots code. It's a food ordering assistant for a fictional restaurant called The Pub and is capable of complex interactions with the user as it takes their order.|[View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/06.assistants.b.orderBot)|[View](https://github.com/microsoft/teams-ai/tree/main/js/samples/06.assistants.b.orderBot) |
-
-
 
 ## Next step
 

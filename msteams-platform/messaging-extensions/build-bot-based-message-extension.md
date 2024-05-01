@@ -1,7 +1,7 @@
 ---
 title: Build message extensions using Bot Framework
 author: v-ypalikila
-description: Learn how to build a bot message extension using Bot Framework with Teams Toolkit.
+description: Learn about Bot-based message extension using Bot Framework to interact with your web service from different locations in the Teams client.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -20,7 +20,7 @@ There are two types of message extension commands, action command and search com
 
 # [Search commands](#tab/search-commands)
 
-Message extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to select  search command invoke locations, and add the search command to your app manifest.
+Message extension search commands allow users to search external systems and insert the results of that search into a message in the form of a card. This document guides you on how to select search command invoke locations, and add the search command to your app manifest.
 
 > [!NOTE]
 > The result card size limit is 28 KB. The card isn't sent if its size exceeds 28 KB.
@@ -30,7 +30,7 @@ See the following video to learn how to define message extension search commands
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4OIvK]
 <br>
 
-The search command in a message extension is configured using the `composeExtensions.commands` property and the `query` type in the app manifest (previously called as Teams app manifest).
+The search command in a message extension is configured using the `composeExtensions.commands` property and the `query` type in the app manifest (previously called as Teams app manifest). Command and parameter descriptions enhance the usability and effectiveness of a message extension. A good command description offers a clear and concise summary of the app’s features.
 
 The following code is an example of the `composeExtensions` property defining a search command:
 
@@ -76,6 +76,7 @@ You must add the following parameters to your `composeExtensions.commands` array
 | `id` | Unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
 | `title` |Command name. This value appears in the user interface (UI). | Yes | 1.0 |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
+|`semanticDescription`|Semantic description of the command for consumption by the large language model.|No|1.17|
 | `type` | Type of command. Default is `query`. | No | 1.4 |
 |`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
 | `context` | Optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `compose`,`commandBox`. | No | 1.5 |
@@ -87,6 +88,7 @@ You must add the following search parameter details that define the text visible
 | `parameters` | Defines a static list of parameters for the command. | No | 1.0 |
 | `parameter.name` | Describes the name of the parameter. The `parameter.name` is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
+|`parameter.semanticDescription`|Semantic description of the parameter for consumption by the large language model.|No|1.17|
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
 | `parameters.value` | Initial value for the parameter. Currently the value isn't supported | No | 1.5 |

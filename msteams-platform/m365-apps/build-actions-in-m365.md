@@ -79,7 +79,7 @@ Build the handler to receive the Action information through the [context object]
 
 When a user selects Add option from the app's context menu, a personal tab opens with the help of the `openPage` property in the app manifest. Your app can access contextual information about the invoked Action from the `actionInfo` property of the `app.getContext()` context object.
 
-The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a page from an Action and the content that initiated the Action.
+The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a tab from an Action and the content that initiated the Action.
 
 ```javascript
 app.getContext().then((context: app.Context) => {

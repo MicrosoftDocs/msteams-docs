@@ -21,6 +21,7 @@ You have the following options to respond:
 * [Card response](#respond-with-a-card-inserted-into-the-compose-message-area): You can respond with a card that the user can interact with or insert into a message.
 * [Adaptive Card from bot](#bot-response-with-adaptive-card): Insert an Adaptive Card directly into the conversation.
 * [Request the user to authenticate](/microsoftteams/platform/messaging-extensions/how-to/add-authentication).
+* [Request the user to provide additional configuration](../search-commands/respond-to-search.md#configuration-response).
 
 If the app doesn't respond within five seconds, the Teams client retries the request twice before it sends an error message **Unable to reach the app**. If the bot replies after the timeout, the response is ignored.
 
@@ -218,7 +219,7 @@ To configure the poll:
 
 1. The user selects the message extension to invoke the dialog.
 1. The user configures the poll with the dialog.
-1. After submitting the dialog, the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
+1. When the user submits the dialog, the app uses the information provided to build the poll as an Adaptive Card and sends it as a `botMessagePreview` response to the client.
 1. The user can then preview the Adaptive Card message before the bot inserts it into the channel. If the app isn't a member of the channel, select `Send` to add it.
 
     > [!NOTE]
@@ -415,7 +416,7 @@ For more information on responding to the initial `fetchTask` event, see [respon
 
 ### Respond to botMessagePreview send
 
-After the user selects the **Send**, you receive a `composeExtensions/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service must create and send a proactive message with the Adaptive Card to the conversation, and also reply to the invoke.
+After the user selects the **Send**, you receive a `composeExtensions/submitAction` invoke with `value.botMessagePreviewAction = send`. Your web service must create and send a message with the Adaptive Card to the conversation, and also reply to the invoke.
 
 # [C#/.NET](#tab/dotnet)
 
@@ -559,6 +560,8 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
 # [C#/.NET](#tab/dotnet-1)
 
 ```csharp
+// Attribute the message to the user on whose behalf the bot is posting
+  responseActivity.ChannelData = new {
     OnBehalfOf = new []
     {
       new
@@ -569,7 +572,22 @@ To use the user attribution in teams, you must add the `OnBehalfOf` mention enti
         DisplayName = turnContext.Activity.From.Name
       }  
     }
+  };
 
+```
+
+# [JavaScript/Node.js](#tab/javascript-1)
+
+```javascript
+    const responseActivity = { type: 'message', attachments: [adaptiveCard], channelData: {
+        onBehalfOf: [ { 
+            itemId: 0, 
+            mentionType: 'person', 
+            mri: context.activity.from.id, 
+            displayname: context.activity.from.name 
+            }
+        ]
+    }};
 ```
 
 # [JSON](#tab/json-1)
