@@ -36,7 +36,7 @@ Prompt Starters are added through command menu that are defined in your app mani
 
 ### Create a Prompt Starter for your bot using Developer Portal
 
-A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.
+A prerequisite to create a Prompt Starter for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.
 
 To create a command menu for your bot using Developer Portal:
 
