@@ -366,7 +366,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 ## ID
 
-**Required** &ndash; Microsoft app ID
+**Required** &ndash; String &ndash; Microsoft app ID
 
 The ID is a unique Microsoft-generated identifier for the app. The format of the ID is GUID. You have an ID if your bot is registered through the Microsoft Bot Framework. You have an ID if your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
 
