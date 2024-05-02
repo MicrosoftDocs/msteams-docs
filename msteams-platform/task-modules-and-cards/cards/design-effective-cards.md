@@ -1,16 +1,15 @@
 ---
-title: Design Adaptive Cards for your app
-description: Learn how to design Adaptive Cards for your Teams app and get the Microsoft Teams UI Kit.
+title: Designing Adaptive Cards for your app
+description: In this module, learn how to design Adaptive Cards for your Teams app and get the Microsoft Teams UI Kit.
 ms.localizationpriority: high
 ms.topic: conceptual
 ms.date: 04/25/2023
 ---
-
-# Design Adaptive Cards for your Teams app
+# Designing Adaptive Cards for your Microsoft Teams app
 
 An Adaptive Card contains a freeform body of card elements and optional set of actions. Adaptive Cards are actionable snippets of content that you can add to a conversation through a bot or message extension. Using text, graphics, and buttons, these cards provide rich communication to your audience.
 
-The Adaptive Card framework is used across many Microsoft products, including Microsoft Teams. You can send cards inside messages to users via bots or message extensions. Users can also take actions on cards when present.
+The Adaptive Card framework is used across many Microsoft products, including Teams. You can send cards inside messages to users via bots or message extensions. Users can also take actions on cards when present.
 
 :::image type="content" source="../../assets/images/adaptive-cards/adaptive-card-overview.png" alt-text="Overview example of an Adaptive Card." lightbox="../../assets/images/adaptive-cards/adaptive-card-overview.png":::
 
@@ -34,278 +33,129 @@ You also can start designing your Adaptive Cards directly in the browser.
 
 Our largest card. Use for sharing articles or scenarios where an image tells most of the story.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Example shows an Adaptive Card hero card.":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-hero-card.png" alt-text="Example shows an Adaptive Card hero card on mobile.":::
 
----
+#### Desktop
 
-#### Sample: Recipe hero
-
-The hero showcase card features a captivating image and is ideal for highlighting featured content or recipes. It expands to reveal more details when users select **Show more**.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/recipe-hero-desktop.png" alt-text="Screenshot shows the desktop version of the recipe hero Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/recipe-hero-mobile.png" alt-text="Screenshot shows the mobile version of the recipe hero Adaptive Card sample.":::
-
----
-
-> [!NOTE]
-> Download Adaptive Card samples with ready-to-use code [here](https://github.com/pnp/AdaptiveCards-Templates).
+:::image type="content" source="../../assets/images/adaptive-cards/hero-card.png" alt-text="Example shows an Adaptive Card hero card.":::
 
 ### Thumbnail
 
 Use for sending a simple actionable message.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card." lightbox="../../assets/images/adaptive-cards/thumbnail-card.png":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card on mobile.":::
 
----
+#### Desktop
 
-#### Sample: Work item thumbnail
-
-This card design optimizes space with a small image, making it ideal for displaying concise information.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/work-item-thumbnail-desktop.png" alt-text="Screenshot shows the desktop version of the work item thumbnail Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/work-item-thumbnail-mobile.png" alt-text="Screenshot shows the mobile version of the work item thumbnail Adaptive Card sample.":::
-
----
+:::image type="content" source="../../assets/images/adaptive-cards/thumbnail-card.png" alt-text="Example shows an Adaptive Card thumbnail card." lightbox="../../assets/images/adaptive-cards/thumbnail-card.png":::
 
 ### List
 
-Use in scenarios where you want the user to pick an item from a list, but the items don’t need a lot of explanation.
+Use in scenarios where you want the user to pick an item from a list, but the items don’t need a lot of explanations.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Example shows an Adaptive Card list card." lightbox="../../assets/images/adaptive-cards/list-card.png":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-list-card.png" alt-text="Example shows an Adaptive Card list card on mobile.":::
 
----
+#### Desktop
 
-#### Sample: List
-
-Use this card to showcase a selection of personalized content, such as curated lists of articles, videos, or courses. Users can select any module to explore its content or open it for a comprehensive view within the app.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/list-card-desktop.png" alt-text="Screenshot shows the desktop version of the list Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/list-card-mobile.png" alt-text="Screenshot shows the mobile version of the list Adaptive Card sample."
-
----
+:::image type="content" source="../../assets/images/adaptive-cards/list-card.png" alt-text="Example shows an Adaptive Card list card." lightbox="../../assets/images/adaptive-cards/list-card.png":::
 
 ### Digest
 
 Use for news digests and round-up posts. Note: We recommend the thumbnail card for a single update or news item.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." lightbox="../../assets/images/adaptive-cards/digest-card.png":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-digest-card.png" alt-text="Example shows an Adaptive Card digest card on mobile.":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/digest-card.png" alt-text="Example shows an Adaptive Card digest card." lightbox="../../assets/images/adaptive-cards/digest-card.png":::
 
 ### Media
 
 Use when you want to combine text and media, like audio or video.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Example shows an Adaptive Card media card." lightbox="../../assets/images/adaptive-cards/media-card.png":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-media-card.png" alt-text="Example shows an Adaptive Card media card on mobile.":::
 
----
+#### Desktop
 
-#### Sample: Communications
-
-This versatile card is designed for communication, social interaction, and sharing updates. Be it company announcements, posts, or community engagement, this card adapts to your content. Customize it with your own text, images, and links to create interesting social experiences.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/communication-card-desktop.png" alt-text="Screenshot shows the desktop version of the communication Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/communication-card-mobile.png" alt-text="Screenshot shows the mobile version of the communication Adaptive Card sample.":::
-
----
-
-#### Sample: Author highlight video
-
-Use this card sample to showcase short video content, such as tutorials, interviews, or creative pieces. Customize it with your own title, description, and information about the author to create an engaging viewing experience for users.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/author-highlight-video-desktop.png" alt-text="Screenshot shows the desktop version of the author highlight video Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/author-highlight-video-mobile.png" alt-text="Screenshot shows the mobile version of the author highlight video Adaptive Card sample.":::
-
----
-
-#### Sample: Course video
-
-This card sample serves as a learning hub with video content. Customize it with a series of courses, tutorials, or informative clips. Modify the title, description, and information about the author to suit the needs of your users.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/course-video-desktop.png" alt-text="Screenshot shows the desktop version of the course video Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/course-video-mobile.png" alt-text="Screenshot shows the mobile version of the course video Adaptive Card sample.":::
-
----
-
-#### Sample: Standard video
-
-Use this compact, standard video card sample to share a range of content, from tech updates to creative inspiration. Users can select the overflow menu to access more features, such as bookmarks. They can also take actions like sharing or learning more about the content.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/standard-video-desktop.png" alt-text="Screenshot shows the desktop version of the standard video Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/standard-video-mobile.png" alt-text="Screenshot shows the mobile version of the standard video Adaptive Card sample.":::
-
----
+:::image type="content" source="../../assets/images/adaptive-cards/media-card.png" alt-text="Example shows an Adaptive Card media card." lightbox="../../assets/images/adaptive-cards/media-card.png":::
 
 ### People
 
 Use when you want to efficiently communicate the individuals involved in a task.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Example shows an Adaptive Card people card." lightbox="../../assets/images/adaptive-cards/people-card.png":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-people-card.png" alt-text="Example shows an Adaptive Card people card on mobile.":::
 
----
+#### Desktop
 
-#### Sample: Account details
-
-This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to further explore the content.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/account-details-desktop.png" alt-text="Screenshot shows the desktop version of the account details Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/account-details-mobile.png" alt-text="Screenshot shows the mobile version of the account details Adaptive Card sample.":::
-
----
+:::image type="content" source="../../assets/images/adaptive-cards/people-card.png" alt-text="Example shows an Adaptive Card people card." lightbox="../../assets/images/adaptive-cards/people-card.png":::
 
 ### Request ticket
 
 Use to get quick inputs from a user to automatically create a task or ticket.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card." lightbox="../../assets/images/adaptive-cards/request-ticket-card.png":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card on mobile.":::
 
----
+#### Desktop
 
-#### Sample: Issue status
-
-The issue card sample is designed to highlight a unique issue and provides important details such as the status and owner. You can easily customize the card with other relevant information, such as priority or due date.
-
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/issue-status-desktop.png" alt-text="Screenshot shows the desktop version of the issue status Adaptive Card sample.":::
-
-# [Mobile](#tab/mobile)
-
-:::image type="content" source="../../assets/images/adaptive-cards/issue-status-mobile.png" alt-text="Screenshot shows the mobile version of the issue status Adaptive Card sample.":::
-
----
+:::image type="content" source="../../assets/images/adaptive-cards/request-ticket-card.png" alt-text="Example shows an Adaptive Card request ticket card." lightbox="../../assets/images/adaptive-cards/request-ticket-card.png":::
 
 ### ImageSet
 
 Use to send multiple image thumbnails.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Example shows an Adaptive Card image set card.":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-image-set-card.png" alt-text="Example shows an Adaptive Card image set card on mobile.":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/image-set-card.png" alt-text="Example shows an Adaptive Card image set card.":::
 
 ### ActionSet
 
 Use when you want to the user to select a button, then gather addition user input from the same card.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card action set card." lightbox="../../assets/images/adaptive-cards/action-set-card.png":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-action-set-card.png" alt-text="Example shows an Adaptive Card action set card on mobile.":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/action-set-card.png" alt-text="Example shows an Adaptive Card action set card." lightbox="../../assets/images/adaptive-cards/action-set-card.png":::
 
 ### ChoiceSet
 
 Use to gather multiple inputs from the user.
 
-# [Desktop](#tab/desktop)
-
-:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card." lightbox="../../assets/images/adaptive-cards/choice-set-card.png":::
-
-# [Mobile](#tab/mobile)
+#### Mobile
 
 :::image type="content" source="../../assets/images/adaptive-cards/mobile-choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card on mobile.":::
 
----
+#### Desktop
+
+:::image type="content" source="../../assets/images/adaptive-cards/choice-set-card.png" alt-text="Example shows an Adaptive Card choice set card." lightbox="../../assets/images/adaptive-cards/choice-set-card.png":::
 
 ## Anatomy
 
 Adaptive Cards have a lot of flexibilities. But at minimum, we strongly suggest including the following components in every card.
 
-### Desktop
+#### Mobile
 
-:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample shows Adaptive Card anatomy.":::
+:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Example shows Adaptive Card anatomy on mobile.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -313,9 +163,9 @@ Adaptive Cards have a lot of flexibilities. But at minimum, we strongly suggest 
 |B|**Body copy**: Convey details that are either too long or not important enough to include in the header.|
 |C|**Primary actions**: As a best practice, include 1-3 primary actions. You can have up to six.|
 
-### Mobile
+#### Desktop
 
-:::image type="content" source="../../assets/images/adaptive-cards/mobile-anatomy.png" alt-text="Example shows Adaptive Card anatomy on mobile.":::
+:::image type="content" source="../../assets/images/adaptive-cards/anatomy.png" alt-text="EExample shows Adaptive Card anatomy.":::
 
 |Counter|Description|
 |----------|-----------|
@@ -337,7 +187,7 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format yo
   * **Don't**: Set `"width": "auto"` for every column container. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with buttons and other content that must always be completely visible.
 * `"width": "stretch"`: Sizes columns based on the available `ColumnSet` width. When multiple columns use the `"stretch"` value, they equally share the available width.
   * **Do**: Use with one column if all your other columns have a static width. For example, you have thumbnail images in one column that are all 50 pixels wide.
-* `"width": "<number>"`: Sizes columns using a proportion of the available `ColumnSet` width. For example, if you set three columns with `"width": "1"`, `"width": "4"`, and `"width": "5"`, the columns take up 10, 40, and 50 percent of the available width.
+* `"width": "<number>"`: Sizes columns using a proportion of the available `ColumnSet` width. For example, if you set three columns with `"width": "1"`, `"width": "4"`, and `"width": "5"`, the columns will take up 10, 40, and 50 percent of the available width.
 * `"width": "<number>px"`: Sizes columns to a specific pixel width. This approach is useful when creating tables.
   * **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
   * **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like Teams desktop.
@@ -350,7 +200,7 @@ Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format yo
 
 :::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="The screenshot shows how to set column width for Adaptive Cards.":::
 
-**Don't**: In this screen, both columns have `width` set to `auto`. This causes the **Select** button to be cut off slightly compared to the input.
+**Don't**: In this screen, both columns have `width` set to `auto`. This causes the **Select** button on the right to be cut off slightly compared to the input.
 
 :::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-dont.png" alt-text="The screenshot shows how not to set column width in Adaptive Cards.":::
 
@@ -536,13 +386,13 @@ Here's the code for implementing the design example you should follow.
 
 **Don't**: Using too many columns can clutter your card content on mobile.
 
-:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-dont.png" alt-text="The screenshot shows how too many columns can negatively affect Adaptive Card layout.":::
+:::image type="content" source="~/assets/images/adaptive-cards/design-column-amount-dont.png" alt-text="The screenshot shows how to many columns can negatively affect Adaptive Card layout.":::
 
 #### Example: Fixed width has its place
 
 # [Design](#tab/design)
 
-When the the size of something you're displaying doesn't need to change, set your columns to a specific pixel width. This example shows the left column sized at 50 pixels, while the descriptions next to the thumbnails stretch the length of the card.
+When the the size of something you're displaying doesn't need to change, set you columns to a specific pixel width. This example shows the left column sized at 50 pixels, while the descriptions next to the thumbnails stretch the length of the card.
 
 :::image type="content" source="~/assets/images/adaptive-cards/design-width-auto-do.png" alt-text="The screenshot shows how to set column width in Adaptive Cards.":::
 
@@ -818,11 +668,11 @@ Adaptive Cards should present quick, actionable content. Too many actions can ov
 
 ### Frequency
 
-:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="The screenshot shows best practice about Adaptive Card frequency." lightbox="../../assets/images/adaptive-cards/frequency-do.png":::
+:::image type="content" source="../../assets/images/adaptive-cards/frequency-do.png" alt-text="The screenshot shows best practice about Adaptive Card frequency.":::
 
 #### Do: Be concise
 
-It's easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful. Try to limit yourself to the essentials. This is especially true in a channel where users have less tolerance for what they perceive as noise.
+It's easy to send multiple cards into a conversation, but once cards scroll out of view, they become less useful. Try to limit yourself to the essentials. This is especially true in a channel where users have less tolerance for what they perceive as "noise".
 
 ## See also
 
