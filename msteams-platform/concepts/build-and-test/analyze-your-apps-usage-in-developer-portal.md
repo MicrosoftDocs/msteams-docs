@@ -19,6 +19,8 @@ In the Developer Portal for Teams, on the **Overview** page, you can see the tot
 | **Monthly R30 active users (MAU)** | The default usage metric. It shows the count of unique active users who used your app within that rolling 30 days window in UTC. |
 | **Daily active users (DAU)** | It shows you the count of unique active users who used your app in a given day in UTC. |
 
+## App usage
+
 The app usage for a given day is reflected within 24 to 48 hours, and usage data for the new apps can take up to three to five days to reflect in the charts.
 
 You can view your app's usage and other insights from the **Analytics** page. To access the page:
@@ -46,7 +48,7 @@ After you have selected your desired filters, you can explore the following indi
 * [Usage by retention state](#usage-by-retention-state)
 * [Usage intensity](#usage-intensity)
 
-## Usage by time period
+### Usage by time period
 
 The **Usage by time period** chart shows you the number of active users or tenants who opened and used your app across different time periods.
 
@@ -59,13 +61,7 @@ The **Usage by time period** chart shows you the number of active users or tenan
 | **Weekly R7** | Each data point represents a given R7 (Rolling 7 days) period. |
 | **Daily** | Each data point represents a given R1 (Rolling 1 day) period. |
 
-## Usage by platform and OS
-
-The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as **Windows**, **Mac**, **iOS**, **Android**, and **Web**. The same user or tenant can use an app on multiple endpoints. Each data point represents a given R30 (Rolling 30 days) period.
-
- :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Screenshot shows you the usage by platform and OS chart for your published app.":::
-
-## Usage by retention state
+### Usage by retention state
 
 The **Usage by retention state** chart lets you track four key retention or churn metrics for your app over time.
 
@@ -78,7 +74,7 @@ The **Usage by retention state** chart lets you track four key retention or chur
 | Resurrected users or tenants | Active users or tenants who used your app one or more times before but not in the immediately preceding R30 time period. |
 | Lapsed users or tenants | Active users or tenants who were not seen during a given R30 time period but were seen during the immediately preceding R30 time period. |
 
-## Usage intensity
+### Usage intensity
 
 The **Usage intensity** chart shows the key usage intensity metrics for your app.
 
@@ -89,6 +85,40 @@ The **Usage intensity** chart shows the key usage intensity metrics for your app
 | **Median days used per month** | The median number of days in which your app was opened in the last R30 (Rolling 30 days) time period. |
 | **% of 5+ Days usage** | The percentage of active users who opened or used the app more than five days in the last R30 time period. |
 | **DAU/MAU** | The ratio of the average number of unique users or tenants who used your app on each day divided by the Monthly active users for the selected R30 time period. |
+
+### Usage by region
+
+## Host and devices
+
+### Usage by platform and OS
+
+The **Usage by platform and OS** chart shows your app's active usage across various endpoints, such as **Windows**, **Mac**, **iOS**, **Android**, and **Web**. The same user or tenant can use an app on multiple endpoints. Each data point represents a given R30 (Rolling 30 days) period.
+
+ :::image type="content" source="../../assets/images/tdp/usage-by-platform-OS.png" alt-text="Screenshot shows you the usage by platform and OS chart for your published app.":::
+
+### Usage by host app
+
+content to be added
+
+## Capability
+
+Content to  be added
+
+### Usage by app capability
+
+You can view the individual app capability usage for R30, R7, daily.
+
+## Segment
+
+### Usage by segment
+
+You can view different segments where your app is used.
+
+## Vertical
+
+### Usage by industry vertical
+
+You can view the overall industry verticals such as Healthcare, Finance, Retail, and Manufacturing that use your app.
 
 ## App dashboard
 
