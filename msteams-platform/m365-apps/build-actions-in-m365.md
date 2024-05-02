@@ -25,7 +25,7 @@ To build Actions for your app, follow these steps:
 
 ## Prerequisites
 
-Before you get started, ensure that you install the following:
+Before you get started, ensure that you install the following tools:
 
 | &nbsp; | Install | Description |
 | --- | --- | --- |
@@ -127,7 +127,7 @@ You can now preview your Actions in the Microsoft 365 home page, right-click a f
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 
-## Preinstall Actions for users in Microsoft365 Admin Center
+## Preinstall Actions for users in Microsoft 365 Admin Center
 
 > [!NOTE]
 > Actions are available in public developer preview, ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users to experience Actions in Microsoft 365 app.
