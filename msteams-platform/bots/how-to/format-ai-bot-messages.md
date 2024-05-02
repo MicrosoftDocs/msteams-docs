@@ -7,9 +7,9 @@ ms.localizationpriority: medium
 
 # Format your AI bot messages
 
-As we make our bots intelligent and more conversational, there's an emerging need for user experiences that are designed for AI and promote user trust and transparency.
+As we make our bots intelligent and more conversational, there's an emerging need for user experiences designed for AI and promote user trust and transparency.
 
-Enhance your AI-powered bot's user experience to fully leverage its AI capabilities. Add features such as citations, an AI-label, feedback buttons, and a sensitivity label. These elements streamline the user experience for common AI scenarios, such as citing data sources for retrieval-augmented generation (RAG), identifying AI-generated responses, and collecting feedback. By incorporating these elements, you can elevate your bot’s user experience to align with industry-leading AI experiences, like Microsoft Copilot.
+Enhance your AI-powered bot's user experience to fully use its AI capabilities. Add features such as citations, an AI-label, feedback buttons, and a sensitivity label. These elements streamline the user experience for common AI scenarios, such as citing data sources for retrieval-augmented generation (RAG), identifying AI-generated responses, and collecting feedback. By incorporating these elements, you can elevate your bot’s user experience to align with industry-leading AI experiences, like Microsoft Copilot.
 
 Even bots that don’t use AI might find it beneficial to add citations or feedback buttons to their responses, as these UI elements can enhance their functionality.
 
@@ -22,7 +22,7 @@ This article covers how to add the following elements to your bot message:
 
 ## Add AI label to bot message
 
-It's important to communicate to users that your bot is using AI to generate its messages. While large language models (LLMs) are generally reliable, there may be scenarios where their responses could be incorrect or misleading.
+It's important to communicate to users that your bot is using AI to generate its messages. While large language models (LLMs) are reliable, there might be scenarios where their responses could be incorrect or misleading.
 
 Adding a label to your AI-generated message enhances transparency and encourages users to exercise caution when consuming the message.
 
@@ -409,7 +409,7 @@ Reference the sensitivity label from citation
 }
 ```
 
-Once added, your bot message contains a shield icon. Users can hover over this icon to find details about the sensitivity of the message.:
+Once added, your bot message contains a shield icon. Users can hover over this icon to find details about the sensitivity of the message:
 
 *image placeholder*
 
