@@ -204,6 +204,12 @@ The following table provides the response codes:
 | **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have permissions to allow share to stage.|
 
+## Get all app content in meeting side panel
+
+The `sharing.history.getContent` API enables to open content in side panel and request for all the content shared in the meeting to display in side panel and shared to stage.
+
+*placeholder for Query parameter, example, and response code/error code.*
+
 ## Build an in-meeting document signing app
 
 You can build an in-meeting app for enabling meeting participants to sign documents in real time. It facilitates reviewing and signing documents in a single session. The participants can sign the documents using their current tenant identity.

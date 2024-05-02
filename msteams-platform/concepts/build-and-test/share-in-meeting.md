@@ -8,28 +8,22 @@ ms.date: 02/08/2023
 ---
 # Share in meeting
 
-Share to Teams allows users to share documents or third-party web apps to an upcoming or an ongoing meeting. The meeting participants can collaborate and interact with the third-party web apps or edit the documents together.
-
-Share to Teams embedded in a web app or a document enables users to share content to an upcoming meeting or an ongoing meeting.
-
-> [!NOTE]
-> Share in meeting is getting integrated with Share to Teams allowing users to share from a webapp to Teams chats, channels, or meetings.
+Share in meeting allows users to share documents or third-party web apps to the meeting stage. The meeting participants can collaborate and interact with the third-party web apps or edit the documents together.
 
 The following image shows the **Share to Teams** button on the web app:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="Screenshot shows share in meeting button on the web app.":::
 
-When a user selects the **Share to Teams** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage. For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension.
+| Action | Description |
+|---|---|
+| How it works | When a user selects the **Share in meeting** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage. |
+| Requirements of meeting participants | For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension. |
+| Deeplink | When you select the **Share in meeting** button, it launches a deep link to the meeting stage. The following is the deep link format: </br> `msteams:/l/meeting-share?deeplinkId={GUID}&fqdn={string}&lm=deeplink&appContext={json encoded app context}` </br> For more information, see [generate a deep link to share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings). |
+| Sidepanel experience | When the meeting begins, the app side panel is automatically opened for the user who shared the content to the meeting. The developer can call the `sharing.history.getContent` API to get the list of content shared and display the content and have it readily available in the side panel. </br> For an upcoming recurring meeting, where the app is already added, the developer can call the API to get the latest content to be displayed in the app side panel.|
 
-When you select the **Share to Teams** button, it launches a deep link to the meeting stage. The following is the deep link format:
+## Prerequisite
 
-`msteams:/l/meeting-share?deeplinkId={GUID}&fqdn={string}&lm=deeplink&appContext={json encoded app context}`
-
-For more information, see [generate a deep link to share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings).
-
-When the meeting begins, the app side panel is automatically opened for the user who shared the content to the meeting. The developer can call the JS SDK API to get the list of content shared and display the content and have it readily available in the side panel.
-
-Note, in the event of an upcoming recurring meeting, where the app is already added, the developer can call the JS SDK to get the latest content to be displayed in the app side panel.
+To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts, see [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
 
 ## Enable share in meeting
 
@@ -65,12 +59,6 @@ You can scan your web page to locate any HTML elements with the class name of ty
    * `data-button-size`: Specifies the size of the button in pixel.
    * `data-target`: Specifies whether the link opens in the same window, new tab, or a new window.
    * `data-locale`: Specifies the desired user language.
-
-4. Following attribute to allow users to share content in meetings, addition to existing capability to share in chat/channel. It will be considered as false by default.
-   * `allow-share-in-meeting` (optional): Set to true to enable users to share content in meetings.
-
-5. Following attribute to open content in side panel and request for all the content shared in the meeting to display in side panel and shared to stage.
-   * `sharing.history.getContent`: App can request for all the content shared in the current meeting to load in the side panel.
 
 # [Method 2](#tab/method-2)
 
@@ -193,61 +181,7 @@ Once the user initiates an instant meeting (Meet now), they can add participants
 
 :::image type="content" source="../../assets/images/integrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="The screenshot is an example that shows an option to add participants and how to interact with the app.":::
 
-To add a deep link to share content on stage, you need to have an app context. The app context allows the Teams client to fetch the app manifest and check if the sharing on stage is possible. The following is an example of an app context:
-
-`{ "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view", "appId": "9ec80a73-1d41-4bcb-8190-4b9eA9e29fbb" , "useMeetNow": false }`
-
-The query parameters for the app context are:
-
-* `appID`: This is the ID that can be obtained from the app manifest.
-* `appSharingUrl`: The URL, which needs to be shared on stage should be a valid domain defined in the app manifest. If the URL isn't a valid domain, an error dialog appears to provide the user with a description of the error.
-* `useMeetNow`: This includes a Boolean parameter that can be either true or false.
-  * **True**: When the `useMeetNow` value is true and if there's no ongoing meeting, a new Meet now meeting will be initiated. When there's an ongoing meeting, this value will be ignored.
-
-  * **False**: The default value of `useMeetNow` is false, which means that when a deep link is shared to stage and there's no ongoing meeting, a calendar pop-up will appear. However, you can share directly during a meeting.
-
-Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Following is an example:
-
-```javascript
-const appContext= JSON.stringify({ 
-  "appSharingUrl" : "https://teams.microsoft.com/extensibility-apps/meetingapis/view",
-  "appId": "9cc80a93-1d41-4bcb-8170-4b9ec9e29fbb",
-  "useMeetNow": false
-});
-const encodedContext = encodeURIComponent(appContext).replace(/'/g,"%27").replace(/"/g,"%22");
-const encodedAppContext = encodeURIComponent(encodedContext).replace(/'/g,"%27").replace(/"/g,"%22");
-```
-
-A deep link can be launched either from the Teams web or from the Teams desktop or mobile client.
-
-* **Teams web**: Use the following format to launch a deep link from the Teams web to share content on stage:
-
-    `msteams:/l/meeting-share?deeplinkId={GUID}&fqdn={string}&lm=deeplink&appContext={json encoded app context}`
-
-    Example: `https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
-
-    |Deep link|Format|Example|
-    |---------|---------|---------|
-    |To share the app and open Teams calendar, when `useMeeetNow` is **false**, default.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
-    |To share the app and initiate instant meeting, when `useMeeetNow` is **true**.|`https://teams.microsoft.com/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}}&lm=deeplink%22&appContext={encoded app context}`|`https://teams.microsoft.com/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
-
-* **Teams desktop or mobile client**: Use the following format to launch a deep link from the Teams desktop or mobile client to share content on stage:
-
-    `msteams:/l/meeting-share?deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink&appContext={encoded app context}`
-
-    Example: `msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`
-
-    |Deep link|Format|Example|
-    |---------|---------|---------|
-    |To share the app and open Teams calendar, when `useMeeetNow` is **false**, default.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Afalse%257D`|
-    |To share the app and initiate instant meeting, when `useMeeetNow` is **true**.|`msteams:/l/meeting-share?   deeplinkId={deeplinkid}&fqdn={fqdn}&lm=deeplink%22&appContext={encoded app context}`|`msteams:/l/meeting-share?deeplinkId={sampleid}&fqdn=teams.microsoft.com&lm=deeplink%22&appContext=%257B%2522appSharingUrl%2522%253A%2522https%253A%252F%252Fteams.microsoft.com%252Fextensibility-apps%252Fmeetingapis%252Fview%2522%252C%2522appId%2522%253A%25229cc80a93-1d41-4bcb-8170-4b9ec9e29fbb%2522%252C%2522useMeetNow%2522%253Atrue%257D`|
-
-The query parameters are:
-
-* `deepLinkId`: Any identifier used for telemetry correlation.
-* `fqdn`: `fqdn` is an optional parameter, which can be used to switch to an appropriate environment of a meeting to share an app on stage. It supports scenarios where a specific app share happens in a particular environment. The default value of `fqdn` is enterprise URL and possible values are `Teams.live.com` for Teams for Life, `teams.microsoft.com`, or `teams.microsoft.us`.
-
-To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts, see [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
+To add a deep link to share content on stage in meetings, see [generate a deep link to share content to stage in meetings](deep-link-workflow.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 
 > [!NOTE]
 > For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.

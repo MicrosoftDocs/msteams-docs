@@ -1,6 +1,6 @@
 ---
 title: Share to Teams from web apps
-description: Learn to add the Share to Teams embedded button on your website, with a website preview, using Code samples 
+description: Learn to add the Share to Teams embedded button on your website, with a website preview, using Code samples.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 07/22/2022
@@ -8,7 +8,7 @@ ms.date: 07/22/2022
 
 # Share to Teams from web apps
 
-Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select Share to Teams button, it launches the Share to Teams experience in a pop-up window. This allows you to share a link directly to any person, Microsoft Teams channel without switching the context, or to a meeting chat even before the meetings is initiated.
+Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select Share to Teams button, it launches the Share to Teams experience in a pop-up window. This allows you to share a link directly to any person, channel without switching the context, or an upcoming or an ongoing meeting.
 
 The following image displays the pop-up window for Share to Teams preview experience:
 
@@ -33,6 +33,8 @@ See the following video to learn how to embed Share to Teams button:
 <br>
 
 ## Embed a Share to Teams button
+
+# [Method 1](#tab/method-1)
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -86,6 +88,36 @@ See the following video to learn how to embed Share to Teams button:
 
 1. If your page dynamically renders content, you can use the `shareToMicrosoftTeams.renderButtons()` method to force **Share** to render at the appropriate place in the pipeline.
 
+(*placeholder for [Share in meeting](share-in-meeting.md)*)
+
+* To enable users to share content in meetings, set `allow-share-in-meeting` attribute (optional) to `true`.
+* To open content in side panel and request for all the content shared in the meeting to display in side panel and shared to stage, set `sharing.history.getContent` (*place holder on how to configure*)
+
+# [Method 2](#tab/method-2)
+
+**`shareToMicrosoftTeams.renderButtons(options)`**
+
+`options` (optional): `{ elements?: HTMLElement[] }`
+
+Currently, all share buttons are rendered on the page. If an optional `options` object is supplied with a list of elements, those elements are rendered into share buttons.
+
+# [Method 3](#tab/method-3)
+
+*Placeholder - the `window.shareToMicrosoftTeams.shareInMeetingClickHandler` API.*
+
+---
+
+The following are the launcher.js definitions:
+
+| Property | HTML attribute | Type | Default | Description |
+| -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
+| href | `data-href` | string | n/a | The href of the content to share. |
+| preview | `data-preview` | Boolean (as a string) | `true` | Whether or not to show a preview of the content to share. |
+| iconPxSize | `data-icon-px-size` | number (as a string) | `32` | The size in pixels of the Share to Teams button to render. |
+| msgText | `data-msg-text` | string | n/a | Default text to be inserted before the link in the message compose box. Maximum number of characters is 200. |
+| assignInstr | `data-assign-instr` | string | n/a | Default text to be inserted in the assignments "Instructions" field. Maximum number of characters is 200. |
+| assignTitle | `data-assign-title` | string | n/a | Default text to be inserted in the assignments "Title" field. Maximum number of characters is 50. |
+
 ## Craft your website preview
 
 When your website is shared to Teams, the card that is inserted into the selected channel contains a preview of your website. You can control the behavior of this preview by ensuring the appropriate meta-data is added to the website being shared, such as the `data-href` URL.  
@@ -111,25 +143,6 @@ For teachers using the Share to Teams button, there's an additional option to `C
 
 :::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Share to Teams pop-up education":::
 
-## Full launcher.js definition
-
-| Property | HTML attribute | Type | Default | Description |
-| -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
-| href | `data-href` | string | n/a | The href of the content to share. |
-| preview | `data-preview` | Boolean (as a string) | `true` | Whether or not to show a preview of the content to share. |
-| iconPxSize | `data-icon-px-size` | number (as a string) | `32` | The size in pixels of the Share to Teams button to render. |
-| msgText | `data-msg-text` | string | n/a | Default text to be inserted before the link in the message compose box. Maximum number of characters is 200. |
-| assignInstr | `data-assign-instr` | string | n/a | Default text to be inserted in the assignments "Instructions" field. Maximum number of characters is 200. |
-| assignTitle | `data-assign-title` | string | n/a | Default text to be inserted in the assignments "Title" field. Maximum number of characters is 50. |
-
-### Methods
-
-**`shareToMicrosoftTeams.renderButtons(options)`**
-
-`options` (optional): `{ elements?: HTMLElement[] }`
-
-Currently, all share buttons are rendered on the page. If an optional `options` object is supplied with a list of elements, those elements are rendered into share buttons.
-
 ### Set default form values
 
 You can select to set default values for the following fields on the Share to Teams form:
@@ -151,6 +164,65 @@ You can select to set default values for the following fields on the Share to Te
     data-assign-instr="Default Assignment Instructions"
 ></span>
 ```
+
+## End user experience
+
+# [Chat or channel](#tab/chatchannel)
+
+If there's no ongoing meeting, the user may select Meet Now to begin a meeting. To open content in a scheduled call, follow the steps:
+
+1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
+1. Add the chat or channel name.
+   > [!NOTE]
+   > If the app isn't added in the meeting scope, then an app consent appears and the app gets added once you click **Share**.
+
+# [Live meeting](#tab/live)
+
+If meeting extension is installed:
+
+1. Open the web app in the browser and select **Share to Teams**.
+
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app-share-button.png" alt-text="Screenshot shows share in meeting button on web app."lightbox="../../assets/images/share-in-teams-meeting/web-app.png":::
+
+1. Select **Start sharing**.
+
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share.png" alt-text="Screenshot shows how to share apps in teams meeting.":::
+
+1. The web app is shared to meeting stage and all the participants can interact and edit together.
+
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="Screenshot shows app shared to the teams meeting stage.":::
+
+If meeting extension isn't installed:
+
+1. Open the web app in the browser and select **Share in meeting**.
+
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app-share-button.png" alt-text="Screenshot shows share in meeting button on web app."lightbox="../../assets/images/share-in-teams-meeting/web-app.png":::
+
+1. To install the meeting extension app, select **Add**.
+
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/meeting-extension-app.png" alt-text="Screenshot shows add button to install meeting extension app.":::
+
+1. Select **Start sharing**.
+
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share.png" alt-text="Screenshot shows start sharing button to share your app in meeting.":::
+
+1. The web app is shared to meeting stage and all the participants can interact and edit together.
+
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="Screenshot shows app shared to the teams meeting stage experience.":::
+
+# [Meet Now](#tab/meetnow)
+
+If there's no ongoing meeting, the user may select Meet Now to begin a meeting. To open content in a scheduled call, follow the steps:
+
+1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
+1. Add the meeting name.
+   > [!NOTE]
+   > If the app isn't added in the meeting scope, then an app consent appears and the app gets added once you click **Share**.
+1. You can select Meet Now to begin the meeting.
+1. Once the meeting begins, request to share the content appears.
+1. The web app is shared to meeting stage and all the participants can interact and edit together.
+
+   :::image type="content" source="../../assets/images/share-in-teams-meeting/share-stage.png" alt-text="Screenshot shows app shared to the teams meeting stage.":::
 
 ## See also
 
