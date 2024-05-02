@@ -16,7 +16,7 @@ Bot-based message extension takes advantage of the Bot Framework's messaging sch
 
 There are two types of message extension commands, action command and search command. The message extension command type defines the UI elements and interaction flows available to your web service. You can use a search command or an action command to interact with your web service through a bot in Teams.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-action-search-command.png" alt-text="Screenshot shows the the way for a developer to select between action commands and search commands.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-action-search-command.png" alt-text="Screenshot shows the way for a developer to select between action commands and search commands.":::
 
 # [Search commands](#tab/search-commands)
 
@@ -97,11 +97,11 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 ## Message extension as a plugin for Copilot for Teams chats
 
-Teams supprots message extension plugins in Microsoft Copilot for Teams chats. Extending bot-based message extension plugins to Teams chats allows you to enhance Copilot for Teams chats. Users can use natural language input to invoke the message extension's search function without the need for specific user interface commands. In essence, the users’ words become the catalyst for Copilot’s actions, calling the appropriate plugin for their request.
+Teams supports message extension plugins in Microsoft Copilot for Teams chats. Extending bot-based message extension plugins to Teams chats allows you to enhance Copilot for Teams chats. Users can use natural language input to invoke the message extension's search function without the need for specific user interface commands. In essence, the users’ words become the catalyst for Copilot’s actions, calling the appropriate plugin for their request.
 
-With the integration of bot-based message extensions and Copilot for Teams chats, users can ask all sorts of follow-up questions. As Copilot for Teams chats is powered by generative AI, it can understand, summarize, predict, and generate content across a multitude of Microsoft 365 applications, thereby boosting user productivity and creativity.
+With the integration of bot-based message extensions and Copilot for Teams chats, users can ask all sorts of follow-up questions. As Copilot for Teams chats is powered by generative AI, it can understand, summarize, predict, and generate content across a multitude of Microsoft 365 applications, boosting user productivity and creativity.
 
-A user can ask about what’s in stock for a product, then, for example, they can also request Copilot for Teams chats to populate a table with various products. Moreover, they can even instruct Copilot for Teams chats to draft an email summarizing the inventory as a reminder for the supplier.
+A user can ask about what’s in stock for a product and also request Copilot for Teams chats to populate a table with various products. Moreover, they can even instruct Copilot for Teams chats to draft an email summarizing the inventory as a reminder for the supplier.
 
 To learn how to build a bot-based message extension plugin for Copilot for Teams chats, see [Extend bot-based message extension as plugin for Copilot for Microsoft 365 and Copilot for Teams chats](build-bot-based-plugin.md).
 
