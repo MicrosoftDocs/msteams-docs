@@ -135,7 +135,7 @@ items:
         Brighten the conversation with emojis! They add a playful and visually engaging element that makes learning about space more fun.
         At the end of each response, share a fascinating fun fact about space or planets. These snippets aim to amaze and provide extra tidbits of knowledge!
         ```
-        :::image type="content" source="../msteams-platform/assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in visual studio code.":::
+        :::image type="content" source="../msteams-platform/assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in Visual Studio Code.":::
 
      1. Go to `config.json` file under `completion`. Update the following code and replace the `endpoint` and `key` values with your Azure AI Search resource details:
 
@@ -165,7 +165,7 @@ items:
 
      1. Select **Debug in Test Tool (Preview)**.
      
-     1. Select the **F5** key to start debugging.   
+     1. Select the **F5** key.   
 
         :::image type="content" source="../msteams-platform/assets/images/bots/debug-in-test-tool.png" alt-text="Screenshot shows the debug in test tool.":::
 
