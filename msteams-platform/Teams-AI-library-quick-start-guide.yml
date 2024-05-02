@@ -121,13 +121,13 @@ items:
 
      1. Enter **deployment name**.
 
-     1. Alternatively, you can fill in these details later in the `env/.env.testtool.user` file, once your Custom Copilot is created.
+     1. Alternatively, you can fill in these details later in the `env/.env.testtool.user` file once your Custom Copilot is created.
 
      1. Select a folder that contains the root folder of your project and enter a suitable name for your Custom Copilot.
      
      1. Select **Enter** and your Custom Copilot is created in a few seconds.
 
-     1. Let's customize the prompt of your Custom Copilot! Go to `src/prompts/chat/skprompt.txt`, update the following code in `skprompt.txt` file:
+     1. Let's customize the prompt of your Custom Copilot. Go to `src/prompts/chat/skprompt.txt` and update the following code in `skprompt.txt` file:
 
         ```skprompt.txt
         This is a conversation with an AI assistant specialized in the vast and intriguing universe of planets and space.
