@@ -12,11 +12,11 @@ ms.date: 11/14/2023
 
 > [!NOTE]
 >
-> * Copilot for Microsoft 365 is in private preview. Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
+> * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
->   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
+>   * An [eligible Microsoft 365 or Office 365 production environment](/microsoft-365-copilot/extensibility/prerequisites#customers-with-existing-microsoft-365-and-copilot-licenses) with a Copilot for Microsoft 365 license.
 > * Bot-based search message extension plugin is available in [**public developer preview**](../resources/dev-preview/developer-preview-intro.md).
-> * Only bot-based search message extension can be extended as a plugin for Copilot for Microsoft 365.
+> * Only *bot-based* message extensions with *search* commands can be extended as plugins for Copilot for Microsoft 365.
 
 Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and large language models (LLMs) to transform your words into a potent productivity tool. Although Copilot for Microsoft 365 can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot for Microsoft 365, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. You can achieve this extension by developing a plugin or connecting to an external data source.
 
@@ -36,9 +36,16 @@ A plugin allows Copilot for Microsoft 365 to interact directly with third-party 
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
 * Perform actions on behalf of the user, such as creating a Contoso ticket.
 
-All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations.
+Descriptions enhance the usability and effectiveness of a message extension plugin. The follwoing description offer a clear and concise summary of the app’s features:
 
-You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as a plugin in Copilot for Microsoft 365.
+* **App description**: App description helps improve your app discoverability in the Teams Store.
+* **Command description**: Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords.
+* **Parameter description**: Parameter description explains the requirements of the system in a natural language with output format.
+* **Semantic description**: Semantic description helps Copilot for Micrososft 365 generate content by providing a conceptual understanding of the plugin's capabilities and scenarios where it can help achieve user goals and match user’s intent with the plugin's capabilities.
+
+For more information, see [define descriptions](high-quality-message-extension.md#define-descriptions).
+
+All bot-based search message extensions are eligible for plugin support, subject to validation to ensure the plugin meets quality, security, privacy, and usefulness expectations. You can create a bot-based search message extension using Teams Toolkit for Visual Studio Code, Visual Studio, Teams Toolkit command line interface (CLI), or Developer Portal for Teams and extend the message extension to function as a plugin in Copilot for Microsoft 365.
 
 ## Prerequisites
 
@@ -349,6 +356,8 @@ To test your bot-based message extension created in the Developer Portal for Tea
 
 ---
 
+For more on testing your plugin in Copilot for Microsoft 365 chat, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/orchestrator?tabs=tasks#debugging-plugin-selection).
+
 ## Message extension as plugin for Copilot for Teams meetings
 
 Message extension plugins are supported in Copilot for Teams meetings. Extending bot-based message extension plugins to meetings allows developers to enhance the Copilot for Teams meetings. Copilot can utilize various app capabilities during meetings, such as task modules, app sharing, and more, to improve user engagement and productivity. For example, a plugin can be used in Copilot for Teams meetings to perform actions like creating polls, adding CRM entries, or even complex operations that require data fetching and rationalization from multiple sources.
@@ -363,7 +372,6 @@ Meetings Copilot is interactive and efficient, it can assist with summarizing di
 * **Action Commands:** Users can facilitate tasks such as creating polls or adding entries into CRM applications.
 * **Complex Commands:** These commands involve data fetching and rationalizing from multiple sources, enabling users to make informed decisions based on comprehensive data analysis.
 
-
 **Scenarios**
 
 1. **Reactive Commands:** Users can directly command Copilot to perform specific actions or provide information. This includes:
@@ -375,8 +383,6 @@ Meetings Copilot is interactive and efficient, it can assist with summarizing di
    * **Providing assistance without explicit prompts:** Copilot can automatically suggest actions like creating a poll or recommending app content based on the meeting's discussion topics.
 
 ### Enable message extension as a plugin for Copilot for meetings
-
-**Pre-requisites**
 
 Ensure that you've created a bot-based message extension and extended it as a plugin for Copilot for Microsoft 365.
 

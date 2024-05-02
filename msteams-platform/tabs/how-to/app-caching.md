@@ -116,6 +116,8 @@ The following are the limitations for app caching:
   * `readyToUnload`
   * `getConfig/getSettings`
 
+* App caching isn't supported in the [new Teams client](../../resources/teams-updates.md#limitations).
+
 ## Troubleshooting
 
 **Apps are not being cached? Why is load handler not invoked on subsequent navigation?**
