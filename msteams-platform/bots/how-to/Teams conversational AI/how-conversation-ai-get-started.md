@@ -1,21 +1,21 @@
 ---
-title: Get started with Teams AI library
-description: In this article, learn how to create an app using Teams AI library and its capabilities.
+title: Get started with Copilot SDK
+description: In this article, learn how to create an app using Copilot SDK and its capabilities.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
 ms.date: 11/27/2023
 ---
 
-# Get started with Teams AI library
+# Get started with Copilot SDK
 
-Teams AI library streamlines the process to build intelligent Microsoft Teams applications by using the AI components.  It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
+Copilot SDK (formally known as the Teams AI Library) streamlines the process to build intelligent Microsoft Teams applications by using the AI components.  It provides APIs to access and manipulate data, as well as a range of controls and components to create custom user interfaces.
 
-You can easily integrate Teams AI library, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key or Azure OpenAI to provide an AI-driven conversational experience.
+You can easily integrate Copilot SDK, prompt management, and safety moderation into your apps and enhance the user experience. It also facilitates the creation of bots that uses an OpenAI API key or Azure OpenAI to provide an AI-driven conversational experience.
 
 ## Initial setup
 
-Teams AI library is built on top of the Bot Framework SDK and uses its fundamentals to offer an extension to the Bot Framework SDK capabilities. As part of initial setup, it's important to import the Bot Framework SDK functionalities.
+Copilot SDK is built on top of the Bot Framework SDK and uses its fundamentals to offer an extension to the Bot Framework SDK capabilities. As part of initial setup, it's important to import the Bot Framework SDK functionalities.
 
 > [!NOTE]
 > The adapter class that handles connectivity with the channels is imported from [Bot Framework SDK](/azure/bot-service/bot-builder-basics?view=azure-bot-service-4.0#the-bot-adapter&preserve-view=true).
@@ -113,14 +113,14 @@ app = Application[TurnState](
 
 ---
 
-### Import Teams AI library
+### Import Copilot SDK
 
-Import all the classes from `@microsoft/teams-ai` to build your bot and use the Teams AI library capabilities.
+Import all the classes from `@microsoft/teams-ai` to build your bot and use the Copilot SDK capabilities.
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L70)
 
 ```javascript
-// import Teams AI library
+// import Copilot SDK
 import {
     AI,
     Application,
@@ -803,4 +803,4 @@ A feedback loop consists of the following:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Teams AI library quick start guide](conversation-ai-quick-start.md)
+> [Copilot SDK quick start guide](conversation-ai-quick-start.md)

@@ -1,5 +1,5 @@
 ---
-title: Teams AI library
+title: Copilot SDK
 description: In this article, learn about Teams conversation AI.
 ms.localizationpriority: medium
 ms.topic: overview
@@ -8,21 +8,21 @@ author: michaelmaillot
 ms.date: 02/12/2024
 ---
 
-# Teams AI library
+# Copilot SDK
 
-Teams AI library is a Teams-centric interface to GPT-based common language models and user intent engines which, moderates the need for you to take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with large language models (LLMs).
+Copilot SDK (formally known as the Teams AI Library) is a Teams-centric interface to GPT-based common language models and user intent engines which, moderates the need for you to take on complex and expensive tasks of writing and maintaining conversational bot logic to integrate with large language models (LLMs).
 
 :::image type="content" border="false" source="../../../assets/images/bots/teams-ai-library.png" alt-text="Visual representation of a user input and a bot response."lightbox="../../../assets/images/bots/teams-ai-library.png":::
 
 The AI library provides a simple capabilities-driven approach and helps you to create intelligent apps quickly and easily with prebuilt, reusable code snippets so that you can focus on building the business logic rather than learning the semantics of Teams conversational applications.
 
-## Why use Teams AI library?
+## Why use Copilot SDK?
 
 The AI Library is a Teams-centric interface to Large Language Models. Your apps can use LLMs to facilitate more natural conversational interactions with users, guiding that conversation into your apps skills.
 
 You can focus on writing your business logic, and allow Teams to handle the complexities of conversational bots so that you can easily extract and utilize user intent within your apps.
 
-:::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Teams AI library.":::
+:::image type="content" source="../../../assets/images/bots/teams-ai-library-benefits.png" alt-text="Screenshot shows the benefits of using Copilot SDK.":::
 
 * The AI Library is a Teams-centric interface to Large Language Models. Use prebuilt templates to add Teams app capabilities.
 
@@ -32,17 +32,17 @@ You can focus on writing your business logic, and allow Teams to handle the comp
 
 * You can easily add support for any LLM of your choice without changing the bot logic.
 
-The Teams AI Library is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a  mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
+The Copilot SDK is available in JavaScript and C# languages allowing you to harness the power of AI and create intelligent, user-friendly applications for Microsoft Teams using the programming languages they're most comfortable with. We're committed to a  mindset where you build AI products with the tools and languages you want in order to make the best experiences possible for your customers on Teams.
 
-The following are some of the main features available through Teams AI library:
+The following are some of the main features available through Copilot SDK:
 
 ## Simple Teams-centric component scaffolding
 
-The Teams AI library simplifies the Teams app model to focus on the extension needed versus the protocol required. You can use prebuilt templates and add your business logic to this scaffold to add modules such as bots, message extensions, Adaptive Cards, or link unfurling.
+The Copilot SDK simplifies the Teams app model to focus on the extension needed versus the protocol required. You can use prebuilt templates and add your business logic to this scaffold to add modules such as bots, message extensions, Adaptive Cards, or link unfurling.
 
 ## Natural language modeling
 
-The Teams AI library is built with GPT-powered language models, so that you don't need to spend time to write your conversational logic and identify user intents. Building AI-powered Teams apps is easier, more compliant, and consistently usable than ever before.
+The Copilot SDK is built with GPT-powered language models, so that you don't need to spend time to write your conversational logic and identify user intents. Building AI-powered Teams apps is easier, more compliant, and consistently usable than ever before.
 
 Bots can run in-context and assist when the bot recognizes a user intent that maps to one of the bot actions. This boosts the conversation without requiring users to explicitly talk to the bot using a small set of registered actions.
 
@@ -52,27 +52,27 @@ Prompt engineering helps you to design prompts considering user's intent, contex
 
 ## Conversational session history
 
-Teams AI library remembers context across messages and helps improve the bot performance by analyzing patterns in user behavior.
+Copilot SDK remembers context across messages and helps improve the bot performance by analyzing patterns in user behavior.
 
 ## Localization
 
-Since Teams AI library uses OpenAI's GPT model, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
+Since Copilot SDK uses OpenAI's GPT model, localization is available. When a user inputs in any language, the input is consistently translated to intents, entities, and resultant actions that the app understands without the need to build and maintain localization records.
 
 ## LLM modularity
 
 Large language model (LLM) is an advanced language model that utilizes latent variables to generate coherent and diverse natural language text and style.
 
-Although, Teams AI library is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic. This means you can choose to keep your app's content outside the public domain and confined to your preferred LLM model.
+Although, Copilot SDK is built to use Open AI’s GPT model, you have the flexibility to swap with any LLM of your choice without changing the bot logic. This means you can choose to keep your app's content outside the public domain and confined to your preferred LLM model.
 
 ## Responsible AI
 
-Teams AI library allows you to create ethical and responsible conversational apps by:
+Copilot SDK allows you to create ethical and responsible conversational apps by:
 
 - Moderation hooks: To regulate bot responses against any moderation API.
 - Conversation sweeping: To monitor conversations and intervene when the conversation goes astray through proactive detection and remediation.
 - Feedback loops: To evaluate the performance of the bot for high quality conversations and enhance user experience.
 
-Teams AI library offers support from low code to complex scenarios. The library extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated context-aware conversations.
+Copilot SDK offers support from low code to complex scenarios. The library extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated context-aware conversations.
 
 ## Predictive engine for mapping intents to actions
 
@@ -84,7 +84,7 @@ A simple interface for actions and predictions allows bots to react when the bot
 
 <!-- ## Bots Architecture overview
 
-The bot framework using Teams AI library requires the following:
+The bot framework using Copilot SDK requires the following:
 
 * Support to OAuth S2S
 * Adherence to Activity schema for reading and writing JSON documents
@@ -116,13 +116,13 @@ Vector databases are a new type of database designed to store vectors and enable
 
 ## Enhanced reasoning
 
-Teams AI Library offers an integrated fact-checking system to tackle bot hallucinations. When a user interacts with your AI assistant, the system prompts the bot to engage in a process of self-reflection critically evaluating its potential responses before sending. The introspection allows the bot to identify inaccuracies and correct its answers, which improves accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment, building trust in your product and drawing users back every day.
+Copilot SDK offers an integrated fact-checking system to tackle bot hallucinations. When a user interacts with your AI assistant, the system prompts the bot to engage in a process of self-reflection critically evaluating its potential responses before sending. The introspection allows the bot to identify inaccuracies and correct its answers, which improves accuracy, quality, and contextual relevance. Advanced reasoning ensures that your AI assistant becomes a dependable source of information and judgment, building trust in your product and drawing users back every day.
 
 ## Feedback loop
 
 Feedback loop allows the bot to validate and correct the output of the language model. It checks the structure and parameters of the plan or monologue that the model returns and provides feedback on errors or missing information. The model then tries to fix its mistakes and returns a valid output. The feedback loop can improve the reliability and accuracy of the AI system and reduce the chances of hallucination or invalid actions.
 
-The following table lists the updates to the Teams AI library:
+The following table lists the updates to the Copilot SDK:
 
 |Type |Description |.NET|JavaScript|Python|
 |---------|---------||||
@@ -136,9 +136,9 @@ The following table lists the updates to the Teams AI library:
 
 | Sample name                            | Description                                                                                                                                                                                                                                                           | .NET                                                                                                        | Node.js                                                                                                                | Python                                                                                                   |
 | -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Echo bot                               | This sample shows how to incorporate a basic conversational flow into a Microsoft Teams application using Bot Framework and the Teams AI library.                                                                                                                     | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)                 | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot)                        | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot)            |
-| Search command message extension       | This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application using Bot Framework and the Teams AI library.                                                                                                                   | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) |
-| Typeahead bot                          | This sample shows how to incorporate the typeahead search functionality in Adaptive Cards into a Microsoft Teams application using Bot Framework and the Teams AI library.                                                                                            | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot)      | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot)      |
+| Echo bot                               | This sample shows how to incorporate a basic conversational flow into a Microsoft Teams application using Bot Framework and the Copilot SDK.                                                                                                                     | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/01.messaging.echoBot)                 | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot)                        | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/01.messaging.a.echoBot)            |
+| Search command message extension       | This sample shows how to incorporate a basic Message Extension app into a Microsoft Teams application using Bot Framework and the Copilot SDK.                                                                                                                   | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/02.messageExtensions.a.searchCommand) | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/a.messageExtensions.searchCommand) |
+| Typeahead bot                          | This sample shows how to incorporate the typeahead search functionality in Adaptive Cards into a Microsoft Teams application using Bot Framework and the Copilot SDK.                                                                                            | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/03.adaptiveCards.a.typeAheadBot)      | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot)      |
 | Conversational bot with AI: Teams chef | This sample shows how to incorporate a basic conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf, using only a natural language prompt file to guide it.                                       | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.a.teamsChefBot)                 | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/a.teamsChefBot)                           |
 | Message extensions: GPT-ME             | This sample is a message extension (ME) for Microsoft Teams that uses the text-davinci-003 model to help users generate and update posts.                                                                                                                             | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.b.messageExtensions.gptME)      | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/b.AI-messageExtensions)                     | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.b.messageExtensions.AI-ME) |
 | Light bot                              | This sample illustrates more complex conversational bot behavior in Microsoft Teams. The bot is built to allow GPT to facilitate the conversation on its behalf and manually defined responses, and maps user intents to user defined actions.                        | [View](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples/04.ai.c.actionMapping.lightBot)       | [View](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/c.actionMapping-lightBot)             | [View](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.c.actionMapping.lightBot)    |
@@ -151,5 +151,5 @@ The following table lists the updates to the Teams AI library:
 ## Next step
 
 > [!div class="nextstepaction"] 
-> [Teams AI library capabilities](how-conversation-ai-core-capabilities.md)
+> [Copilot SDK capabilities](how-conversation-ai-core-capabilities.md)
 

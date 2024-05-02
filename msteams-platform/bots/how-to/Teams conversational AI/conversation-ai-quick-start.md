@@ -1,7 +1,7 @@
 ---
-title: Teams AI library quick start guide
+title: Copilot SDK quick start guide
 author: surbhigupta
-description:  In this module, learn how to quickly try the Teams AI library.
+description:  In this module, learn how to quickly try the Copilot SDK.
 ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: ai-library-quick-start
@@ -9,9 +9,9 @@ ms.author: v-ypalikila
 ms.date: 12/06/2022
 ---
 
-# Teams AI library quick start guide
+# Copilot SDK quick start guide
 
-Get started with Teams AI library using the Chef bot sample, which is designed to  to help you cook apps using the Teams AI Library. The bot uses the gpt-3.5-turbo model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+Get started with Copilot SDK (formally known as the Teams AI Library) using the Chef bot sample, which is designed to  to help you cook apps using the Copilot SDK. The bot uses the gpt-3.5-turbo model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 
 ## Build and run the sample app
 
-Get started with Teams AI library using the **ChefBot** sample. It enables your computer’s localhost to quickly execute a Teams AI library-based sample.
+Get started with Copilot SDK using the **ChefBot** sample. It enables your computer’s localhost to quickly execute a Copilot SDK-based sample.
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
@@ -206,4 +206,4 @@ You can also use the following tools to run and set up a sample:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Teams AI library FAQ](coversational-ai-faq.md)
+> [Copilot SDK FAQ](coversational-ai-faq.md)

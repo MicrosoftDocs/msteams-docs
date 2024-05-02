@@ -1,19 +1,19 @@
 ---
-title: Teams AI library capabilities
-description: In this article, learn more about Teams AI library capabilities, bot logic and message extension query.
+title: Copilot SDK capabilities
+description: In this article, learn more about Copilot SDK capabilities, bot logic and message extension query.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: surbhigupta
 ms.date: 05/24/2023
 ---
 
-# Teams AI library capabilities
+# Copilot SDK capabilities
 
-Teams AI library supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, Message extension (ME) capabilities, and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
+Copilot SDK (formally known as the Teams AI Library) supports JavaScript and is designed to simplify the process of building bots that can interact with Microsoft Teams, and facilitates the migration of existing bots. The AI library supports the migration of messaging capabilities, Message extension (ME) capabilities, and Adaptive Cards capabilities to the new format. It's also possible to upgrade existing Teams apps with these features.
 
-Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Teams. Teams AI library is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of Teams AI library is the AI support that customers can utilize, the initial objective might be to upgrade their current bot without AI. After you upgrade, the bot can connect to AI or large language model (LLM) available in the AI library.
+Earlier, you were using BotBuilder SDK directly to create bots for Microsoft Teams. Copilot SDK is designed to facilitate the construction of bots that can interact with Microsoft Teams. While one of the key features of Copilot SDK is the AI support that customers can utilize, the initial objective might be to upgrade their current bot without AI. After you upgrade, the bot can connect to AI or large language model (LLM) available in the AI library.
 
-Teams AI library supports the following capabilities:
+Copilot SDK supports the following capabilities:
 
 * [Send or receive message](#send-or-receive-message)
 
@@ -295,7 +295,7 @@ app.adaptive_cards.action_submit("submit")(execute_submit)
 
 The Bot responds to the user's input with the action `LightsOn` to turn the lights on.
 
-The following example illustrates how Teams AI library makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with OpenAI:
+The following example illustrates how Copilot SDK makes it possible to manage the bot logic for handling an action `LightsOn` or `LightsOff` and connect it to the prompt used with OpenAI:
 
 # [.NET](#tab/dotnet3)
 
@@ -524,7 +524,7 @@ elif config.AZURE_OPENAI_KEY and config.AZURE_OPENAI_ENDPOINT:
 
 ### Message extension query
 
-The Teams AI library offers you a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
+The Copilot SDK offers you a more intuitive approach to create handlers for various message-extension query commands when compared to previous iterations of Teams Bot Framework SDK. The new SDK works alongside the existing Teams Bot Framework SDK.
 
 The following is an example of how you can structure their code to handle a message-extension query for the `searchCmd` command.
 
@@ -786,4 +786,4 @@ All entities are required parameters to actions.
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Get started with Teams AI library](how-conversation-ai-get-started.md)
+> [Get started with Copilot SDK](how-conversation-ai-get-started.md)
