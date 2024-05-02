@@ -77,7 +77,7 @@ Some scenarios where you can use the SSO API to authenticate your app users are:
 
 - If you want to authenticate your app users within a Teams tab app, the SSO API allows app users to use your app in Teams with no additional authentication needed. Based on the app user's Teams identity, you can obtain access token for them from Microsoft Entra ID.
 - If your app uses dialogs (referred as task modules in TeamsJS v1.x) from within a bot, a tab, a message extension, or Adaptive Cards, then you can use the SSO API to authenticate your app users.
-- You can also use the SSO API for authenticating your app users who want to access to Stage view without need to be validated again.
+- You can also use the SSO API for authenticating your app users who want to access to Stageview without need to be validated again.
 
 > [!TIP]
 > You can also use the SSO API to authenticate app users in [dialogs](../../../task-modules-and-cards/what-are-task-modules.md) that embed web content.
@@ -129,6 +129,7 @@ Here's a list of best practices:
 
 - Currently, SSO in Teams supports only OAuth 2.0 token. It doesn't support SAML token.
 - Multiple domains per app aren't supported. For more information, see [custom apps built for your org (LOB apps)](tab-sso-register-aad.md#before-you-configure-your-app).
+- Redirects aren't supported for iframed or brokered apps. Ensure that you use MSAL.js in the top frame of the window if you use the redirect APIs or use the popup API `(window.parent!==window) => true`.
 
 ## Next step
 
