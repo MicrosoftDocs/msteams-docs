@@ -95,6 +95,16 @@ You must add the following search parameter details that define the text visible
 
 For more information, see [app manifest schema](~/resources/schema/manifest-schema.md).
 
+## Message extension as a plugin for Copilot for Teams chats
+
+Teams supprots message extension plugins in Microsoft Copilot for Teams chats. Extending bot-based message extension plugins to Teams chats allows you to enhance Copilot for Teams chats. Users can use natural language input to invoke the message extension's search function without the need for specific user interface commands. In essence, the users’ words become the catalyst for Copilot’s actions, calling the appropriate plugin for their request.
+
+With the integration of bot-based message extensions and Copilot for Teams chats, users can ask all sorts of follow-up questions. As Copilot for Teams chats is powered by generative AI, it can understand, summarize, predict, and generate content across a multitude of Microsoft 365 applications, thereby boosting user productivity and creativity.
+
+A user can ask about what’s in stock for a product, then, for example, they can also request Copilot for Teams chats to populate a table with various products. Moreover, they can even instruct Copilot for Teams chats to draft an email summarizing the inventory as a reminder for the supplier.
+
+To learn how to build a bot-based message extension plugin for Copilot for Teams chats, see [Extend bot-based message extension as plugin for Copilot for Microsoft 365 and Copilot for Teams chats](build-bot-based-plugin.md).
+
 ## Next step
 
 > [!div class="nextstepaction"]

@@ -312,7 +312,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 <details>
 <summary>What are the guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365 and Copilot for Teams chats? </summary>
 
-You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365) for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365 and Copilot for Teams chats.
+You can read the [Teams Store validation guidelines](concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365-and-copilot-for-teams-chats) for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365 and Copilot for Teams chats.
 
 </details>
 <details>
