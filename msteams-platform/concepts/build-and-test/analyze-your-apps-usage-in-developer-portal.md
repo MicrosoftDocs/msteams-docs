@@ -44,9 +44,9 @@ As you explore individual metrics on this page, you can use **Filter** button to
 After you have selected your desired filters, you can explore the following individual widgets:
 
 * [Usage by time period](#usage-by-time-period)
-* [Usage by platform and OS](#usage-by-platform-and-os)
 * [Usage by retention state](#usage-by-retention-state)
 * [Usage intensity](#usage-intensity)
+* [Usage by region](#usage-by-region)
 
 ### Usage by time period
 
@@ -88,7 +88,14 @@ The **Usage intensity** chart shows the key usage intensity metrics for your app
 
 ### Usage by region
 
+The **Usage by region** chart shows the various regions where your app is being used.
+
 ## Host and devices
+
+The Host and devices page shows you the following:
+
+* [Usage by platform and OS](#usage-by-platform-and-os)
+* [Usage by host app](#usage-by-host-app)
 
 ### Usage by platform and OS
 
@@ -98,7 +105,9 @@ The **Usage by platform and OS** chart shows your app's active usage across vari
 
 ### Usage by host app
 
-content to be added
+The **Usage by host app** chart shows the overall usage by different host.
+
+Image to be added
 
 ## Capability
 
@@ -108,17 +117,23 @@ Content to  be added
 
 You can view the individual app capability usage for R30, R7, daily.
 
+Image to be added
+
 ## Segment
 
 ### Usage by segment
 
-You can view different segments where your app is used.
+The **Usage by segment** shows the various segments where your app is used.
+
+Image to be added
 
 ## Vertical
 
 ### Usage by industry vertical
 
-You can view the overall industry verticals such as Healthcare, Finance, Retail, and Manufacturing that use your app.
+The **Usage by industry vertical** shows the overall industry verticals such as Healthcare, Finance, Retail, and Manufacturing, that are utilizing your app.
+
+Image to be added
 
 ## App dashboard
 
