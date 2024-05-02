@@ -15,7 +15,7 @@ items:
 
     This tutorial shows how to create Custom Copilot with Copilot SDK using Teams Toolkit and interact with your Large Language Model (LLM) on Teams. Copilot SDK streamlines the process of building intelligent Teams apps by using the AI components and LLM of your choice.
 
-    In this tutorial, you'll learn:
+    In this tutorial, you learn:
 
     * How to setup your data on Azure OpenAI.
     * How to create a new Custom Copilot with Teams Toolkit.
@@ -116,7 +116,7 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/bots/large-language-model.png" alt-text="Screenshot shows large language model in Visual Studio Code.":::     
 
-     1. Enter the values from the Azure Portal:
+     1. Enter the values from the Azure portal:
      
          * **Azure OpenAI key**.
 
