@@ -88,9 +88,10 @@ items:
      After the data ingestion process is complete, you can start creating your Custom Copilot using the Copilot SDK and Teams Toolkit.
  
 
-- title: Build your first Custom Copilot using Visual Studio Code
+- title: Create your first Custom Copilot
   durationInMinutes: 1
   content: |
+
      1. Go to **Visual Studio Code**.
 
      1. Select the Teams Toolkit :::image type="icon" source="../msteams-platform/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the Visual Studio Code Activity Bar.
@@ -115,17 +116,44 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/bots/large-language-model.png" alt-text="Screenshot shows large language model in Visual Studio Code.":::     
 
-     1. Enter **Azure OpenAI key**.
+     1. Enter the values from the Azure Portal:
+     
+         * **Azure OpenAI key**.
 
-     1. Enter **Azure OpenAI endpoint**.
+         * **Azure OpenAI endpoint**.
 
-     1. Enter **deployment name**.
+         * **deployment name**.
 
      1. Alternatively, you can fill in these details later in the `env/.env.testtool.user` file once your Custom Copilot is created.
 
      1. Select a folder that contains the root folder of your project and enter a suitable name for your Custom Copilot.
      
-     1. Select **Enter** and your Custom Copilot is created in a few seconds.
+     1. Select **Enter**. Custom Copilot is created in a few seconds.
+
+     ## Take a tour of the tab app source code
+
+     Have a look at what's inside this Custom Copilot > Basic AI Chatbot template.
+
+     | Folder name | Contents |
+     | --- | --- |
+     | `.vscode` | VS Code files for debugging. |
+     | `appPackage` | Templates for the Teams application manifest. |
+     | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
+     | `infra` | Templates for provisioning Azure resources. |
+     | `src/`| The source code for the notification Teams application. |
+     | `src/index.js`| The source code for the notification Teams application. |     
+     | `src/adapter.js`| The source code for the notification Teams application. |  
+     | `src/config.js`| The source code for the notification Teams application. |
+     | `src/prompts/chat/skprompt.txt`| The source code for the notification Teams application. |
+     | `src/prompts/chat/config.json`| The source code for the notification Teams application. |
+     | `src/app/app.js`| The source code for the notification Teams application. |
+     | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
+     | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
+     | `teamsapp.testtool.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+
+- title: Build your first Custom Copilot
+  durationInMinutes: 1
+  content: |
 
      1. Let's customize the prompt for your Custom Copilot. Go to `src/prompts/chat/skprompt.txt` and update the following code in `skprompt.txt` file:
 
@@ -137,7 +165,7 @@ items:
         ```
         :::image type="content" source="../msteams-platform/assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in Visual Studio Code.":::
 
-     1. Go to `config.json` file under `completion`. Update the following code and replace the `endpoint` and `key` values with your Azure AI Search resource details:
+     1. Under `completion` go to `config.json` file. Update the following code and replace the `endpoint` and `key` values with your Azure AI Search resource details:
 
         ```json
            "data_sources": [
@@ -173,26 +201,6 @@ items:
 
         :::image type="content" source="../msteams-platform/assets/images/bots/teams-app-test-tool.png" alt-text="Screenshot shows the teams app test tool.":::
 
-     ## Take a tour of the tab app source code
-
-     Have a look at what's inside this Custom Copilot > Basic AI Chatbot template.
-
-     | Folder name | Contents |
-     | --- | --- |
-     | `.vscode` | VS Code files for debugging. |
-     | `appPackage` | Templates for the Teams application manifest. |
-     | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
-     | `infra` | Templates for provisioning Azure resources. |
-     | `src/`| The source code for the notification Teams application. |
-     | `src/index.js`| The source code for the notification Teams application. |     
-     | `src/adapter.js`| The source code for the notification Teams application. |  
-     | `src/config.js`| The source code for the notification Teams application. |
-     | `src/prompts/chat/skprompt.txt`| The source code for the notification Teams application. |
-     | `src/prompts/chat/config.json`| The source code for the notification Teams application. |
-     | `src/app/app.js`| The source code for the notification Teams application. |
-     | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-     | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
-     | `teamsapp.testtool.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
 - title: Complete challenge
   durationInMinutes: 1
