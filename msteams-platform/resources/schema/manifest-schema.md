@@ -400,6 +400,9 @@ The name of your app experience, displayed to users in the Teams experience. For
 |`short`|30 characters|✔️|The short display name for the app.|
 |`full`|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters.|
 
+> [!NOTE]
+> In the app manifest v1.17 or later the `full` property is required and for app manifest v1.16 or earlier it isn't required.
+
 ## description
 
 **Required** &ndash; Object
@@ -535,6 +538,9 @@ A list of commands that your bot can recommend to users. The object is an array 
 |---|---|---|---|---|
 |`items.scopes`|Array of enums|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupChat`.|
 |`items.commands`|Array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
+
+> [!NOTE]
+> Teams mobile client doesn't support the bot app when there is no value in the `commandLists` property.
 
 ### bots.commandLists.commands
 
