@@ -48,27 +48,27 @@ The following steps help you add an Outlook Add-in to a Teams app:
 1. Add the source code for tab or bot into the respective subfolder.
 1. Ensure to use the latest released version of Teams Toolkit to create a Teams app project. We recommend you to ensure the following folder structure for your project:
 
-```yml
-    |-- .vscode/
-    |-- appPackage/
-    |-- build
-    |-- env/
-    |-- infra/
-    |-- node_modules/
-    |-- src/
-    |-- .gitignore
-    |-- .localConfigs
-    |-- .webappignore
-    |-- package-lock.json
-    |-- package.json
-    |-- teamsapp.local.yml
-    |-- teamsapp.yml
-    |-- tsconfig.json
-    |-- web.config
-```
+    ```yml
+        |-- .vscode/
+        |-- appPackage/
+        |-- build
+        |-- env/
+        |-- infra/
+        |-- node_modules/
+        |-- src/
+        |-- .gitignore
+        |-- .localConfigs
+        |-- .webappignore
+        |-- package-lock.json
+        |-- package.json
+        |-- teamsapp.local.yml
+        |-- teamsapp.yml
+        |-- tsconfig.json
+        |-- web.config
+    ```
 
-> [!NOTE]
-> In a new Teams tab project, the `node_modules` folder and the `package-lock.json` file aren't present when you create the project. The `node_modules` is created when you run `npm install` in the root of the project. The build folder appears after you run a `build` script on the project.
+    > [!NOTE]
+    > In a new Teams tab project, the `node_modules` folder and the `package-lock.json` file aren't present when you create the project. The `node_modules` is created when you run `npm install` in the root of the project. The build folder appears after you run a `build` script on the project.
 
 1. Create a folder under the root named **tab** or **bot**.
 
@@ -82,53 +82,53 @@ The following steps help you add an Outlook Add-in to a Teams app:
 
 1. Move the `.webappignore`, `package-lock.json`, `package.json`, `tsconfig.json`, and `web.config` files into the new subfolder. For example:
 
-```yml
-    |-- .vscode/
-    |-- appPackage/
-    |-- build
-    |-- env/
-    |-- infra/
-    |-- tab/
-    |-- |-- infra/
-    |-- |-- node_modules/
-    |-- |-- src/
-    |-- |-- .webappignore
-    |-- |-- package-lock.json
-    |-- |-- package.json
-    |-- |-- tsconfig.json
-    |-- |-- web.config
-    |-- .gitignore
-    |-- .localConfigs
-    |-- teamsapp.local.yml
-    |-- teamsapp.yml
-```
+    ```yml
+        |-- .vscode/
+        |-- appPackage/
+        |-- build
+        |-- env/
+        |-- infra/
+        |-- tab/
+        |-- |-- infra/
+        |-- |-- node_modules/
+        |-- |-- src/
+        |-- |-- .webappignore
+        |-- |-- package-lock.json
+        |-- |-- package.json
+        |-- |-- tsconfig.json
+        |-- |-- web.config
+        |-- .gitignore
+        |-- .localConfigs
+        |-- teamsapp.local.yml
+        |-- teamsapp.yml
+    ```
 
 1. In `package.json`, delete the script named `dev:teamsfx` from the `scripts` object.
    This script is added to a new package.json in the next step.
 
 1. Create a new file named `package.json` in the root of the project and add the following code:
 
-```JSON
-{
-    "name": "CombinedTabAndAddin",
-    "version": "0.0.1",
-    "author": "Contoso",
-    "scripts": {
-        "dev:teamsfx": "env-cmd --silent -f .localConfigs npm run start:tab",
-        "build:tab": "cd tab && npm run build",
-        "install:tab": "cd tab && npm install",
-        "start:tab": "cd tab && npm run start",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "devDependencies": {
-        "@microsoft/teamsfx-cli": "2.0.2-alpha.4f379e6ab.0",
-        "@microsoft/teamsfx-run-utils": "alpha",
-        "env-cmd": "^10.1.0",
-        "office-addin-dev-settings": "^2.0.3",
-        "ncp": "^2.0.0"
+    ```JSON
+    {
+        "name": "CombinedTabAndAddin",
+        "version": "0.0.1",
+        "author": "Contoso",
+        "scripts": {
+            "dev:teamsfx": "env-cmd --silent -f .localConfigs npm run start:tab",
+            "build:tab": "cd tab && npm run build",
+            "install:tab": "cd tab && npm install",
+            "start:tab": "cd tab && npm run start",
+            "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        "devDependencies": {
+            "@microsoft/teamsfx-cli": "2.0.2-alpha.4f379e6ab.0",
+            "@microsoft/teamsfx-run-utils": "alpha",
+            "env-cmd": "^10.1.0",
+            "office-addin-dev-settings": "^2.0.3",
+            "ncp": "^2.0.0"
+        }
     }
-}
-```
+    ```
 
 1. Change the name, version, and author properties, as needed.
 1. Open the `teamsapp.yml` file in the root of the project.
@@ -200,18 +200,18 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 1. If you changed the `name.short` value from the default value, which is the name of the project followed by the `${{TEAMSFX_ENV}}` variable, change the value in all places where the project name appears in the `teamsapp.yml` and `teamsapp.local.yml` files in the root of the project.
 1. If there's no `authorization.permissions.resourceSpecific` array in the app manifest file, copy it from the add-in manifest as a top-level property. If this array is present in app manifest, copy any objects from the array in the add-in manifest to the array in the Teams template. The following code is an example:
 
-```JSON
-"authorization": {
-    "permissions": {
-        "resourceSpecific": [
-            {
-                "name": "MailboxItem.Read.User",
-                "type": "Delegated"
-            }
-        ]
-    }
-},
-```
+    ```JSON
+    "authorization": {
+        "permissions": {
+            "resourceSpecific": [
+                {
+                    "name": "MailboxItem.Read.User",
+                    "type": "Delegated"
+                }
+            ]
+        }
+    },
+    ```
 
 1. In the `env/.env.local` file, add the following code after the`TAB_DOMAIN` and `TAB_ENDPOINT` variables:
 
@@ -258,38 +258,36 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
    Your Teams app project folder structure should look like the following folder structure:
 
 ```yml
-
-
-       |-- .vscode/
-       |-- add-in/
-       |-- |-- appPackage/assets/
-       |-- |-- infra/
-       |-- |-- src/
-       |-- |-- .eslintrc.json
-       |-- |-- babel.config.json
-       |-- |-- package-lock.json
-       |-- |-- package.json
-       |-- |-- tsconfig.json
-       |-- |-- webpack.config.js
-       |-- appPackage/
-       |-- build\appPackage/
-       |-- env/
-       |-- infra/
-       |-- node_modules/
-       |-- tab/
-       |-- |-- infra/
-       |-- |-- node_modules/
-       |-- |-- src/
-       |-- |-- .webappignore
-       |-- |-- package-lock.json
-       |-- |-- package.json
-       |-- |-- tsconfig.json
-       |-- |-- web.config
-       |-- .gitignore
-       |-- .localConfigs
-       |-- package.json
-       |-- teamsapp.local.yml
-       |-- teamsapp.yml
+    |-- .vscode/
+    |-- add-in/
+    |-- |-- appPackage/assets/
+    |-- |-- infra/
+    |-- |-- src/
+    |-- |-- .eslintrc.json
+    |-- |-- babel.config.json
+    |-- |-- package-lock.json
+    |-- |-- package.json
+    |-- |-- tsconfig.json
+    |-- |-- webpack.config.js
+    |-- appPackage/
+    |-- build\appPackage/
+    |-- env/
+    |-- infra/
+    |-- node_modules/
+    |-- tab/
+    |-- |-- infra/
+    |-- |-- node_modules/
+    |-- |-- src/
+    |-- |-- .webappignore
+    |-- |-- package-lock.json
+    |-- |-- package.json
+    |-- |-- tsconfig.json
+    |-- |-- web.config
+    |-- .gitignore
+    |-- .localConfigs
+    |-- package.json
+    |-- teamsapp.local.yml
+    |-- teamsapp.yml
 ```
 
 ### Edit tooling configuration files
@@ -503,116 +501,116 @@ To see both the app and the add-in running at the same time, take the following 
 
 1. In the same file, add the following code to the end of the provision: section. Note that indentation is meaningful in YAML, so - uses and - name statements should be indented two spaces, with statements should be aligned with uses, and the children of with should be indented a further two spaces.
 
-```yml
-provision:
-
-  -- other YAML omitted --
-
-  - uses: azureStorage/enableStaticWebsite
-    with:
-      storageResourceId: ${{ADDIN_AZURE_STORAGE_RESOURCE_ID}}
-      indexPage: index.html
-      errorPage: error.html
-```
+    ```yml
+    provision:
+    
+      -- other YAML omitted --
+    
+      - uses: azureStorage/enableStaticWebsite
+        with:
+          storageResourceId: ${{ADDIN_AZURE_STORAGE_RESOURCE_ID}}
+          indexPage: index.html
+          errorPage: error.html
+    ```
 
 1. In the same file, replace the entire `deploy:` section with the following code. These changes take account of the new folder structure and the fact that both add-in and tab files need to be deployed.
 
-```JSON
-deploy:
-  - name: InstallAllCapabilities
-    uses: cli/runNpmCommand # Run npm command
-    with:
-      args: install
-
-  - name: BuildAllCapabilities
-    uses: cli/runNpmCommand # Run npm command
-    with:
-      args: run build --if-present
-
-  - name: DeployTab
-    uses: azureAppService/zipDeploy
-    with:
-      artifactFolder: tab
-      ignoreFile: ./tab/.webappignore
-      # The ID of the cloud resource where the tab app will be deployed.
-      # This key will be generated by arm/deploy action automatically.
-      resourceId: ${{TAB_AZURE_APP_SERVICE_RESOURCE_ID}} 
-
-  - name: DeployAddin
-    uses: azureStorage/deploy
-    with:
-      workingDirectory: .
-      # Deploy base folder
-      artifactFolder: add-in/dist
-      # The ID of the cloud resource where the add-in will be deployed.
-      resourceId: ${{ADDIN_AZURE_STORAGE_RESOURCE_ID}}
-```
+    ```JSON
+    deploy:
+      - name: InstallAllCapabilities
+        uses: cli/runNpmCommand # Run npm command
+        with:
+          args: install
+    
+      - name: BuildAllCapabilities
+        uses: cli/runNpmCommand # Run npm command
+        with:
+          args: run build --if-present
+    
+      - name: DeployTab
+        uses: azureAppService/zipDeploy
+        with:
+          artifactFolder: tab
+          ignoreFile: ./tab/.webappignore
+          # The ID of the cloud resource where the tab app will be deployed.
+          # This key will be generated by arm/deploy action automatically.
+          resourceId: ${{TAB_AZURE_APP_SERVICE_RESOURCE_ID}} 
+    
+      - name: DeployAddin
+        uses: azureStorage/deploy
+        with:
+          workingDirectory: .
+          # Deploy base folder
+          artifactFolder: add-in/dist
+          # The ID of the cloud resource where the add-in will be deployed.
+          resourceId: ${{ADDIN_AZURE_STORAGE_RESOURCE_ID}}
+    ```
 
 1. Open the infra/azure.parameters.json file in the root of the project and replace its contents with the following JSON:
 
-```JSON
-{
-    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
-    "contentVersion": "1.0.0.0",
-    "parameters": {
-      "resourceBaseName": {
-        "value": "tabandaddin${{RESOURCE_SUFFIX}}"
-      },
-      "webAppSku": {
-        "value": "F1"
-      },
-      "storageSku": {
-        "value": "Standard_LRS"
-      }
+    ```JSON
+    {
+        "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+        "contentVersion": "1.0.0.0",
+        "parameters": {
+          "resourceBaseName": {
+            "value": "tabandaddin${{RESOURCE_SUFFIX}}"
+          },
+          "webAppSku": {
+            "value": "F1"
+          },
+          "storageSku": {
+            "value": "Standard_LRS"
+          }
+        }
     }
-}
-```
+    ```
 
 1. Open the infra/azure.bicep file in the root of the project (not the one in either the tab or add-in subfolders) and replace its contents with the following.
 
-```JSON
-// Params for Teams tab resources
-@maxLength(20)
-@minLength(4)
-@description('Used to generate names for all resources in this file')
-param resourceBaseName string
-param webAppSku string
-param serverfarmsName string = resourceBaseName
-param webAppName string = resourceBaseName
-param location string = resourceGroup().location
-param storageSku string
-param storageName string = resourceBaseName
-
-module tabModule '../tab/infra/azure.bicep' = {
-  name: 'tabModule'
-  params: {
-    resourceBaseName: resourceBaseName
-    webAppSku: webAppSku
-    serverfarmsName: serverfarmsName
-    webAppName: webAppName
-    location: location
-  }
-}
-
-module addinModule '../add-in/infra/azure.bicep' = {
-  name: 'addinModule'
-  params: {
-    resourceBaseName: resourceBaseName
-    storageSku: storageSku
-    storageName: storageName
-    location: location
-  }
-}
-
-// The output will be persisted in .env.{envName}. Visit https://aka.ms/teamsfx-actions/arm-deploy for more details.
-output TAB_AZURE_APP_SERVICE_RESOURCE_ID string = tabModule.outputs.TAB_AZURE_APP_SERVICE_RESOURCE_ID // used in deploy stage
-output TAB_DOMAIN string = tabModule.outputs.TAB_DOMAIN
-output TAB_ENDPOINT string = tabModule.outputs.TAB_ENDPOINT
-
-output ADDIN_AZURE_STORAGE_RESOURCE_ID string =  addinModule.outputs.ADDIN_AZURE_STORAGE_RESOURCE_ID// used in deploy stage
-output ADDIN_DOMAIN string = addinModule.outputs.ADDIN_DOMAIN
-output ADDIN_ENDPOINT string = addinModule.outputs.ADDIN_ENDPOINT
-```
+    ```JSON
+    // Params for Teams tab resources
+    @maxLength(20)
+    @minLength(4)
+    @description('Used to generate names for all resources in this file')
+    param resourceBaseName string
+    param webAppSku string
+    param serverfarmsName string = resourceBaseName
+    param webAppName string = resourceBaseName
+    param location string = resourceGroup().location
+    param storageSku string
+    param storageName string = resourceBaseName
+    
+    module tabModule '../tab/infra/azure.bicep' = {
+      name: 'tabModule'
+      params: {
+        resourceBaseName: resourceBaseName
+        webAppSku: webAppSku
+        serverfarmsName: serverfarmsName
+        webAppName: webAppName
+        location: location
+      }
+    }
+    
+    module addinModule '../add-in/infra/azure.bicep' = {
+      name: 'addinModule'
+      params: {
+        resourceBaseName: resourceBaseName
+        storageSku: storageSku
+        storageName: storageName
+        location: location
+      }
+    }
+    
+    // The output will be persisted in .env.{envName}. Visit https://aka.ms/teamsfx-actions/arm-deploy for more details.
+    output TAB_AZURE_APP_SERVICE_RESOURCE_ID string = tabModule.outputs.TAB_AZURE_APP_SERVICE_RESOURCE_ID // used in deploy stage
+    output TAB_DOMAIN string = tabModule.outputs.TAB_DOMAIN
+    output TAB_ENDPOINT string = tabModule.outputs.TAB_ENDPOINT
+    
+    output ADDIN_AZURE_STORAGE_RESOURCE_ID string =  addinModule.outputs.ADDIN_AZURE_STORAGE_RESOURCE_ID// used in deploy stage
+    output ADDIN_DOMAIN string = addinModule.outputs.ADDIN_DOMAIN
+    output ADDIN_ENDPOINT string = addinModule.outputs.ADDIN_ENDPOINT
+    ```
 
 1. In Visual Studio Code, open the Teams Toolkit and in the **ACCOUNTS** section be sure you're signed into your Azure account (in addition to being signed into your Microsoft 365 account). For more information about signing in, see [Create Azure resources to host a Teams tab app](/training/modules/teams-toolkit-vsc-deploy-apps/03-create-azure-resources-exercise) and scroll to the **Sign in to Azure in Teams Toolkit** section.
 
