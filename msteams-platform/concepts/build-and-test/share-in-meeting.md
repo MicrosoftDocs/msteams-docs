@@ -41,7 +41,7 @@ You can scan your web page to locate any HTML elements with the class name of ty
    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
    ```
 
-2. Add an HTML element on your webpage with the `teams-share-button` in the `class` attribute, the app ID (from manifest) in the `data-app-id` attribute, and the link to share in the `data-href` attribute. You can also include the `data-entity-name` and `data-entity-description` attributes.
+2. Add an HTML element on your webpage with the `teams-share-in-meeting-button` in the `class` attribute, the app ID (from manifest) in the `data-app-id` attribute, and the link to share in the `data-href` attribute. You can also include the `data-entity-name` and `data-entity-description` attributes.
 
    ```html
    <div
