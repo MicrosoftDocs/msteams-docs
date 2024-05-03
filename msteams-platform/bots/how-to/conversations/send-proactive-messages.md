@@ -78,6 +78,8 @@ For a code sample, see the call `CreateConversationAsync` in the [**sample**](ht
 
 You can get the conversation when the app is installed for the first time. After the conversation is created, [get the conversation ID](#get-the-conversation-id). The `conversationId` is available in the conversation update events.
 
+The conversation ID is unique for each bot within a specific channel, even in a multitenant environment. This ID ensures that the bot's messages are directed to the appropriate channel and doesn't interrupt with other bots or channels within the same or across different organizations.
+
 If you don't have the `conversationId`, you can [proactively install your app using Graph](#proactively-install-your-app-using-graph) to get the `conversationId`.
 
 ## Get the conversation ID
@@ -155,7 +157,7 @@ A good welcome message can include the following:
 
 ### Notification messages
 
-To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. Ensure users have a clear understanding of why they've received a notification. Good notification messages generally include the following items:
+To send notifications using proactive messaging, ensure your users have a clear path to take common actions based on your notification. If user actions are required in a tab app, use activity feed notifications instead of a bot. Ensure users have a clear understanding of why they've received a notification. Good notification messages generally include the following items:
 
 * What happened? A clear indication of what happened to cause the notification.
 

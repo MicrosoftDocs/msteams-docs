@@ -10,7 +10,7 @@ ms.date: 03/03/2022
 
 # Debug background process
 
-The debugging process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debuggers in Visual Studio Code. Visual Studio Code launches Node debugger and browser debugger, and Microsoft Edge or Google Chrome launches a new browser instance.
+The debugging process involves the `.vscode/launch.json` and `.vscode/tasks.json` files to configure the debuggers in Microsoft Visual Studio Code. Visual Studio Code launches Node debugger and browser debugger, and Microsoft Edge or Google Chrome launches a new browser instance.
 
 The debugging process workflow is as follows:
 
@@ -20,11 +20,11 @@ The debugging process workflow is as follows:
 
 3. Visual Studio Code then launches the debuggers specified in the compound configurations, such as **Attach to Bot**, **Attach to Backend**, **Attach to Frontend**, and **Launch Bot**.
 
-4. The browser debugger, Microsoft Edge or Google Chrome, launches a new browser instance and opens a webpage to load Teams client.
+4. The browser debugger, Microsoft Edge or Google Chrome, launches a new browser instance and opens a webpage to load Microsoft Teams client.
 
 ## Validate prerequisites
 
-Teams Toolkit checks the following prerequisites during the debugging process:
+Microsoft Teams Toolkit checks the following prerequisites during the debugging process:
 
 * Teams Toolkit checks if Node.js is installed. If Node.js isn't installed, the debugging terminates.
 * Teams Toolkit checks if Node.js version matches the versions defined in `package.json` file. If the version doesn't match, Teams Toolkit displays a warning message in output channel.

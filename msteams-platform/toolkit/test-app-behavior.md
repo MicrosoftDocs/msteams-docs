@@ -11,7 +11,7 @@ ms.date: 03/03/2022
 
 ## Upload your app to Teams
 
-You can upload your Teams app to Microsoft Teams without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
+You can upload your Microsoft Teams app to Teams without having to publish to your organization or the Microsoft Teams Store in the following scenarios:
 
 * You want to test and debug an app locally or on your testing cloud environment.
 * You built an app for yourself to automate a workflow.
@@ -51,7 +51,7 @@ You can upload your custom app to a team, chat, meeting, or for personal use dep
 
    :::image type="content" source="~/assets/images/publish-app/teams-app-detail.png" alt-text="Screenshot shows the App description.":::
 
-You can test your Teams app after integrating with Microsoft Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Teams Toolkit for testing your Teams app:
+You can test your Teams app after integrating with Teams. To test your Teams app, you need to create at least one workspace in your environment. You can use Microsoft Teams Toolkit for testing your Teams app:
 
 * **Locally hosted in Teams**: Teams Toolkit locally hosts your Teams app by uploading it into Teams for testing in local environment.
 
@@ -66,7 +66,7 @@ Teams is a cloud-based product that requires all services it accesses, to be ava
 
 ## Cloud-hosted environment
 
-To host your development and production code and their HTTPS endpoints, you need to remotely test your teams app using provisioning and deploying on Microsoft Entra ID. You need to ensure that all domains are accessible from your Teams app listed in the `validDomains` object in the `manifest.json` file.
+To host your development and production code and their HTTPS endpoints, you need to remotely test your Teams app using provisioning and deploying on Microsoft Entra ID. You need to ensure that all domains are accessible from your Teams app listed in the `validDomains` object in the `manifest.json` file.
 
 > [!NOTE]
 > To ensure a secure environment, be explicit about the exact domain and subdomains you reference and those domains must be in your control. For example, `*.azurewebsites.net` is not recommended, however `contoso.azurewebsites.net` is recommended.

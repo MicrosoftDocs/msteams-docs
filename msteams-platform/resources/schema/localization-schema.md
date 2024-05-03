@@ -11,7 +11,7 @@ ms.date: 05/20/2019
 The Microsoft Teams localization file describes language translations that are served based on the client language settings. Your file must conform to the schema hosted at [`https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.Localization.schema.json`](https://developer.microsoft.com/en-us/json-schemas/teams/v1.16/MicrosoftTeams.Localization.schema.json).
 
 > [!TIP]
-> Specify the schema at the beginning of your manifest to enable `IntelliSense` or similar support from your code editor: `"$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json".
+> Specify the schema at the beginning of your manifest to enable `IntelliSense` or similar support from your code editor: `"$schema": "<https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json>".
 
 ## Example
 
@@ -51,6 +51,7 @@ The schema defines the following properties:
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.description`|String|128|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.value`|String|512|Replaces the corresponding string from the app manifest with the value provided here.||
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.parameters\\[[0-4]\\]\\.choices\\[[0-9]\\]\\.title`|String|128|Replaces the corresponding strings from the app manifest with the value provided here.||
+|`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.samplePrompts\\[[0-4]\\]\\.text`|String|128|Content for the sample prompt.||
 |`composeExtensions\\[0\\]\\.commands\\[[0-9]\\]\\.taskInfo\\.title`|String|64|Replaces the corresponding strings from the app manifest with the value provided here.||
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.description`|String|128|A brief description of the notification.||
 |`activities.activityTypes\\[\\b([0-9]|[1-8][0-9]|9[0-9]|1[01][0-9]|12[0-7])\\b]\\.templateText`|String|128|Ex: "{actor} created task {taskId} for you".||
