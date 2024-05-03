@@ -7,13 +7,20 @@ ms.localizationpriority: medium
 
 # Format your AI bot messages
 
-As we make our bots intelligent and more conversational, there's an emerging need for user experiences designed for AI and promote user trust and transparency.
+As we enhance our bots intelligence and conversational capabilities, it’s essential to craft user experiences that are specifically designed for AI and to promote user trust and transparency.
 
-Enhance your AI-powered bot's user experience to fully use its AI capabilities. Add features such as citations, an AI-label, feedback buttons, and a sensitivity label. These elements streamline the user experience for common AI scenarios, such as citing data sources for retrieval-augmented generation (RAG), identifying AI-generated responses, and collecting feedback. By incorporating these elements, you can elevate your bot’s user experience to align with industry-leading AI experiences, like Microsoft Copilot.
+Improve the user experience of your AI-powered bot by fully leveraging its AI capabilities. Incorporate features such as citations, an AI-label, feedback buttons, and a sensitivity label. These features streamline the user experience for common AI scenarios, such as:
 
-Even bots that don’t use AI might find it beneficial to add citations or feedback buttons to their responses, as these UI elements can enhance their functionality.
+* Citing data sources for retrieval-augmented generation (RAG).
+* Identifying AI-generated responses.
+* Collecting feedback.
 
-This article covers how to add the following elements to your bot message:
+By incorporating these elements, you can elevate your bot’s user experience to align with industry-leading AI experiences, like Microsoft Copilot.
+
+> [!NOTE]
+> Even bots that don’t use AI might find it beneficial to add citations or feedback buttons to their responses, as these UI elements can enhance their functionality.
+
+Learn how to add the following elements to your bot message:
 
 * [AI label](#add-ai-label-to-bot-message): Add an AI label to indicate that the message’s content was created using AI.
 * [Citations](#add-citations-to-bot-message): Add in-text citations and a list of references to your responses.
@@ -22,13 +29,14 @@ This article covers how to add the following elements to your bot message:
 
 ## Add AI label to bot message
 
-It's important to communicate to users that your bot is using AI to generate its messages. While large language models (LLMs) are reliable, there might be scenarios where their responses could be incorrect or misleading.
+It's important to communicate to users that your bot is using AI to generate messages. Although large language models (LLMs) are reliable, there might be scenarios where their responses could be incorrect or potentially misleading.
 
 Adding a label to your AI-generated message enhances transparency and encourages users to exercise caution when consuming the message.
 
-Here's how you add the AI-Label to your bot's message:
+When your bot is sending a message, modify the message to include an entity object with `additionalType`
+field. Here's the code snippet to add the AI-Label to your bot's message:
 
-```javascript
+```json
 { 
     "type": "message", 
     "from": { 
@@ -56,21 +64,51 @@ Here's how you add the AI-Label to your bot's message:
 }
 ```
 
-After you enable the AI label, your bot’s message displays an AI label next to the bot’s name. The label has a pop-up notification that states **AI-generated content may be incorrect**:
+After you enable the AI label, your bot’s message automatically displays an AI label that reads **AI generated** next to the bot’s name. The label has a hover tooltip displaying the AI disclaimer that states **AI-generated content may be incorrect**:
 
-*image placeholder*
+:::image type="content" source="../../assets/images/bots/ai-bot-label.png" alt-text="AI bot label.":::
 
 ## Add citations to bot message
 
-If your bot responds to users based on information from data sources such as files, messages, emails, and work items, it’s important to cite these sources in the message. Citations significantly enhance the confidence and trust users have in your bot. They provide users with useful references to ask follow-up questions or conduct their own research.
+If your bot responds to users based on information from data sources such as files, messages, emails, and work items, it’s important to cite these sources in the message. Citations significantly enhance the user's confidence and trust on your bot. They provide users with useful references to ask follow-up questions or conduct their own research.
 
-Adding citations to your message consists of two key parts: in-text citations and a reference list. The following code snippet provides the format that Teams expects for your in-text citations:
+> [!NOTE]
+> Adding citations is particularly important for bots using techniques like RAG.
 
-*placeholder - code snippet*
+Adding citations to your message consists of two key parts:
 
-Next is the list of references. The indexing on this list should match the corresponding in-text citations. Use this list to provide key details like such as title of the citation, the link to the resource, and a relevant quote from the document. Here's how you can add a list of references to your message:
+* In-text citations - Cite your text with [X] format at any place of text
+* Citation reference list - Modify the message to include citation array in the entities object:
 
-```JavaScript
+Bot can cite text content with references. Citation can be inserted in the middle of any place in the text, and the associated reference may include title, keywords, excerpt (abstract), hyperlink, and sensitivity information. References are rendered as inline citation as pop-ups and the expandable citation footers.
+
+:::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" alt-text="AI bot inline citation.":::
+
+The following code snippet provides the format that Teams expects for your in-text citations:
+
+# [Javascript](#tab/js)
+
+```javascript
+await context.sendActivity({
+    type: ActivityTypes.Message,
+    text: 'Hey I'm a friendly AI bot. This message is generated via AI [1]', // cite with [1]
+});
+```
+
+# [JSON](#tab/json)
+
+```json
+{
+    "type": "message",
+    "text": "Hey I'm a friendly AI bot. This message is generated via AI [1]"
+}
+```
+
+---
+
+The indexing on this list should match the corresponding in-text citations. Use this list to provide key details like such as title of the citation, the link to the resource, and a relevant quote from the document. Here's how you can add a list of references to your message:
+
+```json
 {
     "type": "message",
     "from": {
@@ -120,7 +158,11 @@ Next is the list of references. The indexing on this list should match the corre
 
 After enabling citations, your bot message should automatically include in-text citations and a reference list in the footer. The in-text citations should display details to users when they hover over them, as shown in the following image:
 
-*image placeholder*
+:::image type="content" source="../../assets/images/bots/ai-bot-ref-cite-list.png" alt-text="AI bot reference citation list.":::
+
+| Error code | Response |
+| --- | --- |
+| 400 | Multiple root message entities found in the bot activity </br> Error parsing message entity from activity object </br> Bot message contains X citations. Max count is 10. </br> Provided claim has empty appearance </br> Error while parsing citation entity with id: X |
 
 ## Feedback buttons
 
@@ -331,7 +373,7 @@ The final element you might want to add to your message is a sensitivity label. 
 
 Here's how you can add a sensitivity label to your bot message:
 
-```JavaScript
+```json
 { 
     "type": "message", 
     "from": { 
@@ -361,9 +403,9 @@ Here's how you can add a sensitivity label to your bot message:
 }
 ```
 
-Reference the sensitivity label from citation
+Reference the sensitivity label from citation:
 
-```javascript
+```json
 { 
     "type": "message", 
     "from": { 
@@ -409,9 +451,13 @@ Reference the sensitivity label from citation
 }
 ```
 
-Once added, your bot message contains a shield icon. Users can hover over this icon to find details about the sensitivity of the message:
+Once added, your bot message contains a shield icon. Users can hover over this icon to find details about the sensitivity of the message.
 
-*image placeholder*
+:::image type="content" source="../../assets/images/bots/ai-bot-sensitivity-label.png" alt-text="AI bot sensitivity label.":::
+
+| Error code | Response |
+| --- | --- |
+| 400 | Multiple root message entities found in the bot activity. </br> Error parsing message entity from activity object. </br> No usage info to link for a message level usage info. </br> Multiple usage info to link for a message level usage info. |
 
 ## Code samples
 
