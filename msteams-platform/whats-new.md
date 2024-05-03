@@ -396,7 +396,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 May**
 
-***May 02, 2024***: You can specify a [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.
+***May 03, 2024***: You can specify a [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.
 
 :::column-end:::
 :::row-end:::
