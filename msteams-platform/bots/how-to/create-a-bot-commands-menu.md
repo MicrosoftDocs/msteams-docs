@@ -20,13 +20,20 @@ To assist users in initiating conversations with your bot, consider incorporatin
 
 You can add Prompt Starters to your bot through the command menu in your app manifest. Each command represents a Prompt Starter and includes a title along with a description. The title serves as the actual prompt, while the description explains the purpose of the prompt and what the user can achieve by using it. When a user selects a Prompt Starter, the title of the prompt automatically gets inserted into the compose box, facilitating a seamless start to the conversation.
 
+We recommend providing Prompt Starters that are specific and target real scenarios that your users are likely to face. For example, if you are a todo list software, prioritize prompt starters like “Provide a summary of my tasks due today” or “What tasks are overdue from last week” over more generic prompts like “Hello.” 
+
+>[!NOTE]
+> When implementing Prompt Starters, your bot should not send a welcome message. The prompt starter UI will not show up if your bot sends a welcome message. 
+
+Additionally, the Prompt Starters are also available in Group Chats & Channels. The prompts show up in a flyout when the user @mentions your bot. A similar flyout is available in 1:1 chats when the user clicks the “View Prompts” button above compose. 
+
 # [Desktop](#tab/desktop)
 
-**WIP**
+:::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop.":::
 
 # [Mobile](#tab/mobile)
 
-**WIP**
+:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter and View Prompts in mobile.":::
 
 ---
 
