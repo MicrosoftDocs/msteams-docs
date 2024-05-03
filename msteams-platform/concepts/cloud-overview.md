@@ -26,7 +26,7 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
    :::column-end:::
 :::row-end:::
 
-The article provides an overview of Teams' compatibility across different government cloud services, detailing its capabilities for each tenant, and providing guidance on deployment.
+The article provides a comprehensive overview of Teams' compatibility across different government cloud services, details the capabilities for each tenant, and adds guidance on deployment.
 
 | Teams in Government cloud | Teams operated by 21Vianet |
 |---|---|
@@ -63,12 +63,14 @@ The following table details the Teams apps and capabilities for GCC, GCC High, D
 | Developer Portal for Teams | ✔️ | ❌ | ❌ |  ❌ |
 
 > [!NOTE]
-> Third-party apps are turned off by default for GCC and aren't available for GCC High, DOD, and Gallatin. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
-> Only Incoming Webhooks are supported in GCC High.
+>
+> * Third-party apps are turned off by default for GCC and aren't available for GCC High, DOD, and Gallatin. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
+> * Only Incoming Webhooks are supported in GCC High.
+> * For Graph API information, see [Graph API for Government clouds](/graph/teamwork-national-cloud-differences).
 
 ### Plan to deploy Teams in Government clouds
 
-To deploy Teams in a government cloud, you need to purchase a suitable Microsoft 365 Government subscription. US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license.
+To deploy Teams in a government cloud, you must purchase a suitable Microsoft 365 Government subscription. US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license.
 
 To purchase required Microsoft 365 Government licenses:
 
@@ -76,6 +78,8 @@ To purchase required Microsoft 365 Government licenses:
 * You must place an order only through the Microsoft account team or a qualified partner.
 
 For more information, see [Teams for Government](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
+
+To deploy Teams operated by 21Vianet, you can purchase a suitable Office 365 plan offered by 21Vianet version of Office 365 specific to China. For more information, see [Teams operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet).
 
 ### Compliance with third-party services
 
@@ -85,8 +89,8 @@ Here are few pointers to consider while connecting with third-party services fro
 | --- | --- |
 | ✔️ | The users must understand that by enabling third-party communication, the communication is being processed through the third party and not Microsoft. |
 | ✔️ | The user is solely responsible for mitigating risks associated with connecting to third-party bots in their services. |
-| ✔️ | Enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. It's your responsibility to ensure that the bot meets the compliance requirements including FedRAMP, DFARS, and ITAR. |
-| ✔️ | It's your responsibility to evaluate the risk and compliance of any endpoint and URL that you connect to. |
+| ✔️ | You must understand that enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. You must ensure that the bot meets the compliance requirements including FedRAMP, DFARS, and ITAR. |
+| ✔️ | The user must be responsible to evaluate the risk and compliance of any endpoint and URL that the users connect to. |
 | ✔️ | Microsoft doesn't endorse and make no warranties concerning the security of third parties that the customer allows to connect with their service. |
 
 ## See also
@@ -95,3 +99,4 @@ Here are few pointers to consider while connecting with third-party services fro
 * [Plan for governance in Teams](/microsoftteams/plan-teams-governance)
 * [Customer eligibility](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/office-365-us-government)
 * [Microsoft 365 Government how to buy](/office365/servicedescriptions/office-365-platform-service-description/office-365-us-government/microsoft-365-government-how-to-buy)
+* [Manage org-wide app settings](/microsoftteams/manage-apps)
