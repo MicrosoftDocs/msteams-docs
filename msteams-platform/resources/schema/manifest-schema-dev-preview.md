@@ -304,14 +304,14 @@ The unique Microsoft-generated identifier for this app. The format of the ID is 
 
 Specifies information about the developer and their business. For store apps, the value must match the values that you provide in Partner Center app submission form.
 
-| Name            | Type   | Maximum size    | Required | Description                                                                                                              |
-|-----------------|--------|-----------------|----------|--------------------------------------------------------------------------------------------------------------------------|
-| `name`          |        | 32 characters   | ✔️      | The display name for the developer.                                                                                      |
-| `websiteUrl`    |        | 2,048 characters | ✔️      | The `https://` URL to the app-specific page on your website. |
-| `privacyUrl`    |        | 2,048 characters | ✔️      | The `https://` URL to the apps's privacy policy.                                                                      |
-| `termsOfUseUrl` |        | 2,048 characters | ✔️      | The `https://` URL to the apps's terms of use.                                                                        |
-| `mpnId`         |        | 10 characters   |          | **Optional** The Microsoft Partner Network ID that identifies the partner organization creating the app.                 |
-| `contactInfo`   | Object |                 |          | App developer's contact information.                                                                                       |
+| Name            | Type   | Maximum size     | Required | Description                                                                                              |
+|-----------------|--------|------------------|----------|----------------------------------------------------------------------------------------------------------|
+| `name`          |        | 32 characters    | ✔️      | The display name for the developer.                                                                      |
+| `websiteUrl`    |        | 2,048 characters | ✔️      | The `https://` URL to the app-specific page on your website.                                             |
+| `privacyUrl`    |        | 2,048 characters | ✔️      | The `https://` URL to the apps's privacy policy.                                                         |
+| `termsOfUseUrl` |        | 2,048 characters | ✔️      | The `https://` URL to the apps's terms of use.                                                           |
+| `mpnId`         |        | 10 characters    |          | **Optional** The Microsoft Partner Network ID that identifies the partner organization creating the app. |
+| `contactInfo`   | Object |                  |          | App developer's contact information.                                                                     |
 
 ### developer.contactInfo
 
@@ -321,10 +321,10 @@ Your contact information that is used by customers to contact you via Teams chat
 
 We recommend that you triage the customer queries in a timely manner and route those internally within your organization based on the questions asked by the customers. It helps improve app adoption, developer trust, and revenue if you monetize your app.
 
-|Name| Type| Maximum size | Required | Description|
-|---|---|---|---|---|
+| Name | Type | Maximum size | Required | Description |
+|------|------|--------------|----------|-------------|
 |`defaultsupport`|Object||✔️| The default contact information for your app.|
-|`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address to receive customer queries using Teams chat. Specify only one email. The object is an array with all elements of the type string. The maximum length of email is 80 characters. |
+|`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address to receive customer queries using Teams chat. While the manifest allows up to 10 email addresses, the feature only uses the first email. The object is an array with all elements of the type string. The maximum length of email is 80 characters. |
 |`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for customer inquiry. Minimum: 1; maximum: 1. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 
 ## localizationInfo
