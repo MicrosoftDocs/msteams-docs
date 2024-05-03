@@ -46,26 +46,29 @@ For your app to pass Teams Store review, these icons must meet the following siz
 
 ### Color icon
 
-The color version of your icon displays in most Teams scenarios and must be 192x192 pixels. Your icon symbol (96x96 pixels) can be any color, but it must sit on a solid or fully transparent square background.
+* **Teams**: The color version of your icon displays in most Teams scenarios and must be 192x192 pixels. Your icon symbol (96x96 pixels) can be any color, but it must sit on a solid or fully transparent square background.
 
-Teams automatically crops your icon to display a square with rounded corners in multiple scenarios and a hexagonal shape in bot scenarios. To crop the symbol without losing any detail, include 48 pixels of padding around your symbol.
+  Teams automatically crops your icon to display a square with rounded corners in multiple scenarios and a hexagonal shape in bot scenarios. To crop the symbol without losing any detail, include 48 pixels of padding around your symbol.
 
-:::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams color icon and design guidance.":::
+  :::image type="content" source="../../assets/images/icons/design-color-icon.png" alt-text="Teams color icon and design guidance.":::
 
-### Outline icon
+* **Outlook and Microsoft 365 (Preview)**: You can specify a [32x32 color icon](~/resources/schema/manifest-schema-dev-preview.md#icons) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365. If not specified, a scaled down [color icon](#color-icon) with rounded corners (and in some cases, opaque background) is used, which may not share the same look and feel of the host environment.
 
-An outline icon displays when your app is in use and/or pinned to the app bar on the left side of Teams.
+  :::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Screenshot shows the design guidance of an outline and 32x32 color icon.":::
 
 |Microsoft 365 host application |Scenario  | Required|
 |---------|---------|----|
-|Teams     | •	When an app is in use and pinned to the app bar. </br> •	When a user pins an app's message extension.      |✔️ |
-|Outlook and Microsoft 365 (Preview)   |  When an app is pinned in Outlook or the Microsoft 365 app.        ||
+|Teams     | Displays in most Teams scenarios and must be 192x192 pixels.      |✔️ |
+|Outlook and Microsoft 365 (Preview)   |  When an app is pinned in Outlook or Microsoft 365.        ||
 
-Ensure that the outline icon adheres to the following best practices:
-* **Teams**: The icon size must be in 32x32 pixels. It should be either white with a transparent background or transparent with a white background. No other colors are allowed. The outline icon mustn't contain any additional padding around the symbol.
-* **Outlook and Microsoft 365 (Preview)**: You have the option to specify a [32x32 color icon](~/resources/schema/manifest-schema-dev-preview.md#icons) with a transparent background to ensure a consistent appearance when your app runs in Outlook and the Microsoft 365 app. If not specified, a scaled down [color icon](#color-icon) with rounded corners (and in some cases, opaque background) will be used, which may not share the same look and feel of the host environment.
+### Outline icon
 
-:::image type="content" source="../../assets/images/icons/design-outline-icon.png" alt-text="Screenshot shows the design guidance of an outline and 32x32 color icon.":::
+An outline icon displays in two scenarios:
+
+* When your app is in use.
+* When your app is pinned to the app bar on the left side of Teams.
+
+Ensure that the ouline icon size must be in 32x32 pixels. It must be either white with a transparent background or transparent with a white background. No other colors are allowed. The outline icon mustn't contain any additional padding around the symbol.
 
 ### Best practices
 
