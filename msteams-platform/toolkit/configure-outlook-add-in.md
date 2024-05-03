@@ -37,9 +37,9 @@ The following steps help you add an Outlook Add-in to a Teams app:
 
 1. [Prepare the Teams app project](#prepare-the-teams-app-project).
 1. [Create an Office Add-in project](#create-an-outlook-add-in-project) that is initially separate from your Teams app project.
-1. [Merge the manifest](#merge-the-manifest) from the Outlook Add-in project into the unified Microsoft 365 manifest.
-1. [Copy the Outlook Add-in files to the Teams app project](#copy-the-outlook-add-in-files-to-the-teams-app-project).
-1. [Edit the tooling configuration files](#edit-the-tooling-configuration-files).
+1. [Merge the manifest](#merge-app-manifest) from the Outlook Add-in project into the unified Microsoft 365 manifest.
+1. [Copy the Outlook Add-in files to the Teams app project](#copy-outlook-add-in-files-to-teams-app-project).
+1. [Edit the tooling configuration files](#edit-tooling-configuration-files).
 1. [Run the app and add-in locally at the same time](#run-the-app-and-add-in-locally-at-the-same-time).
 1. [Move the application to Azure](#move-the-application-to-azure).
 
@@ -108,7 +108,7 @@ The following steps help you add an Outlook Add-in to a Teams app:
 
 1. Create a new file named `package.json` in the root of the project and add the following code:
 
-```json
+```JSON
 {
     "name": "CombinedTabAndAddin",
     "version": "0.0.1",
@@ -200,7 +200,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 1. If you changed the `name.short` value from the default value, which is the name of the project followed by the `${{TEAMSFX_ENV}}` variable, change the value in all places where the project name appears in the `teamsapp.yml` and `teamsapp.local.yml` files in the root of the project.
 1. If there's no `authorization.permissions.resourceSpecific` array in the app manifest file, copy it from the add-in manifest as a top-level property. If this array is present in app manifest, copy any objects from the array in the add-in manifest to the array in the Teams template. The following code is an example:
 
-```json
+```JSON
 "authorization": {
     "permissions": {
         "resourceSpecific": [
@@ -215,21 +215,21 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 
 1. In the `env/.env.local` file, add the following code after the`TAB_DOMAIN` and `TAB_ENDPOINT` variables:
 
-   ```json
+   ```JSON
    ADDIN_DOMAIN=localhost:3000
    ADDIN_ENDPOINT=https://localhost:3000
    ```
 
 1. In the `env/.env.dev` file, add the following line after the `TAB_ENDPOINT` variable:
 
-   ```json
+   ```JSON
    ADDIN_ENDPOINT=
    ```
 
 1. In the app manifest file, add the placeholder `"${{ADDIN_DOMAIN}}"`, before the `validDomains` array.
    Teams Toolkit replaces the placeholder with a localhost domain when you develop the app locally. When you deploy the app to staging or production as described in [Move the application to Azure](#move-the-application-to-azure), Teams Toolkit replaces the placeholder with staging or production URI. The following code is an example:
 
-   ```json
+   ```JSON
    "validDomains": [
        "${{ADDIN_DOMAIN}}",
        
@@ -297,7 +297,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 1. Open the `package.json` file from the root of the project.
 1. Add the following scripts to the `scripts` object:
 
-   ```json
+   ```JSON
    "install:add-in": "cd add-in && npm install",
    "postinstall": "npm run install:add-in && npm run install:tab",
    "build:add-in": "cd add-in && npm run build",
@@ -308,7 +308,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 1. Open the `package.json` file in the add-in folder.
 1. The scripts in the `scripts` object should look like:
 
-    ```json
+    ```JSON
     "start": "office-addin-debugging start appPackage/manifest.json",
     "stop": "office-addin-debugging stop appPackage/manifest.json",
     "validate": "office-addin-manifest validate appPackage/manifest.json",
@@ -316,13 +316,13 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 
 1. In the `start` script, replace `appPackage/manifest.json` to `../appPackage/build/appPackage.local.zip`. For example:
 
-    ```json
+    ```JSON
     "start": "office-addin-debugging start ../appPackage/build/appPackage.local.zip",
     ```
 
 1. In the `validate` and `stop` scripts, update the parameter to `../appPackage/build/manifest.local.json`. For example:
 
-    ```json
+    ```JSON
     "stop": "office-addin-debugging stop ../appPackage/build/manifest.local.json",
     "validate": "office-addin-manifest validate ../appPackage/build/manifest.local.json",
     ```
@@ -333,7 +333,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 1. Replace `from: "appPackage/manifest*.json",` to `from: "../appPackage/build/manifest*.json",`.
 1. In the root of project, open the `teamsapp.local.yml` file and find the provision section. Use the # character to comment out the lines that validate the manifest template. This is necessary because the manifest validation system isn't yet compatible with the changes you made to the manifest template. The following code is an example of how the lines should look like when updated:
 
-   ```json
+   ```JSON
      # - uses: teamsApp/validateManifest
      #   with:
      #     # Path to manifest template
@@ -344,7 +344,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 
 1. Open the `teamsapp.yml` file and add the following lines in `provision` and `publish` sections:
 
-   ```json
+   ```JSON
      # - uses: teamsApp/validateManifest
      #   with:
      #     # Path to manifest template
@@ -357,7 +357,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 
 1. In each of the task objects you copied, add the following `options` property to ensure that these tasks run in the add-in folder.
 
-   ```json
+   ```JSON
    "options": {
        "cwd": "${workspaceFolder}/add-in/"
    }
@@ -365,7 +365,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 
    The following code sample is an example when you update the `Debug: Outlook Desktop` task:
 
-   ```json
+   ```JSON
    {
        "label": "Debug: Outlook Desktop",
        "type": "npm",
@@ -387,7 +387,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 
 1. Add the following task to the `tasks` array in the `.vscode\tasks.json` file of the project:
 
-   ```json
+   ```JSON
    {
        // Create the debug resources.
        // See https://aka.ms/teamsfx-tasks/provision to know the details and how to customize the args.
@@ -403,7 +403,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 
 1. Add the following task to the `tasks` array:
 
-   ```json
+   ```JSON
    {
        "label": "Start Add-in Locally",
        "dependsOn": [
@@ -418,7 +418,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
 
 1. Add the following task to the `tasks` array:
 
-   ```json
+   ```JSON
     {
         "label": "Start App and Add-in Locally",
         "dependsOn": [
@@ -432,7 +432,7 @@ App manifest (previously called Teams app manifest) is generated at debug and cu
    This task combines the `Start Teams App Locally` task with `Start Add-in Locally` and specifies that these tasks must run in the order.
 1. Open the `.vscode\launch.json` file in the project, which configures the **RUN AND DEBUG** UI in Visual Studio Code and add the following objects before the `configurations` array.
 
-   ```json
+   ```JSON
    {
        "name": "Launch Add-in Outlook Desktop (Edge Chromium)",
        "type": "msedge",
@@ -491,7 +491,7 @@ To see both the app and the add-in running at the same time, take the following 
 1. Select **View** > **Run** in Visual Studio Code. In the RUN AND DEBUG drop-down menu, select the option, Launch App and Add-in Outlook Desktop (Edge Chromium), and then press F5. The project builds and a Webpack dev-server window opens to host the add-in. The tab app is hosted in the Visual Studio Code terminal. This process takes a couple of minutes. Eventually, both of the following will happen:
     * Teams opens in a browser with a prompt to add your tab app. If Teams hasn't opened by the time Outlook desktop opens, then automatic sideloading has failed. You can manually sideload it to see both the app and the add-in running at the same time. For sideloading instructions, see Upload your app in Teams. You find the manifest.zip file to upload at `C:\Users\{yourname}\AppData\Local\Temp`.
     * Outlook desktop opens.
-1. In the Teams prompts, select Add and the tab will open.
+1. In the Teams prompts, select Add and the opens.
 1. In Outlook, open the Inbox of your Microsoft 365 account identity and open any message. A Contoso Add-in tab with two buttons appears on the Home ribbon (or the Message ribbon, if you have opened the message in its own window).
 1. Select the Show Taskpane button and a task pane opens. Select the Perform an action button and a small notification appears near the top of the message.
 1. To stop debugging and uninstall the add-in, select Run | Stop Debugging in Visual Studio Code. If the Webpack dev-server window doesn't close, open the Visual Studio Code TERMINAL in the root of the project and run `npm stop`.
@@ -517,7 +517,7 @@ provision:
 
 1. In the same file, replace the entire `deploy:` section with the following code. These changes take account of the new folder structure and the fact that both add-in and tab files need to be deployed.
 
-```json
+```JSON
 deploy:
   - name: InstallAllCapabilities
     uses: cli/runNpmCommand # Run npm command
@@ -550,7 +550,7 @@ deploy:
 
 1. Open the infra/azure.parameters.json file in the root of the project and replace its contents with the following JSON:
 
-```json
+```JSON
 {
     "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
     "contentVersion": "1.0.0.0",
@@ -570,7 +570,7 @@ deploy:
 
 1. Open the infra/azure.bicep file in the root of the project (not the one in either the tab or add-in subfolders) and replace its contents with the following.
 
-```json
+```JSON
 // Params for Teams tab resources
 @maxLength(20)
 @minLength(4)
