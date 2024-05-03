@@ -7,13 +7,15 @@ metadata:
   level: Beginner
   ms.date: 29/04/2024
   ms.topic: interactive-tutorial
+  nextTutorialHref: ~/Teams conversational AI/teams-conversation-ai-overview.md
+  nextTutorialTitle: Back to Teams AI library
   ms.custom: mvc
   ms.localizationpriority: high
 items:
 - durationInMinutes: 1
   content: |
 
-    This tutorial shows how to create Custom Copilot with Copilot SDK using Teams Toolkit and interact with your Large Language Model (LLM) on Teams. Copilot SDK streamlines the process of building intelligent Teams apps by using the AI components and LLM of your choice.
+    This tutorial shows how to create a Custom Copilot with Copilot SDK using Teams Toolkit to chat with your data on Azure OpenAI. Copilot SDK streamlines the process of building intelligent Teams apps by using the AI components and large language model of your choice.
 
     In this tutorial, you learn:
 
@@ -44,7 +46,6 @@ items:
      1. Select the Azure OpenAI service that you created in the prerequisite.
 
      1. Select **Go to Azure OpenAI Studio**.
-
         
         :::image type="content" source="../msteams-platform/assets/images/bots/go-to-azure-openai-studio.png" alt-text="Screenshot shows the go to Azure OpenAI studio in Azure portal.":::
 
@@ -130,7 +131,7 @@ items:
      
      1. Select **Enter**. Custom Copilot is created in a few seconds.
 
-     ## Take a tour of the tab app source code
+     ## Take a tour of the source code
 
      Have a look at what's inside this Custom Copilot > Basic AI Chatbot template.
 
@@ -148,20 +149,18 @@ items:
      | `src/prompts/chat/config.json`| The source code for the notification Teams application. |
      | `src/app/app.js`| The source code for the notification Teams application. |
      | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
-     | `teamsapp.local.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging. |
-     | `teamsapp.testtool.yml` | This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+     | `teamsapp.local.yml` | This override `teamsapp.yml` with actions that enable local execution and debugging. |
+     | `teamsapp.testtool.yml` | This override `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
-- title: Build your first Custom Copilot
+- title: Customize your Custom Copilot
   durationInMinutes: 1
   content: |
 
      1. Let's customize the prompt for your Custom Copilot. Go to `src/prompts/chat/skprompt.txt` and update the following code in `skprompt.txt` file:
 
         ```skprompt.txt
-        This is a conversation with an AI assistant specialized in the vast and intriguing universe of planets and space.
-        Encourage the AI to provide vivid and captivating explanations that spark curiosity and enhance learning.
-        Brighten the conversation with emojis! They add a playful and visually engaging element that makes learning about space more fun.
-        At the end of each response, share a fascinating fun fact about space or planets. These snippets aim to amaze and provide extra tidbits of knowledge!
+        The following is a conversation with an AI assistant, who is an expert on answering questions over the given context.
+        Responses should be in a short journalistic style with no more than 80 words. 
         ```
         :::image type="content" source="../msteams-platform/assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in Visual Studio Code.":::
 
