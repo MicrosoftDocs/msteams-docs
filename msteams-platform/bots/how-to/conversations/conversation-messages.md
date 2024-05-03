@@ -678,6 +678,10 @@ async onTeamsMessageSoftDelete(context) {
 
 ## Send suggested actions
 
+Suggested actions will help users expand on their current conversation with your bot. Often users need help determining what to ask next, and any relevant suggestions can be impactful.  
+
+Suggested actions are prompts that provide users with suggestions on what to ask next. These can be follow-up prompts that help the user expand on the previous response, ask more specific questions to generate a more precise response, or start a conversation on a related topic.  
+
 The suggested actions enable your bot to present buttons that the user can select to provide input. Suggested actions enhance user experience by enabling the user to answer a question or make a choice with selection of a button, rather than typing a response with a keyboard.
 When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
 
@@ -690,18 +694,20 @@ The following is an example for implementation and experience of suggested actio
     "actions": [
       {
         "type": "imBack",
-        "title": "Action 1",
-        "value": "Action 1"
+        "title": "Create a new query identifying overdue tasks",
+        "value": "Create a new query identifying overdue tasks"
       },
       {
         "type": "imBack",
-        "title": "Action 2",
-        "value": "Action 2"
+        "title": "Create a new work item for this feature",
+        "value": "Create a new work item for this feature"
       }
     ],
     "to": [<list of recepientIds>]
   }
 ```
+
+When the user clicks on a suggested action, the bot will receive a message from the user composed of the suggested action’s value field.  
 
 The following illustrates an example of suggested actions:
 
@@ -712,6 +718,8 @@ The following illustrates an example of suggested actions:
 > * `SuggestedActions` are only supported for one-on-one chat bots with both text based messages and Adaptive Cards.
 > * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 > * `imBack` is the only supported action type and Teams display up to three suggested actions.
+
+Suggested Actions should be based on context of the conversation the user is having with the bot. These should not be generic or static prompts. We recommend prompting your bot’s LLM to include up to three suggestions with its responses. You can parse out these suggestions and pass them as suggested actions to the user.  
 
 ## Teams channel data
 
