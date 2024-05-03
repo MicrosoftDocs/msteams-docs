@@ -49,6 +49,14 @@ With Microsoft Graph APIs for calls and online meetings, Teams apps can now inte
 
 You can use the Teams bot APIs to get information for members of a chat or team. See [changes to Teams bot APIs for fetching team or chat members](~/resources/team-chat-member-api-changes.md).
 
+You can change the bot name displayed in Teams environment, and you need to update it in the following occurrences:
+
+* The bot name displayed as a title in the chat window is managed within your app manifest (previously called Teams app manifest) and you can update the bot name in your app manifest.
+
+* The bot name that's displayed in your Teams chat list and in the chat window with each message are managed within Microsoft Azure portal. For custom uploaded apps, you can update the bot name in the **Bot profile** page in Azure portal.
+
+  :::image type="content" source="~\assets\images\bot_name.png" alt-text="The screenshot shows the bot name displayed in a Teams window.":::
+
 ## Add SSO authentication to your conversation bots
 
 You can add single sign-on authentication to your conversation bot using the following steps:
@@ -61,7 +69,7 @@ You can add single sign-on authentication to your conversation bot using the fol
 
 ## Bot configuration experience
 
-Bot configuration experience helps the users to interact with the bot in Teams. Users can interact with the bot either by sending a message or selecting a command from the command list. After the bot is installed in a channel or team, all the members from the channel or team can provide inputs to the bot at the same time, the bot only considers the last input provided by the user. For more information, see [bot configuration experience](how-to/bot-configuration-experience.md).
+Bot configuration experience helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot from the channel or group chat scope where the bot is installed. Bot configuration is an important functionality for apps within the Teams platform, laying the foundation for their operational effectiveness. For more information, see [bot configuration experience](how-to/bot-configuration-experience.md).
 
 ## Code samples
 

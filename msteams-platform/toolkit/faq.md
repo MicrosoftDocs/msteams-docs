@@ -10,8 +10,6 @@ ms.date: 11/29/2021
 
 # FAQ for Teams Toolkit
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/v4-deprecate-note.png" alt-text="Screenshot shows the Teams Toolkit v4 deprecation note.":::
-
 Following are the FAQs for [Provision cloud resources using Teams Toolkit](provision.md):
 
 </br>

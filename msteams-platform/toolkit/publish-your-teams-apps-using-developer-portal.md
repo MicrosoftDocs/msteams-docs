@@ -10,7 +10,7 @@ ms.date: 07/29/2022
 
 # Integrate with Developer Portal
 
-You can configure and manage your app in Developer Portal within Teams Toolkit.
+You can configure and manage your app in Developer Portal within Microsoft Teams Toolkit.
 
 ## To publish app using Developer Portal
 
@@ -18,7 +18,7 @@ You can publish your app, which is created in Visual Studio Code using Developer
 
 The following steps help to publish your app in Developer Portal:
 
-1. Select **Open Developer Portal to Publish** for Teams under **UTILITY**.
+1. Select **Open Developer Portal to Publish** for Microsoft Teams under **UTILITY**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/open-developer-portal-to-publish.png" alt-text="Screenshot showing the selection of open Developer Portal to publish.":::
 
@@ -50,7 +50,7 @@ You can do the following configuration for your app in the Developer Portal:
   * Connector
   * Scene
   * Group and channel app
-  * Messaging extension
+  * Message extension
   * Meeting extension
   * Activity feed notification
 * **Permissions**: This section allows you to give **Device permissions**, **Team Permissions**, **Chat/Meeting Permissions**, and **User Permissions** for your app.

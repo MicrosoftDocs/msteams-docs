@@ -49,7 +49,7 @@ You can configure your app to post messages to a chat and add deep links to them
 
 When you add a deep link to a hyperlinked Markdown text message, it's triggered and opened within Teams. Following is an example:
 
-Example: `[App](https://teams.microsoft.com/l/app/{appId})`, where `appId` is your application ID. To know more about different app IDs used see, [app ID used for different apps](~/concepts/build-and-test/deep-link-application.md#app-id-used-for-different-apps).
+Example: `[App](https://teams.microsoft.com/l/app/{appId})`, where `appId` is your application ID. For more information, see [app ID for different types of apps](deep-link-application.md#app-id-for-different-types-of-apps).
 
 For more information, see [use Markdown formatting in Teams](https://support.microsoft.com/en-us/office/use-markdown-formatting-in-teams-4d10bd65-55e2-4b2d-a1f3-2bebdcd2c772).
 
@@ -57,12 +57,11 @@ For more information, see [use Markdown formatting in Teams](https://support.mic
 
 When you add a deep link to a raw text message, it's triggered and opened within Teams. Following is an example:
 
-Example: `https://teams.microsoft.com/l/app/{appId}`, where `appId` is your application ID. To know more about different app IDs used see, [app ID used for different apps](~/concepts/build-and-test/deep-link-application.md#app-id-used-for-different-apps).
-
+Example: `https://teams.microsoft.com/l/app/{appId}`, where `appId` is your application ID. For more information, see [app ID for different types of apps](deep-link-application.md#app-id-for-different-types-of-apps).
 
 ### Adaptive Card
 
-You can include an `openURL` action in an Adaptive Card and add a deep link to it. The deep link is executed within Teams. As raw links or hyperlinks in an Adaptive Card open in the browser, it's recommended that you use `openURL` action. For more information, see [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html).
+You can include an `openURL` action in an Adaptive Card and add a deep link to it. The deep link is executed within Teams. As raw links or hyperlinks in an Adaptive Card open in the browser, we recommend that you use `openURL` action. For more information, see [Action.OpenUrl](https://adaptivecards.io/explorer/Action.OpenUrl.html).
 
 Following is an example Adaptive Card payload:
 
@@ -97,4 +96,4 @@ When a deep link to a tab app is triggered, ensure that all parameters are set i
 
 When Teams navigates to the tab through a deep link, Teams verifies if the subpage ID exists and retrieves it through the TeamsJS library.
 
-If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) calls `microsoftTeams.getContext()` to verify if the subpage ID exists. In TeamsJS v2 library subpage ID is named as `subPageId` and in v1 it's `subEntityId`. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
+If the tab is navigated through a deep link, the [`app.getContext()`](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-getcontext&preserve-view=true) calls `microsoftTeams.getContext()` to verify if the subpage ID exists. In TeamsJS v2 library, the subpage ID is named as `subPageId`, and in v1, it's `subEntityId`. For more information, see [PageInfo interface](/javascript/api/@microsoft/teams-js/app?view=msteams-client-js-latest#@microsoft-teams-js-app-pageinfo&preserve-view=true).
