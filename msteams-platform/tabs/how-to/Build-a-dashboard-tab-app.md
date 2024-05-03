@@ -628,7 +628,7 @@ To use Microsoft Graph Toolkit as your widget content, follow these steps:
 
 1. Add SSO feature to your Teams app: Microsoft Teams provides single sign-on (SSO) function for an app to obtain signed in Teams user token to access Microsoft Graph. For more information, refer [SSO feature to your Teams app](../../toolkit/add-single-sign-on.md).
 
-1. To install the required `npm` packages, run the following command in your project's `tabs` folder:
+1. To install the required Node Package Manager (npm) packages, run the following command in your project's `tabs` folder:
 
       ```bash
       npm install @microsoft/mgt-react @microsoft/mgt-teamsfx-provider
