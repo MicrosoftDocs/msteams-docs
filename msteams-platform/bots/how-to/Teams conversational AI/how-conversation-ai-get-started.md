@@ -577,12 +577,6 @@ The language supports features that allow you to include variables, call externa
 
 * ``{{$state.[property]}}``: Inserts state properties.
 
-### Suggested Prompts
-
-When users start interacting with AI bots, they often encounter the challenge of understanding how to effectively communicate with these advanced bots. This is especially true for bots that leverage AI, as users may not be familiar with their conversational style or the vast set of capabilities.
-
-Therefore, it's crucial to facilitate a smooth onboarding process for users to learn how to utilize your bot. This not only enhances the user experience by making it more engaging and informative but also promotes user acquisition and retention by simplifying the discovery of the bot's value. An effective approach to accomplish this is to add suggested prompts to your bot. You can add two types of suggested prompts to your bot experience, [Prompt Starters](~/bots/how-to/create-a-bot-commands-menu.md) to help users start a conversation with your bot and [Suggested Actions](~/bots/how-to/conversations/conversation-messages.md#send-suggested-actions) to help users continue conversations with your bot.
-
 ## Actions
 
 Actions handle events triggered by AI components.
