@@ -35,6 +35,8 @@ Adding a label to your AI-generated message enhances transparency and encourages
 
 Here's the code snippet to add the AI label to your bot's message:
 
+# [JSON](#tab/json)
+
 ```json
 { 
     "type": "message", 
@@ -63,19 +65,19 @@ Here's the code snippet to add the AI label to your bot's message:
 }
 ```
 
-# [.NET](#tab/dotnet1)
+# [.NET](#tab/dotnet)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [JavaScript](#tab/javascript4)
+# [JavaScript](#tab/javascript)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python4)
+# [Python](#tab/python)
 
 Sample code reference (link)
 
@@ -125,13 +127,13 @@ await context.sendActivity({
 }
 ```
 
-# [.NET](#tab/dotnet1)
+# [.NET](#tab/dotnet)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python4)
+# [Python](#tab/python)
 
 Sample code reference (link)
 
@@ -193,13 +195,13 @@ The indexing on this list should match the corresponding in-text citations. Use 
 }
 ```
 
-# [.NET](#tab/dotnet1)
+# [.NET](#tab/dotnet)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python4)
+# [Python](#tab/python)
 
 Sample code reference (link)
 
