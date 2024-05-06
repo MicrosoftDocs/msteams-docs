@@ -25,7 +25,7 @@ To build Actions for your app, follow these steps:
 
 ## Prerequisites
 
-Before you get started, ensure that you install the following tools:
+Before you get started, ensure that you install the following:
 
 | &nbsp; | Install | Description |
 | --- | --- | --- |
