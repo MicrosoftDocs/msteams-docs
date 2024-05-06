@@ -261,22 +261,37 @@ After enabling citations, your bot message automatically includes in-text citati
 
 ## Feedback buttons
 
-While LLMs significantly enhance your bot’s conversational capabilities, they can sometimes be inconsistent and require careful adjustments to behave as intended. User feedback is invaluable to evaluate your bot’s performance in real-world scenarios and enables you to make effective and targeted improvements.
+Collecting feedback is critical to assess your bot’s performance in real-world scenarios and improve its conversational capabilities with effective and targeted improvements. Feedback buttons enable users to indicate whether they like or dislike the messages your bot sends. After the user select a button, a dialog (referred as a task module in TeamsJS v1.x) appears that allows them to provide detailed feedback about the message.
 
-Feedback buttons enable users to indicate whether they like or dislike the messages your bot sends. After the user select a button, a dialog (referred as a task module in TeamsJS v1.x) appears that allows them to provide detailed feedback about the message.
+:::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" alt-text="Screenshots shows the feedback buttons in a bot." lightbox="../../assets/images/bots/bot-feedback-buttons.png":::
+
+When the user selects one of the feedback buttons, a dialog that appears contains a feedback form depending on the user's selection. A positive feedback form appears if the user likes a message and a negative feedback form appears if the user dislikes a message.
+
+# [Positive feedback](#tab/pos)
+
+:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" alt-text="Screenshot shows the feedback form in a bot.":::
+
+# [Negative feedback](#tab/neg)
+
+:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" alt-text="Screenshot shows the feedback form in a bot.":::
+
+---
 
 > [!NOTE]
 >
-> * Feedback buttons are available in public developer preview.
-> * Feeback buttons are only available in Teams web and desktop clients.
-> * You can collect feedback on your bot’s responses from personal chats, group chats, and channels.
+> * Feedback buttons are available in public developer preview and only in Teams web and desktop clients.
 > * Feedback buttons are not available for message extensions.
 
 ### Enable feedback buttons
 
 To enable feedback buttons in your bot, add a new `channelData` object in your bot's message and set `feedbackLoopEnabled` to true.
+After you enable feedback buttons, the footer of your bot's message contains a like and dislike button for the user to select. You can collect feedback on your bot’s responses from personal chats, group chats, and channels.
 
-```json
+The following code snippets show how to enable feedback buttons in a bot:
+
+# [JavaScript](#tab/js)
+
+```javascript
 await context.sendActivity({
   type: ActivityTypes.Message,
   text: `Hey I'm a friendly AI bot. This mesasge is generated via AI - ${txt}`,
@@ -286,7 +301,7 @@ await context.sendActivity({
 });
 ```
 
-The following code snippet shows how to enable feedback buttons in a bot for a message in a group chat:
+# [JSON](#tab/json)
 
 ```json
 {
@@ -311,9 +326,22 @@ The following code snippet shows how to enable feedback buttons in a bot for a m
 
 ```
 
-For a bot built using Teams AI library, Teams enables feedback buttons to all messages when `enable_feedback_loop` is set to true. To customize this behavior, you need to extend the SAY command. The following code snippet shows how to enable feedback buttons in a bot built with Teams AI library:
+# [.NET](#tab/dotnet)
 
-```json
+*placeholder code snippet*
+
+# [Python](#tab/python)
+
+*placeholder code snippet*
+
+---
+
+For a bot built using Teams AI library, Teams enables feedback buttons to all messages when `enable_feedback_loop` is set to true. To customize this behavior, you need to extend the SAY command. The following code snippet shows how to enable feedback buttons in a bot built with Teams AI library:
+<br>
+<details>
+<summary><b>Code snippet</b></summary>
+
+```javascript
 import { OpenAIModel, PromptManager, ActionPlanner, Application, TurnState, TeamsAdapter } from '@microsoft/teams-ai';
 import { ConfigurationServiceClientCredentialFactory, MemoryStorage, TurnContext } from 'botbuilder';
 import path from 'path';
@@ -405,21 +433,7 @@ app.feedbackLoop(async (context, state, feedbackLoopData) => {
 });
 ```
 
-After you enable feedback buttons, the footer of your bot's message contains a like and dislike button for the user to select. You can also enable feedback buttons for specific messages that your bot sends.
-
-:::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" alt-text="Screenshots shows the feedback buttons in a bot." lightbox="../../assets/images/bots/bot-feedback-buttons.png":::
-
-When the user selects one of the feedback buttons, the dialog that appears contains a feedback form depending on the user's selection. A positive feedback form appears if the user likes a message and a negative feedback form appears if the user dislikes a message.
-
-# [Positive feedback](#tab/pos)
-
-:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" alt-text="Screenshot shows the feedback form in a bot.":::
-
-# [Negative feedback](#tab/neg)
-
-:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" alt-text="Screenshot shows the feedback form in a bot.":::
-
----
+</details>
 
 The bot sends the user's input, received in the feedback form, to you through a bot invoke. The following code snippet is an example of a bot invoke containing positive feedback from a user:
 
@@ -457,7 +471,9 @@ It’s important to store feedback after you receive it. Teams doesn’t store o
 
 ### Error handling
 
-Teams returns a 400 Bad Request error if the `submit/messageAction` invoke response isn't empty. To learn more about handling common errors in bot conversations, see [Status codes from bot conversational APIs](conversations/conversation-messages.md#status-codes-from-bot-conversational-apis).
+| Error code | Response |
+| --- | --- |
+| 400 | `submit/messageAction` invoke response isn't empty. |
 
 ## Add sensitivity label to bot message
 
