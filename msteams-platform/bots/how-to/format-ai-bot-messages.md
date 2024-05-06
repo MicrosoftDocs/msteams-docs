@@ -20,7 +20,7 @@ By incorporating these elements, you can elevate your bot’s user experience to
 > [!NOTE]
 > Even bots that don’t use AI might find it beneficial to add citations or feedback buttons to their responses, as these UI elements can enhance their functionality.
 
-Learn how to add the following elements to your bot message:
+Learn how to add the following elements to your AI bot message:
 
 * [AI label](#add-ai-label-to-bot-message): Add an AI label to indicate that the message’s content was created using AI.
 * [Citations](#add-citations-to-bot-message): Add in-text citations and a list of references to your responses.
@@ -31,10 +31,9 @@ Learn how to add the following elements to your bot message:
 
 It's important to communicate to users that your bot is using AI to generate messages. Although large language models (LLMs) are reliable, there might be scenarios where their responses could be incorrect or potentially misleading.
 
-Adding a label to your AI-generated message enhances transparency and encourages users to exercise caution when consuming the message.
+Adding a label to your AI-generated message enhances transparency and encourages users to exercise caution when consuming the message. When your bot is sending a message, modify the message to include an entity object with `additionalType` field.
 
-When your bot is sending a message, modify the message to include an entity object with `additionalType`
-field. Here's the code snippet to add the AI-Label to your bot's message:
+Here's the code snippet to add the AI label to your bot's message:
 
 ```json
 { 
@@ -64,7 +63,27 @@ field. Here's the code snippet to add the AI-Label to your bot's message:
 }
 ```
 
-After you enable the AI label, your bot’s message automatically displays an AI label that reads **AI generated** next to the bot’s name. The label has a hover tooltip displaying the AI disclaimer that states **AI-generated content may be incorrect**:
+# [.NET](#tab/dotnet1)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+# [JavaScript](#tab/javascript4)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+# [Python](#tab/python4)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+---
+
+After you enable the AI label, your bot’s message automatically displays an AI label that reads **AI generated** next to the bot’s name. The label has a hover tooltip that displays the AI disclaimer stating **AI-generated content may be incorrect**.
 
 :::image type="content" source="../../assets/images/bots/ai-bot-label.png" alt-text="AI bot label.":::
 
@@ -73,25 +92,27 @@ After you enable the AI label, your bot’s message automatically displays an AI
 If your bot responds to users based on information from data sources such as files, messages, emails, and work items, it’s important to cite these sources in the message. Citations significantly enhance the user's confidence and trust on your bot. They provide users with useful references to ask follow-up questions or conduct their own research.
 
 > [!NOTE]
-> Adding citations is particularly important for bots using techniques like RAG.
+> Citations are particularly important for bots using techniques like RAG.
 
 Adding citations to your message consists of two key parts:
 
-* In-text citations - Cite your text with [X] format at any place of text
-* Citation reference list - Modify the message to include citation array in the entities object:
+* [In-text citations](#in-text-citations): Cite your text with [X] format at any place of text.
+* [Citation reference list](#citation-reference): Modify the message to include citation array in the entities object.
 
-Bot can cite text content with references. Citation can be inserted in the middle of any place in the text, and the associated reference may include title, keywords, excerpt (abstract), hyperlink, and sensitivity information. References are rendered as inline citation as pop-ups and the expandable citation footers.
+### In-text citations
+
+Bots have the capability to embed text content with references. You can insert a citation anywhere within the text. The corresponding reference can include the title, keywords, excerpt (abstract), hyperlink, and sensitivity information. References appear as inline citations in pop-ups and as expandable citation footers.
 
 :::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" alt-text="AI bot inline citation.":::
 
-The following code snippet provides the format that Teams expects for your in-text citations:
+The following code snippet provides the format expected by Teams for your in-text citations:
 
 # [Javascript](#tab/js)
 
 ```javascript
 await context.sendActivity({
     type: ActivityTypes.Message,
-    text: 'Hey I'm a friendly AI bot. This message is generated via AI [1]', // cite with [1]
+    text: 'Hey I'm a friendly AI bot. This message is generated via AI - $(txt) [1]', // cite with [1]
 });
 ```
 
@@ -104,9 +125,25 @@ await context.sendActivity({
 }
 ```
 
+# [.NET](#tab/dotnet1)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+# [Python](#tab/python4)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
 ---
 
-The indexing on this list should match the corresponding in-text citations. Use this list to provide key details like such as title of the citation, the link to the resource, and a relevant quote from the document. Here's how you can add a list of references to your message:
+### Citation reference
+
+The indexing on this list should match the corresponding in-text citations. Use this list to provide key details such as title of the citation, the link to the resource, and a relevant quote from the document. Here's how you can add a list of references to your message:
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -156,13 +193,69 @@ The indexing on this list should match the corresponding in-text citations. Use 
 }
 ```
 
-After enabling citations, your bot message should automatically include in-text citations and a reference list in the footer. The in-text citations should display details to users when they hover over them, as shown in the following image:
+# [.NET](#tab/dotnet1)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+# [Python](#tab/python4)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+---
+
+When your bot is sending a message back, modify the message to include an entity object:
+
+```javascript
+ await context.sendActivity({
+         type: ActivityTypes.Message,
+        text: `Hey I'm a friendly AI bot. This message is generated via AI - $(txt) [1]`, // cite with [1]
+        entities: [
+          {
+            type: "https://schema.org/Message",
+            "@type": "Message",
+            "@context": "https://schema.org",
+            "@id": "",
+            citation: [
+              {
+                "@type": "Claim",
+                position: 1, // Required. Should match the [1] in the text above
+                appearance: {
+                  "@type": "DigitalDocument",
+                  name: "Some secret citation", // Title
+                  url: "https://example.com/claim-1", // Hyperlink on the title
+                  abstract: "Excerpt", // Excerpt (abstract)
+                  encodingFormat: "text/html", // for now ignored, later used for icon
+                  image:
+                    "https://botapiint.blob.core.windows.net/tests/Bender_Rodriguez.png", //Currently, we do not support icon rendering because of some
+                  keywords: ["Keyword1 - 1", "Keyword1 - 2", "Keyword1 - 3"], // Keywords
+                  usageInfo: {
+                    "@type": "CreativeWork",
+                    name: "Confidential \\ Contoso FTE", // Sensitivity title
+                    description: "Only accessible to Contoso FTE", // Sensitivity description
+                  },
+                },
+              },
+            ],
+          },
+        ],
+}
+```
+
+After enabling citations, your bot message automatically includes in-text citations and a reference list in the footer. The in-text citations display details to users when they hover over them, as shown in the following image:
 
 :::image type="content" source="../../assets/images/bots/ai-bot-ref-cite-list.png" alt-text="AI bot reference citation list.":::
 
 | Error code | Response |
 | --- | --- |
-| 400 | Multiple root message entities found in the bot activity </br> Error parsing message entity from activity object </br> Bot message contains X citations. Max count is 10. </br> Provided claim has empty appearance </br> Error while parsing citation entity with id: X |
+| 400 | Multiple root message entities found in the bot activity. |
+| 400 | Error parsing message entity from activity object. |
+| 400 | Bot message contains X citations. Max count is 10. |
+| 400 | Provided claim has empty appearance. |
+| 400 | Error while parsing citation entity with id: X. |
 
 ## Feedback buttons
 
@@ -366,12 +459,14 @@ Teams returns a 400 Bad Request error if the `submit/messageAction` invoke respo
 
 ## Add sensitivity label to bot message
 
-The final element you might want to add to your message is a sensitivity label. In some scenarios, your bot might respond with or use information that is confidential or only available to select people in the organization. It's crucial to help users identify the confidentiality of a message so that they can exercise appropriate caution when sharing the message's contents.
+The final element you might want to add to your message is a sensitivity label. In some scenarios, your bot might respond with or use information that's confidential or only available to selected people in the organization. It's crucial to help users identify the confidentiality of a message so that they can exercise appropriate caution when sharing the message's contents.
 
 > [!NOTE]
-> Add this property to your bot's messages only if it contains sensitive information.
+> Add this label to your bot's messages only if it contains sensitive information.
 
 Here's how you can add a sensitivity label to your bot message:
+
+# [JSON](#tab/json)
 
 ```json
 { 
@@ -403,7 +498,27 @@ Here's how you can add a sensitivity label to your bot message:
 }
 ```
 
-Reference the sensitivity label from citation:
+# [.NET](#tab/dotnet1)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+# [JavaScript](#tab/javascript4)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+# [Python](#tab/python4)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+---
+
+Here's the code snippet to reference the sensitivity label from citation:
 
 ```json
 { 
@@ -451,13 +566,16 @@ Reference the sensitivity label from citation:
 }
 ```
 
-Once added, your bot message contains a shield icon. Users can hover over this icon to find details about the sensitivity of the message.
+Once added, your bot message contains a shield icon. Users can hover over the icon to find disclaimer message about the sensitivity of the message.
 
 :::image type="content" source="../../assets/images/bots/ai-bot-sensitivity-label.png" alt-text="AI bot sensitivity label.":::
 
 | Error code | Response |
 | --- | --- |
-| 400 | Multiple root message entities found in the bot activity. </br> Error parsing message entity from activity object. </br> No usage info to link for a message level usage info. </br> Multiple usage info to link for a message level usage info. |
+| 400 | Multiple root message entities found in the bot activity. |
+| 400 | Error parsing message entity from activity object. |
+| 400 | No usage info to link for a message level usage info. |
+| 400 | Multiple usage info to link for a message level usage info. |
 
 ## Code samples
 
