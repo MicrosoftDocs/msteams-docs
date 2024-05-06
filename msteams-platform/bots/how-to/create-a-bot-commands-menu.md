@@ -14,18 +14,18 @@ ms.author: anclear
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Prompt Starters are commands or actions that help users start or continue conversations with bots. They are important for bots because they improve user engagement, retention, and discovery of the bot's capabilities.
+Prompt Starters are commands or actions that help users start or continue conversations with bots. They are important for bots as they improve user engagement, retention, and discovery of the bot's capabilities.
 
-To assist users in initiating conversations with your bot, consider incorporating Prompt Starters. These are specially crafted prompts tailored to scenarios that are relevant to your bot, offering users a straightforward way to engage in meaningful interactions. Prompt Starters are displayed at the start of a new chat, providing users with an easy way to begin a conversation by simply clicking on them.
+To assist users in initiating conversations with your bot, consider incorporating Prompt Starters. These are specially crafted prompts tailored to scenarios that are relevant to your bot, offering users a straightforward way to engage in meaningful interactions. Prompt Starters are displayed at the start of a new chat, providing users with an easy way to begin a conversation.
 
-You can add Prompt Starters to your bot through the command menu in your app manifest. Each command represents a Prompt Starter and includes a title along with a description. The title serves as the actual prompt, while the description explains the purpose of the prompt and what the user can achieve by using it. When a user selects a Prompt Starter, the title of the prompt automatically gets inserted into the compose box, facilitating a seamless start to the conversation.
+You can add Prompt Starters to your bot through the `commands` property in your app manifest. Each command represents a Prompt Starter and includes a title along with a description. The title serves as the actual prompt, while the description explains the purpose of the prompt and what the user can achieve by using it. When a user selects a Prompt Starter, the title of the prompt automatically gets inserted into the compose box, facilitating a seamless start to the conversation.
 
-We recommend providing Prompt Starters that are specific and target real scenarios that your users are likely to face. For example, if you are a todo list software, prioritize prompt starters like “Provide a summary of my tasks due today” or “What tasks are overdue from last week” over more generic prompts like “Hello.” 
+We recommend providing Prompt Starters that are specific and target real scenarios that your users are likely to face. For example, if you have a todo list app, prioritize prompt starters like Provide a summary of my tasks due today or What tasks are overdue from last week over more generic prompts like Hello.
 
 >[!NOTE]
-> When implementing Prompt Starters, your bot should not send a welcome message. The prompt starter UI will not show up if your bot sends a welcome message. 
+> When implementing Prompt Starters, your bot should not send a welcome message. The prompt starter will not show up if your bot sends a welcome message. 
 
-Additionally, the Prompt Starters are also available in Group Chats & Channels. The prompts show up in a flyout when the user @mentions your bot. A similar flyout is available in 1:1 chats when the user clicks the “View Prompts” button above compose. 
+In group chats and channels Prompt Starters show up in a flyout when the user @mentions your bot. A similar flyout is available in 1:1 chats when the user clicks the View Prompts button above compose. 
 
 # [Desktop](#tab/desktop)
 
