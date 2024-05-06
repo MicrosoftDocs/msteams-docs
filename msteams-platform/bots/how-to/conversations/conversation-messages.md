@@ -719,7 +719,7 @@ The following illustrates an example of suggested actions:
 > * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 > * `imBack` is the only supported action type and Teams display up to three suggested actions.
 
-Suggested Actions should be based on context of the conversation the user is having with the bot. These should not be generic or static prompts. We recommend prompting your bot’s LLM to include up to three suggestions with its responses. You can parse out these suggestions and pass them as suggested actions to the user.  
+Suggested Actions should be based on context of the conversation the user is having with the bot. These should not be generic or static prompts. We recommend prompting your bot’s LLM to include up to three suggestions with its responses. You can parse out these suggestions and pass them as suggested actions to the user.
 
 ## Teams channel data
 
