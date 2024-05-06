@@ -1,29 +1,29 @@
 ---
-title: Create a Prompt Starters for your bot
+title: Create a command menu for your bot
 author: surbhigupta
-description: Learn how to create and handle a Prompt Starters for your Microsoft Teams bot, and best practices. Know how to remove commands or Prompt Starters from your manifest.
+description: Learn how to create and handle a command menu for your Microsoft Teams bot, and best practices. Know how to remove commands from your manifest.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-# Create Prompt Starters
+# Create a commands menu
 
 > [!NOTE]
 > It's recommended that you'd create a command bot by following the step-by-step guide to [Build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Prompt Starters are commands or actions that help users start or continue conversations with bots. They are important for bots as they improve user engagement, retention, and discovery of the bot's capabilities.
+command menus are set of commands or actions that help users start or continue conversations with bots. They are important for bots as they improve user engagement, retention, and discovery of the bot's capabilities.
 
-To assist users in initiating conversations with your bot, consider incorporating Prompt Starters. These are specially crafted prompts tailored to scenarios that are relevant to your bot, offering users a straightforward way to engage in meaningful interactions. Prompt Starters are displayed at the start of a new chat, providing users with an easy way to begin a conversation.
+To assist users in initiating conversations with your bot, consider incorporating command menu. These are specially crafted prompts tailored to scenarios that are relevant to your bot, offering users a straightforward way to engage in meaningful interactions. command menu is displayed at the start of a new chat, providing users with an easy way to begin a conversation.
 
-You can add Prompt Starters to your bot through the `commands` property in your app manifest. Each command represents a Prompt Starter and includes a title along with a description. The title serves as the actual prompt, while the description explains the purpose of the prompt and what the user can achieve by using it. When a user selects a Prompt Starter, the title of the prompt automatically gets inserted into the compose box, facilitating a seamless start to the conversation.
+You can add command menu to your bot through the `commands` property in your app manifest. Each command represents a Prompt and includes a title along with a description. The title serves as the actual prompt, while the description explains the purpose of the prompt and what the user can achieve by using it. When a user selects a Prompt Starter, the title of the prompt automatically gets inserted into the compose box, facilitating a seamless start to the conversation.
 
-We recommend providing Prompt Starters that are specific and target real scenarios that your users are likely to face. For example, if you have a todo list app, prioritize prompt starters like Provide a summary of my tasks due today or What tasks are overdue from last week over more generic prompts like Hello.
+We recommend providing command menu that are specific and target real scenarios that your users are likely to face. For example, if you have a todo list app, prioritize command menus like Provide a summary of my tasks due today or What tasks are overdue from last week over more generic prompts like Hello.
 
 >[!NOTE]
-> When implementing Prompt Starters, your bot should not send a welcome message. The prompt starter will not show up if your bot sends a welcome message. 
+> When implementing command menus, your bot should not send a welcome message. The prompt starter will not show up if your bot sends a welcome message. 
 
 In group chats and channels Prompt Starters show up in a flyout when the user @mentions your bot. A similar flyout is available in 1:1 chats when the user clicks the View Prompts button above compose. 
 
@@ -37,13 +37,13 @@ In group chats and channels Prompt Starters show up in a flyout when the user @m
 
 ---
 
-## Create a Prompt Starter for your bot
+## Create a command menu for your bot
 
-Prompt Starters are added through command menu that are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
+Command menus are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
 
-### Create a Prompt Starter for your bot using Developer Portal
+### Create a command menu for your bot using Developer Portal
 
-A prerequisite to create a Prompt Starter for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.
+A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.
 
 To create a command menu for your bot using Developer Portal:
 
