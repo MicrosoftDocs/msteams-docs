@@ -1031,6 +1031,10 @@
       {
         "source_path": "msteams-platform/tabs/tabs-link-unfurling.md",
         "redirect_url": "/microsoftteams/platform/tabs/open-content-in-stageview"
-      }      
+      },
+      {
+        "source_path": "msteams-platform/sbs-api-me-ttk.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-api-msg-ext-ttk"
+      }
     ]
 }
