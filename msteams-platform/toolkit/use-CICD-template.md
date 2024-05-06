@@ -122,9 +122,13 @@ To set up the pipeline with GitHub, follow these steps:
 
     * Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
+      The following image shows the `teamsapp.yml` file, where the `BOT_AZURE_APP_SERVICE_RESOURCE_ID` to be set as a repository variable:
+
       :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
 
     * Go to the `appPackage/manifest.json` file. The values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
+
+      The following image shows the `manifest.json` file, where the `TEAMS_APP_ID` to be set as a repository variable:
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manifest.png" alt-text="Screenshot shows the Teams app ID in manifest file.":::
 
@@ -218,9 +222,13 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
     * Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
+      The following image shows the `teamsapp.yml` file, where the `BOT_AZURE_APP_SERVICE_RESOURCE_ID` to be set as a repository variable:
+
       :::image type="content" source="../assets/images/teams-toolkit-v2/teamsappyml.png" alt-text="Screenshot shows the bot Azure app service resource ID in teamsapp.yml file.":::
 
     * Go to the `appPackage/manifest.json` file. The values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
+
+      The following image shows the `manifest.json` file, where the `TEAMS_APP_ID` to be set as a repository variable:
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/manifest.png" alt-text="Screenshot shows the Teams app ID in manifest file.":::
 
@@ -360,7 +368,7 @@ To distribute your Teams app, the `appPackage` is required. You can automaticall
 1. Prepare a `appPackage` folder.
 1. Place the `manifest.json` file in the `appPackage` folder. The default `manifest.json` file in the Teams Toolkit project contains placeholders, denoted by ${{}}. Replace these placeholders with the correct values.
 1. Place your app icons in the `appPackage` folder. To prepare your app icon, see [app icons](../concepts/build-and-test/apps-package.md#app-icons).
-1. Zip the `appPackage` folder into `appPackage.zip`.
+1. Zip the files in the `appPackage` folder.
 
 ## See also
 
