@@ -35,6 +35,12 @@ Adding a label to your AI-generated message enhances transparency and encourages
 
 Here's the code snippet to add the AI label to your bot's message:
 
+# [JavaScript](#tab/js)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
 # [JSON](#tab/json)
 
 ```json
@@ -66,12 +72,6 @@ Here's the code snippet to add the AI label to your bot's message:
 ```
 
 # [.NET](#tab/dotnet)
-
-Sample code reference (link)
-
-*placeholder code snippet*
-
-# [JavaScript](#tab/javascript)
 
 Sample code reference (link)
 
@@ -109,7 +109,7 @@ Bots have the capability to embed text content with references. You can insert a
 
 The following code snippet provides the format expected by Teams for your in-text citations:
 
-# [Javascript](#tab/js)
+# [JavaScript](#tab/js)
 
 ```javascript
 await context.sendActivity({
@@ -468,6 +468,12 @@ The final element you might want to add to your message is a sensitivity label. 
 
 Here's how you can add a sensitivity label to your bot message:
 
+# [JavaScript](#tab/js)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
 # [JSON](#tab/json)
 
 ```json
@@ -500,19 +506,13 @@ Here's how you can add a sensitivity label to your bot message:
 }
 ```
 
-# [.NET](#tab/dotnet1)
+# [.NET](#tab/dotnet)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [JavaScript](#tab/javascript4)
-
-Sample code reference (link)
-
-*placeholder code snippet*
-
-# [Python](#tab/python4)
+# [Python](#tab/python)
 
 Sample code reference (link)
 
