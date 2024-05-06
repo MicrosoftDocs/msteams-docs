@@ -35,13 +35,13 @@ Adding a label to your AI-generated message enhances transparency and encourages
 
 Here's the code snippet to add the AI label to your bot's message:
 
-# [JavaScript](#tab/js)
+# [JavaScript](#tab/js1)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [JSON](#tab/json)
+# [JSON](#tab/json1)
 
 ```json
 { 
@@ -71,13 +71,13 @@ Sample code reference (link)
 }
 ```
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/dotnet1)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python)
+# [Python](#tab/python1)
 
 Sample code reference (link)
 
@@ -109,7 +109,7 @@ Bots have the capability to embed text content with references. You can insert a
 
 The following code snippet provides the format expected by Teams for your in-text citations:
 
-# [JavaScript](#tab/js)
+# [JavaScript](#tab/js2)
 
 ```javascript
 await context.sendActivity({
@@ -118,7 +118,7 @@ await context.sendActivity({
 });
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 ```json
 {
@@ -127,13 +127,13 @@ await context.sendActivity({
 }
 ```
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/dotnet2)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python)
+# [Python](#tab/python2)
 
 Sample code reference (link)
 
@@ -145,7 +145,9 @@ Sample code reference (link)
 
 The indexing on this list should match the corresponding in-text citations. Use this list to provide key details such as title of the citation, the link to the resource, and a relevant quote from the document. Here's how you can add a list of references to your message:
 
-# [JSON](#tab/json)
+# [JavaScript](#tab/js3)
+
+# [JSON](#tab/json3)
 
 ```json
 {
@@ -195,13 +197,13 @@ The indexing on this list should match the corresponding in-text citations. Use 
 }
 ```
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/dotnet3)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python)
+# [Python](#tab/python3)
 
 Sample code reference (link)
 
@@ -289,7 +291,7 @@ After you enable feedback buttons, the footer of your bot's message contains a l
 
 The following code snippets show how to enable feedback buttons in a bot:
 
-# [JavaScript](#tab/js)
+# [JavaScript](#tab/js4)
 
 ```javascript
 await context.sendActivity({
@@ -301,7 +303,7 @@ await context.sendActivity({
 });
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json4)
 
 ```json
 {
@@ -326,17 +328,18 @@ await context.sendActivity({
 
 ```
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/dotnet4)
 
 *placeholder code snippet*
 
-# [Python](#tab/python)
+# [Python](#tab/python4)
 
 *placeholder code snippet*
 
 ---
 
 For a bot built using Teams AI library, Teams enables feedback buttons to all messages when `enable_feedback_loop` is set to true. To customize this behavior, you need to extend the SAY command. The following code snippet shows how to enable feedback buttons in a bot built with Teams AI library:
+
 <br>
 <details>
 <summary><b>Code snippet</b></summary>
@@ -484,13 +487,13 @@ The final element you might want to add to your message is a sensitivity label. 
 
 Here's how you can add a sensitivity label to your bot message:
 
-# [JavaScript](#tab/js)
+# [JavaScript](#tab/js5)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [JSON](#tab/json)
+# [JSON](#tab/json5)
 
 ```json
 { 
@@ -522,13 +525,13 @@ Sample code reference (link)
 }
 ```
 
-# [.NET](#tab/dotnet)
+# [.NET](#tab/dotnet5)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python)
+# [Python](#tab/python5)
 
 Sample code reference (link)
 
