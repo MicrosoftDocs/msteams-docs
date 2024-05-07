@@ -403,7 +403,7 @@ The name of your app experience, displayed to users in the Teams experience. For
 > [!NOTE]
 >
 > * In the app manifest v1.17 or later the `full` property is required and for app manifest v1.16 or earlier it isn't required.
-> * The `short` property being used across all UI surfaces.
+> * The `short` property is used across all UI surfaces.
 
 ## description
 
