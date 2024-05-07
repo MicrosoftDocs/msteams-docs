@@ -32,12 +32,12 @@ See the following video to learn how to embed Share to Teams button:
 
 To share content to meeting stage, yo must ensure the following criteria are met:
 
-1. A Teams app with a tab that supports both:
+1. A Teams app with a tab that supports:
 
     * Meeting Side Panel
     * Instant Tab
 
-2. To present the content onto the meeting stage, the meeting up must support Share to Stage APIs, which has two main requirements:
+2. To present the content onto the meeting stage, the meeting app must support Share to Stage APIs, which has two main requirements:
 
     * Support Meeting Stage and Meeting Side Panel within the app manifest.
     * Support read permissions for taking over the stage: “MeetingStage.Write.Chat”
@@ -206,26 +206,26 @@ If there's no ongoing meeting, the user may select Meet Now to begin a meeting. 
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
-:::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="m":::
+    :::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="Screenshot shows the Share to Teams button on the browser.":::
 
 1. Add the meeting name.
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
+    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams pop-up.":::
 
    > [!NOTE]
    > If the app isn't added in the meeting scope, an app consent appears in the Share to Teams dialog.
 
 1. Select **Present Now**. A consent dialog to start the meeting appears.
 
-    :::image type="content" source="../../assets/images/share-to-teams/meeting-start-consent.png" alt-text="m":::
+    :::image type="content" source="../../assets/images/share-to-teams/meeting-start-consent.png" alt-text="Screenshot shows the Present Now option in the Share to Teams dialog.":::
 
 1. Select **OK**. The meeting window appears to join the meeting.
 
-:::image type="content" source="../../assets/images/share-to-teams/join-meeting-now.png" alt-text="m":::
+    :::image type="content" source="../../assets/images/share-to-teams/join-meeting-now.png" alt-text="Screenshot shows the join meeting window.":::
 
-1. Select Join Now. A consent dialog appears to share the content in the meeting.
+1. Select **Join Now**. A consent dialog appears to share the content in the meeting.
 
-:::image type="content" source="../../assets/images/share-to-teams/start-share-new-meeting.png" alt-text="m":::
+    :::image type="content" source="../../assets/images/share-to-teams/start-share-new-meeting.png" alt-text="Screenshot shows the consent dialog.":::
 
 1. The web app is shared to meeting stage and all the participants can interact and edit together.
 
