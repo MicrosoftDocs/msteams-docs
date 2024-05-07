@@ -10,11 +10,11 @@ ms.date: 04/16/2024
 
 # Deploy Teams app to container service
 
-You can deploy a Teams bot or tab app to a Azure Container Apps, Azure Kubernetes Service, or On-Premise Kubernetes Cluster.
+You can deploy a Teams bot or tab app to an Azure Container Apps, Azure Kubernetes Service, or on-premises Kubernetes Cluster.
 
 ## Prerequisites
 
-Download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso-docker) or the [sample Teams tab app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-docker), which offers a ready-to-use experience for Azure Container Apps development. You can make a few configuration changes and deploy it to Azure Kubernetes Service or an On-Premise Kubernetes Cluster.
+Download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso-docker) or the [sample Teams tab app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-docker), which offers a ready-to-use experience for Azure Container Apps development. You can make a few configuration changes and deploy it to Azure Kubernetes Service or an on-premises Kubernetes Cluster.
 
 Before you get started ensure that you have the following tools:
 
@@ -143,7 +143,7 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your reference
 
     1. `<hostname>`: Update your ingress FQDN.
 
-1. Run the following command to apply `deploy/sso-bot.yaml`:
+1. To apply `deploy/tab.yaml`, run the following command:
 
     ```bash
     kubectl apply -f deploy/sso-bot.yaml -n $NAMESPACE
@@ -155,13 +155,13 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your reference
 
 1. To preview the Teams bot application deployed on AKS, select **Start Debugging (F5)**.
 
-## Deploy Teams bot to an On-Premise Kubernetes Cluster
+## Deploy Teams bot to an on-premises Kubernetes Cluster
 
 You can deploy a Teams bot to your personal Kubernetes cluster or a Kubernetes service from different cloud services by following similar steps that are used to deploy Teams bot on AKS.
 
 ### Architecture
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/on-premise-kubernetes-cluster-architecture.png" alt-text="Screenshot shows the on-premise kubernetes cluster architecture.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/on-premise-kubernetes-cluster-architecture.png" alt-text="Screenshot shows the on-premises kubernetes cluster architecture.":::
 
 The Teams backend server interacts with your bot through the Azure Bot Service. This service requires your bot to be reachable through a public HTTPS endpoint. To set up, deploy an ingress controller on your Kubernetes cluster and secure it with a TLS certificate.
 
@@ -191,7 +191,7 @@ To provision resources with Teams Toolkit, follow these steps:
         bicepCliVersion: v0.9.1
     ```
 
-1. In the `teamsapp.yml` file update the `botFramework/create` action during the provision stage. This action enables Teams Toolkit to create a bot registration with the appropriate messaging endpoint.
+1. In the `teamsapp.yml` file, update the `botFramework/create` action during the provision stage. This action enables Teams Toolkit to create a bot registration with the appropriate messaging endpoint.
 
     >[!NOTE]
     > We recommend you to use Azure Bot Service for channeling. If you don't have an Azure account and can't create Azure Bot Service, you can create a bot registration.
@@ -229,7 +229,7 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your guidance.
 
     1. `<hostname>`: Update your ingress FQDN.
 
-1. Run the following command to apply `deploy/sso-bot.yaml`:
+1. To apply `deploy/tab.yaml`, run the following command:
 
     ```bash
     kubectl apply -f deploy/sso-bot.yaml -n $NAMESPACE
@@ -243,7 +243,7 @@ The sample includes a deployment file, `deploy/sso-bot.yaml`, for your guidance.
 
 ## Deploy Teams tab app to Kubernetes
 
-AKS serves as a managed container orchestration service offered by Azure. With AKS you can fully manage Kubernetes experience within Azure.
+AKS serves as a managed container orchestration service offered by Azure. With AKS, you can fully manage Kubernetes experience within Azure.
 
 Deploy a Teams tab app to AKS is similar to deploying a web app to AKS. However, since a Teams tab app requires an HTTPS connection, you need to own a domain and setup TLS ingress in your AKS.
 
@@ -322,7 +322,7 @@ The sample includes a deployment file, `deploy/tab.yaml`, for your reference.
 
     1. `<hostname>`: Update your ingress FQDN.
 
-1. Run the following command to apply `deploy/tab.yaml`:
+1. To apply `deploy/tab.yaml`, run the following command:
 
     ```bash
     kubectl apply -f deploy/tab.yaml -n $NAMESPACE
