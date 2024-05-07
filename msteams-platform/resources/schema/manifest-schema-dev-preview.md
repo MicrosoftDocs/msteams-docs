@@ -319,7 +319,7 @@ Specifies information about the developer and their business. For Teams Store ap
 
 Your contact information that is used by customers to contact you through Teams chat or email. Users may need extra information when evaluating your app or if they have any queries about your app when it doesn't work. Users can contact you using Teams chat, so request your IT admins to [enable external communications](/microsoftteams/communicate-with-users-from-other-organizations) in your organization. For more information, see [developer provided app and contact information](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation). 
 
->[!Note]
+> [!Note]
 > You must provide only one contact email address.
 
 We recommend triaging your customer queries in a timely manner and route those internally within your organization based on the questions shared by the users. It helps improve app adoption, developer trust, and revenue if you monetize your app.
