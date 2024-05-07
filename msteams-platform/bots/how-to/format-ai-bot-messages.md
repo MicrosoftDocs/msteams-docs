@@ -32,7 +32,7 @@ The features that you can add to your bot message are:
 * [Feedback buttons](#feedback-buttons): Enables user to provide positive or negative feedback based on their experience.
 * [Sensitivity label](#add-sensitivity-label-to-bot-message): Enables user to understand the confidentiality of the AI-generated bot message.
 
-:::image type="content" source="../../assets/images/bots/ai-bot-message.png" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
+    :::image type="content" source="../../assets/images/bots/ai-bot-message.png" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
 
 ## Add AI label to bot message
 
