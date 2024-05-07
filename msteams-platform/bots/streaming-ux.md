@@ -1,7 +1,7 @@
 ---
 title: Streaming UX in Bots
 description: Learn how to enhance the user experience in bots using streaming techniques.
-ms.date: 07/05/2024
+ms.date: 05/07/2024
 ms.topic: conceptual
 author: v-ypalikila
 ms.author: surbhigupta
