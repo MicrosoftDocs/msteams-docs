@@ -34,7 +34,7 @@ The features that you can add to your bot message are:
 
     :::image type="content" source="../../assets/images/bots/ai-bot-message.png" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
 
-## Add AI label to bot message
+## AI label
 
 AI-based bot use large language models (LLMs) that are reliable, but there can be instances where their responses might be incorrect or potentially misleading. So it's crucial to indicate that your bot response is AI-generated.
 
@@ -113,7 +113,7 @@ After you enable the AI label, your bot’s message automatically displays an AI
 
 :::image type="content" source="../../assets/images/bots/ai-bot-label.png" alt-text="AI bot label.":::
 
-## Add citations to bot message
+## Citations
 
 When a bot generates responses from data sources like files, messages, emails, and work items, citing these sources in the message is important. These citations offer valuable references for asking follow-up questions or conducting independent research.
 
@@ -125,7 +125,7 @@ Adding citations to your message consists of two key parts:
 * [In-text citations](#in-text-citations): Cite your text with [X] format at any place of text.
 * [Citation reference list](#citation-reference): Modify the message to include citation array in the entities object.
 
-### In-text citations
+### Add in-text citations
 
 In-text citations appear as numbers with the corresponding reference that can include the title, keywords, excerpt (abstract), hyperlink, and sensitivity information. References appear as inline citations in pop-ups and as expandable citation footers. You can insert a citation anywhere within the text.
 
@@ -171,7 +171,7 @@ await context.sendActivity({
 
 ---
 
-### Citation reference
+### Add citation reference
 
 The indexing on this list should match the corresponding in-text citations. Use this list to provide key details such as title of the citation, the link to the resource, and a relevant quote from the document. Here's how you can add a list of references to your message and modify the message to include an entity object, when your bot is sending a message back:
 
@@ -431,7 +431,7 @@ It’s important to store feedback after you receive it. Teams doesn’t store o
 | --- | --- |
 | 400 | When the `submit/messageAction` invoke response isn't empty. |
 
-## Add sensitivity label to bot message
+## Sensitivity label
 
 Bot responses might include information that's confidential or accessible only to certain individuals within the organization. You must add sensitivity label to help users identify the confidentiality of a message so that they can exercise caution when sharing the message.
 
