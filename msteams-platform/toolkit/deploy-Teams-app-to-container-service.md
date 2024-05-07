@@ -18,9 +18,9 @@ Download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tre
 
 Before you get started ensure that you have the following tools:
 
-* Azure account
+* Azure account.
 
-* Azure Command Line Interfaces (CLI) for Azure Container Apps or Azure Kubernetes Service deployment.
+* Azure Command Line Interfaces (CLI) for Azure Container Apps or Azure Kubernetes Service (AKS) deployment.
 
 > [!NOTE]
 > The commands in the article are based on Git Bash. If you're using any other interface, update the commands as required.
@@ -48,7 +48,7 @@ The `deploy` command executes the following actions:
 
 ## Deploy Teams bot to Azure Kubernetes Service
 
-Azure Kubernetes Service (AKS) is a managed container orchestration service provided by Azure. With AKS, you can fully manage Kubernetes experience within Azure.
+AKS is a managed container orchestration service provided by Azure. With AKS, you can fully manage Kubernetes experience within Azure.
 
 ### Architecture
 
@@ -251,7 +251,7 @@ You can also deploy a Teams tab app to your personal Kubernetes cluster or a Kub
 
 ### Setup ingress with HTTPS on AKS
 
-1. Ensure that your Azure Kubernetes Service is already connected to your Azure Container Registry, where your container images are hosted. For more information, see [Azure CLI](/azure/aks/learn/quick-kubernetes-deploy-cli).
+1. Ensure that your AKS is already connected to your Azure Container Registry, which hosts your container images. For more information, see [Azure CLI](/azure/aks/learn/quick-kubernetes-deploy-cli).
 
 1. Run the following commands to install the ingress controller and certificate manager:
 
@@ -292,17 +292,23 @@ You can also deploy a Teams tab app to your personal Kubernetes cluster or a Kub
 
 ### Provision resources with Teams Toolkit
 
-Use the `provision` command in the Teams Toolkit to create a Teams app with tab functionality. If necessary, you can also incorporate Entra ID for authentication. Update the sample code as needed to ensure compatibility with your Azure Kubernetes Service.
+You can use the `provision` command in Teams Toolkit to create a Teams app with tab capability, incorporate the Azure Bot Service, and add the Entra ID for authentication.
 
-1. Fill the `TAB_DOMAIN` value in `env/.env.${envName}` file with your FQDN.
+To provision resources with Teams Toolkit, follow these steps:
 
-1. Remove the `arm/deploy` action from the `teamsapp.yml` file, as no additional Azure resources are required.
+1. Open the sample app that you've downloaded earlier.
+
+1. Go to the `env/.env.${envName}` file and update the `TAB_DOMAIN` value with your FQDN.
+
+1. Go to the `teamsapp.yml` file and remove the `arm/deploy` action, as no additional Azure resources are required.
 
 1. Run the `provision` command in Teams Toolkit.
 
-1. Use the Teams Toolkit to create an Entra ID, which you might want to set as your apps environment variables. After provisioning, locate the `AAD_APP_CLIENT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_AAD_APP_CLIENT_SECRET` in the `env/.env.${envName}.user` file.
+1. Use the Teams Toolkit to create an Entra ID, which you might want to set as your apps environment variables.
 
-1. To get the actual value of `SECRET_AAD_APP_CLIENT_SECRET`, select the Decrypt secret annotation.
+1. After provisioning, locate the `AAD_APP_CLIENT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_AAD_APP_CLIENT_SECRET` in the `env/.env.${envName}.user` file.
+
+1. To obtain the actual value of `SECRET_AAD_APP_CLIENT_SECRET`. Select the Decrypt secret annotation.
 
 ### Apply the deployment
 
@@ -310,11 +316,11 @@ The sample includes a deployment file, `deploy/tab.yaml`, for your reference.
 
 1. Update the following placeholders:
 
-    1. `<tab-image>`: Update placeholder with your image. For example, `myacr.azurecr.io/tab:latest`.
+    1. `<tab-image>`: Update your image. For example, `myacr.azurecr.io/tab:latest`.
 
-    1. `<api-image>`: Update placeholder with your API image. If you don't have an API, remove the `hello-world-api`service and deployment from the yaml file.
+    1. `<api-image>`: Update your API image. If you don't have an API, remove the `hello-world-api`service and deploy from the yaml file.
 
-    1. `<hostname>`: Update the with your ingress FQDN.
+    1. `<hostname>`: Update your ingress FQDN.
 
 1. Run the following command to apply `deploy/tab.yaml`:
 
@@ -326,4 +332,4 @@ The sample includes a deployment file, `deploy/tab.yaml`, for your reference.
 
 1. In the **Run and Debug** panel, select the **Launch Remote** configuration.
 
-1. To preview the Teams bot application deployed on Azure Kubernetes Service (AKS), select **Start Debugging (F5)**.
+1. To preview the Teams bot application deployed on AKS, select **Start Debugging (F5)**.
