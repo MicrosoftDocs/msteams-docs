@@ -505,6 +505,8 @@
         href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
       - name: Teams AI library FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
+  - name: Streaming UX in bots
+    href: bots/streaming-ux.md
 - name: Build message extensions
   items:
   - name: Overview
