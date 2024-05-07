@@ -36,7 +36,7 @@ The `provision` command creates and configures the following resources:
 * A Teams app with tab or bot capability.
 * An Azure Container Registry to host your container image.
 * An Azure Container App environment and an Azure Container Apps to host your app.
-* An Azure Entra App for authentication.
+* A Microsoft Entra App for authentication.
 
 In the sample Teams bot, the `provision` command also creates an Azure Bot Service to channel Teams client and Azure Container Apps.
 
@@ -56,7 +56,7 @@ AKS is a managed container orchestration service provided by Azure. With AKS, yo
 
 The Teams backend server interacts with your bot through the Azure Bot Service. This service requires your bot to be reachable through a public HTTPS endpoint. To set up, deploy an ingress controller on your Kubernetes cluster and secure it with a TLS certificate.
 
-You can use Entra ID to authenticate your bot with Azure Bot Service. Create a Kubernetes secret that includes the app ID and password and integrate the secret into your container's runtime configuration.
+You can use Microsoft Entra ID to authenticate your bot with Azure Bot Service. Create a Kubernetes secret that includes the app ID and password and integrate the secret into your container's runtime configuration.
 
 ### Setup ingress with HTTPS on AKS
 
@@ -101,7 +101,7 @@ You can use Entra ID to authenticate your bot with Azure Bot Service. Create a K
 
 ### Provision resources with Teams Toolkit
 
-You can use the `provision` command in Teams Toolkit to create a Teams app with bot capability, incorporate the Azure Bot Service, and add the Entra ID for authentication.
+You can use the `provision` command in Teams Toolkit to create a Teams app with bot capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
 
 To provision resources with Teams Toolkit, follow these steps:
 
@@ -165,11 +165,11 @@ You can deploy a Teams bot to your personal Kubernetes cluster or a Kubernetes s
 
 The Teams backend server interacts with your bot through the Azure Bot Service. This service requires your bot to be reachable through a public HTTPS endpoint. To set up, deploy an ingress controller on your Kubernetes cluster and secure it with a TLS certificate.
 
-You can use Entra ID to authenticate your bot with Azure Bot Service. Create a Kubernetes secret that includes the app ID and password and integrate the secret into your container's runtime configuration.
+You can use Microsoft Entra ID to authenticate your bot with Azure Bot Service. Create a Kubernetes secret that includes the app ID and password and integrate the secret into your container's runtime configuration.
 
 ### Provision resources with Teams Toolkit
 
-You can use the `provision` command in Teams Toolkit to create a Teams app with bot capability, incorporate the Azure Bot Service, and add the Entra ID for authentication.
+You can use the `provision` command in Teams Toolkit to create a Teams app with bot capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
 
 To provision resources with Teams Toolkit, follow these steps:
 
@@ -292,7 +292,7 @@ You can also deploy a Teams tab app to your personal Kubernetes cluster or a Kub
 
 ### Provision resources with Teams Toolkit
 
-You can use the `provision` command in Teams Toolkit to create a Teams app with tab capability, incorporate the Azure Bot Service, and add the Entra ID for authentication.
+You can use the `provision` command in Teams Toolkit to create a Teams app with tab capability, incorporate the Azure Bot Service, and add the Microsoft Entra ID for authentication.
 
 To provision resources with Teams Toolkit, follow these steps:
 
@@ -304,7 +304,7 @@ To provision resources with Teams Toolkit, follow these steps:
 
 1. Run the `provision` command in Teams Toolkit.
 
-1. Use the Teams Toolkit to create an Entra ID, which you might want to set as your apps environment variables.
+1. Use the Teams Toolkit to create a Microsoft Entra ID, which you might want to set as your apps environment variables.
 
 1. After provisioning, locate the `AAD_APP_CLIENT_ID` in the `env/.env.${envName}` file and the encrypted `SECRET_AAD_APP_CLIENT_SECRET` in the `env/.env.${envName}.user` file.
 
