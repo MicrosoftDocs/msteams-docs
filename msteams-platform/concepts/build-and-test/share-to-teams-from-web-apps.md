@@ -30,7 +30,7 @@ See the following video to learn how to embed Share to Teams button:
 
 ## Prerequisites
 
-To share content to meeting stage, yo must ensure the following criteria are met:
+To share content to meeting stage, you must ensure the following criteria are met:
 
 1. A Teams app with a tab that supports:
 
@@ -57,7 +57,7 @@ There are three different methods by which you can embed a Share to Teams button
 
 # [Method 1](#tab/method-1)
 
-The basic way to embed Share to Teams button and you can customize on your needs.
+The basic way to embed Share to Teams button where you can customize based on your needs.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -78,53 +78,53 @@ The basic way to embed Share to Teams button and you can customize on your needs
 
     :::image type="content" source="~/assets/icons/share-to-teams-icon.png" alt-text="Share to Teams icon":::
 
-    * If you want to enable your users to share content in meetings, set `allow-share-in-meeting` attribute (optional) to `true`.
+    * If you want to enable your users to share content in meetings, set `allow-share-in-meeting` attribute to `true`.
 
-    ```html
-    <div
-    class="teams-share-button"
-    data-href="https://<link-to-be-shared>"
-    data-allow-share-in-meeting="<true>"
-    >
-    </div>
-    ```
+        ```html
+        <div
+        class="teams-share-button"
+        data-href="https://<link-to-be-shared>"
+        data-allow-share-in-meeting="<true>"
+        >
+        </div>
+        ```
 
     * If you want a different icon size for the Share to Teams button, use the `data-icon-px-size` attribute.
 
-    ```html
-    <div
-      class="teams-share-button"
-      data-href="https://<link-to-be-shared>"
-      data-icon-px-size="64">
-    </div>
-    ```
+        ```html
+        <div
+          class="teams-share-button"
+          data-href="https://<link-to-be-shared>"
+          data-icon-px-size="64">
+        </div>
+        ```
 
     * If the shared link requires user authentication, and the URL preview from your link to be shared doesn't render well in Teams, then you can disable the URL preview by adding the `data-preview` attribute set to `false`.
 
-    ```html
-    <div
-      class="teams-share-button"
-      data-href="https://<link-to-be-shared>"
-      data-preview="false">
-    </div>
-    ```
+        ```html
+        <div
+          class="teams-share-button"
+          data-href="https://<link-to-be-shared>"
+          data-preview="false">
+        </div>
+        ```
 
     * To display a message of your choice in compose box, you can define your text in `data-msg-text` attribute.
 
-     ```html
-     <div
-      class="teams-share-button"
-      data-href="https://<link-to-be-shared>"
-      data-msg-text="<default-message-to-be-populated-in-compose-box>"
-      data-preview="false">
-      </div>
-     ```
+         ```html
+         <div
+          class="teams-share-button"
+          data-href="https://<link-to-be-shared>"
+          data-msg-text="<default-message-to-be-populated-in-compose-box>"
+          data-preview="false">
+          </div>
+         ```
 
 # [Method 2](#tab/method-2)
 
 If your page dynamically renders content, you can use the `shareToMicrosoftTeams.renderButtons()` method to force **Share** to render at the appropriate place in the pipeline.
 
-Use `async shareToMicrosoftTeams.renderButtons(options)` API to trigger the rendering of the Share buttons. This renders all share button that have the class name teams-share-button on the page.  
+Use `async shareToMicrosoftTeams.renderButtons(options)` API to trigger the rendering of the Share buttons. This renders all share button that have the class name `teams-share-button` on the page.  
 
 **`shareToMicrosoftTeams.renderButtons(options)`**
 
@@ -138,7 +138,7 @@ All share buttons are rendered on the page. If an optional `options` object is s
 
 To render custom HTML button with click handler, assign `shareToMicrosoftTeams.shareInMeetingClickHandler` API to `onClick` handler of a custom HTML element while providing the *additional attributes* as shared below.
 
-*Placeholder - the `window.shareToMicrosoftTeams.shareInMeetingClickHandler` API.*
+*Placeholder - `window.shareToMicrosoftTeams.shareInMeetingClickHandler` API*
 
 ---
 
