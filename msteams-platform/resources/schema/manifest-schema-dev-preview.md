@@ -306,11 +306,11 @@ Specifies information about the developer and their business. For store apps, th
 
 | Name            | Type   | Maximum size     | Required | Description                                                                                              |
 |-----------------|--------|------------------|----------|----------------------------------------------------------------------------------------------------------|
-| `name`          |        | 32 characters    | ✔️      | The display name for the developer.                                                                      |
-| `websiteUrl`    |        | 2,048 characters | ✔️      | The `https://` URL to the app-specific page on your website.                                             |
-| `privacyUrl`    |        | 2,048 characters | ✔️      | The `https://` URL to the apps's privacy policy.                                                         |
-| `termsOfUseUrl` |        | 2,048 characters | ✔️      | The `https://` URL to the apps's terms of use.                                                           |
-| `mpnId`         |        | 10 characters    |          | **Optional** The Microsoft Partner Network ID that identifies the partner organization creating the app. |
+| `name`          | String | 32 characters    | ✔️      | The display name for the developer.                                                                      |
+| `websiteUrl`    |     | 2,048 characters | ✔️      | The `https://` URL to the app-specific page on your website.                                             |
+| `privacyUrl`    |     | 2,048 characters | ✔️      | The `https://` URL to the apps's privacy policy.                                                         |
+| `termsOfUseUrl` |     | 2,048 characters | ✔️      | The `https://` URL to the apps's terms of use.                                                           |
+| `mpnId`         | String | 10 characters    |          | The Microsoft Partner Network ID that identifies the partner organization creating the app. **Optional** |
 | `contactInfo`   | Object |                  |          | App developer's contact information.                                                                     |
 
 ### developer.contactInfo
