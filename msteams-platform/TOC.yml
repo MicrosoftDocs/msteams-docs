@@ -449,7 +449,7 @@
       displayName: Interactive elements, UTF-16, Base64, hyperlink
     - name: Update and delete messages sent from bot
       href: bots/how-to/update-and-delete-bot-messages.md
-    - name: Format your AI-based bot
+    - name: Format your AI bot messages
       href: bots/how-to/format-ai-bot-messages.md
       displayName: AI label, citations, feedback buttons, sensitivity label  
     - name: Request headers of the bot

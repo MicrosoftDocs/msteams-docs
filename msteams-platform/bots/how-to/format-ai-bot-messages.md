@@ -1,26 +1,33 @@
 ---
-title: AI bot messages
+title: Format AI bot messages
 description: Learn how to format your AI-based bot with AI labels, citations, feedback buttons, and sensitivity labels.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# AI bot messages
+# Format AI bot messages
 
-If you're building an AI-based bot, your bot messages can leverage AI capabilities like citations, an AI label, feedback buttons, and a sensitivity label to enhance user experience and adaptability. These features streamline the user experience for common AI scenarios, such as:
+As you enhance your bot’s conversational capabilities to improve the user experience, it’s important to refine your bot’s messages to align with AI experiences, such as those provided by Microsoft Copilot.
 
-* Citing data sources for retrieval-augmented generation (RAG).
-* Identifying AI-generated responses.
-* Collecting feedback.
+If you're building an AI-based bot, your bot messages can leverage features like citations, an AI label, feedback buttons, and a sensitivity label to improve adaptability. These features streamline the user experience for common AI scenarios, such as:
 
-They can also promote user trust and transparency and elevate your bot’s user experience to align with industry-leading AI experiences, like Microsoft Copilot.
+* Citing data sources for retrieval-augmented generation (RAG)
+* Identifying AI-generated responses
+* Collecting feedback
+
+<!--
+As we enhance our bots intelligence and conversational capabilities, it’s essential to craft user experiences that are specifically designed for AI and to promote user trust and transparency.
+
+They can also promote user trust and transparency and elevate your bot’s user experience to align with AI experiences, like Microsoft Copilot.
+
+To enhance your bots intelligence and conversational capabilities, you can improve the user experience. These are primarily focused AI powered bots, however, you can use some of these features in your regular bots.-->
 
 > [!NOTE]
-> Even if your bot isn't AI based, you can still add citations or feedback buttons to the bot response to enhance the functionality.
+> Even if your bot isn't AI-powered, you can still add citations or feedback buttons to your bot response.
 
-Let's learn in detail of each feature and also how to leverage citations and feedback buttons to regular bot messages.
+The features that you can add to your bot message are:
 
-* [AI label](#add-ai-label-to-bot-message): Enables user to identify the message was generated using AI.
+* [AI label](#add-ai-label-to-bot-message): Enables user to identify that the message was generated using AI.
 * [Citations](#add-citations-to-bot-message): Enables user to refer to the source of bot message through in-text citations and a list of references.
 * [Feedback buttons](#feedback-buttons): Enables user to provide positive or negative feedback based on their experience.
 * [Sensitivity label](#add-sensitivity-label-to-bot-message): Enables user to understand the confidentiality of the AI-generated bot message.
@@ -29,9 +36,9 @@ Let's learn in detail of each feature and also how to leverage citations and fee
 
 ## Add AI label to bot message
 
-It's important to communicate to users that your bot is using AI to generate messages. Although large language models (LLMs) are reliable, there might be scenarios where their responses could be incorrect or potentially misleading.
+AI-based bot use large language models (LLMs) that are reliable, but there can be instances where their responses might be incorrect or potentially misleading. So it's crucial to indicate that your bot response is AI-generated.
 
-Adding a label to your AI-generated message enhances transparency and encourages users to exercise caution when consuming the message. When your bot is sending a message, modify the message to include an entity object with `additionalType` field.
+When your bot is sending a message, modify the message to include an entity object with `additionalType` field.
 
 Here's the code snippet to add the AI label to your bot's message:
 
@@ -71,17 +78,34 @@ Sample code reference (link)
 }
 ```
 
-# [.NET](#tab/dotnet1)
+# [.NET](#tab/dotnet)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python1)
+# [Python](#tab/python)
 
 Sample code reference (link)
 
 *placeholder code snippet*
+
+# [Teams AI library](#tab/ailibrary)
+
+```javascript
+await context.sendActivity({
+         type: ActivityTypes.Message,
+         text: `Hey I'm a friendly AI bot. This mesasge is generated via AI - ${txt}`,
+        entities: [
+          {
+            type: "https://schema.org/Message",
+            "@type": "Message",
+            "@context": "https://schema.org",
+            additionalType: ["AIGeneratedContent"], // AI Generated label
+          }
+        ]
+       });
+```
 
 ---
 
@@ -91,7 +115,7 @@ After you enable the AI label, your bot’s message automatically displays an AI
 
 ## Add citations to bot message
 
-If your bot responds to users based on information from data sources such as files, messages, emails, and work items, it’s important to cite these sources in the message. Citations significantly enhance the user's confidence and trust on your bot. They provide users with useful references to ask follow-up questions or conduct their own research.
+When a bot generates responses from data sources like files, messages, emails, and work items, citing these sources in the message is important. These citations offer valuable references for asking follow-up questions or conducting independent research.
 
 > [!NOTE]
 > Citations are particularly important for bots using techniques like RAG.
@@ -103,22 +127,19 @@ Adding citations to your message consists of two key parts:
 
 ### In-text citations
 
-Bots have the capability to embed text content with references. You can insert a citation anywhere within the text. The corresponding reference can include the title, keywords, excerpt (abstract), hyperlink, and sensitivity information. References appear as inline citations in pop-ups and as expandable citation footers.
+In-text citations appear as numbers with the corresponding reference that can include the title, keywords, excerpt (abstract), hyperlink, and sensitivity information. References appear as inline citations in pop-ups and as expandable citation footers. You can insert a citation anywhere within the text.
 
-:::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" alt-text="AI bot inline citation.":::
+:::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" alt-text="Screenshot shows an AI bot response with inline citation.":::
 
-The following code snippet provides the format expected by Teams for your in-text citations:
+The following code snippet provides the format expected by Microsoft Teams for your in-text citations:
 
-# [JavaScript](#tab/js2)
+# [JavaScript](#tab/js)
 
-```javascript
-await context.sendActivity({
-    type: ActivityTypes.Message,
-    text: 'Hey I'm a friendly AI bot. This message is generated via AI - $(txt) [1]', // cite with [1]
-});
-```
+Sample code reference (link)
 
-# [JSON](#tab/json2)
+*placeholder code snippet*
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -127,27 +148,40 @@ await context.sendActivity({
 }
 ```
 
-# [.NET](#tab/dotnet2)
+# [.NET](#tab/dotnet)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python2)
+# [Python](#tab/python)
 
 Sample code reference (link)
 
 *placeholder code snippet*
+
+# [Teams AI library](#tab/ailibrary)
+
+```javascript
+await context.sendActivity({
+    type: ActivityTypes.Message,
+    text: 'Hey I'm a friendly AI bot. This message is generated via AI - $(txt) [1]', // cite with [1]
+});
+```
 
 ---
 
 ### Citation reference
 
-The indexing on this list should match the corresponding in-text citations. Use this list to provide key details such as title of the citation, the link to the resource, and a relevant quote from the document. Here's how you can add a list of references to your message:
+The indexing on this list should match the corresponding in-text citations. Use this list to provide key details such as title of the citation, the link to the resource, and a relevant quote from the document. Here's how you can add a list of references to your message and modify the message to include an entity object, when your bot is sending a message back:
 
-# [JavaScript](#tab/js3)
+# [JavaScript](#tab/js)
 
-# [JSON](#tab/json3)
+Sample code reference (link)
+
+*placeholder code snippet*
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -197,21 +231,19 @@ The indexing on this list should match the corresponding in-text citations. Use 
 }
 ```
 
-# [.NET](#tab/dotnet3)
+# [.NET](#tab/dotnet)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python3)
+# [Python](#tab/python)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
----
-
-When your bot is sending a message back, modify the message to include an entity object:
+# [Teams AI library](#tab/ailibrary)
 
 ```javascript
  await context.sendActivity({
@@ -249,7 +281,9 @@ When your bot is sending a message back, modify the message to include an entity
 }
 ```
 
-After enabling citations, your bot message automatically includes in-text citations and a reference list in the footer. The in-text citations display details to users when they hover over them, as shown in the following image:
+---
+
+After you enable the citations, the bot message automatically includes in-text citations and a reference list in the footer. The in-text citations display details to users when they hover over them, as shown in the following image:
 
 :::image type="content" source="../../assets/images/bots/ai-bot-ref-cite-list.png" alt-text="AI bot reference citation list.":::
 
@@ -263,17 +297,19 @@ After enabling citations, your bot message automatically includes in-text citati
 
 ## Feedback buttons
 
-Collecting feedback is critical to assess your bot’s performance in real-world scenarios and improve its conversational capabilities with effective and targeted improvements. Feedback buttons enable users to indicate whether they like or dislike the messages your bot sends. After the user select a button, a dialog (referred as a task module in TeamsJS v1.x) appears that allows them to provide detailed feedback about the message.
+Collecting feedback is critical to assess your bot’s performance and improve its conversational capabilities. Enabling feedback buttons allows users to like or dislike the bot message and provide detailed feedback about the message.
 
-:::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" alt-text="Screenshots shows the feedback buttons in a bot." lightbox="../../assets/images/bots/bot-feedback-buttons.png":::
+:::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" alt-text="Screenshot shows the feedback buttons in a bot." lightbox="../../assets/images/bots/bot-feedback-buttons.png":::
 
-When the user selects one of the feedback buttons, a dialog that appears contains a feedback form depending on the user's selection. A positive feedback form appears if the user likes a message and a negative feedback form appears if the user dislikes a message.
+When the user selects a feedback button, a respective feedback form appears based on the user's selection.
 
 # [Positive feedback](#tab/pos)
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-form.png" alt-text="Screenshot shows the feedback form in a bot.":::
 
 # [Negative feedback](#tab/neg)
+
+*Image placeholder*
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-form.png" alt-text="Screenshot shows the feedback form in a bot.":::
 
@@ -287,23 +323,18 @@ When the user selects one of the feedback buttons, a dialog that appears contain
 ### Enable feedback buttons
 
 To enable feedback buttons in your bot, add a new `channelData` object in your bot's message and set `feedbackLoopEnabled` to true.
+
 After you enable feedback buttons, the footer of your bot's message contains a like and dislike button for the user to select. You can collect feedback on your bot’s responses from personal chats, group chats, and channels.
 
 The following code snippets show how to enable feedback buttons in a bot:
 
-# [JavaScript](#tab/js4)
+# [JavaScript](#tab/js)
 
-```javascript
-await context.sendActivity({
-  type: ActivityTypes.Message,
-  text: `Hey I'm a friendly AI bot. This mesasge is generated via AI - ${txt}`,
-  channelData: {
-    feedbackLoopEnabled: true // Enable feedback buttons
-  },
-});
-```
+Sample code reference (link)
 
-# [JSON](#tab/json4)
+*placeholder code snippet*
+
+# [JSON](#tab/json)
 
 ```json
 {
@@ -328,117 +359,37 @@ await context.sendActivity({
 
 ```
 
-# [.NET](#tab/dotnet4)
+# [.NET](#tab/dotnet)
+
+Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python4)
+# [Python](#tab/python)
+
+Sample code reference (link)
 
 *placeholder code snippet*
 
----
+# [Teams AI library](#tab/ailibrary)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts)
 
 For a bot built using Teams AI library, Teams enables feedback buttons to all messages when `enable_feedback_loop` is set to true. To customize this behavior, you need to extend the SAY command. The following code snippet shows how to enable feedback buttons in a bot built with Teams AI library:
 
-<br>
-<details>
-<summary><b>Code snippet</b></summary>
-
 ```javascript
-import { OpenAIModel, PromptManager, ActionPlanner, Application, TurnState, TeamsAdapter } from '@microsoft/teams-ai';
-import { ConfigurationServiceClientCredentialFactory, MemoryStorage, TurnContext } from 'botbuilder';
-import path from 'path';
-import debug from 'debug';
-
-const error = debug('azureopenai:app:error');
-error.log = console.log.bind(console);
-
-interface ConversationState {}
-type ApplicationTurnState = TurnState<ConversationState>;
-
-if (
-    !process.env.AZURE_OPENAI_KEY ||
-    !process.env.AZURE_OPENAI_ENDPOINT ||
-    !process.env.AZURE_SEARCH_ENDPOINT ||
-    !process.env.AZURE_SEARCH_KEY
-) {
-    throw new Error(
-        'Missing environment variables - please check that AZURE_OPENAI_KEY, AZURE_OPENAI_ENDPOINT, AZURE_SEARCH_KEY, AZURE_SEARCH_ENDPOINT are all set.'
-    );
-}
-
-// Create AI components
-const model = new OpenAIModel({
-    // Azure OpenAI Support
-    azureApiKey: process.env.AZURE_OPENAI_KEY!,
-    azureDefaultDeployment: 'gpt-35-turbo',
-    azureEndpoint: process.env.AZURE_OPENAI_ENDPOINT!,
-    azureApiVersion: '2024-02-15-preview',
-
-    // Request logging
-    logRequests: true
-});
-
-const prompts = new PromptManager({
-    promptsFolder: path.join(__dirname, '../src/prompts')
-});
-
-const planner = new ActionPlanner({
-    model,
-    prompts,
-    defaultPrompt: 'chat'
-});
-
-// Define storage and application
-const storage = new MemoryStorage();
-export const app = new Application<ApplicationTurnState>({
-    ai: {
-        planner: planner,
-        enable_feedback_loop: true
-    },
-    storage: storage,
-    adapter: new TeamsAdapter(
-        {},
-        new ConfigurationServiceClientCredentialFactory({
-            MicrosoftAppId: process.env.BOT_ID, // Set to "" if using the Teams Test Tool
-            MicrosoftAppPassword: process.env.BOT_PASSWORD, // Set to "" if using the Teams Test Tool
-            MicrosoftAppType: 'MultiTenant'
-        })
-    )
-});
-
-app.error(async (context: TurnContext, err: any) => {
-    // This check writes out errors to console log .vs. app insights.
-    // NOTE: In production environment, you should consider logging this to Azure
-    //       application insights.
-    error(`[onTurnError] unhandled error: ${err}`);
-    error(err);
-
-    // Send a trace activity, which will be displayed in Bot Framework Emulator
-    await context.sendTraceActivity(
-        'OnTurnError Trace',
-        `${err}`,
-        'https://www.botframework.com/schemas/error',
-        'TurnError'
-    );
-
-    // Send a message to the user
-    await context.sendActivity('The bot encountered an error or bug.');
-    await context.sendActivity('To continue to run this bot, please fix the bot source code.');
-});
-
-app.feedbackLoop(async (context, state, feedbackLoopData) => {
-    if (feedbackLoopData.actionValue.reaction === 'like') {
-        console.log('👍');
-    } else {
-        console.log('👎');
-    }
+await context.sendActivity({
+  type: ActivityTypes.Message,
+  text: `Hey I'm a friendly AI bot. This message is generated via AI - ${txt}`,
+  channelData: {
+    feedbackLoopEnabled: true // Enable feedback buttons
+  },
 });
 ```
 
-</details>
+---
 
-The bot sends the user's input, received in the feedback form, to you through a bot invoke. The following code snippet is an example of a bot invoke containing positive feedback from a user:
+The bot sends the user's input, received in the feedback form, through a bot invoke. The following code snippet is an example of a bot invoke containing positive feedback from a user:
 
 ```json
 {
@@ -456,12 +407,14 @@ The bot sends the user's input, received in the feedback form, to you through a 
 }
 ```
 
+---
+
 ### Handle feedback
 
 When your bot receives the invoke, you need to have an `onInvokeActivity` handler to process the invoke correctly. Ensure that you return a `status:200` with no body.
 
 > [!NOTE]
-> Don't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
+> You mustn't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
 
 The following code snippet returns a response with a status code of 200 when the bot receives an invoke containing feedback:
 
@@ -476,24 +429,24 @@ It’s important to store feedback after you receive it. Teams doesn’t store o
 
 | Error code | Response |
 | --- | --- |
-| 400 | `submit/messageAction` invoke response isn't empty. |
+| 400 | When the `submit/messageAction` invoke response isn't empty. |
 
 ## Add sensitivity label to bot message
 
-The final element you might want to add to your message is a sensitivity label. In some scenarios, your bot might respond with or use information that's confidential or only available to selected people in the organization. It's crucial to help users identify the confidentiality of a message so that they can exercise appropriate caution when sharing the message's contents.
+Bot responses might include information that's confidential or accessible only to certain individuals within the organization. You must add sensitivity label to help users identify the confidentiality of a message so that they can exercise caution when sharing the message.
 
 > [!NOTE]
 > Add this label to your bot's messages only if it contains sensitive information.
 
 Here's how you can add a sensitivity label to your bot message:
 
-# [JavaScript](#tab/js5)
+# [JavaScript](#tab/js)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [JSON](#tab/json5)
+# [JSON](#tab/json)
 
 ```json
 { 
@@ -525,21 +478,51 @@ Sample code reference (link)
 }
 ```
 
-# [.NET](#tab/dotnet5)
+# [.NET](#tab/dotnet)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [Python](#tab/python5)
+# [Python](#tab/python)
 
 Sample code reference (link)
 
 *placeholder code snippet*
+
+# [Teams AI library](#tab/ailibrary)
+
+Sample code reference (link)
+
+```javascript
+await context.sendActivity({
+         type: ActivityTypes.Message,
+         text: `Hey I'm a friendly AI bot. This mesasge is generated via AI - ${txt}`,
+        entities: [
+          {
+            type: "https://schema.org/Message",
+            "@type": "Message",
+            "@context": "https://schema.org",
+            usageInfo: {
+              "@type": "CreativeWork",
+              description: "Please be mindful of sharing outside of your team", // Sensitivity description
+              name: "Confidential \\ Contoso FTE", // Sensitivity title
+            },
+          },
+        ],
+```
 
 ---
 
 Here's the code snippet to reference the sensitivity label from citation:
+
+# [JavaScript](#tab/js)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+# [JSON](#tab/json)
 
 ```json
 { 
@@ -587,6 +570,26 @@ Here's the code snippet to reference the sensitivity label from citation:
 }
 ```
 
+# [.NET](#tab/dotnet)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+# [Python](#tab/python)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+# [Teams AI library](#tab/ailibrary)
+
+Sample code reference (link)
+
+*placeholder code snippet*
+
+---
+
 Once added, your bot message contains a shield icon. Users can hover over the icon to find disclaimer message about the sensitivity of the message.
 
 :::image type="content" source="../../assets/images/bots/ai-bot-sensitivity-label.png" alt-text="AI bot sensitivity label.":::
@@ -609,3 +612,4 @@ Once added, your bot message contains a shield icon. Users can hover over the ic
 * [Bot activity handlers](../bot-basics.md)
 * [Format your bot messages](format-your-bot-messages.md)
 * [Update and delete messages sent from bot](update-and-delete-bot-messages.md)
+* [Teams AI library](Teams%20conversational%20AI/how-conversation-ai-get-started.md)
