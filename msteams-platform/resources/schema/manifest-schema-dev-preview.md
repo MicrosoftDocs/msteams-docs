@@ -322,13 +322,13 @@ Your contact information that is used by customers to contact you through Teams 
 > [!Note]
 > You must provide only one contact email address.
 
-We recommend triaging your customers queries in a timely manner and route those internally within your organization based on the queries shared by the customers. It helps improve app adoption, developer trust, and revenue if you monetize your app.
+We recommend triaging your customer queries in a timely manner and route those internally within your organization based on the queries shared by the customers. It helps improve app adoption, developer trust, and revenue if you monetize your app.
 
 | Name | Type | Maximum size | Required | Description |
 |------|------|--------------|----------|-------------|
 |`defaultsupport`|Object||✔️| The default contact information for your app.|
 |`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address to receive customer queries using Teams chat. While the app manifest allows up to 10 email addresses, only the first email is considered for routing. The object is an array with all elements of the type string. The maximum length of email is 80 characters. |
-|`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for user inquiry (Minimum: 1; maximum: 1). The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
+|`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for customer inquiry (Minimum: 1; maximum: 1). The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 
 ## localizationInfo
 
