@@ -208,7 +208,6 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "id": "AAD App ID",
         "resource": "Resource URL for acquiring auth token for SSO"
     },
-    "graphConnector": "https://contoso.com/connector/notification",
     "showLoadingIndicator": false,
     "isFullScreen": false,
     "defaultBlockUntilAdminAction": false,
