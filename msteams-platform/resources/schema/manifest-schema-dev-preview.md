@@ -302,7 +302,7 @@ The unique Microsoft-generated identifier for this app. The format of the ID is 
 
 **Required** &ndash; Object
 
-Specifies information about the developer and their business. For Teams Store apps, the value must match the values that you provide in Partner Center app submission form.
+Specifies information about the developer and their business. For Teams Store apps, the value must match the values that you provide in the Partner Center app submission form.
 
 | Name            | Type   | Maximum size     | Required | Description                                                                                              |
 |-----------------|--------|------------------|----------|----------------------------------------------------------------------------------------------------------|
@@ -317,18 +317,18 @@ Specifies information about the developer and their business. For Teams Store ap
 
 **Optional** &ndash; Object
 
-Your contact information that is used by customers to contact you through Teams chat or email. Users may need extra information when evaluating your app or if they have any queries about your app when it doesn't work. Users can contact you using Teams chat, so request your IT admins to [enable external communications](/microsoftteams/communicate-with-users-from-other-organizations) in your organization. For more information, see [developer provided app and contact information](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation). 
+Your contact information that is used by users to contact you through Teams chat or email. Users may need extra information when evaluating your app or if they have any queries about your app when it doesn't work. Users can contact you using Teams chat, so request your IT admins to [enable external communications](/microsoftteams/communicate-with-users-from-other-organizations) in your organization. For more information, see [developer provided app and contact information](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation). 
 
 > [!Note]
 > You must provide only one contact email address.
 
-We recommend triaging your customer queries in a timely manner and route those internally within your organization based on the questions shared by the users. It helps improve app adoption, developer trust, and revenue if you monetize your app.
+We recommend triaging your user queries in a timely manner and route those internally within your organization based on the queries shared by the users. It helps improve app adoption, developer trust, and revenue if you monetize your app.
 
 | Name | Type | Maximum size | Required | Description |
 |------|------|--------------|----------|-------------|
 |`defaultsupport`|Object||✔️| The default contact information for your app.|
 |`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address to receive user queries using Teams chat. While the app manifest allows up to 10 email addresses, only the first email is considered for routing. The object is an array with all elements of the type string. The maximum length of email is 80 characters. |
-|`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for customer inquiry. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
+|`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for user inquiry (Minimum: 1; maximum: 1). The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 
 ## localizationInfo
 
