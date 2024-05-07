@@ -607,7 +607,7 @@ The following table includes the query parameters:
 
 ### Example
 
-# [C#](#tab/dotnet2)
+# [C#](#tab/dotnet3)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsinfo.getmeetingparticipantasync?view=botbuilder-dotnet-stable&preserve-view=true)  
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-context-app/csharp/MeetingContextApp/Bots/MeetingContextBot.cs#L33)
@@ -627,7 +627,7 @@ protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivi
 }
 ```
 
-# [JavaScript](#tab/javascript)
+# [JavaScript](#tab/javascript3)
 
 * [SDK reference](/javascript/api/botbuilder/teamsinfo?view=botbuilder-ts-latest#botbuilder-teamsinfo-getmeetingparticipant&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/meetings-token-app/nodejs/server/bot/botActivityHandler.js#L30)
@@ -655,7 +655,7 @@ export class MyBot extends TeamsActivityHandler {
 }
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json3)
 
 ```http
 GET /v1/meetings/{meetingId}/participants/{participantId}?tenantId={tenantId}
@@ -745,7 +745,7 @@ The following table includes the query parameter:
 > * The `externalResourceUrl` width and height parameters must be in pixels. For more information, see [design guidelines](design/designing-apps-in-meetings.md).
 > * The URL is the page, which loads as `<iframe>` in the in-meeting notification. The domain must be in the apps' `validDomains` array in your app manifest.
 
-# [C#](#tab/dotnet3)
+# [C#](#tab/dotnet2)
 
 * [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityextensions.teamsnotifyuser?view=botbuilder-dotnet-stable#microsoft-bot-builder-teams-teamsactivityextensions-teamsnotifyuser(microsoft-bot-schema-iactivity)&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-proactive-messaging/csharp/proactive-cmd/Program.cs#L178)
@@ -761,7 +761,7 @@ activity.TeamsNotifyUser(true, "https://teams.microsoft.com/l/bubble/APP_ID?url=
 await turnContext.SendActivityAsync(activity).ConfigureAwait(false);
 ```
 
-# [JavaScript](#tab/javascript)
+# [JavaScript](#tab/javascript2)
 
 * [SDK reference](/javascript/api/botbuilder-core/turncontext?view=botbuilder-ts-latest#botbuilder-core-turncontext-sendactivity&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/nodejs/bots/teamsConversationBot.js#L74)
@@ -780,7 +780,7 @@ replyActivity.channelData = {
 await context.sendActivity(replyActivity);
 ```
 
-# [JSON](#tab/json)
+# [JSON](#tab/json2)
 
 ```http
 POST /v3/conversations/{conversationId}/activities
