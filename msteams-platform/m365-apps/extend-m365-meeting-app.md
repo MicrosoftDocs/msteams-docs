@@ -24,9 +24,9 @@ The following table shows the Teams meeting app contexts supported in Outlook:
 | [Meeting details view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-details-view) | `meetingDetailsTab` | `frameContext.content` | ✔️ |
 | [Meeting chat view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-chat-view) | `meetingChatTab` | `frameContext.content` | ✔️ |
 | [Meeting side panel view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-side-panel-view) | `meetingSidePanel` | `frameContext.sidePanel` | ✔️ |
-| [Meeting stage view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-stage-view) | `meetingStage` | `frameContext.meetingStage` | ❌ |
+| [Meeting Stageview](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-stageview) | `meetingStage` | `frameContext.meetingStage` | ❌ |
 
-If your meeting app supports stage view, other in-meeting effects, or contains capabilities such as message extensions and bots, these continue to work in Teams when the meeting is scheduled from Outlook, but doesn't appear or run in Outlook.
+If your meeting app supports Stageview, other in-meeting effects, or contains capabilities such as message extensions and bots, these continue to work in Teams when the meeting is scheduled from Outlook, but doesn't appear or run in Outlook.
 
 ## Prerequisites
 

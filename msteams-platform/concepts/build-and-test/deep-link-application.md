@@ -21,6 +21,7 @@ Deep links allow users to know more about an app and install it in different sco
 * [To go to a chat with the application](#deep-link-to-a-chat-with-the-application)
 * [To share deep link for a tab](#share-deep-link-for-a-tab)
 * [To open a dialog (referred as task module in TeamsJS v1.x)](#deep-link-to-open-a-dialog)
+* [To invoke Stageview](#deep-link-to-invoke-stageview)
 
 [!INCLUDE [sdk-include](~/includes/sdk-include.md)]
 
@@ -142,13 +143,15 @@ The query parameters are:
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
-> Ensure that all the query parameters and the white spaces are properly URI encoded. You must follow the preceding examples using the last example:
+> * Ensure that all the query parameters and the white spaces are properly URI encoded. Following is an example of URI encoded query parameters:
 >
-> ```javascript
-> var encodedWebUrl = encodeURIComponent('https://tasklist.example.com/123/456&label=Task 456');
-> var encodedContext = encodeURIComponent(JSON.stringify({"subEntityId": "task456"}));
-> var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
-> ```
+>   ```javascript
+>   var encodedWebUrl = encodeURIComponent('https://tasklist.example.com/123/456&label=Task 456');
+>   var encodedContext = encodeURIComponent(JSON.stringify({"subEntityId": "task456"}));
+>   var taskItemUrl = 'https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=' + encodedWebUrl + '&context=' + encodedContext;
+>   ```
+>
+> * Deep link to a Teams application with encoded URI isn't supported in Outlook.
 
 #### Configure deep link to a tab using TeamsJS
 
@@ -312,7 +315,11 @@ A deep link doesn't open in the meeting side panel in the following scenarios:
 * The deep link is selected outside of the meeting window or component.
 * The deep link doesn't match the current meeting, for example, if the deep link is created from another meeting.
 
-## Code Sample
+## Deep link to invoke Stageview
+
+You can invoke Stageview through deep link from your tab by wrapping the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. The `openMode` property defined in the API determines the Stageview response. For more information, see [invoke Stageview through deep link](../../tabs/tabs-link-unfurling.md#invoke-from-deep-link).
+
+## Code sample
 
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|

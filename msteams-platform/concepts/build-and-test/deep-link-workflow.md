@@ -14,13 +14,12 @@ You can create a deep link to perform a specific task in Teams, such as to creat
 
 In this article, you’ll learn to create a deep link:
 
-* [Deep link to start a new chat](#deep-link-to-start-a-new-chat)<br>
-* [Deep link to open a meeting scheduling dialog](#deep-link-to-open-a-meeting-scheduling-dialog)<br>
-* [Deep link to start an audio-video call with users](#deep-link-to-start-an-audio-video-call-with-users)<br>
-* [Generate a deep link to share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)<br>
-* [Deep link to meeting side panel](#deep-link-to-meeting-side-panel)<br>
-* [Deep link to join a meeting](#deep-link-to-join-a-meeting)<br>
-* [Invoke Stage View through deep link](#invoke-stage-view-through-deep-link)
+* [To start a new chat](#deep-link-to-start-a-new-chat)
+* [To open a meeting scheduling dialog](#deep-link-to-open-a-meeting-scheduling-dialog)
+* [To start an audio-video call](#deep-link-to-start-an-audio-video-call-with-users)
+* [To share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings)
+* [To meeting side panel](#deep-link-to-meeting-side-panel)
+* [To join a meeting](#deep-link-to-join-a-meeting)
 
 ## Deep link to start a new chat
 
@@ -197,11 +196,7 @@ Deep link doesn't open in the meeting side panel in the following scenarios:
 
 Teams app can read the URL for joining a meeting URL through Graph APIs. This deep link brings up the UI for the user to join the meeting. For more information, see [Get `onlineMeeting`](/graph/api/onlinemeeting-get#response-1) and [Get meeting details](~/apps-in-teams-meetings/meeting-apps-apis.md#get-meeting-details-api).
 
-## Invoke Stage View through deep link
-
-To invoke the Stage View through deep link from your tab, you must wrap the deep link URL in the `app.openLink(url)` API. The deep link can also be passed through an `OpenURL` action in the card. For more information, see [Stage View](~/tabs/tabs-link-unfurling.md#invoke-stage-view-through-deep-link).
-
-## Code Sample
+## Code sample
 
 | Sample name | Description | .NET |Node.js|
 |-------------|-------------|------|----|

@@ -169,3 +169,4 @@ The following table provides the user types and lists the features that each use
 * [Meeting apps APIs](meeting-apps-apis.md)
 * [Enhanced collaboration with Live Share SDK](teams-live-share-overview.md)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)
+* [Integrate Teams meetings and calls in external apps](../get-started/b2c-apps.md)
