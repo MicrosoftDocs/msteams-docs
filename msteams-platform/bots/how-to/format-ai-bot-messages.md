@@ -263,7 +263,7 @@ After enabling citations, your bot message automatically includes in-text citati
 
 ## Feedback buttons
 
-Collecting feedback is critical to assess your bot’s performance in real-world scenarios and improve its conversational capabilities with effective and targeted improvements. Feedback buttons enable users to indicate whether they like or dislike the messages your bot sends. After the user select a button, a dialog (referred as a task module in TeamsJS v1.x) appears that allows them to provide detailed feedback about the message.
+Collecting feedback is critical to assess your bot’s performance in real-world scenarios and improve its conversational capabilities with effective and targeted improvements. Enable feedback buttons in the messages your bot sends. This allows users to indicate whether they like or dislike the messages. After users select a button, a dialog (referred as a task module in TeamsJS v1.x) appears that allows them to provide detailed feedback about the message.
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" alt-text="Screenshots shows the feedback buttons in a bot." lightbox="../../assets/images/bots/bot-feedback-buttons.png":::
 
