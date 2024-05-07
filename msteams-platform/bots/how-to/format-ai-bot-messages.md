@@ -27,16 +27,16 @@ To enhance your bots intelligence and conversational capabilities, you can impro
 
 The features that you can add to your bot message are:
 
-* [AI label](#add-ai-label-to-bot-message): Enables user to identify that the message was generated using AI.
-* [Citations](#add-citations-to-bot-message): Enables user to refer to the source of bot message through in-text citations and a list of references.
+* [AI label](#ai-label): Enables user to identify that the message was generated using AI.
+* [Citations](#citations): Enables user to refer to the source of bot message through in-text citations and a list of references.
 * [Feedback buttons](#feedback-buttons): Enables user to provide positive or negative feedback based on their experience.
-* [Sensitivity label](#add-sensitivity-label-to-bot-message): Enables user to understand the confidentiality of the AI-generated bot message.
+* [Sensitivity label](#sensitivity-label): Enables user to understand the confidentiality of the AI-generated bot message.
 
     :::image type="content" source="../../assets/images/bots/ai-bot-message.png" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
 
 ## AI label
 
-AI-based bot use large language models (LLMs) that are reliable, but there can be instances where their responses might be incorrect or potentially misleading. So it's crucial to indicate that your bot response is AI-generated.
+AI-based bots use large language models (LLMs) that are reliable, but there can be instances where their responses might be incorrect or potentially misleading. So it's crucial to indicate that your bot response is AI-generated.
 
 When your bot is sending a message, modify the message to include an entity object with `additionalType` field.
 
@@ -122,8 +122,8 @@ When a bot generates responses from data sources like files, messages, emails, a
 
 Adding citations to your message consists of two key parts:
 
-* [In-text citations](#in-text-citations): Cite your text with [X] format at any place of text.
-* [Citation reference list](#citation-reference): Modify the message to include citation array in the entities object.
+* [In-text citations](#add-in-text-citations): Cite your text with [X] format at any place of text.
+* [Citation reference list](#add-citation-reference): Modify the message to include citation array in the entities object.
 
 ### Add in-text citations
 
