@@ -396,7 +396,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 May**
 
-***May 06, 2024***: [Introduced `developer.contactInfo` property in the developer preview app manifest schema to let potential users contact you with queries before they can confidently adopt your app.](resources/schema/manifest-schema-dev-preview.md#developer)
+***May 06, 2024***: [Introduced `developer.contactInfo` property in the developer preview app manifest schema to let potential users contact you with queries before they can confidently adopt your app.](resources/schema/manifest-schema-dev-preview.md#developercontactinfo)
 
 :::column-end:::
 :::row-end:::
