@@ -1,31 +1,31 @@
 ---
-title: Format your AI bot messages
+title: AI bot messages
 description: Learn how to format your AI-based bot with AI labels, citations, feedback buttons, and sensitivity labels.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Format your AI bot messages
+# AI bot messages
 
-As we enhance our bots intelligence and conversational capabilities, it’s essential to craft user experiences that are specifically designed for AI and to promote user trust and transparency.
-
-Improve the user experience of your AI-powered bot by fully leveraging its AI capabilities. Incorporate features such as citations, an AI-label, feedback buttons, and a sensitivity label. These features streamline the user experience for common AI scenarios, such as:
+If you're building an AI-based bot, your bot messages can leverage AI capabilities like citations, an AI label, feedback buttons, and a sensitivity label to enhance user experience and adaptability. These features streamline the user experience for common AI scenarios, such as:
 
 * Citing data sources for retrieval-augmented generation (RAG).
 * Identifying AI-generated responses.
 * Collecting feedback.
 
-By incorporating these elements, you can elevate your bot’s user experience to align with industry-leading AI experiences, like Microsoft Copilot.
+They can also promote user trust and transparency and elevate your bot’s user experience to align with industry-leading AI experiences, like Microsoft Copilot.
 
 > [!NOTE]
-> Even bots that don’t use AI might find it beneficial to add citations or feedback buttons to their responses, as these UI elements can enhance their functionality.
+> Even if your bot isn't AI based, you can still add citations or feedback buttons to the bot response to enhance the functionality.
 
-Learn how to add the following elements to your AI bot message:
+Let's learn in detail of each feature and also how to leverage citations and feedback buttons to regular bot messages.
 
-* [AI label](#add-ai-label-to-bot-message): Add an AI label to indicate that the message’s content was created using AI.
-* [Citations](#add-citations-to-bot-message): Add in-text citations and a list of references to your responses.
-* [Feedback buttons](#feedback-buttons): Add feedback buttons and a feedback form to your message.
-* [Sensitivity label](#add-sensitivity-label-to-bot-message): Add a sensitivity label to your message to convey the confidentiality of the message.
+* [AI label](#add-ai-label-to-bot-message): Enables user to identify the message was generated using AI.
+* [Citations](#add-citations-to-bot-message): Enables user to refer to the source of bot message through in-text citations and a list of references.
+* [Feedback buttons](#feedback-buttons): Enables user to provide positive or negative feedback based on their experience.
+* [Sensitivity label](#add-sensitivity-label-to-bot-message): Enables user to understand the confidentiality of the AI-generated bot message.
+
+:::image type="content" source="../../assets/images/bots/ai-bot-message.png" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
 
 ## Add AI label to bot message
 
@@ -35,13 +35,13 @@ Adding a label to your AI-generated message enhances transparency and encourages
 
 Here's the code snippet to add the AI label to your bot's message:
 
-# [JavaScript](#tab/js1)
+# [JavaScript](#tab/js)
 
 Sample code reference (link)
 
 *placeholder code snippet*
 
-# [JSON](#tab/json1)
+# [JSON](#tab/json)
 
 ```json
 { 
