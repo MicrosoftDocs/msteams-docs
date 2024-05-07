@@ -79,7 +79,7 @@ The following table provides a list of styles, which are supported on desktop, i
 
 ### AI-based bots
 
-Here are some additional features that you can incorporate with your bot message, that are used by AI-generated bot messages:
+As the bots we develop are emerging to be more conversational, there’s an opportunity to design them to leverage AI capabilities. Here are some additional features that you can be integrated into your bot messages, similar to those used in AI-generated bot messages:
 
 | Feature | Bot | AI bot |
 | --- | :---: | :---: |
