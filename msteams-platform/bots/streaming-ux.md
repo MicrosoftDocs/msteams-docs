@@ -2,11 +2,9 @@
 title: Streaming UX in Bots
 description: Learn how to enhance the user experience in bots using streaming techniques.
 ms.date: 2022-10-01
-ms.topic: article
-ms.prod: microsoft-teams
-ms.service: bot-framework
-author: Your Name
-ms.author: yourname@microsoft.com
+ms.topic: conceptual
+author: v-ypalikila
+ms.author: surbhigupta
 ---
 
 # Streaming UX in Bots
