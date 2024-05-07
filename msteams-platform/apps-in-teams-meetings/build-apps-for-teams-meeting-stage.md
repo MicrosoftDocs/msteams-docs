@@ -219,7 +219,7 @@ Users can screen share content to the meeting stage in the following scenarios:
   > [!NOTE]
   > Apps that specify `MeetingStage` in the `page.frameContext` property of the `getContext` object in the manifest and declare `MeetingStage.Write.Chat` permissions support collaborative Share to Stage infrastructure. The share button initiates the existing collaborative protocol instead of the screen sharing protocol.
 
-* **Share specific parts of your app to the meeting stage**: Specify the appropriate sharing protocol along with the`appContentURL`
+* **Share specific parts of your app to the meeting stage**: Specify the appropriate sharing protocol along with the `appContentURL`.
 
     | Value | Type | Required | Description |
     | --- | --- | --- | --- |
