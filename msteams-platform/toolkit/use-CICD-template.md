@@ -16,7 +16,7 @@ You can set up a Continuous Integration and Continuous Deployment (CI/CD) pipeli
 
 1. Deploy the project to cloud resources.
 
-1. Generate the Teams appPackage.
+1. Generate the Teams `appPackage`.
 
 > [!NOTE]
 > To create a pipeline for a Teams app, it's required to prepare the necessary cloud resources, such as Azure Web App, Azure Functions, or Azure Static Web App, and configure the app settings.
@@ -30,7 +30,7 @@ To build the project, you must compile the source code and create the required d
 ## Set up CI/CD pipelines with Teams Toolkit CLI
 
 > [!NOTE]
-> Use Teams Toolkit version 5.6.0 or a later version.
+> Use Teams Toolkit version 5.6.0 or a later.
 
 You can use [Teams Toolkit command line interface (CLI)](Teams-Toolkit-CLI.md) to set up CI/CD pipeline for your Teams app.
 
@@ -110,9 +110,9 @@ To set up the pipeline with GitHub, follow these steps:
 
 1. Go to GitHub.
 
-1. Update the following variables and secrets you created during the Prerequisites:
+1. Update the following variables and secrets you created during the prerequisites:
 
-    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`.
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/repo-settings.png" alt-text="Screenshot shows the repo settings.":::
 
@@ -216,9 +216,9 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
     After you push your code to the repo, navigate to **Pipelines** and select **New pipeline**. Select your repo and the existing yml file to configure your pipeline.
 
-1. Update the following variables and secrets you created during the Prerequisites:
+1. Update the following variables and secrets you created during the prerequisites:
 
-    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`.
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`, `AZURE_TENANT_ID`, and `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
     * Go to the `teamsapp.yml` file. In the `deploy` stage, the values enclosed in `${{}}` are the required variable keys. If you've used the `provision` command from Teams Toolkit, you can locate the values in the environment files in the `.env` folder.
 
@@ -332,7 +332,7 @@ You can customize these actions in your CI/CD pipeline. Here's an example that u
     package: deploy.zip
 ```
 
-The Teams Toolkit currently supports Teams app projects, written in various programming languages and designed for hosting on different Azure services. The following actions for building and deploying. Use these actions when setting CI/CD deployment pipelines.
+The Teams Toolkit supports Teams app projects, written in various programming languages and designed for hosting on different Azure services. The following actions for building and deploying. Use these actions when setting CI/CD deployment pipelines.
 
 Build:
 
@@ -359,7 +359,7 @@ When you deploy app code to Azure App Service, Azure Functions, or Azure Contain
 
   * For Azure pipeline, see how to [create an Azure Resource Manager service connection that uses workload identity federation](/azure/devops/pipelines/library/connect-to-azure#create-an-azure-resource-manager-service-connection-that-uses-workload-identity-federation).
 
-* Secret: The TeamsApp CLI currently supports sign-in using a service principal with a secret. For more information, see how to [create a new client secret](/entra/identity-platform/howto-create-service-principal-portal).
+* Secret: The TeamsApp CLI supports sign-in using a service principal with a secret. For more information, see how to [create a new client secret](/entra/identity-platform/howto-create-service-principal-portal).
 
 ## Generate the Teams appPackage
 
