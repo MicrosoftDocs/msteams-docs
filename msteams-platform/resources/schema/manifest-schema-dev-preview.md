@@ -52,7 +52,8 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
     },
     "icons": {
         "outline": "%FILENAME-32x32px%",
-        "color": "%FILENAME-192x192px"
+        "color": "%FILENAME-192x192px",
+        "color32x32": "%FILENAME-32x32px%"
     },
     "accentColor": "%HEX-COLOR%",
     "configurableTabs": [
@@ -365,6 +366,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 |---|---|---|---|
 |`outline`|2048 characters|✔️|A relative file path to a transparent 32x32 PNG outline icon. The border color must be white.|
 |`color`|2048 characters|✔️|A relative file path to a full color 192x192 PNG icon.|
+|`color32x32`|2048 character| | A relative file path to a full color 32x32 PNG icon with transparent background. Used when the app is pinned in Outlook and Microsoft 365 app.|
 
 ## accentColor
 
