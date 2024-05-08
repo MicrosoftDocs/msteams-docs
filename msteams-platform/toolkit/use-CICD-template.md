@@ -263,7 +263,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
 If the Teams App CLI doesn't meet your pipeline requirements, you can develop a custom deployment process that suits your needs. This section provides guidance on deploying to Azure with custom methods.
 
 > [!NOTE]
-> If you already have a complete CI/CD pipeline for deploying to your Azure resource, and your Teams app needs to read environment variables during runtime, configure these environment variables in the settings of your Azure resource. For post-deployment testing, see [generate the Teams appPackage](#generate-the-teams-apppackage).
+> If you already have a complete CI/CD pipeline for deploying to your Azure resource, and your Teams app needs to read environment variables during runtime, configure these environment variables in the settings of your Azure resource. For post-deployment testing, see [generate the Teams app package](#generate-the-teams-app-package).
 
 The `teamsapp deploy` command executes the actions defined in the `deploy` stage of the `teamsapp.yml` file. The `deploy` stage consists of `build` and `deploy` actions. To create a custom deployment method, rewrite these actions based on your specific requirements and preferences.
 
