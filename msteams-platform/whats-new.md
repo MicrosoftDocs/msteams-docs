@@ -26,7 +26,7 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
-* ***April 12, 2024***: [Implement authentication in API-based search message extensions to provide secure and seamless access to your app.](messaging-extensions/build-api-based-message-extension.md#authentication)
+* ***April 12, 2024***: [Implement authentication in API-based search message extensions to provide secure and seamless access to your app.](messaging-extensions/build-api-based-message-extension.md#authentication).
 * ***April 12, 2024***: [Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards](resources/schema/manifest-schema.md).
 * ***April 12, 2024***: [Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem](resources/schema/manifest-schema.md#extensionsrequirements).
 * ***April 12, 2024***: [Create Dashboardcards that can be pinned to a dashboard such as Microsoft Viva Connections to provide a summarized view of app information](resources/schema/manifest-schema.md#dashboardcards).
@@ -393,9 +393,9 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
-**2024 March**
+**2024 May**
 
-***March 15, 2023***: [Extend static tabs to channels with a customizable experience.](tabs/what-are-tabs.md)
+***May 07, 2024***: You can specify a [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.
 
 :::column-end:::
 :::row-end:::
@@ -408,6 +408,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
+| 15/03/2024 | Extend static tabs to channels with a customizable experience. | [Build tabs for Teams](tabs/what-are-tabs.md) |
 | 12/02/2024 | Build API-based message extension using Developer Portal for Teams. | Build message extension > [Build API-based message extension](messaging-extensions/build-api-based-message-extension.md) |
 | 06/02/2024 | Introduced `systemDefault` reserved activity type for send activity feed notifications| Build tabs > [Send activity feed notifications](tabs/send-activity-feed-notification.md#requirements-to-use-the-activity-feed-notification-apis)|
 |25/01/2024| Actions help to integrate your app into your user's workflow by enabling easy discoverability and seamless interaction with the content. | Extend your app across Microsoft 365 > [Actions in Microsoft 365](m365-apps/actions-in-m365.md)|
