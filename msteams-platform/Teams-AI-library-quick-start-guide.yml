@@ -15,7 +15,7 @@ items:
 - durationInMinutes: 1
   content: |
 
-    This tutorial shows how to create a Custom Copilot with Copilot SDK using Teams Toolkit to chat with your data on Azure OpenAI. Copilot SDK streamlines the process of building intelligent Teams apps by using the AI components and large language model of your choice.
+    This tutorial shows how to create a Custom Copilot with Teams AI library using Teams Toolkit to chat with your data on Azure OpenAI. Teams AI library streamlines the process of building intelligent Teams apps by using the AI components and large language model of your choice.
 
     In this tutorial, you learn:
 
@@ -86,7 +86,7 @@ items:
      
      1. Select **Save and close**.
 
-     After the data ingestion process is complete, you can start creating your Custom Copilot using the Copilot SDK and Teams Toolkit.
+     After the data ingestion process is complete, you can start creating your Custom Copilot using the Teams AI library and Teams Toolkit.
  
 
 - title: Create your first Custom Copilot
