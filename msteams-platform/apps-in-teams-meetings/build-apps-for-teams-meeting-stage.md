@@ -221,12 +221,57 @@ Users can screen share content to the meeting stage in the following scenarios:
 
 * **Share specific parts of your app to the meeting stage**: Specify the appropriate sharing protocol along with the `appContentURL`.
 
-    | Value | Type | Required | Description |
-    | --- | --- | --- | --- |
-    | `sharingProtocol` | String | No | Collaborative (default) or ScreenShare” |
+   ```typescript
+   expect(shareAppContentToStageMessage.args[1]).toMatchObject(shareOptions);
+          });
+          it(`should successfully share app content to stage. content: ${context} context`, async () => {
+            await utils.initializeWithContext(context);
+            
+            let callbackCalled = false;
+            let returnedSdkError: SdkError | null;
+            let returnedResult: boolean | null;
+            const requestUrl = 'validUrl';
+            const shareOptions = {
+              sharingProtocol: meeting.SharingProtocol.ScreenShare,
+            };
+            meeting.shareAppContentToStage(
+              (error: SdkError, result: boolean) => {
+                callbackCalled = true;
+                returnedResult = result;
+                returnedSdkError = error;
+              },
+              requestUrl,
+              shareOptions,
+            );
 
-    > [!NOTE]
-    > If the value for the sharingProtocol property is set as `screenShare`, you don't need to declare any Resource-Specific Consent (RSC) permissions in the app manifest and don't need to set `MeetingStage` in the `getContext` object of the manifest.
+            const shareAppContentToStageMessage = utils.findMessageByFunc('meeting.shareAppContentToStage');
+            expect(shareAppContentToStageMessage).not.toBeNull();
+            const callbackId = shareAppContentToStageMessage.id;
+            utils.respondToFramelessMessage({
+              data: {
+                id: callbackId,
+                args: [null, true],
+              },
+            } as DOMMessageEvent);
+            expect(callbackCalled).toBe(true);
+            expect(returnedSdkError).toBeNull();
+            expect(returnedResult).toBe(true);
+            expect(shareAppContentToStageMessage.args).toContain(requestUrl);
+            expect(shareAppContentToStageMessage.args[1]).toMatchObject(shareOptions);
+          });
+
+          it('should throw if the shareAppContentToStage message sends and fails', async () => {
+  ```
+
+  | Value | Type | Required | Description |
+  | --- | --- | --- | --- |
+  |`callback` | String | Yes| Callback contains two parameters, error and result. The error can contain either an error of type SdkError or null when share is successful. The result can contain either a true value if there's a successful share or null when the share fails.|
+  |`appContentURL`| String |Yes |The URL that will be shared on to the stage.|
+  | `shareOptions`| Object | No | Defines additional sharing options.|
+  |shareOptions.sharingProtocol | Enum | No | The screen sharing protocol. The supported values are `Collaborative` and `ScreenShare`. Default is `Collaborative`.|
+
+  > [!NOTE]
+  > If the value for the `sharingProtocol` property is set as `screenShare`, you don't need to declare any Resource-Specific Consent (RSC) permissions in the app manifest and don't need to set `MeetingStage` in the `getContext` object of the manifest.
 
 ### Scenarios
 
