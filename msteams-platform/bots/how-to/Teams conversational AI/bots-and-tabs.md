@@ -88,10 +88,8 @@ The tab app itself could be used to trigger a bot message, as shown in the below
 
 ## Sharing app state with the bot 
 
-If a user asks the bot, **What am I looking at?**, a bot might not know what content the user is viewing in the tab application, and couldn't respond with an informed answer. Fortunately, it's straightforward for an app developer to do through the architecture discussed above.
+If a user asks the bot, What am I looking at?, a bot might not know what content the user is viewing in the tab application, and couldn't respond with an informed answer. Fortunately, it's straightforward for an app developer to do through the architecture discussed above.
 
-One powerful scenario that we haven't yet discussed is how a bot might have awareness into the local application state of the user.
-
-With an active web socket connection, or through simple REST APIs, the tab can easily send application state data to a server, which the server would then store/cache for later. For example, if a user opens a modal in the app and a new form is presented, the app could send some metadata to the server. Assuming the data was mapped appropriately (for example, "userId-threadId" <-> app state), when a user then sent the bot a message that data could be retrieved from memory/storage and handled accordingly (for example, fed into a prompt for an LLM). 
+With an active web socket connection or through the REST APIs, the tab can send application state data to a server, which the server would then store/cache for later. For example, if a user opens a modal in the app and a new form is presented, the app could send some metadata to the server. Assuming the data was mapped appropriately (for example, "userId-threadId" <-> app state), when a user then sent the bot a message that data could be retrieved from memory/storage and handled accordingly (for example, fed into a prompt for an LLM). 
 
 :::image type="content" source="~/assets/images/bots/bot-state.png" alt-text="Sequence diagram that explains the communication flow between tab and bot.":::
