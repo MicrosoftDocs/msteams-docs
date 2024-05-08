@@ -10,14 +10,13 @@ ms.date: 05/02/2024
 
 # Interoperability of bot with tab
 
-The user problem is that bots aren't context-aware and accessible in the user's workflow. Users want to use intelligent assistants within the context of their tasks, but they often have to switch surfaces or lose context to interact with Teams bots. Users expect bots to understand and command the surfaces they're hosted in, such as personal tabs, collaboration stages, and meeting stages.
-The user scenarios include building a telemetry dashboard, designing a video game, meeting to discuss product design, and creating a project plan. User scenarios involve interactive workflows that require bots to assist with complex, time-consuming, or mundane tasks. User story involves using different apps and bots in a meeting context.
+Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are great way for conversational experiences through chat, while tabs allow a developer to embed their web applications directly into Teams. Tabs and bots can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
 
-The current experience is that bots have their own tab or are limited to the chat panel. Current experience of bots in Teams isn't optimal for interactive scenarios, as users have to leave their current app context to interact with the bot, or the bot can't access or affect the app surface at all.
+By combining bots and tabs, you can create a custom Copilot-like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab, and the bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application. This allows for a seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
 
 ## Understanding how bots and tabs work 
 
-Before going too deep into the proposed architecture for connecting bots and tabs together, it's helpful to understand how bots and tabs work within their own silos. 
+Before understanding the architecture for connecting bots and tabs together, it's helpful to understand how bots and tabs work within their own space. 
 
 ### Bots 
 
