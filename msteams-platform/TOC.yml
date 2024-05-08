@@ -202,12 +202,12 @@
             href: toolkit/deploy.md
           - name: Deploy Teams app to container service
             href: toolkit/deploy-Teams-app-to-container-service.md           
+          - name: Set up CI/CD pipelines
+            href: toolkit/use-CICD-template.md            
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
-          - name: Set up CI/CD pipelines
-            href: toolkit/use-CICD-template.md  
           - name: Test app behavior in different environment
             href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
