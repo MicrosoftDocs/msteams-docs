@@ -157,9 +157,9 @@ To set up the pipeline with GitHub, follow these steps:
     > [!NOTE]
     > You don't need to commit env files under env folder to the repo. The env variables required for executing the CI/CD pipeline are already set in the repo variables.
 
-    After the pipeline executes successfully, the log displays that the code is deployed to Azure and the appPackage is generated in the artifacts.
+    After the pipeline executes successfully, the log displays that the code is deployed to Azure and the `appPackage` is generated in the artifacts.
 
-    :::image type="content" source="../assets/images/teams-toolkit-v2/artifact.png" alt-text="Screenshot shows the appPackage is generated in the artifacts.":::
+    :::image type="content" source="../assets/images/teams-toolkit-v2/artifact.png" alt-text="Screenshot shows the `appPackage` is generated in the artifacts.":::
 
 ### Set up pipeline with Azure DevOps
 
@@ -254,7 +254,7 @@ To set up the pipeline with Azure DevOps, follow these steps:
     > [!NOTE]
     > There's no need to commit env files under env/ folder to the repo. The env variables required for executing the CI/CD pipeline are already established in the pipeline variables.
 
-    After the pipeline executes successfully, the log displays that the code is deployed to Azure and the appPackage is generated in the artifacts.
+    After the pipeline executes successfully, the log displays that the code is deployed to Azure and the `appPackage` is generated in the artifacts.
 
     :::image type="content" source="../assets/images/teams-toolkit-v2/published.png" alt-text="Screenshot shows the pipeline runs successfully.":::
 
@@ -363,7 +363,7 @@ When you deploy app code to Azure App Service, Azure Functions, or Azure Contain
 
 ## Generate the Teams appPackage
 
-To distribute your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in `Teamsapp` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the appPackage:
+To distribute your Teams app, the `appPackage` is required. You can automatically create the `appPackage.zip` using the `teamsapp package` command in `Teamsapp` CLI. If you're unable to use `Teamsapp` CLI, follow these steps to manually create the `appPackage`:
 
 1. Prepare a `appPackage` folder.
 1. Place the `manifest.json` file in the `appPackage` folder. The default `manifest.json` file in the Teams Toolkit project contains placeholders, denoted by ${{}}. Replace these placeholders with the correct values.
