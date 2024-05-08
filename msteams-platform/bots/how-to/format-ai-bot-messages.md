@@ -34,6 +34,11 @@ The features that you can add to your bot message are:
 
     :::image type="content" source="../../assets/images/bots/ai-bot-message.png" border="false" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
 
+> [!IMPORTANT]
+>
+> * These features are available in public developer preview.
+> * These features are not available in message extensions.
+
 ## AI label
 
 AI-based bots use large language models (LLMs) that are reliable, but there can be instances where their responses might be incorrect or potentially misleading. So it's crucial to indicate that your bot response is AI-generated.
@@ -173,7 +178,7 @@ await context.sendActivity({
 
 ### Add citation reference
 
-The indexing on this list should match the corresponding in-text citations. Use this list to provide key details such as title of the citation, the link to the resource, and a relevant quote from the document. To add a reference list to your message, modify the message to include an entity object when your bot sends a response. The folllowing code snippet provides an example:
+The indexing on this list should match the corresponding in-text citations. Use this list to provide key details such as title of the citation, the link to the resource, and a relevant quote from the document. To add a reference list to your message, modify the message to include an entity object when your bot sends a response. The following code snippet provides an example:
 
 # [JavaScript](#tab/js)
 
@@ -297,9 +302,9 @@ After you enable the citations, the bot message automatically includes in-text c
 
 ## Feedback buttons
 
-Collecting feedback is critical to assess your bot’s performance and improve its conversational capabilities. Enabling feedback buttons allows users to like or dislike the bot message and provide detailed feedback about the message.
+Collecting feedback is critical to assess your bot’s messages and improve its conversational capabilities. Enabling feedback buttons allows users to like or dislike bot messages and provide detailed feedback about them. This feedback can be used to make targeted and effective upgrades to your bot.
 
-:::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot." lightbox="../../assets/images/bots/bot-feedback-buttons.png":::
+:::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot.":::
 
 When the user selects a feedback button, a respective feedback form appears based on the user's selection.
 
@@ -314,11 +319,6 @@ When the user selects a feedback button, a respective feedback form appears base
 :::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the feedback form in a bot.":::
 
 ---
-
-> [!NOTE]
->
-> * Feedback buttons are available in public developer preview and only in Teams web and desktop clients.
-> * Feedback buttons are not available for message extensions.
 
 ### Enable feedback buttons
 
@@ -375,7 +375,7 @@ Sample code reference (link)
 
 [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts)
 
-For a bot built using Teams AI library, Teams enables feedback buttons to all messages when `enable_feedback_loop` is set to true. To customize this behavior, you need to extend the SAY command. The following code snippet shows how to enable feedback buttons in a bot built with Teams AI library:
+For a bot built using Teams AI library, Teams enables feedback buttons to all messages when `enable_feedback_loop` is set to true. To customize this behavior, you need to extend the SAY command.
 
 ```javascript
 await context.sendActivity({
@@ -414,7 +414,9 @@ The bot sends the user's input, received in the feedback form, through a bot inv
 When your bot receives the invoke, you need to have an `onInvokeActivity` handler to process the invoke correctly. Ensure that you return a `status:200` with no body.
 
 > [!NOTE]
-> You mustn't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
+>
+> * You mustn't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
+> * If your bot is built using Teams AI library, the feedback received is automatically handled.
 
 The following code snippet returns a response with a status code of 200 when the bot receives an invoke containing feedback:
 
