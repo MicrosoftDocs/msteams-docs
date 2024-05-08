@@ -139,7 +139,7 @@ To set up the pipeline with GitHub, follow these steps:
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`.
     * `AZURE_TENANT_ID`.
     * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`.
-    * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`
+    * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`.
     * `TEAMS_APP_ID`.
 
     Add the variables defined in your repo directly into your yml file, excluding the following three variables:
