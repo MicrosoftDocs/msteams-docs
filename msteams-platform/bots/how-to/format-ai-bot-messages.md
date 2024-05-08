@@ -32,7 +32,7 @@ The features that you can add to your bot message are:
 * [Feedback buttons](#feedback-buttons): Enables user to provide positive or negative feedback based on their experience.
 * [Sensitivity label](#sensitivity-label): Enables user to understand the confidentiality of the AI-generated bot message.
 
-    :::image type="content" source="../../assets/images/bots/ai-bot-message.png" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
+    :::image type="content" source="../../assets/images/bots/ai-bot-message.png" border="false" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
 
 ## AI label
 
@@ -111,7 +111,7 @@ await context.sendActivity({
 
 After you enable the AI label, your bot’s message automatically displays an AI label that reads **AI generated** next to the bot’s name. The label has a hover tooltip that displays the AI disclaimer stating **AI-generated content may be incorrect**.
 
-:::image type="content" source="../../assets/images/bots/ai-bot-label.png" alt-text="AI bot label.":::
+:::image type="content" source="../../assets/images/bots/ai-bot-label.png" border="false" alt-text="Screenshot shows an AI bot label.":::
 
 ## Citations
 
@@ -129,7 +129,7 @@ Adding citations to your message consists of two key parts:
 
 In-text citations appear as numbers with the corresponding reference that can include the title, keywords, excerpt (abstract), hyperlink, and sensitivity information. References appear as inline citations in pop-ups and as expandable citation footers. You can insert a citation anywhere within the text.
 
-:::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" alt-text="Screenshot shows an AI bot response with inline citation.":::
+:::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" border="false" alt-text="Screenshot shows an AI bot response with inline citation.":::
 
 The following code snippet provides the format expected by Microsoft Teams for your in-text citations:
 
@@ -173,7 +173,7 @@ await context.sendActivity({
 
 ### Add citation reference
 
-The indexing on this list should match the corresponding in-text citations. Use this list to provide key details such as title of the citation, the link to the resource, and a relevant quote from the document. Here's how you can add a list of references to your message and modify the message to include an entity object, when your bot is sending a message back:
+The indexing on this list should match the corresponding in-text citations. Use this list to provide key details such as title of the citation, the link to the resource, and a relevant quote from the document. To add a reference list to your message, modify the message to include an entity object when your bot sends a response. The folllowing code snippet provides an example:
 
 # [JavaScript](#tab/js)
 
@@ -285,7 +285,7 @@ Sample code reference (link)
 
 After you enable the citations, the bot message automatically includes in-text citations and a reference list in the footer. The in-text citations display details to users when they hover over them, as shown in the following image:
 
-:::image type="content" source="../../assets/images/bots/ai-bot-ref-cite-list.png" alt-text="AI bot reference citation list.":::
+:::image type="content" source="../../assets/images/bots/ai-bot-ref-cite-list.png" border="false" alt-text="Screenshot shows an AI bot reference citation list.":::
 
 | Error code | Response |
 | --- | --- |
@@ -299,19 +299,19 @@ After you enable the citations, the bot message automatically includes in-text c
 
 Collecting feedback is critical to assess your bot’s performance and improve its conversational capabilities. Enabling feedback buttons allows users to like or dislike the bot message and provide detailed feedback about the message.
 
-:::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" alt-text="Screenshot shows the feedback buttons in a bot." lightbox="../../assets/images/bots/bot-feedback-buttons.png":::
+:::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot." lightbox="../../assets/images/bots/bot-feedback-buttons.png":::
 
 When the user selects a feedback button, a respective feedback form appears based on the user's selection.
 
 # [Positive feedback](#tab/pos)
 
-:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" alt-text="Screenshot shows the feedback form in a bot.":::
+:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the feedback form in a bot.":::
 
 # [Negative feedback](#tab/neg)
 
 *Image placeholder*
 
-:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" alt-text="Screenshot shows the feedback form in a bot.":::
+:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the feedback form in a bot.":::
 
 ---
 
@@ -592,7 +592,7 @@ Sample code reference (link)
 
 Once added, your bot message contains a shield icon. Users can hover over the icon to find disclaimer message about the sensitivity of the message.
 
-:::image type="content" source="../../assets/images/bots/ai-bot-sensitivity-label.png" alt-text="AI bot sensitivity label.":::
+:::image type="content" source="../../assets/images/bots/ai-bot-sensitivity-label.png" border="false" alt-text="Screenshot shows an AI bot sensitivity label.":::
 
 | Error code | Response |
 | --- | --- |
