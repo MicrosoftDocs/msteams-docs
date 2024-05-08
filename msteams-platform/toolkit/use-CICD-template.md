@@ -136,17 +136,17 @@ To set up the pipeline with GitHub, follow these steps:
 
     Update the variable keys that you've gathered for the following variables:
 
-    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`.
-    * `AZURE_TENANT_ID`.
-    * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`.
-    * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`.
-    * `TEAMS_APP_ID`.
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`
+    * `AZURE_TENANT_ID`
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
+    * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`
+    * `TEAMS_APP_ID`
 
     Add the variables defined in your repo directly into your yml file, excluding the following three variables:
 
-    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`.
-    * `AZURE_TENANT_ID`.
-    * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`.
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`
+    * `AZURE_TENANT_ID`
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/modification.png" alt-text="Screenshot shows the modified pipeline yml.":::
 
@@ -234,11 +234,11 @@ To set up the pipeline with Azure DevOps, follow these steps:
 
     You need to set the following key name variables in the repo:
 
-    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`.
-    * `AZURE_TENANT_ID`.
-    * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`.
-    * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`.
-    * `TEAMS_APP_ID`.
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_ID`
+    * `AZURE_TENANT_ID`
+    * `AZURE_SERVICE_PRINCIPAL_CLIENT_SECRET`
+    * `BOT_AZURE_APP_SERVICE_RESOURCE_ID`
+    * `TEAMS_APP_ID`
 
     To set variables in your pipeline, go to your pipeline and select **Edit** > **Variables**.
 
