@@ -37,7 +37,7 @@ This bi-directional interaction pattern is used for building conversational expe
 
 Tabs allows you to embed your web applications directly into Teams. This allows customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form. 
 
-:::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work.":::
+:::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work." lightbox="~/assets/images/bots/how-tab-work.png":::
 
 Using the `@microsoft/teams-js NPM` package, an app can communicate with the Teams using a secure messaging channel called window post messages. Because the app is loaded as a website, that app can communicate with backends using standard JavaScript APIs, HTTP requests, web sockets, and so on. 
 
