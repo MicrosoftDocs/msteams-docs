@@ -85,7 +85,6 @@ The tab app itself could be used to trigger a bot message, as shown in the below
 > [!NOTE]
 > This scenario works well for personal apps, for collaborative contexts such as, meeting stage, the `threadId` might need to be sent to the app server from the tab using the `teams-js` SDK. That would ensure that the app sends the message to the right context, rather than to the user's personal conversation with the bot. 
 
-
 ## Sharing app state with the bot 
 
 If a user asks the bot, What am I looking at?, a bot might not know what content the user is viewing in the tab application, and couldn't respond with an informed answer. Fortunately, it's straightforward for an app developer to do through the architecture discussed above.
