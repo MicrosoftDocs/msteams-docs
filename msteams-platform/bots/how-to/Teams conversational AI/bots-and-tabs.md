@@ -8,37 +8,44 @@ author: surbhigupta
 ms.date: 05/02/2024
 ---
 
-# Interoperability of bot with tab
+# Interoperability of bots and tabs
 
 Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are great way for conversational experiences through chat, while tabs allow a developer to embed their web applications directly into Teams. Tabs and bots can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
 
 By combining bots and tabs, you can create a custom Copilot-like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab, and the bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application. This allows for a seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
 
-## Understanding how bots and tabs work 
+## Understand how bots and tabs work 
 
 Before understanding the architecture for connecting bots and tabs together, it's helpful to understand how bots and tabs work within their own space. 
 
-### Bots 
+:::row:::
+:::column span="":::
 
-The bot framework allows apps to receive and send messages from a server. It leverages Microsoft Entra ID registrations that are referenced in the Teams app manifest. When a Teams user sends a message to that bot (for example, via @mention from a group context) then the bot receives that message through some handler function the developer defines in their server. 
+### Bots
 
-Here is a simplified diagram showing how this works: 
+The bot framework allows apps to receive and send messages from a server through Microsoft Entra ID registration that is specified in the app manifest (previously called Teams app manifest). When a user sends a message to the bot, the bot receives the message through some of the handler function that are defined in your server. 
 
-:::image type="content" source="~/assets/images/bots/how-bot-work.png" alt-text="Sequence diagram that explains how bots work.":::
+:::image type="content" source="~/assets/images/bots/how-bot-work.png" alt-text="Sequence diagram that explains how bots work." lightbox="~/assets/images/bots/how-bot-work.png":::
 
-This simple bi-directional interaction pattern is great for building conversational experiences. It also extends to other types of actions, such as a user clicking a Submit action from an adaptive card (rather than sending a message). 
+This bi-directional interaction pattern is used for building conversational experiences and can be extended to other types of actions, such as a user selecting a Submit button in an Adaptive Card. 
+
+:::column-end:::
+
+:::column span="":::
 
 ### Tabs
 
-Where bots are great for conversational experiences through chat, tabs allow a developer to embed their web applications directly into Teams. This is great for more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form. Using the @microsoft/teams-js NPM package, an app can communicate with the Teams client using a secure messaging channel called window post messages. Because the app is loaded as a website, that app can communicate with backends using standard JavaScript APIs. This could be using simple HTTP requests, web sockets, etc. 
-
-Web applications can be architected in several ways, some of which might be more prepared for bidirectionality than others. For example, many API requests might be a one-off thing, such as "give me a list of tasks to display." Once those tasks are received, they won't update until the app explicitly re-requests the data. However, like how Teams has an open line of communication with the server to receive incoming messages, other applications might keep an active connection open with their own server. This is especially common for real-time collaborative apps. To use the task example, a collaborative task list might receive task updates via a web socket connection so that multiple different users/clients are always up to date with the latest updates. 
-
-Here is a common architecture for bidirectional interactions between server and client in web applications today: 
+Tabs allows you to embed your web applications directly into Teams. This allows customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form. 
 
 :::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work.":::
 
-Now you might be thinking that this looks like the bot workflow above, which is because it is. The main difference is that Teams services serve as a middle layer between the bot and the Teams client. This same similarity will serve as the foundation for how to connect these two different platform capabilities together. 
+Using the `@microsoft/teams-js NPM` package, an app can communicate with the Teams using a secure messaging channel called window post messages. Because the app is loaded as a website, that app can communicate with backends using standard JavaScript APIs, HTTP requests, web sockets, and so on. 
+
+:::column-end:::
+
+:::row-end:::
+
+Web applications can be architected in several ways, some of which might be more prepared for bidirectionality than others. For example, many API requests might be a one-off thing, such as "give me a list of tasks to display." Once those tasks are received, they won't update until the app explicitly re-requests the data. However, like how Teams has an open line of communication with the server to receive incoming messages, other applications might keep an active connection open with their own server. This is especially common for real-time collaborative apps. To use the task example, a collaborative task list might receive task updates via a web socket connection so that multiple different users/clients are always up to date with the latest updates. 
 
 ## Interoperability between bot and tab 
 
