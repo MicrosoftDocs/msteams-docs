@@ -52,6 +52,7 @@ The following is the UI for command menu, which is generally available:
 
 :::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
+---
 
 ## Create a command menu for your bot
 
