@@ -1,5 +1,5 @@
 ---
-title: Suggested prompts for your bot
+title: Suggested prompts for bot
 author: surbhigupta
 description: Learn how to create and handle a command menu for your Microsoft Teams bot, and best practices. Know how to remove commands from your manifest.
 ms.topic: how-to
@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-# Suggested prompts for your bot
+# Suggested prompts for bot
 
 Suggested Prompts are commands that are presented to the users in the Microsoft Teams chat when they install your bot app. 
 
