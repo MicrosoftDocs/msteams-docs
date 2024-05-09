@@ -11,18 +11,19 @@ ms.author: anclear
 
 Suggested Prompts are commands that are presented to the users in the Microsoft Teams chat when they install your bot app. 
 
-A key challenge user face when starting a conversation with bots is to understand how to interact with them. This challenge is more often with the bots that use AI library as users might not be familiar with their conversational nature or the different set of capabilities. So, it's important to help users onboard and explore how to use your bot. 
+A key challenge users face when starting a conversation with bots is to understand how to interact with them. This challenge is more often with the bots that use AI library as users might not be familiar with their conversational nature or the different set of functionalities. So, it's important to help users onboard and explore how to use your bot.
 
-Suggested prompts create an engaging and insightful user experience and helps your bot acquire and retain users. Users can discover the value of your bot through prompt conversations.
+Suggested prompts create an engaging and insightful user experience and helps your bot acquire and retain users. Users can discover the value of your bot through prompt conversations. There are two types of suggested prompts:
 
-There are two types of suggested prompts, prompt starters and suggested actions. Prompt starters help users start a conversation with your bot and [suggested actions](~/bots/how-to/conversations/conversation-messages.md#send-suggested-actions) help users continue conversations with your bot.
+* Prompt starters: Prompt starters help users start a conversation with your bot.
+* [Suggested actions](~/bots/how-to/conversations/conversation-messages.md#send-suggested-actions): Suggested actions help users continue conversations with your bot.
 
-Prompt starters help users start conversations with your bot with prompts available in the chat window. Prompt starters are sourced from the [command menu](#create-a-command-menu-for-your-bot) in your bot's app manifest. When the user selects a command in the prompt starter, the title of the command is populated into the compose box. Post initial conversation the commands are available in the **View prompts** options above the compose box.
+Prompt starters help users start conversations with your bot with prompts available in the chat window. Prompt starters are sourced from the [command menu](#create-a-command-menu-for-your-bot) in your bot's app manifest. When the user selects a command in the prompt starter, the title of the command is populated into the compose box. Post initial conversation the commands are available in the **View prompts** option above the compose box.
 
 >[!NOTE]
-> For Prompt Starters, bot shouldn't send a welcome message. The commands aren't displayed for the initial conversation if your bot sends a welcome message. 
+> Ensure that the bot doesn't send a welcome message for prompt starter. The commands aren't displayed for the initial conversation if your bot sends a welcome message. 
 
-Following is the UI for command menu, which is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md):
+The following is the UI for command menu, which is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md):
 
 # [Desktop](#tab/desktop)
 
@@ -41,7 +42,7 @@ Following is the UI for command menu, which is available in [public developer pr
 
 * * *
 
-Following is the UI for command menu, which is generally available:
+The following is the UI for command menu, which is generally available:
 
 # [Desktop](#tab/desktop1)
 
