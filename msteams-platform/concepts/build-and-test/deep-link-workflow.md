@@ -162,7 +162,7 @@ else { /* handle case where capability isn't supported */ }
 
 ```
 
-## Generate a deep link to share content to stage in meetings
+## Deep link to share content to stage in meetings
 
 To add a deep link to share content on stage, you need to have an app context. The app context allows the Teams client to fetch the app manifest and check if the sharing on stage is possible. The following is an example of an app context:
 
@@ -177,7 +177,7 @@ The query parameters for the app context are:
 
   * **False**: The default value of `useMeetNow` is false, which means that when a deep link is shared to stage and there's no ongoing meeting, a calendar pop-up will appear. However, you can share directly during a meeting.
 
-Ensure that all the query parameters are properly URI encoded and the app context has to be encoded twice in the final URL. Following is an example:
+Ensure that all the query parameters are properly URI encoded and the app context must be encoded twice in the final URL. Following is an example:
 
 ```javascript
 const appContext= JSON.stringify({ 
@@ -218,9 +218,10 @@ The query parameters are:
 * `deepLinkId`: Any identifier used for telemetry correlation.
 * `fqdn`: `fqdn` is an optional parameter, which can be used to switch to an appropriate environment of a meeting to share an app on stage. It supports scenarios where a specific app share happens in a particular environment. The default value of `fqdn` is enterprise URL and possible values are `Teams.live.com` for Teams for Life, `teams.microsoft.com`, or `teams.microsoft.us`.
 
-You can generate a deep link to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) and to start or join a meeting.
+> [!NOTE]
+> For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.
 
-For deep links to share content to stage, see [deep link to share content to stage in meetings](~/concepts/build-and-test/share-in-meeting.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
+You can generate a deep link to [share the app to stage](~/apps-in-teams-meetings/enable-and-configure-your-app-for-teams-meetings.md#share-entire-app-to-stage) and to start or join a meeting.
 
 ## Deep link to meeting side panel
 

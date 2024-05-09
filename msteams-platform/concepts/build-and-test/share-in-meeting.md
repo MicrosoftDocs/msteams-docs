@@ -14,16 +14,16 @@ The following image shows the **Share in meeting** button on the web app:
 
 :::image type="content" source="../../assets/images/share-in-teams-meeting/web-app.png" alt-text="Screenshot shows share in meeting button on the web app.":::
 
-| Action | Description |
-|---|---|
-| How it works | When a user selects the **Share in meeting** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage. |
-| Requirements of meeting participants | For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension. |
-| Deeplink | When you select the **Share in meeting** button, it launches a deep link to the meeting stage. The following is the deep link format: </br> `msteams:/l/meeting-share?deeplinkId={GUID}&fqdn={string}&lm=deeplink&appContext={json encoded app context}` </br> For more information, see [generate a deep link to share content to stage in meetings](#generate-a-deep-link-to-share-content-to-stage-in-meetings). |
-| Sidepanel experience | When the meeting begins, the app side panel is automatically opened for the user who shared the content to the meeting. The developer can call the `sharing.history.getContent` API to get the list of content shared and display the content and have it readily available in the side panel. </br> For an upcoming recurring meeting, where the app is already added, the developer can call the API to get the latest content to be displayed in the app side panel.|
+During the meeting, when a user selects the **Share in meeting** button from the third-party web app or document, it launches a deep link to the meeting stage and opens the app as a web view in the meeting stage.
 
-## Prerequisite
+When you select the **Share in meeting** button, it launches a deep link to the meeting stage. The following is the deep link format:
 
-To share the entire app to stage, you must configure `meetingStage` and `meetingSidePanel` as frame contexts in the [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
+`msteams:/l/meeting-share?deeplinkId={GUID}&fqdn={string}&lm=deeplink&appContext={json encoded app context}`
+
+## Prerequisites
+
+* For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension.
+* To share the entire app to stage, you must configure `meetingStage` and `meetingSidePanel` as frame contexts in the [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
 
 ## Enable share in meeting
 
@@ -181,7 +181,7 @@ Once the user initiates an instant meeting (Meet now), they can add participants
 
 :::image type="content" source="../../assets/images/integrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="The screenshot is an example that shows an option to add participants and how to interact with the app.":::
 
-To add a deep link to share content on stage in meetings, see [generate a deep link to share content to stage in meetings](deep-link-workflow.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
+To add a deep link to share content in meetings, see [deep link to share content to stage in meetings](deep-link-workflow.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
 
 > [!NOTE]
 > For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.

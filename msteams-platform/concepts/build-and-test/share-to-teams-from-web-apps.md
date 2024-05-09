@@ -17,9 +17,9 @@ The following image displays the pop-up window through Share to Teams button:
 > [!NOTE]
 >
 > * Only the desktop versions of Microsoft&nbsp;Edge and Google Chrome are supported.
-> * Use of Freemium or guest accounts isn't supported.
+> * Usage of Freemium or guest accounts isn't supported.
 
-You can also add link unfurling for the links shared through Share to Teams button hosted in web app, personal app or tab. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
+You can also add link unfurling for the links shared through Share to Teams button hosted in web app, personal app, or tab. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
 
 The following image displays the link unfurling experience through Share to Teams button:
 
@@ -46,7 +46,7 @@ To share content to meeting stage, you must ensure the following criteria are me
     * Support Meeting Stage and Meeting Side Panel within the app manifest.
     * Support read permissions for taking over the stage `MeetingStage.Write.Chat`.
 
-To share the entire app to stage, you must configure `meetingStage` and `meetingSidePanel` as frame contexts in the [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
+    To share the entire app to stage, you must configure `meetingStage` and `meetingSidePanel` as frame contexts in the [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
 
 <!--## Steps
 
@@ -61,7 +61,7 @@ There are two methods by which you can embed a Share to Teams button on your web
 
 # [Method 1](#tab/method-1)
 
-The basic way to embed Share to Teams button where you can customize based on your needs.
+The first method shows the basic way to embed Share to Teams button where you can customize the button and it's functionality based on your needs.
 
 1. Add the `launcher.js` script on your webpage.
 
