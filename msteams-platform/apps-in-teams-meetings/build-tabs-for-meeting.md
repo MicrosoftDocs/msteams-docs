@@ -31,13 +31,13 @@ Before creating a meeting tab, it's important to learn about the surfaces that a
 
 The following image shows a tab added to the meeting details page in the Teams desktop client:
 
-     :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="Screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
+   :::image type="content" source="~/assets/images/apps-in-meetings/premeetingtab.png" alt-text="Screenshot shows desktop Teams tabs in the meeting details view in the Teams meeting.":::
 
 # [Mobile](#tab/mobile)
 
 The following image shows a tab added to the meeting details page in the Teams mobile client:
 
-     :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
+   :::image type="content" source="../assets/images/mobile-tab.png" alt-text="Screenshot shows mobile Teams tabs in the meeting details view in the Teams meeting.":::
 
    ---
 
@@ -53,13 +53,13 @@ The following image shows a tab added to the meeting details page in the Teams m
 
 The following image shows an app added to the meeting chat in the Teams desktop client:
 
-     :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams desktop.":::
 
 # [Meeting chat view mobile](#tab/meeting-chat-view-mobile)
 
 The following image shows an app added to the meeting chat in the Teams mobile client:
 
-     :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
+   :::image type="content" source="../assets/images/apps-in-meetings/meeting-chat-view-mobile.png" alt-text="Screenshot shows the meeting chat view in a meeting chat in Teams mobile.":::
 
    ---
 

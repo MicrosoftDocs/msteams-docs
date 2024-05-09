@@ -206,9 +206,32 @@ The following table provides the response codes:
 
 ## Get all app content in meeting side panel
 
-The `sharing.history.getContent` API enables to open content in side panel and request for all the content shared in the meeting to display in side panel and shared to stage.
+The `sharing.history.getContent` API enables to open content in side panel. It requests for all the content shared in the meeting stage and to display in side panel and share to stage.
 
-*placeholder for Query parameter, example, and response code/error code.*
+### Query parameter
+
+The following table includes the query parameter:
+
+|Value|Type|Required|Description|
+|---|---|----|---|
+| *value placeholder* | String | Yes | *content placeholder* |
+
+### Example
+
+*placeholder javascript*
+
+The JSON response body for `getAppContentStageSharingCapabilities` API is:
+
+*placeholder JSON*
+
+### Response codes
+
+The following table provides the response codes:
+
+|Response code|Description|
+|---|---|
+| **500** | Internal error. |
+| **501** | API isn't supported in the current context.|
 
 ## Build an in-meeting document signing app
 
