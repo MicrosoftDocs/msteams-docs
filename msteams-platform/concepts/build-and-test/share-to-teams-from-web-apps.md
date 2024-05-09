@@ -134,14 +134,6 @@ Use `async shareToMicrosoftTeams.renderButtons(options)` API to trigger the rend
 
 All share buttons are rendered on the page. If an optional `options` object is supplied with a list of elements, those elements are rendered into share buttons.
 
-# [Method 3](#tab/method-3)
-
-To render custom HTML button with click handler, assign `shareToMicrosoftTeams.shareInMeetingClickHandler` API to `onClick` handler of a custom HTML element while providing the *additional attributes* as shared below.
-
-*Placeholder - `window.shareToMicrosoftTeams.shareInMeetingClickHandler` API*
-
-*procedure placeholder*
-
 ---
 
 The following are the launcher.js definitions:
@@ -166,11 +158,11 @@ To share the content to a chat or channel:
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
-    :::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="m":::
+    :::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="Screenshot shows the Share to Teams button in the browser.":::
 
 1. Add the chat or channel name.
 
-    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
+    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog to add chat or channel name.":::
 
    > [!NOTE]
    > If the app isn't added in chat or channel scope, an app consent appears in the Share to Teams dialog.
@@ -183,11 +175,11 @@ To share content to an ongoing meeting:
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
-    :::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="m":::
+    :::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="Screenshot shows the Share to Teams button in the browser to share in meeting.":::
 
 1. Add the meeting name.
 
-    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
+    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the  Share to Teams dialog to add the meeting name.":::
 
    > [!NOTE]
    > If the app isn't added in the meeting scope, an app consent appears in the Share to Teams dialog.
@@ -198,21 +190,21 @@ To share content to an ongoing meeting:
 
    :::image type="content" source="../../assets/images/share-to-teams/start-share-live-meeting.png" alt-text="Screenshot shows how to share apps in teams meeting.":::
 
-1. The web app is shared to meeting stage and all the participants can interact and edit together.
+1. The web app is shared to meeting stage and all the participants can interact and work together.
 
    :::image type="content" source="../../assets/images/share-to-teams/share-meeting-live.png" alt-text="Screenshot shows app shared to the teams meeting stage.":::
 
-# [Meet Now](#tab/meetnow)
+# [Upcoming meeting](#tab/meetnow)
 
-If there's no ongoing meeting, the user may select Meet Now to begin a meeting. To open content in a scheduled call, follow the steps:
+If there's no ongoing meeting, the user can select **Meet Now** to begin a meeting. To open content in a scheduled call or to begin a new meeting from Share to Teams, follow the steps:
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
     :::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="Screenshot shows the Share to Teams button on the browser.":::
 
-1. Add the meeting name.
+1. Add the meeting name or add participants.
 
-    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams pop-up.":::
+    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog to add meeting name or participants.":::
 
    > [!NOTE]
    > If the app isn't added in the meeting scope, an app consent appears in the Share to Teams dialog.
@@ -225,11 +217,11 @@ If there's no ongoing meeting, the user may select Meet Now to begin a meeting. 
 
     :::image type="content" source="../../assets/images/share-to-teams/join-meeting-now.png" alt-text="Screenshot shows the join meeting window.":::
 
-1. Select **Join Now**. A consent dialog appears to share the content in the meeting.
+1. Select **Join Now**. After you join the meeting, a consent dialog appears to share the content in the meeting.
 
     :::image type="content" source="../../assets/images/share-to-teams/start-share-new-meeting.png" alt-text="Screenshot shows the consent dialog.":::
 
-1. The web app is shared to meeting stage and all the participants can interact and edit together.
+1. The web app is shared to meeting stage and all the participants can interact and work together.
 
    :::image type="content" source="../../assets/images/share-to-teams/share-meeting-live.png" alt-text="Screenshot shows app shared to the teams meeting stage.":::
 
