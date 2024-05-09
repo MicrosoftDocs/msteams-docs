@@ -79,14 +79,14 @@ The following table provides a list of styles, which are supported on desktop, i
 
 ### AI-based bots
 
-As the bots we develop are emerging to be more conversational, there’s an opportunity to design them to leverage AI capabilities. Here are some additional features that you can be integrated into your bot messages, similar to those used in AI-generated bot messages:
+As bots become more conversational, you can leverage AI capabilities to enhance their functionality. Here are some additional features that you can integrate into your bot messages, similar to those used in AI-generated bot messages:
 
 | Feature | Bot | AI bot |
 | --- | :---: | :---: |
 | AI label | ❌ | ✔️ |
+| Sensitivity label | ❌ | ✔️ |
 | Citation | ✔️ | ✔️ |
 | Feedback buttons | ✔️ | ✔️ |
-| Sensitivity label | ❌ | ✔️ |
 
 To add citations and feedback buttons to your bot, see [format your AI bot message](format-ai-bot-messages.md).
 
