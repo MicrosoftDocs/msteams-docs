@@ -429,9 +429,9 @@
       - name: Receive all conversation messages
         href: bots/how-to/conversations/channel-messages-with-rsc.md
         displayName: mention, send messages from bot, receive chat messages, bot messages, bots with RSC permissions
-    - name: Create a commands menu
+    - name: Suggested Prompts for bots
       href: bots/how-to/create-a-bot-commands-menu.md
-      displayName: compose
+      displayName: command menu, compose
     - name: Channel and group chat conversations with a bot
       href: bots/how-to/conversations/channel-and-group-conversations.md
       displayName: Teams conversational bots, mention, tag mention, user mention
