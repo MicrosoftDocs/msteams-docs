@@ -35,9 +35,7 @@ The features that you can add to your bot message are:
     :::image type="content" source="../../assets/images/bots/ai-bot-message.png" border="false" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
 
 > [!IMPORTANT]
->
-> * These features are available in public developer preview.
-> * These features are not available in message extensions.
+> These features are available in public developer preview and not supported in message extensions.
 
 ## AI label
 
@@ -302,7 +300,9 @@ After you enable the citations, the bot message automatically includes in-text c
 
 ## Feedback buttons
 
-Collecting feedback is critical to assess your bot’s messages and improve its conversational capabilities. Enabling feedback buttons allows users to like or dislike bot messages and provide detailed feedback about them. This feedback can be used to make targeted and effective upgrades to your bot.
+Feedback buttons in bot messages are crucial to help measure user satisfaction, identify errors, and provide insights to make targeted and effective upgrades to your bot's conversational capabilities.
+
+Enabling feedback buttons allows users to like or dislike messages and provide detailed feedback about them. This boosts user engagement by valuing their input for future improvements.
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot.":::
 
