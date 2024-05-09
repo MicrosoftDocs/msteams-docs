@@ -43,11 +43,11 @@ Following is the UI for command menu which is available in [public developer pre
 
 Following is the UI for command menu which is generally available:
 
-# [Desktop](#tab/desktop)
+# [Desktop](#tab/desktop1)
 
 :::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
 
-# [Mobile](#tab/mobile)
+# [Mobile](#tab/mobile1)
 
 :::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
@@ -59,7 +59,7 @@ Following is the UI for command menu which is generally available:
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Command menus are defined in your app manifest. You can either use [**Developer Portal**](#create-a-command-menu-for-your-bot-using-developer-portal) to create them or add them manually in the [app manifest](#create-a-command-menu-for-your-bot-by-editing-manifestjson).
+Command menus are defined in your app manifest. You can either use [**Developer Portal**](#create-a-command-menu-using-developer-portal) to create them or add them manually in the [app manifest](#create-a-command-menu-by-editing-manifestjson).
 
 ### Create a command menu using Developer Portal
 
