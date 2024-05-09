@@ -690,13 +690,13 @@ The following is an example for implementation and experience of suggested actio
     "actions": [
       {
         "type": "imBack",
-        "title": "Action 1",
-        "value": "Action 1"
+        "title": "Create a new query identifying overdue tasks",
+        "value": "Create a new query identifying overdue tasks"
       },
       {
         "type": "imBack",
-        "title": "Action 2",
-        "value": "Action 2"
+        "title": "Create a new work item for this feature",
+        "value": "Create a new work item for this feature"
       }
     ],
     "to": [<list of recepientIds>]

@@ -1,5 +1,5 @@
 ---
-title: Suggested Prompts for your bot
+title: Suggested prompts for your bot
 author: surbhigupta
 description: Learn how to create and handle a command menu for your Microsoft Teams bot, and best practices. Know how to remove commands from your manifest.
 ms.topic: how-to
@@ -7,9 +7,41 @@ ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-# Suggested Prompts for your bot
+# Suggested prompts for your bot
 
-To define a set of core commands that your bot can respond to, you can add a command menu with a dropdown list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
+Suggested Prompts are commands that are presented to the users in the Microsoft Teams chat when they install your bot app. 
+
+A key challenge users face when starting conversations with bots is to understand how to interact with them. This challenge is more often with the bots that use AI library as users might not be familiar with their conversational nature or the different set of capabilities. So, it's important to help users onboard and explore how to use your bot. 
+
+Suggested prompts create an engaging and insightful user experience and helps your bot acquire and retain users. Users can discover the value of your bot through prompt conversations.
+
+There are two types of suggested prompts, prompt starters and suggested actions. Prompt starters help users start a conversation with your bot and [suggested actions](~/bots/how-to/conversations/conversation-messages.md#send-suggested-actions) help users continue conversations with your bot.
+
+Prompt starters help users start conversations with your bot with prompts available in the chat window. Prompt starters are sourced from the [command menu](#create-a-command-menu-for-your-bot) in your bot's app manifest. When the user select a command in the prompt starter, the title of the command is populated into the compose box. Post initial conversation the commands are avaiable in the **View prompts** options above the compose box.
+
+>[!NOTE]
+> For Prompt Starters, bot shouldn't send a welcome message. The commands aren't displayed for the initial conversation if your bot sends a welcome message. 
+
+Following is the UI for command menu which is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md):
+
+# [Desktop](#tab/desktop)
+
+* One-on-One conversation
+
+  :::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop.":::
+
+* Group chat or channels
+  
+  **{WIP}**
+  
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter and View Prompts in mobile.":::
+
+* * *
+
+Following is the UI for command menu which is generally available:
 
 # [Desktop](#tab/desktop)
 
@@ -19,18 +51,17 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 :::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
-* * *
 
 ## Create a command menu for your bot
 
 > [!NOTE]
-> It's recommended that you'd create a command bot by following the step-by-step guide to [Build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
+> It's recommended that you'd create a command bot by following the step-by-step guide to [build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Command menus are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
+Command menus are defined in your app manifest. You can either use [**Developer Portal**](#create-a-command-menu-for-your-bot-using-developer-portal) to create them or add them manually in the [app manifest](#create-a-command-menu-for-your-bot-by-editing-manifestjson).
 
-### Create a command menu for your bot using Developer Portal
+### Create a command menu using Developer Portal
 
 A prerequisite to create a command menu for your bot is that you must edit an existing app manifest. The steps to add a command menu are the same, whether you create a new manifest or edit an existing one.
 
@@ -57,7 +88,7 @@ To create a command menu for your bot using Developer Portal:
 
    :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description and scopes for your bot.":::
 
-### Create a command menu for your bot by editing Manifest.json
+### Create a command menu by editing manifest.json
 
 Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. To use this method, follow these points:
 
