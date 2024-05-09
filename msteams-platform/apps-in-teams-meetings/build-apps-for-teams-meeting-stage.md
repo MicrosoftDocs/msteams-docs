@@ -206,15 +206,7 @@ The following table provides the response codes:
 
 ## Get all app content in meeting side panel
 
-The `sharing.history.getContent` API enables to open content in side panel. It requests for all the content shared in the meeting stage and to display in side panel and share to stage.
-
-### Query parameter
-
-The following table includes the query parameter:
-
-|Value|Type|Required|Description|
-|---|---|----|---|
-| *value placeholder* | String | Yes | *content placeholder* |
+The `sharing.history.getContent` API enables to fetch content shared in a meeting and display in the app's side panel when the side panel is opened. It requests all the content shared on the meeting stage to display in the side panel and share to stage.
 
 ### Example
 

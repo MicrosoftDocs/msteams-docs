@@ -10,16 +10,20 @@ ms.date: 07/22/2022
 
 Share to Teams from web apps allow users to share a link directly to a chat, channel, or meeting without switching the context. Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select Share to Teams button, it launches the Share to Teams experience in a pop-up window.
 
-The following image displays the pop-up window and link unfurling experience through Share to Teams button:
+The following image displays the pop-up window through Share to Teams button:
 
 :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog.":::
 
 > [!NOTE]
 >
 > * Only the desktop versions of Microsoft&nbsp;Edge and Google Chrome are supported.
-> * Use of Freemium or guest accounts is not supported.
+> * Use of Freemium or guest accounts isn't supported.
 
 You can also add link unfurling for the links shared through Share to Teams button hosted in web app, personal app or tab. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
+
+The following image displays the link unfurling experience through Share to Teams button:
+
+:::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Screenshot shows the Share to Teams link unfurling experience.":::
 
 This article guides you on how to create and embed a Share to Teams button for your website, craft your website preview, and extend Share to Teams for Education.
 
@@ -53,7 +57,7 @@ To share the entire app to stage, you must configure `meetingStage` and `meeting
 
 ## Embed a Share to Teams button
 
-There are three different methods by which you can embed a Share to Teams button on your web page. Based on the control you want on the Share to Teams button, you can use one of the following methods:
+There are two methods by which you can embed a Share to Teams button on your web page. Based on the control you want on the Share to Teams button, you can use one of the following methods:
 
 # [Method 1](#tab/method-1)
 
@@ -182,9 +186,11 @@ To share content to an ongoing meeting:
     :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the  Share to Teams dialog to add the meeting name.":::
 
    > [!NOTE]
-   > If the app isn't added in the meeting scope, an app consent appears in the Share to Teams dialog.
+   >
+   > * If the app isn't added in the meeting scope, an app consent appears in the Share to Teams dialog.
+   > * If there's no ongoing meeting, the user can select **Meet Now** to begin a meeting and share content.
 
-1. Select **Share**. A consent dialog appears to share the content in the meeting.
+1. Select **Present Now**. A consent dialog appears to share the content in the meeting.
 
 1. Select **Start sharing**.
 
@@ -196,7 +202,7 @@ To share content to an ongoing meeting:
 
 # [Upcoming meeting](#tab/meetnow)
 
-If there's no ongoing meeting, the user can select **Meet Now** to begin a meeting. To open content in a scheduled call or to begin a new meeting from Share to Teams, follow the steps:
+To share content in a scheduled call or new meeting from Share to Teams, follow the steps:
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
@@ -209,7 +215,7 @@ If there's no ongoing meeting, the user can select **Meet Now** to begin a meeti
    > [!NOTE]
    > If the app isn't added in the meeting scope, an app consent appears in the Share to Teams dialog.
 
-1. Select **Present Now**. A consent dialog to start the meeting appears.
+1. Select **Share**. A consent dialog to start the meeting appears.
 
     :::image type="content" source="../../assets/images/share-to-teams/meeting-start-consent.png" alt-text="Screenshot shows the Present Now option in the Share to Teams dialog.":::
 
