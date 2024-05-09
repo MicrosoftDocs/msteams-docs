@@ -49,7 +49,7 @@ Here's the code snippet to add the AI label to your bot's message:
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [JSON](#tab/json)
 
@@ -85,13 +85,13 @@ Sample code reference (link)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Python](#tab/python)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Teams AI library](#tab/ailibrary)
 
@@ -140,7 +140,7 @@ The following code snippet provides the format expected by Microsoft Teams for y
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [JSON](#tab/json)
 
@@ -155,13 +155,13 @@ Sample code reference (link)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Python](#tab/python)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Teams AI library](#tab/ailibrary)
 
@@ -182,7 +182,7 @@ The indexing on this list should match the corresponding in-text citations. Use 
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [JSON](#tab/json)
 
@@ -238,13 +238,13 @@ Sample code reference (link)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Python](#tab/python)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Teams AI library](#tab/ailibrary)
 
@@ -302,7 +302,7 @@ After you enable the citations, the bot message automatically includes in-text c
 
 Feedback buttons in bot messages are crucial to help measure user satisfaction, identify errors, and provide insights to make targeted and effective upgrades to your bot's conversational capabilities.
 
-Enabling feedback buttons allows users to like or dislike messages and provide detailed feedback about them. This boosts user engagement by valuing their input for future improvements.
+Enable feedback buttons to allow users to like or dislike messages and provide detailed feedback about them. This boosts user engagement by valuing their input for future improvements.
 
 :::image type="content" source="../../assets/images/bots/bot-feedback-buttons.png" border="false" alt-text="Screenshot shows the feedback buttons in a bot.":::
 
@@ -315,8 +315,6 @@ When the user selects a feedback button, a respective feedback form appears base
 # [Negative feedback](#tab/neg)
 
 *Image placeholder*
-
-:::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the feedback form in a bot.":::
 
 ---
 
@@ -332,7 +330,7 @@ The following code snippets show how to enable feedback buttons in a bot:
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [JSON](#tab/json)
 
@@ -363,13 +361,13 @@ Sample code reference (link)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Python](#tab/python)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Teams AI library](#tab/ailibrary)
 
@@ -446,7 +444,7 @@ Here's how you can add a sensitivity label to your bot message:
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [JSON](#tab/json)
 
@@ -484,13 +482,13 @@ Sample code reference (link)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Python](#tab/python)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Teams AI library](#tab/ailibrary)
 
@@ -522,7 +520,7 @@ Here's the code snippet to reference the sensitivity label from citation:
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [JSON](#tab/json)
 
@@ -576,19 +574,19 @@ Sample code reference (link)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Python](#tab/python)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 # [Teams AI library](#tab/ailibrary)
 
 Sample code reference (link)
 
-*placeholder code snippet*
+*Placeholder code snippet*
 
 ---
 
