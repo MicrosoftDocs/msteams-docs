@@ -215,6 +215,19 @@ async def search_command(
     count = query_dict["query_options"]["count"] if query_dict["query_options"]["count"] else 10
     url = "http://registry.npmjs.com/-/v1/search?"
     params = {"size": count, "text": search_query}
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, params=params) as response:
+            res = await response.json()
+
+            results: List[MessagingExtensionAttachment] = []
+
+            for obj in res["objects"]:
+                results.append(create_npm_search_result_card(result=obj["package"]))
+
+            return MessagingExtensionResult(
+                attachment_layout="list", attachments=results, type="result"
+            )
 ```
 
 ---
@@ -300,6 +313,12 @@ async def on_static_submit(context: TurnContext, _state: AppTurnState, data) -> 
 @app.adaptive_cards.action_submit("DynamicSubmit")
 async def on_dynamic_submit(context: TurnContext, _state: AppTurnState, data) -> None:
     await context.send_activity(f'Dynamically selected option is: {data["choiceSelect"]}')
+
+@app.message(re.compile(r"dynamic", re.IGNORECASE))
+async def dynamic_card(context: TurnContext, _state: AppTurnState) -> bool:
+    attachment = create_dynamic_search_card()
+    await context.send_activity(Activity(attachments=[attachment]))
+    return True
 ```
 
 ---
@@ -660,6 +679,27 @@ async def search_command(
     count = query_dict["query_options"]["count"] if query_dict["query_options"]["count"] else 10
     url = "http://registry.npmjs.com/-/v1/search?"
     params = {"size": count, "text": search_query}
+
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url, params=params) as response:
+            res = await response.json()
+
+            results: List[MessagingExtensionAttachment] = []
+
+            for obj in res["objects"]:
+                results.append(create_npm_search_result_card(result=obj["package"]))
+
+            return MessagingExtensionResult(
+                attachment_layout="list", attachments=results, type="result"
+            )
+
+
+# Listen for item tap
+@app.message_extensions.select_item()
+async def select_item(_context: TurnContext, _state: AppTurnState, item: Any):
+    card = create_npm_package_card(item)
+
+    return MessagingExtensionResult(attachment_layout="list", attachments=[card], type="result")
 ```
 
 ---
@@ -828,6 +868,19 @@ async def on_add_items(
     return "items added. think about your next action"
 
 @app.ai.action("removeItems")
+async def on_remove_items(
+    context: ActionTurnContext[Dict[str, Any]],
+    state: AppTurnState,
+):
+    parameters = ListAndItems.from_dict(context.data, infer_missing=True)
+    state.ensure_list_exists(parameters.list)
+    items = state.conversation.lists[parameters.list]
+    if parameters.items is not None and len(parameters.items) > 0:
+        for item in parameters.items:
+            if item in items:
+                items.remove(item)
+        state.conversation.lists[parameters.list] = items
+    return "items removed. think about your next action"
 ```
 
 ---
