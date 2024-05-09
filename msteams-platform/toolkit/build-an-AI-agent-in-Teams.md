@@ -104,7 +104,6 @@ Table
         |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
         |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
         |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
-    ---
 
     # [Assistants API](#tab/assistantsapi)
         
