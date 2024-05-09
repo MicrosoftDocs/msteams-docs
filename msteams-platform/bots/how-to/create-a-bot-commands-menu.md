@@ -11,18 +11,18 @@ ms.author: anclear
 
 Suggested Prompts are commands that are presented to the users in the Microsoft Teams chat when they install your bot app. 
 
-A key challenge users face when starting conversations with bots is to understand how to interact with them. This challenge is more often with the bots that use AI library as users might not be familiar with their conversational nature or the different set of capabilities. So, it's important to help users onboard and explore how to use your bot. 
+A key challenge user face when starting a conversation with bots is to understand how to interact with them. This challenge is more often with the bots that use AI library as users might not be familiar with their conversational nature or the different set of capabilities. So, it's important to help users onboard and explore how to use your bot. 
 
 Suggested prompts create an engaging and insightful user experience and helps your bot acquire and retain users. Users can discover the value of your bot through prompt conversations.
 
 There are two types of suggested prompts, prompt starters and suggested actions. Prompt starters help users start a conversation with your bot and [suggested actions](~/bots/how-to/conversations/conversation-messages.md#send-suggested-actions) help users continue conversations with your bot.
 
-Prompt starters help users start conversations with your bot with prompts available in the chat window. Prompt starters are sourced from the [command menu](#create-a-command-menu-for-your-bot) in your bot's app manifest. When the user select a command in the prompt starter, the title of the command is populated into the compose box. Post initial conversation the commands are avaiable in the **View prompts** options above the compose box.
+Prompt starters help users start conversations with your bot with prompts available in the chat window. Prompt starters are sourced from the [command menu](#create-a-command-menu-for-your-bot) in your bot's app manifest. When the user selects a command in the prompt starter, the title of the command is populated into the compose box. Post initial conversation the commands are available in the **View prompts** options above the compose box.
 
 >[!NOTE]
 > For Prompt Starters, bot shouldn't send a welcome message. The commands aren't displayed for the initial conversation if your bot sends a welcome message. 
 
-Following is the UI for command menu which is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md):
+Following is the UI for command menu, which is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md):
 
 # [Desktop](#tab/desktop)
 
@@ -41,7 +41,7 @@ Following is the UI for command menu which is available in [public developer pre
 
 * * *
 
-Following is the UI for command menu which is generally available:
+Following is the UI for command menu, which is generally available:
 
 # [Desktop](#tab/desktop1)
 
@@ -86,13 +86,13 @@ To create a command menu for your bot using Developer Portal:
 1. Select the **Scope** check box and then select **Add**.
    This defines where the command menu must appear.
 
-   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description and scopes for your bot.":::
+   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description, and scopes for your bot.":::
 
 ### Create a command menu by editing manifest.json
 
 Another way to create a command menu is to create it directly in the manifest file while developing your bot source code. To use this method, follow these points:
 
-* Each menu supports up to ten commands.
+* Each menu supports up to 10 commands.
 * Create a single command menu that works in all scopes.
 * Create a different command menu for each scope.
 
@@ -193,7 +193,7 @@ You must handle menu commands in your bot code as you handle any message from us
 
 ## Handle menu commands in your bot code
 
-Bots in a group or channel respond only when they are mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
+Bots in a group or channel respond only when they're mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
 
 > [!NOTE]
 > To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
@@ -204,7 +204,7 @@ Bots in a group or channel respond only when they are mentioned `@botname` in a 
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-hello-world/csharp/Microsoft.Teams.Samples.HelloWorld.Web/Bots/MessageExtension.cs#L19)
 
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It is a method of the `Activity` class named `RemoveRecipientMention`.
+You can parse out the **\@Mention** portion of the message text using a static method provided with the Microsoft Bot Framework. It's a method of the `Activity` class named `RemoveRecipientMention`.
 
 The C# code to parse out the **\@Mention** portion of the message text is as follows:
 
@@ -220,7 +220,7 @@ var modifiedText = turnContext.Activity.RemoveRecipientMention();
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-people-picker-adaptive-card/nodejs/bots/teamsBot.js#L21)
 
-You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It is a method of the `TurnContext` class named `removeMentionText`.
+You can parse out the **\@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `removeMentionText`.
 
 The JavaScript code to parse out the **\@Mention** portion of the message text is as follows:
 
@@ -235,7 +235,7 @@ const modifiedText = TurnContext.removeMentionText(turnContext.activity, turnCon
 
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-conversation/python/bots/teams_conversation_bot.py#L34)
 
-You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It is a method of the `TurnContext` class named `remove_recipient_mention`.
+You can parse out the **@Mention** portion of the message text using a static method provided with the Bot Framework. It's a method of the `TurnContext` class named `remove_recipient_mention`.
 
 The Python code to parse out the **\@Mention** portion of the message text is as follows:
 
