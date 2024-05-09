@@ -23,23 +23,23 @@ To enable Copilot Handoff in Microsoft Teams, follow these steps:
 
 1. **Configure a deep link URL**: Set up a deep link to the bot chat and include `botMri` and `continuationToken`. The `botMri` value must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${botMri}&continuation=${continuationToken}`, where `botMri` follows the format `28:<botId>`. For example, if the bot ID is 68935e91-ff09-4a33-a675-0fe09f015706, the `botMri` would be `28:68935e91-ff09-4a33-a675-0fe09f015706`. The `continuationToken` value can be any string, but make sure that the total url length doesn't exceed 2048 characters and that the string is URL encoded.
 
-  Update the deep link url under the `Action.OpenUrl` property in the Adaptive card as follows:
+   Update the deep link url under the `Action.OpenUrl` property in the Adaptive card as follows:
 
-  ```JSON
-  { 
+   ```JSON
+   { 
 
-  "type": "Action.OpenUrl", 
+   "type": "Action.OpenUrl", 
 
-  "title": "Handoff to Bot", 
+   "title": "Handoff to Bot", 
 
-  "url": "https://teams.microsoft.com/l/chat/0/0?users=${botMri}&continuation=${continuationToken}" 
-  }
-  ```
+   "url": "https://teams.microsoft.com/l/chat/0/0?users=${botMri}&continuation=${continuationToken}" 
+   }
+   ```
 
-  The `Action.OpenUrl` property allows the user to handoff the conversation to a bot. The botMri specifies the bot chat that the user is redirected to when they select the action button that contains the deep link url. After the user is redirected to the bot chat, the bot receives the `continuationToken` value as an invoke message of the type `handoff/action`, if the app associated with the bot is installed in the user's personal scope and the continuationToken value isn't empty. Here's an example of the invoke message payload that the bot receives:
+   The `Action.OpenUrl` property allows the user to handoff the conversation to a bot. The botMri specifies the bot chat that the user is redirected to when they select the action button that contains the deep link url. After the user is redirected to the bot chat, the bot receives the `continuationToken` value as an invoke message of the type `handoff/action`, if the app associated with the bot is installed in the user's personal scope and the continuationToken value isn't empty. Here's an example of the invoke message payload that the bot receives:
 
-  ```json
-  { 
+   ```json
+   { 
     "name": "handoff/action", 
     "type": "invoke", 
     "timestamp": "2024-04-15T19:50:32.945Z", 
@@ -89,46 +89,46 @@ To enable Copilot Handoff in Microsoft Teams, follow these steps:
     "rawTimestamp": "2024-04-15T19:50:32.945Z", 
     "rawLocalTimestamp": "2024-04-15T14:50:32.945-05:00", 
     "callerId": "urn:botframework:azure" 
-  }
-  ```
+   }
+   ```
 
 1. **Handle the invoke type**: In your bot code, manage the new invoke type `handoff/action` using the `onInvokeActivity` handler. Override the `onInvokeActivity` method to handle the invoke call. The response to this invoke call should be an HTTP status code 200 for success or a code in the range of 400-500 for error. Don't send any payload with this response as it doesn't render in the chat window. Responses based on the continuation token should be sent to the user separately.
 
-Here's an example of how to handle the invoke call in `searchApp.ts`:
+   Here's an example of how to handle the invoke call in `searchApp.ts`:
 
-```typescript
-public async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> {
-    try {
-      switch (context.activity.name) {
-        case "handoff/action": {
-          // TODO: Save continuation token and use it to process final response to user later
-         return {status: 200}; // return just the http status
+   ```typescript
+    public async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> {
+        try {
+          switch (context.activity.name) {
+            case "handoff/action": {
+              // TODO: Save continuation token and use it to process final response to user later
+             return {status: 200}; // return just the http status
+            }
+            case "composeExtension/query":
+              return {
+                status: 200,
+                body: await this.handleTeamsMessagingExtensionQuery(
+                  context,
+                  context.activity.value
+                ),
+              };
+            default:
+              return {
+                status: 200,
+                body: `Unknown invoke activity handled as default- ${context.activity.name}`,
+              };
+          }
+        } catch (err) {
+          console.log(`Error in onInvokeActivity: ${err}`);
+          return {
+            status: 500,
+            body: `Invoke activity received- ${context.activity.name}`,
+          };
         }
-        case "composeExtension/query":
-          return {
-            status: 200,
-            body: await this.handleTeamsMessagingExtensionQuery(
-              context,
-              context.activity.value
-            ),
-          };
-        default:
-          return {
-            status: 200,
-            body: `Unknown invoke activity handled as default- ${context.activity.name}`,
-          };
       }
-    } catch (err) {
-      console.log(`Error in onInvokeActivity: ${err}`);
-      return {
-        status: 500,
-        body: `Invoke activity received- ${context.activity.name}`,
-      };
-    }
-  }
-```
+   ```
 
-When the bot receives the invoke call, `context.activity.value.continuation` contains the `continuationToken` that was set in the deep link URL.
+   When the bot receives the invoke call, `context.activity.value.continuation` contains the `continuationToken` that was set in the deep link URL.
 
 ## Best practices
 
