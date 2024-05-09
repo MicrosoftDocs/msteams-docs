@@ -12,7 +12,7 @@ Share to Teams from web apps allow users to share a link directly to a chat, cha
 
 The following image displays the pop-up window and link unfurling experience through Share to Teams button:
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog.":::
 
 > [!NOTE]
 >
@@ -34,22 +34,22 @@ To share content to meeting stage, you must ensure the following criteria are me
 
 1. A Teams app with a tab that supports:
 
-    * Meeting Side Panel
-    * Instant Tab
+    * Meeting side panel
+    * Instant tab
 
-2. To present the content onto the meeting stage, the meeting app must support Share to Stage APIs, which has two main requirements:
+2. To present the content onto the meeting stage, the meeting app must support Share to Stage APIs, which has two major requirements:
 
     * Support Meeting Stage and Meeting Side Panel within the app manifest.
-    * Support read permissions for taking over the stage: “MeetingStage.Write.Chat”
+    * Support read permissions for taking over the stage `MeetingStage.Write.Chat`.
 
-To share the entire app to stage, in the app manifest, you must configure `meetingStage` and `meetingSidePanel` as frame contexts, see [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
+To share the entire app to stage, you must configure `meetingStage` and `meetingSidePanel` as frame contexts in the [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
 
-## Steps
+<!--## Steps
 
 * Embed Share to Teams button on webpage.
 * In the meeting tab, add additional logic to query shared content (new APIs to be built by Teams platform) and display the content within the tab experience.
 * Allow users to present that content onto the meeting stage via the Share to Stage APIs.
-* Notify users of shared content via link unfurling.
+* Notify users of shared content via link unfurling.-->
 
 ## Embed a Share to Teams button
 
@@ -126,7 +126,7 @@ If your page dynamically renders content, you can use the `shareToMicrosoftTeams
 
 Use `async shareToMicrosoftTeams.renderButtons(options)` API to trigger the rendering of the Share buttons. This renders all share button that have the class name `teams-share-button` on the page.  
 
-**`shareToMicrosoftTeams.renderButtons(options)`**
+*procedure placeholder*
 
 ```javascript
 `options` (optional): `{ elements?: HTMLElement[] }`
@@ -139,6 +139,8 @@ All share buttons are rendered on the page. If an optional `options` object is s
 To render custom HTML button with click handler, assign `shareToMicrosoftTeams.shareInMeetingClickHandler` API to `onClick` handler of a custom HTML element while providing the *additional attributes* as shared below.
 
 *Placeholder - `window.shareToMicrosoftTeams.shareInMeetingClickHandler` API*
+
+*procedure placeholder*
 
 ---
 
@@ -164,11 +166,11 @@ To share the content to a chat or channel:
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
-:::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="m":::
+    :::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="m":::
 
 1. Add the chat or channel name.
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
+    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
 
    > [!NOTE]
    > If the app isn't added in chat or channel scope, an app consent appears in the Share to Teams dialog.
@@ -181,11 +183,11 @@ To share content to an ongoing meeting:
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
-:::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="m":::
+    :::image type="content" source="../../assets/images/share-to-teams/share-to-teams-browser.png" alt-text="m":::
 
 1. Add the meeting name.
 
-:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
+    :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Share-to-Teams pop-up":::
 
    > [!NOTE]
    > If the app isn't added in the meeting scope, an app consent appears in the Share to Teams dialog.
@@ -230,6 +232,8 @@ If there's no ongoing meeting, the user may select Meet Now to begin a meeting. 
 1. The web app is shared to meeting stage and all the participants can interact and edit together.
 
    :::image type="content" source="../../assets/images/share-to-teams/share-meeting-live.png" alt-text="Screenshot shows app shared to the teams meeting stage.":::
+
+---
 
 ## Craft your website preview
 

@@ -12,7 +12,7 @@ Share to Teams is a button enabled on any web app, personal app, or tab that all
 
 You can also decide the placement of the Share to Teams button on the app. Users can pin the crucial content and refer to it while collaborating with Teams.
 
-:::image type="content" source="../../assets/images/share-to-teams/overview.PNG" alt-text="Screenshot showing the Share button on the app.":::
+:::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot showing the Share button on the app.":::
 
 You can enable this feature on the following:
 
