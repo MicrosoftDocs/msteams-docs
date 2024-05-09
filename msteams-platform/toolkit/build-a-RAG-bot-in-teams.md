@@ -1,7 +1,7 @@
 ---
 title: Build a RAG Bot in Teams
 author: surbhigupta
-description:  In this module, learn how to quickly try the Teams AI library.
+description:  In this module, learn how to build RAG bot using Teams AI library.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ganr

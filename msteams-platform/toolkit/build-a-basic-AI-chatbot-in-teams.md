@@ -1,11 +1,11 @@
 ---
 title: Build a Basic AI Chatbot in Teams
 author: surbhigupta
-description:  In this module, learn how to quickly try the Teams AI library.
+description:  In this module, learn how to build a Basic AI Chatbot using Teams AI library.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ganr
-ms.date: 08/05/2024
+ms.date: 05/08/2024
 ---
 
 # Overview of the Basic AI Chatbot
@@ -51,9 +51,9 @@ The app template is built using the [Teams AI library](../bots/how-to/Teams%20co
     1. Select the location for the project workspace.
     1. Select **Select Folder**.image
 
-1. Enter a application name for your app and then select the **Enter** key. image 
+1. Enter an application name for your app and then select the **Enter** key. image 
 
-Now, you've successfully created your AI chat bot project workspace. image
+Now, you've successfully created your AI chat bot project workspace. Image
 
 1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
 
@@ -68,13 +68,13 @@ image
 
 Test Tool opens the bot in a webpage.
 
-image
+Image
 
 ## Take a tour of the bot app source code
 
 | Folder       | Contents                                            |
 | - | - |
-| `.vscode`    | VSCode files for debugging                          |
+| `.vscode`    | Visual Studio Code files for debugging                          |
 | `appPackage` | Templates for the Teams application manifest        |
 | `env`        | Environment files                                   |
 | `infra`      | Templates for provisioning Azure resources          |
@@ -82,7 +82,7 @@ image
 
 The following files can be customized and demonstrate an example implementation to get you started.
 
-For Javascript language:
+For JavaScript language:
 
 | File                                 | Contents                                           |
 | - | - |
@@ -97,13 +97,13 @@ For Python language:
 
 | File                                 | Contents                                           |
 | - | - |
-|`src/app.py`| Hosts an aiohttp api server and exports an app module.|
+|`src/app.py`| Hosts an aiohttp API server and exports an app module.|
 |`src/bot.py`| Handles business logics for the Basic AI Chatbot.|
 |`src/config.py`| Defines the environment variables.|
 |`src/prompts/chat/skprompt.txt`| Defines the prompt.|
 |`src/prompts/chat/config.json`| Configures the prompt.|
 
-The following are Teams Toolkit specific project files. You can [visit a complete guide on Github](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.
+The following are Teams Toolkit specific project files. You can [visit a complete guide on GitHub](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.
 
 | File                                 | Contents                                           |
 | - | - |

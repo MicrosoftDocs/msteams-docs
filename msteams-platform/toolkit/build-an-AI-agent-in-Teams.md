@@ -1,7 +1,7 @@
 ---
 title: Build an AI Agent in Teams
 author: surbhigupta
-description:  In this module, learn how to quickly try the Teams AI library.
+description:  In this module, learn how to build AI Agent using Teams AI library.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ganr
@@ -38,7 +38,7 @@ Table
 
 1. Select **AI Agent**. image
 
-To build an app follow either of the building agent steps:
+To build an app, follow either of the building agent steps:
     
     # [Build New](#tab/buildnew)
     
@@ -195,4 +195,4 @@ To build an app follow either of the building agent steps:
     |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
     |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
     ---
-How Teams AI Library is used to create an AI Agent
+How Teams AI Library is used to create an AI Agent.
