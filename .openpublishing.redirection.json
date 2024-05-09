@@ -1033,6 +1033,10 @@
         "redirect_url": "/microsoftteams/platform/tabs/open-content-in-stageview"
       },
       {
+        "source_path": "msteams-platform/resources/removing-tab-margins.md",
+        "redirect_url": "/microsoftteams/platform/tabs/design/tabs"
+      },
+      {
         "source_path": "msteams-platform/sbs-api-me-ttk.yml",
         "redirect_url": "/microsoftteams/platform/sbs-api-msg-ext-ttk"
       }
