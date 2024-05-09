@@ -27,7 +27,7 @@ The following is the UI for command menu, which is available in [public develope
 
 # [Desktop](#tab/desktop)
 
-* One-on-One conversation
+* One-on-one conversation
 
   :::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop.":::
 
