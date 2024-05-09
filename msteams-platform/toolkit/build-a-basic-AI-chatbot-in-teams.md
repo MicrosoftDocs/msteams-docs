@@ -8,7 +8,7 @@ ms.author: v-ganr
 ms.date: 05/08/2024
 ---
 
-# Overview of the Basic AI Chatbot
+# Build a Basic AI Chatbot
 
 AI Chatbot template showcases a bot app that responds to user questions like ChatGPT. This enables the users to interact with the AI bot in Teams.
 
