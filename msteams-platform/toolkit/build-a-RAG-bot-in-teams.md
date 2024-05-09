@@ -5,8 +5,10 @@ description:  In this module, learn how to quickly try the Teams AI library.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ganr
-ms.date: 08/05/2024
+ms.date: 05/08/2024
 ---
+
+# Build a RAG Bot in Teams
 
 One of the most powerful applications enabled by LLMs is sophisticated question-answering (Q&A) chatbots. These are applications that can answer questions about specific source information. These applications use a technique known as Retrieval Augmented Generation, or RAG. For example:
 
