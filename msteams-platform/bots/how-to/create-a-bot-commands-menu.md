@@ -1,5 +1,5 @@
 ---
-title: Create a command menu for your bot
+title: Suggested Prompts for your bot
 author: surbhigupta
 description: Learn how to create and handle a command menu for your Microsoft Teams bot, and best practices. Know how to remove commands from your manifest.
 ms.topic: how-to
@@ -7,12 +7,7 @@ ms.localizationpriority: medium
 ms.author: anclear
 ---
 
-# Create a commands menu
-
-> [!NOTE]
-> It's recommended that you'd create a command bot by following the step-by-step guide to [Build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
-
-[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
+# Suggested Prompts for your bot
 
 To define a set of core commands that your bot can respond to, you can add a command menu with a dropdown list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 
@@ -27,6 +22,11 @@ To define a set of core commands that your bot can respond to, you can add a com
 * * *
 
 ## Create a command menu for your bot
+
+> [!NOTE]
+> It's recommended that you'd create a command bot by following the step-by-step guide to [Build command bot with JavaScript](../../sbs-gs-commandbot.yml) using the new generation development tool for Teams. For more information about Teams Toolkit, see [Teams Toolkit Overview for Visual Studio Code](../../toolkit/teams-toolkit-fundamentals.md) and [Teams Toolkit overview for Visual Studio](../../toolkit/teams-toolkit-overview-visual-studio.md).
+
+[!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
 Command menus are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
 
@@ -155,6 +155,9 @@ The manifest example code for the menu for each scope is as follows:
 }
 ```
 
+> [!NOTE]
+> If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
+
 You must handle menu commands in your bot code as you handle any message from users. You can handle menu commands in your bot code by parsing out the **\@Mention** portion of the message text.
 
 ## Handle menu commands in your bot code
@@ -211,19 +214,6 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 ```
 
 * * *
-
-To enable smooth functioning of your bot code, there are few best practices that you must follow.
-
-## Command menu best practices
-
-Following are the command menu best practices:
-
-* Keep it simple: The bot menu is meant to present the key capabilities of your bot.
-* Keep it short: Menu options must not be long and must not be complex natural language statements. They must be simple commands.
-* Keep it invokable: Bot menu actions or commands must always be available, regardless of the state of the conversation or the dialog the bot is in.
-
-> [!NOTE]
-> If you remove any commands from your manifest, you must redeploy your app to implement the changes. In general, any changes to the manifest require you to redeploy your app.
 
 ## Next step
 
