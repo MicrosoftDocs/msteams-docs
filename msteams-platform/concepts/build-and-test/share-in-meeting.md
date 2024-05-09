@@ -181,7 +181,7 @@ Once the user initiates an instant meeting (Meet now), they can add participants
 
 :::image type="content" source="../../assets/images/integrate-with-teams/Screenshot-ofmeet-now-option-pop-up.png" alt-text="The screenshot is an example that shows an option to add participants and how to interact with the app.":::
 
-To add a deep link to share content in meetings, see [deep link to share content to stage in meetings](deep-link-workflow.md#generate-a-deep-link-to-share-content-to-stage-in-meetings).
+To add a deep link to share content in meetings, see [deep link to share content to stage in meetings](deep-link-workflow.md#deep-link-to-share-content-to-stage-in-meetings).
 
 > [!NOTE]
 > For your app to pass validation, when you create a deep link from your website, web app, or Adaptive Card, use **Share in meeting** as the string or copy.
