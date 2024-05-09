@@ -196,17 +196,25 @@ app.messageExtensions.selectItem(async (context: TurnContext, state: TurnState, 
 
 # [Python](#tab/python5)
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.b.messageExtensions.AI-ME)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.b.messageExtensions.AI-ME/src/bot.py#L75)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/02.messageExtensions.a.searchCommand/src/bot.py#L44)
 
 ```python
-# Implement Message Extension logic
-@app.message_extensions.fetch_task("CreatePost")
-async def create_post(context: TurnContext, _state: AppTurnState) -> TaskModuleTaskInfo:
-    # Return card as a TaskInfo object
-    card = create_initial_view()
-    return create_task_info(card)
+@app.message_extensions.query("searchCmd")
+async def search_command(
+    _context: TurnContext, _state: AppTurnState, query: MessagingExtensionQuery
+) -> MessagingExtensionResult:
+    query_dict = query.as_dict()
+    search_query = ""
+    if query_dict["parameters"] is not None and len(query_dict["parameters"]) > 0:
+        for parameter in query_dict["parameters"]:
+            if parameter["name"] == "queryText":
+                search_query = parameter["value"]
+                break
+    count = query_dict["query_options"]["count"] if query_dict["query_options"]["count"] else 10
+    url = "http://registry.npmjs.com/-/v1/search?"
+    params = {"size": count, "text": search_query}
 ```
 
 ---
@@ -274,17 +282,24 @@ app.adaptiveCards.actionSubmit('StaticSubmit', async (context, _state, data: Sub
 
 # [Python](#tab/python4)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/packages/ai/teams/adaptive_cards/adaptive_cards.py#L129C1-L136C67)
+[Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/03.adaptiveCards.a.typeAheadBot)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/03.adaptiveCards.a.typeAheadBot/src/bot.py#L39C1-L78C1)
 
 ```python
-# Use this method as a decorator
-@app.adaptive_cards.action_submit("submit")
-async def execute_submit(context: TurnContext, state: TurnState, data: Any):
-    print(f"Execute with data: {data}")
+@app.message(re.compile(r"static", re.IGNORECASE))
+async def static_card(context: TurnContext, _state: AppTurnState) -> bool:
+    attachment = create_static_search_card()
+    await context.send_activity(Activity(attachments=[attachment]))
     return True
 
-# Pass a function to this method
-app.adaptive_cards.action_submit("submit")(execute_submit)
+@app.adaptive_cards.action_submit("StaticSubmit")
+async def on_static_submit(context: TurnContext, _state: AppTurnState, data) -> None:
+    await context.send_activity(f'Statically selected option is: {data["choiceSelect"]}')
+
+@app.adaptive_cards.action_submit("DynamicSubmit")
+async def on_dynamic_submit(context: TurnContext, _state: AppTurnState, data) -> None:
+    await context.send_activity(f'Dynamically selected option is: {data["choiceSelect"]}')
 ```
 
 ---
@@ -626,16 +641,25 @@ app.messageExtensions.selectItem(async (context, state, item) => {
 
 # [Python](#tab/python2)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/packages/ai/teams/message_extensions/message_extensions.py#L68C1-L75C55)
+[Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/02.messageExtensions.a.searchCommand)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/02.messageExtensions.a.searchCommand/src/bot.py#L44)
 
 ```python
-# Use this method as a decorator
-@app.message_extensions.query("test")
-async def on_query(context: TurnContext, state: TurnState, url: str):
-    return MessagingExtensionResult()
-
-# Pass a function to this method
-app.message_extensions.query("test")(on_query)
+@app.message_extensions.query("searchCmd")
+async def search_command(
+    _context: TurnContext, _state: AppTurnState, query: MessagingExtensionQuery
+) -> MessagingExtensionResult:
+    query_dict = query.as_dict()
+    search_query = ""
+    if query_dict["parameters"] is not None and len(query_dict["parameters"]) > 0:
+        for parameter in query_dict["parameters"]:
+            if parameter["name"] == "queryText":
+                search_query = parameter["value"]
+                break
+    count = query_dict["query_options"]["count"] if query_dict["query_options"]["count"] else 10
+    url = "http://registry.npmjs.com/-/v1/search?"
+    params = {"size": count, "text": search_query}
 ```
 
 ---
@@ -781,6 +805,31 @@ All entities are required parameters to actions.
         return `items removed. think about your next action`;
     });
 ```
+
+# [Python](#tab/python1)
+
+[Code sample](https://github.com/microsoft/teams-ai/tree/main/python/samples/04.ai.d.chainedActions.listBot)
+
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/python/samples/04.ai.d.chainedActions.listBot/src/bot.py#L96C1-L123C57)
+
+```python
+@app.ai.action("addItems")
+async def on_add_items(
+    context: ActionTurnContext[Dict[str, Any]],
+    state: AppTurnState,
+):
+    parameters = ListAndItems.from_dict(context.data, infer_missing=True)
+    state.ensure_list_exists(parameters.list)
+    items = state.conversation.lists[parameters.list]
+    if parameters.items is not None:
+        for item in parameters.items:
+            items.append(item)
+        state.conversation.lists[parameters.list] = items
+    return "items added. think about your next action"
+
+@app.ai.action("removeItems")
+```
+
 ---
 
 ## Next step
