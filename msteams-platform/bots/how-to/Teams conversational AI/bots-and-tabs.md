@@ -22,7 +22,7 @@ By combining bots and tabs, you can create a custom Copilot like experience in T
 Before understanding the architecture for connecting bots and tabs together, it's helpful to understand how bots and tabs work within their own space. 
 
 :::row:::
-:::column span="":::
+:::column span="2":::
 
 ### Tabs
 
