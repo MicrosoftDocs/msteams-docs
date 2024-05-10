@@ -55,7 +55,7 @@ Teams maintains a constant connection with the server to get new messages, and o
 This gives apps a powerful way to integrate bots and tabs smoothly. The key aspects for interoperability between bot and tab are [authentication](#authentication) and [server](#server).
 
 :::row:::
-:::column span="2":::
+:::column span="":::
 
 #### Authentication
 
@@ -68,7 +68,7 @@ Though there might be different ways authentication without SSO, such as through
 
 :::column-end:::
 
-:::column span="2":::
+:::column span="":::
 
 #### Server
 
