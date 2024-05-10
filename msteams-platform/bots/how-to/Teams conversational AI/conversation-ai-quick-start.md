@@ -89,12 +89,53 @@ Get started with Teams AI library using the **ChefBot** sample. It enables your 
 
 1. Go to **teams-ai > js > samples> 03.ai-concepts> c.actionMapping-lightBot** and select **Select Folder**. All the files for the lightbot sample are listed under the **EXPLORER** section in Visual Studio Code.
 
+# [OpenAI key](#tab/OpenAI-key)
+
 1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
    ```text
    SECRET_OPENAI_KEY=<your OpenAI key>
 
    ```
+
+# [Azure OpenAI](#tab/Azure-OpenAI)
+
+1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
+
+   ```text
+   SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
+   SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
+
+   ```
+
+1. Go to `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
+
+   ```text
+   - uses: file/createOrUpdateEnvironmentFile
+    with:
+      target: ./.env
+      envs:
+        BOT_ID: ${{BOT_ID}}
+        BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
+        #OPENAI_KEY: ${{SECRET_OPENAI_KEY}}
+        AZURE_OPENAI_KEY: ${{SECRET_AZURE_OPENAI_KEY}}
+        AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}}
+   ```
+
+1. Go to `infra` folder and comment out lines from 72 to 75 and uncomment lines from 76 to 83 in `azure.bicep` file.
+
+1. Go to `infra>azure.parameters.json` file and replace the lines from 20 to 22 with the following code:
+
+   ```text
+      "azureOpenAIKey": {
+        "value": "${{SECRET_AZURE_OPENAI_KEY}}"
+      },
+      "azureOpenAIEndpoint": {
+        "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
+      }
+   ```
+
+---
 
 1. From the left pane, select **Teams Toolkit**.
 
