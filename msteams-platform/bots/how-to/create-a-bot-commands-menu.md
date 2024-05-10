@@ -10,41 +10,19 @@ ms.author: anclear
 # Create a commands menu
 
 > [!NOTE]
-> Before creating a command menu, we recommend you to review the [suggested prompts](~/bots/how-to/conversations/suggested-prompts-bots.md).
+> We recommend you to refer [suggested prompts](~/bots/how-to/conversations/suggested-prompts-bots.md) as we are enhancing the command menu experience.
 
 To define a set of core commands that your bot can respond to, you can add a command menu with a dropdown list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 
-# [Developer preview](#tab/developer-preview)
+# [Desktop](#tab/desktop)
 
-The following is the UI for command menu, which is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md):
+:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
 
-* **Desktop**
+# [Mobile](#tab/mobile)
 
-  * One-on-one conversation
+:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
-  :::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop.":::
-
-  * Group chat or channels
-  
-  **{WIP}**
-
-* **Mobile**
-
-  :::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter and View Prompts in mobile.":::
-
-# [Generally available](#tab/generally-available)
-
-The following is the UI for command menu, which is generally available:
-
-* **Desktop**
-
-  :::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
-
-* **Mobile**
-
-  :::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
-
----
+* * *
 
 ## Create a command menu for your bot
 

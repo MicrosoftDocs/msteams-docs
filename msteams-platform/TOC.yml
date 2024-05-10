@@ -432,7 +432,7 @@
     - name: Create a commands menu
       href: bots/how-to/create-a-bot-commands-menu.md
       displayName: compose
-    - name: Suggested prompts for bots
+    - name: Create prompt suggestions
       href: bots/how-to/conversations/suggested-prompts-bots.md
       displayName: prompt starter, suggested actions 
     - name: Channel and group chat conversations with a bot
