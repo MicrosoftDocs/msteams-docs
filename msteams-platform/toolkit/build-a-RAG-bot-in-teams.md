@@ -50,6 +50,8 @@ Teams Toolkit provides a series ready to use application templates under the cat
 
 1. Select **Custom Copilot**.image
 
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
+
 1. Select **Chat With Your Data**. image
 
 1. Select **Customize**. image

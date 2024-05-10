@@ -38,6 +38,8 @@ Table
 
 1. Select **Custom Copilot**.image
 
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
+
 1. Select **AI Agent**. image
 
 1. To build an app, follow either of the building agent steps:
