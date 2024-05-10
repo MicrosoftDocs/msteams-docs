@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Format AI bot messages
 
-If you're building a conversational bot, you can now leverage features like citations and feedback buttons that enables better user engagement. For AI -powered bots, you can now add AI label and sensitivity label that can build users trust and transparency.
+If you're building a conversational bot, you can now leverage features like citations and feedback buttons that enables better user engagement. For AI-powered bots, you can now add AI label and sensitivity label that can build users trust and transparency.
 
 Here's a quick overview on each feature that you can integrate to your bot message:
 
@@ -421,12 +421,9 @@ The bot sends the user's input, received in the feedback form, through a bot inv
 
 ### Handle feedback
 
-When your bot receives the invoke, you need to have an `onInvokeActivity` handler to process the invoke correctly. Ensure that you return a status code 200 with an empty response.
+If your bot is built using Teams AI library, the feedback received is automatically handled. For other types of bots, you need to have an `onInvokeActivity` handler to correctly process the invoke when the bot receives it. Ensure that you return a status code 200 with an empty response.
 
-> [!NOTE]
->
-> * Don't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
-> * If your bot is built using Teams AI library, the feedback received is handled automatically.
+Don't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
 
 When the bot receives an invoke containing feedback, the following code snippet returns a response with the status code 200:
 
