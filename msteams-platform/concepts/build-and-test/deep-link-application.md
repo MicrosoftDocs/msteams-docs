@@ -119,6 +119,7 @@ The query parameters are:
 >
 > * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see the [app manifest](~/resources/schema/manifest-schema.md).
 > * Deep links work properly only if the tab was configured using the library v0.4 or later as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
+>* Teams can't parse deep links that exceed 1900 characters in length on Microsoft Windows. This limitation originates from the Windows ShellExecuteEx API, which browsers use to launch the Teams desktop client and handle the deep link. The paths in ShellExecuteEx are constrained by `INTERNET_MAX_URL_LENGTH`, which is 2048 characters. When passing large amounts of data via deep links, it’s necessary to include the path to the Teams client within this character limit. It’s recommended to include a unique identifier in the deep link, which your app can use to retrieve the data from your backend service.
 
 **Examples**:
 
@@ -143,6 +144,7 @@ The query parameters are:
     >`https://teams.microsoft.com/l/entity/fe4a8eba-2a31-4737-8e33-e5fae6fee194/tasklist123?webUrl=https://tasklist.example.com/123/456&label=Task 456?context={"chatId": "17:b42de192376346a7906a7dd5cb84b673@thread.v2","contextType":"chat"}`
 
 > [!IMPORTANT]
+>
 > * Ensure that all the query parameters and the white spaces are properly URI encoded. Following is an example of URI encoded query parameters:
 >
 >   ```javascript
