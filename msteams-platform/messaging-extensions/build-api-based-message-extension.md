@@ -24,10 +24,10 @@ API-based message extensions are a Microsoft Teams app capability that integrate
 1. If authentication is required:
    1. Teams App Service requests auth details from Credential Service.
    1. Credential Service provides the auth key to Teams App Service.
-1. Teams App Service builds a request using the parameters and auth key, following the Open API spec for the operation id.
-1. Teams App Service queries the Developer API using details from the Open API spec.
+1. Teams App Service builds a request using the parameters and auth key, following the OpenAPI spec for the operation id.
+1. Teams App Service queries the Developer API using details from the OpenAPI spec.
 1. Developer API returns the response in the expected OpenAPI format to Teams App Service.
-1. Teams App Service creates a visual response using the apiResponseRenderingTemplate and response mappings from the Open API spec.
+1. Teams App Service creates a visual response using the apiResponseRenderingTemplate and response mappings from the OpenAPI spec.
 1. Teams App Service sends the visual response back to the Teams Client.
 1. Teams Client displays the response to the user in a list format.
 
