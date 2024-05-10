@@ -45,7 +45,7 @@ There are two methods by which you can embed a Share to Teams button on your web
 
 # [Method 1](#tab/method-1)
 
-The first method shows the basic way to embed Share to Teams button where you can customize the button and it's functionality based on your needs.
+The first method shows the basic way to embed Share to Teams button where you can customize the button and its functionality based on your needs.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -101,7 +101,7 @@ The first method shows the basic way to embed Share to Teams button where you ca
 
 If your page dynamically renders content, you can use the `shareToMicrosoftTeams.renderButtons()` method to force **Share** to render at the appropriate place in the pipeline.
 
-Use `async shareToMicrosoftTeams.renderButtons(options)` API to trigger the rendering of the Share buttons. This renders all share button that have the class name `teams-share-button` on the page.  
+Use `async shareToMicrosoftTeams.renderButtons(options)` API to trigger the rendering of the Share buttons. This renders all share buttons that has the class name `teams-share-button` on the page.  
 
 *procedure placeholder*
 
@@ -135,18 +135,15 @@ To enable your users to share content in meetings from Share to Teams, set `allo
     </div>
 ```
 
-The Share to Teams dialog appears with a **Present now** option.
+When you set set `allow-share-in-meeting` attribute to `true`, the Share to Teams dialog appears with a **Present now** option.
 
 :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
-
-> [!NOTE]
-> The **Present now** option in Share to Teams dialog appears only when you set `data-allow-share-in-meeting` to `true`.
 
 ## End user experience
 
 Here are few end user scenarios when the content is shared in different scopes from Share to Teams button.
 
-# [Chat or channel or upcoming meeting](#tab/chatchannelmeeting)
+# [Chat or channel](#tab/chatchannel)
 
 To share the content to a chat or channel:
 
@@ -211,7 +208,7 @@ To share content to an ongoing meeting:
 
 # [Meet Now](#tab/meetnow)
 
-If there is no ongoing meeting and the user wants to begin a meeting and start presenting the content, they can do so with Share to Teams option. To start a meeting while sharing the content, follow the steps given:
+If there's no ongoing meeting and the user wants to begin a meeting and start presenting the content, they can do so with Share to Teams option. To start a meeting while sharing the content, follow the steps given:
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
@@ -295,7 +292,7 @@ The following are the launcher.js definitions:
 | -------------- | ---------------------- | --------------------- | ------- | ---------------------------------------------------------------------- |
 | url | `data-href` | string | NA | The href of the content to share. URL that can be used to pin the content to an upcoming meeting or to share in an ongoing meeting. Required if allow-share-in-meeting is set as true. |
 | preview | `data-preview` | Boolean (as a string) | `true` | Whether or not to show a preview of the content to share. |
-| appId | `data-app-id` | String | NA | ID of the app to share. Teams App ID of the underlying app which will be used to power the content sharing. Reqd if allow-share-in-meeting is set as true. |
+| appId | `data-app-id` | String | NA | ID of the app to share. Teams App ID of the underlying app that's used to power the content sharing. Required if allow-share-in-meeting is set as true. |
 | iconPxSize | `data-icon-px-size` | number (as a string) | `32` | The size in pixels of the Share to Teams button to render. |
 | msgText | `data-msg-text` | string | NA | Default text to be inserted before the link in the message compose box. Maximum number of characters is 200. |
 | assignInstr | `data-assign-instr` | string | NA | Default text to be inserted in the assignments "Instructions" field. Maximum number of characters is 200. |
