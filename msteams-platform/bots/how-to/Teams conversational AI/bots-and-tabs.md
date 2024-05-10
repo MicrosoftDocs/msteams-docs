@@ -114,3 +114,7 @@ As discussed earlier, with an active web socket connection or through the REST A
 For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state then the data can be retrieved from memory or storage and handled accordingly, such as, feed the data into a prompt for a large language model (LLM).
 
 :::image type="content" source="~/assets/images/bots/bot-state.png" alt-text="Sequence diagram that explains the communication flow between tab and bot.":::
+
+## See also
+
+[Combine bots with tabs](~/resources/bot-v3/bots-with-tabs.md)
