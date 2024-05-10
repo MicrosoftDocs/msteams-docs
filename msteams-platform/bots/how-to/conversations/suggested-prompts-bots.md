@@ -9,7 +9,7 @@ ms.author: anclear
 
 # Suggested prompts for bot
 
-Suggested Prompts are commands that are presented to the users in the Microsoft Teams chat when they install your bot app. 
+Suggested prompts are commands that are presented to the users in the Microsoft Teams chat when they install your bot app. 
 
 A key challenge users face when starting a conversation with bots is to understand how to interact with them. This challenge is more often with the bots that use AI library as users might not be familiar with their conversational nature or the different set of functionalities. So, it's important to help users onboard and explore how to use your bot.
 
@@ -20,7 +20,7 @@ Suggested prompts create an engaging and insightful user experience and helps yo
 
 ## Prompt starters
 
-Prompt starters help users start conversations with your bot with prompts available in the chat window. Prompt starters are sourced from the [command menu](/bots/how-to/create-a-bot-commands-menu.md#create-a-command-menu-for-your-bot) in your bot's app manifest. When the user selects a command in the prompt starter, the title of the command is populated into the compose box. Post initial conversation the commands are available in the **View prompts** option above the compose box.
+Prompt starters help users start conversations with your bot with prompts available in the chat window. Prompt starters are sourced from the command menu in your bot's app manifest. When the user selects a command in the prompt starter, the title of the command is populated into the compose box. Post initial conversation the commands are available in the **View prompts** option above the compose box.
 
 >[!NOTE]
 > Ensure that the bot doesn't send a welcome message for prompt starter. The prompts aren't displayed for the initial conversation if your bot sends a welcome message. 
