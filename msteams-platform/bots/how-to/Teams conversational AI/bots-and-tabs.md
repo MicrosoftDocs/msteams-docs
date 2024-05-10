@@ -103,7 +103,7 @@ The tab app itself could be used to trigger a bot message, as shown in the below
 
 ---
 
-## Sharing app state with the bot 
+## Sharing app state
 
 If a user asks the bot, What am I looking at?, a bot might not know what content the user is viewing in the tab application, and couldn't respond with an informed answer.
 
