@@ -38,7 +38,7 @@ This bi-directional interaction pattern is used for building conversational expe
 
 ### Tabs
 
-Tabs allows you to embed your web applications directly into Teams. This allows customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form. 
+Tabs allows you to embed your web applications directly into Teams. This allows customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form. When a user sends a message to the bot, the bot receives the message through some of the handler function that are defined in your server. 
 
 :::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work." lightbox="~/assets/images/bots/how-tab-work.png":::
 
