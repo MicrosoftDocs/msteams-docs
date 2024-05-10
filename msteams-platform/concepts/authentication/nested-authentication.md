@@ -10,14 +10,10 @@ ms.localizationpriority: medium
 
 # Nested app authentication
 
-Nested app authentication (NAA) is a new authentication protocol for single page applications that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process and allows the app to request specific permissions for the resources it needs. It also aligns with the web authentication using Microsoft Authentication Library (MSAL) JS.
+Nested app authentication (NAA) is a new authentication protocol for single page applications that are embedded in host environments like Teams, Outlook, and Microsoft 365. It simplifies the authentication process and allows the app to request specific permissions for the resources it needs. It also aligns with the web authentication using Microsoft Authentication Library (MSAL) JS. It facilitates single sign-on (SSO) across applications nested within supported apps. It offers enhanced security and architectural agility over traditional authentication models and the on-behalf-of flow, enabling the development of dynamic, user-focused applications.
 
-Nested app authentication facilitates single sign-on (SSO) across applications nested within supported first-party apps. It offers enhanced security and architectural agility over traditional authentication models and the on-behalf-of flow, enabling the development of dynamic, user-focused applications.
+The NAA model supports a primary identity that includes multiple app identities. Microsoft utilizes this framework in Office Add-Ins and Teams Tabs and Personal apps.
 
-NAA endorses an "app-in-app" model, where a primary identity encompasses one or more app identities. Microsoft utilizes this framework in:
-
-- Office Add-Ins
-- Teams Tabs and Personal apps
 
 The following table outlines the difference between Teams Microsoft Entra ID SSO and Nested App Authentication:
 
@@ -32,9 +28,6 @@ The following table outlines the difference between Teams Microsoft Entra ID SSO
 | Acquire access token via MSAL.js |  | ✔️ * Requires new msalconfig property: supportsNestedAppAuth |
 | Solicit user consent for more permissions | ✔️ |  |
 | Conduct an OBO exchange on the server | ✔️ |  | 
-
-The existing authentication flow for embedded apps depends on the host environment and requires a middle tier service to do the on-behalf-of token exchange. The app also has to use the Teams JS SDK to get the token and consent to the host app's permissions.
-The nested authentication flow is consistent across all host environments and doesn't require a middle tier service or the Teams JS SDK. The app only has to register its app in Microsoft Entra, configure a broker schema redirect URI, enable the native bridging in the manifest, and use MSAL JS to acquire the token and call the APIs. The app can also check the support status of nested authentication using the Teams JS SDK and provide a fallback experience for unsupported environments.
 
 ## Scenarios
 
