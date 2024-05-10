@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Format AI bot messages
 
-If you're building a conversational bot, you can now leverage features such as citations and feedback buttons that enable better user engagement. For AI -powered bots, you can now add AI label and sensitivity label that can help you build trust and transparency with users.
+If you're building a conversational bot, you can now leverage features such as citations and feedback buttons that enable better user engagement. For AI-powered bots, you can now add AI label and sensitivity label that can help you build trust and transparency with users.
 
 Here's a quick overview on each feature that you can integrate to your bot message:
 
@@ -426,7 +426,7 @@ The bot sends the user's input, received in the feedback form, through a bot inv
 
 If your bot is built using Teams AI library, the feedback received is automatically handled. For other types of bots, you need to have an `onInvokeActivity` handler to correctly process the invoke when the bot receives it. Ensure that you return a status code 200 with an empty response.
 
-Don't send a message or notification to the user upon receiving feedback. Teams automatically notifies the user that their feedback was submitted successfully.
+Teams automatically notifies the user that their feedback was submitted successfully. Therefore, don't send a message or notification to the user upon receiving feedback.
 
 When the bot receives an invoke containing feedback, the following code snippet returns a response with the status code 200:
 
@@ -435,7 +435,7 @@ When the bot receives an invoke containing feedback, the following code snippet 
 It’s important to store feedback after you receive it. Hence, ensure that you store the message IDs and the content of the messages that your bot sends and receives. When your bot receives an invoke containing feedback, match the message ID of the bot’s message with the corresponding feedback.
 
 > [!NOTE]
-> Teams doesn’t store or process feedback, nor does it provide an API or a storage mechanism for you to do so.
+> Teams neither stores or processes feedback, nor does it provide an API or a storage mechanism.
 
 If a user uninstalls your bot and still has access to the bot chat, Teams removes the feedback buttons from the bot's messages to prevent the user from providing feedback to the bot.
 
