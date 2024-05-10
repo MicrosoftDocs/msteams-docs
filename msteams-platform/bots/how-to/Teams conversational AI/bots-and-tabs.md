@@ -34,7 +34,7 @@ Using the `@microsoft/teams-js NPM` package, tab can communicate with Teams usin
 
 :::column-end:::
 
-:::column span="":::
+:::column span="2":::
 
 ### Bots
 
