@@ -49,6 +49,8 @@ landingContent:
       links:
       - text: Introduced Teams Adaptive Card samples
         url: task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards
+      - text: 32x32 color icon for your app running in Outlook and Microsoft 365
+        url: concepts/build-and-test/apps-package.md#outline-icon
       - text: Authentication in API-based message extension
         url: messaging-extensions/build-api-based-message-extension.md#authentication
       - text: Share code snippets as richly formatted Adaptive Cards with the CodeBlock element
@@ -65,8 +67,6 @@ landingContent:
         url: bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md
       - text: Stageview API with the openmode property allows you to open your app content in different Stageview experience
         url: tabs/open-content-in-stageview.md
-      - text: Updated the common reasons for app validation failure to help your app pass the Teams Store submission process
-        url: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 
     - linkListType: reference
       links:
