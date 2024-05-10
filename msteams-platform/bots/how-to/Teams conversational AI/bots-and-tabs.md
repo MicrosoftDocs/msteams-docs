@@ -15,14 +15,14 @@ Bots and tabs are two capabilities of Microsoft Teams that can be used together 
 > [!NOTE]
 > We recommend building bots using AI library for interoperability of bots and tabs.
 
-By combining bots and tabs, you can create a custom Copilot-like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application. This allows for a seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
+By combining bots and tabs, you can create a custom Copilot like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application. This allows for a seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
 
 ## Understand how tabs and bots work 
 
 Before understanding the architecture for connecting bots and tabs together, it's helpful to understand how bots and tabs work within their own space. 
 
 :::row:::
-:::column span="2":::
+:::column span="":::
 
 ### Tabs
 
@@ -30,11 +30,11 @@ Tabs allow you to embed your web applications directly into Teams. This allows c
 
 :::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work." lightbox="~/assets/images/bots/how-tab-work.png":::
 
-Using the `@microsoft/teams-js NPM` package, tab can communicate with the Teams using a secure messaging channel called window post messages and tab can communicate with backend using standard JavaScript APIs, HTTP requests, web sockets, and so on. 
+Using the `@microsoft/teams-js NPM` package, tab can communicate with Teams using a secure messaging channel called window post messages and tab can communicate with backend using standard JavaScript APIs, HTTP requests, web sockets, and so on. 
 
 :::column-end:::
 
-:::column span="2":::
+:::column span="":::
 
 ### Bots
 
@@ -61,7 +61,7 @@ This gives apps a powerful way to integrate bots and tabs smoothly. The key aspe
 
 Apps must have a consistent user identifier for both bot and tab, and that the user is authenticated in both contexts, such as through [single sign-on (SSO)](~/concepts/authentication/authentication.md). 
 
-Though there might be different ways authentication without SSO, such as through a custom authentication provider, where a user must sign-in from both the tab and bot. SSO helps the user experience more seamlessly integrated, which is imperative for this sort of copilot-like integration.
+Though there might be different ways authentication without SSO, such as through a custom authentication provider, where a user must sign-in from both the tab and bot. SSO helps the user experience more seamlessly integrated, which is imperative for this sort of Copilot like integration.
 
 > [!Note]
 > We strongly recommend using SSO to create a unified login between the tab and the bot.
@@ -111,6 +111,6 @@ In this example, the socket connection with the bot can be retrieved through the
 
 As discussed earlier, with an active web socket connection or through the REST APIs, the tab can send application state data to a server, which the server would then store or cache for later use. 
 
-For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state then the data can be retrieved from memory or storage and handled accordingly, such as, feed the data into a prompt for an LLM. 
+For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state then the data can be retrieved from memory or storage and handled accordingly, such as, feed the data into a prompt for a large language model (LLM).
 
 :::image type="content" source="~/assets/images/bots/bot-state.png" alt-text="Sequence diagram that explains the communication flow between tab and bot.":::
