@@ -281,7 +281,7 @@ Before get started, ensure that you've installed the [python](https://marketplac
 
 1. Under **EXPLORER**, duplicate the **sample.env** file and update the duplicate file to **.env**.
 
-# [OpenAI key](#tab1/OpenAI-key)
+# [OpenAI key](#tab1/OpenAI-key1)
 
 1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -290,7 +290,7 @@ Before get started, ensure that you've installed the [python](https://marketplac
 
    ```
 
-# [Azure OpenAI](#tab1/Azure-OpenAI)
+# [Azure OpenAI](#tab1/Azure-OpenAI1)
 
 1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
