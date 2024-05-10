@@ -1,7 +1,7 @@
 ---
 title: Create prompt suggestions
 author: v-npaladugu
-description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot.
+description: Learn how to create and handle a prompt starters and suggested actions for your Microsoft Teams bot.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
@@ -16,7 +16,7 @@ Prompt suggestions create an engaging and insightful user experience. They help 
 > [!NOTE]
 > Prompt suggestions are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
-There are two types of prompt suggestions that you can use
+There are two types of prompt suggestions that you can use:
 
 :::row:::
 :::column span="2":::
@@ -44,13 +44,13 @@ Suggested actions help users continue conversations with your bot.
 ## Prompt starters
 
 >[!NOTE]
-> Ensure that the bot doesn't send a welcome message for prompt starter. The prompts aren't displayed for the initial conversation if your bot sends a welcome message.
+> Ensure that the bot doesn't send a welcome message for prompt starters. The prompts aren't displayed for the initial conversation if your bot sends a welcome message.
 
-Prompt starters are enabled in the `commands` property of your bot's app manifest. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
+To enable prompt starters define the `commands` property in your bot's app manifest. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
 
 # [Developer Portal](#tab/developer-portal)
 
-To create prompt starter using Developer Portal:
+To create prompt starters using Developer Portal:
 
 1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **Developer Portal**, and then select **Open**.
 
@@ -75,10 +75,10 @@ To create prompt starter using Developer Portal:
 
 # [Manually in the app manifest](#tab/manually-in-the-app-manifest)
 
-Another way to create a prompt starter is to create it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
+Another way to create a prompt starters is to create it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
 
 * `command` property supports up to 10 commands.
-* You can either create a prompt starter that works in all scopes or create different prompt starters for each scope.
+* You can either create prompt starters that works in all scopes or create different prompt starters for each scope.
 
 #### Manifest example for prompt starters
 
