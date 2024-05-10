@@ -52,19 +52,9 @@ This bi-directional interaction pattern is used for building conversational expe
 
 Teams maintains a constant connection with the server to get new messages, and other apps might do the same with their own servers. This is typical for apps that allow real-time collaboration. For example, a shared task list might use a web socket connection to sync tasks across different users or devices.
 
-This gives apps a powerful way to integrate bots and tabs smoothly. The key aspects for interoperability between bot and tab are [server](#server) and [authentication](#authentication).
+This gives apps a powerful way to integrate bots and tabs smoothly. The key aspects for interoperability between bot and tab are [authentication](#authentication) and [server](#server).
 
 :::row:::
-:::column span="2":::
-
-#### Server
-
-For interoperability between bot and tab consider that the tab app and the bot backend are operating on the same server. However, the same could be applied if the servers are separate, such as through a micro-service architecture. 
-
-Servers have a way of sending updates that the bot receives and routing it to the tab client. This article explains this scenario using web sockets. There are other ways as well to route the updates, such as polling the server for updates repeatedly from the client. 
-
-:::column-end:::
-
 :::column span="2":::
 
 #### Authentication
@@ -74,7 +64,17 @@ Apps must have a consistent user identifier for both bot and tab, and that the u
 Though there might be different ways authentication without SSO, such as through a custom authentication provider, where a user must sign-in from both the tab and bot. SSO helps the user experience more seamlessly integrated, which is imperative for this sort of copilot-like integration.
 
 > [!Note]
-> We strongly recommend using SSO to create a unified login between the tab and the bot. 
+> We strongly recommend using SSO to create a unified login between the tab and the bot.
+
+:::column-end:::
+
+:::column span="2":::
+
+#### Server
+
+For interoperability between bot and tab consider that the tab app and the bot backend are operating on the same server. However, the same could be applied if the servers are separate, such as through a micro-service architecture. 
+
+Servers have a way of sending updates that the bot receives and routing it to the tab client. This article explains this scenario using web sockets. There are other ways as well to route the updates, such as polling the server for updates repeatedly from the client. 
 
 :::column-end:::
 
