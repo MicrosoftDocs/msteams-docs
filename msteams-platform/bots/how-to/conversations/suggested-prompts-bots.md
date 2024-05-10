@@ -15,16 +15,15 @@ A key challenge users face when starting a conversation with bots is to understa
 
 Suggested prompts create an engaging and insightful user experience and helps your bot acquire and retain users. Users can discover the value of your bot through prompt conversations. There are two types of suggested prompts:
 
-* Prompt starters: Prompt starters help users start a conversation with your bot.
-* Suggested actions: Suggested actions help users continue conversations with your bot.
+* [Prompt starters](#prompt-starters): Prompt starters help users start a conversation with your bot.
+* [Suggested actions](#suggested-actions): Suggested actions help users continue conversations with your bot.
 
 ## Prompt starters
 
 Prompt starters help users start conversations with your bot with prompts available in the chat window. Prompt starters are sourced from the [command menu](#create-a-command-menu-for-your-bot) in your bot's app manifest. When the user selects a command in the prompt starter, the title of the command is populated into the compose box. Post initial conversation the commands are available in the **View prompts** option above the compose box.
 
 >[!NOTE]
-> Ensure that the bot doesn't send a welcome message for prompt starter. The commands aren't displayed for the initial conversation if your bot sends a welcome message. 
-
+> Ensure that the bot doesn't send a welcome message for prompt starter. The prompts aren't displayed for the initial conversation if your bot sends a welcome message. 
 
 # [Desktop](#tab/desktop)
 
@@ -43,5 +42,5 @@ Prompt starters help users start conversations with your bot with prompts availa
 
 * * *
 
+## Suggested actions
 
-Suggested actions
