@@ -1,0 +1,47 @@
+---
+title: Suggested prompts for bot
+author: v-npaladugu
+description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot.
+ms.topic: how-to
+ms.localizationpriority: medium
+ms.author: anclear
+---
+
+# Suggested prompts for bot
+
+Suggested Prompts are commands that are presented to the users in the Microsoft Teams chat when they install your bot app. 
+
+A key challenge users face when starting a conversation with bots is to understand how to interact with them. This challenge is more often with the bots that use AI library as users might not be familiar with their conversational nature or the different set of functionalities. So, it's important to help users onboard and explore how to use your bot.
+
+Suggested prompts create an engaging and insightful user experience and helps your bot acquire and retain users. Users can discover the value of your bot through prompt conversations. There are two types of suggested prompts:
+
+* Prompt starters: Prompt starters help users start a conversation with your bot.
+* Suggested actions: Suggested actions help users continue conversations with your bot.
+
+## Prompt starters
+
+Prompt starters help users start conversations with your bot with prompts available in the chat window. Prompt starters are sourced from the [command menu](#create-a-command-menu-for-your-bot) in your bot's app manifest. When the user selects a command in the prompt starter, the title of the command is populated into the compose box. Post initial conversation the commands are available in the **View prompts** option above the compose box.
+
+>[!NOTE]
+> Ensure that the bot doesn't send a welcome message for prompt starter. The commands aren't displayed for the initial conversation if your bot sends a welcome message. 
+
+
+# [Desktop](#tab/desktop)
+
+* One-on-one conversation
+
+  :::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop.":::
+
+* Group chat or channels
+  
+  **{WIP}**
+  
+
+# [Mobile](#tab/mobile)
+
+:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter and View Prompts in mobile.":::
+
+* * *
+
+
+Suggested actions
