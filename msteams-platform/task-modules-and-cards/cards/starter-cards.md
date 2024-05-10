@@ -53,7 +53,7 @@ This card design optimizes space with a small image, making it ideal for display
 
 ## List
 
-Use this card to display a selection of personalized content, handpicked specifically for your users. Emphasize what’s most important to them, such as articles, videos, or courses. Users can select any module to explore its content or open it for an in-depth view within the app.
+Use this card to display a selection of personalized content, handpicked for your users. Emphasize what’s most important to them, such as articles, videos, or courses. Users can select any module to explore its content or open it for an in-depth view within the app.
 
 # [Desktop](#tab/desktop3)
 
@@ -123,7 +123,7 @@ Use this card sample to share a variety of content, ranging from tech updates to
 
 ## Issue status
 
-The sample issue card is designed to highlight a specific issue, providing key details such as the status and owner. You can easily customize the card with other relevant information, such as priority or due date.
+The sample issue card is designed to highlight a specific issue, providing key details including the status and owner. You can easily customize the card with other relevant information, such as priority or due date.
 
 # [Desktop](#tab/desktop8)
 
