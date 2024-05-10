@@ -13,10 +13,10 @@ Here's a quick overview on each feature that you can integrate to your bot messa
 
 | Feature | Bot | AI bot |
 | --- | :---: | :---: |
-| [AI label](#ai-label) enables user to identify that the message was generated using AI. | ❌ | ✔️ |
-| [Sensitivity label](#sensitivity-label) enables user to understand the confidentiality of the bot's message. | ❌ | ✔️ |
-| [Citations](#citations) enables user to refer to the source of the bot's message through in-text citations and a list of references. | ✔️ | ✔️ |
-| [Feedback buttons](#feedback-buttons) enables user to provide positive or negative feedback based on their experience. | ✔️ | ✔️ |
+| [AI label](#ai-label) that enables user to identify that the message was generated using AI. | ❌ | ✔️ |
+| [Sensitivity label](#sensitivity-label) that enables user to understand the confidentiality of the bot's message. | ❌ | ✔️ |
+| [Citations](#citations) that enables user to refer to the source of the bot's message through in-text citations and a list of references. | ✔️ | ✔️ |
+| [Feedback buttons](#feedback-buttons) that enables user to provide positive or negative feedback based on their experience. | ✔️ | ✔️ |
 
 :::image type="content" source="../../assets/images/bots/ai-bot-message.png" border="false" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
 
