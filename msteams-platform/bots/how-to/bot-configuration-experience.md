@@ -12,8 +12,8 @@ ms.localizationpriority: high
 Bot configuration experience allows users to set up and reconfigure their bots' settings directly within the channel or group chat scope post-installation. This enhances the bot’s operational efficiency from the start. Bot configuration experience eliminates the need for repeated user interventions that previously hampered the timely benefits of apps, affecting user experience.
 
 With the bot configuration experience, you can ensure the bot's ongoing relevance and value as users can:
-*	Tailor the bot to their specific workflows and preferences during installation.
-*	Reconfigure settings to adapt to changing requirements post installation.
+* Tailor the bot to their specific workflows and preferences during installation.
+* Reconfigure settings to adapt to changing requirements post installation.
 
 For instance, consider a bot that tracks and shares news topics, or monitors GitHub repositories. Initially configured to align with user workflows, these bots can easily be reconfigured to respond to new topics or repositories directly from the group chat, streamlining content management, and interaction without leaving the Teams environment. This flexible configuration experience significantly enhances user experience and productivity by integrating bots seamlessly into daily operations.
 
