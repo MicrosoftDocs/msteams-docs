@@ -77,6 +77,19 @@ The following table provides a list of styles, which are supported on desktop, i
 | Hyperlink                 | ✔️ | ✔️ | ✔️ |
 | Image link                | ❌ | ❌ | ❌ |
 
+### AI-based bots
+
+As bots become more conversational, you can leverage AI capabilities to enhance their functionality. Here are some additional features that you can integrate into your bot messages, similar to those used in AI-generated bot messages:
+
+| Feature | Bot | AI bot |
+| --- | :---: | :---: |
+| AI label | ❌ | ✔️ |
+| Sensitivity label | ❌ | ✔️ |
+| Citation | ✔️ | ✔️ |
+| Feedback buttons | ✔️ | ✔️ |
+
+To add citations and feedback buttons to your bot, see [format your AI bot message](format-ai-bot-messages.md).
+
 ### Cards
 
 For card support, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).
