@@ -261,6 +261,8 @@ You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow 
 
 ## Build and run the sample app
 
+Before get started, ensure that you've installed the [python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [poetry](https://python-poetry.org/docs/#installing-with-pipx) extensions.
+
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
 1. Clone the repository to test the sample app.
@@ -279,15 +281,32 @@ You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow 
 
 1. Under **EXPLORER**, duplicate the **sample.env** file and update the duplicate file to **.env**.
 
-1. If you are using OpenAI then only keep the `OPENAI_KEY` and add in your key. Otherwise if you are using `AzureOpenAI` then only keep the `AZURE_OPENAI_KEY`, `AZURE_OPENAI_ENDPOINT` variables and fill them in appropriately.
+# [OpenAI key](#tab1/OpenAI-key)
+
+1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
+
+   ```text
+   SECRET_OPENAI_KEY=<your OpenAI key>
+
+   ```
+
+# [Azure OpenAI](#tab1/Azure-OpenAI)
+
+1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
+
+   ```text
+   SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
+   SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
+
+   ```
+
+---
 
 1. Update `config.json` and `bot.py` with your model deployment name.
 
-1. Install python extension.
+1. Select **Command Palette...** under the View option or **Ctrl+Shift+P**.
 
-1. Install Poetry.
-
-1. Trigger **Python: Create Environment** from command palette and create a virtual environment
+1. Enter **Python: Create Environment** to create a virtual environment.
 
 1. To debug your app, select the **F5** key.
 
