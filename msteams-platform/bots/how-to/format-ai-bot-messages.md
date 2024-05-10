@@ -1,15 +1,15 @@
 ---
 title: Format AI bot messages
-description: Learn how to format your AI-based bot with AI labels, citations, feedback buttons, and sensitivity labels.
+description: Learn how to format your AI-based bot with an AI label, sensitivity labels, citations, and feedback buttons.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
 # Format AI bot messages
 
-As you enhance your bot’s conversational capabilities to improve the user experience, it’s important to refine your bot’s messages to align with AI experiences, such as those provided by Microsoft Copilot.
+As you enhance your bot’s conversational capabilities, it’s important to refine your bot’s messages to align with AI experiences, such as those provided by Microsoft Copilot. If you're building an AI-based bot, your bot's messages can leverage features like citations, an AI label, feedback buttons, and a sensitivity label to build trust and ensure responsible AI communication.
 
-If you're building an AI-based bot, your bot's messages can leverage features like citations, an AI label, feedback buttons, and a sensitivity label to enhance the user experience, build trust, and ensure responsible AI communication. These features streamline the user experience for common AI scenarios, such as:
+These features streamline the user experience for common AI scenarios, such as:
 
 * Citing data sources for retrieval-augmented generation (RAG)
 * Identifying AI-generated responses
@@ -593,7 +593,7 @@ It’s important to store feedback after you receive it. Teams doesn’t store o
 
 | Error code | Condition |
 | --- | --- |
-| 400 | When the `submit/messageAction` invoke response isn't empty. |
+| 400 | When the `submit/messageAction` invoke response isn't empty |
 
 ## Code samples
 
@@ -606,4 +606,4 @@ It’s important to store feedback after you receive it. Teams doesn’t store o
 * [Bot activity handlers](../bot-basics.md)
 * [Format your bot messages](format-your-bot-messages.md)
 * [Update and delete messages sent from bot](update-and-delete-bot-messages.md)
-* [Teams AI library](Teams%20conversational%20AI/how-conversation-ai-get-started.md)
+* [Get started with Teams AI library](Teams%20conversational%20AI/how-conversation-ai-get-started.md)
