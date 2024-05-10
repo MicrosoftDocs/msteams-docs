@@ -115,44 +115,44 @@ The following steps show the pattern to use for acquiring a token:
 1. `accessTokenRequest` specifies the scopes for which the access token is requested. Nested app authentication supports incremental and dynamic consent so always request the minimum scopes needed for your code to complete its task.
 1. Call `publicClientApplication.acquireTokenSilent(accessTokenRequest)` to acquire the token silently without user interaction. If `acquireTokenSilent` fails, call `publicClientApplication.acquireTokenPopup(accessTokenRequest)` to display an interactive dialog for the user. acquireTokenSilent can fail if the token expired, or the user hasn't yet consented to all of the requested scopes.
 
-```javascript
+  ```javascript
 
-// MSAL.js exposes several account APIs, logic to determine which account to use is the responsibility of the developer
-const account = publicClientApplication.getActiveAccount();
+  // MSAL.js exposes several account APIs, logic to determine which account to use is the responsibility of the developer
+  const account = publicClientApplication.getActiveAccount();
 
-const accessTokenRequest = {
+  const accessTokenRequest = {
   scopes: ["user.read"],
   account: account,
-};
+  };
 
-publicClientApplication
-  .acquireTokenSilent(accessTokenRequest)
-  .then(function (accessTokenResponse) {
-    // Acquire token silent success
-    let accessToken = accessTokenResponse.accessToken;
-    // Call your API with token
-    callApi(accessToken);
-  })
-  .catch(function (error) {
-    //Acquire token silent failure, and send an interactive request
-    if (error instanceof InteractionRequiredAuthError) {
-      publicClientApplication
-        .acquireTokenPopup(accessTokenRequest)
-        .then(function (accessTokenResponse) {
-          // Acquire token interactive success
-          let accessToken = accessTokenResponse.accessToken;
-          // Call your API with token
-          callApi(accessToken);
-        })
-        .catch(function (error) {
-          // Acquire token interactive failure
-          console.log(error);
-        });
-    }
-    console.log(error);
-  });
+  publicClientApplication
+    .acquireTokenSilent(accessTokenRequest)
+    .then(function (accessTokenResponse) {
+      // Acquire token silent success
+      let accessToken = accessTokenResponse.accessToken;
+      // Call your API with token
+      callApi(accessToken);
+    })
+    .catch(function (error) {
+      //Acquire token silent failure, and send an interactive request
+      if (error instanceof InteractionRequiredAuthError) {
+        publicClientApplication
+          .acquireTokenPopup(accessTokenRequest)
+          .then(function (accessTokenResponse) {
+            // Acquire token interactive success
+            let accessToken = accessTokenResponse.accessToken;
+            // Call your API with token
+            callApi(accessToken);
+          })
+          .catch(function (error) {
+            // Acquire token interactive failure
+            console.log(error);
+          });
+      }
+      console.log(error);
+    });
 
-```
+  ```
 
 If silent acquisition fails, the code checks if user interaction is required. If `acquireTokenSilent` encounters an `InteractionRequiredAuthError`, it indicates that the user must interact with a consent dialog. To ensure the user intends to open this dialog and to prevent it from appearing unexpectedly, a speed bump dialog is shown. 
 
@@ -160,9 +160,9 @@ After the user shows intent through the speed bump dialog, the `acquireTokenPopu
 
 ### Call an API
 
- After receiving the token, you use the token to can call the API. This ensures that the API is called with a valid token, allowing for authenticated requests to be made to the server.
+After receiving the token, you use the token to can call the API. This ensures that the API is called with a valid token, allowing for authenticated requests to be made to the server.
 
- The following example shows how to make authenticated requests to the Microsoft Graph API to access Microsoft 365 data:
+The following example shows how to make authenticated requests to the Microsoft Graph API to access Microsoft 365 data:
 
 ```javascript
 
@@ -196,5 +196,4 @@ fetch(graphEndpoint, options)
 
 * You must check the support status of nested app authentication using the Teams JS SDK and provide a fallback experience for unsupported environments. For example, they can use the classic SSO or OBO flow for Teams mobile or Surface Hub.
 
-* Test your application in multiple environments.
-* If your application is expected to work in both WebView and browser deployments, we recommend testing your application in both of these deployment environments to ensure it behaves as you expect. Not all APIs supported in the browser work inside of WebViews.
+* **Test your application in multiple environments**: If your application is expected to work in both WebView and browser deployments, we recommend testing your application in both of these deployment environments to ensure it behaves as you expect. Not all APIs supported in the browser work inside of WebViews.
