@@ -10,7 +10,10 @@ ms.date: 05/02/2024
 
 # Interoperability of bots and tabs
 
-Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are great way for conversational experiences through chat, while tabs allow a developer to embed their web applications directly into Teams. Tabs and bots can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
+Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are great way for conversational experiences through chat, while tabs allow you to embed web applications directly into Teams. Tabs and bots can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
+
+> [!NOTE]
+> We recommend building bots using AI library for interoperability of bots and tabs.
 
 By combining bots and tabs, you can create a custom Copilot-like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab, and the bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application. This allows for a seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
 
