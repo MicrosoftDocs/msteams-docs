@@ -213,4 +213,4 @@ items:
   durationInMinutes: 1
   content: |
 
-   Congratulations, you completed this tutorial! If you are interested in learning more about the source code, visit [Azure OpenAI Sample on Teams AI library Github repository.](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/h.datasource-azureOpenAI)
+   Congratulations, you completed this tutorial! If you are interested in learning more about the source code, visit [Azure OpenAI sample on Teams AI library GitHub repository.](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/h.datasource-azureOpenAI)
