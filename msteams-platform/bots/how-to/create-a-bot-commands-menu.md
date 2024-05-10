@@ -16,38 +16,33 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 # [Developer preview](#tab/developer-preview)
 
-- The following is the UI for command menu, which is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md):
+The following is the UI for command menu, which is available in [public developer preview](~/resources/dev-preview/developer-preview-intro.md):
 
-# [Desktop](#tab/desktop)
+* **Desktop**
 
-* One-on-one conversation
+  * One-on-one conversation
 
   :::image type="content" source="~/assets/images/bots/prompt-starter-desktop.png" alt-text="Screenshot that shows the Prompt Starter in desktop.":::
 
-* Group chat or channels
+  * Group chat or channels
   
   **{WIP}**
-  
 
-# [Mobile](#tab/mobile)
+* **Mobile**
 
-:::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter and View Prompts in mobile.":::
-
-* * *
+  :::image type="content" source="~/assets/images/bots/prompt-starter-mobile.png" alt-text="Screenshot that shows the Prompt Starter and View Prompts in mobile.":::
 
 # [Generally available](#tab/generally-available)
 
-- The following is the UI for command menu, which is generally available:
+The following is the UI for command menu, which is generally available:
 
-# [Desktop](#tab/desktop1)
+* **Desktop**
 
-:::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
+  :::image type="content" source="conversations/Media/bot-menu-sample.png" alt-text="Bot-command-menu":::
 
-# [Mobile](#tab/mobile1)
+* **Mobile**
 
-:::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
-
-* * *
+  :::image type="content" source="conversations/Media/mobile-bot-menu-sample.png" alt-text="Mobile-bot-command-menu":::
 
 ---
 
@@ -58,7 +53,7 @@ To define a set of core commands that your bot can respond to, you can add a com
 
 [!INCLUDE [pre-release-label](~/includes/v4-to-v3-pointer-bots.md)]
 
-Command menus are defined in your app manifest. You can either use [**Developer Portal**](#create-a-command-menu-using-developer-portal) to create them or add them manually in the [app manifest](#create-a-command-menu-by-editing-manifestjson).
+Command menus are defined in your app manifest. You can either use **Developer Portal** to create them or add them manually in the app manifest.
 
 ### Create a command menu for your bot using Developer Portal
 
