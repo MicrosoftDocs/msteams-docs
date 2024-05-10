@@ -82,8 +82,8 @@ items:
 
      1. Select **Browse for a file** and upload files you prefer to use as your data, then select **Upload files**.
 
-     > [!NOTE]
-     > Files must be in `.txt`, `.md`, `.html`, `.pdf`, `.docx`, `.pptx` format with 16 MB size limit.
+         > [!NOTE]
+         > Files must be in `.txt`, `.md`, `.html`, `.pdf`, `.docx`, or `.pptx` format with 16 MB size limit.
 
      1. Select the **Data management** settings as default and select **Next**.
      
@@ -201,14 +201,11 @@ items:
 
      1. Custom copilot runs within the Teams App Test Tool, which opens in your browser.
 
-        :::image type="content" source="../msteams-platform/assets/images/bots/teams-app-test-tool.png" alt-text="Screenshot shows the teams app test tool.":::
-
-
 - title: Complete challenge
   durationInMinutes: 1
   content: |
 
-    Did you come up with something like this?
+   In the Teams App Test Tool, ask questions related to your document and chat with your custom copilot to learn more about your data.
 
     :::image type="content" source="../msteams-platform/assets/images/bots/teams-app-test-tool.png" alt-text="Screenshot shows the teams app test tool.":::
 
