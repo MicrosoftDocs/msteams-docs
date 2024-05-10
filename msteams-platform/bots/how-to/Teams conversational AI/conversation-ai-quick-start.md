@@ -87,14 +87,12 @@ Get started with Teams AI library using the **ChefBot** sample. It enables your 
 
 1. After the dependencies are installed, select **File** > **Open Folder**.
 
-1. Go to **teams-ai > js > samples> 04.ai.a.teamsChefBot** and select **Select Folder**. All the files for the chef bot sample are listed under the **EXPLORER** section in Visual Studio Code.
+1. Go to **teams-ai > js > samples> 03.ai-concepts> c.actionMapping-lightBot** and select **Select Folder**. All the files for the lightbot sample are listed under the **EXPLORER** section in Visual Studio Code.
 
-1. Under **EXPLORER**, duplicate the `sample.env` file  and update the duplicate file to `.env`.
-
-1. In the sample folder, update the following code in the `.env` configuration file:
+1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
    ```text
-   OPENAI_KEY=<your OpenAI key>
+   SECRET_OPENAI_KEY=<your OpenAI key>
 
    ```
 
@@ -111,13 +109,13 @@ Get started with Teams AI library using the **ChefBot** sample. It enables your 
 
 1. Select **Add**.
 
-   :::image type="content" source="../../../assets/images/bots/Conversation-AI-sample-app-add.png" alt-text="Screenshot shows the option to add the app in Teams web client.":::
+   Image placeholder
 
    A chat window opens.
 
 1. In the message compose area, send a message to invoke the bot.
 
-   :::image type="content" source="../../../assets/images/bots/conversation-AI-quick-start-final.png" alt-text="Screenshot shows an example of conversation with Teams chef bot in Teams.":::
+   Image placeholder
 
 The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
@@ -144,16 +142,39 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
    cd teams-ai/dotnet
    ```
 
-1. Go to the folder where you cloned the repository and select **04.ai.a.teamsChefBot**.
-1. Select **TeamsChefBot.sln**. The solution opens in Visual Studio.
+1. Go to the folder where you cloned the repository and select **04.ai.c.actionMapping.lightBot**.
+
+1. Select **LightBot.sln**. The solution opens in Visual Studio.
 
 1. In Visual Studio, update your OpenAI related settings in the `appsettings.Development.json` file.
 
       ```json
-      "OpenAI": {
-      "ApiKey": "<your-openai-api-key>"
+      "Azure": {
+      "OpenAIApiKey": "<your-azure-openai-api-key>",
+      "OpenAIEndpoint": "<your-azure-openai-endpoint>"
       },
       ```
+
+1. Go to `Prompts/sequence/skprompt.txt` and update the following code in `skprompt.txt` file:
+
+    ```skprompt.txt
+    The following is a conversation with an AI assistant. 
+    The assistant can turn a light on or off.
+    The assistant must return the following JSON structure:
+    
+    {"type":"plan","commands":[{"type":"DO","action":"<name>","entities":{"<name>":<value>}},{"type":"SAY","response":"<response>"}]}
+    
+    The following actions are supported:
+    
+    - LightsOn
+    - LightsOff
+    - Pause time=<duration in ms>
+    - LightStatus
+    
+    The lights are currently {{getLightStatus}}.
+    
+    Always respond in the form of a JSON based plan. Stick with DO/SAY.
+    ```
 
 1. In the debug dropdown menu, select **Dev Tunnels** > **Create a Tunnel..**.
 
@@ -168,6 +189,7 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
     The tunnel you created is listed under **Dev Tunnels > (name of the tunnel)**.
 
 1. Go to **Solution Explorer** and select your project.
+
 1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams-app.png" alt-text="Screenshot shows an example of the Prepare Teams app Dependencies option under Teams Toolkit section in Visual Studio.":::
@@ -177,19 +199,68 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
 1. Select **OK**.
 
 1. Select **F5** or select **Debug** > **Start**.
+
 1. Select **Add**. The app is added to Teams and a chat window opens.
 
-   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-add-app.png" alt-text="Screenshot shows the add option to add the app to Microsoft Teams.":::
+   Image placeholder
 
 1. In the message compose area, send a message to invoke the bot.
 
-   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-invoke-chef-bot.png" alt-text="Screenshot shows an example of a chat window and a message from the chef bot as a reply to users message.":::
+   Image placeholder
 
 You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow these steps:
 
 1. In Visual Studio, go to **Solution Explorer** and select your project.
 1. Right-click the menu and select **Teams Toolkit** > **Provision in the Cloud**. Toolkit provisions your sample to Azure.
 1. Right-click the menu and select **Teams Toolkit** > **Deploy to the Cloud**.
+
+::: zone-end
+
+::: zone pivot="qs-python"
+
+## Build and run the sample app
+
+1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
+
+1. Clone the repository to test the sample app.
+
+   ```
+   git clone https://github.com/microsoft/teams-ai.git
+   ```
+
+1. Go to the **python** folder.
+
+   ```
+   cd teams-ai/python
+   ```
+
+1. Go to the folder where you cloned the repository and select **04.ai.c.actionMapping.lightBot**. All the files for the lightbot sample are listed under the EXPLORER section in Visual Studio Code.
+
+1. Under **EXPLORER**, duplicate the **sample.env** file and update the duplicate file to **.env**.
+
+1. If you are using OpenAI then only keep the `OPENAI_KEY` and add in your key. Otherwise if you are using `AzureOpenAI` then only keep the `AZURE_OPENAI_KEY`, `AZURE_OPENAI_ENDPOINT` variables and fill them in appropriately.
+
+1. Update `config.json` and `bot.py` with your model deployment name.
+
+1. Install python extension.
+
+1. Install Poetry.
+
+1. Trigger **Python: Create Environment** from command palette and create a virtual environment
+
+1. To debug your app, select the **F5** key.
+
+   A browser tab opens a Teams web client requesting to add the bot to your tenant.
+
+1. Select **Add**.
+
+   Image placeholder
+
+   A chat window opens.
+
+1. In the message compose area, send a message to invoke the bot.
+
+   Image placeholder
 
 ::: zone-end
 
