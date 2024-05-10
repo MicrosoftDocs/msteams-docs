@@ -98,6 +98,10 @@ The tab app itself could be used to trigger a bot message, as shown in the below
 
 :::image type="content" source="~/assets/images/bots/tab-bot-user.png" alt-text="Sequence diagram that explains the communication flow between tab, bot, and user.":::
 
+As we understand from the above flow chart, when a user makes a change in the tab, the tab server is responding to the user and using a web socket connection to process the change in the tab application. 
+
+In this example, the socket connection with the bot can be retrieved through the `threadId`. In a collaborative context, such as meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface. 
+
 > [!NOTE]
 > This scenario works well for personal apps, for collaborative contexts such as, meeting stage, the `threadId` might need to be sent to the app server from the tab using the `teams-js` SDK. That would ensure that the app sends the message to the right context, rather than to the user's personal conversation with the bot.
 
