@@ -10,7 +10,7 @@ ms.author: anclear
 # Create a commands menu
 
 > [!NOTE]
-> We recommend you to refer [suggested prompts](~/bots/how-to/conversations/suggested-prompts-bots.md) as we are enhancing the command menu experience.
+> We’ve enhanced the command menu experience as prompt starters. We recommend you to refer to [prompt starters](~/bots/how-to/conversations/suggested-prompts-bots.md).
 
 To define a set of core commands that your bot can respond to, you can add a command menu with a dropdown list of commands for your bot. The list of commands is presented to the users in the compose message area when they are in conversation with your bot. Select a command from the list to insert the command string into the compose message box and select **Send**.
 

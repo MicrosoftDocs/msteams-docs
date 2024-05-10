@@ -13,6 +13,9 @@ Prompt suggestions are commands that are presented to the users in the Microsoft
 
 Prompt suggestions create an engaging and insightful user experience. They help your bot to acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
 
+> [!NOTE]
+> Prompt suggestions are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
+
 There are two types of prompt suggestions that you can use
 
 :::row:::
@@ -51,15 +54,15 @@ To create prompt starter using Developer Portal:
 
 1. Open Teams and select **Apps** from the left pane. In the **Apps** page, search for **Developer Portal**, and then select **Open**.
 
-   :::image type="content" source="../../assets/images/tdp/add-dev-portal.png" alt-text="Screenshot shows how to add Developer Portal in Teams client.":::
+   :::image type="content" source="~/assets/images/tdp/add-dev-portal.png" alt-text="Screenshot shows how to add Developer Portal in Teams client.":::
   
-1. In **Developer Portal**, select the **Apps** tab. If you don't have an existing app package, you can create or import an existing app. For more information, see [Developer Portal for Teams](../../concepts/build-and-test/teams-developer-portal.md).
+1. In **Developer Portal**, select the **Apps** tab. If you don't have an existing app package, you can create or import an existing app. For more information, see [Developer Portal for Teams](~/concepts/build-and-test/teams-developer-portal.md).
 
 1. Select **Apps** tab, select **App features** from the left pane, and then select **Bots**.
 
 1. Select **Add a command** under **Commands** section.
 
-   :::image type="content" source="../../assets/images/tdp/add-a-bot-command.png" alt-text="Screenshot shows how to add a command for your bot in Developer Portal.":::
+   :::image type="content" source="~/assets/images/tdp/add-a-bot-command.png" alt-text="Screenshot shows how to add a command for your bot in Developer Portal.":::
 
 1. Enter the **Command** that appears as the command menu for your bot.
 
@@ -68,7 +71,7 @@ To create prompt starter using Developer Portal:
 1. Select the **Scope** check box and then select **Add**.
    This defines where the command menu must appear.
 
-   :::image type="content" source="../../assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description, and scopes for your bot.":::
+   :::image type="content" source="~/assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description, and scopes for your bot.":::
 
 # [Manually in the app manifest](#tab/manually-in-the-app-manifest)
 
@@ -231,11 +234,4 @@ modified_text = TurnContext.remove_recipient_mention(turn_context.activity)
 
 ## Suggested actions
 
-> [!Note]
-> Suggested actions are currently available only in personal chat.
-
-Suggested actions are a way to help users continue their conversation with your bot. They give users some ideas of what to ask next, based on the previous response or conversation. Suggested actions can be prompts that go deeper into the previous answer, ask for more details to get a better answer, or switch to a related conversation.
-
-Your bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your bot’s large language model (LLM) to generate up to three possible suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose. For  more information, see [suggested actions.](~/bots/how-to/conversations/conversation-messages.md#send-suggested-actions)
-
-:::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::
+[!INCLUDE [suggested-actions](~/includes/bots/suggested-actions.md)]
