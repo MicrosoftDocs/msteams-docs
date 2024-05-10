@@ -8,9 +8,9 @@ ms.date: 07/22/2022
 
 # Share to Teams from web apps
 
-Share to Teams from web apps allow users to share a link directly to a chat, channel, or meeting without switching the context. Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select Share to Teams button, it launches the Share to Teams experience in a pop-up window.
+Share to Teams from web apps allow users to share a link directly to a chat, channel, or meeting without switching the context. Third-party websites can use the launcher script to embed Share to Teams buttons on their webpages. When you select the **Share to Teams** button, it launches the Share to Teams experience in a pop-up window.
 
-The following image displays the pop-up window through Share to Teams button:
+The following image displays the dialog that appears when the user selects **Share to Teams**:
 
 :::image type="content" source="~/assets/images/share-to-teams-popup.png" alt-text="Screenshot shows the Share to Teams dialog.":::
 
@@ -117,11 +117,11 @@ All share buttons are rendered on the page. If an optional `options` object is s
 
 To share content to meeting stage, you must ensure the following criteria are met:
 
-1. A [Teams app with a tab](../../apps-in-teams-meetings/build-tabs-for-meeting.md) that support Meeting side panel, instant tab, and [Share to Stage APIs](../../apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md).
+1. A [Microsoft Teams app with a tab](../../apps-in-teams-meetings/build-tabs-for-meeting.md) that supports meeting side panel, instant tab, and [Share to Stage APIs](../../apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md).
 
-2. To present the content onto the meeting stage, the meeting app must support [Share to Stage APIs](../../apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md), which has two major requirements:
+2. To present the content to the meeting stage, the meeting app must support [Share to Stage APIs](../../apps-in-teams-meetings/build-apps-for-teams-meeting-stage.md), which has two major requirements:
 
-    * The [app manifest](../../resources/schema/manifest-schema.md) must support both the Meeting Stage and Meeting Side Panel. You must configure `meetingStage` and `meetingSidePanel` as frame contexts in the app manifest. If not configured, meeting attendees might not be able to view the content on stage.
+    * The [app manifest](../../resources/schema/manifest-schema.md) must support both the meeting stage and meeting side panel. You must configure `meetingStage` and `meetingSidePanel` as frame contexts in the app manifest. If not configured, meeting attendees might not be able to view the content on stage.
     * The app must support `MeetingStage.Write.Chat` permissions for taking control of the stage. This is a read permission requirement.
 
 To enable your users to share content in meetings from Share to Teams, set `allow-share-in-meeting` attribute to `true` when configuring Share to Teams button:
