@@ -24,21 +24,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
-**2024 April**
+**2024 May**
 
-* ***May 24, 2024***: [Introduced Teams Adaptive Card samples](task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards)
-* ***April 12, 2024***: [Implement authentication in API-based search message extensions to provide secure and seamless access to your app.](messaging-extensions/build-api-based-message-extension.md#authentication)
-* ***April 12, 2024***: [Implement authentication in API-based search message extensions to provide secure and seamless access to your app.](messaging-extensions/build-api-based-message-extension.md#authentication).
-* ***April 12, 2024***: [Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards](resources/schema/manifest-schema.md).
-* ***April 12, 2024***: [Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem](resources/schema/manifest-schema.md#extensionsrequirements).
-* ***April 12, 2024***: [Create Dashboardcards that can be pinned to a dashboard such as Microsoft Viva Connections to provide a summarized view of app information](resources/schema/manifest-schema.md#dashboardcards).
-* ***April 12, 2024***: [Share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the CodeBlock element.](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)
-* ***April 12, 2024***: [Introduced bot configuration experience that helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot.](bots/how-to/bot-configuration-experience.md)
-* ***April 12, 2024***: [Use sample prompts to guide users on how to use the various plugins within Copilot.](messaging-extensions/high-quality-message-extension.md#sample-prompts)
-* ***April 10, 2024***: [Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.](m365-apps/overview.md#outlook-add-ins)
-* ***April 04, 2024***: [Added support for python in Teams AI library.](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
-* ***April 04, 2024***: [Stageview API with the openmode property allows you to open your app content in different Stageview experience.](tabs/open-content-in-stageview.md)
-* ***April 03, 2024***: [Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)
+* ***May 10, 2024***: [Introduced Teams Adaptive Card samples.](task-modules-and-cards/cards/design-effective-cards.md#types-of-adaptive-cards)
 
 :::column-end:::
 :::row-end:::
@@ -52,7 +40,18 @@ Teams platform features that are available to all app developers.
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-|27/03/2024|Configure Teams deep links using the msteams:// and https:// protocol handlers.|Integrate with Teams > Create deep links > Overview > [Protocol handlers in deep links](concepts/build-and-test/deep-links.md#protocol-handlers-in-deep-links)|
+|12/04/2024|Implement authentication in API-based search message extensions to provide secure and seamless access to your app.|Build message extensions > Build message extensions using API > Build API-based message extension > [Authentication](messaging-extensions/build-api-based-message-extension.md#authentication)|
+|12/04/2024|Introducing app manifest v1.17 with `semanticDescription`, `samplePrompts`, and `dashboardCards`.|App manifest > [App manifest schema](resources/schema/manifest-schema.md)|
+|12/04/2024|Outlook extensions specify Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem.|App manifest > App manifest schema > [extensions.requirements](resources/schema/manifest-schema.md#extensionsrequirements)|
+|12/04/2024|Create Dashboard cards that can be pinned to a dashboard such as Microsoft Viva Connections to provide a summarized view of app information.|App manifest > App manifest schema > [dashboardCards](resources/schema/manifest-schema.md#dashboardcards)|
+|12/04/2024|Share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element.|Build cards and dialogs > Build cards > Format cards in Teams > [CodeBlock in Adaptive Cards](task-modules-and-cards/cards/cards-format.md#codeblock-in-adaptive-cards)|
+|12/04/2024|Introduced bot configuration experience that helps you to enable the bot settings for users to configure their bot during installation and reconfigure the bot.|Build bots > [Bot configuration experience](bots/how-to/bot-configuration-experience.md)|
+|12/04/2024|Use sample prompts to guide users on how to use the various plugins within Copilot.|Build message extensions > Build message extensions using Bot Framework > Guidelines to extend bot-based message extension as plugin > [Sample prompts](messaging-extensions/high-quality-message-extension.md#sample-prompts)|
+|10/04/2024|Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.|Extend your app across Microsoft 365 > Overview > [Outlook Add-ins](m365-apps/overview.md#outlook-add-ins)|
+|04/04/2024|Added support for python in Teams AI library.|Build bots > Teams AI library > [Overview](bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)|
+|04/04/2024|Stageview API with the `openmode` property allows you to open your app content in different Stageview experience.|Build tabs > [Open content in Stageview](tabs/open-content-in-stageview.md)|
+|03/04/2024|Updated the common reasons for app validation failure to help your app pass the Teams Store submission process.|Distribute your app > Publish to the Teams Store > [Common reasons for app validation failure](concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md)|
+|27/03/2024|Configure Teams deep links using the `msteams://` and `https://` protocol handlers.|Integrate with Teams > Create deep links > Overview > [Protocol handlers in deep links](concepts/build-and-test/deep-links.md#protocol-handlers-in-deep-links)|
 |26/03/2024|Adaptive Cards responsive layout helps you to design cards to look great on any device in order to provide an enhanced user experience across chat, channels, and meeting chat.|Build cards and dialogs > Build cards > Format cards in Microsoft Teams > [Adaptive Card responsive layout](task-modules-and-cards/cards/cards-format.md#adaptive-card-responsive-layout)|
 |07/03/2024|Introduced Adaptive Card Previewer to view the realtime changes for Visual Studio 2022.|Tools and SDKs > Tools > [Adaptive Card Previewer for Visual Studio](concepts/build-and-test/adaptive-card-previewer-vs.md)|
 |07/03/2024|Introduced Teams App Test Tool that streamlines the debug process of bot-based apps for Visual Studio 2022.|Tools and SDKs > Tools > Teams Toolkit for Visual Studio > Prepare to build apps using Teams Toolkit > Debug your Teams app > [Debug bot using Teams App Test Tool](toolkit/toolkit-v4/debug-your-Teams-app-test-tool-vs.md)|
