@@ -98,7 +98,7 @@ You need to initialize MSAL and get an instance of the public client application
 ```javascript
 let pca = undefined;
 
-// Initialize the publice client application
+// Initialize the public client application
 Office.onReady(async (info) => {
     pca = await msalBrowser.PublicClientNext.createPublicClientApplication(msalConfig);
   });
@@ -113,7 +113,7 @@ The following steps show the pattern to use for acquiring a token:
 1. Call `publicClientApplication.getActiveAccount();` to fetch the active user account from MSAL’s cache.
 
 1. `accessTokenRequest` specifies the scopes for which the access token is requested. Nested app authentication supports incremental and dynamic consent so always request the minimum scopes needed for your code to complete its task.
-1. Call `publicClientApplication.acquireTokenSilent(accessTokenRequest)` to acquire the token silently without user interaction. If `acquireTokenSilent` fails, call `publicClientApplication.acquireTokenPopup(accessTokenRequest)` to display an interactive dialog for the user. acquireTokenSilent can fail if the token expired, or the user hasn't yet consented to all of the requested scopes.
+1. Call `publicClientApplication.acquireTokenSilent(accessTokenRequest)` to acquire the token silently without user interaction. If `acquireTokenSilent` fails, call `publicClientApplication.acquireTokenPopup(accessTokenRequest)` to display an interactive dialog for the user. acquireTokenSilent can fail if the token expired, or the user hasn't yet consented to all the requested scopes.
 
   ```javascript
 
@@ -160,7 +160,7 @@ After the user shows intent through the speed bump dialog, the `acquireTokenPopu
 
 ### Call an API
 
-After receiving the token, you use the token to can call the API. This ensures that the API is called with a valid token, allowing for authenticated requests to be made to the server.
+After receiving the token, you use the token to call the API. This ensures that the API is called with a valid token, allowing for authenticated requests to be made to the server.
 
 The following example shows how to make authenticated requests to the Microsoft Graph API to access Microsoft 365 data:
 
@@ -190,10 +190,10 @@ fetch(graphEndpoint, options)
   In certain cases, the acquireTokenSilent method's attempt to get the token fails. For example, when there's an expired user session with Microsoft Entra or a password change by the user, which requires user interaction. When the acquireTokenSilent fails, you need to call the interactive acquire token method (acquireTokenPopup).
 
 
-* **Have a fallback**: While we strive to provide a high-degree of compatibility with these flows across the Microsoft ecosystem, your application might appear in down-level/legacy clients aren't updated to support NAA. In these cases, your application doesn't support seamless SSO and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more info, see [Authenticate and authorize with the Office dialog API](/office/dev/add-ins/develop/auth-with-office-dialog-api).
+* **Have a fallback**: While we strive to provide a high degree of compatibility with these flows across the Microsoft ecosystem, your application might appear in down-level/legacy clients aren't updated to support NAA. In these cases, your application doesn't support seamless SSO and you might need to invoke special APIs for interacting with the user to open authentication dialogs. For more info, see [Authenticate and authorize with the Office dialog API](/office/dev/add-ins/develop/auth-with-office-dialog-api).
 
 * If you want to use nested app authentication need to register their single page application in Microsoft Entra and configure a broker schema redirect URI. you must also enable the native bridging in the app manifest and initialize MSAL JS in the app and then acquire the token using the new nested app authentication flow and use it to call the Microsoft Graph or other APIs.
 
 * You must check the support status of nested app authentication using the Teams JS SDK and provide a fallback experience for unsupported environments. For example, they can use the classic SSO or OBO flow for Teams mobile or Surface Hub.
 
-* **Test your application in multiple environments**: If your application is expected to work in both WebView and browser deployments, we recommend testing your application in both of these deployment environments to ensure it behaves as you expect. Not all APIs supported in the browser work inside of WebViews.
+* **Test your application in multiple environments**: If your application is expected to work in both WebView and browser deployments, we recommend testing your application in both deployment environments to ensure it behaves as you expect. Not all APIs supported in the browser work inside of WebViews.
