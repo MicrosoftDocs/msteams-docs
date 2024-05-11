@@ -17,7 +17,7 @@ Copilot handoff allows users to continue their conversation with a custom plugin
 
 Create a deep link URL with a `continuation` query parameter for the action button and assign a continuation token to the parameter to facilitate the handoff process. When the user selects the action button, Teams reads the continuation token from the URL and initiates an invoke call to the bot. The bot or plugin uses the continuation token to create a response, which is then displayed to the user in the plugin chat window.
 
-:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screnshot shows the handoff flow between the user, copilot, plugin, Teams, and bot.":::
+:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, copilot, plugin, Teams, and bot.":::
 
 To enable Copilot Handoff in Microsoft Teams, follow these steps:
 
