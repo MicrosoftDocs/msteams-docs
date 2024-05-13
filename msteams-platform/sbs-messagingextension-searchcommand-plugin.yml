@@ -18,21 +18,21 @@ items:
     >
     > * Bot-based search message extension plugin is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
     > * Only bot-based search message extension can be extended as a plugin in Microsoft Copilot for Microsoft 365 and Copilot for Microsoft Teams chats.
-    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in M365 Chat and Copilot for Teams chats.
+    > * Plugins for Copilot are in preview and only work in Copilot for Microsoft 365 and Copilot for Teams chats.
     
     Start Microsoft Teams app development with your first Teams app.
-    You can create a bot-based message extension plugin with Teams using JavaScript.  
+    You can create a bot-based message extension plugin with Teams using JavaScript.
     
     In this tutorial, you'll learn:
 
     - How to set up a new project with Teams Toolkit.
     - How to build a bot-based message extension plugin.
     - How to deploy your app.
-    - Trigger your bot-based message extension plugin in M365 Chat.
+    - Trigger your bot-based message extension plugin in Copilot for Microsoft 365.
 
-    This step-by-step guide helps you to build  bot-based message extension plugin with Teams Toolkit. You'll see the following output after you've completed this guide:
+    This step-by-step guide helps you to build bot-based message extension plugin with Teams Toolkit. You'll see the following output after you've completed this guide:
 
-     :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
+     :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Copilot for Microsoft 365.":::
 
 - title: Prerequisites
   durationInMinutes: 1
@@ -327,7 +327,7 @@ items:
 
     1. Go to a Teams chat and select **Actions and apps**.
     1. From the message extension fly-out menu, enter the name of your message extension from the search box.
-    1. Select your message extension and enter your search query.   
+    1. Select your message extension and enter your search query.
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-me-invoke.png" alt-text="Screenshot shows an example of a message extension invoked from a chat in Teams and the message extension displays a list of products based on the search query..":::
 
@@ -346,28 +346,28 @@ items:
     To run your app in Teams, you must have a Microsoft 365 development account that allows custom app upload. You can learn more about custom app upload in the prerequisites section.
     </details>
 
-- title: Trigger your bot-based message extension plugin in M365 Chat
+- title: Trigger your bot-based message extension plugin in Copilot for Microsoft 365
   durationInMinutes: 1
   content: |
-    To trigger the message extension in M365 Chat, follow these steps:
+    To trigger the message extension in Copilot for Microsoft 365, follow these steps:
 
     1. From the left pane, select **Teams Toolkit**.
     1. From the left pane, select **Run and Debug (Ctrl+Shift+D)**.
     1. Select Debug in **Copilot (Edge)** or **Debug in Copilot (Chrome)**.
-    1. Select **F5** to build and run your app in M365 Chat.
+    1. Select **F5** to build and run your app in Copilot for Microsoft 365.
     1. Go to **Microsoft Teams** > **Apps**.
-    1. Search for **M365 Chat** and open the app.
+    1. Search for **Copilot** and open the app.
     1. Select **Plugins**.
     1. From the list of plugins, turn on the toggle for your app.
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-plugin-toggle.png" alt-text="Screenshot shows the Plugin option, list of plugins, and the toggle enabled for bot-based-ME-test-local plugin.":::
 
-    1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
+    1. From the message compose area, send a message to Copilot for Microsoft 365 to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
-       :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
+       :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Copilot for Microsoft 365.":::
 
     > [!NOTE]
-    > This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the M365 Chat response and leave a message.
+    > This prompt might not always make Copilot for Microsoft 365 include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the Copilot for Microsoft 365 response and leave a message.
 
 
 - title: Deploy your first Teams app
@@ -384,7 +384,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the message extension app.
-    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -401,7 +401,7 @@ items:
     
     ## Deploy your app to Azure
 
-    Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the message extension app.
+    Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the message extension app.
     <br>
     <br>
     <details>
@@ -479,7 +479,7 @@ items:
   durationInMinutes: 1
   content: |
 
-    You've created a bot-based message extension and extended the message extension as a plugin in M365 Chat.
+    You've created a bot-based message extension and extended the message extension as a plugin in Copilot for Microsoft 365.
 
     
 

@@ -25,7 +25,7 @@ Microsoft 365 plugins provide integration with various Microsoft 365 products, s
 
 We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365 and Copilot for Teams chats. Message extensions must support one or more search commands, as Copilot for Microsoft 365 and Copilot for Teams chats recognizes them as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365 (M365 Chat).":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365.":::
 
 ## Mandatory requirements
 
@@ -40,11 +40,11 @@ The requirements for building message extension plugins for Copilot for Microsof
 
 ## Define descriptions
 
-A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 and Copilot for Teams chats to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365 (M365 Chat) or Copilot for Teams chats.
+A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 and Copilot for Teams chats to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365 or Copilot for Teams chats.
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot for Microsoft 365.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Copilot for Microsoft 365.":::
 
 Ensure that you adhere to the description guidelines listed in the following table:
 
@@ -417,9 +417,9 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 ## Compound utterances
 
 > [!NOTE]
-> Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in M365 Chat.
+> Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in Copilot for Microsoft 365 .
 
-For M365 Chat, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
+For Copilot for Microsoft 365, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
 
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
 * Copilot for Microsoft 365 and Copilot for chats in Teams might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
@@ -587,7 +587,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing M365 Chat app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot for Microsoft 365 app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
 
   <br/>
   <details><summary>Adaptive Card response template example</summary>
@@ -706,7 +706,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
   * `Action.Submit`: Opens a dialog or Stageview using type invoke in data object.
 
-  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Copilot for Microsoft 365.":::
 
 * If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
