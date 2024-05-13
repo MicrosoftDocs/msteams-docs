@@ -293,7 +293,7 @@ The following is the sample app manifest schema:
         ]
     },
     "defaultBlockUntilAdminAction": true,
-    "publisherDocsUrl": "https://website.com/app-info",
+    "publisherDocsUrl": "https://example.com/app-info",
     "defaultInstallScope": "meetings",
     "defaultGroupCapability": {
         "meetings": "tab",
