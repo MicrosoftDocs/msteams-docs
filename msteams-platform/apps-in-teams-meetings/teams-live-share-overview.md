@@ -280,7 +280,7 @@ switch(context.page?.frameContext) {
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-meetings-overview-full.png" alt-text="Screenshot showing meeting side panel and stage.":::
 
-As we've mentioned earlier, there are two meeting contexts: `meetingStage` and `sidePanel`. In this next section, we'll show how you might optimize these two contexts to provide an optimal user experience for your users.
+As we've mentioned earlier, there are two meeting contexts: `meetingStage` and `sidePanel`. In the following section, we'll explore how to optimize these contexts to enhance the user experience.
 
 #### Meeting stage
 
