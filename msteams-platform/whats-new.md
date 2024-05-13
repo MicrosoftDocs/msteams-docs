@@ -26,24 +26,6 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
-***May 22, 2024***: [Leverage AI capabilities to your bot messages]
-
-:::column-end:::
-:::row-end:::
-<br/>
-
-:::row:::
-:::column:::
-
-:::image type="icon" source="~/assets/images/general-availabe.png":::
-
-:::column-end:::
-:::column span="2":::
-
-Teams platform features that are available to all app developers.
-
-**2024 April**
-
 * ***April 12, 2024***: [Implement authentication in API-based search message extensions to provide secure and seamless access to your app.](messaging-extensions/build-api-based-message-extension.md#authentication).
 * ***April 12, 2024***: [Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards](resources/schema/manifest-schema.md).
 * ***April 12, 2024***: [Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem](resources/schema/manifest-schema.md#extensionsrequirements).
