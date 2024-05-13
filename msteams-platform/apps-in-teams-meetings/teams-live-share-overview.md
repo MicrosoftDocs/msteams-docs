@@ -337,7 +337,7 @@ Consider making the following optimizations for your `content` chat and channel 
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-collab-stage-full.png" alt-text="Screenshot showing Live Share in collaborative stageview, where a video player is open with avatars indicating where in the video each user is viewing..":::
 
-When users share your app's content with their colleagues in Teams, we recommend using [collaborative stageview](../tabs/open-content-in-stageview.md#collaborative-stageview). In this scenario, users open content that was shared in a popout window with chat on the side, allows users to engage with your content while continuing the conversation flow. Similar to chat and channel tabs, this content is primarily consumed asynchronously. However, if users send this through chat via an Adaptive Card, users are more likely to view the content and chat with one another, increasing the need for collaborative features.
+When users share your app's content with their colleagues in Teams, we recommend using [collaborative stageview](../tabs/open-content-in-stageview.md#collaborative-stageview). In this scenario, users open content that was shared in a popout window with chat on the side, allowing users to engage with your content while continuing the conversation flow. Similar to chat and channel tabs, this content is primarily consumed asynchronously. However, if users share the content through an Adaptive Card, users are more likely to view the content and chat with one another, increasing the need for collaborative features.
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-collab-stage.png" alt-text="Overview of unique use cases for Live Share in collaborative stageview.":::
 
