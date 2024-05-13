@@ -99,19 +99,13 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 Teams supports message extension plugins in Microsoft Copilot for Teams chats. Extending bot-based message extension plugins to Teams chats offers several benefits:
 
-* **Customization**: You can create plugins specific to your organization's needs for a more personalized and efficient use of Copilot for Teams chats.
+* **Expanded functionality**: Plugins for Copilot for Teams chats can offer functionalities that complement those of plugins Copilot for Microsoft 365 or meetings. For example, a plugin for Copilot for meetings might help schedule and manage meetings, while a plugin for Copilot for Teams chats could handle follow-up actions like sending meeting minutes or action items.
 
-* **Automation**: Plugins Copilot for Teams chat automates repetitive tasks to save time and reduce the chance of errors. For example, a plugin could send reminders in chats, or summarize a chat conversation.
-
-* **Integration**: Plugins can help integrate other tools or services into Copilot for Teams chats. This can streamline workflows by allowing users to access multiple tools from one place.
-
-If you're already using other Copilot plugins, such as plugins for Copilot for Microsoft 365 or Copilot for meetings, creating plugins for Copilot for Teams chats provides more benefits:
+* **Integration**: Plugins can help integrate other external tools or services into Copilot for Teams chats. This can streamline workflows by allowing users to access multiple tools and services from one place, reducing context switchesS.
 
 * **Consistency**: Having plugins for both chat and meetings can provide a consistent user experience across different modes of communication.
 
-* **Expanded functionality**: Plugins for Copilot for Teams chats can offer functionalities that complement those of plugins Copilot for meetings. For example, a plugin for Copilot for meetings might help schedule and manage meetings, while a plugin for Copilot for Teams chats could handle follow-up actions like sending meeting minutes or action items.
-
-In a business scenario, you could develop a plugin for Copilot for Teams chats that automatically sends survey questions to customers after a support interaction. The plugin could then collect the responses, analyze the data, and generate a report. This would save the business time and effort, and allow them to quickly and efficiently gather customer feedback.
+For example, consider a scenario where an accessibility issue is identified in a one-on-one chat. With an Azure DevOps plugin for Copilot for Teams chats activated, Copilot for Teams chats can be instructed to create a bug in Azure DevOps to track the identified issue. Copilot uses relevant information from the conversation to activate the Azure DevOps plugin, resulting in the creation of a bug.
 
 To learn how to build a bot-based message extension plugin for Copilot for Teams chats, see [Extend bot-based message extension as plugin for Copilot for Microsoft 365 and Copilot for Teams chats](build-bot-based-plugin.md).
 
