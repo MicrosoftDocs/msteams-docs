@@ -119,7 +119,9 @@ The query parameters are:
 >
 > * Personal tabs have a `personal` scope, while channel and group tabs use `team` or `group` scopes. The two tab types have a slightly different syntax since only the configurable tab has a `channel` property associated with its context object. For more information on tab scopes, see the [app manifest](~/resources/schema/manifest-schema.md).
 > * Deep links work properly only if the tab was configured using the library v0.4 or later as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
->* Teams can't parse deep links that exceed 1900 characters in length on Microsoft Windows. This limitation originates from the Windows ShellExecuteEx API, which browsers use to launch the Teams desktop client and handle the deep link. The paths in ShellExecuteEx are constrained by `INTERNET_MAX_URL_LENGTH`, which is 2048 characters. When passing large amounts of data via deep links, it’s necessary to include the path to the Teams client within this character limit. It’s recommended to include a unique identifier in the deep link, which your app can use to retrieve the data from your backend service.
+>* On Microsoft Windows, Teams can't process deep links that are longer than 2048 characters. This limit is due to `INTERNET_MAX_URL_LENGTH` in the Windows ShellExecuteEx API, which sets the maximum length to 2048 characters.
+
+When creating a deep link, you need to ensure that the path to the Teams client and any other metadata fit within this 2048 character limit. If your deep link needs to carry a large amount of data, we recommend including a unique identifier in the link. Your app can then use this identifier to fetch the necessary data from your backend service.
 
 **Examples**:
 
