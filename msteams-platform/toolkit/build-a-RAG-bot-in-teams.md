@@ -88,7 +88,7 @@ Teams Toolkit provides a series ready to use application templates under the cat
 
 Now, you've successfully created your chat with your data project workspace.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-project-outputpng" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
 1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
 

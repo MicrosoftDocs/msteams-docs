@@ -59,11 +59,11 @@ The AI Chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
 
-   To change the default location, follow these steps:
+    To change the default location, follow these steps:
 
-    1. Select **Browse**.
-    1. Select the location for the project workspace.
-    1. Select **Select Folder**.
+      1. Select **Browse**.
+      1. Select the location for the project workspace.
+      1. Select **Select Folder**.
 
 1. Enter an application name for your app and then select the **Enter** key.
 
@@ -128,6 +128,7 @@ Image.
 |`src/config.py`| Defines the environment variables.|
 |`src/prompts/chat/skprompt.txt`| Defines the prompt.|
 |`src/prompts/chat/config.json`| Configures the prompt.|
+
 ---
 
 ## How Teams AI Chatbot works
