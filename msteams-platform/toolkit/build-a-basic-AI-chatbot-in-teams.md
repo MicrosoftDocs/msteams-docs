@@ -39,27 +39,39 @@ The AI Chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
 
-1. Select **Basic AI Chatbot**. image
+1. Select **Basic AI Chatbot**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/basic-ai-chatbot.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
 
-1. Select **JavaScript**. image
+1. Select **JavaScript**.
 
-1. Select **Azure OpenAI**. image
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
 
-1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**. image
+1. Select **Azure OpenAI**.
 
-1.  Select **Default folder**.image
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
+
+1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter azure open API key.":::
+
+1.  Select **Default folder**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
 
     To change the default location, follow these steps:
 
-    1. Select **Browse**.image
+    1. Select **Browse**.
     1. Select the location for the project workspace.
-    1. Select **Select Folder**.image
+    1. Select **Select Folder**.
 
-1. Enter an application name for your app and then select the **Enter** key. image 
+1. Enter an application name for your app and then select the **Enter** key.
 
-Now, you've successfully created your AI chat bot project workspace. Image
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
+
+Now, you've successfully created your AI chat bot project workspace. 
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-chatbot-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
 1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
 
@@ -67,14 +79,16 @@ Now, you've successfully created your AI chat bot project workspace. Image
     Azure OpenAI key `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
     Endpoint `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
     Deployment name `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
-image
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
 
 1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
-image
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
 Test Tool opens the bot in a webpage.
 
-Image
+Image.
 
 ## Take a tour of the bot app source code
 
@@ -141,3 +155,13 @@ image
 1. Respond to User: The Teams AI library saves the state, and the bot can send the response to the user.
 
 ## Customize Basic AI Chatbot
+
+You can add customizations on top of this basic application to build more complex scenarios as follows:
+
+1. Customize prompt:
+1. Customize user input:
+1. Customize conversation history:
+1. Customize model type:
+1. Customize model parameters:
+
+## See also
