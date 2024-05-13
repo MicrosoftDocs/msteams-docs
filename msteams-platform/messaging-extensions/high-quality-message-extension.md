@@ -711,6 +711,55 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
+## Best practices to extend message extension plugin to Copilot
+
+If you have Search message extension v1.13 or higher and have enabled the M365 channel, your application will work in Copilot in Teams. To enable your message extensions as a plugin in Microsoft Copilot, we recommed you to implement the following best practices:
+
+* **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.19.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This will ensure that your application continues to work with Bing domains.
+
+* **Update Microsoft Entra ID app registration for SSO**: Microsoft Entra ID single sign-on (SSO) for message extensions works the same way in Bing as it does in Teams or Outlook. However, you need to add Bing’s client application identifiers to your bot's Azure AD app registration in your tenant's App registrations portal. To do this, follow these steps:
+
+   1. Sign in to the Azure portal with your sandbox tenant account.
+   1. Open App registrations.
+   1. Select the name of your application to open its app registration.
+   1. Select Expose an API (under Manage).
+   1. In the Authorized client applications section, ensure that the following Client ID values are listed:
+
+    | Microsoft 365 client application | Client ID |
+    | --- | --- |
+    | Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
+    | Bing (Staging) | ef47e344-4bff-4e28-87da-6551a21ffbe0 |
+    |Teams desktop and mobile|	1fec8e78-bce4-4aaf-ab1b-5451cc387264|
+    |Teams web	| 5e3ce6c0-2b1f-4285-8d4b-75ee78787346|
+    |Microsoft 365 web |	4765445b-32c6-49b0-83e6-1d93765276ca|
+    |Microsoft 365 desktop	| 0ec893e0-5785-4de6-99da-4ed124e5296c|
+    |Microsoft 365 mobile	| d3590ed6-52b3-4102-aeff-aad2292ab01c |
+    |Outlook desktop	| d3590ed6-52b3-4102-aeff-aad2292ab01c |
+    | Outlook Web Access	| bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+    |Outlook mobile	| 27922004-5251-4030-b22d-91ecd9a37ea4 |
+
+* **Configure Content Security Policy Headers**: If your app uses Content Security Policy (CSP) headers, make sure to allow the following frame-ancestors in your CSP headers:
+
+   | Microsoft 365 app host | frame-ancestor permission |
+   | --- | --- |
+   | Bing | edgeservices.bing.com, <www.bing.com>, <www.staging-bing-int.com>, copilot.microsoft.com |
+   |App Copilots| microsoftonline.com <br> sharepoint-df.com <br> sharepoint.com<br>sharepointonline.com<br>spgrid.com<br>spolabs.com<br>spoppe.com<br>sposites.com<br>partner.microsoftonline.cn<br>sharepoint.cn<br>sharepoint.de<br>myus.msftsptest.com<br>my.microsoftpersonalcontentppe.com<br>wopi.onedrive.com<br>wopi.onedrive-tst.com<br>outlook.office.com<br>outlook-sdf.office.com<br>outlook.live.com<br>outlook-sdf.live.com<br>outlook-tdf.live.com<br>sdfpilot.live.com<br>outlook.office365.us<br>outlook.office365.com<br>exchangelabs.live-int.com<br>office-int.com<br>officeapps.live-int.com<br>officeapps.live.com<br>officeapps.live-int.com<br>officeapps-df.live.com<br>fa000000125.resources.office.net<br>fa000000129.resources.office.net<br>fa000000124.resources.office.net<br>fa000000128.resources.office.net<br>*.microsoftonline.com<br>*.sharepoint-df.com<br>*.sharepoint.com<br>*.sharepointonline.com<br>*.spgrid.com<br>*.spolabs.com<br>*.spoppe.com<br>*.sposites.com<br>*.partner.microsoftonline.cn<br>*.sharepoint.cn<br>*.sharepoint.de<br>*.myus.msftsptest.com<br>*.my.microsoftpersonalcontentppe.com<br>*.wopi.onedrive.com<br>*.wopi.onedrive-tst.com<br>*.officeapps.live.com<br>*.officeapps.live-int.com<br>*.officeapps-df.live.com|
+
+* Validate that network connectivity to your application endpoints is available.
+
+* Configure [app setup policies](/microsoftteams/teams-app-setup-policies#assign-a-custom-policy-in-app-setup-policy-to-users-and-groups) to allow custom apps upload. *[Optional]*.
+
+* Create a [Teams app package](../concepts/build-and-test/apps-package.md), which consists  an app manifest and app icons.
+
+* Upload the app package for a single developer or for the tenant.
+
+* If your're publishing the app to the tenant, configure an [app permissions policy](/microsoftteams/teams-app-permission-policies) to limit access to specific users.
+
+* Validate that the app works as expected across Micrososft 365 apps such as Teams, Outlook, office.com, mobile, and Microsoft Copilot for Microsoft 365 in Teams and copilot.microsoft.com.
+
+* Complete organization’s formal publishing process for production.
+
+
 ## Technical requirements
 
 For a plugin to be validated, invoked, and work seamlessly, ensure that it meets the following criteria:
