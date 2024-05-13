@@ -52,27 +52,43 @@ Teams Toolkit provides a series ready to use application templates under the cat
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
 
-1. Select **Chat With Your Data**. image
+1. Select **Chat With Your Data**.
 
-1. Select **Customize**. image
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/chat-with-your-data.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
 
-1. Select **JavaScript**. image
+1. Select **Customize**.
 
-1. Select **Azure OpenAI**. image
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/chat-with-data-customize.png" alt-text="Screenshot shows the option to select the data customization for loading.":::
 
-1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**. image
+1. Select **JavaScript**.
 
-1.  Select **Default folder**.image
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
+
+1. Select **Azure OpenAI**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
+
+1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
+
+1.  Select **Default folder**.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
 
     To change the default location, follow these steps:
 
-    1. Select **Browse**.image
+    1. Select **Browse**.
     1. Select the location for the project workspace.
-    1. Select **Select Folder**.image
+    1. Select **Select Folder**.
 
-1. Enter an application name for your app and then select the **Enter** key. image 
+1. Enter an application name for your app and then select the **Enter** key.
 
-Now, you've successfully created your AI chat bot project workspace. Image
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
+
+Now, you've successfully created your chat with your data project workspace.
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-project-outputpng" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
 1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
 

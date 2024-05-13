@@ -42,29 +42,45 @@ Table
 
 1. Select **AI Agent**. image
 
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
+
 1. To build an app, follow either of the building agent steps:
     
     # [Build New](#tab/buildnew)
     
-    1. Select **Build New**. image
+    1. Select **Build New**.
     
-    1. Select **JavaScript**. image
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/build-new.png" alt-text="Screenshot shows the option to select the available AI agents.":::
     
-    1. Select **Azure OpenAI**. image
+    1. Select **JavaScript**. 
     
-    1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**. image
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
     
-    1.  Select **Default folder**.image
+    1. Select **Azure OpenAI**. 
+    
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
+    
+    1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**.
+    
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
+    
+    1.  Select **Default folder**.
+    
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
     
         To change the default location, follow these steps:
     
-        1. Select **Browse**.image
+        1. Select **Browse**.
         1. Select the location for the project workspace.
-        1. Select **Select Folder**.image
+        1. Select **Select Folder**.
     
-    1. Enter a application name for your app and then select the **Enter** key. image 
+    1. Enter an application name for your app and then select the **Enter** key.
     
-    Now, you've successfully created your AI chat bot project workspace. image
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
+    
+    Now, you've successfully created your AI chat bot project workspace.
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-new.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
     
     1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
     
@@ -72,16 +88,18 @@ Table
         Azure OpenAI key `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
         Endpoint `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
         Deployment name `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
-    image
+    
+        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
     
     1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
-    image
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
     ## Take a tour of the bot app source code
 
     | Folder       | Contents                                            |
     | - | - |
-    | `.vscode`    | VSCode files for debugging                          |
+    | `.vscode`    | Visual Studio Code files for debugging                          |
     | `appPackage` | Templates for the Teams application manifest        |
     | `env`        | Environment files                                   |
     | `infra`      | Templates for provisioning Azure resources          |
@@ -101,7 +119,7 @@ Table
     |`src/app/messages.js`| Defines the message activity handlers.|
     |`src/app/actions.js`| Defines the AI actions.|
     
-    The following are Teams Toolkit specific project files. You can [visit a complete guide on Github](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.
+    The following are Teams Toolkit specific project files. You can [visit a complete guide on GitHub](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.
     
     | File                                 | Contents                                           |
     | - | - |
@@ -113,33 +131,44 @@ Table
     
     Build with Assistants API Preview
     
-    1. Select **Build with Assistants API Preview**. image
-    
-    1. Select **JavaScript**. image
-    
+    1. Select **Build with Assistants API Preview**.
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/build-assistants-api.png" alt-text="Screenshot shows the option to select the available AI agents.":::
+
+    1. Select **JavaScript**.
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
+
     > [!NOTE]
     > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
     * The `AssistantsPlanner` in Teams AI Library is currently in preview version.
-    
-    1. Select **OpenAI**. image
-    
-    1. Based on your service selection, you can optionally enter the credentials to access OpenAI. Select **Enter**. image
-    
-    1.  Select **Default folder**.image
+
+    1. By default **OpenAI** service gets selected, you can optionally enter the credentials to access OpenAI. Select **Enter**.
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
+
+    1.  Select **Default folder**.
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
     
         To change the default location, follow these steps:
     
-        1. Select **Browse**.image
+        1. Select **Browse**.
         1. Select the location for the project workspace.
-        1. Select **Select Folder**.image
+        1. Select **Select Folder**.
     
-    1. Enter a application name for your app and then select the **Enter** key. image 
-    
-    Now, you've successfully created your AI chat bot project workspace. image
-    
+    1. Enter an application name for your app and then select the **Enter** key.
+
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
+
+    Now, you've successfully created your AI chat bot project workspace
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-assistant-api.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+
     ## Create your own OpenAI Assistant
     
-    Before running or debugging your bot, please follow these steps to setup your own [OpenAI Assistant](https://platform.openai.com/docs/assistants/overview).
+    Before running or debugging your bot, please follow these steps to set up your own [OpenAI Assistant](https://platform.openai.com/docs/assistants/overview).
     
     **If you haven't setup any Assistant yet**
     
@@ -157,7 +186,7 @@ Table
         ```
     1. The above command will output something like "*Created a new assistant with an ID of: **asst_xxx...***"
     
-    1. Go to **Visual Studio Code**, Under **EXPLORER**, select **env** > **.env.*.userr** file.
+    1. Go to **Visual Studio Code**, Under **EXPLORER**, select **env** > **.env.*.users** file.
     
     1. Update the following details:
         SECRET_OPENAI_API_KEY=<your-openai-api-key>
@@ -165,14 +194,15 @@ Table
     image
 
     1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
-    image
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
     ## Take a tour of the bot app source code
     
     
     | Folder       | Contents                                            |
     | - | - |
-    | `.vscode`    | VSCode files for debugging                          |
+    | `.vscode`    | Visual Studio Code files for debugging                          |
     | `appPackage` | Templates for the Teams application manifest        |
     | `env`        | Environment files                                   |
     | `infra`      | Templates for provisioning Azure resources          |

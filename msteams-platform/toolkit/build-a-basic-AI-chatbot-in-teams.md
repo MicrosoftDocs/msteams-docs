@@ -53,13 +53,13 @@ The AI Chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
 1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter azure open API key.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
 1.  Select **Default folder**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
 
-    To change the default location, follow these steps:
+   To change the default location, follow these steps:
 
     1. Select **Browse**.
     1. Select the location for the project workspace.
