@@ -1889,7 +1889,8 @@ When you start your application this way, the `LiveShareClient` adds `#{containe
 
 ## Next step
 
-> [!div class="nextstepaction"] > [Live Share media](teams-live-share-media-capabilities.md)
+> [!div class="nextstepaction"]
+> [Live Share media](teams-live-share-media-capabilities.md)
 
 ## See also
 
