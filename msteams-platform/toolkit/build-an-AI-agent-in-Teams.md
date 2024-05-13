@@ -23,9 +23,6 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
 | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
-## How to choose between Build New and Build with Assistants API
-Table
-
 ## Create a new AI Agent project
 
 1. Open **Visual Studio Code**.
@@ -184,7 +181,7 @@ Table
         ```
         > npm run assistant:create -- xxxxxx
         ```
-    1. The above command will output something like "*Created a new assistant with an ID of: **asst_xxx...***"
+    1. The above command outputs something like "*Created a new assistant with an ID of: **asst_xxx...***"
     
     1. Go to **Visual Studio Code**, Under **EXPLORER**, select **env** > **.env.*.users** file.
     
@@ -219,4 +216,81 @@ Table
     |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
     ---
 
-How Teams AI Library is used to create an AI Agent.
+## How Teams AI Library is used to create an AI Agent.
+
+### Build New
+
+Teams AI Library provides a comprehensive flow that facilitates you to build your own AI agent. These are the most important concepts you need to know:
+
+* Actions: An action is an atomic function that is registered to the AI System. It's a fundamental building block of a plan.
+* Planner: The planner receives the user's ask and returns a plan on how to accomplish the request. The user's ask is in the form of a prompt or prompt template. It does this by using AI to mix and match atomic functions (called actions) registered to the AI system so that it can recombine them into a series of steps that complete a goal.
+* Action PlannerThe Action Planner is a powerful planner that uses an LLM to generate plans. It can trigger parameterized actions and send text-based responses to the user.
+
+### Build with Assistants API
+
+Assistants API from OpenAI to simplify the development effort of creating an AI agent. OpenAI as a platform offers prebuilt tools such as Code Interpreter, Knowledge Retrieval and Function Calling that drastically simplifies the code you need to write for common scenarios.
+
+## Customize the application template
+
+### Customize prompt augmentation
+The SDK provides a functionality to augment the prompt. With augmentation:
+
+The actions defined in src/prompts/planner/actions.json will be inserted into the prompt to let LLM know the available functions.
+An internal piece of prompt text will be inserted into the prompt to instruct LLM to determine which functions to call based on the available functions. This prompt text orders LLM to generate the response in a structured json format.
+The SDK validates the LLM response and lets LLM correct or refine the response if the response is in wrong format.
+In src/prompts/planner/config.json, configure augmentation.augmentation_type. The options are:
+
+Sequence: suitable for tasks that require multiple steps or complex logic.
+Monologue: suitable for tasks that require natural language understanding and generation, and more flexibility and creativity.
+
+### Add functions (Build New)
+In src/prompts/planner/actions.json, define your actions schema.
+[
+    ...
+    {
+        "name": "myFunction",
+        "description": "The function description",
+        "parameters": {
+            "type": "object",
+            "properties": {
+                "parameter1": {
+                    "type": "string",
+                    "description": "The parameter1 description"
+                },
+            },
+            "required": ["parameter1"]
+        }
+    }
+]
+In src/app/actions.ts, define the action handlers.
+// Define your own function
+export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
+  // Implement your function logic
+  ...
+  // Return the result
+  return "...";
+}
+In src/app/app.ts, register the actions.
+app.ai.action("myFunction", myFunction);
+back to top
+
+### Customize assistant creation
+
+The file src/creator.ts creates a new OpenAI Assistant. You can customize the assistant creation by updating the parameters including instruction, model, tools, and functions.
+
+### Add functions (with Assistants API)
+
+When the assistant returns a function that needs to be called along with its arguments, the SDK maps the function to the corresponding action that is registered in advance, then calls the action handler and submits the results to the assistant. You can add your functions by registering the actions into the app.
+
+In src/app/actions.ts, define the action handlers.
+// Define your own function
+export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
+  // Implement your function logic
+  ...
+  // Return the result
+  return "...";
+}
+In src/app/app.ts, register the actions.
+app.ai.action("myFunction", myFunction);
+
+# See also
