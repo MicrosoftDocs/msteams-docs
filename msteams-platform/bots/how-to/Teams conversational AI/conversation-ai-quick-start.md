@@ -11,7 +11,7 @@ ms.date: 12/06/2022
 
 # Teams AI library quick start guide
 
-Get started with Teams AI library using the lightBot sample, which is designed to  to help you cook apps using the Teams AI Library. The bot uses the gpt-3.5-turbo model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+Get started with Teams AI library using the Light bot sample, which is designed to  to help you cook apps using the Teams AI Library. The bot uses the gpt-3.5-turbo model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 ## Prerequisites
 
@@ -45,7 +45,7 @@ Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword
 
 ## Build and run the sample app
 
-Get started with Teams AI library using the **lightBot** sample. It enables your computer’s localhost to quickly execute a Teams AI library-based sample.
+Get started with Teams AI library using the **LightBot** sample. It enables your computer’s localhost to quickly execute a Teams AI library-based sample.
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
@@ -87,7 +87,7 @@ Get started with Teams AI library using the **lightBot** sample. It enables your
 
 1. After the dependencies are installed, select **File** > **Open Folder**.
 
-1. Go to **teams-ai > js > samples> 03.ai-concepts> c.actionMapping-lightBot** and select **Select Folder**. All the files for the lightBot sample are listed under the **EXPLORER** section in Visual Studio Code.
+1. Go to **teams-ai > js > samples> 03.ai-concepts> c.actionMapping-lightBot** and select **Select Folder**. All the files for the Light bot sample are listed under the **EXPLORER** section in Visual Studio Code.
 
       # [OpenAI key](#tab/OpenAI-key)
 
@@ -277,7 +277,7 @@ Before get started, ensure that you've installed the [python](https://www.python
    cd teams-ai/python
    ```
 
-1. Go to the folder where you cloned the repository and select **04.ai.c.actionMapping.lightBot**. All the files for the lightBot sample are listed under the EXPLORER section in Visual Studio Code.
+1. Go to the folder where you cloned the repository and select **04.ai.c.actionMapping.lightBot**. All the files for the Light bot sample are listed under the EXPLORER section in Visual Studio Code.
 
 1. Under **EXPLORER**, duplicate the **sample.env** file and update the duplicate file to **.env**.
 
