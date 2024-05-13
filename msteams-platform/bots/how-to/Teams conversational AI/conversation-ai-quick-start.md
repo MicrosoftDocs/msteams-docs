@@ -243,11 +243,11 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
 
 1. Select **Add**. The app is added to Teams and a chat window opens.
 
-   Image placeholder
+   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the lightbot app.":::
 
 1. In the message compose area, send a message to invoke the bot.
 
-   Image placeholder
+   :::image type="content" source="../../../assets/images/bots/lightbot-output.png" alt-text="Screenshot shows an example of the lightbot output.":::
 
 You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow these steps:
 
