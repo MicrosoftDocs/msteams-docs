@@ -150,13 +150,13 @@ Get started with Teams AI library using the **lightBot** sample. It enables your
 
 1. Select **Add**.
 
-   Image placeholder
+   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the lightbot app.":::
 
    A chat window opens.
 
 1. In the message compose area, send a message to invoke the bot.
 
-   Image placeholder
+   :::image type="content" source="../../../assets/images/bots/lightbot-output.png" alt-text="Screenshot shows an example of the lightbot output.":::
 
 The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
