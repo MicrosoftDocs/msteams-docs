@@ -94,40 +94,40 @@ Image.
 
 # [JavaScript](#tab/javascript)
 
-    | Folder       | Contents                                            |
-    | - | - |
-    | `.vscode`    | Visual Studio Code files for debugging                          |
-    | `appPackage` | Templates for the Teams application manifest        |
-    | `env`        | Environment files                                   |
-    | `infra`      | Templates for provisioning Azure resources          |
-    | `src`        | The source code for the application                 |
-    |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
-    |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-    |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
-    |`src/index.js`| Sets up the bot app server.|
-    |`src/adapter.js`| Sets up the bot adapter.|
-    |`src/config.js`| Defines the environment variables.|
-    |`src/prompts/chat/skprompt.txt`| Defines the prompt.|
-    |`src/prompts/chat/config.json`| Configures the prompt.|
-    |`src/app/app.js`| Handles business logics for the Basic AI Chatbot.|
+| Folder       | Contents                                            |
+| - | - |
+| `.vscode`    | Visual Studio Code files for debugging                          |
+| `appPackage` | Templates for the Teams application manifest        |
+| `env`        | Environment files                                   |
+| `infra`      | Templates for provisioning Azure resources          |
+| `src`        | The source code for the application                 |
+|`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
+|`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
+|`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`src/index.js`| Sets up the bot app server.|
+|`src/adapter.js`| Sets up the bot adapter.|
+|`src/config.js`| Defines the environment variables.|
+|`src/prompts/chat/skprompt.txt`| Defines the prompt.|
+|`src/prompts/chat/config.json`| Configures the prompt.|
+|`src/app/app.js`| Handles business logics for the Basic AI Chatbot.|
 
 # [Python](#tab/python)
 
-    | File                                 | Contents                                           |
-    | - | - |
-    | `.vscode`    | Visual Studio Code files for debugging                          |
-    | `appPackage` | Templates for the Teams application manifest        |
-    | `env`        | Environment files                                   |
-    | `infra`      | Templates for provisioning Azure resources          |
-    | `src`        | The source code for the application                 |
-    |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
-    |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-    |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
-    |`src/app.py`| Hosts an aiohttp API server and exports an app module.|
-    |`src/bot.py`| Handles business logics for the Basic AI Chatbot.|
-    |`src/config.py`| Defines the environment variables.|
-    |`src/prompts/chat/skprompt.txt`| Defines the prompt.|
-    |`src/prompts/chat/config.json`| Configures the prompt.|
+| File                                 | Contents                                           |
+| - | - |
+| `.vscode`    | Visual Studio Code files for debugging                          |
+| `appPackage` | Templates for the Teams application manifest        |
+| `env`        | Environment files                                   |
+| `infra`      | Templates for provisioning Azure resources          |
+| `src`        | The source code for the application                 |
+|`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
+|`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
+|`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+|`src/app.py`| Hosts an aiohttp API server and exports an app module.|
+|`src/bot.py`| Handles business logics for the Basic AI Chatbot.|
+|`src/config.py`| Defines the environment variables.|
+|`src/prompts/chat/skprompt.txt`| Defines the prompt.|
+|`src/prompts/chat/config.json`| Configures the prompt.|
 ---
 
 ## How Teams AI Chatbot works
