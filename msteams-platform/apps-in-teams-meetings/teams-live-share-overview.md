@@ -315,7 +315,7 @@ The `content` context is designed for asynchronous consumption of your app's con
 - Collaborative stage view
 
 > [!NOTE]
-> The `content` context is also used for personal apps, which Live Share does not support. Live Share only supports `content` contexts on Teams desktop and web clients.
+> The `content` context is also used for personal apps, which Live Share doesn't support. Live Share only supports `content` contexts on Teams desktop and web clients.
 
 #### Chat and channel tabs
 
