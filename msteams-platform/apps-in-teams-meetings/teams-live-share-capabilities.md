@@ -57,9 +57,13 @@ To enable the Live Share SDK for your tab extension, you must first add the foll
             "team"
         ],
         "context": [
+            // meeting contexts
             "meetingSidePanel",
             "meetingStage",
-            "content"
+            // content contexts
+            "privateChatTab",
+            "channelTab",
+            "meetingChatTab"
         ]
     }
   ],
