@@ -172,26 +172,37 @@ Some possible name suggestions for a pet golden retriever are:
 Using project generated with Teams Toolkit, you can author the prompts in src/prompts/chat/skprompt.txt file. The prompts written in this file will be inserted into the prompt used to instruct the LLM. Teams AI library defines the following syntax that you can use in the prompt text.
 
 Syntax 1: {{ $[scope].property }}
-{{ $[scope].property }} Renders the value of the scoped property that is defined in turn state. Teams AI library defines three scopes: temp, user and conversation. If scope is omitted, the temp scope is used.
+`{{ $[scope].property }}` Renders the value of the scoped property that is defined in turn state. Teams AI library defines three scopes: temp, user and conversation. If scope is omitted, the temp scope is used.
 
-The {{$[scope].property}} is used in the following way:
+The `{{$[scope].property}}` is used in the following way:
 
 For JavaScript language:
-In src/app/turnState.ts, define your temp state, user state, conversation state and application turn state.
 
+In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
+
+```typescript
 export interface TempState extends DefaultTempState { ... }
 export interface UserState extends DefaultUserState { ... }
 export interface ConversationState extends DefaultConversationState {
     tasks: Record<string, Task>;
 }
 export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
+```
 In src/app/app.ts, use application turn state to initialize application.
 
+```typescript
+
 const app = new Application<ApplicationTurnState>(...);
-In src/prompts/chat/skprompt.txt, use the scoped state property such as {{$conversation.tasks}}.
+
+```
 
 For Python language:
-In src/state.py, define your temp state, user state, conversation state and application turn state.
+
+In `src/prompts/chat/skprompt.txt` use the scoped state property such as {{$conversation.tasks}}.
+
+In `src/state.py`, define your temp state, user state, conversation state and application turn state.
+
+```python
 
 from teams.state import TempState, ConversationState, UserState, TurnState
 
@@ -213,26 +224,44 @@ class AppTurnState(TurnState[AppConversationState, UserState, TempState]):
             user=await UserState.load(context, storage),
             temp=await TempState.load(context, storage),
         )
-In src/bot.py, user application turn state to initialize application.
+
+```
+
+In `src/bot.py`, user application turn state to initialize application.
+
+```python
 
 from state import AppTurnState
 
 app = Application[AppTurnState](...)
-In src/prompts/chat/skprompt.txt, use the scoped state property such as {{$conversation.tasks}}.
 
-Syntax 2: {{ functionName }}
+```
+
+In `src/prompts/chat/skprompt.txt`, use the scoped state property such as {{$conversation.tasks}}.
+
+Syntax 2: `{{ functionName }}`
+
 To call an external function and embed the result in your text, use the {{ functionName }} syntax. For example, if you have a function called getTasks that can return a list of task items, you can embed the results into the prompt:
 
 For JavaScript language:
-Register the function into prompt manager in src/app/app.ts:
+
+Register the function into prompt manager in `src/app/app.ts`:
+
+```typescript
 
 prompts.addFunction("getTasks", async (context: TurnContext, memory: Memory, functions: PromptFunctions, tokenizer: Tokenizer, args: string[]) => {
   return ...
 });
+
+```
+
 Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
 
 For Python language:
+
 Register the function into prompt manager in src/bot.py:
+
+```python
 
 @prompts.function("getTasks")
 async def get_tasks(
@@ -243,15 +272,19 @@ async def get_tasks(
     _args: List[str],
 ):
     return state.get("conversation.tasks")
-Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
 
-Syntax 3:  {{ functionName arg1 arg2 }}
+```
+
+Use the function in `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
+
+Syntax 3:  `{{ functionName arg1 arg2 }}`
+
 This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
 
 Register the function into prompt manager:
-For JavaScript language, register it in src/app/app.ts.
-For Python language, register it in src/bot.py.
-Use the function in src/prompts/chat/skprompt.txt such as Your task is: {{ getTasks taskTitle }}.
+For JavaScript language, register it in `src/app/app.ts`.
+For Python language, register it in `src/bot.py`.
+Use the function in `src/prompts/chat/skprompt.txt` such as Your `task is: {{ getTasks taskTitle }}`.
 
 1. Customize user input: Teams AI library allows you to augment the prompt sent to LLM by including the user inputs. When including user inputs, you need to specify it in a prompt configuration file by setting completion.include_input to true in src/prompts/chat/config.json. You can also optionally configure the maximum number of user input tokens in src/prompts/chat/config.json by changing completion.max_input_tokens. This is useful when you want to limit the length of user inputs to avoid token limit exceeded.
 
@@ -262,27 +295,51 @@ Whether to include history. In src/prompts/chat/config.json, configure completio
 Maximum number of history messages. Configure max_history_messages when initializing PromptManager.
 
 For JavaScript language:
+
+```javascript
+
+
 const prompts = new PromptManager({
   promptsFolder: path.join(__dirname, "../prompts"),
   max_history_messages: 3,
 });
+```
+
 For Python language:
+
+```python
+
 prompts = PromptManager(PromptManagerOptions(
     prompts_folder=f"{os.getcwd()}/prompts",
     max_history_messages=3,
 ))
+
+```
+
 Maximum number of history tokens. Configure max_conversation_history_tokens when initializing PromptManager.
 
 For JavaScript language:
+
+```javascript
+
   const prompts = new PromptManager({
     promptsFolder: path.join(__dirname, "../prompts"),
     max_conversation_history_tokens: 1000,
 });
+
+```
+
 For Python language:
+
+```python
+
 prompts = PromptManager(PromptManagerOptions(
     prompts_folder=f"{os.getcwd()}/prompts",
     max_conversation_history_tokens=1000,
 ))
+
+```
+
 1. Customize model type: You can use a specific model for a prompt. In src/prompts/chat/config.json, configure completion.model. If no model is configured for the prompt, the default model configured in OpenAIModel will be used.
 
 Below lists the models whether the SDK supports.
@@ -302,7 +359,7 @@ gpt-4-turbo	Supported
 
 1. Customize model parameters:
 
-In src/prompts/chat/config.json, configure the model parameters under completion:
+In `src/prompts/chat/config.json`, configure the model parameters under completion:
 
 * max_tokens: The maximum number of tokens to generate.
 * temperature: The models temperature as a number between 0 and 2.
