@@ -169,7 +169,7 @@ For more information, see the custom Azure Fluid Relay service [how-to guide](./
 
 ## Live Share collaborative contexts
 
-Live Share sessions facilitate seamless collaboration in meetings, chats, and channels. When you connect to a session via the `joinContainer()` API, Teams will connect your user to the appropriate Fluid container. While you don't need to write any context-specific code, you should understand the differences in user scenarios for each tab surface.
+Live Share sessions enable seamless collaboration in meetings, chats, and channels. When you connect to a session  through the `joinContainer()` API, Teams connects your user to the appropriate Fluid container. While you don't need to write any context-specific code, you should understand the differences in user scenarios for each tab surface.
 
 > [!NOTE]
 > Live Share sessions used across different contexts should connect to the same Fluid container. If you want to synchronize data differently across different contexts, you can create different distributed-data objects (DDS) for each context and only listen to changes for those that are relevant to your scenario.
