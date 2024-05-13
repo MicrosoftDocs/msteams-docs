@@ -61,7 +61,7 @@ Scheduled meetings, one-on-one calls, group calls, meet now, and channel meeting
 Yes! Live Share supports chat and channel content contexts, including configurable tabs, static tabs, and Collaborative Stageview for Microsoft Teams desktop and web clients. Personal apps aren't supported.
 
 > [!NOTE]
-> Microsoft Teams iOS and Android clients do not support Live Share sessions outside of meeting contexts.
+> Microsoft Teams iOS and Android clients don't support Live Share sessions outside of meeting contexts.
 
 <br>
 
