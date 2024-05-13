@@ -15,6 +15,8 @@ Live Share is an SDK designed to transform Teams apps into collaborative multi-u
 > [!div class="nextstepaction"]
 > [Get started](teams-live-share-quick-start.md)
 
+:::image type="content" source="../assets/images/teams-live-share/live-share-overview-featured-image.png" alt-text="Screenshot featuring Live Share in a meeting. Meeting participants are looking at a 3D model together.":::
+
 Sometimes screen sharing just isn't enough, which is why Microsoft built tools like PowerPoint Live and Whiteboard directly into Teams. By bringing your web application directly to center stage in the meeting interface, your users can seamlessly collaborate during meetings and calls.
 
 Collaboration doesn't need to stop after meetings end, either. Live Share sessions work in chat and channel contexts, allowing your users to see who is viewing what content, follow one another, and more.
