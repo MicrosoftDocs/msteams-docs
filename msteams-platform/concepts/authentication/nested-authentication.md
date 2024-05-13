@@ -23,9 +23,9 @@ The following table outlines the difference between Teams Microsoft Entra ID SSO
 | Register API in Microsoft Entra ID | ✔️ |  |
 | Define a custom scope in Microsoft Entra ID | ✔️ |  |
 | Authorize Teams client apps | ✔️ |  |
-| Revise Teams manifest | ✔️ | Recommended helping IT admins in providing consent via the Admin Portal |
-| Acquire access token via Teams JS SDK | ✔️ |  |
-| Acquire access token via MSAL.js |  | ✔️ * Requires new msalconfig property: supportsNestedAppAuth |
+| Revise Teams manifest | ✔️ | Recommended helping IT admins in providing consent through the Admin Portal |
+| Acquire access token through Teams JS SDK | ✔️ |  |
+| Acquire access token through MSAL.js |  | ✔️ * Requires new msalconfig property: supportsNestedAppAuth |
 | Solicit user consent for more permissions | ✔️ |  |
 | Conduct an OBO exchange on the server | ✔️ |  | 
 
