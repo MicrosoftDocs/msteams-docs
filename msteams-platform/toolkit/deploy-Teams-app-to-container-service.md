@@ -14,13 +14,13 @@ You can deploy a Teams bot or tab app to an Azure Container Apps, Azure Kubernet
 
 ## Prerequisites
 
-Download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso-docker) or the [sample Teams tab app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-docker), which offers a ready-to-use experience for Azure Container Apps development. You can make a few configuration changes and deploy it to Azure Kubernetes Service or an on-premises Kubernetes Cluster.
+Download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso-docker) or the [sample Teams tab app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-docker), which offers a ready-to-use experience for Azure Container Apps development. You can make a few configuration changes and deploy it to Azure Kubernetes Service (AKS) or an on-premises Kubernetes Cluster.
 
-Before you get started ensure that you have the following tools:
+Before you get started, ensure that you have the following tools:
 
 * Azure account.
 
-* Azure Command Line Interfaces (CLI) for Azure Container Apps or Azure Kubernetes Service (AKS) deployment.
+* Azure Command Line Interfaces (CLI) for Azure Container Apps or AKS deployment.
 
 > [!NOTE]
 > The commands in the article are based on Git Bash. If you're using any other interface, update the commands as required.
@@ -62,7 +62,7 @@ You can use Microsoft Entra ID to authenticate your bot with Azure Bot Service. 
 
 1. Ensure that your AKS is connected to your Azure Container Registry, which hosts your container images. For more information, see [use the Azure CLI](/azure/aks/learn/quick-kubernetes-deploy-cli/).
 
-1. Run the following commands to install the ingress controller and certificate manager:
+1. Run the following command to install the ingress controller and certificate manager:
 
     ```bash
     NAMESPACE=teams-bot
@@ -194,7 +194,7 @@ To provision resources with Teams Toolkit, follow these steps:
 1. In the `teamsapp.yml` file, update the `botFramework/create` action during the provision stage. This action enables Teams Toolkit to create a bot registration with the appropriate messaging endpoint.
 
     >[!NOTE]
-    > We recommend you to use Azure Bot Service for channeling. If you don't have an Azure account and can't create Azure Bot Service, you can create a bot registration.
+    > We recommend you use Azure Bot Service for channeling. If you don't have an Azure account and can't create Azure Bot Service, you can create a bot registration.
 
     ```yml
     - uses: botFramework/create
@@ -253,7 +253,7 @@ You can also deploy a Teams tab app to your personal Kubernetes cluster or a Kub
 
 1. Ensure that your AKS is already connected to your Azure Container Registry, which hosts your container images. For more information, see [Azure CLI](/azure/aks/learn/quick-kubernetes-deploy-cli).
 
-1. Run the following commands to install the ingress controller and certificate manager:
+1. Run the following command to install the ingress controller and certificate manager:
 
     ```yml
     NAMESPACE=teams-tab
