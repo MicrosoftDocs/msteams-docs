@@ -24,7 +24,7 @@ Yes! When initializing Live Share, you can define your own `AzureConnectionConfi
 
 While most of you find it beneficial to use our free hosted service, there may still be times where it's beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
 
-- Require storage of data in Fluid containers beyond four hours after the container is first created.
+- Require storage of data in Fluid containers beyond six hours after the container is first created.
 - Transmit sensitive data through the service that requires a custom security policy.
 - Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
@@ -38,7 +38,7 @@ For more information, see [how to guide](./teams-live-share-how-to/how-to-custom
 
 <summary><b>How long is data stored in Live Share's hosted service accessible?</b></summary>
 
-Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service might be accessible for up to 24 hours, though in most cases it's deleted within four hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
+Any data sent or stored through Fluid containers created by Live Share's hosted Azure Fluid Relay service might be accessible for up to 24 hours, though in most cases it's deleted within six hours. If you want to persist data beyond 24 hours, you can replace our hosted Azure Fluid Relay service with your own. Alternatively, you can use your own storage provider in parallel to Live Share's hosted service.
 
 <br>
 
