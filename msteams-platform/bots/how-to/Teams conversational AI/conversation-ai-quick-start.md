@@ -11,7 +11,7 @@ ms.date: 12/06/2022
 
 # Teams AI library quick start guide
 
-Get started with Teams AI library using the Chef bot sample, which is designed to  to help you cook apps using the Teams AI Library. The bot uses the gpt-3.5-turbo model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+Get started with Teams AI library using the lightBot sample, which is designed to  to help you cook apps using the Teams AI Library. The bot uses the gpt-3.5-turbo model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ To get started, ensure that you have the following tools:
 | Install | For using... |
 | --- | --- |
 | &nbsp; | &nbsp; |
-| [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or CSharp build environments. Use the latest version. |
+| [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, Python, or CSharp build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
@@ -233,7 +233,7 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
 
 1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
-   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams-app.png" alt-text="Screenshot shows an example of the Prepare Teams app Dependencies option under Teams Toolkit section in Visual Studio.":::
+   :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams.png" alt-text="Screenshot shows an example of the Prepare Teams app Dependencies option under Teams Toolkit section in Visual Studio.":::
 
    If prompted, sign in to your Microsoft 365 account. You'll receive a message that Teams app is successfully prepared.
 
@@ -261,7 +261,7 @@ You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow 
 
 ## Build and run the sample app
 
-Before get started, ensure that you've installed the [python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and [poetry](https://python-poetry.org/docs/#installing-with-pipx) extensions.
+Before get started, ensure that you've installed the [python](https://www.python.org/) and [poetry](https://python-poetry.org/docs/#installing-with-pipx) extensions.
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
