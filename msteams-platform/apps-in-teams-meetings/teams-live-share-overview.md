@@ -10,16 +10,16 @@ ms.date: 04/07/2022
 
 # Live Share SDK
 
-Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. With Live Share, your users can co-watch, co-create, and co-edit together in Microsoft Teams. Whether your users are presenting during a meeting or viewing content shared to a chat, Live Share securely connects them into a shared session with just a few lines of code.
-
-> [!div class="nextstepaction"]
-> [Get started](teams-live-share-quick-start.md)
-
 :::image type="content" source="../assets/images/teams-live-share/live-share-overview-featured-image.png" alt-text="Screenshot featuring Live Share in a meeting. Meeting participants are looking at a 3D model together.":::
+
+Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. With Live Share, your users can co-watch, co-create, and co-edit together in Microsoft Teams. Whether your users are presenting during a meeting or viewing content shared to a chat, Live Share securely connects them into a shared session with just a few lines of code.
 
 Sometimes screen sharing just isn't enough, which is why Microsoft built tools like PowerPoint Live and Whiteboard directly into Teams. By bringing your web application directly to center stage in the meeting interface, your users can seamlessly collaborate during meetings and calls.
 
 Collaboration doesn't need to stop after meetings end, either. Live Share sessions work in chat and channel contexts, allowing your users to see who is viewing what content, follow one another, and more.
+
+> [!div class="nextstepaction"]
+> [Get started](teams-live-share-quick-start.md)
 
 ## Feature overview
 
