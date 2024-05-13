@@ -274,7 +274,13 @@ switch(context.page?.frameContext) {
 
 ---
 
-### Meeting stage
+### Meeting contexts
+
+:::image type="content" source="../assets/images/teams-live-share/live-share-meetings-overview-full.png" alt-text="Screenshot showing meeting side panel and stage.":::
+
+As we've mentioned earlier, there are two meeting contexts: `meetingStage` and `sidePanel`. In this next section, we'll show how you might optimize these two contexts to provide an optimal user experience for your users.
+
+#### Meeting stage
 
 The `meetingStage` context allows users to share your app content to the meeting stage for participants in the meeting. In this context, users typically expect to collaborate in realtime. Unlike when loading a collaborative app like Microsoft Loop or Word in a web browser, presenters usually expect to have more control of the experience. For example, in PowerPoint Live, presenters expect to have control over which PowerPoint slide is visible to attendees by default, even if attendees can choose to stop following them temporarily.
 
@@ -287,7 +293,7 @@ Consider making the following optimizations for your `meetingStage` app:
 - Let users temporarily stop following the presenter, such as showing a "Sync to presenter" button when an attendee clicks on a different image in a slideshow.
 - Provide settings that give the presenter control, such as disabling the ability for other users to stop following them.
 
-### Meeting side panel
+#### Meeting side panel
 
 The meeting `sidePanel` context allows users to pin your app as a tab in a meeting, alongside default tabs like chat. While any meeting participant may have the option to open a `sidePanel` tab, each user must open it individually. This makes it ideal for asynchronous scenarios during a meeting, such as searching for content to share to the meeting stage. While your users won't want to co-watch, co-create, or co-edit rich content from this surface, Live Share can still improve your `sidePanel` app.
 
