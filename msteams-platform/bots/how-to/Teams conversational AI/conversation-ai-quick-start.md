@@ -235,7 +235,7 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
 
    :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams.png" alt-text="Screenshot shows an example of the Prepare Teams app Dependencies option under Teams Toolkit section in Visual Studio.":::
 
-   If prompted, sign in to your Microsoft 365 account. You'll receive a message that Teams app is successfully prepared.
+   If prompted, sign in to your Microsoft 365 account. You receive a message that Teams app is successfully prepared.
 
 1. Select **OK**.
 
