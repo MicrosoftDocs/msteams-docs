@@ -17,7 +17,7 @@ Bots and tabs are two capabilities of Microsoft Teams that can be used together 
 
 By combining bots and tabs, you can create a custom Copilot like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application.
 
-**{WIP}**
+**{WIP - GIF for example}**
 
 This allows for a seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
 
@@ -55,7 +55,7 @@ Using the `@microsoft/teams-js NPM` package, tab can communicate with Teams usin
 
 Teams maintains a constant connection with the server to get new messages, and other apps might do the same with their own servers. This is typical for apps that allow real-time collaboration. For example, a shared task list might use a web socket connection to sync tasks across different users or devices.
 
-This gives apps a powerful way to integrate bots and tabs smoothly. The key aspects for interoperability between bot and tab are [authentication](#authentication) and [server](#server).
+This gives apps a powerful way to integrate bots and tabs smoothly. The key aspects for interoperability between bot and tab are authentication and server.
 
 :::row:::
 :::column span="":::
