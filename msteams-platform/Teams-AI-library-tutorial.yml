@@ -155,7 +155,7 @@ items:
      | `teamsapp.local.yml` | This override `teamsapp.yml` with actions that enable local execution and debugging. |
      | `teamsapp.testtool.yml` | This override `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
-- title: Customize your custom copilot
+- title: Configure your custom copilot
   durationInMinutes: 1
   content: |
 
@@ -167,7 +167,7 @@ items:
         ```
         :::image type="content" source="../msteams-platform/assets/images/bots/prompts-chat.png" alt-text="Screenshot shows skprompt in explorer in Visual Studio Code.":::
 
-     1. Under `completion` go to `config.json` file. Update the following code and replace the `endpoint` and `key` values with your Azure AI Search resource details:
+     1. Under `prompts/chat` go to `config.json` file. Add the following code inside the `completion` brackets and replace the `endpoint`, `index_name` and `key` values with your Azure AI Search resource details:
 
         ```json
            "data_sources": [
