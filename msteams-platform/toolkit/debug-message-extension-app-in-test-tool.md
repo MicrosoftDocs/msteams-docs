@@ -55,13 +55,15 @@ Ensure you install the following tools for building and deploying your bots in T
 
 1. Select **+** to display the list of Message Extension: 
 
-* Search Command
+   * Search Command
 
-* Action Command
+   * Action Command
 
-* Link Unfurling
+   * Link Unfurling
 
 ## Search Command
+
+
 
 
 
