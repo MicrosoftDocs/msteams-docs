@@ -74,10 +74,10 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
     1. Enter an application name for your app and then select the **Enter** key.
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
-    
-    Now, you've successfully created your AI chat bot project workspace.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-new.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+       Now, you've successfully created your AI chat bot project workspace.
+
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-new.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
     
     1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
     
@@ -211,9 +211,9 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
     |`src/app/app.js`| Handles business logics for the AI Agent.|
     |`src/app/messages.js`| Defines the message activity handlers.|
     |`src/app/actions.js`| Defines the AI actions.|
-    |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
-    |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-    |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+    |`teamsapp.yml`| This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
+    |`teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
+    |`teamsapp.testtool.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
     ---
 
 ## How Teams AI Library is used to create an AI Agent.

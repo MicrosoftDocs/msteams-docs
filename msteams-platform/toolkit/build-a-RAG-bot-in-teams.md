@@ -86,7 +86,7 @@ Teams Toolkit provides a series ready to use application templates under the cat
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-Now, you've successfully created your chat with your data project workspace.
+   Now, you've successfully created your chat with your data project workspace.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
