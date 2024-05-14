@@ -175,7 +175,7 @@ No, Live Share doesn't support Teams Rooms devices.
 <details>
 <summary><b>Does Live Share support the Fluid Framework version 2 beta?</b></summary>
 
-Yes, Live Share supports Fluid Framework version `^2.0.0-rc` and greater in preview. If you are interested in using these preview versions, update your Live Share packages to version `2.0.0-preview.0` or greater.
+Yes, Live Share supports Fluid Framework version `^2.0.0-rc` and later in preview. If you're interested in using these preview versions, update your Live Share packages to version `2.0.0-preview.0` or later.
 
 <br>
 
