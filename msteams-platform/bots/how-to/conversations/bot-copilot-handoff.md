@@ -21,7 +21,7 @@ Create a deep link URL with a `continuation` query parameter for the action butt
 
 To enable Copilot Handoff in Microsoft Teams, follow these steps:
 
-1. **Configure a deep link URL**: Set up a deep link to the bot chat and include `botMri` and `continuationToken`. The `botMri` value must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${botMri}&continuation=${continuationToken}`, where `botMri` follows the format `28:<botId>`. For example, if the bot ID is 68935e91-ff09-4a33-a675-0fe09f015706, the `botMri` would be `28:68935e91-ff09-4a33-a675-0fe09f015706`. The `continuationToken` value can be any string, but make sure that the total url length doesn't exceed 2048 characters and that the string is URL encoded.
+1. **Configure a deep link URL**: Set up a deep link to the bot chat and include `botMri` and `continuationToken`. The `botMri` value must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${28:<botId>}&continuation=${continuationToken}`. The `continuationToken` value can be any string, but make sure that the total url length doesn't exceed 2048 characters and that the string is URL encoded.
 
    Update the deep link url under the `Action.OpenUrl` property in the Adaptive card as follows:
 
