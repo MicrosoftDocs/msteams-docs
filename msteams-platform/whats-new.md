@@ -24,6 +24,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 Teams platform features that are available to all app developers.
 
+**2024 May**
+
+* ***May 20, 2024***: [Share to Teams from web apps to an ongoing or upcoming meetings.](concepts/build-and-test/share-to-teams-from-web-apps.md)
+
 **2024 April**
 
 * ***April 12, 2024***: [Implement authentication in API-based search message extensions to provide secure and seamless access to your app.](messaging-extensions/build-api-based-message-extension.md#authentication).

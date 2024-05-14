@@ -23,17 +23,17 @@ When you select the **Share in meeting** button, it launches a deep link to the 
 ## Prerequisites
 
 * For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension.
-* To share the entire app to stage, you must configure `meetingStage` and `meetingSidePanel` as frame contexts in the [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees may not be able to see the content on stage.
+* To share the entire app to stage, you must configure `meetingStage` and `meetingSidePanel` as frame contexts in the [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees might not be able to see the content on stage.
 
 ## Enable share in meeting
 
-The following are three different methods to enable share in meeting. You can use one of the methods depending on how much control you want on the **Share in meeting** buttons displayed on your web page:
+The following are three different methods to enable share in meeting. You can use one of the methods depending on how much control you want on the **Share in meeting** buttons displayed on your webpage:
 
 # [Method 1](#tab/method-1)
 
 This method is the simplest way to display the share in meeting buttons with minimal customizations. You can customize the button styles, size, and languages.
 
-You can scan your web page to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate **Share in meeting** buttons in your page.
+You can scan your webpage to locate any HTML elements with the class name of type `teams-share-in-meeting-button` and dynamically generate **Share in meeting** buttons in your page.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -64,7 +64,7 @@ You can scan your web page to locate any HTML elements with the class name of ty
 
 You can use this method to have some control over which button to render dynamically or when the script is executed. The script only executes when `window.shareToMicrosoftTeams.renderButtons()` is called. You can pass specific HTML elements through the `renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton])` API. You can customize the button styles, size, and languages.
 
-The `async shareToMicrosoftTeams.renderButtons(options)` API renders all share button that have the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the **Share** buttons or **Share in meeting** buttons.
+The `async shareToMicrosoftTeams.renderButtons(options)` API renders all share button that has the class name **teams-share-button** or **teams-share-in-meeting-button** on the page. If an `options (optional)` object is supplied with a list of elements as shown in the following code, those elements are rendered into the **Share** buttons or **Share in meeting** buttons.
 
 ```javascript
 options (optional): { elements?: HTMLElement[], shareInMeetingElements?: HTMLElement[] }

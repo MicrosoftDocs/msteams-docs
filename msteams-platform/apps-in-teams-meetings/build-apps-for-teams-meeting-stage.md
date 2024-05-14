@@ -46,11 +46,11 @@ To share an app to the meeting stage, you must configure the context and RSC per
 
 There are many scenarios where sharing the entire app to the meeting stage isn't as useful as sharing specific parts of the app:  
 
-1. For a brainstorming or whiteboard app, a user may want to share a specific board in a meeting versus the entire app with all the boards.  
+1. For a brainstorming or whiteboard app, a user might want to share a specific board in a meeting versus the entire app with all the boards.  
 
-1. For a medical app, a doctor may want to share just the X-Ray on the screen with the patient versus sharing the entire app with all the patients records or results and so on.
+1. For a medical app, a doctor might want to share just the X-Ray on the screen with the patient versus sharing the entire app with all the patients records or results and so on.
 
-1. A user may want to share content from a single content provider at a time (for example, YouTube) versus sharing an entire video catalog onto stage.
+1. A user might want to share content from a single content provider at a time (for example, YouTube) versus sharing an entire video catalog onto stage.
 
 To help users in such scenarios, we released APIs within the Microsoft Teams JavaScript client library (TeamsJS) that allow you to programmatically invoke share to stage for specific parts of the app from a button in the meeting side panel.
 
@@ -91,7 +91,7 @@ The following table includes the query parameters:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The *result* can contain either a true value if there's a successful share or null when the share fails. |
-|**appContentURL**| String | Yes | The URL that will be shared on to the stage. |
+|**appContentURL**| String | Yes | The URL that's to be shared on to the stage. |
 
 ### Example
 
@@ -206,9 +206,9 @@ The following table provides the response codes:
 
 ## Get all app content in meeting side panel
 
-The `sharing.history.getContent` API enables to fetch content shared in a meeting and display in the app's side panel when the side panel is opened. It requests all the content shared on the meeting stage to display in the side panel and share to stage.
+The `sharing.history.getContent` API enables to fetch the content shared in a meeting and display in the meeting side panel. When the side panel is opened, app requests for all the content shared in the meeting to display in the side panel and also share to stage.
 
-When the meeting begins, the app’s side panel automatically opens for the user who has shared content in the meeting. The developer can call the `sharing.history.getContent` API to retrieve a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, the developer can call the API to get the latest content to be displayed in the app side panel.
+When the meeting begins, the app’s side panel automatically opens for the user who has shared content in the meeting. The developer can call the `sharing.history.getContent` API to retrieve a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, the developer can call the API to get the latest content to be displayed in the app's side panel.
 
 ### Example
 
@@ -241,7 +241,7 @@ The participants can review and sign documents, such as purchase agreements and 
 
 :::image type="content" source="../assets/images/sbs-inmeeting-doc-signing/final-output.png" alt-text="Screenshot shows an in-meeting document signing app":::
 
-The following participant roles may be involved during the meeting:
+The following participant roles might be involved during the meeting:
 
 * **Document creator**: This role can add their own documents to be reviewed and signed.
 * **Signer**: This role can sign reviewed documents.
