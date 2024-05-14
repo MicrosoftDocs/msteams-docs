@@ -30,7 +30,7 @@ Before understanding the architecture for connecting bots and tabs together, it'
 
 ### Bots
 
-The bot framework allows apps to receive and send messages from a server through Microsoft Entra ID registration that is specified in the app manifest (previously called Teams app manifest). When a user sends a message to the bot, the bot receives the message through some of the handler functions that are defined in your server. 
+The bot framework allows apps to receive and send messages from a server through Microsoft Entra ID registration that is specified in the app manifest (previously called Teams app manifest). When a user sends a message to the bot, the bot receives the message through handler functions defined in your server. 
 
 :::image type="content" source="~/assets/images/bots/how-bot-work.png" alt-text="Sequence diagram that explains how bots work." lightbox="~/assets/images/bots/how-bot-work.png":::
 
@@ -42,7 +42,7 @@ This bi-directional interaction pattern is used for building conversational expe
 
 ### Tabs
 
-Tabs allow you to embed your web applications directly into Teams. This allows customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form. When a user makes a change in the tab, it processes the change through some of the handler functions that are defined in your server.
+Tabs allow you to embed your web applications directly into Teams this allows customized interactions between the user and an app. When a user makes a change in the tab, it processes the change through some of the handler functions that are defined in your server.
 
 :::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work." lightbox="~/assets/images/bots/how-tab-work.png":::
 
