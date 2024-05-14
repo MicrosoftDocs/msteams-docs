@@ -42,6 +42,12 @@ landingContent:
 #      - text: Integrate People Picker
 #        url: ~/concepts/device-capabilities/people-picker-capability.md
 
+- title: Microsoft Build 2023
+  linkLists:
+    - linkListType: whats-new
+      links:
+      - text: 
+        url: 
 
 - title: What's new
   linkLists:
