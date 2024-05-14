@@ -212,11 +212,17 @@ When the meeting begins, the app’s side panel automatically opens for the user
 
 ### Example
 
-*placeholder javascript*
+```javascript
+// Define an async function
+async function fetchContentDetails() {
+    // Fetches a list of content details that was shared in the meeting
+    const contentDetails = await microsoftTeams.sharing.history.getContent();
 
-The JSON response body for `getAppContentStageSharingCapabilities` API is:
+    // Above content details can be used to hydrate the meeting side panel 
+    // to share to meeting stage
 
-*placeholder JSON*
+}
+```
 
 ### Response codes
 
