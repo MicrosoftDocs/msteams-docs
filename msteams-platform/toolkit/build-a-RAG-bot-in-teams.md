@@ -319,7 +319,7 @@ image
 * Fill fields to create a vector index
 image
 
-## Data Source Implementation
+## Data Source
 
 After ingesting data into Azure AI Search, you can implement your own DataSource to retrieve data from search index.
 
