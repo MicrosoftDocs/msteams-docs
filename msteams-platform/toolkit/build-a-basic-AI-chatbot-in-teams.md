@@ -67,11 +67,11 @@ The AI Chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
 1. Enter an application name for your app and then select the **Enter** key.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
    Now, you've successfully created your AI chat bot project workspace. 
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-chatbot-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+     :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-chatbot-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
 1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
 

@@ -61,11 +61,11 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
     
-    1.  Select **Default folder**.
-    
+    1. Select **Default folder**.
+
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
     
-        To change the default location, follow these steps:
+       To change the default location, follow these steps:
     
         1. Select **Browse**.
         1. Select the location for the project workspace.
@@ -77,7 +77,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
     
     Now, you've successfully created your AI chat bot project workspace.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-new.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-new.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
     
     1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
     
@@ -136,19 +136,19 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
 
-    > [!NOTE]
-    > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
-    * The `AssistantsPlanner` in Teams AI Library is currently in preview version.
+       > [!NOTE]
+       > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
+       > * The `AssistantsPlanner` in Teams AI Library is currently in preview version.
 
     1. By default **OpenAI** service gets selected, you can optionally enter the credentials to access OpenAI. Select **Enter**.
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
-    1.  Select **Default folder**.
+    1. Select **Default folder**.
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
     
-        To change the default location, follow these steps:
+       To change the default location, follow these steps:
     
         1. Select **Browse**.
         1. Select the location for the project workspace.
@@ -163,7 +163,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-assistant-api.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
-    ## Create your own OpenAI Assistant
+   **Create your own OpenAI Assistant**
     
     Before running or debugging your bot, please follow these steps to set up your own [OpenAI Assistant](https://platform.openai.com/docs/assistants/overview).
     
@@ -186,8 +186,8 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
     1. Go to **Visual Studio Code**, Under **EXPLORER**, select **env** > **.env.*.users** file.
     
     1. Update the following details:
-        SECRET_OPENAI_API_KEY=<your-openai-api-key>
-        OPENAI_ASSISTANT_ID=<your-openai-assistant-id>
+        SECRET_OPENAI_API_KEY=`<your-openai-api-key>`
+        OPENAI_ASSISTANT_ID=`<your-openai-assistant-id>`
     image
 
     1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
@@ -244,7 +244,9 @@ Sequence: suitable for tasks that require multiple steps or complex logic.
 Monologue: suitable for tasks that require natural language understanding and generation, and more flexibility and creativity.
 
 ### Add functions (Build New)
-In src/prompts/planner/actions.json, define your actions schema.
+In `src/prompts/planner/actions.json`, define your actions schema.
+
+```json
 [
     ...
     {
@@ -262,7 +264,12 @@ In src/prompts/planner/actions.json, define your actions schema.
         }
     }
 ]
-In src/app/actions.ts, define the action handlers.
+```
+
+In `src/app/actions.ts`, define the action handlers.
+
+```typescript
+
 // Define your own function
 export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
   // Implement your function logic
@@ -270,10 +277,14 @@ export async function myFunction(context: TurnContext, state: TurnState, paramet
   // Return the result
   return "...";
 }
-In src/app/app.ts, register the actions.
-app.ai.action("myFunction", myFunction);
-back to top
+```
 
+In `src/app/app.ts`, register the actions.
+```typescript
+
+app.ai.action("myFunction", myFunction);
+
+```
 ### Customize assistant creation
 
 The file src/creator.ts creates a new OpenAI Assistant. You can customize the assistant creation by updating the parameters including instruction, model, tools, and functions.
@@ -282,7 +293,10 @@ The file src/creator.ts creates a new OpenAI Assistant. You can customize the as
 
 When the assistant returns a function that needs to be called along with its arguments, the SDK maps the function to the corresponding action that is registered in advance, then calls the action handler and submits the results to the assistant. You can add your functions by registering the actions into the app.
 
-In src/app/actions.ts, define the action handlers.
+In `src/app/actions.ts`, define the action handlers.
+
+```typescript
+
 // Define your own function
 export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
   // Implement your function logic
@@ -290,7 +304,14 @@ export async function myFunction(context: TurnContext, state: TurnState, paramet
   // Return the result
   return "...";
 }
-In src/app/app.ts, register the actions.
+
+```
+
+In `src/app/app.ts`, register the actions.
+```typescript
+
 app.ai.action("myFunction", myFunction);
+
+```
 
 ## See also
