@@ -62,9 +62,6 @@ Apps must have a consistent user identifier for both bot and tab, and that the u
 
 Though there might be different ways authentication without SSO, such as through a custom authentication provider, where a user must sign-in from both the tab and bot. SSO helps the user experience more seamlessly integrated, which is imperative for this sort of Copilot like integration.
 
-> [!Note]
-> We strongly recommend using SSO to create a unified login between the tab and the bot.
-
 :::column-end:::
 
 :::column span="":::
@@ -78,6 +75,9 @@ Servers have a way of sending updates that the bot receives and routing it to th
 :::column-end:::
 
 :::row-end:::
+
+> [!Note]
+> We strongly recommend using SSO to create a unified login between the tab and the bot.
 
 You can make bots and tabs work together in two ways, either by updating the tab through a bot message or updating the bot through a change in the tab.
 
