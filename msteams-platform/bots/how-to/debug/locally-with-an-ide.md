@@ -39,6 +39,8 @@ Use the https endpoint provided by ngrok in your [app manifest](../../../resourc
 > [!NOTE]
 > If you close your command window and restart, a new URL is generated and you need to update your bot endpoint address to use it.
 
+Teams bot, being based on the Microsoft Bot Framework, must be accessible on the internet through an https endpoint. However, the endpoint is never exposed to anyone. It's bound only between Microsoft's Bot Framework and your internal address.
+
 ## Test your bot without uploading to Teams
 
 Occasionally, it's necessary to test your bot without installing it as an app in Teams. We provide two methods for testing the bot. Testing your bot without installing it as an app can be useful to ensure your bot is available and responding. However, it doesn't allow you to test the full breadth of Microsoft Teams functionality you've added to your bot. If you want to fully test your bot, see [testing by uploading](#test-by-uploading-to-teams).
