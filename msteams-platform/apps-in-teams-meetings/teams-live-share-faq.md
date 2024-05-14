@@ -121,7 +121,7 @@ If you plan to update your app with new `SharedObject`, `DataObject`, or `LiveDa
 - Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
 
 > [!NOTE]
-> Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
+> Live Share doesn't support versioning your `ContainerSchema` and doesn't have any APIs dedicated to migrations.
 
 <br>
 
