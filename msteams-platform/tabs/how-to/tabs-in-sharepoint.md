@@ -67,7 +67,7 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 
 ## Use Teams tab in SharePoint
 
-1. Upload and deploy your Teams app package to your SharePoint App Catalog by visiting `https://YOUR_TENANT_NAME.sharepoint.com/sites/appCatalog/AppCatalog/Forms/AllItems.aspx`. For example, `https://contoso.sharepoint.com/sites/appCatalog/AppCatalog/Forms/AllItems.aspx`.
+1. Upload and deploy your Teams app package to your SharePoint App Catalog by visiting `https://YOUR_TENANT_NAME.sharepoint.com/sites/appcatalog/AppCatalog/Forms/AllItems.aspx`. For example, `https://contoso.sharepoint.com/sites/appcatalog/AppCatalog/Forms/AllItems.aspx`.
 
 1. When prompted, enable **Make this solution available to all sites in the organization**.
 The following image displays the corresponding screen:
