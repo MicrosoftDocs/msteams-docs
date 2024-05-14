@@ -17,23 +17,11 @@ Bots and tabs are two capabilities of Microsoft Teams that can be used together 
 
 By combining bots and tabs, you can create a custom Copilot like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application. This allows for a seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
 
-## Understand how tabs and bots work 
+## Understand how bots  and tabs work
 
 Before understanding the architecture for connecting bots and tabs together, it's helpful to understand how bots and tabs work within their own space. 
 
 :::row:::
-:::column span="2":::
-
-### Tabs
-
-Tabs allow you to embed your web applications directly into Teams. This allows customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form. When a user makes a change in the tab, it processes the change through some of the handler functions that are defined in your server.
-
-:::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work." lightbox="~/assets/images/bots/how-tab-work.png":::
-
-Using the `@microsoft/teams-js NPM` package, tab can communicate with Teams using a secure messaging channel called window post messages and tab can communicate with backend using standard JavaScript APIs, HTTP requests, web sockets, and so on. 
-
-:::column-end:::
-
 :::column span="2":::
 
 ### Bots
@@ -44,6 +32,17 @@ The bot framework allows apps to receive and send messages from a server through
 
 This bi-directional interaction pattern is used for building conversational experiences and can be extended to other types of actions, such as a user selecting a Submit button in an Adaptive Card. 
 
+:::column-end:::
+
+:::column span="2":::
+
+### Tabs
+
+Tabs allow you to embed your web applications directly into Teams. This allows customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form. When a user makes a change in the tab, it processes the change through some of the handler functions that are defined in your server.
+
+:::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work." lightbox="~/assets/images/bots/how-tab-work.png":::
+
+Using the `@microsoft/teams-js NPM` package, tab can communicate with Teams using a secure messaging channel called window post messages and tab can communicate with backend using standard JavaScript APIs, HTTP requests, web sockets, and so on. 
 :::column-end:::
 
 :::row-end:::
