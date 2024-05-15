@@ -34,12 +34,10 @@ If you're hosting your bot locally during development, you need to use a tunneli
 ngrok http <port> --host-header=localhost:<port>
 ```
 
-Use the https endpoint provided by ngrok in your [app manifest](../../../resources/schema/manifest-schema.md).
+Use the https endpoint provided by ngrok in your [app manifest](../../../resources/schema/manifest-schema.md). If you close your command window and restart, a new URL is generated and you need to update your bot endpoint address to use it.
 
 > [!NOTE]
-> If you close your command window and restart, a new URL is generated and you need to update your bot endpoint address to use it.
-
-Teams bot, being based on the Microsoft Bot Framework, must be accessible on the internet through an https endpoint. However, the endpoint is never exposed to anyone. It's bound only between Microsoft's Bot Framework and your internal address.
+> Teams bot, being based on the Microsoft's Bot Framework, must be accessible on the internet through an https endpoint. However, the endpoint is not exposed to others as it is bound only between Microsoft's Bot Framework and your internal address.
 
 ## Test your bot without uploading to Teams
 
