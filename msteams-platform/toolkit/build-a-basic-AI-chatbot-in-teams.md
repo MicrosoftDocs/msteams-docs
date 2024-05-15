@@ -181,7 +181,7 @@ You can add customizations on top of this basic application to build more comple
     
      The `{{$[scope].property}}` is used in the following way:
     
-        # [Javascript](#tab/javascript)
+     # [Javascript](#tab/javascript)
         
         * In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
         
@@ -203,7 +203,7 @@ You can add customizations on top of this basic application to build more comple
         ```
         * In `src/prompts/chat/skprompt.txt` use the scoped state property such as {{$conversation.tasks}}.
     
-        # [Python](#tab/python)
+     # [Python](#tab/python)
         
         * In `src/state.py`, define your temp state, user state, conversation state and application turn state.
         
@@ -243,13 +243,13 @@ You can add customizations on top of this basic application to build more comple
         ```
         
         * In `src/prompts/chat/skprompt.txt`, use the scoped state property such as {{$conversation.tasks}}.
-        ---
+     ---
 
      # [Syntax 2](#tab/syntax2)
 
      `{{ functionName }}`: To call an external function and embed the result in your text, use the {{ functionName }} syntax. For example, if you have a function called getTasks that can return a list of task items, you can embed the results into the prompt:
     
-         # [Javascript](#tab/javascript)
+     # [Javascript](#tab/javascript)
         
          * Register the function into prompt manager in `src/app/app.ts`:
         
@@ -263,7 +263,7 @@ You can add customizations on top of this basic application to build more comple
         
          * Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
         
-         # [Python](#tab/python)
+     # [Python](#tab/python)
         
          * Register the function into prompt manager in src/bot.py:
         
@@ -282,7 +282,7 @@ You can add customizations on top of this basic application to build more comple
          ```
         
          * Use the function in `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
-         ---
+     ---
 
      # [Syntax 3](#tab/syntax3)  
      `{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
