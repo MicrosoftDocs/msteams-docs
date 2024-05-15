@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Format AI bot messages
 
-If you're building a conversational bot, you can now leverage features such as citations, feedback buttons, and sensitivity label that enable better user engagement. For AI-powered bots, you can now include AI label that helps to build trust and transparency with users.
+If you're building a conversational bot, you can now leverage features such as citations, feedback buttons, and sensitivity label that enable better user engagement. For AI-powered bots, you can now include AI label that can promote a sense of responsibility, implicitly reinforce trust and transparency with users.
 
 Here's a quick overview on each feature that you can integrate to your bot message:
 
@@ -52,7 +52,7 @@ The following code snippet shows how to add an AI label to your bot's message:
 }
 ```
 
-For a bot built using Teams AI library, AI label is automatically enabled to all AI-powered bot messages. Teams AI library enables the flag to include the AI label button in all activities sent via the AI module.
+For a bot built using Teams AI library, AI label is automatically enabled to all AI-powered bot messages. Teams AI library enables the flag to include the AI label button in all activities sent via the `ai` module.
 
 ```javascript
 await context.sendActivity({
@@ -69,7 +69,7 @@ await context.sendActivity({
        });
 ```
 
-To learn more about how to add the flag manually and modify `PredictedSAYCommand`, see [Modify PredictedSAYCommand](#modify-predictedsaycommand).
+<!--To learn more about how to add the flag manually and modify `PredictedSAYCommand`, see [Modify PredictedSAYCommand](#modify-predictedsaycommand).-->
 
 After an AI label is added, your bot’s message automatically display an **AI-generated** label next to the bot’s name with a hover disclaimer stating **AI-generated content may be incorrect**. The label and hover disclaimer can't be modified.
 
@@ -82,11 +82,11 @@ It's important to cite the sources of the bot message that helps users to ask fo
 Citations to your bot message include:
 
 * [In-text citations](#add-in-text-citations) to cite your text using the [X] format at any point within the text.
-* [Citation reference list](#add-citation-reference) to list the corresponding references of the in-text citations.
+* [Details to citation reference](#add-details-to-citation-reference) to list the corresponding references of the in-text citations.
 
 ### Add in-text citations
 
-In-text citations appear as numbers, each corresponding to a reference that can include the title, keywords, an abstract (or excerpt), hyperlink, and sensitivity information. References for these in-text citations appear as pop-ups and as expandable citation footers. A citation can be inserted anywhere within the text.
+In-text citations appear as numbers, each corresponding to a reference that can include the title, keywords, an abstract (or excerpt), hyperlink, and sensitivity information. A citation can be inserted anywhere within the text.
 
 :::image type="content" source="../../assets/images/bots/ai-bot-inline-citation.png" border="false" alt-text="Screenshot shows an AI bot response with in-text citation.":::
 
@@ -97,6 +97,47 @@ await context.sendActivity({
     type: ActivityTypes.Message,
     text: 'Hey I'm a friendly AI bot. This message is generated via AI - $(txt) [1]', // cite with [1]
 });
+```
+
+### Add details to citation reference
+
+References for these in-text citations appear as pop-ups. The pop-up provides key details such as the title of the citation, the link to the source, and a relevant quote from the source.
+
+For a bot built using Teams AI library, Teams displays the in-line citations when the message includes `citation` array in the `entities` object.
+
+The following code snippet shows the citation reference added to your bot's message:
+
+```javascript
+ await context.sendActivity({
+         type: ActivityTypes.Message,
+        text: `Hey I'm a friendly AI bot. This message is generated via AI - $(txt) [1]`, // cite with [1]
+        entities: [
+          {
+            type: "https://schema.org/Message",
+            "@type": "Message",
+            "@context": "https://schema.org",
+            "@id": "",
+            citation: [
+              {
+                "@type": "Claim",
+                position: 1, // Required. Should match the [1] in the text above
+                appearance: {
+                  "@type": "DigitalDocument",
+                  name: "Some secret citation", // Title
+                  url: "https://example.com/claim-1", // Hyperlink on the title
+                  abstract: "Excerpt", // Excerpt (abstract)
+                  keywords: ["Keyword1 - 1", "Keyword1 - 2", "Keyword1 - 3"], // Keywords
+                  usageInfo: {
+                    "@type": "CreativeWork",
+                    name: "Confidential \\ Contoso FTE", // Sensitivity title
+                    description: "Only accessible to Contoso FTE", // Sensitivity description
+                  },
+                },
+              },
+            ],
+          },
+        ],
+}
 ```
 
 <!-- ### Add citation reference
@@ -151,46 +192,9 @@ To add a citation reference list to your bot message, include `citation` array i
         }
     ]
 }
-```
-
-For a bot built using Teams AI library, Teams displays the citations when the message includes `citation` array in the `entities` object.
-
-The following code snippet shows the citation reference added to your bot's message:
-
-```javascript
- await context.sendActivity({
-         type: ActivityTypes.Message,
-        text: `Hey I'm a friendly AI bot. This message is generated via AI - $(txt) [1]`, // cite with [1]
-        entities: [
-          {
-            type: "https://schema.org/Message",
-            "@type": "Message",
-            "@context": "https://schema.org",
-            "@id": "",
-            citation: [
-              {
-                "@type": "Claim",
-                position: 1, // Required. Should match the [1] in the text above
-                appearance: {
-                  "@type": "DigitalDocument",
-                  name: "Some secret citation", // Title
-                  url: "https://example.com/claim-1", // Hyperlink on the title
-                  abstract: "Excerpt", // Excerpt (abstract)
-                  keywords: ["Keyword1 - 1", "Keyword1 - 2", "Keyword1 - 3"], // Keywords
-                  usageInfo: {
-                    "@type": "CreativeWork",
-                    name: "Confidential \\ Contoso FTE", // Sensitivity title
-                    description: "Only accessible to Contoso FTE", // Sensitivity description
-                  },
-                },
-              },
-            ],
-          },
-        ],
-}
 ```-->
 
-After you enable citations, the bot's message includes the in-text citations and a reference list in the footer. The in-text citations display the reference details when users hover over them, as shown in the following image:
+After you enable citations, the bot's message includes the in-text citations and the reference. The in-text citations display the reference details when users hover over them, as shown in the following image:
 
 :::image type="content" source="../../assets/images/bots/ai-bot-ref-cite-list.png" border="false" alt-text="Screenshot shows an AI bot reference citation list.":::
 
