@@ -15,9 +15,9 @@ Bots and tabs are two capabilities of Microsoft Teams that can be used together 
 > [!NOTE]
 > We recommend building bots using AI library for integrating bots and tabs.
 
-By integrating bots and tabs, you can create a custom copilot like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application.
+By integrating bots and tabs, you can create custom copilot like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application.
 
-**{WIP - GIF for example}**
+:::image type="content" source="~/assets/images/bots/sync-bot-tab.gif" alt-text="Example for bot message updating the tab." lightbox="~/assets/images/bots/sync-bot-tab.gif":::
 
 This allows for a seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
 
