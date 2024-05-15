@@ -366,7 +366,7 @@ This version string must follow the [semver](http://semver.org/) standard (MAJOR
 
 ## ID
 
-**Required** &ndash; String &ndash; Microsoft app ID
+**Required** &ndash; Microsoft app ID
 
 The ID is a unique Microsoft-generated identifier for the app. The format of the ID is GUID. You have an ID if your bot is registered through the Microsoft Bot Framework. You have an ID if your tab's web app already signs in with Microsoft. You must enter the ID here. Otherwise, you must generate a new ID at the [Microsoft Application Registration Portal](https://aka.ms/appregistrations). Use the same ID if you add a bot.
 
@@ -448,7 +448,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 
 ## accentColor
 
-**Required** &ndash; String &ndash; HTML Hex color code
+**Required** &ndash; HTML Hex color code
 
 A color to use and as a background for your color icons.
 
@@ -486,7 +486,7 @@ This item is an array (maximum of 16 elements) with all elements of the type `ob
 |`contentBotId`|String|128 characters||The Microsoft app ID specified for the bot in the [Bot Framework portal](https://dev.botframework.com/bots).|
 |`websiteUrl`|String|2048 characters||The https:// URL to point to if a user opts to view in a browser.|
 |`searchUrl`|String|2048 characters||The https:// URL to point to for a user's search queries.|
-|`scopes`|Array of enums|3|✔️|Identifies the scopes in which the add-in can run. Accepted values: `team`, `personal`, `groupChat`|
+|`scopes`|Array of enums|3|✔️|Specifies whether the tab offers an experience in the context of a channel in a team, or an experience scoped to an individual user or group chat. The static tabs support `personal` scope only.|
 |`context` | Array of enums| 8|| The set of `contextItem` contexts where a [tab is supported](../../tabs/how-to/access-teams-context.md). </br> Accepted values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`, `meetingStage`, `meetingSidepanel`, `teamLevelApp`. </br> Default values: `personalTab`, `channelTab`, `privateChatTab`, `meetingChatTab`, `meetingDetailsTab`. |
 
 > [!NOTE]
@@ -521,7 +521,7 @@ The item is an array (maximum of only one element&mdash;currently only one bot i
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
 |`team.fetchTask`|Boolean||✔️|A boolean value that indicates if it should fetch dialog (referred as task module in TeamsJS v1.x) dynamically. <br>Default value: `false`|
-|`team.taskInfo`|Object||✔️|Specify the dialog to pre-load when using a bot |
+|`team.taskInfo`|Object||✔️|Specify the dialog to preload when you use a bot |
 |`team.taskInfo.title`|String|64 characters|✔️|Initial dialog title.|
 |`team.taskInfo.width`|String|16||The dialog width is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
 |`team.taskInfo.height`|String|16||The dialog height is either a number in pixels or default layout such as `large`, `medium`, or `small`.|
@@ -541,8 +541,8 @@ A list of commands that your bot can recommend to users. The object is an array 
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
-|`items.scopes`|Array of enums|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupChat`.|
-|`items.commands`|Array of objects|10|✔️|An array of commands the bot supports.|
+|`scopes`|Array of enums|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupChat`.|
+|`commands`|Array of objects|10|✔️|An array of commands the bot supports.|
 
 > [!NOTE]
 > Teams mobile client doesn't support the bot app when there is no value in the `commandLists` property.
@@ -618,12 +618,12 @@ Each command item is an object with the following structure:
 |`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by Copilot using large language model (LLM).|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. <br>Default value: `false` |
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog (referred as task module in TeamsJS v1.x) dynamically. <br>Default value: `false` |
-|`taskInfo`|Object|||Specify the dialog to pre-load when using a message extension command.|
+|`taskInfo`|Object|||Specify the dialog to preload when using a message extension command.|
 |`taskInfo.title`|String|64 characters||Initial dialog title.|
 |`taskInfo.width`|String|||Dialog width - either a number in pixels or default layout values such as `large`, `medium`, or `small`.|
 |`taskInfo.height`|String|||Dialog height - either a number in pixels or default layout values such as `large`, `medium`, or `small`.|
 |`taskInfo.url`|String|||Initial webview URL.|
-|`parameters`|Array of object|5 items||The list of parameters the command takes.|
+|`parameters`|Array of object|5 ||The list of parameters the command takes.|
 |`parameters.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameters.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameters.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
@@ -1092,8 +1092,8 @@ The `extensions.ribbons` property provides the ability to add [add-in commands](
 |`tabs.customMobileRibbonGroups.id` | String | 250 characters | ✔️ | Specifies the ID of the group. It must be different from any built-in group ID in the Microsoft 365 application and any other custom group.|
 |`tabs.customMobileRibbonGroups.label` | String | 32 characters | ✔️ | Specifies the label on the group. |
 |`tabs.customMobileRibbonGroups.controls` | Array | 20 | ✔️ | Defines the controls in the group. Only mobile buttons are supported.|
-|`tabs.customMobileRibbonGroups.controls.id` | String | 250 characters | ✔️ | Specifies the ID of the control such as "msgReadFunctionButton".|
-|`tabs.customMobileRibbonGroups.controls.type` | String |  | ✔️ | Specifies the type of control. Currently only `MobileButton` is supported.|
+|`tabs.customMobileRibbonGroups.controls.id` | String | 250 characters | ✔️ | Specifies the ID of the control such as `msgReadFunctionButton`.|
+|`tabs.customMobileRibbonGroups.controls.type` | String |  | ✔️ | Specifies the type of control. The supported value is `MobileButton`|
 |`tabs.customMobileRibbonGroups.controls.label` | String | 32 characters | ✔️ | Specifies the label on the control.|
 |`tabs.customMobileRibbonGroups.controls.actionId` | String | 64 characters |✔️ | Specifies the ID of the action that is taken when a user selects the control. The `actionId` must match the `runtime.actions.id` property of an action in the `runtimes` object.|
 |`tabs.customMobileRibbonGroups.controls.icons` | Array | 9 | ✔️ | Specifies the icons that will appear on the control depending on the dimensions and DPI of the mobile device screen. There must be exactly 9 icons.|
