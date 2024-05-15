@@ -177,112 +177,115 @@ You can add customizations on top of this basic application to build more comple
     
      # [Syntax 1](#tab/syntax1)
     
-     `{{ $[scope].property }}`: The Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified, the library defaults to using the temp scope.
+     1. `{{ $[scope].property }}`: The Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified, the library defaults to using the temp scope.
     
-     The `{{$[scope].property}}` is used in the following way:
+     1. The `{{$[scope].property}}` is used in the following way:
     
-       # [Javascript](#tab/javascript)
+        # [Javascript](#tab/javascript1)
     
-       1. In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
+        1. In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
     
-       ```javascript
+            ```javascript
+        
+            export interface TempState extends DefaultTempState { ... }
+            export interface UserState extends DefaultUserState { ... }
+            export interface ConversationState extends DefaultConversationState {
+                tasks: Record<string, Task>;
+                }
+            export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
+            ```
+
+        1. In `src/app/app.ts`, use application turn state to initialize application.
     
-       export interface TempState extends DefaultTempState { ... }
-       export interface UserState extends DefaultUserState { ... }
-       export interface ConversationState extends DefaultConversationState {
-           tasks: Record<string, Task>;
-           }
-       export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
-       ```
-       1. In `src/app/app.ts`, use application turn state to initialize application.
+            ```javascript
+        
+            const app = new Application<ApplicationTurnState>(...);
+        
+            ```
+
+        1. In `src/prompts/chat/skprompt.txt` use the scoped state property such as {{$conversation.tasks}}.
     
-       ```javascript
+        # [Python](#tab/python1)
     
-       const app = new Application<ApplicationTurnState>(...);
+        1. In `src/state.py`, define your temp state, user state, conversation state and application turn state.
     
-       ```
-       1. In `src/prompts/chat/skprompt.txt` use the scoped state property such as {{$conversation.tasks}}.
+            ```python
+        
+            from teams.state import TempState, ConversationState, UserState, TurnState
+        
+            class AppConversationState(ConversationState):
+            tasks: Dict[str, Task] # Your data definition here
+        
+                @classmethod
+                async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppConversationState":
+                    state = await super().load(context, storage)
+                    return cls(**state)
+        
+            class AppTurnState(TurnState[AppConversationState, UserState, TempState]):
+                conversation: AppConversationState
+        
+                @classmethod
+                async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppTurnState":
+                    return cls(
+                        conversation=await AppConversationState.load(context, storage),
+                        user=await UserState.load(context, storage),
+                        temp=await TempState.load(context, storage),
+                    )
+        
+            ```
     
-       # [Python](#tab/python)
+        1. In `src/bot.py`, user application turn state to initialize application.
     
-       1. In `src/state.py`, define your temp state, user state, conversation state and application turn state.
+            ```python
+        
+            from state import AppTurnState
+        
+            app = Application[AppTurnState](...)
+        
+            ```
     
-       ```python
-    
-       from teams.state import TempState, ConversationState, UserState, TurnState
-    
-       class AppConversationState(ConversationState):
-        tasks: Dict[str, Task] # Your data definition here
-    
-           @classmethod
-           async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppConversationState":
-               state = await super().load(context, storage)
-               return cls(**state)
-    
-       class AppTurnState(TurnState[AppConversationState, UserState, TempState]):
-           conversation: AppConversationState
-    
-           @classmethod
-           async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppTurnState":
-               return cls(
-                   conversation=await AppConversationState.load(context, storage),
-                   user=await UserState.load(context, storage),
-                   temp=await TempState.load(context, storage),
-               )
-    
-       ```
-    
-       1. In `src/bot.py`, user application turn state to initialize application.
-    
-       ```python
-    
-       from state import AppTurnState
-    
-       app = Application[AppTurnState](...)
-    
-       ```
-    
-       1. In `src/prompts/chat/skprompt.txt`, use the scoped state property such as {{$conversation.tasks}}.
-       ---
+        1. In `src/prompts/chat/skprompt.txt`, use the scoped state property such as {{$conversation.tasks}}.
+
+         ---
     
      # [Syntax 2](#tab/syntax2)
     
-     `{{ functionName }}`: To call an external function and embed the result in your text, use the {{ functionName }} syntax. For example, if you have a function called getTasks that can return a list of task items, you can embed the results into the prompt:
+     1. `{{ functionName }}`: To call an external function and embed the result in your text, use the {{ functionName }} syntax. For example, if you have a function called getTasks that can return a list of task items, you can embed the results into the prompt:
     
-       # [Javascript](#tab/javascript)
+        # [Javascript](#tab/javascript2)
     
-       1. Register the function into prompt manager in `src/app/app.ts`:
+        1. Register the function into prompt manager in `src/app/app.ts`:
     
-       ```typescript
+            ```typescript
+        
+            prompts.addFunction("getTasks", async (context: TurnContext, memory: Memory, functions: PromptFunctions, tokenizer: Tokenizer, args: string[]) => {
+            return ...
+            });
+        
+            ```
     
-       prompts.addFunction("getTasks", async (context: TurnContext, memory: Memory, functions: PromptFunctions, tokenizer: Tokenizer, args: string[]) => {
-       return ...
-       });
+        1. Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
     
-       ```
+        # [Python](#tab/python2)
     
-       1. Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
+        1. Register the function into prompt manager in src/bot.py:
     
-       # [Python](#tab/python)
+            ```python
+        
+            @prompts.function("getTasks")
+            async def get_tasks(
+                _context: TurnContext,
+                state: MemoryBase,
+                _functions: PromptFunctions,
+                _tokenizer: Tokenizer,
+                _args: List[str],
+            ):
+                return state.get("conversation.tasks")
+        
+            ```
     
-       1. Register the function into prompt manager in src/bot.py:
-    
-       ```python
-    
-       @prompts.function("getTasks")
-       async def get_tasks(
-           _context: TurnContext,
-           state: MemoryBase,
-           _functions: PromptFunctions,
-           _tokenizer: Tokenizer,
-           _args: List[str],
-       ):
-           return state.get("conversation.tasks")
-    
-       ```
-    
-       1. Use the function in `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
-       ---
+        1. Use the function in `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
+         ---
     
      # [Syntax 3](#tab/syntax3)
     
@@ -304,18 +307,17 @@ You can add customizations on top of this basic application to build more comple
     
     * Maximum number of history messages. Configure max_history_messages when initializing PromptManager.
     
-    # [JavaScript](#tab/javaScript)
+    # [JavaScript](#tab/javaScript3)
     
     ```javascript
-    
-    
+
     const prompts = new PromptManager({
       promptsFolder: path.join(__dirname, "../prompts"),
       max_history_messages: 3,
     });
     ```
     
-    # [Python](#tab/python)
+    # [Python](#tab/python3)
     
     ```python
     
@@ -329,7 +331,7 @@ You can add customizations on top of this basic application to build more comple
     
     * Maximum number of history tokens. Configure max_conversation_history_tokens when initializing PromptManager.
     
-    # [JavaScript](#tab/javaScript)
+    # [JavaScript](#tab/javaScript4)
     
     ```javascript
     
@@ -340,7 +342,7 @@ You can add customizations on top of this basic application to build more comple
     
     ```
     
-    # [Python](#tab/python)
+    # [Python](#tab/python4)
     
     ```python
     
