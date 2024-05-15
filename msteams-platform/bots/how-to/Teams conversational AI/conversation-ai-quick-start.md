@@ -91,7 +91,7 @@ Get started with Teams AI library using the **LightBot** sample. It enables your
 
       # [OpenAI key](#tab/OpenAI-key)
 
-      1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
+      Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
          ```text
          SECRET_OPENAI_KEY=<your OpenAI key>
@@ -261,7 +261,7 @@ You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow 
 
 ## Build and run the sample app
 
-Before get started, ensure that you've installed the [python](https://www.python.org/) and [poetry](https://python-poetry.org/docs/#installing-with-pipx) extensions.
+Before get started, ensure that you've installed the [python v3.8.10](https://www.python.org/) and [poetry](https://python-poetry.org/docs/#installing-with-pipx) extensions.
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
@@ -283,7 +283,7 @@ Before get started, ensure that you've installed the [python](https://www.python
 
       # [OpenAI key](#tab/OpenAI-key2)
 
-      1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
+      Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
          ```text
          SECRET_OPENAI_KEY=<your OpenAI key>
@@ -292,7 +292,7 @@ Before get started, ensure that you've installed the [python](https://www.python
 
       # [Azure OpenAI](#tab/Azure-OpenAI2)
 
-      1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
+      Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
          ```text
          SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
@@ -301,6 +301,15 @@ Before get started, ensure that you've installed the [python](https://www.python
          ```
 
       ---
+
+1. To install the following dependencies, go to **View** > **Terminal** and run the following commands:
+
+   |Dependencies |Command |
+   | --- | --- |
+   | python-dotenv | pip install python-dotenv |
+   | load-dotenv | pip install load-dotenv |
+   | teams-ai | pip install teams-ai |
+   | botbuilder-core | pip install botbuilder-core |
 
 1. Update `config.json` and `bot.py` with your model deployment name.
 
@@ -314,13 +323,13 @@ Before get started, ensure that you've installed the [python](https://www.python
 
 1. Select **Add**.
 
-   Image placeholder
+   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the lightbot app.":::
 
    A chat window opens.
 
 1. In the message compose area, send a message to invoke the bot.
 
-   Image placeholder
+   :::image type="content" source="../../../assets/images/bots/lightbot-output.png" alt-text="Screenshot shows an example of the lightbot output.":::
 
 ::: zone-end
 
