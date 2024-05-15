@@ -30,7 +30,7 @@ Before understanding the architecture for connecting bots and tabs together, it'
 
 ### Bots
 
-The bot framework allows apps to receive and send messages from a server through Microsoft Entra ID registration that is specified in the app manifest (previously called Teams app manifest). When a user sends a message to the bot, the bot receives the message through handler functions defined in your server. 
+The bot framework allows apps to receive and send messages from a server through Microsoft Entra ID registration that is specified in the app manifest. When a user sends a message to the bot, the bot receives the message through handler functions defined in your server. 
 
 :::image type="content" source="~/assets/images/bots/how-bot-work.png" alt-text="Sequence diagram that explains how bots work." lightbox="~/assets/images/bots/how-bot-work.png":::
 
