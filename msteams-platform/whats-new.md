@@ -30,7 +30,7 @@ Teams platform features that are available to all app developers.
 
 **2024 April**
 
-* ***April 12, 2024***: [Implement authentication in API-based search message extensions to provide secure and seamless access to your app.](messaging-extensions/build-api-based-message-extension.md#authentication).
+* ***April 12, 2024***: [Implement authentication in API-based search message extensions to provide secure and seamless access to your app.](messaging-extensions/build-api-based-message-extension.md#authentication)
 * ***April 12, 2024***: [Introducing app manifest v1.17 with semanticDescription, samplePrompts, and dashboardCards](resources/schema/manifest-schema.md).
 * ***April 12, 2024***: [Outlook extensions specifies Outlook Add-ins within an app manifest and simplify the distribution and acquisition across the Microsoft 365 ecosystem](resources/schema/manifest-schema.md#extensionsrequirements).
 * ***April 12, 2024***: [Create Dashboardcards that can be pinned to a dashboard such as Microsoft Viva Connections to provide a summarized view of app information](resources/schema/manifest-schema.md#dashboardcards).
@@ -399,7 +399,8 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 May**
 
-***May 07, 2024***: You can specify a [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.
+* ***May 14, 2024***: [Introduced a new manifest property to let potential customers contact you with queries before they can confidently adopt your app.](resources/schema/manifest-schema-dev-preview.md#developercontactinfo)
+* ***May 07, 2024***: You can specify a [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.
 
 :::column-end:::
 :::row-end:::
