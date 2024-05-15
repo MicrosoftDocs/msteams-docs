@@ -204,11 +204,11 @@ The following table provides the response codes:
 | **501** | API isn't supported in the current context.|
 | **1000** | App doesn't have permissions to allow share to stage.|
 
-## Get all app content in meeting side panel
+## Get all the app content in meeting side panel
 
-The `sharing.history.getContent` API enables to fetch the content shared in a meeting and display in the meeting side panel. When the side panel is opened, app requests for all the content shared in the meeting to display in the side panel and also share to stage.
+The `sharing.history.getContent` API enables to fetch the content shared in a meeting and display in the meeting side panel. When the side panel is opened, the app requests all the content shared in the meeting to display in the side panel and also for sharing to the stage.
 
-When the meeting begins, the app’s side panel automatically opens for the user who has shared content in the meeting. The developer can call the `sharing.history.getContent` API to retrieve a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, the developer can call the API to get the latest content to be displayed in the app's side panel.
+When the meeting begins, the app’s side panel automatically opens for the user who has shared content in the meeting. The developer can call the `sharing.history.getContent` API to fetch a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, developers can call the API to get the latest content to be displayed in the app's side panel.
 
 ### Example
 

@@ -23,7 +23,7 @@ When you select the **Share in meeting** button, it launches a deep link to the 
 ## Prerequisites
 
 * For the meeting participants to interact with third-party web app or document, they must have meeting extension of the app or document installed in their Teams client. If they don't have meeting extension, Teams prompts participants to install the meeting extension.
-* To share the entire app to stage, you must configure `meetingStage` and `meetingSidePanel` as frame contexts in the [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting attendees might not be able to see the content on stage.
+* To share the entire app to stage, you must configure `meetingStage` and `meetingSidePanel` as frame contexts in the [app manifest](../../resources/schema/manifest-schema.md). Otherwise, meeting participants might not be able to view the content on stage.
 
 ## Enable share in meeting
 

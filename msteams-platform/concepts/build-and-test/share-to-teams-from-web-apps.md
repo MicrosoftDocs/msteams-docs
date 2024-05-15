@@ -1,6 +1,6 @@
 ---
 title: Share to Teams from web apps
-description: Learn to add the Share to Teams embedded button on your website, with a website preview, using Code samples.
+description: Learn to add the Share to Teams embedded button on your website, with a website preview, using code samples.
 ms.topic: reference
 ms.localizationpriority: medium
 ms.date: 07/22/2022
@@ -21,13 +21,13 @@ The following image displays the dialog that appears when the user selects the *
 
 You can also add link unfurling for the links shared through Share to Teams that are hosted in a web app, personal app, or tab. For more information, see [link unfurling](~/messaging-extensions/how-to/link-unfurling.md).
 
-The following image displays the link unfurling experience through **Share to Teams** button:
+The following image displays the link unfurling experience through Share to Teams:
 
 :::image type="content" source="~/assets/images/share-to-teams-link-unfurling.png" alt-text="Screenshot shows the Share to Teams link unfurling experience.":::
 
-This article guides you on how to create and embed a **Share to Teams** button for your website, craft your website preview, and extend Share to Teams for Education.
+This article guides you on how to create and embed a Share to Teams button for your website, craft your website preview, and extend Share to Teams for Education.
 
-The following video provides the basic steps on how to embed **Share to Teams** button:
+The following video provides the basic steps on how to embed Share to Teams button:
 <br>
 > [!VIDEO https://www.microsoft.com/en-us/videoplayer/embed/RE4vhWH]
 <br>
@@ -45,7 +45,7 @@ There are two methods by which you can embed a Share to Teams button on your web
 
 # [Method 1](#tab/method-1)
 
-This method shows the basic way to embed Share to Teams button where you can customize the button and its functionality based on your requirements.
+This method shows the simple and basic way to embed Share to Teams button where you can customize the button and its functionality based on your requirements.
 
 1. Add the `launcher.js` script on your webpage.
 
@@ -62,7 +62,7 @@ This method shows the basic way to embed Share to Teams button where you can cus
     </div>
     ```
 
-    After configuration, the Share to Teams button gets added to your website.
+    After configuration, the **Share to Teams** button gets added to your website.
 
     * If you want a different icon size for the Share to Teams button, use the `data-icon-px-size` attribute.
 
@@ -74,7 +74,7 @@ This method shows the basic way to embed Share to Teams button where you can cus
         </div>
         ```
 
-    * If the shared link requires user authentication or the URL preview from your link doesn't render well in Teams, then you can disable the URL preview by adding the `data-preview` attribute set to `false`.
+    * If the shared link requires user authentication or the URL preview from your link doesn't render properly in Teams, then you can disable the URL preview by adding the `data-preview` attribute and setting it to `false`.
 
         ```html
         <div
@@ -97,7 +97,7 @@ This method shows the basic way to embed Share to Teams button where you can cus
 
 # [Method 2](#tab/method-2)
 
-This method allows you to have some control over which button is dynamically rendered or when the script is executed. The script only runs when `shareToMicrosoftTeams.renderButtons(options)` is invoked. You can pass specific HTML elements through the `renderButtons({elements: [], shareInMeetingElements: [shareInMeetingButton]})` API.
+This method allows you to have some control over which button is dynamically rendered or when the script is executed. The script only runs when `shareToMicrosoftTeams.renderButtons(options)` is invoked.
 
 Use `async shareToMicrosoftTeams.renderButtons(options)` API to trigger and render all share buttons that have the class name `teams-share-button` on the page.
 
@@ -135,7 +135,7 @@ To enable your users to share content in meetings from Share to Teams, set `allo
 
 When you set `allow-share-in-meeting` attribute to `true`, the Share to Teams dialog appears with a **Present now** option.
 
-:::image type="content" source="~/assets/images/share-to-teams/share-to-teams-dialog.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
+:::image type="content" source="../../assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
 
 ## End user experience
 
@@ -198,7 +198,7 @@ To share content to a live meeting:
 
 1. Select **Start sharing**.
 
-   :::image type="content" source="../../assets/images/share-to-teams/start-share-live-meeting.png" alt-text="Screenshot shows how to share apps in teams meeting.":::
+   :::image type="content" source="../../assets/images/share-to-teams/start-share-live-meeting.png" alt-text="Screenshot shows how to share apps in teams meeting." lightbox="../../assets/images/share-to-teams/start-share-live-meeting-lightbox.png":::
 
 1. The web app is shared to meeting stage and all the participants can interact and work together.
 
@@ -223,15 +223,15 @@ If there's no ongoing meeting and the user wants to begin a meeting and present 
 
 1. Select **OK**. The meeting window appears to join the meeting.
 
-    :::image type="content" source="../../assets/images/share-to-teams/meeting-start-consent.png" alt-text="Screenshot shows the Present Now option in the Share to Teams dialog.":::
+    :::image type="content" source="../../assets/images/share-to-teams/meeting-start-consent.png" alt-text="Screenshot shows the Present Now option in the Share to Teams dialog." lightbox="../../assets/images/share-to-teams/meeting-start-consent-lightbox.png":::
 
 1. Select **Join Now**. After you join the meeting, a consent dialog appears to share the content in the meeting.
 
-    :::image type="content" source="../../assets/images/share-to-teams/join-meeting-now.png" alt-text="Screenshot shows the join meeting window.":::
+    :::image type="content" source="../../assets/images/share-to-teams/join-meeting-now.png" alt-text="Screenshot shows the join meeting window." lightbox="../../assets/images/share-to-teams/join-meeting-now-lightbox.png":::
 
 1. Select **Start sharing**.
 
-    :::image type="content" source="../../assets/images/share-to-teams/start-share-new-meeting.png" alt-text="Screenshot shows the consent dialog.":::
+    :::image type="content" source="../../assets/images/share-to-teams/start-share-new-meeting.png" alt-text="Screenshot shows the consent dialog." lightbox="../../assets/images/share-to-teams/start-share-new-meeting-lightbox.png":::
 
 1. The web app is shared to meeting stage and all the participants can interact and work together.
 
