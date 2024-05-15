@@ -47,6 +47,8 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
+      - text: 32x32 color icon for your app running in Outlook and Microsoft 365
+        url: concepts/build-and-test/apps-package.md#outline-icon
       - text: Authentication in API-based message extension
         url: messaging-extensions/build-api-based-message-extension.md#authentication
       - text: Share code snippets as richly formatted Adaptive Cards with the CodeBlock element
@@ -64,9 +66,7 @@ landingContent:
       - text: Stageview API with the openmode property allows you to open your app content in different Stageview experience
         url: tabs/open-content-in-stageview.md
       - text: Updated the common reasons for app validation failure to help your app pass the Teams Store submission process
-        url: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md      
-      - text: Configure Teams deep links using the msteams:// and https:// protocol handlers
-        url: concepts/build-and-test/deep-links.md#protocol-handlers-in-deep-links
+        url: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
 
     - linkListType: reference
       links:
