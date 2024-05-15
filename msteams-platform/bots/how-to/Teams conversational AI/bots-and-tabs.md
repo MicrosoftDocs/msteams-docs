@@ -90,7 +90,7 @@ You can make bots and tabs work together in two ways, either by updating the tab
 
 Let's consider the scenario where a user sends a message to the bot asking it to do some change in the tab, for example, show me the latest metrics for X feature. 
 
-:::image type="content" source="~/assets/images/bots/user-bot-tab.png" alt-text="Sequence diagram that explains the communication flow between user, bot, and tab.":::
+:::image type="content" source="~/assets/images/bots/user-bot-tab.png" alt-text="Sequence diagram that explains the communication flow between user, bot, and tab." lightbox="~/assets/images/bots/user-bot-tab.png":::
 
 As we understand from the above flow chart, when a user sends a message to the bot, the bot server is responding to the user through a bot message and using a web socket connection to process the change in the tab application. 
 
@@ -100,7 +100,7 @@ In this example, the socket connection with the tab can be retrieved through the
 
 The tab app itself could be used to trigger a bot message, as shown in the below diagram: 
 
-:::image type="content" source="~/assets/images/bots/tab-bot-user.png" alt-text="Sequence diagram that explains the communication flow between tab, bot, and user.":::
+:::image type="content" source="~/assets/images/bots/tab-bot-user.png" alt-text="Sequence diagram that explains the communication flow between tab, bot, and user." lightbox="~/assets/images/bots/tab-bot-user.png":::
 
 As we understand from the above flow chart, when a user makes a change in the tab, the tab server is responding to the user and using a web socket connection to process the change in the tab application. 
 
@@ -117,7 +117,7 @@ As discussed earlier, with an active web socket connection or through the REST A
 
 For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state then the data can be retrieved from memory or storage and handled accordingly, such as, feed the data into a prompt for a large language model (LLM).
 
-:::image type="content" source="~/assets/images/bots/bot-state.png" alt-text="Sequence diagram that explains the communication flow between tab and bot.":::
+:::image type="content" source="~/assets/images/bots/bot-state.png" alt-text="Sequence diagram that explains the communication flow between tab and bot." lightbox="~/assets/images/bots/bot-state.png":::
 
 ## See also
 
