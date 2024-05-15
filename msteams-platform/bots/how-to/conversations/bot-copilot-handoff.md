@@ -1,6 +1,6 @@
 ---
 title: Copilot handoff
-description: Learn how to allow users to continue their conversation with custom copilots from the copilot chat.
+description: Learn how to allow users to continue their conversation with custom copilots from the Copilot for Microsoft chat.
 ms.date: 05/07/2024
 ms.topic: conceptual
 author: v-ypalikila
@@ -9,21 +9,23 @@ ms.author: surbhigupta
 
 # Copilot handoff
 
-Copilot handoff allows users to continue their conversation with a custom copilot from the copilot chat. Custom copilot can send a deep link with a continuation token to the copilot, and when the user selects on it, they're navigated to the one-on-one bot chat. The copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context.
+Copilot handoff allows users to continue their conversation with a custom Copilot from the Copilot for Microsoft chat. Custom Copilot can send a deep link with a continuation token to the copilot, and when the user selects the deep link, they're navigated to the one-on-one bot chat. The Copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context.
 
-:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-architecture.png" alt-text="Screenshot shows the handoff architecture from plugins in copilot to other apps in Teams." lightbot="../../../assets/images/Copilot/copilot-handoff-architecture.png":::
+:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-architecture.png" alt-text="Screenshot shows the handoff architecture from plugins in Copilot to other apps in Teams." lightbot="../../../assets/images/Copilot/copilot-handoff-architecture.png":::
 
-## Enable copilot handoff
+You can now improve your plugins with the Copilot handoff feature, which allows for a seamless transition to your custom copilot by using deep links that carry over the user context. This resolves the issue of users having to restart and repeat their requests in the bot experience. The new deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced, allowing for a smooth conversation. This significantly enhances the user experience by providing a seamless transition and immediate understanding of the user’s intent, enabling you to create more responsive and context-aware applications.
 
-Create a deep link URL with a `continuation` query parameter for the action button and assign a continuation token to the parameter to facilitate the handoff process. When the user selects the action button, Teams reads the continuation token from the URL and initiates an invoke call to the bot. The bot or plugin uses the continuation token to create a response, which is then displayed to the user in the plugin chat window.
+## Enable Copilot handoff
 
-:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, copilot, plugin, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
+Create a deep link URL with a `continuation` query parameter for the action button and assign a continuation token to the parameter to facilitate the handoff process. When the user selects the action button, Microsoft Teams reads the continuation token from the URL and initiates an invoke call to the bot. The bot or plugin uses the continuation token to create a response, which is then displayed to the user in the plugin chat window.
 
-To enable Copilot Handoff in Microsoft Teams, follow these steps:
+:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, Copilot, plugin, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
 
-1. **Configure a deep link URL**: Set up a deep link to the bot chat and include `botMri` and `continuationToken`. The `botMri` value must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${28:<botId>}&continuation=${continuationToken}`. The `continuationToken` value can be any string, but make sure that the total url length doesn't exceed 2048 characters and that the string is URL encoded.
+To enable Copilot handoff in Teams, follow these steps:
 
-   Update the deep link url under the `Action.OpenUrl` property in the Adaptive card as follows:
+1. **Configure a deep link URL**: Set up a deep link to the bot chat and include `botMri` and `continuationToken`. The deep link must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${`botMri`}&continuation=${continuationToken}`. The `botMri` must be in the format `28:<botID>`. The `continuationToken` value can be any string, but ensure that the total URL length doesn't exceed 2048 characters and the string is URL encoded.
+
+   Update the deep link URL under the `Action.OpenUrl` property in the Adaptive Card as follows:
 
    ```JSON
    { 
@@ -92,7 +94,7 @@ To enable Copilot Handoff in Microsoft Teams, follow these steps:
    }
    ```
 
-1. **Handle the invoke type**: In your bot code, manage the new invoke type `handoff/action` using the `onInvokeActivity` handler. Override the `onInvokeActivity` method to handle the invoke call. The response to this invoke call should be an HTTP status code 200 for success or a code in the range of 400-500 for error. Don't send any payload with this response as it doesn't render in the chat window. Responses based on the continuation token should be sent to the user separately.
+1. **Handle the invoke type**: In your bot code, manage the new invoke type `handoff/action` using the `onInvokeActivity` handler. Override the `onInvokeActivity` method to handle the invoke call. The response to this invoke call must be an HTTP status code 200 for success or a code in the range of 400-500 for error. Don't send any payload with this response as it doesn't render in the chat window. The responses based on the continuation token must be sent to the user separately.
 
    Here's an example of how to handle the invoke call in `searchApp.ts`:
 
@@ -132,13 +134,13 @@ To enable Copilot Handoff in Microsoft Teams, follow these steps:
 
 ## Best practices
 
-* **Preview Release Considerations**: It’s important for the bot to quickly notify users when they're directed to the bot chat after selecting the action button, as there's no visual indication. This helps manage expectations as there might be a delay before the bot returns a response due to network latency and processing time. For instance, the bot could send a series of activities to keep the user informed of the progress:
+* **Preview Release Considerations**: It’s important for the bot to quickly notify users when they're directed to the bot chat after selecting the action button, as there's no visual indication. This helps manage expectations as there might be a delay before the bot returns a response due to network latency and processing time. For instance, the bot can send a series of activities to keep the user informed of the progress:
 
     ```typescript
     await context.sendActivities([
       {
         type: ActivityTypes.Message,
-        text: "Continuing conversation from copilot...",
+        text: "Continuing conversation from Copilot...",
       },
       { type: ActivityTypes.Typing },
       { type: "delay", value: 1000 },
@@ -158,4 +160,4 @@ To enable Copilot Handoff in Microsoft Teams, follow these steps:
 
 * **Continuation Token Lifetime**: For a smooth handoff process, it’s important to manage the continuation token effectively. Keep the token’s lifetime short and ensure it doesn't process more than once. After a token is used, remove it from storage to prevent it from being used again. If the same token comes up, let the user know they need to start a new conversation with the bot because the handoff from Copilot can't continue.
 
-* When the bot is unable to process a request or if the token is expired, it should actively guide the user to the bot chat. If the conversation can't continue, the bot must inform the user of the error and suggest they start a new conversation or retry their query.
+* When the bot is unable to process a request or if the token is expired, it must actively guide the user to the bot chat. If the conversation can't continue, the bot must inform the user of the error and suggest they start a new conversation or retry their query.
