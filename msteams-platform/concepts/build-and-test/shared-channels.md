@@ -1,8 +1,6 @@
 ---
 title: Teams Connect shared channels
-author: Rajeshwari-v
 description:  Learn about Teams Connect shared channels to securely collaborate with internal and external users in a shared space without switching tenants.
-ms.author: surbhigupta
 localization_priority: Normal
 ms.topic: conceptual
 ms.date: 11/02/2022
@@ -21,7 +19,7 @@ Microsoft Teams Connect shared channels allow members of a channel to collaborat
 
 Teams Connect shared channels facilitate secure collaboration seamlessly. Allow external users outside of your organization to collaborate with internal users in Teams without changing their user context. Enhance user experience unlike using guest accounts, for example, the members must sign out of Teams and sign in again using a guest account. Teams applications extend the powerful collaboration space.
 
-:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram that shows Team B from organization A and Team C from organization B collaborating in a shared Channel as Team A.":::
+:::image type="content" source="~/assets/images/app-fundamentals/shared-channels-teams.png" alt-text="Diagram that shows Team B from organization A and Team C from organization B collaborating in a shared channel as Team A.":::
 
 ## Enable your app for shared channels
 
@@ -102,7 +100,26 @@ Apps must function cross-tenants in installation and usage. The following table 
 
 ## Apps in group chats with external users
 
-Teams supports apps in group chats with external users from outside an organization. Only the host of the group chat can add, update, or remove apps to the group chat. However, all members of the chat, including external users, can use these apps. External users can't add, update, or remove apps from a group chat. This feature only applies to group chats and doesn't extend to one-on-one chats or channel chats with external users.
+Teams supports apps in group chats with external users from outside an organization. Only the host of the group chat can add, update, or remove apps to the group chat. However, all members of the chat, including external users, can use these apps. External users can't add, update, or remove apps from a group chat. Support for apps doesn't extend to one-on-one chats or channel chats with external users.
+
+If you enable the `groupChat` scope in a single tenant app, you must handle the cases where authentication fails for external users.
+If you have a multitenant app, you must handle userIDs that from outside your host organization. The following code snippet shows how to handle both the scenarios:
+
+The following code snippet prevents external users from signing in and displays a failure message when they attempt to sign in:
+
+<Placeholder code snippet>
+
+The following code snippets show how to allow external users to sign-in and handle two distinct sign-in scenarios for host and external users:
+
+# [Bot](#tab/bot)
+
+<Placeholder code snippet>
+
+# [Tab](#tab/tab)
+
+<Placeholder code snippet>
+
+---
 
 ## See also
 
@@ -110,4 +127,4 @@ Teams supports apps in group chats with external users from outside an organizat
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
-* [Retension policy for Teams locations](/microsoft-365/compliance/create-retention-policies)
+* [Retention policy for Teams locations](/microsoft-365/compliance/create-retention-policies)
