@@ -159,152 +159,152 @@ Image
 
 You can add customizations on top of this basic application to build more complex scenarios as follows:
 
-1. Customize prompt: Prompts play a crucial role in communicating and directing the behavior of Large Language Models (LLMs) AI. They serve as inputs or queries that users can provide to elicit specific responses from a model. Here's a prompt that asks the LLM for name suggestions:
+1. **Customize prompt**: Prompts play a crucial role in communicating and directing the behavior of Large Language Models (LLMs) AI. They serve as inputs or queries that users can provide to elicit specific responses from a model. Here's a prompt that asks the LLM for name suggestions:
 
- Request:
- ```
- Give me 3 name suggestions for my pet golden retriever.
- ```
- Response:
- ```
- Some possible name suggestions for a pet golden retriever are:
- - Bailey
- - Sunny
- - Cooper
- ```
+     Request:
+     ```
+     Give me 3 name suggestions for my pet golden retriever.
+     ```
+     Response:
+     ```
+     Some possible name suggestions for a pet golden retriever are:
+     - Bailey
+     - Sunny
+     - Cooper
+     ```
+    
+     Using project generated with Teams Toolkit, you can author the prompts in `src/prompts/chat/skprompt.txt` file. The prompts written in this file are inserted into the prompt used to instruct the LLM. Teams AI library defines the following syntax that you can use in the prompt text.
+    
+     # [Syntax 1](#tab/syntax1)
+    
+     `{{ $[scope].property }}`: The Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified, the library defaults to using the temp scope.
+    
+     The `{{$[scope].property}}` is used in the following way:
+    
+       # [Javascript](#tab/javascript)
+    
+       * In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
+    
+       ```javascript
+    
+       export interface TempState extends DefaultTempState { ... }
+       export interface UserState extends DefaultUserState { ... }
+       export interface ConversationState extends DefaultConversationState {
+           tasks: Record<string, Task>;
+           }
+       export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
+       ```
+       * In `src/app/app.ts`, use application turn state to initialize application.
+    
+       ```javascript
+    
+       const app = new Application<ApplicationTurnState>(...);
+    
+       ```
+       * In `src/prompts/chat/skprompt.txt` use the scoped state property such as {{$conversation.tasks}}.
+    
+       # [Python](#tab/python)
+    
+       * In `src/state.py`, define your temp state, user state, conversation state and application turn state.
+    
+       ```python
+    
+       from teams.state import TempState, ConversationState, UserState, TurnState
+    
+       class AppConversationState(ConversationState):
+        tasks: Dict[str, Task] # Your data definition here
+    
+           @classmethod
+           async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppConversationState":
+               state = await super().load(context, storage)
+               return cls(**state)
+    
+       class AppTurnState(TurnState[AppConversationState, UserState, TempState]):
+           conversation: AppConversationState
+    
+           @classmethod
+           async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppTurnState":
+               return cls(
+                   conversation=await AppConversationState.load(context, storage),
+                   user=await UserState.load(context, storage),
+                   temp=await TempState.load(context, storage),
+               )
+    
+       ```
+    
+       * In `src/bot.py`, user application turn state to initialize application.
+    
+       ```python
+    
+       from state import AppTurnState
+    
+       app = Application[AppTurnState](...)
+    
+       ```
+    
+       * In `src/prompts/chat/skprompt.txt`, use the scoped state property such as {{$conversation.tasks}}.
+       ---
+    
+     # [Syntax 2](#tab/syntax2)
+    
+     `{{ functionName }}`: To call an external function and embed the result in your text, use the {{ functionName }} syntax. For example, if you have a function called getTasks that can return a list of task items, you can embed the results into the prompt:
+    
+       # [Javascript](#tab/javascript)
+    
+       * Register the function into prompt manager in `src/app/app.ts`:
+    
+       ```typescript
+    
+       prompts.addFunction("getTasks", async (context: TurnContext, memory: Memory, functions: PromptFunctions, tokenizer: Tokenizer, args: string[]) => {
+       return ...
+       });
+    
+       ```
+    
+       * Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
+    
+       # [Python](#tab/python)
+    
+       * Register the function into prompt manager in src/bot.py:
+    
+       ```python
+    
+       @prompts.function("getTasks")
+       async def get_tasks(
+           _context: TurnContext,
+           state: MemoryBase,
+           _functions: PromptFunctions,
+           _tokenizer: Tokenizer,
+           _args: List[str],
+       ):
+           return state.get("conversation.tasks")
+    
+       ```
+    
+       * Use the function in `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
+       ---
+    
+    # [Syntax 3](#tab/syntax3)
+    
+    `{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
+    
+    1. Register the function into prompt manager:
+     * For JavaScript language, register it in `src/app/app.ts`.
+     * For Python language, register it in `src/bot.py`.
+    
+    1. Use the function in `src/prompts/chat/skprompt.txt` such as Your `task is: {{ getTasks taskTitle }}`.
+    
+    ---
 
- Using project generated with Teams Toolkit, you can author the prompts in src/prompts/chat/skprompt.txt file. The prompts written in this file will be inserted into the prompt used to instruct the LLM. Teams AI library defines the following syntax that you can use in the prompt text.
+1. **Customize user input**: Teams AI library allows you to augment the prompt sent to LLM by including the user inputs. When including user inputs, you need to specify it in a prompt configuration file by setting completion.include_input to true in src/prompts/chat/config.json. You can also optionally configure the maximum number of user input tokens in src/prompts/chat/config.json by changing completion.max_input_tokens. This is useful when you want to limit the length of user inputs to avoid token limit exceeded.
 
- # [Syntax 1](#tab/syntax1)
-
- `{{ $[scope].property }}`: The Teams AI library renders the value of a property that is scoped and defined within the turn state. It defines three such scopes: temp, user, and conversation. If no scope is specified, the library defaults to using the temp scope.
-
- The `{{$[scope].property}}` is used in the following way:
-
-   # [Javascript](#tab/javascript)
-
-   * In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
-
-   ```javascript
-
-   export interface TempState extends DefaultTempState { ... }
-   export interface UserState extends DefaultUserState { ... }
-   export interface ConversationState extends DefaultConversationState {
-       tasks: Record<string, Task>;
-       }
-   export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
-   ```
-   * In `src/app/app.ts`, use application turn state to initialize application.
-
-   ```javascript
-
-   const app = new Application<ApplicationTurnState>(...);
-
-   ```
-   * In `src/prompts/chat/skprompt.txt` use the scoped state property such as {{$conversation.tasks}}.
-
-   # [Python](#tab/python)
-
-   * In `src/state.py`, define your temp state, user state, conversation state and application turn state.
-
-   ```python
-
-   from teams.state import TempState, ConversationState, UserState, TurnState
-
-   class AppConversationState(ConversationState):
-    tasks: Dict[str, Task] # Your data definition here
-
-       @classmethod
-       async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppConversationState":
-           state = await super().load(context, storage)
-           return cls(**state)
-
-   class AppTurnState(TurnState[AppConversationState, UserState, TempState]):
-       conversation: AppConversationState
-
-       @classmethod
-       async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppTurnState":
-           return cls(
-               conversation=await AppConversationState.load(context, storage),
-               user=await UserState.load(context, storage),
-               temp=await TempState.load(context, storage),
-           )
-
-   ```
-
-   * In `src/bot.py`, user application turn state to initialize application.
-
-   ```python
-
-   from state import AppTurnState
-
-   app = Application[AppTurnState](...)
-
-   ```
-
-   * In `src/prompts/chat/skprompt.txt`, use the scoped state property such as {{$conversation.tasks}}.
-   ---
-
- # [Syntax 2](#tab/syntax2)
-
- `{{ functionName }}`: To call an external function and embed the result in your text, use the {{ functionName }} syntax. For example, if you have a function called getTasks that can return a list of task items, you can embed the results into the prompt:
-
-   # [Javascript](#tab/javascript)
-
-   * Register the function into prompt manager in `src/app/app.ts`:
-
-   ```typescript
-
-   prompts.addFunction("getTasks", async (context: TurnContext, memory: Memory, functions: PromptFunctions, tokenizer: Tokenizer, args: string[]) => {
-   return ...
-   });
-
-   ```
-
-   * Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
-
-   # [Python](#tab/python)
-
-   * Register the function into prompt manager in src/bot.py:
-
-   ```python
-
-   @prompts.function("getTasks")
-   async def get_tasks(
-       _context: TurnContext,
-       state: MemoryBase,
-       _functions: PromptFunctions,
-       _tokenizer: Tokenizer,
-       _args: List[str],
-   ):
-       return state.get("conversation.tasks")
-
-   ```
-
-   * Use the function in `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
-   ---
-
-# [Syntax 3](#tab/syntax3)
-
-`{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
-
-1. Register the function into prompt manager:
- * For JavaScript language, register it in `src/app/app.ts`.
- * For Python language, register it in `src/bot.py`.
-
-1. Use the function in `src/prompts/chat/skprompt.txt` such as Your `task is: {{ getTasks taskTitle }}`.
-
----
-
-1. Customize user input: Teams AI library allows you to augment the prompt sent to LLM by including the user inputs. When including user inputs, you need to specify it in a prompt configuration file by setting completion.include_input to true in src/prompts/chat/config.json. You can also optionally configure the maximum number of user input tokens in src/prompts/chat/config.json by changing completion.max_input_tokens. This is useful when you want to limit the length of user inputs to avoid token limit exceeded.
-
-1. Customize conversation history: The SDK automatically manages the conversation history, and you can customize the following.
+1. **Customize conversation history**: The SDK automatically manages the conversation history, and you can customize the following.
 
     Whether to include history. In src/prompts/chat/config.json, configure completion.include_history. If true, the history is inserted into the prompt to let LLM aware of the conversation context.
     
-    Maximum number of history messages. Configure max_history_messages when initializing PromptManager.
+    * Maximum number of history messages. Configure max_history_messages when initializing PromptManager.
     
-    For JavaScript language:
+    # [JavaScript](#tab/javaScript)
     
     ```javascript
     
@@ -315,7 +315,7 @@ You can add customizations on top of this basic application to build more comple
     });
     ```
     
-    For Python language:
+    # [Python](#tab/python)
     
     ```python
     
@@ -326,9 +326,9 @@ You can add customizations on top of this basic application to build more comple
     
     ```
     
-    Maximum number of history tokens. Configure max_conversation_history_tokens when initializing PromptManager.
+    * Maximum number of history tokens. Configure max_conversation_history_tokens when initializing PromptManager.
     
-    For JavaScript language:
+    # [JavaScript](#tab/javaScript)
     
     ```javascript
     
@@ -339,7 +339,7 @@ You can add customizations on top of this basic application to build more comple
     
     ```
     
-    For Python language:
+    # [Python](#tab/python)
     
     ```python
     
@@ -349,23 +349,25 @@ You can add customizations on top of this basic application to build more comple
     ))
     
     ```
+    ---
     
-1. Customize model type: You can use a specific model for a prompt. In src/prompts/chat/config.json, configure completion.model. If no model is configured for the prompt, the default model configured in OpenAIModel will be used.
+1. **Customize model type: You can use a specific model for a prompt. In src/prompts/chat/config.json, configure completion.model. If no model is configured for the prompt, the default model configured in OpenAIModel is used.
 
-    Below lists the models whether the SDK supports.
-    GPT-3.5
-    
-    Model	Supported
-    gpt-3.5-turbo	Supported
-    gpt-3.5-turbo-16k	Supported
-    gpt-3.5-turbo-instruct	Not supported from 1.1.0
-    GPT-4
-    
-    Model	Supported
-    gpt-4	Supported
-    gpt-4-32k	Supported
-    gpt-4-vision	Supported
-    gpt-4-turbo	Supported
+    The models that support the SDK as follows:
+
+    | Model | Supported |
+    | --- | --- |
+    | &nbsp; | &nbsp; |
+    | gpt-3.5-turbo | Supported |
+    | gpt-3.5-turbo-16k | Supported |
+    | gpt-3.5-turbo-instruct | Not supported from 1.1.0 |
+    | gpt-4 | Supported |
+    | gpt-4-32k | Supported |
+    | gpt-4-vision | Supported |
+    | gpt-4-turbo | Supported |
+    | DALL·E | Not supported |
+    | Whisper | Not supported |
+    | TTS | Not supported |
 
 1. Customize model parameters:
 
