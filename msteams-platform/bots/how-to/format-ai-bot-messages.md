@@ -12,11 +12,12 @@ If you're building a conversational bot, you can now leverage features such as c
 Here's a quick overview on each feature that you can integrate to your bot message:
 
 | Feature | Description |
-| --- | :---: |
+| --- | --- |
 | [AI label](#ai-label) | Enables user to identify that the message was generated using AI. |
 | [Sensitivity label](#sensitivity-label) | Enables user to understand the confidentiality of the bot's message. |
 | [Citations](#citations) | Enables user to refer to the source of the bot's message through in-text citations and a list of references. |
 | [Feedback buttons](#feedback-buttons) | Enables user to provide positive or negative feedback based on their experience. |
+
 :::image type="content" source="../../assets/images/bots/ai-bot-message.png" border="false" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
 
 > [!NOTE]
@@ -412,7 +413,7 @@ The following code snippet shows how to enable feedback buttons in a bot:
 
 ```
 
-For a bot built using Teams AI library, Teams enables feedback buttons to all bot messages when `enable_feedback_loop` is set to `true` in the `ai` object.
+For a bot built using Teams AI library, Teams enables feedback buttons to all bot messages when `enable_feedback_loop` is set to `true` in the `ai` module.
 
 ```javascript
 export const app = new Application<ApplicationTurnState>({
