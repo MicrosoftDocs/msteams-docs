@@ -608,13 +608,6 @@ Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls
   * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
   * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
 
-
-
-
-
-
-
-
 ## Adaptive Card response
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
@@ -748,7 +741,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 ## Best practices to extend Teams apps as plugin in Copilot
 
-If you have a Search message extension and enable the M365 channel, your app works in Copilot for Microsoft 365 in Teams. To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
+If you have a search-based message extension and have enabled   the M365 channel, your app works in Copilot for Microsoft 365 in Teams. To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
 
 * **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.19.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This ensures that your application continues to work with Bing domains.
 
