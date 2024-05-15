@@ -325,6 +325,7 @@ You can add customizations on top of this basic application to build more comple
     ))
     
     ```
+    ---
     
     * Maximum number of history tokens. Configure max_conversation_history_tokens when initializing PromptManager.
     
@@ -351,7 +352,7 @@ You can add customizations on top of this basic application to build more comple
     ```
     ---
     
-1. **Customize model type: You can use a specific model for a prompt. In src/prompts/chat/config.json, configure completion.model. If no model is configured for the prompt, the default model configured in OpenAIModel is used.
+1. **Customize model type**: You can use a specific model for a prompt. In src/prompts/chat/config.json, configure completion.model. If no model is configured for the prompt, the default model configured in OpenAIModel is used.
 
     The models that support the SDK as follows:
 
