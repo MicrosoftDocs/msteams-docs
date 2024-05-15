@@ -1,5 +1,5 @@
 ---
-title: Interoperability of bot and tab
+title: Sync bots and tabs
 description: In this article, learn about interoperability between bot and tab.
 ms.localizationpriority: medium
 ms.topic: coceptual
@@ -8,14 +8,14 @@ author: surbhigupta
 ms.date: 05/02/2024
 ---
 
-# Interoperability of bots and tabs
+# Sync bots and tabs
 
 Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are great way for conversational experiences through chat, while tabs allow you to embed web applications directly into Teams. Tabs and bots can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
 
 > [!NOTE]
-> We recommend building bots using AI library for interoperability of bots and tabs.
+> We recommend building bots using AI library for integrating bots and tabs.
 
-By combining bots and tabs, you can create a custom Copilot like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application.
+By integrating bots and tabs, you can create a custom copilot like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application.
 
 **{WIP - GIF for example}**
 
@@ -98,13 +98,13 @@ In this example, the socket connection with the tab can be retrieved through the
 
 # [Update the bot through change in the tab](#tab/update-the-bot-through-change-in-the-tab)
 
-The tab app itself could be used to trigger a bot message, as shown in the below diagram: 
+The tab app itself could be used to trigger a bot message, as shown in the following diagram: 
 
 :::image type="content" source="~/assets/images/bots/tab-bot-user.png" alt-text="Sequence diagram that explains the communication flow between tab, bot, and user." lightbox="~/assets/images/bots/tab-bot-user.png":::
 
-As we understand from the above flow chart, when a user makes a change in the tab, the tab server is responding to the user and using a web socket connection to process the change in the tab application. 
+As we understand from the above flow chart, when a user makes a change in the tab, the tab server is responding to the user and using a web socket connection to process the change in the tab application.
 
-In this example, the socket connection with the bot can be retrieved through the `threadId`. In a collaborative context, such as meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface. 
+In this example, the socket connection with the bot can be retrieved through the `threadId`. In a collaborative context, such as meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface.
 
 > [!NOTE]
 > This scenario works well for personal apps, for collaborative contexts such as, meeting stage, the `threadId` might need to be sent to the app server from the tab using the `teams-js` SDK. That would ensure that the app sends the message to the right context, rather than to the user's personal conversation with the bot.
@@ -113,7 +113,7 @@ In this example, the socket connection with the bot can be retrieved through the
 
 ## Sharing app state
 
-As discussed earlier, with an active web socket connection or through the REST APIs, the tab can send application state data to a server, which the server would then store or cache for later use. 
+As discussed earlier, with an active web socket connection or through the REST APIs, the tab can send application state data to a server, which the server would then store or cache for later use.
 
 For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state then the data can be retrieved from memory or storage and handled accordingly, such as, feed the data into a prompt for a large language model (LLM).
 
