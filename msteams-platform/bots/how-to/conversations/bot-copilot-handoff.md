@@ -11,7 +11,7 @@ ms.author: surbhigupta
 
 Copilot handoff allows users to continue their conversation with a custom Copilot from the Copilot for Microsoft chat. Custom Copilot can send a deep link with a continuation token to the copilot, and when the user selects the deep link, they're navigated to the one-on-one bot chat. The Copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context.
 
-:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-architecture.png" alt-text="Screenshot shows the handoff architecture from plugins in Copilot to other apps in Teams." lightbot="../../../assets/images/Copilot/copilot-handoff-architecture.png":::
+:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-architecture.png" alt-text="Screenshot shows the handoff architecture from plugins in Copilot to other apps in Teams." lightbox="../../../assets/images/Copilot/copilot-handoff-architecture.png":::
 
 You can now improve your plugins with the Copilot handoff feature, which allows for a seamless transition to your custom copilot by using deep links that carry over the user context. This resolves the issue of users having to restart and repeat their requests in the bot experience. The new deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced, allowing for a smooth conversation. This significantly enhances the user experience by providing a seamless transition and immediate understanding of the user’s intent, enabling you to create more responsive and context-aware applications.
 
