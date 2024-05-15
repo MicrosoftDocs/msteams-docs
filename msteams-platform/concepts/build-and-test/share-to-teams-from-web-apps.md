@@ -115,7 +115,7 @@ Currently, all share buttons are rendered on the page. If an `options (optional)
 
 Sharing content to Teams is an extended functionality of Share to Teams from web apps. You can enable users to share content in meetings and allow for collaborative workspace within the meeting stage. For example, the users can collectively review a GitHub Pull Request by sharing it in the meeting.
 
-Here's how the web app appears when shared in the meeting stage:
+Here's how the shared web content appears in the meeting stage:
 
 :::image type="content" source="../../assets/images/share-to-teams/share-meeting-live.png" alt-text="Screenshot shows app shared to the teams meeting stage.":::
 
@@ -146,11 +146,8 @@ When you set `allow-share-in-meeting` attribute to `true`, the Share to Teams di
 Here are a few end user scenarios where the content is shared to different scopes from Share to Teams.
 
 </br>
-</br>
 <details>
-<summary>Content shared to chat or channel</summary>
-
-To share the content to a chat or channel:
+<summary>Share the content to a chat or channel</summary>
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
@@ -168,9 +165,7 @@ To share the content to a chat or channel:
 </details>
 </br>
 <details>
-<summary>Content shared to an upcoming meeting</summary>
-
-To share the content in an upcoming meeting:
+<summary>Share the content in an upcoming meeting</summary>
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
@@ -192,9 +187,7 @@ When the meeting begins, the content shared to the meeting is displayed in a sid
 </details>
 </br>
 <details>
-<summary>Content shared in an ongoing meeting</summary>
-
-To share content in an ongoing meeting:
+<summary>Share content in an ongoing meeting</summary>
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
