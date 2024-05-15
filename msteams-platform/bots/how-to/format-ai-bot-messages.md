@@ -194,11 +194,9 @@ To add a citation reference list to your bot message, include `citation` array i
 }
 ```-->
 
-After you enable citations, the bot's message includes the in-text citations and the reference. The in-text citations display the reference details when users hover over them, as shown in the following image:
+After you enable citations, the bot's message includes the in-text citations and the reference. The in-text citations display the reference details when users hover over the citation.
 
-:::image type="content" source="../../assets/images/bots/ai-bot-ref-cite-list.png" border="false" alt-text="Screenshot shows an AI bot reference citation list.":::
-
-You can add sensitivity labels to citations to indicate the confidentiality of the content referenced. To enable sensitivity labels for citations, modify the message to include `usageInfo` in the `entities` object.
+You can manually add sensitivity labels to citations to indicate the confidentiality of the content referenced. To enable sensitivity labels for citations, modify the message to include `usageInfo` in the `entities` object.
 
 The following code snippet shows the sensitivity labels in citations of your bot's message:
 
@@ -466,7 +464,7 @@ After the sensitivity label is added, your bot message contains a shield icon. U
 
 ## Modify PredictedSAYCommand
 
-For a bout built using Teams AI library, the `PredictedSAYCommand` provides more control on how AI label, sensitivity label, citations, and feedback buttons are added to the bot's activity. To modify `PredictedSAYCommand`, use the following code:
+For a bot built using Teams AI library, the `PredictedSAYCommand` provides more control on how AI label, sensitivity label, citations, and feedback buttons are added to the bot's activity. To modify `PredictedSAYCommand`, use the following code:
 
 ```JavaScript
 app.ai.action<PredictedSayCommand>(AI.SayCommandActionName, async (context, state, data, action) => {
