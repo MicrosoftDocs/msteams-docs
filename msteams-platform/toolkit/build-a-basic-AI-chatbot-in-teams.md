@@ -292,8 +292,8 @@ You can add customizations on top of this basic application to build more comple
      `{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
     
      1. Register the function into prompt manager:
-      * For JavaScript language, register it in `src/app/app.ts`.
-      * For Python language, register it in `src/bot.py`.
+          * For JavaScript language, register it in `src/app/app.ts`.
+          * For Python language, register it in `src/bot.py`.
     
      1. Use the function in `src/prompts/chat/skprompt.txt` such as Your `task is: {{ getTasks taskTitle }}`.
     

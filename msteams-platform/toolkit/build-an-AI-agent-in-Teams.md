@@ -156,54 +156,57 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
     
     1. Enter an application name for your app and then select the **Enter** key.
 
-
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-    Now, you've successfully created your AI chat bot project workspace
+       Now, you've successfully created your AI chat bot project workspace
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-assistant-api.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-assistant-api.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
-   **Create your own OpenAI Assistant**
+       **Create your own OpenAI Assistant**
     
-    Before running or debugging your bot, please follow these steps to set up your own [OpenAI Assistant](https://platform.openai.com/docs/assistants/overview).
+        Before running or debugging your bot, please follow these steps to set up your own [OpenAI Assistant](https://platform.openai.com/docs/assistants/overview).
     
-    **If you haven't setup any Assistant yet**
+        **If you haven't setup any Assistant yet**
     
-    > This app template provides script `src/creator.js` to help create assistant. You can change the instructions and settings in the script to customize the assistant.
-    > 
-    > After creation, you can change and manage your assistants on [OpenAI](https://platform.openai.com/assistants).
-    
-    1. Open terminal and run command `npm install` to install all dependency packages
-        ```
-        > npm install
-        ```
-    1. After `npm install` completed, run command `npm run assistant:create -- <your-openai-api-key>`
-        ```
-        > npm run assistant:create -- xxxxxx
-        ```
-    1. The above command outputs something like "*Created a new assistant with an ID of: **asst_xxx...***"
-    
+        > This app template provides script `src/creator.js` to help create assistant. You can change the instructions and settings in the script to customize the assistant.
+        > 
+        > After creation, you can change and manage your assistants on [OpenAI](https://platform.openai.com/assistants).
+        
+        1. Open terminal and run command `npm install` to install all dependency packages
+            ```
+            > npm install
+            ```
+        1. After `npm install` completed, run command `npm run assistant:create -- <your-openai-api-key>`
+            ```
+            > npm run assistant:create -- xxxxxx
+            ```
+        1. The above command outputs something like "*Created a new assistant with an ID of: **asst_xxx...***"
+        
     1. Go to **Visual Studio Code**, Under **EXPLORER**, select **env** > **.env.*.users** file.
+        
+      1. Update the following details:
+            SECRET_OPENAI_API_KEY=`<your-openai-api-key>`
+            OPENAI_ASSISTANT_ID=`<your-openai-assistant-id>`
+            image
     
-    1. Update the following details:
-        SECRET_OPENAI_API_KEY=`<your-openai-api-key>`
-        OPENAI_ASSISTANT_ID=`<your-openai-assistant-id>`
-    image
-
     1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
-
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
-
-    ## Take a tour of the bot app source code
     
+           :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
+    
+    ## Take a tour of the bot app source code
     
     | Folder       | Contents                                            |
     | - | - |
-    | `.vscode`    | Visual Studio Code files for debugging                          |
+    | `.vscode`    | VSCode files for debugging                          |
     | `appPackage` | Templates for the Teams application manifest        |
     | `env`        | Environment files                                   |
     | `infra`      | Templates for provisioning Azure resources          |
     | `src`        | The source code for the application                 |
+
+    The following files can be customized and demonstrate an example implementation to get you started.
+
+    | File                                 | Contents                                           |
+    | - | - |
     |`src/index.js`| Sets up the bot app server.|
     |`src/adapter.js`| Sets up the bot adapter.|
     |`src/config.js`| Defines the environment variables.|
@@ -211,9 +214,15 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
     |`src/app/app.js`| Handles business logics for the AI Agent.|
     |`src/app/messages.js`| Defines the message activity handlers.|
     |`src/app/actions.js`| Defines the AI actions.|
-    |`teamsapp.yml`| This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
-    |`teamsapp.local.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
-    |`teamsapp.testtool.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+
+    The following are Teams Toolkit specific project files. You can [visit a complete guide on Github](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.
+
+    | File                                 | Contents                                           |
+    | - | - |
+    |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
+    |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
+    |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
+
     ---
 
 ## How Teams AI Library is used to create an AI Agent.
