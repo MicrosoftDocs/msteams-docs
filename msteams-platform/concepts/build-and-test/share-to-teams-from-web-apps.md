@@ -113,7 +113,7 @@ Currently, all share buttons are rendered on the page. If an `options (optional)
 
 ### Share content in meetings
 
-Sharing content to Teams is an extended functionality of Share to Teams from web apps. You can enable users to share content in meetings and allow for collaborative workspace within the meeting stage. For example, the users can collectively review a GitHub Pull Request by sharing it in the meeting.
+Share to Teams from web apps now allows users to share content to a live or an upcoming meeting. By enabling content sharing to meetings, you can allow users to share information that creates a collaborative workspace within the meeting. For example, users can share workboards from a web app directly onto the meeting stage, facilitating a collective effort to gather and organize ideas.
 
 Here's how the shared web content appears in the meeting stage:
 
@@ -128,7 +128,15 @@ Before you enable share content to meetings, you must ensure the following:
     * The [app manifest](../../resources/schema/manifest-schema.md) that supports both the meeting stage and meeting side panel. You must configure `meetingStage` and `meetingSidePanel` as frame contexts in the app manifest. If not configured, meeting participants might not be able to view the content on stage.
     * The app that supports `MeetingStage.Write.Chat` permissions for taking control of the stage. This is a read permission requirement.
 
-To enable your users to share content in meetings from Share to Teams, add `allow-share-in-meeting` attribute and set it to `true`.
+**Enable Share to Teams for meeting**
+
+1. Add the `launcher.js` script on your webpage.
+
+    ```html
+    <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
+    ```
+
+1. Add an HTML element on your webpage with the `teams-share-button` in the `class` attribute and the link to share in the `data-href` attribute. To enable your users to share content in meetings from Share to Teams, add `allow-share-in-meeting` attribute and set it to `true`.
 
 ```html
     <div
@@ -139,7 +147,7 @@ To enable your users to share content in meetings from Share to Teams, add `allo
     </div>
 ```
 
-When you set `allow-share-in-meeting` attribute to `true`, the Share to Teams dialog appears with a **Present now** option. Present now allows the users to share content to an ongoing meeting.
+After the configuration, the Share to Teams dialog appears with a **Present now** option. Present now allows the users to share content to an ongoing meeting.
 
 :::image type="content" source="../../assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
 
@@ -147,7 +155,7 @@ Here are a few end user scenarios where the content is shared to different scope
 
 </br>
 <details>
-<summary>Share the content to a chat or channel</summary>
+<summary>Share content to a chat or channel</summary>
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
@@ -165,7 +173,7 @@ Here are a few end user scenarios where the content is shared to different scope
 </details>
 </br>
 <details>
-<summary>Share the content in an upcoming meeting</summary>
+<summary>Share content to an upcoming meeting</summary>
 
 1. Open the web app in the browser and select **Share to Teams**. The Share to Teams dialog opens.
 
