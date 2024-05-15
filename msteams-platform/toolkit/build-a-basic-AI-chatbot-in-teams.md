@@ -181,108 +181,108 @@ You can add customizations on top of this basic application to build more comple
     
      The `{{$[scope].property}}` is used in the following way:
     
-     # [Javascript](#tab/javascript)
+         # [Javascript](#tab/javascript)
+        
+         * In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
+        
+         ```javascript
+        
+         export interface TempState extends DefaultTempState { ... }
+         export interface UserState extends DefaultUserState { ... }
+         export interface ConversationState extends DefaultConversationState {
+             tasks: Record<string, Task>;
+         }
+         export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
+         ```
+         * In `src/app/app.ts`, use application turn state to initialize application.
+        
+         ```javascript
+        
+         const app = new Application<ApplicationTurnState>(...);
+        
+         ```
+         * In `src/prompts/chat/skprompt.txt` use the scoped state property such as {{$conversation.tasks}}.
     
-     * In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
+         # [Python](#tab/python)
+        
+         * In `src/state.py`, define your temp state, user state, conversation state and application turn state.
+        
+         ```python
+        
+         from teams.state import TempState, ConversationState, UserState, TurnState
+        
+         class AppConversationState(ConversationState):
+             tasks: Dict[str, Task] # Your data definition here
+        
+             @classmethod
+             async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppConversationState":
+                 state = await super().load(context, storage)
+                 return cls(**state)
+        
+         class AppTurnState(TurnState[AppConversationState, UserState, TempState]):
+             conversation: AppConversationState
+        
+             @classmethod
+             async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppTurnState":
+                 return cls(
+                     conversation=await AppConversationState.load(context, storage),
+                     user=await UserState.load(context, storage),
+                     temp=await TempState.load(context, storage),
+                 )
+        
+         ```
     
-     ```javascript
-    
-     export interface TempState extends DefaultTempState { ... }
-     export interface UserState extends DefaultUserState { ... }
-     export interface ConversationState extends DefaultConversationState {
-         tasks: Record<string, Task>;
-     }
-     export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
-     ```
-     * In `src/app/app.ts`, use application turn state to initialize application.
-    
-     ```javascript
-    
-     const app = new Application<ApplicationTurnState>(...);
-    
-     ```
-     * In `src/prompts/chat/skprompt.txt` use the scoped state property such as {{$conversation.tasks}}.
-
-     # [Python](#tab/python)
-    
-     * In `src/state.py`, define your temp state, user state, conversation state and application turn state.
-    
-     ```python
-    
-     from teams.state import TempState, ConversationState, UserState, TurnState
-    
-     class AppConversationState(ConversationState):
-         tasks: Dict[str, Task] # Your data definition here
-    
-         @classmethod
-         async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppConversationState":
-             state = await super().load(context, storage)
-             return cls(**state)
-    
-     class AppTurnState(TurnState[AppConversationState, UserState, TempState]):
-         conversation: AppConversationState
-    
-         @classmethod
-         async def load(cls, context: TurnContext, storage: Optional[Storage] = None) -> "AppTurnState":
-             return cls(
-                 conversation=await AppConversationState.load(context, storage),
-                 user=await UserState.load(context, storage),
-                 temp=await TempState.load(context, storage),
-             )
-    
-     ```
-
-     * In `src/bot.py`, user application turn state to initialize application.
-    
-     ```python
-    
-     from state import AppTurnState
-    
-     app = Application[AppTurnState](...)
-    
-     ```
-    
-     * In `src/prompts/chat/skprompt.txt`, use the scoped state property such as {{$conversation.tasks}}.
-     ---
+         * In `src/bot.py`, user application turn state to initialize application.
+        
+         ```python
+        
+         from state import AppTurnState
+        
+         app = Application[AppTurnState](...)
+        
+         ```
+        
+         * In `src/prompts/chat/skprompt.txt`, use the scoped state property such as {{$conversation.tasks}}.
+         ---
 
      # [Syntax 2](#tab/syntax2)
 
      `{{ functionName }}`: To call an external function and embed the result in your text, use the {{ functionName }} syntax. For example, if you have a function called getTasks that can return a list of task items, you can embed the results into the prompt:
     
-     # [Javascript](#tab/javascript)
+         # [Javascript](#tab/javascript)
+        
+         * Register the function into prompt manager in `src/app/app.ts`:
+        
+         ```typescript
+        
+         prompts.addFunction("getTasks", async (context: TurnContext, memory: Memory, functions: PromptFunctions,  tokenizer: Tokenizer, args: string[]) => {
+           return ...
+         });
     
-     * Register the function into prompt manager in `src/app/app.ts`:
-    
-     ```typescript
-    
-     prompts.addFunction("getTasks", async (context: TurnContext, memory: Memory, functions: PromptFunctions,  tokenizer: Tokenizer, args: string[]) => {
-       return ...
-     });
-
-     ```
-    
-     * Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
-    
-     # [Python](#tab/python)
-    
-     * Register the function into prompt manager in src/bot.py:
-    
-     ```python
-    
-     @prompts.function("getTasks")
-     async def get_tasks(
-         _context: TurnContext,
-         state: MemoryBase,
-         _functions: PromptFunctions,
-         _tokenizer: Tokenizer,
-         _args: List[str],
-     ):
-         return state.get("conversation.tasks")
-    
-     ```
-    
-     * Use the function in `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
-     ---
+         ```
+        
+         * Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
+        
+         # [Python](#tab/python)
+        
+         * Register the function into prompt manager in src/bot.py:
+        
+         ```python
+        
+         @prompts.function("getTasks")
+         async def get_tasks(
+             _context: TurnContext,
+             state: MemoryBase,
+             _functions: PromptFunctions,
+             _tokenizer: Tokenizer,
+             _args: List[str],
+         ):
+             return state.get("conversation.tasks")
+        
+         ```
+        
+         * Use the function in `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
+         ---
 
      # [Syntax 3](#tab/syntax3)  
      `{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
