@@ -183,7 +183,7 @@ You can add customizations on top of this basic application to build more comple
     
        # [Javascript](#tab/javascript)
     
-       * In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
+       1. In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
     
        ```javascript
     
@@ -194,18 +194,18 @@ You can add customizations on top of this basic application to build more comple
            }
        export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
        ```
-       * In `src/app/app.ts`, use application turn state to initialize application.
+       1. In `src/app/app.ts`, use application turn state to initialize application.
     
        ```javascript
     
        const app = new Application<ApplicationTurnState>(...);
     
        ```
-       * In `src/prompts/chat/skprompt.txt` use the scoped state property such as {{$conversation.tasks}}.
+       1. In `src/prompts/chat/skprompt.txt` use the scoped state property such as {{$conversation.tasks}}.
     
        # [Python](#tab/python)
     
-       * In `src/state.py`, define your temp state, user state, conversation state and application turn state.
+       1. In `src/state.py`, define your temp state, user state, conversation state and application turn state.
     
        ```python
     
@@ -232,7 +232,7 @@ You can add customizations on top of this basic application to build more comple
     
        ```
     
-       * In `src/bot.py`, user application turn state to initialize application.
+       1. In `src/bot.py`, user application turn state to initialize application.
     
        ```python
     
@@ -242,7 +242,7 @@ You can add customizations on top of this basic application to build more comple
     
        ```
     
-       * In `src/prompts/chat/skprompt.txt`, use the scoped state property such as {{$conversation.tasks}}.
+       1. In `src/prompts/chat/skprompt.txt`, use the scoped state property such as {{$conversation.tasks}}.
        ---
     
      # [Syntax 2](#tab/syntax2)
@@ -251,7 +251,7 @@ You can add customizations on top of this basic application to build more comple
     
        # [Javascript](#tab/javascript)
     
-       * Register the function into prompt manager in `src/app/app.ts`:
+       1. Register the function into prompt manager in `src/app/app.ts`:
     
        ```typescript
     
@@ -261,11 +261,11 @@ You can add customizations on top of this basic application to build more comple
     
        ```
     
-       * Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
+       1. Use the function in src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}.
     
        # [Python](#tab/python)
     
-       * Register the function into prompt manager in src/bot.py:
+       1. Register the function into prompt manager in src/bot.py:
     
        ```python
     
@@ -281,20 +281,20 @@ You can add customizations on top of this basic application to build more comple
     
        ```
     
-       * Use the function in `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
+       1. Use the function in `src/prompts/chat/skprompt.txt: Your tasks are: {{ getTasks }}`.
        ---
     
-    # [Syntax 3](#tab/syntax3)
+     # [Syntax 3](#tab/syntax3)
     
-    `{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
+     `{{ functionName arg1 arg2 }}`: This syntax enables you to call the specified function with the provided arguments and renders the result. Similar to the usage of calling a function, you can:
     
-    1. Register the function into prompt manager:
-     * For JavaScript language, register it in `src/app/app.ts`.
-     * For Python language, register it in `src/bot.py`.
+     1. Register the function into prompt manager:
+      * For JavaScript language, register it in `src/app/app.ts`.
+      * For Python language, register it in `src/bot.py`.
     
-    1. Use the function in `src/prompts/chat/skprompt.txt` such as Your `task is: {{ getTasks taskTitle }}`.
+     1. Use the function in `src/prompts/chat/skprompt.txt` such as Your `task is: {{ getTasks taskTitle }}`.
     
-    ---
+     ---
 
 1. **Customize user input**: Teams AI library allows you to augment the prompt sent to LLM by including the user inputs. When including user inputs, you need to specify it in a prompt configuration file by setting completion.include_input to true in src/prompts/chat/config.json. You can also optionally configure the maximum number of user input tokens in src/prompts/chat/config.json by changing completion.max_input_tokens. This is useful when you want to limit the length of user inputs to avoid token limit exceeded.
 
