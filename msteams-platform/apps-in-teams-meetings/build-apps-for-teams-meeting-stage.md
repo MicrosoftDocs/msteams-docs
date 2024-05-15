@@ -208,7 +208,7 @@ The following table provides the response codes:
 
 The `sharing.history.getContent` API enables you to fetch the content shared in a meeting and display in the meeting side panel.
 
-When the meeting starts, the app’s side panel automatically opens for the user who has shared content in the meeting. The developer can call the `sharing.history.getContent` API to fetch a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, developers can call the API to get the latest content to be displayed in the app's side panel.
+When the meeting starts, the app’s side panel automatically opens for the user who has shared content in the meeting. You can call the `sharing.history.getContent` API to fetch a list of shared content and display it in the side panel, making it readily accessible. For an upcoming recurring meeting, where the app is already added, developers can call the API to get the latest content to be displayed in the app's side panel.
 
 ### Example
 
