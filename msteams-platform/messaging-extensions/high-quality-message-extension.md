@@ -741,7 +741,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 ## Best practices to extend Teams apps as plugin in Copilot
 
-If you have a search-based message extension and have enabled   the M365 channel, your app works in Copilot for Microsoft 365 in Teams. To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
+If you have a search-based message extension and have enabled the M365 channel, your app works in Copilot for Microsoft 365 in Teams. To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
 
 * **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.19.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This ensures that your application continues to work with Bing domains.
 
@@ -799,7 +799,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 | Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Mandatory*] |
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
-| Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |
+| Content Security Policy |If applicable, modify your Content Security Policy (CSP)headers. [*Recommended*] |
 
 > [!IMPORTANT]
 > If applicable, update your Content Security Policy headers and `X-Frame-Options` in accordance with [Configure Content Security Policy headers](../m365-apps/extend-m365-teams-personal-tab.md#configure-content-security-policy-headers).
