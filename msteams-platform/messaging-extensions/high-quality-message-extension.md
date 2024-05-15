@@ -41,9 +41,9 @@ The requirements for building message extension plugins for Copilot for Microsof
 
 A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365.
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot for Microsoft 365 in Teams.":::
+:::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot for Microsoft 365 in Teams.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Copilot for Microsoft 365 in Teams.":::
+:::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin for Copilot for Microsoft 365 in Teams.":::
 
 Ensure that you adhere to the description guidelines listed in the following table:
 
@@ -588,6 +588,33 @@ The following code is an example of the `samplePrompts` property in app manifest
 ]
 ```
 
+## Adaptive Cards
+
+Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width.
+
+* **ColumnSets**
+
+  * Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width.
+  * Don't define `ColumnSets` with more than three columns.
+  * Don’t use explicit pixel width on more than one column in the set.
+  * Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Copilot.
+  * Generally, an explicit width must not exceed 48 pixels, though some scenarios might allow for exceptions.
+
+* **Sizing images**
+  
+  * When using an image inside a `ColumnSet` with more than one Column, specify the size of the column containing an image rather than the image itself.
+  * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `"auto"` or `"stretch"`.
+  * If you want to define explicit width in pixels, ensure that they don't exceed 3/4 of the narrowest card width.
+  * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
+  * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
+
+
+
+
+
+
+
+
 ## Adaptive Card response
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
@@ -719,32 +746,32 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
-## Best practices to extend plugin across Copilot
+## Best practices to extend Teams apps as plugin in Copilot
 
 If you have a Search message extension and enable the M365 channel, your app works in Copilot for Microsoft 365 in Teams. To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
 
 * **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.19.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This ensures that your application continues to work with Bing domains.
 
-* **Update Microsoft Entra ID app registration for SSO**: Microsoft Entra ID single sign-on (SSO) for message extensions works the same way in Bing as it does in Teams or Outlook. However, you need to add Bing’s client application identifiers to your bot's Azure AD app registration in your tenant's App registrations portal. To do this, follow these steps:
+* **Update Microsoft Entra ID app registration for SSO**: Microsoft Entra ID single sign-on (SSO) for message extensions works the same way in Bing as it does in Teams or Outlook. However, you need to add Bing’s client application identifiers to your bot's Microsoft Entra ID app registration in your tenant's App registrations portal. To do this, follow these steps:
 
-   1. Sign in to the Azure portal with your sandbox tenant account.
-   1. Open App registrations.
-   1. Select the name of your application to open its app registration.
-   1. Select Expose an API (under Manage).
+   1. Go to [Azure portal](https://ms.portal.azure.com/) and sign in with your sandbox tenant account.
+   1. Select **App registrations**.
+   1. Search for your app and select the app name.
+   1. Go to **Manage** > **Expose an API**.
    1. In the Authorized client applications section, ensure that the following Client ID values are listed:
 
-    | Microsoft 365 client application | Client ID |
-    | --- | --- |
-    | Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
-    | Bing (Staging) | ef47e344-4bff-4e28-87da-6551a21ffbe0 |
-    |Teams desktop and mobile| 1fec8e78-bce4-4aaf-ab1b-5451cc387264|
-    |Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346|
-    |Microsoft 365 web | 4765445b-32c6-49b0-83e6-1d93765276ca|
-    |Microsoft 365 desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c|
-    |Microsoft 365 mobile | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-    |Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
-    | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
-    |Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
+      | Microsoft 365 client application | Client ID |
+      | --- | --- |
+      | Bing | 9ea1ad79-fdb6-4f9a-8bc3-2b70f96e34c7 |
+      | Bing (Staging) | ef47e344-4bff-4e28-87da-6551a21ffbe0 |
+      |Teams desktop and mobile| 1fec8e78-bce4-4aaf-ab1b-5451cc387264|
+      |Teams web | 5e3ce6c0-2b1f-4285-8d4b-75ee78787346|
+      |Microsoft 365 web | 4765445b-32c6-49b0-83e6-1d93765276ca|
+      |Microsoft 365 desktop | 0ec893e0-5785-4de6-99da-4ed124e5296c|
+      |Microsoft 365 mobile | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+      |Outlook desktop | d3590ed6-52b3-4102-aeff-aad2292ab01c |
+      | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
+      |Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
 
 * **Configure Content Security Policy Headers**: If your app uses Content Security Policy (CSP) headers, make sure to allow the following frame-ancestors in your CSP headers:
 

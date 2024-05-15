@@ -55,7 +55,7 @@ Use for sending a simple actionable message.
 
 ### List
 
-Use in scenarios where you want the user to pick an item from a list, but the items don’t need a lot of explanations.
+Use in scenarios where you want the user to pick an item from a list, but the items don’t need much explanations.
 
 #### Mobile
 
@@ -151,7 +151,7 @@ Use to gather multiple inputs from the user.
 
 ## Anatomy
 
-Adaptive Cards have a lot of flexibilities. But at minimum, we strongly suggest including the following components in every card.
+Adaptive Cards have many flexibilities. But at minimum, we strongly suggest including the following components in every card.
 
 #### Mobile
 
@@ -181,16 +181,35 @@ Cards designed for a narrow screen scale well on wider screens (the opposite isn
 
 Use [`ColumnSet`](https://adaptivecards.io/explorer/ColumnSet.html) to format your card content into a table or grid. There are several options for formatting column width. These guidelines help you understand when to use each one.
 
-* `"width": "auto"`: Sizes each column in the `ColumnSet` to fit whatever app content you include in that column.
+* "width": "auto" : Sizes each column in the `ColumnSet` to fit whatever app content you include in that column.
   * **Do**: Use when you have content of varying width and don't need to prioritize a specific column.
   * **Do**: For each `TextBlock`, set `"wrap": true` since text doesn't wrap by default.
-  * **Don't**: Set `"width": "auto"` for every column container. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set `auto` for the column with buttons and other content that must always be completely visible.
-* `"width": "stretch"`: Sizes columns based on the available `ColumnSet` width. When multiple columns use the `"stretch"` value, they equally share the available width.
+  * **Don't**: Set `"width": "auto"` for every column container. For example, if you have an input and button side by side, the button might get cut off on some screens. Instead, set auto for the column with buttons and other content that must always be visible.
+
+* "width": "stretch": Sizes columns based on the available `ColumnSet` width. When multiple columns use the "stretch" value, they equally share the available width.
   * **Do**: Use with one column if all your other columns have a static width. For example, you have thumbnail images in one column that are all 50 pixels wide.
-* `"width": "<number>"`: Sizes columns using a proportion of the available `ColumnSet` width. For example, if you set three columns with `"width": "1"`, `"width": "4"`, and `"width": "5"`, the columns will take up 10, 40, and 50 percent of the available width.
-* `"width": "<number>px"`: Sizes columns to a specific pixel width. This approach is useful when creating tables.
+
+* "width": "<number>": Sizes columns using a proportion of the available `ColumnSet` width. For example, if you set three columns with "width": "1", "width": "4", and "width": "5", the columns take up 10, 40, and 50 percent of the available width.
+
+* "width": "<number>px": Sizes columns to a specific pixel width. This approach is useful when creating tables.
   * **Do**: Use when the width of what you're displaying doesn't need to change (for example, numbers and percentages).
   * **Don't**: Accidentally exceed the width of what the card can display. Remember, available screen width depends on the device. Teams mobile also doesn't support horizontal scrolling like Teams desktop.
+
+### `ColumnSet`
+
+* **Adaptive Cards must not display a horizontal scroll**. To avoid horizontal scrolls, don’t specify a fixed width.
+* **Don't** define `ColumnSets` with more than three columns.
+* **Don’t** use explicit pixel width on more than one column in the set.
+* Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Copilot.
+* Generally, an explicit width must not exceed 48 pixels, though some scenarios might allow for exceptions.
+
+### Image sizing
+
+* When using an image inside a `ColumnSet` with more than one Column, specify the size of the column containing an image rather than the image itself.
+* If the image isn’t in a `ColumnSet`, we recommend you to set its size to `"auto"` or `"stretch"`.
+* If you want to define explicit width in pixels, ensure that they don't exceed 3/4 of the narrowest card width.
+* If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
+* We recommend you to set the width of the image, though some scenarios might allow for exceptions.
 
 #### Example: Knowing when to stretch columns
 

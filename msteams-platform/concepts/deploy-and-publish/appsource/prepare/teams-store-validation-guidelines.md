@@ -1827,6 +1827,13 @@ The short descriptions of an app, parameter, and command must not include the fo
 1. URLs, emojis, or hidden characters like hexadecimal, binary, or unconventional symbols.
 1. Grammar and punctuation errors.
 
+### Compound utterances
+
+A search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating the [app manifest (previously called Teams app manifest)](/resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
+
+* Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](/how-to/search-commands/respond-to-search.md).
+* Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
+
 ### User Awareness
 
 The long description of an app must clearly call out the following:
