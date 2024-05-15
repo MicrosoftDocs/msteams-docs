@@ -11,21 +11,15 @@ If you're building a conversational bot, you can now leverage features such as c
 
 Here's a quick overview on each feature that you can integrate to your bot message:
 
-| Feature | Description |
-| --- | --- |
-| [AI label](#ai-label) | Enables user to identify that the message was generated using AI. |
-| [Sensitivity label](#sensitivity-label) | Enables user to understand the confidentiality of the bot's message. |
-| [Citations](#citations) | Enables user to refer to the source of the bot's message through in-text citations and a list of references. |
-| [Feedback buttons](#feedback-buttons) | Enables user to provide positive or negative feedback based on their experience. |
+* [AI label](#ai-label) enables user to identify that the message was generated using AI.
+* [Citations](#citations) enables user to refer to the source of the bot's message through in-text citations and a list of references.
+* [Feedback buttons](#feedback-buttons) enables user to provide positive or negative feedback based on their experience.
+* [Sensitivity label](#sensitivity-label) enables user to understand the confidentiality of the bot's message.
 
 :::image type="content" source="../../assets/images/bots/ai-bot-message.png" border="false" alt-text="Screenshot shows the AI-generated bot message with the respective AI bot message features.":::
 
 > [!NOTE]
->
-> AI label, sensitivity label, citations, and feedback buttons:
->
-> * Are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-> * Aren't supported in message extensions.
+> AI label, sensitivity label, citations, and feedback buttons are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 ## AI label
 
@@ -65,7 +59,7 @@ The following code snippet shows how to add an AI label to your bot's message:
 
 For a bot built using Teams AI library, Teams automatically enables AI label to all AI-powered bot messages. Teams AI library enables the flag to include the AI label button in all activities sent via the AI module in `PredictedSAYCommand`.
 
-In an AI-bot built with JavaScript, the code that automatically adds this flag can be found in `SayCommand.ts`. If you want to add this flag manually, add the following code:
+If you want to add this flag manually, add the following code:
 
 <!--```javascript
 await context.sendActivity({
@@ -111,82 +105,6 @@ After an AI label is added, your bot’s message automatically display an **AI-g
 
 :::image type="content" source="../../assets/images/bots/ai-bot-label.png" border="false" alt-text="Screenshot shows an AI bot label.":::
 
-## Sensitivity label
-
-Bot responses might contain information that's confidential or only accessible to certain individuals within the organization. You must add a sensitivity label to help users identify the confidentiality of a message, enabling them to exercise caution when sharing the message.
-
-> [!NOTE]
-> Add this label to your bot's messages only if it contains sensitive information.
-
-To add sensitivity label to your bot message, modify the message to include `usageInfo` in the `entities` object.
-
-The following code snippet shows how to add the sensitivity label to your bot's message:
-
-```json
-{ 
-    "type": "message", 
-    "from": { 
-        "id": "28:48b2e1fd-b6b8-46ce-8074-8e918304fcb2" 
-    }, 
-    "conversation": { 
-        "isGroup": true, 
-        "id": "19:751e0de5-9729-4182-882c-1cf98c5ea3d4@thread.tacv2" 
-    }, 
-    "recipient": { 
-        "id": "8:orgid:db0778ad-ed6c-4e21-b98c-896ec6ad7ed0" 
-    }, 
-    "text": "ea2492cd-f768-41ad-a1ae-8f356c7cca28", 
-    "attachments": [], 
-    "entities": [ 
-        { 
-            "@type": "Message", 
-            "@context": "https://schema.org", 
-            "@id": "", 
-            "usageInfo": { 
-                "@type": "CreativeWork", 
-                "description": "Sensitivity description", 
-                "name": "Sensitivity name" 
-            } 
-        } 
-    ] 
-}
-```
-
-For a bot built using Teams AI library, Teams displays a sensitivity label when the message includes `usageInfo` in the `entities` object.
-
-The following code snippet shows the sensitivity label added to your bot's message:
-
-```javascript
-await context.sendActivity({
-         type: ActivityTypes.Message,
-         text: `Hey I'm a friendly AI bot. This mesasge is generated via AI - ${txt}`,
-        entities: [
-          {
-            type: "https://schema.org/Message",
-            "@type": "Message",
-            "@context": "https://schema.org",
-            usageInfo: {
-              "@type": "CreativeWork",
-              description: "Please be mindful of sharing outside of your team", // Sensitivity description
-              name: "Confidential \\ Contoso FTE", // Sensitivity title
-            },
-          },
-        ],
-```
-
-After the sensitivity label is added, your bot message contains a shield icon. Users can hover over the icon to find a disclaimer message on the sensitivity of the message.
-
-:::image type="content" source="../../assets/images/bots/ai-bot-sensitivity-label.png" border="false" alt-text="Screenshot shows an AI bot sensitivity label.":::
-
-### Error handling
-
-| Error code | Condition |
-| --- | --- |
-| 400 | Multiple root message entities found in the bot activity. |
-| 400 | Error parsing message entity from activity object. |
-| 400 | No usage info to link for a message level usage info. |
-| 400 | Multiple usage info to link for a message level usage info. |
-
 ## Citations
 
 It's important to cite the sources of the bot message that helps users to ask follow-up questions or conduct independent research. Citing the data sources such as files, messages, emails, and work items build trust and enables users to get valuable insights. Citations are important for bots using techniques like RAG.
@@ -211,7 +129,7 @@ await context.sendActivity({
 });
 ```
 
-### Add citation reference
+<!-- ### Add citation reference
 
 Citation references are an indexed list that corresponds to in-text citations. This list provides key details such as the title of the citation, the link to the source, and a relevant quote from the source.
 
@@ -300,7 +218,7 @@ The following code snippet shows the citation reference added to your bot's mess
           },
         ],
 }
-```
+```-->
 
 After you enable citations, the bot's message includes the in-text citations and a reference list in the footer. The in-text citations display the reference details when users hover over them, as shown in the following image:
 
@@ -374,15 +292,7 @@ Feedback buttons in bot messages are crucial for measuring user engagement, iden
 
 When the user selects a feedback button, a respective feedback form appears based on the user's selection.
 
-# [👍Positive feedback](#tab/pos)
-
 :::image type="content" source="../../assets/images/bots/bot-feedback-form.png" border="false" alt-text="Screenshot shows the feedback form in a bot.":::
-
-# [👎Negative feedback](#tab/neg)
-
-*Image placeholder*
-
----
 
 ### Enable feedback buttons
 
@@ -503,6 +413,82 @@ If a user uninstalls your bot and still has access to the bot chat, Teams remove
 | Error code | Condition |
 | --- | --- |
 | 400 | When the `submit/messageAction` invoke response isn't empty |
+
+## Sensitivity label
+
+Bot responses might contain information that's confidential or only accessible to certain individuals within the organization. You must add a sensitivity label to help users identify the confidentiality of a message, enabling them to exercise caution when sharing the message.
+
+> [!NOTE]
+> Add this label to your bot's messages only if it contains sensitive information.
+
+To add sensitivity label to your bot message, modify the message to include `usageInfo` in the `entities` object.
+
+The following code snippet shows how to add the sensitivity label to your bot's message:
+
+```json
+{ 
+    "type": "message", 
+    "from": { 
+        "id": "28:48b2e1fd-b6b8-46ce-8074-8e918304fcb2" 
+    }, 
+    "conversation": { 
+        "isGroup": true, 
+        "id": "19:751e0de5-9729-4182-882c-1cf98c5ea3d4@thread.tacv2" 
+    }, 
+    "recipient": { 
+        "id": "8:orgid:db0778ad-ed6c-4e21-b98c-896ec6ad7ed0" 
+    }, 
+    "text": "ea2492cd-f768-41ad-a1ae-8f356c7cca28", 
+    "attachments": [], 
+    "entities": [ 
+        { 
+            "@type": "Message", 
+            "@context": "https://schema.org", 
+            "@id": "", 
+            "usageInfo": { 
+                "@type": "CreativeWork", 
+                "description": "Sensitivity description", 
+                "name": "Sensitivity name" 
+            } 
+        } 
+    ] 
+}
+```
+
+For a bot built using Teams AI library, Teams displays a sensitivity label when the message includes `usageInfo` in the `entities` object.
+
+The following code snippet shows the sensitivity label added to your bot's message:
+
+```javascript
+await context.sendActivity({
+         type: ActivityTypes.Message,
+         text: `Hey I'm a friendly AI bot. This mesasge is generated via AI - ${txt}`,
+        entities: [
+          {
+            type: "https://schema.org/Message",
+            "@type": "Message",
+            "@context": "https://schema.org",
+            usageInfo: {
+              "@type": "CreativeWork",
+              description: "Please be mindful of sharing outside of your team", // Sensitivity description
+              name: "Confidential \\ Contoso FTE", // Sensitivity title
+            },
+          },
+        ],
+```
+
+After the sensitivity label is added, your bot message contains a shield icon. Users can hover over the icon to find a disclaimer message on the sensitivity of the message.
+
+:::image type="content" source="../../assets/images/bots/ai-bot-sensitivity-label.png" border="false" alt-text="Screenshot shows an AI bot sensitivity label.":::
+
+### Error handling
+
+| Error code | Condition |
+| --- | --- |
+| 400 | Multiple root message entities found in the bot activity. |
+| 400 | Error parsing message entity from activity object. |
+| 400 | No usage info to link for a message level usage info. |
+| 400 | Multiple usage info to link for a message level usage info. |
 
 ## Modify PredictedSAYCommand
 
