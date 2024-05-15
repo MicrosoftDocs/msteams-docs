@@ -1,6 +1,6 @@
 ---
 title: Copilot handoff
-description: Learn how to allow users to continue their conversation with a custom plugin bot from the copilot chat.
+description: Learn how to allow users to continue their conversation with custom copilots from the copilot chat.
 ms.date: 05/07/2024
 ms.topic: conceptual
 author: v-ypalikila
@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Copilot handoff
 
-Copilot handoff allows users to continue their conversation with a custom plugin bot from the copilot chat. The plugin bot can send a deep link with a continuation token to the copilot, and when the user selects on it, they're navigated to the one-on-one bot chat. The copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context.
+Copilot handoff allows users to continue their conversation with a custom copilot from the copilot chat. Custom copilot can send a deep link with a continuation token to the copilot, and when the user selects on it, they're navigated to the one-on-one bot chat. The copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context.
 
 :::image type="content" source="../../../assets/images/Copilot/copilot-handoff-architecture.png" alt-text="Screenshot shows the handoff architecture from plugins in copilot to other apps in Teams.":::
 
