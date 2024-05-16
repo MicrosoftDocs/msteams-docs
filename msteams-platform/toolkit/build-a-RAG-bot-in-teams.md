@@ -225,104 +225,105 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
 
 * Create myDataSource.ts to implement `DataSource` interface.
 
-```typescript
-export class MyDataSource implements DataSource {
-  public readonly name = "my-datasource";
-  public async renderData(
-    context: TurnContext,
-    memory: Memory,
-    tokenizer: Tokenizer,
-    maxTokens: number
-  ): Promise<RenderedPromptSection<string>> {
-    const input = memory.getValue('temp.input') as string;
-    let knowledge = "There's no knowledge found.";
-
-    // hard-code knowledge
-    if (input?.includes("shuttle bus")) {
-      knowledge = "Company's shuttle bus may be 15 minutes late on rainy days.";
-    } else if (input?.includes("cafe")) {
-      knowledge = "The Cafe's available time is 9:00 to 17:00 on working days and 10:00 to 16:00 on weekends and holidays."
-    }
+    ```typescript
+    export class MyDataSource implements DataSource {
+      public readonly name = "my-datasource";
+      public async renderData(
+        context: TurnContext,
+        memory: Memory,
+        tokenizer: Tokenizer,
+        maxTokens: number
+      ): Promise<RenderedPromptSection<string>> {
+        const input = memory.getValue('temp.input') as string;
+        let knowledge = "There's no knowledge found.";
     
-    return {
-      output: knowledge,
-      length: knowledge.length,
-      tooLong: false
+        // hard-code knowledge
+        if (input?.includes("shuttle bus")) {
+          knowledge = "Company's shuttle bus may be 15 minutes late on rainy days.";
+        } else if (input?.includes("cafe")) {
+          knowledge = "The Cafe's available time is 9:00 to 17:00 on working days and 10:00 to 16:00 on weekends and holidays."
+        }
+        
+        return {
+          output: knowledge,
+          length: knowledge.length,
+          tooLong: false
+        }
+      }
     }
-  }
-}
-```
+    ```
 
 * Register the data source in `app.ts`,
 
-# [Javascript](#tab/javascript)
-
-```javascript
-// Register your data source to prompt manager
-planner.prompts.addDataSource(new MyDataSource());
-```
-# [Python](#tab/python)
-
-```python
-planner.prompts.add_data_source(MyDataSource())
-```
+    # [Javascript](#tab/javascript)
+    
+    ```javascript
+    // Register your data source to prompt manager
+    planner.prompts.addDataSource(new MyDataSource());
+    ```
+    # [Python](#tab/python)
+    
+    ```python
+    planner.prompts.add_data_source(MyDataSource())
+    ```
 
 * Create `prompts/qa/skprompt.txt` for prompt template text.
 
-```
-The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly to answer user's question.
-
-Base your answer off the text below:
-```
+    ```
+    The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly to answer user's question.
+    
+    Base your answer off the text below:
+    
+    ```
 
 * Create `prompts/qa/config.json` to connect with the data source.
 
-```json
-{
-    "schema": 1.1,
-    "description": "Chat with QA Assistant",
-    "type": "completion",
-    "completion": {
-        "model": "gpt-35-turbo",
-        "completion_type": "chat",
-        "include_history": true,
-        "include_input": true,
-        "max_input_tokens": 2800,
-        "max_tokens": 1000,
-        "temperature": 0.9,
-        "top_p": 0.0,
-        "presence_penalty": 0.6,
-        "frequency_penalty": 0.0,
-        "stop_sequences": []
-    },
-    "augmentation": {
-        "data_sources": {
-            "my-datasource": 1200
+    ```json
+    {
+        "schema": 1.1,
+        "description": "Chat with QA Assistant",
+        "type": "completion",
+        "completion": {
+            "model": "gpt-35-turbo",
+            "completion_type": "chat",
+            "include_history": true,
+            "include_input": true,
+            "max_input_tokens": 2800,
+            "max_tokens": 1000,
+            "temperature": 0.9,
+            "top_p": 0.0,
+            "presence_penalty": 0.6,
+            "frequency_penalty": 0.0,
+            "stop_sequences": []
+        },
+        "augmentation": {
+            "data_sources": {
+                "my-datasource": 1200
+            }
         }
     }
-}
-```
+    ```
 
 ## Choose Between Data Sources
 
-* Customize allows you to fully control the data ingestion, see the sample on Build your own Data Ingestion to build your own vector index, and use it as data source. There are other alternatives, e.g., Azure Cosmos DB Vector Database Extension or Azure PostgreSQL Server pgvector Extension as vector databases, or Bing Web Search API to get latest web content. You may implement any DataSource instance to connect with your own data source.
+ * Customize allows you to fully control the data ingestion, see the sample on Build your own Data Ingestion to build your own vector index, and use it as data source. There are other alternatives, e.g., Azure Cosmos DB Vector Database Extension or Azure PostgreSQL Server pgvector Extension as vector databases, or Bing Web Search API to get latest web content. You may implement any DataSource instance to connect with your own data source.
 
-* Azure AI Search provides a sample to add your documents to Azure AI Search Service, then use the search index as data source.
+ * Azure AI Search provides a sample to add your documents to Azure AI Search Service, then use the search index as data source.
 
-* Custom API allows your chatbot can invoke the API defined in the OpenAPI description document to retrieve domain data from API service.
+ * Custom API allows your chatbot can invoke the API defined in the OpenAPI description document to retrieve domain data from API service.
 
-* Microsoft Graph and SharePoint provides a sample to use M365 content from Microsoft Graph Search API as data source.
+ * Microsoft Graph and SharePoint provides a sample to use M365 content from Microsoft Graph Search API as data source.
 
 ## Build your own Data Ingestion
 
 Data ingestion process is as follows:
 
-1. **Load your source documents**: Besides text, if you have other types of documents, you may need to convert them to meaningful text, since the embedding model takes text as input.
-1. **Split into chunks**: The embedding model has input token limitation, so you may need to split documents into chunks to avoid API call failure.
-1. **Call embedding model**: Call the embedding model APIs to create embeddings for the given inputs.
-1. **Store embeddings**: Store the created embeddings into a vector database, also including useful metadata and raw content for further referencing.
+ 1. **Load your source documents**: Besides text, if you have other types of documents, you may need to convert them to meaningful text, since the embedding model takes text as input.
+ 1. **Split into chunks**: The embedding model has input token limitation, so you may need to split documents into chunks to avoid API call failure.
+ 1. **Call embedding model**: Call the embedding model APIs to create embeddings for the given inputs.
+ 1. **Store embeddings**: Store the created embeddings into a vector database, also including useful metadata and raw content for further referencing.
 
-Sample code
+ Sample code
 
 ## Azure AI Search as Data Source
 
@@ -330,6 +331,7 @@ This doc showcases a solution to:
 
 * Add your document to Azure AI Search via Azure OpenAI Service.
 * Use Azure AI Search index as data source in the RAG app.
+
 image
 
 ### Data Ingestion
