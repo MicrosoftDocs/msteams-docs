@@ -1,5 +1,5 @@
 ---
-title: Sync bots and tabs
+title: Synchronized bots and tabs
 description: In this article, learn about interoperability between bot and tab.
 ms.localizationpriority: medium
 ms.topic: coceptual
@@ -8,7 +8,7 @@ author: surbhigupta
 ms.date: 05/02/2024
 ---
 
-# Sync bots and tabs
+# Synchronized bots and tabs
 
 Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are great way for conversational experiences through chat, while tabs allow you to embed web applications directly into Teams. Tabs and bots can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
 
@@ -52,7 +52,7 @@ Through `@microsoft/teams-js NPM` package, tab can communicate with Teams using 
 
 :::row-end:::
 
-## Interoperability between bot and tab
+## Integration of bots and tabs
 
 Teams maintains a constant connection with the server to get new messages, and other apps might do the same with their own servers. This is typical for apps that allow real-time collaboration. For example, a shared task list might use a web socket connection to sync tasks across different users or devices.
 
