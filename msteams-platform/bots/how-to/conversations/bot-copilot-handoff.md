@@ -9,7 +9,9 @@ ms.author: surbhigupta
 
 # Copilot handoff
 
-You can enable Copilot handoff to allow users to continue the conversation with a custom Copilot from the Copilot for Microsoft chat without losing the context of their work. You can improve your plugins with the Copilot handoff feature, which allows for a seamless transition to your custom copilot by using deep links that carry over the user context. This resolves the issue of users having to restart and repeat their requests in the bot experience. For example, in the following image, the user is using Copilot to get information on tech issues and receives results from across the enterprise dataset. The user doesn't find the information sufficient and wants to continue an interaction with an Aisera bot.​ When the user selects the Aisera bot, a new chat is opened to continue the conversation with Aisera. The continuation of the conversation without losing the context is called Copilot handoff.
+You can enable Copilot handoff to allow users to continue the conversation with a custom Copilot from the Copilot for Microsoft chat without losing the context of their work. You can improve your plugins with Copilot handoff, which allows for a seamless transition to your custom copilot by using deep links that carry over the user context.
+
+In the following Graphic, a user is trying to get information on tech issues using Copilot and receives results from the enterprise dataset. The user doesn't find the information sufficient and wants to continue the interaction with an Aisera bot plugin.​ When the user selects the Aisera bot, a new chat is opened to continue the conversation with Aisera. The continuation of the conversation without losing the context is called Copilot handoff.
 
 :::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="The GIF shows the conversation handoff between the Copilot for Microsoft 365 and the Aisera chat bot.":::
 
@@ -40,13 +42,7 @@ To enable Copilot handoff in Teams, follow these steps:
    }
    ```
 
-   **Parameters**
-
-   |Property |Description  |
-   |---------|---------|
-   |`botMri`     |The `botMri` must be in the format `28:<botID>`. The botMri specifies the bot chat that the user is redirected to when they select the action button that contains the deep link url.        |
-   |`continuationToken`     | The `continuationToken` value can be any string, but ensure that the total URL length doesn't exceed 2048 characters and the string is URL encoded.        |
-   |`Action.OpenUrl`     |  The `Action.OpenUrl` property allows the user to handoff the conversation to a bot.       |
+   The `Action.OpenUrl` property allows the user to hand off the conversation to a bot. When a user selects on the action button, Teams interprets the URL and opens a new chat window with the bot. The continuation token is passed to the bot as part of this URL, which the bot uses to maintain the context of the conversation or to continue a workflow that was previously started. When the deep link is activated, the bot receives a payload.
 
    **Sample payload**
 
@@ -104,7 +100,7 @@ To enable Copilot handoff in Teams, follow these steps:
    }
    ```
 
-   The `Action.OpenUrl` property allows the user to handoff the conversation to a bot.  After the user is redirected to the bot chat, the bot receives the `continuationToken` value as an invoke message of the type `handoff/action`, if the app associated with the bot is installed in the user's personal scope and the continuationToken value isn't empty.
+   The `handoff/action` invoke type allows the bot to transfer control of the conversation to another service or initiating a specific action that requires further processing. When the bot receives the `handoff/action` invoke activity, it uses the continuation token to look up any necessary information to continue the conversation seamlessly. This could involve retrieving conversation history, user preferences, or any other context needed to provide a consistent experience.
 
 1. **Handle the invoke type**: In your bot code, manage the `handoff/action` invoke using the `onInvokeActivity` handler. Override the `onInvokeActivity` method to handle the invoke call. The response to this invoke call must be an HTTP status code 200 for success or a code in the range of 400-500 for error.
 
