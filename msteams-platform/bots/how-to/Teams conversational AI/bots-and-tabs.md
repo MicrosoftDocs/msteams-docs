@@ -46,7 +46,7 @@ Tabs allow you to embed your web applications directly into Teams this allows cu
 
 :::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work." lightbox="~/assets/images/bots/how-tab-work.png":::
 
-Through `@microsoft/teams-js NPM` package, tab can communicate with Teams using a secure messaging channel called window post messages and tab can communicate with backend using standard JavaScript APIs, HTTP requests, web sockets, and so on.
+Through `@microsoft/teams-js NPM` package, tab can communicate with Teams using a secure messaging channel called window post messages and tab can communicate with backend using standard JavaScript APIs, HTTP requests and web sockets.
 
 :::column-end:::
 
@@ -86,7 +86,10 @@ Servers have a way of sending updates that the bot receives and routing it to th
 
 ## Bots and tabs work together
 
-You can make bots and tabs work together in two ways, either by updating the tab through a bot message or updating the bot through a change in the tab.
+You can make bots and tabs work together in either of the following two ways: 
+
+* [Updating the tab through a bot message](#update-the-tab-through-bot-message)
+* [Updating the bot through a change in the tab](#update-the-bot-through-change-in-the-tab)
 
 # [Update the tab through bot message](#tab/update-the-tab-through-bot-message)
 
@@ -115,11 +118,11 @@ In this example, the socket connection with the bot can be retrieved through the
 
 ## Get `threadId`
 
-Tabs and bots have different ways of getting the `threadId`. This section will teach you how to get the `threadId` for use in your socket connection mapping in your bot and tab applications.
+Tabs and bots have different ways of getting the `threadId`. Following explains how to get the `threadId` to use in your socket connection to map in your bot and tab applications.
 
 ##### Get `threadId` for your bot
 
-Follow this example to get the `threadId` from an incoming bot message in using the Teams AI library:
+Following is an example to get the `threadId` from an incoming bot message using the Teams AI library:
 
 # [C#](#tab/csharp)
 
@@ -297,7 +300,7 @@ const threadId =
 
 ## Sharing app state
 
-As discussed earlier, with an active web socket connection or through the REST APIs, the tab can send application state data to a server, which the server would then store or cache for later use.
+As described earlier, with an active web socket connection or through the REST APIs, the tab can send application state data to a server, which the server would then store or cache for later use.
 
 For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state then the data can be retrieved from memory or storage and handled accordingly, such as, feed the data into a prompt for a large language model (LLM).
 
