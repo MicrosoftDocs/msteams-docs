@@ -169,7 +169,7 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
 
 ## Build and run the sample app
 
-1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
+1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples).
 
 1. Clone the repository to test the sample app.
 
@@ -263,7 +263,7 @@ You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow 
 
 Before get started, ensure that you've installed the [python v3.8.10](https://www.python.org/) and [poetry](https://python-poetry.org/docs/#installing-with-pipx) extensions.
 
-1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
+1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/python/samples).
 
 1. Clone the repository to test the sample app.
 
