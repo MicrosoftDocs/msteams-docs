@@ -1,6 +1,6 @@
 ---
 title: Copilot handoff
-description: Learn how to allow users to continue their conversation with custom copilots from the Copilot for Microsoft chat.
+description: Learn how to allow users to continue their conversation with custom copilots from the copilot for Microsoft chat.
 ms.date: 05/07/2024
 ms.topic: conceptual
 author: v-ypalikila
@@ -9,23 +9,23 @@ ms.author: surbhigupta
 
 # Copilot handoff
 
-You can enable Copilot handoff to allow users to continue the conversation with a custom Copilot from the Copilot for Microsoft chat without losing the context of their work. You can improve your plugins with Copilot handoff, which allows for a seamless transition to your custom copilot by using deep links that carry over the user context.
+You can enable copilot handoff for your plugins to allow users to continue the conversation with a custom copilot from the copilot for Microsoft chat without losing the context of their work. Copilot handoff allows for a seamless transition to your custom copilot by using deep links that carry over the user context.
 
-In the following Graphic, a user is trying to get information on tech issues using Copilot and receives results from the enterprise dataset. The user doesn't find the information sufficient and wants to continue the interaction with an Aisera bot plugin.​ When the user selects the Aisera bot, a new chat is opened to continue the conversation with Aisera. The continuation of the conversation without losing the context is called Copilot handoff.
+In the following Graphic, a user looks for help on tech issues using copilot and receives results from the enterprise dataset. The user finds the information is insufficient and wants to continue the interaction with an Aisera bot plugin.​ When the user selects the Aisera bot, a new chat starts and the conversation continues in the Aisera bot. This seamless switch from Copilot to the Aisera bot, without losing the  conversation context is called copilot handoff.
 
-:::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="The GIF shows the conversation handoff between the Copilot for Microsoft 365 and the Aisera chat bot.":::
+:::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="The GIF shows the conversation handoff between the copilot for Microsoft 365 and the Aisera chat bot.":::
 
-## How Copilot handoff works
+## How copilot handoff works
 
-A custom Copilot sends a deep link with a continuation token to the Copilot for Microsoft 365. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced.  When the user selects the deep link, the Copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context. This process enables a seamless transition from Copilot to a custom Copilot, maintaining the conversation’s continuity and context, which optimizes the user experience.
+A custom copilot sends a deep link with a continuation token to the copilot for Microsoft 365. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced.  When the user selects the deep link, the copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context. This process enables a seamless transition from copilot to a custom copilot, maintaining the conversation’s continuity and context, which optimizes the user experience.
 
-:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, Copilot, plugin, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
+:::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, copilot, plugin, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
 
 You must create a deep link URL with a `continuation` query parameter for the action button and assign a continuation token to the parameter to facilitate the handoff process. When the user selects the action button, Microsoft Teams reads the continuation token from the URL and initiates an invoke call to the bot. The bot or plugin uses the continuation token to create a response, which is then displayed to the user in the plugin chat window.
 
 ## Enable copilot handoff
 
-To enable Copilot handoff in Teams, follow these steps:
+To enable copilot handoff in Teams, follow these steps:
 
 1. **Configure a deep link URL**: Create a deep link to the bot chat and include `botMri` and `continuationToken`. The deep link must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${botMri}&continuation=${continuationToken}`.
 
@@ -151,7 +151,7 @@ To enable Copilot handoff in Teams, follow these steps:
     await context.sendActivities([
       {
         type: ActivityTypes.Message,
-        text: "Continuing conversation from Copilot...",
+        text: "Continuing conversation from copilot...",
       },
       { type: ActivityTypes.Typing },
       { type: "delay", value: 1000 },
@@ -169,6 +169,6 @@ To enable Copilot handoff in Teams, follow these steps:
     
     ```
 
-* For a smooth handoff process, it’s important to manage the continuation token effectively. Keep the token’s lifetime short and ensure it doesn't process more than once. After a token is used, remove it from storage to prevent it from being used again. If the same token comes up, let the user know they need to start a new conversation with the bot because the handoff from Copilot can't continue.
+* For a smooth handoff process, it’s important to manage the continuation token effectively. Keep the token’s lifetime short and ensure it doesn't process more than once. A short lifetime reduces the risk of unauthorized use or replay attacks, where an old token could be used to gain access to a session. Ensuring the token is redeemed only once prevents multiple handoffs from the same token, which could lead to confusion or errors in the handoff process.
 
-* When the bot is unable to process a request or if the token is expired, it must actively guide the user to the bot chat. If the conversation can't continue, the bot must inform the user of the error and suggest they start a new conversation or retry their query.
+* After a token is used, remove it from storage to prevent it from being used again. If the same token comes up, let the user know they need to start a new conversation with the bot because the handoff from copilot can't continue.
