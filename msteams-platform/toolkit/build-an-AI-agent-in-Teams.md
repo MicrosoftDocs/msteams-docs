@@ -294,23 +294,24 @@ In `src/prompts/planner/config.json`, configure `augmentation.augmentation_type`
     
    * In `src/app/actions.ts`, define the action handlers.
     
-    ```typescript
+     ```typescript
     
-    // Define your own function
-    export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
-      // Implement your function logic
-      ...
-      // Return the result
-      return "...";
-    }
-    ```
+     // Define your own function
+     export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
+       // Implement your function logic
+       ...
+       // Return the result
+       return "...";
+     }
+     ```
     
    * In `src/app/app.ts`, register the actions.
-    ```typescript
-    
-    app.ai.action("myFunction", myFunction);
-    
-    ```
+
+     ```typescript
+
+     app.ai.action("myFunction", myFunction);
+
+     ```
 
 ### Customize assistant creation
 
@@ -322,24 +323,24 @@ When the assistant returns a function that needs to be called along with its arg
 
    * In `src/app/actions.ts`, define the action handlers.
     
-    ```typescript
+     ```typescript
     
-    // Define your own function
-    export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
-      // Implement your function logic
-      ...
-      // Return the result
-      return "...";
-    }
+     // Define your own function
+     export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
+       // Implement your function logic
+       ...
+       // Return the result
+       return "...";
+     }
     
-    ```
+     ```
     
    * In `src/app/app.ts`, register the actions.
 
-    ```typescript
+     ```typescript
     
-    app.ai.action("myFunction", myFunction);
+     app.ai.action("myFunction", myFunction);
 
-    ```
+     ```
 
 ## See also
