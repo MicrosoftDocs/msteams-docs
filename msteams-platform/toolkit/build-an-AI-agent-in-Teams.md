@@ -10,7 +10,7 @@ ms.date: 05/08/2024
 
 # Build an AI Agent in Teams
 
-An AI agent in Microsoft Teams is a conversational chatbot that can reason with large language models to interact with users to understand the intention and choose a sequence of actions to take so the chatbot can complete common tasks. Example tasks include querying and summarizing information (for example, "Do you have any flights to DC tomorrow?"), authoring content based on user intent (for example, "Rephrase this sentence to be more professional"), or acting on the user’s behalf (for example, "Please cancel my order").
+An AI agent in Microsoft Teams is a conversational chatbot that can reason with large language models to interact with users to understand the intention and select a sequence of actions to take so the chatbot can complete common tasks.
 
 ## Prerequisites
 
@@ -92,6 +92,10 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
+    Test Tool opens the bot in a webpage.
+
+      Image.
+
     ## Take a tour of the bot app source code
 
     | Folder       | Contents                                            |
@@ -125,9 +129,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
     |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
     # [Assistants API](#tab/assistantsapi)
-    
-    Build with Assistants API Preview
-    
+
     1. Select **Build with Assistants API Preview**.
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/build-assistants-api.png" alt-text="Screenshot shows the option to select the available AI agents.":::
@@ -191,13 +193,17 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
     
     1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
     
-           :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
-    
+      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
+
+    Test Tool opens the bot in a webpage.
+
+      Image.
+
     ## Take a tour of the bot app source code
     
     | Folder       | Contents                                            |
     | - | - |
-    | `.vscode`    | VSCode files for debugging                          |
+    | `.vscode`    | Visual Studio Code files for debugging                          |
     | `appPackage` | Templates for the Teams application manifest        |
     | `env`        | Environment files                                   |
     | `infra`      | Templates for provisioning Azure resources          |
@@ -215,7 +221,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
     |`src/app/messages.js`| Defines the message activity handlers.|
     |`src/app/actions.js`| Defines the AI actions.|
 
-    The following are Teams Toolkit specific project files. You can [visit a complete guide on Github](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.
+    The following are Teams Toolkit specific project files. You can [visit a complete guide on GitHub](https://github.com/OfficeDev/TeamsFx/wiki/Teams-Toolkit-Visual-Studio-Code-v5-Guide#overview) to understand how Teams Toolkit works.
 
     | File                                 | Contents                                           |
     | - | - |
@@ -225,19 +231,27 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 
     ---
 
-## How Teams AI Library is used to create an AI Agent.
+## Create an AI Agent using Teams AI Library
 
 ### Build New
 
 Teams AI Library provides a comprehensive flow that facilitates you to build your own AI agent. These are the most important concepts you need to know:
 
-* Actions: An action is an atomic function that is registered to the AI System. It's a fundamental building block of a plan.
-* Planner: The planner receives the user's ask and returns a plan on how to accomplish the request. The user's ask is in the form of a prompt or prompt template. It does this by using AI to mix and match atomic functions (called actions) registered to the AI system so that it can recombine them into a series of steps that complete a goal.
-* Action PlannerThe Action Planner is a powerful planner that uses an LLM to generate plans. It can trigger parameterized actions and send text-based responses to the user.
+* [**Actions**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTIONS.md): An action is an atomic function that is registered to the AI System. It's a fundamental building block of a plan.
+* [**Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PLANNER.md): The planner receives the user's ask and returns a plan on how to accomplish the request. The user's ask is in the form of a prompt or prompt template. It does this by using AI to mix and match atomic functions (called actions) registered to the AI system so that it can recombine them into a series of steps that complete a goal.
+* [**Action Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTION-PLANNER.md):The Action Planner is a powerful planner that uses an LLM to generate plans. It can trigger parameterized actions and send text-based responses to the user.
 
 ### Build with Assistants API
 
 Assistants API from OpenAI to simplify the development effort of creating an AI agent. OpenAI as a platform offers prebuilt tools such as Code Interpreter, Knowledge Retrieval and Function Calling that drastically simplifies the code you need to write for common scenarios.
+
+   | Comparison | Build New | Build with Assistants API |
+   | - | - | - |
+   | Cost | Only costs for LLM services | Costs for LLM services and use tools in Assistants API may incur additional costs |
+   | Dev Effort | Medium | Relatively Small |
+   | LLM Services | Azure OpenAI or OpenAI | OpenAI Only |
+   | Example Implementations in Template | This app template is capable of chatting with users and helping users manage tasks. | This app templates uses Code Interpreter tool to solve math problems and also Function Calling tool to get city weather. |
+   | Limitations | NA | 	Currently, the Knowledge Retrieval tool is not supported by Teams AI library. |
 
 ## Customize the application template
 
