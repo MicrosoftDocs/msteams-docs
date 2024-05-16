@@ -165,47 +165,47 @@ Teams AI library also provides functionalities to ease each step of the retrieva
 
 1. **Retrieve data source**: Teams-AI library provides DataSource interface to let you to add your own retrieval logic. You'll need to create your own DataSource instance, and the library orchestrator will call it on demand.
 
-  # [Javascript](#tab/javascript1)
-
-  ```javascript
-  class MyDataSource implements DataSource {
-    /**
-      * Name of the data source.
-      */
-    public readonly name = "my-datasource";
-  
-    /**
-      * Renders the data source as a string of text.
-      * @param context Turn context for the current turn of conversation with the user.
-      * @param memory An interface for accessing state values.
-      * @param tokenizer Tokenizer to use when rendering the data source.
-      * @param maxTokens Maximum number of tokens allowed to be rendered.
-      * @returns The text to inject into the prompt as a `RenderedPromptSection` object.
-      */
-    renderData(
-      context: TurnContext,
-      memory: Memory,
-      tokenizer: Tokenizer,
-      maxTokens: number
-    ): Promise<RenderedPromptSection<string>> {
-      ...
-    }
-  }
-    ```
-  # [Python](#tab/python1)
-
-    ```python
-    class MyDataSource(DataSource):
-      def __init__(self):
-        self.name = "my_datasource_name"
-      
-      def name(self):
-        return self.name
+    # [Javascript](#tab/javascript1)
     
-      async def render_data(self, _context: TurnContext, memory: Memory, tokenizer: Tokenizer, maxTokens: int):
-        # your render data logic
-    ```
-  ---
+    ```javascript
+    class MyDataSource implements DataSource {
+      /**
+        * Name of the data source.
+        */
+      public readonly name = "my-datasource";
+    
+      /**
+        * Renders the data source as a string of text.
+        * @param context Turn context for the current turn of conversation with the user.
+        * @param memory An interface for accessing state values.
+        * @param tokenizer Tokenizer to use when rendering the data source.
+        * @param maxTokens Maximum number of tokens allowed to be rendered.
+        * @returns The text to inject into the prompt as a `RenderedPromptSection` object.
+        */
+      renderData(
+        context: TurnContext,
+        memory: Memory,
+        tokenizer: Tokenizer,
+        maxTokens: number
+      ): Promise<RenderedPromptSection<string>> {
+        ...
+      }
+    }
+      ```
+    # [Python](#tab/python1)
+    
+      ```python
+      class MyDataSource(DataSource):
+        def __init__(self):
+          self.name = "my_datasource_name"
+        
+        def name(self):
+          return self.name
+      
+        async def render_data(self, _context: TurnContext, memory: Memory, tokenizer: Tokenizer, maxTokens: int):
+          # your render data logic
+      ```
+    ---
 
 1. **Call AI with prompt**: In Teams AI's prompt system, you can easily inject data source by adjusting the augmentation.data_sources configuration section. This connects the prompt with the added DataSource in previous step, and library orchestrator will inject the data source text into final prompt. See AuthorPrompt for the details. For example, in prompt's config.json file:
 
@@ -268,6 +268,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     ```python
     planner.prompts.add_data_source(MyDataSource())
     ```
+    ---
 
 * Create `prompts/qa/skprompt.txt` for prompt template text.
 
@@ -340,10 +341,9 @@ image
 
 With Azure OpenAI on your data, you can ingest your knowledge documents to Azure AI Search Service and create a vector index. Then you can use the index as data source.
 
-Prepare your data in Azure Blob Storage, or directly upload in later step
-On Azure OpenAI Studio, add your data source.
+* Prepare your data in Azure Blob Storage, or directly upload in later step on Azure OpenAI Studio, add your data source.
 
-* Fill fields to create a vector index
+* Fill fields to create a vector index.
 image
 
 ### Data Source
