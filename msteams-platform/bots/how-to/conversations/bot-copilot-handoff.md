@@ -17,7 +17,7 @@ In the following Graphic, a user looks for help on tech issues using copilot and
 
 ## How copilot handoff works
 
-A custom engine copilot (also known as custom copilot) sends a deep link with a continuation token to the copilot for Microsoft 365. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced.  When the user selects the deep link, the copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context. This process enables a seamless transition from copilot to a custom engine copilot (also known as custom copilot), maintaining the conversation’s continuity and context, which optimizes the user experience.
+A custom engine copilot (also known as custom copilot) sends a deep link with a continuation token to the copilot for Microsoft 365. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced. When the user selects the deep link, the copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context. This process enables a seamless transition from copilot to a custom engine copilot (also known as custom copilot), maintaining the conversation’s continuity and context, which optimizes the user experience.
 
 :::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, copilot, plugin, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
 
@@ -42,7 +42,7 @@ To enable copilot handoff in Teams, follow these steps:
    }
    ```
 
-   The `Action.OpenUrl` property allows the user to hand off the conversation to a bot. When a user selects on the action button, Teams interprets the URL and opens a new chat window with the bot. The continuation token is passed to the bot as part of this URL, which the bot uses to maintain the context of the conversation or to continue a workflow that was previously started. When the deep link is activated, the bot receives a payload.
+   The `Action.OpenUrl` property allows the user to hand off the conversation to a bot. When a user selects on the action button, the deep link is activated and opens a new chat window with the bot. The bot receives the continuation token from the URL in the form of a payload and uses the token to maintain the context of the conversation.
 
    **Sample payload**
 
@@ -145,7 +145,7 @@ Here's an example of how to handle the invoke call in `searchApp.ts`:
 
 ## Best practices
 
-* It’s important for the bot to quickly notify users when they're directed to the bot chat after selecting the action button, as there's no visual indication. This helps manage expectations as there might be a delay before the bot returns a response due to network latency and processing time. For instance, the bot can send a series of activities to keep the user informed of the progress:
+* Bot must notify users when they're directed to the bot chat after selecting the action button, as there's no visual indication. This helps manage expectations as there might be a delay before the bot returns a response due to network latency and processing time. For instance, the bot can send a series of activities to keep the user informed of the progress:
 
     ```typescript
     await context.sendActivities([
@@ -169,6 +169,6 @@ Here's an example of how to handle the invoke call in `searchApp.ts`:
     
     ```
 
-* For a smooth handoff process, it’s important to manage the continuation token effectively. Keep the token’s lifetime short and ensure it doesn't process more than once. A short lifetime reduces the risk of unauthorized use or replay attacks, where an old token could be used to gain access to a session. Ensuring the token is redeemed only once prevents multiple handoffs from the same token, which could lead to confusion or errors in the handoff process.
+* Manage the continuation token effectively. Keep the token’s lifetime short and ensure it doesn't process more than once. A short lifetime reduces the risk of unauthorized use or replay attacks, where an old token could be used to gain access to a session. Ensuring the token is redeemed only once prevents multiple handoffs from the same token, which could lead to confusion or errors in the handoff process.
 
-* After a token is used, remove it from storage to prevent it from being used again. If the same token comes up, let the user know they need to start a new conversation with the bot because the handoff from copilot can't continue.
+* Remove the token from storage after a token is used. If the same token comes up, let the user know they need to start a new conversation with the bot because the handoff from copilot can't continue.
