@@ -256,85 +256,90 @@ Assistants API from OpenAI to simplify the development effort of creating an AI 
 ## Customize the application template
 
 ### Customize prompt augmentation
-The SDK provides a functionality to augment the prompt. With augmentation:
 
-The actions defined in src/prompts/planner/actions.json will be inserted into the prompt to let LLM know the available functions.
-An internal piece of prompt text will be inserted into the prompt to instruct LLM to determine which functions to call based on the available functions. This prompt text orders LLM to generate the response in a structured json format.
-The SDK validates the LLM response and lets LLM correct or refine the response if the response is in wrong format.
-In src/prompts/planner/config.json, configure augmentation.augmentation_type. The options are:
+The SDK provides a functionality to augment the prompt.
 
-Sequence: suitable for tasks that require multiple steps or complex logic.
-Monologue: suitable for tasks that require natural language understanding and generation, and more flexibility and creativity.
+* The actions defined in `src/prompts/planner/actions.json` will be inserted into the prompt to let LLM know the available functions.
+* An internal piece of prompt text will be inserted into the prompt to instruct LLM to determine which functions to call based on the available functions. This prompt text orders LLM to generate the response in a structured json format.
+* The SDK validates the LLM response and lets LLM correct or refine the response if the response is in wrong format.
 
-### Add functions (Build New)
-In `src/prompts/planner/actions.json`, define your actions schema.
+In `src/prompts/planner/config.json`, configure `augmentation.augmentation_type`. The options are:
 
-```json
-[
-    ...
-    {
-        "name": "myFunction",
-        "description": "The function description",
-        "parameters": {
-            "type": "object",
-            "properties": {
-                "parameter1": {
-                    "type": "string",
-                    "description": "The parameter1 description"
+* `Sequence`: suitable for tasks that require multiple steps or complex logic.
+* `Monologue`: suitable for tasks that require natural language understanding and generation, and more flexibility and creativity.
+
+### Build New add functions
+
+   * In `src/prompts/planner/actions.json`, define your actions schema.
+    
+    ```json
+    [
+        ...
+        {
+            "name": "myFunction",
+            "description": "The function description",
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "parameter1": {
+                        "type": "string",
+                        "description": "The parameter1 description"
+                    },
                 },
-            },
-            "required": ["parameter1"]
+                "required": ["parameter1"]
+            }
         }
+    ]
+    ```
+    
+   * In `src/app/actions.ts`, define the action handlers.
+    
+    ```typescript
+    
+    // Define your own function
+    export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
+      // Implement your function logic
+      ...
+      // Return the result
+      return "...";
     }
-]
-```
+    ```
+    
+   * In `src/app/app.ts`, register the actions.
+    ```typescript
+    
+    app.ai.action("myFunction", myFunction);
+    
+    ```
 
-In `src/app/actions.ts`, define the action handlers.
-
-```typescript
-
-// Define your own function
-export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
-  // Implement your function logic
-  ...
-  // Return the result
-  return "...";
-}
-```
-
-In `src/app/app.ts`, register the actions.
-```typescript
-
-app.ai.action("myFunction", myFunction);
-
-```
 ### Customize assistant creation
 
 The file src/creator.ts creates a new OpenAI Assistant. You can customize the assistant creation by updating the parameters including instruction, model, tools, and functions.
 
-### Add functions (with Assistants API)
+### Build with Assistants API add functions
 
 When the assistant returns a function that needs to be called along with its arguments, the SDK maps the function to the corresponding action that is registered in advance, then calls the action handler and submits the results to the assistant. You can add your functions by registering the actions into the app.
 
-In `src/app/actions.ts`, define the action handlers.
+   * In `src/app/actions.ts`, define the action handlers.
+    
+    ```typescript
+    
+    // Define your own function
+    export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
+      // Implement your function logic
+      ...
+      // Return the result
+      return "...";
+    }
+    
+    ```
+    
+   * In `src/app/app.ts`, register the actions.
 
-```typescript
+    ```typescript
+    
+    app.ai.action("myFunction", myFunction);
 
-// Define your own function
-export async function myFunction(context: TurnContext, state: TurnState, parameters): Promise<string> {
-  // Implement your function logic
-  ...
-  // Return the result
-  return "...";
-}
-
-```
-
-In `src/app/app.ts`, register the actions.
-```typescript
-
-app.ai.action("myFunction", myFunction);
-
-```
+    ```
 
 ## See also
