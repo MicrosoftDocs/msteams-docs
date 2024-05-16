@@ -84,6 +84,8 @@ Servers have a way of sending updates that the bot receives and routing it to th
 > [!Note]
 > We strongly recommend using Microsoft Entra ID to create a unified authentication between bot and tab.
 
+Syncing
+
 You can make bots and tabs work together in two ways, either by updating the tab through a bot message or updating the bot through a change in the tab.
 
 # [Update the tab through bot message](#tab/update-the-tab-through-bot-message)
