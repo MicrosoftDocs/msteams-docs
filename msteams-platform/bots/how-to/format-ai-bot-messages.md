@@ -122,7 +122,7 @@ Citations to your bot message include in-text citations, details to citation ref
 
 ### Add citations
 
-For bot build using Teams AI library, citations are added to an AI bot message automatically via `PredictedSAYCommand` action. Here's the code snippet for your reference:
+For bots built using Teams AI library, citations are added to an AI bot message automatically via `PredictedSAYCommand` action. Here's the code snippet for your reference:
 
 ```javascript
 export interface ClientCitation {
@@ -200,7 +200,7 @@ export function sayCommand<TState extends TurnState = TurnState>(feedbackLoopEna
 }
 ```
 
-For bot that aren't AI-powered, you can add citations manually. To add citations to your bot message, include `citation` under `entities` array. Here's the code snippet for your reference:
+For bots that aren't AI-powered, you can add citations manually. To add citations to your bot message, include `citation` under `entities` array. Here's the code snippet for your reference:
 
 ```javascript
  await context.sendActivity({
@@ -519,7 +519,7 @@ Bot responses might contain information that's confidential or only accessible t
 > [!NOTE]
 > Add this label to your bot's messages only if it contains sensitive information.
 
-For bot build using Teams AI library, sensitivity labels are added via `PredictedSAYCommand` action. Here's the code snippet for your reference:
+For bots built using Teams AI library, sensitivity labels are added via `PredictedSAYCommand` action. Here's the code snippet for your reference:
 
 ```javascript
 export interface SensitivityUsageInfo {
@@ -530,7 +530,7 @@ export interface SensitivityUsageInfo {
 }
 ```
 
-For bot that aren't AI-powered, you can add sensitivity label to your bot message by modifying the message to include `usageInfo` in the `entities` object. Here's a code snippet for your reference:
+For bots that aren't AI-powered, you can add sensitivity label to your bot message by modifying the message to include `usageInfo` in the `entities` object. Here's a code snippet for your reference:
 
 ```javascript
 await context.sendActivity({
