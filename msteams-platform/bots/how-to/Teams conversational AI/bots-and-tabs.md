@@ -88,8 +88,8 @@ Servers have a way of sending updates that the bot receives and routing it to th
 
 You can make bots and tabs work together in either of the following two ways: 
 
-* [Updating the tab through a bot message](#update-the-tab-through-bot-message)
-* [Updating the bot through a change in the tab](#update-the-bot-through-change-in-the-tab)
+* Updating the tab through a bot message
+* Updating the bot through a change in the tab
 
 # [Update the tab through bot message](#tab/update-the-tab-through-bot-message)
 
