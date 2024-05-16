@@ -272,25 +272,25 @@ In `src/prompts/planner/config.json`, configure `augmentation.augmentation_type`
 
    * In `src/prompts/planner/actions.json`, define your actions schema.
     
-    ```json
-    [
-        ...
-        {
-            "name": "myFunction",
-            "description": "The function description",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "parameter1": {
-                        "type": "string",
-                        "description": "The parameter1 description"
-                    },
-                },
-                "required": ["parameter1"]
-            }
-        }
-    ]
-    ```
+     ```json
+     [
+         ...
+         {
+             "name": "myFunction",
+             "description": "The function description",
+             "parameters": {
+                 "type": "object",
+                 "properties": {
+                     "parameter1": {
+                         "type": "string",
+                         "description": "The parameter1 description"
+                     },
+                 },
+                 "required": ["parameter1"]
+             }
+         }
+     ]
+     ```
     
    * In `src/app/actions.ts`, define the action handlers.
     

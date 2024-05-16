@@ -165,30 +165,30 @@ Teams AI library also provides functionalities to ease each step of the retrieva
 
   # [Javascript](#tab/javascript)
 
-    ```javascript
-    class MyDataSource implements DataSource {
-      /**
-       * Name of the data source.
-       */
-      public readonly name = "my-datasource";
-    
-      /**
-       * Renders the data source as a string of text.
-       * @param context Turn context for the current turn of conversation with the user.
-       * @param memory An interface for accessing state values.
-       * @param tokenizer Tokenizer to use when rendering the data source.
-       * @param maxTokens Maximum number of tokens allowed to be rendered.
-       * @returns The text to inject into the prompt as a `RenderedPromptSection` object.
-       */
-      renderData(
-        context: TurnContext,
-        memory: Memory,
-        tokenizer: Tokenizer,
-        maxTokens: number
-      ): Promise<RenderedPromptSection<string>> {
-        ...
-      }
+  ```javascript
+  class MyDataSource implements DataSource {
+    /**
+      * Name of the data source.
+      */
+    public readonly name = "my-datasource";
+  
+    /**
+      * Renders the data source as a string of text.
+      * @param context Turn context for the current turn of conversation with the user.
+      * @param memory An interface for accessing state values.
+      * @param tokenizer Tokenizer to use when rendering the data source.
+      * @param maxTokens Maximum number of tokens allowed to be rendered.
+      * @returns The text to inject into the prompt as a `RenderedPromptSection` object.
+      */
+    renderData(
+      context: TurnContext,
+      memory: Memory,
+      tokenizer: Tokenizer,
+      maxTokens: number
+    ): Promise<RenderedPromptSection<string>> {
+      ...
     }
+  }
     ```
   # [Python](#tab/python)
 
