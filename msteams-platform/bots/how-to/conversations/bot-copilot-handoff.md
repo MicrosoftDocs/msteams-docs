@@ -1,6 +1,6 @@
 ---
 title: Copilot handoff
-description: Learn how to allow users to continue their conversation with custom copilots from the copilot for Microsoft chat.
+description: Learn how to allow users to continue their conversation with custom engine copilot (also known as custom copilot) from the copilot for Microsoft chat.
 ms.date: 05/07/2024
 ms.topic: conceptual
 author: v-ypalikila
@@ -9,7 +9,7 @@ ms.author: surbhigupta
 
 # Copilot handoff
 
-You can enable copilot handoff for your plugins to allow users to continue the conversation with a custom copilot from the copilot for Microsoft chat without losing the context of their work. Copilot handoff allows for a seamless transition to your custom copilot by using deep links that carry over the user context.
+You can enable copilot handoff for your plugins to allow users to continue the conversation with a custom engine copilot (also known as custom copilot) from the copilot for Microsoft chat without losing the context of their work. Copilot handoff allows for a seamless transition to your custom engine copilot (also known as custom copilot) by using deep links that carry over the user context.
 
 In the following Graphic, a user looks for help on tech issues using copilot and receives results from the enterprise dataset. The user finds the information is insufficient and wants to continue the interaction with an Aisera bot plugin.​ When the user selects the Aisera bot, a new chat starts and the conversation continues in the Aisera bot. This seamless switch from Copilot to the Aisera bot, without losing the  conversation context is called copilot handoff.
 
@@ -17,7 +17,7 @@ In the following Graphic, a user looks for help on tech issues using copilot and
 
 ## How copilot handoff works
 
-A custom copilot sends a deep link with a continuation token to the copilot for Microsoft 365. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced.  When the user selects the deep link, the copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context. This process enables a seamless transition from copilot to a custom copilot, maintaining the conversation’s continuity and context, which optimizes the user experience.
+A custom engine copilot (also known as custom copilot) sends a deep link with a continuation token to the copilot for Microsoft 365. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced.  When the user selects the deep link, the copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context. This process enables a seamless transition from copilot to a custom engine copilot (also known as custom copilot), maintaining the conversation’s continuity and context, which optimizes the user experience.
 
 :::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, copilot, plugin, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
 
@@ -107,7 +107,7 @@ To enable copilot handoff in Teams, follow these steps:
    > [!NOTE]
    > Don't send any payload with this response as it doesn't render in the chat window. The responses based on the continuation token must be sent to the user separately.
 
-   Here's an example of how to handle the invoke call in `searchApp.ts`:
+Here's an example of how to handle the invoke call in `searchApp.ts`:
 
    ```typescript
     public async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> {
