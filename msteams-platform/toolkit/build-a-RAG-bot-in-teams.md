@@ -97,14 +97,16 @@ Teams Toolkit provides a series ready to use application templates under the cat
     Azure OpenAI key `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
     Endpoint `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
     Deployment name `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
-image
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
 
 1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
-image
+
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
 Test Tool opens the bot in a webpage.
 
-Image
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-final-output.png" alt-text="Screenshows the chat with your data final output.":::
 
 ## Take a tour of the bot app source code
 
@@ -163,7 +165,7 @@ Teams AI library also provides functionalities to ease each step of the retrieva
 
 1. **Retrieve data source**: Teams-AI library provides DataSource interface to let you to add your own retrieval logic. You'll need to create your own DataSource instance, and the library orchestrator will call it on demand.
 
-  # [Javascript](#tab/javascript)
+  # [Javascript](#tab/javascript1)
 
   ```javascript
   class MyDataSource implements DataSource {
@@ -190,7 +192,7 @@ Teams AI library also provides functionalities to ease each step of the retrieva
     }
   }
     ```
-  # [Python](#tab/python)
+  # [Python](#tab/python1)
 
     ```python
     class MyDataSource(DataSource):
@@ -255,13 +257,13 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
 
 * Register the data source in `app.ts`,
 
-    # [Javascript](#tab/javascript)
+    # [Javascript](#tab/javascript2)
     
     ```javascript
     // Register your data source to prompt manager
     planner.prompts.addDataSource(new MyDataSource());
     ```
-    # [Python](#tab/python)
+    # [Python](#tab/python2)
     
     ```python
     planner.prompts.add_data_source(MyDataSource())
@@ -348,7 +350,7 @@ image
 
 After ingesting data into Azure AI Search, you can implement your own DataSource to retrieve data from search index.
 
-# [Javascript](#tab/javascript)
+# [Javascript](#tab/javascript3)
 
 ```javascript
 
@@ -435,7 +437,7 @@ export class MyDataSource implements DataSource {
 }
 
 ```
-# [Python](#tab/python)
+# [Python](#tab/python3)
 
 ```python
 async def get_embedding_vector(text: str):

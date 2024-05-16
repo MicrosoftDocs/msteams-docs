@@ -94,7 +94,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 
     Test Tool opens the bot in a webpage.
 
-      Image.
+      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-build-new-final-output.png" alt-text="Screenshot shows the final output of AI agent build new bot.":::
 
     ## Take a tour of the bot app source code
 
@@ -197,7 +197,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 
     Test Tool opens the bot in a webpage.
 
-      Image.
+      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-build-assistant-api-final-output.png" alt-text="Screenshot shows the final output of AI agent build with assitants API bot.":::
 
     ## Take a tour of the bot app source code
     
