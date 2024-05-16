@@ -38,7 +38,7 @@ export interface AIEntity {
 
 To add an AI label manually to your bot message, include `additionalType` under `entities` array of the `message` entity object. Here's the code snippet for your reference:
 
-# C# (tab/charp)
+# [C#](#tab/charp)
 
 ```csharp
         await stepContext.Context.SendActivityAsync(
@@ -63,7 +63,7 @@ To add an AI label manually to your bot message, include `additionalType` under 
         )
 ```
 
-# JavaScript (tab/js)
+# [JavaScript](#tab/js)
 
 ```javascript
 await context.sendActivity({
