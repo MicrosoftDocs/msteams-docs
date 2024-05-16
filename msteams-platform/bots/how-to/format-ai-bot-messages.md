@@ -365,7 +365,7 @@ When the user selects a feedback button, a respective feedback form appears base
 
 ### Enable feedback buttons
 
-To enable feedback buttons in your bot, add a new `channelData` object in your bot's message and set `feedbackLoopEnabled` to true.
+To enable feedback buttons in your bot, add a `channelData` object in your bot's message and set `feedbackLoopEnabled` to true.
 
 The following code snippet shows how to enable feedback buttons in a bot:
 
@@ -418,7 +418,7 @@ await context.sendActivity({
 
 Feedback buttons are located at the footer of the bot’s message, and include a 👍 (thumbs up) and a 👎 (thumbs down) button for the user to choose from. You can collect feedback on bot responses from personal chats, group chats, and channels.
 
-The bot sends the user's input, received in the feedback form, through a bot invoke. The following code snippet shows a bot invoke containing positive feedback from a user:
+The bot receives the user's input, received in the feedback form, through a bot invoke flow. The following code snippet shows a bot invoke containing positive feedback from a user:
 
 ```json
 {
@@ -454,13 +454,42 @@ The following code snippet shows a bot invoke containing feedback from a user fo
 
 ### Handle feedback
 
-You need to have an `onInvokeActivity` handler to correctly process the invoke when the bot receives it. Ensure that you return a status code 200 with an empty response.
+You need to have an `onInvokeActivity` handler to correctly process the invoke when the bot receives it. Ensure that you return a status code 200 with an empty JSON object as a response.
 
 Teams automatically notifies the user that their feedback was submitted successfully. Therefore, don't send a message or notification to the user upon receiving feedback.
 
 The following code snippet shows how to handle feedback received in a bot invoke and return a response with the status code 200:
 
-***<placeholder_code snippet>***
+```javascript
+public async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> {
+    try {
+      switch (context.activity.name) {
+        case "message/submitAction":
+           console.log('Your feedback is ' + JSON.stringify(context.activity.value))
+           // {"actionName":"feedback","actionValue":{"reaction":"like","feedback":"{\"feedbackText\":\"user written feedback\"}"}}
+           return CreateInvokeResponse(200, {});
+        default:
+          return {
+            status: 200,
+            body: `Unknown invoke activity handled as default- ${context.activity.name}`,
+          };
+      }
+    } catch (err) {
+      console.log(`Error in onInvokeActivity: ${err}`);
+      return {
+        status: 500,
+        body: `Invoke activity received- ${context.activity.name}`,
+      };
+    }
+  }
+
+ export const CreateInvokeResponse = (
+  status: number,
+  body?: unknown
+ ): InvokeResponse => {
+    return { status, body };
+ };
+```
 
 If your bot is built using Teams AI library, the bot invoke received is automatically handled. To handle feedback, use the `app.feedbackLoop` method to register a feedback loop handler that is called when the user provides feedback.
 
