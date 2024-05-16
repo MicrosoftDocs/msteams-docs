@@ -36,7 +36,7 @@ If you ran the samples before or encounter a runtime error, follow these steps t
 * If you don’t want Teams Toolkit to generate the appId and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
 * Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
 
-Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
+Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
 
 * An Azure OpenAI or OpenAI key
 * A database or similar storage options
@@ -122,20 +122,20 @@ Get started with Teams AI library using the **LightBot** sample. It enables your
             AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}}
          ```
 
-      1. Go to `infra` folder and comment out lines from 72 to 75 and uncomment lines from 76 to 83 in `azure.bicep` file.
-
-      1. Go to `infra>azure.parameters.json` file and replace the lines from 20 to 22 with the following code:
-
-         ```text
-            "azureOpenAIKey": {
-            "value": "${{SECRET_AZURE_OPENAI_KEY}}"
-            },
-            "azureOpenAIEndpoint": {
-            "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
-            }
-         ```
-
       ---
+
+1. Go to `infra` folder and comment out lines from 72 to 75 and uncomment lines from 76 to 83 in `azure.bicep` file.
+
+1. Go to `infra>azure.parameters.json` file and replace the lines from 20 to 22 with the following code:
+
+   ```text
+      "azureOpenAIKey": {
+      "value": "${{SECRET_AZURE_OPENAI_KEY}}"
+      },
+      "azureOpenAIEndpoint": {
+      "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
+      }
+   ```
 
 1. From the left pane, select **Teams Toolkit**.
 
