@@ -118,8 +118,6 @@ You can test an **Action Command** in the Test Tool in the following ways:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/action-commands.png" alt-text="Screenshot shows the action command.":::
 
-   Additionally, the Test Tool allows triggering message extensions on a message:
-
 # [**...** icon](#tab/action-commands1)
 
 1. Select **...** above the message.
@@ -132,7 +130,7 @@ You can test an **Action Command** in the Test Tool in the following ways:
 
 ### Create a dialog
 
-You can create a dialog with an action command in two ways:
+You can create a dialog with an Action Command in two ways:
 
 * [Adaptive Cards](#create-dialog-with-adaptive-cards)
 * [Static list of parameters](#create-dialog-with-static-list-of-parameters)
@@ -147,38 +145,36 @@ In the action-based message extension dialog, select **Adaptive Cards**. Test To
 
 #### Create dialog with static list of parameters
 
-1. In the action-based message extension dialog, select **Static list of parameters**.
+In the action-based message extension dialog, select **Static list of parameters**. Test Tool renders the parameters you provided into a dialog. For more information on parameters, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
 
-1. Update the values for **Card title**, **Subtitle**, and **Text** parameters.
+The following is a sample of the static list of parameters:
 
-1. Select **Submit**.
+   ```json
+   [{
+     "name": "title",
+     "title": "Card title",
+     "description": "Title for the card",
+     "inputType": "text"
+   },
+   {
+     "name": "subTitle",
+     "title": "Subtitle",
+     "description": "Subtitle for the card",
+     "inputType": "text"
+   },
+   {
+     "name": "text",
+     "title": "Text",
+     "description": "Text for the card",
+     "inputType": "textarea"
+   }]
+   ```
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in teams app test tool.":::
+The following image shows a sample static list of parameters:
 
-1. The Test Tool renders the parameters you provided into a dialog. For more information on parameters, see [app manifest](../resources/schema/manifest-schema.md#composeextensionscommands) (previously called Teams app manifest).
+:::image type="content" source="../assets/images/teams-toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in teams app test tool.":::
 
-    The following is a sample of the static list of parameters:
-
-    ```json
-    [{
-      "name": "title",
-      "title": "Card title",
-      "description": "Title for the card",
-      "inputType": "text"
-    },
-    {
-      "name": "subTitle",
-      "title": "Subtitle",
-      "description": "Subtitle for the card",
-      "inputType": "text"
-    },
-    {
-      "name": "text",
-      "title": "Text",
-      "description": "Text for the card",
-      "inputType": "textarea"
-    }]
-    ```
+You can find the static list of parameters from the app manifest under the `composeExtensions`. For more information, see [manifest.json.tpl](https://github.com/OfficeDev/TeamsFx/blob/main/templates/ts/message-extension-action/appPackage/manifest.json.tpl#L41-L59).
 
 ### Submit form inside the dialog
 
