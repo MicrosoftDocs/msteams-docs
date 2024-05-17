@@ -14,6 +14,10 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 ## Generally available
 
+| Date | Update |Find here |
+| --- | --- | --- |
+| 22/05/2024 | Implement synchronization of bots and tabs to create more customized interactions between the user and an app| Build bots > [Synchronized bots and tabs](~/bots/how-to/teams%20conversational%20ai/bots-and-tabs.md)|
+
 :::row:::
 :::column:::
 
