@@ -5,7 +5,7 @@ description:  In this module, learn how to build a Basic AI Chatbot using Teams 
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ganr
-ms.date: 05/08/2024
+ms.date: 05/21/2024
 ---
 
 # Build a Basic AI Chatbot
@@ -76,9 +76,10 @@ The AI Chatbot template showcases a bot app, similar to ChatGPT, that responds t
 1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
 
 1. Update the following details:
-    Azure OpenAI key `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
-    Endpoint `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
-    Deployment name `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
+
+    * Azure OpenAI key `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
+    * Endpoint `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
+    * Deployment name `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
 
@@ -139,25 +140,25 @@ Image
 
 1. **TurnContext**: The turn context object provides information about the activity, such as the sender and receiver, the channel, and other data needed to process the activity.
 
-1. **TurnState**: The turn state object stores cookie-like data for the current turn. Like the turn context, it's carried through the entire application logic, including the activity handlers and the AI System.
+1. **TurnState**: The turn state object, similar to a cookie, stores data for the current turn. This object, like the turn context, is carried through the entire application logic, including the activity handlers and the AI System.
 
 1. **Authentication**: If user authentication is configured, Teams AI attempts to sign the user in. If the user is already signed in, the SDK retrieves the access token and continues. Otherwise, the SDK initiates the sign-in flow and ends the current turn.
 
-1. **Activity Handlers**: The Teams AI library executes a set of registered activity handlers, enabling developers to handle several types of activities. The activity handler system is the primary method for implementing bot or message extension application logic. It's a set of methods and configurations that allow you to register callbacks (known as route handlers), which trigger based on the incoming activity. These can be in the form of a message, message reaction, or virtually any interaction within the Teams app.
+1. **Activity Handlers**: The Teams AI library executes a set of registered activity handlers, enabling developers to handle several types of activities. The activity handler system is the primary method for implementing bot or message extension application logic. It's a set of methods and configurations that allow you to register callbacks (known as route handlers), which trigger based on the incoming activity. The incoming activity can be in the form of a message, message reaction, or virtually any interaction within the Teams app.
 
 1. **AI System**: The AI system in the Teams AI library is responsible for moderating input and output, generating plans, and executing them. It can be used standalone or routed to by the Application object. The most important concepts are as follows:
 
     1. [**Prompt Manager**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PROMPTS.md): Prompts play a crucial role in communicating and directing the behavior of Large Language Models (LLMs) AI.
-    1. [**Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PLANNER.md): The planner receives the user's request and returns a plan on how to accomplish it. The user's request is in the form of a prompt or prompt template. It accomplishes this by using AI to mix and match atomic functions (called actions) registered to the AI system, recombining them into a series of steps that complete a goal.
+    1. [**Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PLANNER.md): The planner receives the user's request, which is in the form of a prompt or prompt template, and returns a plan to fulfill it. This is achieved by using AI to mix and match atomic functions, known as actions, that are registered to the AI system. These actions are recombined into a series of steps that complete a goal.
     1. [**Actions**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTIONS.md): An action is an atomic function that is registered to the AI System. It's a fundamental building block of a plan.
 
-1. **AfterTurn Handler**: After the activity handler or AI system is executed, the Teams AI library executes an afterTurn handler. This allows you to perform an action after the turn. If it returns true, the SDK saves the turn state to storage.
+1. **AfterTurn Handler**: After the activity handler or AI system is executed, the Teams AI library executes an afterTurn handler. This handler allows you to perform an action after the turn. If it returns true, the SDK saves the turn state to storage.
 
 1. **Respond to User**: The Teams AI library saves the state, and the bot can send the response to the user.
 
 ## Customize Basic AI Chatbot
 
-You can add customizations on top of this basic application to build more complex scenarios as follows:
+You can add customizations on top of the basic application to build more complex scenarios as follows:
 
 1. **Customize prompt**: Prompts play a crucial role in communicating and directing the behavior of Large Language Models (LLMs) AI. They serve as inputs or queries that users can provide to elicit specific responses from a model. Here's a prompt that asks the LLM for name suggestions:
 
@@ -181,9 +182,9 @@ You can add customizations on top of this basic application to build more comple
     
      1. The `{{$[scope].property}}` is used in the following way:
     
-        # [Javascript](#tab/javascript1)
+        # [JavaScript](#tab/javascript1)
     
-        1. In `src/app/turnState.ts` define your temp state, user state, conversation state and application turn state.
+        1. In `src/app/turnState.ts` define your temp state, user state, conversation state, and application turn state.
     
             ```javascript
         
@@ -207,7 +208,7 @@ You can add customizations on top of this basic application to build more comple
     
         # [Python](#tab/python1)
     
-        1. In `src/state.py`, define your temp state, user state, conversation state and application turn state.
+        1. In `src/state.py`, define your temp state, user state, conversation state, and application turn state.
     
             ```python
         
@@ -252,7 +253,7 @@ You can add customizations on top of this basic application to build more comple
     
      1. `{{ functionName }}`: To call an external function and embed the result in your text, use the {{ functionName }} syntax. For example, if you have a function called getTasks that can return a list of task items, you can embed the results into the prompt:
     
-        # [Javascript](#tab/javascript2)
+        # [JavaScript](#tab/javascript2)
     
         1. Register the function into prompt manager in `src/app/app.ts`:
     
@@ -301,9 +302,9 @@ You can add customizations on top of this basic application to build more comple
 
 1. **Customize user input**: Teams AI library allows you to augment the prompt sent to LLM by including the user inputs. When including user inputs, you need to specify it in a prompt configuration file by setting completion.include_input to true in src/prompts/chat/config.json. You can also optionally configure the maximum number of user input tokens in src/prompts/chat/config.json by changing completion.max_input_tokens. This is useful when you want to limit the length of user inputs to avoid token limit exceeded.
 
-1. **Customize conversation history**: The SDK automatically manages the conversation history, and you can customize the following.
+1. **Customize conversation history**: The SDK automatically manages the conversation history, and you can customize as follows:
 
-    Whether to include history. In src/prompts/chat/config.json, configure completion.include_history. If true, the history is inserted into the prompt to let LLM aware of the conversation context.
+    * In `src/prompts/chat/config.json`, configure completion.include_history. If true, the history is inserted into the prompt to let LLM aware of the conversation context.
     
     * Maximum number of history messages. Configure max_history_messages when initializing PromptManager.
     
@@ -384,3 +385,6 @@ In `src/prompts/chat/config.json`, configure the model parameters under completi
 * stop_sequences: Array of stop sequences that when hit stops generation.
 
 ## See also
+
+[Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
+
