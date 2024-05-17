@@ -10,9 +10,9 @@ ms.date: 04/25/2024
 
 # Debug message extension app in Test Tool
 
-You can debug bot-based message extension capabilities such as search commands, action commands, and link unfurling using Teams App Test Tool within a simulated environment. Test tool helps you to identify and resolve issues before deploying the extension to a live environment.
+You can debug bot-based message extension capabilities such as search commands, action commands, and link unfurling using Teams App Test Tool (Test Tool) within a simulated environment. Test tool helps you to identify and resolve issues before deploying the extension to a live environment.
 
-Teams App Test Tool enhances the functionality of bot-based message extensions, which are built on top of the Bot Framework. When a message extension is activated, the Test Tool sends an invoke request to the app. The app then processes this request and returns an invoke response, which the Test Tool renders and displays.
+Test Tool enhances the functionality of bot-based message extensions, which are built on top of the Bot Framework. When a message extension is activated, the Test Tool sends an invoke request to the app. The app then processes this request and returns an invoke response, which the Test Tool renders and displays.
 
 > [!NOTE]
 > The user experience to trigger message extension in Test Tool is different from Teams, as the goal of Test Tool is to test and debug the app logic and make the flow simple, instead of being a real chat app.
@@ -226,7 +226,7 @@ The following table lists the type of message extension features that aren't sup
 | **Action Command** | Trigger from command box. <br> Create dialog with embedded web view. <br> Render the invoke activity of [botMessagePreview](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#the-botmessagepreview-send-and-edit-events).|
 | **Link Unfurling** | Render the preview card from the invoke response. <br> Send invoke activity of `composeExtension/anonymousQueryLink` for zero install case. |
 
-## Teams App Test Tool for message extension FAQ
+## Test Tool for message extension FAQ
 
 <br>
 <details>
@@ -234,18 +234,17 @@ The following table lists the type of message extension features that aren't sup
 
 When you use the search box in a search-based message extension on Teams, your app receives an invoke activity that includes two parameters. Occasionally, your app might need to use `activity.value.commandId` or `activity.value.parameters[0].name` to manage different search command behaviors in the activity handler for the `composeExtension/query` invoke activity, such as the `handleTeamsMessagingExtensionQuery` method in the Bot Framework SDK for JavaScript. However, your app doesn't need it because [Teams only supports a single search command](../resources/schema/manifest-schema.md#composeextensionscommands) and you can leave them empty.
 
-If your app utilizes these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and enter the necessary values. The Teams App Test Tool includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
+If your app utilizes these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and enter the necessary values. Test Tool includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/specify-command-parameter.png" alt-text="Screenshot shows the specify command ID or Parameter.":::
 
-In Teams, your app manifest provides this information. However, the Teams App Test Tool doesn't process the manifest. For more information, see [Limitations](toolkit-v4/debug-your-Teams-app-test-tool-vs.md#limitations). Therefore, you need to input this information manually.
+In Teams, your app manifest provides this information. However, Test Tool doesn't process the manifest. For more information, see [Limitations](toolkit-v4/debug-your-Teams-app-test-tool-vs.md#limitations). Therefore, you need to input this information manually.
 
 For details about the schema of this, invoke activity payload. For more information, see [respond to user requests](../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
 <br>
 </details>
 </br>
 
-<br>
 <details>
 <summary>Command ID parameter in Action Command</summary>
 
@@ -255,14 +254,13 @@ To test various action commands, you must enter the `Command ID` in the designat
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/command-parameter.png" alt-text="Screenshot shows the command ID parameter in Action Command.":::
 
-While Teams retrieves this information from your app manifest, the Teams App Test Tool doesn't. Therefore, you need to input it manually.
+While Teams retrieves this information from your app manifest, Test Tool doesn't. Therefore, you need to input it manually.
 
 For details about the schema of this, invoke activity payload. For more information, see [create and send dialogs](../messaging-extensions/how-to/action-commands/create-task-module.md) and [respond to the dialog submit action](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md).
 <br>
 </details>
 </br>
 
-<br>
 <details>
 <summary>Static list of parameters in Action Command</summary>
 
@@ -272,9 +270,8 @@ When you opt to create a dialog using a static list of parameters, the message e
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/static-list-of-parameters.png" alt-text="Screenshot shows the static list of parameter in Action Command.":::
 
-In Teams, your app manifest provides this information. However, the Teams App Test Tool doesn't process the manifest. For more information, see [Limitations](toolkit-v4/debug-your-Teams-app-test-tool-vs.md#limitations). Therefore, you need to input this information manually.
+In Teams, your app manifest provides this information. However, Test Tool doesn't process the manifest. For more information, see [Limitations](toolkit-v4/debug-your-Teams-app-test-tool-vs.md#limitations). Therefore, you need to input this information manually.
 
 For the schema of, the Static list of parameters. For more information, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
 <br>
 </details>
-</br>
