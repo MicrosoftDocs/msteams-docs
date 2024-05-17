@@ -505,7 +505,7 @@
         href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
       - name: Teams AI library FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
-  - name: Interoperability of bots and tabs
+  - name: Unified communication between bot and tab
     href: bots/how-to/Teams conversational AI/bots-and-tabs.md
 - name: Build message extensions
   items:

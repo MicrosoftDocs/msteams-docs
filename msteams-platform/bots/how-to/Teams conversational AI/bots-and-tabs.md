@@ -1,5 +1,5 @@
 ---
-title: Synchronized bots and tabs
+title: Unified communication between bot and tab
 description: In this article, learn about interoperability between bot and tab.
 ms.localizationpriority: medium
 ms.topic: coceptual
@@ -8,9 +8,9 @@ author: surbhigupta
 ms.date: 05/02/2024
 ---
 
-# Synchronized bots and tabs
+# Unified communication between bot and tab
 
-Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are a great way to have conversational experiences through chat, while tabs allow you to embed web applications directly into Teams. Tabs and bots can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
+Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are a great way to have conversational experiences through chat, while tabs allow you to embed web applications directly into Teams. Bots and tabs can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
 
 > [!NOTE]
 > We recommend building bots using the Teams AI library for integrating bots and tabs.
@@ -19,7 +19,7 @@ By integrating bots and tabs, you can create a custom copilot like experience in
 
 :::image type="content" source="~/assets/images/bots/sync-bot-tab.gif" alt-text="Example for bot message updating the tab." lightbox="~/assets/images/bots/sync-bot-tab.gif":::
 
-This allows seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
+This allows seamless integration between the bots and tabs, providing a more engaging and interactive experience for the user.
 
 ## Understand how bots  and tabs work
 
@@ -118,7 +118,7 @@ In this example, the socket connection with the bot can be retrieved through the
 
 ## Get `threadId`
 
-Tabs and bots have different ways of getting the `threadId`. The following explains how to get the `threadId` to use in your socket connection to map in your bot and tab applications.
+Bots and tabs have different ways of getting the `threadId`. The following explains how to get the `threadId` to use in your socket connection to map in your bot and tab applications.
 
 ##### Get `threadId` for your bot
 
@@ -303,8 +303,6 @@ const threadId =
 As described earlier, with an active web socket connection or through the REST APIs, the tab can send application state data to a server, which the server would then store or cache for later use.
 
 For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state, then the data can be retrieved from memory or storage and handled accordingly, such as by feeding the data into a prompt for a large language model (LLM).
-
-:::image type="content" source="~/bots/image (3).png" alt-text="Sequence diagram that explains the communication flow between tab and bot." lightbox="~/bots/image (3).png":::
 
 :::image type="content" source="~/assets/images/bots/bot-state.png" alt-text="Sequence diagram that explains the communication flow between tab and bot." lightbox="~/assets/images/bots/bot-state.png":::
 
