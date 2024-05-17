@@ -389,7 +389,6 @@ The following code snippet shows how to enable feedback buttons in a bot:
         "feedbackLoopEnabled": true
     }
 }
-
 ```
 
 For a bot built using Teams AI library, Teams enables feedback buttons to all bot messages when `enable_feedback_loop` is set to `true` in the `ai` module.
@@ -449,8 +448,6 @@ The following code snippet shows a bot invoke containing feedback from a user fo
 }
 
 ```
-
----
 
 ### Handle feedback
 
