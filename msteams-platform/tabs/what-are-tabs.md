@@ -136,7 +136,9 @@ For channel or group tabs, you can also create an extra configuration page. This
 
 For static tabs you can pin a `contentUrl` to chat or meeting tabs. This allows you to skip the mandatory configuration dialog and get your users to use the app faster. You can also change the `contentUrl` at runtime. This allows you to build one tab object that works in all surface areas of Teams. For more information, see [migrate your configurable tab to static tab.](~/tabs/how-to/create-channel-group-tab.md#migrate-your-configurable-tab-to-static-tab)
 
-You can have multiple channels or group tabs, and up to 16 static tabs per app.
+You can have multiple channels or group tabs, and up to 16 static tabs per app. In your personal app, if you've integrated both tab and bot capabilities, you can establish a [unified communication](~/bots/how-to/teams%20conversational%20ai/bots-and-tabs.md) between the tab and the bot. The following image shows a personal app with both a tab and a bot added:
+
+:::image type="content" source="~/assets/images/bots/bot-tab-stage.png" alt-text="Screenshot that shows the tab and bot content in Stageview." lightbox="~/assets/images/bots/bot-tab-stage.png":::
 
 ### Tools to build tabs
 

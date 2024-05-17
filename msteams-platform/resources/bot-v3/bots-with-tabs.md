@@ -9,7 +9,7 @@ ms.date: 04/02/2023
 
 [!include[v3-to-v4-SDK-pointer](~/includes/v3-to-v4-pointer-bots.md)]
 
-Bots and tabs work together, and are often combined into a single back-end service. In personal apps you can open tab and bot content in Stageview.
+Bots and tabs work together, and are often combined into a single back-end service. The following image shows a personal app with both a bot and a tab added:
 
 :::image type="content" source="~/assets/images/bots/bot-tab-stage.png" alt-text="Screenshot that shows the tab and bot content in Stageview." lightbox="~/assets/images/bots/bot-tab-stage.png":::
 

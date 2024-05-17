@@ -35,6 +35,10 @@ Use the right mix of cards, text, and dialogs to create a useful bot. The follow
 
 :::image type="content" source="~/assets/images/FAQPlusEndUser.gif" alt-text="The screenshot is an example that shows a sample FAQ bot.":::
 
+In your personal app, if you've integrated both bot and tab capabilities, you can establish a [unified communication](~/bots/how-to/teams%20conversational%20ai/bots-and-tabs.md) between the bot and the tab. The following image shows a personal app with both a bot and a tab added:
+
+:::image type="content" source="~/assets/images/bots/bot-tab-stage.png" alt-text="Screenshot that shows the tab and bot content in Stageview." lightbox="~/assets/images/bots/bot-tab-stage.png":::
+
 Every interaction between the user and the bot is represented as an activity. When a bot receives an activity, it passes it on to its activity handlers. See [bot activity handlers](~/bots/bot-basics.md).
 
 Bots are apps that have a conversational interface. You can interact with a bot using text, interactive cards, and speech. A bot behaves differently in a channel or group chat conversation and in a one-to-one conversation. Conversations are handled through the Bot Framework connector. See [conversation basics](~/bots/how-to/conversations/conversation-basics.md).
