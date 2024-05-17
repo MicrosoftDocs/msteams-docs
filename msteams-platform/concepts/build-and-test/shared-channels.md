@@ -111,7 +111,7 @@ Teams supports the use of apps in group chats that include external users. These
 
 * **Multitenant**: When you use a multitenant registration, the Microsoft Entra object ID that your app receives for a user isn't housed in your own tenant. This is because the user could be from an external organization. You need to handle these Microsoft Entra object IDs that can’t be resolved in your own directory.
 
-This might involve asking for additional permissions from the user to resolve the ID, or asking for consent to access the user’s email address for authentication purposes. If you can’t authenticate a user or resolve their Microsoft Entra object ID, you need to provide a fallback experience, such as a guest user experience or other types of unauthenticated experiences.
+    This might involve asking for additional permissions from the user to resolve the ID, or asking for consent to access the user’s email address for authentication purposes. If you can’t authenticate a user or resolve their Microsoft Entra object ID, you need to provide a fallback experience, such as a guest user experience or other types of unauthenticated experiences.
 
 The following code snippet prevents external users from signing in and displays a failure message when they attempt to sign in:
 
