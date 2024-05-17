@@ -21,7 +21,7 @@ Here's a quick overview on each feature that you can integrate to your bot messa
 > [!NOTE]
 >
 > * AI label, sensitivity label, citations, and feedback buttons are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) for chats and group chats.
-> * Feedback buttons are available only in Teams web and desktop clients for public developer preview.
+> * Feedback buttons are available only in Teams web and desktop clients.
 
 ## AI label
 
@@ -370,32 +370,6 @@ When the user selects a feedback button, a respective feedback form appears base
 
 ### Enable feedback buttons
 
-To enable feedback buttons in your bot, add a `channelData` object in your bot's message and set `feedbackLoopEnabled` to true.
-
-The following code snippet shows how to enable feedback buttons in a bot:
-
-```json
-{
-    "type": "message",
-    "from": {
-        "id": "28:48b2e1fd-b6b8-46ce-8074-8e918304fcb2"
-    },
-    "conversation": {
-        "isGroup": true,
-        "id": "19:21e795db-9804-4bb8-9a6a-f85b9e8e9602@thread.tacv2"
-    },
-    "recipient": {
-        "id": "8:orgid:67cc58d0-4a80-496a-a019-437b70bc6529"
-    },
-    "text": "93001cd5-45f4-4a9a-b694-0f44eecfd004",
-    "attachments": [],
-    "entities": [],
-    "channelData": {
-        "feedbackLoopEnabled": true
-    }
-}
-```
-
 For a bot built using Teams AI library, Teams enables feedback buttons to all bot messages when `enable_feedback_loop` is set to `true` in the `ai` module.
 
 ```javascript
@@ -410,42 +384,61 @@ export const app = new Application<ApplicationTurnState>({
 
 After you enable feedback buttons, all SAY commands from the bot have `feedbackLoopEnabled` automatically set to `true` in the `channelData` object.
 
+To enable feedback buttons in a bot built using Bot Framework SDK, add a `channelData` object in your bot's message and set the value of `feedbackLoopEnabled` to `true`.
+
+# [C#](#tab/charp)
+
+```csharp
+ await stepContext.Context.SendActivityAsync(
+          new Activity
+          {
+              Type = ActivityTypes.Message,
+              Text = ${txt},
+              ChannelData = new { feedbackLoopEnabled = true },
+          };
+      )
+```
+
+# [JavaScript](#tab/js)
+
 ```javascript
 await context.sendActivity({
   type: ActivityTypes.Message,
-  text: `Hey I'm a friendly AI bot. This message is generated through AI [1]`, // cite with [1],
+  text: `Hey! I'm a friendly AI bot!`,
   channelData: {
     feedbackLoopEnabled: true // Enable feedback buttons
   },
 });
 ```
 
-Feedback buttons are located at the footer of the bot’s message, and include a 👍 (thumbs up) and a 👎 (thumbs down) button for the user to choose from. You can collect feedback on bot responses from personal chats, group chats, and channels.
+---
 
-The bot receives the user's input, received in the feedback form, through a bot invoke flow. The following code snippet shows a bot invoke containing positive feedback from a user:
+Feedback buttons are located at the footer of the bot’s message, and include a 👍 (thumbs up) and a 👎 (thumbs down) button for the user to choose from. You can collect feedback on bot responses from personal and group chats.
+
+The bot receives the user's input, received in the feedback form, through a bot invoke flow. The following code snippet shows a payload containing positive feedback from a user:
 
 ```json
 {
  "name": "message/submitAction",
  "conversation": {
-  "id": "19:144de878089f94d7db699d10a4672bc040@thread.v2"
+  "id": "19:0000000000000000000000000000000000@thread.v2"
  },
  "value": {
   "actionName": "feedback",
   "actionValue": {
     "reaction": "like",
-    "feedback": "test feedback"
+    "feedback": "This bot is very friendly!"
   }
  }
 }
 
 ```
 
-The following code snippet shows a bot invoke containing feedback from a user for a bot built using Teams AI library:
+The following code snippet shows a payload containing feedback from a user for a bot built using Teams AI library:
 
-```javascript
+```json
 {
-    "actionName: "feedback",
+    "actionName": "feedback",
     "actionValue": {
         "reaction": string, //"like" or "dislike"
         "feedback": string
@@ -579,7 +572,7 @@ await context.sendActivity({
 
 ```
 
-<!-->```javascript
+<!--```javascript
 await context.sendActivity({
          type: ActivityTypes.Message,
          text: `Hey I'm a friendly AI bot. This message is generated through AI [1]`, // cite with [1],
