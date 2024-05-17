@@ -55,7 +55,7 @@ Ensure that you install the following tools for building and deploying your bots
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/test-tool-in-browser-window.png" alt-text="Screenshot shows the test tool opens in a webpage.":::
 
-1. Type `help` in the message compose area of Test Tool, it displays all the message extension commands in the sample app.
+1. Type `help` in the message compose area of Test Tool. It displays all the message extension commands in the sample app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/help-in-teams-app-test-tool.png" alt-text="Screenshot shows the help in the message compose area of test tool.":::
 
@@ -189,7 +189,7 @@ Based on the invoke response from the message extension, the Test Tool enables t
 * Display a plain text message from the invoke response inside the dialog.
 
 > [!Note]
-> Similar to the **Search Command**, include the command ID only if it’s used by your message extension. If not, you can ignore it during testing in the Test Tool.
+> Similar to the **Search Command**, it's not mandatory to include the command ID to test your message extension. Add them if you require to test the functionality.
 
 ## Link Unfurling
 
