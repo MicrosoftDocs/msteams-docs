@@ -27,7 +27,7 @@ You must create a deep link URL with a `continuation` query parameter for the ac
 
 To enable copilot handoff in Teams, follow these steps:
 
-1. **Configure a deep link URL**: Create a deep link to the bot chat and include `28:<botId>` and `continuationToken`. The deep link must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${28:<botId>}&continuation=${continuationToken}`.
+1. **Configure a deep link URL**: Create a [deep link to a chat](../../../concepts/build-and-test/deep-link-teams.md#configure-deep-link-to-start-a-chat-manually) and add the `28:<botId>` and `continuationToken` to the deep link format. The deep link must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${28:<botId>}&continuation=${continuationToken}`.
 
    **Example**:
 
@@ -42,7 +42,7 @@ To enable copilot handoff in Teams, follow these steps:
    }
    ```
 
-   The `Action.OpenUrl` property allows the user to hand off the conversation to a bot. When a user selects on the action button, the deep link is activated and opens a new chat window with the bot. The bot receives the continuation token from the URL in the form of a payload and uses the token to maintain the context of the conversation.
+   The `Action.OpenUrl` property allows the user to hand off the conversation to a bot. When a user selects the action button, the deep link is activated and opens a new chat window with the bot. The bot receives an invoke call with a payload, which contains the continuation token from the URL and uses the token to maintain the context of the conversation.
 
    **Sample payload**
 
@@ -107,7 +107,7 @@ To enable copilot handoff in Teams, follow these steps:
    > [!NOTE]
    > Don't send any payload with this response as it doesn't render in the chat window. The responses based on the continuation token must be sent to the user separately.
 
-Here's an example of how to handle the invoke call in `searchApp.ts`:
+   Here's an example of how to handle the invoke call in `searchApp.ts`:
 
    ```typescript
             case "handoff/action": {
