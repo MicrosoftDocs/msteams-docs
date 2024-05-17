@@ -80,6 +80,8 @@ await context.sendActivity({
        });
 ```
 
+---
+
 <!--The code snippets are Bot Framework SDK samples.
 
 To add an AI label manually to your bot message, include `additionalType` under `entities` array of the `message` entity object. The following code snippet shows how to add an AI label to your bot's message:
@@ -433,6 +435,7 @@ The bot receives the user's input, received in the feedback form, through a bot 
   }
  }
 }
+
 ```
 
 The following code snippet shows a bot invoke containing feedback from a user for a bot built using Teams AI library:
