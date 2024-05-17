@@ -15,7 +15,7 @@ Bots and tabs are two capabilities of Microsoft Teams that can be used together 
 > [!NOTE]
 > We recommend building bots using the Teams AI library for integrating bots and tabs.
 
-By integrating bots and tabs, you can create a custom copilot like experience in Teams. For example, a user can send a message to the bot asking it to make some changes to the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application.
+By integrating bots and tabs, you can create a custom copilot-like experience in Teams. For example, a user can send a message to the bot asking it to make some changes to the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application.
 
 :::image type="content" source="~/assets/images/bots/sync-bot-tab.gif" alt-text="Example for bot message updating the tab." lightbox="~/assets/images/bots/sync-bot-tab.gif":::
 
@@ -46,7 +46,7 @@ Tabs allow you to embed your web applications directly into Teams this allows cu
 
 :::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work." lightbox="~/assets/images/bots/how-tab-work.png":::
 
-Through the `@microsoft/teams-js NPM` package, tabs can communicate with Teams using a secure messaging channel called window post messages, and tab can communicate with the backend using standard JavaScript APIs, HTTP requests, and web sockets.
+Through the `@microsoft/teams-js` npm package, tabs can communicate with Teams using a secure messaging channel called window post messages, and tab can communicate with the backend using standard JavaScript APIs, HTTP requests, and web sockets.
 
 :::column-end:::
 
@@ -65,7 +65,7 @@ This gives apps a powerful way to integrate bots and tabs smoothly. The key aspe
 
 Apps must have a consistent user identifier for both bot and tab and ensure that the user is authenticated in both contexts, such as through [Microsoft Entra ID](~/concepts/authentication/authentication.md). 
 
-Though there might be different ways to authenticate without Microsoft Entra ID, such as through a custom authentication provider, where a user must sign-in from both the tab and bot, Microsoft Entra ID makes the user experience more seamlessly integrated, which is imperative for this sort of custom copilot like integration.
+Though there might be different ways to authenticate without Microsoft Entra ID, such as through a custom authentication provider, where a user must sign-in from both the tab and bot, Microsoft Entra ID makes the user experience more seamlessly integrated, which is imperative for this sort of custom copilot-like integration.
 
 :::column-end:::
 
