@@ -121,7 +121,7 @@ The query parameters are:
 > * Deep links work properly only if the tab was configured using the library v0.4 or later as it has an entity ID. Deep links to tabs without entity IDs still go to the tab but can't provide the subentity ID to the tab.
 >* On Microsoft Windows, Teams can't process deep links that are longer than 2048 characters. This limit is due to `INTERNET_MAX_URL_LENGTH` in the Windows ShellExecuteEx API, which sets the maximum length to 2048 characters.
 >
-> When creating a deep link, you need to ensure that the path to the Teams client and any other metadata fit within this 2048 character limit. If your deep link needs to carry a large amount of data, we recommend including a unique identifier in the link. Your app can then use this identifier to fetch the necessary data from your backend service.
+>     When creating a deep link, you need to ensure that the path to the Teams client and any other metadata fit within this 2048 character limit. If your deep link needs to carry a large amount of data, we recommend including a unique identifier in the link. Your app can then use this identifier to fetch the necessary data from your backend service.
 
 **Examples**:
 
