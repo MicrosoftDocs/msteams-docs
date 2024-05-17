@@ -175,7 +175,7 @@ items:
                     "type": "azure_search",
                     "parameters": {
                          "endpoint": "AZURE-AI-SEARCH-ENDPOINT",
-                         "index_name": "nba",
+                         "index_name": "YOUR-INDEX_NAME",
                          "authentication": {
                                "type": "api_key",
                                "key": "AZURE-AI-SEARCH-KEY"
