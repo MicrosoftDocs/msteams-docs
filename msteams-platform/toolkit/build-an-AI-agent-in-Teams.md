@@ -10,7 +10,9 @@ ms.date: 05/08/2024
 
 # Build an AI Agent in Teams
 
-An AI agent in Microsoft Teams is a conversational chatbot that can reason with large language models to interact with users to understand the intention and select a sequence of actions to take so the chatbot can complete common tasks.
+An AI agent in Microsoft Teams is a conversational chatbot that uses Large Language Models (LLMs) to interact with users. It understands user intentions and selects a sequence of actions, enabling the chatbot to complete common tasks.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/build-ai-agent.png" alt-text="Screenshot shows the process of build AI agent bot requests and responses.":::
 
 ## Prerequisites
 
@@ -21,7 +23,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
-| [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
+| [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
 ## Create a new AI Agent project
 
@@ -166,7 +168,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 
        **Create your own OpenAI Assistant**
     
-        Before running or debugging your bot, please follow these steps to set up your own [OpenAI Assistant](https://platform.openai.com/docs/assistants/overview).
+        Before running or debugging your bot, follow these steps to set up your own [OpenAI Assistant](https://platform.openai.com/docs/assistants/overview).
     
         **If you haven't setup any Assistant yet**
     
@@ -197,7 +199,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 
     Test Tool opens the bot in a webpage.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-build-assistant-api-final-output.png" alt-text="Screenshot shows the final output of AI agent build with assitants API bot.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-build-assistant-api-final-output.png" alt-text="Screenshot shows the final output of AI agent build with assistants API bot.":::
 
     ## Take a tour of the bot app source code
     
@@ -235,11 +237,11 @@ An AI agent in Microsoft Teams is a conversational chatbot that can reason with 
 
 ### Build New
 
-Teams AI Library provides a comprehensive flow that facilitates you to build your own AI agent. These are the most important concepts you need to know:
+The Teams AI Library provides a comprehensive flow that simplifies the process of building your own AI agent. The most important concepts you need to understand as follows:
 
 * [**Actions**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTIONS.md): An action is an atomic function that is registered to the AI System. It's a fundamental building block of a plan.
-* [**Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PLANNER.md): The planner receives the user's ask and returns a plan on how to accomplish the request. The user's ask is in the form of a prompt or prompt template. It does this by using AI to mix and match atomic functions (called actions) registered to the AI system so that it can recombine them into a series of steps that complete a goal.
-* [**Action Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTION-PLANNER.md):The Action Planner is a powerful planner that uses an LLM to generate plans. It can trigger parameterized actions and send text-based responses to the user.
+* [**Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PLANNER.md): The planner receives the user's request, which is in the form of a prompt or prompt template, and returns a plan to fulfill it. This is achieved by using AI to mix and match atomic functions, known as actions, that are registered to the AI system. These actions are recombined into a series of steps that complete a goal.
+* [**Action Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTION-PLANNER.md): The Action Planner is a powerful planner that uses an LLM to generate plans. It can trigger parameterized actions and send text-based responses to the user.
 
 ### Build with Assistants API
 
@@ -247,11 +249,11 @@ Assistants API from OpenAI to simplify the development effort of creating an AI 
 
    | Comparison | Build New | Build with Assistants API |
    | - | - | - |
-   | Cost | Only costs for LLM services | Costs for LLM services and use tools in Assistants API may incur additional costs |
+   | Cost | Only costs for LLM services | Costs for LLM services and the use tools in Assistants API leads to extra costs. |
    | Dev Effort | Medium | Relatively Small |
    | LLM Services | Azure OpenAI or OpenAI | OpenAI Only |
-   | Example Implementations in Template | This app template is capable of chatting with users and helping users manage tasks. | This app templates uses Code Interpreter tool to solve math problems and also Function Calling tool to get city weather. |
-   | Limitations | NA | 	Currently, the Knowledge Retrieval tool is not supported by Teams AI library. |
+   | Example Implementations in Template | This app template is capable of chatting with users and helping users manage tasks. | This app templates use Code Interpreter tool to solve math problems and also Function Calling tool to get city weather. |
+   | Limitations | NA | Currently, the Teams AI library doesn't support the Knowledge Retrieval tool. |
 
 ## Customize the application template
 
@@ -259,8 +261,8 @@ Assistants API from OpenAI to simplify the development effort of creating an AI 
 
 The SDK provides a functionality to augment the prompt.
 
-* The actions defined in `src/prompts/planner/actions.json` will be inserted into the prompt to let LLM know the available functions.
-* An internal piece of prompt text will be inserted into the prompt to instruct LLM to determine which functions to call based on the available functions. This prompt text orders LLM to generate the response in a structured json format.
+* The actions, which are defined in the `src/prompts/planner/actions.json` file, are inserted into the prompt. This allows the LLM to be aware of the available functions.
+* An internal piece of prompt text is inserted into the prompt to instruct LLM to determine which functions to call based on the available functions. This prompt text orders LLM to generate the response in a structured json format.
 * The SDK validates the LLM response and lets LLM correct or refine the response if the response is in wrong format.
 
 In `src/prompts/planner/config.json`, configure `augmentation.augmentation_type`. The options are:
@@ -319,7 +321,7 @@ The file src/creator.ts creates a new OpenAI Assistant. You can customize the as
 
 ### Build with Assistants API add functions
 
-When the assistant returns a function that needs to be called along with its arguments, the SDK maps the function to the corresponding action that is registered in advance, then calls the action handler and submits the results to the assistant. You can add your functions by registering the actions into the app.
+When the assistant provides a function and its arguments for execution, the SDK aligns this function with a pre-registered action. It later activates the action handler and submits the outcomes back to the assistant. To integrate your functions, register the actions within the app.
 
    * In `src/app/actions.ts`, define the action handlers.
     

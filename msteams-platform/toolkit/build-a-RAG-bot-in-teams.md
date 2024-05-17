@@ -10,23 +10,16 @@ ms.date: 05/08/2024
 
 # Build a RAG Bot in Teams
 
-The most effective applications enabled by Large Language Models (LLMs) is the creation of sophisticated question-answering (Q&A) chatbots. These chatbots can respond to inquiries about specific source information using a technique known as Retrieval Augmented Generation (RAG)."
+The most effective applications enabled by Large Language Models (LLMs) are the creation of sophisticated question-answering (Q&A) chatbots. These chatbots can respond to inquiries about specific source information using a technique known as Retrieval Augmented Generation (RAG)."
 
-For example:
-Knowledge Base: "Company's shuttle bus might be 15 minutes late on rainy days."
-User Query: "When will the shuttle bus arrive?"
-AI Response (With RAG): "Today is rainy, the shuttle bus might be 15 minutes late than usual, so around 9:15 AM."
-
-image
-
-A typical RAG architecture that has two main flows:
+A typical RAG architecture has two main flows:
 
 1. **Data Ingestion**: A pipeline for ingesting data from a source and indexing it. This usually happens offline.
 1. **Retrieval and Generation**: The actual RAG chain, which takes the user query at run time and retrieves the relevant data from the index, then passes that to the model.
 
 Microsoft Teams enables developers to build a conversational bot with RAG capability to create a powerful experience to maximize the productivity.
 
-Teams Toolkit provides a series ready to use application templates under the category Chat with your data that combines the capabilities of Azure AI Search, Microsoft 365 and SharePoint and Custom API as different data source and Large Language Models (LLMs) to create a conversational search experience in Microsoft Teams.
+Microsoft Teams Toolkit provides a series of ready-to-use application templates in the chat with your data category. These templates combine the capabilities of Azure AI Search, Microsoft 365, SharePoint, and Custom API as different data sources, along with LLMs, to create a conversational search experience in Teams.
 
 ## Prerequisites
 
@@ -37,7 +30,7 @@ Teams Toolkit provides a series ready to use application templates under the cat
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
-| [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
+| [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
 ## Create a new Basic AI Chatbot project
 
@@ -131,11 +124,11 @@ Test Tool opens the bot in a webpage.
 
 ## RAG scenarios for Teams AI
 
-Teams AI library does not provide vector database implementation, so you need to add your own logic for further processing the created embeddings.
+Teams AI library doesn't provide vector database implementation, so you need to add your own logic for further processing the created embeddings.
 
 In AI context, vector databases are widely used as RAG storages, which store embeddings data and provide vector-similarity search. Teams-AI library provides utilities to help create embeddings for the given inputs.
 
-# [Javascript](#tab/javascript)
+# [JavaScript](#tab/javascript)
 
 ```javascript
 // create OpenAIEmbeddings instance
@@ -159,13 +152,15 @@ embeddings = await model.create_embeddings(inputs)
 ```
 ---
 
+:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/teams-ai-rag-scenario.png" alt-text="Screenshot shows the RAG scenario.":::
+
 Teams AI library also provides functionalities to ease each step of the retrieval and generation process.
 
 1. **Handle Input**: The most straight forward way is to pass user's input as is to retrieval. However, if you'd like to customize the input before retrieval, you can add activity handler to certain incoming activities.
 
-1. **Retrieve data source**: Teams-AI library provides DataSource interface to let you to add your own retrieval logic. You'll need to create your own DataSource instance, and the library orchestrator will call it on demand.
+1. **Retrieve data source**: Teams-AI library provides DataSource interface to let you add your own retrieval logic. You need to create your own DataSource instance, and the library calls it on demand.
 
-    # [Javascript](#tab/javascript1)
+    # [JavaScript](#tab/javascript1)
     
     ```javascript
     class MyDataSource implements DataSource {
@@ -207,7 +202,7 @@ Teams AI library also provides functionalities to ease each step of the retrieva
       ```
     ---
 
-1. **Call AI with prompt**: In Teams AI's prompt system, you can easily inject data source by adjusting the augmentation.data_sources configuration section. This connects the prompt with the added DataSource in previous step, and library orchestrator will inject the data source text into final prompt. See AuthorPrompt for the details. For example, in prompt's config.json file:
+1. **Call AI with prompt**: In the Teams AI prompt system, you can easily inject a data source by adjusting the augmentation.data_sources configuration section. This connects the prompt with the DataSource added in the previous step, and the library orchestrator to inject the data source text into the final prompt. For more information, See [AuthorPrompt](https://github.com/OfficeDev/TeamsFx/wiki/). For example, in the prompt's 'config.json' file.
 
     ```json
     {
@@ -221,7 +216,7 @@ Teams AI library also provides functionalities to ease each step of the retrieva
     }
     ```
 
-1. **Build response**: By default, Teams-AI library replies the AI generated response as text message to user. If you'd like to customize the response, you can override the default SAY action (see AI Actions) or explicitly call AI model (see AI Models) to build your own replies, e.g., with adaptive cards.
+1. **Build response**: By default, Teams-AI library replies the AI generated response as text message to user. If you'd like to customize the response, you can override the default SAY action (see [AI Actions](https://github.com/OfficeDev/TeamsFx/wiki/)) or explicitly call AI model (see [AI Models](https://github.com/OfficeDev/TeamsFx/wiki/)) to build your own replies, for example, with adaptive cards.
 
 Here's a minimal set of implementations to add RAG to your app. In general, it implements DataSource to inject your own knowledge into prompt, so that AI can generate response based on the knowledge.
 
@@ -257,7 +252,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
 
 * Register the data source in `app.ts`,
 
-    # [Javascript](#tab/javascript2)
+    # [JavaScript](#tab/javascript2)
     
     ```javascript
     // Register your data source to prompt manager
@@ -309,20 +304,20 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
 
 ## Choose Between Data Sources
 
- * Customize allows you to fully control the data ingestion, see the sample on Build your own Data Ingestion to build your own vector index, and use it as data source. There are other alternatives, e.g., Azure Cosmos DB Vector Database Extension or Azure PostgreSQL Server pgvector Extension as vector databases, or Bing Web Search API to get latest web content. You may implement any DataSource instance to connect with your own data source.
+ * Customize allows you to fully control the data ingestion, see the sample on Build your own Data Ingestion to build your own vector index, and use it as data source. There are other alternatives, for example, Azure Cosmos DB Vector Database Extension or Azure PostgreSQL Server vector Extension as vector databases, or Bing Web Search API to get latest web content. You might implement any DataSource instance to connect with your own data source.
 
  * Azure AI Search provides a sample to add your documents to Azure AI Search Service, then use the search index as data source.
 
  * Custom API allows your chatbot can invoke the API defined in the OpenAPI description document to retrieve domain data from API service.
 
- * Microsoft Graph and SharePoint provides a sample to use M365 content from Microsoft Graph Search API as data source.
+ * Microsoft Graph and SharePoint provides a sample to use Microsoft 365 content from Microsoft Graph Search API as data source.
 
 ## Build your own Data Ingestion
 
 Data ingestion process is as follows:
 
- 1. **Load your source documents**: Besides text, if you have other types of documents, you may need to convert them to meaningful text, since the embedding model takes text as input.
- 1. **Split into chunks**: The embedding model has input token limitation, so you may need to split documents into chunks to avoid API call failure.
+ 1. **Load your source documents**: Besides text, if you have other types of documents, you might need to convert them to meaningful text, since the embedding model takes text as input.
+ 1. **Split into chunks**: The embedding model has an input token limitation, so you might need to split documents into chunks to avoid API call failures.
  1. **Call embedding model**: Call the embedding model APIs to create embeddings for the given inputs.
  1. **Store embeddings**: Store the created embeddings into a vector database, also including useful metadata and raw content for further referencing.
 
@@ -335,7 +330,7 @@ This doc showcases a solution to:
 * Add your document to Azure AI Search via Azure OpenAI Service.
 * Use Azure AI Search index as data source in the RAG app.
 
-image
+Image
 
 ### Data Ingestion
 
@@ -344,13 +339,14 @@ With Azure OpenAI on your data, you can ingest your knowledge documents to Azure
 * Prepare your data in Azure Blob Storage, or directly upload in later step on Azure OpenAI Studio, add your data source.
 
 * Fill fields to create a vector index.
-image
+
+Image
 
 ### Data Source
 
 After ingesting data into Azure AI Search, you can implement your own DataSource to retrieve data from search index.
 
-# [Javascript](#tab/javascript3)
+# [JavaScript](#tab/javascript3)
 
 ```javascript
 
@@ -577,7 +573,7 @@ Create a new file with name `${{YOUR-API-NAME}}.json`, and fill in the adaptive 
 
 1. Update `./src/app/app.js`
 
-   Add following code before module.exports = app;. Remember to replace necessary info.
+   Add following code before module.exports = app;
 
 ```javascript
 
@@ -601,19 +597,19 @@ app.ai.action(${{YOUR-API-NAME}}, async (context: TurnContext, state: Applicatio
 
 ## Microsoft 365 as Data Source
 
-This doc showcases a solution to query M365 content from Microsoft Graph Search API as data source in the RAG app. To learn more about Microsoft Graph Search API, you can refer to Use the Microsoft Search API to search OneDrive and SharePoint content.
+This doc showcases a solution to query Microsoft 365 content from Microsoft Graph Search API as data source in the RAG app. To learn more about Microsoft Graph Search API, you can refer to Use the Microsoft Search API to search OneDrive and SharePoint content.
 
 Prerequisite - You should create a Graph API client and grant it the Files.Read.All permission scope to access SharePoint and OneDrive files, folders, pages, and news.
 
 ### Data Ingestion
 
-Microsoft Graph Search API is available for searching SharePoint content, thus you just need to ensure your document is uploaded to SharePoint / OneDrive, no extra data ingestion required.
+The Microsoft Graph Search API, which can search SharePoint content, is available. Therefore, you only need to ensure your document is uploaded to SharePoint or OneDrive, with no extra data ingestion required.
 
 Note: SharePoint Server indexes a file only if its file extension is listed on the Manage File Types page. For a complete list of supported file extensions, refer to the Default crawled file name extensions and parsed file types in SharePoint Server and SharePoint in Microsoft 365.
 
 ### Data Source Implementation
 
-The following is an example of search txt files in SharePoint and OneDrive.
+An example of searching for txt files in SharePoint and OneDrive as follows:
 
 ```
 import {

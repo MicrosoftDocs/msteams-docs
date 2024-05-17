@@ -136,7 +136,7 @@ Test Tool opens the bot in a webpage.
 
 The Teams-AI library provides a typical flow for building an intelligent chatbot with AI capabilities as follows:
 
-Image
+:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/teams-ai-chatbot-process.png" alt-text="Screenshot shows the typical flow of AI chatbot.":::
 
 1. **TurnContext**: The turn context object provides information about the activity, such as the sender and receiver, the channel, and other data needed to process the activity.
 
@@ -375,14 +375,14 @@ You can add customizations on top of the basic application to build more complex
 
 1. Customize model parameters:
 
-In `src/prompts/chat/config.json`, configure the model parameters under completion:
+    In `src/prompts/chat/config.json`, configure the model parameters under completion as follows:
 
-* max_tokens: The maximum number of tokens to generate.
-* temperature: The models temperature as a number between 0 and 2.
-* top_p: The models top_p as a number between 0 and 2.
-* presence_penalty: The models presence_penalty as a number between 0 and 1.
-* frequency_penalty: The models frequency_penalty as a number between 0 and 1.
-* stop_sequences: Array of stop sequences that when hit stops generation.
+    * **Max_tokens**: The maximum number of tokens to generate.
+    * **Temperature**: The models temperature as a number between 0 and 2.
+    * **Top_p**: The models top_p as a number between 0 and 2.
+    * **Presence_penalty**: The models presence_penalty as a number between 0 and 1.
+    * **Frequency_penalty**: The models frequency_penalty as a number between 0 and 1.
+    * **Stop_sequences**: Array of stop sequences that when hit stops generation.
 
 ## See also
 
