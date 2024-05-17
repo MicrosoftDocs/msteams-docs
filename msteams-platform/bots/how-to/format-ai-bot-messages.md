@@ -578,7 +578,7 @@ app.ai.action<PredictedSayCommand>(AI.SayCommandActionName, async (context, stat
 ## Code samples
 
 | S.No. | Description | .NET | Node.js | Manifest |
-|:--|:--|:--|---|---|
+|:--|:--|--|---|---|
 | 1 | This sample app provides a bot with an AI label, feedback buttons, sensitivity label, and citations in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples) |
 
 ## See also
