@@ -579,7 +579,7 @@ await context.sendActivity({
 
 ```
 
-<!-->```javascript
+<!--```javascript
 await context.sendActivity({
          type: ActivityTypes.Message,
          text: `Hey I'm a friendly AI bot. This message is generated through AI [1]`, // cite with [1],
@@ -625,20 +625,20 @@ app.ai.action<PredictedSayCommand>(AI.SayCommandActionName, async (context, stat
 
 ## Query parameters
 
-| Value | Required | Description |
-|:--|:--|:--|
-| `additionalType` |  |  |
-| `feedbackLoopEnabled` |  |  |
-| `citation` |  |  |
-| `citation.position` |  |  |
-| `citation.@type` |  |  |
-| `citation.appearance.@type` |  |  |
-| `citation.appearance.name` |  |  |
-| `citation.appearance.usageInfo.@type` |  |  |
-| `citation.appearance.usageInfo.name` |  |  |
-| `citation.appearance.usageInfo.description` |  |  |
-| `usageInfo.@type` |  |  |
-| `usageInfo.@id` |  |  |
+| Value | Description |
+|:--|:--|
+| `additionalType` |  |
+| `feedbackLoopEnabled` | Boolean value. If you want to include positive and negative feedback buttons or not. |
+| `citation` | Denotes the citation number for the content referenced |
+| `citation.position` | Denotes the position of the citation number |
+| `citation.@type` |  |
+| `citation.appearance.@type` |  |
+| `citation.appearance.name` | Denotes the title of the content referenced |
+| `citation.appearance.usageInfo.@type` |  |
+| `citation.appearance.usageInfo.name` | Denotes the sensitivity label |
+| `citation.appearance.usageInfo.description` | Denotes the disclaimer of the sensitivity label |
+| `usageInfo.@type` | Denotes the sensitivity label in the bot message |
+| `usageInfo.@id` | Denotes the disclaimer of the sensitivity label in the bot message  |
 
 ## Code samples
 
