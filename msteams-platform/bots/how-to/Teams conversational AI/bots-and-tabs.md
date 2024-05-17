@@ -75,14 +75,14 @@ Though there might be different ways to authenticate without Microsoft Entra ID,
 
 For interoperability between bot and tab consider that the tab app and the bot backend are operating on the same server. However, the same could be applied if the servers are separate, such as through a micro-service architecture. 
 
-Servers have a way of sending updates that the bot receives and routing it to the tab client. This article explains this scenario using web sockets. There are other ways as well to route the updates, such as polling the server for updates repeatedly from the client. 
+Servers have a way of sending updates that the bot receives and routing it to the tab client using web sockets. There are other ways as well to route the updates, such as polling the server for updates repeatedly from the client. 
 
 :::column-end:::
 
 :::row-end:::
 
 > [!Note]
-> We strongly recommend using Microsoft Entra ID for authenticating bots and tabs.
+> We strongly recommend using [Microsoft Entra ID](~/concepts/authentication/authentication.md) to authenticate bot and tab.
 
 ## Bots and tabs work together
 
@@ -97,9 +97,9 @@ Let's consider the scenario where a user sends a message to the bot asking it to
 
 :::image type="content" source="~/assets/images/bots/user-bot-tab.png" alt-text="Sequence diagram that explains the communication flow between user, bot, and tab." lightbox="~/assets/images/bots/user-bot-tab.png":::
 
-As presented in the earlier flow chart, when a user sends a message to your bot, your server responds to the user through a bot message. In parallel, your bot server sends data through the same web socket connection that your tab application is using. When your tab receives that data, you can then process and display the update to your user.
+As presented in the earlier flow chart, when a user sends a message to your bot, your server responds to the user through a bot message. In parallel, your bot server sends data through the same web socket connection that your tab application is using. When your tab receives the data, it processes and displays the update to the user.
 
-In this example, the socket connection with the tab can be retrieved through the `userId`. In a collaborative context, such as a meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface. 
+In this example, the socket connection with the tab can be retrieved through the `userId`. In a collaborative context such as a meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface. 
 
 # [Update the bot through a change in the tab](#tab/update-the-bot-through-change-in-the-tab)
 
@@ -118,7 +118,7 @@ In this example, the socket connection with the bot can be retrieved through the
 
 ## Get `threadId`
 
-Bots and tabs have different ways of getting the `threadId`. The following explains how to get the `threadId` to use in your socket connection to map in your bot and tab applications.
+Bots and tabs have different ways of getting the `threadId`. The following explains how to get the `threadId` to use in your socket connection to map in your bot and tab app.
 
 ##### Get `threadId` for your bot
 
@@ -250,7 +250,7 @@ function getTeamsThreadId(activity: Activity): string {
 
 ##### Get `threadId` for your tab
 
-The following is an example of how to get the `threadId` from your tab application using the `@microsoft/teams-js` npm package:
+The following is an example of how to get the `threadId` from your tab app using the `@microsoft/teams-js` npm package:
 
 # [JavaScript](#tab/javascript1)
 
@@ -300,7 +300,7 @@ const threadId =
 
 ## Sharing app state
 
-As described earlier, with an active web socket connection or through the REST APIs, the tab can send application state data to a server, which the server would then store or cache for later use.
+As described earlier, with an active web socket connection or through the REST APIs, the tab can send app state data to a server, which the server stores or cache for later use.
 
 For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state, then the data can be retrieved from memory or storage and handled accordingly, such as by feeding the data into a prompt for a large language model (LLM).
 
