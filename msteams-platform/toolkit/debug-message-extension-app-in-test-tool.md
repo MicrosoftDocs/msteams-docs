@@ -10,9 +10,9 @@ ms.date: 04/25/2024
 
 # Debug message extension app in Test Tool
 
-The Teams App Test Tool has introduced a new feature that allows developers to debug bot-based Message Extension applications. This includes capabilities for search commands, action commands, and link unfurling.
+The Teams App Test Tool has introduced a new feature that allows developers to debug bot-based message extension applications. This includes capabilities for search commands, action commands, and link unfurling.
 
-Bot-based Message Extension apps are built on the Bot Framework. When triggered, the Test Tool sends an invoke request to the app, which then processes the request and returns a response that the Test Tool renders and displays.
+Bot-based message extension apps are built on the Bot Framework. When triggered, the Test Tool sends an invoke request to the app, which then processes the request and returns a response that the Test Tool renders and displays.
 
 > [!NOTE]
 > The UX to trigger Message Extension app in Test Tool is different than Teams, as the goal of Test Tool is to test and debug the app logic and make the flow simple, instead of being a real chat app.
@@ -148,7 +148,7 @@ When you select the Adaptive Cards option, the Test Tool dynamically retrieves t
 
 1. Select **Create**.
 
-Image <palceholder>
+Image palceholder
 
 Typically, the static list of parameters is located within the app manifest `composeExtensions` section. For instance, in the Teams Toolkit app template titled `Collect Form Input and Process Data`, you can locate these parameters in the [app manifest](https://github.com/OfficeDev/TeamsFx/blob/main/templates/ts/message-extension-action/appPackage/manifest.json.tpl#L41-L59).
 
