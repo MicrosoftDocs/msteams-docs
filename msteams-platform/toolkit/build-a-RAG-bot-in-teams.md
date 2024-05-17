@@ -5,7 +5,7 @@ description:  In this module, learn how to build RAG bot using Teams AI library.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ganr
-ms.date: 05/08/2024
+ms.date: 05/21/2024
 ---
 
 # Build a RAG Bot in Teams
@@ -321,26 +321,348 @@ Data ingestion process is as follows:
  1. **Call embedding model**: Call the embedding model APIs to create embeddings for the given inputs.
  1. **Store embeddings**: Store the created embeddings into a vector database, also including useful metadata and raw content for further referencing.
 
- Sample code
+## Sample code
+
+# [JavaScript](#tab/javascript2)
+
+* `loader.ts`: Plain text as source input.
+
+    ```javascript
+    import * as fs from "node:fs";
+    
+    export function loadTextFile(path: string): string {
+      return fs.readFileSync(path, "utf-8");
+    }
+    ```
+
+* `splitter.ts`: Split text into chunks, with certain overlap.
+    
+    ```javascript
+    
+    // split words by delimiters.
+    const delimiters = [" ", "\t", "\r", "\n"];
+    
+    export function split(content: string, length: number, overlap: number): Array<string> {
+      const results = new Array<string>();
+      let cursor = 0, curChunk = 0;
+      results.push("");
+      while(cursor < content.length) {
+        const curChar = content[cursor];
+        if (delimiters.includes(curChar)) {
+          // check chunk length
+          while (curChunk < results.length && results[curChunk].length >= length) {
+            curChunk ++;
+          }
+          for (let i = curChunk; i < results.length; i++) {
+            results[i] += curChar;
+          }
+          if (results[results.length - 1].length >= length - overlap) {
+            results.push("");
+          }
+        } else {
+          // append
+          for (let i = curChunk; i < results.length; i++) {
+            results[i] += curChar;
+          }
+        }
+        cursor ++;
+      }
+      while (curChunk < results.length - 1) {
+        results.pop();
+      }
+      return results;
+    }
+    
+    ```
+
+* `embeddings.ts`: Use Teams AI library OpenAIEmbeddings to create embeddings.
+
+    ```javascript
+    import { OpenAIEmbeddings } from "@microsoft/teams-ai";
+    
+    const embeddingClient = new OpenAIEmbeddings({
+      azureApiKey: "<your-aoai-key>",
+      azureEndpoint: "<your-aoai-endpoint>",
+      azureDeployment: "<your-embedding-deployment, e.g., text-embedding-ada-002>"
+    });
+    
+    export async function createEmbeddings(content: string): Promise<number[]> {
+      const response = await embeddingClient.createEmbeddings(content);
+      return response.output[0];
+    }
+    ```
+
+* `searchIndex.ts`: One-time and standalone method to create Azure AI Search Index.
+
+    ```javascript
+    import { SearchIndexClient, AzureKeyCredential, SearchIndex } from "@azure/search-documents";
+    
+    const endpoint = "<your-search-endpoint>";
+    const apiKey = "<your-search-key>";
+    const indexName = "<your-index-name>";
+    
+    const indexDef: SearchIndex = {
+      name: indexName,
+      fields: [
+        {
+          type: "Edm.String",
+          name: "id",
+          key: true,
+        },
+        {
+          type: "Edm.String",
+          name: "content",
+          searchable: true,
+        },
+        {
+          type: "Edm.String",
+          name: "filepath",
+          searchable: true,
+          filterable: true,
+        },
+        {
+          type: "Collection(Edm.Single)",
+          name: "contentVector",
+          searchable: true,
+          vectorSearchDimensions: 1536,
+          vectorSearchProfileName: "default"
+        }
+      ],
+      vectorSearch: {
+        algorithms: [{
+          name: "default",
+          kind: "hnsw"
+        }],
+        profiles: [{
+          name: "default",
+          algorithmConfigurationName: "default"
+        }]
+      },
+      semanticSearch: {
+        defaultConfigurationName: "default",
+        configurations: [{
+          name: "default",
+          prioritizedFields: {
+            contentFields: [{
+              name: "content"
+            }]
+          }
+        }]
+      }
+    };
+    
+    export async function createNewIndex(): Promise<void> {
+      const client = new SearchIndexClient(endpoint, new AzureKeyCredential(apiKey));
+      await client.createIndex(indexDef);
+    }
+    ```
+
+* `searchIndexer.ts`: Upload created embeddings and other fields to Azure AI Search Index.
+
+    ```javascript
+    import { AzureKeyCredential, SearchClient } from "@azure/search-documents";
+    
+    export interface Doc {
+      id: string,
+      content: string,
+      filepath: string,
+      contentVector: number[]
+    }
+    
+    const endpoint = "<your-search-endpoint>";
+    const apiKey = "<your-search-key>";
+    const indexName = "<your-index-name>";
+    const searchClient: SearchClient<Doc> = new SearchClient<Doc>(endpoint, indexName, new AzureKeyCredential(apiKey));
+    
+    export async function indexDoc(doc: Doc): Promise<boolean> {
+      const response = await searchClient.mergeOrUploadDocuments([doc]);
+      return response.results.every((result) => result.succeeded);
+    }
+    ```
+
+* `index.ts`: Orchestrate above components.
+
+    ```javascript
+    import { createEmbeddings } from "./embeddings";
+    import { loadTextFile } from "./loader";
+    import { createNewIndex } from "./searchIndex";
+    import { indexDoc } from "./searchIndexer";
+    import { split } from "./splitter";
+    
+    async function main() {
+      // Only need to call once
+      await createNewIndex();
+    
+      // local files as source input
+      const files = [`${__dirname}/data/A.md`, `${__dirname}/data/A.md`];
+      for (const file of files) {
+        // load file
+        const fullContent = loadTextFile(file);
+    
+        // split into chunks
+        const contents = split(fullContent, 1000, 100);
+        let partIndex = 0;
+        for (const content of contents) {
+          partIndex ++;
+          // create embeddings
+          const embeddings = await createEmbeddings(content);
+    
+          // upload to index
+          await indexDoc({
+            id: `${file.replace(/[^a-z0-9]/ig, "")}___${partIndex}`,
+            content: content,
+            filepath: file,
+            contentVector: embeddings,
+          });
+        }
+      }
+    }
+    
+    main().then().finally();
+    ```
+
+# [Python](#tab/python2)
+
+* `loader.py`: Plain text as source input.
+
+    ```python
+    def load_text_file(path: str) -> str:
+        with open(path, 'r', encoding='utf-8') as file:
+            return file.read()
+    ```
+
+* `splitter.py`: Split text into chunks, with certain overlap.
+
+    ```python
+    def split(content: str, length: int, overlap: int) -> list[str]:
+        delimiters = [" ", "\t", "\r", "\n"]
+        results = [""]
+        cursor = 0
+        cur_chunk = 0
+        while cursor < len(content):
+            cur_char = content[cursor]
+            if cur_char in delimiters:
+                while cur_chunk < len(results) and len(results[cur_chunk]) >= length:
+                    cur_chunk += 1
+                for i in range(cur_chunk, len(results)):
+                    results[i] += cur_char
+                if len(results[-1]) >= length - overlap:
+                    results.append("")
+            else:
+                for i in range(cur_chunk, len(results)):
+                    results[i] += cur_char
+            cursor += 1
+        while cur_chunk < len(results) - 1:
+            results.pop()
+        return results
+    ```
+
+* `embeddings.py`: Use Teams AI library OpenAIEmbeddings to create embeddings.
+
+    ```python
+    async def create_embeddings(text: str, embeddings):
+        result = await embeddings.create_embeddings(text)
+        
+        return result.output[0]
+    ```
+
+* `search_index.py`: One-time and standalone method to create Azure AI Search Index.
+
+    ```python
+    async def create_index_if_not_exists(client: SearchIndexClient, name: str):
+        doc_index = SearchIndex(
+            name=name,
+            fields = [
+                SimpleField(name="docId", type=SearchFieldDataType.String, key=True),
+                SimpleField(name="docTitle", type=SearchFieldDataType.String),
+                SearchableField(name="description", type=SearchFieldDataType.String, searchable=True),
+                SearchField(name="descriptionVector", type=SearchFieldDataType.Collection(SearchFieldDataType.Single), searchable=True, vector_search_dimensions=1536, vector_search_profile_name='my-vector-config'),
+            ],
+            scoring_profiles=[],
+            cors_options=CorsOptions(allowed_origins=["*"]),
+            vector_search = VectorSearch(
+                profiles=[VectorSearchProfile(name="my-vector-config", algorithm_configuration_name="my-algorithms-config")],
+                algorithms=[HnswAlgorithmConfiguration(name="my-algorithms-config")],
+            )
+        )
+    
+        client.create_or_update_index(doc_index)
+    ```
+
+* `search_indexer.py`: Upload created embeddings and other fields to Azure AI Search Index.
+
+    ```python
+    from embeddings import create_embeddings
+    from search_index import create_index_if_not_exists
+    from loader import load_text_file
+    from split import split
+    
+    async def get_doc_data(embeddings):
+        file_path=f'{os.getcwd()}/my_file_path_1'
+        raw_description1 = split(load_text_file(file_path), 1000, 100)
+        doc1 = {
+            "docId": "1",
+            "docTitle": "my_titile_1",
+            "description": raw_description1,
+            "descriptionVector": await create_embeddings(raw_description1, embeddings=embeddings),
+        }
+        
+        file_path=f'{os.getcwd()}/my_file_path_2'
+        raw_description2 = split(load_text_file(file_path), 1000, 100)
+        doc2 = {
+            "docId": "2",
+            "docTitle": "my_titile_2",
+            "description": raw_description2,
+            "descriptionVector": await create_embeddings(raw_description2, embeddings=embeddings),
+        }
+    
+        return [doc1, doc2]
+    
+    async def setup(search_api_key, search_api_endpoint):
+        index = 'my_index_name'
+        credentials = AzureKeyCredential(search_api_key)
+        search_index_client = SearchIndexClient(search_api_endpoint, credentials)
+        await create_index_if_not_exists(search_index_client, index)
+    
+        search_client = SearchClient(search_api_endpoint, index, credentials)
+        embeddings=AzureOpenAIEmbeddings(AzureOpenAIEmbeddingsOptions(
+              azure_api_key="<your-aoai-key>",
+              azure_endpoint="<your-aoai-endpoint>",
+              azure_deployment="<your-embedding-deployment, e.g., text-embedding-ada-002>"
+        ))
+        data = await get_doc_data(embeddings=embeddings)
+        await search_client.merge_or_upload_documents(data)
+    ```
+* `index.py`: Orchestrate above components.
+
+    ```python
+    from search_indexer import setup
+    
+    search_api_key = '<your-key>'
+    search_api_endpoint = '<your-endpoint>'
+    asyncio.run(setup(search_api_key, search_api_endpoint))
+    ```
+
+---
 
 ## Azure AI Search as Data Source
 
 This doc showcases a solution to:
 
-* Add your document to Azure AI Search via Azure OpenAI Service.
+* Add your document to Azure AI Search through Azure OpenAI Service.
 * Use Azure AI Search index as data source in the RAG app.
-
-Image
 
 ### Data Ingestion
 
 With Azure OpenAI on your data, you can ingest your knowledge documents to Azure AI Search Service and create a vector index. Then you can use the index as data source.
 
-* Prepare your data in Azure Blob Storage, or directly upload in later step on Azure OpenAI Studio, add your data source.
+1. Prepare your data in Azure Blob Storage, or directly upload in later step on Azure OpenAI Studio, add your data source.
 
-* Fill fields to create a vector index.
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/assistant-set-up.png" alt-text="Screenshot shows to do assistant setup in Azure OpenAI Studio.":::
 
-Image
+1. Fill fields to create a vector index.
+
+:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/add-data.png" alt-text="Screenshot shows the option to add data source.":::
 
 ### Data Source
 
@@ -711,3 +1033,5 @@ export class GraphApiSearchDataSource implements DataSource {
 ```
 
 ## See also
+
+[Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md)
