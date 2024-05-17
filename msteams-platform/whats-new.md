@@ -26,8 +26,6 @@ Teams platform features that are available to all app developers.
 
 **2024 May**
 
-* ***May 20, 2024***: [Leverage AI capabilities in your bot's messages with AI label, citations, feedback buttons, and sensitivity labels.](bots/how-to/format-ai-bot-messages.md)
-
 :::column-end:::
 :::row-end:::
 <br/>
@@ -396,6 +394,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 May**
 
+* ***May 23, 2024***: [Leverage AI capabilities in your bot's messages with AI label, citations, feedback buttons, and sensitivity labels.](bots/how-to/format-ai-bot-messages.md)
 * ***May 14, 2024***: [Introduced a new manifest property to let potential customers contact you with queries before they can confidently adopt your app.](resources/schema/manifest-schema-dev-preview.md#developercontactinfo)
 * ***May 07, 2024***: You can specify a [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.
 
