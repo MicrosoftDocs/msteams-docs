@@ -100,24 +100,48 @@ Apps must function cross-tenants in installation and usage. The following table 
 
 ## Apps in group chats with external users
 
-Teams supports apps in group chats with external users from outside an organization. Only the host of the group chat can add, update, or remove apps to the group chat. However, all members of the chat, including external users, can use these apps. External users can't add, update, or remove apps from a group chat. Support for apps doesn't extend to one-on-one chats or channel chats with external users.
+Teams supports the use of apps in group chats that include external users. However, these external users aren't permitted to add, update, or remove apps from the group chat. This permission is reserved for the host of the group chat. However, all members of the chat, including external users, can use these apps. Support for apps doesn't extend to one-on-one chats or channel chats with external users.
 
-If you enable the `groupChat` scope in a single tenant app, you must handle the cases where authentication fails for external users.
-If you have a multitenant app, you must handle userIDs that from outside your host organization. The following code snippet shows how to handle both the scenarios:
+If you’re developing an app for use in group chats that include external users, we recommend using a multitenant registration. Ensure that you register your app in Microsoft Entra ID to allow users from multiple organizations (tenants) to use it. If you're using a single tenant registration, you need to handle situations where users are unauthenticated. This could be because they’re from an external organization that your app isn’t registered with. In these cases, you might show a placeholder page or response.
+
+When you use a multitenant registration, the Microsoft Entra object ID that your app receives for a user isn't housed in your own tenant. This is because the user could be from an external organization. You need to handle these Microsoft Entra object IDs that can’t be resolved in your own directory.
+
+This might involve asking for additional permissions from the user to resolve the ID, or asking for consent to access the user’s email address for authentication purposes. If you can’t authenticate a user or resolve their Microsoft object ID, you need to provide a fallback experience, such as a guest user experience or other types of unauthenticated experiences.
 
 The following code snippet prevents external users from signing in and displays a failure message when they attempt to sign in:
 
-<Placeholder code snippet>
+```javascript
+// This is a placeholder code snippet
+function placeholderFunction() {
+    console.log("This is a placeholder code snippet");
+}
+
+placeholderFunction();
+```
 
 The following code snippets show how to allow external users to sign-in and handle two distinct sign-in scenarios for host and external users:
 
 # [Bot](#tab/bot)
 
-<Placeholder code snippet>
+```javascript
+// This is a placeholder code snippet
+function placeholderFunction() {
+    console.log("This is a placeholder code snippet");
+}
+
+placeholderFunction();
+```
 
 # [Tab](#tab/tab)
 
-<Placeholder code snippet>
+```javascript
+// This is a placeholder code snippet
+function placeholderFunction() {
+    console.log("This is a placeholder code snippet");
+}
+
+placeholderFunction();
+```
 
 ---
 
