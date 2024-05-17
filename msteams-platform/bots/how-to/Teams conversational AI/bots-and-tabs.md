@@ -34,7 +34,7 @@ The bot framework allows apps to receive and send messages from a server through
 
 :::image type="content" source="~/assets/images/bots/how-bot-work.png" alt-text="Sequence diagram that explains how bots work." lightbox="~/assets/images/bots/how-bot-work.png":::
 
-This bi-directional interaction pattern is used for building conversational experiences and can be extended to other types of actions, such as a user selecting a Submit button in an Adaptive Card. 
+This bi-directional interaction pattern is used for building conversational experiences and can be extended to other types of actions, such as a user selecting a **Submit** button in an Adaptive Card. 
 
 :::column-end:::
 
@@ -88,26 +88,26 @@ Servers have a way of sending updates that the bot receives and routing it to th
 
 You can make bots and tabs work together in either of the following two ways: 
 
-* Updating the tab through a bot message
-* Updating the bot through a change in the tab
+* Update the tab through a bot message
+* Update the bot through a change in the tab
 
-# [Update the tab through bot message](#tab/update-the-tab-through-bot-message)
+# [Update the tab through a bot message](#tab/update-the-tab-through-bot-message)
 
-Let's consider the scenario where a user sends a message to the bot asking it to make some changes to the tab. For example, users of an analytics platform might ask a bot, What are my latest usage metrics?.
+Let's consider the scenario where a user sends a message to the bot asking it to make some changes to the tab. For example, users of an analytics platform might ask a bot, What are my latest usage metrics?
 
 :::image type="content" source="~/assets/images/bots/user-bot-tab.png" alt-text="Sequence diagram that explains the communication flow between user, bot, and tab." lightbox="~/assets/images/bots/user-bot-tab.png":::
 
-As shown in the above flow chart, when a user sends a message to your bot, your server responds to the user through a bot message. In parallel, your bot server sends data through the same web socket connection that your tab application is using. When your tab receives that data, you can then process and display the update to your user.
+As presented in the earlier flow chart, when a user sends a message to your bot, your server responds to the user through a bot message. In parallel, your bot server sends data through the same web socket connection that your tab application is using. When your tab receives that data, you can then process and display the update to your user.
 
 In this example, the socket connection with the tab can be retrieved through the `userId`. In a collaborative context, such as a meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface. 
 
-# [Update the bot through change in the tab](#tab/update-the-bot-through-change-in-the-tab)
+# [Update the bot through a change in the tab](#tab/update-the-bot-through-change-in-the-tab)
 
-The tab app itself could be used to trigger a bot message, as shown in the following diagram: 
+The tab app itself could be used to trigger a bot message, as presented in the following flow chart: 
 
 :::image type="content" source="~/assets/images/bots/tab-bot-user.png" alt-text="Sequence diagram that explains the communication flow between tab, bot, and user." lightbox="~/assets/images/bots/tab-bot-user.png":::
 
-As we understand from the above flow chart, when a user makes a change in the tab, the tab server is responding to the user and using a web socket connection to process the change in the tab application.
+As we understand from the earlier flow chart, when a user makes a change in the tab, the tab server is responding to the user and using a web socket connection to process the change in the tab application.
 
 In this example, the socket connection with the bot can be retrieved through the `threadId`. In a collaborative context such as a meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface.
 
