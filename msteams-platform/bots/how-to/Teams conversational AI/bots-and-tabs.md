@@ -10,7 +10,7 @@ ms.date: 05/02/2024
 
 # Synchronized bots and tabs
 
-Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are great way for conversational experiences through chat, while tabs allow you to embed web applications directly into Teams. Tabs and bots can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
+Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are a great way to have conversational experiences through chat, while tabs allow you to embed web applications directly into Teams. Tabs and bots can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
 
 > [!NOTE]
 > We recommend building bots using Teams AI library for integrating bots and tabs.
@@ -305,6 +305,8 @@ As described earlier, with an active web socket connection or through the REST A
 For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state then the data can be retrieved from memory or storage and handled accordingly, such as, feed the data into a prompt for a large language model (LLM).
 
 :::image type="content" source="~/assets/images/bots/bot-state.png" alt-text="Sequence diagram that explains the communication flow between tab and bot." lightbox="~/assets/images/bots/bot-state.png":::
+
+:::image type="content" source="~/assets/images/bots/image (3).png" alt-text="Sequence diagram that explains the communication flow between tab and bot." lightbox="~/assets/images/bots/image (3).png":::
 
 ## See also
 
