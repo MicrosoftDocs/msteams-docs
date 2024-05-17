@@ -13,13 +13,13 @@ ms.date: 05/02/2024
 Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are a great way to have conversational experiences through chat, while tabs allow you to embed web applications directly into Teams. Tabs and bots can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
 
 > [!NOTE]
-> We recommend building bots using Teams AI library for integrating bots and tabs.
+> We recommend building bots using the Teams AI library for integrating bots and tabs.
 
-By integrating bots and tabs, you can create custom copilot like experience in Teams. For example, a user can send a message to the bot asking it to do some change in the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application.
+By integrating bots and tabs, you can create a custom copilot like experience in Teams. For example, a user can send a message to the bot asking it to make some changes to the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application.
 
 :::image type="content" source="~/assets/images/bots/sync-bot-tab.gif" alt-text="Example for bot message updating the tab." lightbox="~/assets/images/bots/sync-bot-tab.gif":::
 
-This allows for a seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
+This allows seamless integration between the tabs and bots, providing a more engaging and interactive experience for the user.
 
 ## Understand how bots  and tabs work
 
@@ -46,7 +46,7 @@ Tabs allow you to embed your web applications directly into Teams this allows cu
 
 :::image type="content" source="~/assets/images/bots/how-tab-work.png" alt-text="Sequence diagram that explains how tabs work." lightbox="~/assets/images/bots/how-tab-work.png":::
 
-Through `@microsoft/teams-js NPM` package, tab can communicate with Teams using a secure messaging channel called window post messages and tab can communicate with backend using standard JavaScript APIs, HTTP requests and web sockets.
+Through the `@microsoft/teams-js NPM` package, tabs can communicate with Teams using a secure messaging channel called window post messages, and tab can communicate with the backend using standard JavaScript APIs, HTTP requests, and web sockets.
 
 :::column-end:::
 
@@ -56,16 +56,16 @@ Through `@microsoft/teams-js NPM` package, tab can communicate with Teams using 
 
 Teams maintains a constant connection with the server to get new messages, and other apps might do the same with their own servers. This is typical for apps that allow real-time collaboration. For example, a shared task list might use a web socket connection to sync tasks across different users or devices.
 
-This gives apps a powerful way to integrate bots and tabs smoothly. The key aspects for interoperability between bot and tab are authentication and real time communication.
+This gives apps a powerful way to integrate bots and tabs smoothly. The key aspects of integration between bot and tab are authentication and real-time communication.
 
 :::row:::
 :::column span="":::
 
 #### Authentication
 
-Apps must have a consistent user identifier for both bot and tab, and that the user is authenticated in both contexts, such as through [Microsoft Entra ID](~/concepts/authentication/authentication.md). 
+Apps must have a consistent user identifier for both bot and tab and ensure that the user is authenticated in both contexts, such as through [Microsoft Entra ID](~/concepts/authentication/authentication.md). 
 
-Though there might be different ways authentication without Microsoft Entra ID, such as through a custom authentication provider, where a user must sign-in from both the tab and bot. Microsoft Entra ID helps the user experience more seamlessly integrated, which is imperative for this sort of Copilot like integration.
+Though there might be different ways to authenticate without Microsoft Entra ID, such as through a custom authentication provider, where a user must sign-in from both the tab and bot, Microsoft Entra ID makes the user experience more seamlessly integrated, which is imperative for this sort of custom copilot like integration.
 
 :::column-end:::
 
@@ -93,13 +93,13 @@ You can make bots and tabs work together in either of the following two ways:
 
 # [Update the tab through bot message](#tab/update-the-tab-through-bot-message)
 
-Let's consider the scenario where a user sends a message to the bot asking it to do some change in the tab. For example, users of an analytics platform might ask a bot, what are my latest usage metrics?.
+Let's consider the scenario where a user sends a message to the bot asking it to make some changes to the tab. For example, users of an analytics platform might ask a bot, What are my latest usage metrics?.
 
 :::image type="content" source="~/assets/images/bots/user-bot-tab.png" alt-text="Sequence diagram that explains the communication flow between user, bot, and tab." lightbox="~/assets/images/bots/user-bot-tab.png":::
 
 As shown in the above flow chart, when a user sends a message to your bot, your server responds to the user through a bot message. In parallel, your bot server sends data through the same web socket connection that your tab application is using. When your tab receives that data, you can then process and display the update to your user.
 
-In this example, the socket connection with the tab can be retrieved through the `userId`. In a collaborative context, such as meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface. 
+In this example, the socket connection with the tab can be retrieved through the `userId`. In a collaborative context, such as a meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface. 
 
 # [Update the bot through change in the tab](#tab/update-the-bot-through-change-in-the-tab)
 
@@ -109,20 +109,20 @@ The tab app itself could be used to trigger a bot message, as shown in the follo
 
 As we understand from the above flow chart, when a user makes a change in the tab, the tab server is responding to the user and using a web socket connection to process the change in the tab application.
 
-In this example, the socket connection with the bot can be retrieved through the `threadId`. In a collaborative context, such as meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface.
+In this example, the socket connection with the bot can be retrieved through the `threadId`. In a collaborative context such as a meeting stage, you might also want to use `userId` and `threadId` for socket connection mapping. Collaborative document apps might use `documentId` for socket connection mappings, opting to edit the document for all users viewing that document. As such, it's important to clearly define what mapping you expect to use for each tab surface.
 
 > [!NOTE]
-> This scenario works well for personal apps, for collaborative contexts such as, meeting stage, the `threadId` might need to be sent to the app server from the tab using the `teams-js` SDK. That would ensure that the app sends the message to the right context, rather than to the user's personal conversation with the bot.
+> This scenario works well for personal apps, for collaborative contexts such as meeting stage, the `threadId` might need to be sent to the app server from the tab using the `teams-js` SDK. That would ensure that the app sends the message to the right context, rather than to the user's personal conversation with the bot.
 
 ---
 
 ## Get `threadId`
 
-Tabs and bots have different ways of getting the `threadId`. Following explains how to get the `threadId` to use in your socket connection to map in your bot and tab applications.
+Tabs and bots have different ways of getting the `threadId`. The following explains how to get the `threadId` to use in your socket connection to map in your bot and tab applications.
 
 ##### Get `threadId` for your bot
 
-Following is an example to get the `threadId` from an incoming bot message using the Teams AI library:
+The following is an example of how to get the `threadId` from an incoming bot message using the Teams AI library:
 
 # [C#](#tab/csharp)
 
@@ -250,7 +250,7 @@ function getTeamsThreadId(activity: Activity): string {
 
 ##### Get `threadId` for your tab
 
-Follow this example to get the `threadId` from your tab application, using the `@microsoft/teams-js` npm package:
+The following is an example of how to get the `threadId` from your tab application using the `@microsoft/teams-js` npm package:
 
 # [JavaScript](#tab/javascript1)
 
@@ -302,7 +302,7 @@ const threadId =
 
 As described earlier, with an active web socket connection or through the REST APIs, the tab can send application state data to a server, which the server would then store or cache for later use.
 
-For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state then the data can be retrieved from memory or storage and handled accordingly, such as, feed the data into a prompt for a large language model (LLM).
+For example, if a user opens a new form in the app as a modal, the app can send metadata to the server. Considering the data was mapped appropriately, `userId` or `threadId` to the app state, then the data can be retrieved from memory or storage and handled accordingly, such as by feeding the data into a prompt for a large language model (LLM).
 
 :::image type="content" source="~/bots/image (3).png" alt-text="Sequence diagram that explains the communication flow between tab and bot." lightbox="~/bots/image (3).png":::
 
