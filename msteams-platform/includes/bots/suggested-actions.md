@@ -12,25 +12,38 @@ To add suggested actions to a message, set the `suggestedActions` property of an
 The following is an example for implementation and experience of suggested actions:
 
 ``` json
-"suggestedActions": {
+{
+  "type": "message",
+  "from": {
+    "id": "12345678",
+    "name": "sender's name"
+  },
+  "conversation": {
+    "id": "abcd1234",
+    "name": "conversation's name"
+  },
+  "recipient": {
+    "id": "1234abcd",
+    "name": "recipient's name"
+  },
+  "text": "What are the tasks for the day.",
+  "inputHint": "expectingInput",
+  "suggestedActions": {
     "actions": [
       {
         "type": "imBack",
-        "title": "Action 1",
-        "value": "Action 1"
         "title": "Create a new query identifying overdue tasks",
         "value": "Create a new query identifying overdue tasks"
       },
       {
         "type": "imBack",
-        "title": "Action 2",
-        "value": "Action 2"
         "title": "Create a new work item for this feature",
         "value": "Create a new work item for this feature"
-      }
-    ],
-    "to": [<list of recepientIds>]
-  }
+            }
+        ]
+    },
+  "replyToId": "5d5cdc723"
+}
 ```
 The following illustrates an example of suggested actions:
 :::image type="content" source="~/assets/images/Cards/suggested-actions.png" alt-text="Bot suggested actions" border="true":::

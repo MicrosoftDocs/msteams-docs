@@ -44,7 +44,8 @@ Suggested actions help users continue conversations with your bot.
 ## Prompt starters
 
 >[!NOTE]
-> Ensure that the bot doesn't send a welcome message for prompt starters. The prompts aren't displayed for the initial conversation if your bot sends a welcome message.
+> * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot is not sending a welcome message.
+> * Prompt starters is not available for Teams mobile client.
 
 To enable prompt starters define the `commands` property in your bot's app manifest. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
 
