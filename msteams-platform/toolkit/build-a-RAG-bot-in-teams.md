@@ -99,7 +99,7 @@ Microsoft Teams Toolkit provides a series of ready-to-use application templates 
 
 Test Tool opens the bot in a webpage.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-final-output.png" alt-text="Screenshows the chat with your data final output.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-final-output.png" alt-text="Screenshows the chat with your data final output." lightbox="../assets/images/teams-toolkit-v2/custom-copilot/rag-output.png":::
 
 ## Take a tour of the bot app source code
 

@@ -89,7 +89,7 @@ The AI Chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
 Test Tool opens the bot in a webpage.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/basic-ai-chatbot-final-output.png" alt-text="Screenshot shows the bot response with basic AI chatbot.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/basic-ai-chatbot-final-output.png" alt-text="Screenshot shows the bot response with basic AI chatbot." lightbox="../assets/images/teams-toolkit-v2/custom-copilot/chat-bot-output.png":::
 
 ## Take a tour of the bot app source code
 

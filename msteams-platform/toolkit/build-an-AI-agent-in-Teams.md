@@ -96,7 +96,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
     Test Tool opens the bot in a webpage.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-build-new-final-output.png" alt-text="Screenshot shows the final output of AI agent build new bot.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-build-new-final-output.png" alt-text="Screenshot shows the final output of AI agent build new bot." lightbox="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-new-output.png":::
 
     ## Take a tour of the bot app source code
 
@@ -199,7 +199,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
     Test Tool opens the bot in a webpage.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-build-assistant-api-final-output.png" alt-text="Screenshot shows the final output of AI agent build with assistants API bot.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-build-assistant-api-final-output.png" alt-text="Screenshot shows the final output of AI agent build with assistants API bot." lightbox="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-assistant-api-output.png":::
 
     ## Take a tour of the bot app source code
     
