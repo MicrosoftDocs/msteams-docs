@@ -13,7 +13,7 @@ ms.date: 05/02/2024
 Bots and tabs are two capabilities of Microsoft Teams that can be used together to create a more engaging and interactive user experience. Bots are a great way to have conversational experiences through chat, while tabs allow you to embed web applications directly into Teams. Bots and tabs can be combined to create more customized interactions between the user and an app, such as modifying a collaborative document or filling out a web-based form.
 
 > [!NOTE]
-> We recommend building bots using the Teams AI library for integrating bots and tabs.
+> We recommend to build bots using the Teams AI library for integrating bots and tabs.
 
 By integrating bots and tabs, you can create a custom copilot-like experience in Teams. For example, a user can send a message to the bot asking it to make some changes to the tab. The bot can respond with a confirmation message while also using a web socket connection to process the change in the tab application.
 
@@ -34,7 +34,7 @@ The bot framework allows apps to receive and send messages from a server through
 
 :::image type="content" source="~/assets/images/bots/how-bot-work.png" alt-text="Sequence diagram that explains how bots work." lightbox="~/assets/images/bots/how-bot-work.png":::
 
-This bi-directional interaction pattern is used for building conversational experiences and can be extended to other types of actions, such as a user selecting a **Submit** button in an Adaptive Card. 
+This bi-directional interaction pattern is used to build conversational experiences and can be extended to other types of actions, such as a user selecting a **Submit** button in an Adaptive Card. 
 
 :::column-end:::
 
