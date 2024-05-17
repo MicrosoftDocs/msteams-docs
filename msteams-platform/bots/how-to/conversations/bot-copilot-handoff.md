@@ -9,11 +9,11 @@ ms.author: surbhigupta
 
 # Copilot handoff
 
-You can enable copilot handoffs for your plugins to allow users to continue the conversation with a custom engine copilot from the Copilot for Microsoft 365 without losing the context of their work. Copilot handoff allows for a seamless transition from Copilot for Microsoft 365 to your custom engine copilot by using deep links that carry over the user context.
+You can enable copilot handoffs for your plugins to allow users to continue the conversation with a custom engine copilot from Microsoft Copilot for Microsoft 365 without losing the context of their work. Copilot handoffs allow for a seamless transition from Copilot for Microsoft 365 to your custom engine copilot by using deep links that carry over the user context.
 
-In the following graphic, a user looks for help on tech issues using copilot and receives results from the enterprise dataset. The user finds the information is insufficient and wants to continue the interaction with an Aisera bot plugin.​ When the user selects the Aisera bot, a new chat starts and the conversation continues in the Aisera bot. This seamless switch from Copilot to the Aisera bot, without losing the  conversation context is called copilot handoff.
+In the following graphic, a user looks for help on tech issues using copilot and receives results from the enterprise dataset. The user finds the information is insufficient and wants to continue the interaction with a Contoso bot plugin.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from copilot to the Contoso bot, without losing the conversation context is called copilot handoff.
 
-:::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="The GIF shows the conversation handoff between the copilot for Microsoft 365 and the Aisera chat bot.":::
+:::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="The GIF shows the conversation handoff between the copilot for Microsoft 365 and the Contoso chat bot.":::
 
 ## How copilot handoff works
 
@@ -27,7 +27,7 @@ You must create a deep link URL with a `continuation` query parameter for the ac
 
 To enable copilot handoff in Teams, follow these steps:
 
-1. **Configure a deep link URL**: Create a deep link to the bot chat and include `botMri` and `continuationToken`. The deep link must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${botMri}&continuation=${continuationToken}`.
+1. **Configure a deep link URL**: Create a deep link to the bot chat and include `28:<botId>` and `continuationToken`. The deep link must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${28:<botId>}&continuation=${continuationToken}`.
 
    **Example**:
 
@@ -38,7 +38,7 @@ To enable copilot handoff in Teams, follow these steps:
 
    "title": "Handoff to Bot", 
 
-   "url": "https://teams.microsoft.com/l/chat/0/0?users=${botMri}&continuation=${continuationToken}" 
+   "url": "https://teams.microsoft.com/l/chat/0/0?users=${28:<botId>}&continuation=${continuationToken}" 
    }
    ```
 
@@ -52,20 +52,20 @@ To enable copilot handoff in Teams, follow these steps:
     "type": "invoke", 
     "timestamp": "2024-04-15T19:50:32.945Z", 
     "localTimestamp": "2024-04-15T19:50:32.945Z", 
-    "id": "f:ad06278a-0dd1-8811-71b1-f65e2bfd4570", 
+    "id": "f:00000000-0000-0000-0000-000000000000",
     "channelId": "msteams", 
     "serviceUrl": "https://smba.trafficmanager.net/amer/", 
     "from": { 
         "id": "29:1jzORtjcfpYTLQDR9O4TyLz9LDwHskubQN1Ljc-aFO4L8dnZatjFpSw1PCGa-Mm-Jo4uLp67Lvekcjq2hkPoxdA", 
-        "aadObjectId": "57162b23-ae6f-4e95-9774-27f7cb019864" 
+        "aadObjectId": "00000000-0000-0000-0000-000000000000" 
     }, 
     "conversation": { 
         "conversationType": "personal", 
-        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47", 
+        "tenantId": "00000000-0000-0000-0000-000000000000",
         "id": "a:13tOiSzRqeub3zaqoTHKpvOkk8Y1zFxk-g8WKdAUM2tjhTBFMt4RSuL8YWi7uwFNBmbxsyzYYktJEyfimYXYiEoplQ34aJs1y8trDb7EIcG09xOjSUieHVzFZ2b8tkagZ" 
     }, 
     "recipient": { 
-        "id": "28:68935e91-ff09-4a33-a675-0fe09f015706", 
+        "id": "28:00000000-0000-0000-0000-000000000000", 
         "name": "NorthwindProducts" 
     }, 
     "entities": [ 
@@ -79,7 +79,7 @@ To enable copilot handoff in Teams, follow these steps:
     ], 
     "channelData": { 
         "tenant": { 
-            "id": "72f988bf-86f1-41af-91ab-2d7cd011db47" 
+            "id": "00000000-0000-0000-0000-000000000000" 
         }, 
         "source": { 
             "name": "message" 
@@ -110,35 +110,10 @@ To enable copilot handoff in Teams, follow these steps:
 Here's an example of how to handle the invoke call in `searchApp.ts`:
 
    ```typescript
-    public async onInvokeActivity(context: TurnContext): Promise<InvokeResponse> {
-        try {
-          switch (context.activity.name) {
             case "handoff/action": {
               // TODO: Save continuation token and use it to process final response to user later
              return {status: 200}; // return just the http status
             }
-            case "composeExtension/query":
-              return {
-                status: 200,
-                body: await this.handleTeamsMessagingExtensionQuery(
-                  context,
-                  context.activity.value
-                ),
-              };
-            default:
-              return {
-                status: 200,
-                body: `Unknown invoke activity handled as default- ${context.activity.name}`,
-              };
-          }
-        } catch (err) {
-          console.log(`Error in onInvokeActivity: ${err}`);
-          return {
-            status: 500,
-            body: `Invoke activity received- ${context.activity.name}`,
-          };
-        }
-      }
    ```
 
    When the bot receives the invoke call, `context.activity.value.continuation` contains the `continuationToken` that was set in the deep link URL.
