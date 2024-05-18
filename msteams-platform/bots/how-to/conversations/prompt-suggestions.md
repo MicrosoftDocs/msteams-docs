@@ -1,7 +1,7 @@
 ---
 title: Create prompt suggestions
 author: v-npaladugu
-description: Learn how to create and handle a prompt starters and suggested actions for your Microsoft Teams bot.
+description: Learn how to create and handle a prompt starter and suggested actions for your Microsoft Teams bot.
 ms.topic: how-to
 ms.localizationpriority: medium
 ms.author: anclear
@@ -47,7 +47,7 @@ Suggested actions help users continue conversations with your bot.
 > * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot is not sending a welcome message.
 > * Prompt starters is not available for Teams mobile client.
 
-To enable prompt starters define the `commands` property in your bot's app manifest. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
+To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains a `title` and `description`. The `title` is the prompt and the `description` describes what the users accomplish. When the user selects on a prompt starter, the `title` of the prompt is populated into the compose box. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
 
 # [Developer Portal](#tab/developer-portal)
 
@@ -76,10 +76,10 @@ To create prompt starters using Developer Portal:
 
 # [Manually in the app manifest](#tab/manually-in-the-app-manifest)
 
-Another way to create a prompt starters is to create it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
+Another way to create a prompt starter is to create it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
 
 * `command` property supports up to 10 commands.
-* You can either create prompt starters that works in all scopes or create different prompt starters for each scope.
+* You can either create prompt starters that work in all scopes or create different prompt starters for each scope.
 
 #### Manifest example for prompt starters
 
