@@ -739,7 +739,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 ## Extend your plugin to Copilot, Office, and Word
 
-If you have a search-based message extension and have enabled the **M365** channel, your app works in Copilot for Microsoft 365 in Teams. To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
+If you have a search-based message extension and your app works in Copilot for Microsoft 365 in Teams. To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
 
 * **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.19.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This ensures that your application continues to work with Bing domains. [*Mandatory*]
 
@@ -775,7 +775,7 @@ If you have a search-based message extension and have enabled the **M365** chann
    | WXP M365 Copilot Domains | fa000000125.resources.office.net, fa000000129.resources.office.net, fa000000124.resources.office.net, fa000000128.resources.office.net |
    |App Copilots| microsoftonline.com <br> sharepoint-df.com <br> sharepoint.com<br>sharepointonline.com<br>spgrid.com<br>spolabs.com<br>spoppe.com<br>sposites.com<br>partner.microsoftonline.cn<br>sharepoint.cn<br>sharepoint.de<br>myus.msftsptest.com<br>my.microsoftpersonalcontentppe.com<br>wopi.onedrive.com<br>wopi.onedrive-tst.com<br>outlook.office.com<br>outlook-sdf.office.com<br>outlook.live.com<br>outlook-sdf.live.com<br>outlook-tdf.live.com<br>sdfpilot.live.com<br>outlook.office365.us<br>outlook.office365.com<br>exchangelabs.live-int.com<br>office-int.com<br>officeapps.live-int.com<br>officeapps.live.com<br>officeapps.live-int.com<br>officeapps-df.live.com<br>fa000000125.resources.office.net<br>fa000000129.resources.office.net<br>fa000000124.resources.office.net<br>fa000000128.resources.office.net<br>*.microsoftonline.com<br>*.sharepoint-df.com<br>*.sharepoint.com<br>*.sharepointonline.com<br>*.spgrid.com<br>*.spolabs.com<br>*.spoppe.com<br>*.sposites.com<br>*.partner.microsoftonline.cn<br>*.sharepoint.cn<br>*.sharepoint.de<br>*.myus.msftsptest.com<br>*.my.microsoftpersonalcontentppe.com<br>*.wopi.onedrive.com<br>*.wopi.onedrive-tst.com<br>*.officeapps.live.com<br>*.officeapps.live-int.com<br>*.officeapps-df.live.com|
 
-* **Ensure that your registered bot is connected to Microsoft 365 channel (Word only)**: [*Mandatory*].
+* **Ensure that your registered bot is connected to Microsoft 365 channel**: [*Mandatory*].
   1. Go to [Azure portal](https://ms.portal.azure.com/) and sign in with your sandbox tenant account.
   1. Select **Bot Services**.
   1. Search and select the name of your bot.
