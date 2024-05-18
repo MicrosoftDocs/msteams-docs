@@ -9,9 +9,9 @@ ms.author: anclear
 
 # Create prompt suggestions
 
-Prompt suggestions are commands that are presented to the users in the Microsoft Teams chat when they install your bot app. 
+Prompt suggestions are commands that are presented to the users in the Microsoft Teams chat when they install your bot. 
 
-Prompt suggestions create an engaging and insightful user experience. They help your bot to acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
+Prompt suggestions create an engaging and insightful user experience and help your bot to acquire and retain users by showing them the value of your bot through prompt conversations. You can use prompt suggestions to help your users initiate conversations with your bot and learn how to interact with it.
 
 > [!NOTE]
 > Prompt suggestions are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
@@ -44,10 +44,10 @@ Suggested actions help users continue conversations with your bot.
 ## Prompt starters
 
 >[!NOTE]
-> * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot is not sending a welcome message.
-> * Prompt starters aren't available for Teams mobile client.
+> * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot doesn’t send a welcome message.
+> * Prompt starters aren't available in Teams mobile client.
 
-To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains a `title` and `description`. The `title` is the prompt and the `description` describes what the users accomplish. When the user selects on a prompt starter, the `title` of the prompt is populated into the compose box. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
+To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains a `title` and `description`. The `title` is the prompt and the `description` describes what the users accomplish. When the user selects on a prompt starter, the `title` of the prompt is populated in the compose box. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
 
 # [Developer Portal](#tab/developer-portal)
 
@@ -61,16 +61,16 @@ To create prompt starters using Developer Portal:
 
 1. Select **Apps** tab, select **App features** from the left pane, and then select **Bots**.
 
-1. Select **Add a command** under **Commands** section.
+1. Under **Commands**, select **Add a command**.
 
    :::image type="content" source="~/assets/images/tdp/add-a-bot-command.png" alt-text="Screenshot shows how to add a command for your bot in Developer Portal.":::
 
-1. Enter the **Command** that appears as the command menu for your bot.
+1. Enter the values for the following fields:
+    
+    * **Command**: Appears as the prompt for your bot.
+    * **Description**: A brief explanation of the purpose of the command.
 
-1. Enter the **Description** that appears under the command text in the menu. **Description** must be a brief explanation of the purpose of the command.
-
-1. Select the **Scope** check box and then select **Add**.
-   This defines where the command menu must appear.
+1. Select the required **scopes** and then select **Add**. This defines where the command menu must appear. 
 
    :::image type="content" source="~/assets/images/tdp/bot-command.png" alt-text="Screenshot shows how to add a command, description, and scopes for your bot.":::
 
@@ -78,7 +78,7 @@ To create prompt starters using Developer Portal:
 
 Another way to create a prompt starter is to create it directly in the app manifest file while developing your bot source code. To use this method, follow these points:
 
-* `command` property supports up to 10 commands.
+* The `command` property supports up to 10 commands.
 * You can either create prompt starters that work in all scopes or create different prompt starters for each scope.
 
 #### Manifest example for prompt starters
@@ -180,10 +180,10 @@ You must handle menu commands in your bot code as you handle any message from us
 
 ## Handle `commands` in your bot
 
-Bots in a group or channel respond only when they're mentioned `@botname` in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
+Bots in a group or channel respond only when they're @mentioned in a message. Every message received by a bot when in a group or channel scope contains its name in the message text. Before handling the command being returned, your message parsing must handle the message received by a bot with its name.
 
 > [!NOTE]
-> To handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
+> Handle the commands in code, they are sent to your bot as a regular message. You must handle them as you would handle any other message from your users. The commands in code insert pre-configured text into the text box. The user must then send that text as they do for any other message.
 
 # [C#](#tab/dotnet)
 

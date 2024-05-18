@@ -1,6 +1,6 @@
-Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your bot’s large language model (LLM) to generate up to six possible suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose.
+Suggested actions help users with ideas of what to ask next, based on the previous response or conversation. Your bot should offer context-specific suggestions to the user, rather than generic or fixed ones. You can use your bot’s large language model (LLM) to generate up to six suggestions along with its responses. Then, you can extract these suggestions and present them as options for the user to choose.
 
-When the user selects a button, it remains visible and accessible in the rich cards, but not for the suggested actions. This prevents the user from selection of stale buttons within a conversation.
+When a user selects a button, it remains visible and accessible on the rich cards. However, for suggested actions, the buttons are designed to disappear after selection to prevent the user from selecting  stale options that may no longer be relevant.
 
 > [!NOTE]
 >
@@ -8,8 +8,9 @@ When the user selects a button, it remains visible and accessible in the rich ca
 > * `SuggestedActions` aren't supported for chat bots with attachments for any conversation type.
 > * `imBack` is the only supported action type and Teams display up to six suggested actions.
 
-To add suggested actions to a message, set the `suggestedActions` property of an [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object to specify the list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be presented to the user. For more information, see [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions).
-The following is an example for implementation and experience of suggested actions:
+To add suggested actions to a message, specify a list of [card action](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) objects that represent the buttons to be displayed to the user for the [`sugestedActions`](/dotnet/api/microsoft.bot.builder.messagefactory.suggestedactions) property of the [activity](/azure/bot-service/rest-api/bot-framework-rest-connector-api-reference) object.
+
+The following is an example to implement and experience suggested actions:
 
 ``` json
 {
