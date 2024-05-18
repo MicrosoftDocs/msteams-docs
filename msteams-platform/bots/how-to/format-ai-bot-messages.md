@@ -374,7 +374,7 @@ export const app = new Application<ApplicationTurnState>({
     },
 ```
 
-For a sample code reference, see [Teams AI sample](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts)
+For a sample code reference, see [Teams AI sample](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/h.datasource-azureOpenAI/src/app.ts).
 
 After you enable feedback buttons, all SAY commands from the bot have `feedbackLoopEnabled` automatically set to `true` in the `channelData` object.
 
@@ -566,7 +566,7 @@ app.ai.action<PredictedSayCommand>(AI.SayCommandActionName, async (context, stat
 });
 ```
 
-To learn more about the `PredictedSayCommand`, see [PredictedSayCommand interface](/javascript/api/%40microsoft/teams-ai/predictedsaycommand?view=msteams-client-js-latest)
+To learn more about the `PredictedSayCommand`, see [PredictedSayCommand interface](/javascript/api/%40microsoft/teams-ai/predictedsaycommand?view=msteams-client-js-latest&preserve-view=true).
 
 ## Code samples
 
