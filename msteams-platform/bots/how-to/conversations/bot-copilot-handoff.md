@@ -9,15 +9,15 @@ ms.author: surbhigupta
 
 # Copilot handoff
 
-You can enable copilot handoffs for your plugins to allow users to continue the conversation with a custom engine copilot from Microsoft Copilot for Microsoft 365 without losing the context of their work. Copilot handoffs allow for a seamless transition from Copilot for Microsoft 365 to your custom engine copilot by using deep links that carry over the user context.
+You can enhance your Copilot message extension plugin to hand off a conversation to your [custom engine copilot](/microsoft-365-copilot/extensibility/overview-custom-engine-copilot) to handle cases where a more in-depth, specialized chat experience is required. Copilot handoffs are plugin-provided deep links that carry over chat context, enabling users to seamlessly transition their chat with Copilot for Microsoft 365 to your bot service.
 
-In the following graphic, a user looks for help on tech issues using copilot and receives results from the enterprise dataset. The user finds the information is insufficient and wants to continue the interaction with a Contoso bot plugin.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from copilot to the Contoso bot, without losing the conversation context is called copilot handoff.
+In the following graphic, a user looks for help on tech issues using Copilot and receives results from the enterprise dataset. The user finds the information is insufficient and wants to continue the interaction with a Contoso bot plugin.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from Copilot to the Contoso bot, without losing the conversation context is called a *copilot handoff*.
 
 :::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="The GIF shows the conversation handoff between the copilot for Microsoft 365 and the Contoso chat bot.":::
 
 ## How copilot handoff works
 
-A custom engine copilot sends a deep link with a continuation token to the copilot for Microsoft 365. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced. When the user selects the deep link, the copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context. This process enables a seamless transition from copilot to a custom engine copilot, maintaining the conversation’s continuity and context, which optimizes the user experience.
+A custom engine copilot sends a deep link with a continuation token to Copilot for Microsoft 365. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced. When the user selects the deep link, Copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context. This process enables a seamless transition from Copilot for Microsoft 365 to your custom engine copilot, maintaining the conversation’s continuity and context, which optimizes the user experience.
 
 :::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, Copilot, plugin, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
 
