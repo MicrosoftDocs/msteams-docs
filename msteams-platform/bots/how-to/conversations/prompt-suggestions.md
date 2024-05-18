@@ -45,7 +45,7 @@ Suggested actions help users continue conversations with your bot.
 
 >[!NOTE]
 > * Your bot can either use a prompt starter or a welcome message. If your bot uses prompt starters, ensure that your bot is not sending a welcome message.
-> * Prompt starters is not available for Teams mobile client.
+> * Prompt starters aren't available for Teams mobile client.
 
 To enable prompt starters, define the `commands` property in your bot's app manifest. Each command contains a `title` and `description`. The `title` is the prompt and the `description` describes what the users accomplish. When the user selects on a prompt starter, the `title` of the prompt is populated into the compose box. To define `commands` in your app manifest, you can either use **Developer Portal** or add them manually in the app manifest.
 
