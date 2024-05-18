@@ -104,6 +104,10 @@ To enable copilot handoff in Teams, follow these steps:
 
 1. **Handle the invoke type**: In your bot code, manage the `handoff/action` invoke using the `onInvokeActivity` handler. Override the `onInvokeActivity` method to handle the invoke call. The response to this invoke call must be an HTTP status code 200 for success or a code in the range of 400-500 for error.
 
+In your bot code, manage the `handoff/action` invoke using the `onInvokeActivity` handler. You must override the `onInvokeActivity` method to handle the invoke call. If the invoke is successfull, the bot must return an HTTP status code of **200**. If there is an error, the bot must respond with an appropriate HTTP status code in the range of **400- or 500-**. If the user receives an error, they must wait and retry while the errors are logged in the backend service.
+
+The response to this invoke call must be an HTTP status code 200 for success, or a (400- or 500-level) error code response.
+
    > [!NOTE]
    > Don't send any payload with this response as it doesn't render in the chat window. The responses based on the continuation token must be sent to the user separately.
 
@@ -144,6 +148,4 @@ To enable copilot handoff in Teams, follow these steps:
     
     ```
 
-* Manage the continuation token effectively. Keep the token’s lifetime short and ensure it doesn't process more than once. A short lifetime reduces the risk of unauthorized use or replay attacks, where an old token could be used to gain access to a session. Ensuring the token is redeemed only once prevents multiple handoffs from the same token, which could lead to confusion or errors in the handoff process.
-
-* Remove the token from storage after a token is used. If the same token comes up, let the user know they need to start a new conversation with the bot because the handoff from copilot can't continue.
+* We recommended that you manage the lifecycle of the continuation token to ensure it expires after a reasonable period and also handle scenarios where the continuation token request is replayed by the user. For example, If the same token comes up, let the user know they need to start a new conversation with the bot because the handoff from copilot can't continue.
