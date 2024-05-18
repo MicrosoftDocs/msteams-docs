@@ -1,5 +1,5 @@
 ---
-title: Build a RAG Bot in Teams
+title: Build a RAG bot in Teams
 author: surbhigupta
 description:  In this module, learn how to build RAG bot using Teams AI library.
 ms.topic: conceptual
@@ -8,18 +8,17 @@ ms.author: v-ganr
 ms.date: 05/21/2024
 ---
 
-# Build a RAG Bot in Teams
+# Build a RAG bot in Teams
 
-The most effective applications enabled by Large Language Models (LLMs) are the creation of sophisticated question-answering (Q&A) chatbots. These chatbots can respond to inquiries about specific source information using a technique known as Retrieval Augmented Generation (RAG)."
+The advanced question-answering (Q&A) chatbots represents one of the most effective apps enabled by Large Language Models (LLMs). The chatbots respond to inquiries about specific source information using Retrieval Augmented Generation (RAG).
 
-A typical RAG architecture has two main flows:
+The RAG architecture has two main flows:
 
 1. **Data Ingestion**: A pipeline for ingesting data from a source and indexing it. This usually happens offline.
-1. **Retrieval and Generation**: The actual RAG chain, which takes the user query at run time and retrieves the relevant data from the index, then passes that to the model.
 
-Microsoft Teams enables developers to build a conversational bot with RAG capability to create a powerful experience to maximize the productivity.
+1. **Retrieval and Generation**: The actual RAG chain, which takes the user query at run time and retrieves the relevant data from the index, then passes it to the model.
 
-Microsoft Teams Toolkit provides a series of ready-to-use application templates in the chat with your data category. These templates combine the capabilities of Azure AI Search, Microsoft 365, SharePoint, and Custom API as different data sources, along with LLMs, to create a conversational search experience in Teams.
+Microsoft Teams enables you to build a conversational bot with RAG to create an enhanced experience to maximize the productivity. Teams Toolkit provides a series of ready to use app templates in the **Chat With Your Data** category that combines the functionalities of Azure AI search, Microsoft 365 SharePoint, and custom API as different data source and LLMs to create a conversational search experience in Teams.
 
 ## Prerequisites
 
@@ -32,17 +31,17 @@ Microsoft Teams Toolkit provides a series of ready-to-use application templates 
 | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
 | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
-## Create a new Basic AI Chatbot project
+## Create a new basic AI chatbot project
 
 1. Open **Visual Studio Code**.
- 
-1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**
+
+1. Select the Teams Toolkit :::image type="icon" source="~/assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.PNG" border="false"::: icon in the Visual Studio Code **Activity Bar**.
 
 1. Select **Create a New App**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-1. Select **Custom Copilot**.image
+1. Select **Custom Copilot**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
 
@@ -66,6 +65,8 @@ Microsoft Teams Toolkit provides a series of ready-to-use application templates 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
+1. Select **Enter** to confirm your input.
+
 1. Select **Default folder**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
@@ -76,24 +77,25 @@ Microsoft Teams Toolkit provides a series of ready-to-use application templates 
     1. Select the location for the project workspace.
     1. Select **Select Folder**.
 
-1. Enter an application name for your app and then select the **Enter** key.
+1. Enter an app name for your app and then select the **Enter** key.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-   Now, you've successfully created your chat with your data project workspace.
+   Now, you've successfully created your **Chat With Your Data** project workspace.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
 1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
 
-1. Update the following details:
-    Azure OpenAI key `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
-    Endpoint `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
-    Deployment name `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
+1. Update the following values:
+
+    * `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
+    * `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
+    * `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
 
-1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
+1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Test Tool (Preview)** from the dropdown list.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
@@ -105,11 +107,11 @@ Test Tool opens the bot in a webpage.
 
 | Folder       | Contents                                            |
 | - | - |
-| `.vscode`    | Visual Studio Code files for debugging                          |
-| `appPackage` | Templates for the Teams application manifest        |
+| `.vscode`    | Visual Studio Code files for debugging.                          |
+| `appPackage` | Templates for the Teams app manifest.        |
 | `env`        | Environment files                                   |
 | `infra`      | Templates for provisioning Azure resources          |
-| `src`        | The source code for the application                 |
+| `src`        | The source code for the app.                 |
 |`src/index.js`| Sets up the bot app server.|
 |`src/adapter.js`| Sets up the bot adapter.|
 |`src/config.js`| Defines the environment variables.|
@@ -118,15 +120,16 @@ Test Tool opens the bot in a webpage.
 |`src/app/app.js`| Handles business logics for the RAG bot.|
 |`src/app/myDataSource.js`| Defines the data source.|
 |`src/data/*.md`| Raw text data sources.|
-|`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
+|`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines the properties and configuration stage definitions. |
 |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
 |`teamsapp.testtool.yml`| This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
 
 ## RAG scenarios for Teams AI
 
-Teams AI library doesn't provide vector database implementation, so you need to add your own logic for further processing the created embeddings.
+In AI context, the vector databases are widely used as RAG storages, which store embeddings data and provide vector-similarity search. Teams AI library provides utilities to help create embeddings for the given inputs.
 
-In AI context, vector databases are widely used as RAG storages, which store embeddings data and provide vector-similarity search. Teams-AI library provides utilities to help create embeddings for the given inputs.
+> [!Tip]
+> Teams AI library doesn't provide the vector database implementation, so you need to add your own logic to process the created embeddings.
 
 # [JavaScript](#tab/javascript)
 
@@ -139,6 +142,7 @@ const embeddings = await model.createEmbeddings(model, inputs);
 
 // your own logic to process embeddings
 ```
+
 # [Python](#tab/python)
 
 ```python
@@ -150,18 +154,19 @@ embeddings = await model.create_embeddings(inputs)
 
 # your own logic to process embeddings
 ```
+
 ---
+
+The following diagram shows how Teams AI library provides functionalities to ease each step of the retrieval and generation process:
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/teams-ai-rag-scenario.png" alt-text="Screenshot shows the RAG scenario.":::
 
-Teams AI library also provides functionalities to ease each step of the retrieval and generation process.
+1. **Handle input**: The most straight forward way is to pass the user’s input to the retrieval without any change. However, if you'd like to customize the input before retrieval, you can add an [activity handler](https://github.com/OfficeDev/TeamsFx/wiki/) to certain incoming activities.
 
-1. **Handle Input**: The most straight forward way is to pass user's input as is to retrieval. However, if you'd like to customize the input before retrieval, you can add activity handler to certain incoming activities.
+1. **Retrieve DataSource**: Teams AI library provides `DataSource` interface to let you add your own retrieval logic. You need to create your own `DataSource` instance, and the Teams AI library calls it on demand.
 
-1. **Retrieve data source**: Teams-AI library provides DataSource interface to let you add your own retrieval logic. You need to create your own DataSource instance, and the library calls it on demand.
+   # [JavaScript](#tab/javascript1)
 
-    # [JavaScript](#tab/javascript1)
-    
     ```javascript
     class MyDataSource implements DataSource {
       /**
@@ -187,8 +192,9 @@ Teams AI library also provides functionalities to ease each step of the retrieva
       }
     }
       ```
-    # [Python](#tab/python1)
-    
+
+   # [Python](#tab/python1)
+
       ```python
       class MyDataSource(DataSource):
         def __init__(self):
@@ -200,9 +206,10 @@ Teams AI library also provides functionalities to ease each step of the retrieva
         async def render_data(self, _context: TurnContext, memory: Memory, tokenizer: Tokenizer, maxTokens: int):
           # your render data logic
       ```
+
     ---
 
-1. **Call AI with prompt**: In the Teams AI prompt system, you can easily inject a data source by adjusting the augmentation.data_sources configuration section. This connects the prompt with the DataSource added in the previous step, and the library orchestrator to inject the data source text into the final prompt. For more information, See [AuthorPrompt](https://github.com/OfficeDev/TeamsFx/wiki/). For example, in the prompt's 'config.json' file.
+1. **Call AI with prompt**: In the Teams AI prompt system, you can easily inject a `DataSource` by adjusting the `augmentation.data_sources` configuration section. This connects the prompt with the `DataSource` added and the library orchestrator to inject the `DataSource` text into the final prompt. For more information, see [authorprompt](https://github.com/OfficeDev/TeamsFx/wiki/). For example, in the prompt's `config.json` file:
 
     ```json
     {
@@ -216,11 +223,11 @@ Teams AI library also provides functionalities to ease each step of the retrieva
     }
     ```
 
-1. **Build response**: By default, Teams-AI library replies the AI generated response as text message to user. If you'd like to customize the response, you can override the default SAY action (see [AI Actions](https://github.com/OfficeDev/TeamsFx/wiki/)) or explicitly call AI model (see [AI Models](https://github.com/OfficeDev/TeamsFx/wiki/)) to build your own replies, for example, with adaptive cards.
+1. **Build response**: By default, Teams AI library replies the AI generated response as a text message to the user. If you want to customize the response, you can override the default [SAY actions](https://github.com/OfficeDev/TeamsFx/wiki/) or explicitly call the [AI Model](https://github.com/OfficeDev/TeamsFx/wiki/) to build your replies, for example, with Adaptive Cards.
 
-Here's a minimal set of implementations to add RAG to your app. In general, it implements DataSource to inject your own knowledge into prompt, so that AI can generate response based on the knowledge.
+Here's a minimal set of implementations to add RAG to your app. In general, it implements `DataSource` to inject your `knowledge` into prompt, so that AI can generate response based on the `knowledge`.
 
-* Create myDataSource.ts to implement `DataSource` interface.
+* Create `myDataSource.ts` file to implement `DataSource` interface:
 
     ```typescript
     export class MyDataSource implements DataSource {
@@ -250,22 +257,24 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     }
     ```
 
-* Register the data source in `app.ts`,
+* Register the `DataSource` in `app.ts` file:
 
-    # [JavaScript](#tab/javascript2)
-    
+# [JavaScript](#tab/javascript2)
+
     ```javascript
     // Register your data source to prompt manager
     planner.prompts.addDataSource(new MyDataSource());
     ```
-    # [Python](#tab/python2)
-    
+
+# [Python](#tab/python2)
+
     ```python
     planner.prompts.add_data_source(MyDataSource())
     ```
+
     ---
 
-* Create `prompts/qa/skprompt.txt` for prompt template text.
+* Create `prompts/qa/skprompt.txt` file and add the following text:
 
     ```
     The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly to answer user's question.
@@ -274,7 +283,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     
     ```
 
-* Create `prompts/qa/config.json` to connect with the data source.
+* Create `prompts/qa/config.json` file and add the following code to connect with the data source:
 
     ```json
     {
@@ -302,24 +311,31 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     }
     ```
 
-## Choose Between Data Sources
+## Select data sources
 
- * Customize allows you to fully control the data ingestion, see the sample on Build your own Data Ingestion to build your own vector index, and use it as data source. There are other alternatives, for example, Azure Cosmos DB Vector Database Extension or Azure PostgreSQL Server vector Extension as vector databases, or Bing Web Search API to get latest web content. You might implement any DataSource instance to connect with your own data source.
+In the `Chat With Your Data` or RAG scenarios, Teams Toolkit provides four types of data source:
 
- * Azure AI Search provides a sample to add your documents to Azure AI Search Service, then use the search index as data source.
+* `Customize`: Allows you to fully control the data ingestion to build your own vector index and use it as data source. For more information, see [build your own data ingestion](#build-your-own-data-ingestion).
 
- * Custom API allows your chatbot can invoke the API defined in the OpenAPI description document to retrieve domain data from API service.
+  You can also use Azure Cosmos DB Vector Database Extension or Azure PostgreSQL Server vector Extension as vector databases, or Bing Web Search API to get latest web content to implement any data source instance to connect with your own data source.
 
- * Microsoft Graph and SharePoint provides a sample to use Microsoft 365 content from Microsoft Graph Search API as data source.
+* `Azure AI Search`: Provides a sample to add your documents to Azure AI Search Service, then use the search index as data source.
 
-## Build your own Data Ingestion
+* `Custom API`: Allows your chatbot to invoke the API defined in the OpenAPI description document to retrieve domain data from the API service.
 
-Data ingestion process is as follows:
+* Microsoft Graph and SharePoint: Provides a sample to use Microsoft 365 content from Microsoft Graph Search API as data source.
 
- 1. **Load your source documents**: Besides text, if you have other types of documents, you might need to convert them to meaningful text, since the embedding model takes text as input.
- 1. **Split into chunks**: The embedding model has an input token limitation, so you might need to split documents into chunks to avoid API call failures.
- 1. **Call embedding model**: Call the embedding model APIs to create embeddings for the given inputs.
- 1. **Store embeddings**: Store the created embeddings into a vector database, also including useful metadata and raw content for further referencing.
+## Build your own data ingestion
+
+To build your data ingestion, follow these steps:
+
+1. **Load your source documents**: Ensure that your document has a meaningful text as the embedding model takes only text as input.
+
+1. **Split into chunks**: Ensure you split the document to avoid API call failures as the embedding model has an input token limitation.
+
+1. **Call embedding model**: Call the embedding model APIs to create embeddings for the given inputs.
+
+1. **Store embeddings**: Store the created embeddings into a vector database, also include useful metadata and raw content for further referencing.
 
 ## Sample code
 
@@ -335,8 +351,8 @@ Data ingestion process is as follows:
     }
     ```
 
-* `splitter.ts`: Split text into chunks, with certain overlap.
-    
+* `splitter.ts`: Split text into chunks, with an overlap.
+
     ```javascript
     
     // split words by delimiters.
@@ -375,7 +391,7 @@ Data ingestion process is as follows:
     
     ```
 
-* `embeddings.ts`: Use Teams AI library OpenAIEmbeddings to create embeddings.
+* `embeddings.ts`: Use Teams AI library `OpenAIEmbeddings` to create embeddings.
 
     ```javascript
     import { OpenAIEmbeddings } from "@microsoft/teams-ai";
@@ -392,7 +408,7 @@ Data ingestion process is as follows:
     }
     ```
 
-* `searchIndex.ts`: One-time and standalone method to create Azure AI Search Index.
+* `searchIndex.ts`: Create Azure AI Search Index.
 
     ```javascript
     import { SearchIndexClient, AzureKeyCredential, SearchIndex } from "@azure/search-documents";
@@ -531,7 +547,7 @@ Data ingestion process is as follows:
             return file.read()
     ```
 
-* `splitter.py`: Split text into chunks, with certain overlap.
+* `splitter.py`: Split text into chunks, with an overlap.
 
     ```python
     def split(content: str, length: int, overlap: int) -> list[str]:
@@ -557,7 +573,7 @@ Data ingestion process is as follows:
         return results
     ```
 
-* `embeddings.py`: Use Teams AI library OpenAIEmbeddings to create embeddings.
+* `embeddings.py`: Use Teams AI library `OpenAIEmbeddings` to create embeddings.
 
     ```python
     async def create_embeddings(text: str, embeddings):
@@ -566,7 +582,7 @@ Data ingestion process is as follows:
         return result.output[0]
     ```
 
-* `search_index.py`: One-time and standalone method to create Azure AI Search Index.
+* `search_index.py`: Create Azure AI Search Index.
 
     ```python
     async def create_index_if_not_exists(client: SearchIndexClient, name: str):
@@ -633,6 +649,7 @@ Data ingestion process is as follows:
         data = await get_doc_data(embeddings=embeddings)
         await search_client.merge_or_upload_documents(data)
     ```
+
 * `index.py`: Orchestrate above components.
 
     ```python
@@ -645,26 +662,32 @@ Data ingestion process is as follows:
 
 ---
 
-## Azure AI Search as Data Source
+## Azure AI Search as data source
 
-This doc showcases a solution to:
+In this section you'll learn how to:
 
-* Add your document to Azure AI Search through Azure OpenAI Service.
-* Use Azure AI Search index as data source in the RAG app.
+* [Add your document to Azure AI Search through Azure OpenAI Service](#add-document-to-azure-ai-search).
+* [Use Azure AI Search index as data source in the RAG app](#use-azure-ai-search-index-data-source).
 
-### Data Ingestion
+### Add document to Azure AI Search
 
-With Azure OpenAI on your data, you can ingest your knowledge documents to Azure AI Search Service and create a vector index. Then you can use the index as data source.
+> [!Note]
+> This approach creates an end-to-end chat API called as AI model. You can also use the created index as data source, and use Teams AI library to customize the retrieval and prompt.
 
-1. Prepare your data in Azure Blob Storage, or directly upload in later step on Azure OpenAI Studio, add your data source.
+You can ingest your knowledge documents to Azure AI Search Service and create a vector index with Azure OpenAI on your data. After ingestion, you can use the index as a data source.
+
+1. Prepare your data in Azure Blob Storage.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/assistant-set-up.png" alt-text="Screenshot shows to do assistant setup in Azure OpenAI Studio.":::
 
-1. Fill fields to create a vector index.
+1. In Azure OpenAI Studio, select **Add a data source**.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/add-data.png" alt-text="Screenshot shows the option to add data source.":::
+1. Update the required fields.
 
-### Data Source
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/add-data.png" alt-text="Screenshot shows the option to add data source.":::
+
+
+### Use Azure AI Search index data source
 
 After ingesting data into Azure AI Search, you can implement your own DataSource to retrieve data from search index.
 
@@ -755,6 +778,7 @@ export class MyDataSource implements DataSource {
 }
 
 ```
+
 # [Python](#tab/python3)
 
 ```python
@@ -845,6 +869,7 @@ class MyDataSource(DataSource):
 
         return Result(doc, usedTokens, usedTokens > maxTokens)
 ```
+
 ---
 
 ## Add more API for Custom API as data source
