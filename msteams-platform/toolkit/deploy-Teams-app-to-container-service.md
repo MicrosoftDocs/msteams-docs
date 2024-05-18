@@ -10,11 +10,11 @@ ms.date: 04/16/2024
 
 # Deploy Teams app to container service
 
-You can deploy a Teams bot or tab app to an Azure Container Apps, Azure Kubernetes Service, or on-premises Kubernetes Cluster.
+You can deploy a Teams bot or tab app to an Azure Container Apps, Azure Kubernetes Service (AKS), or on-premises Kubernetes Cluster.
 
 ## Prerequisites
 
-Download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso-docker) or the [sample Teams tab app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-docker), which offers a ready-to-use experience for Azure Container Apps development. You can make a few configuration changes and deploy it to Azure Kubernetes Service (AKS) or an on-premises Kubernetes Cluster.
+Download the [sample Teams bot](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/bot-sso-docker) or the [sample Teams tab app](https://github.com/OfficeDev/TeamsFx-Samples/tree/dev/hello-world-tab-docker), which offers a ready-to-use experience for Azure Container Apps development. You can make a few configuration changes and deploy it to AKS or an on-premises Kubernetes Cluster.
 
 Before you get started, ensure that you have the following tools:
 
