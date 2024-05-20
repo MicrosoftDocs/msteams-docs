@@ -83,10 +83,8 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Custom app upload](../toolkit/publish.md#publish-to-individual-scope-or-custom-app-upload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
 | [Custom Together Mode](../apps-in-teams-meetings/teams-together-mode.md)| Custom Together Mode scenes in Teams provide an immersive and engaging meeting environment. <br>**See also**: [Developer Portal for Teams](#d) |
 | Citation | A citation in a bot message is a reference to the source of information used in the message, such as web results. The citation typically includes the title of the source, the URL, and sometimes a brief snippet of the information from the source. |
-| Copilot Handoff | |
-| Custom copilot engine | |
-| Custom copilot| |
-
+| Copilot Handoff | Copilot handoffs are plugin-provided deep links that carry over chat context, enabling users to seamlessly transition their chat with Copilot for Microsoft 365 to your bot service. |
+| Custom copilot engine | Custom engine copilots are conversational Teams bots designed to harness the powerful capabilities of Large Language Models (LLMs) for seamless user interaction. These advanced bots mark a significant departure from traditional bots, offering an extensive range of features that elevate the overall user experience. |
 
 ## D
 
@@ -194,7 +192,6 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Notification only Bot](../bots/how-to/conversations/notification-bot-in-teams.md)| Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Teams. By design, if your bot doesn't respond or support any user command and is a one way bot only intended to notify users. You must set `isNotificationOnly` to true in the app manifest. <br> **See also**: [Teams Toolkit](#t)|
-| Nested app authentication (NAA) | |
 
 ## O
 
