@@ -12,9 +12,9 @@ ms.date: 05/21/2024
 
 Advanced Q&A chatbots are powerful apps built with the help of large language models (LLMs). The chatbots answer questions by pulling information from specific sources using a method called Retrieval Augmented Generation (RAG). The RAG architecture has two main flows:
 
-1. **Data ingestion**: A pipeline for ingesting data from a source and indexing it. This usually happens offline.
+* **Data ingestion**: A pipeline for ingesting data from a source and indexing it. This usually happens offline.
 
-1. **Retrieval and generation**: The actual RAG chain, which takes the user query at run time and retrieves the relevant data from the index, then passes it to the model.
+* **Retrieval and generation**: The RAG chain, which takes the user query at run time and retrieves the relevant data from the index, then passes it to the model.
 
 Microsoft Teams enables you to build a conversational bot with RAG to create an enhanced experience to maximize  productivity. Teams Toolkit provides a series of ready to use app templates in the **Chat With Your Data** category that combines the functionalities of Azure AI search, Microsoft 365 SharePoint, and custom API as different data source and LLMs to create a conversational search experience in Teams.
 
