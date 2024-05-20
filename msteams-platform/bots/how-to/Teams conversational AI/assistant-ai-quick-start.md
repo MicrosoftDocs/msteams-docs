@@ -89,12 +89,51 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
 
 1. Under **EXPLORER**, duplicate the `sample.env` file  and update the duplicate file to `.env`.
 
-1. In the sample folder, update the following code in the `.env` configuration file:
+   # [OpenAI key](#tab/OpenAI-key)
+
+   Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
    ```text
-   OPENAI_KEY=<your OpenAI key>
-
+   SECRET_OPENAI_KEY=<your OpenAI key>
+   ASSISTANT_ID=<your Assistant ID>
    ```
+
+   # [Azure OpenAI](#tab/Azure-OpenAI)
+
+   1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
+
+      ```text
+      SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
+      SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
+      ```
+
+   1. Go to `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
+
+      ```text
+      - uses: file/createOrUpdateEnvironmentFile
+      with:
+         target: ./.env
+         envs:
+         BOT_ID: ${{BOT_ID}}
+         BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
+         #OPENAI_KEY: ${{SECRET_OPENAI_KEY}}
+         AZURE_OPENAI_KEY: ${{SECRET_AZURE_OPENAI_KEY}}
+         AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}}
+      ```
+
+    ---
+
+1. Go to `infra` folder and comment out lines from [69 to 76](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L69-L76) and uncomment lines from [77 to 80](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L77-L80) in `azure.bicep` file.
+
+1. Go to `infra>azure.parameters.json` file and replace the lines from 20 to 25 with the following code:
+
+   ```text
+      "openAIKey": {
+      "value": "${{SECRET_OPENAI_KEY}}"
+      },
+   ```
+
+1. Copy the sample into a new directory that is not a subdirectory of `teams-ai`.
 
 1. From the left pane, select **Teams Toolkit**.
 
@@ -109,18 +148,18 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
 
 1. Select **Add**.
 
-   :::image type="content" source="../../../assets/images/bots/Conversation-AI-sample-app-add.png" alt-text="Screenshot shows the option to add the app in Teams web client.":::
+   :::image type="content" source="../../../assets/images/bots/math-bot-sample-app-add.png" alt-text="Screenshot shows the option to add the app in Teams web client.":::
 
    A chat window opens.
 
 1. In the message compose area, send a message to invoke the bot.
 
-   :::image type="content" source="../../../assets/images/bots/conversation-AI-quick-start-final.png" alt-text="Screenshot shows an example of conversation with Teams chef bot in Teams.":::
+   :::image type="content" source="../../../assets/images/bots/mathbot-output.png" alt-text="Screenshot shows an example of the mathbot output." lightbox="../../../assets/images/bots/mathbot-output.png":::
 
 The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 > [!NOTE]
-> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
+> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio Code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
 
 ## Additional tools
 
