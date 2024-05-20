@@ -769,9 +769,9 @@ To enable your message extensions as a plugin in Copilot for Microsoft 365, we r
    | Microsoft 365 app host | frame-ancestor permission |
    | --- | --- |
    | Bing | edgeservices.bing.com, <www.bing.com>, <www.staging-bing-int.com>, copilot.microsoft.com |
-   |OneDrive and Sharepoint | .sharepoint.com, .sharepoint-df.co |
-   | WXP Web Internal Infrastructure | officeapps.live.com, .officeapps.live-int.com, officeappspdf.live.com |
-   | WXP M365 Copilot Domains | fa000000125.resources.office.net, fa000000129.resources.office.net, fa000000124.resources.office.net, fa000000128.resources.office.net |
+   |OneDrive and Sharepoint | .sharepoint.com, .sharepoint-df.com |
+   | WXP Web Internal Infrastructure | officeapps.live.com, .officeapps.live-int.com, officeapps-df.live.com |
+   | WXP M365 Copilot Domains | fa000000124.resources.office.net, fa000000124.resources.office.net, fa000000128.resources.office.net, fa000000129.resources.office.net |
    |App Copilots| microsoftonline.com <br> sharepoint-df.com <br> sharepoint.com<br>sharepointonline.com<br>spgrid.com<br>spolabs.com<br>spoppe.com<br>sposites.com<br>partner.microsoftonline.cn<br>sharepoint.cn<br>sharepoint.de<br>myus.msftsptest.com<br>my.microsoftpersonalcontentppe.com<br>wopi.onedrive.com<br>wopi.onedrive-tst.com<br>outlook.office.com<br>outlook-sdf.office.com<br>outlook.live.com<br>outlook-sdf.live.com<br>outlook-tdf.live.com<br>sdfpilot.live.com<br>outlook.office365.us<br>outlook.office365.com<br>exchangelabs.live-int.com<br>office-int.com<br>officeapps.live-int.com<br>officeapps.live.com<br>officeapps.live-int.com<br>officeapps-df.live.com<br>fa000000125.resources.office.net<br>fa000000129.resources.office.net<br>fa000000124.resources.office.net<br>fa000000128.resources.office.net<br>*.microsoftonline.com<br>*.sharepoint-df.com<br>*.sharepoint.com<br>*.sharepointonline.com<br>*.spgrid.com<br>*.spolabs.com<br>*.spoppe.com<br>*.sposites.com<br>*.partner.microsoftonline.cn<br>*.sharepoint.cn<br>*.sharepoint.de<br>*.myus.msftsptest.com<br>*.my.microsoftpersonalcontentppe.com<br>*.wopi.onedrive.com<br>*.wopi.onedrive-tst.com<br>*.officeapps.live.com<br>*.officeapps.live-int.com<br>*.officeapps-df.live.com|
 
 * **Ensure that your registered bot is connected to Microsoft 365 channel**: [*Mandatory*].
