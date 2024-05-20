@@ -85,9 +85,9 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     1. Under **EXPLORER**, go to the **env** > **.env.testtool.user** file.
     
     1. Update the following details:
-        Azure OpenAI key `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
-        Endpoint `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
-        Deployment name `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
+       * `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
+       * `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
+       * `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
     
         :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
     
