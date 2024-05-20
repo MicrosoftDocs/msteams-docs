@@ -16,13 +16,13 @@ ms.author: surbhigupta
 
 You can enhance your Copilot message extension plugin to hand off a conversation to your [custom engine copilot](/microsoft-365-copilot/extensibility/overview-custom-engine-copilot) to handle cases where a more in-depth, specialized chat experience is required. Copilot handoffs are plugin-provided deep links that carry over chat context, enabling users to seamlessly transition their chat with Copilot for Microsoft 365 to your bot service.
 
-In the following graphic, a user looks for help on tech issues using Copilot and receives results from the enterprise dataset. The user finds the information is insufficient and wants to continue the interaction with a Contoso bot plugin.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from Copilot to the Contoso bot, without losing the conversation context is called a *copilot handoff*.
+In the following graphic, a user looks for help on tech issues using Copilot and receives results from the enterprise dataset. The user finds the available information insufficient and wants to continue the interaction with a Contoso bot plugin.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from Copilot to the Contoso bot, without losing the conversation context is called a *copilot handoff*.
 
 :::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="The GIF shows the conversation handoff between the copilot for Microsoft 365 and the Contoso chat bot.":::
 
 ## How copilot handoff works
 
-A custom engine copilot sends a deep link with a continuation token to Copilot for Microsoft 365. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced. When the user selects the deep link, Copilot then sends an invoke call to the bot with the continuation token, and the bot can resume the conversation based on the context. This process enables a seamless transition from Copilot for Microsoft 365 to your custom engine copilot, maintaining the conversation’s continuity and context, which optimizes the user experience.
+A custom engine copilot sends a deep link with a continuation token to Copilot for Microsoft 365. The deep link query parameter with a continuation token ensures that any information from your plugin invocation parameters is referenced. When the user selects the deep link, Copilot sends an invoke call to the bot with the continuation token, and the bot then resumes the conversation based on the context. This process enables a seamless transition from Copilot for Microsoft 365 to your custom engine copilot, maintaining the conversation’s continuity and context, which optimizes the user experience.
 
 :::image type="content" source="../../../assets/images/Copilot/copilot-handoff-flow.png" alt-text="Screenshot shows the handoff flow between the user, Copilot, plugin, Teams, and bot." lightbox="../../../assets/images/Copilot/copilot-handoff-flow.png":::
 
@@ -32,7 +32,7 @@ You must create a deep link URL with a `continuation` query parameter for the ac
 
 To enable copilot handoff in Teams, follow these steps:
 
-1. **Configure a deep link URL**: Create a [deep link to a chat](../../../concepts/build-and-test/deep-link-teams.md#configure-deep-link-to-start-a-chat-manually) and add the `28:<botId>` and `continuationToken` to the deep link format. The deep link must be in the format `https://teams.microsoft.com/l/chat/0/0?users=${28:<botId>}&continuation=${continuationToken}`.
+1. **Configure a deep link URL**: Create a [deep link to a chat](../../../concepts/build-and-test/deep-link-teams.md#configure-deep-link-to-start-a-chat-manually) and add the `28:<botId>` and `continuationToken` to the deep link format. The deep link format must be `https://teams.microsoft.com/l/chat/0/0?users=${28:<botId>}&continuation=${continuationToken}`.
 
    **Example**:
 
@@ -105,7 +105,7 @@ To enable copilot handoff in Teams, follow these steps:
    }
    ```
 
-   The `handoff/action` invoke type allows the bot to transfer control of the conversation to another service or initiating a specific action that requires further processing. When the bot receives the `handoff/action` invoke activity, it uses the continuation token to look up any necessary information to continue the conversation seamlessly. This could involve retrieving conversation history, user preferences, or any other context needed to provide a consistent experience.
+   The `handoff/action` invoke type allows the bot to transfer control of the conversation to another service or initiate a specific action that requires further processing. When the bot receives the `handoff/action` invoke activity, it uses the continuation token to look up any necessary information to continue the conversation seamlessly. This involves retrieving conversation history, user preferences, or any other context needed to provide a consistent experience.
 
 1. **Handle the invoke type**: In your bot code, manage the `handoff/action` invoke using the `onInvokeActivity` handler. Override the `onInvokeActivity` method to handle the invoke call. The response to this invoke call must be an HTTP status code 200 for success or a code in the range of 400-500 for error.
 
@@ -153,4 +153,4 @@ The response to this invoke call must be an HTTP status code 200 for success, or
     
     ```
 
-* We recommended that you manage the lifecycle of the continuation token to ensure it expires after a reasonable period and also handle scenarios where the continuation token request is replayed by the user. For example, If the same token comes up, let the user know they need to start a new conversation with the bot because the handoff from copilot can't continue.
+* We recommended that you manage the lifecycle of the continuation token to ensure it expires after a reasonable period and also handle scenarios where the continuation token request is replayed by the user. For example, if the same token comes up, let the user know they need to start a new conversation with the bot because the handoff from copilot can't continue.
