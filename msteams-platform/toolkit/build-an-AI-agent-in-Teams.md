@@ -12,17 +12,16 @@ ms.date: 05/21/2024
 
 An AI agent in Microsoft Teams is a conversational chatbot that uses Large Language Models (LLMs) to interact with users. It understands user intentions and selects a sequence of actions, enabling the chatbot to complete common tasks.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/build-ai-agent.png" alt-text="Screenshot shows the process of build AI agent bot requests and responses.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/build-ai-agent.png" alt-text="Screenshot shows the process of build AI agent bot requests and responses."Lightbox="../assets/images/teams-toolkit-v2/custom-copilot/build-ai-agent.png":::
 
 ## Prerequisites
 
 | Install | For using... |
 | --- | --- |
-| &nbsp; | &nbsp; |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
 | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
 ## Create a new AI Agent project
@@ -35,11 +34,11 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/create-new-app.png" alt-text="Screenshot shows the location of the Create New Project link in the Teams Toolkit sidebar.":::
 
-1. Select **Custom Copilot**.image
+1. Select **Custom Copilot**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
 
-1. Select **AI Agent**. image
+1. Select **AI Agent**. 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
 
@@ -55,13 +54,15 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
     
-    1. Select **Azure OpenAI**. 
+    1. Select **Azure OpenAI** or **OpenAI**. 
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
     
     1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**.
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
+
+    1. Select **Enter**.
     
     1. Select **Default folder**.
 
@@ -77,11 +78,11 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-       Now, you've successfully created your AI chat bot project workspace.
+       You've successfully created your AI chat bot project workspace.
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-new.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
     
-    1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
+    1. Under **EXPLORER**, go to the **env** > **.env.testtool.user** file.
     
     1. Update the following details:
         Azure OpenAI key `SECRET_AZURE_OPENAI_API_KEY=<your-key>`

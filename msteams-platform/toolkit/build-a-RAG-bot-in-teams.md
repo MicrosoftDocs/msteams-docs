@@ -10,7 +10,7 @@ ms.date: 05/21/2024
 
 # Build a RAG bot in Teams
 
-The advanced Q&A chatbots are powerful apps built with the help of large language models (LLMs). The chatbots answer questions by pulling information from specific sources using a method called Retrieval Augmented Generation (RAG). The RAG architecture has two main flows:
+The advanced Q&A chatbots are powerful apps built with the help of Large Language Models (LLMs). The chatbots answer questions by pulling information from specific sources using a method called Retrieval Augmented Generation (RAG). The RAG architecture has two main flows:
 
 * **Data ingestion**: A pipeline for ingesting data from a source and indexing it. This usually happens offline.
 
