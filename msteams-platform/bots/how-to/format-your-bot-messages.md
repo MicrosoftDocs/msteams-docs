@@ -79,7 +79,7 @@ The following table provides a list of styles, which are supported on desktop, i
 
 ### AI bot messages
 
-As bots evolve to be more conversational, you can leverage AI capabilities to enhance their functionality. Integrate the following features into your bot messages, similar to those used in AI-generated bot messages:
+As bots evolve to be more conversational, you can leverage AI capabilities to enhance their functionality. Integrate the following functionalities into your bot messages, similar to those used in AI-generated bot messages:
 
 * [AI label](format-ai-bot-messages.md#ai-label) enables user to identify that the message was generated using AI.
 * [Citations](format-ai-bot-messages.md#citations) enables user to refer to the source of the bot's message through in-text citations and references.
@@ -87,10 +87,6 @@ As bots evolve to be more conversational, you can leverage AI capabilities to en
 * [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables user to understand the confidentiality of the bot's message.
 
 For more information, see [format your AI bot message](format-ai-bot-messages.md).
-
-### Cards
-
-For card support, see [card formatting](~/task-modules-and-cards/cards/cards-format.md).
 
 ## Next step
 
@@ -102,3 +98,4 @@ For card support, see [card formatting](~/task-modules-and-cards/cards/cards-for
 * [Build bots for Teams](../what-are-bots.md)
 * [Designing your Microsoft Teams bot](../design/bots.md)
 * [Adaptive Cards](../../task-modules-and-cards/what-are-cards.md#adaptive-cards)
+* [Format cards in Teams](../../task-modules-and-cards/cards/cards-format.md)
