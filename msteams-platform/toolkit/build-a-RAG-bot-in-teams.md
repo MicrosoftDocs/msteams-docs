@@ -277,7 +277,6 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly to answer user's question.
     
     Base your answer off the text below:
-    
     ```
 
 * Create the `prompts/qa/config.json` file and add the following code to connect with the data source:
@@ -691,7 +690,6 @@ After ingesting data into Azure AI Search, you can implement your own `DataSourc
 # [JavaScript](#tab/javascript3)
 
 ```javascript
-
 import { AzureKeyCredential, SearchClient } from "@azure/search-documents";
 import { DataSource, Memory, OpenAIEmbeddings, RenderedPromptSection, Tokenizer } from "@microsoft/teams-ai";
 import { TurnContext } from "botbuilder";
@@ -773,7 +771,6 @@ export class MyDataSource implements DataSource {
     return { output, length, tooLong: length > maxTokens };
   }
 }
-
 ```
 
 # [Python](#tab/python3)
@@ -882,7 +879,6 @@ Follow these steps to extend the custom copilot from Custom API template with mo
     Update the necessary info and properties for path, query, and body for the API in the following object:
 
     ```json
-
     {
       "name": "${{YOUR-API-NAME}}",
       "description": "${{YOUR-API-DESCRIPTION}}",
@@ -908,7 +904,6 @@ Follow these steps to extend the custom copilot from Custom API template with mo
         }
       }
     }
-
     ```
 
 1. Update `./src/adaptiveCards`.
