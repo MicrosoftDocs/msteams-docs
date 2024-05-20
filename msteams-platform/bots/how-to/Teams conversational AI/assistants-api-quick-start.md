@@ -122,7 +122,7 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
 
 1. Go to the `infra` folder and comment out lines from [69 to 76](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L69-L76) and uncomment lines from [77 to 80](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L77-L80) in `azure.bicep` file.
 
-1. Go to the `infra > azure.parameters.json` file and replace the lines from 20 to 25 with the following code:
+1. Go to the `infra > azure.parameters.json` file and replace the lines from [20 to 25](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.parameters.json#L20-L25) with the following code:
 
    ```text
       "openAIKey": {
