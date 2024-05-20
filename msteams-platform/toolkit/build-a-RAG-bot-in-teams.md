@@ -10,7 +10,7 @@ ms.date: 05/21/2024
 
 # Build a RAG bot in Teams
 
-Advanced Q&A chatbots are powerful apps built with the help of large language models (LLMs). The chatbots answer questions by pulling information from specific sources using a method called Retrieval Augmented Generation (RAG). The RAG architecture has two main flows:
+The advanced Q&A chatbots are powerful apps built with the help of large language models (LLMs). The chatbots answer questions by pulling information from specific sources using a method called Retrieval Augmented Generation (RAG). The RAG architecture has two main flows:
 
 * **Data ingestion**: A pipeline for ingesting data from a source and indexing it. This usually happens offline.
 
@@ -22,7 +22,6 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
 | Install | For using... |
 | --- | --- |
-| &nbsp; | &nbsp; |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
