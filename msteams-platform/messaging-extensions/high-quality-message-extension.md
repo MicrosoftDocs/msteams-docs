@@ -887,9 +887,9 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
-## Extend your plugin to Copilot, Office, and Word
+## Extend your plugin to Copilot and Office.com
 
-To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
+To enable your message extensions as a plugin in Copilot for Microsoft 365 or Office.com, we recommend you to implement the following best practices:
 
 * **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.19.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This ensures that your application continues to work with Bing domains. [*Mandatory*]
 
