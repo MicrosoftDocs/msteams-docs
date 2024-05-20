@@ -433,8 +433,159 @@ For Copilot for Microsoft 365 in Teams, a search-based message extension must su
 
 * A message extension supports upto 10 commands and each command has a corresponding `parameters` property, which supports up to five parameters.
 
-<br>
-<details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
+# [Single parameter](#tab/single-parameter)
+
+The following code is an example of a single parameter defined in app manifest:
+
+```json
+"commands": [
+                {
+                    "id": "inventorySearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search products by name, category, inventory status, supplier location, stock level",
+                    "title": "Product inventory",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "productName",
+                            "title": "Product name",
+                            "description": "Enter a product name here",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "discountSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search for discounted products by category",
+                    "title": "Discounts",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "categoryName",
+                            "title": "Category name",
+                            "description": "Enter the category to find discounted products",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "revenueSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Find products based on their revenue/period",
+                    "title": "Revenue",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "revenueRange",
+                            "title": "Revenue range",
+                            "description": "Enter 'high' or 'low' or enter a range of integers such as 0-10000 or 5000- using this exact format",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+```
+
+# [Two parameters](#tab/two-parameter)
+
+The following code is an example of two parameters defined in app manifest:
+
+```json
+"commands": [
+                {
+                    "id": "inventorySearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search products by name, category, inventory status, supplier location, stock level",
+                    "title": "Product inventory",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "productName",
+                            "title": "Product name",
+                            "description": "Enter a product name here",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "categoryName",
+                            "title": "Category name",
+                            "description": "Enter the category of the product",
+                            "inputType": "text"
+                        }
+                        {
+                            "name": "supplierCity",
+                            "title": "Supplier city",
+                            "description": "Enter the supplier city of product",
+                            "inputType": "text"
+                        }
+                    ]
+                },
+                {
+                    "id": "discountSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Search for discounted products by category",
+                    "title": "Discounts",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "categoryName",
+                            "title": "Category name",
+                            "description": "Enter the category to find discounted products",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "inventoryStatus",
+                            "title": "Inventory status",
+                            "description": "Enter what status of the product inventory. Possible values are 'in stock', 'low stock', 'on order', or 'out of stock'",
+                            "inputType": "text"
+                        },
+                    ]
+                },
+                {
+                    "id": "revenueSearch",
+                    "context": [
+                        "compose",
+                        "commandBox"
+                    ],
+                    "description": "Find products based on their revenue/period",
+                    "title": "Revenue",
+                    "type": "query",
+                    "parameters": [
+                        {
+                            "name": "revenueRange",
+                            "title": "Revenue range",
+                            "description": "Enter 'high' or 'low' or enter a range of integers such as 0-10000 or 5000- using this exact format",
+                            "inputType": "text"
+                        },
+                        {
+                            "name": "stockQuery",
+                            "title": "Stock level",
+                            "description": "Enter a range of integers such as 0-42 or 100- (for >100 items). Only use if you need an exact numeric range.",
+                            "inputType": "text"
+                        }
+                    ]
+                }
+            ]
+```
+
+# [Multiple parameters](#tab/multiple-parameters)
+
+The following code is an example of multiple parameters defined in app manifest:
 
 ```json
 "commands": [
@@ -519,7 +670,6 @@ For Copilot for Microsoft 365 in Teams, a search-based message extension must su
             ]
 ```
 
-</details>
 <br>
 
 :::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
