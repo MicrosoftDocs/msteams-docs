@@ -11,7 +11,7 @@ ms.date: 05/20/2024
 
 # Quick start guide for using Assistants API with Teams AI library
 
-Get started using OpenAI or Azure OpenAI Assistants API with Teams AI library in MathBot sample. This guide uses the OpenAI Code Interpreter tool to help you create an assistant that specializes in mathematics. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+Get started using OpenAI or Azure OpenAI Assistants API with Teams AI library in Math tutor assistant sample. This guide uses the OpenAI Code Interpreter tool to help you create an assistant that specializes in mathematics. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ To get started, ensure that you have the following tools:
 | Install | For using... |
 | --- | --- |
 | &nbsp; | &nbsp; |
-| [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or CSharp build environments. Use the latest version. |
+| [Visual Studio Code](https://code.visualstudio.com/download) or [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or C Sharp build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
@@ -43,7 +43,7 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 ## Build and run the sample app
 
-Get started with Teams AI library using the **mathBot** sample. It enables your computer’s localhost to quickly execute a Teams AI library-based sample.
+Get started with Teams AI library using the **Math tutor assistant** sample. It enables your computer’s localhost to quickly execute a Teams AI library-based sample.
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
@@ -85,7 +85,7 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
 
 1. After the dependencies are installed, select **File** > **Open Folder**.
 
-1. Go to **teams-ai > js > samples > 04.ai-apps > d.assistants-mathBot** and select **Select Folder**. All the files for the math bot sample are listed under the **EXPLORER** section in Visual Studio Code.
+1. Go to **teams-ai > js > samples > 04.ai-apps > d.assistants-mathBot** and select **Select Folder**. All the files for the Math tutor assistant sample are listed under the **EXPLORER** section in Visual Studio Code.
 
 1. Under **EXPLORER**, duplicate the `sample.env` file  and update the duplicate file to `.env`.
 
@@ -166,3 +166,8 @@ You can also use the following tools to run and set up a sample:
 1. **Bot Framework Emulator**: The [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator) is a desktop application that allows you to test and debug your bot locally. You can connect to your bot by entering the bot’s endpoint URL and Microsoft App ID and password. You can then send messages to your bot and see its responses in real-time. For more information, see [Bot Framework Emulator set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/BOTFRAMEWORK-EMULATOR.md).
 
 1. **Manual setup**: If you prefer to set up your resources manually, you can do so by following the instructions provided by the respective services. For more information, see [manual set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/MANUAL-RESOURCE-SETUP.md).
+
+## Next step
+
+> [!div class="nextstepaction"]
+> [Assistants API](teams-conversation-ai-overview.md#assistants-api)

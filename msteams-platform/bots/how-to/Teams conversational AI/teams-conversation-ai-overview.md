@@ -94,7 +94,10 @@ The bot framework using Teams AI library requires the following:
 
 Action Planner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
 
-## Teams AI library supports both OpenAI and Azure OpenAI Assistants API (preview) for you to get started building intelligent assistants.
+## Assistants API
+
+> [!NOTE]
+> Teams AI library supports both OpenAI and Azure OpenAI Assistants API [public developer preview](../../resources/dev-preview/developer-preview-intro.md) for you to get started building intelligent assistants.
 
 Assistants API allows you to create powerful AI assistants capable of performing a variety of tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction, enabling the development of assistants that can understand and respond in a conversational manner.
 
