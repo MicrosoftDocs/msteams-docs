@@ -13,6 +13,8 @@ ms.date: 12/06/2022
 
 Get started with Teams AI library using the LightBot sample, which is designed to help you through the process of creating apps that can control lights, such as turning them on and off using Teams AI Library. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
+::: zone pivot="qs-javascript"
+
 ## Prerequisites
 
 To get started, ensure that you have the following tools:
@@ -20,7 +22,7 @@ To get started, ensure that you have the following tools:
 | Install | For using... |
 | --- | --- |
 | &nbsp; | &nbsp; |
-| [Visual Studio Code](https://code.visualstudio.com/download) or  [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, Python, or CSharp build environments. Use the latest version. |
+| [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, and Python build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
@@ -30,7 +32,7 @@ To get started, ensure that you have the following tools:
 | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
 
 <br/>
-If you ran the samples before or encounter a runtime error, follow these steps to start fresh:
+If you've already run the samples before or encountered a runtime error, follow these steps to start fresh:
 
 * Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
 * If you don’t want Teams Toolkit to generate the appId and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
@@ -40,8 +42,6 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 * An Azure OpenAI or OpenAI key
 * A database or similar storage options
-
-::: zone pivot="qs-javascript"
 
 ## Build and run the sample app
 
@@ -167,6 +167,34 @@ The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a p
 
 ::: zone pivot="qs-csharp"
 
+## Prerequisites
+
+To get started, ensure that you have the following tools:
+
+| Install | For using... |
+| --- | --- |
+| &nbsp; | &nbsp; |
+| [Visual Studio](https://visualstudio.microsoft.com/downloads/) | C Sharp build environments. Use the latest version. |
+| [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+|[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
+| [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+| [OpenAI](https://openai.com/api/) or [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an Azure OpenAI service.|
+| [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
+
+<br/>
+If you've already run the samples before or encountered a runtime error, follow these steps to start fresh:
+
+* Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
+* If you don’t want Teams Toolkit to generate the appId and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
+* Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
+
+Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
+
+* An Azure OpenAI or OpenAI key
+* A database or similar storage options
+
 ## Build and run the sample app
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/dotnet/samples).
@@ -259,9 +287,37 @@ You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow 
 
 ::: zone pivot="qs-python"
 
-## Build and run the sample app
+## Prerequisites
 
-Before get started, ensure that you've installed the [python v3.8.10](https://www.python.org/) and [poetry](https://python-poetry.org/docs/#installing-with-pipx) extensions.
+To get started, ensure that you have the following tools:
+
+| Install | For using... |
+| --- | --- |
+| &nbsp; | &nbsp; |
+| [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, and Python build environments. Use the latest version. |
+| [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
+| [Python ](https://www.python.org/) | Python is an interpreted, object-oriented programming language with dynamic semantics. Use versions between 3.8 to 4.0. |
+| [Poetry](https://python-poetry.org/docs/#installing-with-pipx) | Dependency management and packaging tool for Python.|
+| [Python VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) | Provides rich support for Python on VSCode. |
+|[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+| [OpenAI](https://openai.com/api/) or [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an Azure OpenAI service.|
+| [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
+| [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
+
+<br/>
+If you've already run the samples before or encountered a runtime error, follow these steps to start fresh:
+
+* Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
+* If you don’t want Teams Toolkit to generate the appId and password, update the `BOT_ID` and `BOT_PASSWORD` in the `.env` file with your own values.
+* Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
+
+Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
+
+* An Azure OpenAI or OpenAI key
+* A database or similar storage options
+
+## Build and run the sample app
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/python/samples).
 
