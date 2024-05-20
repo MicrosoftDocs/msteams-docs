@@ -1,15 +1,15 @@
 ---
 title: Assistant AI library quick start guide
 author: surbhigupta
-description:  In this module, learn how to quickly try the Teams AI library.
+description: In this module, learn how to quickly try the Assistant AI library.
 ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: assistant-ai-library-quick-start
-ms.author: v-ypalikila
-ms.date: 20/05/2024
+ms.author: v-bvishnu
+ms.date: 05/20/2024
 ---
 
-# Teams AI library quick start guide
+# Assistant AI library quick start guide
 
 Get started with OpenAI Assistants API using the mathBot sample, use OpenAI Code Interpreter tool to create an assistant that specializes in mathematics, guiding you through the development process of such apps. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
