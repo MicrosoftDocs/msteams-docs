@@ -9,9 +9,9 @@ ms.author: v-bvishnu
 ms.date: 05/20/2024
 ---
 
-# Assistants API quick start guide
+# Quick start guide for using Assistants API with Teams AI library
 
-Get started with the OpenAI Assistants API using the MathBot sample. This guide uses the OpenAI Code Interpreter tool to help you create an assistant that specializes in mathematics. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+Get started using OpenAI or Azure OpenAI Assistants API with Teams AI library in MathBot sample. This guide uses the OpenAI Code Interpreter tool to help you create an assistant that specializes in mathematics. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 ## Prerequisites
 
