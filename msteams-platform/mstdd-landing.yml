@@ -46,8 +46,14 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Live Share SDK is now generally available
+      - text: Unified communication between bot and tab
         url: apps-in-teams-meetings/teams-live-share-overview.md
+      - text: Leverage AI capabilities in bot messages with AI label, citations, feedback buttons, and sensitivity labels
+        url: apps-in-teams-meetings/teams-live-share-overview.md
+      - text: Enable Copilot handoffs to seamlessly transition your chat with Copilot for Microsoft 365.
+        url: apps-in-teams-meetings/teams-live-share-overview.md
+      - text: Prompt suggestions for bots
+      - url: apps-in-teams-meetings/teams-live-share-overview.md
 
 - title: What's new
   linkLists:
