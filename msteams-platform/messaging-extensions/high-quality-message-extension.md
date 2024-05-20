@@ -670,6 +670,7 @@ The following code is an example of multiple parameters defined in app manifest:
             ]
 ```
 
+---
 <br>
 
 :::image type="content" source="../assets/images/Copilot/high-quaity-me-pass-multi-parameters.png" alt-text="Screenshot shows an example of a pass scenario where the Northwind app returns a response for a seafood and in stock parameters.":::
