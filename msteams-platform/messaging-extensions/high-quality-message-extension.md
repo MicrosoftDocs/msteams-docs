@@ -35,7 +35,7 @@ The requirements for building message extension plugins for Copilot for Microsof
 > * [Define app, command, and parameter descriptions](#define-descriptions)
 > * [Enhance message extension to retrieve information through compound utterances](#compound-utterances)
 > * [Define sample prompts](#sample-prompts)
-> * [Create rich Adaptive Card responses](#adaptive-card-response)
+> * [Rich responses](#rich-response)
 
 ## Define descriptions
 
