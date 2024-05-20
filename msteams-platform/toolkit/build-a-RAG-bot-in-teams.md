@@ -25,7 +25,7 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and calls all in one place.|
 | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
 ## Create a new basic AI chatbot project
@@ -106,8 +106,8 @@ Test Tool opens the bot in a webpage.
 | - | - |
 | `.vscode`    | Visual Studio Code files for debugging.                          |
 | `appPackage` | Templates for the Teams app manifest.        |
-| `env`        | Environment files                                   |
-| `infra`      | Templates for provisioning Azure resources          |
+| `env`        | Environment files.                                   |
+| `infra`      | Templates for provisioning Azure resources.         |
 | `src`        | The source code for the app.                 |
 |`src/index.js`| Sets up the bot app server.|
 |`src/adapter.js`| Sets up the bot adapter.|
@@ -256,22 +256,22 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
 
 * Register the `DataSource` in `app.ts` file:
 
-# [JavaScript](#tab/javascript2)
+  # [JavaScript](#tab/javascript2)
 
-  ```javascript
-    // Register your data source to prompt manager
-    planner.prompts.addDataSource(new MyDataSource());
-  ```
+    ```javascript
+      // Register your data source to prompt manager
+      planner.prompts.addDataSource(new MyDataSource());
+    ```
 
-# [Python](#tab/python2)
+  # [Python](#tab/python2)
 
-  ```python
-    planner.prompts.add_data_source(MyDataSource())
-  ```
+    ```python
+      planner.prompts.add_data_source(MyDataSource())
+    ```
 
----
+  ---
 
-* Create `prompts/qa/skprompt.txt` file and add the following text:
+* Create the `prompts/qa/skprompt.txt` file and add the following text:
 
     ```
     The following is a conversation with an AI assistant. The assistant is helpful, creative, clever, and very friendly to answer user's question.
@@ -280,7 +280,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     
     ```
 
-* Create `prompts/qa/config.json` file and add the following code to connect with the data source:
+* Create the `prompts/qa/config.json` file and add the following code to connect with the data source:
 
     ```json
     {
@@ -310,15 +310,15 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
 
 ## Select data sources
 
-In the `Chat With Your Data` or RAG scenarios, Teams Toolkit provides four types of data source:
+In the **Chat With Your Data** or RAG scenarios, Teams Toolkit provides the following types of data sources:
 
-* `Customize`: Allows you to fully control the data ingestion to build your own vector index and use it as data source. For more information, see [build your own data ingestion](#build-your-own-data-ingestion).
+* **Customize**: Allows you to fully control the data ingestion to build your own vector index and use it as data source. For more information, see [build your own data ingestion](#build-your-own-data-ingestion).
 
   You can also use Azure Cosmos DB Vector Database Extension or Azure PostgreSQL Server vector Extension as vector databases, or Bing Web Search API to get latest web content to implement any data source instance to connect with your own data source.
 
-* `Azure AI Search`: Provides a sample to add your documents to Azure AI Search Service, then use the search index as data source.
+* **Azure AI Search**: Provides a sample to add your documents to Azure AI Search Service, then use the search index as data source.
 
-* `Custom API`: Allows your chatbot to invoke the API defined in the OpenAPI description document to retrieve domain data from the API service.
+* **Custom API**: Allows your chatbot to invoke the API defined in the OpenAPI description document to retrieve domain data from the API service.
 
 * Microsoft Graph and SharePoint: Provides a sample to use Microsoft 365 content from Microsoft Graph Search API as data source.
 
@@ -326,7 +326,7 @@ In the `Chat With Your Data` or RAG scenarios, Teams Toolkit provides four types
 
 To build your data ingestion, follow these steps:
 
-1. **Load your source documents**: Ensure that your document has a meaningful text as the embedding model takes only text as input.
+1. **Load your source documents**: Ensure that your document has a meaningful text as the embedding model takes only text as a input.
 
 1. **Split into chunks**: Ensure you split the document to avoid API call failures as the embedding model has an input token limitation.
 
@@ -686,7 +686,7 @@ You can ingest your knowledge documents to Azure AI Search Service and create a 
 
 ### Use Azure AI Search index data source
 
-After ingesting data into Azure AI Search, you can implement your own DataSource to retrieve data from search index.
+After ingesting data into Azure AI Search, you can implement your own `DataSource` to retrieve data from search index.
 
 # [JavaScript](#tab/javascript3)
 
@@ -871,7 +871,7 @@ class MyDataSource(DataSource):
 
 ## Add more API for Custom API as data source
 
-You can follow the following steps to extend the custom copilot from Custom API template with more APIs.
+Follow these steps to extend the custom copilot from Custom API template with more APIs.
 
 1. Update `./appPackage/apiSpecificationFile/openapi.*`.
 
@@ -911,37 +911,37 @@ You can follow the following steps to extend the custom copilot from Custom API 
 
     ```
 
-1. Update `./src/adaptiveCards`
+1. Update `./src/adaptiveCards`.
 
    Create a new file with name `${{YOUR-API-NAME}}.json` and fill in the Adaptive Card for the API response of your API.
 
-1. Update `./src/app/app.js`
+1. Update `./src/app/app.js`.
 
-   Add following code before module.exports = app;
+   Add following code before `module.exports = app;`:
 
-```javascript
+  ```javascript
 
-app.ai.action(${{YOUR-API-NAME}}, async (context: TurnContext, state: ApplicationTurnState, parameter: any) => {
-  const client = await api.getClient();
-  
-  const path = client.paths[${{YOUR-API-PATH}}];
-  if (path && path.${{YOUR-API-METHOD}}) {
-    const result = await path.${{YOUR-API-METHOD}}(parameter.path, parameter.body, {
-      params: parameter.query,
-    });
-    const card = generateAdaptiveCard("../adaptiveCards/${{YOUR-API-NAME}}.json", result);
-    await context.sendActivity({ attachments: [card] });
-  } else {
-    await context.sendActivity("no result");
-  }
-  return "result";
-});
+  app.ai.action(${{YOUR-API-NAME}}, async (context: TurnContext, state: ApplicationTurnState, parameter: any) => {
+    const client = await api.getClient();
+    
+    const path = client.paths[${{YOUR-API-PATH}}];
+    if (path && path.${{YOUR-API-METHOD}}) {
+      const result = await path.${{YOUR-API-METHOD}}(parameter.path, parameter.body, {
+        params: parameter.query,
+      });
+      const card = generateAdaptiveCard("../adaptiveCards/${{YOUR-API-NAME}}.json", result);
+      await context.sendActivity({ attachments: [card] });
+    } else {
+      await context.sendActivity("no result");
+    }
+    return "result";
+  });
 
-```
+  ```
 
 ## Microsoft 365 as Data Source
 
-This doc showcases a solution to query Microsoft 365 content from Microsoft Graph Search API as data source in the RAG app. To learn more about Microsoft Graph Search API, you can refer to use the Microsoft Search API to search OneDrive and SharePoint content.
+Learn to utilize the Microsoft Graph Search API to query Microsoft 365 content as a data source for the RAG app. To learn more about Microsoft Graph Search API, you can refer to use the Microsoft Search API to search OneDrive and SharePoint content.
 
 **Prerequisite**: You must create a Graph API client and grant it the `Files.Read.All` permission scope to access SharePoint and OneDrive files, folders, pages, and news.
 
@@ -952,9 +952,9 @@ The Microsoft Graph Search API, which can search SharePoint content, is availabl
 > [!NOTE]
 > SharePoint server indexes a file only if its file extension is listed on the manage file types page. For a complete list of supported file extensions, refer to the default indexed file name extensions and parsed file types in SharePoint server and SharePoint in Microsoft 365.
 
-### Data Source implementation
+### Data source implementation
 
-An example of searching for the text files in SharePoint and OneDrive as follows:
+An example of searching for the text files in SharePoint and OneDrive is as follows:
 
 ```
 import {
