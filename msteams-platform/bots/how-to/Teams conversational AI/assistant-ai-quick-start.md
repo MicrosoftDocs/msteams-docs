@@ -1,7 +1,7 @@
 ---
-title: Assistant AI library quick start guide
+title: Assistants API quick start guide
 author: surbhigupta
-description: In this module, learn how to quickly try the Assistant AI library.
+description: In this module, learn how to quickly try the Assistants API.
 ms.topic: conceptual
 ms.localizationpriority: high
 zone_pivot_groups: assistant-ai-library-quick-start
@@ -9,9 +9,9 @@ ms.author: v-bvishnu
 ms.date: 05/20/2024
 ---
 
-# Assistant AI library quick start guide
+# Assistants API quick start guide
 
-Get started with OpenAI Assistants API using the mathBot sample, use OpenAI Code Interpreter tool to create an assistant that specializes in mathematics, guiding you through the development process of such apps. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+Get started with the OpenAI Assistants API using the MathBot sample. This guide uses the OpenAI Code Interpreter tool to help you create an assistant that specializes in mathematics. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 ## Prerequisites
 
@@ -36,7 +36,7 @@ If you ran the samples before or encounter a runtime error, follow these steps t
 * If you don’t want Teams Toolkit to generate the appId and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
 * Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
 
-Teams Toolkit automatically provisions`MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
+Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
 
 * An Azure OpenAI or OpenAI key
 * A database or similar storage options
@@ -85,13 +85,13 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
 
 1. After the dependencies are installed, select **File** > **Open Folder**.
 
-1. Go to **teams-ai > js > samples > 04.ai-apps > d.assistants-mathBot** and select **Select Folder**. All the files for the chef bot sample are listed under the **EXPLORER** section in Visual Studio Code.
+1. Go to **teams-ai > js > samples > 04.ai-apps > d.assistants-mathBot** and select **Select Folder**. All the files for the math bot sample are listed under the **EXPLORER** section in Visual Studio Code.
 
 1. Under **EXPLORER**, duplicate the `sample.env` file  and update the duplicate file to `.env`.
 
-   # [OpenAI key](#tab/OpenAI-key)
+1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
-   Go to `env` folder and update the following code in `./env/.env.local.user` file:
+   # [OpenAI key](#tab/OpenAI-key)
 
    ```text
    SECRET_OPENAI_KEY=<your OpenAI key>
@@ -100,14 +100,12 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
 
    # [Azure OpenAI](#tab/Azure-OpenAI)
 
-   1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
-
-      ```text
+   ```text
       SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
       SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
-      ```
+   ```
 
-   1. Go to `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
+   Go to `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
 
       ```text
       - uses: file/createOrUpdateEnvironmentFile
@@ -120,12 +118,11 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
          AZURE_OPENAI_KEY: ${{SECRET_AZURE_OPENAI_KEY}}
          AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}}
       ```
-
     ---
 
-1. Go to `infra` folder and comment out lines from [69 to 76](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L69-L76) and uncomment lines from [77 to 80](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L77-L80) in `azure.bicep` file.
+1. Go to the `infra` folder and comment out lines from [69 to 76](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L69-L76) and uncomment lines from [77 to 80](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L77-L80) in `azure.bicep` file.
 
-1. Go to `infra > azure.parameters.json` file and replace the lines from 20 to 25 with the following code:
+1. Go to the `infra > azure.parameters.json` file and replace the lines from 20 to 25 with the following code:
 
    ```text
       "openAIKey": {
@@ -133,7 +130,7 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
       },
    ```
 
-1. Copy the sample into a new directory that isn't a subdirectory of `teams-ai`.
+1. Copy the sample to a new directory that isn't a subdirectory of `teams-ai`.
 
 1. From the left pane, select **Teams Toolkit**.
 
@@ -156,7 +153,6 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
 
    :::image type="content" source="../../../assets/images/bots/mathbot-output.png" alt-text="Screenshot shows an example of the mathbot output." lightbox="../../../assets/images/bots/mathbot-output.png":::
 
-The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 > [!NOTE]
 > If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio Code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
