@@ -126,7 +126,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. Go to `infra` folder and comment out lines from [72 to 75](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/infra/azure.bicep#L72-L75C10) and uncomment lines from [76 to 83](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/infra/azure.bicep#L76-L83) in `azure.bicep` file.
 
-1. Go to `infra>azure.parameters.json` file and replace the lines from 20 to 22 with the following code:
+1. Go to `infra` > `azure.parameters.json` file and replace the lines from 20 to 22 with the following code:
 
    ```text
       "azureOpenAIKey": {
@@ -139,7 +139,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. From the left pane, select **Teams Toolkit**.
 
-1. Under **ACCOUNTS**, sign in to the following:
+1. Under **ACCOUNTS**, sign-in to the following:
 
    * **Microsoft 365 account**
    * **Azure account**
@@ -158,10 +158,9 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
    :::image type="content" source="../../../assets/images/bots/lightbot-output.png" alt-text="Screenshot shows an example of the lightbot output." lightbox="../../../assets/images/bots/lightbot-output.png":::
 
-The bot uses the GPT turbo 3.5 model to chat with Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 > [!NOTE]
-> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio Code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
+> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio Code to build a bot, see [build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
 
 ::: zone-end
 
@@ -293,10 +292,9 @@ To get started, ensure that you have the following tools:
 
 | Install | For using... |
 | --- | --- |
-| &nbsp; | &nbsp; |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, and Python build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
-| [Python ](https://www.python.org/) | Python is an interpreted, object-oriented programming language with dynamic semantics. Use versions between 3.8 to 4.0. |
+| [Python ](https://www.python.org/) | Python is an interpreted and object-oriented programming language with dynamic semantics. Use versions between 3.8 to 4.0. |
 | [Poetry](https://python-poetry.org/docs/#installing-with-pipx) | Dependency management and packaging tool for Python.|
 | [Python VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) | Provides rich support for Python on VSCode. |
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
