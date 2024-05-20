@@ -32,6 +32,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Authorization](../resources/schema/manifest-schema.md#authorization)| An app manifest property (`authorization`) that specifies and consolidates authorization related information for the app. <br> **See also**: [Permission](#p)|
 | [Microsoft Entra ID](../tabs/how-to/authentication/auth-tab-aad.md) | Microsoft’s cloud-based identity and access management service. It helps authenticated users access internal and external resources.  <br> **See also**: [System for Cross-Domain Identity Management (SCIM)](/azure/active-directory/architecture/sync-scim)|
 | [Azure resource](../toolkit/provision.md) | A service that is available through Azure that your Teams app can use for Azure deployment. It could be storage accounts, web apps, databases, and more. |
+| AI label | An AI label in an AI bot message indicates that content was generated using AI and reminds the user that the content they are interacting with was not created by a human, but by an AI system. |
 
 ## B
 
@@ -81,6 +82,11 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Custom app built for your org (LOB app) | An app created only for Teams by you or your organization.  |
 | [Custom app upload](../toolkit/publish.md#publish-to-individual-scope-or-custom-app-upload-permission) | A process where a Teams app is loaded to the Teams client to test it in the Teams environment before distributing it. |
 | [Custom Together Mode](../apps-in-teams-meetings/teams-together-mode.md)| Custom Together Mode scenes in Teams provide an immersive and engaging meeting environment. <br>**See also**: [Developer Portal for Teams](#d) |
+| Citation | A citation in a bot message is a reference to the source of information used in the message, such as web results. The citation typically includes the title of the source, the URL, and sometimes a brief snippet of the information from the source. |
+| Copilot Handoff | |
+| Custom copilot engine | |
+| Custom copilot| |
+
 
 ## D
 
@@ -117,6 +123,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product. The FRE helps users to get started with the functions, features, and benefits of the product and influences users to come back and continue using your product such as tab or bot.|
 | [Fluent UI](../concepts/design/design-teams-app-basic-ui-components.md)| Design and build your Teams app from scratch with the basic Fluent UI components. These components can work across different use cases, themes, and screen sizes. <br>**See also**: [Fluent UI React Components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)|
 | [Fully qualified domain name (FQDN)](../tabs/how-to/authentication/tab-sso-register-aad.md) | A fully qualified domain name (FQDN) represents a domain name of a host or IP address(es). |
+| Feedback button | Feedback buttons in bot messages are interactive elements that allow users to provide their reactions or opinions about the bot’s responses. They are used to collect user feedback and improve bot responses. |
 
 ## G
 
@@ -187,6 +194,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | Term | Definition |
 | --- | --- |
 | [Notification only Bot](../bots/how-to/conversations/notification-bot-in-teams.md)| Microsoft Teams Toolkit enables you to build applications that capture events and send them as notifications to a personal, group chat, or a channel in Teams. By design, if your bot doesn't respond or support any user command and is a one way bot only intended to notify users. You must set `isNotificationOnly` to true in the app manifest. <br> **See also**: [Teams Toolkit](#t)|
+| Nested app authentication (NAA) | |
 
 ## O
 
@@ -212,6 +220,7 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
 | [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It's a prerequisite to deployment. <br>**See also**: [Deploy](#d) |
 | [Publisher docs URL](../resources/schema/manifest-schema.md#publisherdocsurl)| The value of the `publisherDocsUrl` parameter is a secure HTTPS URL to the app documentation and information page that app developers choose to provide. Tenant admins get documentation about the app at this URL. Teams admin center displays the URL in the app details page.|
+| Prompt starters | |
 
 ## R
 
@@ -246,6 +255,9 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md) | A set of standards and principles for validating an app before submitting the app to Teams store. The guidelines are applicable for apps that work across Teams, Outlook, and Microsoft 365. <br>**See also**: [Teams store](#t) |
 | [Subdomain ID](../tabs/how-to/authentication/tab-sso-register-aad.md) | It's the application ID URI that you register when configuring scope for your app in Microsoft Entra ID. <br> **See also**: [SSO](#s); [Application ID URI](#a); [Application ID](#a) |
 | [Subscription offer](../resources/schema/manifest-schema.md#subscriptionoffer) | This specifies the SaaS offer associated with your app. A unique identifier that includes your Publisher ID and Offer ID, which you can find in Partner Center. <br>**See also**: [SaaS](#s)|
+| Suggested prompts | |
+| Suggested actions| |
+| Sensitivity label | A sensitivity label in a bot message enables the user to understand the confidentiality of the bot's message. For an AI bot, this label is essential for maintaining transparency and accountability in AI usage. |
 
 ## T
 
