@@ -10,15 +10,13 @@ ms.date: 05/21/2024
 
 # Build a RAG bot in Teams
 
-The advanced question-answering (Q&A) chatbots represents one of the most effective apps enabled by Large Language Models (LLMs). The chatbots respond to inquiries about specific source information using Retrieval Augmented Generation (RAG).
+Advanced Q&A chatbots are powerful apps built with the help of large language models (LLMs). The chatbots answer questions by pulling information from specific sources using a method called Retrieval Augmented Generation (RAG). The RAG architecture has two main flows:
 
-The RAG architecture has two main flows:
+1. **Data ingestion**: A pipeline for ingesting data from a source and indexing it. This usually happens offline.
 
-1. **Data Ingestion**: A pipeline for ingesting data from a source and indexing it. This usually happens offline.
+1. **Retrieval and generation**: The actual RAG chain, which takes the user query at run time and retrieves the relevant data from the index, then passes it to the model.
 
-1. **Retrieval and Generation**: The actual RAG chain, which takes the user query at run time and retrieves the relevant data from the index, then passes it to the model.
-
-Microsoft Teams enables you to build a conversational bot with RAG to create an enhanced experience to maximize the productivity. Teams Toolkit provides a series of ready to use app templates in the **Chat With Your Data** category that combines the functionalities of Azure AI search, Microsoft 365 SharePoint, and custom API as different data source and LLMs to create a conversational search experience in Teams.
+Microsoft Teams enables you to build a conversational bot with RAG to create an enhanced experience to maximize  productivity. Teams Toolkit provides a series of ready to use app templates in the **Chat With Your Data** category that combines the functionalities of Azure AI search, Microsoft 365 SharePoint, and custom API as different data source and LLMs to create a conversational search experience in Teams.
 
 ## Prerequisites
 
@@ -28,7 +26,7 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or Python build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call all in one place.|
 | [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's Generative Pretrained Transformer (GPT). If you want to host your app or access resources in Azure, you must create an Azure OpenAI service.|
 
 ## Create a new basic AI chatbot project
@@ -57,15 +55,15 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
 
-1. Select **Azure OpenAI**.
+1. Select **Azure OpenAI** or **OpenAI**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
 
-1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**.
+1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
-1. Select **Enter** to confirm your input.
+1. Select **Enter**.
 
 1. Select **Default folder**.
 
@@ -85,7 +83,7 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/rag-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
-1. Under **EXPLORER**, go to **env** > **.env.testtool.user** file.
+1. Under **EXPLORER**, go to the **env** > **.env.testtool.user** file.
 
 1. Update the following values:
 
@@ -209,7 +207,7 @@ The following diagram shows how Teams AI library provides functionalities to eas
 
     ---
 
-1. **Call AI with prompt**: In the Teams AI prompt system, you can easily inject a `DataSource` by adjusting the `augmentation.data_sources` configuration section. This connects the prompt with the `DataSource` added and the library orchestrator to inject the `DataSource` text into the final prompt. For more information, see [authorprompt](https://github.com/OfficeDev/TeamsFx/wiki/). For example, in the prompt's `config.json` file:
+1. **Call AI with prompt**: In the Teams AI prompt system, you can easily inject a `DataSource` by adjusting the `augmentation.data_sources` configuration section. This connects the prompt with the `DataSource` and the library orchestrator to inject the `DataSource` text into the final prompt. For more information, see [authorprompt](https://github.com/OfficeDev/TeamsFx/wiki/). For example, in the prompt's `config.json` file:
 
     ```json
     {
@@ -223,7 +221,7 @@ The following diagram shows how Teams AI library provides functionalities to eas
     }
     ```
 
-1. **Build response**: By default, Teams AI library replies the AI generated response as a text message to the user. If you want to customize the response, you can override the default [SAY actions](https://github.com/OfficeDev/TeamsFx/wiki/) or explicitly call the [AI Model](https://github.com/OfficeDev/TeamsFx/wiki/) to build your replies, for example, with Adaptive Cards.
+1. **Build response**: By default, Teams AI library replies to the AI generated response as a text message to the user. If you want to customize the response, you can override the default [SAY actions](https://github.com/OfficeDev/TeamsFx/wiki/) or explicitly call the [AI Model](https://github.com/OfficeDev/TeamsFx/wiki/) to build your replies, for example, with Adaptive Cards.
 
 Here's a minimal set of implementations to add RAG to your app. In general, it implements `DataSource` to inject your `knowledge` into prompt, so that AI can generate response based on the `knowledge`.
 
@@ -335,7 +333,7 @@ To build your data ingestion, follow these steps:
 
 1. **Call embedding model**: Call the embedding model APIs to create embeddings for the given inputs.
 
-1. **Store embeddings**: Store the created embeddings into a vector database, also include useful metadata and raw content for further referencing.
+1. **Store embeddings**: Store the created embeddings into a vector database. Also include useful metadata and raw content to further reference.
 
 ## Sample code
 
@@ -672,7 +670,7 @@ In this section you'll learn how to:
 ### Add document to Azure AI Search
 
 > [!Note]
-> This approach creates an end-to-end chat API called as AI model. You can also use the created index as data source, and use Teams AI library to customize the retrieval and prompt.
+> This approach creates an end-to-end chat API called as AI model. You can also use the index created earlier as a data source, and use Teams AI library to customize the retrieval and prompt.
 
 You can ingest your knowledge documents to Azure AI Search Service and create a vector index with Azure OpenAI on your data. After ingestion, you can use the index as a data source.
 
@@ -874,49 +872,49 @@ class MyDataSource(DataSource):
 
 ## Add more API for Custom API as data source
 
-You can follow the following steps to extend the Custom Copilot from Custom API template with more APIs.
+You can follow the following steps to extend the custom copilot from Custom API template with more APIs.
 
-1. Update `./appPackage/apiSpecificationFile/openapi.*`
+1. Update `./appPackage/apiSpecificationFile/openapi.*`.
 
-Copy corresponding part of the API you want to add from your spec, and append to `./appPackage/apiSpecificationFile/openapi.*`.
+    Copy corresponding part of the API you want to add from your spec and append to `./appPackage/apiSpecificationFile/openapi.*`.
 
-1. Update `./src/prompts/chat/actions.json`
+1. Update `./src/prompts/chat/actions.json`.
 
-Fill necessary info and properties for path, query and/or body for the API in the following object, and add it in the array in `./src/prompts/chat/actions.json`.
+    Update the necessary info and properties for path, query, and body for the API in the following object:
 
-```json
+    ```json
 
-{
-  "name": "${{YOUR-API-NAME}}",
-  "description": "${{YOUR-API-DESCRIPTION}}",
-  "parameters": {
-    "type": "object",
-    "properties": {
-      "query": {
+    {
+      "name": "${{YOUR-API-NAME}}",
+      "description": "${{YOUR-API-DESCRIPTION}}",
+      "parameters": {
         "type": "object",
         "properties": {
-          "${{YOUR-PROPERTY-NAME}}": {
-            "type": "${{YOUR-PROPERTY-TYPE}}",
-            "description": "${{YOUR-PROPERTY-DESCRIPTION}}",
+          "query": {
+            "type": "object",
+            "properties": {
+              "${{YOUR-PROPERTY-NAME}}": {
+                "type": "${{YOUR-PROPERTY-TYPE}}",
+                "description": "${{YOUR-PROPERTY-DESCRIPTION}}",
+              }
+              // You can add more query properties here
+            }
+          },
+          "path": {
+            // Same as query properties
+          },
+          "body": {
+            // Same as query properties
           }
-          // You can add more query properties here
         }
-      },
-      "path": {
-        // Same as query properties
-      },
-      "body": {
-        // Same as query properties
       }
     }
-  }
-}
 
-```
+    ```
 
 1. Update `./src/adaptiveCards`
 
-Create a new file with name `${{YOUR-API-NAME}}.json`, and fill in the adaptive card for the API response of your API.
+   Create a new file with name `${{YOUR-API-NAME}}.json` and fill in the Adaptive Card for the API response of your API.
 
 1. Update `./src/app/app.js`
 
@@ -944,19 +942,20 @@ app.ai.action(${{YOUR-API-NAME}}, async (context: TurnContext, state: Applicatio
 
 ## Microsoft 365 as Data Source
 
-This doc showcases a solution to query Microsoft 365 content from Microsoft Graph Search API as data source in the RAG app. To learn more about Microsoft Graph Search API, you can refer to Use the Microsoft Search API to search OneDrive and SharePoint content.
+This doc showcases a solution to query Microsoft 365 content from Microsoft Graph Search API as data source in the RAG app. To learn more about Microsoft Graph Search API, you can refer to use the Microsoft Search API to search OneDrive and SharePoint content.
 
-Prerequisite - You should create a Graph API client and grant it the Files.Read.All permission scope to access SharePoint and OneDrive files, folders, pages, and news.
+**Prerequisite**: You must create a Graph API client and grant it the `Files.Read.All` permission scope to access SharePoint and OneDrive files, folders, pages, and news.
 
-### Data Ingestion
+### Data ingestion
 
 The Microsoft Graph Search API, which can search SharePoint content, is available. Therefore, you only need to ensure your document is uploaded to SharePoint or OneDrive, with no extra data ingestion required.
 
-Note: SharePoint Server indexes a file only if its file extension is listed on the Manage File Types page. For a complete list of supported file extensions, refer to the Default crawled file name extensions and parsed file types in SharePoint Server and SharePoint in Microsoft 365.
+> [!NOTE]
+> SharePoint server indexes a file only if its file extension is listed on the manage file types page. For a complete list of supported file extensions, refer to the default indexed file name extensions and parsed file types in SharePoint server and SharePoint in Microsoft 365.
 
-### Data Source Implementation
+### Data Source implementation
 
-An example of searching for txt files in SharePoint and OneDrive as follows:
+An example of searching for the text files in SharePoint and OneDrive as follows:
 
 ```
 import {
