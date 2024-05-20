@@ -45,7 +45,7 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 ## Build and run the sample app
 
-Get started with Teams AI library using the **LightBot** sample. It enables your computer’s localhost to quickly execute a Teams AI library-based sample.
+Get started with Teams AI library using the LightBot sample. It enables your computer’s localhost to quickly execute a Teams AI library-based sample.
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
