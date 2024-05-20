@@ -202,7 +202,7 @@ You can add customizations on top of the basic application to build more complex
             }
 
             export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
-s
+
             ```
 
         1. In `src/app/app.ts`, use application turn state to initialize application.

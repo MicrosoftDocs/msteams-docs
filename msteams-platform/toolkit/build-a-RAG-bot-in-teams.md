@@ -272,7 +272,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     planner.prompts.add_data_source(MyDataSource())
   ```
 
-    ---
+---
 
 * Create `prompts/qa/skprompt.txt` file and add the following text:
 
@@ -537,7 +537,7 @@ To build your data ingestion, follow these steps:
     main().then().finally();
     ```
 
-# [Python](#tab/python2)
+# [Python](#tab/python4)
 
 * `loader.py`: Plain text as source input.
 
