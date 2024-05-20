@@ -57,7 +57,7 @@ Ensure that you adhere to the description guidelines listed in the following tab
 
 Long and short app descriptions must be clear and define the app's scope. To render an app as a plugin in Copilot for Microsoft 365, modify the app description to suit the following plugin requirements:
 
-* Long description must clearly explain the functionality and usage of the message extension plugin in Copilot for Microsoft 365. For example, Use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
+* Long description must clearly explain the functionality and usage of the message extension plugin in Copilot for Microsoft 365. For example, use Contoso cloud in Copilot for Microsoft 365 to search and summarize your tasks.
 * Short description must briefly describe the app's functionality in a natural language and can include the name of the app.
 
 The following table lists the short description examples for each category:
@@ -275,7 +275,7 @@ The following table lists the command and semantic description examples for each
 
 ### Parameter description
 
-Each message extension command supports has a corresponding `parameters' property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+Each message extension command supports has a corresponding `parameters` property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
 The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
@@ -431,7 +431,7 @@ For Copilot for Microsoft 365 in Teams, a search-based message extension must su
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
-* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters.
+* A message extension supports upto 10 commands and each command has a corresponding `parameters` property, which supports up to five parameters.
 
 <br>
 <details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
@@ -528,11 +528,11 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 ## Sample prompts
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available in the following areas within Copilot for Microsoft 365:
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use various plugins in Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available in the following areas within Copilot for Microsoft 365:
 
-* First Run Experience (FRE): When a user first installs or enables a plugin.
-* Prompt library or Copilot Lab: When a user seeks help with prompts.
-* Plugin suggestions: To guide users towards better utterances.
+* **First Run Experience (FRE)**: When a user first installs or enables a plugin.
+* **Prompt library or Copilot Lab**: When a user seeks help with prompts.
+* **Plugin suggestions**: To guide users towards better utterances.
 
 :::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Copilot.":::
 
@@ -719,7 +719,6 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
   * **ColumnSets**
 
-    * Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width.
     * Don't define `ColumnSets` with more than three columns.
     * Don’t use explicit pixel width on more than one column in the set.
     * Ensure the column doesn't exceed one-quarter of the narrowest card width, such as in a meeting chat or Copilot.
@@ -739,11 +738,11 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 ## Extend your plugin to Copilot, Office, and Word
 
-If you have a search-based message extension and your app works in Copilot for Microsoft 365 in Teams. To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
+To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
 
 * **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.19.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This ensures that your application continues to work with Bing domains. [*Mandatory*]
 
-* **Update Microsoft Entra ID app registration for SSO**: Microsoft Entra ID single sign-on (SSO) for message extensions works the same way in Bing as it does in Teams or Outlook. However, you need to add Bing’s client application identifiers to your bot's Microsoft Entra ID app registration in your tenant's App registrations portal. To do this, follow these steps: [*Optional*]
+* **Update Microsoft Entra ID app registration for SSO**: Microsoft Entra ID single sign-on (SSO) for message extensions works similarly for Teams, Outlook, and Bing. However, you must add client application identifiers to your bot's Microsoft Entra ID app registration in your tenant's App registrations portal. To do this, follow these steps: [*Optional*]
 
    1. Go to [Azure portal](https://ms.portal.azure.com/) and sign in with your sandbox tenant account.
    1. Select **App registrations**.
@@ -779,7 +778,7 @@ If you have a search-based message extension and your app works in Copilot for M
   1. Go to [Azure portal](https://ms.portal.azure.com/) and sign in with your sandbox tenant account.
   1. Select **Bot Services**.
   1. Search and select the name of your bot.
-  1. In your bot page, go to **Settings** > **Channels**.
+  1. In bot overview page, go to **Settings** > **Channels**.
   1. Under **Available Channels**, select **Microsoft 365**.
   1. Select **Apply**.
 
