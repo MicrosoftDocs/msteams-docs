@@ -91,9 +91,9 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     
         :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
     
-    1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
+    1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Test Tool (Preview)** from the dropdown list.
 
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
+      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
     Test Tool opens the bot in a webpage.
 
@@ -145,10 +145,16 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
        > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
        > * The `AssistantsPlanner` in Teams AI Library is currently in preview version.
 
-    1. By default **OpenAI** service gets selected, you can optionally enter the credentials to access OpenAI. Select **Enter**.
-
+    1.  Select **Azure OpenAI** or **OpenAI**. 
+    
+       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
+    
+    1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**.
+    
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
+    1. Select **Enter**.
+    
     1. Select **Default folder**.
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
@@ -163,7 +169,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-       Now, you've successfully created your AI chat bot project workspace
+       You've successfully created your AI chat bot project workspace
 
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent-project-output-biuld-assistant-api.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
@@ -194,9 +200,10 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
             OPENAI_ASSISTANT_ID=`<your-openai-assistant-id>`
             image
     
-    1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
-    
+    1.To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Test Tool (Preview)** from the dropdown list.
+
       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
+
 
     Test Tool opens the bot in a webpage.
 
@@ -236,17 +243,17 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
 ## Create an AI Agent using Teams AI Library
 
-### Build New
+### Build new
 
-The Teams AI Library provides a comprehensive flow that simplifies the process of building your own AI agent. The most important concepts you need to understand as follows:
+Teams AI Library provides a comprehensive flow that simplifies the process of building your own AI agent. The important concepts you need to understand as follows:
 
-* [**Actions**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTIONS.md): An action is an atomic function that is registered to the AI System. It's a fundamental building block of a plan.
+* [**Actions**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTIONS.md): An action is an atomic function that is registered to the AI system. It's a fundamental building block of a plan.
 * [**Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/PLANNER.md): The planner receives the user's request, which is in the form of a prompt or prompt template, and returns a plan to fulfill it. This is achieved by using AI to mix and match atomic functions, known as actions, that are registered to the AI system. These actions are recombined into a series of steps that complete a goal.
-* [**Action Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTION-PLANNER.md): The Action Planner is a powerful planner that uses an LLM to generate plans. It can trigger parameterized actions and send text-based responses to the user.
+* [**Action Planner**](https://github.com/microsoft/teams-ai/blob/main/getting-started/CONCEPTS/ACTION-PLANNER.md): Action Planner uses an LLM to generate plans. It can trigger parameterized actions and send text based responses to the user.
 
 ### Build with Assistants API
 
-Assistants API from OpenAI to simplify the development effort of creating an AI agent. OpenAI as a platform offers prebuilt tools such as Code Interpreter, Knowledge Retrieval and Function Calling that drastically simplifies the code you need to write for common scenarios.
+Assistants API from OpenAI simplify the development effort of creating an AI agent. OpenAI as a platform offers prebuilt tools such as Code Interpreter, Knowledge Retrieval and Function Calling that drastically simplifies the code you need to write for common scenarios.
 
    | Comparison | Build New | Build with Assistants API |
    | - | - | - |
