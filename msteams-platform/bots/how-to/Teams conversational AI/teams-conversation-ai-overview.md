@@ -98,7 +98,7 @@ Action Planner is the main component calling your Large Language Model (LLM) and
 
 Assistants API allows you to create powerful AI assistants capable of performing a variety of tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction, enabling the development of assistants that can understand and respond in a conversational manner.
 
-Follow the [quick start guide](assistant-ai-quick-start.md) to create an assistant that specializes in mathematics.
+Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
 
 ## Prompt management
 
