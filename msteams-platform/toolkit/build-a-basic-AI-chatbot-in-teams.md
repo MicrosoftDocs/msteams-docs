@@ -184,23 +184,38 @@ You can add customizations on top of the basic application to build more complex
     
         # [JavaScript](#tab/javascript1)
     
-        1. In `src/app/turnState.ts` define your temp state, user state, conversation state, and application turn state.
+        1. In `src/app/turnState.ts` define your temp state, user state, conversation state, and application turn state. If `turnState.ts` doesn't exist in your project, create it under `src/app`.
     
             ```javascript
         
-            export interface TempState extends DefaultTempState { ... }
-            export interface UserState extends DefaultUserState { ... }
+            import { DefaultConversationState, DefaultTempState, DefaultUserState, TurnState } from "@microsoft/teams-ai";
+
+            export interface TempState extends DefaultTempState {  }
+            export interface UserState extends DefaultUserState {  }
             export interface ConversationState extends DefaultConversationState {
                 tasks: Record<string, Task>;
-                }
+            }
+
+            export interface Task {
+                title: string;
+                description: string;
+            }
+
             export type ApplicationTurnState = TurnState<ConversationState, UserState, TempState>;
+s
             ```
 
         1. In `src/app/app.ts`, use application turn state to initialize application.
     
             ```javascript
         
-            const app = new Application<ApplicationTurnState>(...);
+            const storage = new MemoryStorage();
+            const app = new Application<ApplicationTurnState>({
+              storage,
+              ai: {
+                planner,
+              },
+            });
         
             ```
 

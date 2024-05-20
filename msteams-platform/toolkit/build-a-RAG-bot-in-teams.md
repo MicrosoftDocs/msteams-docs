@@ -261,16 +261,16 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
 
 # [JavaScript](#tab/javascript2)
 
-    ```javascript
+  ```javascript
     // Register your data source to prompt manager
     planner.prompts.addDataSource(new MyDataSource());
-    ```
+  ```
 
 # [Python](#tab/python2)
 
-    ```python
+  ```python
     planner.prompts.add_data_source(MyDataSource())
-    ```
+  ```
 
     ---
 
@@ -339,7 +339,7 @@ To build your data ingestion, follow these steps:
 
 ## Sample code
 
-# [JavaScript](#tab/javascript2)
+# [JavaScript](#tab/javascript4)
 
 * `loader.ts`: Plain text as source input.
 
