@@ -391,10 +391,8 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 21/05/2024 | Enhance your Copilot message extension plugin to hand off a conversation to your
-custom engine copilot. | Build message extensions > Build message extensions using Bot Framework > Search commands > Copilot handoff |
-| 21/05/2024 | Leverage AI capabilities in your bot's messages with AI label, citations, feedback buttons, and sensitivity labels. | Build bots > Bot conversations >
-Format AI bot messages |
+| 21/05/2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot. | Build message extensions > Build message extensions using Bot Framework > Search commands > Copilot handoff |
+| 21/05/2024 | Leverage AI capabilities in your bot's messages with AI label, citations, feedback buttons, and sensitivity labels. | Build bots > Bot conversations > Format AI bot messages |
 | 21/05/2024 | Enhance your bot conversations through prompt suggestions to create an engaging and insightful user experience. | Build bots > Bot conversations > Create prompt suggestions |
 
 ## Developer preview
