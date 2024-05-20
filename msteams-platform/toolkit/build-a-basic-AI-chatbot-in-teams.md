@@ -10,9 +10,7 @@ ms.date: 05/21/2024
 
 # Build a basic AI chatbot
 
-The AI chatbot template showcases a bot app, similar to ChatGPT, that responds to user questions and enables users to interact with the AI bot in  Microsoft Teams.
-
-[Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md) is used to build the app template, providing the capabilities to create AI-based Teams applications.
+The AI chatbot template showcases a bot app, similar to ChatGPT, that responds to user questions and allows users to interact with the AI bot in  Microsoft Teams. [Teams AI library](../bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md) is used to build the app template, providing the capabilities to create AI-based Teams applications.
 
 ## Prerequisites
 
@@ -38,7 +36,7 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/custom-copilot.png" alt-text="Screenshot shows the option to select custom Copilot as the new project to create.":::
 
-1. Select **Basic AI Chatbot**.
+1. Select **Basic AI hatbot**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/basic-ai-chatbot.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
 
@@ -54,6 +52,8 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
+1. Select **Enter**.
+
 1. Select **Default folder**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
@@ -68,7 +68,7 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/application-name.png" alt-text="Screenshot shows the option to enter the suitable name.":::
 
-   Now, you created your AI chat bot project workspace. 
+You've successfully created your AI chat bot project workspace. 
 
      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-chatbot-project-output.png" alt-text="Screenshot shows the ai chatbot created and readme file is available.":::
 
@@ -76,13 +76,13 @@ The AI chatbot template showcases a bot app, similar to ChatGPT, that responds t
 
 1. Update the following details:
 
-    * Azure OpenAI key `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
-    * Endpoint `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
-    * Deployment name `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
+    * `SECRET_AZURE_OPENAI_API_KEY=<your-key>`
+    * `AZURE_OPENAI_ENDPOINT=<your-endpoint>`
+    * `AZURE_OPENAI_DEPLOYMENT_NAME=<your-deployment>`
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/env-testtool-user.png" alt-text="Screenshot shows the details updated in the env file.":::
 
-1. Select **F5** or from the left pane, select **RUN and DEBUG** (Ctrl+Shift+D) and select **Debug in Test Tool (Preview)** from the dropdown list.
+1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Test Tool (Preview)** from the dropdown list.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
@@ -115,11 +115,11 @@ Test Tool opens the bot in a webpage.
 
 | File                                 | Contents                                           |
 | - | - |
-| `.vscode`    | Visual Studio Code files for debugging                          |
-| `appPackage` | Templates for the Teams application manifest        |
-| `env`        | Environment files                                   |
-| `infra`      | Templates for provisioning Azure resources          |
-| `src`        | The source code for the application                 |
+| `.vscode`    | Visual Studio Code files for debugging.                          |
+| `appPackage` | Templates for the Teams application manifest.        |
+| `env`        | Environment files.                                   |
+| `infra`      | Templates for provisioning Azure resources.          |
+| `src`        | The source code for the application.                 |
 |`teamsapp.yml`|This is the main Teams Toolkit project file. The project file defines two primary things:  Properties and configuration Stage definitions. |
 |`teamsapp.local.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging.|
 |`teamsapp.testtool.yml`|This overrides `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
@@ -135,7 +135,7 @@ Test Tool opens the bot in a webpage.
 
 The Teams-AI library provides a typical flow for building an intelligent chatbot with AI capabilities as follows:
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/teams-ai-chatbot-process.png" alt-text="Screenshot shows the typical flow of AI chatbot.":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/teams-ai-chatbot-process.png" alt-text="Screenshot shows the typical flow of AI chatbot."Lightbox="../assets/images/teams-toolkit-v2/custom-copilot/teams-ai-chatbot-process.png":::
 
 1. **TurnContext**: The turn context object provides information about the activity, such as the sender and receiver, the channel, and other data needed to process the activity.
 
