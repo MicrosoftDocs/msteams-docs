@@ -85,7 +85,7 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
 
 1. After the dependencies are installed, select **File** > **Open Folder**.
 
-1. Go to **teams-ai > js > samples> 04.ai-apps > d.assistants-mathBot** and select **Select Folder**. All the files for the chef bot sample are listed under the **EXPLORER** section in Visual Studio Code.
+1. Go to **teams-ai > js > samples > 04.ai-apps > d.assistants-mathBot** and select **Select Folder**. All the files for the chef bot sample are listed under the **EXPLORER** section in Visual Studio Code.
 
 1. Under **EXPLORER**, duplicate the `sample.env` file  and update the duplicate file to `.env`.
 
@@ -125,7 +125,7 @@ Get started with Teams AI library using the **mathBot** sample. It enables your 
 
 1. Go to `infra` folder and comment out lines from [69 to 76](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L69-L76) and uncomment lines from [77 to 80](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L77-L80) in `azure.bicep` file.
 
-1. Go to `infra>azure.parameters.json` file and replace the lines from 20 to 25 with the following code:
+1. Go to `infra > azure.parameters.json` file and replace the lines from 20 to 25 with the following code:
 
    ```text
       "openAIKey": {
