@@ -446,9 +446,9 @@
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
-    - name: Format your AI bot messages
+    - name: Bot messages with AI-generated content
       href: bots/how-to/format-ai-bot-messages.md
-      displayName: AI label, citations, feedback buttons, sensitivity label
+      displayName: AI label, citations, feedback buttons, sensitivity label, Powered by AI UX Kit
     - name: Update and delete messages sent from bot
       href: bots/how-to/update-and-delete-bot-messages.md
     - name: Request headers of the bot

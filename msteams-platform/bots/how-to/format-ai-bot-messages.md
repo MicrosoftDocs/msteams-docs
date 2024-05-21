@@ -1,11 +1,11 @@
 ---
-title: Format your AI bot messages
+title: Bot messages with AI-generated content
 description: Learn how to format your bot with an AI label, sensitivity labels, citations, and feedback buttons built using Teams AI library or Bot Framework SDK.
 ms.topic: conceptual
 ms.localizationpriority: medium
 ---
 
-# Format your AI bot messages
+# Bot messages with AI-generated content
 
 If you’re building a conversational bot, you can leverage functionalities such as citations, feedback buttons, and sensitivity labels for better user engagement. For AI-powered bots, you can include an AI label to indicate that the bot message is AI-generated. This promotes a sense of responsibility and enhances transparency and trust with users.
 
@@ -74,12 +74,10 @@ Citations to your bot message include in-text citations, details to citation ref
 * **Details to citation reference** include the title, keywords, an abstract, hyperlink, and sensitivity information. References appear as pop-ups for each in-text citation.
 * **Sensitivity labels to citations** indicate the confidentiality of the citation content referenced and aren't added automatically. To add sensitivity labels for citations, see [modify PredictedSayCommand](#modify-predictedsaycommand).
 
-Citations don't appear as Adaptive Cards in bot messages. After you enable citations, Teams automatically adds them to the bot messages.
-
 > [!NOTE]
 >
 > * A maximum of 10 citations are displayed in a message.
-> * You can add citations in the `entities` field, even if they aren’t directly referenced in the text of the message.
+> * Adaptive Cards aren't rendered in the citation pop-up area. However, Adaptive Cards can be rendered in the bot message.
 
 ### Add citations
 
@@ -99,7 +97,7 @@ export function sayCommand<TState extends TurnState = TurnState>(feedbackLoopEna
             content = content.split('\n').join('<br>');
         }
 
-        // If the response from AI includes citations, those citations will be parsed and added to the SAY command.
+        // If the response from AI includes citations, those citations are parsed and added to the SAY command.
         let citations: ClientCitation[] | undefined = undefined;
 
         if (data.response.context && data.response.context.citations.length > 0) {
@@ -183,9 +181,8 @@ If you're using Bot Framework SDK to build your bot, include `citation` under th
 | `citation.position` | Number | Yes | Specifies the position of the citation number |
 | `citation.appearance` | Object | Yes | Contains information about the appearance of the citation |
 | `citation.appearance.@type` | String | Yes | Specifies the type of the content referenced |
-| `citation.appearance.name` | String | Yes | Denotes the title of the content referenced |
-| `citation.appearance.url` | String | Yes | Denotes the URL of the content referenced |
-| `encodingFormat` | | | |
+| `citation.appearance.name` | String | No | Denotes the title of the content referenced |
+| `citation.appearance.url` | String | No | Denotes the URL of the content referenced |
 
 After you enable citations, the bot message includes the in-text citations and the reference. The in-text citations display the reference details when users hover over the citation.
 
@@ -388,11 +385,11 @@ app.ai.action<PredictedSayCommand>(AI.SayCommandActionName, async (context, stat
 
 To learn more about the `PredictedSayCommand`, see [PredictedSayCommand interface](/javascript/api/%40microsoft/teams-ai/predictedsaycommand?view=msteams-client-js-latest&preserve-view=true).
 
-## Code samples
+## Code sample
 
-| Description | .NET | Manifest |
+| Description | Node.js |
 |:--|--|---|---|
-| This sample app provides a bot with an AI label, feedback buttons, sensitivity label, and citations in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples) |
+| This sample app provides a bot with an AI label, feedback buttons, sensitivity label, and citations in messages. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-conversation/nodejs) |
 
 ## See also
 
