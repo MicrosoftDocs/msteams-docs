@@ -804,11 +804,7 @@ Specifies the install scope defined for this app by default. The defined scope i
 
 **Optional** &ndash; Object
 
-When a group install scope is selected, it defines the default capability when the user installs the app. Options are:
-
-* `team`
-* `groupChat`
-* `meetings`
+When a group install scope is selected, it defines the default capability when the user installs the app.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -981,7 +977,7 @@ The `extensions` property specifies Outlook Add-ins within an app manifest and s
 |`runtimes`| Array | 20 | | Configures the set of runtimes and actions that can be used by each extension point. For more information, see [runtimes in Office Add-ins](/office/dev/add-ins/testing/runtimes). |
 |`ribbons`| Array | 20 | | Defines the ribbons extension point. |
 |`autoRunEvents`| Array | 10 | | Defines the event-based activation extension point. |
-|`alternates`| Array | | | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
+|`alternates`| Array | | 10 | Specifies the relationship to alternate existing Microsoft 365 solutions. It's used to hide or prioritize add-ins from the same publisher with overlapping functionality. |
 |`audienceClaimUrl`| String | 2048 characters | | Specifies the URL for your extension and is used to validate Exchange user identity tokens. For more information, see [inside the Exchange identity token](/office/dev/add-ins/outlook/inside-the-identity-token)|
 
 For more information, see [Office Add-ins manifest for Microsoft 365](/office/dev/add-ins/develop/unified-manifest-overview).
@@ -1187,7 +1183,7 @@ Defines the icon properties of a given dashboard card.
 |`iconUrl`| String | 2048 characters | | Location of the icon for the card, to be displayed in the toolbox and card bar. |
 |`officeUIFabricIconName`| String | 255 characters | | Office UI Fabric or Fluent UI icon's friendly name for the card. This value is used if `iconUrl` is not specified. |
 
-### dashboardCards.dashboardCard.contentSource
+### dashboardCards.dashboardCard.contentSource 
 
 Defines the content source of a given dashboard card.
 
