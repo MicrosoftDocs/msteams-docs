@@ -12,7 +12,7 @@ ms.date: 05/21/2024
 
 An AI agent in Microsoft Teams is a conversational chatbot that uses Large Language Models (LLMs) to interact with users. It understands user intentions and selects a sequence of actions, enabling the chatbot to complete common tasks.
 
-:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/build-ai-agent.png" alt-text="Screenshot shows the process of build AI agent bot requests and responses. "Lightbox="../assets/images/teams-toolkit-v2/custom-copilot/build-ai-agent.png":::
+:::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/build-ai-agent.png" alt-text="Screenshot shows the process of build AI agent bot requests and responses."Lightbox="../assets/images/teams-toolkit-v2/custom-copilot/build-ai-agent.png":::
 
 ## Prerequisites
 
