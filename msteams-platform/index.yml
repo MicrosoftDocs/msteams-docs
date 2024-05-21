@@ -169,7 +169,7 @@ conceptualContent:
       links:
         - url: https://aka.ms/M365PlatformAnnouncement
           itemType: whats-new
-          text: Microsoft Learn Blog
+          text: Microsoft Teams announcements
         - url: https://developer.microsoft.com/microsoft-teams/blogs/
           itemType: overview
           text: Microsoft Teams developer blog
