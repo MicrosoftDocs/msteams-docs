@@ -144,7 +144,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
        > [!NOTE]
        >
        > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
-       > * The `AssistantsPlanner` in Teams AI Library is currently in preview version.
+       > * The `AssistantsPlanner` in Teams AI Library is in preview.
 
     1. Select **Azure OpenAI** or **OpenAI**. 
     
@@ -184,24 +184,24 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
         > 
         > After creation, you can change and manage your assistants on [OpenAI](https://platform.openai.com/assistants).
         
-        1. Open terminal and run command `npm install` to install all dependency packages
+        1. Open terminal and run the following command to install all dependency packages:
             ```
             > npm install
             ```
-        1. After `npm install` completed, run command `npm run assistant:create -- <your-openai-api-key>`
+        1. Run the following command to run assistant:
             ```
-            > npm run assistant:create -- xxxxxx
+            > npm run assistant:create -- <your-openai-api-key>
             ```
-        1. The above command outputs something like "*Created a new assistant with an ID of: **asst_xxx...***"
+        1. You'll get an output as **Created a new assistant with an ID of: **asst_xxx...** **
         
-    1. Go to **Visual Studio Code**, Under **EXPLORER**, select **env** > **.env.*.users** file.
+    1. Go to **Visual Studio Code**, Under **EXPLORER**, select the **env** > **.env.*.users** file.
         
       1. Update the following details:
-            SECRET_OPENAI_API_KEY=`<your-openai-api-key>`
-            OPENAI_ASSISTANT_ID=`<your-openai-assistant-id>`
-            image
+          * `SECRET_OPENAI_API_KEY=<your-openai-api-key>`
+          * `OPENAI_ASSISTANT_ID=<your-openai-assistant-id>`
+            
     
-    1.To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Test Tool (Preview)** from the dropdown list.
+    1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Test Tool (Preview)** from the dropdown list.
 
       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
@@ -326,7 +326,7 @@ In `src/prompts/planner/config.json`, configure `augmentation.augmentation_type`
 
 ### Customize assistant creation
 
-The file src/creator.ts creates a new OpenAI Assistant. You can customize the assistant creation by updating the parameters including instruction, model, tools, and functions.
+The file src/creator.ts creates a new OpenAI Assistant. You can customize the assistant by updating the parameters including instruction, model, tools, and functions.
 
 ### Build with Assistants API add functions
 

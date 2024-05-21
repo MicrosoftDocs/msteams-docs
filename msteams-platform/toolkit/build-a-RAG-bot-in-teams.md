@@ -70,9 +70,9 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
     To change the default location, follow these steps:
 
-    1. Select **Browse**.
-    1. Select the location for the project workspace.
-    1. Select **Select Folder**.
+      1. Select **Browse**.
+      1. Select the location for the project workspace.
+      1. Select **Select Folder**.
 
 1. Enter an app name for your app and then select the **Enter** key.
 
@@ -690,7 +690,7 @@ You can ingest your knowledge documents to Azure AI Search Service and create a 
 
 1. Select **Next**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/select-add-data-source.png" alt-text="Screenshot shows the option to add data source.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/select-add-data-source.png" alt-text="Screenshot shows the option to select add data source.":::
 
 1. Update the required fields. Select **Next**.
 
