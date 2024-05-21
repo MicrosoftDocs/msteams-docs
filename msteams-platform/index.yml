@@ -7,7 +7,7 @@ brand: teams
 
 metadata:
   title: Microsoft Teams Platform developer documentation # Required; page title displayed in search results. Include the brand. < 60 chars.
-  description: The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, make decisions faster, provide focus by reducing context switching, and create collaboration around existing content and workflows. # Required; article description that is displayed in search results. < 160 chars.
+  description: The Microsoft Teams developer platform makes it easy for developers to integrate their own apps and services to improve productivity, provide focus by reducing context switching, and create collaboration around existing content and workflows. # Required; article description that is displayed in search results. < 160 chars.
   ms.service: msteams
   ms.topic: hub-page # Required
   ms.collection: collection # Optional; Remove if no collection is used.
@@ -124,7 +124,7 @@ conceptualContent:
           text: Monetize your Teams app with a transactable SaaS offer
         - url: /microsoftteams/platform/concepts/authentication/authentication
           itemType: concept
-          text: User authentication and SSO
+          text: User authentication and single sign-on (SSO)
         - url: /microsoftteams/platform/samples/teams-low-code-solutions
           itemType: how-to-guide
           text: Build low-code Teams apps, bots, and flows with Microsoft Power Platform
