@@ -76,7 +76,7 @@ Citations to your bot message include in-text citations, details to citation ref
 
 > [!NOTE]
 >
-> * You can't add more than 10 citations per message.
+> * A maximum of 10 citations are displayed in a message.
 > * You can provide additional citations in the `entities` field, even if they aren’t directly referenced in the text of the message.
 
 ### Add citations
@@ -181,6 +181,7 @@ If you're using Bot Framework SDK to build your bot, include `citation` under `e
 | `citation` | | No | Denotes the citation number for the content referenced |
 | `citation.@type` | | No | |
 | `citation.appearance.@type` | | No | |
+| `encodingFormat` | | | |
 | `citation.appearance.usageInfo.@type` | | No | |
 | `citation.appearance.usageInfo.name` | | No | Denotes the sensitivity label |
 | `citation.appearance.usageInfo.description` | | No | Denotes the disclaimer of the sensitivity label |
