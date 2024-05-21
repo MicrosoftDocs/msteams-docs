@@ -25,13 +25,13 @@ The following code illustrates how to navigate to a specific page:
 
 ```js
 if (pages.currentApp.isSupported()) {
-    const navPromise = pages.currentApp.navigateTo({pageId: <pageId>, subPageId:<subPageId>});
+    const navPromise = pages.currentApp.navigateTo({pageId:'<pageId>', subPageId:'<subPageId>'});
     navPromise.
         then((result) => {/*Successful navigation*/}).
         catch((error) => {/*Failed navigation*/});
 }
 else {/*Handle situation where capability isn't supported*/
-    const navPromise = pages.navigateToApp({appId: <appId>, pageId: <pageId>});
+    const navPromise = pages.navigateToApp({appId:'<appId>', pageId:'<pageId>'});
     navPromise.
         then((result) => {/*Successful navigation*/}).
         catch((error) => {/*Failed navigation*/});
