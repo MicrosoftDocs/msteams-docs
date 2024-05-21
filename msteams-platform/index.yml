@@ -167,15 +167,18 @@ conceptualContent:
     # Card
     - title: Community
       links:
+        - url: https://aka.ms/M365PlatformAnnouncement
+          itemType: whats-new
+          text: Microsoft Learn Blog
         - url: https://developer.microsoft.com/microsoft-teams/blogs/
           itemType: overview
           text: Microsoft Teams developer blog
+        - url: https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog
+          itemType: overview
+          text: Microsoft Learn Blog
         - url: https://aka.ms/microsoftteamscommunitycall
           itemType: overview
           text: Microsoft Teams community calls
-        - url: https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog
-          itemType: whats-new
-          text: Announcements
         - url: /microsoftteams/platform/feedback
           itemType: overview
           text: Microsoft Teams Developer Community and response
