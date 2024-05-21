@@ -495,7 +495,7 @@
     items:
       - name: Overview
         href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
-        displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt 
+        displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API
       - name: Core capabilities
         href: bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md
       - name: Get started
