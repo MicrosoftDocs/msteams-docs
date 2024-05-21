@@ -68,9 +68,9 @@ Although, Teams AI library is built to use Open AI’s GPT model, you have the f
 
 Teams AI library allows you to create ethical and responsible conversational apps by:
 
-- Moderation hooks: To regulate bot responses against any moderation API.
-- Conversation sweeping: To monitor conversations and intervene when the conversation goes astray through proactive detection and remediation.
-- Feedback loops: To evaluate the performance of the bot for high quality conversations and enhance user experience.
+* Moderation hooks: To regulate bot responses against any moderation API.
+* Conversation sweeping: To monitor conversations and intervene when the conversation goes astray through proactive detection and remediation.
+* Feedback loops: To evaluate the performance of the bot for high quality conversations and enhance user experience.
 
 Teams AI library offers support from low code to complex scenarios. The library extends capabilities with AI constructs to build natural language modeling, scenario-specific user intent, personalization, and automated context-aware conversations.
 
@@ -93,6 +93,15 @@ The bot framework using Teams AI library requires the following:
 ## Action Planner
 
 Action Planner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
+
+## Assistants API
+
+> [!NOTE]
+> Teams AI library supports both OpenAI and Azure OpenAI Assistants API in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) for you to get started with building intelligent assistants.
+
+Assistants API allows you to create powerful AI assistants capable of performing a variety of tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction, enabling the development of assistants that can understand and respond in a conversational manner.
+
+Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
 
 ## Prompt management
 
@@ -150,6 +159,5 @@ The following table lists the updates to the Teams AI library:
 
 ## Next step
 
-> [!div class="nextstepaction"] 
+> [!div class="nextstepaction"]
 > [Teams AI library capabilities](how-conversation-ai-core-capabilities.md)
-
