@@ -54,15 +54,9 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
     
-    1. Select **Azure OpenAI** or **OpenAI**. 
-    
-       :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
-    
-    1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
+    1. By default **OpenAI** service gets selected, you can optionally enter the credentials to access OpenAI. Select **Enter**.
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
-
-    1. Select **Enter**.
     
     1. Select **Default folder**.
 
