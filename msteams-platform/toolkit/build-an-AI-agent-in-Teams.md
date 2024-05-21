@@ -42,7 +42,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/ai-agent.png" alt-text="Screenshot shows the option to select app features using AI library list.":::
 
-1. To build an app, follow either of the building agent steps:
+1. To build an app, select any of the following options:
     
     # [Build New](#tab/buildnew)
     
@@ -58,7 +58,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
     
-    1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**.
+    1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.Yes
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
@@ -150,7 +150,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
     
-    1. Based on your service selection, you can optionally enter the credentials to access OpenAI or Azure OpenAI. Select **Enter**.
+    1. Enter your **Azure OpenAI** or **OpenAI** credentials based on the service you select. Select **Enter**.
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
