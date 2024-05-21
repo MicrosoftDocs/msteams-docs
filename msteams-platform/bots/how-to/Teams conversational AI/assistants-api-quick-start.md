@@ -20,7 +20,7 @@ To get started, ensure that you have the following tools:
 | Install | For using... |
 | --- | --- |
 | &nbsp; | &nbsp; |
-| [Visual Studio Code](https://code.visualstudio.com/download) or [Visual Studio](https://visualstudio.microsoft.com/downloads/) | JavaScript, TypeScript, or C Sharp build environments. Use the latest version. |
+| [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or C Sharp build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
@@ -30,10 +30,10 @@ To get started, ensure that you have the following tools:
 | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
 
 <br/>
-If you ran the samples before or encounter a runtime error, follow these steps to start fresh:
+If you've already run the samples before or encountered a runtime error, follow these steps to start fresh:
 
 * Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
-* If you don’t want Teams Toolkit to generate the appId and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
+* If you don’t want Teams Toolkit to generate the app ID and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
 * Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
 
 Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
@@ -122,7 +122,7 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
 
 1. Go to the `infra` folder and comment out lines from [69 to 76](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L69-L76) and uncomment lines from [77 to 80](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L77-L80) in `azure.bicep` file.
 
-1. Go to the `infra > azure.parameters.json` file and replace the lines from [20 to 25](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.parameters.json#L20-L25) with the following code:
+1. Go to the `infra` > `azure.parameters.json` file and replace the lines from [20 to 25](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.parameters.json#L20-L25) with the following code:
 
    ```text
       "openAIKey": {
@@ -155,7 +155,7 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
 
 
 > [!NOTE]
-> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio Code to build a bot, see [Build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
+> If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio Code to build a bot, see [build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
 
 ## Additional tools
 
