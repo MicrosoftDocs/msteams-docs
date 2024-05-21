@@ -99,7 +99,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
       ```
    1. Go to the `infra` folder and ensure that the following lines in the `azure.bicep` file are commented out:
 
-          ```bicep
+      ```bicep
           // {
           //   name: 'AZURE_OPENAI_KEY'
           //   value: azureOpenAIKey
@@ -108,7 +108,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
           //   name: 'AZURE_OPENAI_ENDPOINT'
           //   value: azureOpenAIEndpoint
           // }
-          ```
+      ```
 
    # [Azure OpenAI](#tab/Azure-OpenAI)
 
@@ -135,12 +135,12 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
    1. Go to the `infra` folder and ensure that the following lines in the `azure.bicep` file are commented out:
 
-          ```bicep
+      ```bicep
           // {
           //  name: 'OPENAI_KEY'
           //  value: openAIKey
           // }
-          ```
+      ```
 
    1. Go to `infra` > `azure.parameters.json` and replace the lines from [20 to 22](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/infra/azure.parameters.json#L20-L22) with the following code:
 
