@@ -268,8 +268,7 @@ Here's a minimal set of implementations to add RAG to your app. In general, it i
     ```python
       planner.prompts.add_data_source(MyDataSource())
     ```
-
-  ---
+   ---
 
 * Create the `prompts/qa/skprompt.txt` file and add the following text:
 
@@ -927,29 +926,27 @@ Follow these steps to extend the custom copilot from Custom API template with mo
 
    Create a new file with name `${{YOUR-API-NAME}}.json` and fill in the Adaptive Card for the API response of your API.
 
-1. Update `./src/app/app.js`.
+1. Update the`./src/app/app.js` file.
 
    Add following code before `module.exports = app;`:
 
-  ```javascript
-
-  app.ai.action(${{YOUR-API-NAME}}, async (context: TurnContext, state: ApplicationTurnState, parameter: any) => {
-    const client = await api.getClient();
-    
-    const path = client.paths[${{YOUR-API-PATH}}];
-    if (path && path.${{YOUR-API-METHOD}}) {
-      const result = await path.${{YOUR-API-METHOD}}(parameter.path, parameter.body, {
-        params: parameter.query,
-      });
-      const card = generateAdaptiveCard("../adaptiveCards/${{YOUR-API-NAME}}.json", result);
-      await context.sendActivity({ attachments: [card] });
-    } else {
-      await context.sendActivity("no result");
-    }
-    return "result";
-  });
-
-  ```
+    ```javascript
+    app.ai.action(${{YOUR-API-NAME}}, async (context: TurnContext, state: ApplicationTurnState, parameter: any) => {
+      const client = await api.getClient();
+      
+      const path = client.paths[${{YOUR-API-PATH}}];
+      if (path && path.${{YOUR-API-METHOD}}) {
+        const result = await path.${{YOUR-API-METHOD}}(parameter.path, parameter.body, {
+          params: parameter.query,
+        });
+        const card = generateAdaptiveCard("../adaptiveCards/${{YOUR-API-NAME}}.json", result);
+        await context.sendActivity({ attachments: [card] });
+      } else {
+        await context.sendActivity("no result");
+      }
+      return "result";
+    });
+    ```
 
 ## Microsoft 365 as Data Source
 
@@ -968,7 +965,7 @@ The Microsoft Graph Search API, which can search SharePoint content, is availabl
 
 An example of searching for the text files in SharePoint and OneDrive is as follows:
 
-```
+```javascript
 import {
   DataSource,
   Memory,
@@ -1064,7 +1061,6 @@ export class GraphApiSearchDataSource implements DataSource {
     );
   }
 }
-
 ```
 
 ## See also
