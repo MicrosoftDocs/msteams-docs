@@ -161,13 +161,13 @@ Command description maps user intent and utterance to search command inside a pl
 
 #### Semantic description
 
-The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
 The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
 We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
-* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
+* Avoid instructional phrases such as “if the user says X,” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
 * Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
 * Avoid grammar and punctuation errors. *[Mandatory fix]*
 * Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
@@ -277,7 +277,7 @@ The following table lists the command and semantic description examples for each
 
 Each message extension command supports has a corresponding `parameters` property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
-The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
 A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for each category:
 
@@ -743,7 +743,7 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
-* Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
+* Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. *[Mandatory fix]*
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot for Microsoft 365 in Teams app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
 
@@ -846,13 +846,13 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
   </details>
 
-* Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes, such as, data modified, author, status, and flags. [*Mandatory*]
+* Apart from the app logo, title, thumbnail, and title of the information, the data in the Adaptive Card must represent at least two pieces of information. You can identify the fields from the most frequently searched attributes, such as, data modified, author, status, and flags. *[Mandatory fix]*
 
   :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
-* Adaptive Card must be presentable in desktop, web, and mobile (iOS and Android). [*Mandatory*]
+* Adaptive Card must be presentable in desktop, web, and mobile (iOS and Android). *[Mandatory fix]*
 
-* An Adaptive Card must contain at least one action button, but not more than four action buttons. [*Mandatory*]
+* An Adaptive Card must contain at least one action button, but not more than four action buttons. *[Mandatory fix]*
 
   > [!NOTE]
   > Action types `imBack`, `messageBack` aren't supported in a data object.
@@ -866,7 +866,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
   :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Copilot for Microsoft 365 in Teams.":::
 
-* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. [*Mandatory*]
+* Adaptive Cards must not display a horizontal scroll. To avoid horizontal scrolls, don’t specify a fixed width. *[Mandatory fix]*
 
   * **ColumnSets**
 
@@ -878,7 +878,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   * **Sizing images**
   
     * When using an image inside a `ColumnSet` with more than one Column, specify the size of the column containing an image rather than the image itself.
-    * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `"auto"` or `"stretch"`.
+    * If the image isn’t in a `ColumnSet`, we recommend you to set its size to `auto` or `stretch`.
     * If you want to define explicit width in pixels, ensure that they don't exceed 3/4 of the narrowest card width.
     * If you want to define explicit size in pixels, define it for the width or height. Setting explicit size for any one parameter preserves the image's aspect ratio.
     * We recommend you to set the width of the image, though some scenarios might allow for exceptions.
@@ -889,11 +889,11 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
 ## Extend your plugin to Copilot
 
-To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
+Copilot for Microsoft 365 is available in Teams, Outlook, and Bing. To enable your message extensions as a plugin in Copilot for Microsoft 365, we recommend you to implement the following best practices:
 
-* **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.19.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This ensures that your application continues to work with Bing domains. [*Mandatory*]
+* **Upgrade TeamsJS Version**: Upgrade your [TeamsJS version to 2.19.0](https://www.npmjs.com/package/@microsoft/teams-js) by installing the `@microsoft/teams-js` package from npm. This ensures that your application continues to work with Bing domains. *[Mandatory fix]*
 
-* **Update Microsoft Entra ID app registration for SSO**: Microsoft Entra ID single sign-on (SSO) for message extensions works similarly for Teams, Outlook, and Bing. However, you must add client application identifiers to your bot's Microsoft Entra ID app registration in your tenant's App registrations portal. To do this, follow these steps: [*Optional*]
+* **Update Microsoft Entra ID app registration for SSO**: Microsoft Entra ID single sign-on (SSO) for message extensions works similarly for Teams, Outlook, and Bing. However, you must add client application identifiers to your bot's Microsoft Entra ID app registration in your tenant's App registrations portal. To do this, follow these steps: *[Optional]*
 
    1. Go to [Azure portal](https://ms.portal.azure.com/) and sign in with your sandbox tenant account.
    1. Select **App registrations**.
@@ -914,14 +914,13 @@ To enable your message extensions as a plugin in Copilot for Microsoft 365, we r
       | Outlook Web Access | bc59ab01-8403-45c6-8796-ac3ef710b3e3 |
       |Outlook mobile | 27922004-5251-4030-b22d-91ecd9a37ea4 |
 
-* **Configure Content Security Policy Headers**: If your app uses Content Security Policy (CSP) headers, make sure to allow the following frame-ancestors in your CSP headers: [*Mandatory*]
+* **Configure Content Security Policy Headers**: If your app uses Content Security Policy (CSP) headers, make sure to allow the following frame-ancestors in your CSP headers: *[Mandatory fix]*
 
    | Microsoft 365 app host | frame-ancestor permission |
    | --- | --- |
    | Bing | edgeservices.bing.com, <www.bing.com>, <www.staging-bing-int.com>, copilot.microsoft.com |
-   |App Copilots| microsoftonline.com <br> sharepoint-df.com <br> sharepoint.com<br>sharepointonline.com<br>spgrid.com<br>spolabs.com<br>spoppe.com<br>sposites.com<br>partner.microsoftonline.cn<br>sharepoint.cn<br>sharepoint.de<br>myus.msftsptest.com<br>my.microsoftpersonalcontentppe.com<br>wopi.onedrive.com<br>wopi.onedrive-tst.com<br>outlook.office.com<br>outlook-sdf.office.com<br>outlook.live.com<br>outlook-sdf.live.com<br>outlook-tdf.live.com<br>sdfpilot.live.com<br>outlook.office365.us<br>outlook.office365.com<br>exchangelabs.live-int.com<br>office-int.com<br>officeapps.live-int.com<br>officeapps.live.com<br>officeapps.live-int.com<br>officeapps-df.live.com<br>fa000000125.resources.office.net<br>fa000000129.resources.office.net<br>fa000000124.resources.office.net<br>fa000000128.resources.office.net |
 
-* **Ensure that your registered bot is connected to Microsoft 365 channel**: [*Mandatory*].
+* **Ensure that your registered bot is connected to Microsoft 365 channel**: *[Mandatory fix]*
   1. Go to [Azure portal](https://ms.portal.azure.com/) and sign in with your sandbox tenant account.
   1. Select **Bot Services**.
   1. Search and select the name of your bot.
@@ -949,11 +948,11 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 
 | Criteria | Fulfillment |
 |---|---|
-| Manifest version | App manifest version must be 1.17 or later. [*Mandatory*] |
-|Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Mandatory*]|
-| Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
-| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Mandatory*] |
+| Manifest version | App manifest version must be 1.17 or later. *[Mandatory fix]* |
+|Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). *[Mandatory fix]*|
+| Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. *[Mandatory fix]* |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1000 times, it must provide a meaningful response 999 times. *[Mandatory fix]* |
+| Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. *[Mandatory fix]* |
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | Content Security Policy |If applicable, modify your Content Security Policy (CSP) headers. [*Recommended*] |
 
