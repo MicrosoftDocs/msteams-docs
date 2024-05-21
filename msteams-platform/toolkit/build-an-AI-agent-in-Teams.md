@@ -93,7 +93,7 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
     
     1. To debug your app, select the **F5** key or from the left pane, select **Run and Debug (Ctrl+Shift+D)** and then select **Debug in Test Tool (Preview)** from the dropdown list.
 
-      :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
+         :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/debug-test-tool.png" alt-text="Screenshot shows the selection of debugging option from the list of options.":::
 
     Test Tool opens the bot in a webpage.
 
@@ -142,10 +142,11 @@ An AI agent in Microsoft Teams is a conversational chatbot that uses Large Langu
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/language-javascript.png" alt-text="Screenshot shows the option to select the programming language.":::
 
        > [!NOTE]
+       >
        > * If the building agent is selected as Build with Assistants API, Azure OpenAI service has not provided support for Assistants API.
        > * The `AssistantsPlanner` in Teams AI Library is currently in preview version.
 
-    1.  Select **Azure OpenAI** or **OpenAI**. 
+    1. Select **Azure OpenAI** or **OpenAI**. 
     
        :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-openai.png" alt-text="Screenshot shows the option to select the LLM.":::
     
