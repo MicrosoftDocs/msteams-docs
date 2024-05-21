@@ -11,7 +11,7 @@ ms.date: 12/06/2022
 
 # Teams AI library quick start guide
 
-Get started with Teams AI library using the LightBot sample, which is designed to help you through the process of creating apps that can control lights, such as turning them on and off using Teams AI Library. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
+Get started with Teams AI library using the LightBot sample, which is designed to help you through the process of creating apps that can control lights, such as turning them on and off using Teams AI library. The bot uses the gpt-3.5-turbo model to chat with Microsoft Teams users and respond in a polite and respectful manner, staying within the scope of the conversation.
 
 ::: zone pivot="qs-javascript"
 
@@ -21,12 +21,11 @@ To get started, ensure that you have the following tools:
 
 | Install | For using... |
 | --- | --- |
-| &nbsp; | &nbsp; |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, and Python build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
 | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with apps for chat, meetings, and call-all in one place.|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with apps for chat, meetings, and call all in one place.|
 | [OpenAI](https://openai.com/api/) or [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an Azure OpenAI service.|
 | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
@@ -35,7 +34,7 @@ To get started, ensure that you have the following tools:
 If you've already run the samples before or encountered a runtime error, follow these steps to start fresh:
 
 * Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
-* If you don’t want Teams Toolkit to generate the appId and password, update the `BOT_ID` and `BOT_PASSWORD` in the `.env` file with your own values.
+* If you don’t want Teams Toolkit to generate the app ID and password, update the `BOT_ID` and `BOT_PASSWORD` in the `.env` file with your own values.
 * Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
 
 Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
@@ -49,7 +48,7 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
-1. Run the following command to clone the repository.
+1. Run the following command to clone the repository:
 
    ```cmd
    git clone https://github.com/microsoft/teams-ai.git
@@ -87,55 +86,76 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. After the dependencies are installed, select **File** > **Open Folder**.
 
-1. Go to **teams-ai > js > samples> 03.ai-concepts> c.actionMapping-lightBot** and select **Select Folder**. All the files for the Light bot sample are listed under the **EXPLORER** section in Visual Studio Code.
+1. Go to **teams-ai > js > samples> 03.ai-concepts> c.actionMapping-lightBot** and select **Select Folder**. All the files for the LightBot sample are listed under the **EXPLORER** section in Visual Studio Code.
 
-      # [OpenAI key](#tab/OpenAI-key)
+   # [OpenAI key](#tab/OpenAI-key)
 
-      Go to `env` folder and update the following code in `./env/.env.local.user` file:
+   Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
-      ```text
-      SECRET_OPENAI_KEY=<your OpenAI key>
+    ```text
+       SECRET_OPENAI_KEY=<your OpenAI key>
+    
+    ```
 
-      ```
+   # [Azure OpenAI](#tab/Azure-OpenAI)
 
-      # [Azure OpenAI](#tab/Azure-OpenAI)
+   1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
-      1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
+       ```text
+       SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
+       SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
+    
+       ```
+
+   1. Go to `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
+
+       ```text
+          - uses: file/createOrUpdateEnvironmentFile
+            with:
+             target: ./.env
+             envs:
+             BOT_ID: ${{BOT_ID}}
+             BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
+             #OPENAI_KEY: ${{SECRET_OPENAI_KEY}}
+             AZURE_OPENAI_KEY: ${{SECRET_AZURE_OPENAI_KEY}}
+             AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}}
+       ```
+
+   1. Go to `infra` folder and comment out the following lines in the `azure.bicep` file:
+
+      * **For OpenAI**:
+
+          ```bicep
+          // {
+          //   name: 'AZURE_OPENAI_KEY'
+          //   value: azureOpenAIKey
+          // }
+          // {
+          //   name: 'AZURE_OPENAI_ENDPOINT'
+          //   value: azureOpenAIEndpoint
+          // }
+          ```
+
+      * **For Azure OpenAI**:
+
+          ```bicep
+          // {
+          //  name: 'OPENAI_KEY'
+          //  value: openAIKey
+          // }
+          ```
+
+   1. Go to `infra` > `azure.parameters.json` and replace the lines from [20 to 22](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/infra/azure.parameters.json#L20-L22) with the following code:
 
          ```text
-         SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
-         SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
-
-         ```
-
-      1. Go to `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
-
-         ```text
-         - uses: file/createOrUpdateEnvironmentFile
-         with:
-            target: ./.env
-            envs:
-            BOT_ID: ${{BOT_ID}}
-            BOT_PASSWORD: ${{SECRET_BOT_PASSWORD}}
-            #OPENAI_KEY: ${{SECRET_OPENAI_KEY}}
-            AZURE_OPENAI_KEY: ${{SECRET_AZURE_OPENAI_KEY}}
-            AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}}
-         ```
-
+            "azureOpenAIKey": {
+            "value": "${{SECRET_AZURE_OPENAI_KEY}}"
+            },
+            "azureOpenAIEndpoint": {
+            "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
+            }
+           ```
       ---
-
-1. Go to `infra` folder and comment out lines from [72 to 75](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/infra/azure.bicep#L72-L75C10) and uncomment lines from [76 to 83](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/infra/azure.bicep#L76-L83) in `azure.bicep` file.
-
-1. Go to `infra` > `azure.parameters.json` file and replace the lines from 20 to 22 with the following code:
-
-   ```text
-      "azureOpenAIKey": {
-      "value": "${{SECRET_AZURE_OPENAI_KEY}}"
-      },
-      "azureOpenAIEndpoint": {
-      "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
-      }
-   ```
 
 1. From the left pane, select **Teams Toolkit**.
 
@@ -150,14 +170,13 @@ Get started with Teams AI library using the LightBot sample. It enables your com
 
 1. Select **Add**.
 
-   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the lightbot app.":::
+   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the LightBot app.":::
 
    A chat window opens.
 
 1. In the message compose area, send a message to invoke the bot.
 
-   :::image type="content" source="../../../assets/images/bots/lightbot-output.png" alt-text="Screenshot shows an example of the lightbot output." lightbox="../../../assets/images/bots/lightbot-output.png":::
-
+   :::image type="content" source="../../../assets/images/bots/lightbot-output.png" alt-text="Screenshot shows an example of the LightBot output." lightbox="../../../assets/images/bots/lightbot-output.png":::
 
 > [!NOTE]
 > If you're building a bot for the first time, it's recommended to use Teams Toolkit extension for Visual Studio Code to build a bot, see [build your first bot app using JavaScript](../../../sbs-gs-bot.yml).
@@ -172,11 +191,10 @@ To get started, ensure that you have the following tools:
 
 | Install | For using... |
 | --- | --- |
-| &nbsp; | &nbsp; |
 | [Visual Studio](https://visualstudio.microsoft.com/downloads/) | C Sharp build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
-| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with through apps for chat, meetings, and call-all in one place.|
+| [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | To collaborate with everyone, you work with through apps for chat, meetings, and call all in one place.|
 | [OpenAI](https://openai.com/api/) or [Azure OpenAI](https://oai.azure.com/portal)| First create your OpenAI API key to use OpenAI's GPT. If you want to host your app or access resources in Microsoft Azure, you must create an Azure OpenAI service.|
 | [Microsoft&nbsp;Edge](https://www.microsoft.com/edge) (recommended) or [Google Chrome](https://www.google.com/chrome/) | A browser with developer tools. |
 | [Microsoft 365 developer account](/microsoftteams/platform/concepts/build-and-test/prepare-your-o365-tenant) | Access to Teams account with the appropriate permissions to install an app and [enable custom Teams apps and turn on custom app uploading](../../../concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading). |
@@ -185,7 +203,7 @@ To get started, ensure that you have the following tools:
 If you've already run the samples before or encountered a runtime error, follow these steps to start fresh:
 
 * Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
-* If you don’t want Teams Toolkit to generate the appId and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
+* If you don’t want Teams Toolkit to generate the app ID and password, update the `MicrosoftAppId` and `MicrosoftAppPassword` in the `.env` file with your own values.
 * Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
 
 Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPassword` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
@@ -257,7 +275,7 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 1. Go to **Solution Explorer** and select your project.
 
-1. Right-click the menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
+1. Right-click menu and select **Teams Toolkit** > **Prepare Teams App Dependencies**.
 
    :::image type="content" source="../../../assets/images/bots/dotnet-ai-library-prepare-teams.png" alt-text="Screenshot shows an example of the Prepared Teams app Dependencies option under Teams Toolkit section in Visual Studio.":::
 
@@ -269,17 +287,17 @@ Teams Toolkit automatically provisions `MicrosoftAppId` and `MicrosoftAppPasswor
 
 1. Select **Add**. The app is added to Teams and a chat window opens.
 
-   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the lightbot app.":::
+   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the LightBot app.":::
 
 1. In the message compose area, send a message to invoke the bot.
 
-   :::image type="content" source="../../../assets/images/bots/lightbot-output.png" alt-text="Screenshot shows an example of the lightbot output.":::
+   :::image type="content" source="../../../assets/images/bots/lightbot-output.png" alt-text="Screenshot shows an example of the LightBot output.":::
 
 You can also deploy the samples to Azure using Teams Toolkit. To deploy, follow these steps:
 
 1. In Visual Studio, go to **Solution Explorer** and select your project.
-1. Right-click the menu and select **Teams Toolkit** > **Provision in the Cloud**. Toolkit provisions your sample to Azure.
-1. Right-click the menu and select **Teams Toolkit** > **Deploy to the Cloud**.
+1. Right-click menu and select **Teams Toolkit** > **Provision in the Cloud**. Toolkit provisions your sample to Azure.
+1. Right-click menu and select **Teams Toolkit** > **Deploy to the Cloud**.
 
 ::: zone-end
 
@@ -293,7 +311,7 @@ To get started, ensure that you have the following tools:
 | --- | --- |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, and Python build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
-| [Python ](https://www.python.org/) | Python is an interpreted and object-oriented programming language with dynamic semantics. Use versions between 3.8 to 4.0. |
+| [Python](https://www.python.org/) | Python is an interpreted and object-oriented programming language with dynamic semantics. Use versions between 3.8 to 4.0. |
 | [Poetry](https://python-poetry.org/docs/#installing-with-pipx) | Dependency management and packaging tool for Python.|
 | [Python VSCode Extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) | Provides rich support for Python on VSCode. |
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
@@ -306,7 +324,7 @@ To get started, ensure that you have the following tools:
 If you've already run the samples before or encountered a runtime error, follow these steps to start fresh:
 
 * Check all the `.env` and `env/.env.*.*` files in the sample and delete any automatically populated values to ensure that Teams Toolkit generates new resources for you.
-* If you don’t want Teams Toolkit to generate the appId and password, update the `BOT_ID` and `BOT_PASSWORD` in the `.env` file with your own values.
+* If you don’t want Teams Toolkit to generate the app ID and password, update the `BOT_ID` and `BOT_PASSWORD` in the `.env` file with your own values.
 * Remove values or leave the values blank for  **SECRET_BOT_PASSWORD** and **TEAMS_APP_UPDATE_TIME** in the `.env` file to avoid conflicts.
 
 Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If you want to use your own resources, you need to manually add them to the `.env` file. Teams Toolkit doesn't auto-generate the following resources:
@@ -330,11 +348,11 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
    cd teams-ai/python
    ```
 
-1. Go to the folder where you cloned the repository and select **04.ai.c.actionMapping.lightBot**. All the files for the Light bot sample are listed under the **EXPLORER** section in Visual Studio Code.
+1. Go to the folder where you cloned the repository and select **04.ai.c.actionMapping.lightBot**. All the files for the LightBot sample are listed under the **EXPLORER** section in Visual Studio Code.
 
 1. Under **EXPLORER**, duplicate the **sample.env** file and update the duplicate file to **.env**.
 
-      # [OpenAI key](#tab/OpenAI-key2)
+# [OpenAI key](#tab/OpenAI-key2)
 
       Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -343,7 +361,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
       ```
 
-      # [Azure OpenAI](#tab/Azure-OpenAI2)
+# [Azure OpenAI](#tab/Azure-OpenAI2)
 
       Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
@@ -366,7 +384,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
 1. Update `config.json` and `bot.py` with your model deployment name.
 
-1. Select **Command Palette...** under **View** or **Ctrl+Shift+P**.
+1. Go to **View** > **Command Palette...** or select **Ctrl+Shift+P**.
 
 1. Enter **Python: Create Environment** to create a virtual environment.
 
@@ -376,13 +394,13 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
 1. Select **Add**.
 
-   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the lightbot app.":::
+   :::image type="content" source="../../../assets/images/bots/lightbot-add.png" alt-text="Screenshot shows adding the LightBot app.":::
 
    A chat window opens.
 
 1. In the message compose area, send a message to invoke the bot.
 
-   :::image type="content" source="../../../assets/images/bots/lightbot-output.png" alt-text="Screenshot shows an example of the lightbot output.":::
+   :::image type="content" source="../../../assets/images/bots/lightbot-output.png" alt-text="Screenshot shows an example of the LightBot output.":::
 
 ::: zone-end
 
@@ -392,7 +410,7 @@ You can also use the following tools to run and set up a sample:
 
 1. **Teams Toolkit CLI**: You can use the Teams Toolkit CLI to create and manage Teams apps from the command line. For more information, see [Teams Toolkit CLI set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/TEAMS-TOOLKIT-CLI.md).
 
-1. **Bot Framework Emulator**: The [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator) is a desktop application that allows you to test and debug your bot locally. You can connect to your bot by entering the bot’s endpoint URL and Microsoft App ID and password. You can then send messages to your bot and see its responses in real-time. For more information, see [Bot Framework Emulator set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/BOTFRAMEWORK-EMULATOR.md).
+1. **Bot Framework Emulator**: The [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator) is a desktop application that allows you to test and debug your bot locally. You can connect to your bot by entering the bot’s endpoint URL and Microsoft app ID and password. You can then send messages to your bot and see its responses in real-time. For more information, see [Bot Framework Emulator set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/BOTFRAMEWORK-EMULATOR.md).
 
 1. **Manual setup**: If you prefer to set up your resources manually, you can do so by following the instructions provided by the respective services. For more information, see [manual set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/MANUAL-RESOURCE-SETUP.md).
 
