@@ -36,7 +36,7 @@ Before you can create and manage pre-approvals. You need to connect PowerShell t
 1. `AppCatalog.Read.All`
 
 ```powershell
-connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite.Authorization', 'AppCatalog.Read.All','InformationProtectionPolicy.Read', 'ServicePrincipalEndpoint.ReadWrite.All', 'Policy.ReadWrite.PermissionGrant', 'Policy.ReadWrite.ApplicationConfiguration', 'Application.ReadWrite.All')
+connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite.Authorization')
 ```
 
 # Enable preapproval for RSC permissions
@@ -45,6 +45,7 @@ For pre-approval to function you need to change your RSC settings to allow pre-a
 
 |Configuration| Description|
 |---|---|
+|`ManagedByMicrosoft`|This is the default state of Teams RSC when you first create your tenant. It is dynamic and can be changed by Microsoft, it is currently default to approve RSC
 |`ApprovedForAllApps`|Any RSC enabled app can be consented to by users in your tenant. With these settings enabled, preapproval of RSC permissions is not needed as all RSC enabled apps are approved for use
 |`ApprovedForPreApprovedAppsOnly`|RSC enabled apps can be consented on an app-by-app basis. Admins can choose which apps are approved for which RSC permissions.
 |`DisabledForAllApps`| No RSC permissions can be consented to by users. In this state, preapproval of RSC permissions will have no effect on users ability to consent to RSC enabled apps
