@@ -23,7 +23,7 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use other contacts or sites, depending on the type of community help required to raise issues, limitations, and general questions.
 
 
-📢 Please read our latest [annoucements](https://aka.ms/M365PlatformAnnouncement) and join the conversation with community members and platform engineering! 
+📢 We recommend you go through our latest [annoucements](https://aka.ms/M365PlatformAnnouncement) and join the conversation with both community members and our platform engineering team!
 
 ### Developer community forums
 
