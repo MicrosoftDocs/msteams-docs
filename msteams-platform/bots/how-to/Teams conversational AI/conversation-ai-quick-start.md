@@ -371,7 +371,7 @@ Teams Toolkit automatically provisions `BOT_ID` and `BOT_PASSWORD` resources. If
 
       ```
 
-   ---
+    ---
 
 1. To install the following dependencies, go to **View** > **Terminal** and run the following commands:
 
