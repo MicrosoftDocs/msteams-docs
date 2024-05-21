@@ -15,20 +15,20 @@ items:
 - durationInMinutes: 1
   content: |
 
-    This tutorial shows how to create a custom copilot with Teams AI library using Teams Toolkit to chat with your data on Azure OpenAI. Teams AI library streamlines the process of building intelligent Teams apps by using the AI components and large language model of your choice.
+    This tutorial shows how to create a custom copilot with Teams AI library using Teams Toolkit to chat with your data on Azure OpenAI. Teams AI library streamlines the process of building intelligent Teams apps by using the AI components and large language models (LLMs) of your choice.
 
-    In this tutorial, you learn:
+    In this tutorial, you'll learn:
 
     * How to setup your data on Azure OpenAI.
     * How to create a new custom copilot with Teams Toolkit.
-    * How to interact with your Large Language Model and data.
+    * How to interact with your LLMs and data.
     * The directory structure of your custom copilot.
 
 
 - title: Prerequisites
   durationInMinutes: 1
   content: |
-   Ensure you install the following tools for building and deploying your apps.
+   Ensure you install the following tools for building and deploying your apps:
 
    | &nbsp; | Install | For using... |
    | --- | --- | --- |
@@ -41,7 +41,7 @@ items:
 - title: Setup your data on Azure OpenAI
   durationInMinutes: 1
   content: | 
-     1. Go to **Azure Portal**.
+     1. Go to [**Azure Portal**](https://ms.portal.azure.com/).
 
      1. Select the Azure OpenAI service that you created in the prerequisite.
 
@@ -53,11 +53,11 @@ items:
         
         Update the values for the following fields:
 
-        * Select a model: gpt-35-turbo
-        * Model version: Auto-update to default
-        * Deployment type: Standard
-        * Deployment name: gpt-35-turbo
-        * Content filter: default
+        * **Select a model**: gpt-35-turbo
+        * **Model version**: Autoupdate to default
+        * **Deployment type**: Standard
+        * **Deployment name**: gpt-35-turbo
+        * **Content filter**: default
 
      1. Select **Create**.
 
@@ -76,7 +76,7 @@ items:
         > [!NOTE]
         > Save **Azure AI Search endpoint** and **key** details as they're necessary for the subsequent steps.
 
-     1. Enter a unique index name and select **Next**.
+     1. Enter a unique **index name** and select **Next**.
 
         :::image type="content" source="../msteams-platform/assets/images/bots/nba.png" alt-text="Screenshot shows how to create data source in Azure portal.":::
 
@@ -92,7 +92,7 @@ items:
      After the data ingestion process is complete, you can start creating your custom copilot using the Teams AI library and Teams Toolkit.
  
 
-- title: Create your first custom copilot
+- title: Create your custom copilot
   durationInMinutes: 1
   content: |
 
@@ -122,11 +122,11 @@ items:
 
      1. Enter the values from the Azure portal:
      
-         * **Azure OpenAI key**.
+         * **Azure OpenAI key**
 
-         * **Azure OpenAI endpoint**.
+         * **Azure OpenAI endpoint**
 
-         * **deployment name**.
+         * **Deployment name**
 
      1. Alternatively, you can fill in these details later in the `env/.env.testtool.user` file once your custom copilot is created.
 
@@ -159,7 +159,9 @@ items:
   durationInMinutes: 1
   content: |
 
-     1. Let's customize the prompt for your custom copilot. Go to `src/prompts/chat/skprompt.txt` and update the following code in `skprompt.txt` file:
+     Let's customize the prompt for your custom copilot.
+
+     1. Go to `src/prompts/chat/skprompt.txt` and update the following code in `skprompt.txt` file:
 
         ```skprompt.txt
         The following is a conversation with an AI assistant, who is an expert on answering questions over the given context.
@@ -213,4 +215,4 @@ items:
   durationInMinutes: 1
   content: |
 
-   Congratulations, you completed this tutorial! If you are interested in learning more about the source code, visit [Azure OpenAI sample on Teams AI library GitHub repository.](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/h.datasource-azureOpenAI)
+   Congratulations, you completed this tutorial! If you're interested in learning more about the source code, visit [Azure OpenAI sample on Teams AI library GitHub repository.](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai-apps/h.datasource-azureOpenAI)
