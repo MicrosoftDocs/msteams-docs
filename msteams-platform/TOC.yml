@@ -200,6 +200,8 @@
             href: toolkit/provision.md
           - name: Deploy to the cloud
             href: toolkit/deploy.md
+          - name: Deploy Teams app to container service
+            href: toolkit/deploy-Teams-app-to-container-service.md           
           - name: Set up CI/CD pipelines
             href: toolkit/use-CICD-template.md            
         - name: Test your Teams app
