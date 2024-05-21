@@ -113,7 +113,7 @@ The query parameters are:
 | `context.channelId`&emsp; | Microsoft Teams channel ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md). This property is available only in configurable tabs with a scope of **team**. It isn't available in static tabs, which has a **personal** scope.| 19:<cbe3683f25094106b826c9cada3afbe0@thread.skype> |
 | `context.chatId`&emsp; | Chat ID that is available from the tab [context](~/tabs/how-to/access-teams-context.md) for group and meeting chat. | 17:b42de192376346a7906a7dd5cb84b673@thread.v2 |
 | `context.contextType`&emsp; |  Chat is the only supported `contextType` for meetings. | chat |
-|`&openInMeeting=false`| Use `openInMeeting` to control the user experience when the target tab is associated with a meeting. If user interacts with the deep link in an ongoing meeting experience, Teams opens the app in the in-meeting side panel. Set this value to `false` to always open the app in the meeting chat tab rather than the side panel, regardless of the meeting status. Teams ignores any value other than `false`. | `false` |
+|`openInMeeting`| Use `openInMeeting` to control the user experience when the target tab is associated with a meeting. If user interacts with the deep link in an ongoing meeting experience, Teams opens the app in the in-meeting side panel. Set this value to `false` to always open the app in the meeting chat tab rather than the side panel, regardless of the meeting status. Teams ignores any value other than `false`. | `false` |
 
 > [!NOTE]
 >
@@ -163,7 +163,7 @@ You can trigger navigation from your tab using the [pages.navigateToApp()](/java
 
 ```javascript
 if (pages.isSupported()) {
-  const navPromise = pages.navigateToApp({ appId: <appId>, pageId: <pageId>, webUrl: <webUrl>, subPageId: <subPageId>, channelId:<channelId>});
+  const navPromise = pages.navigateToApp({ appId: '<appId>', pageId: '<pageId>', webUrl: '<webUrl>', subPageId: '<subPageId>', channelId:'<channelId>'});
   navPromise.
      then((result) => {/*Successful navigation*/}).
      catch((error) => {/*Failed navigation*/});
@@ -205,7 +205,7 @@ You can share deep links to entities in Teams apps to navigate to the content an
 Add a **copy link** action to each item in whatever way best suits your UI. When the user takes this action, call [`pages.shareDeepLink()`](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) to display a dialog containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
 ```javascript
-pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
+pages.shareDeepLink({ subPageId: '<subPageId>', subPageLabel: '<subPageLabel>', subPageWebUrl: '<subPageWebUrl>' })
 ```
 
 You need to replace the following parameters with the appropriate information:
@@ -221,7 +221,7 @@ For more information, see [pages.shareDeepLink()](/javascript/api/@microsoft/tea
 Add a **copy link** action to each item in whatever way best suits your UI. When the user takes this action, call `shareDeepLink()` to display a dialog containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
 ```javascript
-microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })
+microsoftTeams.shareDeepLink({ subEntityId: '<subEntityId>', subEntityLabel: '<subEntityLabel>', subEntityWebUrl: '<subEntityWebUrl>' })
 ```
 
 You need to replace the following parameters with the appropriate information:
