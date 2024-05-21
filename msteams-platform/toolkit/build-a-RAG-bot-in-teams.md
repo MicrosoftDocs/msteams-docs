@@ -62,8 +62,6 @@ Microsoft Teams enables you to build a conversational bot with RAG to create an 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/azure-open-api-key-optional.png" alt-text="Screenshot shows the location to enter Azure open API key.":::
 
-1. Select **Enter**.
-
 1. Select **Default folder**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/default-folder.png" alt-text="Screenshot shows the location app folder to save.":::
