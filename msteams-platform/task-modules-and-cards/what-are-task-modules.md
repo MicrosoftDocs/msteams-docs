@@ -53,7 +53,8 @@ A dialog includes the following as shown in the previous image:
 
 ## See also
 
+* [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
+* [Bot configuration experience](../bots/how-to/bot-configuration-experience.md)
 * [Cards and dialogs](cards-and-task-modules.md)
 * [Cards](~/task-modules-and-cards/what-are-cards.md)
-* [Adaptive Cards overflow menu](~/task-modules-and-cards/cards/cards-format.md#adaptive-cards-overflow-menu)
 * [Instrumenting for Teams app specific analytics](../concepts/design/overview-analytics.md#instrumenting-for-teams-app-specific-analytics)

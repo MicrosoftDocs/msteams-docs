@@ -22,7 +22,7 @@ To debug your tab app follow these steps:
 
 # [Visual Studio Code](#tab/vscode)
 
-You can view the project folders and files under **Explorer** in the Visual Studio Code.
+You can view the project folders and files under **Explorer** in the Microsoft Visual Studio Code.
 
 1. Add `Start local tunnel` after `Validate prerequisites` in the `task.json` file to make the tab app accessible on the mobile client.
 1. Add the following code after the property `dependsOrder` in the `task.json` file.
