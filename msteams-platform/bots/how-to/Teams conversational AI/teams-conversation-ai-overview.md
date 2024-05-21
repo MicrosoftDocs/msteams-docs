@@ -94,6 +94,15 @@ The bot framework using Teams AI library requires the following:
 
 Action Planner is the main component calling your Large Language Model (LLM) and includes several features to enhance and customize your model. Model plugins simplify configuring your selected LLM to the planner and ships with an OpenAIModel that supports both OpenAI and Azure OpenAI LLMs. Additional plugins for other models like Llama-2 can easily be added, giving you the flexibility to choose what model is best for your use case. An internal feedback loop increases reliability by fixing the subpar responses from the LLM.
 
+## Assistants API
+
+> [!NOTE]
+> Teams AI library supports both OpenAI and Azure OpenAI Assistants API in [public developer preview](~/resources/dev-preview/developer-preview-intro.md) for you to get started with building intelligent assistants.
+
+Assistants API allows you to create powerful AI assistants capable of performing a variety of tasks that are difficult to code using traditional methods. It provides programmatic access to OpenAI’s GPT system for tasks ranging from chat to image processing, audio processing, and building custom assistants. The API supports natural language interaction, enabling the development of assistants that can understand and respond in a conversational manner.
+
+Follow the [quick start guide](assistants-api-quick-start.md) to create an assistant that specializes in mathematics.
+
 ## Prompt management
 
 Dynamic prompt management is a feature of the AI system that allows it to adjust the size and content of the prompt that is sent to the language model, based on the available token budget and the data sources or augmentations. It can improve the efficiency and accuracy of the model by ensuring that the prompt doesn't exceed the context window or include irrelevant information.
