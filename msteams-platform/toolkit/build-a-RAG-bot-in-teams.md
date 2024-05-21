@@ -682,6 +682,23 @@ You can ingest your knowledge documents to Azure AI Search Service and create a 
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/custom-copilot/add-data.png" alt-text="Screenshot shows the option to add data source.":::
 
+1. Select **Next**.
+
+   The **Data management** page appears.
+
+1. Update the required fields.
+
+Image placeholder
+
+1. Select **Next**.
+
+1. Select **Review and finish**. 
+
+Image placeholder
+
+1. Select **Save and close**.
+
+Image placeholder
 
 ### Use Azure AI Search index data source
 
