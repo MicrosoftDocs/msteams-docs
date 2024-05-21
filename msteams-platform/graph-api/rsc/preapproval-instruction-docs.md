@@ -105,7 +105,6 @@ New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 
 >[!WARNING]
 >Your pre-approval creation may fail if you associate the wrong permissions with the wrong permission type in your cmdlet. Chat RSC permissions end in .Chat and Team RSC permissions end in .Group
-Create a pre-approval with a sensitivity label
 
 ## Create a preapproval with a sensitivity label
 
