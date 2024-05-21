@@ -580,7 +580,7 @@ Each command item is an object with the following structure:
 |`context`|Array of Strings|3 characters||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
-|`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by Copilot using large language model (LLM).|
+|`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by Copilot using Large Language Models (LLMs).|
 |`initialRun`|Boolean|||A Boolean value that indicates whether the command runs initially with no parameters. <br>Default value: `false`|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog dynamically.|
 |`taskInfo`|Object|||Specify the dialog to preload when using a message extension command.|
@@ -592,7 +592,7 @@ Each command item is an object with the following structure:
 |`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. This is included in the user request. </br> For Api-based message extension, The name must map to the `parameters.name` in the OpenAPI Description. If you're referencing a property in the request body schema, then the name must map to `properties.name` or query parameters. |
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameter.semanticDescription`|String|2000 characters||Semantic description of the parameter for consumption by the large language model.|
+|`parameter.semanticDescription`|String|2000 characters||Semantic description of the parameter for consumption by the Large Language Models (LLMs).|
 |`parameter.inputType`|String|||Defines the type of control displayed on a dialog for `fetchTask: false`. One of `text`, `textarea`, `number`, `date`, `time`, `toggle`, `choiceset`.|
 |`parameter.value`|String|512 characters||Initial value for the parameter.|
 |`parameter.choices`|Array of objects|10||The choice options for the `choiceset`. Use only when `parameter.inputType` is `choiceset`.|
