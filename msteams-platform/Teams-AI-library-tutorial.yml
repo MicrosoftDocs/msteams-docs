@@ -57,7 +57,7 @@ items:
         * **Model version**: Autoupdate to default
         * **Deployment type**: Standard
         * **Deployment name**: gpt-35-turbo
-        * **Content filter**: default
+        * **Content Filter**: default
 
      1. Select **Create**.
 
@@ -142,15 +142,15 @@ items:
      | --- | --- |
      | `.vscode` | VS Code files for debugging. |
      | `appPackage` | Templates for the Teams application manifest. |
-     | `env` | Name / value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
+     | `env` | Name or value pairs are stored in environment files and used by teamsapp.yml to customize the provisioning and deployment rules. |
      | `infra` | Templates for provisioning Azure resources. |
      | `src/`| The source code for the notification Teams application. |
-     | `src/index.js`| The source code for the notification Teams application. |     
-     | `src/adapter.js`| The source code for the notification Teams application. |  
-     | `src/config.js`| The source code for the notification Teams application. |
-     | `src/prompts/chat/skprompt.txt`| The source code for the notification Teams application. |
-     | `src/prompts/chat/config.json`| The source code for the notification Teams application. |
-     | `src/app/app.js`| The source code for the notification Teams application. |
+     | `src/index.js`| Sets up the bot app server. |     
+     | `src/adapter.js`| Sets up the bot adapter. |  
+     | `src/config.js`| Defines the environment variables. |
+     | `src/prompts/chat/skprompt.txt`| Defines the prompt. |
+     | `src/prompts/chat/config.json`| Configures the prompt. |
+     | `src/app/app.js`| Handles business logics for the Basic AI Chatbot. |
      | `teamsapp.yml` | Main project file describes your application configuration and defines the set of actions to run in each lifecycle stages. |
      | `teamsapp.local.yml` | This override `teamsapp.yml` with actions that enable local execution and debugging. |
      | `teamsapp.testtool.yml` | This override `teamsapp.yml` with actions that enable local execution and debugging in Teams App Test Tool.|
