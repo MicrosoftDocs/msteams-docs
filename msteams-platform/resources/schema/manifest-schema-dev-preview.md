@@ -209,6 +209,18 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "id": "AAD App ID",
         "resource": "Resource URL for acquiring auth token for SSO"
     },
+    "showLoadingIndicator": false,
+    "isFullScreen": false,
+    "defaultBlockUntilAdminAction": false,
+    "publisherDocsUrl": "https://contoso.com/teamtabapp/admin-doc",
+    "scopeConstraints": { 
+        "teams": [ 
+            { "id": "%TEAMS-THREAD-ID" } 
+        ], 
+        "groupChats": [ 
+          { "id": "%GROUP-CHATS-THREAD-ID" } 
+        ] 
+    },    
     "authorization": {
         "permissions": {
             "resourceSpecific": [
@@ -223,6 +235,31 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
             ]
         }
     },
+"actions": [
+    {
+      "id": "addTodoTask",
+      "displayName": "Add ToDo task",
+      "intent": "addTo",
+      "description": "Add this file with a short note to my to do list",
+      "handlers": [
+        {
+          "type": "openPage",
+          "supportedObjects": {
+            "file": {
+              "extensions": [
+                "doc",
+                "pdf"
+              ]
+            }
+          },
+          "pageInfo": {
+            "pageId": "newTaskPage",
+            "subPageId": ""
+          }
+        }
+      ]
+    },
+  ],
     "configurableProperties": [
         "name",
         "shortDescription",
@@ -233,6 +270,10 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "developerUrl",
         "privacyUrl",
         "termsOfUseUrl"
+    ],
+    "supportedChannelTypes": [
+        "sharedChannels",
+        "privateChannels"
     ],
     "defaultInstallScope": "meetings",
     "defaultGroupCapability": {
