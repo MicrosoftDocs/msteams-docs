@@ -121,7 +121,6 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [First-run Experience](../concepts/design/design-teams-app-ui-templates.md)|A First-run Experience (FRE) is a user's introduction to your product. The FRE helps users to get started with the functions, features, and benefits of the product and influences users to come back and continue using your product such as tab or bot.|
 | [Fluent UI](../concepts/design/design-teams-app-basic-ui-components.md)| Design and build your Teams app from scratch with the basic Fluent UI components. These components can work across different use cases, themes, and screen sizes. <br>**See also**: [Fluent UI React Components](https://react.fluentui.dev/?path=/docs/concepts-introduction--page)|
 | [Fully qualified domain name (FQDN)](../tabs/how-to/authentication/tab-sso-register-aad.md) | A fully qualified domain name (FQDN) represents a domain name of a host or IP address(es). |
-| Feedback button | Feedback buttons in bot messages are interactive elements that allow users to provide their reactions or opinions about the bot’s responses. They are used to collect user feedback and improve bot responses. <br> **See also**:|
 
 ## G
 
@@ -217,7 +216,6 @@ Common terms and definitions used in Microsoft Teams developer documentation.
 | [Proactive messages](../bots/how-to/conversations/send-proactive-messages.md) | A message sent by a bot that isn't in response to a request from a user, such as welcome messages, notifications, scheduled messages. |
 | [Provision](../toolkit/provision.md) | A process that creates resources in Azure and Microsoft 365 for your app, but no code (HTML, CSS, JavaScript, etc.) is copied to the resources. It's a prerequisite to deployment. <br>**See also**: [Deploy](#d) |
 | [Publisher docs URL](../resources/schema/manifest-schema.md#publisherdocsurl)| The value of the `publisherDocsUrl` parameter is a secure HTTPS URL to the app documentation and information page that app developers choose to provide. Tenant admins get documentation about the app at this URL. Teams admin center displays the URL in the app details page.|
-| Prompt suggestions | Prompt suggestions are commands that are presented to the users in the Teams chat when they install your bot. <br>**See also**: |
 
 ## R
 
