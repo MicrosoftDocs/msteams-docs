@@ -46,14 +46,12 @@ landingContent:
   linkLists:
     - linkListType: whats-new
       links:
-      - text: Unified communication between bot and tab
-        url: apps-in-teams-meetings/teams-live-share-overview.md
-      - text: Leverage AI capabilities in bot messages with AI label, citations, feedback buttons, and sensitivity labels
-        url: apps-in-teams-meetings/teams-live-share-overview.md
-      - text: Enable Copilot handoffs to seamlessly transition your chat with Copilot for Microsoft 365.
-        url: apps-in-teams-meetings/teams-live-share-overview.md
-      - text: Prompt suggestions for bots
-        url: apps-in-teams-meetings/teams-live-share-overview.md
+      - text: Assistants API
+        url: bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview.md#assistants-api
+      - text: Build apps with the Teams AI library
+        url: bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start.md
+      - text: Build a custom copilot to chat with your data
+        url: teams-ai-library-tutorial.yml
 
 - title: What's new
   linkLists:

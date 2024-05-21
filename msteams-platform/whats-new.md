@@ -16,7 +16,9 @@ Discover Microsoft Teams platform features that are generally available (GA). Yo
 
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
-| 21/05/2024 | Unified communication between bot and tab creates more customized interactions between the user and the app. | Build bots > Unified communication between bot and tab |
+| 21/05/2024 | Introduced the Assistants API to create powerful AI assistants capable of performing a variety of tasks. | Build bots > Teams AI library > [Overview](bots/how-to/teams%20conversational%20ai/teams-conversation-ai-overview.md#assistants-api) |
+| 21/05/2024 | Get started with the process of building apps with the Teams AI library using the LightBot sample. | Build bots> Teams AI library > [Quick start guide](bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start.md)|
+| 21/05/2024 | Introduced a step-by-step guide to build a custom copilot to chat with your data using the Teams AI library and Teams Toolkit. | Build bots > Teams AI library > Build custom copilot > [Build custom copilot using Teams Toolkit](teams-ai-library-tutorial.yml)|
 
 ## Generally available
 
@@ -386,14 +388,6 @@ Explore updates from the previous GA releases listed here.
 ::: zone pivot="dev-preview"
 
 Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
-
-## Microsoft Build 2024 :::image type="icon" source="assets/images/bullhorn.png" border="false"
-
-| **Date** | **Update** | **Find here** |
-| -------- | --------- | ----------------|
-| 21/05/2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot. | Build message extensions > Build message extensions using Bot Framework > Search commands > Copilot handoff |
-| 21/05/2024 | Leverage AI capabilities in your bot's messages with AI label, citations, feedback buttons, and sensitivity labels. | Build bots > Bot conversations > Format AI bot messages |
-| 21/05/2024 | Enhance your bot conversations through prompt suggestions to create an engaging and insightful user experience. | Build bots > Bot conversations > Create prompt suggestions |
 
 ## Developer preview
 
