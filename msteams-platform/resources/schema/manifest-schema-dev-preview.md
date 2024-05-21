@@ -52,7 +52,8 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
     },
     "icons": {
         "outline": "%FILENAME-32x32px%",
-        "color": "%FILENAME-192x192px"
+        "color": "%FILENAME-192x192px",
+        "color32x32": "%FILENAME-32x32px%"
     },
     "accentColor": "%HEX-COLOR%",
     "configurableTabs": [
@@ -208,6 +209,18 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "id": "AAD App ID",
         "resource": "Resource URL for acquiring auth token for SSO"
     },
+    "showLoadingIndicator": false,
+    "isFullScreen": false,
+    "defaultBlockUntilAdminAction": false,
+    "publisherDocsUrl": "https://contoso.com/teamtabapp/admin-doc",
+    "scopeConstraints": { 
+        "teams": [ 
+            { "id": "%TEAMS-THREAD-ID" } 
+        ], 
+        "groupChats": [ 
+          { "id": "%GROUP-CHATS-THREAD-ID" } 
+        ] 
+    },    
     "authorization": {
         "permissions": {
             "resourceSpecific": [
@@ -222,6 +235,31 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
             ]
         }
     },
+"actions": [
+    {
+      "id": "addTodoTask",
+      "displayName": "Add ToDo task",
+      "intent": "addTo",
+      "description": "Add this file with a short note to my to do list",
+      "handlers": [
+        {
+          "type": "openPage",
+          "supportedObjects": {
+            "file": {
+              "extensions": [
+                "doc",
+                "pdf"
+              ]
+            }
+          },
+          "pageInfo": {
+            "pageId": "newTaskPage",
+            "subPageId": ""
+          }
+        }
+      ]
+    },
+  ],
     "configurableProperties": [
         "name",
         "shortDescription",
@@ -232,6 +270,10 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "developerUrl",
         "privacyUrl",
         "termsOfUseUrl"
+    ],
+    "supportedChannelTypes": [
+        "sharedChannels",
+        "privateChannels"
     ],
     "defaultInstallScope": "meetings",
     "defaultGroupCapability": {
@@ -302,15 +344,33 @@ The unique Microsoft-generated identifier for this app. The format of the ID is 
 
 **Required** &ndash; Object
 
-Specifies information about your company. For apps submitted to Microsoft AppSource (formerly Office Store), these values must match the information in your AppSource entry.
+Specifies information about the developer and their business. For Teams Store apps, the value must match the values that you provide in the Partner Center app submission form.
 
-|Name| Maximum size | Required | Description|
-|---|---|---|---|
-|`name`|32 characters|✔️|The display name for the developer.|
-|`websiteUrl`|2048 characters|✔️|The https:// URL to the developer's website. This link must take users to your company or product-specific landing page.|
-|`privacyUrl`|2048 characters|✔️|The https:// URL to the developer's privacy policy.|
-|`termsOfUseUrl`|2048 characters|✔️|The https:// URL to the developer's terms of use.|
-|`mpnId`|10 characters||**Optional** The Microsoft Partner Network ID that identifies the partner organization building the app.|
+| Name            | Type   | Maximum size     | Required | Description                                                                                              |
+|-----------------|--------|------------------|----------|----------------------------------------------------------------------------------------------------------|
+| `name`          | String | 32 characters    | ✔️      | The display name for the developer.                                                                      |
+| `websiteUrl`    |     | 2048 characters | ✔️      | The `https://` URL to the app-specific page on your website.                                             |
+| `privacyUrl`    |     | 2048 characters | ✔️      | The `https://` URL to the app's privacy policy.                                                         |
+| `termsOfUseUrl` |     | 2048 characters | ✔️      | The `https://` URL to the app's terms of use.                                                           |
+| `mpnId`         | String | 10 characters    |          | The Microsoft Partner Network ID that identifies the partner organization creating the app. **Optional** |
+| `contactInfo`   | Object |                  |          | App developer's contact information.                                                                     |
+
+### developer.contactInfo
+
+**Optional** &ndash; Object
+
+Your contact information that is used by customers to contact you through Teams chat or email. Customers may need extra information when evaluating your app or if they have any queries about your app when it doesn't work. Customers can contact you using Teams chat, so request your IT admins to [enable external communications](/microsoftteams/communicate-with-users-from-other-organizations) in your organization. For more information, see [developer provided app and contact information](/MicrosoftTeams/manage-apps#developer-provided-app-information-support-and-documentation).
+
+> [!Note]
+> You must provide only one contact email address.
+
+We recommend triaging your customer queries in a timely manner and route those internally within your organization, say to other functions to get the answers. It helps improve app adoption, builds developer trust, and increase revenue if you monetize the app.
+
+| Name           | Type   | Maximum size | Required | Description          |
+|----------------|--------|--------------|----------|----------------------|
+|`defaultsupport`|Object| |✔️|The default contact information for your app.|
+|`defaultsupport.userEmailsForChatSupport`|Array|10|✔️|Email address to receive customer queries using Teams chat. While the app manifest allows up to 10 email addresses, Teams uses only the first email address to let IT admins communicate with you. The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
+|`defaultsupport.emailsForEmailSupport`|Array|1|✔️|Contact email for customer inquiry (Minimum: 1; maximum: 1). The object is an array with all elements of the type string. The maximum length of email is 80 characters.|
 
 ## localizationInfo
 
@@ -365,6 +425,7 @@ Icons used within the Teams app. The icon files must be included as part of the 
 |---|---|---|---|
 |`outline`|2048 characters|✔️|A relative file path to a transparent 32x32 PNG outline icon. The border color must be white.|
 |`color`|2048 characters|✔️|A relative file path to a full color 192x192 PNG icon.|
+|`color32x32`|2048 character| | A relative file path to a full color 32x32 PNG icon with transparent background. Used when the app is pinned in Outlook and Microsoft 365 app.|
 
 ## accentColor
 

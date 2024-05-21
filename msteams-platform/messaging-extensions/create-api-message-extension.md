@@ -389,5 +389,5 @@ To create an API-based message extension using Teams Toolkit for Visual Studio, 
 
 To build an API-based message extension, follow these step-by-step guides:
 
-* [For beginners](../sbs-api-me-ttk.yml): Build an API-based message extension using Teams Toolkit.
+* [For beginners](../sbs-api-msg-ext-ttk.yml): Build an API-based message extension using Teams Toolkit.
 * [For advanced users](../sbs-api-based-message-extensions.yml): Build an API-based message extension from the ground up.
