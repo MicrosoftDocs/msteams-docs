@@ -19,7 +19,6 @@ To get started, ensure that you have the following tools:
 
 | Install | For using... |
 | --- | --- |
-| &nbsp; | &nbsp; |
 | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or C Sharp build environments. Use the latest version. |
 | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest version.|
 |[Git](https://git-scm.com/downloads)|Git is a version control system that helps you manage different versions of code within a repository. |
@@ -47,7 +46,7 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
 
 1. Go to the [sample](https://github.com/microsoft/teams-ai/tree/main/js/samples).
 
-1. Run the following command to clone the repository.
+1. Run the following command to clone the repository:
 
    ```cmd
    git clone https://github.com/microsoft/teams-ai.git
@@ -89,25 +88,41 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
 
 1. Under **EXPLORER**, duplicate the `sample.env` file  and update the duplicate file to `.env`.
 
-1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
+1. Update the following steps based on the AI services you select.
 
    # [OpenAI key](#tab/OpenAI-key)
 
-   ```text
-   SECRET_OPENAI_KEY=<your OpenAI key>
-   ASSISTANT_ID=<your Assistant ID>
-   ```
+   1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
+
+      ```text
+      SECRET_OPENAI_KEY=<your OpenAI key>
+      ASSISTANT_ID=<your Assistant ID>
+      ```
+   1. Go to the `infra` folder and ensure that the following lines in the `azure.bicep` file are commented out:
+
+      ```bicep
+          // {
+          //  name: 'AZURE_OPENAI_KEY'
+          //  value: azureOpenAIKey
+          // }
+          // {
+          //  name: 'AZURE_OPENAI_ENDPOINT'
+          //  value: azureOpenAIEndpoint
+          // }
+      ```
 
    # [Azure OpenAI](#tab/Azure-OpenAI)
+
+   1. Go to `env` folder and update the following code in `./env/.env.local.user` file:
 
    ```text
       SECRET_AZURE_OPENAI_KEY=<your Azure OpenAI key>
       SECRET_AZURE_OPENAI_ENDPOINT=<your Azure OpenAI Endpoint>
    ```
 
-   Go to `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
+   1. Go to `teamsapp.local.yml` file and modify the last step to use Azure OpenAI variables:
 
-      ```text
+      ```yaml
       - uses: file/createOrUpdateEnvironmentFile
       with:
          target: ./.env
@@ -118,17 +133,27 @@ Get started with Teams AI library using the **Math tutor assistant** sample. It 
          AZURE_OPENAI_KEY: ${{SECRET_AZURE_OPENAI_KEY}}
          AZURE_OPENAI_ENDPOINT: ${{SECRET_AZURE_OPENAI_ENDPOINT}}
       ```
+
+   1. Go to the `infra` folder and ensure that the following lines in the `azure.bicep` file are commented out:
+
+      ```bicep
+          // {
+          //   name: 'OPENAI_KEY'
+          //   value: openAIKey
+          // }
+      ```
+
+   1. Go to `infra` > `azure.parameters.json` and replace the lines from [20 to 25](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.parameters.json#L20-L25) with the following code:
+
+      ```json
+            "azureOpenAIKey": {
+            "value": "${{SECRET_AZURE_OPENAI_KEY}}"
+            },
+            "azureOpenAIEndpoint": {
+            "value": "${{SECRET_AZURE_OPENAI_ENDPOINT}}"
+            }
+      ```
     ---
-
-1. Go to the `infra` folder and comment out lines from [69 to 76](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L69-L76) and uncomment lines from [77 to 80](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.bicep#L77-L80) in `azure.bicep` file.
-
-1. Go to the `infra` > `azure.parameters.json` file and replace the lines from [20 to 25](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/d.assistants-mathBot/infra/azure.parameters.json#L20-L25) with the following code:
-
-   ```text
-      "openAIKey": {
-      "value": "${{SECRET_OPENAI_KEY}}"
-      },
-   ```
 
 1. Copy the sample to a new directory that isn't a subdirectory of `teams-ai`.
 
@@ -163,7 +188,7 @@ You can also use the following tools to run and set up a sample:
 
 1. **Teams Toolkit CLI**: You can use the Teams Toolkit CLI to create and manage Microsoft Teams apps from the command line. For more information, see [Teams Toolkit CLI set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/TEAMS-TOOLKIT-CLI.md).
 
-1. **Bot Framework Emulator**: The [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator) is a desktop application that allows you to test and debug your bot locally. You can connect to your bot by entering the bot’s endpoint URL and Microsoft App ID and password. You can then send messages to your bot and see its responses in real-time. For more information, see [Bot Framework Emulator set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/BOTFRAMEWORK-EMULATOR.md).
+1. **Bot Framework Emulator**: The [Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator) is a desktop application that allows you to test and debug your bot locally. You can connect to your bot by entering the bot’s endpoint URL and Microsoft app ID and password. You can then send messages to your bot and see its responses in real-time. For more information, see [Bot Framework Emulator set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/BOTFRAMEWORK-EMULATOR.md).
 
 1. **Manual setup**: If you prefer to set up your resources manually, you can do so by following the instructions provided by the respective services. For more information, see [manual set up instructions](https://github.com/microsoft/teams-ai/blob/main/getting-started/OTHER/MANUAL-RESOURCE-SETUP.md).
 
