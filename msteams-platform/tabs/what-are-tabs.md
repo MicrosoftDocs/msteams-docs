@@ -51,8 +51,9 @@ Following images show tabs with customizable experience added to different conte
 **Teams mobile**
 
 :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
----
-<br>
+***
+
+
 Following are a few benefits of static tabs in chats and meeting tabs:
 
 * **Pinnable and instant**: You can pin apps with static tabs from the add a tab **+** icon in chats and meetings. These tabs can be unpinned and don't have the mandatory configuration dialog, which allows you to create tabs that function more like apps.
