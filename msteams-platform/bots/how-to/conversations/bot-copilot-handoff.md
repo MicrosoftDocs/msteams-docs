@@ -154,3 +154,9 @@ The response to this invoke call must be an HTTP status code 200 for success, or
     ```
 
 * We recommended that you manage the lifecycle of the continuation token to ensure it expires after a reasonable period and also handle scenarios where the continuation token request is replayed by the user. For example, if the same token comes up, let the user know they need to start a new conversation with the bot because the handoff from copilot can't continue.
+
+## Code samples
+
+|Sample name | Description | Node.js|
+| ----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Northwind inventory message extension                               | This sample implements a Teams message extension that can be used as a plugin for Microsoft Copilot for Microsoft 365 and enables copilot handoff.             | [View](https://github.com/OfficeDev/Copilot-for-M365-Plugins-Samples/tree/main/samples/msgext-northwind-inventory-ts)              |
