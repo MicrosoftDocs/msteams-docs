@@ -24,31 +24,73 @@ Following image shows tabs with customizable experience added to different conte
 
 # [Personal](#tab/personal)
 
+:::row:::
+
+:::column span="2":::
+
 ###### Teams Desktop
 
-    :::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the tab added to a personal scope."
+    :::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the tab added to a personal scope." lightbox="~/assets/images/tabs/personal-tab-configure.png":::
+
+:::column-end:::
+
+:::column span="2":::
 
 ###### Teams mobile
 
-    :::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context.":::
+    :::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+---
 
 # [Channel](#tab/channel)
 
+:::row:::
+
+:::column span="2":::
+
 ###### Teams desktop
 
+    :::image type="content" source="~/assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="~/assets/images/tabs/tabs.png":::
+
+:::column-end:::
+
+:::column span="2":::
 
 ###### Teams mobile
 
+    :::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png":::
+
+:::column-end:::
+
+:::row-end:::
+
+---
 
 # [Meeting](#tab/meeting)
 
+:::row:::
+
+:::column span="2":::
+
 ###### Teams desktop
 
-    :::image type="content" source="~/assets/images/tabs/personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting.":::
+    :::image type="content" source="~/assets/images/tabs/personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting." lightbox="~/assets/images/tabs/personal-tab-meeting.png":::
+
+:::column-end:::
+
+:::column span="2":::
 
 ###### Teams mobile
 
-    :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile.":::
+    :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
+
+:::column-end:::
+
+:::row-end:::
 
 ---
 
