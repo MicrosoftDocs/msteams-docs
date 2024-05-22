@@ -18,37 +18,36 @@ There are two types of tabs available in Teams, personal and group. [Personal ta
 
 You can extend static tabs to different scopes. Static tabs in chats, channels, or meetings behave more like apps, as you can pin only one tab per app. For example, you can only pin a single YouTube app tab in a meeting. Static tabs in meetings can also be pre-pinned in meetings by IT Admins.
 
-Following image shows tabs with customizable experience added to different contexts in Teams:
+Following images show tabs with customizable experience added to different contexts in Teams:
 
 # [Personal](#tab/personal)
 
-:::row:::
+ :::row:::
 
-:::column span="2":::
+ :::column span="":::
 
-###### Teams Desktop
+ ###### Teams Desktop
 
     :::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the tab added to a personal scope." lightbox="~/assets/images/tabs/personal-tab-configure.png":::
 
-:::column-end:::
+ :::column-end:::
 
-:::column span="2":::
+ :::column span="":::
 
-###### Teams mobile
+ ###### Teams mobile
 
     :::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
 
-:::column-end:::
+ :::column-end:::
 
-:::row-end:::
-
+ :::row-end:::
 ---
 
 # [Channel](#tab/channel)
 
 :::row:::
 
-:::column span="2":::
+:::column span="":::
 
 ###### Teams desktop
 
@@ -56,7 +55,7 @@ Following image shows tabs with customizable experience added to different conte
 
 :::column-end:::
 
-:::column span="2":::
+:::column span="":::
 
 ###### Teams mobile
 
@@ -65,14 +64,13 @@ Following image shows tabs with customizable experience added to different conte
 :::column-end:::
 
 :::row-end:::
-
 ---
 
 # [Meeting](#tab/meeting)
 
 :::row:::
 
-:::column span="2":::
+:::column span="":::
 
 ###### Teams desktop
 
@@ -80,7 +78,7 @@ Following image shows tabs with customizable experience added to different conte
 
 :::column-end:::
 
-:::column span="2":::
+:::column span="":::
 
 ###### Teams mobile
 
@@ -89,7 +87,6 @@ Following image shows tabs with customizable experience added to different conte
 :::column-end:::
 
 :::row-end:::
-
 ---
 
 Following are a few benefits of static tabs in chats and meeting tabs:
