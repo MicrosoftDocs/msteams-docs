@@ -32,7 +32,7 @@ You must create a deep link URL with a `continuation` query parameter for the ac
 
 To enable copilot handoff in Teams, follow these steps:
 
-1. **Configure a deep link URL**: Create a [deep link to a chat](../../../concepts/build-and-test/deep-link-teams.md#configure-deep-link-to-start-a-chat-manually) and add the `28:<botId>` and `continuationToken` to the deep link format. The deep link format must be `https://teams.microsoft.com/l/chat/0/0?users=${28:<botId>}&continuation=${continuationToken}`.
+1. **Configure a deep link URL**: Create a [deep link to a chat](../../../concepts/build-and-test/deep-link-teams.md#configure-deep-link-to-start-a-chat-manually) and add the `28:<botId>` and `continuationToken` to the deep link format. The deep link format must be `https://teams.microsoft.com/l/chat/0/0?users=28:${botId}&continuation=${continuationToken}`.
 
    **Example**:
 
@@ -43,7 +43,7 @@ To enable copilot handoff in Teams, follow these steps:
 
    "title": "Handoff to Bot", 
 
-   "url": "https://teams.microsoft.com/l/chat/0/0?users=${28:<botId>}&continuation=${continuationToken}" 
+   "url": "https://teams.microsoft.com/l/chat/0/0?users=28:${botId}&continuation=${continuationToken}" 
    }
    ```
 
