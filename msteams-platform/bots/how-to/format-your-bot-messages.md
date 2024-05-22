@@ -77,16 +77,16 @@ The following table provides a list of styles, which are supported on desktop, i
 | Hyperlink                 | ✔️ | ✔️ | ✔️ |
 | Image link                | ❌ | ❌ | ❌ |
 
-## Format AI bot messages
+## AI-generated content messages
 
-As bots evolve to be more conversational, you can leverage AI capabilities to enhance their functionality. Integrate the following functionalities into your bot messages, similar to those used in AI-generated bot messages:
+AI labels, citations, feedback buttons, and sensitivity labels in your bot’s messages improve user engagement and foster transparency and trust.
 
 * [AI label](format-ai-bot-messages.md#ai-label) enables users to identify that the message was generated using AI.
 * [Citations](format-ai-bot-messages.md#citations) enables users to refer to the source of the bot's message through in-text citations and references.
 * [Feedback buttons](format-ai-bot-messages.md#feedback-buttons) enables users to provide positive or negative feedback to the bot's messages.
 * [Sensitivity label](format-ai-bot-messages.md#sensitivity-label) enables users to understand the confidentiality of the bot's message.
 
-For more information, see [format your AI bot messages](format-ai-bot-messages.md).
+For more information, see [bot messages with AI-generated content](format-ai-bot-messages.md).
 
 ## Next step
 
