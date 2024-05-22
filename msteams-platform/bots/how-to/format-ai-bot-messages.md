@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Bot messages with AI-generated content
 
-If you’re building a conversational bot, you can leverage functionalities such as citations, feedback buttons, and sensitivity labels for better user engagement. For AI-powered bots, you can include an AI label to indicate that the bot message is AI-generated. This promotes a sense of responsibility and enhances transparency and trust with users.
+If you’re building a conversational bot, you can use AI capabilities such as citations, feedback buttons, and sensitivity labels for better user engagement. For AI-powered bots, you can include an AI label to indicate that the bot message is AI-generated. This promotes a sense of responsibility and enhances transparency and trust with users.
 
 Here's a quick overview of each functionality that you can integrate into your bot message:
 
@@ -58,7 +58,7 @@ await context.sendActivity({
 
 | Property | Type | Required | Description |
 |--|--|--|--|
-| `additionalType` | String | Yes | Enables the AI label in the bot message |
+| `additionalType` | Array | Yes | Enables the AI label in the bot message. The only allowed value is `"AIGeneratedContent"`. |
 
 After an AI label is added, your bot’s message displays an **AI generated** label next to the bot’s name with a hover-over disclaimer stating, **AI-generated content may be incorrect**. The AI label and disclaimer can't be customized for AI-powered bots.
 
@@ -317,6 +317,29 @@ For bots built using Bot Framework SDK, add a sensitivity label to your bot mess
 
 The following code snippet shows how to add sensitivity labels in both bot message and citation:
 
+# [Bot message](#tab/botmessage)
+
+```javascript
+await context.sendActivity({
+  type: ActivityTypes.Message,
+  text: `Hey, I'm a friendly AI bot. This message is generated through AI [1]`,
+  entities: [
+    {
+      type: "https://schema.org/Message",
+      "@type": "Message",
+      "@context": "https://schema.org",
+      usageInfo: {
+        "@type": "CreativeWork",
+        name: "Sensitivity title",
+        description: "Sensitivity description",
+      },
+    },
+  ],
+});
+```
+
+# [Citation](#tab/citation)
+
 ```javascript
 await context.sendActivity({
   type: ActivityTypes.Message,
@@ -350,13 +373,16 @@ await context.sendActivity({
     },
   ],
 });
-
 ```
+
+---
 
 | Property | Type | Required | Description |
 |--|--|--|--|
-| `usageInfo.@type` | String | Yes | Denotes the sensitivity label in the bot message |
-| `usageInfo.@id` | String | Yes | Denotes the disclaimer of the sensitivity label in the bot message |
+| `usageInfo.@type` | String | Yes | Enables the sensitivity label in the bot message |
+| `usageInfo.@id` | String | Yes | Enables referencing the sensitivity label in the citation |
+| `usageInfo.name` | String | Yes | Denotes the title of the sensitivity label |
+| `usageInfo.description` | String | No | Denotes the pop-up message that appears when a user hovers over the sensitivity label |
 
 After the sensitivity label is added, your bot message contains a shield icon. Users can hover over the icon to find a disclaimer on the sensitivity of the message.
 
