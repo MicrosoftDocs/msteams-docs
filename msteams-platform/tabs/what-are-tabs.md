@@ -22,35 +22,34 @@ Following images show tabs with customizable experience added to different conte
 
 # [Personal](#tab/personal)
 
-###### Teams Desktop
-:::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the tab added to a personal scope." lightbox="~/assets/images/tabs/personal-tab-configure.png":::
-###### Teams mobile
-:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
+**Teams Desktop**
 
+:::image type="content" source="~/assets/images/tabs/personal-tab-configure.png" alt-text=" Screenshot shows the tab added to a personal scope." lightbox="~/assets/images/tabs/personal-tab-configure.png":::
+
+**Teams mobile**
+:::image type="content" source="~/assets/images/tabs/mobile-design-access-tab.png" alt-text="Example shows a mobile tab being added in a personal context." lightbox="~/assets/images/tabs/mobile-design-access-tab.png":::
 ---
 
 # [Channel](#tab/channel)
 
-###### Teams desktop
+**Teams desktop**
 
 :::image type="content" source="~/assets/images/tabs/tabs.png" alt-text="Channel or group tabs" lightbox="~/assets/images/tabs/tabs.png":::
 
-###### Teams mobile
+**Teams mobile**
 
 :::image type="content" source="~/assets/images/tabs/mobile-design-static-tab.png" alt-text="Example shows a mobile tab being added in a channel." lightbox="~/assets/images/tabs/mobile-design-static-tab.png":::
-
 ---
 
 # [Meeting](#tab/meeting)
 
-###### Teams desktop
+**Teams desktop**
 
 :::image type="content" source="~/assets/images/tabs/personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting." lightbox="~/assets/images/tabs/personal-tab-meeting.png":::
 
-###### Teams mobile
+**Teams mobile**
 
 :::image type="content" source="~/assets/images/tabs/mobile-personal-tab-meeting.png" alt-text="Example shows a configurable tab added to a meeting in mobile." lightbox="~/assets/images/tabs/mobile-personal-tab-meeting.png":::
-
 ---
 
 Following are a few benefits of static tabs in chats and meeting tabs:
