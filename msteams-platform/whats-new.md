@@ -35,7 +35,8 @@ Teams platform features that are available to all app developers.
 
 **2024 May**
 
-***May 17, 2024***: [Deploy Teams app to container service.](toolkit/deploy-Teams-app-to-container-service.md)
+* ***May 22, 2024***: [Static tabs are generally available for chats, channels, and meetings.](tabs/what-are-tabs.md)
+* ***May 17, 2024***: [Deploy Teams app to container service.](toolkit/deploy-Teams-app-to-container-service.md)
 
 :::column-end:::
 :::row-end:::
