@@ -204,7 +204,7 @@ Add AI capabilities to your existing app or a new Bot Framework app.
 
 # [JavaScript](#tab/javascript1)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L83)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/index.ts#L86)
 
 ```javascript
 /// Create AI components
@@ -289,7 +289,7 @@ The application object automatically manages the conversation and user state of 
 
 # [JavaScript](#tab/javascript3)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L109)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/index.ts#L112)
 
 ```javascript
 // Define storage and application
@@ -499,7 +499,7 @@ Create a folder called prompts and define your prompts in the folder. When the u
   
 * `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement.
 
-   [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/prompts/chat/config.json)
+   [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/prompts/sequence/config.json)
 
     ```json
      {
