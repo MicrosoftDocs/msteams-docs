@@ -47,9 +47,9 @@ You can send and receive messages using the Bot Framework. The app listens for t
 
 # [JavaScript](#tab/javascript6)
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.messaging.a.echoBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/01.getting-started/a.echoBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.messaging.a.echoBot/src/index.ts#L83)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/01.getting-started/a.echoBot/src/index.ts#L74)
 
 ```typescript
 // Listen for user to say '/reset' and then delete conversation state
@@ -147,7 +147,7 @@ Now, the app class has `messageExtensions` features to simplify creating the
 
 * [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L81)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/a.messageExtensions.searchCommand/src/index.ts#L79)
 
 ```javascript
 import { MessagingExtensionAttachment } from "botbuilder";
@@ -261,9 +261,9 @@ You can register Adaptive Card action handlers using the `app.adaptiveCards` p
 
 # [JavaScript](#tab/javascript4)
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.adaptiveCards.a.typeAheadBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.adaptiveCards.a.typeAheadBot/src/index.ts#L95)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.teams-features/b.adaptiveCards.typeAheadBot/src/index.ts#L86)
 
 ```javascript
 // Listen for messages that trigger returning an adaptive card
@@ -458,9 +458,9 @@ builder.Services.AddTransient<IBot>(sp =>
 
 # [JavaScript](#tab/javascript3)
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/04.ai.c.actionMapping.lightBot)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/c.actionMapping-lightBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L93)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/index.ts#L87)
 
 ```typescript
 
@@ -609,9 +609,9 @@ The following is an example of how you can structure their code to handle a mess
 
 # [JavaScript](#tab/javascript2)
 
-* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/02.messageExtensions.a.searchCommand)
+* [Code sample](https://github.com/microsoft/teams-ai/tree/main/js/samples/03.ai-concepts/d.chainedActions-listBot)
 
-* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/02.messageExtensions.a.searchCommand/src/index.ts#L81)
+* [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/d.chainedActions-listBot/src/index.ts#L161)
 
 ```typescript
 
