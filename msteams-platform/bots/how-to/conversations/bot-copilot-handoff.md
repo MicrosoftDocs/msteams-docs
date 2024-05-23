@@ -105,7 +105,7 @@ To enable copilot handoff in Teams, follow these steps:
 
    The `handoff/action` invoke type allows the bot to transfer control of the conversation to another service or initiate a specific action that requires further processing. When the bot receives the `handoff/action` invoke activity, it uses the continuation token to look up any necessary information to continue the conversation seamlessly. This involves retrieving conversation history, user preferences, or any other context needed to provide a consistent experience.
 
-1. **Handle the invoke type**: In your bot code, manage the `handoff/action` invoke using the `onInvokeActivity` handler. In your bot code, manage the `handoff/action` invoke using the `onInvokeActivity` handler. You must override the `onInvokeActivity` method to handle the invoke call. If the invoke is successful, the bot must return an HTTP status code of **200**. If there's an error, the bot must respond with an appropriate HTTP status code in the range of **400- or 500-**. If the user receives an error, they must wait and retry while the errors are logged in the backend service.
+1. **Handle the invoke type**: In your bot code, manage the `handoff/action` invoke using the `onInvokeActivity` handler. In your bot code, manage the `handoff/action` invoke using the `onInvokeActivity` handler. You must override the `onInvokeActivity` method to handle the invoke call. If the invoke call is successful, the bot must return an HTTP status code of **200**. If there's an error, the bot must respond with an appropriate HTTP status code in the range of **400- or 500-**. If the user receives an error, they must wait and retry while the errors are logged in the backend service.
 
    > [!NOTE]
    > Don't send any payload with this response as it doesn't render in the chat window. The responses based on the continuation token must be sent to the user separately.
@@ -119,7 +119,7 @@ To enable copilot handoff in Teams, follow these steps:
             }
    ```
 
-   When the bot receives the invoke call, `context.activity.value.continuation` contains the `continuationToken` that was set in the deep link URL.
+   When the bot receives the invoke call, `context.activity.value.continuation` contains the `continuationToken` that was set in the deep link URL. If the app isn't installed during the handoff the user is redirected to the Teams Store to install the app.
 
 ## Best practices
 

@@ -405,7 +405,7 @@ Developer preview is a public program that provides early access to unreleased T
 
 **2024 May**
 
-* ***May 22, 2024***: [Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.](bots/how-to/conversations/bot-copilot-handoff.md)
+* ***May 23, 2024***: [Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.](bots/how-to/conversations/bot-copilot-handoff.md)
 
 * ***May 14, 2024***: [Introduced a new manifest property to let potential customers contact you with queries before they can confidently adopt your app.](resources/schema/manifest-schema-dev-preview.md#developercontactinfo)
 * ***May 07, 2024***: You can specify a [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.
