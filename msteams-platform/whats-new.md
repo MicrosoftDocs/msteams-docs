@@ -391,6 +391,12 @@ Explore updates from the previous GA releases listed here.
 
 Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+## Microsoft Build 2024 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| May 23, 2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
+
 ## Developer preview
 
 :::row:::
@@ -404,8 +410,6 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 Developer preview is a public program that provides early access to unreleased Teams platform features.
 
 **2024 May**
-
-* ***May 23, 2024***: [Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.](bots/how-to/conversations/bot-copilot-handoff.md)
 
 * ***May 14, 2024***: [Introduced a new manifest property to let potential customers contact you with queries before they can confidently adopt your app.](resources/schema/manifest-schema-dev-preview.md#developercontactinfo)
 * ***May 07, 2024***: You can specify a [32x32 color icon](concepts/build-and-test/apps-package.md#outline-icon) with a transparent background to ensure a consistent appearance when your app runs in Outlook and Microsoft 365.
