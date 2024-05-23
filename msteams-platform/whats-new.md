@@ -391,6 +391,12 @@ Explore updates from the previous GA releases listed here.
 
 Discover Microsoft Teams platform features that are in developer preview. You can now get latest Teams platform updates by subscribing to the RSS feed [![download feed](~/assets/images/RSSfeeds.png)](https://aka.ms/TeamsPlatformUpdates). For more information, see [configure RSS feed](#get-latest-updates).
 
+## Microsoft Build 2024 :::image type="icon" source="assets/images/bullhorn.png" border="false"
+
+| **Date** | **Update** | **Find here** |
+| -------- | --------- | ----------------|
+| May 23, 2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
+
 ## Developer preview
 
 :::row:::

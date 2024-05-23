@@ -556,6 +556,9 @@
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
+      - name: Copilot handoff
+        href: bots/how-to/conversations/bot-copilot-handoff.md
+        displayName: custom copilot, custom engine copilot, plugin, conversation
       - name: Microsoft 365 Chat plugin FAQ
         href: messaging-extensions/copilot-plugin-faq.md
         displayName: M365, bot-based message extension, plugin
