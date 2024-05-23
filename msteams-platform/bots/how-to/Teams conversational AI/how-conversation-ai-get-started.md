@@ -56,7 +56,7 @@ builder.Services.AddSingleton<BotAdapter>(sp => sp.GetService<CloudAdapter>());
 
 # [JavaScript](#tab/javascript4)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L9)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L9)
 
 ```javascript
 // Import required bot services.
@@ -117,7 +117,7 @@ app = Application[TurnState](
 
 Import all the classes from `@microsoft/teams-ai` to build your bot and use the Teams AI library capabilities.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L70)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L13)
 
 ```javascript
 // import Teams AI library
@@ -204,7 +204,7 @@ Add AI capabilities to your existing app or a new Bot Framework app.
 
 # [JavaScript](#tab/javascript1)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L82)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L83)
 
 ```javascript
 /// Create AI components
@@ -289,7 +289,7 @@ The application object automatically manages the conversation and user state of 
 
 # [JavaScript](#tab/javascript3)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L108)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L109)
 
 ```javascript
 // Define storage and application
@@ -329,7 +329,7 @@ app = Application[AppTurnState](
 
 A vector data source makes it easy to add RAG to any prompt. You can register a named data source with the planner and then specify the name[s] of the data sources to augment the prompt within the prompt's `config.json` file.  Data sources allow AI to inject relevant information from external sources into the prompt, such as vector databases or cognitive search.  You can register named data sources with the planner and then specify the name[s] of the data sources they wish to augment the prompt within the prompt's `config.json` file.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L117)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L118)
 
 ```typescript
 // Register your data source with planner
@@ -499,7 +499,7 @@ Create a folder called prompts and define your prompts in the folder. When the u
   
 * `config.json`: Contains the prompt model settings. Provide the right configuration to ensure bot responses are aligned with your requirement.
 
-   [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/prompts/chat/config.json)
+   [Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/prompts/chat/config.json)
 
     ```json
      {
@@ -583,7 +583,7 @@ Actions handle events triggered by AI components.
 
 `FlaggedInputAction` and `FlaggedOutputAction` are the built-in action handlers to handle the moderator flags. If the moderator flags an incoming message input, the moderator redirects to the `FlaggedInputAction` handler and the `context.sendActivity` sends a message to the user about the flag. If you want to stop the action, you must add `AI.StopCommandName`.
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.a.teamsChefBot/src/index.ts#L127)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai-apps/a.teamsChefBot/src/index.ts#L132)
 
 ```javascript
 // Register other AI actions
@@ -674,7 +674,7 @@ public class LightBotActions
 
 # [JavaScript](#tab/javascript2)
 
-[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/04.ai.c.actionMapping.lightBot/src/index.ts#L133)
+[Sample code reference](https://github.com/microsoft/teams-ai/blob/main/js/samples/03.ai-concepts/c.actionMapping-lightBot/src/index.ts#L126)
 
 ```javascript
 // Register action handlers
