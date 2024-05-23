@@ -374,7 +374,7 @@
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
     displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
-  - name: Open content in Stageview
+  - name: Open content in multi-window
     href: tabs/open-content-in-stageview.md
     displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
   - name: Create a configuration page
