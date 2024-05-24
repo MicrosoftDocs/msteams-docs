@@ -41,7 +41,7 @@ The following diagram illustrates how to respond to an Adaptive Card action with
 
 To handle card actions with TeamsFx SDK, each card action handler must implement the `TeamsFxAdaptiveCardActionHandler` interface:
 
-``` Export interface
+```JavaScript Export interface
 -
 TeamsFxAdaptiveCardActionHandler 
 {
