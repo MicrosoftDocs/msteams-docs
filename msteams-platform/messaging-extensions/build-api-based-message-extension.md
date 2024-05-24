@@ -28,7 +28,8 @@ Ensure that you adhere to following guidelines for OpenAPI Description (OAD) doc
 * Define an HTTPS protocol server URL for the `servers.url` property.
 * Only POST and GET HTTP methods are supported.
 * The OpenAPI Description document must have an `operationId`.
-* A message extension supports upto 10 commands and each command supports up to 5 parameters.
+* API definitions in the OpenAPI Description document that contain circular references aren't supported.
+* A message extension supports upto 10 commands and each command supports up to five parameters.
 * A required parameter with a default value is considered optional.
 * Users must not enter a parameter for a header or cookie.
 * The operation must not have a required header or cookie parameters without default values.
@@ -363,8 +364,7 @@ Let's say you have the below JSON for a list of products and you want to create 
 
 As you can see, the array of results is under "products", which is nested under "warehouse", so the JSON path would be "warehouse.products".
 
-Use <https://adaptivecards.io/designer/> to preview the adaptive card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking.
-Note that Teams supports cards up to version 1.5 while the designer supports 1.6.
+Use <https://adaptivecards.io/designer/> to preview the adaptive card by inserting the template into Card Payload Editor, and take a sample response entry from your array or for your object and insert it into the Same Data editor on the right. Make sure that the card renders properly and is to your liking. Teams supports cards up to version 1.5 while the designer supports 1.6.
 
 #### Schema mapping
 
@@ -534,7 +534,7 @@ When an API request is initiated, the system retrieves the API key from a secure
 
 ### Register an API key
 
-API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls.  You can then paste the API key ID in the simplified message extension and the API key ID enables the authentication for the API calls that are behind an auth.
+API key registration allows you to secure their APIs that are behind an auth and use in message extensions. You can register an API key and specify the domain, tenant, and app that can access the APIs, and provide the secrets that are needed to authenticate the API calls. You can then paste the API key ID in the simplified message extension and the API key ID enables the authentication for the API calls that are behind an auth.
 
 To register an API Key, follow these steps:
 
@@ -614,7 +614,7 @@ You can authorize incoming requests to your service by configuring a static API 
 
 <details><summary id="microsoft-entra">Microsoft Entra </summary>
 
-`microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who has signed into Teams doesn't need to sign in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user has given consent, they can access the app even from other devices without having to be validated again.
+`microsoftEntra` authentication method uses an app user's Teams identity to provide them with access to your app. A user who is signed into Teams doesn't need to sign in again to your app within the Teams environment. With only a consent required from the app user, the Teams app retrieves access details for them from Microsoft Entra ID. After the app user gives consent, they can access the app even from other devices without having to be validated again.
 
 ### Prerequisites
 
@@ -980,7 +980,7 @@ After the API-based message extension gets a request header with token, perform 
 
      1. A JSON object representing an error response from a service or API is displayed. It contains a `standardizedError` object with `errorCode`, `errorSubCode`, and `errorDescription`, which have more details about the error.
 
-        :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-network.png" alt-text="Screenshots shows the network tab, the list of Invoke Errors, and the error details in the response tab in Developer tools while running a message extension in Teams and getting an error.":::
+        :::image type="content" source="../assets/images/Copilot/api-me-troubleshoot-network.png" alt-text="Screenshot shows the network tab, the list of Invoke Errors, and the error details in the response tab in Developer tools while running a message extension in Teams and getting an error.":::
 
       **Common HTTP Error Responses**:
 
