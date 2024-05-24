@@ -17,7 +17,7 @@ ms.author: surbhigupta
 Copilot handoffs are plugin-provided deep links that carry over chat context, enabling users to seamlessly transition their chat with Copilot for Microsoft 365 to your bot service. You can enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot to handle scenarios where specialized knowledge or actions are required, such as
 complex IT support queries, detailed product inquiries, or interactive order management.
 
-In the following graphic, a user looks for help on tech issues using Copilot and receives results from the enterprise dataset. The user finds the available information insufficient and wants to continue the interaction with a Contoso bot plugin.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from Copilot to the Contoso bot, without losing the conversation context is called a *copilot handoff*.
+In the following graphic, a user looks for help on tech issues using Copilot and receives results from the enterprise dataset. The user finds the available information insufficient and wants to continue the interaction with a Contoso bot plugin.​ When the user selects the Contoso bot, a new chat starts and the conversation continues in the Contoso bot. This seamless switch from Copilot to the Contoso bot, without losing the conversation context is called a copilot handoff.
 
 :::image type="content" source="../../../assets/images/Copilot/Copilot-handoff.gif" alt-text="The GIF shows the conversation handoff between the copilot for Microsoft 365 and the Contoso chat bot.":::
 
@@ -114,12 +114,12 @@ To enable copilot handoff in Teams, follow these steps:
 
    ```typescript
             case "handoff/action": {
-              // TODO: Save continuation token and use it to process final response to user later
+              // TODO: Save the continuation token and use it to process final response to user later
              return {status: 200}; // return just the http status
             }
    ```
 
-   When the bot receives the invoke call, `context.activity.value.continuation` contains the `continuationToken` that was set in the deep link URL. If the app isn't installed during the handoff the user is redirected to the Teams Store to install the app.
+   When the bot receives the invoke call, `context.activity.value.continuation` contains the `continuationToken` that was set in the deep link URL. If the app isn't installed during the handoff, the user is redirected to Teams Store to install the app.
 
 ## Best practices
 
@@ -154,3 +154,4 @@ To enable copilot handoff in Teams, follow these steps:
 |Sample name | Description | Node.js|
 | ----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
 | Northwind inventory message extension                               | This sample implements a Teams message extension that can be used as a plugin for Microsoft Copilot for Microsoft 365. The message extension showcases copilot handoff along with allowings users to query the Northwind Database.             | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-copilot-handoff/ts)              |
+| Northwind inventory message extension                               | This sample is a Teams message extension that works as a plugin for Microsoft 365 Copilot. It features copilot handoff and enables users to transition their chat from Copilot for Microsoft 365 to Northwind Database.             | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/msgext-copilot-handoff/ts)              |
