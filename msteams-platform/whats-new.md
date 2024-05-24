@@ -396,6 +396,7 @@ Discover Microsoft Teams platform features that are in developer preview. You ca
 | **Date** | **Update** | **Find here** |
 | -------- | --------- | ----------------|
 | May 23, 2024 | Leverage AI label, citations, feedback buttons, and sensitivity labels in your bot's messages. | Build bots > Bot conversations > [Format AI bot messages](bots/how-to/format-ai-bot-messages.md) |
+| May 23, 2024 | Enhance your Copilot message extension plugin to hand off a conversation to your custom engine copilot.| Build message extensions > Build message extensions using Bot Framework > Search commands > [Copilot handoff](bots/how-to/conversations/bot-copilot-handoff.md)|
 
 ## Developer preview
 
