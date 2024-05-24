@@ -23,7 +23,7 @@ The [pages](/javascript/api/@microsoft/teams-js/pages) capability of the TeamsJS
 
 The following code illustrates how to navigate to a specific page:
 
-```ts
+```typescript
 if (pages.currentApp.isSupported()) {
     const navPromise = pages.currentApp.navigateTo({pageId: <pageId>, subPageId: <subPageId>});
     navPromise.
@@ -40,7 +40,8 @@ else {/*Handle situation where capability isn't supported*/
 
 The following code illustrates how to navigate to the app's default tab:
 
-```ts
+```typescript
+
 if (pages.currentApp.isSupported()) {
     const navPromise = pages.currentApp.navigateToDefaultPage();
     navPromise.
