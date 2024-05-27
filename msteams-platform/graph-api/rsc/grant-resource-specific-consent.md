@@ -12,7 +12,7 @@ ms.date: 03/28/2023
 
 Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams, chats, or users within an organization.
 
-In this section, you'll learn to:
+In this section, you learn to:
 
 1. [Add RSC permissions to your Teams app](#add-rsc-permissions-to-your-teams-app)
 1. [Install your app in a team, chat, or user](#install-your-app-in-a-team-chat-or-user)
@@ -344,6 +344,14 @@ To install your app on which you've enabled RSC permission in a team, chat, or u
 
 1. Ensure that you've configured [consent settings](#configure-consent-settings) for team, chat, or user.
 1. [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
+
+> [!NOTE]
+>
+> To see the RSC settings for team or chat, users must have one of these Microsoft 365 roles:
+> * Global Administrator
+> * Global Reader
+> * Teams Administrator
+> * Privileged Role Administrator
 
 ### Configure consent settings
 
