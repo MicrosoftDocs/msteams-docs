@@ -24,7 +24,7 @@ The following is the sample app manifest schema:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
     "manifestVersion": "1.17",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
