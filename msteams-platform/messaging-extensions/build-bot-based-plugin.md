@@ -346,9 +346,9 @@ To create a bot-based search message extension plugin using Developer Portal, fo
 
 1. Select **Save**.
 
-A bot-based search message extension is created.
+   A bot-based search message extension is created.
 
-:::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the messaging extension created and listed in the App features page in Developer Portal.":::
 
 To test your bot-based message extension created in Developer Portal, you can use the following methods:
 
