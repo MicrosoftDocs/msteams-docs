@@ -1,7 +1,7 @@
 ---
 title: Map your use cases to Teams app features and capabilities
 author: surbhigupta
-description: Identify how your app's use cases can work within the Teams experience, app features and capabilities; map common use cases with capabilities.
+description: Identify how your app's use cases can work within the Teams experience, app features, and capabilities; map common use cases with capabilities.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
@@ -60,7 +60,8 @@ Send asynchronous notifications and alerts to your users in Teams.
 
 | **If you want to...** | **Try ...** |
 | --- | --- |
-| Send proactive messages to groups, channels, or individual users. | Conversational bots |
+| Send proactive notifications to inform users about news, events, requests, and reminders that require users’ immediate attention or specific actions in the activity feed. | Microsoft Graph API (`sendActivityNotification`) |
+| Send interactive messages to groups, channels, or individual users. | Conversational bots |
 | Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page. | Connectors and incoming webhooks |
 
 </details>

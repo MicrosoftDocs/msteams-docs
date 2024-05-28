@@ -26,7 +26,7 @@ You can use various tools and services to build your app. The following developm
 1. Plan your project and figure out the requirement.
 1. Design your app. Use Microsoft Teams UI Kit and Microsoft Teams UI Library for designing tabs UI.
 1. Build your app with JavaScript using Teams Toolkit.
-1. Extend functionality by adding more Teams capabilities and Microsoft 365 data with :::image type="icon" source="../assets/icons/graph-small-icon.png"::: Microsoft Graph.
+1. Extend functionality by adding more Teams capabilities, send activity feed notifications, and use Microsoft 365 data with :::image type="icon" source="../assets/icons/graph-small-icon.png"::: Microsoft Graph.
 1. Test the app on a developer tenant with sample user data.
 1. Deploy the app to Microsoft Azure.
 1. Manage and publish the app to Microsoft Teams Store with Developer Portal for Teams. Monetize your app with options, such as SaaS offers and in-app purchases.
