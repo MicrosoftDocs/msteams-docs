@@ -161,7 +161,7 @@ Command description maps user intent and utterance to search command inside a pl
 
 #### Semantic description
 
-The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Microsoft Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
 The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
 
@@ -270,7 +270,7 @@ The following table lists the command and semantic description examples for each
 
 ### Parameter description
 
-Each message extension command supports up to five parameters and first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+Each message extension command supports has a corresponding `parameters' property which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
 
 The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
@@ -423,6 +423,8 @@ For M365 Chat, a search-based message extension must support more than three uni
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
+* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property which supports up to 5 parameters. 
+
 <br>
 <details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
 
@@ -518,7 +520,7 @@ The search parameters must have good descriptions with acceptable parameters, en
 
 ## Sample prompts
 
-The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available in the following areas within Copilot for Microsoft 365:
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available in the following areas within Copilot for Microsoft 365:
 
 * First Run Experience (FRE): When a user first installs or enables a plugin.
 * Prompt library or Copilot Lab: When a user seeks help with prompts.
@@ -544,32 +546,38 @@ We recommend you to follow these guidelines to increase the chances of your app 
 The following code is an example of the `samplePrompts` property in app manifest:
 
 ```json
-composeExtensions": [
-    {
-        "canUpdateConfiguration": true,
-        "botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
-        "commands": [
-            {
-                "id": "orders",
-                "title": "Orders",
-                "context": [
-                    "Commandbox",
-                    "Compose"
-                ],
-                "description": "Search for orders",
-                "semanticDescription": "Search for orders",
-                "samplePrompts": [
-                    { "text": "Search for all orders" },
-
-                    { "text": "Search for orders related to Contoso" },
-                    { "text": "Search for all pending orders" },
-                    { "text": "Search for all completed ordered for Fabrikam" }
-                ],
-                // ...
-            },
-            // ...
-        ]
-    }
+"composeExtensions": [
+	{
+		"canUpdateConfiguration": true,
+		"botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
+		"commands": [
+			{
+				"id": "orders",
+				"title": "Orders",
+				"context": [
+					"Commandbox",
+					"Compose"
+				],
+				"description": "Search for orders",
+				"semanticDescription": "Search for orders",
+				"samplePrompts": [
+					{
+						"text": "Search for all orders"
+					},
+					{
+						"text": "Search for orders related to Contoso"
+					},
+					{
+						"text": "Search for all pending orders"
+					},
+					{
+						"text": "Search for all completed ordered for Fabrikam"
+					}
+				]
+			}
+		]
+	}
+]
 ```
 
 ## Adaptive Card response
