@@ -76,7 +76,7 @@ You must add the following parameters to your `composeExtensions.commands` array
 | `id` | Unique ID that you assign to search command. The user request includes this ID. | Yes | 1.0 |
 | `title` |Command name. This value appears in the user interface (UI). | Yes | 1.0 |
 | `description` | Help text indicating what this command does. This value appears in the UI. | Yes | 1.0 |
-|`semanticDescription`|Semantic description of the command for consumption by the large language model.|No|1.17|
+|`semanticDescription`|Semantic description of the command for consumption by the Large Language Models (LLMs).|No|1.17|
 | `type` | Type of command. Default is `query`. | No | 1.4 |
 |`initialRun` | If this property is set to **true**, it indicates this command should be executed as soon as the user selects this command in the UI. | No | 1.0 |
 | `context` | Optional array of values that defines the context the search action is available in. The possible values are `message`, `compose`, or `commandBox`. The default is `compose`,`commandBox`. | No | 1.5 |
@@ -88,7 +88,7 @@ You must add the following search parameter details that define the text visible
 | `parameters` | Defines a static list of parameters for the command. | No | 1.0 |
 | `parameter.name` | Describes the name of the parameter. The `parameter.name` is sent to your service in the user request. | Yes | 1.0 |
 | `parameter.description` | Describes the parameter’s purposes or example of the value that must be provided. This value appears in the UI. | Yes | 1.0 |
-|`parameter.semanticDescription`|Semantic description of the parameter for consumption by the large language model.|No|1.17|
+|`parameter.semanticDescription`|Semantic description of the parameter for consumption by the Large Language Models (LLMs).|No|1.17|
 | `parameter.title` | Short user-friendly parameter title or label. | Yes | 1.0 |
 | `parameter.inputType` | Set to the type of the input required. Possible values include `text`, `textarea`, `number`, `date`, `time`, `toggle`. Default is set to `text`. | No | 1.4 |
 | `parameters.value` | Initial value for the parameter. Currently the value isn't supported | No | 1.5 |
