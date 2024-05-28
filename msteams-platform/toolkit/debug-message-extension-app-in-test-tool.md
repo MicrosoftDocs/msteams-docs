@@ -23,7 +23,7 @@ Ensure that you install the following tools for building and deploying your bots
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
-| &nbsp; | [Teams Toolkit](install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest prerelease version. |
+| &nbsp; | [Teams Toolkit](install-Teams-Toolkit.md) | A Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use the latest release version. |
 | &nbsp; | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type). |
 | &nbsp; | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use the latest version. |
 
@@ -85,7 +85,7 @@ To test a **Search Command** in the Test Tool, follow these steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/search-command-invoke.png" alt-text="Screenshot shows the search commands invoke.":::
 
-1. Search results are displayed by the Test Tool.
+1. Search results are displayed.
 
 1. To review the details of the request and the results, check the log panel.
 
@@ -207,7 +207,7 @@ To test an **Link Unfurling** in the Test Tool, follow these steps:
 
 1. Review the Adaptive Card that the Test Tool renders based on the invoke response from the app.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows to create link unfurling in teams app test tool.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows how to create link unfurling in teams app test tool.":::
 
 > [!Note]
 > The user experience for testing link unfurling in the Test Tool differs from that in Teams, however you can still test or debug the app logic with Test Tool in a simple way.
@@ -244,15 +244,15 @@ For details about the schema of this, invoke activity payload. For more informat
 <details>
 <summary>Command ID parameter in Action Command</summary>
 
-While navigating through dialogs initiated by action commands in Teams, your app receives a `composeExtension/fetchTask` or `composeExtension/submitAction` invoke activity. This activity includes the `activity.value.commandId` parameter. However, your app uses this parameter to differentiate between commands within the activity handler for these invoke activities, such as the `handleTeamsMessagingExtensionFetchTask` or `handleTeamsMessagingExtensionSubmitAction` methods in the Bot Framework SDK for JavaScript.
+Navigate through dialogs initiated by action commands in Teams, your app receives a `composeExtension/fetchTask` or `composeExtension/submitAction` invoke activity. This activity includes the `activity.value.commandId` parameter. However, your app uses this parameter to differentiate between commands within the activity handler for these invoke activities, such as the `handleTeamsMessagingExtensionFetchTask` or `handleTeamsMessagingExtensionSubmitAction` methods in the Bot Framework SDK for JavaScript.
 
-To test various action commands, you must enter the `Command ID` in the designated input box. If you don't set it, the command ID won't be included in the activity payload.
+To test various action commands, you must enter the `Command ID` in the designated input box. If you don't set it, the command IDs aren't included in the activity payload.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/command-parameter.png" alt-text="Screenshot shows the command ID parameter in Action Command.":::
 
 While Teams retrieves this information from your app manifest, Test Tool doesn't. Therefore, you need to input it manually.
 
-For details about the schema of this, invoke activity payload. For more information, see [create and send dialogs](../messaging-extensions/how-to/action-commands/create-task-module.md) and [respond to the dialog submit action](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md).
+For details about the schema, invoke activity payload. For more information, see [create and send dialogs](../messaging-extensions/how-to/action-commands/create-task-module.md) and [respond to the dialog submit action](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md).
 <br>
 </details>
 </br>
