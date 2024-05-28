@@ -24,7 +24,7 @@ An application-hosted media bot requires the following:
 * The bot can be hosted within one of the following Azure service environments:
   * Cloud Service.
   * Service Fabric with Virtual Machine Scale Sets (VMSS).
-  * Infrastructure as a Service (IaaS) Virtual Machine (VM).
+  * Infrastructure as a Service (IaaS) Virtual Machine (VM).  
   
 * The bot can't be deployed as an Azure web app.
 
@@ -62,6 +62,8 @@ The application-hosted media bots require the following scalability and performa
 * The VM instance hosting the real-time media bot must have at least 2 CPU cores. For Azure, a Dv2-series virtual machine is recommended. For other Azure VM types, a system with four virtual CPUs (vCPU) is the minimum size required. Detailed information about Azure VM types is available in the [Azure documentation](/azure/virtual-machines/windows/sizes-general).
 
 ## Code sample
+
+Application-hosted media bots samples are as follows:
 
 | **Sample name** | **Description** | **Graph** |
 |------------|-------------|-----------|
