@@ -9,7 +9,7 @@ ms.date: 01/29/2023
 
 # Invoke and dismiss dialogs
 
-Dialogs (referred as task modules in TeamsJS v1.x) are invoked from tabs, bots, or deep links. The response can be either in HTML, JavaScript, or as an Adaptive Card. There's a numerous flexibilities in terms of how dialogs are invoked and how to deal with the response of the user's interaction. The following table summarizes how this works.
+Dialogs (referred as task modules in TeamsJS v1.x) can be invoked from tabs, bots, or deep links. The response can be either in HTML, JavaScript, or as an Adaptive Card. There's a numerous flexibilities in terms of how dialogs are invoked and how to deal with the response of the user's interaction. The following table summarizes how this works.
 
 > [!NOTE]
 > The `task` capability is replaced with `dialog` capability in both HTML-based dialogs (starting with TeamsJS v.2.0.0) and Adaptive Card-based dialogs (starting with TeamsJS v.2.8.0). For more information, see [dialog](./../../m365-apps/teamsjs-support-m365.md#dialog).
@@ -82,7 +82,7 @@ HTML or JavaScript-based dialogs have access to the entire area of the dialog be
 >
 > 1. Update TeamsJS SDK to v.2.19.0 or later. For more information about the latest release of TeamsJS SDK, see [Microsoft Teams JavaScript client library](https://www.npmjs.com/package/@microsoft/teams-js).
 >
-> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the **_*.cloud.microsoft_** domain.
+> 2. Update your [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) headers in your Teams app to allow your app to access the ****.cloud.microsoft*** domain.
 
 Here are a few examples of common use cases.
 
