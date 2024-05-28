@@ -8,7 +8,7 @@ ms.date: 04/13/2023
 
 # Configure deep links
 
-Deep links function as URLs that direct users straight to specific content within an app, thus eliminating the need to navigate through several screens. In Microsoft Teams, you can use deep links to go to a specific chat, message, or tab within an app. You can also use deep links to initiate a new chat or call and share content during a meeting.
+Deep links function as URLs that direct users straight to specific content within an app, thus eliminating the need to navigate through several screens. In Microsoft Teams, you can use deep links to go to a specific chat, message, or tab within an app. You can also use deep links to initiate a new chat or call and share content during a meeting. Deep links are primarily used for navigation within Teams and Teams apps, and don't support creating a temporary tab or a dialog.
 
 You can use deep links in Teams in the following ways:
 
@@ -42,8 +42,6 @@ You can use deep links in Teams in the following ways:
     :::image type="content" source="~/assets/images/deeplink-schedule.gif" alt-text="Graphical representation shows the user experience of deep links to launch a meeting scheduling dialog.":::
 
 You can use the Microsoft Teams JavaScript client library (TeamsJS) to navigate within your tab. For scenarios such as navigating to content and information or launching a chat dialog, the TeamsJS typed APIs provide an improved experience. We recommend using TeamsJs typed APIs for Teams apps that might run in Outlook or Microsoft 365 apps. They also provide a way to check if the host supports the capability used.
-
-Deep links are primarily used for navigation within Teams and Teams apps, and doesn't directly support creating a temporary tab or a popup experience.
 
 > [!NOTE]
 > To redirect users from your Teams app to its native experience through a deep link with a protocol such as `tel:`, `mailto:`, or `webex:`, launch the deep link in a new window by calling the `window.open` method or using an anchor tag with `target="_blank"`.
