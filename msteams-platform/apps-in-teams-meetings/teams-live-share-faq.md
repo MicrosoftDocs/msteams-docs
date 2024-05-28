@@ -20,13 +20,13 @@ Get answers to common questions when using Live Share.<br>
 
 <summary><b>Can I use my own Azure Fluid Relay service?</b></summary>
 
-Yes! When initializing Live Share, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, but you need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
+Yes! When initializing Live Share, you can define your own `AzureConnectionConfig`. Live Share associates containers you create with meetings, chats, or channels, but you need to implement the `ITokenProvider` interface to sign tokens for your containers. For example, you can use a provided `AzureFunctionTokenProvider`, which uses an Azure cloud function to request an access token from a server.
 
 While most of you find it beneficial to use our free hosted service, there may still be times where it's beneficial to use your own Azure Fluid Relay service for your Live Share app. Consider using a custom AFR service connection if you:
 
-* Require storage of data in Fluid containers beyond the lifetime of a meeting.
-* Transmit sensitive data through the service that requires a custom security policy.
-* Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
+- Require storage of data in Fluid containers beyond six hours after the container is first created.
+- Transmit sensitive data through the service that requires a custom security policy.
+- Develop features through Fluid Framework, for example, `SharedMap`, for your application outside of Teams.
 
 For more information, see [how to guide](./teams-live-share-how-to/how-to-custom-azure-fluid-relay.md) or visit the [Azure Fluid Relay documentation](/azure/azure-fluid-relay/).
 
@@ -56,9 +56,22 @@ Scheduled meetings, one-on-one calls, group calls, meet now, and channel meeting
 
 <details>
 
+<summary><b>Can I use Live Share for my tab outside of meetings?</b></summary>
+
+Yes! Live Share supports chat and channel content contexts, including configurable tabs, static tabs, and Collaborative Stageview for Microsoft Teams desktop and web clients. Personal apps aren't supported.
+
+> [!NOTE]
+> Microsoft Teams iOS and Android clients don't support Live Share sessions outside of meeting contexts.
+
+<br>
+
+</details>
+
+<details>
+
 <summary><b>Will Live Share's media package work with DRM content?</b></summary>
 
-No. Teams currently doesn't support encrypted media for tab applications on desktop. Chrome, Edge, and mobile clients are supported. For more information, you can [track the issue here](https://github.com/microsoft/live-share-sdk/issues/14).
+Yes, DRM is supported in the new Teams desktop, web, iOS, and Android clients. It's not supported in Teams classic. To enable DRM encryption for Teams desktop, enable the `media` device permission in your app manifest.
 
 <br>
 
@@ -103,12 +116,12 @@ To fix errors resulting from changes to `initialObjects` when testing locally in
 
 If you plan to update your app with new `SharedObject`, `DataObject`, or `LiveDataObject` instances, you must consider how you deploy new schema changes to production. While the actual risk is relatively low and short lasting, there might be active sessions at the time you roll out the change. Existing users in the session must not be impacted, but users joining that session after you deployed a breaking change may have issues connecting to the session. To mitigate this, you might consider some of the following solutions:
 
-* Use our experimental [Live Share Turbo](https://aka.ms/liveshareturbo) or [Live Share for React](https://aka.ms/livesharereact) packages.
-* Deploy schema changes for your web application outside of normal business hours.
-* Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
+- Use our experimental [Live Share Turbo](https://aka.ms/liveshareturbo) or [Live Share for React](https://aka.ms/livesharereact) packages.
+- Deploy schema changes for your web application outside of normal business hours.
+- Use `dynamicObjectTypes` for any changes made to your schema, rather than changing `initialObjects`.
 
 > [!NOTE]
-> Live Share does not currently support versioning your `ContainerSchema`, nor does it have any APIs dedicated to migrations.
+> Live Share doesn't support versioning your `ContainerSchema` and doesn't have any APIs dedicated to migrations.
 
 <br>
 
@@ -126,7 +139,7 @@ While there aren't any enforced limits, you must be mindful of how many messages
 <details>
 <summary><b>Is Live Share supported for Government Community Cloud (GCC), Government Community Cloud High (GCC-High), and Department of Defense (DOD) tenants?</b></summary>
 
-Live Share isn't supported for GCC, GCC-High, and DOD tenants.
+Live Share is only supported in Government Community Cloud (GCC) tenants.
 
 <br>
 
@@ -159,14 +172,23 @@ No, Live Share doesn't support Teams Rooms devices.
 
 </details>
 
+<details>
+<summary><b>Does Live Share support the Fluid Framework version 2 beta?</b></summary>
+
+Yes, Live Share supports Fluid Framework version `^2.0.0-rc` and later in preview. If you're interested in using these preview versions, update your Live Share packages to version `2.0.0-preview.0` or later.
+
+<br>
+
+</details>
+
 ## Have more questions or feedback?
 
 Submit issues and feature requests to the SDK repository for [Live Share SDK](https://github.com/microsoft/live-share-sdk). Use the `live-share` and `microsoft-teams` tag to post how-to questions about the SDK at [Stack Overflow](https://stackoverflow.com/questions/tagged/live-share+microsoft-teams).
 
 ## See also
 
-* [Apps for Teams meetings](teams-apps-in-meetings.md)
-* [GitHub repository](https://github.com/microsoft/live-share-sdk)
-* [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
-* [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
-* [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
+- [Apps for Teams meetings](teams-apps-in-meetings.md)
+- [GitHub repository](https://github.com/microsoft/live-share-sdk)
+- [Live Share SDK reference docs](/javascript/api/@microsoft/live-share/)
+- [Live Share Media SDK reference docs](/javascript/api/@microsoft/live-share-media/)
+- [Use Fluid with Teams](../tabs/how-to/using-fluid-msteam.md)
