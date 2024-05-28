@@ -298,7 +298,7 @@
       items:
       - name: Teams Toolkit overview
         href: toolkit/teams-toolkit-fundamentals.md
-        displayName: TTK, version
+        displayName: TTK, version, Developer Portal, debug, Teams App Test Tool, dev tunnel
       - name: Install Teams Toolkit
         href: toolkit/install-Teams-Toolkit.md
         displayName: download
@@ -354,12 +354,14 @@
             href: toolkit/provision.md
           - name: Deploy to the cloud
             href: toolkit/deploy.md
+          - name: Deploy Teams app to container service
+            href: toolkit/deploy-Teams-app-to-container-service.md           
+          - name: Set up CI/CD pipelines
+            href: toolkit/use-CICD-template.md            
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
-          - name: Set up CI/CD pipelines
-            href: toolkit/use-CICD-template.md  
           - name: Test app behavior in different environment
             href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
@@ -429,7 +431,7 @@
         displayName: AppID 
       - name: Develop your apps with Teams Toolkit
         href: concepts/build-and-test/develop-your-apps-with-teams-toolkit.md
-        displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app
+        displayName: visual studio code, visual studio, teams toolkit, react web app, publish react app, debug
       - name: Analyze your apps usage in Developer Portal
         href: concepts/build-and-test/analyze-your-apps-usage-in-developer-portal.md  
         displayName: dashboard
@@ -509,7 +511,6 @@
           displayName: Loop
         - name: Action extensions
           href: resources/messaging-extension-v3/create-extensions.md
-
 - name: Test your app
   items:
   - name: Overview
@@ -557,7 +558,7 @@
     displayName: Customize your app, update app name, branding, hide and unhide app, accent
   - name: Configure default options for Teams app
     href: concepts/deploy-and-publish/add-default-install-scope.md
-    displayName: default install scope, default capability for shared scopes, block apps 
+    displayName: default install scope, default capability for shared scopes, block apps, apps to meetings, app default options 
   - name: Create Teams app package
     href: concepts/build-and-test/apps-package.md
     displayName: Host your app, HTTPS, cloud server, bot icon, app icons
@@ -740,15 +741,19 @@
     items:
     - name: Overview
       href: concepts/build-and-test/deep-links.md
-      displayName: Navigate within your app, executeDeepLink, protocol handlers
+      displayName: create deep link, protocol handlers, chat deep link, app deep link, workflow deep link, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to an application
       href: concepts/build-and-test/deep-link-application.md
+      displayName: create deep link for app, custom app deep link, tab deep link, deep link for app install dialog, invoke Stageview, navigate within your app, protocol handlers, deep link parameters, deep link URL
     - name: Deep link to Teams chat
-      href: concepts/build-and-test/deep-link-teams.md   
+      href: concepts/build-and-test/deep-link-teams.md
+      displayName: create deep link for specific chat, deep link for new chat, navigate to chat, channel conversation, deep link parameters, deep link URL   
     - name: Deep link to a workflow in Teams
       href: concepts/build-and-test/deep-link-workflow.md
+      displayName: create deep link for workflow, deep link for meeting schedule dialog, audio video call, deep link to join meeting, share content to meeting stage, deep link parameters, deep link URL
     - name: Execution and handling of deep links
-      href: concepts/build-and-test/deep-links-execution-handling.md    
+      href: concepts/build-and-test/deep-links-execution-handling.md
+      displayName: execute deep link, deep link API, hyperlink text, raw link text, deep link from tab, deep link parameters, deep link URL    
   - name: Integrate People Picker  
     href: concepts/device-capabilities/people-picker-capability.md
 - name: Resources
