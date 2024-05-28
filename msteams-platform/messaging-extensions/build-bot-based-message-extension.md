@@ -99,9 +99,9 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 Teams supports message extension plugins in Microsoft Copilot for Teams chats. Extending bot-based message extension plugins to Teams chats offers several benefits:
 
-* **Expanded functionality**: Plugins for Copilot for Teams chats can offer functionalities that complement those of plugins Copilot for Microsoft 365 or meetings. For example, a plugin for Copilot for meetings might help schedule and manage meetings, while a plugin for Copilot for Teams chats could handle follow-up actions like sending meeting minutes or action items.
+* **Expanded functionality**: Plugins for Copilot for Teams chats offer functionalities that complement those of plugins Copilot for Microsoft 365 or meetings. For example, a plugin for Copilot for meetings helps schedule and manage meetings, while a plugin for Copilot for Teams chats handles follow-up actions like sending meeting minutes or action items.
 
-* **Integration**: Plugins can help integrate other external tools or services into Copilot for Teams chats. This can streamline workflows by allowing users to access multiple tools and services from one place, reducing context switchesS.
+* **Integration**: Plugins can help integrate other external tools or services into Copilot for Teams chats. This can streamline workflows by allowing users to access multiple tools and services from one place, reducing context switching.
 
 * **Consistency**: Having plugins for both chat and meetings can provide a consistent user experience across different modes of communication.
 

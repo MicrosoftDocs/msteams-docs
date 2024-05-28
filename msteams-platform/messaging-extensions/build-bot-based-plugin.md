@@ -60,7 +60,7 @@ Before you get started, ensure that you're familiar with the following standards
 > [!IMPORTANT]
 >
 > * Plugins for Microsoft Copilot for Microsoft 365 are available in public developer preview.
-> * Plugins for Microsoft Copilot for Microsoft 365 only work in Microsoft 365 Chat and Copilot for Teams chats.
+> * Plugins for Microsoft Copilot for Microsoft 365 only work in Copilot for Microsoft 365 and Copilot for Teams chats.
 
 Let's create a bot-based search message extension that can search Node Package Manager (npm) registries in Teams and Copilot and share results through the compose message area in Teams.
 
@@ -303,7 +303,7 @@ To trigger the message extension through Copilot for Microsoft 365, follow these
 > [!NOTE]
 > This prompt might not always make Copilot for Microsoft 365 include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the Copilot for Microsoft 365 response and leave a message tagged with [MessageExtension].
 
-# [Developer Portal for Teams](#tab/developer-portal-for-teams)
+# [Developer Portal](#tab/developer-portal)
 
 To create a bot-based search message extension plugin using Developer Portal, follow these steps:
 
@@ -358,7 +358,7 @@ To test your bot-based message extension created in Developer Portal, you can us
 
 ---
 
-For more on testing your plugin in Copilot for Microsoft 365 chat and Copilot for Teams chats, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/orchestrator?tabs=tasks#debugging-plugin-selection).
+For more on testing your plugin in Copilot for Microsoft 365 and Copilot for Teams chats, see [Debugging plugin selection](/microsoft-365-copilot/extensibility/orchestrator?tabs=tasks#debugging-plugin-selection).
 
 ## Step-by-step guide
 
