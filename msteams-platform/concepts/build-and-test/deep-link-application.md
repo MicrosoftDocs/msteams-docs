@@ -159,7 +159,7 @@ You can configure deep links in your app through TeamsJS to allow the app users 
 
 # [TeamsJS v2](#tab/teamsjs-v2)
 
-You can trigger navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp&preserve-view=true) function as shown in the following code:
+You can trigger navigation from your tab using the [pages.navigateToApp()](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-navigatetoapp) function as shown in the following code:
 
 ```javascript
 if (pages.isSupported()) {
