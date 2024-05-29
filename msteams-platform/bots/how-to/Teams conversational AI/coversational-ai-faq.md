@@ -14,7 +14,7 @@ ms.date: 04/07/2022
 <details>
 <summary>What does the Teams AI library do?</summary>
 
-Teams AI library provides abstractions for you to build robust applications that utilize OpenAI large language model (LLM)s.
+Teams AI library provides abstractions for you to build robust applications that utilize OpenAI Large Language Models (LLMs).
 <br>
 </details>
 </br>
@@ -22,7 +22,7 @@ Teams AI library provides abstractions for you to build robust applications that
 <details>
 <summary>Does Microsoft provide a hosted version of OpenAI models that are used by the AI library?</summary>
 
-No, you need to have your large language model (LLM)s, hosted in Azure OpenAI or elsewhere.
+No, you need to have your Large Language Models (LLMs), hosted in Azure OpenAI or elsewhere.
 <br>
 </details>
 </br>
@@ -30,7 +30,7 @@ No, you need to have your large language model (LLM)s, hosted in Azure OpenAI or
 <details>
 <summary>Can we use the AI library with other large language models apart from OpenAI?</summary>
 
-Yes, it's possible to use Teams AI library with other large language model (LLM)s.
+Yes, it's possible to use Teams AI library with other Large Language Models (LLMs).
 <br>
 </details>
 </br>
@@ -38,7 +38,7 @@ Yes, it's possible to use Teams AI library with other large language model (LLM)
 <details>
 <summary>Does a developer need to do anything to benefit from LLMs? If yes, why?</summary>
 
-Yes, Teams AI library provides abstractions to simplify utilization of large language model (LLM)s in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
+Yes, Teams AI library provides abstractions to simplify utilization of Large Language Models (LLMs) in conversational applications. However, you (developer) must tweak the prompts, topic filters, and actions depending upon your scenarios.
 <br>
 </details>
 </br>
