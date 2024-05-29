@@ -107,6 +107,7 @@
       href: tabs/design/tabs.md
     - name: Bots
       href: bots/design/bots.md
+      displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md
       displayName: commands      
