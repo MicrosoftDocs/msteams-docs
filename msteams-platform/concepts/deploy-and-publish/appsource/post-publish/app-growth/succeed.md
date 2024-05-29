@@ -127,5 +127,4 @@ Each app in the Teams ecosystem undertakes this journey, in all likelihood, star
 
 ## See also
 
-- [Plan, strategize and execute growth for your app](overview-app-growth.md)
-- [Growth lifecycle for your app](app-growth-lifecycle.md)
+[Plan, strategize and execute growth for your app](overview-app-growth.md)

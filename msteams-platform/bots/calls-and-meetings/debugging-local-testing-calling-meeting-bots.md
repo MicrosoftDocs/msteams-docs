@@ -118,5 +118,4 @@ var mediaPlatform = new MediaPlatformSettings
 
 ## See also
 
-* [Test your app](../../concepts/build-and-test/test-app-overview.md)
-* [Test and debug your bot locally with IDE](../how-to/debug/locally-with-an-ide.md)
+[Test your app](../../concepts/build-and-test/test-app-overview.md)
