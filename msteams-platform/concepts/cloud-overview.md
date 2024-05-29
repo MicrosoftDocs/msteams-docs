@@ -28,13 +28,30 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
 
 The article provides a comprehensive overview of Teams' compatibility across different government cloud services, details the capabilities for each tenant, and adds guidance on deployment.
 
-| Teams in Government cloud | Teams operated by 21Vianet |
-|---|---|
-| GCC, GCC High, and DOD are limited for use within Unites States and to access Microsoft Government clouds services, you can purchase [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans). | [Teams operated by 21Vianet](/officeupdates/teams-app-versioning) cloud service is specific to China and you can purchase the suitable [Microsoft 365 plan](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365) to utilize the services offered within China. |
+:::row:::
+   :::column span="":::
+
+### Teams in Government cloud
+
+GCC, GCC High, and DOD are limited for use within Unites States. To access Government cloud services, you can purchase a suitable [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans).
+
+   :::column-end:::
+
+   :::column span="":::
+
+### Teams operated by 21Vianet
+
+[Teams operated by 21Vianet](/officeupdates/teams-app-versioning) is specific to China. To utilize the services offered within China, you can purchase the suitable [Microsoft 365 plan](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365).
+
+   :::column-end:::
+
+:::row-end:::
+
+<br>
 
 ## Teams app capabilities for Government clouds
 
- Teams is compatible with all Microsoft 365 Government environment, but the capabilities and features vary by tenant. Some features available in commercial tenants may not be accessible in government tenant due to security and compliance restrictions, while others features take time to roll out. Understanding supported Teams apps and capabilities is crucial for effective utilization within government tenants.
+Teams is compatible with all Microsoft 365 Government environments, but the capabilities and features vary by tenant. Some features available in commercial tenants may not be accessible in government tenants due to security and compliance restrictions, while other features take time to roll out. Understanding the supported Teams apps and capabilities is crucial for effective utilization within government tenants.
 
 The following table details the Teams apps and capabilities for GCC, GCC High, DOD, and Teams operated by 21Vianet:
 
@@ -64,20 +81,13 @@ The following table details the Teams apps and capabilities for GCC, GCC High, D
 
 > [!NOTE]
 >
-> * Third-party apps are turned off by default for GCC and aren't available for GCC High, DOD, and Gallatin. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
+> * Third-party apps are turned off by default for GCC and aren't available for GCC High, DOD, and Teams operated by 21Vianet. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
 > * Only Incoming Webhooks are supported in GCC High.
-> * For Graph API information, see [Graph API for Government clouds](/graph/teamwork-national-cloud-differences).
+> * For more information on Graph API, see [Graph API for Government clouds](/graph/teamwork-national-cloud-differences).
 
 ### Plan to deploy Teams in Government clouds
 
-To deploy Teams in a government cloud, you must purchase a suitable Microsoft 365 Government subscription. US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license.
-
-To purchase required Microsoft 365 Government licenses:
-
-* You must submit a form either for GCC or GCC High to validate your organization’s eligibility. For more information on the eligibility, see [Microsoft 365 Government plans](https://www.microsoft.com/en-in/microsoft-365/enterprise/government-plans-and-pricing?rtc=1#heading-oc2835).
-* You must place an order only through the Microsoft account team or a qualified partner.
-
-For more information, see [Teams for Government](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
+To deploy Teams in a government cloud, you must purchase a suitable Microsoft 365 Government subscription. US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license. For more information, see [Teams for Government](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
 
 To deploy Teams operated by 21Vianet, you can purchase a suitable Office 365 plan offered by 21Vianet version of Office 365 specific to China. For more information, see [Teams operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet).
 
@@ -85,13 +95,13 @@ To deploy Teams operated by 21Vianet, you can purchase a suitable Office 365 pla
 
 Here are few pointers to consider while connecting with third-party services from Government clouds:
 
-| &nbsp; | Check the following |
+| &nbsp; | Compliance check |
 | --- | --- |
-| ✔️ | The users must understand that by enabling third-party communication, the communication is being processed through the third party and not Microsoft. |
-| ✔️ | The user is solely responsible for mitigating risks associated with connecting to third-party bots in their services. |
-| ✔️ | You must understand that enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. You must ensure that the bot meets the compliance requirements including FedRAMP, DFARS, and ITAR. |
-| ✔️ | The user must be responsible to evaluate the risk and compliance of any endpoint and URL that the users connect to. |
-| ✔️ | Microsoft doesn't endorse and make no warranties concerning the security of third parties that the customer allows to connect with their service. |
+| ✔️ | Understand that by enabling third-party communication, the communication is processed through the third party and not Microsoft. |
+| ✔️ | Be responsible to mitigate risks associated with connecting to third-party bots in their services. |
+| ✔️ | Understand that enabling bots extend your system boundary beyond this tenant based on the bot you choose to use. You must ensure that the bot meets the compliance requirements including FedRAMP, DFARS, and ITAR. |
+| ✔️ | Be responsible to evaluate the risk and compliance of any endpoint and URL that the users connect to. |
+| ✔️ | Understand that Microsoft doesn't endorse and make no warranties concerning the security of third parties that the customer allows to connect with their service. |
 
 ## See also
 
