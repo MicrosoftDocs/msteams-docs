@@ -103,23 +103,22 @@ Meetings Copilot is interactive and efficient, it can assist with summarizing di
 
 :::image type="content" source="../assets/images/Copilot/meeting-copilot-extensibility.png" alt-text="Screenshot shows the plugins flyout menu in Copilot for Teams meetings.":::
 
-**Benefits**
+| Benefits          | Description                                                                                                            |
+|-------------------|------------------------------------------------------------------------------------------------------------------------|
+| User Empowerment  | Extending Meeting Copilot empowers users with various actions to enhance their meeting experience.                      |
+| UI Commands       | Users can easily access features like opening a task module or sharing an app to the stage.                             |
+| Search Commands   | Efficient data retrieval from app databases is made possible, streamlining the search process.                          |
+| Action Commands   | Users can facilitate tasks such as creating polls or adding entries into CRM applications.                              |
+| Complex Commands  | These commands involve data fetching and rationalizing from multiple sources, enabling informed decisions.              |
 
-* **User Empowerment:** Extending Meeting Copilot empowers users with various actions to enhance their meeting experience.
-* **UI Commands:** Users can easily access features like opening a task module or sharing an app to the stage.
-* **Search Commands:** Efficient data retrieval from app databases is made possible, streamlining the search process.
-* **Action Commands:** Users can facilitate tasks such as creating polls or adding entries into CRM applications.
-* **Complex Commands:** These commands involve data fetching and rationalizing from multiple sources, enabling users to make informed decisions based on comprehensive data analysis.
-
-**Scenarios**
-
-1. **Reactive Commands:** Users can directly command Copilot to perform specific actions or provide information. This include:
-   * **Natural Language Prompts:** Users can instruct Copilot to carry out search or action commands. For example, requesting the latest sales report prompts Copilot to retrieve it from the app database.
-   * **Prompt Suggestions:** Apps can offer static or enriched prompts for Copilot to execute, such as creating a new task, which Copilot would then facilitate by opening the relevant module.
-
-2. **Proactive Assistance:** Copilot proactively listens to meeting signals and assists users by:
-   * **Suggesting prompts from apps:** These suggestions are contextually relevant, like opening a project management app during a discussion on project planning.
-   * **Providing assistance without explicit prompts:** Copilot can automatically suggest actions like creating a poll or recommending app content based on the meeting's discussion topics.
+| Scenarios         | Description                                                                                                            |
+|-------------------|------------------------------------------------------------------------------------------------------------------------|
+| Reactive Commands | Users can directly command Copilot to perform specific actions or provide information.                                  |
+|                   | - Natural Language Prompts: Users can instruct Copilot to carry out search or action commands.                         |
+|                   | - Prompt Suggestions: Apps can offer static or enriched prompts for Copilot to execute.                                |
+| Proactive Assistance | Copilot proactively listens to meeting signals and assists users by:                                                   |
+|                   | - Suggesting prompts from apps: Contextually relevant suggestions based on the discussion topics.                      |
+|                   | - Providing assistance without explicit prompts: Copilot can automatically suggest actions based on the discussion.    |
 
 ## Next step
 
