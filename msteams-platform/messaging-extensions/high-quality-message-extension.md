@@ -1,5 +1,5 @@
 ---
-title: Bot-based message extension plugin guidelines
+title: Copilot for Microsoft 365 extension guidelines
 description: Learn about the guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
 ms.topic: how-to
 author: v-preethah
@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 11/14/2023
 ---
 
-# Guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365
+# Guidelines to create or upgrade Copilot extensions
 
 > [!IMPORTANT]
 >
@@ -16,6 +16,7 @@ ms.date: 11/14/2023
 > * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
+> * If your app uses Graph connectors, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams).
 
 Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
 
@@ -423,7 +424,7 @@ For M365 Chat, a search-based message extension must support more than three uni
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
-* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property which supports up to 5 parameters. 
+* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property which supports up to 5 parameters.
 
 <br>
 <details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
@@ -547,36 +548,36 @@ The following code is an example of the `samplePrompts` property in app manifest
 
 ```json
 "composeExtensions": [
-	{
-		"canUpdateConfiguration": true,
-		"botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
-		"commands": [
-			{
-				"id": "orders",
-				"title": "Orders",
-				"context": [
-					"Commandbox",
-					"Compose"
-				],
-				"description": "Search for orders",
-				"semanticDescription": "Search for orders",
-				"samplePrompts": [
-					{
-						"text": "Search for all orders"
-					},
-					{
-						"text": "Search for orders related to Contoso"
-					},
-					{
-						"text": "Search for all pending orders"
-					},
-					{
-						"text": "Search for all completed ordered for Fabrikam"
-					}
-				]
-			}
-		]
-	}
+ {
+  "canUpdateConfiguration": true,
+  "botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
+  "commands": [
+   {
+    "id": "orders",
+    "title": "Orders",
+    "context": [
+     "Commandbox",
+     "Compose"
+    ],
+    "description": "Search for orders",
+    "semanticDescription": "Search for orders",
+    "samplePrompts": [
+     {
+      "text": "Search for all orders"
+     },
+     {
+      "text": "Search for orders related to Contoso"
+     },
+     {
+      "text": "Search for all pending orders"
+     },
+     {
+      "text": "Search for all completed ordered for Fabrikam"
+     }
+    ]
+   }
+  ]
+ }
 ]
 ```
 
