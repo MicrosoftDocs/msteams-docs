@@ -40,7 +40,7 @@ Next, you can retrieve mentions using the `entities` object and add mentions to 
 
 ## Work with mentions
 
-Every message to your bot from a group or channel contains an @mention with its name in the message text. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends. Bots in group chats support @mention of user but doesn't support to mention @everyone.
+Every message to your bot from a group or channel contains an @mention with its name in the message text. Your bot can also retrieve other users mentioned in a message and add mentions to any messages it sends. Bots in group chats support @mention of user but doesn't support @everyone mention.
 
 You must also strip out the @mentions from the content of the message your bot receives.
 
