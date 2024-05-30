@@ -187,7 +187,7 @@ Settings screens are where users can configure their preferences with your app.
 
 ### Top use case
 
-* Manage app features
+Manage app features
 
 :::image type="content" source="../../assets/images/ui-templates/settings.png" alt-text="Example shows a settings template." lightbox="../../assets/images/ui-templates/settings.png":::
 

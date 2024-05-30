@@ -35,7 +35,7 @@ Follow these tips to make the most of your space in the Teams Store.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/app-artwork-color-do.png" alt-text="Example shows the background color to enhance your brand.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-artwork-color-do.png" alt-text="Example shows the background color to enhance your brand." lightbox="../../assets/images/design-guidelines/app-artwork-color-do.png" alt-text="Example shows the background color to enhance your brand.":::
 
 #### Do: Use color to enhance your brand
 
@@ -43,7 +43,7 @@ Use the background color to highlight your logo and create more cohesion.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/app-artwork-color-dont.png" alt-text="Example shows overlap the background colors that can clash with your brand.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-artwork-color-dont.png" alt-text="Example shows overlap the background colors that can clash with your brand." lightbox="../../assets/images/design-guidelines/app-artwork-color-dont.png":::
 
 #### Don’t: Use colors that clash with your brand
 
@@ -54,7 +54,7 @@ Your app display is overwhelming to customers.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/app-artwork-clear-text-do.png" alt-text="Example shows an app artwork with simple and clear text.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-artwork-clear-text-do.png" alt-text="Example shows an app artwork with simple and clear text." lightbox="../../assets/images/design-guidelines/app-artwork-clear-text-do.png":::
 
 #### Do: Use simple and clear text
 
@@ -62,7 +62,7 @@ Briefly highlight the features that are displayed.
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/app-artwork-clear-text-dont.png" alt-text="Example shows an app artwork with unclear text.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-artwork-clear-text-dont.png" alt-text="Example shows an app artwork with unclear text." lightbox="../../assets/images/design-guidelines/app-artwork-clear-text-dont.png":::
 
 #### Don’t: Use unclear text
 
@@ -73,7 +73,7 @@ Customers may ignore an unclear message.
 
 :::row:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/app-artwork-describe-your-app-do.png" alt-text="Example shows an app artwork that clearly describes your app.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-artwork-describe-your-app-do.png" alt-text="Example shows an app artwork that clearly describes your app." lightbox="../../assets/images/design-guidelines/app-artwork-describe-your-app-do.png" alt-text="Example shows an app artwork that clearly describes your app.":::
 
 #### Do: Clearly and accurately describe your app
 
@@ -81,7 +81,7 @@ Give a brief and accurate overview of your application and what people can expec
 
    :::column-end:::
    :::column span="":::
-:::image type="content" source="../../assets/images/design-guidelines/app-artwork-describe-your-app-dont.png" alt-text="Example shows an app artwork which is confusing and misleading.":::
+:::image type="content" source="../../assets/images/design-guidelines/app-artwork-describe-your-app-dont.png" alt-text="Example shows an app artwork which is confusing and misleading." lightbox="../../assets/images/design-guidelines/app-artwork-describe-your-app-dont.png" alt-text="Example shows an app artwork which is confusing and misleading.":::
 
 #### Don’t: Use confusing or misleading copy to describe your app
 
