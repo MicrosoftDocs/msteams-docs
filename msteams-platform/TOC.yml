@@ -443,7 +443,7 @@
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId 
+      displayName: conversationId, proactive message, send message, bot framework
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
