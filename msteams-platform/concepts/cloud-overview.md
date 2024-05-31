@@ -26,41 +26,22 @@ Microsoft Teams plays a key role to facilitate secure and efficient communicatio
    :::column-end:::
 :::row-end:::
 
-The article provides a comprehensive overview of Teams' compatibility across different government cloud services, details the capabilities for each tenant, and adds guidance on deployment.
+This article provides a comprehensive overview of Teams' compatibility across different Government cloud services, details the capabilities for each tenant, and provides guidance on deployment.
 
-:::row:::
-   :::column span="":::
-
-### Teams in Government cloud
-
-GCC, GCC High, and DOD are limited for use within Unites States. To access Government cloud services, you can purchase a suitable [Microsoft 365 Government plans](https://products.office.com/government/compare-office-365-government-plans).
-
-   :::column-end:::
-
-   :::column span="":::
-
-### Teams operated by 21Vianet
-
-[Teams operated by 21Vianet](/officeupdates/teams-app-versioning) is specific to China. To utilize the services offered within China, you can purchase the suitable [Microsoft 365 plan](https://www.microsoft.com/zh-cn/microsoft-365/compare-china-global-versions-microsoft-365).
-
-   :::column-end:::
-
-:::row-end:::
-
-<br>
+GCC, GCC High, and DOD are limited for use within Unites States and [Teams operated by 21Vianet](/officeupdates/teams-app-versioning) is specific to China.
 
 ## Teams app capabilities for Government clouds
 
-Teams is compatible with all Microsoft 365 Government environments, but the capabilities and features vary by tenant. Some features available in commercial tenants may not be accessible in government tenants due to security and compliance restrictions, while other features take time to roll out. Understanding the supported Teams apps and capabilities is crucial for effective utilization within government tenants.
+Teams is compatible with all Microsoft 365 Government environments, but the capabilities and features vary by tenant. Some features available in commercial tenants might not be accessible in government tenants due to security and compliance restrictions, while other features take time to roll out. It’s important to have a clear understanding of the Teams apps and capabilities that are supported within government tenants to ensure they are utilized effectively.
 
 The following table details the Teams apps and capabilities for GCC, GCC High, DOD, and Teams operated by 21Vianet:
 
 | &nbsp; | GCC | GCC High | DOD | Teams operated by 21Vianet |
 |-------------|---------|---|---|---|
 | **Apps** | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-| Apps built by Microsoft. | ✔️ | ✔️ | ✔️ | ✔️ |
-| Third-party apps built by external developers. | ✔️ | ❌ | ❌ | ❌ |
-| Custom apps built for your org (LOB apps) distributed and used in specific organization. | ✔️ | ✔️ | ✔️ | ✔️ |
+| Apps built by Microsoft | ✔️ | ✔️ | ✔️ | ✔️ |
+| Third-party apps built by external developers | ✔️ | ❌ | ❌ | ❌ |
+| Custom apps built for your org (LOB apps) distributed and used in specific organization | ✔️ | ✔️ | ✔️ | ✔️ |
 | **App capabilities** | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 | Tabs | ✔️ | ✔️ | ✔️ | ✔️ |
 | Bots and message extensions | ✔️ | ✔️ | ✔️ | ✔️ |
@@ -79,17 +60,18 @@ The following table details the Teams apps and capabilities for GCC, GCC High, D
 | Graph APIs | ✔️ | ✔️ | ✔️ |  ✔️ |
 | Developer Portal for Teams | ✔️ | ❌ | ❌ |  ❌ |
 
+For more information on Graph API, see [Graph API for Government clouds](/graph/teamwork-national-cloud-differences)
+
 > [!NOTE]
 >
 > * Third-party apps are turned off by default for GCC and aren't available for GCC High, DOD, and Teams operated by 21Vianet. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
-> * Only Incoming Webhooks are supported in GCC High.
-> * For more information on Graph API, see [Graph API for Government clouds](/graph/teamwork-national-cloud-differences).
+> * Only Incoming Webhooks are supported within GCC High.
 
-### Plan to deploy Teams in Government clouds
+### Plan to deploy Teams in government clouds
 
-To deploy Teams in a government cloud, you must purchase a suitable Microsoft 365 Government subscription. US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license. For more information, see [Teams for Government](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
+To deploy Teams in GCC, GCC High, or DOD, you must purchase a suitable [Microsoft 365 Government plan](https://products.office.com/government/compare-office-365-government-plans). US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license. For more information, see [Teams for Government](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
 
-To deploy Teams operated by 21Vianet, you can purchase a suitable Office 365 plan offered by 21Vianet version of Office 365 specific to China. For more information, see [Teams operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet).
+To deploy Teams operated by 21Vianet, you must purchase a suitable [Office 365 plan](https://products.office.com/government/compare-office-365-government-plans) offered by 21Vianet version of Office 365 specific to China. For more information, see [Teams operated by 21Vianet](/office365/servicedescriptions/office-365-platform-service-description/teams-operated-by-21vianet).
 
 ### Compliance with third-party services
 
