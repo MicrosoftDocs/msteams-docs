@@ -30,6 +30,7 @@ The following screenshots show how bot messages can be enhanced with AI labels, 
 >
 > * AI label, sensitivity label, citations, and feedback buttons are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) for one-on-one and group chats, but aren't supported in channels.
 > * AI label, sensitivity label, citations, and feedback buttons are available only in Teams web and desktop clients.
+> * AI label, sensitivity label, citations, and feedback buttons are available in [Government Community Cloud (GCC), GCC High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 ## AI label
 
