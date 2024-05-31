@@ -168,7 +168,7 @@ Alternatively, you can use the REST API and issue a POST request to [`/conversat
 
 # [C#](#tab/csharp)
 
-The .NET example is from [this sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/csharp/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
+The .NET example is from [this sample](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-complete-sample/csharp/AppCompleteSample/src/dialogs/examples/teams/ProactiveMsgTo1to1Dialog.cs)
 
 ```csharp
 using Microsoft.Bot.Builder.Dialogs;
