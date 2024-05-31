@@ -187,5 +187,4 @@ To remove or configure your app in the scheduling window, select the dropdown me
 
 ## See also
 
-* [Extend Teams apps across Microsoft 365](overview.md)
 * [Support and feedback](~/feedback.md)
