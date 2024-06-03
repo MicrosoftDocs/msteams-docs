@@ -1,7 +1,7 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: Learn how message extensions are used, its types, and scenarios where it's used on the Microsoft Teams platform. Samples on action and searched based message extension.
+description: Learn how message extensions are used, its types, and scenarios where the extensions are used on the Microsoft Teams platform. Samples on action and searched based message extension.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -19,7 +19,8 @@ This document provides an overview of message extensions, tasks executed in vari
 The following image displays the locations from where message extensions can be invoked:
 
 > [!NOTE]
-> @mentioning message extensions in the compose box isn't supported.
+> * @mentioning message extensions in the compose box isn't supported.
+> * Message extension isn't displayed to external users of a group chat.
 
 # [Desktop](#tab/desktop)
 
