@@ -20,47 +20,53 @@ In this article:
 
 # What is preapproval of RSC permissions?
 
-Preapproval of RSC permissions allows admins to approve resource-specific consent (RSC) on an app-by-app basis in Microsoft Teams. Previously, admins had the ability to toggle RSC on or off in their tenant. Admins had to approve or block all RSC enabled apps with no granularity to declare which apps they wanted to allow. Through pre-approved RSC, admins can choose which RSC-enabled apps they allow their tenant users to install in Teams without having to allow or block all apps that utilize RSC permissions.
+RSC preapproval provides admins with granular control over the resource-specific consent (RSC) permissions an app can request upon installation. Today, RSC permissions are granted to an app only when the app gets installed. Through the use of pre-approval policies, admins can declare ahead of time the max permissions an app can request from the end user and be consented to during installation. For a permission pre-approval policy to take affect for an app, the admin still needs to ensure that the app is enabled (installable) in their organization (link to managing apps in TAC). If the app is not installable, then the permission pre-approval with respect to that specific app is moot.
+
+Admins have the ability to create finely tuned pre-approval policies based on dimensions such as app id, permissions and sensitivity of the data being accessed. Pre-approval for RSC permissions is an advanced feature meant for admins who have a need to creating advanced custom policies for their organization. Out of the box, the preapproval policies are managed by Microsoft, and it is recommended that organizations leave it in that state. This allows the security team at Microsoft to provide the best security posture for your organization.
 
    > [!NOTE]
    > RSC Pre-approval is currently in public preview, features and operating procedures are subject to change.
 
 # Setting up PowerShell to manage preapprovals
 
-Preapproval of RSC permissions is managed through Microsoft Graph PowerShell. You can learn more about managing Microsoft Teams with PowerShell [here](/manage-teams-with-microsoft-teams-powershell)
+Preapproval of RSC permissions is managed through Microsoft Graph PowerShell. You can learn more about managing Microsoft Teams with PowerShell [here](/../../powershell/microsfotgraph/get-started?view=graph-powershell-1.0l)
 
-Before you can create and manage pre-approvals. You need to connect PowerShell to your tenant using Microsoft Graph. You can use the `Connect-MgGraph` cmdlet to do this. You will need to connect with the following permissions to create, manage, and delete pre-approval policies. 
+Before you can create and manage pre-approvals, You need to connect PowerShell to your tenant using Microsoft Graph. You can use the `Connect-MgGraph` cmdlet to do this. You will need to connect with the following permissions to create, manage, and delete pre-approval policies. 
 
 1. `TeamworkAppSettings.ReadWrite.All`
 1. `Policy.ReadWrite.Authorization`
 1. `AppCatalog.Read.All`
-1. `Policy.ReadWrite.PermissionsGrant'
+1. `Policy.ReadWrite.PermissionsGrant`
 
 ```powershell
 connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite.Authorization', 'AppCatalog.Read.All', 'Policy.ReadWrite.PermissionsGrant')
 ```
 
-# Enable preapproval for RSC permissions
+# Allowing RSC permissions in your organization
 
-For pre-approval to function you need to change your RSC settings to allow pre-approved apps only. You can do this using the `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets. Below are the available configurations available for these settings.
+For both team-specific and chat-specific RSC permissions, there are four distinct states an admin can set for their organization. Apart from `DisabledForAllApps`, all the other states allow RSC permissions to different degrees. These states can be set via `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` commandlets.
+
+For example, to allow RSC permissions for all unblocked apps in your organization, use the command `Set-MgBetaTeamRscConfiguration -State EnabledForPreApprovedAppsOnly`.
+
+The various states for allowing and disallowing RSC permission in your organization are described below:
 
 |Configuration| Description|
 |---|---|
 |`ManagedByMicrosoft`|This is the default state of Teams RSC when you first create your tenant. It is dynamic and can be changed by Microsoft, it is currently default to approve RSC
-|`ApprovedForAllApps`|Any RSC enabled app can be consented to by users in your tenant. With these settings enabled, preapproval of RSC permissions is not needed as all RSC enabled apps are approved for use
-|`ApprovedForPreApprovedAppsOnly`|RSC enabled apps can be consented on an app-by-app basis. Admins can choose which apps are approved for which RSC permissions.
-|`DisabledForAllApps`| No RSC permissions can be consented to by users. In this state, preapproval of RSC permissions will have no effect on users ability to consent to RSC enabled apps
+|`ApprovedForAllApps`|Users can consent to RSC permissions by any unblocked app in the organization
+|`ApprovedForPreApprovedAppsOnly`|Users in the organization can consent to only those unblocked apps that also have an explicit pre-approval policy associated with them. This option should be used only if the admin wants to explicitly limit the allowed RSC permissions on a per app basis.
+|`DisabledForAllApps`| Users will not be able to consent to the RSC permissions required by any app even if the app has been unblocked in the organization. Warning: This will break the installation of all apps that need RSC permissions.
 
    >[!WARNING]
    >Changing your Chat RSC or Team RSC configuration to DisabledForAllApps will disable pre-approval in your tenant and users will encounter errors when attempting to install RSC enabled apps.
 
-## Enable preapproval for Chat RSC: 
+## Enable preapproval for Chat RSC
 You can check and change the current state of your Chat RSC configurations by using `Get-MgBetaChatRscConfiguration` and `Set-MgBetaChatRscConfiguration` cmndlets. 
 
 1. `Get-MgBetaChatRscConfiguration`
 1. `Set-MgBetaChatRscConfiguration -State EnabledForPreApprovedAppsOnly`
 
-## Enable preapproval for Team RSC:
+## Enable preapproval for Team RSC
 You can check the current state of your Team RSC configurations by using the `Get-MgBetaTeamsRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmndlets. 
 
 1. `Get-MgBetaTeamRscConfiguration`
