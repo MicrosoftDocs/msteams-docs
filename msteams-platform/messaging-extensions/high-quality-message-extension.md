@@ -171,11 +171,11 @@ The `semanticDescription` property isn't a mandatory field. However, if you add 
 
 We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
-* Avoid instructional phrases such as **if the user says X**, **ignore**, **delete**, **reset**, **new instructions**, **Answer in Bold**, or **Don't print anything**. *[Mandatory fix]*
+* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
 * Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
 * Avoid grammar and punctuation errors. *[Mandatory fix]*
 * Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
-* Avoid superlative claims such as **#1**, **amazing**, or **best**. *[Suggested fix]*
+* Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
 
 The following table lists the command and semantic description examples for each category:
 
@@ -704,7 +704,7 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
 
   The following action types are recommended:
 
-  * `Action.OpenUrl`: Opens a specified URL from the card.
+  * `Action.OpenUrl`: Opens a specified URL from the Card.
   * `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
   * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
   * `Action.Submit`: Opens a dialog or Stageview using type invoke in data object.
@@ -724,7 +724,7 @@ For a plugin to be validated, invoked, and work seamlessly, ensure that it meets
 | Manifest version | App manifest version must be 1.13 or later. [*Mandatory*] |
 |Microsoft 365 Channel| For users to interact with your message extension from Outlook, you need to add Microsoft 365 channel to your bot. For more information, see [Add Microsoft 365 channel](../m365-apps/extend-m365-teams-message-extension.md#add-microsoft-365-channel-for-your-app). [*Mandatory*]|
 | Response Time | Response time must not exceed 9 seconds for 99 percent, 5 Seconds for 75 percent and 2 Seconds for 50 percent. [*Mandatory*] |
-| Reliability | Apps must maintain 99.9% availability. For instance, if Copilot for Microsoft 365 calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
+| Reliability | Apps must maintain 99.9% availability. For instance, if Microsoft 365 Chat calls a plugin 1,000 times, it must provide a meaningful response 999 times. [*Mandatory*] |
 | Zero Regressions | If you need to resubmit your app for validation, the existing message extension functionality that was working earlier mustn't break. This requirement is only applicable to independent software vendor (ISV) apps and not apps built for your organization. [*Mandatory*] |
 | Single sign-on (SSO) | If applicable, update your Microsoft Entra ID app registration for SSO.  [*Recommended*] |
 | Content Security Policy |If applicable, modify your Content Security Policy headers. [*Recommended*] |

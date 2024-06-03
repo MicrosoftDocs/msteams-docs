@@ -28,7 +28,7 @@ items:
     - How to set up a new project with Teams Toolkit.
     - How to build a bot-based message extension plugin.
     - How to deploy your app.
-    - Trigger your bot-based message extension plugin in Microsoft 365 Chat.
+    - Trigger your bot-based message extension plugin in M365 Chat.
 
     This step-by-step guide helps you to build bot-based message extension plugin with Teams Toolkit. You'll see the following output after you've completed this guide:
 
@@ -364,7 +364,7 @@ items:
 
     1. From the message compose area, send a message to M365 Chat to search for npm package information in Teams and Copilot. For example, find the npm package info on teamsfx-react in npm-searchlocal.
 
-       :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from Copilot for M365 Chat.":::
+       :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
 
     > [!NOTE]
     > This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by thumbing down the M365 Chat response and leave a message.
