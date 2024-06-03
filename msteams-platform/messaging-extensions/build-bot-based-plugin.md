@@ -362,7 +362,7 @@ For more on testing your plugin in Copilot for Microsoft 365 and Copilot for Tea
 
 ## Step-by-step guide
 
-Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.yml) to build a bot-based search message extension plugin for Copilot for M365 Chat.
+Follow the [step-by-step guide](../sbs-messagingextension-searchcommand-plugin.yml) to build a bot-based search message extension plugin for M365 Chat.
 
 ## See also
 
