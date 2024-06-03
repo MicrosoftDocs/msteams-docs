@@ -19,7 +19,8 @@ This document provides an overview of message extensions, tasks executed in vari
 The following image displays the locations from where message extensions can be invoked:
 
 > [!NOTE]
-> @mentioning message extensions in the compose box isn't supported.
+> * @mentioning message extensions in the compose box isn't supported.
+> * If external users are members of the group chat, message extension cards will not be displayed to them.
 
 # [Desktop](#tab/desktop)
 
