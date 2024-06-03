@@ -1,7 +1,7 @@
 ---
 title: Microsoft 365 Chat plugin FAQ
 author: v-ypalikila
-description: In this article, fetch answers to some frequently asked questions while building a plugin for Microsoft Copilot for Microsoft 365 and Copilot for Teams chats.
+description: Get answers to some frequently asked questions while building a plugin for Microsoft Copilot for Microsoft 365 and Copilot for Teams chats.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -10,7 +10,7 @@ ms.date: 11/14/2023
 
 # Frequently Asked Questions
 
-Get answers to common queries about building a message extension and extending the message extension as a plugin in Microsoft Copilot for Microsoft 365 and Copilot for Teams chats.
+Get answers to your common queries about building a message extension and extending the message extension as a plugin in Microsoft Copilot for Microsoft 365 and Copilot for Teams chats.
 
 </br>
 <details>
@@ -90,7 +90,7 @@ Here's an example description that works for NPM Finder:
 </br>
 <details>
 
-<summary> Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat's response doesn’t meet my expectations. What should I do?</summary>
+<summary> Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
 
 Use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
 
@@ -116,7 +116,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 <details>
 <summary>What are the guidelines for Teams apps extensible as plugin for Microsoft Copilot for Microsoft 365 and Copilot for Teams chats? </summary>
 
-You can read the [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365-and-copilot-for-teams-chats) for Teams apps extensible as plugin for Copilot for Microsoft 365 and Copilot for Teams chats.
+You can read the [Teams Store validation guidelines](../concepts/deploy-and-publish/appsource/prepare/teams-store-validation-guidelines.md#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365-and-copilot-for-teams-chats) for Teams apps extensible as plugins for Copilot for Microsoft 365 and Copilot for Teams chats.
 
 </details>
 </br>

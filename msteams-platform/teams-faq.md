@@ -213,15 +213,15 @@ No, Live Share doesn't support meeting recordings.
 
 </details>
 
-## Copilot for Microsoft 365
+## Microsoft 365 Chat
 
 <details>
 
-<summary>Why isn't Copilot for Microsoft 365 including my plugin in a response?</summary>
+<summary>Why isn't Microsoft 365 Chat including my plugin in a response?</summary>
 
 Ensure your app manifest (previously called Teams app manifest) is descriptive. The app manifest helps in plugin matching in response to a user prompt. Also, ensure that you upload the app package to Outlook and interacted with the app, including authentication.
 
-If the problem continues, use the thumbs down indicator in the Copilot for Microsoft 365 reply and prefix your reply with [MessageExtension].
+If the problem continues, use the thumbs down indicator in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
 
 </details>
 <details>
@@ -290,9 +290,9 @@ Here's an example description that work for NPM Finder.
 </details>
 <details>
 
-<summary> Copilot for Microsoft 365 includes my plugin in the response, but the Copilot for Microsoft 365’s response doesn’t meet my expectations. What should I do?</summary>
+<summary> Microsoft 365 Chat includes my plugin in the response, but the Microsoft 365 Chat’s response doesn’t meet my expectations. What should I do?</summary>
 
-Use the downvoting option in the Copilot for Microsoft 365 reply and prefix your reply with [MessageExtension].
+Use the downvoting option in the Microsoft 365 Chat reply and prefix your reply with [MessageExtension].
 
 </details>
 <details>
@@ -303,7 +303,7 @@ Yes, you can. Ensure that you have a descriptive app manifest and upload the app
 </details>
 <details>
 
-<summary> How can I get my existing Teams message extension to work with Copilot for Microsoft 365? </summary>
+<summary> How can I get my existing Teams message extension to work with Microsoft 365 Chat? </summary>
 
 1. Register the bot channel in Azure Bot Service.
 1. Upload the app to Outlook.
