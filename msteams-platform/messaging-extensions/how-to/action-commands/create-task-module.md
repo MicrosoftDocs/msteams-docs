@@ -991,9 +991,10 @@ private static Attachment GetAdaptiveCardAttachmentFromFile(string fileName)
 
 ## See also
 
-* [Cards](../../../task-modules-and-cards/what-are-cards.md)
-* [People Picker in Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
-* [Dialogs](../../../task-modules-and-cards/what-are-task-modules.md)
 * [App manifest schema for Teams](../../../resources/schema/manifest-schema.md)
+* [Cards](../../../task-modules-and-cards/what-are-cards.md)
+* [Dialogs](../../../task-modules-and-cards/what-are-task-modules.md)
 * [Define message extension action commands](define-action-command.md)
 * [Message extensions](../../what-are-messaging-extensions.md)
+* [People Picker in Adaptive Cards](../../../task-modules-and-cards/cards/people-picker.md)
+* [Bot configuration experience](../../../bots/how-to/bot-configuration-experience.md)

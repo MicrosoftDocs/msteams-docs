@@ -24,9 +24,9 @@ The following table shows the Teams meeting app contexts supported in Outlook:
 | [Meeting details view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-details-view) | `meetingDetailsTab` | `frameContext.content` | ✔️ |
 | [Meeting chat view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-chat-view) | `meetingChatTab` | `frameContext.content` | ✔️ |
 | [Meeting side panel view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-side-panel-view) | `meetingSidePanel` | `frameContext.sidePanel` | ✔️ |
-| [Meeting stage view](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-stage-view) | `meetingStage` | `frameContext.meetingStage` | ❌ |
+| [Meeting Stageview](../apps-in-teams-meetings/build-tabs-for-meeting.md#meeting-stageview) | `meetingStage` | `frameContext.meetingStage` | ❌ |
 
-If your meeting app supports stage view, other in-meeting effects, or contains capabilities such as message extensions and bots, these continue to work in Teams when the meeting is scheduled from Outlook, but doesn't appear or run in Outlook.
+If your meeting app supports Stageview, other in-meeting effects, or contains capabilities such as message extensions and bots, these continue to work in Teams when the meeting is scheduled from Outlook, but doesn't appear or run in Outlook.
 
 ## Prerequisites
 
@@ -35,7 +35,7 @@ To preview your Teams meeting app in Outlook, ensure the following:
 * A [Microsoft 365 developer sandbox](./prerequisites.md#prepare-a-developer-tenant-for-testing) tenant with uploading enabled.
 * A test environment with Outlook for Windows desktop installed from the [Microsoft 365 Apps *Current Channel*](./prerequisites.md#install-microsoft-365-apps-in-your-test-environment).
 * [NodeJS](https://nodejs.org/download) (with npm) installed.
-* [TeamsFx CLI v2](../toolkit/TeamsFx-CLI.md) library installed from npm.
+* [TeamsFx CLI v2](~/toolkit/teams-toolkit-cli.md) library installed from npm.
 * [Visual Studio Code](https://code.visualstudio.com/) installed to your development environment.
 * [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) extension for Visual Studio Code.
 

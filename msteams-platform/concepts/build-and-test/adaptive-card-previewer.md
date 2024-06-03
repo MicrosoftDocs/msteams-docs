@@ -71,7 +71,7 @@ The Adaptive Card Previewer doesn't support the following Adaptive Card features
 * [People Picker](../../task-modules-and-cards/cards/people-picker.md)
 * [Typeahead search](../../task-modules-and-cards/cards/dynamic-search.md)
 * [User mention](../../task-modules-and-cards/cards/cards-format.md#microsoft-azure-active-directory-azure-ad-object-id-and-upn-in-user-mention)
-* [Stage View](../../task-modules-and-cards/cards/cards-format.md#stage-view-for-images-in-adaptive-cards)
+* [Stageview](../../task-modules-and-cards/cards/cards-format.md#stageview-for-images-in-adaptive-cards)
 * [Full width control](../../task-modules-and-cards/cards/cards-format.md#full-width-adaptive-card)
 
 ## FAQs
