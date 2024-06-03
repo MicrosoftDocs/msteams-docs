@@ -25,7 +25,7 @@ items:
     | Install | For using |
     | --- | --- |    
     | [Visual Studio Code](https://code.visualstudio.com/download) | JavaScript, TypeScript, or SharePoint Framework (SPFx) build environments. Use version 1.55 or later. |
-    | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/TeamsFx-CLI.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5. |
+    | [Teams Toolkit](https://marketplace.visualstudio.com/items?itemName=TeamsDevApp.ms-teams-vscode-extension) or [TeamsFx CLI](~/toolkit/teams-toolkit-cli.md) | Microsoft Visual Studio Code extension that creates a project scaffolding for your app. Use Teams Toolkit v5. |
     | [Microsoft 365 developer program](https://developer.microsoft.com/microsoft-365/dev-program) | Teams account with the appropriate permissions to install an app. |
     | [Node.js](https://nodejs.org/en/download/) | Back-end JavaScript runtime environment. For more information, see [Node.js version compatibility table for project type](~/toolkit/build-environments.md#nodejs-version-compatibility-table-for-project-type).|
     | [Microsoft Teams](https://www.microsoft.com/microsoft-teams/download-app) | Microsoft Teams to collaborate with everyone you work with through apps for chat, meetings, and call-all in one place.|
@@ -172,7 +172,7 @@ items:
      1. Create a **sampleModel.ts** file.
      1. Add the following code in the **sampleModel.ts** file:
 
-        ```typescript
+        ```TypeScript
           export interface SampleModel {
           content: string;
           }
@@ -189,7 +189,7 @@ items:
      1. Create a **sampleService.ts** file.
      1. Add the following code in the **sampleService.ts** file:
 
-        ```typescript
+        ```TypeScript
         import { SampleModel } from "../models/sampleModel";
 
         export const getSampleData = (): SampleModel => {
@@ -204,7 +204,7 @@ items:
      1. Create a **SampleWidget.tsx** file.
      1. Add the following code in the **SampleWidget.tsx** file:
 
-        ```typescript
+        ```TypeScript
         import { Button, Text } from "@fluentui/react-components";
         import { BaseWidget } from "@microsoft/teamsfx-react";
         import { SampleModel } from "../models/sampleModel";
@@ -241,7 +241,7 @@ items:
       1. In Visual Studio Code, go to **Explorer** > **src** > **dashboards** > **SampleDashboard.tsx**.
       1. Update the `override layout()` method to add the widget to the dashboard:
 
-          ```typescript
+          ```TypeScript
           override layout(): JSX.Element | undefined {
             return (
            <>
@@ -266,7 +266,7 @@ items:
             }
             ```
 
-            ```typescript
+            ```TypeScript
             override layout(): JSX.Element | undefined {
               return (
               <>
@@ -661,7 +661,7 @@ items:
 
      1. Update the following code in the **listService.ts**:        
 
-        ```typescript
+        ```TypeScript
         /**
           * Retrieve sample data
           * @returns data for list widget
@@ -711,7 +711,7 @@ items:
 
       1. Update the `export default class ListWidget()` to add user profile widget.
 
-         ```typescript
+         ```TypeScript
           export default class ListWidget extends BaseWidget<any, IListWidgetState> {
             async getData(): Promise<IListWidgetState> {
               return { data: await getListData() };
