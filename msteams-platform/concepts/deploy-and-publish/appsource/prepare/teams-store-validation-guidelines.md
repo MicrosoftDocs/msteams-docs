@@ -85,13 +85,13 @@ Following these guidelines increases the chances of your app to pass the Microso
       :::image type="icon" source="../../../../assets/icons/Teams-apps-extensible-plugin-for-Microsoft.png" link="#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" link="#mobile-experience" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" link="#apps-extended-across-microsoft-365-clients" border="false":::
    :::column-end:::
    :::column span="":::
-      :::image type="icon" source="../../../../assets/icons/white-bg.png" border="false":::
+      :::image type="icon" source="../../../../assets/icons/white-bg.png" link="#teams-apps-extensible-as-plugin-for-microsoft-copilot-for-microsoft-365" border="false":::
    :::column-end:::
 :::row-end:::
 
