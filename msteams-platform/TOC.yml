@@ -200,12 +200,14 @@
             href: toolkit/provision.md
           - name: Deploy to the cloud
             href: toolkit/deploy.md
+          - name: Deploy Teams app to container service
+            href: toolkit/deploy-Teams-app-to-container-service.md           
+          - name: Set up CI/CD pipelines
+            href: toolkit/use-CICD-template.md            
         - name: Test your Teams app
           items: 
           - name: Integrate and collaborate
             href: toolkit/TeamsFx-collaboration.md
-          - name: Set up CI/CD pipelines
-            href: toolkit/use-CICD-template.md  
           - name: Test app behavior in different environment
             href: toolkit/test-app-behavior.md
       - name: Publish your Teams app
@@ -372,7 +374,7 @@
   - name: Create a content page
     href: tabs/how-to/create-tab-pages/content-page.md
     displayName: Loading indicator, showLoadingIndicator, personal-scoped custom tab, channel or group custom tab
-  - name: Open content in Stageview
+  - name: Open content in multi-window
     href: tabs/open-content-in-stageview.md
     displayName: Tab in Stageview, Collaborative Stageview, Stageview Multi-window, Stageview Modal, Teams multiwindow
   - name: Create a configuration page
@@ -404,9 +406,6 @@
   - name: Send activity feed notifications
     href: /graph/teams-send-activityfeednotifications
     displayName: activity feed, notification, customize notification
-  - name: Tab margin changes
-    href: resources/removing-tab-margins.md
-    displayName: margins align, extra padding effect, size of the tab margins, changing margins
   - name: App caching for your tab app
     href: tabs/how-to/app-caching.md
     displayName: App caching, caching, launch time, cache
@@ -496,13 +495,19 @@
     items:
       - name: Overview
         href: bots/how-to/Teams conversational AI/teams-conversation-ai-overview.md
-        displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt 
+        displayName: OpenAI, Azure OpenAI, LLM, ChatGPT, prompt, Math tutor, Assistants API
       - name: Core capabilities
         href: bots/how-to/Teams conversational AI/how-conversation-ai-core-capabilities.md
       - name: Get started
         href: bots/how-to/Teams conversational AI/how-conversation-ai-get-started.md
       - name: Quick start guide
         href: bots/how-to/Teams conversational AI/conversation-ai-quick-start.md
+      - name: Build custom copilot
+        items: 
+          - name: Custom copilot for Microsoft 365 
+            href: /microsoft-365-copilot/extensibility/overview-custom-engine-copilot
+          - name: Build custom copilot using Teams Toolkit 
+            href: Teams-AI-library-tutorial.yml
       - name: Teams AI library FAQs
         href: bots/how-to/Teams conversational AI/coversational-ai-faq.md
 - name: Build message extensions
@@ -545,12 +550,15 @@
       - name: Universal actions for search based message extensions
         href: messaging-extensions/how-to/search-commands/universal-actions-for-search-based-message-extensions.md
         displayName: Handle tap actions, Just-in-time install, JIT
-      - name: Guidelines to extend bot-based message extension as plugin
+      - name: Guidelines for Copilot extensions
         href: messaging-extensions/high-quality-message-extension.md
         displayName: Criteria, extend message extension, plugin,  M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
       - name: Extend bot-based message extension as plugin
         href: messaging-extensions/build-bot-based-plugin.md
         displayName: Copilot, extend message extension, search based message extension, M365, Microsoft 365 Chat, Microsoft Copilot for Microsoft 365, customize Microsoft 365 Copilot
+      - name: Copilot handoff
+        href: bots/how-to/conversations/bot-copilot-handoff.md
+        displayName: custom copilot, custom engine copilot, plugin, conversation
       - name: Microsoft 365 Chat plugin FAQ
         href: messaging-extensions/copilot-plugin-faq.md
         displayName: M365, bot-based message extension, plugin
