@@ -20,7 +20,7 @@ The following image displays the locations from where message extensions can be 
 
 > [!NOTE]
 > * @mentioning message extensions in the compose box isn't supported.
-> * If external users are members of the group chat, message extension cards will not be displayed to them.
+> * If external users are members of the group chat, message extension isn't displayed to them.
 
 # [Desktop](#tab/desktop)
 
