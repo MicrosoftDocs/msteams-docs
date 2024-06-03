@@ -287,7 +287,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 
 **Trigger message extension in M365 Chat**
 
-To trigger the message extension through Copilot for Microsoft 365, follow these steps:
+To trigger the message extension through M365 Chat, follow these steps:
 
 1. Select **Apps**.
 1. Search for **M365 Chat** and open the **M365 Chat** app.
