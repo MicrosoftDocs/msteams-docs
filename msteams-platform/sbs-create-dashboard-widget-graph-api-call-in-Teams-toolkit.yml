@@ -66,7 +66,7 @@ items:
 
         Teams Toolkit creates tab app in few seconds and message appears.
       
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in VS Code.":::
+        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in Visual Studio Code.":::
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
 
