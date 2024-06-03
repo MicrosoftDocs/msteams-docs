@@ -29,7 +29,7 @@ Admins have the ability to create finely tuned pre-approval policies based on di
 
 # Setting up PowerShell to manage preapprovals
 
-Preapproval of RSC permissions is managed through Microsoft Graph PowerShell. You can learn more about managing Microsoft Teams with PowerShell [here](/../../powershell/microsfotgraph/get-started?view=graph-powershell-1.0l)
+Preapproval of RSC permissions is managed through Microsoft Graph PowerShell. You can learn more about managing Microsoft Teams with PowerShell [here](/../../../powershell/microsoftgraph/get-started?view=graph-powershell-1.0l)
 
 Before you can create and manage pre-approvals, You need to connect PowerShell to your tenant using Microsoft Graph. You can use the `Connect-MgGraph` cmdlet to do this. You will need to connect with the following permissions to create, manage, and delete pre-approval policies. 
 
