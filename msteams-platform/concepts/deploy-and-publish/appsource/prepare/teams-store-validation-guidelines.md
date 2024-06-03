@@ -1841,19 +1841,19 @@ The long description of an app must clearly call out the following:
 
 ### Response Quality
 
-* The mandatory fields in Copilot for Microsoft 365 Adaptive Card response must include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, and flags. Both the preview and content must be part of a single response.
+* The mandatory fields in Microsoft 365 Chat Adaptive Card response must include Information title and at least two additional useful fields of your choice, for example, date modified, author, status, and flags. Both the preview and content must be part of a single response.
 
-   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot for Microsoft 365 app response contains Preview and Content in the same response. ":::
+   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Microsoft 365 Chat app response contains Preview and Content in the same response. ":::
 
-* Adaptive Cards in Copilot for Microsoft 365 response must have at least one action button.
-* Action buttons present in Copilot for Microsoft 365 response Adaptive Cards must be functional.
+* Adaptive Cards in Microsoft 365 Chat response must have at least one action button.
+* Action buttons present in Microsoft 365 Chat response Adaptive Cards must be functional.
 
   :::image type="content" source="../../../../assets/images/Copilot/validation-guidelines-plugin-functional-action.png" alt-text="Screenshot shows an example of information title, additional user fields, and action button in an Adaptive Card response.":::
 
-* Copilot for Microsoft 365 must respond accurately and not display an error when a user prompts with a single parameter.
-* Copilot for Microsoft 365 must respond accurately and not show an error when a user prompts with a multi parameter.
-* Copilot for Microsoft 365 must respond accurately and not show an error when a user prompts with a follow-up.
-* Message extension must contain at least two parameters for enhanced user experience in Copilot for Microsoft 365.
+* Microsoft 365 Chat must respond accurately and not display an error when a user prompts with a single parameter.
+* Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a multi parameter.
+* Microsoft 365 Chat must respond accurately and not show an error when a user prompts with a follow-up.
+* Message extension must contain at least two parameters for enhanced user experience in Microsoft 365 Chat.
 
 [Back to top](#teams-store-validation-guidelines)
 
