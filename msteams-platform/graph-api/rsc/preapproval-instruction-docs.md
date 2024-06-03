@@ -52,7 +52,7 @@ The various states for allowing and disallowing RSC permission in your organizat
 
 |Configuration| Description|
 |---|---|
-|`ManagedByMicrosoft`|This is the default state of Teams RSC when you first create your tenant. It is dynamic and can be changed by Microsoft, it is currently default to approve RSC
+|`ManagedByMicrosoft`|This is a dynamic policy administered by Microsoft. It is subject to evolve based on best security practices. Currently, this policy defaults to enabling RSC for all unblocked apps in the organization.
 |`ApprovedForAllApps`|Users can consent to RSC permissions by any unblocked app in the organization
 |`ApprovedForPreApprovedAppsOnly`|Users in the organization can consent to only those unblocked apps that also have an explicit pre-approval policy associated with them. This option should be used only if the admin wants to explicitly limit the allowed RSC permissions on a per app basis.
 |`DisabledForAllApps`| Users will not be able to consent to the RSC permissions required by any app even if the app has been unblocked in the organization. Warning: This will break the installation of all apps that need RSC permissions.
