@@ -23,7 +23,7 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
   - Building awareness for the app through impactful customer and seller marketing channels.
   - Building readiness of product, sales, customer success and support functions for the app’s upcoming adoption, growth, and ROI realization.
 
-  Most growth and GTM activities during this stage are pilots to discover effectiveness, learning and execution rhythms. When the app crosses the *traction barrier*, one can say it has achieved product market fit in Teams marketplace and ecosystem.
+  Most growth and GTM activities during this stage are pilots to discover effectiveness, learning, and execution rhythms. When the app crosses the *traction barrier*, one can say it has achieved product market fit in Teams marketplace and ecosystem.
 
 - **Scale stage**: This stage encompasses scaling in the market on the back of activation in existing customers who use the SaaS app outside Teams and selling to new customers through product-led, sales-led, and channel-led initiatives. Growth and GTM activities become more programmatic at this stage. When the app crosses the scale barrier, often also referred to as the *growth barrier*, one can conclude the apps is ready to deliver on the business goals and starts to deliver ROI on engineering and GTM investments.
 
@@ -35,11 +35,11 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
   - Optimizing customer sales and conversion based on PQLs
   - Investing further in more user-valuable scenarios or experiences inside the app
 
-There may be examples of developers short circuiting the lifecycle to jump across stages, for example, directly starting to monetize their app after launch using their version 1 experience itself. It's recommended that you follow a stage-by-stage approach as a best practice that most developers follow to derive the best ROI from their Teams app journey.
+There might be examples of developers short circuiting the lifecycle to jump across stages, for example, directly starting to monetize their app after launch using their version 1 experience itself. It's recommended that you follow a stage-by-stage approach as a best practice that most developers follow to derive the best ROI from their Teams app journey.
 
 ## Review the Teams partners GTM guide
 
-Get started first by reviewing (and sharing with your GTM leaders) this high-level visual [Guide to ISV success with Microsoft for Teams Partners](https://aka.ms/teamsappsGTMguide) flipbook. This resource orients you about how to plan and strategize your Teams app offering, insights about key industry-wise personas and trends, how to define your app’s value proposition, create content to maximize your app’s reach among customers and sellers, access various partner benefits available to you, how to visualize a simplistic customer journey with your app, how to align your marketing activities with key opportunities from Microsoft and how to sell your app via Microsoft’s global marketplace. As you can see from the flipbook, Microsoft partners with app developers once they’ve launched their apps on the marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. You're encouraged to get in touch with your Microsoft field, account or engineering representatives before spending cycles on your app growth planning and execution, so that you can get the most appropriate guidance you’re eligible for.
+Get started first by reviewing (and sharing with your GTM leaders) this high-level visual [Guide to ISV success with Microsoft for Teams Partners](https://aka.ms/teamsappsGTMguide) flipbook. This resource orients you about how to plan and strategize your Teams app offering, insights about key industry-wise personas and trends, how to define your app’s value proposition, create content to maximize your app’s reach among customers and sellers, access various partner benefits available to you, how to visualize a simplistic customer journey with your app, how to align your marketing activities with key opportunities from Microsoft and how to sell your app via Microsoft’s global marketplace. As you can see from the flipbook, Microsoft partners with app developers once they’ve launched their apps on the marketplace by offering select, programmatic GTM investments depending on the app’s maturity in the market. You're encouraged to get in touch with your Microsoft field, account, or engineering representatives before spending cycles on your app growth planning and execution, so that you can get the most appropriate guidance you’re eligible for.
 
 ## Step-by-step guide to grow your app
 
@@ -48,7 +48,7 @@ It's time now to expand on the preview provided by the flipbook above! The follo
 Developers are encouraged to follow the guidance here to grow their app and drive success for their investments on the Teams marketplace and ecosystem. However, the guidance provided can't be considered comprehensive. It's recommended that developers must always adapt these growth initiatives in the context best known to them based on:
 
 - The nature of business.
-- The app they’ve launched on Teams.
+- The app launched on Teams.
 - The target customer personas.
 
 <!--
@@ -67,19 +67,19 @@ You can plan your app's growth through the app lifecycle:
 
 To accelerate the growth of third-party apps and increase adoption rates, consider the following strategies:
 
-- **Leverage a Freemium Model**: Offering a Freemium account is a proven method to improve user conversion rates. It allows potential customers to experience the core benefits of your app without initial costs, increasing the likelihood of conversion to paid plans.
+- **Leverage a Freemium model**: Offering a Freemium account is a proven method to improve user conversion rates. It allows potential customers to experience the core benefits of your app without initial costs, increasing the likelihood of conversion to paid plans.
 
-- **Integrate a Shareable Call-to-Action**: Implement a dynamic Call-to-Action (CTA) button within an Adaptive Card. This empowers users to effortlessly share your app, fostering organic growth as they bring on board their team members.
+- **Integrate a shareable call-to-action**: Implement a dynamic Call-to-Action (CTA) button within an Adaptive Card. This method empowers users to effortlessly share your app to onboard their team members fostering organic growth.
 
-- **Utilize Banner Advertising**: Engage in targeted banner promotions as part of your marketing campaigns. This approach significantly boost app installations and foster deeper user engagement.
+- **Utilize banner advertising**: Engage in targeted banner promotions as part of your marketing campaigns. This approach significantly boosts app installations and fosters deeper user engagement.
 
-- **Implement Adoption Change Management**: Consistent communication with users is key. By regularly updating them about new and existing features via email, you maintain their interest and encourage continued use of your app.
+- **Implement adoption change management**: Consistent communication with users is a key. By regularly updating users about new and existing features via email, you maintain their interest and encourage continued use of your app.
 
-- **Identify and Resolve Blockers**: Proactively address and resolve any barriers to adoption. Collaborate with Independent Software Vendors (ISVs) and Teams Engineering to gather feedback and swiftly eliminate any obstacles that hinder user experience.
+- **Identify and resolve blockers**: Proactively address and resolve any barriers to adoption. Collaborate with Independent Software Vendors (ISVs) and Teams Engineering to gather feedback and swiftly eliminate any obstacles that hinder user experience.
 
-- **Embrace Growth Marketing**: Develop a robust growth marketing strategy tailored for Software as a Service (SaaS) offerings. This should focus on driving usage through data-driven techniques and user engagement analytics.
+- **Embrace growth marketing**: Develop a robust growth marketing strategy tailored for Software as a Service (SaaS) offers. This method must focus on driving usage through data-driven techniques and user engagement analytics.
 
-By adopting these methods, you’ll not only see an uptick in app installations but also ensure sustained engagement and growth over time. For more information, see [educate users and drive adoption change management for your app](~/promote-app-adoption.md#step-3-educate-users-and-drive-adoption-change-management-for-your-app).
+By adopting these methods, you can see an increase in app installations and also ensure sustained engagement and growth over time. For more information, see [educate users and drive adoption change management for your app](~/promote-app-adoption.md#step-3-educate-users-and-drive-adoption-change-management-for-your-app).
 
 ## Next step
 
