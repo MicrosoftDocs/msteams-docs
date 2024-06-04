@@ -11,13 +11,13 @@ ms.date: 08/29/2023
 In this article:
 1. [What is preapproval of RSC permissions](#what-is-preapproval-of-rsc-permissions)
 1. [Setting up PowerShell to manage preapprovals](#setting-up-powershell-to-manage-preapprovals)
-2. [Enabling RSC for all unblocked apps in the organization](#enabling-rsc-for-all-unblocked-apps-in-the-organization)
-1. [Enabling RSC for a specific set of apps only](#enabling-rsc-for-a-specific-set-of-apps-only)
-    * [Create a pre-approval policy based on app id and permissions](#create-a-pre-approval-policy-based-on-app-id-and-permissions)
-    * [Create a pre-approval policy based on app id, permissions and sensitivity label](#create-a-pre-approval-policy-based-on-app-id-permissions-and-sensitivity-label)
-    * [Change RSC configuration to honor explicitly defined pre-approval policies only](#change-rsc-configruation-to-honor-explicitly-defined-pre-approval-policies-only)
+2. [Enabling RSC for all unblocked apps in the organization](##enable-rsc-for-all-unblocked-apps-in-the-organization)
+1. [Enabling RSC for a specific set of apps only](#enable-rsc-for-a-specific-set-of-apps-only)
+    * [Create a pre-approval policy based on app id and permissions](#create-a-preapproval-policy-based-on-app-id-and-permissions)
+    * [Create a pre-approval policy based on app id, permissions and sensitivity label](#create-a-preapproval-policy-based-on-app-id-and-permissions-and-sensitivity-label)
+    * [Change RSC configuration to honor explicitly defined pre-approval policies only](#change-rsc-configuration-to-honor-explicilty-defined-pre-approval-policies-only)
 1. [Managing existing pre-approval policies](#managing-existing-pre-approval-policies)
-    * [Updating an existing pre-approval policy](#modify-an-existing-pre-approval-policy)
+    * [Updating an existing pre-approval policy](#updating-an-existing-pre-approval-policy)
     * [Deleting an existing pre-approval policy](#delete-an-existing-pre-approval-policy)
 
 # What is preapproval of RSC permissions?
