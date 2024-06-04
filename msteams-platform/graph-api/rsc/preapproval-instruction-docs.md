@@ -13,9 +13,8 @@ In this article:
 1. [Setting up PowerShell to manage preapprovals](#setting-up-powershell-to-manage-preapprovals)
 2. [Enabling RSC for all unblocked apps in the organization](#enabling-rsc-for-all-unblocked-apps-in-the-organization)
 1. [Enabling RSC for a specific set of apps only](#enabling-rsc-for-a-specific-set-of-apps-only)
-      * [Create a pre-approval policy](#create-a-prea-pproval-policy)
-         * [Create a pre-approval policy based on app id and permissions](#create-a-pre-approval-policy-based-on-app-id-and-permissions)
-         * [Create a pre-approval policy based on app id, permissions and sensitivity label](#create-a-pre-approval-policy-based-on-app-id-permissions-and-sensitivity-label)
+    * [Create a pre-approval policy based on app id and permissions](#create-a-pre-approval-policy-based-on-app-id-and-permissions)
+    * [Create a pre-approval policy based on app id, permissions and sensitivity label](#create-a-pre-approval-policy-based-on-app-id-permissions-and-sensitivity-label)
     * [Change RSC configuration to honor explicitly defined pre-approval policies only](#change-rsc-configruation-to-honor-explicitly-defined-pre-approval-policies-only)
 1. [Managing existing pre-approval policies](#managing-existing-pre-approval-policies)
     * [Updating an existing pre-approval policy](#modify-an-existing-pre-approval-policy)
@@ -72,14 +71,6 @@ You can allow RSC for all unblocked apps in your organization using PowerShell c
 ```
 
 # Enable RSC for a specific set of apps only
-You can also enable RSC for a specific set of apps in your organization. This setting is more restrictive and enabling it may cause some apps not to function correctly for your end users. You can achieve this by changing the state of your organizations RSC settings, the example below shows what PowerShell cmdlets would look like to achieve this: 
-
-```powershell
-`Set-MgBetaTeamRscConfiguration -State ApprovedForPreApprovedAppsOnly`
-`Set-MgBetaChatRscConfiguration -State ApprovedForPreApprovedAppsOnly`
-```
-
-## Create a preapproval policy
 
 ### Create a preapproval policy based on app id and permissions
 Preapprovals can be created to allow users in you orginzation to consent to RSC permissions for a specific set of apps only. This means you can choose what RSC enabled apps your organization has access to without restricting all RSC in your organization. 
@@ -143,11 +134,18 @@ New-MgBetaTeamAppPreApproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 ```
 ## Change RSC configuration to honor explicilty defined pre-approval policies only
 
+Once you've created your pre-approval policies you need to change your organizations RSC settings to use the new policy. This setting is more restrictive and enabling it may cause some apps not to function correctly for your end users. You can achieve this by changing the state of your organizations RSC settings, the example below shows what PowerShell cmdlets would look like to achieve this: 
+
+```powershell
+`Set-MgBetaTeamRscConfiguration -State ApprovedForPreApprovedAppsOnly`
+`Set-MgBetaChatRscConfiguration -State ApprovedForPreApprovedAppsOnly`
+```
+
 # Managing existing pre-approval policies
 
-## Updating an existing pre-approval policy
+After you’ve created a pre-approval policy you can edit the policy to change the permissions being allowed, and the sensitivity label of the policy. When apps are released with additional permissions, you must update the pre-approval for that app to include the new permissions for the app to continue to be installable in your tenant. You need the same information to manage an existing pre-approval and create a new pre-approval. You can also delete existing pre-approval policies if you no longer wish to grant them the ability to be consented by users in your organization
 
-After you’ve created a pre-approval policy you can edit the policy to change the permissions being allowed, and the sensitivity label of the policy. When apps are released with additional permissions, you must update the pre-approval for that app to include the new permissions for the app to continue to be installable in your tenant. You need the same information to manage an existing pre-approval and create a new pre-approval. 
+## Updating an existing pre-approval policy
 
 You can update a pre-approval policy by using the `Update-MgBetaTeamAppPreApproval` cmdlet. When declaring which permissions are to be updated, you must distinguish what type of RSC permissions are being edited. There are two options when managing an existing pre-approval: 
 
