@@ -1,6 +1,6 @@
 ---
-title: Bot-based message extension plugin guidelines
-description: Learn about the guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
+title: Copilot for Microsoft 365 extension guidelines
+description: Guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
@@ -8,14 +8,14 @@ ms.localizationpriority: high
 ms.date: 11/14/2023
 ---
 
-# Guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365
+# Guidelines to create or upgrade Copilot extensions
 
 > [!IMPORTANT]
 >
 > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in Microsoft 365 Chat in Microsoft Teams.
 > * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
->   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
->   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
+  > * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
+  > * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
 
 Microsoft 365 plugins provide integration with various  Microsoft 365 products, such as Teams and Outlook. The integration helps users to search or create content in external systems. Message extension plugins allow Microsoft Copilot for Microsoft 365 to interact with APIs from other software and services through a bot. With Copilot for Microsoft 365, you can:
 
@@ -25,6 +25,9 @@ Microsoft 365 plugins provide integration with various  Microsoft 365 products, 
 We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. Message extensions must support one or more search commands, as Copilot for Microsoft 365 recognizes them as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
 
 :::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365.":::
+
+> [!NOTE]
+> If you want to configure a custom Graph connector for Copilot for Microsoft 365, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams).
 
 ## Mandatory requirements
 
@@ -125,7 +128,7 @@ The following table lists the short description examples for each category:
   "description": {
     "short": "Search and view customer leads.",
     "full": "Resolve tickets faster, simplify employee workflows and improve team performance by integrating Contoso CRM to Microsoft Teams. Contoso CRM is a complete customer service solution that’s easy to use and scales with your business."
-  },
+  }
 ```
 
 # [General](#tab/general)
