@@ -128,6 +128,11 @@ Before you enable share content to meetings, you must ensure the following:
     * The [app manifest](../../resources/schema/manifest-schema.md) that supports both the meeting stage and meeting side panel. You must configure `meetingStage` and `meetingSidePanel` as frame contexts in the app manifest. If not configured, meeting participants might not be able to view the content on stage.
     * The app that supports `MeetingStage.Write.Chat` permissions for taking control of the stage. This is a read permission requirement.
 
+> [!NOTE]
+>
+> * If the app doesn't have meeting stage and side panel capabilities, the content aren't stored and the messages are just sent in the regular meeting chat.
+> * If app installation is blocked by the admin, then the app is added to the chat and not the meeting of the user.
+
 **Enable Share to Teams for meeting**
 
 1. Add the `launcher.js` script on your webpage.
@@ -138,18 +143,18 @@ Before you enable share content to meetings, you must ensure the following:
 
 1. Add an HTML element on your webpage with the `teams-share-button` in the `class` attribute and the link to share in the `data-href` attribute. To enable your users to share content in meetings from Share to Teams, add `allow-share-in-meeting` attribute and set it to `true`.
 
-```html
-    <div
-    class="teams-share-button"
-    data-href="https://<link-to-be-shared>"
-    data-allow-share-in-meeting="<true>"
-    >
-    </div>
-```
+    ```html
+        <div
+        class="teams-share-button"
+        data-href="https://<link-to-be-shared>"
+        data-allow-share-in-meeting="<true>"
+        >
+        </div>
+    ```
 
-After the configuration, the Share to Teams dialog appears with a **Present now** option. Present now allows the users to share content to an ongoing meeting.
+    After the configuration, the Share to Teams dialog appears with a **Present now** option. Present now allows the users to share content to an ongoing meeting.
 
-:::image type="content" source="../../assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
+    :::image type="content" source="../../assets/images/share-to-teams/share-to-team-dialog.png" alt-text="Screenshot shows the Share to Teams dialog with Present now option.":::
 
 Here are a few end user scenarios where the content is shared to different scopes from Share to Teams.
 
@@ -278,11 +283,7 @@ You can use either the HTML default versions or the Open Graph version.
 
 ## Share to Teams for Education
 
-For teachers using the Share to Teams button, there's an additional option to `Create an Assignment` that enables you to quickly create an assignment in the chosen Team, based on the shared link. The following image displays Share to Teams for education:
-
-:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Share to Teams pop-up education":::
-
-### Set default form values
+For teachers using the Share to Teams button, there's an additional option to `Create an Assignment` that enables you to quickly create an assignment in the chosen Team, based on the shared link.
 
 You can select to set default values for the following fields on the Share to Teams form:
 
@@ -290,7 +291,11 @@ You can select to set default values for the following fields on the Share to Te
 * Assignment Instructions: `assignInstr`
 * Assignment Title: `assignTitle`
 
-#### Example
+The following image displays Share to Teams for education:
+
+:::image type="content" source="../../assets/images/share-to-teams-popup-edu.png" alt-text="Share to Teams pop-up education":::
+
+### Example
 
 The default form values are given in the following example:
 
