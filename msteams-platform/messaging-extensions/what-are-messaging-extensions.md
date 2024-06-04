@@ -1,7 +1,7 @@
 ---
 title: Message extensions
 author: surbhigupta
-description: Learn how message extensions are used, its types, and scenarios where the extensions are used on the Microsoft Teams platform. Samples on action and searched based message extension.
+description: Learn how message extensions are used, its types, and scenarios where the message extensions are used on the Microsoft Teams platform. Samples on action and searched based message extension.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.author: anclear
@@ -14,7 +14,7 @@ Message extensions enable users to engage with your web service through buttons 
 > [!IMPORTANT]
 > Message extensions are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-This document provides an overview of message extensions, including their use cases, functionality, command types, and link unfurling.
+This document provides an overview of message extensions, including their use cases, functionality, action and search commands, and link unfurling.
 
 The following image displays the locations from where message extensions can be invoked:
 
@@ -47,7 +47,7 @@ A message extension consists of a web service that you host and an app manifest 
 > [!NOTE]
 > Though it's possible to manually create the web service, we recommend to use [Bot Framework SDK](https://github.com/microsoft/botframework-sdk) to work with the protocol.
 
-In the app manifest (previously called as Teams app manifest), a single message extension is defined with up to 10 different commands. Each command defines a type, such as action or search and the locations in the client from where the extension is invoked. The invoke locations include the compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload with all the relevant information. Respond with a JSON payload to inform the Teams client of the next interaction to enable.
+In the app manifest (previously called as Teams app manifest), a single message extension is defined with up to 10 different commands. Each command defines a type, such as action or search and the locations in the client from where the message extension is invoked. The invoke locations include the compose message area, command bar, and message. On invoke, the web service receives an HTTPS message with a JSON payload with all the relevant information. Respond with a JSON payload to inform the Teams client of the next interaction to enable.
 
 ## Message extension commands types
 
@@ -63,7 +63,7 @@ Action commands are triggered from the compose message area, the command box, or
 
 ### Search commands
 
-Search commands allow the users to search an external system for information manually through a search box or by pasting a link to a monitored domain into the compose message area and insert the results of the search into a message. In a simple search command flow, the initial invoke message includes the search string submitted by the user. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
+Search commands allow the users to search an external system for information. Search commands can be used in two ways: searching manually through a search box or by pasting a link to a monitored domain in the compose message area and then inserting the results of the search into a message. In a simple search command flow, the initial invoke message includes the search string submitted by the user. You respond with a list of cards and card previews. The Teams client renders a list of card previews for the user. When the user selects a card from the list, the full-size card is inserted into the compose message area.
 
 The cards are triggered from the compose message area or the command box, but not from a message. They can't be triggered from a message.
 The following image displays the message extension search command dialog:
@@ -101,7 +101,7 @@ The following table helps you select a message extension type to get started:
 
 * Simpler and faster to create and maintain.
 * Message extension uses an API.
-* No extra resources or code for bot logic are required.
+* No additional code or resources for bot logic are required.
 * Ideal for scenarios where the message extension only needs to communicate with a web service and doesn't need any complex logic or state management.
 * Traffic is privatized as they don’t depend on Azure bot infrastructure.
 * Supports search commands.
