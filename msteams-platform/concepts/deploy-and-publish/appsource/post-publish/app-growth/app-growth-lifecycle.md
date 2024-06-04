@@ -63,18 +63,23 @@ You can plan your app's growth through the app lifecycle:
 
 [Back to top](#growth-lifecycle-for-your-app)
 
-## Promote app adoption
+## Best practices for app growth and adoption
 
-Here are few best practices you can adopt to promote third-party apps:
+To accelerate the growth of third-party apps and increase adoption rates, consider the following strategies:
 
-- Create a Freemium account helps for better user conversion.
-- Add a Call-to-action button that can be shared in an Adaptive Card for users to share the app and onboard other team members.
-- Banner promotion for marketing campaign that leads to higher app installation and meaningful engagement.
-- Adoption change management is critical for an app's growth to reach users on a constant basis about the existing and new features through email communication.
-- Solving blockers to address and eliminate adoption blockers and VoCs through ISVs and Teams Engineering is important for growth.
-- Growth marketing to established strategy for driving usage and growth for apps in a SaaS offers.
+- **Leverage a Freemium Model**: Offering a Freemium account is a proven method to improve user conversion rates. It allows potential customers to experience the core benefits of your app without initial costs, increasing the likelihood of conversion to paid plans.
 
-For mor information, see [educate users and drive adoption change management for your app](../../../../promote-app-adoption.md#step-3-educate-users-and-drive-adoption-change-management-for-your-app).
+- **Integrate a Shareable Call-to-Action**: Implement a dynamic Call-to-Action (CTA) button within an Adaptive Card. This empowers users to effortlessly share your app, fostering organic growth as they bring on board their team members.
+
+- **Utilize Banner Advertising**: Engage in targeted banner promotions as part of your marketing campaigns. This approach significantly boost app installations and foster deeper user engagement.
+
+- **Implement Adoption Change Management**: Consistent communication with users is key. By regularly updating them about new and existing features via email, you maintain their interest and encourage continued use of your app.
+
+- **Identify and Resolve Blockers**: Proactively address and resolve any barriers to adoption. Collaborate with Independent Software Vendors (ISVs) and Teams Engineering to gather feedback and swiftly eliminate any obstacles that hinder user experience.
+
+- **Embrace Growth Marketing**: Develop a robust growth marketing strategy tailored for Software as a Service (SaaS) offerings. This should focus on driving usage through data-driven techniques and user engagement analytics.
+
+By adopting these methods, you’ll not only see an uptick in app installations but also ensure sustained engagement and growth over time. For more information, see [educate users and drive adoption change management for your app](~/promote-app-adoption.md#step-3-educate-users-and-drive-adoption-change-management-for-your-app).
 
 ## Next step
 
