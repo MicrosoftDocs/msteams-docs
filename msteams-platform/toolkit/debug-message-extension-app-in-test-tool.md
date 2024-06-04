@@ -12,14 +12,14 @@ ms.date: 04/25/2024
 
 You can debug bot-based message extension capabilities such as search commands, action commands, and link unfurling using Teams App Test Tool (Test Tool) within a simulated environment. Test tool helps you to identify and resolve issues before deploying the extension to a live environment.
 
-Test Tool enhances the functionality of bot-based message extensions, which are built on top of the Bot Framework. When a message extension is activated, the Test Tool sends an invoke request to the app. The app then processes this request and returns an invoke response, which the Test Tool renders and displays.
+Test Tool enhances the functionality of bot-based message extensions, which are built on top of Bot Framework. When a message extension is activated, the Test Tool sends an invoke request to the app. The app then processes this request and returns an invoke response, which the Test Tool renders and displays.
 
 > [!NOTE]
-> The user experience to trigger message extension in Test Tool is different from Teams, as the goal of Test Tool is to test and debug the app logic and make the flow simple, instead of being a real chat app.
+> The user experience to trigger message extension in Test Tool is different from Teams, as the goal of Test Tool is to test and debug the app logic and make the flow simple.
 
 ## Prerequisites
 
-Ensure that you install the following tools for building and deploying your bots in Test Tool:
+Ensure that you install the following tools to build and deploy your bot in Test Tool:
 
 | &nbsp; | Install | For using... |
 | --- | --- | --- |
@@ -55,11 +55,11 @@ Ensure that you install the following tools for building and deploying your bots
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/test-tool-in-browser-window.png" alt-text="Screenshot shows the test tool opens in a webpage.":::
 
-1. Type `help` in the message compose area of Test Tool. It displays all the message extension commands in the sample app.
+1. In the message compose area, type `help`. Test Tool displays all the message extension commands in the sample app.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/help-in-teams-app-test-tool.png" alt-text="Screenshot shows the help in the message compose area of test tool.":::
 
-1. Select **+** to display the list of message extension:
+1. Select the **+** icon to display the type of message extension:
 
    * Search Command
 
@@ -69,66 +69,62 @@ Ensure that you install the following tools for building and deploying your bots
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/list-of-message-extension.png" alt-text="Screenshot shows the list of message extension.":::
 
-## Search Command
+1. Select the type of message extension you want to debug.
 
-To test a **Search Command** in the Test Tool, follow these steps:
+1. Based on the option selected in the earlier step, select the following tab:
 
-1. Select **+** in the message compose area.
+    ## Search Command
 
-1. Select **Search Command**.
+    To test a **Search Command** in the Test Tool, follow these steps:
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/search-command.png" alt-text="Screenshot shows the search command.":::
+    1. Enter the keywords you wish to search for into the message extension.
 
-1. Enter the keywords you wish to search for into the message extension.
+    1. The Test Tool sends a `composeExtension/query` invoke request.
 
-1. The Test Tool sends a `composeExtension/query` invoke request.
+       :::image type="content" source="../assets/images/teams-toolkit-v2/search-command-invoke.png" alt-text="Screenshot shows the search commands invoke.":::
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/search-command-invoke.png" alt-text="Screenshot shows the search commands invoke.":::
+    1. Search results are displayed.
 
-1. Search results are displayed.
+    1. To review the details of the request and the results, check the **Log Panel**.
 
-1. To review the details of the request and the results, check the log panel.
+    For scenarios that require more advanced configurations:
 
-For scenarios that require more advanced configurations:
+    1. Select the **+** icon in the message compose area.
 
-1. Select **+** in the message compose area.
+    1. Select **Search Command**.
 
-1. Select **Search Command**.
+    1. Select **Specify Command ID or Parameter**.
 
-1. Select **Specify Command ID or Parameter**.
+    1. Update the values for **Command ID** and **Parameter name**.
 
-1. Update the values for **Command ID** and **Parameter name**.
+       :::image type="content" source="../assets/images/teams-toolkit-v2/advanced-configurations.png" alt-text="Screenshot shows the search command for advanced configurations.":::
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/advanced-configurations.png" alt-text="Screenshot shows the search command for advanced configurations.":::
+    1. When the message extension is triggered, it retrieves these predefined values from the context.
 
-1. When the message extension is triggered, it retrieves these predefined values from the context.
+    > [!Note]
+    > It's not mandatory to include the command ID or parameter name to test your message extension. Add them if you require to test the functionality.
 
-> [!Note]
-> It's not mandatory to include the command ID or parameter name to test your message extension. Add them if you require to test the functionality.
+   ## Action Command
 
-## Action Command
+   You can test an **Action Command** in the Test Tool in the following ways:
 
-You can test an **Action Command** in the Test Tool in the following ways:
+      # [**+** icon](#tab/action-commands)
 
-# [**+** icon](#tab/action-commands)
+      1. Select the **+** icon in the message compose area.
 
-1. Select **+** icon in the message compose area.
+      1. Select **Action Command**.
 
-1. Select **Action Command**.
+         :::image type="content" source="../assets/images/teams-toolkit-v2/action-commands.png" alt-text="Screenshot shows the action command.":::
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/action-commands.png" alt-text="Screenshot shows the action command.":::
+      # [**...** icon](#tab/action-commands1)
 
-# [**...** icon](#tab/action-commands1)
+      1. Above the message, select the **...** option.
 
-1. Select **...** above the message.
+      1. Select **Action Command**.
 
-1. Select **Action Command**.
+         :::image type="content" source="../assets/images/teams-toolkit-v2/message-action-command.png" alt-text="Screenshot shows the message in action command.":::
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/message-action-command.png" alt-text="Screenshot shows the message in action command.":::
-
----
-
-### Create a dialog
+    ---
 
 You can create a dialog with an Action Command in two ways:
 
