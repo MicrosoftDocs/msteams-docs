@@ -265,6 +265,9 @@
             href: toolkit/toolkit-v4/provision-vs.md
           - name: Deploy to the cloud
             href: toolkit/toolkit-v4/deploy-vs.md            
+    - name: Teams Toolkit migration guide
+      href: toolkit/Teams-Toolkit-CLI.md
+      displayName: migrate Teams toolkit, toolkit version migration
     - name: Teams Toolkit CLI
       href: toolkit/Teams-Toolkit-CLI.md
     - name: Developer Portal for Teams
