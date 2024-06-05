@@ -1,8 +1,8 @@
 ### YamlMime:Tutorial
-title: Build a bot-based message extension plugin for Copilot for Microsoft 365 and Copilot for Teams chats
+title: Build a bot-based message extension plugin for Copilot for Microsoft 365
 metadata:
-  title: Build a bot-based message extension plugin for Copilot for Microsoft 365 and Copilot for Teams chats
-  description: In this tutorial, learn to build a bot-based message extension and extend it as a plugin in Microsoft Copilot for Microsoft 365 and Copilot for Teams chats.
+  title: Build a bot-based message extension plugin for Copilot for Microsoft 365
+  description: In this tutorial, learn to build a bot-based message extension and extend it as a plugin in Microsoft Copilot for Microsoft 365.
   audience: Developer
   level: Beginner
   ms.date: 11/14/2023
@@ -17,11 +17,11 @@ items:
     > [!NOTE]
     >
     > * Bot-based search message extension plugin is available in [**public developer preview**](resources/dev-preview/developer-preview-intro.md).
-    > * Only bot-based search message extension can be extended as a plugin in Microsoft Copilot for Microsoft 365 and Copilot for Microsoft Teams chats.
-    > * Plugins for Copilot are in preview and only work in Copilot for Microsoft 365 and Copilot for Teams chats.
+    > * Only bot-based search message extension can be extended as a plugin in Microsoft Copilot for Microsoft 365.
+    > * Plugins for Microsoft Copilot for Microsoft 365 are in preview and only work in M365 Chat in Microsoft Teams.
     
-    Start Microsoft Teams app development with your first Teams app.
-    You can create a bot-based message extension plugin with Teams using JavaScript.
+    Start Microsoft Teams app development with your first Teams app. 
+    You can create a bot-based message extension plugin with Teams using JavaScript.  
     
     In this tutorial, you'll learn:
 
@@ -30,7 +30,7 @@ items:
     - How to deploy your app.
     - Trigger your bot-based message extension plugin in M365 Chat.
 
-    This step-by-step guide helps you to build bot-based message extension plugin with Teams Toolkit. You'll see the following output after you've completed this guide:
+    This step-by-step guide helps you to build  bot-based message extension plugin with Teams Toolkit. You'll see the following output after you've completed this guide:
 
      :::image type="content" source="assets/images/Copilot/bot-based-VSC-trigger-plugin.png" alt-text="Screenshot shows the plugin prompt and the response from M365 Chat.":::
 
@@ -144,7 +144,7 @@ items:
     > [!NOTE]
     >
     > * Message extensions rely on bots to provide a dialog between the user and your code.
-    > * Only bot-based search message extension can be extended as a plugin for Copilot for Microsoft 365 and Copilot for Teams chats.
+    > * Only bot-based search message extension can be extended as a plugin for Copilot for Microsoft 365.
 
 
     In this tutorial, you'll learn:
@@ -327,7 +327,7 @@ items:
 
     1. Go to a Teams chat and select **Actions and apps**.
     1. From the message extension fly-out menu, enter the name of your message extension from the search box.
-    1. Select your message extension and enter your search query.
+    1. Select your message extension and enter your search query.   
 
        :::image type="content" source="assets/images/Copilot/bot-based-VSC-me-invoke.png" alt-text="Screenshot shows an example of a message extension invoked from a chat in Teams and the message extension displays a list of products based on the search query..":::
 
@@ -384,7 +384,7 @@ items:
 
     1. Open Visual Studio Code.
     1. Open the project folder in which you created the message extension app.
-    1. Select the Teams Toolkit :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
+    1. Select the Teams Toolkit  :::image type="icon" source="assets/images/teams-toolkit-v2/teams-toolkit-sidebar-icon.png"::: icon in the sidebar.
     1. Select **Sign in to Azure** using your credentials.
 
         > [!TIP]
@@ -401,7 +401,7 @@ items:
     
     ## Deploy your app to Azure
 
-    Deployment consists of two steps. First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the message extension app.
+    Deployment consists of two steps.  First, necessary cloud resources are created (also known as provisioning). Then, your app's code is copied into the created cloud resources. For this tutorial, you'll deploy the message extension app.
     <br>
     <br>
     <details>

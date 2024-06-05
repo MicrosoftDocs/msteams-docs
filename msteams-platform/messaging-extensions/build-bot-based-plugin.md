@@ -36,7 +36,7 @@ A plugin allows Copilot for Microsoft 365 and Copilot for Teams chats to interac
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
 * Perform actions on behalf of the user, such as creating a Contoso ticket.
 
-Descriptions enhance the usability and effectiveness of a message extension plugin. The follwoing description offer a clear and concise summary of the app’s features:
+Descriptions enhance the usability and effectiveness of a message extension plugin. The following description offers a clear and concise summary of the app’s features:
 
 * **App description**: App description helps improve your app discoverability in the Teams Store.
 * **Command description**: Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords.
