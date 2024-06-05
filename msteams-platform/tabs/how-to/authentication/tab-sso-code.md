@@ -8,12 +8,12 @@ ms.date: 12/13/2022
 ---
 # Add code to enable SSO
 
-Before you add code to enable SSO, ensure that you've registered your app with Azure AD.
+Before you add code to enable SSO, ensure that you've registered your app with Microsoft Entra ID.
 
 > [!div class="nextstepaction"]
-> [Register with Azure AD](tab-sso-register-aad.md)
+> [Register with Microsoft Entra ID](tab-sso-register-aad.md)
 
-You need to configure your tab app's client-side code to obtain an access token from Azure AD. The access token is issued on behalf of the tab app. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server-side, and exchange it for Microsoft Graph token.
+You need to configure your tab app's client-side code to obtain an access token from Microsoft Entra ID. The access token is issued on behalf of the tab app. If your tab app requires additional Microsoft Graph permissions, you'll need to pass the access token to the server-side, and exchange it for Microsoft Graph token.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/sso-config-code.png" alt-text="configure code for handling access token":::
 
@@ -32,7 +32,7 @@ To obtain app access for the current app user, your client-side code must make a
 <summary>Learn more about getAuthToken()</summary>
 <br>
 
-`getAuthToken()` is a method in Microsoft Teams JavaScript library. It requests an Azure AD access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Azure AD to obtain a new access token.
+`getAuthToken()` is a method in Microsoft Teams JavaScript library. It requests a Microsoft Entra access token to be issued on behalf of app. The token is acquired from the cache, if it is not expired. If it's expired, a request is sent to Microsoft Entra ID to obtain a new access token.
 
  For more information, see [getAuthToken](/javascript/api/%40microsoft/teams-js/microsoftteams.authentication#@microsoft-teams-js-microsoftteams-authentication-getauthtoken).
 </details>
@@ -43,7 +43,7 @@ Use `getAuthToken()` at the time when you need access token for the current app 
 
 | If access token is needed... | Call getAuthToken()... |
 | --- | --- |
-| When app user accesses the app | After `microsoftTeams.initialize()`. |
+| When app user accesses the app | After `microsoftTeams.app.initialize()`. |
 | To use a particular functionality of the app | When the app user takes an action that requires signing in. |
 
 ### Add code for getAuthToken
@@ -56,12 +56,33 @@ Add JavaScript code snippet to the tab app to:
 The following code snippet shows an example of calling `getAuthToken()`.
 
 ```javascript
-microsoftTeams.initialize();
-var authTokenRequest = {
-  successCallback: function(result) { console.log("Success: " + result); },
-  failureCallback: function(error) { console.log("Error getting token: " + error); }
-};
-microsoftTeams.authentication.getAuthToken(authTokenRequest);
+microsoftTeams.app.initialize().then(() => {
+    getClientSideToken()
+        .then((clientSideToken) => {
+            return getServerSideToken(clientSideToken);
+        })
+        .then((profile) => {
+            return useServerSideToken(profile);
+        })
+        .catch((error) => {
+            ...
+        })
+}
+
+    function getClientSideToken() {
+
+        return new Promise((resolve, reject) => {
+            display("1. Get auth token from Microsoft Teams");
+            
+            microsoftTeams.authentication.getAuthToken().then((result) => {
+                display(result);
+
+                resolve(result);
+            }).catch((error) => {
+                reject("Error getting token: " + error);
+            });
+        });
+    }
 ```
 
 You can add calls of `getAuthToken()` to all functions and handlers that initiate an action where the token is needed.
@@ -74,7 +95,7 @@ You can add calls of `getAuthToken()` to all functions and handlers that initiat
 
 </details>
 
-When Teams receives the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to Azure AD.
+When Teams receives the access token, it's cached and reused as needed. This token can be used whenever `getAuthToken()` is called, until it expires, without making another call to Microsoft Entra ID.
 
 > [!IMPORTANT]
 > As a best practice for security of access token:
@@ -84,17 +105,17 @@ When Teams receives the access token, it's cached and reused as needed. This tok
 
 ### Consent dialog for getting access token
 
-When you call `getAuthToken()` and app user's consent is required for user-level permissions, an Azure AD dialog is shown to the app user who is currently signed in.
+When you call `getAuthToken()` and app user's consent is required for user-level permissions, a Microsoft Entra dialog is shown to the app user who is currently signed in.
 
 :::image type="content" source="../../../assets/images/authentication/teams-sso-tabs/tabs-sso-prompt.png" alt-text="Tab single sign-on dialog prompt":::
 
-The consent dialog that appears is for open-id scopes defined in Azure AD. The app user must give consent only once. After consenting, the app user can access and use your tab app for the granted permissions and scopes.
+The consent dialog that appears is for open-id scopes defined in Microsoft Entra ID. The app user must give consent only once. After consenting, the app user can access and use your tab app for the granted permissions and scopes.
 
 > [!IMPORTANT]
 > Scenarios where consent dialogs are not needed:
 >
 > - If the tenant administrator has granted consent on behalf of the tenant, app users don't need to be prompted for consent at all. This means that the app users don't see the consent dialogs, and can access the app seamlessly.
-> - If your Azure AD app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Azure AD app is registered in a different tenant.
+> - If your Microsoft Entra app is registered in the same tenant from which you're requesting an authentication in Teams, the app user can't be asked to consent, and is granted an access token right away. App users consent to these permissions only if the Microsoft Entra app is registered in a different tenant.
 
 If you encounter any errors, see [Troubleshooting SSO authentication in Teams](tab-sso-troubleshooting.md).
 
@@ -119,7 +140,7 @@ Teams can cache this information associated with the app user's identity, such a
 If you need to access web APIs on your server, you'll need to pass the access token to your server-side code. The web APIs must decode access token to view claims for that token.
 
 > [!NOTE]
-> If you don't receive User Principal Name (UPN) in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Azure AD.
+> If you don't receive User Principal Name (UPN) in the returned access token, add it as an [optional claim](/azure/active-directory/develop/active-directory-optional-claims) in Microsoft Entra ID.
 > For more information, see [Access tokens](/azure/active-directory/develop/access-tokens).
 
 The access token received in success callback of `getAuthToken()` provides access (for the authenticated app user) to your web APIs. The server-side code can also parse the token for [identity information](#use-the-access-token-as-an-identity-token), if needed.
@@ -131,21 +152,41 @@ If you need to pass the access token to get Microsoft Graph data, see [Extend ta
 The following code shows an example of passing the access token to the server-side. The token is passed in an `Authorization` header when sending a request to a server-side web API. This example sends JSON data, so it uses the `POST` method. The `GET` is sufficient to send the access token when you're not writing to the server.
 
 ```javascript
-$.ajax({
-    type: "POST",
-    url: "/api/DoSomething",
-    headers: {
-        "Authorization": "Bearer " + accessToken
-    },
-    data: { /* some JSON payload */ },
-    contentType: "application/json; charset=utf-8"
-}).done(function (data) {
-    // Handle success
-}).fail(function (error) {
-    // Handle error
-}).always(function () {
-    // Cleanup
-});
+function getServerSideToken(clientSideToken) {
+        return new Promise((resolve, reject) => {
+            microsoftTeams.app.getContext().then((context) => {
+                fetch('/getProfileOnBehalfOf', {
+                    method: 'post',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        'tid': context.user.tenant.id,
+                        'token': clientSideToken
+                    }),
+                    mode: 'cors',
+                    cache: 'default'
+                })
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        reject(response.error);
+                    }
+                })
+                .then((responseJson) => {
+                    if (responseJson.error) {
+                        reject(responseJson.error);
+                    } else {
+                        const profile = responseJson;
+
+                        resolve(profile);
+                    }
+                });
+            });
+        });
+    }
+
 ```
 
 ### Validate the access token
@@ -182,7 +223,7 @@ The following is a typical decoded payload of an access token.
 
 | Sample name | Description | .NET| Node.js | Manifest |
 |---------------|---------------|------|--------------|-----|
-| Tab SSO |Microsoft Teams sample app for tabs Azure AD SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|NA|
+| Tab SSO |Microsoft Teams sample app for tabs Microsoft Entra SSO| [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/tab-sso/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/tab-sso/nodejs), </br>[Teams Toolkit](../../../toolkit/visual-studio-code-tab-sso.md)|NA|
 | Tab, Bot and Message Extension (ME) SSO | This sample shows SSO for Tab, Bot and ME - search, action, linkunfurl. |  [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/app-sso/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/app-sso/csharp/demo-manifest/App-SSO.zip) |
 
 ## Next step

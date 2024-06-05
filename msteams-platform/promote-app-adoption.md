@@ -1,11 +1,12 @@
 ---
-title: Facilitate adoption of your app and create awareness
+title: Facilitate adoption of your app and help customers promote your app
 author: ashishguptaiitb
+ms.author: guptaashish
+manager: prkosh
 description: Learn about the best practices and guidance for app adoption and promotion.
 ms.topic: reference
 ms.localizationpriority: medium
-ms.author: guptaashish
-ms.date: 03/02/2023
+ms.date: 01/04/2024
 ---
 
 # Five steps to drive adoption of your app
@@ -38,7 +39,7 @@ Admins can set up an app governance process that manages your organization's IT 
 
 ## Understand how you can drive app adoption
 
-Following the below five easy steps, you can encourage customers to adopt your apps through admin recommendations to their users, for maximum adoption in an organization. Consider the following elements for app adoption.
+You can help your customers to adopt apps within their organizations by following these steps.
 
 :::row:::
    :::column span="1":::
@@ -103,7 +104,7 @@ To learn and understand how an IT admin can configure your app, see [Help IT adm
 
 Provide a user guide for your app and cover the following articles:
 
-* Instructions to install your app from the [Microsoft Teams store](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams).
+* Instructions to install your app from the [Microsoft Teams Store](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams).
 * Key features and use cases of your app. For more information, see [Provide your app's use cases](#provide-a-feature-guide-for-the-users-of-your-app).
 * How can users reach you for support?
 * What are the user configuration settings, for example, profile setup?
@@ -180,7 +181,7 @@ Your app might require purchasing a service subscription to experience the app's
 
 ### Allow custom apps in an organization
 
-If an organization uses custom or line-of-business apps, then understand how admins control who can upload and use these custom apps. There are three settings that determine whether a user can upload a custom app to a team. These settings don't affect the ability to allow or block third-party apps.
+If an organization uses custom apps or custom apps built for your org, then understand how admins control who can upload and use these custom apps. There are three settings that determine whether a user can upload a custom app to a team. These settings don't affect the ability to allow or block third-party apps.
 
 1. User app setup policy setting: As part of [app setup policies](/microsoftteams/teams-app-setup-policies), admins can control whether a user can upload custom apps to Teams.
 
@@ -190,9 +191,9 @@ If an organization uses custom or line-of-business apps, then understand how adm
 
 ### Customize branding of apps
 
-Microsoft Teams admins can modify the metadata and appearance of some Teams apps to provide a personalized brand experience within their organization. Such modifications help admins adhere to their organization's requirements and branding. Customizing also enhances Teams store experience for the users, improves trust, and promotes app usage. For more information, see [how admins use app customization to update branding](/microsoftteams/customize-apps).
+Microsoft Teams admins can modify the metadata and appearance of some Teams apps to provide a personalized brand experience within their organization. Such modifications help admins adhere to their organization's requirements and branding. Customizing also enhances Teams Store experience for the users, improves trust, and promotes app usage. For more information, see [how admins use app customization to update branding](/microsoftteams/customize-apps).
 
-To support app customization, you as an app developer can allow admins to customize you app within their organization. Your app in Teams store contains the default information and metadata that you provide when you create and submit an app. Teams provides an option to customize properties of an app. You can decide what properties of your app can the admins customize. However, customizations made within an organization don't affect the apps used in other organizations. To learn more, see [how to allow app customization](concepts/design/enable-app-customization.md).
+To support app customization, you as an app developer can allow admins to customize you app within their organization. Your app in Teams Store contains the default information and metadata that you provide when you create and submit an app. Teams provides an option to customize properties of an app. You can decide what properties of your app can the admins customize. However, customizations made within an organization don't affect the apps used in other organizations. To learn more, see [how to allow app customization](concepts/design/enable-app-customization.md).
 
 ### Documentation requirements for IT admins
 
@@ -264,7 +265,7 @@ The following considerations might help you make the awareness documents more us
 
 * Include a call to action encouraging users to download and use the app.
 * Ensure that there’s a support path for users to contact the support team if they run into any problems.
-* Your feature and usage guide must cover the details of how users can install the app from the [Teams store](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams) from different entry points such as channels, chats, meetings, and message extensions, as well as the details of each feature's usage.
+* Your feature and usage guide must cover the details of how users can install the app from the [Teams Store](https://appsource.microsoft.com/marketplace/apps?product=office%3Bteams) from different entry points such as channels, chats, meetings, and message extensions, as well as the details of each feature's usage.
 
 ### Provide training and create champions who facilitate change management
 
@@ -296,35 +297,37 @@ When your app is being rolled out or being used, your customers might have queri
 
 Enable and train your customer-facing teams such as enablement, consulting, support, and GTM functions to answer the expected support queries. Proactively establish a support process for your app. It might involve internal enablement, socializing documentation and training videos, internally or even externally published escalation matrix, and providing support information in your communications.
 
-In your app’s help documentation, consider providing some or all the following information to provide reliable support to your customers and admins:
+In your app’s help documentation, consider providing some or all the following information for your customers and admins:
 
-* Contact method with support information, for example, email, phone, or web portal.
-* Links to help documentation about rollout for admins, features for users, and troubleshooting to supporting functions.
+* Contact method such as email, phone, community forum, or web portal for customers who want to contact you for app support.
+* Explain features for users, app rollout and configuration methods for admins, and troubleshooting to supporting functions.
+* Explain the different personas that are required to configure your app. For example, an app that works with a Customer Relationship Management (CRM) system or a bug tracking system may require an admin to provision accounts for app users or to create an account for the app to fetch your organization's information.
+* Understanding of how IT admins can control which users have access to apps by using [app centric management](/microsoftteams/app-centric-management) and [permission policies](/microsoftteams/app-policies#app-permission-policies), depending on their tenant configuration.
 * Language support provided by the app in case the app is available in any non-English language.
 * Latest release date and version that imparts app freshness and hence inspires confidence.
 * Call out any app-specific configuration or permissions that might be required. Also, call out any app-specific uptime information link if your app relies on a backend infrastructure to work.
 * If you [block an app by default](concepts/design/enable-app-customization.md), provide documentation for the requirements before admins can allow the app. For example, the required configuration or subscription purchase that admins must do.
 
-Your customers can find [support information for your app](/microsoftteams/manage-apps#support-information-for-apps) and self-serve themselves. The following table provides the support information that you already submitted to Microsoft with your app and the interface in Teams where this information is displayed:
+To learn more about how your customers access the support information for your app, see [support information for Teams apps](/microsoftteams/manage-apps#support-information-for-apps). The following table explains what support information you can submit with your app and where Teams displays it for app users and administrators.
 
-|Input source when creating app|Parameter|Description and meaning|Visibility of the information in Teams|
-|-----|-----|-----|-----|
-|[Manifest file](resources/schema/manifest-schema.md)|`websiteUrl`|The web page at this URL provides support information for an app.|App details page in Teams admin center displays the website URL.|
-|[Manifest file](resources/schema/manifest-schema.md)|`privacyUrl`|The URL to the page that provides privacy information for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Appsource listing.|
-|[Manifest file](resources/schema/manifest-schema.md)|`termsOfUseUrl`|The URL to the page that provides the terms of use for the app.|• Displayed in app details page in Teams admin center. <br> • Displayed in Appsource listing.|
-|[Manifest file](resources/schema/manifest-schema.md)|`publisherDocsUrl`|The URL destination provides app documentation for the admins to use to understand, allow, configure, and rollout the app. | URL is available in Teams admin center for those apps where app developer provide it in their manifest file.|
-|[Partner Center submission](/azure/marketplace/add-in-submission-guide)|NA|Support or help documentation URL.|Displayed in [Microsoft AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.|
+| Input source when creating app                                          | Parameter          | Description and meaning                                                                                                    | Visibility of the information in Teams                                                                       |
+|-------------------------------------------------------------------------|--------------------|----------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
+| [Manifest file](resources/schema/manifest-schema.md)                    | `websiteUrl`       | The web page at this URL provides support information for an app.                                                          | App details page in Teams admin center displays the website URL.                                             |
+| [Manifest file](resources/schema/manifest-schema.md)                    | `privacyUrl`       | The URL to the page that provides privacy information for the app.                                                         | • Displayed in app details page in Teams admin center. <br> • Displayed in AppSource listing.                |
+| [Manifest file](resources/schema/manifest-schema.md)                    | `termsOfUseUrl`    | The URL to the page that provides the terms of use for the app.                                                            | • Displayed in app details page in Teams admin center. <br> • Displayed in AppSource listing.                |
+| [Manifest file](resources/schema/manifest-schema.md)                    | `publisherDocsUrl` | The URL destination provides app documentation for the admins to use to understand, allow, configure, and rollout the app. | Teams admin center displays the URL if the app developer provides it in the manifest file. |
+| [Partner Center submission](/azure/marketplace/add-in-submission-guide) | NA                 | Support or help documentation URL.                                                                                         | Displayed in [Microsoft AppSource](https://appsource.microsoft.com/), in the **Details + support** tab.      |
 
 > [!div class="nextstepaction"]
 > [Back to top](#understand-how-you-can-drive-app-adoption)
 
 ## Step 5: Track app adoption and usage using analytics
 
-You build an app for millions of Teams users to achieve specific business or customer goals. For this purpose, you distribute it using the options available on the Teams store versus a custom app. After the app is published, you'll want to measure how your app is performing in the real-world. You’d also want to guide the admins to measure their org-specific app usage.
+You build an app for millions of Teams users to achieve specific business or customer goals. For this purpose, you distribute it using the options available on the Teams Store versus a custom app. After the app is published, you'll want to measure how your app is performing in the real-world. You’d also want to guide the admins to measure their org-specific app usage.
 
 ### Track app usage in Partner Center
 
-You can track your app’s overall usage in [Teams app usage report](concepts/deploy-and-publish/appsource/post-publish/overview.md) in Partner Center after one week of publishing your app on the Teams store. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. The reports are available at an aggregate level, such as:
+You can track your app’s overall usage in [Teams app usage report](concepts/deploy-and-publish/appsource/post-publish/overview.md) in Partner Center after one week of publishing your app on the Teams Store. Partner Center's usage report provides standard metrics that enable you to track user demand, user churn, and frequency of usage for your app. The reports are available at an aggregate level, such as:
 
 * Monthly, daily, and weekly active users.
 * Retention and intensity charts.

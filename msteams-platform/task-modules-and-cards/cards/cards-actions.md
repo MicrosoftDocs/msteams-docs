@@ -1,6 +1,6 @@
 ---
 title: Add card actions in a bot
-description: In this module, learn what are card actions in Microsoft Teams, action types and how to use them in your bots
+description: Learn what are card actions in Microsoft Teams, action types and how to use them in your bots.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.date: 05/04/2023
@@ -8,7 +8,7 @@ ms.date: 05/04/2023
 
 # Card actions
 
-Cards used by bots and message extensions in Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
+Cards used by bots and message extensions in Microsoft Teams support the following activity [`CardAction`](/bot-framework/dotnet/bot-builder-dotnet-add-rich-card-attachments#process-events-within-rich-cards) types:
 
 > [!NOTE]
 > The `CardAction` actions differ from `potentialActions` for connector cards for Microsoft 365 Groups when used from connectors.
@@ -35,7 +35,7 @@ Cards used by bots and message extensions in Teams support the following activit
 > [!NOTE]
 >
 > * Your bot doesn't receive any notice on which button was selected.
-> * Machine names with numbers aren't supported in URL.
+> * URLs don't support machine names that include numbers. For example, a hostname such as *userhostname123* isn't supported.
 
 With `openUrl`, you can create an action with the following properties:
 
@@ -257,7 +257,7 @@ CardFactory.actions([
 
 ## Action type invoke
 
-The `invoke` action is used for invoking [task modules](~/task-modules-and-cards/task-modules/task-modules-bots.md).
+The `invoke` action is used for invoking [dialogs (referred as task modules in TeamsJS v1.x)](~/task-modules-and-cards/task-modules/task-modules-bots.md).
 
 The `invoke` action contains three properties, `type`, `title`, and `value`.
 
@@ -432,19 +432,20 @@ Adaptive Cards support four action types:
 In the Adaptive Card schema, the `data` property for Action.Submit is either a `string` or an `object`. A submit action behaves differently for each data property:
 
 * `string`: A string submit action automatically sends a message from the user to the bot and is visible in the conversation history.
-* `object`:  An object submit action automatically sends an invisible message from the user to the bot that contains hidden data.  An object submit action populates the activity’s value property while the text property is empty.
+* `object`: An object submit action automatically sends an invisible message from the user to the bot that contains hidden data. An object submit action populates the activity’s value property while the text property is empty.
 
-Action.Submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the `Action.Submit` behavior is defined by Teams client. If the `msteams` property isn't defined in the schema,  `Action.Submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all the input values defined in the input fields.
+Action.Submit is equivalent to the Bot Framework actions. You can also modify the Adaptive Card `Action.Submit` payload to support existing Bot Framework actions using an `msteams` property in the `data` object of `Action.Submit`. When you define the `msteams` property under `data`, the Teams client defines the behavior of `Action.Submit`. If the `msteams` property isn't defined in the schema, `Action.Submit` works like a regular Bot Framework invoke action, where; the submit action triggers an invoke call to the bot and the bot receives the payload with all the input values defined in the input fields.
 
 > [!NOTE]
 >
->* Adding `msteams` to data with a Bot Framework action doesn't work with an Adaptive Card task module.
->* Primary or destructive `ActionStyle` isn't supported in Microsoft Teams.
+>* The bot doesn’t receive user input unless the user submits their actions in the Adaptive Card through a button, such as **Save** or **Submit**. For example, the bot doesn't consider user actions, such as selecting an option from multiple choices or filling out fields in a form, as inputs unless the user submits them.
+>* Adding `msteams` to data with a Bot Framework action doesn't work with an Adaptive Card dialog.
+>* Primary or destructive `ActionStyle` isn't supported in Teams.
 >* Your app has five seconds to respond to the invoke message.
 
 #### Example
 
-The following is an example of a `Action.Submit` card payload:
+The following is an example of an `Action.Submit` card payload:
 
 The payload consists of a text input field `"id": "text-1"` and hidden data payload `"hiddenKey": 123.45`.
 
@@ -579,7 +580,7 @@ For more information on cards and cards in bots, see [cards documentation](~/tas
 
 ### Adaptive Cards with messageBack action
 
-To include a `messageBack` action with an Adaptive Card include the following details in the `msteams` object:
+To include a `messageBack` action with an Adaptive Card, include the following details in the `msteams` object:
 
 > [!NOTE]
 > You can include additional hidden properties in the `data` object, if required.
@@ -610,7 +611,7 @@ The following code shows an example of Adaptive Cards with `messageBack` action:
 
 ### Adaptive Cards with imBack action
 
-To include an `imBack` action with an Adaptive Card include the following details in the `msteams` object:
+To include an `imBack` action with an Adaptive Card, include the following details in the `msteams` object:
 
 > [!NOTE]
 > You can include additional hidden properties in the `data` object, if required.
@@ -637,7 +638,7 @@ The following code shows an example of Adaptive Cards with `imBack` action:
 
 ### Adaptive Cards with sign-in action
 
-To include a `signin` action with an Adaptive Card include the following details in the `msteams` object:
+To include a `signin` action with an Adaptive Card, include the following details in the `msteams` object:
 
 > [!NOTE]
 > You can include additional hidden properties in the `data` object, if required.
@@ -664,7 +665,7 @@ The following code shows an example of Adaptive Cards with `signin` action:
 
 ### Adaptive Cards with invoke action
 
-To include an `invoke` action with an Adaptive Card include the following details in the `msteams` object:
+To include an `invoke` action with an Adaptive Card, include the following details in the `msteams` object:
 
 > [!NOTE]
 > You can include additional hidden properties in the `data` object, if required.
@@ -688,31 +689,50 @@ The following code shows an example of Adaptive Cards with `invoke` action:
 }
 ```
 
+| Property | Description |
+| --- | --- |
+| `type` | Set to `invoke`. |
+| `value` | Set the value to display. |
+
 The following code shows an example of Adaptive Cards with `invoke` action with additional payload data:
 
 ```json
-{
-  "type": "Action.Submit",
-  "title": "submit"
-  "data": {
-    "msteams": {
-        "type": "task/fetch"
-    },
-    "Value1": "some value"
+[
+  {
+    "type": "Action.Submit",
+    "title": "submit with object value",
+    "data": {
+      "ab": "xy",
+      "msteams": {
+        "type": "invoke",
+        "value": { "a": "b" }
+      }
+    }
+  },
+  {
+    "type": "Action.Submit",
+    "title": "submit with stringified json value",
+    "data": {
+      "ab": "xy",
+      "msteams": {
+        "type": "invoke",
+        "value": "{ \"a\": \"b\"}"
+      }
+    }
   }
-}
+]
 ```
 
 ## Code samples
 
 |S.No.|Card| Description|.NET|Node.js|Python|Java|Manifest|
 |:--|:--|:--------------------------------------------------------|-----|------------|-----|----------------------------|------|
-|1|Adaptive card actions|This sample showscases different actions supported in adaptive cards.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/nodejs)|NA|NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-adaptive-card-actions/csharp/demo-manifest/bot-adaptivecard-actions.zip)|
+|1|Adaptive Card actions|This sample showcases different actions supported in Adaptive Cards.|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/csharp)|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/bot-adaptive-card-actions/nodejs)|NA|NA|[View](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/bot-adaptive-card-actions/csharp/demo-manifest/bot-adaptivecard-actions.zip)|
 |2|Using cards|Introduces all card types including thumbnail, audio, media etc. Builds on Welcoming user + multi-prompt bot by presenting a card with buttons in welcome message that route to appropriate dialog.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/06.using-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/06.using-cards)|NA|
 |3|Adaptive cards|Demonstrates how the multi-turn dialog can use a card to get user input for name and age.|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/csharp_dotnetcore/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/javascript_nodejs/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/python/07.using-adaptive-cards)|[View](https://github.com/microsoft/BotBuilder-Samples/blob/main/samples/java_springboot/07.using-adaptive-cards)|NA|
 
 > [!NOTE]
-> Media elements are not supported for Adaptive Card in Teams.
+> Media elements aren't supported for Adaptive Card in Teams.
 
 ## Next step
 
@@ -723,6 +743,6 @@ The following code shows an example of Adaptive Cards with `invoke` action with 
 
 * [Cards reference](./cards-reference.md)
 * [Types of cards](cards-reference.md)
-* [Use task modules from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
+* [Use dialogs from bots](~/task-modules-and-cards/task-modules/task-modules-bots.md)
 * [Adaptive Cards in bots](../../bots/how-to/conversations/conversation-messages.md#adaptive-cards)
 * [Adaptive Card-based Loop component](../../m365-apps/cards-loop-component.md)

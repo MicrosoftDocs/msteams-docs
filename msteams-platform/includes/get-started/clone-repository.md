@@ -5,4 +5,4 @@
 
    :::image type="content" source="../../assets/images/include-files/clone-repository.png" alt-text="Screenshot show the option to clone repository in local.":::
 
-1. Select **Clone**. 
+1. Select **Clone**.

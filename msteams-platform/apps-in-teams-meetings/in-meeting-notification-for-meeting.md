@@ -109,7 +109,7 @@ To enable the targeted in-meeting notification:
 1. Retrieve the user IDs of the participants through [Get participant API](meeting-apps-apis.md#get-participant-api) and [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile).
 
    > [!NOTE]
-   > Targeted in-meeting notification doesn't support user IDs in the Azure Active Directory (Azure AD) user ID format.
+   > Targeted in-meeting notification doesn't support user IDs in the Microsoft Entra user ID format.
 
    **The following is an example of a user ID**:
     `id=29:1I12M_iy2wTa97T6LbjTh4rJCWrtw2PZ3lxpD3yFv8j2YPnweY2lpCPPAn3RIOPP7rghfHauUz48I1t7ANhj4CA`

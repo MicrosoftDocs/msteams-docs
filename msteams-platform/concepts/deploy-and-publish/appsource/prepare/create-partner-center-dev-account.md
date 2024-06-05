@@ -1,6 +1,6 @@
 ---
 title: Create your Partner Center developer account  
-description: FAQs for creating a Partner Center developer account for publishing your app to the Microsoft Teams store.
+description: FAQs for creating a Partner Center developer account for publishing your app to the Microsoft Teams Store.
 ms.topic: how-to
 author: heath-hamilton
 ms.author: surbhigupta
@@ -9,7 +9,7 @@ ms.date: 12/20/2022
 ---
 # Create a Partner Center developer account
 
-To publish your app to the Microsoft Teams store, you must [create your Partner Center developer account](/office/dev/store/open-a-developer-account). Depending on your scenario, you might be able to use an existing account.
+To publish your app to the Microsoft Teams Store, you must [create your Partner Center developer account](/office/dev/store/open-a-developer-account). Depending on your scenario, you might be able to use an existing account.
 
 ## FAQ
 
@@ -209,8 +209,8 @@ The following resources can also assist:
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Prepare your store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
+> [Prepare your Teams Store submission](~/concepts/deploy-and-publish/appsource/prepare/submission-checklist.md)
 
 ## See also
 
-[Publish your app to the Microsoft Teams store](../publish.md)
+[Publish your app to the Microsoft Teams Store](../publish.md)

@@ -28,10 +28,11 @@ You can use conversation update events to provide better notifications and effec
 > * You can add new events any time and your bot begins to receive them.
 > * You must design your bot to receive unexpected events.
 > * If you are using the Bot Framework SDK, your bot automatically responds with a `200 - OK` to any events you choose not to handle.
+> * When an Azure Communication Services (ACS) client joins or leaves the Teams meeting, no conversation update events are triggered.
 
 A bot receives a `conversationUpdate` event in either of the following cases:
 
-* When bot has been added to a conversation.
+* When the bot is added to a conversation.
 * Other members are added to or removed from a conversation.
 * Conversation metadata has changed.
 
@@ -97,8 +98,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-created)
 
 ```json
 {
@@ -195,8 +194,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-renamed)
-
 ```json
 {
     "type": "conversationUpdate",
@@ -290,8 +287,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-deleted)
-
 ```json
 {
     "type": "conversationUpdate",
@@ -354,7 +349,7 @@ The following code shows an example of channel restored event:
 
 # [C#](#tab/dotnet)
 
-* [SDK refernce](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
+* [SDK reference](/dotnet/api/microsoft.bot.builder.teams.teamsactivityhandler.onteamschannelrestoredasync?view=botbuilder-dotnet-stable&preserve-view=true)
 * [Sample code reference](https://github.com/OfficeDev/Microsoft-Teams-Samples/blob/main/samples/msteams-application-qbot/Source/Microsoft.Teams.Apps.QBot.Web/Bot/BotActivityHandler.cs#L395)
 
 ```csharp
@@ -388,8 +383,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#channel-restored)
 
 ```json
 {
@@ -519,8 +512,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#members-added)
 
 The message your bot receives when the bot is added to a team.
 
@@ -696,8 +687,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-[SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#members-removed)
-
 The `channelData` object in the following payload example is based on adding a member to a team rather than a group chat, or initiating a new one-to-one conversation:
 
 ```json
@@ -799,8 +788,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-renamed)
-
 ```json
 { 
     "type": "conversationUpdate",
@@ -886,8 +873,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-deleted)
 
 ```json
 { 
@@ -977,8 +962,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-restored)
 
 ```json
 { 
@@ -1071,8 +1054,6 @@ export class MyBot extends TeamsActivityHandler {
 
 # [JSON](#tab/json)
 
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-archived)
-
 ```json
 { 
     "type": "conversationUpdate",
@@ -1163,8 +1144,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#team-unarchived)
 
 ```json
 { 
@@ -1283,8 +1262,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#reactions-added-to-bot-message)
 
 ```json
 {
@@ -1413,8 +1390,6 @@ export class MyBot extends TeamsActivityHandler {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#reactions-removed-from-bot-message)
 
 ```json
 {
@@ -1556,8 +1531,6 @@ async onInstallationUpdateActivity(context: TurnContext) {
 ```
 
 # [JSON](#tab/json)
-
-* [SDK reference](/microsoftteams/platform/bots/how-to/conversations/subscribe-to-conversation-events?tabs=json#install-update-event)
 
 ```json
 {

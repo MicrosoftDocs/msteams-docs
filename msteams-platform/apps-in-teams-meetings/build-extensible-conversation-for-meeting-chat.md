@@ -1,7 +1,7 @@
 ---
 title: Build extensible conversation for meeting chat
 author: v-sdhakshina
-description: In this article, learn how to build extensible conversation for Microsoft Teams meeting chat with bots, cards and message extensions.
+description: In this article, learn how to build extensible conversation for Microsoft Teams meeting chat with bots, cards, and message extensions.
 ms.topic: conceptual
 ms.author: v-sdhakshina
 ms.localizationpriority: medium
@@ -10,7 +10,7 @@ ms.date: 01/11/2023
 
 # Build extensible conversation for meeting chat
 
-You can make conversations extensible in Microsoft Teams meetings. Bots, message extensions, cards, and task modules can be combined to deliver an intuitive experience.
+You can make conversations extensible in Microsoft Teams meetings. Bots, message extensions, cards, and dialogs (referred as task modules in TeamsJS v1.x) can be combined to deliver an intuitive experience.
 
 ## Bots
 
@@ -31,18 +31,18 @@ The [Bot Framework](https://dev.botframework.com/) is a rich SDK used to create 
 
 Message extensions allow the users to interact with your web service through buttons and forms in the Teams client. Users can search or initiate actions in an external system from the compose message area, the command box, or directly from a message. You can send back the results of that interaction to the Teams client in the form of a richly formatted card. Implementing message extensions for meeting chats is no different than regular chats. To implement message extension, start with [message extensions](/microsoftteams/platform/messaging-extensions/what-are-messaging-extensions?tabs=dotnet).
 
-## Cards and Task modules
+## Cards and dialogs
 
-Cards provide users with various visual, audio, and selectable messages and help in conversation flow. With task modules, you can create modal pop-up experiences in Teams. They're useful for starting and completing the tasks, or displaying rich information like videos or Power business intelligence (BI) dashboards. For more information, see [building cards and task modules](/microsoftteams/platform/task-modules-and-cards/cards-and-task-modules).
+Cards provide users with various visual, audio, and selectable messages and help in conversation flow. With dialogs, you can create modal pop-up experiences in Teams. They're useful for starting and completing the tasks, or displaying rich information like videos or Power business intelligence (BI) dashboards. For more information, see [building cards and dialogs](/microsoftteams/platform/task-modules-and-cards/cards-and-task-modules).
 
 ## Feature compatibility by user types
 
 The following table provides the user types and lists the features that each user can access in meetings:
 
-| User type | Bots | Message extensions | Adaptive Cards | Task modules |
+| User type | Bots | Message extensions | Adaptive Cards | Dialogs |
 | :-- | :-- | :-- | :-- | :-- |
 | In-tenant | Can view messages, interact with the content, and invoke the bot. | Available | Available | Available |
-| Guest, part of the tenant Azure AD | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
+| Guest, part of the tenant Microsoft Entra ID | Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 | Federated, for more information, see [non-standard users](/microsoftteams/non-standard-users). |Can view messages, interact with the content, and invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 | Anonymous |  Can view and interact with the messages sent by the bot. Can't invoke the bot. | Not available | Interactions in the meeting chat are allowed. | Interactions in the meeting chat from Adaptive Card are allowed. |
 
@@ -54,7 +54,7 @@ The following table provides the user types and lists the features that each use
 
 * [Apps for Teams meetings and calls](teams-apps-in-meetings.md)
 * [Design your Microsoft Teams message extension](../messaging-extensions/design/messaging-extension-design.md)
-* [Design task modules for your Microsoft Teams app](../task-modules-and-cards/task-modules/design-teams-task-modules.md)
+* [Design dialogs for your Microsoft Teams app](../task-modules-and-cards/task-modules/design-teams-task-modules.md)
 * [Receive all conversation messages with RSC](../bots/how-to/conversations/channel-messages-with-rsc.md)
 * [Conversation basics](../bots/how-to/conversations/conversation-basics.md)
 * [Adaptive Card](../task-modules-and-cards/cards/cards-reference.md#adaptive-card)

@@ -22,13 +22,15 @@ Use **Azure Admin Center** or **Microsoft 365 Admin Center** for any **business-
 
 Teams community of developers use Stack Overflow and Microsoft Q&A to connect with other developers to ideate, get clarifications, and submit queries. In addition, you can also use other contacts or sites, depending on the type of community help required to raise issues, limitations, and general questions.
 
+📢 Read our latest [announcements](https://aka.ms/M365PlatformAnnouncement) and join the conversation with community members and platform engineers!
+
 ### Developer community forums
 
 Post your questions and help other community members by sharing and responding to Teams App Development questions.
 
 | **Community channel**|   **Contact**  |
 |:---------------------|:---------------|
-|**Community help** | <ul> <li>:::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams): Use the `microsoft-teams` tag to post questions. Follow the Stack Overflow guidelines, such as providing a descriptive title, a concise problem statement, and details to reproduce the issue. Feature requests or broad questions are off-topic. If you are a new user, see [Stack Overflow Help Center](https://stackoverflow.com/help).</li>  <li>:::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](/answers/topics/office-teams-app-dev.html): We love Stack Overflow and provide extensive support to questions posted on Stack Overflow. Use the `office-teams-app-dev` tag to post questions. Stack Overflow has criteria about appropriate questions and [Microsoft Q&A](/answers/topics/office-teams-app-dev.html) has an open policy regarding this. </li><ul> |
+|**Community help** | <ul> <li>:::image type="icon" source="assets/icons/microsoft-icon.png"::: [Microsoft Q&A](/answers/topics/office-teams-app-dev.html): We love Stack Overflow and provide extensive support to questions posted on Stack Overflow. Use the `office-teams-app-dev` tag to post questions. Stack Overflow has criteria about appropriate questions and [Microsoft Q&A](/answers/topics/office-teams-app-dev.html) has an open policy regarding this. </li> <li>:::image type="icon" source="assets/icons/stack-overflow-icon.png"::: [Stack Overflow](https://stackoverflow.com/questions/tagged/microsoft-teams): Use the `microsoft-teams` tag to post questions. Follow the Stack Overflow guidelines, such as providing a descriptive title, a concise problem statement, and details to reproduce the issue. Feature requests or broad questions are off-topic. If you are a new user, see [Stack Overflow Help Center](https://stackoverflow.com/help).</li> <ul> |
 | **Community chat group** | Use the informal community chat room for :::image type="icon" source="assets/icons/Teams-icon.png":::[Microsoft Teams app developers](https://gitter.im/OfficeDev/MicrosoftTeamsAppDev). Select **SIGN IN TO START TALKING**, if signing in for the first time. Select **JOIN ROOM**, if already logged in. |
 
 ### Report issues
@@ -50,7 +52,7 @@ Submit documentation feedback or updates using the community help channels.
 
 | **Community channel** | **Contact** |
 |:--------------------------|:--------------------------|
-| **Documentation issues** | Select **This page** in the **Submit and view feedback** section available at the footer of the documentation, to open an [issue](https://github.com/MicrosoftDocs/msteams-docs/issues) on the [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository.<br/>:::image type="content" source="assets/images/community-feedback-this-page.png" alt-text="This page feedback":::|
+| **Documentation issues** | To open an issue on the [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository, select **Open a documentation issue** in the **Platform Docs feedback** section available at the footer of the documentation.<br/><br/>:::image type="content" source="assets/images/platform-docs-feedback.png" alt-text="Screenshot shows the option to open a documentation issue for platfrom docs."::: <br><br/> You can also select whether the article was helpful or not on the article’s page. Select :::image type="icon" source="assets/icons/feedback-icon.png" border="false"::: **Feedback** in the upper-right corner of the article. Select **Yes** or **No**, provide additional context in the text field and select **Submit**. <br/>:::image type="content" source="assets/images/community-feedback.png" alt-text="Screenshot shows the feedback option in the article.":::<br> If you want to provide additional feedback, you can reach out to the community help through [Microsoft Q&A](#developer-community-forums).|
 |**Documentation updates**|Select **Edit** at the top right of the article you want to update, and submit a pull request to the :::image type="icon" source="assets/icons/GitHub-icon.png"::: [Microsoft Teams documentation GitHub](https://github.com/MicrosoftDocs/msteams-docs) repository. <br /> :::image type="content" source="assets/images/community-feedback-edit.png" alt-text="edit option":::|
 
 ### Feature request and general help
@@ -61,7 +63,7 @@ Suggest a feature or vote up existing feature requests.
 |:----------------------|:------------|
 | **Features suggestions** | Post feature suggestions on :::image type="icon" source="assets/icons/Teams-icon.png"::: [Microsoft Teams feedback portal](https://feedbackportal.microsoft.com/feedback/forum/ad198462-1c1c-ec11-b6e7-0022481f8472). |
 | **General questions** | Send general questions about the Microsoft Teams developer platform to [Microsoft Teams Community Help](mailto:microsoftteamsdev@microsoft.com). We encourage posting questions on the channels mentioned here and using email only if no other mode of communication is applicable. |
-| **Feedback interview** | Your feedback is important to us. If you're interested in talking to us about your experience of leveraging our platform documentation, community forum responses, and Teams store publishing process, please feel free to [book a slot](https://aka.ms/bookdevfeedback).|
+| **Feedback interview** | Your feedback is important to us. If you're interested in talking to us about your experience of leveraging our platform documentation, community forum responses, and Microsoft Teams Store publishing process, please feel free to [book a slot](https://aka.ms/bookdevfeedback).|
 
 ## See also
 

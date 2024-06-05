@@ -870,47 +870,175 @@
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/teams-toolkit-fundamentals-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/teams-toolkit-fundamentals"
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/deploy-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/deploy"
+        "redirect_url": "/microsoftteams/platform/toolkit/deploy"
       },    
       {
         "source_path": "msteams-platform/toolkit/add-capability.md",
-        "redirect_url": "/msteams-platform/toolkit/toolkit-v4/add-capability-v4"
+        "redirect_url": "/microsoftteams/platform/toolkit/toolkit-v4/add-capability-v4"
       },     
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/provision-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/provision"
+        "redirect_url": "/microsoftteams/platform/toolkit/provision"
       },   
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/install-Teams-Toolkit-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/install-Teams-Toolkit"
+        "redirect_url": "/microsoftteams/platform//toolkit/install-Teams-Toolkit"
       }, 
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/explore-Teams-Toolkit-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/explore-Teams-Toolkit"
+        "redirect_url": "/microsoftteams/platform/toolkit/explore-Teams-Toolkit"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/debug-overview-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/debug-overview"
+        "redirect_url": "/microsoftteams/platform/toolkit/debug-overview"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/debug-local-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/debug-local"
+        "redirect_url": "/microsoftteams/platform/toolkit/debug-local"
       },
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/create-new-project-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/create-new-project"
+        "redirect_url": "/microsoftteams/platform/toolkit/create-new-project"
       },   
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/add-single-sign-on-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/add-single-sign-on"
+        "redirect_url": "/microsoftteams/platform/toolkit/add-single-sign-on"
       }, 
       {
         "source_path": "msteams-platform/toolkit/toolkit-v4/TeamsFx-preview-and-customize-app-manifest-v4.md",
-        "redirect_url": "/msteams-platform/toolkit/TeamsFx-preview-and-customize-app-manifest"
+        "redirect_url": "/microsoftteams/platform/toolkit/TeamsFx-preview-and-customize-app-manifest"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/add-How-to guides-v5.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/add-How-to-guides-v5"
+      },
+      {
+        "source_path": "msteams-platform/copilot/how-to-extend-copilot.md",
+        "redirect_url": "/microsoftteams/platform/messaging-extensions/how-to-extend-copilot"
+      },
+      {
+        "source_path": "msteams-platform/messaging-extensions/how-to-extend-copilot.md",
+        "redirect_url": "/microsoft-365-copilot/extensibility/"
+      },
+      {
+        "source_path": "msteams-platform/sbs-botbuilder-conversation-AI.yml",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/teams%20conversational%20ai/conversation-ai-quick-start"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/teamsfx-cli.md",
+        "redirect_url": "msteams-platform/toolkit/Teams-Toolkit-CLI"
+      },
+      {
+        "source_path": "msteams-platform/get-started/build-notification-bot.md",
+        "redirect_url": "/microsoftteams/platform/get-started/build-interactive-notification-bot"
+      },
+      {
+        "source_path": "msteams-platform/bots/how-to/conversations/notification-bot-in-teams.md",
+        "redirect_url": "/microsoftteams/platform/bots/how-to/conversations/interactive-notification-bot-in-teams"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/add-capability-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/add-How-to-guides-v5"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/AAD-manifest-customization-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/AAD-manifest-customization"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/TeamsFx-collaboration-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/TeamsFx-collaboration"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/TeamsFx-multi-env-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/TeamsFx-multi-env"
+      },  
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/add-API-connection-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/add-API-connection"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/add-resource-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/add-resource"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/publish-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/publish"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/publish-your-teams-apps-using-developer-portal-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/publish-your-teams-apps-using-developer-portal"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sbs-v4/sbs-gs-blazorupdate-v4.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-blazorupdate"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sbs-v4/sbs-gs-bot-v4.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-bot"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sbs-v4/sbs-gs-commandbot-v4.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-commandbot"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sbs-v4/sbs-gs-csharp-v4.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-csharp"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sbs-v4/sbs-gs-javascript-v4.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-javascript"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sbs-v4/sbs-gs-msgext-v4.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-msgext"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sbs-v4/sbs-gs-nodejs-v4.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-nodejs"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sbs-v4/sbs-gs-notificationbot-v4.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-notificationbot"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sbs-v4/sbs-gs-spfx-v4.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-spfx"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sbs-v4/sbs-gs-workflow-bot-v4.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-gs-workflow-bot"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/sideload-and-test-app-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-fundamentals"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/teams-toolkit-tutorial-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/teams-toolkit-tutorial"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/test-app-behavior-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/test-app-behavior"
+      },
+      {
+        "source_path": "msteams-platform/toolkit/toolkit-v4/use-CICD-template-v4.md",
+        "redirect_url": "/microsoftteams/platform/toolkit/use-CICD-template"
+      },      
+      {
+        "source_path": "msteams-platform/tabs/tabs-link-unfurling.md",
+        "redirect_url": "/microsoftteams/platform/tabs/open-content-in-stageview"
+      },
+      {
+        "source_path": "msteams-platform/resources/removing-tab-margins.md",
+        "redirect_url": "/microsoftteams/platform/tabs/design/tabs"
+      },
+      {
+        "source_path": "msteams-platform/sbs-api-me-ttk.yml",
+        "redirect_url": "/microsoftteams/platform/sbs-api-msg-ext-ttk"
       }
     ]
 }

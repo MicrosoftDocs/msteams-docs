@@ -1,7 +1,7 @@
 ---
 title: Integrate web apps
 author: Rajeshwari-v
-description: In this article, you'll get started with integrating web applications and device capabilities with Microsoft Teams app. Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS.
+description: In this article, you get started with integrating web applications and device capabilities with Microsoft Teams app. Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS.
 ms.topic: conceptual
 ms.author: surbhigupta
 ms.localizationpriority: high
@@ -11,7 +11,7 @@ ms.date: 12/15/2022
 # Integrate web apps
 
 You can provide an enriched user experience by integrating the features of an existing web application into Microsoft Teams platform. Ensure to follow [Teams design guidelines](~/concepts/design/understand-use-cases.md) to make your app native to Teams.
-This document gives an overview of prerequisites to integrate web applications with Teams, Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS, creating a Share-to-Teams button for your website, adding a Teams tab in SharePoint, creating deep links, and integrating device capabilities.
+This document gives an overview of prerequisites to integrate web applications with Teams, Power platform to create Power apps, Power Virtual Agents, Virtual Assistant, app templates, Shift connectors, Moodle LMS, create a Share-to-Teams button for your website, adding a Teams tab in SharePoint, creating deep links, and integrate device capabilities.
 
 ## Prerequisites
 
@@ -37,7 +37,7 @@ Low code platforms provide an intuitive approach to software development and req
 Microsoft Power platform combines four robust Microsoft technologies, such as Power BI, Power Apps, Power Automate, and Power Virtual Agents in one powerful application platform. These technologies empower you to build solutions, automate processes, analyze data, and create virtual agents within a unified and integrated environment.
 
 >[!NOTE]
->You must not use Microsoft Power Platform to create apps that are to be published to the Teams app store. Microsoft Power Platform apps can be published to an organization’s app store only.
+>You must not use Microsoft Power Platform to create apps that are to be published to the Microsoft Teams Store. Microsoft Power Platform apps can be published to an organization’s app store only.
 
 ### Power Apps
 
@@ -45,7 +45,7 @@ With Power Apps, you can build business apps that connect to your business data 
 
 ### Power Virtual Agents
 
-Power Virtual Agent is a no code, guided graphical interface solution. It's built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to set up a development environment, create a web service, or directly register with the Bot Framework.
+Power Virtual Agent is a no code, guided graphical interface solution. Built on the Microsoft Power Platform and the Bot Framework. It empowers every member of your team to create and maintain rich conversational chatbots that easily integrate with the Teams platform. You can design, develop, and publish intelligent virtual agents for Teams without having to set up a development environment, create a web service, or directly register with the Bot Framework.
 
 ### Create Virtual Assistant
 
@@ -53,7 +53,7 @@ Virtual Assistant is a Microsoft open-source template that enables you to create
 
 ## App templates
 
-You can use app template to create custom made apps to suit your organizational needs. These are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each template contains detailed instructions to deploy and install the app for your organization. It provides a ready-to-use application that you can install and start using immediately.
+You can use app template to create custom made apps to suit your organizational needs. App templates are production-ready apps for Microsoft Teams that are community driven, open-source, and available on GitHub. Each template contains detailed instructions to deploy and install the app for your organization. It provides a ready-to-use application that you can install and start using immediately.
 
 ## Install Moodle LMS
 
@@ -69,7 +69,7 @@ You can get a rich integration experience between Teams and SharePoint by adding
 
 ## Create deep link
 
-You can create deep links to the entities in Teams. You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience.
+You can create deep links to the entities in Teams. You can create links to information and features within Teams. These deep links navigate to content and information within your tab. You can use deep links to link your app with Teams as they tie together multiple pieces of an app for a more native Teams experience. For more information, see [Configure deep links.](../concepts/build-and-test/deep-links.md)
 
 ## Integrate device capabilities
 
@@ -81,7 +81,7 @@ You can integrate the Teams native people picker control that allows users to se
 
 ## Integrate Teams in your external app
 
-You can embed your own experiences into Teams by building Teams apps. If you'd like to *reverse* this model and integrate Teams or other communication capabilities into your own external app experience, see [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services are cloud-based services with REST APIs and client libraries to help you integrate communication into your own custom applications. You can embed generic or Teams-styled React Web components for calling and chat with the help of the [UI library](https://azure.github.io/communication-ui-library/).
+You can embed your own experiences into Teams by building Teams apps. If you'd like to *reverse* this model and integrate Teams or other communication capabilities into your own external app experience, see [Azure Communication Services](/azure/communication-services/overview). Azure Communication Services is cloud-based services with REST APIs and client libraries to help you integrate communication into your own custom applications. You can embed generic or Teams-styled React Web components for calling and chat with the help of the [UI library](https://azure.github.io/communication-ui-library/).
 
 Azure Communication Services applications can use public preview functionality to [interoperate with Teams](/azure/communication-services/concepts/teams-interop) and enable your custom application to join Teams meetings anonymously. For example, you can integrate video calling into a mobile banking application and allow end-users to virtually meet with bank employees using Teams.
 

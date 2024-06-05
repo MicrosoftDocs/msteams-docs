@@ -137,11 +137,11 @@ Microsoft Teams is available for users in more than 180 markets and supports ove
 ## Where can Microsoft help?
 
 <details>
-<summary>Teams App Store merchandising: Editorial articles</summary>
+<summary>Microsoft Teams Store merchandising: Editorial articles</summary>
 
-The Microsoft Teams store editorial team curates editorial sections on the in-product app store based on various ranking parameters.
+The Teams Store editorial team curates editorial sections on the in-product Teams Store based on various ranking parameters.
 
-Editorial articles provide a list of app suggestions to users within the store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Contact the Microsoft field, account, or engineering representatives or connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to feature your app in the editorial articles.
+Editorial articles provide a list of app suggestions to users within the Teams Store that meet specific scenario objectives. It includes a clear call-to-action to install the app while reading the article. Contact the Microsoft field, account, or engineering representatives or connect with the [ISV Marketplace Success Rewards Program team](mailto:rewards@microsoft.com) to feature your app in the editorial articles.
 
 </details>
 <br>

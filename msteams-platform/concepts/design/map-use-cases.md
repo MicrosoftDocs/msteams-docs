@@ -1,7 +1,7 @@
 ---
 title: Map your use cases to Teams app features and capabilities
 author: surbhigupta
-description: Identify how your app's use cases can work within the Teams experience, app features and capabilities; map common use cases with capabilities.
+description: Identify how your app's use cases can work within the Teams experience, app features, and capabilities; map common use cases with capabilities.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: anclear
@@ -35,7 +35,7 @@ Apps to interact with your data
 | Collect information to insert into a data store or run advanced searches. | Message extensions with action commands |
 | Create embedded web experiences to view, work with and share data. | Tabs |
 | Push data and send data out of the Teams client. | Connectors and webhooks|
-| Interactive modal forms from wherever you need them to collect or display information. | Task modules |
+| Interactive modal forms from wherever you need them to collect or display information. | Dialogs (referred as task modules in TeamsJS v1.x) |
 
 </details>
 </br>
@@ -47,7 +47,7 @@ A quick way to start a process or workflow in an external system.
 | **If you want to...** | **Try ...** |
 | --- | --- |
 | Trigger messages, allowing your users to quickly send the contents of a message to your web services. | Message extensions action commands |
-| Open messages from a tab, a bot, or a message extension to collect information before initiating a workflow. | Task modules |
+| Open messages from a tab, a bot, or a message extension to collect information before initiating a workflow. | Dialogs (referred as task modules in TeamsJS v1.x) |
 | Interact with your users through text and rich cards. | Conversational bots |
 | A good choice for a simple back-and-forth interaction when you don't need to build an entire conversational bot. |  Outgoing webhooks |
 
@@ -60,7 +60,8 @@ Send asynchronous notifications and alerts to your users in Teams.
 
 | **If you want to...** | **Try ...** |
 | --- | --- |
-| Send proactive messages to groups, channels, or individual users. | Conversational bots |
+| Send proactive notifications to inform users about news, events, requests, and reminders that require users’ immediate attention or specific actions in the activity feed. | Microsoft Graph API (`sendActivityNotification`) |
+| Send interactive messages to groups, channels, or individual users. | Conversational bots |
 | Permit a channel to subscribe to receive messages. A connector lets users tailor the subscription with a configuration page. | Connectors and incoming webhooks |
 
 </details>
@@ -113,7 +114,7 @@ Let's look at how Teams capabilities enable different features for your Teams ap
 
 For example:
 
-* Use the **tab** capability to display task modules, request device permissions, display <`iframe`> content, or using deep links.
+* Use the **tab** capability to display dialogs, request device permissions, display <`iframe`> content, or using deep links.
 * Use the **message extension** capability to send cards, unfurl links, or take action on messages.
 
 > [!NOTE]

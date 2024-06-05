@@ -12,7 +12,7 @@ ms.date: 03/28/2023
 
 Resource-specific consent (RSC) is a Microsoft Teams and Microsoft Graph API integration that enables your app to use API endpoints to manage specific resources, either teams, chats, or users within an organization.
 
-In this section, you'll learn to:
+In this section, you learn to:
 
 1. [Add RSC permissions to your Teams app](#add-rsc-permissions-to-your-teams-app)
 1. [Install your app in a team, chat, or user](#install-your-app-in-a-team-chat-or-user)
@@ -22,19 +22,21 @@ In this section, you'll learn to:
 
 To add RSC permissions to your app, follow these steps:
 
-1. [Register your app with Microsoft identity platform using the Azure AD portal](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
+1. [Register your app with Microsoft identity platform using the Microsoft Entra admin center](#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).
 1. [Update your app manifest (previously called Teams app manifest)](#update-your-app-manifest).
 
-### Register your app with Microsoft identity platform using the Azure AD portal
+<a name='register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal'></a>
 
-The Azure Active Directory (Azure AD) portal provides a central platform for you to register and configure your apps. You must register your app in the Azure AD portal to integrate with the identity platform and call Graph APIs. For more information, see [register an app with the identity platform](/graph/auth-register-app-v2).
+### Register your app with Microsoft identity platform using the Microsoft Entra admin center
+
+The Microsoft Entra admin center provides a central platform for you to register and configure your apps. You must register your app in the Microsoft Entra admin center to integrate with the identity platform and call Graph APIs. For more information, see [register an app with the identity platform](/graph/auth-register-app-v2).
 
 > [!WARNING]
-> You mustn't share your Azure AD app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and an Azure AD app. Installing multiple Teams apps associated with the same Azure AD app ID will cause installation or runtime failures.
+> You mustn't share your Microsoft Entra app ID across multiple Teams apps. There must be a 1:1 mapping between a Teams app and a Microsoft Entra app. Installing multiple Teams apps associated with the same Microsoft Entra app ID will cause installation or runtime failures.
 
 ### Update your app manifest
 
-You must declare RSC permissions in your app **manifest.json** file. You don't need to add the non-RSC permissions to the app manifest as Azure AD portal stores them.
+You must declare RSC permissions in your app **manifest.json** file. You don't need to add the non-RSC permissions to the app manifest as Microsoft Entra admin center stores them.
 
 #### Request RSC permissions for Teams app
 
@@ -57,7 +59,7 @@ To add RSC permission in app manifest:
 
     |Name| Type | Description|
     |---|---|---|
-    |`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+    |`id` |String |Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
     |`resource`|String| This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
 
 1. Add permissions needed by your app.
@@ -265,7 +267,7 @@ Add the [webApplicationInfo](../../resources/schema/manifest-schema.md#webapplic
 
 |Name| Type | Description|
 |---|---|---|
-|`id` |String |Your Azure AD app ID. For more information, see [register your app in the Azure AD portal](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
+|`id` |String |Your Microsoft Entra app ID. For more information, see [register your app in the Microsoft Entra admin center](grant-resource-specific-consent.md#register-your-app-with-microsoft-identity-platform-using-the-azure-ad-portal).|
 |`resource`|String| This field has no operation in RSC but you must add a value to avoid an error response. You can add any string as value.|
 |`applicationPermissions`|Array of strings|RSC permissions for  your app. For more information, see [Supported RSC permissions](resource-specific-consent.md#supported-rsc-permissions).|
 
@@ -341,7 +343,15 @@ Example for RSC permissions for a user:
 To install your app on which you've enabled RSC permission in a team, chat, or user, follow these steps:
 
 1. Ensure that you've configured [consent settings](#configure-consent-settings) for team, chat, or user.
-1. [Sideload your app in Teams](#sideload-your-app-in-teams).
+1. [Upload your custom app in Teams](#upload-your-custom-app-in-teams).
+
+> [!NOTE]
+>
+> To see the RSC settings for team or chat, users must have one of these Microsoft 365 roles:
+> * Global Administrator
+> * Global Reader
+> * Teams Administrator
+> * Privileged Role Administrator
 
 ### Configure consent settings
 
@@ -349,53 +359,72 @@ The tenant-level controls of application RSC permissions vary based on the resou
 
 For delegated permissions, any authorized user can consent to the permissions requested by the app.
 
+> [!WARNING]
+> The way you manage team and chat RSC permission settings is being updated. The pre-selection period for government clouds has started and continues till May 14, 2024. During this period, government cloud organizations can continue to use Group Owner Consent. For all other organizations, following are the instructions to modify your consent settings in PowerShell.
+
+For organizations in government clouds, you can manage consent settings with [group owner consent settings in Microsoft Entra admin center](/entra/identity/enterprise-apps/configure-user-consent-groups?pivots=portal) till May 14th, 2024.
+
+Tenant level RSC settings are managed by PowerShell and Graph API. For more information on managing Microsoft Graph settings with PowerShell, see [get started with the Microsoft Graph PowerShell SDK](/powershell/microsoftgraph/get-started).
+
+You can use the `Connect-MgGraph` cmdlet and connect with the following permissions:
+
+1. `TeamworkAppSettings.ReadWrite.All`
+1. `Policy.ReadWrite.Authorization`
+1. `Policy.ReadWrite.PermissionGrant`
+1. `AppCatalog.Read.All`
+
+The following are the available states for the PowerShell settings and each section shows examples of how to use these states to adjust your settings:
+
+| PowerShell State | Description |
+| ---- | ---- |
+| ManagedByMicrosoft | This is the default state for all tenants. It allows chat and team RSC permissions to be consented for all users but can be changed at any time at Microsoft's discretion. |
+| EnabledForAllApps | Any app requesting RSC permissions can be consented to by users (resource owners) in your tenant. |
+| DisabledForAllApps | No RSC permissions can be consented to by users. |
+
 <br>
 <details>
 
-<summary><b>Configure group owner consent settings for RSC in a team using the Azure AD portal</b></summary>
+<summary><b>Configure team RSC through PowerShell cmdlets</b></summary>
+<br>
 
-You can enable or disable group owner consent directly within the Azure AD portal:
+You can configure which users are allowed to consent to apps accessing their teams' data by using the available PowerShell states, such as ManagedByMicrosoft, EnabledForAllApps, and DisabledForAllApps.
+<br>
 
-1. Sign in to the [Azure AD portal](https://portal.azure.com) as a global administrator.
-1. Select **Azure Active Directory** > **Enterprise apps** > **Consent and permissions** > [**User consent settings**](https://portal.azure.com/#blade/Microsoft_AAD_IAM/ConsentPoliciesMenuBlade/UserSettings).
-1. Enable, disable, or limit user consent with the control labeled **Group owner consent for apps accessing data**. By default, **Allow group owner consent for all group owners** is selected. For a team owner to install an app using RSC, enable group owner consent for that user.
+The following example shows how to enable team RSC for all apps: 
+<br>
 
-    :::image type="content" source="../../assets/images/azure-rsc-team-configuration.png" alt-text="Screenshot shows the Azure RSC team configuration.":::
-
-In addition, you can enable or disable group owner consent using PowerShell. Follow the steps outlined in [Configure group owner consent using PowerShell](/azure/active-directory/manage-apps/configure-user-consent-groups?tabs=azure-powershell).
+```powershell
+Set-MgBetaTeamRscConfiguration -State EnabledForAllApps
+```
 
 </details>
-
 <br>
 <details>
 
-<summary><b>Configure chat owner consent settings for RSC in a chat using the Graph APIs</b></summary>
-
-You can enable or disable RSC for chats using Graph API. The property `isChatResourceSpecificConsentEnabled` in [teamsAppSettings](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether chat RSC is enabled in the tenant.
-
-:::image type="content" source="../../assets/images/rsc/graph-rsc-chat-configuration.PNG" alt-text="Screenshot shows the Graph RSC team configuration.":::
-
-The default value of the property `isChatResourceSpecificConsentEnabled` is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for chats is first used. The default value is defined either when:
-
-* [TeamsAppSettings](/graph/api/teamsappsettings-get) are retrieved for the first time.
-* Teams app with RSC permissions is installed in a chat or meeting.
-
-> [!NOTE]
-> Admin control is added to allow or block RSC settings based on the sensitivity of the accessed data. The control is independent of the org-wide app settings for RSC that allows or blocks RSC permissions for all apps in the tenant.
-
+<summary><b>Configure chat RSC through PowerShell cmdlets</b></summary>
 <br>
-</details>
 
+You can configure which users are allowed to consent to apps accessing their chats' data by using the available PowerShell states, such as ManagedByMicrosoft, EnabledForAllApps, and DisabledForAllApps.
+<br>
+
+The following example shows how to enable chat RSC for all apps: 
+<br>
+
+```powershell
+Set-MgBetaChatRscConfiguration -State EnabledForAllApps
+```
+
+</details>
 <br>
 <details>
 
 <summary><b>Configure user owner consent settings for RSC for a user using the Graph APIs</b></summary>
 
-You can enable or disable RSC for user using Graph API. The property `isUserPersonalScopeResourceSpecificConsentEnabled` in [teamsAppSettings](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether user RSC is enabled in the tenant.
+You can enable or disable RSC for user using Graph API. The `isUserPersonalScopeResourceSpecificConsentEnabled` property in [teamsAppSettings](/graph/api/teamsappsettings-update#example-1-enable-installation-of-apps-that-require-resource-specific-consent-in-chats-meetings) governs whether user RSC is enabled in the tenant.
 
 :::image type="content" source="../../assets/images/rsc/graph-rsc-user-configuration.PNG" alt-text="The screenshot shows the Graph RSC user configuration.":::
 
-The default value of the property `isUserPersonalScopeResourceSpecificConsentEnabled` is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for user is first used. The default value is defined either when:
+The default value of the `isUserPersonalScopeResourceSpecificConsentEnabled` property is based on whether [user consent settings](/azure/active-directory/manage-apps/configure-user-consent?tabs=azure-portal) is turned on or off in the tenant when RSC for user is first used. The default value is defined either when:
 
 * [TeamsAppSettings](/graph/api/teamsappsettings-get) are retrieved for the first time.
 * Teams app with RSC permissions is installed for a user.
@@ -407,9 +436,9 @@ The default value of the property `isUserPersonalScopeResourceSpecificConsentEna
 
 <br>
 
-### Sideload your app in Teams
+### Upload your custom app in Teams
 
-If your Teams admin allows custom app uploads, you can [sideload your app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team, chat, or user.
+If your Teams admin allows custom app uploads, you can [upload your custom app](~/concepts/deploy-and-publish/apps-upload.md) directly to a specific team, chat, or user.
 
 ## Verify app RSC permission granted to your app
 
@@ -420,13 +449,13 @@ To verify the app RSC permissions, follow these steps:
 
 ### Obtain an access token from the Microsoft identity platform
 
-To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, you must register your app in the Azure AD portal. The access token contains information about your app and its permissions for the resources and APIs available through Microsoft Graph.
+To make Graph API calls, you must obtain an access token for your app from the identity platform. Before your app can get a token from the identity platform, you must register your app in the Microsoft Entra admin center. The access token contains information about your app and its permissions for the resources and APIs available through Microsoft Graph.
 
-You must have the following values from the Azure AD registration process to retrieve an access token from the identity platform:
+You must have the following values from the Microsoft Entra registration process to retrieve an access token from the identity platform:
 
-* **Application ID**: The app ID assigned by the Azure AD portal to your app. If your app supports single sign-on (SSO), you must use the same app ID for your app and SSO.
+* **Application ID**: The app ID assigned by the Microsoft Entra admin center to your app. If your app supports single sign-on (SSO), you must use the same app ID for your app and SSO.
 * **Client secret** or **Certificate**: The password for your app, or the public or private key pair that is the certificate. The client secret or certificate isn't required for native apps.
-* **Redirect URI**: The URL for your app to receive responses from Azure AD.
+* **Redirect URI**: The URL for your app to receive responses from Microsoft Entra ID.
 
 For more information, see [get access on behalf of a user](/graph/auth-v2-user?view=graph-rest-1.0#3-get-a-token&preserve-view=true) and [get access without a user](/graph/auth-v2-service).
 
@@ -512,3 +541,4 @@ For more information on how to get details of the apps installed for the user, s
 * [Global Administrator](/azure/active-directory/roles/permissions-reference#global-administrator&preserve-view=true)
 * [List permissionGrants of a user](/graph/api/user-list-permissiongrants?view=graph-rest-beta&preserve-view=true)
 * [Send notification to a user](/graph/api/userteamwork-sendactivitynotification?view=graph-rest-beta&tabs=http&preserve-view=true)
+* [Messages in bot conversations](~/bots/how-to/conversations/conversation-messages.md)

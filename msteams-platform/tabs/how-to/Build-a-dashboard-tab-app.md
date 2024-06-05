@@ -3,7 +3,7 @@ title: Build a dashboard tab app
 author: v-silakshmi
 description:  Describes Dashboard, widget and Graph API call in Teams toolkit 
 ms.author: surbhigupta
-ms.localizationpriority: medium 
+ms.localizationpriority: medium
 ms.topic: Dashboard, widget, and Graph API call in Teams toolkit
 ms.date: 01/17/2023
 ---
@@ -764,7 +764,7 @@ If you want to call a Graph API from the back-end, follow these steps:
 To consent application permissions, follow these steps:
 
 1. Go to [Azure portal](https://ms.portal.azure.com/#home).
-1. Select **Azure Active Directory**.
+1. Select **Microsoft Entra ID**.
 1. Select **App registrations** in the left pane.
 1. Select your dashboard app.
 1. Select **API permissions** in the left pane.

@@ -10,22 +10,20 @@ ms.date: 01/11/2023
 
 # Virtual tables for Tasks, Meetings, Files
 
+[!INCLUDE [deprecation-label](~/includes/collaboration-controls-deprecation.md)]
+
 A new capability with this release is a set of Virtual tables. These enable developers to interact with Graph via OData APIs.
 
-The Collaboration controls core solution includes a set of [virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve), which can be used for programmatic access to the data created by the Collaboration controls.
-
-> [!NOTE]
-> Currently, Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
-
-> [!TIP]
-> [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
+The Collaboration controls core solution includes a set of [virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve), which can be used for programmatic access to the data created by the Collaboration controls. Collaboration controls are available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md).
 
 The external system that is used by the Collaboration controls is Microsoft Graph. There are virtual tables for group calendar events, booking appointments, planner plans or tasks and SharePoint drives, folders, and files.
 
 This article provides samples, which demonstrate how to access the virtual tables using the Dataverse REST API to perform CRUD (Create, Read, Update, and Delete) operations.
 
 > [!TIP]
-> For more information on the Dataverse REST API, see [use the Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview).
+>
+> * [Virtual tables](/power-apps/developer/data-platform/virtual-entities/get-started-ve) also known as virtual entities, enable the integration of data residing in external systems by seamlessly representing that data as tables in Microsoft Dataverse, without replication of data and often without custom coding.
+> * For more information on the Dataverse REST API, see [use the Microsoft Dataverse Web API](/power-apps/developer/data-platform/webapi/overview).
 
 * Virtual tables use the standard Dataverse Web API, which makes it easy to use the virtual tables to populate data in your application.
 * Virtual tables implement complex workflows required to support Collaboration controls and these execute within Microsoft data centers for optimum performance.  
@@ -33,11 +31,11 @@ This article provides samples, which demonstrate how to access the virtual table
 
 After you install the Collaboration controls, the virtual tables can be treated as another service to your application that can depend on.
 
-:::image type="content" source="~/assets/images/collaboration-control/vt-overview.png" alt-text="Virtual tables overview":::
+:::image type="content" source="~/assets/images/collaboration-control/vt-overview.png" alt-text="Screenshot shows the Virtual tables overview.":::
 
 **Pre-requisites**
 
-To follow along with this article, you'll need:
+To follow along with this article, you need:
 
 1. A Dataverse environment where the Collaboration controls have been installed.
 1. A user account in the Dataverse environment, which has the **Collaboration controls User** role assigned to it.
@@ -181,7 +179,7 @@ Create a Planner Task with `PlanId` and `collaborationRootId`. you can create se
 ```
 
 * `collaborationRootId`: Identifies the collaboration session we want to associate this plan with, use the value from task 2
-* `planId`: Identifies the plan this task will be assigned to, use the value from the previous step
+* `planId`: Identifies the plan this task is assigned to, use the value from the previous step
 * `taskTitle`: Title for the task
 
 # [Response](#tab/response2)
@@ -344,7 +342,7 @@ Retrieve a Planner Task with `PlannerTaskID` to perform a Read operation on one 
 
 ---
 
-Keep track of the `@odata.etag` property and the`m365_graphplannertaskid` property as these will be needed to perform update or delete operations.
+Keep track of the `@odata.etag` property and the`m365_graphplannertaskid` property as these are needed to perform update or delete operations.
 
 **Task 7: Update a Planner Task**
 
@@ -420,9 +418,9 @@ Header: If-Match: {{@odata.etag}}
 }   
 ```
 
-* `@odata.etag`: Etag for the task, you must perform a read to retrieve the most up to date version.
+* `@odata.etag`: Etag for the task, you must perform a read to retrieve the latest version.
 * `planTitle`: Updated title for the task.
-* `@details.etag`: Etag for the task details, you must perform a read using the query $select query parameter to include the `m365_details` column to retrieve the most up to date version. This value will be included in the `m365_details` column of the response. This value isn't the same as the `@odata.etag` because in the Planner backend, the Task and its details are stored separately.
+* `@details.etag`: Etag for the task details, you must perform a read using the query $select query parameter to include the `m365_details` column to retrieve the latest version. This value is included in the `m365_details` column of the response. This value isn't the same as the `@odata.etag` because in the Planner backend, the Task and its details are stored separately.
 
 # [Response](#tab/response7)
 
@@ -454,7 +452,7 @@ To acquire the correct bearer token, an app registration in Azure is required. F
 1. Add the **user_impersonation** delegated permission from Dynamics CRM.
 1. Grant admin consent for this permission.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-automate-api-permission.png" alt-text="The screenshot is an example that shows the Power Automate API permission":::
+     :::image type="content" source="../assets/images/collaboration-control/power-automate-api-permission.png" alt-text="Screenshot shows the Power Automate API permission.":::
 
 1. Browse to **Manifest**.
 1. Set the value of the following attributes to true:
@@ -464,11 +462,11 @@ To acquire the correct bearer token, an app registration in Azure is required. F
 
 1. Select Save.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-automate-manifest.png" alt-text="The screenshot is an example that shows the Power Automate manifest":::
+     :::image type="content" source="../assets/images/collaboration-control/power-automate-manifest.png" alt-text="Screenshot shows the Power Automate manifest.":::
 
 ### PowerApps environment permissions
 
-After the app registration has been set up, you must set up an application user in PowerApps environment. This will allow you to authenticate with the correct Dynamics scopes that were configured earlier.
+After the app registration has been set up, you must set up an application user in PowerApps environment. This allows you to authenticate with the correct Dynamics scopes that were configured earlier.
 
 1. Open the [Power Platform Admin Center](https://admin.powerplatform.microsoft.com/).
 1. Browse to **Environments** > **Your_Environment** > **Users** > **App Users List**.
@@ -478,7 +476,7 @@ After the app registration has been set up, you must set up an application user 
    1. The **System Administrator** role is applied to allow authentication for any users that have a lower security role. For example, **Collaboration controls User**.
    1. This can be restricted by applying a lower role to the application. For example, **Collaboration controls Administrator**.
 
-     :::image type="content" source="../assets/images/collaboration-control/power-automate-admin-center.png" alt-text="The screenshot is an example that shows the Power automate admin center":::
+     :::image type="content" source="../assets/images/collaboration-control/power-automate-admin-center.png" alt-text="Screenshot shows the Power automate admin center.":::
 
 ### Getting the bearer token
 
@@ -501,15 +499,15 @@ POST https://login.microsoftonline.com/<AZURE_APP_TENANT_ID>/oauth2/token
 
 From the response payload, copy the value of the **access_token** property. You can then pass this Bearer token as the part of the authorization header when making requests to the Virtual tables.
 
-:::image type="content" source="../assets/images/collaboration-control/power-automate-authorization.png" alt-text="The screenshot is an example that shows the Power automate authorization":::
+:::image type="content" source="../assets/images/collaboration-control/power-automate-authorization.png" alt-text="Screenshot shows the Power automate authorization.":::
 
 ## Virtual tables error handling
 
-Virtual tables error handling describes common error scenarios and how the virtual tables will respond.
+Virtual tables error handling describes common error scenarios and how the virtual tables respond.
 
 ### Attempt to create a virtual record without a Collaboration session
 
-A valid collaboration session is required for every request to create a virtual record.  When a virtual record is created the virtual table will create a collaboration map record, which includes the virtual record primary key, entity name and the external ID that is, Graph resource ID. This collaboration map is associated with a collaboration session, and this is how the Collaboration controls will keep track of the collaborations associated with a business record.
+A valid collaboration session is required for every request to create a virtual record.  When a virtual record is created, the virtual table creates a collaboration map record, which includes the virtual record primary key, entity name and the external ID that is, Graph resource ID. This collaboration map is associated with a collaboration session, and this is how the Collaboration controls keep track of the collaborations associated with a business record.
 
 # [Request](#tab/request8)
 
@@ -553,7 +551,7 @@ To resolve this issue, you must always provide a valid `collaborationRootId` pro
 
 ### Attempt to read a virtual record without a Collaboration map
 
-Virtual tables allow you to execute requests, which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a $filter system query like this: $filter=m365_planid eq`{{planId}}`. One issue that will happen if you use such a query is that records will be returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't find the associated collaboration map.  
+Virtual tables allow you to execute requests, which return collections of virtual records. We saw this earlier in this document where we requested all the planner tasks associated with a specific collaboration session. It's also possible to request all the planner tasks associated with a specific planner plan by using a `$filter` system query like `$filter=m365_planid eq {{planId}}`. One issue that happens if you use such a query is that records are returned for planner tasks, which aren't associated with a collaboration session that is, planner tasks that were created by a means other than using a Collaboration control. If you attempt to read, update, or delete such a record, the request fails because the virtual table can't find the associated collaboration map.  
 
 # [Request](#tab/request9)
 
@@ -584,7 +582,7 @@ To resolve this issue, you must check the error message in the response and if i
 
 ### Attempt to read a virtual record and the Graph resource has been deleted
 
-Related to the previous error, you need to handle the case where a Graph resource has been deleted but the client still has a reference to the deleted virtual record. This can happen if another user deleted the record. If you attempt to read, update, or delete such a record the request will fail because the virtual table can't retrieve the resource from Graph.
+Related to the previous error, you need to handle the case where a Graph resource has been deleted but the client still has a reference to the deleted virtual record. This can happen if another user deleted the record. If you attempt to read, update, or delete such a record, the request fails because the virtual table can't retrieve the resource from Graph.
 
 # [Request](#tab/request10)
 
@@ -615,9 +613,9 @@ This case must be handled by any client code, which retrieves virtual records as
 
 ### Attempt to update a virtual record with an invalid @odata.etag
 
-The `@odata.etag` property is used for data concurrency and to prevent the over writing of the same record if it has been updated by another user. When, a record is read the current etag is returned, and remains valid until the record is changed. The etag should be included in any update request and will be checked before the operation completes. If the record was changed by another user since the current user read the record, then the current users update request will fail.
+The `@odata.etag` property is used for data concurrency and to prevent the over writing of the same record if it has been updated by another user. When, a record is read the current etag is returned, and remains valid until the record is changed. The etag should be included in any update request and are checked before the operation completes. If the record was changed by another user since the current user read the record, then the current users update request fails.
 
-If you perform two updates requests using the same @odata.etag, then the second request will fail:
+If you perform two updates requests using the same @odata.etag, then the second request fails:
 
 # [Request](#tab/request11)
 
@@ -653,7 +651,7 @@ Header: If-Match: {{@odata.etag}}
 
 ### Querying for Associated Virtual Records
 
-In Task 5 of above, described how to Retrieve Associated Planner Tasks. This operation is supported for all of the virtual tables. When executing this request, you must include a `$filter` query, which specifies the Collaboration Root ID as shown below:
+In Task 5, described how to Retrieve Associated Planner Tasks. This operation is supported for all of the virtual tables. When executing this request, you must include a `$filter` query, which specifies the Collaboration Root ID as follows:
 
 # [Request](#tab/request12)
 
@@ -663,12 +661,12 @@ In Task 5 of above, described how to Retrieve Associated Planner Tasks. This ope
 
 ---
 
-* Other filtering options can't be combined with this `$filter` query and if there they'll be ignored.
+* Other filtering options can't be combined with this `$filter` query and if there they're ignored.
 * Other filtering must be performed directly on the response from the request.
 
 ### Querying for Virtual records with required key attributes
 
-When, Dataverse Web API is called to retrieve multiple records from the following virtual tables a mandatory key attribute is required. Graph Booking Appointments requires a valid `m365_bookingbusinessid` is included in the query. If the key attribute isn't provided, then the request will fail as follows:
+When the Dataverse Web API is called to retrieve multiple records from the following virtual tables, a mandatory key attribute is required. Graph Booking Appointments requires a valid `m365_bookingbusinessid` is included in the query. If the key attribute isn't provided, then the request fails as follows:
 
 # [Response](#tab/response13)
 
@@ -702,7 +700,7 @@ To fix this problem, change the request to this format:
 
 ### Creating virtual records and Graph access control
 
-The virtual tables honor the access control specified for Microsoft Graph. The virtual tables won't permit operations that the user couldn't perform using the Microsoft Graph API. For example, if the user you use to create the Plan is Task 3 and isn't a member of group you use then you'll get 403 Forbidden responses.
+The virtual tables honor the access control specified for Microsoft Graph. The virtual tables won't permit operations that the user couldn't perform using the Microsoft Graph API. For example, if the user you use to create the Plan is Task 3 and isn't a member of group you use then you get 403 Forbidden responses.
 
 ## See also
 

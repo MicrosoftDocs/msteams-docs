@@ -1,5 +1,5 @@
 ---
-title: Design your app - App artwork for store
+title: Design your app - App artwork for Microsoft Teams Store
 description: Learn about guidelines and templates for displaying the app artwork.
 author: heath-hamilton
 ms.localizationpriority: medium
@@ -7,9 +7,9 @@ ms.author: lajanuar
 ms.topic: App artwork
 ms.date: 05/23/2023
 ---
-# Microsoft Teams app artwork for store
+# Teams app artwork for Teams Store
 
-This article provides guidelines and templates for displaying app artwork and details in the Teams store. Follow these guidelines for tips on crafting engaging and useful imagery to get people excited about your app in [Fluent icons](https://www.figma.com/community/file/836835755999342788) and [Teams icon](https://react.fluentui.dev/?path=/docs/concepts-developer-icons-icons--page).
+This article provides guidelines and templates for displaying app artwork and details in the Microsoft Teams Store. Follow these guidelines for tips on crafting engaging and useful imagery to get people excited about your app in [Fluent icons](https://www.figma.com/community/file/836835755999342788) and [Teams icon](https://react.fluentui.dev/?path=/docs/concepts-developer-icons-icons--page).
 
 ## App image templates
 
@@ -31,7 +31,7 @@ Use Size 1 for single column images and Size 2 for double column images.
 
 ## Best practices
 
-Follow these tips to make the most of your space in the Teams store.
+Follow these tips to make the most of your space in the Teams Store.
 
 :::row:::
    :::column span="":::

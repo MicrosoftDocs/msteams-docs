@@ -18,9 +18,9 @@ App caching is supported for the following:
 | --- | --- | --- | --- |
 | &nbsp; | *Supported* <br> *Available only in [public developer preview](~/resources/dev-preview/developer-preview-intro.md)* | *Supported* | *Supported* |
 | Personal | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
-| Chat | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
-| Channel | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
-| Meeting tab | ✔️ Cache lifetime: 30 minutes| ❌ | ❌ |
+| Chat | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
+| Channel | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
+| Meeting tab | ✔️ Cache lifetime: 30 minutes| ✔️ | ❌ |
 | Meeting side panel or In-meeting apps | ✔️ Cache lifetime: 20 minutes| ❌ | ❌ |
 
 ## Enable app caching
@@ -58,6 +58,7 @@ There are multiple reasons for an app to not get cached or for an app to get rem
 * Side panel is the only supported frameContext for app caching in meetings.
 * App caching isn't supported for meetings where the invited user count is more than 20.
 * If an app fails to load, the app isn't cached.
+* On iOS, when the Teams app is terminated, the app is removed from the cache.
 
 ## Code example
 
@@ -89,7 +90,7 @@ The following are the limitations for app caching:
 
 * Apps need to re-register for events such as `themeChange`, `focusEnter`, and so on, in the load handler. Teams client won't send any notifications to the app when cached. If your app requires notifications even when cached, caching might not be the right solution.
 
-* App caching is supported only in Teams desktop client. In Teams web client, even if the app registers load handlers, the app is removed from the cache after the unload sequence is completed.
+* App caching is supported only in Teams desktop client. In Teams web client, even if the app registers load handlers, the app is removed from the cache after the `unload` sequence is completed.
 
 * Register the `load` and `beforeUnload` handlers early in your launch sequence. If the Teams client doesn’t see these registrations before the user leaves the app, the app isn't cached.
 
@@ -97,9 +98,9 @@ The following are the limitations for app caching:
 
 * Apps are cached on a per-window basis. App caching happens on a per app (not on a per tab) basis within the same window.
 
-* App caching isn't supported for the meeting stage or task module contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the task module.
+* App caching isn't supported for the meeting stage or dialog (referred as task module in TeamsJS v1.x) contexts, because these can be opened on top of the tab and the same webview can't be used to render the content in the tab and the dialog.
 
-* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the unload flow completes.
+* Register only the `beforeUnload` handler if your app doesn't require app caching but needs time to safely save state (as leaving the app can cause the app content to be abruptly removed from the Document Object Model (DOM)). If the app hasn't registered for the `load` event, it's removed from the DOM after the `unload` flow completes.
 
 * Follow the guidelines in this section to onboard your app to app caching in Teams meeting. For app caching support only in meetings, register the `load` or `beforeUnload` handlers if the context is `sidePanel`.
 
@@ -115,13 +116,15 @@ The following are the limitations for app caching:
   * `readyToUnload`
   * `getConfig/getSettings`
 
+* App caching isn't supported in the [new Teams client](../../resources/teams-updates.md#limitations).
+
 ## Troubleshooting
 
 **Apps are not being cached? Why is load handler not invoked on subsequent navigation?**
 
 * Verify if the system and available memory constraints are met.
 
-* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources, for example, release references and remove event listeners, that might not be needed when cached.
+* Reduce your memory footprint when cached. Use the `beforeUnload` handler to dispose resources, for example, release references and remove event listeners that might not be needed when cached.
 
 ## Code sample
 

@@ -21,7 +21,7 @@ You can find comprehensive personal app design guidelines, including elements th
 
 ## Add a personal app
 
-Users can add a personal app from the Teams store or app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).
+Users can add a personal app from the Microsoft Teams Store or app flyout by selecting the **More** icon on the left side of Teams (shown in the following example).
 
 :::image type="content" source="../../assets/images/personal-apps/add-from-app-flyout.png" alt-text="Example shows how to add a personal app from the app flyout." lightbox="../../assets/images/personal-apps/add-from-app-flyout.png":::
 

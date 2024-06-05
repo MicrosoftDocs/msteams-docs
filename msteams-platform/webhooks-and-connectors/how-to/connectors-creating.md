@@ -24,7 +24,7 @@ You can create a [package](~/concepts/build-and-test/apps-package.md) and [publi
 
 To distribute your connector, register it in the [Connectors Developer Dashboard](https://aka.ms/connectorsdashboard).
 
-For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Microsoft 365 products that support applications, including Outlook and Teams.
+For a connector to work only in Teams, follow the instructions to submit connector in [publish your app to the Microsoft Teams Store](~/concepts/deploy-and-publish/appsource/publish.md) article. Otherwise, a registered connector works in all Microsoft 365 products that support applications, including Outlook and Teams.
 
 > [!IMPORTANT]
 > Your connector is registered after you select **Save** in the Connectors Developer Dashboard. If you want to publish your connector in AppSource, follow the instructions in [publish your Microsoft Teams app to AppSource](~/concepts/deploy-and-publish/apps-publish.md). If you do not want to publish your app in AppSource, distribute it directly to the organization. After publishing connectors for your organization, no further action is required on the Connector Dashboard.

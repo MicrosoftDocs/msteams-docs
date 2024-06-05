@@ -155,7 +155,7 @@ The `channelData` object contains Teams-specific information and is the definiti
 A typical channelData object in an activity sent to your bot contains the following information:
 
 * `eventType` Teams event type; passed only in cases of [channel modification events](~/resources/bot-v3/bots-notifications.md#channel-updates).
-* `tenant.id` Microsoft Azure Active Directory (Azure AD) tenant ID; passed in all contexts.
+* `tenant.id` Microsoft Entra tenant ID; passed in all contexts.
 * `team` Passed only in channel contexts, not in personal chat.
   * `id` GUID for the channel.
   * `name` Name of the team; passed only in cases of [team rename events](~/resources/bot-v3/bots-notifications.md#team-name-updates).
@@ -269,11 +269,11 @@ function sendCardUpdate(bot, session, originalMessage, address) {
 
 You can create a personal conversation with a user or start a new reply chain in a channel for your team bot. This lets you message your user or users without having them first initiate contact with your bot. For more information, see the following articles:
 
-See [Proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md) for more general information on conversations started by bots.
+For more information on conversations started by bots, see [proactive messaging for bots](~/resources/bot-v3/bot-conversations/bots-conv-proactive.md).
 
 ## Deleting messages
 
-Messages can be deleted using the connectors [`delete()`](https://docs.botframework.com/node/builder/chat-reference/interfaces/_botbuilder_d_.iconnector.html) method in the [BotBuilder SDK](/bot-framework/bot-builder-overview-getstarted).
+Messages can be deleted using the `connector.delete()` method in the BotBuilder SDK.
 
 ```typescript
 bot.dialog('BotDeleteMessage', function (session: builder.Session) {

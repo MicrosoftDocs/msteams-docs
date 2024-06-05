@@ -19,7 +19,7 @@ Bots added to a team become another team member and can be @mentioned as part of
 
 A bot in a group or channel should provide information relevant and appropriate for all members. While your bot can certainly provide any information relevant to the experience, keep in mind conversations with it are visible to everyone. Therefore, a great bot in a group or channel should add value to all users, and certainly not inadvertently share information more appropriate to a one-to-one conversation.
 
-Your bot, just as it is, may be entirely relevant in all scopes without requiring more work. In Teams, there's no expectation that your bot function in all scopes, but you should ensure that your bot provides user value in whichever scope(s) you choose to support. For more information on scopes, see [Apps in Microsoft Teams](~/concepts/build-and-test/teams-developer-portal.md).
+Your bot, just as it is, may be entirely relevant in all scopes without requiring more work. In Teams, there's no expectation that your bot function in all scopes, but you should ensure that your bot provides user value in whichever scope(s) you choose to support.
 
 Developing a bot that works in groups or channels uses much of the same functionality as personal conversations. Additional events and data in the payload provide Teams group and channel information. Those differences, as well as key differences in common functionality are described in the following sections.
 
@@ -29,7 +29,7 @@ For more information on bots creating messages in channels, see [Proactive messa
 
 ### Receiving messages
 
-For a bot in a group or channel, in addition to the [regular message schema](https://docs.botframework.com/core-concepts/reference/#activity), your bot also receives the following properties:
+For a bot in a group or channel, in addition to the [regular message schema](bots-conversations.md#full-inbound-schema-example), your bot also receives the following properties:
 
 * `channelData` See [Teams channel data](~/resources/bot-v3/bot-conversations/bots-conversations.md#teams-channel-data). In a group chat, contains information specific to that chat.
 * `conversation.id` The reply chain ID, consisting of channel ID plus the ID of the first message in the reply chain.

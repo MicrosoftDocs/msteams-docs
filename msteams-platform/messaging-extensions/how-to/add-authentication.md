@@ -1,7 +1,7 @@
 ---
 title: Add third party authentication to your message extension
 author: surbhigupta
-description: Enable authentication in Teams message extension app using third-party provider with Azure AD configuration and code sample.
+description: Enable authentication in Teams message extension app using third-party provider with Microsoft Entra configuration and code sample.
 ms.localizationpriority: medium
 ms.topic: conceptual
 ms.author: anclear
@@ -15,7 +15,7 @@ ms.author: anclear
 
 ## Identify the user
 
-Every request to your services includes the user ID, the user's display name, and Azure Active Directory object ID.
+Every request to your services includes the user ID, the user's display name, and Microsoft Entra object ID.
 
 ```json
 "from": {
@@ -25,7 +25,7 @@ Every request to your services includes the user ID, the user's display name, an
 },
 ```
 
-The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user. They're used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Azure Active Directory tenant ID, which is used to identify the user’s organization. If applicable, the request also contains the team ID and channel ID from which the request is originated.
+The `id` and `aadObjectId` values are guaranteed for the authenticated Teams user. They're used as keys to look up the credentials or any cached state in your service. In addition, each request contains the Microsoft Entra tenant ID, which is used to identify the user’s organization. If applicable, the request also contains the team ID and channel ID from which the request is originated.
 
 ## Authentication
 

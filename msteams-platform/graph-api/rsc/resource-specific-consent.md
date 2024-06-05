@@ -8,7 +8,7 @@ ms.date: 03/20/2023
 
 # Resource-specific consent for your Teams app
 
-Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft Identity platform that allows for granting scoped access to an app.
+Resource-specific consent (RSC) is an authorization framework built by Microsoft Teams and Microsoft identity platform that allows for granting scoped access to an app.
 
 Through RSC, an authorized user can give an app access to the data of a specific instance of a resource type. They don't need to give app access to every instance of the resource type in the entire tenant.
 
@@ -44,10 +44,16 @@ Use RSC permissions to determine the data access methods for your app. A user's 
 
 * **Application context RSC permissions (application permission)**: Allows an app to access data without the user being signed in. Only resource owners can grant application RSC permissions.
 
-  > [!NOTE]
-  > Application RSC permissions for chat scope are available in [public developer preview](../../resources/dev-preview/developer-preview-intro.md) only.
-
 * **Delegated context RSC permissions (delegated permission)**: Allows an app to access data only on behalf of a signed-in user. No access is allowed in the absence of a signed-in user. Only authorized users can install an app in a specific scope. They can also grant any delegated RSC permissions that the app requests in that specific scope at app installation. For example, if regular members have the permission to install an app inside a team, then they can also grant delegated RSC permission to the app in that specific team.
+
+### Basic RSC Permissions
+
+A limited set of RSC permissions have been reviewed by Microsoft privacy and security teams and have been deemed low risk. These permissions can be consented to at all times by any user when they install and use an app. The following low-risk basic permissions will always be consented to upon installation.
+
+| Permission name | Action | Type: Delegated | Type: Application |
+| ----- | ----- | :-----: | :-----: |
+|`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
+|`TeamsActivity.Send.User`|Send activity feed notifications to the user. | NA | Supported |
 
 ### RSC-based data access APIs
 
@@ -55,7 +61,7 @@ Microsoft Graph SDK, Microsoft Bot Framework SDK, and Microsoft TeamsJS client l
 
 | RSC mode | Supported SDKs | App manifest version | Resource types | RSC-related controls for the entire tenant | Who can consent to RSC permissions? |
 |---------|---------|---------|---------|---------|---------|
-|Application| • Microsoft Graph  <br> • Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Azure Active Directory (Azure AD) portal-based controls for Teams |• Team: A team owner <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
+|Application| • Microsoft Graph  <br> • Microsoft Bot Framework | >=v1.6 | Teams, chats, and meetings | • Microsoft Graph-based controls for chats and meetings <br> • Microsoft Entra admin center-based controls for Teams |• Team: A team owner or member <br> • Chat: A chat member <br> • Meeting: A meeting organizer or presenter |
 | Delegated | Microsoft Teams Client | >=v1.12 | Teams, chats, meetings, and users | Always on | Any user authorized to install an app in the specific scope. |
 
 > [!NOTE]
@@ -86,11 +92,8 @@ The following table provides RSC application permissions for a team and their ap
 |`ChannelMeetingTranscript.Read.Group`|Read the transcripts of all channel meetings associated with this team.| NA | Supported |
 |`ChannelMeetingNotification.Send.Group`|Send notifications in all the channel meetings associated with this team.| NA | Supported |
 |`ChannelMessage.Read.Group`|Read this team's channel messages. | NA | Supported |
-|`ChannelMessage.Send.Group`|Send messages to this team's channels.| NA | Supported |
 |`ChannelSettings.Read.Group`| Read the names, descriptions, and settings of this team's channels​.| NA | Supported |
 |`ChannelSettings.ReadWrite.Group`|Update the names, descriptions, and settings of this team's channels.​| NA | Supported |
-|`Member.Read.Group`|Read this group's members.| NA | Supported |
-|`Owner.Read.Group`|Read this group's owners.| NA | Supported |
 |`TeamsActivity.Send.Group`|Send activity feed notifications to users in this team. | NA | Supported |
 |`TeamsAppInstallation.Read.Group`|Read the apps that are installed in this team.| NA | Supported |
 |`TeamMember.Read.Group`|Read this team's members. | NA | Supported |
@@ -112,6 +115,9 @@ For more information, see [team resource-specific consent permissions](/graph/pe
 
 ### RSC permissions for a chat or meeting
 
+> [!NOTE]
+> The RSC permissions for chat in personal scope is limited to `ChatMessageReadReceipt.Read.Chat`.
+
 If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 
 The following table provides RSC permissions for a chat or meeting and their applicable data access mode:
@@ -123,7 +129,6 @@ The following table provides RSC permissions for a chat or meeting and their app
 | `ChatSettings.Read.Chat`| Read this chat's settings.|NA |Supported |
 | `ChatSettings.ReadWrite.Chat`| Read and write this chat's settings. |NA |Supported |
 | `ChatMessage.Read.Chat` | Read this chat's messages.|NA |Supported |
-| `ChatMessage.Send.Chat` | Send messages to this chat. |NA |Supported |
 | `ChatMessageReadReceipt.Read.Chat` | Read the ID of the last seen message in this chat. |NA |Supported |
 | `ChatMember.Read.Chat` | Read this chat's members. |NA |Supported |
 | `Chat.Manage.Chat` | Manage this chat. |NA |Supported |
@@ -150,12 +155,9 @@ The following table provides RSC permissions for a chat or meeting and their app
 For more information, see [chat resource-specific consent permissions](/graph/permissions-reference#chat-resource-specific-consent-permissions).
 
 > [!TIP]
-> RSC permissions are available only to Teams apps installed on the Teams client and not part of the Azure AD portal. If you want to know the RSC permissions associated with an app, see app installation or app information dialog within Teams client.
+> RSC permissions are available only to Teams apps installed on the Teams client and not part of the Microsoft Entra admin center. If you want to know the RSC permissions associated with an app, see app installation or app information dialog within Teams client.
 
 ### RSC permissions for user access
-
-> [!NOTE]
-> The `TeamsActivity.Send.User` RSC  permission is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
 
 The following table provides RSC permissions for a user and their applicable data access mode:
 
@@ -177,3 +179,5 @@ The following table provides RSC permissions for a user and their applicable dat
 
 * [App manifest schema for Teams](../../resources/schema/manifest-schema.md)
 * [Permissions in Teams app](../App-permissions/Teams-app-permissions.md)
+* [Manage custom apps in Teams admin center](/microsoftteams/teams-custom-app-policies-and-settings)
+* [Allow members to upload custom apps](/microsoftteams/teams-custom-app-policies-and-settings?branch=main)

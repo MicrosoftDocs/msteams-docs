@@ -4,7 +4,7 @@ description: Learn about the basics of designing your Microsoft Teams app, inclu
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.topic: overview
-ms.date: 07/26/2022
+ms.date: 01/07/2024
 ---
 # Microsoft Teams app design system
 
@@ -52,7 +52,7 @@ Quickly learn about the fundamentals of Teams app design. You can find comprehen
 
    :::column span="3":::
 
-      Your app's primary icon can go a long way in conveying your brand to Teams users. Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to the Teams store.
+      Your app's primary icon can go a long way in conveying your brand to Teams users. Getting your icon design right is also important for [publishing your app](../../concepts/build-and-test/apps-package.md) to the Microsoft Teams Store.
 
       You also can use Fluent UI icons throughout your app:
 

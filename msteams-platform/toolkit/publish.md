@@ -1,7 +1,7 @@
 ---
 title: Publish Teams apps using Teams Toolkit
 author: zyxiaoyuer
-description: In this module, learn how to publish Teams apps using Teams Toolkit and publish to individual scope or sideload permission.
+description: In this module, learn how to publish Teams apps using Teams Toolkit and publish to individual scope or custom app upload permission.
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 11/29/2021
@@ -15,26 +15,26 @@ After creating the app, you can distribute your app to different scopes, such as
 
 Here's what you'll learn in this section:
 
-* [Publish to individual scope or sideload permission](#publish-to-individual-scope-or-sideload-permission)
+* [Publish to individual scope or custom app upload permission](#publish-to-individual-scope-or-custom-app-upload-permission)
 * [Publish to your organization](#publish-to-your-organization)
-* [Publish to Microsoft Teams store](#publish-to-microsoft-teams-store)
+* [Publish to Microsoft Teams Store](#publish-to-teams-store)
 
 ## Prerequisites
 
 * Ensure to create your [app package](~/concepts/build-and-test/apps-package.md) and [validate it](https://dev.teams.microsoft.com/appvalidation.html) for errors.
 * [Enable custom app uploading](~/concepts/build-and-test/prepare-your-o365-tenant.md#enable-custom-teams-apps-and-turn-on-custom-app-uploading) in Teams.
 * Ensure that your app is running and accessible using HTTPs.
-* Ensure you have followed set of guidelines in the publish your app to the Microsoft Teams store to publish your app.
+* Ensure you have followed set of guidelines in the publish your app to the Teams Store to publish your app.
 
-## Publish to individual scope or sideload permission
+## Publish to individual scope or custom app upload permission
 
-You can add a custom app to Teams by uploading an [app package](../concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as sideloading. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
+You can add a custom app to Microsoft Teams by uploading an [app package](../concepts/build-and-test/apps-package.md) in `.zip` file directly to a team or in personal context. Adding a custom app by uploading an app package is known as custom app upload. It allows you to test app while being uploaded in Teams. You can build and test app in the following scenarios:
 
 * Test and debug an app locally.
 * Build an app for yourself, such as to automate a workflow.
 * Build an app for small set of users, such as, your work group.
 
-You can build an app for internal use and share it with your team without submitting it to the Microsoft Teams app catalog in the Teams app store. For more information, see [how to upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
+You can build an app for internal use and share it with your team without submitting it to the Microsoft Teams app catalog in the Teams Store . For more information, see [how to upload your app in Teams](../concepts/deploy-and-publish/apps-upload.md).
 
 ### Build app package
 
@@ -49,19 +49,19 @@ Perform the following steps to upload app package:
 
 1. In the Teams client, select **Apps** > **Manage your apps** > **Upload an app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish1_1.png" alt-text="Screenshot shows the publish an app option.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/publish-manage-teams-upload-app.png" alt-text="Screenshot shows the publish an app option.":::
 
    The **Upload an app** window appears.
 
 2. Select **Upload a custom app**.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload_1.png" alt-text="Screenshot shows the upload an app option.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
-   Now, the app is sideloaded into the Teams client and you can add and view it.
+   Now, the custom app is uploaded into the Teams client and you can add and view it.
 
 ## Publish to your organization
 
-When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Microsoft Graph API. Teams app submission API is an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Teams toolkit. The following steps help you to publish the app to your organization:
+When the app is ready for use in production, you can submit the app using the Teams app submission API, called from Microsoft Graph API. Teams app submission API is an integrated development environment (IDE) such as Microsoft Visual Studio Code installed with Microsoft Teams Toolkit. The following steps help you to publish the app to your organization:
 
 * [Publish from Teams Toolkit](#publish-from-teams-toolkit)
 * [Approve on admin center](#approve-on-admin-center)
@@ -115,11 +115,11 @@ The following steps help you to approve from admin center:
 
    In the **Pending approval** widget at the top of the page, lets you know when a custom app is submitted for approval. In the table, a newly submitted app automatically publishes the status of submitted and blocked apps. You can sort the publishing status column in descending order to find the app.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app-1.png" alt-text="Screenshot shows the approval.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/admin-approval-for-teams-app.png" alt-text="Screenshot shows the teams apps pending for approval.":::
 
 1. Select the app name to go to the app details page. On the **About** tab, you can view details about the app, including description, status, and app ID.
 
-   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/about-submitted-app-1.png" alt-text="Screenshot shows the submitted app.":::
+   :::image type="content" source="../assets/images/teams-toolkit-v2/teams toolkit fundamentals/about-submitted-app.png" alt-text="Screenshot shows the submitted app.":::
 
 1. Select the status dropdown and change from **Submitted** to **Publish**.
 
@@ -127,11 +127,11 @@ The following steps help you to approve from admin center:
 
    For more information, see [Publish to your org](/microsoftteams/manage-apps?toc=%2Fmicrosoftteams%2Fplatform%2Ftoc.json&bc=%2Fmicrosoftteams%2Fplatform%2Fbreadcrumb%2Ftoc.json)
 
-## Publish to Microsoft Teams store
+## Publish to Teams Store
 
-You can distribute your app directly to the store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the store, you can instantly reach potential customers. The apps published to the Teams store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
+You can distribute your app directly to the Teams Store inside Microsoft Teams and reach millions of users around the world. If your app is also featured in the Teams Store, you can instantly reach potential customers. The apps published to the Teams Store also automatically list on Microsoft AppSource, which is the official marketplace for Microsoft 365 apps and solutions.
 
-For more information, see [how to publish to the Teams store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-microsoft-teams-store).
+For more information, see [how to publish to the Teams Store](../concepts/deploy-and-publish/appsource/publish.md#publish-your-app-to-the-teams-store).
 
 ## See also
 

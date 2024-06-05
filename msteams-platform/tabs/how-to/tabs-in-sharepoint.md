@@ -50,10 +50,10 @@ To add Teams tab to SharePoint, perform the following steps to add Teams tab to 
 Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs/raw/master/msteams-platform/assets/downloads/TalentMgmt-Azure.zip).
 
 1. Open Microsoft Teams.
-1. Select the **Appstore** icon at the lower left of side tab.
-1. Select **Upload a custom app** at the lower left. The following image displays the corresponding screen:  
+1. Select **Apps** > **Manage your apps** > **Upload an app**.
+1. Select **Upload a custom app**.
 
-    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the Upload a custom app option."  lightbox="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png":::
+    :::image type="content" source="../../assets/images/tabs/tabs-in-sharepoint/upload-custom-app.png" alt-text="Screenshot shows the option to upload a custom app in Teams.":::
 
 1. The file to upload is located in your **Downloads** folder. It's called TalentMgmt-Azure.zip. The following image displays the corresponding screen:
 
@@ -67,7 +67,7 @@ Download the [sample app manifest](https://github.com/MicrosoftDocs/msteams-docs
 
 ## Use Teams tab in SharePoint
 
-1. Upload and deploy your Teams app package to your SharePoint App Catalog by visiting `https://YOUR_TENANT_NAME.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`. For example, `https://contoso.sharepoint.com/sites/apps/AppCatalog/Forms/AllItems.aspx`.
+1. Upload and deploy your Teams app package to your SharePoint App Catalog by visiting `https://YOUR_TENANT_NAME.sharepoint.com/sites/appcatalog/AppCatalog/Forms/AllItems.aspx`. For example, `https://contoso.sharepoint.com/sites/appcatalog/AppCatalog/Forms/AllItems.aspx`.
 
 1. When prompted, enable **Make this solution available to all sites in the organization**.
 The following image displays the corresponding screen:

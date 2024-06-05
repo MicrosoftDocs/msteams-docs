@@ -21,17 +21,17 @@ Microsoft Teams supports the following formatting options:
 
 | `TextFormat` value | Description |
 | --- | --- |
-| plain | The text must be treated as raw text with no formatting applied.|
-| markdown | The text must be treated as markdown formatting and rendered on the channel as appropriate. |
-| xml | The text is simple XML markup. |
+| `plain` | The text must be treated as raw text with no formatting applied.|
+| `markdown` | The text must be treated as Markdown formatting and rendered on the channel as appropriate. |
+| `xml` | The text is simple XML markup. |
 
-Teams supports a subset of markdown and XML or HTML formatting tags.
+Teams supports a subset of `markdown` and `xml` or HTML formatting tags. Your bot can also mention other users and tags in text messages posted in channels. For more information, see [add mentions to your messages](~/bots/how-to/conversations/channel-and-group-conversations.md#add-mentions-to-your-messages).
 
 Currently, the following limitations apply to formatting:
 
 * Text-only messages don't support table formatting.
 * Rich cards support formatting in the text property only, not in the title or subtitle properties.
-* Rich cards don't support markdown or table formatting.
+* Rich cards don't support Markdown or table formatting.
 
 After you format text content, ensure that your formatting works across all platforms supported by Teams.
 

@@ -11,7 +11,7 @@ ms.date: 05/02/2023
 # Build tabs with Adaptive Cards
 
 > [!WARNING]
-> Adaptive Card tabs aren't supported in the new Teams client. If your app is using Adaptive Card tabs, we recommend to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../what-are-tabs.md).
+> Adaptive Card tabs aren't available in the new Teams client. The Classic Teams client is expected to be deprecated by March 31, 2024. If your app is using Adaptive Card tabs, we recommend to rebuild the tab as a web-based tab. For more information, see [Build tabs for Teams](../what-are-tabs.md).
 
 When developing a tab using the traditional method, you might run into these issues:
 
@@ -22,17 +22,17 @@ When developing a tab using the traditional method, you might run into these iss
 
 You can build Adaptive Card tabs in Teams. Instead of embedding web content in an iFrame, you can render Adaptive Cards to a tab. While the front end is rendered with Adaptive Cards, the backend is powered by a bot. The bot is responsible for accepting requests and responding appropriately with the Adaptive Card that is rendered.
 
-You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the task module workflow.
+You can build your tabs with ready-made user interface (UI) building blocks native on desktop, web, and mobile. This article helps you understand the changes required to be made to the app manifest. The article also identifies how the invoke activity requests and sends information in tab with Adaptive Cards, and its effect on the modal dialog (referred as task module in TeamsJS v1.x) workflow.
 
 The following image shows build tabs with Adaptive Cards in desktop and mobile:
 
-:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Example of Adaptive Card rendered in tabs.":::
+:::image type="content" source="../../assets/images/adaptive-cards-rendered-in-tabs.png" alt-text="Screenshot shows an example of the Adaptive Card rendered in tabs.":::
 
 ## Prerequisites
 
 Before you start using Adaptive Cards to build tabs, you must:
 
-* Be familiar with [bot development](../../bots/what-are-bots.md), [Adaptive Cards](https://adaptivecards.io/), and [task modules](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
+* Be familiar with [bot development](../../bots/what-are-bots.md), [Adaptive Cards](https://adaptivecards.io/), and [modal dialogs](../../task-modules-and-cards/task-modules/task-modules-bots.md) in Teams.
 * Have a bot running in Teams for your development.
 
 ## Changes to app manifest
@@ -219,11 +219,11 @@ The following code provides examples of `tab/submit` request and response:
 }
 ```
 
-## Understand task module workflow
+## Understand dialog workflow
 
-The task module also uses Adaptive Card to invoke `task/fetch` and `task/submit` requests and responses. For more information, see [using Task Modules in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
+Modal dialogs also use Adaptive Cards to invoke `task/fetch` and `task/submit` requests and responses. For more information, see [using dialogs in Microsoft Teams bots](../../task-modules-and-cards/task-modules/task-modules-bots.md).
 
-With the introduction of Adaptive Card tab, there's a change in how the bot responds to a `task/submit` request. If you're using an Adaptive Card tab, the bot responds to the `task/submit` invoke request with the standard tab **continue** response, and closes the task module. The Adaptive Card tab is updated by rendering the new list of cards provided in the tab **continue** response body.
+With the introduction of Adaptive Card tab, there's a change in how the bot responds to a `task/submit` request. If you're using an Adaptive Card tab, the bot responds to the `task/submit` invoke request with the standard tab **continue** response, and closes the dialog. The Adaptive Card tab is updated by rendering the new list of cards provided in the tab **continue** response body.
 
 ### Invoke `task/fetch`
 
@@ -329,7 +329,7 @@ The following code provides examples of `task/submit` request and response:
 
 ## Authentication
 
-In the previous sections, you've seen that most of the development paradigms can be extended from the task module requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for message extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
+In the previous sections, you've seen that most of the development paradigms can be extended from the dialog requests and responses into tab requests and responses. When it comes to handling authentication, the workflow for Adaptive Card tab follows the authentication pattern for message extensions. For more information, see [add authentication](../../messaging-extensions/how-to/add-authentication.md).
 
 `tab/fetch` requests can have either a **continue** or an **auth** response. When a `tab/fetch` request is triggered and receives a tab **auth** response, the sign in page is shown to the user.
 
@@ -349,7 +349,7 @@ In the previous sections, you've seen that most of the development paradigms can
 
 The following image provides an overview of how the authentication data flow works for a `tab/fetch` invoke.
 
-:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Example of Adaptive Card Tab auth flow.":::
+:::image type="content" source="../../assets/images/tabs/adaptive-cards-tab-auth-flow.png" alt-text="Screenshot shows the example of Adaptive Card Tab auth flow.":::
 
 **`tab/fetch` auth response**
 
@@ -432,13 +432,13 @@ Follow the [step-by-step](../../sbs-tab-with-adaptive-cards.yml) guide to build 
 ## Next step
 
 > [!div class="nextstepaction"]
-> [Tabs link unfurling and Stage View](~/tabs/tabs-link-unfurling.md)
+> [Tabs link unfurling and Stageview](~/tabs/tabs-link-unfurling.md)
 
 ## See also
 
 * [Build tabs for Teams](../what-are-tabs.md)
 * [Tabs on mobile](../design/tabs-mobile.md)
 * [Cards](../../task-modules-and-cards/what-are-cards.md)
-* [Use task modules in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
+* [Use dialogs in tabs](../../task-modules-and-cards/task-modules/task-modules-tabs.md)
 * [Form completion feedback](../../task-modules-and-cards/cards/cards-actions.md#form-completion-feedback)
 * [Microsoft Teams update](../../resources/teams-updates.md)

@@ -2,7 +2,7 @@
 title: Share to Teams overview
 description: Learn share to Teams overview and where you can create share-to-teams button in the Teams apps and tab apps.
 ms.topic: how-to
-ms.localizationpriority: mediumss
+ms.localizationpriority: medium
 ms.date: 02/09/2023
 ---
 
@@ -14,10 +14,13 @@ You can also decide the placement of the Share to Teams button on the app. Users
 
 :::image type="content" source="../../assets/images/share-to-teams/overview.PNG" alt-text="Screenshot showing the Share button on the app.":::
 
-You can enable this feature on the following:
+You can enable Share to Teams button in the following scopes:
 
 * Web apps
 * Personal app or tab
+
+> [!NOTE]
+> Share to Teams isn't available for [Government Community Cloud (GCC) High and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
 ## Share to Teams from web apps
 
