@@ -108,8 +108,6 @@ Meetings Copilot is interactive and efficient, it can assist with summarizing di
 | User Empowerment  | Extending Meeting Copilot empowers users with various actions to enhance their meeting experience.                      |
 | UI Commands       | Users can easily access features like opening a task module or sharing an app to the stage.                             |
 | Search Commands   | Efficient data retrieval from app databases is made possible, streamlining the search process.                          |
-| Action Commands   | Users can facilitate tasks such as creating polls or adding entries into CRM applications.                              |
-| Complex Commands  | These commands involve data fetching and rationalizing from multiple sources, enabling informed decisions.              |
 
 | Scenarios         | Description                                                                                                            |
 |-------------------|------------------------------------------------------------------------------------------------------------------------|
