@@ -20,7 +20,7 @@ ms.date: 11/14/2023
 
 Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to transform your words into a potent productivity tool. Although Copilot for Microsoft 365 can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot for Microsoft 365 and Copilot for Teams chats, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. You can achieve this extension by developing a plugin or connecting to an external data source.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and M365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams, and M365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
 See the video to learn more about extending Copilot for Microsoft 365 using Teams message extensions:
 </br>
@@ -241,7 +241,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. Select **Custom Search Results**.
 1. Select **Start with a Bot**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results and start with a bot option selected in the CLI window.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results, and start with a bot option selected in the CLI window.":::
 
 1. Enter the location for your project and select **Enter**.
 
@@ -350,7 +350,7 @@ A bot-based search message extension is created.
 
 To test your bot-based message extension created in Developer Portal for Teams, you can use the following methods:
 
-* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
+* **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You're redirected to Teams, where you can add the app to Teams to preview the app.
 
 * **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to Teams and test the message extension.
 
