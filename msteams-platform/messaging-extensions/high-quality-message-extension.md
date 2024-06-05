@@ -12,8 +12,7 @@ ms.date: 11/14/2023
 
 > [!IMPORTANT]
 >
-> * Plugins for Microsoft Copilot for Microsoft 365 are available in public developer preview.
-> * Plugins for Copilot only work in Copilot for Microsoft 365 and Copilot for Microsoft Teams chats.
+> * Plugins for Copilot for Microsoft 365 and Copilot for Teams chats are in preview and only work in Copilot for Microsoft 365 and Copilot for Teams chats in Teams.
 > * Ensure that Copilot for Microsoft 365 is available for your organization. You have two ways to get a developer environment for Copilot:
 >   * A sandbox Microsoft 365 tenant with Copilot (available in limited preview through [TAP membership](https://developer.microsoft.com/microsoft-365/tap)).
 >   * An enterprise customer production environment with Microsoft Copilot for Microsoft 365 licenses.
@@ -134,7 +133,7 @@ The following table lists the short description examples for each category:
 
 # [General](#tab/general)
 
-**Description**: Stock and share lookup tool.
+**Description**:  Stock and share lookup tool.
 
 **App description example:**
 
@@ -538,7 +537,7 @@ The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionsco
 > * The `samplePrompts` property is mandatory for app validation during the app submission process.
 > * If you define multiple commands for your app, a maximum of three prompts (one from each of the top three commands) are displayed to the user. The prompts rotate to provide the user with a diverse set of prompts across different commands.
 
-We recommend you to follow these guidelines to increase the chances of your app to pass the Teams Store submission process:
+We recommend you to follow these guidelines to increase the chances of your app to pass the Microsoft Teams Store submission process:
 
 * A plugin must have at least three prompts and maximum of five prompts for each command.
 * Each prompt must not exceed 128 characters.

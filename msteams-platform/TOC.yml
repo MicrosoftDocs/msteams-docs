@@ -447,7 +447,7 @@
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
     - name: Update and delete messages sent from bot
-      href: bots/how-to/update-and-delete-bot-messages.md
+      href: bots/how-to/update-and-delete-bot-messages.md      
     - name: Request headers of the bot
       href: bots/how-to/conversations/request-headers-of-the-bot.md
     - name: Interactive notification bot in Teams

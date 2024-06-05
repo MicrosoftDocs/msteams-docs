@@ -27,7 +27,7 @@ If the problem continues, use the thumbs down indicator in the Microsoft 365 Cha
 
 <summary> What descriptions should I include in app manifest? </summary>
 
-Here's an example description that works for NPM Finder:
+Here's an example description that work for NPM Finder.
 
 ```json
  "name": { 
