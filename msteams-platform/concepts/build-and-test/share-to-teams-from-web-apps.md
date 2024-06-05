@@ -132,6 +132,7 @@ Before you enable share content to meetings, you must ensure the following:
 >
 > * If the app doesn't have meeting stage and side panel capabilities, the content aren't stored and the messages are just sent in the regular meeting chat.
 > * If app installation is blocked by the admin, then the app is added to the chat and not the meeting of the user.
+> Share to Teams in meeting is supported only for instant tab scenarios and specific to Teams.
 
 **Enable Share to Teams for meeting**
 
