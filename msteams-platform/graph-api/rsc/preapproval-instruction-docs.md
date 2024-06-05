@@ -84,7 +84,7 @@ You must distinguish what type of RSC permissions you're preapproving in the cmd
 Preapprove an app with Team RSC permissions:
 
 ```powershell
-New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group')
+New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group') -TeamLevelSensitivityLabelCondition AnySensitivityLabel
 ```
 
 Preapprove an app with Chat RSC permissions:
@@ -96,7 +96,7 @@ New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 Preapprove an app with both Team and Chat RSC permissions:
 
 ```powershell
-New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat') -ResourceSpecificApplicationPermissionsAllowedForTeams @(‘ChannelMessage.Read.Group’)
+New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat') -ResourceSpecificApplicationPermissionsAllowedForTeams @(‘ChannelMessage.Read.Group’) -TeamLevelSensitivityLabelCondition AnySensitivityLabel
 ```
 
 >[!WARNING]
@@ -121,7 +121,7 @@ You must distinguish what type of RSC permissions you're preapproving in the cmd
 |`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this option when creating a preapproval for RSC permissions for a team. A listing of these permissions can be found [here](/graph-api/rsc/resource-specific-consent)|
 |`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this option when creating a preapproval for RSC permissions for a team. A listing of these permissions can be found [here](/graph-api/rsc/resource-specific-consent)|
 
-You can use the `TeamLevelSensitivityLabelCondition` and `SpecificSensitivityLabel` arguments to define specific sensitivity labels to apply the RSC preapproval policy to. An example of a cmdlet using the following arguments:
+You can use the `SpecificSensitivityLabel` arguments to define specific sensitivity labels to apply the RSC preapproval policy to. An example of a cmdlet using the following arguments:
 
 ```powershell
 New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group') -TeamLevelSensitivityLabelCondition SpecificSensitivityLabel -SpecificSensitivityLabelIdsApplicableToTeams @('4de11089-adb9-4be8-9b7a-8336be68f3c4')
@@ -158,7 +158,7 @@ Update-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
 #### Updating a preapproval for Team RSC
 
 ```powershell
-Update-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group', 'TeamsAppInstallation.Read.Group)
+Update-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group', 'TeamsAppInstallation.Read.Group) -TeamLevelSensitivityLabelCondition AnySensitivityLabel
 ```
 
 If you're changing your preapproval from a defined sensitivity label to all sensitivity labels, you must reset the value of the `SpecificSensitivityLabel` argument in your preapproval. You can do so by setting the `SpecificSensitivityLabel` argument to null like in the following example:
