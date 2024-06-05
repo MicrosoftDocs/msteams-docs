@@ -195,7 +195,7 @@ To test an **Link Unfurling** in the Test Tool, follow these steps:
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/link-unfurling.png" alt-text="Screenshot shows how to create a link unfurling in teams app test tool.":::
 
-   A **Enter an URL** dialog appears.
+   A **Enter a URL** dialog appears.
 
 1. In the **Enter an URL** dialog, enter a URL of your choice.
 
@@ -252,7 +252,7 @@ In Teams, the commands are available in the app manifest. Since the Test Tool do
 </br>
 
 <details>
-<summary>How to does Static list of parameters work in Teams app Test Tool?</summary>
+<summary>How to do Static list of parameters work in Teams app Test Tool?</summary>
 
 The static list of parameters is the simple method for creating dialogs for action commands, but it doesn’t allow for formatting control.
 
