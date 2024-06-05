@@ -143,7 +143,7 @@ In the action-based message extension dialog, select **Adaptive Cards**. Test To
 
 In the action-based message extension dialog, select **Static list of parameters**. Test Tool renders the parameters you provided into a dialog. For more information on parameters, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
 
-The following is a sample of the static list of parameters:
+The following code is a sample of the static list of parameters in JSON format:
 
    ```json
    [{
@@ -166,79 +166,78 @@ The following is a sample of the static list of parameters:
    }]
    ```
 
-The following image shows a sample static list of parameters:
-
 :::image type="content" source="../assets/images/teams-toolkit-v2/static-list-of-parameters-in-teams-app-test-tool.png" alt-text="Screenshot shows how to create a static list of parameters in teams app test tool.":::
 
-You can find the static list of parameters from the app manifest under the `composeExtensions`. For more information, see [manifest.json.tpl](https://github.com/OfficeDev/TeamsFx/blob/main/templates/ts/message-extension-action/appPackage/manifest.json.tpl#L41-L59).
+Static list of parameters are available under the `composeExtensions` property in app manifest. For example, see [manifest.json](https://github.com/OfficeDev/TeamsFx/blob/main/templates/ts/message-extension-action/appPackage/manifest.json.tpl#L41-L59).
 
 ### Submit form inside the dialog
 
 After you've created a dialog using Adaptive Cards or a static list of parameters and select submit, Test Tool sends an invoke request with name of `composeExtension/submitAction`.
 
-Based on the invoke response from the message extension, the Test Tool enables the following actions:
+Based on the invoke response from the message extension, the Test Tool performs one of the following actions:
 
-* Render the Adaptive Card from the invoke response and insert it into the message compose area.
+* Renders an Adaptive Card from the invoke response and inserts it into the message compose area.
 
-* Render the Adaptive Card from the invoke response inside the dialog. This is useful when the form is extensive and needs to be divided into multiple cards.
+* Renders an Adaptive Card from the invoke response inside the dialog. This is useful when the form is extensive and needs to be divided into multiple cards.
 
-* Display a plain text message from the invoke response inside the dialog.
+* Displays a plain text message from the invoke response inside the dialog.
 
 > [!Note]
-> Similar to the **Search Command**, it's not mandatory to include the command ID to test your message extension. Add them if you require to test the functionality.
+> It's not mandatory to include the command ID to test your message extension. Add them if you require to test the functionality.
 
 ## Link Unfurling
 
 To test an **Link Unfurling** in the Test Tool, follow these steps:
 
-1. Select **+** in the message compose area.
+1. Select the **+** icon in the message compose area.
 
 1. Select **Link Unfurling**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/link-unfurling.png" alt-text="Screenshot shows how to create a link unfurling in teams app test tool.":::
 
-1. Provide the URL in the dialog.
+   A **Enter an URL** dialog appears.
 
-1. The Test Tool triggers a `composeExtension/queryLink` invoke request with the URL to the message extension.
+1. In the **Enter an URL** dialog, enter a URL of your choice.
 
-1. Review the Adaptive Card that the Test Tool renders based on the invoke response from the app.
+1. Select **Send to Conversation**.
 
    :::image type="content" source="../assets/images/teams-toolkit-v2/link-unfurling-card.png" alt-text="Screenshot shows how to create link unfurling in teams app test tool.":::
+
+   The Test Tool triggers a `composeExtension/queryLink` invoke request with the URL to the message extension. You can review the Adaptive Card that the Test Tool renders based on the invoke response from the app.
 
 > [!Note]
 > The user experience for testing link unfurling in the Test Tool differs from that in Teams, however you can still test or debug the app logic with Test Tool in a simple way.
 
 ## Limitations
 
-The following table lists the type of message extension features that aren't supported:
+The following table lists the features for each message extension type that aren't supported:
 
-|Type of message extension |Not supported |
+|Message extension type |Features not supported |
 | --- | --- |
-| **Search Command** | Trigger from command box. <br> Grid layout for search results. <br> Send the `composeExtension/selectItem` invoke activity when an item from the search results is selected. <br> Pagination for additional search results. |
-| **Action Command** | Trigger from command box. <br> Create dialog with embedded web view. <br> Render the invoke activity of [botMessagePreview](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#the-botmessagepreview-send-and-edit-events).|
-| **Link Unfurling** | Render the preview card from the invoke response. <br> Send invoke activity of `composeExtension/anonymousQueryLink` for zero install case. |
+| **Search Command** | Triggering from command box. <br> Grid layout for search results. <br> Sending the `composeExtension/selectItem` invoke activity when an item from the search results is selected. <br> Pagination for additional search results. |
+| **Action Command** | Triggering from command box. <br> Creating a dialog with embedded web view. <br> Rendering the [botMessagePreview](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#the-botmessagepreview-send-and-edit-events) invoke activity.|
+| **Link Unfurling** | Rendering the preview card from the invoke response. <br> Sending invoke activity of `composeExtension/anonymousQueryLink` for zero install case. |
 
-## Test Tool for message extension FAQ
+## Message extension Test Tool FAQ
 
 <br>
 <details>
-<summary>Command ID and Parameter name parameters in Search Command</summary>
+<summary>How can I use `commandId` or `parameters.name` properties for a Search Command in Teams app Test Tool?</summary>
 
-When you use the search box in a search-based message extension on Teams, your app receives an invoke activity that includes two parameters. Occasionally, your app might need to use `activity.value.commandId` or `activity.value.parameters[0].name` to manage different search command behaviors in the activity handler for the `composeExtension/query` invoke activity, such as the `handleTeamsMessagingExtensionQuery` method in the Bot Framework SDK for JavaScript. However, your app doesn't need it because [Teams only supports a single search command](../resources/schema/manifest-schema.md#composeextensionscommands) and you can leave them empty.
+When you use the search box in a search-based message extension in Teams, your app receives an invoke activity that includes two parameters. Sometimes, your app might need to use `activity.value.commandId` or `activity.value.parameters[0].name` to manage different search command behaviors in the activity handler for the `composeExtension/query` invoke activity, such as the `handleTeamsMessagingExtensionQuery` method in the Bot Framework SDK for JavaScript. However, your app doesn't need it because [Teams only supports a single search command](../resources/schema/manifest-schema.md#composeextensionscommands) and you can leave them empty.
 
-If your app utilizes these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and enter the necessary values. Test Tool includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
+If your app uses these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and enter the necessary values. Test Tool includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/specify-command-parameter.png" alt-text="Screenshot shows the specify command ID or Parameter.":::
 
-In Teams, your app manifest provides this information. However, Test Tool doesn't process the manifest. For more information, see [Limitations](toolkit-v4/debug-your-Teams-app-test-tool-vs.md#limitations). Therefore, you need to input this information manually.
+In Teams, the parameters are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the parameters manually.
 
-For details about the schema of this, invoke activity payload. For more information, see [respond to user requests](../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests).
 <br>
 </details>
 </br>
 
 <details>
-<summary>Command ID parameter in Action Command</summary>
+<summary>How can I use `commandId` property for an Action Command in Teams app Test Tool?</summary>
 
 Navigate through dialogs initiated by action commands in Teams, your app receives a `composeExtension/fetchTask` or `composeExtension/submitAction` invoke activity. This activity includes the `activity.value.commandId` parameter. However, your app uses this parameter to differentiate between commands within the activity handler for these invoke activities, such as the `handleTeamsMessagingExtensionFetchTask` or `handleTeamsMessagingExtensionSubmitAction` methods in the Bot Framework SDK for JavaScript.
 
@@ -246,15 +245,14 @@ To test various action commands, you must enter the `Command ID` in the designat
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/command-parameter.png" alt-text="Screenshot shows the command ID parameter in Action Command.":::
 
-While Teams retrieves this information from your app manifest, Test Tool doesn't. Therefore, you need to input it manually.
+In Teams, the commands are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the commands manually.
 
-For details about the schema, invoke activity payload. For more information, see [create and send dialogs](../messaging-extensions/how-to/action-commands/create-task-module.md) and [respond to the dialog submit action](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md).
 <br>
 </details>
 </br>
 
 <details>
-<summary>Static list of parameters in Action Command</summary>
+<summary>How to does Static list of parameters work in Teams app Test Tool?</summary>
 
 The static list of parameters is the simple method for creating dialogs for action commands, but it doesn’t allow for formatting control.
 
@@ -262,8 +260,15 @@ When you opt to create a dialog using a static list of parameters, the message e
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/static-list-of-parameters.png" alt-text="Screenshot shows the static list of parameter in Action Command.":::
 
-In Teams, your app manifest provides this information. However, Test Tool doesn't process the manifest. For more information, see [Limitations](toolkit-v4/debug-your-Teams-app-test-tool-vs.md#limitations). Therefore, you need to input this information manually.
+In Teams, the parameters are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the parameters manually.
 
-For the schema of, the Static list of parameters. For more information, see [composeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands).
+
 <br>
 </details>
+
+## See also
+
+* [Respond to user requests](../messaging-extensions/how-to/search-commands/respond-to-search.md#respond-to-user-requests)
+* [Create and send dialogs](../messaging-extensions/how-to/action-commands/create-task-module.md)
+* [Respond to the dialog submit action](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md)
+* [ComposeExtensions.commands](../resources/schema/manifest-schema.md#composeextensionscommands)
