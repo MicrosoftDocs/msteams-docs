@@ -20,7 +20,7 @@ Check **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Lau
 1. Create a new folder under the solution folder. The new folder name can be TeamsApp.
 
     > [!NOTE]
-    > The new folder can be any name, but please pay any attention that it should be meaningful. We suggest to use TeamsApp.
+    > The new folder can be any name, but please pay any attention that it must be meaningful. We suggest to use TeamsApp.
 
 1. Create a file under the new folder and name it as TeamsApp.ttkproj.
 
@@ -34,9 +34,9 @@ Check **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Lau
     ```
 
     > [!NOTE]
-    > The name of project file should be the same of the new folder, but differences won't block the Visual Studio system.
+    > The name of project file must be the same of the new folder, but differences won't block the Visual Studio system.
 
-1. Move the configuration folders and the files to the new project. They are
+1. Move the configuration folders and the files to the new project. They're
 
     * Folders: ["appPackage", "env", "infra"]
     * Files: ["teamsapp.yml", "teamsapp.local.yml", "aad.manifest.json"]
@@ -44,12 +44,12 @@ Check **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Lau
     > [!NOTE]
     > These folders and files are auto included, so you needn't manually add them to the .ttkproj.
 
-1. According to the old launchSettings.json, move the launching browser or test tool capability to launchSettings.json of the new project.
+1. According to the earlier launchSettings.json, move the launching browser or test tool capability to launchSettings.json of the new project.
 
-    * Create a luanchSettings.json under the new project. Copy the C# launchSettings.json to the new created one.
-    * Delete the dotnetRunMessages, launchBrowser, applicationUrl, environmentVariables and hotReloadProfile fields of the new launchSettings.json, because they are not used in TeamsApp.
-    * Remove the launchBrowser, launchTestTool and launchUrl in the old LaunchSettings.json file.
-    * Remove the duplicated profile(s) in the old launchSettings.json.
+    * Create a launchSettings.json under the new project. Copy the C# launchSettings.json to the new created one.
+    * Delete the dotnetRunMessages, launchBrowser, applicationUrl, environmentVariables, and hotReloadProfile fields of the new launchSettings.json, because they aren't used in TeamsApp.
+    * Remove the launchBrowser, launchTestTool, and launchUrl in the old LaunchSettings.json file.
+    * Remove the duplicated profiles in the earlier launchSettings.json.
 
     > [!NOTE]
     >
@@ -59,7 +59,7 @@ Check **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Lau
 
 1. Use Visual Studio (version greater than 17.10 Preview 3) to open the solution. Add the new project to the solution, maybe TeamsApp/TeamsApp.ttkproj.
 
-1. Remove the <ProjectCapability Include="TeamsFx"/> in the old C# project.
+1. Remove `<ProjectCapability Include="TeamsFx"/>` in the old C# project.
 
 1. Create a {{solutionName}}.slnLaunch.user file at the same level of the solution file.
 
@@ -92,17 +92,17 @@ Notice that the DebugTarget must be the same name of the profiles in the LaunchS
 Alternatively, use UI to set up the multiple startup profiles.
 
 1. Right-click the solution -> Configure Startup Projects...
-1. Click Multiple start projects -> Add more profiles which starts up TeamsApp and the C# project together. You can rename them to what you like.
-1. Click OK. You can find that the {{solutionName}}.slnLaunch.user has auto saved under the solution folder.
+1. Select Multiple start projects -> Add more profiles that start up TeamsApp and the C# project together. You can rename them to what you like.
+1. Select OK. You can find that the {{solutionName}}.slnLaunch.user has auto saved under the solution folder.
 
-Modify the teamsapp.local.yml and teamsapp.yml after moving them to the new folder.
-Every action which will change the C# project needs to be updated because the path has changed. Almost focus on the following actions:
+1. Modify the teamsapp.local.yml and teamsapp.yml after moving them to the new folder.
+1. Every action that changes the C# project needs to be updated because the path has changed. Almost focus on the following actions:
 
-* uses: file/createOrUpdateJsonFile, it may change the C# appSettings.json file to set some runtime environment, so change to the correct path of target field.
-    > [!IMPORTANT]
-    > Changing LaunchSettings.json in file/createOrUpdateJsonFile is unnecessary so remove it if you see it in the teamsapp.local.yml.
-* uses: cli/runDotnetCommand, it will run dotnet command under the C# project to pack the project, so add the correct path to WorkingDirectory field and add the correct csproj path to the command string.
-* uses: azureAppService/zipDeploy, it will deploy the packed file to the remote, so add the correct path to WorkingDirectory field.
+    * uses: file/createOrUpdateJsonFile, it might change the C# appSettings.json file to set some runtime environment, so change to the correct path of target field.
+        > [!IMPORTANT]
+        > Changing LaunchSettings.json in file/createOrUpdateJsonFile is unnecessary so remove it if you see it in the teamsapp.local.yml.
+    * uses: cli/runDotnetCommand, it runs dotnet command under the C# project to pack the project, so add the correct path to WorkingDirectory field and add the correct csproj path to the command string.
+    * uses: azureAppService/zipDeploy, it deploys the packed file to the remote, so add the correct path to WorkingDirectory field.
 
 ```yml
 # For example:
@@ -141,7 +141,7 @@ deploy:
 ```
 
 > [!NOTE]
-> This step is easy to make mistakes, so you can run provisioning and deploying on the new project to test it.
+> This step is easy to make mistakes, so you can provision and deploy on the new project to test it.
 
 1. Close the solution and save all changes.
 
@@ -155,7 +155,7 @@ Old and New image
 
 New
 
-This file extension is .ttkproj.
+This file extension is **.ttkproj**.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -268,7 +268,7 @@ Another in TeamsApp project
 }
 ```
 
-## Teamsapp YAML File
+## Teams app YAML File
 
 Old
 
@@ -395,7 +395,7 @@ None
 
 New
 
-This should be stored at the same level of the solution folder.
+This file must be stored at the same level of the solution folder.
 
 ```json
 [
