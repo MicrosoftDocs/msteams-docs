@@ -99,13 +99,13 @@ For more information, see [app manifest schema](~/resources/schema/manifest-sche
 
 Teams supports message extension plugins in Microsoft Copilot for Teams chats. Extending bot-based message extension plugins to Teams chats offers several benefits:
 
-* **Expanded functionality**: Plugins for Copilot for Teams chats offer functionalities that complement those of plugins for Copilot for Microsoft 365 or meetings. For example, a plugin for Copilot for meetings helps schedule and manage meetings, while a plugin for Copilot for Teams chats handles follow-up actions like sending meeting minutes or action items.
+* **Expanded functionality**: Plugins for Copilot for Teams chats offer functionalities that complement those of plugins for Copilot for Microsoft 365 or meetings. For example, a plugin for Copilot for meetings helps schedule and manage meetings, while a plugin for Copilot for Teams chats handles follow-up actions such as sending meeting minutes or action items.
 
 * **Integration**: Plugins can help integrate other external tools or services into Copilot for Teams chats. This can streamline workflows by allowing users to access multiple tools and services from one place, reducing context switching.
 
 * **Consistency**: Having plugins for both chat and meetings can provide a consistent user experience across different modes of communication.
 
-For example, consider a scenario where an accessibility issue is identified in a one-on-one chat. With an Azure DevOps plugin for Copilot for Teams chats activated, Copilot for Teams chats can be instructed to create a bug in Azure DevOps to track the identified issue. Copilot uses relevant information from the conversation to activate the Azure DevOps plugin, resulting in the creation of a bug.
+For example, consider a scenario where an accessibility issue is identified in a one-on-one chat. If an Azure DevOps plugin for Copilot for Teams chats activated, Copilot for Teams chats can be instructed to create a bug in Azure DevOps to track the identified issue. Copilot uses relevant information from the conversation to activate the Azure DevOps plugin, which results in the creation of a bug.
 
 To learn how to build a bot-based message extension plugin for Copilot for Teams chats, see [Extend bot-based message extension as plugin for Copilot for Microsoft 365 and Copilot for Teams chats](build-bot-based-plugin.md).
 

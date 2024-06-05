@@ -20,7 +20,7 @@ ms.date: 11/14/2023
 
 Microsoft Copilot for Microsoft 365, powered by an advanced processing and orchestration engine, integrates Microsoft 365 apps, Microsoft Graph, and Large Language Models (LLMs) to transform your words into a potent productivity tool. Although Copilot for Microsoft 365 can utilize apps and data within the Microsoft 365 ecosystem, many users rely on various external tools and services for work management and collaboration. By extending your message extension as a plugin in Copilot for Microsoft 365 and Copilot for Teams chats, you can enable users to interact with third-party tools and services, therefore empowering them to achieve more with Copilot for Microsoft 365. You can achieve this extension by developing a plugin or connecting to an external data source.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams, and M365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-diff.png" alt-text="Graphic shows the user interaction flow between the user, Microsoft Teams and M365 Chat." lightbox="../assets/images/Copilot/ailib-copilot-diff.png":::
 
 See the video to learn more about extending Copilot for Microsoft 365 using Teams message extensions:
 </br>
@@ -36,9 +36,9 @@ A plugin allows Copilot for Microsoft 365 and Copilot for Teams chats to interac
 * Retrieve knowledge-based information, such as a team’s design files in Figma.
 * Perform actions on behalf of the user, such as creating a Contoso ticket.
 
-Descriptions enhance the usability and effectiveness of a message extension plugin. The following description offers a clear and concise summary of the app’s features:
+Descriptions enhance the usability and effectiveness of a message extension plugin. The follwoing description offer a clear and concise summary of the app’s features:
 
-* **App description**: App description helps improve your app discoverability in Microsoft Teams Store.
+* **App description**: App description helps improve your app discoverability in the Teams Store.
 * **Command description**: Command description maps user intent and utterance to search command inside a plugin and must be built based on the analysis of the user intent and keywords.
 * **Parameter description**: Parameter description explains the requirements of the system in a natural language with output format.
 * **Semantic description**: Semantic description helps Copilot for Microsoft 365 and Copilot for Teams chats generate content by providing a conceptual understanding of the plugin's capabilities and scenarios where it can help achieve user goals and match user’s intent with the plugin's capabilities.
@@ -58,9 +58,7 @@ Before you get started, ensure that you're familiar with the following standards
 ## Create bot-based message extension
 
 > [!IMPORTANT]
->
-> * Plugins for Microsoft Copilot for Microsoft 365 are available in public developer preview.
-> * Plugins for Microsoft Copilot for Microsoft 365 only work in Copilot for Microsoft 365 and Copilot for Teams chats.
+> Plugins for Copilot for Microsoft 365 and Copilot for Teams chats are in preview and only work in Copilot for Microsoft 365 and Copilot for Teams chats in Teams.
 
 Let's create a bot-based search message extension that can search npm registries in Teams and Copilot and share results through the compose message area of the Microsoft Teams client.
 
@@ -243,7 +241,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 1. Select **Custom Search Results**.
 1. Select **Start with a Bot**.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results, and start with a bot option selected in the CLI window.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-new-project.png" alt-text="Screenshot shows the message extension, custom search results and start with a bot option selected in the CLI window.":::
 
 1. Enter the location for your project and select **Enter**.
 
@@ -263,7 +261,7 @@ To create a bot-based search message extension plugin using Teams Toolkit CLI, f
 
 1. From the list, select a subscription.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the sign-in to Azure and select a subscription option in the CLI window.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-CLI-resource-group.png" alt-text="Screenshot shows the login to Azure and select a subscription option in the CLI window.":::
 
 1. From the list, select a resource group.
 1. If you receive a message, which reads **Cost may incur according to the usage. Do you want to provision resources in dev environment using accounts listed above?**, enter **Y**.
@@ -303,17 +301,17 @@ To trigger the message extension through M365 Chat, follow these steps:
 > [!NOTE]
 > This prompt might not always make M365 Chat include a response from your message extension. If it happens, try some other prompts or leave feedback to us by downvoting the M365 Chat response and leave a message tagged with [MessageExtension].
 
-# [Developer Portal](#tab/developer-portal)
+# [Developer Portalfor Teams](#tab/developer-portal-for-teams)
 
-To create a bot-based search message extension plugin using Developer Portal, follow these steps:
+To create a bot-based search message extension plugin using Developer Portal for Teams, follow these steps:
 
-1. Go to **Developer Portal**.
+1. Go to *Teams Developer Portal**.
 1. Go to **Apps**.
 1. Select **+ New apps**.
 1. Under **Configure**, select **App features**.
 1. Select **Message extension**.
 
-   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/api-based-me-tdp-app-feature.png" alt-text="Screenshot shows the message extension option in Teams Developer Portal.":::
 
 1. Under **Message extension type**, select **Bot**.
 
@@ -325,7 +323,7 @@ To create a bot-based search message extension plugin using Developer Portal, fo
 
    1. If you don't have a Bot ID, you can select **Create a new bot**, to create a new bot and enter the bot ID of the new bot that you've created.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-tdp-select-bot.png" alt-text="Screenshot shows the Bot, Existing bot, and Enter Bot ID options for message extension app feature in Developer Portal.":::
+   :::image type="content" source="../assets/images/Copilot/bot-based-tdp-select-bot.png" alt-text="Screenshot shows the Bot, Existing bot, and Enter Bot ID options for message extension app feature in Developer Portal for Teams.":::
 
 1. Select **Save**.
 
@@ -346,15 +344,15 @@ To create a bot-based search message extension plugin using Developer Portal, fo
 
 1. Select **Save**.
 
-   A bot-based search message extension is created.
+A bot-based search message extension is created.
 
-   :::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the message extension created and listed in the App features page in Developer Portal.":::
+:::image type="content" source="../assets/images/Copilot/bot-based-tdp-message-extension-created.png" alt-text="Screenshot shows the message extension created and listed in the App features page in Developer Portal for Teams.":::
 
-To test your bot-based message extension created in Developer Portal, you can use the following methods:
+To test your bot-based message extension created in Developer Portal for Teams, you can use the following methods:
 
 * **Preview in Teams**: In Developer Portal, open your message extension and select **Preview in Teams** in the upper-right corner. You'll be redirected to Teams, where you can add the app to Teams to preview the app.
 
-* **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to Teams and test the message extension.
+* **Download app package**: On the message extension page, select **App package** from the left pane and then, in the upper-left corner of the window, select **Download app package**. The app package is downloaded to your local machine in a .zip file. You can upload the app package to teams and test the message extension.
 
 ---
 
