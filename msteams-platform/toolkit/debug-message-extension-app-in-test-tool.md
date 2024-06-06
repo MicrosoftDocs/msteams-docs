@@ -226,7 +226,7 @@ The following table lists the features for each message extension type that aren
 
 When you use the search box in a search-based message extension in Teams, your app receives an invoke activity that includes two parameters. Sometimes, your app might need to use `activity.value.commandId` or `activity.value.parameters[0].name` to manage different search command behaviors in the activity handler for the `composeExtension/query` invoke activity, such as the `handleTeamsMessagingExtensionQuery` method in the Bot Framework SDK for JavaScript. However, your app doesn't need it because [Teams only supports a single search command](../resources/schema/manifest-schema.md#composeextensionscommands) and you can leave them empty.
 
-If your app uses these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and enter the necessary values. Test Tool includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
+If your app uses these two parameters, you can provide additional inputs by selecting `Specify Command ID or Parameter` and updating the required values. Test Tool includes these parameters in the invoke activity payload during a search. If you don't specify them, the payload avoids these parameters.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/specify-command-parameter.png" alt-text="Screenshot shows the specify command ID or Parameter.":::
 
@@ -239,13 +239,13 @@ In Teams, the parameters are available in the app manifest. Since the Test Tool 
 <details>
 <summary>How can I use `commandId` property for an Action Command in Teams app Test Tool?</summary>
 
-Navigate through dialogs initiated by action commands in Teams, your app receives a `composeExtension/fetchTask` or `composeExtension/submitAction` invoke activity. This activity includes the `activity.value.commandId` parameter. However, your app uses this parameter to differentiate between commands within the activity handler for these invoke activities, such as the `handleTeamsMessagingExtensionFetchTask` or `handleTeamsMessagingExtensionSubmitAction` methods in the Bot Framework SDK for JavaScript.
+In Teams, dialogs are triggered from action commands and your app receives a `composeExtension/fetchTask` or `composeExtension/submitAction` invoke activity. This activity includes the `activity.value.commandId` parameter. However, your app uses this parameter to differentiate between commands within the activity handler for these invoke activities, such as the `handleTeamsMessagingExtensionFetchTask` or `handleTeamsMessagingExtensionSubmitAction` methods in the Bot Framework SDK for JavaScript.
 
-To test various action commands, you must enter the `Command ID` in the designated input box. If you don't set it, the command IDs aren't included in the activity payload.
+To test various action commands, you must enter the `Command ID` in the respective field. If you don't update, the command IDs aren't included in the activity payload.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/command-parameter.png" alt-text="Screenshot shows the command ID parameter in Action Command.":::
 
-In Teams, the commands are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the commands manually.
+In Teams, commands are available in the app manifest. Since the Test Tool doesn't process the manifest, you need to input the commands manually.
 
 <br>
 </details>
@@ -254,9 +254,9 @@ In Teams, the commands are available in the app manifest. Since the Test Tool do
 <details>
 <summary>How to do Static list of parameters work in Teams app Test Tool?</summary>
 
-The static list of parameters is the simple method for creating dialogs for action commands, but it doesn’t allow for formatting control.
+The static list of parameters is the simple method to create dialogs for action commands, however you can't format the static list.
 
-When you opt to create a dialog using a static list of parameters, the message extension receives a `composeExtension/submitAction` invoke activity upon the user’s submission of the dialog.
+When you create a dialog using a static list of parameters, the message extension receives a `composeExtension/submitAction` invoke activity upon the user’s submission of the dialog.
 
 :::image type="content" source="../assets/images/teams-toolkit-v2/static-list-of-parameters.png" alt-text="Screenshot shows the static list of parameter in Action Command.":::
 
