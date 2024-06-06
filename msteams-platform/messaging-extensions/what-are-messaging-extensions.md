@@ -14,13 +14,13 @@ Message extensions enable users to engage with your web service through buttons 
 > [!IMPORTANT]
 > Message extensions are available in [Government Community Cloud (GCC), GCC-High, and Department of Defense (DOD)](~/concepts/app-fundamentals-overview.md#government-community-cloud) environments.
 
-This document provides an overview of message extensions, including their use cases, functionality, action and search commands, and link unfurling.
+This document provides an overview of message extensions and link unfurling including their use cases and functionality.
 
 The following image displays the locations from where message extensions can be invoked:
 
 > [!NOTE]
 > * @mentioning message extensions in the compose box isn't supported.
-> * Message extension isn't displayed to external users of a group chat.
+> * Message extension isn't displayed to external users in a group chat.
 
 # [Desktop](#tab/desktop)
 
