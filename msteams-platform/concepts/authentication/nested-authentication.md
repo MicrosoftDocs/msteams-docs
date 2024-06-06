@@ -54,7 +54,6 @@ To use nested authentication, follow these steps:
 
 1. [Register their single page application](#register-your-single-page-application)
 1. [Add trusted brokers](#add-trusted-brokers)
-1. [Enable the native bridging](#enable-native-bridging)
 1. [Initialize public client application](#initialize-public-client-application)
 1. [Call an API](#call-an-api)
 
@@ -72,11 +71,6 @@ brk-<broker_application_id>://<your_domain>
 
 Where <broker_application_id> is the app ID or alias of the broker or brokers you wish to trust and <your_domain> is the fully qualified domain name where your application is hosted. For example, **brk-multihub://contoso.com**.
 
-For Teams only apps, add two Redirect URIs to indicate you trust only Teams to broker tokens for you:
-
-* brk-5e3ce6c0-2b1f-4285-8d4b-75ee78787346://<your_domain>
-* brk-1fec8e78-bce4-4aaf-ab1b-5451cc387264://<your_domain>
-
 If your app has been upgraded to also run in Outlook and Microsoft365.com (in addition to Teams) then you just need to add one Redirect URI:
 
 ```http
@@ -87,22 +81,6 @@ Your domain should only include the origin and not sub-paths. For example:
 
 * Correct: brk-multihub://myapp.teams.microsoft.com
 * Incorrect: brk-multihub://myapp.teams.microsoft.com/go
-
-### Enable native bridging
-
-Configure your add-in to use nested app authentication by setting the `supportsNestedAppAuth` property to `true` in your MSAL configuration. This enables MSAL to use APIs on its native application host such as Outlook to acquire tokens for your application. If you don't set this property, MSAL uses the default JavaScript-based implementation to acquire tokens for your application, which might lead to unexpected auth prompts and unsatisfiable conditional access policies when running inside of a webview.
-
-```javascript
-
-// Config object to be passed to Msal on creation
-const msalConfig = {
-  auth: {
-      clientId: "<your_app_id>",
-      authority: "<https://login.microsoftonline.com/common>",
-      supportsNestedAppAuth: true // Enable native bridging.
-  }
-};
-```
 
 ### Initialize public client application
 
@@ -116,7 +94,7 @@ let pca = undefined;
 
 // Initialize the public client application
 Office.onReady(async (info) => {
-    pca = await msalBrowser.PublicClientNext.createPublicClientApplication(msalConfig);
+    pca = await msalBrowser.nestablePublicClient.createPublicClientApplication(msalConfig);
   });
 ```
 
