@@ -4,7 +4,7 @@ description: In this article, learn more about the function of Actions and its u
 ms.date: 11/16/2023
 ms.author: mosdevdocs
 author: v-bvishnu
-ms.topic: Conceptual
+ms.topic: conceptual
 ms.subservice: m365apps
 ---
 # Actions in Microsoft 365
