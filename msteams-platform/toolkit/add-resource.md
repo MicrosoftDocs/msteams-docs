@@ -10,7 +10,7 @@ ms.date: 11/29/2021
 
 # Add cloud resources to Teams app
 
-Teams Toolkit allows you to provision the cloud resources for hosting your app. You can add the cloud resources according to your development needs. The advantage of adding more cloud resources in TeamsFx is that you can autogenerate all configuration files and connect to Teams app by using Teams Toolkit.
+Microsoft Teams Toolkit allows you to provision the cloud resources for hosting your app. You can add the cloud resources according to your development needs. The advantage of adding more cloud resources in TeamsFx is that you can autogenerate all configuration files and connect to Microsoft Teams app by using Teams Toolkit.
 
 > [!NOTE]
 > If you've created SharePoint Framework (SPFx) based tab project, you can't add Azure cloud resources.
@@ -25,9 +25,9 @@ You can add cloud resources in the following ways:
    1. Select **Teams Toolkit** from the Visual Studio Code activity bar.
    1. Select **View How-to Guides** in the **DEVELOPMENT** section.
 
-        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-feature123_1.png" alt-text="Screenshot shows View How-to Guides under Development highlighted.":::
+        :::image type="content" source="~/assets/images/teams-toolkit-v2/manual/select-view-how-to-guides.png" alt-text="Screenshot shows the option to select View How-to Guides under Development.":::
 
-   1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You'll be redirected to the respective How-to Guide.
+   1. From the dropdown list that appears, select the cloud service integration you want to add to your app. You're redirected to the respective How-to Guide.
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the Cloud service integration options in View How-to Guides.":::
 
@@ -35,7 +35,7 @@ You can add cloud resources in the following ways:
       |----------|----------|
       |Integrate with Azure Functions | [How to Integrate Azure Functions with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app) |
       |Integrate with Azure SQL Database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
-      |Integrate with Azure API Management | [How to Integrate Azure API Management with your Teams App and export the api to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
+      |Integrate with Azure API Management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
       |Integrate with Azure Key Vault | [How to Integrate Azure Key Vault with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-Key-Vault-with-your-Teams-app) |
 
 ### To add cloud resources by using Command Palette
@@ -50,7 +50,7 @@ You can add cloud resources in the following ways:
      
         :::image type="content" source="../assets/images/teams-toolkit-v2/manual/how-to-guides.png" alt-text="Screenshot shows the selection of View how-to guides from the list.":::
 
-   1. From the dropdown list that appears, select the capability you want to add to your app. You'll be redirected to the respective How-to Guide.
+   1. From the dropdown list that appears, select the capability you want to add to your app. You're redirected to the respective How-to Guide.
 
         :::image type="content" source="../assets/images/teams-toolkit-v2/manual/cloud-service-integration.png" alt-text="Screenshot shows the capabilities in View How-to Guides list.":::
 
@@ -58,7 +58,7 @@ You can add cloud resources in the following ways:
       |----------|----------|
       |Integrate with Azure Functions | [How to Integrate Azure Functions with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/How-to-integrate-Azure-Functions-with-your-Teams-app) |
       |Integrate with Azure SQL Database | [How to Integrate Azure SQL Database with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-SQL-Database-with-your-Teams-app) |
-      |Integrate with Azure API Management | [How to Integrate Azure API Management with your Teams App and export the api to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
+      |Integrate with Azure API Management | [How to Integrate Azure API Management with your Teams App and export the API to power app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-API-Management-with-your-Teams-App-and-export-the-api-to-power-app) |
       |Integrate with Azure Key Vault | [How to Integrate Azure Key Vault with your Teams app](https://github.com/OfficeDev/TeamsFx/wiki/Integrate-Azure-Key-Vault-with-your-Teams-app) |
 
 ## See also
@@ -66,5 +66,5 @@ You can add cloud resources in the following ways:
 * [Teams Toolkit Overview](teams-toolkit-fundamentals.md)
 * [Provision cloud resources](provision.md)
 * [Create a new Teams app](create-new-project.md)
-* [Add capabilities to Teams apps](toolkit-v4/add-capability-v4.md)
+* [Add How-to guides to Teams app](add-How-to-guides-v5.md)
 * [Deploy to the cloud](deploy.md)
