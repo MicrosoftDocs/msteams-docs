@@ -77,12 +77,12 @@ To accelerate the growth of third-party apps and increase adoption rates, consid
 
 - **Embrace growth marketing**: Develop a robust growth marketing strategy tailored for SaaS offers. This method must focus on driving usage through data-driven techniques and user engagement analytics.
 
-Here are few recommendations for growth marketing strategies:
+  Here are few recommendations for growth marketing strategies:
 
-    - Send active notifications to users via email or within the app that contain deep links.
-    - Run targeted paid advertising campaigns on social media or search engines with direct links to the Teams app.
-    - Link your app with popular platforms like monday.com’s to cross-promote your Teams app.
-    - Create informative blog posts, tutorials, or webinars that highlight your Teams app features.
+   Send active notifications to users via email or within the app that contain deep links.
+  - Run targeted paid advertising campaigns on social media or search engines with direct links to the Teams app.
+  - Link your app with popular platforms like monday.com’s to cross-promote your Teams app.
+  - Create informative blog posts, tutorials, or webinars that highlight your Teams app features.
 
 By adopting these methods, you can see an increase in app installations and also ensure sustained engagement and growth over time. For more information, see [educate users and drive adoption change management for your app](~/promote-app-adoption.md#step-3-educate-users-and-drive-adoption-change-management-for-your-app).
 
