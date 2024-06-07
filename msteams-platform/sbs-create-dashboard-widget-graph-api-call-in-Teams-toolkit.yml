@@ -47,11 +47,11 @@ items:
      1. Select **Tab** to create a new tab project. 
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/create-a-new-teams-app-2.png" alt-text="Screenshot shows the selection of new Teams app.":::
-
+        
      1. Select **Dashboard**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-tab-preview.png" alt-text="Screenshot shows the selection of dashboard tab preview.":::
-
+        
      1. Select **TypeScript** as the programming language.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/programming-language.png" alt-text="Screenshot shows the selection of programming language.":::
@@ -239,7 +239,7 @@ items:
       To add a widget to the dashboard, follow these steps:
 
       1. In Visual Studio Code, go to **Explorer** > **src** > **dashboards** > **SampleDashboard.tsx**.
-      1. Update the `override layout()` method to add the widget to the dashboard:
+      1. Add the widget to the dashboard by updating the `override layout()` method:
 
           ```TypeScript
           override layout(): JSX.Element | undefined {
@@ -374,9 +374,10 @@ items:
                   },
                   {
                       "appId": "bc59ab01-8403-45c6-8796-ac3ef710b3e3",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                        [
+                           "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
+                        ]
                   },
                   {
                       "appId": "0ec893e0-5785-4de6-99da-4ed124e5296c",
