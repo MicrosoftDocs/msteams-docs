@@ -25,7 +25,7 @@ Growing your app is a journey. It's a process that’s not overnight and goes th
 
   Most growth and GTM activities during this stage are pilots to discover effectiveness, learning, and execution rhythms. When the app crosses the *traction barrier*, one can say it has achieved product market fit in Teams marketplace and ecosystem.
 
-- **Scale stage**: This stage encompasses scaling in the market on the back of activation in existing customers who use the SaaS app outside Teams and selling to new customers through product-led, sales-led, and channel-led initiatives. Growth and GTM activities become more programmatic at this stage. When the app crosses the scale barrier, often also referred to as the *growth barrier*, one can conclude the apps is ready to deliver on the business goals and starts to deliver ROI on engineering and GTM investments.
+- **Scale stage**: This stage encompasses scaling in the market on the back of activation in existing customers who use the Software as a Service (SaaS) app outside Teams and selling to new customers through product-led, sales-led, and channel-led initiatives. Growth and GTM activities become more programmatic at this stage. When the app crosses the scale barrier, often also referred to as the *growth barrier*, one can conclude the apps is ready to deliver on the business goals and starts to deliver ROI on engineering and GTM investments.
 
 - **Succeed stage**: The final stage of the Teams collaborative app lifecycle is where the app moves from being a product integration built on Teams into a full-fledged strategic product line just as the core SaaS product for the web browser or native apps for Windows or mobile phones.
 
@@ -67,15 +67,22 @@ You can plan your app's growth through the app lifecycle:
 
 To accelerate the growth of third-party apps and increase adoption rates, consider the following strategies:
 
-- **Leverage a Freemium model**: Offering a basic Freemium account is a proven method to improve user conversion rates. It allows potential customers to experience the core benefits of your app without initial costs, increasing the likelihood of conversion to paid plans. It's recommended to offer a 30-day free trial.
+- **Leverage a Freemium model**: Providing a basic Freemium account is a proven method to improve user conversion rates. It allows potential customers to experience the core benefits of your app without initial costs, increasing the likelihood of conversion to paid plans. It's recommended to offer a 30-day free trial.
 
 - **Integrate a shareable call-to-action**: Implement a dynamic Call-to-Action (CTA) button within an Adaptive Card. This method empowers users to effortlessly share your app to onboard their team members fostering organic growth.
 
 - **Implement adoption change management**: Consistent communication with users is a key. By regularly updating users about new and existing features via email, you maintain their interest and encourage continued use of your app.
 
-- **Identify and resolve blockers**: Proactively address and resolve any barriers to adoption. Collaborate with Independent Software Vendors (ISVs) and Teams Engineering to gather feedback and swiftly eliminate any obstacles that hinder user experience.
+- **Identify and resolve blockers**: Proactively address and resolve any barriers to adoption. Collaborate with partners to gather feedback and eliminate any obstacles that hinder user experience.
 
-- **Embrace growth marketing**: Develop a robust growth marketing strategy tailored for Software as a Service (SaaS) offers. This method must focus on driving usage through data-driven techniques and user engagement analytics.
+- **Embrace growth marketing**: Develop a robust growth marketing strategy tailored for SaaS offers. This method must focus on driving usage through data-driven techniques and user engagement analytics.
+
+Here are few recommendations for growth marketing strategies:
+
+    - Send active notifications to users via email or within the app that contain deep links.
+    - Run targeted paid advertising campaigns on social media or search engines with direct links to the Teams app.
+    - Link your app with popular platforms like monday.com’s to cross-promote your Teams app.
+    - Create informative blog posts, tutorials, or webinars that highlight your Teams app features.
 
 By adopting these methods, you can see an increase in app installations and also ensure sustained engagement and growth over time. For more information, see [educate users and drive adoption change management for your app](~/promote-app-adoption.md#step-3-educate-users-and-drive-adoption-change-management-for-your-app).
 
