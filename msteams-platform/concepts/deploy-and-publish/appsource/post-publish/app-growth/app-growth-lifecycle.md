@@ -67,11 +67,9 @@ You can plan your app's growth through the app lifecycle:
 
 To accelerate the growth of third-party apps and increase adoption rates, consider the following strategies:
 
-- **Leverage a Freemium model**: Offering a Freemium account is a proven method to improve user conversion rates. It allows potential customers to experience the core benefits of your app without initial costs, increasing the likelihood of conversion to paid plans.
+- **Leverage a Freemium model**: Offering a basic Freemium account is a proven method to improve user conversion rates. It allows potential customers to experience the core benefits of your app without initial costs, increasing the likelihood of conversion to paid plans. It's recommended to offer a 30-day free trial.
 
 - **Integrate a shareable call-to-action**: Implement a dynamic Call-to-Action (CTA) button within an Adaptive Card. This method empowers users to effortlessly share your app to onboard their team members fostering organic growth.
-
-- **Utilize banner advertising**: Engage in targeted banner promotions as part of your marketing campaigns. This approach significantly boosts app installations and fosters deeper user engagement.
 
 - **Implement adoption change management**: Consistent communication with users is a key. By regularly updating users about new and existing features via email, you maintain their interest and encourage continued use of your app.
 
