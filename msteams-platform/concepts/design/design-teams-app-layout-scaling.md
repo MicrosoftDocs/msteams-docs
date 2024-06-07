@@ -4,7 +4,7 @@ description: Learn about the layout and scaling for Microsoft Teams app.
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.topic: Layout and scaling
+ms.topic: reference
 ms.date: 05/23/2023
 ---
 # Layout and scaling for your Microsoft Teams app
