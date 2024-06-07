@@ -272,7 +272,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot registration.
 
-    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
+    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
      [!code-json[appsettings](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/csharp/appsettings.json?range=1-5)]
 
@@ -290,7 +290,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `MicrosoftAppId` to the **bot App ID** you saved at the time of the bot registration.
     - Set `MicrosoftAppPassword` to the **customer secret** you saved at the time of the bot registration.
     - Set the `connectionName` to the name of the identity provider connection.
-    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
+    Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
      [!code-javascript[settings](~/../Microsoft-Teams-Samples/samples/bot-conversation-sso-quickstart/js/.env)]
 
@@ -304,7 +304,7 @@ With the preliminary settings done, let's focus on the creation of the bot to us
     - Set `ConnectionName` to the name of the OAuth connection setting you added to your bot.
     - Set `MicrosoftAppId` and `MicrosoftAppPassword` to your bot's app ID and app secret.
 
-      Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) will need to be encoded as `&amp;`.
+      Depending on the characters in your bot secret, you may need to XML escape the password. For example, any ampersands (&) must be encoded as `&amp;`.
 
       [!code-python[config](~/../Microsoft-Teams-Samples/samples/bot-teams-authentication/python/config.py?range=14-16)]
 

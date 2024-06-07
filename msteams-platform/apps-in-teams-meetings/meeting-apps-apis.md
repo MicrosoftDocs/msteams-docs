@@ -47,7 +47,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * Meeting type
 
-  # [Channel meeting](#tab/channel-meeting)
+# [Channel meeting](#tab/channel-meeting)
 
   The following is a JSON payload response for a channel meeting for in-tenant users:
 
@@ -134,7 +134,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
   ```
 
-  # [Scheduled meeting](#tab/scheduled-meeting)
+# [Scheduled meeting](#tab/scheduled-meeting)
 
   The following is a JSON payload response for a scheduled meeting for in-tenant users:
 
@@ -199,7 +199,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
   ```
 
-  # [Instant meeting](#tab/instant-meeting)
+# [Instant meeting](#tab/instant-meeting)
 
   The following is a JSON payload response for an Instant meeting (Meet now) for in-tenant users:
 
@@ -257,7 +257,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * User type
 
-  # [Guest user](#tab/guest-user)
+# [Guest user](#tab/guest-user)
 
   The following is a JSON payload response in a scheduled private meeting for a guest user:
 
@@ -329,7 +329,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
   ```
 
-  # [Anonymous user](#tab/anonymous-user)
+# [Anonymous user](#tab/anonymous-user)
 
   The following is a JSON payload response in a scheduled private meeting for an anonymous user:
 
@@ -370,7 +370,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
    ```
 
-  # [External user](#tab/external-user)
+# [External user](#tab/external-user)
 
   The following is a JSON payload response in a scheduled private meeting for an external user:
 
@@ -437,7 +437,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * Call type
 
-  # [One-on-One call](#tab/one-on-one-call)
+# [One-on-One call](#tab/one-on-one-call)
 
   The following is a JSON payload response for a one-on-one call for an in-tenant user:
 
@@ -509,7 +509,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
     
   ```
 
-  # [Group call](#tab/group-call)
+# [Group call](#tab/group-call)
 
   The following is a JSON payload response for a group chat call for an in-tenant user:
 
@@ -937,7 +937,7 @@ POST /v1/meetings/{meetingId}/notification
 |---|---|
 | `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
 | `type` |`targetedMeetingNotification` |
-| `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list will return 400.|
+| `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list returns 400.|
 | `surface` | A type of surface. The supported surface types are `meetingStage` and `meetingTabIcon`. |
 | `surfaces` | List of surfaces where notifications can be rendered. |
 | `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
@@ -945,7 +945,7 @@ POST /v1/meetings/{meetingId}/notification
 | `content.value.height` | **Optional**; requested height of the notification. |
 |`content.value.width` | **Optional**; requested width of the notification. |
 | `content.value.title` | **Optional**; title of the notification. |
-| `content.value.url` | **Optional**; URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing will be rendered on a meeting notification. |
+| `content.value.url` | **Optional**; URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing is rendered on a meeting notification. |
 | `ChannelData.OnBehalfOf` | **Optional**; this is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#user-attribution-for-bots-messages). |
 | `onBehalfOf.itemid` | Describes identification of the item. Its value must be 0. |
 | `onBehalfOf.mentionType` |`person` keyword. Describes the mention of a person. |

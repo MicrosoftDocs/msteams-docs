@@ -141,7 +141,7 @@ Cache-Control: no-store, must-revalidate, no-cache
 
 ## Best practices for proactive messaging
 
-Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it will be the first time that they’ve interacted with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
+Sending proactive messages to the users is an effective way to communicate with your users. However, from the user's perspective, the message appears unprompted. If there's a welcome message, it marks their first interaction with your app. It's important to use this functionality and provide the complete information to the user to understand the purpose of this message.
 
 ### Welcome messages
 

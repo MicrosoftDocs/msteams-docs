@@ -389,7 +389,7 @@ The following are a few examples in which `LiveState` can be used in your applic
 - Keeping a scroll position in sync for a **follow me** feature.
 
 > [!NOTE]
-> Unlike `SharedMap`, the `state` value in `LiveState` will be reset after all the users disconnect from a session.
+> Unlike `SharedMap`, the `state` value in `LiveState` is reset after all the users disconnect from a session.
 
 Example:
 

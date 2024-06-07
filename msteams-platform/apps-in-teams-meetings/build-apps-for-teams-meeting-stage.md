@@ -91,7 +91,7 @@ The following table includes the query parameters:
 |Value|Type|Required|Description|
 |---|---|----|---|
 |**callback**| String | Yes | Callback contains two parameters, error and result. The *error* can contain either an error of type *SdkError* or null when share is successful. The *result* can contain either a true value if there's a successful share or null when the share fails. |
-|**appContentURL**| String | Yes | The URL that will be shared on to the stage. |
+|**appContentURL**| String | Yes | The URL that's shared on to the stage. |
 
 ### Example
 
