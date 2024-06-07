@@ -70,7 +70,7 @@ items:
 
         After your app is created, Teams Toolkit displays the following message:
 
-        :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
+        :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
 
      1. Select the Teams Toolkit icon in sidebar.
 
@@ -247,8 +247,7 @@ items:
 
           ```TypeScript
           override layout(): JSX.Element | undefined {
-            return (
-            <>
+            return (<>
                 <ListWidget />
                 <ChartWidget />
                 <SampleWidget />
@@ -272,8 +271,7 @@ items:
 
             ```TypeScript
             override layout(): JSX.Element | undefined {
-              return (
-              <>
+              return (<>
                   <ListWidget />
                   <div className="one-column">
                     <ChartWidget />
