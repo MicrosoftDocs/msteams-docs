@@ -1,5 +1,5 @@
 ---
-title: Partner Center developer account FAQ
+title: Create your Partner Center developer account  
 description: FAQs for creating a Partner Center developer account for publishing your app to the Microsoft Teams Store.
 ms.topic: how-to
 author: heath-hamilton
@@ -7,7 +7,7 @@ ms.author: surbhigupta
 ms.localizationpriority: high
 ms.date: 12/20/2022
 ---
-# Partner Center developer account FAQ
+# Create a Partner Center developer account
 
 To publish your app to the Microsoft Teams Store, you must [create your Partner Center developer account](/office/dev/store/open-a-developer-account). Depending on your scenario, you might be able to use an existing account.
 
@@ -137,7 +137,7 @@ Try the following:
 * Check your junk or spam folder.
 * Clear the browser cache, go to your Partner Center account dashboard, and select **Resend verification email**.
 * Try accessing the **Resend verification email** link from a different browser.
-* Work with your IT department to ensure that the verification emails aren't blocked by your email server.
+* Work with your IT department to ensure that the verification emails are not blocked by your email server.
 * Adjust your server's spam filter to allow or safe-list all emails from **<maccount@microsoft.com>**.
 
 <br>
