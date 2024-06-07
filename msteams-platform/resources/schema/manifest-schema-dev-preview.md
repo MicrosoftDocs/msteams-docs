@@ -476,7 +476,7 @@ The value must be a valid HTML color code starting with '#', for example `#4464e
 
 **Optional** &ndash; Object
 
-Describes relationships among individual app components, including as `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. Used to specify runtime dependencies to ensure that the app only launches from applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app.
+Describes relationships among individual app components, including as `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. Used to specify runtime dependencies to ensure that the app only launches from applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
@@ -494,6 +494,7 @@ Describes a unidirectional dependency of one app component to another. If a Micr
 | `element`| Object||✔️| Represents an individual app component that has a one-way runtime dependency on another component being loaded |
 | `element.name`| String|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
 | `element.id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
+| `element.commandIds` | Array of strings||| List of one or more message extension (`composeExtensions`) commands that are dependent on the specified `dependsOn` component.|
 | `dependsOn`| Array|| ✔️| Denotes one or more app components required for the specified `element` to load|
 | `dependsOn.name`| String||✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
 | `dependsOn.id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
@@ -554,7 +555,7 @@ The object is an array (maximum of 16 elements) with all elements of the type `o
 
 ### staticTabs.requirementSet
 
-Describes the runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the tab.
+Describes the runtime requirements for the tab to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the tab. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
 
 **Optional** &ndash; Object
 
@@ -619,7 +620,7 @@ An optional list of commands that your bot can recommend to users. The object is
 
 ### bots.requirementSet
 
-Describes the runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the bot.
+Describes the runtime requirements for the bot to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the bot. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
 
 **Optional** &ndash; Object
 
@@ -720,7 +721,7 @@ Each command item is an object with the following structure:
 
 ### composeExtensions.requirementSet
 
-Describes the runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the message extension.
+Describes the runtime requirements for the message extension to function properly in the Microsoft 365 host application. If one or more of the requirements are not supported by the runtime host, the host will not load the message extension. See [Specify runtime requirements in your app manifest](../../m365-apps/specify-runtime-requirements.md) for more info.
 
 **Optional** &ndash; Object
 
