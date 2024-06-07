@@ -4,7 +4,7 @@ description: Learn about guidelines and templates for displaying the app artwork
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.topic: App artwork
+ms.topic: reference
 ms.date: 05/23/2023
 ---
 # Teams app artwork for Teams Store
