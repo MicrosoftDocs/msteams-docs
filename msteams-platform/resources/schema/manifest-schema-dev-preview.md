@@ -519,6 +519,7 @@ The object is an array with all elements of the type `object`. This block is req
 
 |Name| Type| Maximum size | Required | Description|
 |---|---|---|---|---|
+|`id`|String||| Unique identifier for configurable tab. Used when defining one-way and mutual app component dependencies as [elementRelationshipSet](#elementrelationshipset).|
 |`configurationUrl`|String|2048 characters|✔️|The https:// URL to use when configuring the tab.|
 |`canUpdateConfiguration`|Boolean|||A value indicating whether an instance of the tab's configuration can be updated by the user after creation. <br>Default value: `true`|
 |`scopes`|Array of enum|2|✔️|Currently, configurable tabs support only the `team` and `groupChat` scopes. |
@@ -663,6 +664,7 @@ The object is an array (maximum of 1 element) with all elements of type `object`
 
 |Name| Type | Maximum Size | Required | Description|
 |---|---|---|---|---|
+|`id`|String||| Unique identifier for compose extension. Used when defining one-way and mutual app component dependencies as [elementRelationshipSet](#elementrelationshipset).|
 |`botId`|String|||The unique Microsoft app ID for the bot that backs the message extension, as registered with the Bot Framework. The ID can be the same as the overall [app ID](#id).|
 |`composeExtensionType`|String|||Type of the compose extension. Enum values are `botBased` and `apiBased`.|
 |`authorization`|Object|2||Authorization related information for the API-based message extension|
