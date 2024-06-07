@@ -56,6 +56,25 @@ The app manifest describes how the app integrates into the Microsoft Teams platf
         "color32x32": "%FILENAME-32x32px%"
     },
     "accentColor": "%HEX-COLOR%",
+    "elementRelationshipSet": {
+      "oneWayDependencies" : [
+        {
+          "element" : {
+            "name" : "composeExtensions",
+            "id" : "composeExtension-id",
+            "commandIds": ["command-1-id", "command-2-id"]  // Developers can add more commands.
+          },
+          "dependsOn" : [
+              {"name" : "bots", "id" : "bot-id"}
+            ]
+        }
+      ],
+      "mutualDependencies" : [
+                {"name" : "bots", "id" : "bot-id"}, 
+                {"name" : "staticTabs", "id" : "static-Tab-id"},
+                {"name" : "composeExtensions", "id" : "composeExtension-id"},
+      ]
+    },
     "configurableTabs": [
         {
             "configurationUrl": "https://contoso.com/teamstab/configure",
@@ -434,6 +453,43 @@ Icons used within the Teams app. The icon files must be included as part of the 
 A color to use with and as a background for your outline icons.
 
 The value must be a valid HTML color code starting with '#', for example `#4464ee`.
+
+## elementRelationshipSet
+
+**Optional** &ndash; Object
+
+Describes relationships among individual app components, including as `staticTabs`, `configurableTabs`, `composeExtensions`, and `bots`. Used to specify runtime dependencies to ensure that the app only launches from applicable Microsoft 365 hosts, such as Teams, Outlook, and the Microsoft 365 (Office) app.
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `oneWayDependencies`| Array|||Array containing one or more unidirectional dependency relationships among app components (each represented by `oneWayDependency` object)|
+| `mutualDependencies`| Array|||Array containing one or more mutual dependency relationships among app components (each represented by `mutualDependency` object)|
+
+### elementRelationshipSet.oneWayDependency
+
+Describes a unidirectional dependency of one app component to another. If a Microsoft 365 runtime host doesn't support a required component, this app will not be available for end-users to launch from that host.
+
+**Optional** &ndash; Object
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `element`| Object||✔️| Represents an individual app component that has a one-way runtime dependency on another component being loaded |
+| `element.name`| String|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
+| `element.id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
+| `dependsOn`| Array|| ✔️| Denotes one or more app components required for the specified `element` to load|
+| `dependsOn.name`| String||✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
+| `dependsOn.id` | String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
+
+### elementRelationshipSet.mutualDependencies
+
+Describes a set of mutual dependencies between two or more app components. A Microsoft 365 runtime host must support all required components in order for this app to be available for end-users in that host.
+
+**Optional** &ndash; Array
+
+|Name| Type| Maximum size | Required | Description|
+|---|---|---|---|---|
+| `name`|String|| ✔️| The type of app component. Supported values: `bots`, `staticTabs`, `composeExtensions`, `configurableTabs`|
+| `id`|String|| ✔️| The specific instance of the bot, tab, or message extension. Maps to `botId` for bots, `entityId` for staticTabs, `id` for configurableTabs, and `id` for composeExtensions.|
 
 ## configurableTabs
 
