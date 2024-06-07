@@ -443,7 +443,7 @@
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId, proactive message, send message, bot framework
+      displayName: conversationId, send message, bot framework
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
@@ -659,7 +659,7 @@
     displayName: HMAC security token, message in channel, Teams message
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message, create incoming webhook
+    displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message, incoming webhook
   - name: Create connectors for Microsoft 365 Groups
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
