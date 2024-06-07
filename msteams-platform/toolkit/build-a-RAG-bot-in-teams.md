@@ -946,7 +946,7 @@ Follow these steps to extend the custom copilot from Custom API template with mo
     });
     ```
 
-## Microsoft 365 as Data Source
+## Microsoft 365 as data source
 
 Learn to utilize the Microsoft Graph Search API to query Microsoft 365 content as a data source for the RAG app. To learn more about Microsoft Graph Search API, you can refer to use the Microsoft Search API to search OneDrive and SharePoint content.
 
