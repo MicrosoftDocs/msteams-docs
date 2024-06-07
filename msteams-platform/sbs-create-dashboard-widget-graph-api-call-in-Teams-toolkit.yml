@@ -34,11 +34,11 @@ items:
 - title: Create a new dashboard
   content: |
 
-    Teams Toolkit supports scaffolding and dashboard creation.
+   Teams Toolkit supports to create a dashboard and scaffolding.
 
-    To create a new dashboard:
+   To create a new dashboard:
 
-     1. Select the Teams Toolkit icon in the Visual Studio Code Activity Bar.
+     1. Select the Teams Toolkit icon in the Visual Studio Code **Activity Bar**.
 
      1. Select **Create a New App**.
 
@@ -64,15 +64,17 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/enter-application-name.png" alt-text="Screenshot shows the selection of application name.":::
 
-        Teams Toolkit creates tab app in few seconds and message appears.
+        The Teams tab app is created in few seconds.
       
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-app-preview.png" alt-text="Screenshot shows the teams tab app dashboard preview in Visual Studio Code.":::
+
+        After your app is created, Teams Toolkit displays the following message:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard-debug.png" alt-text="Screenshot shows the local debug.":::
 
      1. Select the Teams Toolkit icon in sidebar.
 
-     1. Select **Sign in to Microsoft 365**. A prompt appears.
+     1. Select **Sign in to Microsoft 365**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/M365-account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
@@ -80,17 +82,17 @@ items:
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/account-signin.png" alt-text="Screenshot shows the Microsoft sign in.":::
 
-     1. Select the **F5** key to run the application in debug mode.
+     1. Select the **F5** to run the application in debug mode.
 
      1. Select **Add**.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/teams-dashboard-add.png" alt-text="Screenshot shows the selection of workspace folder.":::
 
-        Teams app successfully creates the tab app dashboard.
+        Tab app dashboard is successfully created in Teams.
 
         :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dashboard.png" alt-text="Screenshot shows user profile information and recent Teams activity.":::
 
-        Teams app also supports different themes, including dark and high contrast themes.
+        Teams also supports different themes, including dark and high contrast themes.
 
         # [Dark theme](#tab/darktheme)
 
@@ -106,11 +108,11 @@ items:
 
         ---
 
-      In TeamsFX CLI,
+      In TeamsFx CLI,
 
-      * If you prefer interactive mode, execute `teamsfx new` command, then use the keyboard to go through the same flow as in Visual Studio Code.
+      * If you prefer an interactive mode, execute `teamsfx new` command and then use the keyboard to go through the same flow as in Visual Studio Code.
 
-      * If you prefer non-interactive mode, enter all required parameters in one command:
+      * If you prefer non-interactive mode, enter all the required parameters in one command:
 
         `teamsfx new--interactive false--capabilities "dashboard-tab"--programming-language "TypeScript"--folder "./"--app-name dashboard-cli-001`
 
@@ -118,7 +120,7 @@ items:
   durationInMinutes: 2
   content: |       
 
-      The core dashboard implementation is in the tabs folder. This section walks you through the generated code.
+      After creating the project, you can view the project folders and files in the **Explorer** in the Visual Studio Code. The core implementation of the dashboard is in the tabs folder.
 
       | Folder | Contents |
       | ----- | ----- |
@@ -128,7 +130,7 @@ items:
       | `infra` | Templates for provisioning Azure resources. |
       | `src` | The source code for the dashboard Teams application. |
 
-      The following files provide the business logic for the dashboard tab. You can update them to fit your business logic requirements. The default implementation provides a starting point to help you get started.
+      The following files provide the business logic for the dashboard tab. You can update the files to fit your business logic requirements. The default implementation provides a starting point to help you get started.
 
       | File | Contents |
       | ----- | ----- |
@@ -209,24 +211,26 @@ items:
         import { BaseWidget } from "@microsoft/teamsfx-react";
         import { SampleModel } from "../models/sampleModel";
         import { getSampleData } from "../services/sampleService";
-        
-        interface SampleWidgetState {
+        interface SampleWidgetState 
+        {
           data?: SampleModel;
         }
-        
-        export class SampleWidget extends BaseWidget<any, SampleWidgetState> {
-          override async getData(): Promise<SampleWidgetState> {
+        export class SampleWidget extends BaseWidget<any, SampleWidgetState>
+        {
+          override async getData(): Promise<SampleWidgetState>
+          {
             return { data: getSampleData() };
           }
-          
-          override header(): JSX.Element | undefined {
+          override header(): JSX.Element | undefined
+          {
             return <Text>Sample Widget</Text>;
           }
-          
-          override body(): JSX.Element | undefined {
+          override body(): JSX.Element | undefined
+          {
             return <div>{this.state.data?.content}</div>;
           }
-          override footer(): JSX.Element | undefined {
+          override footer(): JSX.Element | undefined
+          {
             return <Button>View Details</Button>;
           }
         }
@@ -244,7 +248,7 @@ items:
           ```TypeScript
           override layout(): JSX.Element | undefined {
             return (
-           <>
+            <>
                 <ListWidget />
                 <ChartWidget />
                 <SampleWidget />
@@ -350,57 +354,47 @@ items:
               "preAuthorizedApplications": [
                   {
                       "appId": "1fec8e78-bce4-4aaf-ab1b-5451cc387264",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "5e3ce6c0-2b1f-4285-8d4b-75ee78787346",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "d3590ed6-52b3-4102-aeff-aad2292ab01c",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "00000002-0000-0ff1-ce00-000000000000",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "bc59ab01-8403-45c6-8796-ac3ef710b3e3",
                       "permissionIds": 
-                        [
-                           "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                        ]
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "0ec893e0-5785-4de6-99da-4ed124e5296c",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "4765445b-32c6-49b0-83e6-1d93765276ca",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   },
                   {
                       "appId": "4345a7b9-9a63-4910-a426-35363201d503",
-                      "permissionIds": [
-                          "${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"
-                      ]
+                      "permissionIds": 
+                      ["${{AAD_APP_ACCESS_AS_USER_PERMISSION_ID}}"]
                   }
               ],
-              "identifierUris": [
-                "api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"
-              ],
+              "identifierUris": 
+              ["api://${{TAB_DOMAIN}}/${{AAD_APP_CLIENT_ID}}"],
               "replyUrlsWithType": [
                 {
                   "url": "${{TAB_ENDPOINT}}/auth-end.html",
@@ -513,7 +507,7 @@ items:
  
             ```yaml
               REACT_APP_CLIENT_ID: ${{AAD_APP_CLIENT_ID}}
-              REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html
+              REACT_APP_START_LOGIN_PAGE_URL: ${{TAB_ENDPOINT}}/auth-start.html 
             ```
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/file-teams-app-local.png" alt-text="Screenshot shows the information to react codes.":::
@@ -571,7 +565,6 @@ items:
                             cacheLocation: "sessionStorage",
                           },
                         }
-
                         const msalInstance = new msal.PublicClientApplication(msalConfig);
                         const scopesArray = scope.split(" ");
                         const scopesRequest = {
@@ -624,19 +617,20 @@ items:
                             cacheLocation: "sessionStorage",
                           },
                         }
-
                         const msalInstance = new window.msal.PublicClientApplication(msalConfig);
                         msalInstance.handleRedirectPromise()
-                          .then((tokenResponse) => {
-                            if (tokenResponse !== null) {
+                          .then((tokenResponse) => 
+                          {
+                            if (tokenResponse !== null) 
+                            {
                               microsoftTeams.authentication.notifySuccess(JSON.stringify({
                                 sessionStorage: sessionStorage
                               }));
                             } else {
                               microsoftTeams.authentication.notifyFailure("Get empty response.");
                             }
-                          })
-                          .catch((error) => {
+                          }).catch((error) => 
+                          {
                             microsoftTeams.authentication.notifyFailure(JSON.stringify(error));
                           });
                       });
@@ -674,7 +668,6 @@ items:
           } from "@microsoft/teamsfx";
           import { ListModel } from "../models/listModel";
           import { loginAction } from "../internal/login";
-                
         export const getListData = async (): Promise<ListModel[]> => {
           await loginAction(["User.Read"]);
           let credential = TeamsUserCredentialContext.getInstance().getCredential();
@@ -689,7 +682,6 @@ items:
               content: me.mail,
             },
           ];
-
           // {
           //   id: "id1",
           //   title: "Sample title",
