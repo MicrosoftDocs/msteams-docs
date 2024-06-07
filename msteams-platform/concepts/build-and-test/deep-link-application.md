@@ -163,7 +163,7 @@ You can trigger navigation from your tab using the [pages.navigateToApp()](/java
 
 ```javascript
 if (pages.isSupported()) {
-  const navPromise = pages.navigateToApp({ appId: '<appId>', pageId: '<pageId>', webUrl: '<webUrl>', subPageId: '<subPageId>', channelId:'<channelId>'});
+  const navPromise = pages.navigateToApp({ appId: <appId>, pageId: <pageId>, webUrl: <webUrl>, subPageId: <subPageId>, channelId:<channelId>});
   navPromise.
      then((result) => {/*Successful navigation*/}).
      catch((error) => {/*Failed navigation*/});
@@ -205,7 +205,7 @@ You can share deep links to entities in Teams apps to navigate to the content an
 Add a **copy link** action to each item in whatever way best suits your UI. When the user takes this action, call [`pages.shareDeepLink()`](/javascript/api/@microsoft/teams-js/pages?view=msteams-client-js-latest#@microsoft-teams-js-pages-sharedeeplink&preserve-view=true) to display a dialog containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
 ```javascript
-pages.shareDeepLink({ subPageId: '<subPageId>', subPageLabel: '<subPageLabel>', subPageWebUrl: '<subPageWebUrl>' })
+pages.shareDeepLink({ subPageId: <subPageId>, subPageLabel: <subPageLabel>, subPageWebUrl: <subPageWebUrl> })
 ```
 
 You need to replace the following parameters with the appropriate information:
@@ -221,7 +221,7 @@ For more information, see [pages.shareDeepLink()](/javascript/api/@microsoft/tea
 Add a **copy link** action to each item in whatever way best suits your UI. When the user takes this action, call `shareDeepLink()` to display a dialog containing a link that the user can copy to the clipboard. When you make this call, pass an ID for your item. You get it back in [context](~/tabs/how-to/access-teams-context.md) when the link is followed and your tab is reloaded.
 
 ```javascript
-microsoftTeams.shareDeepLink({ subEntityId: '<subEntityId>', subEntityLabel: '<subEntityLabel>', subEntityWebUrl: '<subEntityWebUrl>' })
+microsoftTeams.shareDeepLink({ subEntityId: <subEntityId>, subEntityLabel: <subEntityLabel>, subEntityWebUrl: <subEntityWebUrl> })
 ```
 
 You need to replace the following parameters with the appropriate information:
