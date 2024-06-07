@@ -169,6 +169,7 @@ Update-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
 #### Update the preapproval for team RSC
 
 
+
 ```powershell
 Update-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group', 'TeamsAppInstallation.Read.Group) -TeamLevelSensitivityLabelCondition AnySensitivityLabel
 ```
