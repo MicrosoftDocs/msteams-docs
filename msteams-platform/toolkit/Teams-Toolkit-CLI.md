@@ -1127,9 +1127,9 @@ The secrets in `.userdata` file are encrypted, `teamsfx config` and can help you
 
   There are three configurations to turn on or off Node.js, .NET SDK and Azure Functions Core Tools validation, and all of them are enabled by default. You can set the configuration to "off" if you don't need the dependencies validation and want to install the dependencies by yourself. Check the following guides:
 
-  * [Node.js installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-nodejs)
-  * [.NET SDK installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-net-sdk)
-  * [Azure Functions Core Tools installation guide](https://github.com/OfficeDev/TeamsFx/blob/dev/docs/vscode-extension/envchecker-help.md#how-to-install-azure-functions-core-tools).
+  * [Node.js installation guide](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs)
+  * [.NET SDK installation guide](/dotnet/core/install/windows)
+  * [Azure Functions Core Tools installation guide](https://www.npmjs.com/package/azure-functions-core-tools).
 
   To disable .NET SDK validation, use the following command:
 
