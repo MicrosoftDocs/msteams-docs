@@ -4,7 +4,7 @@ description: In this article, learn more how to build Actions and its use cases.
 ms.date: 12/8/2023
 ms.author: mosdevdocs
 author: v-preethah
-ms.topic: Conceptual
+ms.topic: conceptual
 ms.subservice: m365apps
 ---
 
