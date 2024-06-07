@@ -8,7 +8,7 @@ ms.date: 04/13/2023
 
 # Configure deep links
 
-Deep links function as URLs that direct users straight to specific content within an app, thus eliminating the need to navigate through several screens. In Microsoft Teams, you can use deep links to go to a specific chat, message, or tab within an app. You can also use deep links to initiate a new chat or call and share content during a meeting. Deep links are primarily used for navigation within Teams and Teams apps, and they don't support creating a temporary tab or a pop-up experience.
+Deep links function as URLs that direct users straight to specific content within an app, thus eliminating the need to navigate through several screens. In Microsoft Teams, you can use deep links to go to a specific chat, message, or tab within an app. You can also use deep links to initiate a new chat or call and share content during a meeting. Deep links are primarily used for navigation within Teams and Teams apps; however, they can’t be used to create a temporary tab or a pop-up experience.
 
 You can use deep links in Teams in the following ways:
 
