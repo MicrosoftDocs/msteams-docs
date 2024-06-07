@@ -79,7 +79,7 @@ To accelerate the growth of third-party apps and increase adoption rates, consid
 
   Here are few recommendations for growth marketing strategies:
 
-   Send active notifications to users via email or within the app that contain deep links.
+  - Send active notifications to users via email or within the app that contain deep links.
   - Run targeted paid advertising campaigns on social media or search engines with direct links to the Teams app.
   - Link your app with popular platforms like monday.com’s to cross-promote your Teams app.
   - Create informative blog posts, tutorials, or webinars that highlight your Teams app features.
