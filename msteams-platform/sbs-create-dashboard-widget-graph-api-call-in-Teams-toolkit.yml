@@ -96,13 +96,13 @@ items:
 
         The following image shows the use of Dark theme in the Teams desktop client:
 
-           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
+           :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/dark-mode.png" alt-text="Screenshot shows the contrast themes.":::
 
         # [High contrast theme](#tab/highcontrasttheme)
 
         The following image shows the use of High contrast theme in the Teams desktop client:
 
-           :::image type="content" source="~/assets/images/sbs-create-a-new-dashboard/high-contrast.png" alt-text="Screenshot shows the contrast themes.":::
+           :::Image type="content" source="~/assets/images/sbs-create-a-new-dashboard/high-contrast.png" alt-text="Screenshot shows the contrast themes.":::
 
         ---
 
@@ -122,7 +122,7 @@ items:
 
       | Folder | Contents |
       | ----- | ----- |
-      | `.vscode` | VS Code files for debugging. |
+      | `.vscode` | Visual Studio Code files for debugging. |
       | `appPackage` | Templates for the Teams application manifest. |
       | `env` | Environment files. |
       | `infra` | Templates for provisioning Azure resources. |
