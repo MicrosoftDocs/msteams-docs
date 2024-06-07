@@ -43,7 +43,7 @@ connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite
 
 ## Allow RSC permissions for apps in your organization
 
-For both team and chat specific RSC permissions, admins can set four different states for their organization. Apart from `DisabledForAllApps` state, all the other states allow RSC permissions. These states can be set through `Set-MgBehatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets.
+For both team and chat specific RSC permissions, admins can set four different states for their organization. Apart from `DisabledForAllApps` state, all the other states allow RSC permissions. These states can be set through `Set-MgBetaChatRscConfiguration` and `Set-MgBetaTeamRscConfiguration` cmdlets.
 
 For example, to allow RSC permissions for all unblocked apps in your organization, use the `Set-MgBetaTeamRscConfiguration -State EnabledForPreApprovedAppsOnly` cmdlets.
 
@@ -70,15 +70,17 @@ You can enable RSC for all unblocked apps in your organization using PowerShell 
 
 ## Enable RSC for a specific set of apps only
 
+You can create preapprovals for specific apps with the permissions and sensitivity labels of the data you wish you preapprove. The following sections show how to create a preapproval with and without a sensitivity label attached.
+
 ### Create a preapproval policy based on app ID and permissions
 
-Preapprovals allow users in your organization to grant RSC permissions for a specific set of apps only. This implies that you can determine which RSC-enabled apps your organization can access, without limiting RSC permissions for all apps within your organization.
+Preapprovals allow users in your organization to consent to RSC permissions for a specific set of apps only. This implies that you can determine which RSC-enabled apps your organization can access, without limiting RSC permissions for all apps within your organization.
 
 To create a preapproval policy without a sensitivity label, ensure that you have the following information:
 
 1. Teams App ID.
 1. The RSC permissions associated with the app.
-1. Global admin privilege in your tenant.
+1. Global administrator privilege in your tenant.
 
 You can use PowerShell cmdlets to create a preapproval. To create the cmdlet, you must get the information mentioned earlier with the `New-MgBetaTeamAppPreApproval` command and specify the one of the following RSC permissions you want to preapprove in the cmdlet:
 
@@ -117,7 +119,7 @@ You can also create a preapproval policy for specific permissions in addition to
 1. Teams App ID.
 1. The RSC permissions associated with the app.
 1. The sensitivity label ID associated with the sensitivity label. This isn't required if you want the policy to apply to all sensitivity labels or if you preapprove only chat RSC permissions.
-1. Global admin privilege in your tenant.
+1. Global admininistrator privilege in your tenant.
 
 You can use PowerShell cmdlets to create a preapproval. To create the cmdlet, you must get the information mentioned earlier with the `New-MgBetaTeamAppPreApproval` command and specify the one of the following RSC permissions you want to preapprove in the cmdlet:
 
@@ -194,7 +196,7 @@ You can delete the preapproval policy associated with an app by using the follow
 
 ```powershell
 Remove-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
-
+```
 ## See also
 
 * [Grant RSC permissions to your app](grant-resource-specific-consent.md)
