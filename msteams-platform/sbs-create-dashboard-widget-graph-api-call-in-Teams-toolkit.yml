@@ -311,7 +311,7 @@ items:
             {
               "id": "${{AAD_APP_OBJECT_ID}}",
               "appId": "${{AAD_APP_CLIENT_ID}}",
-              "name": "dashboardV5Demo",
+              "name": "dashboardDemo",
               "accessTokenAcceptedVersion": 2,
               "signInAudience": "AzureADMyOrg",
               "optionalClaims": {
@@ -480,6 +480,7 @@ items:
         1. Add the code under `provision`.
         
             ```yaml 
+
               - uses: aadApp/create
                 with:
                     name: "YOUR_AAD_APP_NAME"
@@ -496,7 +497,7 @@ items:
               - uses: aadApp/update
                 with:
                   manifestPath: "./aad.manifest.json"
-                  outputFilePath : ./build/aad.manifest.${{TEAMSFX_ENV}}.json
+                  outputFilePath: ./build/aad.manifest.${{TEAMSFX_ENV}}.json
             ```
 
             :::image type="content" source="assets/images/sbs-create-a-new-dashboard/ttk-teams-app-local.png" alt-text="Screenshot shows the addition of aadApp/create and aadApp/update code.":::  
@@ -669,8 +670,8 @@ items:
         export const getListData = async (): Promise<ListModel[]> => {
           await loginAction(["User.Read"]);
           let credential = TeamsUserCredentialContext.getInstance().getCredential();
-          const graphClient = createMicrosoftGraphClientWithCredential(credential, [
-            "User.Read",
+          const graphClient = createMicrosoftGraphClientWithCredential(credential, 
+          ["User.Read",
           ]);
           const me = await graphClient.api("/me").get();
           return [
