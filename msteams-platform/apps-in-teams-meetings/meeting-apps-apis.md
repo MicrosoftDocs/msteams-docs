@@ -47,7 +47,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * Meeting type
 
-# [Channel meeting](#tab/channel-meeting)
+  # [Channel meeting](#tab/channel-meeting)
 
   The following is a JSON payload response for a channel meeting for in-tenant users:
 
@@ -134,7 +134,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
         }
   ```
 
-# [Scheduled meeting](#tab/scheduled-meeting)
+  # [Scheduled meeting](#tab/scheduled-meeting)
 
   The following is a JSON payload response for a scheduled meeting for in-tenant users:
 
@@ -199,7 +199,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
   ```
 
-# [Instant meeting](#tab/instant-meeting)
+  # [Instant meeting](#tab/instant-meeting)
 
   The following is a JSON payload response for an Instant meeting (Meet now) for in-tenant users:
 
@@ -257,7 +257,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * User type
 
-# [Guest user](#tab/guest-user)
+  # [Guest user](#tab/guest-user)
 
   The following is a JSON payload response in a scheduled private meeting for a guest user:
 
@@ -329,7 +329,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
   ```
 
-# [Anonymous user](#tab/anonymous-user)
+  # [Anonymous user](#tab/anonymous-user)
 
   The following is a JSON payload response in a scheduled private meeting for an anonymous user:
 
@@ -370,7 +370,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
    ```
 
-# [External user](#tab/external-user)
+  # [External user](#tab/external-user)
 
   The following is a JSON payload response in a scheduled private meeting for an external user:
 
@@ -437,7 +437,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
 
 * Call type
 
-# [One-on-One call](#tab/one-on-one-call)
+  # [One-on-One call](#tab/one-on-one-call)
 
   The following is a JSON payload response for a one-on-one call for an in-tenant user:
 
@@ -509,7 +509,7 @@ The following are the TeamsJS v2 responses for Get user context API based on mee
     
   ```
 
-# [Group call](#tab/group-call)
+  # [Group call](#tab/group-call)
 
   The following is a JSON payload response for a group chat call for an in-tenant user:
 
