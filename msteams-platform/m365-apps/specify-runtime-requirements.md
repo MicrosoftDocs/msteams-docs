@@ -10,7 +10,7 @@ ms.subservice: m365apps
 ---
 # Specify Microsoft 365 host runtime requirements in your app manifest (preview)
 
-TODO: Crosslinking to applicable reference and conceptual articles.
+TODO: Crosslinking to applicable reference and conceptual articles, more visually appealing formatting.
 
 > [!NOTE]
 >
@@ -128,13 +128,13 @@ Currently, a subset of TeamsJS capabilities can be specified as runtime requirem
 ## Frequently Asked Questions
 
 - Q: What will be the behavior of the app in the host if all the elements of the app require some sort of element or runtime support from the host, but the host can’t meet any of the app’s requirements?
-- A: The app will not be available on the host in this case. This is already true today. In-product store will not display apps with zero compatible elements to the host.
+  A: The app will not be available on the host in this case. This is already true today. In-product store will not display apps with zero compatible elements to the host.
 
 - Q: What is the relationship these new manifest properties to the Outlook Add-ins 'requirements' property in the `extensions` section of the manifest?
-- A: for now, the two are independent, but this design is parallel and might converge in the future
+  A: for now, the two are independent, but this design is parallel and might converge in the future
 
 - Q: How can I target specific host applications?
-- A: You can't, and this is by design. Best practice is to target runtime requirements in a host-agnostic way so your app is flexible as possible and take advantage of reach of future hosts. Check the latest host support in [TeamsJS support across Microsoft 365](teamsjs-support-m365.md).
+  A: You can't, and this is by design. Best practice is to target runtime requirements in a host-agnostic way so your app is flexible as possible and take advantage of reach of future hosts. Check the latest host support in [TeamsJS support across Microsoft 365](teamsjs-support-m365.md).
 
 ## See also
 
