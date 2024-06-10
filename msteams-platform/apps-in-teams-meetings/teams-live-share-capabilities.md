@@ -1,7 +1,7 @@
 ---
 title: Live Share getting started
 author: surbhigupta
-description: In this module, learn more about live share SDK capabilities, RSC permissions and live data structures.
+description: In this module, learn more about live share SDK capabilities, RSC permissions, and live data structures.
 ms.topic: conceptual
 ms.localizationpriority: high
 ms.author: v-ypalikila
@@ -182,7 +182,7 @@ const LiveShareLoading = () => {
 
 ---
 
-That's all it took to setup your container and join the session mapped to the meeting, chat, or channel. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
+That's all it took to set up your container and join the session mapped to the meeting, chat, or channel. Now, let's review the different types of _distributed data structures_ that you can use with the Live Share SDK.
 
 > [!TIP]
 > Ensure that the Teams Client SDK is initialized before calling `LiveShareHost.create()`.
@@ -1311,7 +1311,7 @@ export const MyLiveFollowMode = () => {
 
 ---
 
-In `meetingStage` contexts, your users are collaborating and presenting synchronously to facilitate more productive discussions. When a user presents content to the meeting stage, you should call the `startPresenting()` API for the initial presenter. In `content` contexts like collaborative stageview, content is most commonly consumed asynchronously. In this case, it is best to let users opt into realtime collaboration, such as through a "Follow" button. Using the `teamsJs.app.getContext()` API in the Teams JavaScript SDK, you can easily adjust your functionality accordingly.
+In `meetingStage` contexts, your users are collaborating and presenting synchronously to facilitate more productive discussions. When a user presents content to the meeting stage, you should call the `startPresenting()` API for the initial presenter. In `content` contexts like collaborative stageview, content is most commonly consumed asynchronously. In this case, it's best to let users opt into realtime collaboration, such as through a "Follow" button. Using the `teamsJs.app.getContext()` API in the Teams JavaScript SDK, you can easily adjust your functionality accordingly.
 
 Example:
 
