@@ -16,7 +16,7 @@ To invoke share to stage, users can select the **Share to Stage** icon on the up
 
 ## App manifest settings for apps in meeting stage
 
-To share an app to the meeting stage, you must configure the context and RSC permissions in the [app manifest](../resources/schema/manifest-schema.md):
+To share an app to the meeting stage, you must configure the context and resource-specific consent (RSC) permissions in the [app manifest](../resources/schema/manifest-schema.md):
 
 1. Update the `context` property in the app manifest as follows:
 
@@ -50,7 +50,7 @@ There are many scenarios where sharing the entire app to the meeting stage isn't
 
 1. For a medical app, a doctor may want to share just the X-Ray on the screen with the patient versus sharing the entire app with all the patients records or results and so on.
 
-1. A user may want to share content from a single content provider at a time (for example, YouTube) versus sharing an entire video catalog onto stage.
+1. For a video streaming app, a user may want to share content from a single content provider at a time (for example, YouTube) versus sharing an entire video catalog onto stage.
 
 To help users in such scenarios, we released APIs within the Microsoft Teams JavaScript client library (TeamsJS) that allow you to programmatically invoke share to stage for specific parts of the app from a button in the meeting side panel.
 
@@ -241,7 +241,7 @@ The following table provides the user types and lists the features that each use
 |----------------|-----------------|--------------|----------------|----------------|
 |Meeting stage sample | This sample app shows a tab in meeting stage for collaboration. This sample also uses Live Share SDK for collaborative Stageview. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-stage-view/csharp/demo-manifest) |
 | In-meeting notification | Demonstrates how to implement in-meeting notifications using bot. | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/nodejs) | [View](https://github.com/OfficeDev/Microsoft-Teams-Samples/tree/main/samples/meetings-notification/csharp/demo-manifest) |
-| In-meeting document signing | This sample app shows how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams SSO, and user specific Stageview. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
+| In-meeting document signing | This sample app shows how to implement a document signing Teams app. Includes sharing specific app content to stage, Teams single sign-on (SSO), and user specific Stageview. | [View](https://github.com/officedev/microsoft-teams-samples/tree/main/samples/meetings-share-to-stage-signing/csharp) | NA | NA |
 
 ## Step-by-step guide
 
