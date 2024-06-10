@@ -109,10 +109,6 @@ Teams supports the use of apps in group chats that include external users. These
 
 * **Single tenant**: If you're creating a single tenant app for a group chat, you need to handle situations where external users in the group chat are unauthenticated. In these cases, you must show a placeholder page or response.
 
-* **Multitenant**: If you're creating a multitenant app, you must handle the Microsoft Entra object ID that your app receives for an external user that isn't in your home tenant. These Microsoft Entra object IDs that can’t be resolved in your own directory.
-
-    You must ask for additional permissions from the external user to resolve their Microsoft Entra object ID, or ask for consent to access the user’s email address for authentication. To learn how to retrieve the details of a user's Microsoft Entra Object ID for a bot, see [get single member details](../../bots/how-to/get-teams-context.md#get-single-member-details). To learn how to retrieve the details of a user's Microsoft Entra Object ID for a tab, see [Get context by using the Microsoft Teams JavaScript library](../../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). If you're unable to authenticate a user or resolve their Microsoft Entra object ID, provide a fallback experience, such as a guest user experience or other types of unauthenticated experiences.
-
 The following code snippet prevents external users from signing in and displays a failure message when they attempt to sign in:
 
 ```javascript
@@ -124,7 +120,11 @@ function placeholderFunction() {
 placeholderFunction();
 ```
 
-The following code snippets show how to allow external users to sign-in and handle two distinct sign-in scenarios for host and external users:
+* **Multitenant**: If you're creating a multitenant app, you must handle the Microsoft Entra object ID that your app receives for an external user that isn't in your home tenant. These Microsoft Entra object IDs can’t be resolved in your own directory. You must ask for additional permissions from the external user to resolve their Microsoft Entra object ID, or ask for consent to access the user’s email address for authentication.
+
+    To learn how to retrieve the details of a user's Microsoft Entra Object ID for a bot, see [get single member details](../../bots/how-to/get-teams-context.md#get-single-member-details). To learn how to retrieve the details of a user's Microsoft Entra Object ID for a tab, see [Get context by using the Microsoft Teams JavaScript library](../../tabs/how-to/access-teams-context.md#get-context-by-using-the-microsoft-teams-javascript-library). If you're unable to authenticate a user or resolve their Microsoft Entra object ID, provide a fallback experience, such as a guest user experience or other types of unauthenticated experiences.
+
+The following code snippets show how to allow external users to sign-in and handle two distinct sign-in scenarios for users in the home tenant and external users:
 
 # [Bot](#tab/bot)
 
@@ -157,3 +157,5 @@ placeholderFunction();
 * [Shared channels in Microsoft Teams](/microsoftteams/shared-channels)
 * [Channel resource type](/graph/api/resources/channel)
 * [Retention policy for Teams locations](/microsoft-365/compliance/create-retention-policies)
+* [Use guest access and external access to collaborate with people outside your organization](/microsoftteams/communicate-with-users-from-other-organizations)
+* [Manage external meetings and chat with people and organizations using Microsoft identities](/microsoftteams/trusted-organizations-external-meetings-chat?tabs=organization-settings)
