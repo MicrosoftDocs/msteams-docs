@@ -1,6 +1,6 @@
 ---
-title: Bot-based message extension plugin guidelines
-description: Learn about the guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
+title: Copilot for Microsoft 365 extension guidelines
+description: Guidelines and criteria to extend your message extension as a plugin for Microsoft Copilot for Microsoft 365.
 ms.topic: how-to
 author: v-preethah
 ms.author: surbhigupta
@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 11/14/2023
 ---
 
-# Guidelines to create or upgrade a message extension plugin for Copilot for Microsoft 365
+# Guidelines to create or upgrade Copilot extensions
 
 > [!IMPORTANT]
 >
@@ -22,9 +22,12 @@ Microsoft 365 plugins provide integration with various  Microsoft 365 products, 
 * Search for the latest information or record. For example, the latest incident ticket or survey results.
 * Summarize information based on multiple records. For example, summarize all incident tickets related to the project Northwind.
 
-We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. Message extensions should support one or more search commands, as Copilot for Microsoft 365 recognizes them as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
+We recommend that you build or upgrade your existing message extensions to maximize their usefulness and usability in Copilot for Microsoft 365. Message extensions must support one or more search commands, as Copilot for Microsoft 365 recognizes them as skills it can execute on behalf of the user. Additionally, your extensions must meet the standards for compliance, performance, security, and user experience outlined in this article.
 
-:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365 (M365 Chat).":::
+:::image type="content" source="../assets/images/Copilot/ailib-copilot-interface.png" alt-text="Graphic shows the user experience between Microsoft Teams and Copilot for Microsoft 365.":::
+
+> [!NOTE]
+> If you want to configure a custom Graph connector for Copilot for Microsoft 365, ensure that you adhere to the [guidelines to create or upgrade Graph connectors](/graph/connecting-external-content-deploy-teams).
 
 ## Mandatory requirements
 
@@ -34,15 +37,16 @@ The requirements for building message extension plugins for Copilot for Microsof
 >
 > * [Define app, command, and parameter descriptions](#define-descriptions)
 > * [Enhance message extension to retrieve information through compound utterances](#compound-utterances)
+> * [Define sample prompts](#sample-prompts)
 > * [Create rich Adaptive Card responses](#adaptive-card-response)
 
 ## Define descriptions
 
-A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365 (M365 Chat).
+A good description offers a clear and concise summary of the app’s features and allows Copilot for Microsoft 365 to efficiently discover and execute search operations. When a user enters the app name along with a verb, for example, **Find Contoso tickets**, the message extension plugin must be invoked from Copilot for Microsoft 365.
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-pass.png" alt-text="Screenshot shows a pass scenario with an example of a sample prompt for message extension plugin in Copilot Chat.":::
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension usage as a plugin in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-plugin-prompt-fail.png" alt-text="Screenshot shows a fail scenario without an example of sample prompt for message extension as a plugin in Copilot Chat.":::
 
 Ensure that you adhere to the description guidelines listed in the following table:
 
@@ -124,7 +128,7 @@ The following table lists the short description examples for each category:
   "description": {
     "short": "Search and view customer leads.",
     "full": "Resolve tickets faster, simplify employee workflows and improve team performance by integrating Contoso CRM to Microsoft Teams. Contoso CRM is a complete customer service solution that’s easy to use and scales with your business."
-  },
+  }
 ```
 
 # [General](#tab/general)
@@ -158,7 +162,21 @@ Command description maps user intent and utterance to search command inside a pl
 * Include verbs and synonyms, if applicable.
 * Focus on keywords that are likely to be used in the search function of your native apps.
 
-The following table lists the command description examples for each category:
+#### Semantic description
+
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Copilot for Microsoft 365. Semantic description for commands supports up to 5,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot for Microsoft 365 uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
+
+The `semanticDescription` property isn't a mandatory field. However, if you add `semanticDescription` in app manifest, the existing validation checks for short, parameter, and command descriptions are also applicable for semantic descriptions.
+
+We recommend you to review the following guidelines for semantic description to increase the chances of your app to pass the Microsoft Teams Store submission process:
+
+* Avoid instructional phrases such as “if the user says X",” “ignore,” “delete,” “reset,” “new instructions,” “Answer in Bold,” or “Don't print anything.” *[Mandatory fix]*
+* Avoid URLs, emojis, or hidden characters such as hexadecimal, binary, or unconventional symbols. *[Mandatory fix]*
+* Avoid grammar and punctuation errors. *[Mandatory fix]*
+* Avoid overly verbose, flowery, or marketing language. *[Suggested fix]*
+* Avoid superlative claims such as “#1,” “amazing,” or “best.” *[Suggested fix]*
+
+The following table lists the command and semantic description examples for each category:
 
 # [Tasks](#tab/tasks)
 
@@ -173,6 +191,7 @@ The following table lists the command description examples for each category:
           "type": "query",
           "title": "Tasks",
           "description": "Search for high priority tasks related to Northwind that are due tomorrow.",
+          "SemanticDescription": "Search for issues, epics, stories, tasks, sub tasks, bugs + additional details."
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -195,6 +214,7 @@ The following table lists the command description examples for each category:
           "type": "query",
           "title": "Survey",
           "description": "Search for surveys, drafts, and results with keywords or number of respondents.",
+          "semanticDescription": "This command enables users to search for surveys, drafts, and results based on specific keywords or the number of respondents."
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -217,6 +237,7 @@ The following table lists the command description examples for each category:
           "type": "query",
           "title": "CRM",
           "description": "Through CRM plugin, find qualified, unqualified, and quoted leads of clients and customers.",
+          "semanticDescription": "This command allows users to search for leads in the CRM system based on specific criteria.",
           "initialRun": true,
           "fetchTask": false,
           "context": [
@@ -252,7 +273,9 @@ The following table lists the command description examples for each category:
 
 ### Parameter description
 
-Each message extension command supports up to five parameters and first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+Each message extension command supports has a corresponding `parameters' property, which supports up to five parameters and the first parameter must be visible in the message extension search bar. A parameter must have a good description, which must contain a combination of acceptable parameters, enums, acronyms, and output format.
+
+The [semanticDescription](../resources/schema/manifest-schema-dev-preview.md#composeextensionscommands) property is used to provide a detailed description of a command for Microsoft Copilot. Semantic description for parameters supports up to 2,000 characters and isn't displayed in the user interface. If the `semanticDescription` property is left empty, Copilot uses the information in the `description` field. When writing a `semanticDescription`, you must include information about expected values, limits, and ranges for the command.
 
 A good parameter description explains the requirements of the system in a natural language with output format. The following are a few examples of basic and advanced search requests for each category:
 
@@ -268,19 +291,21 @@ Advanced search: Search for high priority tasks related to Northwind that are du
     {
         "name": "Name",
         "title": "Project or Task Name",
-        "description": "Project name or task name as keyword",
+        "description": "Project name or task name as keyword.",
         "inputType": "text"
     },
     {
         "name": "Time",
         "title": "Time",
-        "description": "Date or number of days for which you need tasks for.Output: Number",
+        "description": "Date or number of days for which you need tasks for.",
+        "semanticDescription": "Date or number of days for which you need tasks for. Output: Number",
         "inputType": "text"
     },
     {
         "name": "Priority",
         "title": "Priority",
-        "description": "Priority of tasks. Acceptable values are high, medium, low, NA ",
+        "description": "Priority of tasks.",
+        "semanticDescription": "Priority of tasks. Acceptable values are high, medium, low, NA",
         "inputType": "text"
     }] 
 ```
@@ -297,19 +322,20 @@ Advanced search: Retrieve recent customer satisfaction survey on product Contoso
   {
     "name": "SurveyName",
     "title": "Name of Survey",
-    "description": "survey name or related keyword",
+    "description": "Survey name or related keyword",
     "inputType": "text"
   },
   {
     "name": "Tags",
     "title": "Tags",
-    "description": "product name or keywords related pertaining to a question",
+    "description": "Product name or keywords related pertaining to a question",
     "inputType": "text"
   },
   {
     "name": "ResponseNumber",
     "title": "Response number",
-    "description": "number of responses received for a survey. Output: Number",
+    "description": "Number of responses received for a survey.",
+    "semanticDescription": "Number of responses received for a survey. Output: Number",
     "inputType": "text"
   }
 ]
@@ -327,19 +353,22 @@ Advanced search: Fetch qualified leads for which quotes are pending from last se
   {
     "name": "TypeofLeads",
     "title": "Type of Leads",
-    "description": "what types of leads user is looking for. Acceptable fields are: Qualified, Unqualified and New.",
+    "description": "Type of leads to find.",
+    "semanticDescription": "Type of leads to find. Acceptable fields are: Qualified, Unqualified and New.",
     "inputType": "text"
   },
   {
     "name": "Status",
     "title": "Status",
-    "description": "status of leads. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
+    "description": "Status of leads to find.",
+    "semanticDescription": "Status of leads to find. Acceptable fields are: Pending, Quote Given and Quote Rejected.",
     "inputType": "text"
   },
   {
     "name": "Time",
     "title": "Time",
-    "description": "number of days for which you need status of leads for. Output: Number",
+    "description": "Number of days to search for leads with given status.",
+    "semanticIndex": "Number of days to search for leads with given status. Output: Number",
     "inputType": "text"
   }
 ]
@@ -357,25 +386,29 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
   {
     "name": "StockIndex",
     "title": "Stock Index",
-    "description": "Name of index in which user wants to find stocks",
+    "description": "Name of index to search for stocks",
+    "semanticDescription": "Name of stock market index used to search for stocks",
     "inputType": "text"
   },
   {
     "name": "NumberofStocks",
     "title": "Ranked Number of Stocks",
-    "description": "Provide number of stocks in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
+    "description": "Number of stocks to return.",
+    "semanticDescription": "Number of stocks to return in ranked order. Output format: Top:<Number of stocks or bottom:<Number of stocks>",
     "inputType": "text"
   },
   {
     "name": "P/B",
     "title": "Price to Book Ratio",
-    "description": "P/B or Price to book ratio of a stock. Output format: >x.xx or <x.xx",
+    "description": "Price-to-book ratio of a stock.",
+    "semanticDescription": "Price to book (P/B) ratio of a stock. Output format: >x.xx or <x.xx",
     "inputType": "text"
   },
   {
     "name": "P/E",
     "title": "Price to Earnings Ratio",
-    "description": "P/E or Price to Earnings ratio of a stock with comparison. Output format: >x.xx or <x.xx",
+    "description": "Price-to-earnings ratio of a stock with comparison.",
+    "semanticDescription": "Price to Earnings (P/E) ratio of a stock with comparison. Output format: >x.xx or <x.xx",
     "inputType": "text"
   }
 ]
@@ -386,15 +419,17 @@ Advanced search: Find top 10 stocks in NASDAQ with P/E less than 30 and P/B less
 ## Compound utterances
 
 > [!NOTE]
-> Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in M365 Chat.
+> Search through dialog (referred as task module in TeamsJS v1.x) isn't supported in Copilot for Microsoft 365.
 
-For M365 Chat, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
+For Copilot for Microsoft 365, a search-based message extension must support more than three unique compound utterances to perform deep retrieval of accurate information. To enable compound utterances, you must expand the scope of search to handle three or more search parameters by updating the [app manifest (previously called Teams app manifest)](../resources/schema/manifest-schema.md#composeextensionscommands) and ensure the following:
 
 * Update your web service to support search based on multiple parameters. For more information on how to respond to user requests, see [Respond to search command](how-to/search-commands/respond-to-search.md).
 * Copilot for Microsoft 365 might pass an empty string or null value for parameters, which aren't part of user utterance, update your web service to handle the parameters.
 
+* A message extension supports upto 10 commands (9 usable) and each command has a corresponding `parameters` property, which supports up to five parameters.
+
 <br>
-<details><summary>The following JSON code is an example of multiple parameters defined in app manifest:</summary>
+<details><summary>The following code is an example of multiple parameters defined in app manifest:</summary>
 
 ```json
 "commands": [
@@ -486,13 +521,75 @@ For M365 Chat, a search-based message extension must support more than three uni
 
 The search parameters must have good descriptions with acceptable parameters, enums, acronyms, and output format. For more information and examples, see [Parameter description](#parameter-description).
 
+## Sample prompts
+
+The [`samplePrompts`](../resources/schema/manifest-schema.md#composeextensionscommands) property guides users on how to use the various plugins within Copilot. Copilot uses the sample prompts to display the prompts for the user. The prompts must be adaptable to different locales and clear across different commands. Sample prompts are available in the following areas within Copilot for Microsoft 365:
+
+* First Run Experience (FRE): When a user first installs or enables a plugin.
+* Prompt library or Copilot Lab: When a user seeks help with prompts.
+* Plugin suggestions: To guide users towards better utterances.
+
+:::image type="content" source="../assets/images/Copilot/bot-based-sample-prompts.png" alt-text="Screenshot shows the sample prompts displayed when the message extension plugin in enable in Copilot.":::
+
+> [!NOTE]
+>
+> * If the app manifest doesn't specify the `samplePrompts` property, the prompts aren't displayed.
+> * The `samplePrompts` property is mandatory for app validation during the app submission process.
+> * If you define multiple commands for your app, a maximum of three prompts (one from each of the top three commands) are displayed to the user. The prompts rotate to provide the user with a diverse set of prompts across different commands.
+
+We recommend you to follow these guidelines to increase the chances of your app to pass the Microsoft Teams Store submission process:
+
+* A plugin must have at least three prompts and maximum of five prompts for each command.
+* Each prompt must not exceed 128 characters.
+* Two commands within the same plugin must not have identical prompts.
+* Sample prompts must be generic in nature and not include custom references. For example, project names and task name.
+* All sample prompts must be functional and return responses.
+* Prompt must be relevant to the commands.
+
+The following code is an example of the `samplePrompts` property in app manifest:
+
+```json
+"composeExtensions": [
+ {
+  "canUpdateConfiguration": true,
+  "botId": "bxxxxxx5-xxxx-xxxx-xxxx-4xxxxxx16599",
+  "commands": [
+   {
+    "id": "orders",
+    "title": "Orders",
+    "context": [
+     "Commandbox",
+     "Compose"
+    ],
+    "description": "Search for orders",
+    "semanticDescription": "Search for orders",
+    "samplePrompts": [
+     {
+      "text": "Search for all orders"
+     },
+     {
+      "text": "Search for orders related to Contoso"
+     },
+     {
+      "text": "Search for all pending orders"
+     },
+     {
+      "text": "Search for all completed ordered for Fabrikam"
+     }
+    ]
+   }
+  ]
+ }
+]
+```
+
 ## Adaptive Card response
 
 Message extensions respond to a user input with an Adaptive Card. An Adaptive Card for a message extension plugin must function effectively, appear rich, and meet the following requirements:
 
 * Adaptive Card response must include Adaptive Card content and preview card information as part of the same template. [*Mandatory*]
 
-  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing M365 Chat app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
+  :::image type="content" source="../assets/images/Copilot/validation-guidelines-app-response-copilot.png" alt-text="Screenshot shows an example of a sample app showing Copilot app response contains Preview and Content in the same response." lightbox="../assets/images/Copilot/validation-guidelines-app-response-copilot-ext.png":::
 
   <br/>
   <details><summary>Adaptive Card response template example</summary>
@@ -609,11 +706,11 @@ Message extensions respond to a user input with an Adaptive Card. An Adaptive Ca
   * `Action.OpenUrl`: Opens a specified URL from the Card.
   * `Action.ToggleVisibility`: Displays or hides one or more elements in the card.
   * `Action.Execute`: Collects the input fields and sends them as a request to your bot service.
-  * `Action.Submit`: Opens a dialog or Stage view using type invoke in data object.
+  * `Action.Submit`: Opens a dialog or Stageview using type invoke in data object.
 
-  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in M365 Chat.":::
+  :::image type="content" source="../assets/images/Copilot/ailib-copilot-action-buttons.png" alt-text="Graphic shows an example of the Update Stock, restock, and Cancel restock action buttons in an Adaptive Card response in Copilot.":::
 
-* If a user can change any information on the card through dialog, stage view, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
+* If a user can change any information on the card through dialog, Stageview, or directly from the card, we recommend the Adaptive Card to support universal actions and automatic refresh. [*Recommended*]
 * Adaptive Cards must include a URL as part of the [metadata](https://adaptivecards.io/explorer/Metadata.html), which allows cards to be easily copied from one hub to another. [*Recommended*]
 * Apart from thumbnails, any image in an Adaptive Card must have an alt-text. [*Recommended*]
 
