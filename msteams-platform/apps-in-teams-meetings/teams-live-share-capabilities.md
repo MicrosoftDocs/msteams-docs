@@ -25,7 +25,7 @@ This article focuses on how to integrate the Live Share SDK into your app and ke
 
 The [Live Share SDK](https://github.com/microsoft/live-share-sdk) is a JavaScript package published on [npm](https://www.npmjs.com/package/@microsoft/live-share), and you can download through npm or yarn. You must also install Live Share peer dependencies, which include `fluid-framework` and `@fluidframework/azure-client`. If you're using Live Share in your tab application, you must also install `@microsoft/teams-js` version `2.23.0` or later. If you want to use the `TestLiveShareHost` class for local browser development, you must install `@fluidframework/test-client-utils` and `start-server-and-test` packages in your `devDependencies`.
 
-#### npm
+#### NPM
 
 ```bash
 npm install @microsoft/live-share fluid-framework @fluidframework/azure-client --save
@@ -33,7 +33,7 @@ npm install @microsoft/teams-js --save
 npm install @fluidframework/test-client-utils start-server-and-test --save-dev
 ```
 
-#### yarn
+#### Yarn
 
 ```bash
 yarn add @microsoft/live-share fluid-framework @fluidframework/azure-client
@@ -1311,7 +1311,7 @@ export const MyLiveFollowMode = () => {
 
 ---
 
-In `meetingStage` contexts, your users are collaborating and presenting synchronously to facilitate more productive discussions. When a user presents content to the meeting stage, you should call the `startPresenting()` API for the initial presenter. In `content` contexts like collaborative stageview, content is most commonly consumed asynchronously. In this case, it's best to let users opt into realtime collaboration, such as through a "Follow" button. Using the `teamsJs.app.getContext()` API in the Teams JavaScript SDK, you can easily adjust your functionality accordingly.
+In `meetingStage` contexts, your users are collaborating and presenting synchronously to facilitate more productive discussions. When a user presents content to the meeting stage, you should call the `startPresenting()` API for the initial presenter. In `content` contexts like collaborative stageview, content is most commonly consumed asynchronously. In this case, it's best to let users opt into real-time collaboration, such as through a "Follow" button. Using the `teamsJs.app.getContext()` API in the Teams JavaScript SDK, you can easily adjust your functionality accordingly.
 
 Example:
 

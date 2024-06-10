@@ -18,7 +18,7 @@ For more information about how the Azure Bot Service handles authentication, see
 
 In this article you'll learn:
 
-- **How to create an authentication-enabled bot**. You'll use [cs-auth-sample][teams-auth-bot-cs] to handle user sign-in credentials and the generating the authentication token.
+- **How to create an authentication-enabled bot**. Use [cs-auth-sample][teams-auth-bot-cs] to handle user sign-in credentials and the generating the authentication token.
 - **How to deploy the bot to Azure and associate it with an identity provider**. The provider issues a token based on user sign-in credentials. The bot can use the token to access resources, such as a mail service, which require authentication. For more information, see  [Microsoft Teams authentication flow for bots](auth-flow-bot.md).
 - **How to integrate the bot within Microsoft Teams**. Once the bot is integrated, you can sign in and exchange messages with it in a chat.
 
@@ -38,7 +38,7 @@ In this article you'll learn:
 
 ## Create the resource group
 
-The resource group and the service plan aren't strictly necessary, but they allow you to conveniently release the resources you create. It's recommended to keep your resources organized and manageable.
+The resource group and the service plan aren't strictly necessary, but they allow you to conveniently release the resources you create. We recommend that you keep your resources organized and manageable.
 
 You use a resource group to create individual resources for the Bot Framework. For performance, ensure that these resources are located in the same Azure region.
 
@@ -168,8 +168,8 @@ You need an identity provider for authentication. In this procedure, you use a M
 
 1. After it's created, Azure displays the **Overview** page for the app. Copy and save the following information to a file:
 
-    1. The **Application (client) ID** value. You'll use this value later as the *Client ID* when you register this Azure identity application with your bot.
-    1. The **Directory (tenant) ID** value. You'll use this value later as the *Tenant ID* to register this Azure identity application with your bot.
+    1. The **Application (client) ID** value. Use this value later as the *Client ID* when you register this Azure identity application with your bot.
+    1. The **Directory (tenant) ID** value. Use this value later as the *Tenant ID* to register this Azure identity application with your bot.
 
 1. In the left panel, select **Certificates & secrets** to create a client secret for your application.
 
@@ -177,7 +177,7 @@ You need an identity provider for authentication. In this procedure, you use a M
    1. Add a description to identify this secret from others you might need to create for this app, such as *Bot identity app in Teams*.
    1. Set **Expires** to your selection.
    1. Select **Add**.
-   1. Before leaving this page, **record the secret**. You'll use this value later as the *Client secret* when you register your Microsoft Entra application with your bot.
+   1. Before leaving this page, **record the secret**. Use this value later as the *Client secret* when you register your Microsoft Entra application with your bot.
 
 ### Configure the identity provider connection and register it with the bot
 
@@ -226,7 +226,7 @@ You need an identity provider for authentication. In this procedure, you use a M
 
 1. Complete the form as follows:
 
-    1. **Name**. Enter a name for the connection. You'll use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv2*.
+    1. **Name**. Enter a name for the connection. Use this name in your bot in the `appsettings.json` file. For example, *BotTeamsAuthADv2*.
     1. **Service Provider**. Select **Azure Active Directory v2**. Once you select this option, the Azure AD v2 specific fields are displayed.
     1. **Client id**. Enter the Application (client) ID that you recorded for your Azure identity provider app.
     1. **Client secret**. Enter the secret that you recorded for your Azure identity provider app.
@@ -526,7 +526,7 @@ This manifest contains information needed by Teams to connect with the bot:
 }
 ```
 
-With authentication, Teams behaves slightly differently than other channels.
+With authentication, Teams behaves differently than other channels.
 
 ### Handling Invoke Activity
 
