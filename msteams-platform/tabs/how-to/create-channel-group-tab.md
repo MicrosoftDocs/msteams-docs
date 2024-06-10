@@ -1066,9 +1066,9 @@ You've completed the tutorial to build a tab app with Blazor.
 
 ::: zone-end
 
-# Create a configuration page
+## Create a configuration page
 
-A configuration page is a special type of [content page](content-page.md). The users configure some aspects of the Microsoft Teams app using the configuration page and use that configuration as part of the following:
+A configuration page is a special type of [content page](~/tabs/how-to/create-tab-pages/content-page.md). The users configure some aspects of the Microsoft Teams app using the configuration page and use that configuration as part of the following:
 
 * A channel or group chat tab: Collect information from the users and set the `contentUrl` of the content page to be displayed.
 * A [message extension](~/messaging-extensions/what-are-messaging-extensions.md).
@@ -1084,7 +1084,7 @@ The application must refer the [TeamsJS library](/javascript/api/overview/msteam
 
 An example of a configuration page is shown in the following image:
 
-:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="Screenshot shows the configuration page." lightbox="../../../assets/images/tab-images/configuration-page.png" alt-text="Screenshot shows the configuration page.":::
+:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="Screenshot shows the configuration page." lightbox="../../../assets/images/tab-images/configuration-page.png":::
 
 The following code is an example of corresponding code for the configuration page:
 
@@ -1214,11 +1214,11 @@ Choose either **Select Gray** or **Select Red** button in the configuration page
 
 The following image displays the tab content with **Gray** icon selected:
 
-:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-gray.png" alt-text="Screenshot shows the configure tab with select gray." lightbox="../../../assets/images/tab-images/configure-tab-with-gray.png":::
+:::image type="content" source="~/assets/images/tab-images/configure-tab-with-gray.png" alt-text="Screenshot shows the configure tab with select gray." lightbox="~/assets/images/tab-images/configure-tab-with-gray.png":::
 
 The following image displays the tab content with **Red** icon selected:
 
-:::image type="content" source="../../../assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot shows the configure tab with select red." lightbox=""../../../assets/images/tab-images/configure-tab-with-red.png"":::
+:::image type="content" source="~/assets/images/tab-images/configure-tab-with-red.png" alt-text="Screenshot shows the configure tab with select red." lightbox="~/assets/images/tab-images/configure-tab-with-red.png":::
 
 Choosing the appropriate button triggers either `saveGray()` or `saveRed()`, and invokes the following:
 
@@ -1241,7 +1241,7 @@ Your tab requires contextual information to display relevant content. Contextual
 
 For more information on the properties used for tab configuration, see [context interface](/javascript/api/@microsoft/teams-js/app.context?view=msteams-client-js-latest&preserve-view=true). Collect the values of context data variables in the following two ways:
 
-* Insert URL query string placeholders in `configurationURL`of your [app manifest](../../../resources/schema/manifest-schema.md#configurabletabs).
+* Insert URL query string placeholders in `configurationURL`of your [app manifest](~/resources/schema/manifest-schema.md#configurabletabs).
 
 * Use the [TeamsJS library](/javascript/api/overview/msteams-client) `app.getContext()` method.
 
