@@ -169,7 +169,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
           1. **In progress**: App validation is initiated.
           1. **Completed**: App validation is completed.
 
-        You can select **Refresh status** to retrieve latest validation status when the validation in **In progress** status.
+        You can select **Refresh Status** to retrieve latest validation status when the validation in **In progress** status.
 
         :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status.":::
 
