@@ -4,7 +4,7 @@ description: In this article, learn more how to build Actions and its use cases.
 ms.date: 12/8/2023
 ms.author: mosdevdocs
 author: v-preethah
-ms.topic: Conceptual
+ms.topic: conceptual
 ms.subservice: m365apps
 ---
 
@@ -82,7 +82,7 @@ When a user selects Add option from the app's context menu, a personal tab opens
 The [ActionInfo](/javascript/api/@microsoft/teams-js/actioninfo) interface helps to enable your app to determine when a user opens a tab from an Action and the content that initiated the Action.
 
 ```javascript
-app.getContext().then((context: app.Context) => {
+app.getContext().then((context) => {
     const actionInfo = context.actionInfo;
     if (actionInfo) {
         // App was launched using an action    
@@ -127,7 +127,7 @@ You can now preview your Actions in the Microsoft 365 home page, right-click a f
 
 :::image type="content" source="images/actions-context-menu.png" alt-text="The screenshot shows the actions in context menu.":::
 
-## Preinstall Actions for users in Microsoft365 Admin Center
+## Preinstall Actions for users in Microsoft 365 Admin Center
 
 > [!NOTE]
 > Actions are available in public developer preview, ensure that you enable [targeted release](/microsoft-365/admin/manage/release-options-in-office-365?view=o365-worldwide&preserve-view=true) to the users to experience Actions in Microsoft 365 app.

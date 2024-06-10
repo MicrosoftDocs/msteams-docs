@@ -1,5 +1,5 @@
 ---
-title: Open content in Stageview
+title: Open content in multi-window
 author: Rajeshwari-v
 description: Learn about the types of Stageview, a full screen UI component invoked to surface your app content. Open content in multi-window experiences using deep links, Adaptive Cards, or Teams JavaScript client library (TeamsJS).
 ms.topic: conceptual
@@ -8,7 +8,7 @@ ms.localizationpriority: high
 ms.date: 06/05/2023
 ---
 
-# Open content in Stageview
+# Open content in multi-window
 
 Microsoft Teams provides multiple methods to open your app content in immersive canvas experiences. Stageview allows users to adopt multitasking inside Teams, for example, you can open your app content in a new Teams window with a specific chat in the side panel. Stageview is designed to:
 
@@ -66,7 +66,7 @@ You can invoke Stageview in Teams through one of the following methods and confi
 <details>
 <summary id="openmode" ><b>openMode property</b></summary>
 
-`openMode` is a property in [StageViewParams interface](/javascript/api/@microsoft/teams-js/stageview.stageviewparams). The `openMode` property must be defined in a [stageView API](#invoke-from-stageview-api) or a [deep link](#invoke-from-deep-link) to determine the type of Stageview response. The `openMode` property has the following three values:
+`openMode` is a property in [StageViewParams interface](/javascript/api/@microsoft/teams-js/stageview.stageviewparams). The `openMode` property is optional and can be defined in a [stageView API](#invoke-from-stageview-api) or a [deep link](#invoke-from-deep-link) to determine the type of Stageview response. The `openMode` property has the following three values:
 
 * `popoutWithChat`
 * `popout`

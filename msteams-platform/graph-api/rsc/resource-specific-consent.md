@@ -2,7 +2,7 @@
 title: Overview resource-specific consent in Teams
 description: In this article, learn about resource-specific consent (RSC) permissions, types of RSC and supported RSC permissions.
 ms.localizationpriority: medium
-ms.topic: Conceptual
+ms.topic: conceptual
 ms.date: 03/20/2023
 ---
 
@@ -114,6 +114,9 @@ The following table provides RSC application permissions for a team and their ap
 For more information, see [team resource-specific consent permissions](/graph/permissions-reference#team-resource-specific-consent-permissions).
 
 ### RSC permissions for a chat or meeting
+
+> [!NOTE]
+> The RSC permissions for chat in personal scope is limited to `ChatMessageReadReceipt.Read.Chat`.
 
 If a chat has a meeting or a call associated with it, then the relevant RSC permissions apply to those resources as well.
 

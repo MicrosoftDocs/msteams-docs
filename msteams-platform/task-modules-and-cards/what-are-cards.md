@@ -10,7 +10,7 @@ ms.date: 01/08/2023
 
 A card is a user interface (UI) container for short or related pieces of information. Cards can have multiple properties and attachments and can include buttons, which trigger [card actions](~/task-modules-and-cards/cards/cards-actions.md). Using cards, you can organize information into groups and give users the opportunity to interact with specific parts of the information.
 
-The bots for Teams support the following types of cards:
+The bots for Microsoft Teams support the following types of cards:
 
 - Adaptive Card
 - Hero card
@@ -22,7 +22,7 @@ The bots for Teams support the following types of cards:
 - Card collections
 - Overflow menu on Adaptive Cards
 
-You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and message extensions in Microsoft Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
+You can add rich text formatting to your cards using either Markdown or HTML, depending on the card type. Cards used by bots and message extensions in Teams, add and respond to these card actions, `openUrl`, `messageBack`, `imBack`, `invoke`, and `signin`.
 
 Teams uses cards in three different places:
 
@@ -67,7 +67,7 @@ In addition to Adaptive Cards, Teams supports two other types of cards:
 
 ### Typeahead search in Adaptive Cards  
 
-Typeahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a type-ahead static search within a list with limited number of choices. The mobile and desktop clients support type ahead dynamic search experience.
+Typeahead search added as an input control in Adaptive Cards enable [dynamic search](~/task-modules-and-cards/cards/dynamic-search.md) experience from a dynamically loaded dataset. It also allows users to do a typeahead static search within a list with limited number of choices. The mobile and desktop clients support typeahead dynamic search experience.
 
 ### Media elements in Adaptive Cards
 
@@ -81,6 +81,10 @@ Media elements in Adaptive Card provide enhanced media experience and increases 
 > - The supported actions are [**Action.OpenURL**](https://adaptivecards.io/explorer/Action.OpenUrl.html), [**Action.ShowCard**](https://adaptivecards.io/explorer/Action.ShowCard.html), [**Action.ToggleVisibility**](https://adaptivecards.io/explorer/Action.ToggleVisibility.html), and [**Action.Execute**](/adaptive-cards/authoring-cards/universal-action-model#actionexecute).
 
 Adaptive Cards with Incoming Webhooks enable you to use the rich and flexible capabilities of Adaptive Cards. It sends data using Incoming Webhooks in Teams from their web service.
+
+### CodeBlock in Adaptive Cards
+
+Share code snippets as richly formatted Adaptive Cards in Teams chats, channels, and meetings with the `CodeBlock` element. Adaptive Cards with the `CodeBlock` element make the code snippet easy to read as the indentation, numbering, and syntax highlighting match the programming language. For more information, see [CodeBlock in Adaptive Cards](cards/cards-format.md#codeblock-in-adaptive-cards).
 
 ### Adaptive Card responsive layout
 
