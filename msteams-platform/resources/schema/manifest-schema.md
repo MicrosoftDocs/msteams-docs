@@ -680,6 +680,9 @@ The object is an array with all elements of the type `string`. The maximum item 
 
 ## webApplicationInfo
 
+> [!NOTE]
+> The `webApplicationInfo` property is related to a single domain and isn't supported for multiple domains. Therefore, if you've two apps hosted on different domains, you need to create separate app manifests for each app.
+
 **Optional** &ndash; Object
 
 Provide your Microsoft Entra App ID and Microsoft Graph information to help users seamlessly sign into your app. If your app is registered in Microsoft Entra ID, you must provide the App ID. Administrators can easily review permissions and grant consent in Teams admin center.
