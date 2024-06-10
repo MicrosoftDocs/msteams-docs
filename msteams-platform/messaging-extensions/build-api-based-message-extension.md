@@ -960,6 +960,132 @@ After the API-based message extension gets a request header with token, perform 
 </details>
 <br/>
 
+<details><summary id="oauth">OAuth</summary>
+<br>
+
+Open Authorization (OAuth) enables a client application to obtain authorized access to protected resources like web APIs. OAuth is designed to work with Hypertext Transfer Protocol (HTTP), It uses access tokens to prove your identity and allow it to interact with another service on your behalf.
+
+OAuth 2.0 in your Teams app provides a secure way to access user data from third-party applications without exposing user credentials. You can only grant access to the specific data you need, and the user must consent before the application can access their data which is useful for apps that need to access individual items for a user.
+
+:::image type="content" source="../assets/images/Copilot/api-me-oauth-resources.png" alt-text="Screenshot shows the oauth authorization flow.":::
+
+**Authorization server**: The Microsoft identity platform is the authorization server. Also called an identity provider or IdP, it securely handles the end-user's information, their access, and the trust relationships between the parties in the auth flow. The authorization server issues the security tokens your apps and APIs use for granting, denying, or revoking access to resources (authorization) after the user has signed in (authenticated).
+
+**Client**: The client in an OAuth exchange is the application requesting access to a protected resource. The client could be a web app running on a server, a single-page web app running in a user's web browser, or a web API that calls another web API. You'll often see the client referred to as client application, application, or app.
+
+**Resource owner**: The resource owner in an auth flow is usually the application user, or end-user in OAuth terminology. The end-user "owns" the protected resource (their data) which your app accesses on their behalf. The resources owners can grant or deny your app (the client) access to the resources they own. For example, your app might call an external system's API to get a user's email address from their profile on that system. Their profile data is a resource the end-user owns on the external system, and the end-user can consent to or deny your app's request to access their data.
+
+**Resource server**: The resource server hosts or provides access to a resource owner's data. Most often, the resource server is a web API fronting a data store. The resource server relies on the authorization server to perform authentication and uses information in bearer tokens issued by the authorization server to grant or deny access to resources.
+
+## Prerequisites
+
+Before you start, you need to have a Microsoft Teams app with API Message Extensions or Plugins. You also need to have an OAuth 2.0 client ID and client secret from the third-party authorization server.
+
+### Configure OAuth in Teams Developer Portal
+
+1. Go to Teams Developer Portal.
+1. Select **OAuth client registration**.
+1. Select **Register Client**.
+
+1. In the **OAuth client registration** page, under **Register an API key**, update the following:
+
+   1. Registration name:
+   1. Base URL:
+   1. Under **Restrict usage by org**, select any of the following:
+
+      * **My organization only**
+      * **Any Microsoft 365 organization**
+
+      |Option   |When to use  | Description|
+      |---------|---------|----------------|
+      |**Home tenant**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        |  The API key is only usable within the tenant where the the API is registered. |
+      |**Any tenant**     | After you've completed testing the app and want to enable the app across different tenants. Ensure that you update your target tenant to **Any tenant** before submitting your app package to the Partner Center.        | The API key can be used in other tenants after the app is available in the Teams Store. |
+
+      :::image type="content" source="../assets/images/Copilot/api-based-me-api-key-tenant.png" alt-text="Screenshot shows the Home tenant and Any tenant options under set a target tenant heading in Developer Portal for Teams.":::
+
+   1. Under **Restrict usage by app**, select any of the following:
+
+      * **Any Teams app**
+      * **Existing Teams app ID**
+
+      |Option   |When to use  | Description|
+      |---------|---------|----------------|
+      |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
+      |**Existing Teams app ID**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
+
+   1. **Client ID**: The client ID is a unique identifier assigned to your application by the third-party authorization server.
+   1. **Client Secret**: The client secret is a confidential string known by the third-party authorization server.
+
+   1. **Authorization URL**: The authorization URL is where the user is redirected to sign-in and grant or deny access to your app. For example, `https://login.example.com/authorize` .
+
+   1. **Token URL**: The token URL is where your app exchanges the authorization code for an access token. For example, `https://authorization-server.com/oauth/token`.
+
+   1. **Refresh URL**: The refresh URL allows your app to obtain a new access token without user interaction. For example, `https://authorization-server.com/oauth/refresh`.
+
+   1. **Scope**: The scope defines the permissions your app requests from the user. *[Optional]*
+
+### Update the Manifest Schema
+
+Update your Teams app manifest schema to include the new auth type: “oAuth” and the "oAuthConfigurationId" you received from the dev portal.
+
+```json
+{
+    "composeExtensions": [
+        {
+            "composeExtensionType": "apiBased",
+            "authorization":
+            {
+                "authType": "oAuth2.0",
+                "oAuthConfiguration": {
+                    "oAuthConfigurationId": "sCVBX2udSXEtxo97behM1ReO8pJc4MdA"
+                }
+            },
+            "apiSpecificationFile": "apiSpecFiles/repairs-openapi.json",
+            "commands": [
+                {
+                    "id": "listRepairs",
+                    "type": "query",
+                    "context": ["compose", "commandBox"],
+                    "title": "List all repairs",
+                    "description": "Returns a list of repairs with their details and images",
+                    "parameters": [
+                        {
+                            "name": "assignedTo",
+                            "title": "Assigned To",
+                            "description": "Filter repairs by who they're assigned to"
+                        }
+                    ],
+                    "apiResponseRenderingTemplateFile": "adaptiveCards/repairs.json"
+                }
+            ]
+        }
+    ]
+}
+```
+
+### Implement the OAuth Flow
+
+When a user attempts to use a message action on a newly installed Teams app that uses OAuth, Teams Client makes an invoke with the app ID being used to check if there is a valid token/trigger the sign-in flow. If the token acquisition fails, then trigger the sign-in flow. The Teams client then renders the OAuth card in a pop-up. The end-user signs into the 3P service and authorizes the scope that is being requested. The 3P authorization server sends an authorization code to the callback url on TGS. TGS calls the token URL endpoint on the 3P authorization server and exchanges the code for a token that TGS then saves.
+
+### Handle Error Cases
+
+Ensure your implementation can handle error cases such as missing token, expired token, invalid token, user fails to log-in/does not grant permissions, user closes out of the dialog box, invoke fails due to network issue/service being down/unable to fetch app/endpoint returning anything other than 401/403, resource server returns 401 or 403.
+
+## Limitations and Best Practices
+
+* After an OAuth configuration is saved, it becomes read-only except for updating the allowed app Id/allowed tenant and the description and domain.
+* Developers shouldn't be updating the OAuth configuration frequently even during the initial development process.
+* If a developer wants to make any changes to configuration such as adding scopes or the authorization url, they will need to register a new OAuth configuration which will generate a new unique ID.
+
+For more information, refer to the [Microsoft Teams Developer Documentation](https://developer.microsoft.com/en-us/microsoft-teams).
+
+## Conclusion
+
+Implementing OAuth 2.0 for API MEs and Plugins in Microsoft Teams enhances the security of your app by providing a secure way to access user data from third-party applications without exposing user credentials. By following this guide, you can successfully implement OAuth 2.0 in your Teams app.
+
+</details>
+<br/>
+
 ### Troubleshooting
 
 * If you get a **Manifest parsing has failed** error message when uploading the app to teams, use [Teams app validator](https://dev.teams.microsoft.com/validation) to validate the app package, including the app manifest and OpenAPI spec file. Review the [app manifest](#app-manifest) and the [OpenAPI Description document](#oad) requirements to resolve errors or warnings and try uploading your app.
@@ -984,11 +1110,10 @@ After the API-based message extension gets a request header with token, perform 
 
       **Common HTTP Error Responses**:
 
-      * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
-      * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
-      * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
+    * A 400 Bad Request error might occur if a request parameter is missing or incorrectly formatted.
+    * A 401 Unauthorized or 403 Forbidden error suggests issues with the API key, such as it being missing or unauthorized.
+    * A 500 Internal Server Error indicates that the service doesn't know how to respond, due to a server-side issue.
 
 * **Troubleshooting with Tools**: If the information from the network trace is insufficient, you can construct a request following the OpenAPI description document and use tools like Swagger Editor or Postman to test the request, including the authorization header for the API key if necessary.
 
 If you’re unable to resolve the errors, we recommend contacting [Microsoft Teams product support](../feedback.md#product-support-and-service-issues) for further assistance.
-
