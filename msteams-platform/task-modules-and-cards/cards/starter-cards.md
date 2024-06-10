@@ -139,8 +139,6 @@ The sample issue card is designed to highlight a specific issue, providing key d
 
 This design focuses on a high-level summary of an individual sales opportunity. It displays the company name, opportunity status, opportunity score, estimated revenue, and account owner. Additionally, it contains buttons for users to explore the content further.
 
-Download the sample here.
-
 # [Desktop](#tab/desktop9)
 
 :::image type="content" source="../../assets/images/adaptive-cards/account-details-desktop.png" alt-text="Screenshot shows the desktop version of the account details Adaptive Card sample.":::

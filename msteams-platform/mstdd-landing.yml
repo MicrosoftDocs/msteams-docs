@@ -75,7 +75,7 @@ landingContent:
         url: messaging-extensions/high-quality-message-extension.md#sample-prompts
       - text: Define and deploy Outlook Add-ins in version 1.17 and later of the app manifest schema.
         url: m365-apps/overview.md#outlook-add-ins
-      - text: Added support for python in Teams AI library
+      - text: Added support for Python in Teams AI library
         url: bots/how-to/Teams%20conversational%20AI/teams-conversation-ai-overview.md
       - text: Updated the common reasons for app validation failure to help your app pass the Teams Store submission process
         url: concepts/deploy-and-publish/appsource/common-reasons-for-app-validation-failure.md
