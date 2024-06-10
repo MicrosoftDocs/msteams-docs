@@ -38,7 +38,7 @@ Before you can create and manage preapprovals, use `Connect-MgGraph` cmdlet to c
 The following is an example of the PowerShell set up to manage preapproval of RSC permissions:
 
 ```powershell
-connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite.Authorization', 'AppCatalog.Read.All', 'Policy.ReadWrite.PermissionsGrant', 'InformationProtectionPolicy.Read', 'Application.ReadWrite.All')
+connect-MgGraph -Scopes @('TeamworkAppSettings.ReadWrite.All', 'Policy.ReadWrite.Authorization', 'AppCatalog.Read.All', 'Policy.ReadWrite.PermissionGrant', 'InformationProtectionPolicy.Read', 'Application.ReadWrite.All')
 ```
 
 ## Allow RSC permissions for apps in your organization
