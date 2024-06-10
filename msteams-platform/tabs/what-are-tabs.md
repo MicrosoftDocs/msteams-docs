@@ -56,7 +56,7 @@ Following are a few benefits of static tabs:
 
 * **Optional configuration**: You can change the default URL in your tab instance by changing the `contentUrl` property of your app after it's pinned in Teams.
 
-[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md) deliver content only to channels and group chats and create collaborative spaces around dedicated web-based content with a mandatory configuration page.
+[Configurable tabs](~/tabs/how-to/create-channel-group-tab.md) deliver content only to channels, group chats, and meetings, which create collaborative spaces around dedicated web-based content with a mandatory configuration page.
 
 Following image shows static tabs with customizable experience added to different contexts in Teams:
 
