@@ -12,7 +12,7 @@ ms.date: 04/07/2022
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-overview-featured-image.png" alt-text="Screenshot featuring Live Share in a meeting. Meeting participants are looking at a 3D model together.":::
 
-Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. With Live Share, your users can co-watch, co-create, and co-edit together in Microsoft Teams. Whether your users are presenting during a meeting or viewing content shared to a chat, Live Share securely connects them into a shared session with just a few lines of code.
+Live Share is an SDK designed to transform Teams apps into collaborative multi-user experiences without writing any dedicated back-end code. With Live Share, your users can cowatch, cocreate, and coedit together in Microsoft Teams. Whether your users are presenting during a meeting or viewing content shared to a chat, Live Share securely connects them into a shared session with just a few lines of code.
 
 Sometimes screen sharing just isn't enough, which is why Microsoft built tools like PowerPoint Live and Whiteboard directly into Teams. By bringing your web application directly to center stage in the meeting interface, your users can seamlessly collaborate during meetings and calls.
 
@@ -65,7 +65,7 @@ You can find more information about this package on the [Live Share media page](
 
 :::image type="content" source="../assets/images/teams-live-share/Teams-live-share-schematics.png" alt-text="Screenshots shows an example of multiple users drawing on a canvas during a meeting.":::
 
-When collaborating in realtime, it's essential for users to be able to point out and emphasize content on the screen. Live Share canvas makes it easy to add inking, laser pointers, and cursors to your app for seamless collaboration.
+When collaborating in real time, it's essential for users to be able to point out and emphasize content on the screen. Live Share canvas makes it easy to add inking, laser pointers, and cursors to your app for seamless collaboration.
 
 Features supported by Live Share canvas include:
 
@@ -284,20 +284,20 @@ As we've mentioned earlier, there are two meeting contexts: `meetingStage` and `
 
 #### Meeting stage
 
-The `meetingStage` context allows users to share your app content to the meeting stage for participants in the meeting. In this context, users typically expect to collaborate in realtime. Unlike when loading a collaborative app like Microsoft Loop or Word in a web browser, presenters usually expect to have more control of the experience. For example, in PowerPoint Live, presenters expect to have control over which PowerPoint slide is visible to attendees by default, even if attendees can choose to stop following them temporarily.
+The `meetingStage` context allows users to share your app content to the meeting stage for participants in the meeting. In this context, users typically expect to collaborate in real time. Unlike when loading a collaborative app like Microsoft Loop or Word in a web browser, presenters usually expect to have more control of the experience. For example, in PowerPoint Live, presenters expect to have control over which PowerPoint slide is visible to attendees by default, even if attendees can choose to stop following them temporarily.
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-meeting-stage.png" alt-text="Overview of unique use cases for Live Share in meeting stage.":::
 
 Consider making the following optimizations for your `meetingStage` app:
 
 - Put the active presenter control of the app, such as by controlling the camera position for all users viewing a 3D model.
-- Allow eligible users to take control of the app, such as taking control of media playback while co-watching a video.
+- Allow eligible users to take control of the app, such as taking control of media playback while cowatching a video.
 - Let users temporarily stop following the presenter, such as showing a "Sync to presenter" button when an attendee clicks on a different image in a slideshow.
 - Provide settings that give the presenter control, such as disabling the ability for other users to stop following them.
 
 #### Meeting side panel
 
-The meeting `sidePanel` context allows users to pin your app as a tab in a meeting, alongside default tabs like chat. While any meeting participant may have the option to open a `sidePanel` tab, each user must open it individually. This makes it ideal for asynchronous scenarios during a meeting, such as searching for content to share to the meeting stage. While your users won't want to co-watch, co-create, or co-edit rich content from this surface, Live Share can still improve your `sidePanel` app.
+The meeting `sidePanel` context allows users to pin your app as a tab in a meeting, alongside default tabs like chat. While any meeting participant may have the option to open a `sidePanel` tab, each user must open it individually. This makes it ideal for asynchronous scenarios during a meeting, such as searching for content to share to the meeting stage. While your users won't want to cowatch, cocreate, or coedit rich content from this surface, Live Share can still improve your `sidePanel` app.
 
 :::image type="content" source="../assets/images/teams-live-share/live-share-side-panel.png" alt-text="Overview of unique use cases for Live Share in meeting side panel.":::
 
