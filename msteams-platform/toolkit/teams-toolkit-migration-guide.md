@@ -1,5 +1,5 @@
 ---
-title: Migrate to New Project Structure
+title: Migrate to new project structure
 author: v-preethah
 description: This guide provides the steps to migrate from scaffolded template to the new project structure in Microsoft Teams using Teams Toolkit.
 ms.author: v-preethah
@@ -11,8 +11,6 @@ ms.date: 06/05/2024
 # Migrate to Microsoft Teams new project structure
 
 This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to leverage the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications.
-
-Note that this structure requires Visual Studio 17.10 Preview 3 or later. It necessitates the activation of the multiple startups feature, accessible through the Preview Feature options in Visual Studio.
 
 Learn in detail to create a new project folder, move configuration files, adjust launch settings, and more.
 
