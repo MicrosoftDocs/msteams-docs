@@ -155,7 +155,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the App validation in Teams developer portal." lightbox="../../assets/images/tdp/app-validation-get-started.png":::
 
-    1. Select the validation acknowledgments checkbox and select the **Start validation**.
+    1. Select all the checkboxes under **Validation Acknowledgment** and select the **Start validation**.
 
         :::image type="content" source="../../assets/images/tdp/app-validation.png" alt-text="Screenshot shows you the App validation acknowledgment of your app package." lightbox="../../assets/images/tdp/app-validation-start.png":::
 
@@ -163,18 +163,22 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
         :::image type="content" source="../../assets/images/tdp/app-validation-in-progress.png" alt-text="Screenshot shows you the App validation in progress.":::
 
-        After you select **Start validation**, your app validation status becomes **Created**, then it moves to **In progress** status once the app validation is initiated. When the app validation completes, the status updates to **Completed**.
+        The app validation status is updated as follows:
+
+          1. **Created**: After you select **Start validation**.
+          1. **In progress**: After the app validation is initiated.
+          1. **Completed**: After the app validation is completed.
 
         You can select **Refresh status** to retrieve latest validation status when the validation in **In progress** status.
 
         :::image type="content" source="../../assets/images/tdp/app-validation-refresh.png" alt-text="Screenshot shows the app validation status.":::
 
-    1. After validation, it shows the list of test cases your app has passed or failed. Here is the list of app validation test result status:<br>
+    1. After validation, it shows a list of test cases your app has passed or failed. The following are the app validation test result status available:<br>
 
-        1. **Success** - Your app validation test is successful.
-        1. **Warning** - You can review and resolve the warning.
-        1. **Error** - You must check and fix the errors; else the app can't be published.
-        1. **Skipped** - Unable to execute the test case for now. You must submit the new validation request again.
+        1. **Success** - App validation is successful.
+        1. **Warning** - We recommend you to review and resolve the suggested warning.
+        1. **Error** - Fix the errors for the app to be published.
+        1. **Skipped** - The tool is unable to execute the test case. Submit a new validation request.
 
         :::image type="content" source="../../assets/images/tdp/app-validation-result.png" alt-text="Screenshot shows you the app validation tool result.":::
 
