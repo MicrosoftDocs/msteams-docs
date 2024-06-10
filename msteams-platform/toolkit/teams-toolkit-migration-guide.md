@@ -1,28 +1,40 @@
 ---
-title: Teams Toolkit Migration Guide
+title: Migrate to New Project Structure
 author: v-preethah
-description: In this module, learn how to migrate from Teams Toolkit 17.9 to 17.10.
+description: This guide provides the steps to migrate from scaffolded template to the new project structure in Microsoft Teams using Teams Toolkit.
 ms.author: v-preethah
 ms.localizationpriority: medium
 ms.topic: overview
 ms.date: 06/05/2024
 ---
 
-# Teams Toolkit 17.9 to 17.10 migration guide
+# Migrate to Microsoft Teams new project structure
 
-This doc is to tell how to migrate to the new project type from the old, scaffolded template.
+This guide details the process of migrating from the traditional, scaffolded template to the new project structure in Microsoft Teams. The transition is essential to leverage the latest features and improve project maintainability. The new project structure introduces a more streamlined and efficient way of managing your Teams applications.
 
-> [!IMPORTANT]
-> The new project type can just run after Visual Studio 17.10 Preview 3, also needs users to enable multiple startups feature.
+Note that this structure requires Visual Studio 17.10 Preview 3 or later. It necessitates the activation of the multiple startups feature, accessible through the Preview Feature options in Visual Studio.
 
-Check **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Launch Profiles**.
+Learn in detail to create a new project folder, move configuration files, adjust launch settings, and more.
 
-1. Create a new folder under the solution folder. The new folder name can be TeamsApp.
+## Prerequisites
 
-    > [!NOTE]
-    > The new folder can be any name, but please pay any attention that it must be meaningful. We suggest to use TeamsApp.
+The new structure requires Visual Studio 17.10 Preview 3 or later and also necessitates the activation of the multiple startups feature.
 
-1. Create a file under the new folder and name it as TeamsApp.ttkproj.
+Before starting the migration process, ensure that you have the following:
+
+* Visual Studio 17.10 Preview 3 or later.
+* The multiple startups feature enabled. This can be done by navigating to **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Launch Profiles**.
+
+## Migration process
+
+Perform the following steps to migrate to the new project structure:
+
+1. Create a new folder under the solution folder. The new folder name can be **TeamsApp**.
+
+  > [!NOTE]
+  > You can provide any name to the new folder but must be meaningful. We recommend that you use the name **TeamsApp**.
+
+1. Create a file under the new folder and name it as **TeamsApp.ttkproj**. Add the following content to the file:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -34,126 +46,160 @@ Check **Tools** > **Options** > **Preview Feature** > **Enable Multi-Project Lau
     ```
 
     > [!NOTE]
-    > The name of project file must be the same of the new folder, but differences won't block the Visual Studio system.
+    > The project file name must match the new folder name; however, discrepancies don't block the Visual Studio system.
 
-1. Move the configuration folders and the files to the new project. They're
+1. Move the following configuration folders and files to the new project.
 
-    * Folders: ["appPackage", "env", "infra"]
-    * Files: ["teamsapp.yml", "teamsapp.local.yml", "aad.manifest.json"]
+    * Folders: `appPackage`, `env`, `infra`
+    * Files: `teamsapp.yml`, `teamsapp.local.yml`, `aad.manifest.json`
 
     > [!NOTE]
-    > These folders and files are auto included, so you needn't manually add them to the .ttkproj.
+    > These folders and files are automatically included and you needn't add them to the `.ttkproj` manually.
 
-1. According to the earlier launchSettings.json, move the launching browser or test tool capability to launchSettings.json of the new project.
+1. According to the earlier `launchSettings.json`, move the launching browser or test tool capability to `launchSettings.json` of the new project.
 
-    * Create a launchSettings.json under the new project. Copy the C# launchSettings.json to the new created one.
-    * Delete the dotnetRunMessages, launchBrowser, applicationUrl, environmentVariables, and hotReloadProfile fields of the new launchSettings.json, because they aren't used in TeamsApp.
-    * Remove the launchBrowser, launchTestTool, and launchUrl in the old LaunchSettings.json file.
-    * Remove the duplicated profiles in the earlier launchSettings.json.
+    * Create a `launchSettings.json` under the new project.
+    * Copy the C# `launchSettings.json` to the new created one.
+    * Delete the `dotnetRunMessages`, `launchBrowser`, `applicationUrl`, `environmentVariables`, and `hotReloadProfile` fields of the new `launchSettings.json`, because they aren't used in TeamsApp.
+    * Remove the `launchBrowser`, `launchTestTool`, and `launchUrl` in the old `launchSettings.json` file.
+    * Remove the duplicated profiles in the earlier `launchSettings.json`.
 
     > [!NOTE]
     >
-    > * Notice that the LaunchSettings.json under the C# (old) project just needs to start itself.
-    > * The LaunchSettings.json under the TeamsApp is to start the browser or the test tool app which communicates with the C# project.
-    > *Names of profiles will be used in the following step.
+    > * The `launchSettings.json` under the C# of the old project must start by itself.
+    > * The `launchSettings.json` under the TeamsApp is configured to launch the browser or the test tool app that communicates with the C# project.
+    > * The profile names specified is used in the subsequent steps.
 
-1. Use Visual Studio (version greater than 17.10 Preview 3) to open the solution. Add the new project to the solution, maybe TeamsApp/TeamsApp.ttkproj.
+1. Open the solution using Visual Studio (version 17.10 Preview 3 or later). Add the new project to the solution, maybe `TeamsApp/TeamsApp.ttkproj`.
 
 1. Remove `<ProjectCapability Include="TeamsFx"/>` in the old C# project.
 
-1. Create a {{solutionName}}.slnLaunch.user file at the same level of the solution file.
+1. Create a `{{solutionName}}.slnLaunch.user` file at the same level as the solution file and add the content to the `{{solutionName}}.slnLaunch.user` file, according to the two files of `launchSettings.json`.
 
-1. Add the content to the {{solutionName}}.slnLaunch.user file, according to the two files of LaunchSettings.json.
-
-```json
-[
-  {
-    "Name": "Microsoft Teams (browser)",
-    "Projects": [
+    ```json
+    [
       {
-        "Path": "TeamsApp\\TeamsApp.ttkproj",
-        "Action": "StartWithoutDebugging",
-        "DebugTarget": "Microsoft Teams (browser)"
-      },
-      {
-        "Path": "MyTeamsApp8\\MyTeamsApp8.csproj",
-        "Action": "Start",
-        "DebugTarget": "Start Project"
+        "Name": "Microsoft Teams (browser)",
+        "Projects": [
+          {
+            "Path": "TeamsApp\\TeamsApp.ttkproj",
+            "Action": "StartWithoutDebugging",
+            "DebugTarget": "Microsoft Teams (browser)"
+          },
+          {
+            "Path": "MyTeamsApp8\\MyTeamsApp8.csproj",
+            "Action": "Start",
+            "DebugTarget": "Start Project"
+          }
+        ]
       }
     ]
-  }
-]
-```
+    ```
 
-> [!NOTE]
-> This {{solutionName}}.slnLaunch.user file defines what projects will start and how to start them. You can define your groups of projects you want to start together.
-Notice that the DebugTarget must be the same name of the profiles in the LaunchSettings.json.
+    > [!NOTE]
+    >
+    > The `{{solutionName}}.slnLaunch.user` file specifies which projects to launch and their respective startup configurations. You can define groups of projects that you want to start simultaneously. Ensure that the `DebugTarget` corresponds exactly to the profile names in the `launchSettings.json`.
 
-Alternatively, use UI to set up the multiple startup profiles.
+    Alternatively, you can configure multiple startup profiles through the UI to set up the multiple startup profiles.
 
-1. Right-click the solution -> Configure Startup Projects...
-1. Select Multiple start projects -> Add more profiles that start up TeamsApp and the C# project together. You can rename them to what you like.
-1. Select OK. You can find that the {{solutionName}}.slnLaunch.user has auto saved under the solution folder.
+    1. Right-click the solution and select **Configure Startup Projects...**.
+    1. Select **Multiple start projects** and add more profiles that starts the TeamsApp and the C# project simultaneously. You can rename the profiles as required.
+    1. Select **OK**. The `{{solutionName}}.slnLaunch.user` file is automatically saved in the solution folder.
 
-1. Modify the teamsapp.local.yml and teamsapp.yml after moving them to the new folder.
-1. Every action that changes the C# project needs to be updated because the path has changed. Almost focus on the following actions:
+1. Modify the `teamsapp.local.yml` and `teamsapp.yml` files after moving them to the new folder.
+1. Every action that changes the C# project must be updated because the path is updated. Focus on the following actions:
 
-    * uses: file/createOrUpdateJsonFile, it might change the C# appSettings.json file to set some runtime environment, so change to the correct path of target field.
+    * `uses: file/createOrUpdateJsonFile`: This action might change the `appSettings.json` file of the C# project to configure runtime environments. Update the `target` field to the correct path.
         > [!IMPORTANT]
-        > Changing LaunchSettings.json in file/createOrUpdateJsonFile is unnecessary so remove it if you see it in the teamsapp.local.yml.
-    * uses: cli/runDotnetCommand, it runs dotnet command under the C# project to pack the project, so add the correct path to WorkingDirectory field and add the correct csproj path to the command string.
-    * uses: azureAppService/zipDeploy, it deploys the packed file to the remote, so add the correct path to WorkingDirectory field.
+        > You need not modify `launchSettings.json` using `file/createOrUpdateJsonFile`. If present in `teamsapp.local.yml`, remove it.
+    * `uses: cli/runDotnetCommand`: This action executes a dotnet command within the C# project to package it. Adjust the `workingDirectory` field to the new path and update the command string with the correct `.csproj` path.
+    * `uses: azureAppService/zipDeploy`: This action deploys the packaged file remotely. Update the `workingDirectory` field to the correct path.
 
-```yml
-# For example:
-# Generate runtime appsettings to JSON file
-- uses: file/createOrUpdateJsonFile
-  with:
-    target: ../MyTeamsApp8/appsettings.Development.json
-    content:
-      TeamsFx:
-        Authentication:
-        ClientId: ${{AAD_APP_CLIENT_ID}}
-        ClientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
-        InitiateLoginEndpoint: ${{TAB_ENDPOINT}}/auth-start.html
-        OAuthAuthority: ${{AAD_APP_OAUTH_AUTHORITY}}
+    Here’s an example of how to modify the YAML configurations:
 
+    ```yml
+    # For example:
+    # Generate runtime appsettings to JSON file
+    - uses: file/createOrUpdateJsonFile
+      with:
+        target: ../MyTeamsApp8/appsettings.Development.json
+        content:
+          TeamsFx:
+            Authentication:
+            ClientId: ${{AAD_APP_CLIENT_ID}}
+            ClientSecret: ${{SECRET_AAD_APP_CLIENT_SECRET}}
+            InitiateLoginEndpoint: ${{TAB_ENDPOINT}}/auth-start.html
+            OAuthAuthority: ${{AAD_APP_OAUTH_AUTHORITY}}
+    
+    
+    # Triggered when 'teamsapp deploy' is executed
+    deploy:
+    - uses: cli/runDotnetCommand
+      with:
+        args: publish --configuration Release MyTeamsApp8.csproj
+        workingDirectory: ../MyTeamsApp8
+    
+    # Deploy your application to Azure App Service using the zip deploy feature.
+    # For additional details, refer to https://aka.ms/zip-deploy-to-app-services.
+    - uses: azureAppService/zipDeploy
+      with:
+        # Deploy base folder
+        artifactFolder: bin/Release/net8.0/publish
+        # The resource id of the cloud resource to be deployed to.
+        # This key will be generated by arm/deploy action automatically.
+        # You can replace it with your existing Azure Resource id
+        # or add it to your environment variable file.
+        resourceId: ${{TAB_AZURE_APP_SERVICE_RESOURCE_ID}}
+        workingDirectory: ../MyTeamsApp8
+    ```
 
-# Triggered when 'teamsapp deploy' is executed
-deploy:
-- uses: cli/runDotnetCommand
-  with:
-    args: publish --configuration Release MyTeamsApp8.csproj
-    workingDirectory: ../MyTeamsApp8
+    > [!NOTE]
+    > This step is easy to make mistakes, so you can provision and deploy on the new project to test it.
 
-# Deploy your application to Azure App Service using the zip deploy feature.
-# For additional details, refer to https://aka.ms/zip-deploy-to-app-services.
-- uses: azureAppService/zipDeploy
-  with:
-    # Deploy base folder
-    artifactFolder: bin/Release/net8.0/publish
-    # The resource id of the cloud resource to be deployed to.
-    # This key will be generated by arm/deploy action automatically.
-    # You can replace it with your existing Azure Resource id
-    # or add it to your environment variable file.
-    resourceId: ${{TAB_AZURE_APP_SERVICE_RESOURCE_ID}}
-    workingDirectory: ../MyTeamsApp8
+1. Close the solution and ensure all changes are saved.
+
+The following representation shows the process of migrating to the new project type from the old, scaffolded template. The process involves several steps, including creating a new folder and file, moving configuration folders and files, modifying certain files, and testing the new project.
+
+```mermaid
+sequenceDiagram
+    participant TeamsApp as Teams App
+    participant VS as Visual Studio
+    participant CSharp as C# Project
+    TeamsApp->>VS: Check Tools > Options > Preview Feature > Enable Multi-Project Launch Profiles
+    TeamsApp->>VS: Create new folder (TeamsApp) under solution folder
+    TeamsApp->>VS: Create TeamsApp.ttkproj file under new folder
+    TeamsApp->>VS: Move configuration folders and files to new project
+    TeamsApp->>VS: Move launching browser or test tool capability to launchSettings.json of new project
+    TeamsApp->>VS: Remove <ProjectCapability Include="TeamsFx"/> in old C# project
+    TeamsApp->>VS: Create {{solutionName}}.slnLaunch.user file at the same level of the solution file
+    TeamsApp->>VS: Modify teamsapp.local.yml and teamsapp.yml after moving them to the new folder
+    TeamsApp->>VS: Close the solution and save all changes
+    VS->>CSharp: Open solution with Visual Studio (version > 17.10 Preview 3)
+    VS->>CSharp: Add new project to the solution (TeamsApp/TeamsApp.ttkproj)
+    VS->>CSharp: Set up multiple startup profiles (TeamsApp and C# project)
+    VS->>CSharp: Update actions that change the C# project (path has changed)
+    CSharp->>VS: Provision and deploy on the new project to test it
 ```
 
-> [!NOTE]
-> This step is easy to make mistakes, so you can provision and deploy on the new project to test it.
+### Folder Structure
 
-1. Close the solution and save all changes.
+# [Old structure](#tab/old)
 
-## Folder Structure
+:::image type="content" source="../assets/images/teams-toolkit-overview/old-structure-migration.png" alt-text="Screenshot shows the old structure.":::
+
+# [New structure](#tab/new)
+
+:::image type="content" source="../assets/images/teams-toolkit-overview/new-structure-migration.png" alt-text="Screenshot shows the new structure.":::
 
 Old and New image
 
-## New Project Type File
+### Project Type File
 
-Old and New image
+# [Old project type file](#tab/old)
 
-New
+None
+
+# [New project type file](#tab/new)
 
 This file extension is **.ttkproj**.
 
@@ -169,7 +215,9 @@ This file extension is **.ttkproj**.
 </Project>
 ```
 
-## LaunchSettings.json
+### LaunchSettings.json
+
+# [Old launchSettings.json](#tab/old)
 
 ```json
 {
@@ -224,9 +272,9 @@ This file extension is **.ttkproj**.
 }
 ```
 
-New
+# [New launchSettings.json](#tab/new)
 
-One in C# code project.
+The following code is the sample of the C# project:
 
 ```json
 {
@@ -244,7 +292,7 @@ One in C# code project.
 }
 ```
 
-Another in TeamsApp project
+The following code is the sample of TeamsApp project:
 
 ```json
 {
@@ -268,11 +316,11 @@ Another in TeamsApp project
 }
 ```
 
-## Teams app YAML File
+### Teams app YAML File
 
-Old
+# [Old structure](#tab/old)
 
-teamapp.local.yml
+The following code is the sample of teamapp.local.yml:
 
 ```yml
 # Generate runtime appsettings to JSON file
@@ -324,7 +372,7 @@ teamapp.local.yml
             hotReloadProfile: "aspnetcore"
 ```
 
-teamapp.yml
+The following code is the sample of teamapp.yml:
 
 ```yml
 # Triggered when 'teamsapp deploy' is executed
@@ -345,9 +393,9 @@ deploy:
       resourceId: ${{TAB_AZURE_APP_SERVICE_RESOURCE_ID}}
 ```
 
-New
+# [New structure](#tab/new)
 
-teamapp.local.yml
+The following code is the sample of teamapp.local.yml:
 
 ```yml
 # Generate runtime appsettings to JSON file
@@ -364,7 +412,7 @@ teamapp.local.yml
 
 ```
 
-teamapp.yml
+The following code is the sample of teamapp.yml:
 
 ```yml
 # Triggered when 'teamsapp deploy' is executed
@@ -387,13 +435,13 @@ deploy:
       workingDirectory: ../MyTeamsApp8
 ```
 
-## Solution Launch User File
+### Solution launch user file
 
-Old
+# [Old structure](#tab/old)
 
 None
 
-New
+# [New structure](#tab/new)
 
 This file must be stored at the same level of the solution folder.
 
