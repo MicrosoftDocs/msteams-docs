@@ -983,11 +983,17 @@ Before you start, you need to have a Microsoft Teams app with API Message Extens
 
 ### Configure OAuth in Teams Developer Portal
 
+You can register OAuth client configurations for your API-based message extensions and Copilot plugins in Teams Developer Portal.
+
+To register OAuth for your API-based message extensions, follow these steps:
+
 1. Go to Teams Developer Portal.
+
 1. Select **OAuth client registration**.
+
 1. Select **Register Client**.
 
-1. In the **OAuth client registration** page, under **Register an API key**, update the following:
+1. In the **OAuth client registration** page, under **App settings**, update the following:
 
    1. Registration name:
    1. Base URL:
@@ -1013,20 +1019,25 @@ Before you start, you need to have a Microsoft Teams app with API Message Extens
       |**Any Teams app**     | When you develop your app in your tenant and test the app as a custom app or custom app built for your org.        | The API key can be used with any Teams app. It's useful when custom app or custom app built for your org have IDs generated after app upload. |
       |**Existing Teams app ID**     | After you've completed testing of your app within your tenant as a custom app or custom app built for your org. Update your API key registration and select **Existing Teams app** and input your app’s manifest ID.         |The **Existing Teams app** option binds the API secret registration to your specific Teams app. |
 
+1. Under **OAuth settings**, update the following:
+
    1. **Client ID**: The client ID is a unique identifier assigned to your application by the third-party authorization server.
-   1. **Client Secret**: The client secret is a confidential string known by the third-party authorization server.
 
-   1. **Authorization URL**: The authorization URL is where the user is redirected to sign-in and grant or deny access to your app. For example, `https://login.example.com/authorize` .
+   1. **Client secret**: The client secret is a confidential string known by the third-party authorization server.
 
-   1. **Token URL**: The token URL is where your app exchanges the authorization code for an access token. For example, `https://authorization-server.com/oauth/token`.
+   1. **Authorization endpoint**: The authorization URL is where the user is redirected to sign-in and grant or deny access to your app. For example, `https://login.example.com/authorize` .
 
-   1. **Refresh URL**: The refresh URL allows your app to obtain a new access token without user interaction. For example, `https://authorization-server.com/oauth/refresh`.
+   1. **Token endpoint**: The token URL is where your app exchanges the authorization code for an access token. For example, `https://authorization-server.com/oauth/token`.
+
+   1. **Refresh endpoint**: The refresh URL allows your app to obtain a new access token without user interaction. For example, `https://authorization-server.com/oauth/refresh`.
 
    1. **Scope**: The scope defines the permissions your app requests from the user. *[Optional]*
 
+1. Select **Save**.
+
 ### Update the Manifest Schema
 
-Update your Teams app manifest schema to include the new auth type: “oAuth” and the "oAuthConfigurationId" you received from the dev portal.
+Update your Teams app manifest schema to include the new auth type: `oAuth` and the `oAuthConfigurationId` you received from the dev portal.
 
 ```json
 {
