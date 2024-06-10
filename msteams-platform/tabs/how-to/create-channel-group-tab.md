@@ -1084,7 +1084,7 @@ The application must refer the [TeamsJS library](/javascript/api/overview/msteam
 
 An example of a configuration page is shown in the following image:
 
-:::image type="content" source="../../../assets/images/tab-images/configuration-page.png" alt-text="Screenshot shows the configuration page." lightbox="../../../assets/images/tab-images/configuration-page.png":::
+:::image type="content" source="~/assets/images/tab-images/configuration-page.png" alt-text="Screenshot shows the configuration page." lightbox="~/assets/images/tab-images/configuration-page.png":::
 
 The following code is an example of corresponding code for the configuration page:
 
