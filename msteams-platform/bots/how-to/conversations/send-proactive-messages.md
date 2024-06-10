@@ -171,6 +171,12 @@ To send notifications using proactive messaging, ensure your users have a clear 
 
 To send messages to a large group of users, for example to your organization, proactively install your app using Graph.
 
+To update or delete a proactive message sent by a notification only bot:
+
+1. Keep track of the sent messages by storing their message IDs or conversation references when sending the proactive message.
+
+1. Use `UpdateActivityAsync` or `DeleteActivityAsync` methods to update or delete the original message.
+
 ### Scheduled messages
 
 When using proactive messaging to send scheduled messages to users, verify that your time zone is updated to their time zone. This ensures that the messages are delivered to the users at the relevant time. Schedule messages generally include:
