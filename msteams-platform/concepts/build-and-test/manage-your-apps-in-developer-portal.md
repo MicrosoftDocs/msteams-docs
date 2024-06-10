@@ -142,7 +142,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
 * **App validation**: Evaluate your app package based on the test cases that Microsoft uses to review your app. The **App validation** tool identifies any errors or warnings in your app package and provides guidelines for resolution.
 
-    If your app failed any test cases, you can review the guidelines and make necessary updates to your app package based on the Microsoft test case results. You can also download your app package and validation report.
+    If your app fails any test cases, you can review the guidelines and make necessary updates to your app package based on the Microsoft test case results. You can also download your app package and validation report.
 
     <br>
     <details>
@@ -150,7 +150,7 @@ In the **Publish** section, you can publish your app to your org or to the Teams
 
     To ensure that your app functions as expected on Teams, use the **App validation** tool to check your app package against Microsoft's test cases:
 
-    1. In the Developer Portal, select the **Apps** from the left pane and select the app that you're working.
+    1. In Teams Developer Portal, select the **Apps** from the left pane and select your app.
     1. Go to **Publish** > **App validation** > **Get started**.
 
         :::image type="content" source="../../assets/images/tdp/app-validation-home.png" alt-text="Screenshot shows you the App validation in Teams developer portal." lightbox="../../assets/images/tdp/app-validation-get-started.png":::
