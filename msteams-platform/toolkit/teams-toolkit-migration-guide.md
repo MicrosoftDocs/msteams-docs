@@ -31,8 +31,8 @@ Perform the following steps to migrate to the new project structure:
 
 1. Create a new folder under the solution folder. The new folder name can be **TeamsApp**.
 
-  > [!NOTE]
-  > You can provide any name to the new folder but must be meaningful. We recommend that you use the name **TeamsApp**.
+      > [!NOTE]
+      > You can provide any name to the new folder but must be meaningful. We recommend that you use the name **TeamsApp**.
 
 1. Create a file under the new folder and name it as **TeamsApp.ttkproj**. Add the following content to the file:
 
@@ -102,9 +102,9 @@ Perform the following steps to migrate to the new project structure:
 
     Alternatively, you can configure multiple startup profiles through the UI to set up the multiple startup profiles.
 
-    1. Right-click the solution and select **Configure Startup Projects...**.
-    1. Select **Multiple start projects** and add more profiles that starts the TeamsApp and the C# project simultaneously. You can rename the profiles as required.
-    1. Select **OK**. The `{{solutionName}}.slnLaunch.user` file is automatically saved in the solution folder.
+      1. Right-click the solution and select **Configure Startup Projects...**.
+      1. Select **Multiple start projects** and add more profiles that starts the TeamsApp and the C# project simultaneously. You can rename the profiles as required.
+      1. Select **OK**. The `{{solutionName}}.slnLaunch.user` file is automatically saved in the solution folder.
 
 1. Modify the `teamsapp.local.yml` and `teamsapp.yml` files after moving them to the new folder.
 1. Every action that changes the C# project must be updated because the path is updated. Focus on the following actions:
@@ -158,29 +158,6 @@ Perform the following steps to migrate to the new project structure:
 
 1. Close the solution and ensure all changes are saved.
 
-The following representation shows the process of migrating to the new project type from the old, scaffolded template. The process involves several steps, including creating a new folder and file, moving configuration folders and files, modifying certain files, and testing the new project.
-
-```mermaid
-sequenceDiagram
-    participant TeamsApp as Teams App
-    participant VS as Visual Studio
-    participant CSharp as C# Project
-    TeamsApp->>VS: Check Tools > Options > Preview Feature > Enable Multi-Project Launch Profiles
-    TeamsApp->>VS: Create new folder (TeamsApp) under solution folder
-    TeamsApp->>VS: Create TeamsApp.ttkproj file under new folder
-    TeamsApp->>VS: Move configuration folders and files to new project
-    TeamsApp->>VS: Move launching browser or test tool capability to launchSettings.json of new project
-    TeamsApp->>VS: Remove <ProjectCapability Include="TeamsFx"/> in old C# project
-    TeamsApp->>VS: Create {{solutionName}}.slnLaunch.user file at the same level of the solution file
-    TeamsApp->>VS: Modify teamsapp.local.yml and teamsapp.yml after moving them to the new folder
-    TeamsApp->>VS: Close the solution and save all changes
-    VS->>CSharp: Open solution with Visual Studio (version > 17.10 Preview 3)
-    VS->>CSharp: Add new project to the solution (TeamsApp/TeamsApp.ttkproj)
-    VS->>CSharp: Set up multiple startup profiles (TeamsApp and C# project)
-    VS->>CSharp: Update actions that change the C# project (path has changed)
-    CSharp->>VS: Provision and deploy on the new project to test it
-```
-
 ### Folder Structure
 
 # [Old structure](#tab/old)
@@ -191,7 +168,7 @@ sequenceDiagram
 
 :::image type="content" source="../assets/images/teams-toolkit-overview/new-structure-migration.png" alt-text="Screenshot shows the new structure.":::
 
-Old and New image
+---
 
 ### Project Type File
 
@@ -214,6 +191,8 @@ This file extension is **.ttkproj**.
   </ItemGroup>
 </Project>
 ```
+
+---
 
 ### LaunchSettings.json
 
@@ -315,6 +294,8 @@ The following code is the sample of TeamsApp project:
   }
 }
 ```
+
+---
 
 ### Teams app YAML File
 
@@ -435,6 +416,8 @@ deploy:
       workingDirectory: ../MyTeamsApp8
 ```
 
+---
+
 ### Solution launch user file
 
 # [Old structure](#tab/old)
@@ -494,3 +477,5 @@ This file must be stored at the same level of the solution folder.
   }
 ]
 ```
+
+---
