@@ -4,7 +4,7 @@ description: Learn about the app icons for Microsoft Teams Store and app bar
 author: heath-hamilton
 ms.localizationpriority: medium
 ms.author: lajanuar
-ms.topic: App icon
+ms.topic: reference
 ms.date: 05/23/2023
 ---
 # Teams app icon for Teams Store and app bar

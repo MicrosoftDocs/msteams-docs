@@ -24,7 +24,7 @@ The following is the sample app manifest schema:
 
 ```json
 {
-    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.16/MicrosoftTeams.schema.json",
+    "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
     "manifestVersion": "1.17",
     "version": "1.0.0",
     "id": "%MICROSOFT-APP-ID%",
@@ -397,8 +397,13 @@ The name of your app experience, displayed to users in the Teams experience. For
 
 |Name| Maximum size | Required | Description|
 |---|---|---|---|
-|`short`|30 characters|✔️|The short display name for the app.|
-|`full`|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters.|
+|`short`|30 characters|✔️|The short display name for the app. Use `short` property where the space is limited, such as the app header.|
+|`full`|100 characters|✔️|The full name of the app, used if the full app name exceeds 30 characters. Use `full` property where there is more space, such as the app catalog or the app details page.|
+
+> [!NOTE]
+>
+> * In the app manifest v1.17 or later the `full` property is required and for app manifest v1.16 or earlier it isn't required.
+> * The `short` property is used across all UI surfaces.
 
 ## description
 
@@ -536,6 +541,9 @@ A list of commands that your bot can recommend to users. The object is an array 
 |`items.scopes`|Array of enums|3|✔️|Specifies the scope for which the command list is valid. Options are `team`, `personal`, and `groupChat`.|
 |`items.commands`|Array of objects|10|✔️|An array of commands the bot supports:<br>`title`: the bot command name (string, 32)<br>`description`: a simple description or example of the command syntax and its argument (string, 128).|
 
+> [!NOTE]
+> Teams mobile client doesn't support the bot app when there is no value in the `commandLists` property.
+
 ### bots.commandLists.commands
 
 |Name| Type| Maximum size | Required | Description|
@@ -603,7 +611,7 @@ Each command item is an object with the following structure:
 |`context`|Array of Strings|3 characters||Defines where the message extension can be invoked from. Any combination of `compose`, `commandBox`, `message`. <br>Default values: `compose, commandBox`|
 |`title`|String|32 characters|✔️|The user-friendly command name.|
 |`description`|String|128 characters||The description that appears to users to indicate the purpose of this command.|
-|`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by Copilot using large language model (LLM).|
+|`semanticDescription`|String|5000 characters||Semantic description of the command for consumption by Copilot using Large Language Models (LLMs).|
 |`initialRun`|Boolean|||A Boolean value indicates whether the command runs initially with no parameters. Default is **false**.|
 |`fetchTask`|Boolean|||A Boolean value that indicates if it must fetch the dialog (referred as task module in TeamsJS v1.x) dynamically. Default is **false**.|
 |`taskInfo`|Object|||Specify the dialog to pre-load when using a message extension command.|
@@ -615,7 +623,7 @@ Each command item is an object with the following structure:
 |`parameter.name`|String|64 characters|✔️|The name of the parameter as it appears in the client. The parameter name is included in the user request.|
 |`parameter.title`|String|32 characters|✔️|User-friendly title for the parameter.|
 |`parameter.description`|String|128 characters||User-friendly string that describes this parameter’s purpose.|
-|`parameter.semanticDescription`|String|2000 characters||Semantic description of the parameter for consumption by Copilot using large language model (LLM).|
+|`parameter.semanticDescription`|String|2000 characters||Semantic description of the parameter for consumption by Copilot using Large Language Models (LLMs).|
 |`parameter.value`|String|512 characters||Initial value for the parameter. Currently the value isn't supported|
 |`parameter.inputType`|String|||Defines the type of control displayed on a dialog for`fetchTask: false` . Input value can only be one of `text, textarea, number, date, time, toggle, choiceset` .|
 |`parameter.choices`|Array of objects|10 items||The choice options for the`choiceset`. Use only when`parameter.inputType` is `choiceset`.|
