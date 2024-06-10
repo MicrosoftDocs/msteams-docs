@@ -107,6 +107,7 @@
       href: tabs/design/tabs.md
     - name: Bots
       href: bots/design/bots.md
+      displayName: add Teams bot, design your bot, manage bot, chat with Teams bot, bot authentication
     - name: Message extensions
       href: messaging-extensions/design/messaging-extension-design.md
       displayName: commands      
@@ -453,7 +454,7 @@
       displayName: conversation bot, activity, Message reaction events, event handling for install and uninstall events, customize bot conversation, bot conversation events, update bot conversation events
     - name: Proactive messages
       href: bots/how-to/conversations/send-proactive-messages.md
-      displayName: conversationId 
+      displayName: conversationId, send message, bot framework
     - name: Format your bot messages
       href: bots/how-to/format-your-bot-messages.md
       displayName: Interactive elements, UTF-16, Base64, hyperlink
@@ -669,7 +670,7 @@
     displayName: HMAC security token, message in channel, Teams message
   - name: Create Incoming Webhooks
     href: webhooks-and-connectors/how-to/add-incoming-webhook.md
-    displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message
+    displayName: share content in Microsoft Teams channels, external applications, message in channel, Teams message, incoming webhook
   - name: Create connectors for Microsoft 365 Groups
     href: webhooks-and-connectors/how-to/connectors-creating.md
   - name: Create and send messages
