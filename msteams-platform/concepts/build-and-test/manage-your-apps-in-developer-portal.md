@@ -166,8 +166,8 @@ In the **Publish** section, you can publish your app to your org or to the Teams
         The app validation status is updated as follows:
 
           1. **Created**: After you select **Start validation**.
-          1. **In progress**: After the app validation is initiated.
-          1. **Completed**: After the app validation is completed.
+          1. **In progress**: App validation is initiated.
+          1. **Completed**: App validation is completed.
 
         You can select **Refresh status** to retrieve latest validation status when the validation in **In progress** status.
 
