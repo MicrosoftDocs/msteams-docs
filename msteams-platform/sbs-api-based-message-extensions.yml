@@ -133,7 +133,7 @@ items:
               required: true
               schema:
                 type: string
-              description: Used to search for AI tools by their category based on the keywords. For example, "tool to create music" gives tools that can create music.
+              description: Used to search for AI tools by their category based on the keywords. For example, "tool to create music" will give tools that can create music.
           responses:
             "200":
               description: OK
