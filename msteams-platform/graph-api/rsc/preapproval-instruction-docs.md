@@ -16,15 +16,15 @@ To enable the preapproval of RSC permission policy for an app, admins must ensur
 
 Admins can create a detailed preapproval policy, based on the app ID, permissions, and the sensitivity of the accessed data. Preapproval of RSC permissions are designed for admins seeking to create advanced custom policies for their organization. 
 
-By default, the preapproval policies are managed by Microsoft, and we recommend that organizations must maintain `ManagedByMicrosoft` state. This state allows Microsoft's security team to deliver the best security for your organization.
+By default, the preapproval policies are managed by Microsoft, and we recommend that organizations maintain `ManagedByMicrosoft` state. This state allows Microsoft's security team to deliver the best security for your organization.
 
-   > [!NOTE]
-      > Preapproval of RSC permissions is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
-      > Preapproval of RSC permissions and its operating procedures are subject to change.
+> [!NOTE]
+> Preapproval of RSC permissions is available only in [public developer preview](../../resources/dev-preview/developer-preview-intro.md).
+> Preapproval of RSC permissions and its operating procedures are subject to change.
 
 ## Set up PowerShell to manage preapproval of RSC permissions
 
-preapproval of RSC permissions is managed through Microsoft Graph PowerShell. You can learn more about managing Microsoft Teams with PowerShell [here](/powershell/microsoftgraph/get-started).
+Preapproval of RSC permissions is managed through Microsoft Graph PowerShell. You can learn more about managing Microsoft Teams with PowerShell [here](/powershell/microsoftgraph/get-started).
 
 Before you can create and manage preapprovals, use `Connect-MgGraph` cmdlet to connect PowerShell to your tenant using Microsoft Graph. To create, manage, and delete RSC preapproval policies, add the following permissions:
 
@@ -64,8 +64,8 @@ The following are different states that allow and disallow RSC permission in you
 You can enable RSC for all unblocked apps in your organization using PowerShell cmdlets by changing your RSC permission setting state to `ApprovedForAllApps`. You can set the state for both chat and team RSC settings in your organization as follows:
 
 ```powershell
-`Set-MgBetaTeamRscConfiguration -State ApprovedForAllApps`
-`Set-MgBetaChatRscConfiguration -State ApprovedForAllApps`
+Set-MgBetaTeamRscConfiguration -State ApprovedForAllApps
+Set-MgBetaChatRscConfiguration -State ApprovedForAllApps
 ```
 
 ## Enable RSC for a specific set of apps only
@@ -141,8 +141,8 @@ New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 After creating your preapproval policies, change your organization's RSC settings to use the new policy. This setting is more restrictive and might cause some apps not to function for your end users. To make this change, change the state of your organization's RSC settings. The following example shows the required PowerShell cmdlets:
 
 ```powershell
-`Set-MgBetaTeamRscConfiguration -State ApprovedForPreApprovedAppsOnly`
-`Set-MgBetaChatRscConfiguration -State ApprovedForPreApprovedAppsOnly`
+Set-MgBetaTeamRscConfiguration -State ApprovedForPreApprovedAppsOnly
+Set-MgBetaChatRscConfiguration -State ApprovedForPreApprovedAppsOnly
 ```
 
 ## Manage the existing preapproval policies
@@ -173,7 +173,7 @@ Update-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
 
 
 ```powershell
-Update-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group', 'TeamsAppInstallation.Read.Group) -TeamLevelSensitivityLabelCondition AnySensitivityLabel
+Update-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group', 'TeamsAppInstallation.Read.Group') -TeamLevelSensitivityLabelCondition AnySensitivityLabel
 ```
 
 If you want to change your preapproval from a defined sensitivity label to all sensitivity labels, you must reset the value of the `SpecificSensitivityLabel` argument in your preapproval. You can do so by setting the `AnySensitivityLabel` argument to null as follows:
@@ -192,7 +192,7 @@ If you want to stop preapproving an existing app’s RSC permission, you can del
 
 You can delete the preapproval policy associated with an app by using the following PowerShell cmdlet:
 
-`remove-MgBetaTeamAppPreapproval`
+`Remove-MgBetaTeamAppPreapproval`
 
 ```powershell
 Remove-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e
