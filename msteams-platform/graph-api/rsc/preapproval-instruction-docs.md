@@ -52,8 +52,8 @@ The following are different states that allow and disallow RSC permission in you
 |Configuration| Description|
 |---|---|
 |`ManagedByMicrosoft`|A dynamic policy administered by Microsoft. It might be updated based on best security practices. By default, this state enables RSC for all unblocked apps in the organization. |
-|`ApprovedForAllApps`|Users can consent to RSC permissions for any unblocked app in the organization. |
-|`ApprovedForPreApprovedAppsOnly`| Users in the organization can consent to only those unblocked apps that also have an explicit preapproval policy associated with them. This option should be used only if the admin wants to explicitly limit the allowed RSC permissions on a per app basis. |
+|`EnabledForAllApps`|Users can consent to RSC permissions for any unblocked app in the organization. |
+|`EnabledForPreApprovedAppsOnly`| Users in the organization can consent to only those unblocked apps that also have an explicit preapproval policy associated with them. This option should be used only if the admin wants to explicitly limit the allowed RSC permissions on a per app basis. |
 |`DisabledForAllApps`| Users can't consent to the RSC permissions required by any app even if the app is unblocked in the organization. **Warning:** This state won't allow installation for apps that need RSC permissions. |
 
    >[!WARNING]
@@ -61,11 +61,11 @@ The following are different states that allow and disallow RSC permission in you
 
 ## Enable RSC permissions for all unblocked apps in the organization
 
-You can enable RSC for all unblocked apps in your organization using PowerShell cmdlets by changing your RSC permission setting state to `ApprovedForAllApps`. You can set the state for both chat and team RSC settings in your organization as follows:
+You can enable RSC for all unblocked apps in your organization using PowerShell cmdlets by changing your RSC permission setting state to `EnabledForAllApps`. You can set the state for both chat and team RSC settings in your organization as follows:
 
 ```powershell
-Set-MgBetaTeamRscConfiguration -State ApprovedForAllApps
-Set-MgBetaChatRscConfiguration -State ApprovedForAllApps
+Set-MgBetaTeamRscConfiguration -State EnabledForAllApps
+Set-MgBetaChatRscConfiguration -State EnabledForAllApps
 ```
 
 ## Enable RSC for a specific set of apps only
