@@ -231,7 +231,7 @@ Anonymous users can view and interact with Adaptive Cards in the meeting chat. A
 
 * Apps for anonymous users aren't supported in Teams channel meetings.
 
-* Currently, the `getContext` API doesn't return a user ID for the anonymous user though the bot APIs do and it's not possible to correlate the anonymous user between these two APIs.
+* The `getContext` API doesn't return a user ID for the anonymous user though the bot APIs do and it's not possible to correlate the anonymous user between these two APIs.
 
 * Anonymous users see a generic app icon on bot messages and cards, instead of the app's actual icon.
 

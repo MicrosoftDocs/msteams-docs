@@ -888,7 +888,7 @@ followMode.on("stateChanged", (state, local, clientId) => {
   const followingUser = followMode.getUserForClient(clientId);
   switch (state.type) {
     case FollowModeType.local: {
-      // Update app to reflect that the user is not currently following anyone and there is no presenter.
+      // Update app to reflect that the user is not following anyone and there is no presenter.
       infoText.innerHTML = "";
       // Show a "Start presenting" button in your app.
       button.innerHTML = "Start presenting";
@@ -1060,7 +1060,7 @@ followMode.on("stateChanged", (state: IFollowModeState<ICameraPosition>, local: 
   const followingUser = followMode.getUserForClient(clientId);
   switch (state.type) {
     case FollowModeType.local: {
-        // Update app to reflect that the user is not currently following anyone and there is no presenter.
+        // Update app to reflect that the user is not following anyone and there is no presenter.
         infoText.innerHTML = "";
         // Show a "Start presenting" button in your app.
         button.innerHTML = "Start presenting";
@@ -1392,7 +1392,7 @@ const context: app.Context = await app.getContext();
 if (context.page?.frameContext === FrameContexts.meetingStage) {
   // Check if user is initial presenter
   meeting.getAppContentStageSharingState((error, state) => {
-    // isShareInitiator is not currently declared in the typedocs in the SDK, so we cast as any
+    // isShareInitiator is not declared in the typedocs in the SDK, so we cast as any
     const isShareInitiator = (state as any)?.isShareInitiator;
     if (!isShareInitiator) return;
     // The user is the initial presenter, so we "take control"
@@ -1430,7 +1430,7 @@ export const MyLiveFollowMode = () => {
       .then(async (context: app.Context) => {
         if (context.page?.frameContext !== FrameContexts.meetingStage) return;
         meeting.getAppContentStageSharingState((error, state) => {
-          // isShareInitiator is not currently declared in the typedocs in the SDK, so we cast as any
+          // isShareInitiator is not declared in the typedocs in the SDK, so we cast as any
           const isShareInitiator = (state as any)?.isShareInitiator;
           if (!isShareInitiator) return;
           setIsShareInitiator(true);

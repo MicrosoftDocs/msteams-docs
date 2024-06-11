@@ -588,7 +588,7 @@ The `GetParticipant` API must have a bot registration and ID to generate auth to
 >
 > * The user type isn't included in the **getParticipantRole** API.
 > * Do not cache participant roles since the meeting organizer can change the roles any time.
-> * Currently, the `GetParticipant` API is only supported for distributions lists or rosters with less than 350 participants.
+> * The `GetParticipant` API is only supported for distributions lists or rosters with less than 350 participants.
 
 ### Query parameters
 
@@ -959,7 +959,7 @@ POST /v1/meetings/{meetingId}/notification
 
 ## Get meeting details API
 
-The meeting details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Currently, both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
+The meeting details API enables your app to get a meeting's static metadata. The metadata provides data points that don't change dynamically. The API is available through Bot Services. Both private scheduled or recurring meetings and channel scheduled or recurring meetings support API with different RSC permissions respectively.
 
 The meeting details API must have a bot registration and bot ID. It requires Bot SDK to get `TurnContext`. To use the meeting details API, you must obtain different RSC permission based on the scope of any meeting, such as private meeting or channel meeting.
 
