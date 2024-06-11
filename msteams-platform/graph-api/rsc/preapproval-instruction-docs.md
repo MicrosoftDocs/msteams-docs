@@ -86,22 +86,22 @@ You can use PowerShell cmdlets to create a preapproval policy. To create the cmd
 
 |Configuration| Description|
 |---|---|
-|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this configuration, when you create a preapproval policy for RSC permissions for a chat. For the list of all permissions, see [RSC permissions](/graph-api/rsc/resource-specific-consent).|
-|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this configuration, when you create a preapproval policy for RSC permissions for a team. For the list of all permissions, see [RSC permissions](/graph-api/rsc/resource-specific-consent).|
+|`ResourceSpecificApplicationPermissionsAllowedForChats`|Use this option, when creating a preapproval policy for RSC permissions for a chat. For a list of all permissions, see [RSC permissions](/graph-api/rsc/resource-specific-consent).|
+|`ResourceSpecificApplicationPermissionsAllowedForTeams`|Use this option, when creating a preapproval policy for RSC permissions for a team. For a list of all permissions, see [RSC permissions](/graph-api/rsc/resource-specific-consent).|
 
-**Preapprove an app with team RSC permissions**
+**Preapprove an app with Team RSC permissions**
 
 ```powershell
 New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForTeams @('ChannelMessage.Read.Group') -TeamLevelSensitivityLabelCondition AnySensitivityLabel
 ```
 
-**Preapprove an app with chat RSC permissions**
+**Preapprove an app with Chat RSC permissions**
 
 ```powershell
 New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat')
 ```
 
-**Preapprove an app with both team and chat RSC permissions**
+**Preapprove an app with both Team and That RSC permissions**
 
 ```powershell
 New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -ResourceSpecificApplicationPermissionsAllowedForChats @('OnlineMeeting.ReadBasic.Chat') -ResourceSpecificApplicationPermissionsAllowedForTeams @(‘ChannelMessage.Read.Group’) -TeamLevelSensitivityLabelCondition AnySensitivityLabel
@@ -112,7 +112,7 @@ New-MgBetaTeamAppPreapproval -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20e -R
 
 ### Create a preapproval policy with a sensitivity label based on app ID and permissions
 
-Preapproval policy can be created to preapprove RSC permissions against certain sensitivity labels in your tenant. This enables you to control the data that RSC-enabled apps can access. Here, you can learn the process to create a preapproval policy with a sensitivity label to use against particular data.
+Preapproval policies can be created to preapprove RSC permissions against certain sensitivity labels in your tenant. This enables you to control the data that RSC-enabled apps can access. Here, you can learn the process to create a preapproval policy with a sensitivity label to use against particular data.
 
 You can also create a preapproval policy for specific permissions in addition to specific sensitivity labels. You can allow all RSC consent requests to be approved for a particular permission. To create a preapproval policy, ensure that you have the following information:
 
@@ -188,7 +188,6 @@ Update-MgBetaTeamAppPreapproval  -TeamsAppId c626ce8b-6d15-4c07-bfb1-a5fd0bc3c20
 ### Delete an existing preapproval policy
 
 If you want to stop preapproving an existing app’s RSC permission, you can delete the preapproval policy for that app. To delete a preapproval policy, ensure that you have the App ID.
-
 
 You can delete the preapproval policy associated with an app by using the following PowerShell cmdlet:
 
