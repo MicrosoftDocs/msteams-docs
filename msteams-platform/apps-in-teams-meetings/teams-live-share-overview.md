@@ -319,7 +319,7 @@ The `content` context is designed for asynchronous consumption of your app's con
 
 #### Chat and channel tabs
 
-:::image type="content" source="../assets/images/teams-live-share/live-share-chat-channel-full.png" alt-text="Screenshot of Live Share in chat and channel tabs, with list of task boards and avatars indicating which tasks people are currently viewing.":::
+:::image type="content" source="../assets/images/teams-live-share/live-share-chat-channel-full.png" alt-text="Screenshot of Live Share in chat and channel tabs, with list of task boards and avatars indicating which tasks people are viewing.":::
 
 Chat and channel tabs allow users to pin your application to a chat or channel. A tab that supports both `sidePanel` and `content` features the same pinned URL, but the use cases are fairly different. For starters, chat and channel tabs generally have more horizontal space to work with. As a best practice, allow users to search for content to "pin" to the tab. For example, teachers using a note app may pin notes containing educational resources for their students.
 
@@ -329,7 +329,7 @@ While chat and channel tabs are most commonly used for asynchronous consumption,
 
 Consider making the following optimizations for your `content` chat and channel tab:
 
-- Show which users are currently viewing content pinned to the tab, such as users actively viewing each whiteboard.
+- Show which users are viewing content pinned to the tab, such as users actively viewing each whiteboard.
 - Nudge users to join an ongoing collaboration session, such as displaying a toast to join an ongoing standup for a task app.
 - Allow users to follow a specific user or group of users, such as by clicking on the avatar of another connected user they'd like to follow.
 
@@ -343,7 +343,7 @@ When users share your app's content with their colleagues in Teams, we recommend
 
 Consider making the following optimizations for your collaborative stageview apps:
 
-- Show which users are currently viewing the content and what they're doing, such as displaying a user's avatar at the position they are at in a video.
+- Show which users are viewing the content and what they're doing, such as displaying a user's avatar at the position they are at in a video.
 - Allow users to follow a specific user or group of users, such as by clicking on the avatar of another connected user they'd like to follow.
 - Facilitate ad-hoc communication, such as by enabling inking tools and laser pointers while in follow mode.
 
@@ -355,7 +355,7 @@ Live Share has a dedicated React integration, making Live Share features even ea
 
 | Scenario                                                                                | Example                                                                                                                                                                                            |
 | :-------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| During a marketing review, a user wants to collect feedback on their latest video edit. | User shares the video to the meeting stage and starts the video. As needed, the user pauses the video to discuss the scene, and participants draw over parts of the screen to emphasize key points. |
+| During a marketing review, a user wants to collect feedback on their latest video edit. | User shares the video to the meeting stage and starts the video. As needed, the user pauses the video to discuss the scene and participants draw over parts of the screen to emphasize key points. |
 | A project manager plays Agile Poker with their team during planning.                    | Manager shares an Agile Poker app to the meeting stage that enables playing the planning game until the team has consensus.                                                                        |
 | A financial advisor reviews PDF documents with clients before signing.                  | The financial advisor shares the PDF contract to the meeting stage. All attendees can see each other's cursors and highlighted text in the PDF, after which both parties sign the agreement.       |
 | Engineers view a 3D model together.                                                     | An engineering team views a 3D model that was shared in chat. They can see each other's camera positions, edit the model, and follow each other.                                                   |

@@ -937,7 +937,7 @@ POST /v1/meetings/{meetingId}/notification
 |---|---|
 | `meetingId` | The meeting ID is available through bot invoke and TeamsJS library. |
 | `type` |`targetedMeetingNotification` |
-| `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). Empty or null recipients list returns 400.|
+| `recipients` | List of user IDs. Get user IDs for meeting participants through [Get participant API](#get-participant-api). Get the entire list of chat roster using [Get members API](../bots/how-to/get-teams-context.md#fetch-the-roster-or-user-profile). An empty or null recipients list returns 400.|
 | `surface` | A type of surface. The supported surface types are `meetingStage` and `meetingTabIcon`. |
 | `surfaces` | List of surfaces where notifications can be rendered. |
 | `contentType` | Type of content that the targeted in-meeting notification renders. The supported value is `task`. |
@@ -945,7 +945,7 @@ POST /v1/meetings/{meetingId}/notification
 | `content.value.height` | **Optional**; requested height of the notification. |
 |`content.value.width` | **Optional**; requested width of the notification. |
 | `content.value.title` | **Optional**; title of the notification. |
-| `content.value.url` | **Optional**; URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If empty string or no URL is provided, nothing is rendered on a meeting notification. |
+| `content.value.url` | **Optional**; URL to be rendered in the notification. Make sure the URL is part of `validDomains` in app manifest. If an empty string or no URL is provided, nothing is rendered on a meeting notification. |
 | `ChannelData.OnBehalfOf` | **Optional**; this is to support [User attributes](../messaging-extensions/how-to/action-commands/respond-to-task-module-submit.md#user-attribution-for-bots-messages). |
 | `onBehalfOf.itemid` | Describes identification of the item. Its value must be 0. |
 | `onBehalfOf.mentionType` |`person` keyword. Describes the mention of a person. |
