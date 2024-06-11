@@ -1,5 +1,5 @@
 ---
-title: Microsoft Adaptive Card Previewer
+title: Preview Adaptive Card - Teams | Microsoft Learn
 author: v-vanv
 description: In this article, learn more about the Microsoft Adaptive Card previewer, features, advantages, and k=limitations of the Adaptive Card Previewer.
 ms.localizationpriority: medium
