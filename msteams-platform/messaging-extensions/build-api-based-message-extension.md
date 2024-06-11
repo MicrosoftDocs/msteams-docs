@@ -15,21 +15,7 @@ ms.date: 10/19/2023
 
 API-based message extensions are a Microsoft Teams app capability that integrates external APIs directly into Teams, enhancing your app's usability and offering a seamless user experience. API-based message extensions support search commands and can be used to fetch and display data from external services within Teams, streamlining workflows by reducing the need to switch between applications.
 
-:::image type="content" source="../assets/images/Copilot/api-based-me-flow.png" alt-text="Screenshot shows the interaction between a user and the Teams Client. A user opens a developer app in Teams, which displays the app. The user queries a command, and Teams Client sends details to Teams App Service. If needed, Teams App Service gets an auth key from Credential Service. Teams App Service then builds and sends a request to Developer API, receives a formatted response, and creates a visual response for Teams Client. Finally, Teams Client shows the response to the user as a list." lightbox="../assets/images/Copilot/api-based-me-flow.png":::
-
-1. User opens a developer app in Teams.
-1. Teams Client renders the app for the user.
-1. User queries a specific command within the app.
-1. Teams Client sends the command details, including parameters, app id, and command id, to the Teams App Service.
-1. If authentication is required:
-   1. Teams App Service requests auth details from Credential Service.
-   1. Credential Service provides the auth key to Teams App Service.
-1. Teams App Service builds a request using the parameters and auth key, following the OpenAPI spec for the operation id.
-1. Teams App Service queries the Developer API using details from the OpenAPI spec.
-1. Developer API returns the response in the expected OpenAPI format to Teams App Service.
-1. Teams App Service creates a visual response using the apiResponseRenderingTemplate and response mappings from the OpenAPI spec.
-1. Teams App Service sends the visual response back to the Teams Client.
-1. Teams Client displays the response to the user in a list format.
+:::image type="content" source="../assets/images/Copilot/api-based-me-flow.png" alt-text="Screenshot shows the interaction between a user, Teams Client, and Teams bot service. The diagra also shows how the API spec, the rendering templates, the API relate to each other." lightbox="../assets/images/Copilot/api-based-me-flow.png":::
 
 Before you get started, ensure that you meet the following requirements:
 
@@ -789,7 +775,7 @@ To configure scope and authorize trusted client applications, you need:
     > * If you're building an app with a bot, a message extension, and a tab, enter the application ID URI as api://fully-qualified-domain-name.com/botid-{YourClientId}, where {YourClientId} is your bot app ID.
     > * If you're building an app with a message extension or tab capabilities without the bot,  enter the application ID URI as api://fully-qualified-domain-name.com/{YourClientId}, where {YourClientId} is your Microsoft Entra application ID.
 
-    **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the application ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
+    > * **Application ID URI for app with multiple capabilities**: If you're building an API-based message extension, enter the application ID URI as `api://fully-qualified-domain-name.com/{YourClientId}`, where {YourClientId} is your Microsoft Entra app ID.
     >
     > * **Format for domain name**: Use lower case letters for domain name. Don't use upper case.
 
@@ -808,7 +794,9 @@ To configure scope and authorize trusted client applications, you need:
 #### Configure API scope
 
 > [!NOTE]
-> API-based message extension support **access_as_user** scope only.
+>
+> * API-based message extension support **access_as_user** scope only.
+> * The API receives a Microsoft Entra access token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
 
 1. Select **+ Add a scope** in the **Scopes defined by this API** section.
 
@@ -1004,9 +992,6 @@ After the API-based message extension gets a request header with token, perform 
   ```
 
 * **Use the token**: Extract the user information from the token, such as name, email, and object ID and use the token to call the message extension app's own API. For more information on claims reference with details on the claims included in access tokens, see [access token claims](/entra/identity-platform/access-token-claims-reference).
-
-  > [!NOTE]
-  > The API receives a Microsoft Entra access token with the scope set to `access_as_user` as registered in the Azure portal. However, the token isn't authorized to call any other downstream APIs, such as Microsoft Graph.
 
 </details>
 <br/>
