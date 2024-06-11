@@ -67,7 +67,7 @@ For more information on Graph API, see [Graph API for Government clouds](/graph/
 > * Third-party apps are turned off by default for GCC and aren't available for GCC High, DOD, and Teams operated by 21Vianet. To turn on third-party apps for GCC, see [manage org-wide app settings for Microsoft 365 Government](/microsoftteams/manage-apps).
 > * Only Incoming Webhooks are supported within GCC High.
 
-### Plan to deploy Teams in government clouds
+### Plan to deploy Teams in Government clouds
 
 To deploy Teams in GCC, GCC High, or DOD, you must purchase a suitable [Microsoft 365 Government plan](https://products.office.com/government/compare-office-365-government-plans). US federal, state, local or tribal government entity, or other entities that handle data subject to government regulations can opt for a government cloud service license. For more information, see [Teams for Government](/microsoftteams/expand-teams-across-your-org/teams-for-government-landing-page).
 
