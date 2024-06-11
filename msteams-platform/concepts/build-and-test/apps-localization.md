@@ -1,5 +1,5 @@
 ---
-title: Localize your app - Teams | Microsoft Learn
+title: Localize your app
 description: Learn considerations for localizing your Microsoft Teams app and localize strings in your app manifest.
 ms.topic: conceptual
 ms.localizationpriority: medium

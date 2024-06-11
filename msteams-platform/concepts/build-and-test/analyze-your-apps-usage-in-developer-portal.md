@@ -1,5 +1,5 @@
 ---
-title: Analyze your app's usage in Developer Portal
+title: Get App Analytics in Developer Portal - Teams| Microsoft Learn
 description: In this module, learn how to analyze your app's usage in Developer Portal
 ms.localizationpriority: medium
 ms.topic: overview
