@@ -168,7 +168,7 @@ You can design app sign-in flows for different Teams contexts and identity provi
 
 ### Top use case
 
-* Authenticate users
+Authenticate users
 
 ### Mobile
 
