@@ -50,7 +50,7 @@ Application-hosted media bots must be directly accessible on the internet. These
   * For an Azure Cloud Service, this requires an instance input endpoint. For more information, see [enable communication for role instances in Azure](/azure/cloud-services/cloud-services-enable-communication-role-instances).
   * For a VM Scale Set, a NAT rule on the load balancer must be configured. For more information, see [virtual networks and virtual machines in Azure](/azure/virtual-machines/windows/network-overview).
 
-* Application-hosted media bots aren't supported by the Bot Framework Emulator.
+* Bot Framework Emulator doesn't support application-hosted media bots.
 
 The next section provides details on scalability and performance considerations of application-hosted media bots.
 
