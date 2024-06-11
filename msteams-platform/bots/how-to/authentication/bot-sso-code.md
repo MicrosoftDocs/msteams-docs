@@ -1,5 +1,5 @@
 ---
-title: Code configuration for enabling SSO for bots
+title: Enable SSO for Bot App using Code
 description: Describes code configuration for enabling SSO for bots.
 ms.topic: how-to
 ms.localizationpriority: high

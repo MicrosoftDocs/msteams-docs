@@ -1,5 +1,5 @@
 ---
-title: Extend your app with Microsoft Graph permissions
+title: Extend App with Microsoft Graph 
 description: Describes configuring API permissions with Microsoft Graph for bot and messaging extension apps.
 ms.topic: how-to
 ms.localizationpriority: high
