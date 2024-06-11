@@ -51,7 +51,7 @@ The following table outlines the difference between Teams Microsoft Entra ID SSO
 
 > [!NOTE]
 >
-> * Nested authentication is in developer preview and not supported by all host environments. You must check the support status using the [isNAAChannelRecommended()](https://learn.microsoft.com/en-us/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
+> * Nested authentication is in developer preview and not supported by all host environments. You must check the support status using the [isNAAChannelRecommended()](/javascript/api/@microsoft/teams-js/nestedappauth?) function and provide a fallback experience for unsupported environments.
 > * If the API return the value as `true`, then call MSAL for the NAA flow. If it returns `false`, continue to use your existing token retrieval method.
 
 To use nested authentication, follow these steps:
@@ -89,7 +89,7 @@ Your domain should only include the origin and not sub-paths. For example:
 > [!NOTE]
 > Ensure that you initialize TeamsJS before you initialize MSAL (Microsoft Authentication Library), else Nested app authentication might fail.
 
-You need to initialize MSAL and get an instance of the public client application. This is used to get access tokens when needed. We recommended creating the public client application in the `Office.onReady` method.
+You need to initialize MSAL and get an instance of the public client application. This is used to get access tokens when needed.
 
 ```javascript
 import {
